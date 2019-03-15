@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619118"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813867"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Określ typ pliku źródłowego)
 
@@ -43,11 +43,11 @@ Plik źródłowy C lub C++.
 
 Domyślnie **CL** założono, że pliki z rozszerzeniem .c znajdują się pliki źródłowe C i pliki .cpp lub .cxx rozszerzenia są pliki źródłowe C++.
 
-Podczas albo **TC** lub **Tc** opcja jest określona, wszystkie specyfikacji [/Zc: wchar_t (wchar_t jest typem natywnym)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opcja jest ignorowana.
+Podczas albo **TC** lub **Tc** opcja jest określona, wszystkie specyfikacji [/Zc: wchar_t (wchar_t jest typem natywnym)](zc-wchar-t-wchar-t-is-native-type.md) opcja jest ignorowana.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **zaawansowane** stronę właściwości.
 
@@ -69,5 +69,5 @@ Ten wiersz polecenia CL Określa, że TEST1.c, TEST2.cxx, TEST3.huh i TEST4.o s�
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

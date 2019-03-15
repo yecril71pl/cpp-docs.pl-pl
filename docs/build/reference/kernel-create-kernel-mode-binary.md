@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509660"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816454"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Utwórz plik binarny trybu jądra)
 
@@ -46,7 +46,7 @@ W poniższej tabeli wymieniono zmiany w zachowaniu kompilatora podczas **/Kernel
 |RTTI|Wyłączone. Wszystkie wystąpienia elementu `dynamic_cast` i `typeid` słowa kluczowe emitować błąd kompilatora, chyba że `dynamic_cast` służy statycznie.|
 |`new` i `delete`|Musisz jawnie zdefiniować `new()` lub `delete()` operator; kompilator ani środowisko uruchomieniowe będzie dostarczać definicję domyślną.|
 
-Konwencje wywoływania, niestandardowe [/GS](../../build/reference/gs-buffer-security-check.md) opcji kompilacji, a wszystkie optymalizacje są dozwolone, gdy używasz **/Kernel** opcji. Wbudowanie stopniu nie dotyczy **/Kernel**, z tą samą semantyką uznawane przez kompilator. Jeśli chcesz upewnić się, że `__forceinline` wbudowanie kwalifikator jest honorowane, musisz upewnić się, że ostrzeżenie [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) jest włączone, dzięki czemu będzie wiadomo, gdy konkretny `__forceinline` funkcja nie jest śródwierszowa.
+Konwencje wywoływania, niestandardowe [/GS](gs-buffer-security-check.md) opcji kompilacji, a wszystkie optymalizacje są dozwolone, gdy używasz **/Kernel** opcji. Wbudowanie stopniu nie dotyczy **/Kernel**, z tą samą semantyką uznawane przez kompilator. Jeśli chcesz upewnić się, że `__forceinline` wbudowanie kwalifikator jest honorowane, musisz upewnić się, że ostrzeżenie [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) jest włączone, dzięki czemu będzie wiadomo, gdy konkretny `__forceinline` funkcja nie jest śródwierszowa.
 
 Gdy kompilator jest przekazywany **/Kernel** przełącznika go powoduje wstępne definiowanie makro preprocesora, który nosi nazwę `_KERNEL_MODE` i ma wartość **1**. Możesz użyć tego, aby warunkowo skompilować kod w oparciu o tego, czy środowisko wykonawcze w trybie użytkownika lub w trybie jądra. Na przykład poniższy kod określa, że klasa mają zostać w segmencie pamięci niestronicowanej, gdy jest ona kompilowana do wykonywania w trybie jądra.
 
@@ -80,7 +80,7 @@ Kompilowanie z użyciem **/Kernel** przekazuje także **/Kernel** do konsolidato
    ||**/ Kernel** obj|**/Kernel-** obj, MASM obj lub cvtresed|Mieszanie z **/Kernel** i **/kernel-** objs|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
    |**/ Kernel łącza**|Tak|Tak|Tak, z ostrzeżeniem LNK4257|
-   |**Link**|Tak|Tak|Tak|
+   |**link**|Tak|Yes|Tak|
 
    **LNK4257 obiektu nie został skompilowany z/Kernel; Obraz może nie działać.**
 
@@ -88,7 +88,7 @@ Kompilowanie z użyciem **/Kernel** przekazuje także **/Kernel** do konsolidato
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Aby ustawić opcję kompilatora/Kernel w programie Visual Studio
 
-1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **C/C++** folderu.
 
@@ -96,7 +96,7 @@ Kompilowanie z użyciem **/Kernel** przekazuje także **/Kernel** do konsolidato
 
 1. W **dodatkowe opcje** Dodaj `/kernel` lub `/kernel-`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

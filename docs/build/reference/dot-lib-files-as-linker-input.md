@@ -14,22 +14,22 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: 0bf791d682b66d9d0da968fb0bfd5229e912e84c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505358"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822616"
 ---
 # <a name="lib-files-as-linker-input"></a>Pliki .Lib — Wejście konsolidatora
 
-LINK akceptuje COFF standardowych bibliotek i COFF importowania bibliotek, które zwykle z rozszerzeniem. lib. Standardowe biblioteki zawiera obiektów i są tworzone za pomocą narzędzia LIB. Bibliotek importu zawierają informacje dotyczące eksportu w innych programach i są tworzone przez łącze, opiera się program, który zawiera eksporty albo za pomocą narzędzia LIB. Aby uzyskać informacji na temat używania biblioteki do tworzenia standardowych lub Importuj biblioteki, zobacz [odwołanie do biblioteki LIB](../../build/reference/lib-reference.md). Szczegółowe informacje na temat przy użyciu LINKU, aby utworzyć bibliotekę importu, [/dll](../../build/reference/dll-build-a-dll.md) opcji.
+LINK akceptuje COFF standardowych bibliotek i COFF importowania bibliotek, które zwykle z rozszerzeniem. lib. Standardowe biblioteki zawiera obiektów i są tworzone za pomocą narzędzia LIB. Bibliotek importu zawierają informacje dotyczące eksportu w innych programach i są tworzone przez łącze, opiera się program, który zawiera eksporty albo za pomocą narzędzia LIB. Aby uzyskać informacji na temat używania biblioteki do tworzenia standardowych lub Importuj biblioteki, zobacz [odwołanie do biblioteki LIB](lib-reference.md). Szczegółowe informacje na temat przy użyciu LINKU, aby utworzyć bibliotekę importu, [/dll](dll-build-a-dll.md) opcji.
 
-Biblioteka określono LINK jako argument nazwy pliku lub domyślna biblioteka. LINK rozpoznawania odwołań zewnętrznych, wyszukując najpierw w bibliotekach określone w wierszu polecenia, a następnie w domyślnych bibliotek określony za pomocą [/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md) opcji, a następnie w domyślnych bibliotek nazwę w plikach .obj. Jeśli ścieżka jest określona za pomocą nazwy biblioteki, łącze szuka biblioteki, w tym katalogu. Jeśli ścieżka nie zostanie określona, łączy wygląda pierwszy w katalogu, który łączy jest uruchamiana z, a następnie w dowolnym katalogi określone w zmiennej środowiskowej LIB.
+Biblioteka określono LINK jako argument nazwy pliku lub domyślna biblioteka. LINK rozpoznawania odwołań zewnętrznych, wyszukując najpierw w bibliotekach określone w wierszu polecenia, a następnie w domyślnych bibliotek określony za pomocą [/DEFAULTLIB](defaultlib-specify-default-library.md) opcji, a następnie w domyślnych bibliotek nazwę w plikach .obj. Jeśli ścieżka jest określona za pomocą nazwy biblioteki, łącze szuka biblioteki, w tym katalogu. Jeśli ścieżka nie zostanie określona, łączy wygląda pierwszy w katalogu, który łączy jest uruchamiana z, a następnie w dowolnym katalogi określone w zmiennej środowiskowej LIB.
 
 ## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>Aby dodać pliki .lib — wejście konsolidatora w środowisku programistycznym
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **dane wejściowe** — strona właściwości w **konsolidatora** folderu.
 
@@ -37,7 +37,7 @@ Biblioteka określono LINK jako argument nazwy pliku lub domyślna biblioteka. L
 
 ## <a name="to-programmatically-add-lib-files-as-linker-input"></a>Aby programowo dodać pliki .lib — wejście konsolidatora
 
-- Zobacz [AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx).
+- Zobacz [AdditionalDependencies](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies).
 
 ## <a name="example"></a>Przykład
 
@@ -67,7 +67,7 @@ int main() {
 213
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Pliki wejściowe LINK](../../build/reference/link-input-files.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Pliki wejściowe LINK](link-input-files.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

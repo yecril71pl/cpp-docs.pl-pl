@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 7c0b63d80a8b4b03b55d6e50af6c08a8de0937de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96b8c0ce1116dbb08260573f25f941ca54169127
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596554"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822421"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary i AfxLoadLibrary
 
@@ -30,22 +30,22 @@ Dla aplikacji MFC, które ładują biblioteki DLL rozszerzeń MFC, firma Microso
 Jeśli Windows nie może załadować biblioteki DLL, proces może próbować odzyskać sprawność po błędzie. Na przykład ten proces może powiadomić użytkownika o błędzie i poprosić użytkownika, aby określić inną ścieżkę do pliku DLL.
 
 > [!IMPORTANT]
-> Upewnij się określić pełną ścieżkę do każdej biblioteki dll. Bieżący katalog jest przeszukiwany w pierwszej kolejności gdy pliki są ładowane. Jeśli nie kwalifikuje się ścieżkę pliku, może załadować pliku, który nie jest to zamierzone. Innym sposobem, aby zapobiec takiej sytuacji jest za pomocą [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) — opcja konsolidatora.
+> Upewnij się określić pełną ścieżkę do każdej biblioteki dll. Bieżący katalog jest przeszukiwany w pierwszej kolejności gdy pliki są ładowane. Jeśli nie kwalifikuje się ścieżkę pliku, może załadować pliku, który nie jest to zamierzone. Innym sposobem, aby zapobiec takiej sytuacji jest za pomocą [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) — opcja konsolidatora.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Jak połączyć niejawnie biblioteki DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Łączenie pliku wykonywalnego z biblioteką DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Określić, której metody łączenia użyjesz](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Łączenie pliku wykonywalnego z biblioteką DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
 - [Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
-- [FreeLibrary i AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)
+- [FreeLibrary i AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+- [Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)

@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977735"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813550"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Kompilowanie i uruchamianie projektu aplikacji konsoli w języku C++
 
@@ -19,23 +19,23 @@ Po utworzeniu projektu aplikacji konsoli w języku C++ i wprowadzić swój kod, 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Program Visual Studio za pomocą programowanie aplikacji klasycznych, z obciążeniem C++ zainstalowany i uruchomiony na komputerze. Jeśli nie jest jeszcze zainstalowany, wykonaj kroki opisane w [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md).
+- Program Visual Studio za pomocą programowanie aplikacji klasycznych, z obciążeniem C++ zainstalowany i uruchomiony na komputerze. Jeśli nie jest jeszcze zainstalowany, wykonaj kroki opisane w [Instalowanie obsługi języka C++ w programie Visual Studio](vscpp-step-0-installation.md).
 
-- Tworzenie "Hello, World!" Projekt, a następnie wprowadź jego kod źródłowy. Jeśli nie masz jeszcze ustanowionego jeszcze, wykonaj kroki opisane w [Tworzenie projektu aplikacji konsoli w języku C++](../build/vscpp-step-1-create.md).
+- Tworzenie "Hello, World!" Projekt, a następnie wprowadź jego kod źródłowy. Jeśli nie masz jeszcze ustanowionego jeszcze, wykonaj kroki opisane w [Tworzenie projektu aplikacji konsoli w języku C++](vscpp-step-1-create.md).
 
 Jeśli program Visual Studio wygląda tak, możesz przystąpić do kompilowania i uruchamiania aplikacji:
 
-   ![Gotowe do kompilowania nowego projektu](../build/media/vscpp-ready-to-build.png "gotowe do kompilowania nowego projektu")
+   ![Gotowe do kompilowania nowego projektu](media/vscpp-ready-to-build.png "gotowe do kompilowania nowego projektu")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Kompilowanie i uruchamianie kodu w programie Visual Studio
 
 1. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z **kompilacji** menu. **Dane wyjściowe** okno przedstawia wyniki procesu kompilacji.
 
-   ![Skompiluj projekt](../build/media/vscpp-build-solution.gif "kompilacji projektu")
+   ![Skompiluj projekt](media/vscpp-build-solution.gif "kompilacji projektu")
 
 1. Aby uruchomić kod, na pasku menu, wybierz **debugowania**, **Uruchom bez debugowania**.
 
-   ![Rozpocznij projekt](../build/media/vscpp-start-without-debugging.gif "Rozpocznij projekt")
+   ![Rozpocznij projekt](media/vscpp-start-without-debugging.gif "Rozpocznij projekt")
 
    Okno konsoli zostanie otwarty, a następnie uruchamia aplikację. Po uruchomieniu aplikacji konsoli w programie Visual Studio działa kod, a następnie drukuje "naciśnij dowolny klawisz, aby kontynuować. . ." daje szansę, aby wyświetlić dane wyjściowe.
 
@@ -55,7 +55,7 @@ Normalnie możesz uruchomić aplikacje konsoli w wierszu polecenia, a nie w prog
 
 1. W oknie wiersza polecenia kliknij prawym przyciskiem myszy w celu Wklej ścieżkę do aplikacji w wierszu polecenia. Naciśnij klawisz Enter, aby uruchomić aplikację.
 
-   ![Uruchamianie aplikacji w wierszu polecenia](../build/media/vscpp-run-in-cmd.gif "uruchomienia aplikacji w wierszu polecenia")
+   ![Uruchamianie aplikacji w wierszu polecenia](media/vscpp-run-in-cmd.gif "uruchomienia aplikacji w wierszu polecenia")
 
 Gratulacje, udało skompilowane i uruchomisz aplikację konsoli w programie Visual Studio!
 

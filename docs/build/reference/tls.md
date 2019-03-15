@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /TLS dumpbin option
 - -TLS dumpbin option
 ms.assetid: 2b3f48f9-cac4-4351-b15c-2833b43bc709
-ms.openlocfilehash: c125a6439e6cda2159a8bde2317528e667eaf310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 751c212398f3d309b1d31d204291fe3a0503cf06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532642"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811865"
 ---
 # <a name="tls"></a>/TLS
 
@@ -26,6 +26,6 @@ Jeśli program nie używa lokalnego magazynu wątków, obraz nie będzie zawiera
 
 IMAGE_TLS_DIRECTORY jest zdefiniowana w pliku winnt.h.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opcje DUMPBIN](dumpbin-options.md)

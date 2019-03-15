@@ -7,12 +7,12 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: 6d6528b81777711e52153e19a656619a2895b0d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424759"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821277"
 ---
 # <a name="rules-for-module-definition-statements"></a>Zasady dla instrukcji definicji modułu
 
@@ -34,8 +34,8 @@ Następujące reguły składni dotyczą wszystkie instrukcje w pliku .def. Inne 
 
 - Liczbowe argumenty są określone w podstawie 10 lub szesnastkowego.
 
-- Jeśli argument ciągu pasuje [słowa zarezerwowanego](../../build/reference/reserved-words.md), muszą być ujęte w podwójny cudzysłów (").
+- Jeśli argument ciągu pasuje [słowa zarezerwowanego](reserved-words.md), muszą być ujęte w podwójny cudzysłów (").
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pliki definicji modułu (.Def)](../../build/reference/module-definition-dot-def-files.md)
+[Pliki definicji modułu (.Def)](module-definition-dot-def-files.md)

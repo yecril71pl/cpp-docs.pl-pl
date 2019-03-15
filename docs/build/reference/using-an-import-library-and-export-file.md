@@ -6,12 +6,12 @@ helpviewer_keywords:
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-ms.openlocfilehash: e23b729bdca102ec24c4426e9784e3aab267bff2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030b792d4bbebecef9d9303238657a564a142ecf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484966"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810955"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Korzystanie z biblioteki importowanej oraz pliku eksportowanego
 
@@ -27,6 +27,6 @@ Po utworzeniu bibliotekę importu (.lib) i plik eksportu (.exp) dla programu prz
 
 Na koniec połączyć program, który rozpoczął za pomocą. W poleceniu łącze Określ obiektów i bibliotek programu pliku .exp, które LIB utworzone dla programu i bibliotekę importowaną lub biblioteki eksportów używanych przez program. Aby kontynuować w przykładzie, polecenie LINK dla ONE.dll zawiera ONE.exp i TWO.lib, a także obiektów i bibliotek, które bardziej szczegółowo ONE.dll. Nie określaj pliku .def lub specyfikacji/Export w poleceniu łącze; nie są one potrzebne, ponieważ definicje eksportu są zawarte w pliku .exp. Gdy łączysz się przy użyciu pliku .exp, łącze nie tworzy bibliotekę importu, ponieważ przyjęto założenie, że jedna została utworzona podczas tworzenia pliku .exp.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Praca z bibliotekami importowanymi oraz plikami eksportowanymi](../../build/reference/working-with-import-libraries-and-export-files.md)
+[Praca z bibliotekami importowanymi oraz plikami eksportowanymi](working-with-import-libraries-and-export-files.md)

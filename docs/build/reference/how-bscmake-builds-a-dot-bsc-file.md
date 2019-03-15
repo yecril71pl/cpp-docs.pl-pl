@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-ms.openlocfilehash: 053bc7565accce5db8998ae8efec256ef37d37b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f721641e021396f112bfe4c075ca0f524100d1f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442591"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821238"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>W jaki sposób BSCMAKE kompiluje plik .Bsc
 
@@ -23,6 +23,6 @@ BSCMAKE szuka pliku .bsc, który ma określoną opcją /o nazwę. Jeśli nie okr
 
 - Kompilacja przyrostowa zakończyło się sukcesem musi istnieć pliku .bsc. Wszystkich powiązanych plików SBR nawet pustych plików, musi istnieć i musi zostać określony w wierszu polecenia BSCMAKE. Jeżeli pominięto plik SBR z wiersza polecenia BSCMAKE usuwa swój wkład zgodnie z pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Kompilowanie pliku .Bsc](../../build/reference/building-a-dot-bsc-file.md)
+[Kompilowanie pliku .Bsc](building-a-dot-bsc-file.md)

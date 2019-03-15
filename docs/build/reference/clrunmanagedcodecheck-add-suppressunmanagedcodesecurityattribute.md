@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 3cefe34eef1a30274ba2e9e362e2f61458f10e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565922"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822603"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/ CLRUNMANAGEDCODECHECK (Usuń atrybut SuppressUnmanagedCodeSecurityAttribute)
 
@@ -39,7 +39,7 @@ Zobacz [bezpiecznego kodowania wytyczne dla niezarządzanego kodu](/dotnet/frame
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji** węzła.
 
@@ -55,5 +55,5 @@ Zobacz [bezpiecznego kodowania wytyczne dla niezarządzanego kodu](/dotnet/frame
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)
-- [Opcje konsolidatora](../../build/reference/linker-options.md)
+- [Odwołania konsolidatora MSVC](linking.md)
+- [Opcje konsolidatora MSVC](linker-options.md)

@@ -2,12 +2,12 @@
 title: /HIGHENTROPYVA (Adres 64-bitowej obsługi ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: a8bd1b2231530c0f1632b244edaf36ee14ed65b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534800"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822005"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (Adres 64-bitowej obsługi ASLR)
 
@@ -15,7 +15,7 @@ Określa, czy obraz wykonywalny obsługuje z randomizacji układu przestrzeni ad
 
 ## <a name="syntax"></a>Składnia
 
-> **/ HIGHENTROPYVA**[**: NO**]
+> **/HIGHENTROPYVA**[**:NO**]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -27,7 +27,7 @@ Aby uzyskać **/highentropyva** efekty w czasie ładowania [opcja/DynamicBase](d
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
@@ -35,8 +35,8 @@ Aby uzyskać **/highentropyva** efekty w czasie ładowania [opcja/DynamicBase](d
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)
-- [Opcje konsolidatora](../../build/reference/linker-options.md)
+- [Odwołania konsolidatora MSVC](linking.md)
+- [Opcje konsolidatora MSVC](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
 - [Poziom ochrony oprogramowania niezależnego dostawcy oprogramowania Windows](https://msdn.microsoft.com/library/bb430720.aspx)

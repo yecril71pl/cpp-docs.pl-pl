@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612371"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822629"
 ---
 # <a name="import-directive-c"></a>#import — dyrektywa (C++)
 
@@ -121,16 +121,16 @@ Następujące optymalizacje kompilatora pochodzą z **#import** dyrektywy:
 
 - Gdy **#import** jest przetwarzany, kompilator najpierw sprawdza, czy nagłówek istnieje i jest aktualny. Jeśli tak, następnie nie musi zostać utworzony ponownie.
 
-**#Import** dyrektywy również uczestniczy w minimalnej odbudowie i może zostać umieszczony w pliku wstępnie skompilowanego nagłówka. Zobacz [tworzenie prekompilowanych plików nagłówka](../build/reference/creating-precompiled-header-files.md) Aby uzyskać więcej informacji.
+**#Import** dyrektywy również uczestniczy w minimalnej odbudowie i może zostać umieszczony w pliku wstępnie skompilowanego nagłówka. Zobacz [tworzenie prekompilowanych plików nagłówka](../build/creating-precompiled-header-files.md) Aby uzyskać więcej informacji.
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> Plik nagłówkowy biblioteki typu podstawowego
 Plik nagłówkowy biblioteki typu podstawowego składa się z siedmiu sekcji:
 
-- Standardowy nagłówek: składa się z komentarzy, `#include` poufności informacji dotyczące COMDEF. Godz. (która określa niektóre standardowe makra używane w nagłówku) oraz inne informacje różne ustawienia.
+- Standardowy nagłówek: Składa się z komentarzy, `#include` poufności informacji dotyczące COMDEF. Godz. (która określa niektóre standardowe makra używane w nagłówku) oraz inne informacje różne ustawienia.
 
-- Prześlij dalej odniesienia i definicje typów: składa się z deklaracji struktury, takich jak `struct IMyInterface` i definicje typów.
+- Prześlij dalej odniesienia i definicje typów: Składa się z deklaracji struktury, takich jak `struct IMyInterface` i definicje typów.
 
-- Deklaracje sprytnego wskaźnika: szablon klasy `_com_ptr_t` jest implementacją sprytnego wskaźnika, który hermetyzuje wskaźniki interfejsu i eliminuje konieczność wywoływania `AddRef`, `Release`, `QueryInterface` funkcji. Ponadto, ukrywa `CoCreateInstance` wywołania podczas tworzenia nowego obiektu COM. Ten rozdział wykorzystuje makro instrukcję `_COM_SMARTPTR_TYPEDEF` Aby ustalić definicje typów interfejsów COM, które mają być specjalizacjami z [_com_ptr_t](../cpp/com-ptr-t-class.md) klasy szablonu. Na przykład w przypadku interfejsu `IMyInterface`,. Tlh — plik będzie zawierać:
+- Deklaracje sprytnego wskaźnika: Klasa szablonu `_com_ptr_t` jest implementacją sprytnego wskaźnika, który hermetyzuje wskaźniki interfejsu i eliminuje konieczność wywoływania `AddRef`, `Release`, `QueryInterface` funkcji. Ponadto, ukrywa `CoCreateInstance` wywołania podczas tworzenia nowego obiektu COM. Ten rozdział wykorzystuje makro instrukcję `_COM_SMARTPTR_TYPEDEF` Aby ustalić definicje typów interfejsów COM, które mają być specjalizacjami z [_com_ptr_t](../cpp/com-ptr-t-class.md) klasy szablonu. Na przykład w przypadku interfejsu `IMyInterface`,. Tlh — plik będzie zawierać:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ Plik nagłówkowy biblioteki typu podstawowego składa się z siedmiu sekcji:
 
    Typ `IMyInterfacePtr` mogą być później wykorzystany surowego wskaźnika interfejsu `IMyInterface*`. W związku z tym, istnieje nie trzeba wywoływac różnych `IUnknown` elementów członkowskich
 
-- Deklaracje TypeInfo: składa się głównie z definicji klas i innych elementów ukazujących indywidualne elementy typeinfo zwrócone przez `ITypeLib:GetTypeInfo`. W tej sekcji, każdy element typeinfo z biblioteki typów znajduje odzwierciedlenie w nagłówku formularza w zależności od `TYPEKIND` informacji.
+- Deklaracje TypeInfo: Składa się głównie z definicji klas i innych elementów ukazujących indywidualne elementy typeinfo zwrócone przez `ITypeLib:GetTypeInfo`. W tej sekcji, każdy element typeinfo z biblioteki typów znajduje odzwierciedlenie w nagłówku formularza w zależności od `TYPEKIND` informacji.
 
-- Opcjonalne określanie identyfikatora GUID w starym stylu: zawiera inicjalizacje nazwanych stałych identyfikatora GUID. Są to nazwy w postaci `CLSID_CoClass` i `IID_Interface`, podobne do tych wygenerowanych przez kompilator MIDL.
+- Opcjonalne definicja w starym stylu identyfikatora GUID: Zawiera inicjalizacje nazwanych stałych identyfikatora GUID. Są to nazwy w postaci `CLSID_CoClass` i `IID_Interface`, podobne do tych wygenerowanych przez kompilator MIDL.
 
 - `#include` Instrukcja dla nagłówka biblioteki typu pomocniczego.
 
-- Standardowe stopki: obecnie obejmują `#pragma pack(pop)`.
+- Standardowe stopki: Obecnie dotyczy to `#pragma pack(pop)`.
 
 Wszystkie sekcje, z wyjątkiem nagłówek standardowy i szablonowe sekcji stopki, są ujęte w przestrzeni nazw z jego nazwą określoną przez `library` instrukcji w oryginalnym pliku IDL. Można użyć nazw z nagłówka biblioteki typów, poprzez jawną kwalifikację z nazwą przestrzeni nazw lub umieszczając następującą instrukcję:
 

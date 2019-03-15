@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491302"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816623"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Ostrzeżenia kompilatora od C4400 C4599
 
@@ -186,10 +184,10 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 1) C4426|flagi optymalizacji zmieniły się po dołączeniu nagłówka, może być #pragma Optimize()|
 |Ostrzeżenie kompilatora (poziom 1) C4427|"*operator*": przepełnienie w czasie dzielenia stałej, niezdefiniowane zachowanie|
 |[Ostrzeżenie kompilatora (poziom 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|możliwe niekompletne lub niepoprawnie uformowane universal-character-name|
-|[Ostrzeżenie (błąd) kompilatora C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|brak specyfikatora typu — zakładany int. Uwaga: C++ nie obsługuje domyślnie typu int|
-|[Ostrzeżenie kompilatora (poziom 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnego int|
+|[Ostrzeżenie (błąd) kompilatora C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|brak specyfikatora typu — zakładany int. Uwaga: Język C++ obsługuje domyślnie typu int|
+|[Ostrzeżenie kompilatora (poziom 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnie typu int|
 |[Ostrzeżenie kompilatora (poziom 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|statyczny Konstruktor musi posiadać prywatną dostępność; Zmiana na prywatny dostęp|
-|[Ostrzeżenie kompilatora (poziom 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*derived_class*": układ obiektu pod/vd2 zmieni się z powodu bazy wirtualnej "*element $base_class*"|
+|[Ostrzeżenie kompilatora (poziom 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*derived_class*": Układ obiektu pod/vd2 zmieni się z powodu bazy wirtualnej "*element $base_class*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamiczne\_rzutowania z wirtualną klasę podstawową '*element $base_class*"to"*derived_class*"w konstruktorze lub destruktorze może zakończyć się niepowodzeniem z częściowo skonstruowanym obiektem|
 |[Ostrzeżenie kompilatora (poziom 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamiczne\_rzutowania z wirtualną klasę podstawową '*element $base_class*"to"*derived_class*"może nie działać w niektórych kontekstach|
 |C4438 ostrzeżenia kompilatora|"*funkcja*": nie można bezpiecznie wywołać / await: clrcompat trybu. Jeśli "*funkcja*" wywołuje środowisko CLR może spowodować uszkodzenie nagłówka środowiska CLR|
@@ -205,9 +203,9 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |C4448 ostrzeżenia kompilatora|"*typu*1" nie ma domyślnego interfejsu określonego w metadanych. Pobrania: "*type2*", która może ulec awarii w czasie wykonywania.|
 |C4449 ostrzeżenia kompilatora|"*typu*" typ niezapieczętowany powinien być oznaczony jako "[WebHostHidden]"|
 |C4450 ostrzeżenia kompilatora|"*type1*"powinien być oznaczony jako "[WebHostHidden]" ponieważ dziedziczy"*type2*"|
-|Ostrzeżenie kompilatora (poziom 4) C4451|"classname1::member": użycie klasy ref "classname2::member' wewnątrz tego kontekstu może doprowadzić do nieprawidłowego kierowania obiektami między kontekstami|
+|Ostrzeżenie kompilatora (poziom 4) C4451|"classname1::member": Użycie klasy ref "classname2::member' wewnątrz tego kontekstu może doprowadzić do nieprawidłowego kierowania obiektami między kontekstami|
 |Ostrzeżenie kompilatora (poziom 1) C4452|"*identyfikator*": typ publiczny nie może być w zakresie globalnym. Musi być w przestrzeni nazw, który jest elementem podrzędnym nazwy wyjściowego pliku .winmd.|
-|Ostrzeżenie kompilatora (poziom 1) C4453|"*typu*": typ "[WebHostHidden]", nie powinien być używany na publikowanej powierzchni typu publicznego, który nie jest "[WebHostHidden]"|
+|Ostrzeżenie kompilatora (poziom 1) C4453|"*typu*": Typ "[WebHostHidden]", nie powinien być używany na publikowanej powierzchni typu publicznego, który nie jest "[WebHostHidden]"|
 |Ostrzeżenie kompilatora (poziom 1) C4454|"*funkcja*" jest przeciążony przez więcej niż liczba parametrów wejściowych bez konieczności [DefaultOverload] określony. Pobrania "*deklaracji*" jako domyślne przeciążenie|
 |Ostrzeżenie kompilatora (poziom 1) C4455|"operator *operator*": identyfikatory sufiksu literału, które nie rozpoczynają się od znaku podkreślenia są zarezerwowane|
 |[Ostrzeżenie kompilatora (poziom 4) C4456](compiler-warning-level-4-c4456.md)|Deklaracja "*identyfikator*" powoduje ukrycie poprzedniej deklaracji lokalnej|
@@ -306,7 +304,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 3) C4569|"*funkcja*": żadne składowe nie odpowiadają sygnaturze jawnego przesłaniania|
 |[Ostrzeżenie kompilatora (poziom 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|"*typu*": nie jest jawnie zadeklarowana jako abstrakcyjna, ale ma funkcje abstrakcyjne|
 |[Ostrzeżenie kompilatora (poziom 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informacja: semantyka instrukcji catch(...) została zmieniona od czasu Visual C++ 7.1; Wyjątki strukturalne (SEH) nie są już przechwytywane|
-|[Ostrzeżenie kompilatora (poziom 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." zamiast niego|
+|[Ostrzeżenie kompilatora (poziom 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." Zamiast tego|
 |Ostrzeżenie kompilatora (poziom 1) C4573|użycie "*funkcji lambda*" wymaga kompilator do przechwytywania "this" ale nie zezwala na to domyślny tryb przechwytywania bieżącego|
 |Ostrzeżenie kompilatora (poziom 4) C4574|"*Identyfikator*'jest zdefiniowane jako ' 0': Czy chodziło o ' Identyfikator #if'?|
 |Ostrzeżenie kompilatora (poziom 1) C4575|"__vectorcall" jest niezgodna z "/ clr" opcja: konwertowanie na "__stdcall"|
@@ -318,8 +316,8 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 4) C4582|"*typu*": Konstruktor nie jest wywoływany niejawnie|
 |Ostrzeżenie kompilatora (poziom 4) C4583|"*typu*": destruktor nie jest wywoływany niejawnie|
 |[Ostrzeżenie kompilatora (poziom 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|"*klasa1*": klasy bazowej*klasa2*"jest już klasą bazową dla"*class3*"|
-|Ostrzeżenie kompilatora (poziom 1, błąd) C4585|"*klasy*": WinRT "public ref class" musi być zapieczętowana lub dziedziczyć po istniejącej niezamkniętej klasie|
-|Ostrzeżenie kompilatora (poziom 1, błąd) C4586|"*typu*": typ publiczny nie można zadeklarować w przestrzeni nazw najwyższego poziomu o nazwie "Windows"|
+|Ostrzeżenie kompilatora (poziom 1, błąd) C4585|"*klasy*": WinRT "public ref class" musi być zapieczętowana lub dziedziczyć po istniejącej niezapieczętowane klasy|
+|Ostrzeżenie kompilatora (poziom 1, błąd) C4586|"*typu*": Typ publiczny nie można zadeklarować w przestrzeni nazw najwyższego poziomu o nazwie "Windows"|
 |Ostrzeżenie kompilatora (poziom 1) C4587|"*anonymous_structure*": Zmiana zachowania: Konstruktor nie jest już niejawnie jest wywoływany.|
 |Ostrzeżenie kompilatora (poziom 1) C4588|"*anonymous_structure*": Zmiana zachowania: destruktor jest wywoływany nie jest już niejawnie|
 |Ostrzeżenie kompilatora (poziom 1) C4591|limit głębokości wywołań wyrażeń "constexpr" *numer* przekracza (/ constexpr: DEPTH\<liczba >)|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: 0e6cf408e56dd6e5bc262c39dda460253a32dfc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0d850d54611579288b81a334af4abdfab6e411c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662465"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820341"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/ Zc: alignednew (c ++ 17 nadmiernie wyrównana alokacja)
 
@@ -97,7 +97,7 @@ Aby uzyskać informacje na temat problemów ze zgodnością w języku Visual C++
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
@@ -105,4 +105,4 @@ Aby uzyskać informacje na temat problemów ze zgodnością w języku Visual C++
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)
+[/Zc (Zgodność)](zc-conformance.md)

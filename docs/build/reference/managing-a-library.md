@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74b8cf198d46f83de327c68ac5f883bd75e5db80
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477067"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812047"
 ---
 # <a name="managing-a-library"></a>Zarządzanie biblioteką
 
@@ -64,7 +64,7 @@ Domyślnie, LIB nazwy pliku wyjściowego przy użyciu podstawowej nazwy pierwszy
 Poniższe opcje są stosowane do tworzenia i modyfikowania biblioteki:
 
 **/ LIBPATH:** *dir*<br/>
-Zastępuje ścieżki biblioteki środowiska. Aby uzyskać szczegółowe informacje, zobacz opis łącza [/libpath —](../../build/reference/libpath-additional-libpath.md) opcji.
+Zastępuje ścieżki biblioteki środowiska. Aby uzyskać szczegółowe informacje, zobacz opis łącza [/libpath —](libpath-additional-libpath.md) opcji.
 
 **/ LIST**<br/>
 Wyświetla informacje o bibliotece wyjściowej na wyjście standardowe. Dane wyjściowe mogą zostać przekierowane do pliku. Można użyć/list, aby określić zawartość istniejącej biblioteki bez modyfikowania go.
@@ -72,8 +72,8 @@ Wyświetla informacje o bibliotece wyjściowej na wyjście standardowe. Dane wyj
 **/ NAME:** *nazwy pliku*<br/>
 Podczas kompilowania biblioteki importowanej, określa nazwę biblioteki dll, dla których jest ona kompilowana biblioteki importu.
 
-**/ NODEFAULTLIB**<br/>
-Usuwa co najmniej jedną domyślną bibliotekę z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych. Zobacz [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) Aby uzyskać więcej informacji.
+**/NODEFAULTLIB**<br/>
+Usuwa co najmniej jedną domyślną bibliotekę z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych. Zobacz [/nodefaultlib](nodefaultlib-ignore-libraries.md) Aby uzyskać więcej informacji.
 
 **/ OUT:** *nazwy pliku*<br/>
 Przesłania domyślną nazwę pliku wyjściowego. Domyślnie dane wyjściowe biblioteki jest tworzony w bieżącym katalogu, o nazwie podstawowej pierwszego pliku biblioteki lub obiekt, w wierszu polecenia i rozszerzenia. lib.
@@ -82,7 +82,7 @@ Przesłania domyślną nazwę pliku wyjściowego. Domyślnie dane wyjściowe bib
 Pomija określony *obiektu* z biblioteki wyjściowej. LIB tworzy bibliotekę wyjściową, łącząc wszystkie obiekty (w plikach obiektu lub biblioteki), a następnie usuwając wszystkie obiekty określone za pomocą/Remove.
 
 **/ SUBSYSTEM:**{**KONSOLI** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM** &AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **NATYWNYCH** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [, #[. ##]]<br/>
-Informuje system operacyjny, jak uruchomić program, utworzone przez łączenie z biblioteki wyjściowej. Aby uzyskać więcej informacji, zobacz opis łącza [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opcji.
+Informuje system operacyjny, jak uruchomić program, utworzone przez łączenie z biblioteki wyjściowej. Aby uzyskać więcej informacji, zobacz opis łącza [/Subsystem](subsystem-specify-subsystem.md) opcji.
 
 Opcje LIB, określone w wierszu polecenia nie jest uwzględniana.
 
@@ -99,6 +99,6 @@ Lib — służy do wykonywania następujących zadań zarządzania biblioteką:
 > [!NOTE]
 >  Zarówno nie można usunąć element członkowski i Wyodrębnij jego zawartość do pliku, w tym samym kroku. Należy najpierw wyodrębnić obiektu składowego przy użyciu/extract, a następnie uruchom ponownie za pomocą/Remove LIB. To zachowanie różni się od LIB 16-bitowych (dla biblioteki OMF) podany w innych produktów firmy Microsoft.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[LIB — dokumentacja](../../build/reference/lib-reference.md)
+[LIB — dokumentacja](lib-reference.md)

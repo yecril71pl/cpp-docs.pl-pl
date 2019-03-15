@@ -4,7 +4,7 @@
 # [Tworzenie nowego projektu systemu Linux](create-a-new-linux-project.md)
 # [Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](connect-to-your-remote-linux-computer.md)
 # [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](deploy-run-and-debug-your-linux-project.md)
-# [Samouczek: Tworzenie międzyplatformowych projektów w języku C++ w programie Visual Studio](../ide/get-started-linux-cmake.md)
+# [Samouczek: Tworzenie międzyplatformowych projektów w języku C++ w programie Visual Studio](../build/get-started-linux-cmake.md)
 # [Dokumentacja strony właściwości projektu systemu Linux](prop-pages-linux.md)
 ## [Właściwości ogólne (Linux)](prop-pages/general-linux.md)
 ## [Właściwości debugowania (Linux)](prop-pages/debugging-linux.md)

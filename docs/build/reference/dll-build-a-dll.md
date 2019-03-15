@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: 71696e4ffae91ed1fa8a13e69e75523ce66e8361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546347"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820510"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Kompilowanie biblioteki DLL)
 
@@ -29,9 +29,9 @@ Opcja/dll kompiluje bibliotekę DLL jako plik wyjściowy głównego. Biblioteka 
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) w kodzie źródłowym
 
-1. [EKSPORTY](../../build/reference/exports.md) instrukcja w pliku .def
+1. [EKSPORTY](exports.md) instrukcja w pliku .def
 
-1. [/EXPORT](../../build/reference/export-exports-a-function.md) specyfikacji za pomocą polecenia łącza
+1. [/EXPORT](export-exports-a-function.md) specyfikacji za pomocą polecenia łącza
 
 Program można używać więcej niż jednej metody.
 
@@ -43,7 +43,7 @@ Należy pamiętać, że jeśli tworzysz biblioteki importu w krok wstępny, prze
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **właściwości konfiguracji** folderu.
 
@@ -55,7 +55,7 @@ Należy pamiętać, że jeśli tworzysz biblioteki importu w krok wstępny, prze
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

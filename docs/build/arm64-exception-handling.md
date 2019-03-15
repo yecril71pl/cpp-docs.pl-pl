@@ -1,16 +1,16 @@
 ---
 title: Obsługa wyjątków ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176682"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816155"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
-Windows dla procesorów ARM64 używa tego samego strukturalnej obsługi wyjątków mechanizm asynchroniczne wyjątki generowane przez sprzęt i synchroniczne wyjątki generowane przez oprogramowanie. Programy obsługi wyjątków specyficzne dla języka są tworzone na podstawie Windows obsługi przy użyciu języka funkcji pomocnika wyjątków strukturalnych. W tym dokumencie opisano obsługę wyjątków w Windows ARM64 i pomocników język używany przez kod, który jest generowany przez asemblera ARM firmy Microsoft i kompilator języka Visual C++.
+Windows dla procesorów ARM64 używa tego samego strukturalnej obsługi wyjątków mechanizm asynchroniczne wyjątki generowane przez sprzęt i synchroniczne wyjątki generowane przez oprogramowanie. Programy obsługi wyjątków specyficzne dla języka są tworzone na podstawie Windows obsługi przy użyciu języka funkcji pomocnika wyjątków strukturalnych. W tym dokumencie opisano obsługę wyjątków w Windows ARM64 i pomocników język używany przez kod, który jest generowany przez asemblera ARM firmy Microsoft oraz za pomocą kompilatora MSVC.
 
 ## <a name="goals-and-motivation"></a>Cele i motywację
 
@@ -44,7 +44,7 @@ Poniżej przedstawiono założeniom w opis obsługi wyjątków:
 
 1. Brak warunkowego kodu w epilogs.
 
-1. Rejestr wskaźnika ramki w wersji dedykowanej: zapisanie PS innego rejestru (r29) w prologu, tego rejestru pozostaje bez zmian w całej funkcji, dzięki czemu oryginalne sp może zostać odzyskana w dowolnym momencie.
+1. Rejestr wskaźnika ramki dedykowanej: Jeśli PS zostanie zapisany w innym rejestru (r29) w prologu, który zarejestrował pozostają niezmienione w całej funkcji, dzięki czemu oryginalne sp może zostać odzyskana w dowolnym momencie.
 
 1. Chyba że PS jest zapisywany w rejestrze innego, wszystkie operacje na wskaźnik stosu występuje wyłącznie w prologu i epilogu.
 
@@ -52,7 +52,7 @@ Poniżej przedstawiono założeniom w opis obsługi wyjątków:
 
 ## <a name="arm64-stack-frame-layout"></a>Układ ramki stosu ARM64
 
-![Ramka stosu — układ](../build/media/arm64-exception-handling-stack-frame.png "układ ramki stosu")
+![Ramka stosu — układ](media/arm64-exception-handling-stack-frame.png "układ ramki stosu")
 
 Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu w zmiennej lokalnej w zależności od zagadnienia dotyczące optymalizacji. Celem jest, aby zmaksymalizować liczbę zmiennych lokalnych, które można osiągnąć przez jeden pojedynczej instrukcji, w oparciu o wskaźnik ramki (r29) lub wskaźnik stosu (sp). Jednak dla `alloca` funkcji, muszą być powiązane i r29 musi wskazywać na dole stosu. Aby umożliwić lepsze pokrycie rejestru pary adresowanie trybu, nieulotnej zarejestrować aave, które obszary są umieszczone na górze stosu sieci lokalnej. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej efektywny sposób sekwencji prologu. Dla jasności i lepsze lokalność pamięci podręcznej kolejność przechowywania zapisane wywoływanego rejestrów w wszystkich prologs canonical jest w kolejności "rosnącą się". `#framesz` poniżej reprezentuje rozmiar całego stosu (z wyjątkiem obszaru alloca). `#localsz` i `#outsz` oznaczają rozmiar lokalnego (Zapisz w tym obszar \<r29, lr > pary) i odpowiednio wychodzące rozmiar parametru.
 
@@ -187,7 +187,7 @@ Rekordy .pdata są uporządkowanej tablicy elementów o stałej długości, któ
 
 Każdy rekord .pdata dla architektury ARM64 jest 8 bajtów długości. Ogólny format każdego miejsca rekordu RVA 32-bitowych funkcji uruchamiania w pierwszy wyraz, następuje chwilę, korzystając z niego zawiera wskaźnik do bloku .xdata o zmiennej długości lub upakowaną słowo opisujące sekwencję odwijania kanonicznej funkcji.
 
-![Układ rekordu .pdata](../build/media/arm64-exception-handling-pdata-record.png "układ rekordu .pdata")
+![Układ rekordu .pdata](media/arm64-exception-handling-pdata-record.png "układ rekordu .pdata")
 
 Dostępne są następujące pola:
 
@@ -203,7 +203,7 @@ Dostępne są następujące pola:
 
 Format upakowaną odwijania jest niewystarczający do opisania rozwinięcia funkcji, rekord o zmiennej długości .xdata musi zostać utworzona. Adres ten rekord jest przechowywany w drugim słowie rekordu .pdata. Format .xdata jest spakowany zestaw znaków o zmiennej długości słowa:
 
-![Układ rekordu .xdata](../build/media/arm64-exception-handling-xdata-record.png ".xdata rekordu układu")
+![Układ rekordu .xdata](media/arm64-exception-handling-xdata-record.png ".xdata rekordu układu")
 
 Tych danych jest dzielony na cztery sekcje:
 
@@ -291,14 +291,14 @@ Kody unwind są kodowane zgodnie z poniższą tabelą. Wszystkie kodów odwinię
 |`save_fplr_x`|        10zzzzzz: Zapisz \<r29, lr > pair w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512 |
 |`alloc_m`|        11000xxx "xxxxxxxx: alokacji stosu dużych o rozmiarze \< 16 KB (2 ^ 11 * 16). |
 |`save_regp`|        110010xx "xxzzzzzz: Zapisz pary r(19+#X) u [sp + #Z * 8], offset \<= 504 |
-|`save_regp_x`|        110011xx "xxzzzzzz: Zapisz r(19+#X) pary w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512 |
+|`save_regp_x`|        110011xx'xxzzzzzz: save pair r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_reg`|        110100xx "xxzzzzzz: Zapisz r(19+#X) reg w [sp + #Z * 8], offset \<= 504 |
 |`save_reg_x`|        1101010 x "xxxzzzzz: Zapisz r(19+#X) reg w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-256 |
-|`save_lrpair`|         1101011 x "xxzzzzzz: Zapisz pary \<r19 + 2 *#X, lr > u [sp + #Z*8], offset \<= 504 |
-|`save_fregp`|        1101100 x "xxzzzzzz: Zapisz d(8+#X) pary w [sp + #Z * 8], offset \<= 504 |
-|`save_fregp_x`|        1101101 x "xxzzzzzz: Zapisz d(8+#X) pary w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512 |
+|`save_lrpair`|         1101011x'xxzzzzzz: save pair \<r19+2 *#X,lr> at [sp+#Z*8], offset \<= 504 |
+|`save_fregp`|        1101100x'xxzzzzzz: save pair d(8+#X) at [sp+#Z*8], offset \<= 504 |
+|`save_fregp_x`|        1101101x'xxzzzzzz: save pair d(8+#X), at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_freg`|        1101110 x "xxzzzzzz: Zapisz d(8+#X) reg w [sp + #Z * 8], offset \<= 504 |
-|`save_freg_x`|        11011110' xxxzzzzz: Zapisz d(8+#X) reg w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-256 |
+|`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`alloc_l`|         xxxxxxxx "xxxxxxxx" xxxxxxxx 11100000': alokacji stosu dużych o rozmiarze \< 256 M (2 ^ 24 * 16) |
 |`set_fp`|        11100001: Konfigurowanie r29: za pomocą: mov r29 sp |
 |`add_fp`|        11100010' xxxxxxxx: Konfigurowanie r29 z: Dodawanie r29 sp #x * 8 |
@@ -313,9 +313,9 @@ Kody unwind są kodowane zgodnie z poniższą tabelą. Wszystkie kodów odwinię
 |`arithmetic(ror)`|    11100111' 100zxxxx: lr ror za pomocą plików cookie reg(z) (0 = x28, 1 = sp); RoR lr, lr, reg(z) |
 | |            11100111: xxxz---:---zarezerwowane |
 | |              11101xxx: zarezerwowane dla niestandardowych stosu przypadki przedstawione poniżej generowane tylko dla procedur asm |
-| |              11101001: stos niestandardowe dla MSFT_OP_TRAP_FRAME |
-| |              11101010: stos niestandardowe dla MSFT_OP_MACHINE_FRAME |
-| |              11101011: stos niestandardowe dla MSFT_OP_CONTEXT |
+| |              11101001: Niestandardowe stos MSFT_OP_TRAP_FRAME |
+| |              11101010: Niestandardowe stos MSFT_OP_MACHINE_FRAME |
+| |              11101011: Niestandardowe stos MSFT_OP_CONTEXT |
 | |              1111xxxx: zarezerwowane |
 
 W instrukcjach o dużych wartościach obejmujących wiele bajtów najbardziej znaczące bity są przechowywane najpierw. Kody unwind powyżej zaprojektowano tak, po prostu wyszukiwanie do pierwszego bajtu kodu to możliwość sprawdzenia, całkowity rozmiar w bajtach kodu unwind. Biorąc pod uwagę, że każdy kod unwind dokładnie jest mapowany na instrukcję w prologu i epilogu, do obliczenia rozmiaru prologu i epilogu, należy wykonać jest przeprowadzenie od samego początku sekwencji-to-end, przy użyciu tabeli odnośników lub podobne urządzenie, aby określić, jak długo Core jest opcode działa prawidłowo.
@@ -334,7 +334,7 @@ Dla operacji unwind funkcje pakowane którego prologs i epilogs postępuj zgodni
 
 Format rekordu .pdata z upakowaną unwind danych wygląda następująco:
 
-![dane operacji unwind .pdata rekordu z upakowaną](../build/media/arm64-exception-handling-packed-unwind-data.png ".pdata rekordu z spakowane dane operacji unwind")
+![dane operacji unwind .pdata rekordu z upakowaną](media/arm64-exception-handling-packed-unwind-data.png ".pdata rekordu z spakowane dane operacji unwind")
 
 Dostępne są następujące pola:
 
@@ -359,24 +359,24 @@ Canonical prologs, które można podzielić na kategorie 1, 2 (bez wychodzących
 
 Krok 0: Wykonaj wstępne obliczania rozmiaru każdego obszaru.
 
-Krok 1: Zapisz Int zapisane wywoływanego rejestrów.
+Krok 1. Zapisz Int zapisane wywoływanego rejestrów.
 
-Krok 2: Ten krok jest specyficzne dla typu 4 na początku sekcji. LR zostanie zapisany pod koniec Int obszaru.
+Krok 2. Ten krok jest specyficzny dla typu 4 na początku sekcji. LR zostanie zapisany pod koniec Int obszaru.
 
-Krok 3: Zapisz FP zapisane wywoływanego rejestrów.
+Krok 3. Zapisz FP zapisane wywoływanego rejestrów.
 
-Krok 4: Zapisz argumentów wejściowych w obszarze parametrów macierzystego.
+Krok 4. Zapisz argumentów wejściowych w obszarze parametrów macierzystego.
 
-Krok 5: Przydzielić pozostałe stosu, takich jak lokalny obszar \<r29, lr > pary i wychodzących obszarze parametrów. 5a odnosi się do typu canonical 1. 5b i 5c odpowiadają kanoniczna typu 2. 5d 5e dotyczą zarówno typ 3 i 4 typu.
+Krok 5. Przydziel pozostałe stosu, takich jak lokalny obszar \<r29, lr > pary i wychodzących obszarze parametrów. 5a odnosi się do typu canonical 1. 5b i 5c odpowiadają kanoniczna typu 2. 5d 5e dotyczą zarówno typ 3 i 4 typu.
 
 Krok #|Wartości flagi|Liczba instrukcji|OpCode|Kodzie operacji unwind
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
 1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**== 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) w / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
+3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5a|**CR** == 11 & & #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** == 11 &AMP; &AMP;<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5c|**CR** == 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
@@ -456,7 +456,7 @@ Typowa funkcja fragmentów jest "Kod separacji" przez kompilator może przenieś
     ```
 
 - (region 3: koniec)
-- (regionie 2: rozpoczęcie)
+- (region 2: begin)
 
     ```asm
     ...
@@ -531,7 +531,7 @@ Jeśli fragment nie prologu i epilogu nie, nadal wymaga własnej .pdata (i ewent
 
 ## <a name="examples"></a>Przykłady
 
-### <a name="example-1-frame-chained-compact-form"></a>Przykład 1: Łańcuchowa ramki compact postaci
+### <a name="example-1-frame-chained-compact-form"></a>Przykład 1: Formularz compact łańcuchowa ramki
 
 ```asm
 |Foo|     PROC
@@ -627,4 +627,4 @@ Uwaga: Indeks EpilogStart [4] wskazuje środka prologu unwind kodu (częściowo 
 ## <a name="see-also"></a>Zobacz także
 
 [Przegląd Konwencji ARM64 ABI](arm64-windows-abi-conventions.md)<br/>
-[Obsługa wyjątków ARM](../build/arm-exception-handling.md)
+[Obsługa wyjątków ARM](arm-exception-handling.md)

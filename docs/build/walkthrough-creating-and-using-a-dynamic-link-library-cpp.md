@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)'
+title: 'Przewodnik: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)'
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330544"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813971"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)
 
 Ten przewodnik krok po kroku pokazano, jak użyć środowiska IDE programu Visual Studio do utworzenia własnego w języku C++ Biblioteka dołączana dynamicznie (DLL), a następnie użyć go z innej aplikacji C++. Biblioteki DLL są jednymi z najbardziej przydatnych rodzaje składników Windows. Można je jako sposób udostępniaj kod i zasoby, aby zmniejszyć rozmiar aplikacji i ułatwiają usługi i rozszerzaj swoje aplikacje. W tym przewodniku tworzy bibliotekę DLL, który implementuje pewne funkcje matematyczne, a następnie utwórz aplikację konsoli, która używa funkcji z biblioteki DLL. Po drodze zapoznaj się z wprowadzeniem do niektórych techniki programowania i Konwencji używanych w bibliotekach DLL Windows.
 
@@ -29,11 +29,11 @@ W tym przewodniku opisano następujące zadania:
 
 - Uruchom ukończoną aplikację.
 
-Statycznie połączone biblioteki DLL, takie jak _eksportuje_ zmienne, funkcje i zasoby według nazwy i aplikację _importuje_ te nazwy, aby użyć tych zmiennych, funkcji i zasobów. W odróżnieniu od statycznie połączoną bibliotekę Windows Importy w swojej aplikacji łączy się z eksportu w bibliotece DLL w czasie ładowania lub w czasie wykonywania, a nie połączenie ich w czasie połączenia. Windows wymaga dodatkowych informacji, które nie jest częścią standardowego modelu kompilacji C++, aby nawiązać połączenie. Kompilator języka Visual C++ implementuje niektóre rozszerzenia specyficzne dla firmy Microsoft do C++, aby zapewnić te dodatkowe informacje. Wyjaśnijmy tych rozszerzeń, kursu.
+Statycznie połączone biblioteki DLL, takie jak _eksportuje_ zmienne, funkcje i zasoby według nazwy i aplikację _importuje_ te nazwy, aby użyć tych zmiennych, funkcji i zasobów. W odróżnieniu od statycznie połączoną bibliotekę Windows Importy w swojej aplikacji łączy się z eksportu w bibliotece DLL w czasie ładowania lub w czasie wykonywania, a nie połączenie ich w czasie połączenia. Windows wymaga dodatkowych informacji, które nie jest częścią standardowego modelu kompilacji C++, aby nawiązać połączenie. Kompilator MSVC implementuje niektóre rozszerzenia specyficzne dla firmy Microsoft do C++, aby zapewnić te dodatkowe informacje. Wyjaśnijmy tych rozszerzeń, kursu.
 
 Ten poradnik tworzy dwa rozwiązań programu Visual Studio. taki, który tworzy bibliotekę DLL, a taki, który kompiluje aplikację kliencką. Biblioteki DLL używa konwencji wywoływania C, dzięki czemu można wywołać z aplikacji skompilowanych przy użyciu innych języków, tak długo, jak platformy i wywoływania i łączenie konwencje są zgodne. Ta aplikacja używa klienta _niejawna Konsolidacja_, gdzie Windows łączy aplikację z biblioteki DLL w czasie ładowania. To połączenie umożliwia aplikacji wywoływać funkcje dostarczone przez bibliotekę DLL, podobnie jak funkcje statycznie połączone biblioteki.
 
-Ten przewodnik nie obejmuje niektóre typowe problemy. Korzystanie z bibliotek DLL języka C++ w innych językach programowania nie była widoczna. Go nie pokazuje jak utworzyć bibliotekę DLL tylko do zasobów. Również nie pokazuje użycie jawnego łączenia można załadować biblioteki dll w czasie wykonywania, a nie w czasie ładowania. Zachowaj spokój ducha i Visual C++ można użyć, aby korzystać z tych możliwości. Aby uzyskać linki do szczegółowych informacji o bibliotece dll, zobacz [biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md). Aby uzyskać więcej informacji na temat łączenia niejawne i jawne tworzenie łączy, zobacz [określająca, które łączenie metody użyć](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Aby uzyskać informacji o tworzeniu bibliotek DLL języka C++ do użycia z usługą języki programowania, które używać konwencji powiązania języka C, zobacz [eksportowanie funkcji C++ do użycia w plikach wykonywalnych języka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md). Aby uzyskać informacji na temat sposobu tworzenia bibliotek DLL dla języków .NET, zobacz [wywoływanie funkcji DLL z aplikacji Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md).
+Ten przewodnik nie obejmuje niektóre typowe problemy. Korzystanie z bibliotek DLL języka C++ w innych językach programowania nie była widoczna. Go nie pokazuje jak utworzyć bibliotekę DLL tylko do zasobów. Również nie pokazuje użycie jawnego łączenia można załadować biblioteki dll w czasie wykonywania, a nie w czasie ładowania. Zachowaj spokój ducha i Visual C++ można użyć, aby korzystać z tych możliwości. Aby uzyskać linki do szczegółowych informacji o bibliotece dll, zobacz [biblioteki dll w programie Visual C++](dlls-in-visual-cpp.md). Aby uzyskać więcej informacji na temat łączenia niejawne i jawne tworzenie łączy, zobacz [określająca, które łączenie metody użyć](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Aby uzyskać informacji o tworzeniu bibliotek DLL języka C++ do użycia z usługą języki programowania, które używać konwencji powiązania języka C, zobacz [eksportowanie funkcji C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md). Aby uzyskać informacji na temat sposobu tworzenia bibliotek DLL dla języków .NET, zobacz [wywoływanie funkcji DLL z aplikacji Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 Ten przewodnik korzysta z programu Visual Studio 2017, ale kod i większość instrukcje mają zastosowanie do wcześniejszych wersji. Kroki do tworzenia nowych projektów zmienione, począwszy od programu Visual Studio 2017 w wersji 15.3. W tym przewodniku opisano sposób tworzenia projektów dla starszych i nowszych wersji. Zwróć uwagę na czynności, które są dopasowane do wersji programu Visual Studio.
 
@@ -41,7 +41,7 @@ Ten przewodnik korzysta z programu Visual Studio 2017, ale kod i większość in
 
 - Komputer z systemem Microsoft Windows 7 lub nowszy. Zalecamy systemu Windows 10 dla najlepszego komfortu programowania.
 
-- Kopia programu Visual Studio 2017. Aby uzyskać informacje na temat sposobu pobierania i instalowania programu Visual Studio, zobacz [Install Visual Studio 2017](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora, upewnij się, że **programowanie aplikacji klasycznych w języku C++** zaznaczono obciążenia. Nie martw się, jeśli nie zainstalował tego obciążenia podczas instalowania programu Visual Studio. Można ponownie uruchom Instalatora i zainstaluj go teraz.
+- A copy of Visual Studio 2017. Aby uzyskać informacje na temat sposobu pobierania i instalowania programu Visual Studio, zobacz [Install Visual Studio 2017](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora, upewnij się, że **programowanie aplikacji klasycznych w języku C++** zaznaczono obciążenia. Nie martw się, jeśli nie zainstalował tego obciążenia podczas instalowania programu Visual Studio. Można ponownie uruchom Instalatora i zainstaluj go teraz.
 
    ![Programowanie aplikacji klasycznych w języku C++](media/desktop-development-with-cpp.png "programowanie aplikacji klasycznych w języku C++")
 
@@ -398,9 +398,6 @@ Teraz, po utworzeniu biblioteki DLL i aplikacja kliencka, możesz eksperymentowa
 
 Podczas wdrażania aplikacji, należy wdrożyć używa biblioteki dll. Najprostszym sposobem udostępnienia biblioteki dll, tworzenia, lub możesz uwzględnić pochodzące od innych firm do aplikacji jest umieścić w tym samym katalogu co aplikacja, znany także jako *wdrożenia lokalnego dla aplikacji*. Aby uzyskać więcej informacji na temat wdrażania, zobacz [wdrożenia w programie Visual C++](../ide/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Przewodnik: wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[Wywoływanie funkcji DLL z aplikacji języka Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Wywoływanie funkcji DLL z aplikacji języka Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

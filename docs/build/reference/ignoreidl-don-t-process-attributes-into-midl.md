@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-ms.openlocfilehash: 1a78f99f61bbeff9c5d617fce374925d0541aafd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 210778adecd87ffdd5f2702c10106f12bd5a1b79
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423160"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820432"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/ IGNOREIDL (Don&#39;t procesu atrybutów w MIDL)
 
@@ -28,7 +28,7 @@ Opcja /IGNOREIDL Określa, że wszelkie [atrybuty IDL](../../windows/idl-attribu
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -42,9 +42,9 @@ Opcja /IGNOREIDL Określa, że wszelkie [atrybuty IDL](../../windows/idl-attribu
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (Nazwij wyjściowe pliki MIDL)](../../build/reference/idlout-name-midl-output-files.md)<br/>
-[/TLBOUT (Nazywanie pliku .TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
-[/MIDL (Określ opcje wiersza polecenia MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)<br/>
+[/IDLOUT (Nazwij wyjściowe pliki MIDL)](idlout-name-midl-output-files.md)<br/>
+[/TLBOUT (Nazywanie pliku .TLB)](tlbout-name-dot-tlb-file.md)<br/>
+[/MIDL (Określ opcje wiersza polecenia MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Kompilowanie programu opartego na atrybutach](../../windows/building-an-attributed-program.md)

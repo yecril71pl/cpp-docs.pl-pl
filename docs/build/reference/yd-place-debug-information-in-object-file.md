@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: eda3dd38449f89d9b8d767b460970d659f6c9dc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430020"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820159"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umieść informacje o debugowaniu w pliku obiektu)
 
-Pełne informacje we wszystkich plikach obiektu debugowania tępy utworzone na podstawie pliku prekompilowanego pliku nagłówkowego (.pch), gdy jest używane z [/Yc](../../build/reference/yc-create-precompiled-header-file.md) i [/z7](../../build/reference/z7-zi-zi-debug-information-format.md) opcje. Przestarzałe.
+Pełne informacje we wszystkich plikach obiektu debugowania tępy utworzone na podstawie pliku prekompilowanego pliku nagłówkowego (.pch), gdy jest używane z [/Yc](yc-create-precompiled-header-file.md) i [/z7](z7-zi-zi-debug-information-format.md) opcje. Przestarzałe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,9 +28,9 @@ Pełne informacje we wszystkich plikach obiektu debugowania tępy utworzone na p
 
 ## <a name="remarks"></a>Uwagi
 
-**/YD** jest przestarzała; Visual C++ obsługuje teraz wiele obiektów zapis do pliku .pdb w jednym, należy użyć **/zi** zamiast tego. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).
+**/YD** jest przestarzała; Visual C++ obsługuje teraz wiele obiektów zapis do pliku .pdb w jednym, należy użyć **/zi** zamiast tego. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](compiler-options-listed-by-category.md).
 
-O ile nie trzeba rozpowszechniać biblioteki zawierające informacje debugowania, użyj [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) opcji zamiast **/z7** i **/Yd**.
+O ile nie trzeba rozpowszechniać biblioteki zawierające informacje debugowania, użyj [/zi](z7-zi-zi-debug-information-format.md) opcji zamiast **/z7** i **/Yd**.
 
 Przechowywanie kompletne informacje debugowania w każdym pliku obj. konieczne jest tylko Dystrybucja bibliotek, które zawierają informacje o debugowaniu. Go spowalnia kompilacji i wymaga dużo wolnego miejsca. Gdy **/Yc** i **/z7** są używane bez **/Yd**, kompilator zapisuje typowych informacji o debugowaniu w pierwszym pliku .obj, utworzonego na podstawie pliku .pch. Kompilator nie wstawić tych informacji do plików .obj, następnie utworzonego na podstawie pliku .pch; wstawia odsyłacze do informacji. Niezależnie od tego, ile plików .obj, użyj pliku .pch tylko jeden plik .obj zawiera wspólne informacje debugowania.
 
@@ -38,13 +38,13 @@ Mimo że domyślne zachowanie powoduje to szybsze czasy kompilacji i zmniejsza z
 
 Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:
 
-- [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Prekompilowane nagłówki)](y-precompiled-headers.md)
 
-- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+- [Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -81,7 +81,7 @@ Plik obiektu G.obj nie zawiera informacje o debugowaniu dla prekompilowanego nag
 
 Jeśli Twoje wstępnie skompilowanego nagłówka nie został skompilowany przy użyciu **/z7**, można nadal używać go w nowszej kompilacji przy użyciu **/z7**. Informacje o debugowaniu znajduje się w bieżącym pliku obiektu i symboli lokalnych dla funkcji i typów zdefiniowanych w prekompilowanego pliku nagłówkowego nie są dostępne do debugera.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

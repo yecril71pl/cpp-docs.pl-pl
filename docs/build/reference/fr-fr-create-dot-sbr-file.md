@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 1eeca5d5ddbb40e0439a1774392f3c3b53c3c90e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656238"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811878"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Utwórz plik .Sbr)
 
@@ -41,14 +41,14 @@ Podczas procesu kompilacji Microsoft Przeglądaj informacje o pliku konserwacji 
 
 Jeśli nie określisz `filename`, plik .sbr pobiera tej samej nazwie podstawowej co plik źródłowy.
 
-**/FR** jest przestarzały; użyj **/FR** zamiast tego. Aby uzyskać więcej informacji, zobacz uznane za przestarzałe i usunąć — opcje kompilatora w [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).
+**/FR** jest przestarzały; użyj **/FR** zamiast tego. Aby uzyskać więcej informacji, zobacz uznane za przestarzałe i usunąć — opcje kompilatora w [opcje kompilatora wymienione według kategorii](compiler-options-listed-by-category.md).
 
 > [!NOTE]
 >  Nie zmieniaj rozszerzenia .sbr. BSCMAKE wymaga pośrednie pliki, aby mieć tego rozszerzenia.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. W okienku nawigacji wybierz **C/C++**, **informacji o przeglądaniu** stronę właściwości.
 
@@ -58,9 +58,9 @@ Jeśli nie określisz `filename`, plik .sbr pobiera tej samej nazwie podstawowej
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)
+[Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Określanie nazwy ścieżki](specifying-the-pathname.md)

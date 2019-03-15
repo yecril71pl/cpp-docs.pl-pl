@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750408"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821393"
 ---
 # <a name="include-directive-cc"></a>#include — dyrektywa (C/C++)
 
@@ -49,7 +49,7 @@ Dołącz pliki, które mogą być "zagnieżdżone"; oznacza to, że **#include**
 
 Gdy obejmują pliki są gnieżdżone i podczas kompilacji wykonywanej w wierszu polecenia, wyszukiwanie katalogów rozpoczyna się od katalogów pliku nadrzędnego i następnie przechodzi przez katalogi plików nadrzędnych wobec niego. Oznacza to wyszukiwanie rozpoczyna się względem katalogu zawierającego źródło obecnie przetwarzane. Jeśli plik nie zostanie znaleziony, wyszukiwanie przenosi się do katalogów określonych przez [/I (dodatkowe katalogi dołączenia)](../build/reference/i-additional-include-directories.md) — opcja kompilatora. Na koniec przeszukiwane są katalogi, które są określone przez zmienną środowiskową INCLUDE.
 
-W środowisku programowania Visual Studio zmienna środowiskowa INCLUDE jest ignorowana. Aby uzyskać informacje o ustawianiu katalogów przeszukiwanych w poszukiwaniu plików dołączanych — dotyczy to również zmiennej środowiska LIB — zobacz [VC ++ Directories Property Page](../ide/vcpp-directories-property-page.md).
+W środowisku programowania Visual Studio zmienna środowiskowa INCLUDE jest ignorowana. Aby uzyskać informacje o ustawianiu katalogów przeszukiwanych w poszukiwaniu plików dołączanych — dotyczy to również zmiennej środowiska LIB — zobacz [VC ++ Directories Property Page](../build/reference/vcpp-directories-property-page.md).
 
 Ten przykład pokazuje włączenie pliku przy użyciu nawiasów:
 

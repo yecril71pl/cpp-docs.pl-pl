@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-ms.openlocfilehash: a433c9987d665aeeb910edbadac692ba9c286e3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9909a3e179aa6c0af3a622c7bf1b545326f90bbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605390"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818443"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Jawne zwalnianie bibliotek DLL załadowanych z opóźnieniem
 
-[/Opóźnienie](../../build/reference/delay-delay-load-import-settings.md): unload — opcja konsolidatora pozwala wyładować bibliotekę DLL, które było ładowane z opóźnieniem. Domyślnie, gdy kod zwalnia DLL (przy użyciu/DELAY: Unload i **__FUnloadDelayLoadedDLL2**), importów załadowanych z opóźnieniem pozostają w tabeli adresów importowania (IAT). Jednak jeśli używasz/DELAY: Unload w wierszu polecenia konsolidatora funkcji pomocnika będzie obsługiwać jawne zwalnianie bibliotek DLL, zresetowanie IAT do ich oryginalnej formie; wskaźniki obecnie nieprawidłowym zostaną zastąpione. IAT jest polem w [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) zawierający adres kopię oryginalnego IAT (jeśli istnieje).
+[/Opóźnienie](delay-delay-load-import-settings.md): unload — opcja konsolidatora pozwala wyładować bibliotekę DLL, które było ładowane z opóźnieniem. Domyślnie, gdy kod zwalnia DLL (przy użyciu/DELAY: Unload i **__FUnloadDelayLoadedDLL2**), importów załadowanych z opóźnieniem pozostają w tabeli adresów importowania (IAT). Jednak jeśli używasz/DELAY: Unload w wierszu polecenia konsolidatora funkcji pomocnika będzie obsługiwać jawne zwalnianie bibliotek DLL, zresetowanie IAT do ich oryginalnej formie; wskaźniki obecnie nieprawidłowym zostaną zastąpione. IAT jest polem w [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) zawierający adres kopię oryginalnego IAT (jeśli istnieje).
 
 ## <a name="example"></a>Przykład
 
@@ -53,10 +53,10 @@ Ważne uwagi na zwalnianie bibliotek DLL ładowanych z opóźnieniem:
 
 - Można znaleźć implementacji **__FUnloadDelayLoadedDLL2** funkcji w pliku \VC7\INCLUDE\DELAYHLP. CPP.
 
-- Nazwa parametru **__FUnloadDelayLoadedDLL2** funkcja musi dokładnie odpowiadać (z uwzględnieniem wielkości liter) biblioteki importowanej zawartość (czyli ciąg też w Tabela importu na obrazie). Można wyświetlić zawartość biblioteki importu za pomocą [DUMPBIN /DEPENDENTS](../../build/reference/dependents.md). Jeśli konieczne jest dopasowanie bez uwzględniania wielkości liter ciągu, możesz zaktualizować **__FUnloadDelayLoadedDLL2** użycia jednej z funkcji CRT w ciągu lub wywołanie interfejsu API Windows.
+- Nazwa parametru **__FUnloadDelayLoadedDLL2** funkcja musi dokładnie odpowiadać (z uwzględnieniem wielkości liter) biblioteki importowanej zawartość (czyli ciąg też w Tabela importu na obrazie). Można wyświetlić zawartość biblioteki importu za pomocą [DUMPBIN /DEPENDENTS](dependents.md). Jeśli konieczne jest dopasowanie bez uwzględniania wielkości liter ciągu, możesz zaktualizować **__FUnloadDelayLoadedDLL2** użycia jednej z funkcji CRT w ciągu lub wywołanie interfejsu API Windows.
 
-Zobacz [zwalnianie bibliotek DLL z Delay-Loaded](../../build/reference/unloading-a-delay-loaded-dll.md) Aby uzyskać więcej informacji.
+Zobacz [zwalnianie bibliotek DLL z Delay-Loaded](unloading-a-delay-loaded-dll.md) Aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)

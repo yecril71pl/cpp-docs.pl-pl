@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 85439598ae4c3e0f9ef923f21e701e0399aefa70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619300"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820796"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(zgodność ze standardami)
 
@@ -29,21 +29,21 @@ Określ tryb zgodności standardów do kompilatora. Użyj tej opcji, aby ułatwi
 
 Ta opcja jest obsługiwana w programie Visual Studio 2017 i nowszych wersjach.
 
-Możesz użyć **/ permissive-** opcję kompilatora, aby określić zachowanie zgodne z normami kompilatora. Ta opcja powoduje wyłączenie warunki dotyczące zachowania i ustawia [/Zc](../../build/reference/zc-conformance.md) opcje kompilatora, aby uzyskać pełną zgodność. W środowisku IDE ta opcja sprawia, że aparat podkreślenie niezgodnych kodu IntelliSense.
+Możesz użyć **/ permissive-** opcję kompilatora, aby określić zachowanie zgodne z normami kompilatora. Ta opcja powoduje wyłączenie warunki dotyczące zachowania i ustawia [/Zc](zc-conformance.md) opcje kompilatora, aby uzyskać pełną zgodność. W środowisku IDE ta opcja sprawia, że aparat podkreślenie niezgodnych kodu IntelliSense.
 
 Domyślnie **/ permissive-** opcja jest ustawiana w nowe projekty utworzone przez program Visual Studio 2017 w wersji 15.5 i nowszych wersjach. Nie ustawiono domyślne we wcześniejszych wersjach. Gdy opcja jest ustawiona, kompilator generuje błędy diagnostycznych lub ostrzeżenia podczas konstrukcji językowych niestandardowych są wykrywane w kodzie, w tym niektóre typowe błędy w pre-C ++ 11 kodu.
 
 **/ Permissive-** opcja jest zgodna z prawie wszystkie pliki nagłówkowe z najnowszych zestawów Windows, takich jak Software Development Kit (SDK) lub Windows Driver Kit (WDK), począwszy od Windows SDK Fall Creators Update (10.0.16299.0). Starsze wersje zestawu SDK może kompilacja nie powiedzie się w obszarze **/ permissive-** różne źródła przyczyny zgodność kodu. Kompilator i dostarczaj zestawów SDK na osiach czasu z różnych wersji, w związku z tym występują pewne problemy pozostałych. W przypadku określonego nagłówka pliku problemów, zobacz [problemów nagłówka Windows](#windows-header-issues) poniżej.
 
-**/ Permissive-** zestawy opcji [/Zc: strictstrings](../../build/reference/zc-conformance.md) i [/Zc: rvaluecast](../../build/reference/zc-conformance.md) opcje do zachowania zgodności. Wartością domyślną niezgodnych zachowanie. Można przekazać określonego **/Zc** opcje po **/ permissive-** w wierszu polecenia, aby zastąpić to zachowanie.
+**/ Permissive-** zestawy opcji [/Zc: strictstrings](zc-conformance.md) i [/Zc: rvaluecast](zc-conformance.md) opcje do zachowania zgodności. Wartością domyślną niezgodnych zachowanie. Można przekazać określonego **/Zc** opcje po **/ permissive-** w wierszu polecenia, aby zastąpić to zachowanie.
 
-W wersjach kompilatora, począwszy od programu Visual Studio 2017 w wersji 15.3 **/ permissive-** zestawy opcji [/Zc: ternary](../../build/reference/zc-ternary.md) opcji. Kompilator wykonuje kilka wymagań dotyczących nazwy dwufazowe wyszukiwanie. Gdy **/ permissive-** wyboru jest zaznaczone, w którym kompilator analizuje funkcji i klas definicjach szablonów, identyfikowanie nazwy zależne i zależne od innych niż używane w szablonach. W tej wersji odbywa się tylko nazwa analizy zależności.
+W wersjach kompilatora, począwszy od programu Visual Studio 2017 w wersji 15.3 **/ permissive-** zestawy opcji [/Zc: ternary](zc-ternary.md) opcji. Kompilator wykonuje kilka wymagań dotyczących nazwy dwufazowe wyszukiwanie. Gdy **/ permissive-** wyboru jest zaznaczone, w którym kompilator analizuje funkcji i klas definicjach szablonów, identyfikowanie nazwy zależne i zależne od innych niż używane w szablonach. W tej wersji odbywa się tylko nazwa analizy zależności.
 
 Rozszerzenia specyficznymi dla środowiska i obszary języka standard pozostawia do wykonania nie dotyczy **/ permissive-**. Na przykład specyficzne dla firmy Microsoft `__declspec`, Konwencja wywoływania i obsługi słów kluczowych i dyrektyw pragma specyficznych dla kompilatora lub atrybutów wyjątków strukturalnych nie są oznaczone przez kompilator w **/ permissive-** trybu.
 
-**/ Permissive-** opcja używa obsługi zgodności w bieżącej wersji kompilatora ustalenie konstrukcji języka, które są niezgodne. Opcja nie określa, czy kod jest zgodny z określoną wersją C++ standard. Aby włączyć wszystkie obsługa kompilatora zaimplementowane do najnowszego standardu projekt, należy użyć [/std:latest](../../build/reference/std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługa kompilatora do aktualnie wdrożonych standardzie C ++ 17, należy użyć [/STD: c ++ 17](../../build/reference/std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługę kompilatora, aby lepiej dopasować standard C ++ 14, należy użyć [/STD: c ++ 14](../../build/reference/std-specify-language-standard-version.md) opcji, co jest ustawieniem domyślnym.
+**/ Permissive-** opcja używa obsługi zgodności w bieżącej wersji kompilatora ustalenie konstrukcji języka, które są niezgodne. Opcja nie określa, czy kod jest zgodny z określoną wersją C++ standard. Aby włączyć wszystkie obsługa kompilatora zaimplementowane do najnowszego standardu projekt, należy użyć [/std:latest](std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługa kompilatora do aktualnie wdrożonych standardzie C ++ 17, należy użyć [/STD: c ++ 17](std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługę kompilatora, aby lepiej dopasować standard C ++ 14, należy użyć [/STD: c ++ 14](std-specify-language-standard-version.md) opcji, co jest ustawieniem domyślnym.
 
-Nie wszystkie C ++ 11, C ++ 14 lub C ++ 17 zgodne z normami kodu jest obsługiwana przez kompilator języka Visual C++ w programie Visual Studio 2017. W zależności od wersji programu Visual Studio **/ permissive-** opcji może nie wykryć problemy dotyczące niektóre aspekty dwufazowe wyszukiwanie nazw, powiązanie odwołanie niestałe do tymczasowej, traktowanie init kopię jako bezpośrednie init, umożliwiając wiele zdefiniowanych przez użytkownika konwersje inicjowania lub alternatywne tokenów dla operatorów logicznych i innych zagadnień-obsługiwany zgodność. Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md). Aby uzyskać najbardziej z **/ permissive-**, zaktualizować program Visual Studio do najnowszej wersji.
+Nie wszystkie C ++ 11, C ++ 14 lub C ++ 17 zgodne z normami kod jest obsługiwany za pomocą kompilatora MSVC w programie Visual Studio 2017. W zależności od wersji programu Visual Studio **/ permissive-** opcji może nie wykryć problemy dotyczące niektóre aspekty dwufazowe wyszukiwanie nazw, powiązanie odwołanie niestałe do tymczasowej, traktowanie init kopię jako bezpośrednie init, umożliwiając wiele zdefiniowanych przez użytkownika konwersje inicjowania lub alternatywne tokenów dla operatorów logicznych i innych zagadnień-obsługiwany zgodność. Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md). Aby uzyskać najbardziej z **/ permissive-**, zaktualizować program Visual Studio do najnowszej wersji.
 
 ### <a name="how-to-fix-your-code"></a>Jak naprawić kod
 
@@ -425,7 +425,7 @@ Te problemy są specyficzne dla nagłówków trybu użytkownika w Windows SDK Fa
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   Deklaracja wyliczenia niewystępującego w zakresie jest rozszerzeniem firmy Microsoft. Aby rozwiązać ten problem, skompiluj pliki, które zawierają cellularapi_oem.h bez **/ permissive-** , lub użyć [/wd](../../build/reference/compiler-option-warning-level.md) możliwość wyciszyć ostrzeżenie C4471.
+   Deklaracja wyliczenia niewystępującego w zakresie jest rozszerzeniem firmy Microsoft. Aby rozwiązać ten problem, skompiluj pliki, które zawierają cellularapi_oem.h bez **/ permissive-** , lub użyć [/wd](compiler-option-warning-level.md) możliwość wyciszyć ostrzeżenie C4471.
 
 - Wysłać um/omscript.h
 
@@ -464,5 +464,5 @@ W wersjach starszych niż program Visual Studio 2017 w wersji 15.5 wykonaj nast�
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora](../../build/reference/compiler-options.md)
-- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+- [MSVC Compiler Options](compiler-options.md)
+- [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

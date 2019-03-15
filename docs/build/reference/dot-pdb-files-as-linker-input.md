@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .pdb files, as linker input
 - PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-ms.openlocfilehash: 23974a9e20f8259c3a38af15664d328ded7ff7d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 365f2955f5bc9e8082221a070af454c820c665f1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628903"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822525"
 ---
 # <a name="pdb-files-as-linker-input"></a>Pliki .Pdb — Wejście konsolidatora
 
@@ -18,7 +18,7 @@ Obiekt, pliki (.obj), skompilowane przy użyciu opcji/zi zawierają nazwę bazy 
 
 ŁĄCZE używa również pliku PDB do przechowywania informacji o debugowaniu dla pliku .exe lub .dll. PDB programu jest zarówno plik wyjściowy, jak i plik wejściowy, ponieważ łącze zaktualizowanie pliku PDB, gdy zostanie odbudowana program.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Pliki wejściowe LINK](../../build/reference/link-input-files.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Pliki wejściowe LINK](link-input-files.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

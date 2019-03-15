@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - helper functions
 ms.assetid: a845429d-68b1-4e14-aa88-f3f5343bd490
-ms.openlocfilehash: 0bd0066cee875408056bd88895b0b5f449802c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73b4a8180345dd6f7dc26f4243f6e63eda80e4af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492017"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820143"
 ---
 # <a name="developing-your-own-helper-function"></a>Tworzenie własnej funkcji Pomocnik
 
@@ -23,6 +23,6 @@ Jest to dość proste, ponieważ zasadniczo służy podany kod należy przyjąć
 
 Prawdopodobnie będzie łatwiej wystarczy podać nowy wskaźnik do funkcji punktów zaczepienia powiadomień dostarczone przez użytkownika, która otrzymuje te same wartości pomocnika domyślne na dliStartProcessing powiadomień. W tym momencie funkcja podłączania można zasadniczo stają się nową funkcję pomocnika pomyślne wróć do domyślnego elementu pomocniczego pomijał wszystkie dalsze przetwarzanie w Pomocniku domyślne.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)
