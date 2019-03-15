@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: c2abf23c15e6550a6d115f2e2b41a9c59de5fa3a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424642"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814256"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Preferuj mały kod, Preferuj szybki kod)
 
@@ -39,12 +39,12 @@ Minimalizuje lub maksymalizuje rozmiar plików exe i dll.
 
 **/OS** (Preferuj mały kod) minimalizuje rozmiar plików exe i dll przez poinstruowanie kompilatora, aby preferował rozmiar nad szybkość. Kompilator może zmniejszyć liczbę konstrukcji języka C i C++ podobne sekwencji z kodu maszynowego. Czasami te różnice oferują wady rozmiar w zależności od szybkości. **/Os** i **/Ot** opcje pozwalają na określenie preferencji dla jednego z nich:
 
-**/OT** (Preferuj szybko kod) maksymalizuje szybkość plików exe i dll przez poinstruowanie kompilatora, aby preferował szybkość nad rozmiar. (Jest to wartość domyślna). Kompilator może zmniejszyć liczbę konstrukcji języka C i C++ podobne sekwencji z kodu maszynowego. Czasami te różnice oferują wady rozmiar w zależności od szybkości. Opcja /Ot jest implikowane, Maksymalizuj szybkość ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) opcji. **/O2** opcja łączy kilka opcji, aby utworzyć bardzo szybki kod.
+**/OT** (Preferuj szybko kod) maksymalizuje szybkość plików exe i dll przez poinstruowanie kompilatora, aby preferował szybkość nad rozmiar. (Jest to wartość domyślna). Kompilator może zmniejszyć liczbę konstrukcji języka C i C++ podobne sekwencji z kodu maszynowego. Czasami te różnice oferują wady rozmiar w zależności od szybkości. Opcja /Ot jest implikowane, Maksymalizuj szybkość ([/O2](o1-o2-minimize-size-maximize-speed.md)) opcji. **/O2** opcja łączy kilka opcji, aby utworzyć bardzo szybki kod.
 
-Jeśli używasz **/Os** lub **/Ot**, a następnie należy także określić [/Og](../../build/reference/og-global-optimizations.md) do optymalizacji kodu.
+Jeśli używasz **/Os** lub **/Ot**, a następnie należy także określić [/Og](og-global-optimizations.md) do optymalizacji kodu.
 
 > [!NOTE]
->  Informacje zebrane w trakcie przebiegów testowych profilowania zastąpią optymalizacje, które normalnie w efekcie w przypadku określenia **/Ob**, **/Os**, lub **/Ot**. Aby uzyskać więcej informacji [optymalizacje Profile-Guided](../../build/reference/profile-guided-optimizations.md).
+>  Informacje zebrane w trakcie przebiegów testowych profilowania zastąpią optymalizacje, które normalnie w efekcie w przypadku określenia **/Ob**, **/Os**, lub **/Ot**. Aby uzyskać więcej informacji [optymalizacje Profile-Guided](../profile-guided-optimizations.md).
 
 **x86 Specific**
 
@@ -86,7 +86,7 @@ sub    eax, ecx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -100,6 +100,6 @@ sub    eax, ecx
 
 ## <a name="see-also"></a>Zobacz także
 
-[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[/O Opcje (Optymalizuj kod)](o-options-optimize-code.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

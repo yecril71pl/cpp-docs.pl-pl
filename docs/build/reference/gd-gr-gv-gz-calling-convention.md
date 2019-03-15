@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 8eba665e34fc3b949283557461e33348106fd532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451519"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817468"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konwencja wywoływania)
 
@@ -51,14 +51,14 @@ Te opcje określają kolejność, która funkcja argumenty są wypychane na stos
 
 Funkcje, które przyjmują zmienną liczbę argumentów, które muszą być oznaczone `__cdecl`.
 
-**/GD —**, **GR**, **GV** i **GZ** nie są zgodne z [/CLR: Safe](../../build/reference/clr-common-language-runtime-compilation.md) lub   **/CLR: pure**. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/GD —**, **GR**, **GV** i **GZ** nie są zgodne z [/CLR: Safe](clr-common-language-runtime-compilation.md) lub   **/CLR: pure**. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 > [!NOTE]
 > Domyślnie x86 procesorów, funkcji składowych języka C++ użyj [__thiscall](../../cpp/thiscall.md).
 
 Dla wszystkich procesorów funkcja członkowska, która jest jawnie oznaczona jako `__cdecl`, `__fastcall`, `__vectorcall`, lub `__stdcall` używa określonej konwencji wywoływania, jeśli nie jest ona ignorowana na danej architekturze. Funkcja elementu członkowskiego, która przyjmuje zmienną liczbę argumentów, zawsze używa `__cdecl` konwencji wywoływania.
 
-Te opcje kompilatora nie mają wpływu na dekorację nazwy metod języka C++ i funkcji. O ile nie jest zadeklarowany jako `extern "C"`, metody i funkcje C++ używają innego schematu dekorowania nazwy. Aby uzyskać więcej informacji, zobacz [nazwy dekorowane](../../build/reference/decorated-names.md).
+Te opcje kompilatora nie mają wpływu na dekorację nazwy metod języka C++ i funkcji. O ile nie jest zadeklarowany jako `extern "C"`, metody i funkcje C++ używają innego schematu dekorowania nazwy. Aby uzyskać więcej informacji, zobacz [nazwy dekorowane](decorated-names.md).
 
 Aby uzyskać więcej informacji dotyczących konwencji wywoływania, zobacz [Konwencje wywoływania](../../cpp/calling-conventions.md).
 
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji dotyczących konwencji wywoływania, zobacz [Kon
 
 Na x86 procesorów, wszystkie argumenty funkcji są przekazywane na stosie od prawej do lewej. Na ARM i x64 architektury, niektóre argumenty są przekazywane przez rejestr, a pozostałe są przekazywane na stosie od prawej do lewej. Wywołanie procedury pobiera argumenty ze stosu.
 
-Dla języka C `__cdecl` nazewnictwa Konwencji używa nazwy funkcji poprzedzonej podkreśleniem ( `_` ); Translacja wielkości liter nie jest wykonywane. O ile nie jest zadeklarowany jako `extern "C"`, funkcje C++ używają innego schematu dekorowania nazwy. Aby uzyskać więcej informacji, zobacz [nazwy dekorowane](../../build/reference/decorated-names.md).
+Dla języka C `__cdecl` nazewnictwa Konwencji używa nazwy funkcji poprzedzonej podkreśleniem ( `_` ); Translacja wielkości liter nie jest wykonywane. O ile nie jest zadeklarowany jako `extern "C"`, funkcje C++ używają innego schematu dekorowania nazwy. Aby uzyskać więcej informacji, zobacz [nazwy dekorowane](decorated-names.md).
 
 ## <a name="fastcall-specifics"></a>Charakterystyka __fastcall
 
@@ -99,7 +99,7 @@ Dla języka C `__vectorcall` konwencji nazewnictwa używa nazwy funkcji, a nast�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **C/C++** > **zaawansowane** stronę właściwości.
 
@@ -111,5 +111,5 @@ Dla języka C `__vectorcall` konwencji nazewnictwa używa nazwy funkcji, a nast�
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora](../../build/reference/compiler-options.md)
-- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+- [MSVC Compiler Options](compiler-options.md)
+- [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

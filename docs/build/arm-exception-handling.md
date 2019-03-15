@@ -2,16 +2,16 @@
 title: Obsługa wyjątków ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694351"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814543"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
-Windows na ARM używa tego samego strukturalnej obsługi wyjątków mechanizm asynchroniczne wyjątki generowane przez sprzęt i synchroniczne wyjątki generowane przez oprogramowanie. Programy obsługi wyjątków specyficzne dla języka są tworzone na podstawie Windows obsługi przy użyciu języka funkcji pomocnika wyjątków strukturalnych. W tym dokumencie opisano obsługę wyjątków w Windows na ARM i pomocników język używany przez kod, który jest generowany przez asemblera ARM firmy Microsoft i kompilator języka Visual C++.
+Windows na ARM używa tego samego strukturalnej obsługi wyjątków mechanizm asynchroniczne wyjątki generowane przez sprzęt i synchroniczne wyjątki generowane przez oprogramowanie. Programy obsługi wyjątków specyficzne dla języka są tworzone na podstawie Windows obsługi przy użyciu języka funkcji pomocnika wyjątków strukturalnych. W tym dokumencie opisano obsługę wyjątków w Windows na ARM i pomocników język używany przez kod, który jest generowany przez asemblera ARM firmy Microsoft oraz za pomocą kompilatora MSVC.
 
 ## <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -104,11 +104,11 @@ Prologues kanonicznej funkcji może mieć maksymalnie 5 instrukcje (Zwróć uwag
 
 |Instrukcja|OpCode zakłada, że istnieje jeśli:|Rozmiar|OpCode|Kodów odwinięcia|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*== 1|16|`push {r0-r3}`|04|
-|2|*C*== 1 lub *L*== 1 lub *R*== 0 lub PF == 1|16/32|`push {registers}`|80-BF/D0-DF/WE ED|
-|3a|*C*== 1 i (*L*== 0 i *R*== 1 i PF == 0)|16|`mov r11,sp`|C0-CF/PLATFORMY FB|
+|1|*H*==1|16|`push {r0-r3}`|04|
+|2|*C*== 1 lub *L*== 1 lub *R*== 0 lub PF == 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
+|3a|*C*== 1 i (*L*== 0 i *R*== 1 i PF == 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*== 1 i (*L*== 1 lub *R*== 0 lub PF == 1)|32|`add r11,sp,#xx`|FC|
-|4|*R*== 1 i *Reg* ! = 7|32|`vpush {d8-dE}`|E0 E7|
+|4|*R*== 1 i *Reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
 |5|*Dostosowanie stosu* ! = 0 i PF == 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
 
 Zawsze występuje instrukcja 1 Jeśli *H* bit jest ustawiony na 1.
@@ -131,11 +131,11 @@ Instrukcje 2 i 4 są ustawiane w zależności od tego, czy jest wymagane powiado
 |0|1|1|1|r*S*-r3, LR|D8 d*E*|
 |1|0|0|0|R4 r*N*, r11|brak|
 |1|0|0|1|r*S*- r*N*, r11|brak|
-|1|0|1|0|R11|D8 d*E*|
+|1|0|1|0|r11|D8 d*E*|
 |1|0|1|1|r*S*-r3, r11|D8 d*E*|
 |1|1|0|0|R4 r*N*, r11, LR|brak|
 |1|1|0|1|r*S*- r*N*, r11, LR|brak|
-|1|1|1|0|R11, LR|D8 d*E*|
+|1|1|1|0|r11, LR|D8 d*E*|
 |1|1|1|1|r*S*-r3 r11, LR|D8 d*E*|
 
 Epilogues funkcje canonical postępuj zgodnie z formularzem podobne, ale w odwrotnej kolejności i z pewne dodatkowe opcje. Epilogu może być maksymalnie 5 instrukcji długich i jego formularza ściśle jest zależna od postaci prologu.
@@ -158,7 +158,7 @@ Jeśli *H* jest ustawiona, 9a instrukcji lub 9b jest obecny. 9a instrukcja jest 
 
 Jeśli epilogu nie została już zakończona, następnie albo instrukcja 10a lub 10b jest obecny, aby wskazać gałąź 16-bitowe czy 32-bitowe, na podstawie wartości z *Ret*.
 
-### <a name="xdata-records"></a>rekordy .xdata
+### <a name="xdata-records"></a>.xdata Records
 
 Format upakowaną odwijania jest niewystarczający do opisania rozwinięcia funkcji, rekord o zmiennej długości .xdata musi zostać utworzona. Adres ten rekord jest przechowywany w drugim słowie rekordu .pdata. Format .xdata jest spakowany o zmiennej długości zbiór słów, które zawiera cztery sekcje:
 
@@ -175,7 +175,7 @@ Format upakowaną odwijania jest niewystarczający do opisania rozwinięcia funk
    |0|28-31|*Wyrazy kodu* pole 4-bitowy, określający liczbę wyrazów 32-bitowe muszą zawierać wszystkie kody unwind w sekcji 4. Jeśli więcej niż 15 wyrazy są wymagane dla więcej niż 63 unwind bajty kodu, w tym polu i *liczba epilogu* pola musi mieć wartość 0 Aby wskazać, że wymagane jest rozszerzenie programu word.|
    |1|0-15|*Rozszerzony liczba epilogu* jest polem 16-bitowych, który zapewnia więcej miejsca na potrzeby kodowania niezwykle dużą liczbę epilogues. Słowo rozszerzenia, które zawiera to pole jest obecny tylko, jeśli *liczba epilogu* i *wyrazów* pól w pierwszy wyraz nagłówka są ustawione na 0.|
    |1|16-23|*Rozszerzony wyrazów* jest pole 8-bitowych, które udostępnia więcej miejsca do kodowania niezwykle dużą liczbę wyrazów unwind. Słowo rozszerzenia, które zawiera to pole jest obecny tylko, jeśli *liczba epilogu* i *wyrazów* pól w pierwszy wyraz nagłówka są ustawione na 0.|
-   |1|24-31|Zastrzeżone|
+   |1|24-31|Zarezerwowany|
 
 1. Po dane wyjątku (Jeśli *E* bit w nagłówku został ustawiony na 0) znajduje się lista informacji o zakresach epilogu, które są pakowane do programu word i przechowywane w celu zwiększenia początkowe przesunięcie. Każdy zakres zawiera następujące pola:
 
@@ -238,26 +238,26 @@ W poniższej tabeli przedstawiono mapowanie kody unwind rozkazów. Najbardziej t
 
 |1 bajt|Bajt 2|Bajt 3|4 bajtów|Opsize|Wyjaśnienie|
 |------------|------------|------------|------------|------------|-----------------|
-|00 7F||||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x7F) \* 4|
-|80 BF|00 DO FF|||32|`pop   {r0-r12, lr}`<br /><br /> gdzie jest zdejmowany LR, jeśli kod i 0x2000 i r0 r12 są zdjęte ze stosu jeśli odnośny bit jest ustawiony w 0x1FFF & kodu|
-|C0 CF||||16|`mov   sp,rX`<br /><br /> gdzie X jest 0x0F & kodu|
-|D0 D7||||16|`pop   {r4-rX,lr}`<br /><br /> gdzie X jest (kod & 0x03) + 4 i LR jest zdejmowany, jeśli 0x04 & kodu|
-|D8 DF||||32|`pop   {r4-rX,lr}`<br /><br /> gdzie X jest (kod & 0x03) + 8 i LR jest zdejmowany, jeśli 0x04 & kodu|
-|E0 E7||||32|`vpop  {d8-dX}`<br /><br /> gdzie X jest (kod & 0x07) + 8|
-|E8 EB|00 DO FF|||32|`addw  sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x03FF) \* 4|
-|WE ED|00 DO FF|||16|`pop   {r0-r7,lr}`<br /><br /> gdzie jest zdejmowany LR, jeśli kod & 0x0100 i r0 r7 są zdjęte ze stosu jeśli odnośny bit jest ustawiony w 0x00FF & kodu|
-|EE|00 0F|||16|specyficzne dla firmy Microsoft|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x7F) \* 4|
+|80-BF|00 DO FF|||32|`pop   {r0-r12, lr}`<br /><br /> gdzie jest zdejmowany LR, jeśli kod i 0x2000 i r0 r12 są zdjęte ze stosu jeśli odnośny bit jest ustawiony w 0x1FFF & kodu|
+|C0-CF||||16|`mov   sp,rX`<br /><br /> gdzie X jest 0x0F & kodu|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> gdzie X jest (kod & 0x03) + 4 i LR jest zdejmowany, jeśli 0x04 & kodu|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> gdzie X jest (kod & 0x03) + 8 i LR jest zdejmowany, jeśli 0x04 & kodu|
+|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> gdzie X jest (kod & 0x07) + 8|
+|E8-EB|00 DO FF|||32|`addw  sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x03FF) \* 4|
+|EC-ED|00 DO FF|||16|`pop   {r0-r7,lr}`<br /><br /> gdzie jest zdejmowany LR, jeśli kod & 0x0100 i r0 r7 są zdjęte ze stosu jeśli odnośny bit jest ustawiony w 0x00FF & kodu|
+|EE|00-0F|||16|specyficzne dla firmy Microsoft|
 |EE|10-FF|||16|Dostępne|
-|EF|00 0F|||32|`ldr   lr,[sp],#X`<br /><br /> gdzie X jest (kod & 0x000F) \* 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> gdzie X jest (kod & 0x000F) \* 4|
 |EF|10-FF|||32|Dostępne|
-|F0 F4||||-|Dostępne|
+|F0-F4||||-|Dostępne|
 |F5|00 DO FF|||32|`vpop  {dS-dE}`<br /><br /> gdzie S jest (kod & 0x00F0) >> 4 i E jest 0x000F & kodu|
 |F6|00 DO FF|||32|`vpop  {dS-dE}`<br /><br /> gdzie jest S ((Code & 0x00F0) >> 4) + 16 i E jest (kod & 0x000F) + 16|
 |F7|00 DO FF|00 DO FF||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFF) \* 4|
 |F8|00 DO FF|00 DO FF|00 DO FF|16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFFFF) \* 4|
 |F9|00 DO FF|00 DO FF||32|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFF) \* 4|
 |FA|00 DO FF|00 DO FF|00 DO FF|32|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFFFF) \* 4|
-|PLATFORMY FB||||16|NOP (16-bitowy)|
+|FB||||16|NOP (16-bitowy)|
 |FC||||32|NOP (32-bitowy)|
 |FD||||16|End + nop 16-bitowych w epilogu|
 |FE||||32|End + nop 32-bitowych w epilogu|
@@ -410,7 +410,7 @@ Jeśli po epilogues pojedynczych instrukcji są ignorowane, nie istnieją żadne
 
 W tych przykładach podstawowy obraz wynosi 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Przykład 1: Liścia funkcji nie zmiennych lokalnych
+### <a name="example-1-leaf-function-no-locals"></a>Przykład 1: Funkcja typu liść, nie elementy lokalne
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Stack — Dostosuj* = 0, co oznacza nie dopasowania stosu
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Przykład 2: Zagnieżdżonej funkcji przy użyciu lokalnego alokacji
+### <a name="example-2-nested-function-with-local-allocation"></a>Przykład 2: Funkcja zagnieżdżona przy użyciu lokalnego alokacji
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Dostosowanie stosu* = 3 (= 0x0C/4)
 
-### <a name="example-3-nested-variadic-function"></a>Przykład 3: Zagnieżdżonej funkcji ze zmienną liczbą argumentów
+### <a name="example-3-nested-variadic-function"></a>Przykład 3: Funkcja zagnieżdżona ze zmienną liczbą argumentów
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Stack — Dostosuj* = 0, co oznacza nie dopasowania stosu
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Przykład 4: Funkcji z wieloma Epilogues
+### <a name="example-4-function-with-multiple-epilogues"></a>Przykład 4: Funkcja z wielu Epilogues
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - 2 = 0xFF kodzie operacji unwind: koniec
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Przykład 5: Funkcja dynamicznej stosu i epilogu wewnętrzny
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Przykład 5: Funkcja dynamiczne stosu i epilogu wewnętrzny
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Wyrazy kodu* = 0x01, wskazując jedno słowo w 32-bitowych kodów unwind
 
-- Word 1: Epilogu zakresu przesunięciem 0xC6 (= 0x18C/2), od indeksu kodu unwind na 0x00 i z warunkiem 0x0E (zawsze)
+- Word 1: Zakres epilogu przesunięciem 0xC6 (= 0x18C/2), od indeksu kodu unwind na 0x00 i z warunkiem 0x0E (zawsze)
 
 - Operacja unwind kodów, począwszy od programu Word 2: (udostępniane między prologu/epilogu)
 
@@ -698,7 +698,7 @@ Epilogue:
 
 - Wyrazy 4 i nowszych są dane o wyjątkach śródwierszowych
 
-### <a name="example-7-funclet"></a>Przykład 7: polecenie Funclet
+### <a name="example-7-funclet"></a>Przykład 7: Polecenie Funclet
 
 ```asm
 Function:
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)
+[Przegląd konwencji ABI ARM](overview-of-arm-abi-conventions.md)<br/>
+[Typowe problemy przy migracji Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)

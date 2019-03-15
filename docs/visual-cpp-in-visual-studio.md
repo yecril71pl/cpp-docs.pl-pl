@@ -1,5 +1,5 @@
 ---
-title: Visual C++ w programie Visual Studio
+title: Język C++ w programie Visual Studio
 description: Visual C++ jest to nazwa dla kompilatora Microsoft C++, Edytor kodu i pokrewnych narzędzi w programie Visual Studio IDE. Visual C++ umożliwia opracowywanie programów dla Windows, Linux, Android i iOS.
 ms.date: 09/26/2018
 ms.technology: cpp-ide
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 475f9394d9a12d05c95bc73ec451fbfe6fc4b052
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809655"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814413"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ w programie Visual Studio
 
@@ -71,11 +71,14 @@ Informacje dotyczące przykładów.
 
 ## <a name="c-development-tools"></a>Narzędzia programistyczne C++
 
-[Środowisko IDE i narzędzia programistyczne](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+[Omówienie programowania C++ w programie Visual Studio](overview-of-cpp-development.md)<br/>
 Jak używać programu Visual Studio IDE do tworzenia projektów, edytowania kodu, łącze do biblioteki, Kompiluj, Debuguj, Utwórz testy jednostkowe, czy analizy statycznej, Wdrażaj i nie tylko.
 
-[Kompilatory i narzędzia do kompilacji](build/building-c-cpp-programs.md)<br/>
-Opcje kompilatora i konsolidatora C++ firmy Microsoft, komunikaty o błędach, przykładach wierszy poleceń, skonfiguruj konfigurować skonfigurować dla różnych platform i tematy referencyjne kompilacji.
+[Projekty i systemów kompilacji](build/projects-and-build-systems-cpp.md)<br/>
+Jak tworzyć i konfigurować projekty Visual Studio C++, projektów CMake i innych rodzajów projektów przy użyciu opcji kompilatora i konsolidatora MSVC.
+
+[Pisanie i Refaktoryzacja kodu w języku C++](ide/writing-and-refactoring-code-cpp.md)<br/>
+W jaki sposób używać wydajność funkcji w edytorze języka C++, Refaktoryzacja, przejdź i pisanie kodu.
 
 [Debugowanie kodu natywnego](/visualstudio/debugger/debugging-native-code)<br/>
 Debuger programu Visual Studio za pomocą projektów w języku C++.

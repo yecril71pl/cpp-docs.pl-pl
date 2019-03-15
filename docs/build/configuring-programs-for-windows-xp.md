@@ -2,16 +2,16 @@
 title: Konfigurowanie programów pod kątem Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582745"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814296"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurowanie programów pod kątem Windows XP
 
-Ponieważ program Visual Studio obsługuje wiele zestawów narzędzi platformy, mogą kierować systemów operacyjnych i bibliotek środowiska uruchomieniowego, które nie są obsługiwane przez domyślny zestaw narzędzi. Na przykład, przełączając zestawu narzędzi platformy, służy C ++ 11, C ++ 14 i C ++ 17 języka ulepszenia obsługiwane przez kompilator języka Visual C++ w programie Visual Studio do tworzenia aplikacji przeznaczonych dla Windows XP i Windows Server 2003. Można również używać starszych zestawów narzędzi platformy do obsługi starszego kodu zgodne dane binarne i nadal korzystaj z najnowszych funkcji środowiska IDE programu Visual Studio.
+Ponieważ program Visual Studio obsługuje wiele zestawów narzędzi platformy, mogą kierować systemów operacyjnych i bibliotek środowiska uruchomieniowego, które nie są obsługiwane przez domyślny zestaw narzędzi. Na przykład, przełączając zestawu narzędzi platformy, służy C ++ 11, C ++ 14 i C ++ 17 języka ulepszenia obsługiwane za pomocą kompilatora MSVC w programie Visual Studio do tworzenia aplikacji przeznaczonych dla Windows XP i Windows Server 2003. Można również używać starszych zestawów narzędzi platformy do obsługi starszego kodu zgodne dane binarne i nadal korzystaj z najnowszych funkcji środowiska IDE programu Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Zainstaluj zestaw narzędzi platformy Windows XP
 

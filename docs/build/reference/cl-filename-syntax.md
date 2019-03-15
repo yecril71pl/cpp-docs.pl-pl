@@ -11,12 +11,12 @@ helpviewer_keywords:
 - file names [C++], CL compiler
 - file names [C++]
 ms.assetid: 3ca72586-75be-4477-b323-a1be232e80d4
-ms.openlocfilehash: 929096ed169a33e0876c3afb68f3594757d61e4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b20f88e69c6e0d1774f1cd81b3ee833c4f0ff696
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438938"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811774"
 ---
 # <a name="cl-filename-syntax"></a>Składnia nazwy pliku CL
 
@@ -24,6 +24,6 @@ CL akceptuje plików o nazwach, które postępuj zgodnie z konwencją nazewnictw
 
 Rozszerzenie nazwy pliku Określa, jak są przetwarzane pliki. Pliki C i C++, które mają rozszerzenie .c, .cxx lub .cpp, są kompilowane. Inne pliki, w tym pliki .obj, biblioteki (.lib) i pliki definicji modułu (.def) są przekazywane do konsolidatora bez przetwarzany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md)
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639353"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816103"
 ---
 # <a name="clr-restrictions"></a>/clr Ograniczenia
 
@@ -17,7 +17,7 @@ Należy zauważyć następujące ograniczenia na użycie **/CLR**:
 
 - W obsłudze wyjątków strukturalnych, istnieją ograniczenia dotyczące używania `_alloca` podczas kompilowania za pomocą **/CLR**. Aby uzyskać więcej informacji, zobacz [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- Użycie sprawdzanie błędów czasu wykonywania nie jest prawidłowa w przypadku **/CLR**. Aby uzyskać więcej informacji, zobacz [porady: użycie macierzystego sprawdzania w trakcie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Użycie sprawdzanie błędów czasu wykonywania nie jest prawidłowa w przypadku **/CLR**. Aby uzyskać więcej informacji, zobacz [jak: Korzystanie z macierzystego sprawdzania w czasie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Gdy **/CLR** jest używany, aby skompilować program, który używa tylko standardową składnię C++, poniższe wskazówki dotyczą korzystania z wbudowanego asemblera:
 
@@ -37,36 +37,36 @@ Należy zauważyć następujące ograniczenia na użycie **/CLR**:
 
 - Następujące opcje kompilatora są nieobsługiwane w przypadku **/CLR**:
 
-  - **/ EHsc** i **/EHS** (**/CLR** oznacza **/eha** (zobacz [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md))
+  - **/ EHsc** i **/EHS** (**/CLR** oznacza **/eha** (zobacz [/EH (Model obsługi wyjątku)](eh-exception-handling-model.md))
 
-  - **/ FP: strict** i **/FP: except** (zobacz [/FP (określenie zachowania zmiennopozycyjna)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/ FP: strict** i **/FP: except** (zobacz [/FP (określenie zachowania zmiennopozycyjna)](fp-specify-floating-point-behavior.md))
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- Kombinacja `_STATIC_CPPLIB` definicji preprocesora (`/D_STATIC_CPPLIB`) i **/CLR** — opcja kompilatora nie jest obsługiwana. Dzieje się tak dlatego definicji spowodowałoby aplikację, aby połączyć się przy użyciu statycznych wielowątkowe standardowej biblioteki C++, który nie jest obsługiwany. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md) tematu.
+- Kombinacja `_STATIC_CPPLIB` definicji preprocesora (`/D_STATIC_CPPLIB`) i **/CLR** — opcja kompilatora nie jest obsługiwana. Dzieje się tak dlatego definicji spowodowałoby aplikację, aby połączyć się przy użyciu statycznych wielowątkowe standardowej biblioteki C++, który nie jest obsługiwany. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](md-mt-ld-use-run-time-library.md) tematu.
 
-- Korzystając z **/zi** z **/CLR**, ma to wpływ na wydajność. Aby uzyskać więcej informacji, zobacz [/zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+- Korzystając z **/zi** z **/CLR**, ma to wpływ na wydajność. Aby uzyskać więcej informacji, zobacz [/zi](z7-zi-zi-debug-information-format.md).
 
-- Przekazywanie znaków dwubajtowych do .NET Framework danych wyjściowych procedury bez jednoczesnego określenia [/Zc:](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) lub bez rzutowania znak `__wchar_t` spowoduje, że dane wyjściowe są wyświetlane jako `unsigned short int`. Na przykład:
+- Przekazywanie znaków dwubajtowych do .NET Framework danych wyjściowych procedury bez jednoczesnego określenia [/Zc:](zc-wchar-t-wchar-t-is-native-type.md) lub bez rzutowania znak `__wchar_t` spowoduje, że dane wyjściowe są wyświetlane jako `unsigned short int`. Na przykład:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/ GS](../../build/reference/gs-buffer-security-check.md) jest ignorowany podczas kompilowania za pomocą **/CLR**, chyba że funkcja jest w obszarze `#pragma` [niezarządzanych](../../preprocessor/managed-unmanaged.md) lub jeśli funkcja musi zostać skompilowana do natywnego, w którym to przypadku kompilator wygeneruje Ostrzeżenie C4793, która jest domyślnie wyłączona.
+- [/ GS](gs-buffer-security-check.md) jest ignorowany podczas kompilowania za pomocą **/CLR**, chyba że funkcja jest w obszarze `#pragma` [niezarządzanych](../../preprocessor/managed-unmanaged.md) lub jeśli funkcja musi zostać skompilowana do natywnego, w którym to przypadku kompilator wygeneruje Ostrzeżenie C4793, która jest domyślnie wyłączona.
 
-- Zobacz [/Entry](../../build/reference/entry-entry-point-symbol.md) wymagania podpisu funkcji zarządzanej aplikacji.
+- Zobacz [/Entry](entry-entry-point-symbol.md) wymagania podpisu funkcji zarządzanej aplikacji.
 
-- Aplikacje skompilowane z **/OpenMP** i **/CLR** może być uruchamiany tylko w procesie pojedynczego elementu appdomain.  Zobacz [/OpenMP (Włącz obsługę OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md) Aby uzyskać więcej informacji.
+- Aplikacje skompilowane z **/OpenMP** i **/CLR** może być uruchamiany tylko w procesie pojedynczego elementu appdomain.  Zobacz [/OpenMP (Włącz obsługę OpenMP 2.0)](openmp-enable-openmp-2-0-support.md) Aby uzyskać więcej informacji.
 
 - Funkcje, które przyjmują zmienną liczbę argumentów (VARARG) zostanie wygenerowany jako funkcje natywne. Wszystkie typy zarządzanych danych w miejscu zmiennych argumentów będzie można zorganizować typy natywne. Należy pamiętać, że <xref:System.String?displayProperty=fullName> typy są ciągami faktycznie znaków dwubajtowych, ale są one przekazywane do ciągów znaków jednobajtowych. Więc jeśli specyfikatora printf %S (wchar_t *), go będzie kierować ciąg %s zamiast tego.
 
@@ -88,4 +88,4 @@ Należy zauważyć następujące ograniczenia na użycie **/CLR**:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](clr-common-language-runtime-compilation.md)

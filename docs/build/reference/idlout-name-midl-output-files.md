@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: b21e8eb266de9a0baa0512a82acb0ae8a9f650a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3816bb85cb3c711075e3fefeec2d706c2f8cc2ff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500428"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821472"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Nazwij wyjściowe pliki MIDL)
 
@@ -38,7 +38,7 @@ Określa nazwę pliku .idl, utworzony przez kompilator MIDL. Przyjęto, że brak
 
 Opcja/idlout Określa nazwę i rozszerzenie pliku .idl.
 
-Kompilator MIDL jest wywoływana przez konsolidator Visual C++, gdy łączenie projektów, które mają [modułu](../../windows/module-cpp.md) atrybutu.
+Kompilator MIDL jest wywoływana przez konsolidator MSVC podczas łączenia projektów, które mają [modułu](../../windows/module-cpp.md) atrybutu.
 
 / IDLOUT określa również nazwy plików skojarzonych z kompilator MIDL inne pliki wyjściowe:
 
@@ -50,13 +50,13 @@ Kompilator MIDL jest wywoływana przez konsolidator Visual C++, gdy łączenie p
 
 - *Nazwa pliku*.h
 
-*Nazwa pliku* jest parametrem, który jest przekazywany do/idlout. Jeśli [/tlbout](../../build/reference/tlbout-name-dot-tlb-file.md) określono pliku .tlb otrzyma jego nazwę w/tlbout *filename*.
+*Nazwa pliku* jest parametrem, który jest przekazywany do/idlout. Jeśli [/tlbout](tlbout-name-dot-tlb-file.md) określono pliku .tlb otrzyma jego nazwę w/tlbout *filename*.
 
 Jeśli określisz/idlout ani/tlbout konsolidator utworzy vc70.tlb vc70.idl, vc70_p.c, vc70_i.c i vc70.h.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -68,10 +68,10 @@ Jeśli określisz/idlout ani/tlbout konsolidator utworzy vc70.tlb vc70.idl, vc70
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergedIDLBaseFileName%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (Nie przetwarzaj atrybutów w MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (Określ opcje wiersza polecenia MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)<br/>
+[/IGNOREIDL (Nie przetwarzaj atrybutów w MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (Określ opcje wiersza polecenia MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Kompilowanie programu opartego na atrybutach](../../windows/building-an-attributed-program.md)

@@ -97,13 +97,12 @@ f1_keywords:
 - C5043
 - C5044
 - C5045
-- C5046
-ms.openlocfilehash: 672aa1b0e298be3b6754b1706e721ad6798230ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a0eee4e0a7774c1c92a44ad1e8eaa480ce84d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642861"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816350"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora od C4800 za pośrednictwem C5999
 
@@ -144,7 +143,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 4) C4840](compiler-warning-level-4-c4840.md)|nieprzenośne użycie klasy*typu*"jako argumentu do funkcji ze zmienną liczbą argumentów|
 |Ostrzeżenie kompilatora (poziom 4) C4841|użyto niestandardowego rozszerzenia: desygnator złożonej składowej użyty w makrze offsetof|
 |Ostrzeżenie kompilatora (poziom 4) C4842|nie gwarantuje wynik makra "offsetof" zastosować do typu używającego wielu dziedziczeń będzie spójny między wydaniami kompilatora|
-|C4843 ostrzeżenia kompilatora|"*type1*": procedura obsługi wyjątków odwołania do typu funkcji lub tablicy jest nieosiągalna, użyj "*type2*" zamiast niego|
+|C4843 ostrzeżenia kompilatora|"*type1*": Procedura obsługi wyjątków odwołania do typu funkcji lub tablicy jest nieosiągalna, użyj "*type2*" zamiast niego|
 |C4844 ostrzeżenia kompilatora|"Eksportuj modułu *nazwa_modułu*;" jest teraz preferowana składnia do deklarowania interfejsu modułu|
 |[Ostrzeżenie kompilatora (poziom 4) C4866](c4866.md)| Kompilator może nie wymusić kolejności oceny od lewej do prawej dla wywołania *operator_name*|
 |[Ostrzeżenie (błąd) kompilatora C4867](compiler-warning-c4867.md)|"*funkcja*": wywołania funkcji brakuje listy argumentów; Użyj "*wywołania*" Aby utworzyć wskaźnik do składowej|
@@ -176,7 +175,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 1) C4935|Specyfikator dostępu do zestawu zmodyfikowany z "*dostępu*"|
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4936|Ta deklaracja __declspec jest obsługiwana tylko w przypadku, gdy skompilowano z opcją/CLR lub/CLR: pure|
 |Ostrzeżenie kompilatora (poziom 4) C4937|"*text1*"i"*text2*"są nierozróżnialne jako argumenty"*dyrektywy*"|
-|Ostrzeżenie kompilatora (poziom 4) C4938|"*var*": zmiennoprzecinkowy zmiennej redukcji punktu może spowodować niespójne wyniki w obszarze/FP: strict lub #pragma fenv_access|
+|Ostrzeżenie kompilatora (poziom 4) C4938|"*var*": Zmiennoprzecinkowe zmiennej redukcji punktu może spowodować niespójne wyniki w obszarze/FP: strict lub #pragma fenv_access|
 |C4939 ostrzeżenia kompilatora|#pragma vtordisp jest przestarzała i zostanie usunięta w przyszłej wersji programu Visual C++|
 |Ostrzeżenie kompilatora (poziom 1) C4944|"*symbol*": nie można zaimportować symbolu z "*assembly1*": jako*symbol*"już istnieje w bieżącym zakresie|
 |[Ostrzeżenie kompilatora (poziom 1) C4945](compiler-warning-level-1-c4945.md)|"*symbol*": nie można zaimportować symbolu z "*assembly1*": jako*symbol*"został już zaimportowany z innego zestawu"*assembly2* '|
@@ -196,7 +195,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4959|Nie można zdefiniować typu niezarządzanego "*typu*" w/CLR: Safe, ponieważ dostęp do jego składowych daje nieweryfikowalny kod|
 |Ostrzeżenie kompilatora (poziom 4) C4960|"*funkcja*" jest zbyt duży do profilowania|
 |Ostrzeżenie kompilatora (poziom 1) C4961|Dane profilowe nie zostały scalone z "plik .pgd", profilowana Optymalizacja została wyłączona|
-|Ostrzeżenie kompilatora (poziom 4) C4962|"*funkcja*': optymalizacje profilowane wyłączone, ponieważ optymalizacje spowodowały niespójność danych profilu|
+|Ostrzeżenie kompilatora (poziom 4) C4962|"*funkcja*": Optymalizacje sterowane profilem wyłączone, ponieważ optymalizacje spowodowały niespójność danych profilu|
 |Ostrzeżenie kompilatora (poziom 1) C4963|"*opis*": nie znaleziono danych profilowych; różne opcje kompilatora zostały użyte w kompilacji instrumentowanej|
 |[Ostrzeżenie kompilatora (poziom 1) C4964](compiler-warning-level-1-c4964.md)|Opcje optymalizacji nie zostały określone; informacje profilowe nie zostaną zebrane.|
 |[Ostrzeżenie kompilatora (poziom 1) C4965](compiler-warning-level-1-c4965.md)|niejawne rzutowanie liczby całkowitej 0; Użyj nullptr lub jawnego rzutowania|
@@ -212,7 +211,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 4) C4987|użyto rozszerzenia niestandardowego: 'throw (...)'|
 |Ostrzeżenie kompilatora (poziom 4) C4988|"*zmiennej*": Zmienna zadeklarowana poza zakresem klasy/funkcji|
 |Ostrzeżenie kompilatora (poziom 4) C4989|"*typu*": Typ ma definicje powodujące konflikt.|
-|Ostrzeżenie kompilatora (poziom 3) C4990|Warbird: *wiadomości*|
+|Ostrzeżenie kompilatora (poziom 3) C4990|Warbird: *message*|
 |Ostrzeżenie kompilatora (poziom 3) C4991|Warbird: funkcja "*funkcja*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ poziom ochrony przed wstawianiem do treści jest większy niż element nadrzędny|
 |Ostrzeżenie kompilatora (poziom 3) C4992|Warbird: funkcja "*funkcja*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ zawiera wstawiony zestaw, który nie może być chroniony|
 |[Ostrzeżenie kompilatora (poziom 3) C4995](compiler-warning-level-3-c4995.md)|"*funkcja*': nazwa została oznaczona jako przestarzała #pragma|
@@ -226,7 +225,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 4) C5025|"*typu*": Przenieś operator przypisania został niejawnie zdefiniowany jako usunięty|
 |Ostrzeżenie kompilatora (poziom 1 i 4) C5026|"*typu*": Konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty|
 |Ostrzeżenie kompilatora (poziom 1 i 4) C5027|"*typu*": Przenieś operator przypisania został niejawnie zdefiniowany jako usunięty|
-|Ostrzeżenie kompilatora (poziom 1) C5028|"*nazwa*": wyrównanie określone we wcześniejszej deklaracji (*numer*) nie jest określona w definicji|
+|Ostrzeżenie kompilatora (poziom 1) C5028|"*nazwa*": Wyrównanie określone we wcześniejszej deklaracji (*numer*) nie jest określona w definicji|
 |Ostrzeżenie kompilatora (poziom 4) C5029|użyto niestandardowego rozszerzenia: atrybuty wyrównania w języku C++ dotyczą zmiennych, składowych danych i tylko dla typów tagów|
 |Ostrzeżenie kompilatora (poziom 3) C5030|atrybut "*atrybut*" nie został rozpoznany|
 |Ostrzeżenie kompilatora (poziom 4) C5031|#pragma warning(pop): prawdopodobnie niezgodność, stan ostrzeżenia wypychany w innym pliku o wyświetlaniu|
@@ -244,4 +243,4 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 2) C5043|"*specyfikacji*': specyfikacja wyjątku jest niezgodna z poprzednią deklaracją|
 |Ostrzeżenie kompilatora (poziom 4) C5044|Argument opcji wiersza polecenia *opcji* wskazuje ścieżkę "*ścieżki*' który nie istnieje|
 |[C5045 ostrzeżenia kompilatora](c5045.md)|Kompilator wstawi zaradcze dla luki Spectre dla obciążenia pamięci Jeśli przełącznik/qspectre określonych|
-|[Ostrzeżenie kompilatora (poziom 2) C5046](c5046.md)|"*funkcja*": Symbol obejmujące typu z wewnętrznym powiązaniem nie jest zdefiniowana|
+|[Ostrzeżenie kompilatora (poziom 2) C5046](c5046.md)|"*funkcja*": Obejmujące typu z wewnętrznym powiązaniem Niezdefiniowany symbol|

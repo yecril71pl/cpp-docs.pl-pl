@@ -1,17 +1,17 @@
 ---
-title: 'Porady: tworzenie weryfikowalnych projektów C++ (C++/CLI)'
+title: 'Instrukcje: Tworzenie weryfikowalnych projektów C++ (C + +/ CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630441"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817383"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Porady: tworzenie weryfikowalnych projektów C++ (C + +/ CLI)
 
@@ -28,7 +28,7 @@ Domyślnie projekty .NET Użyj flagi kompilatora/CLR i skonfigurować konsolidat
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>Aby zmienić ustawienia kompilatora i konsolidatora
 
-1. Wyświetlanie strony właściwości projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+1. Wyświetlanie strony właściwości projektu. Aby uzyskać więcej informacji, zobacz [Ustaw kompilatora i właściwości kompilacji](../build/working-with-project-properties.md).
 
 1. Na **ogólne** strony w obszarze **właściwości konfiguracji** zestawu węzłów, **Obsługa środowiska uruchomieniowego języka wspólnego** właściwość **bezpieczne wspólny język MSIL Obsługa środowiska uruchomieniowego (/ CLR: Safe)**.
 
@@ -56,7 +56,7 @@ Ponieważ weryfikowalny aplikacje nie mogą używać biblioteki wykonawczej C (C
 
 1. Zmień _tmain() Main() w pliku .cpp głównego projektu.
 
-1. Wyświetlanie strony właściwości projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+1. Wyświetlanie strony właściwości projektu. Aby uzyskać więcej informacji, zobacz [Ustaw kompilatora i właściwości kompilacji](../build/working-with-project-properties.md).
 
 1. Na **zaawansowane** strony w obszarze **konsolidatora** węzła, wprowadź `Main` jako **punktu wejścia** wartości właściwości.
 
