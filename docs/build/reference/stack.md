@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stack, setting size
 - /STACK editbin option
 ms.assetid: a39bcff0-c945-4355-80cc-8e4f24a5f142
-ms.openlocfilehash: 89591a9d0a7f19422275b6bce6f4c5a7a723e800
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f30877800d4597054601f7459df88c78193fd3c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647710"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820653"
 ---
 # <a name="stack"></a>/STACK
 
@@ -30,6 +30,6 @@ Ta opcja ustawia rozmiar stosu w bajtach i przyjmuje argumenty w notacji dziesi�
 
 Opcjonalny `commit` argument podlega interpretacji przez system operacyjny. Windows NT, Windows 95 i Windows 98 `commit` określa ilość pamięci fizycznej do przydzielenia w danym momencie. Zadeklarowanej pamięci wirtualnej powoduje, że miejsce, które mają zostać zarezerwowane w pliku stronicowania. Uzyskanie lepszej `commit` wartość pozwala zaoszczędzić czas, gdy potrzeba więcej miejsca na stosie aplikacji, ale zwiększa wymagania dotyczące pamięci i ewentualnie czas uruchamiania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: kompilowanie natywnego programu C++ na wiersz polecenia'
+title: 'Przewodnik: Kompilowanie natywnego programu C++ w wierszu polecenia'
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: 2d02560f9a76ee6f7a2aa7170f2bca6a95fe3ce8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602257"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814348"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Wskazówki: kompilowanie natywnego programu C++ na wiersz polecenia
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie natywnego programu C++ w wierszu polecenia
 
 Visual C++ dołącza kompilatora wiersza polecenia języka C++, który służy do tworzenia wszystkiego, od aplikacji konsolowych podstawowe dla aplikacji uniwersalnych platformy Windows, aplikacje komputerowe, sterowniki urządzeń i składniki .NET.
 
-W tym instruktażu utworzysz podstawową "Hello, World"-stylu program w języku C++ przy użyciu tekstu w edytorze, a następnie skompilować go w wierszu polecenia. Jeśli chcesz wypróbować jej możliwości programu Visual Studio IDE, a nie przy użyciu wiersza polecenia, zobacz [wskazówki: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) lub [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+W tym instruktażu utworzysz podstawową "Hello, World"-stylu program w języku C++ przy użyciu tekstu w edytorze, a następnie skompilować go w wierszu polecenia. Jeśli chcesz wypróbować jej możliwości programu Visual Studio IDE, a nie przy użyciu wiersza polecenia, zobacz [instruktażu: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) lub [używanie środowiska IDE programu Visual Studio do tworzenia aplikacji pulpitu C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 W tym przewodniku można użyć programu Visual C++, zamiast wpisywać ten, który jest wyświetlany, lub można użyć przykładowego kodu języka Visual C++ z innego artykułu pomocy.
 
@@ -27,14 +27,14 @@ W tym przewodniku można użyć programu Visual C++, zamiast wpisywać ten, któ
 
 Do przeprowadzenia tego instruktażu, należy zainstalować program Visual Studio i opcjonalną **programowanie aplikacji klasycznych w języku C++** obciążenia lub wiersza polecenia narzędzia Build Tools for Visual Studio.
 
-Visual Studio to zaawansowane zintegrowane środowisko programistyczne (IDE) obsługującego edytora z w pełni funkcjonalne, menedżerów zasobów, debugery i kompilatorów dla wielu języków i platform. Aby uzyskać informacje na temat, aby pobrać i zainstalować program Visual Studio, w tym bezpłatnej wersji programu Visual Studio Community oraz zapewnia obsługę dla rozwoju języka C/C++, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md).
+Visual Studio to zaawansowane zintegrowane środowisko programistyczne (IDE) obsługującego edytora z w pełni funkcjonalne, menedżerów zasobów, debugery i kompilatorów dla wielu języków i platform. Aby uzyskać informacje na temat, aby pobrać i zainstalować program Visual Studio, w tym bezpłatnej wersji programu Visual Studio Community oraz zapewnia obsługę dla rozwoju języka C/C++, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](vscpp-step-0-installation.md).
 
 Narzędzia Build Tools for Visual Studio instaluje tylko kompilatorów wiersza polecenia, narzędzi i bibliotek, których potrzebujesz do tworzenia programów C i C++. Jest doskonała do laboratoriów kompilacji lub klasą wykonuje i instaluje względnie szybko. Aby zainstalować tylko narzędzia wiersza polecenia, Pobierz [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
 
 Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy sprawdzić, czy narzędzia są zainstalowane i czy użytkownik może uzyskiwać do nich dostęp z poziomu wiersza polecenia. Visual C++ ma złożone wymagania dotyczące środowiska wiersza polecenia można znaleźć narzędzia, nagłówki i biblioteki, które są używane. **Nie można użyć Visual C++ w oknie wiersza polecenia zwykły** bez wykonania tej czynności kilka operacji przygotowania. Na szczęście Visual C++ instaluje skróty dla Ciebie uruchomić wiersz polecenia dla deweloperów, zawierającej środowisko dla kompilacji z wiersza polecenia. Niestety nazw skróty wiersza polecenia dla deweloperów i gdzie są przechowywane różnią się w prawie każdym wersji programu Visual C++ i w innych wersjach systemu Windows. Pierwsze zadanie przewodnik znajduje się właściwy do użycia.
 
 > [!NOTE]
-> Skrót do wiersza polecenia dla deweloperów automatycznie ustawia prawidłowe ścieżki dla kompilatora i narzędzi oraz wszelkie wymagane nagłówki i biblioteki. Jeśli używasz zwykły należy ustawić w tych wartości środowiskowe **polecenia** okna. Aby uzyskać więcej informacji, zobacz [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji wiersza polecenia](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Zaleca się, że używasz skrót do wiersza polecenia dla deweloperów, zamiast tworzyć własne.
+> Skrót do wiersza polecenia dla deweloperów automatycznie ustawia prawidłowe ścieżki dla kompilatora i narzędzi oraz wszelkie wymagane nagłówki i biblioteki. Jeśli używasz zwykły należy ustawić w tych wartości środowiskowe **polecenia** okna. Aby uzyskać więcej informacji, zobacz [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji wiersza polecenia](setting-the-path-and-environment-variables-for-command-line-builds.md). Zaleca się, że używasz skrót do wiersza polecenia dla deweloperów, zamiast tworzyć własne.
 
 ### <a name="open-a-developer-command-prompt"></a>Otwórz wiersz polecenia dla deweloperów
 
@@ -151,26 +151,26 @@ Skompilować program, który zawiera pliki kodu źródłowego dodatkowe, wprowad
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-`/EHsc` Opcji wiersza polecenia instruuje kompilator, aby włączyć obsługę wyjątku C++. Aby uzyskać więcej informacji, zobacz [/EH (Model obsługi wyjątku)](../build/reference/eh-exception-handling-model.md).
+`/EHsc` Opcji wiersza polecenia instruuje kompilator, aby włączyć obsługę wyjątku C++. Aby uzyskać więcej informacji, zobacz [/EH (Model obsługi wyjątku)](reference/eh-exception-handling-model.md).
 
-Podczas podawania dodatkowych plików źródłowych, kompilator używa pierwszego pliku wejściowego, aby utworzyć nazwę programu. W tym przypadku dane wyjściowe programu o nazwie file1.exe. Aby zmienić nazwę program1.exe, Dodaj [/out](../build/reference/out-output-file-name.md) — opcja konsolidatora:
+Podczas podawania dodatkowych plików źródłowych, kompilator używa pierwszego pliku wejściowego, aby utworzyć nazwę programu. W tym przypadku dane wyjściowe programu o nazwie file1.exe. Aby zmienić nazwę program1.exe, Dodaj [/out](reference/out-output-file-name.md) — opcja konsolidatora:
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
-I aby automatycznie wykryć więcej błędów programowania, zaleca się skompilować przy użyciu [/W3](../build/reference/compiler-option-warning-level.md) lub [/W4](../build/reference/compiler-option-warning-level.md) ostrzeżenie opcję poziomu:
+I aby automatycznie wykryć więcej błędów programowania, zaleca się skompilować przy użyciu [/W3](reference/compiler-option-warning-level.md) lub [/W4](reference/compiler-option-warning-level.md) ostrzeżenie opcję poziomu:
 
 `cl /W4 /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
-Kompilator cl.exe, ma wiele więcej opcji się do kompilacji, optymalizowanie, Debuguj i Analizuj swój kod. Lista szybkich, wprowadź `cl /?` w wierszu polecenia dla deweloperów. Można również skompilować i połączyć oddzielnie i zastosować opcje konsolidatora w bardziej złożonych scenariuszy kompilacji. Aby uzyskać więcej informacji dotyczących kompilatora i opcje konsolidatora i jego użycia, zobacz [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
+Kompilator cl.exe, ma wiele więcej opcji się do kompilacji, optymalizowanie, Debuguj i Analizuj swój kod. Lista szybkich, wprowadź `cl /?` w wierszu polecenia dla deweloperów. Można również skompilować i połączyć oddzielnie i zastosować opcje konsolidatora w bardziej złożonych scenariuszy kompilacji. Aby uzyskać więcej informacji dotyczących kompilatora i opcje konsolidatora i jego użycia, zobacz [odwołanie kompilacji C/C++](reference/c-cpp-building-reference.md).
 
-NMAKE i pliki reguł programu make lub MSBuild i pliki projektu można użyć do konfigurowania i tworzyć bardziej złożone projekty w wierszu polecenia. Aby uzyskać więcej informacji na temat korzystania z tych narzędzi, zobacz [odwołanie NMAKE](../build/nmake-reference.md) i [MSBuild](../build/msbuild-visual-cpp.md).
+NMAKE i pliki reguł programu make lub MSBuild i pliki projektu można użyć do konfigurowania i tworzyć bardziej złożone projekty w wierszu polecenia. Aby uzyskać więcej informacji na temat korzystania z tych narzędzi, zobacz [odwołanie NMAKE](reference/nmake-reference.md) i [MSBuild](msbuild-visual-cpp.md).
 
-W językach C i C++ są podobne, ale nie sam. Kompilator języka Visual C++ używa prostej reguły, aby określić język, który będzie używany podczas kompiluje kod. Domyślnie kompilator języka Visual C++ traktuje wszystkie pliki, które kończą się na .c, jako kod źródłowy języka C i wszystkich plików, które kończą się na .cpp, jako kod źródłowy języka C++. Aby wymusić na kompilatorze traktowanie wszystkich plików, co kod C++ nie są zależne rozszerzenie nazwy pliku, użyj [TP](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) — opcja kompilatora.
+W językach C i C++ są podobne, ale nie sam. Kompilator MSVC używa prostej reguły, aby określić język, który będzie używany podczas kompiluje kod. Domyślnie kompilator MSVC traktuje wszystkie pliki, które kończą się na .c, jako kod źródłowy języka C i wszystkich plików, które kończą się na .cpp, jako kod źródłowy języka C++. Aby wymusić na kompilatorze traktowanie wszystkich plików, co kod C++ nie są zależne rozszerzenie nazwy pliku, użyj [TP](reference/tc-tp-tc-tp-specify-source-file-type.md) — opcja kompilatora.
 
-Kompilator języka Visual C++ obejmuje C Runtime Library (CRT) zgodne ze standardem ISO C99, ale nie jest ściśle zgodna. W większości przypadków kod przenośny skompilować i uruchomić zgodnie z oczekiwaniami. Visual C++ nie obsługuje pewnych zmian CRT w ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe przez kompilator Visual C++. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+Kompilator MSVC zawiera C Runtime Library (CRT) zgodne ze standardem ISO C99, ale nie jest ściśle zgodna. W większości przypadków kod przenośny skompilować i uruchomić zgodnie z oczekiwaniami. Visual C++ nie obsługuje pewnych zmian CRT w ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe za pomocą kompilatora MSVC. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>
-[Opcje kompilatora](../build/reference/compiler-options.md)
+[Projekty i systemów kompilacji](projects-and-build-systems-cpp.md)<br/>
+[MSVC Compiler Options](reference/compiler-options.md)

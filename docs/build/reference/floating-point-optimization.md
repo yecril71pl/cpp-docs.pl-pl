@@ -1,13 +1,13 @@
 ---
-title: Microsoft Visual C++ Optymalizacja liczb zmiennoprzecinkowych
+title: Optymalizacja zmiennoprzecinkowy MSVC
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504302"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814374"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++ optymalizacji zmiennoprzecinkowych
 
@@ -36,7 +36,7 @@ Ta funkcja dodaje n **float** wartości w wektorze tablicy `A`. W treści pętli
 
 Kompilator języka C++ naiwni zakładać, że arytmetyki zmiennoprzecinkowej te same reguły algebraicznych jako liczba rzeczywista operacje arytmetyczne. Takie kompilator może następnie błędnie stwierdzą, że
 
-> C = T - sum - Y == > (suma + Y) — Suma - Y == > 0.
+> C = T - sum - Y ==> (sum+Y)-sum-Y ==> 0;
 
 Oznacza to, że wartość postrzegany c jest zawsze stałą wartość zero. Jeśli ta wartość stała jest następnie propagowany do kolejnych wyrażeń, ciało pętli jest skrócony do prostych sumą. Aby była precyzyjna,
 
@@ -952,11 +952,11 @@ Przełączniki wiersza polecenia są w rzeczywistości skrót do ustawiania czte
 ||||||
 |-|-|-|-|-|
 ||float_control(Precise)|float_control(EXCEPT)|fp_contract|fenv_access|
-|/ FP: strict|on|on|Wyłączone|on|
-|/ FP: strict/FP: except-|on|Wyłączone|Wyłączone|on|
-|/ FP: precise|on|Wyłączone|on|Wyłączone|
-|/ FP: precise/FP: except|on|on|on|Wyłączone|
-|Fast|Wyłączone|Wyłączone|on|Wyłączone|
+|/fp:strict|on|on|wyłączone|on|
+|/fp:strict /fp:except-|on|wyłączone|wyłączone|on|
+|/fp:precise|on|wyłączone|on|wyłączone|
+|/ FP: precise/FP: except|on|on|on|wyłączone|
+|/fp:fast|wyłączone|wyłączone|on|wyłączone|
 
 Na przykład następujące jawnie włącza semantykę FP: Fast.
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Optymalizacja kodu](optimizing-your-code.md)<br/>
+[Optymalizacja kodu](../optimizing-your-code.md)<br/>

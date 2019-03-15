@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -FPO dumpbin option
 - FPO dumpbin option
 ms.assetid: ee67f08b-bc5a-475a-bee3-c5614721755a
-ms.openlocfilehash: c40c488a89d2338cb30d25dbb1a04703b6c3c901
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bb56398efb328163c0e0952d50da105bc226c9fa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422107"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812931"
 ---
 # <a name="fpo"></a>/FPO
 
@@ -25,8 +25,8 @@ ms.locfileid: "57422107"
 
 Ta opcja umożliwia wyświetlenie rekordów optymalizacji (ang.) wskaźnika ramki.
 
-Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opcje DUMPBIN](dumpbin-options.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-ms.openlocfilehash: 39b614b1ab21a654a35e30b0d3acffa15d244fb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90f63a972245114424b64d4131420dcb4e1e925a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530042"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809798"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Przetwarzaj komentarze dokumentacji) (C/C++)
 
@@ -33,15 +33,15 @@ Nazwa pliku .xdc, który zostanie utworzony przez kompilator. Prawidłowy tylko 
 
 ## <a name="remarks"></a>Uwagi
 
-W plikach xdc są przetwarzane w pliku XML z xdcmake.exe. Aby uzyskać więcej informacji, zobacz [xdcmake — dokumentacja](../../ide/xdcmake-reference.md).
+W plikach xdc są przetwarzane w pliku XML z xdcmake.exe. Aby uzyskać więcej informacji, zobacz [xdcmake — dokumentacja](xdcmake-reference.md).
 
-Możesz dodać komentarze dokumentacji do plików kodu źródłowego. Aby uzyskać więcej informacji, zobacz [tagi zalecane dla komentarzy do dokumentacji](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).
+Możesz dodać komentarze dokumentacji do plików kodu źródłowego. Aby uzyskać więcej informacji, zobacz [tagi zalecane dla komentarzy do dokumentacji](recommended-tags-for-documentation-comments-visual-cpp.md).
 
 Plik XML wygenerowany za pomocą funkcji IntelliSense, wprowadzić nazwę pliku w pliku XML, który jest taki sam jak zestaw, który chcesz obsługiwać i umieścić ten plik XML w tym samym katalogu co zestaw. W przypadku zestawu odwołuje się do projektu programu Visual Studio, znajduje się także plik XML. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense) i [podawania komentarzy kodu XML](/visualstudio/ide/supplying-xml-code-comments).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **pliki wyjściowe** stronę właściwości.
 
@@ -51,7 +51,7 @@ Plik XML wygenerowany za pomocą funkcji IntelliSense, wprowadzić nazwę pliku 
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

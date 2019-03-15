@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298064"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808355"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Klasy okien ramowych tworzone przez kreatora aplikacji
 
-Kiedy używasz [Kreatora aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md) utworzyć szkielet aplikacji, oprócz aplikacji, dokumentu i Widok klas, Kreator aplikacji tworzy klasy pochodnej okno ramowe aplikacji głównej ramki okna. Nosi nazwę klasy `CMainFrame` domyślnie i pliki go zawierające są nazywane MAINFRM. H i MAINFRM. CPP.
+Gdy projekt do tworzenia nowych MFC z **nowy projekt** okno dialogowe, oprócz aplikacji, klasy dokumentów i widoków, Kreator aplikacji tworzy klasy pochodnej okno ramowe aplikacji głównej ramki okna. Nosi nazwę klasy `CMainFrame` domyślnie i pliki go zawierające są nazywane MAINFRM. H i MAINFRM. CPP.
 
 Jeśli aplikacja jest SDI, Twoje `CMainFrame` klasa pochodzi od klasy [CFrameWnd](../mfc/reference/cframewnd-class.md).
 
@@ -36,4 +36,5 @@ Te klasy okien ramowych działają podczas tworzenia, ale aby zwiększyć ich fu
 ## <a name="see-also"></a>Zobacz także
 
 [Klasy okien ramowych](../mfc/frame-window-classes.md)<br/>
-[Program MFC lub źródło kontroli i pliki nagłówkowe](../ide/mfc-program-or-control-source-and-header-files.md)
+[Program MFC lub źródło kontroli i pliki nagłówkowe](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

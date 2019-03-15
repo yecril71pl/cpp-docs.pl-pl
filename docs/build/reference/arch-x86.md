@@ -2,16 +2,16 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421810"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812255"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-Określa architekturę do generowania kodu na x86. Zobacz też [/arch (x64)](../../build/reference/arch-x64.md) i [/arch (ARM)](../../build/reference/arch-arm.md).
+Określa architekturę do generowania kodu na x86. Zobacz też [/arch (x64)](arch-x64.md) i [/arch (ARM)](arch-arm.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,9 +48,9 @@ Oprócz przy użyciu instrukcji SSE i SSE2, kompilator używa także inne instru
 
 Ponieważ x86 kompilator generuje kod używającego instrukcji SSE2, domyślnie, należy określić **/arch:IA32** wyłączenie generowania instrukcji SSE i SSE2 dla x86 procesorów.
 
-**/ arch** tylko ma wpływ na generowanie kodu dla funkcji natywnych. Kiedy używasz [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) do kompilowania, **/arch** nie ma wpływu na generowanie kodu dla funkcji zarządzanej.
+**/ arch** tylko ma wpływ na generowanie kodu dla funkcji natywnych. Kiedy używasz [/CLR](clr-common-language-runtime-compilation.md) do kompilowania, **/arch** nie ma wpływu na generowanie kodu dla funkcji zarządzanej.
 
-**/ arch** i [/QIfist](../../build/reference/qifist-suppress-ftol.md) nie można użyć w tym samym compiland —. W szczególności, jeśli nie używasz `_controlfp` do modyfikowania słowa sterującego FP, a następnie uruchamiania środowiska wykonawczego zestawy x87 FPU kontrolki programu word sterowanie dokładnością pola Kod do 53 bitów. W związku z tym co zmiennoprzecinkowe i podwójne operacji w wyrażeniu używa mantysę 53-bitową i wykładnik 15-bitowych. Jednak każda operacja pojedynczej precyzji SSE używa mantysę 24-bitowego i wykładnik 8-bitową i SSE2 podwójnej precyzji operacje używają mantysę 53-bitową i wykładnik 11-bitowych. Aby uzyskać więcej informacji, zobacz [_control87 —, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Te różnice są możliwe w drzewie jedno wyrażenie, ale nie w przypadkach, gdzie uczestniczy przypisanie użytkownika po każdym Podwyrażenie. Rozważ następujące opcje:
+**/ arch** i [/QIfist](qifist-suppress-ftol.md) nie można użyć w tym samym compiland —. W szczególności, jeśli nie używasz `_controlfp` do modyfikowania słowa sterującego FP, a następnie uruchamiania środowiska wykonawczego zestawy x87 FPU kontrolki programu word sterowanie dokładnością pola Kod do 53 bitów. W związku z tym co zmiennoprzecinkowe i podwójne operacji w wyrażeniu używa mantysę 53-bitową i wykładnik 15-bitowych. Jednak każda operacja pojedynczej precyzji SSE używa mantysę 24-bitowego i wykładnik 8-bitową i SSE2 podwójnej precyzji operacje używają mantysę 53-bitową i wykładnik 11-bitowych. Aby uzyskać więcej informacji, zobacz [_control87 —, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Te różnice są możliwe w drzewie jedno wyrażenie, ale nie w przypadkach, gdzie uczestniczy przypisanie użytkownika po każdym Podwyrażenie. Rozważ następujące opcje:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -66,7 +66,7 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>Aby ustawić tę opcję kompilatora AVX, AVX2, IA32, SSE lub SSE2 w programie Visual Studio
 
-1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji**, **C/C++** folderu.
 
@@ -80,6 +80,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>Zobacz także
 
-[/arch (Minimalna architektura procesora CPU)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[/arch (Minimalna architektura procesora CPU)](arch-minimum-cpu-architecture.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

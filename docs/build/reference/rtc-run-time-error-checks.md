@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424616"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815895"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Sprawdzanie błędów czasu wykonywania)
 
@@ -75,7 +75,7 @@ Włącza ramki błąd w czasie wykonywania sprawdzania stosu, w następujący sp
 
 - Inicjalizacja zmiennych lokalnych na wartość różną od zera. Pomaga to identyfikować błędy, które nie są wyświetlane podczas pracy w trybie debugowania. Istnieje duże prawdopodobieństwo, że zmiennych stosu będą nadal zero do kompilacji debugowanej, ze względu na optymalizacje kompilatora zmiennych stosu w kompilacji wydania w porównaniu do kompilacji wydania. Gdy program został użyty obszar swój stos, nigdy nie zresetowaniu 0 przez kompilator. W związku z tym zmiennych stosu kolejne, niezainicjowanej, które zdarzają się używać tego samego obszaru stosu mogą zwracać pozostawione przez wcześniejsze korzystanie z tej pamięci stosu.
 
-- Wykrywanie przepełnienia i underruns zmiennych lokalnych, takich jak tablice. **/ RTC** `s` nie wykrywa przepełnienia podczas uzyskiwania dostępu do pamięci, która wynika z kompilatora uzupełnienia w ramach struktury. Dopełnienie mogą wystąpić przy użyciu [wyrównać](../../cpp/align-cpp.md), [/ZP (wyrównanie członka struktury)](../../build/reference/zp-struct-member-alignment.md), lub [pakiet](../../preprocessor/pack.md), lub jeśli porządkowania elementów struktury w taki sposób, aby wymagać kompilator, aby dodać dopełnienia.
+- Wykrywanie przepełnienia i underruns zmiennych lokalnych, takich jak tablice. **/ RTC** `s` nie wykrywa przepełnienia podczas uzyskiwania dostępu do pamięci, która wynika z kompilatora uzupełnienia w ramach struktury. Dopełnienie mogą wystąpić przy użyciu [wyrównać](../../cpp/align-cpp.md), [/ZP (wyrównanie członka struktury)](zp-struct-member-alignment.md), lub [pakiet](../../preprocessor/pack.md), lub jeśli porządkowania elementów struktury w taki sposób, aby wymagać kompilator, aby dodać dopełnienia.
 
 - Weryfikacja wskaźnik stosu, które wykrywa uszkodzenie wskaźnik stosu. Uszkodzenie wskaźnika stosu może być spowodowany niezgodnością konwencji wywoływania. Na przykład za pomocą wskaźnika funkcji, należy wywołać funkcję w bibliotece DLL, która jest eksportowana jako [__stdcall](../../cpp/stdcall.md) , ale deklaruje wskaźnik, aby działały jak [__cdecl](../../cpp/cdecl.md).
 
@@ -99,13 +99,13 @@ Sprawdzanie błędów czasu wykonywania to sposób odnajdywania problemów w kod
 
 Jeśli kompilujesz program w wierszu polecenia przy użyciu dowolnej z **usunęliśmy** opcje kompilatora, wszelkie pragma [zoptymalizować](../../preprocessor/optimize.md) po cichu nie będzie zgodnie z instrukcjami w kodzie. Jest to spowodowane sprawdzanie błędów czasu wykonywania nie są dozwolone w kompilacji wydania (zoptymalizowany).
 
-Należy używać **usunęliśmy** dla rozwoju kompilacji; **Usunęliśmy** nie powinny być używane dla kompilacji detalicznej. **/ RTC** nie można używać z optymalizacje kompilatora ([/O opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)). Obraz programu utworzonych za pomocą **usunęliśmy** będzie nieco większy przebiegać wolniej niż obrazu skompilowanego za pomocą **/Od** (5 procent wolniej niż **/Od** kompilacji).
+Należy używać **usunęliśmy** dla rozwoju kompilacji; **Usunęliśmy** nie powinny być używane dla kompilacji detalicznej. **/ RTC** nie można używać z optymalizacje kompilatora ([/O opcje (Optymalizuj kod)](o-options-optimize-code.md)). Obraz programu utworzonych za pomocą **usunęliśmy** będzie nieco większy przebiegać wolniej niż obrazu skompilowanego za pomocą **/Od** (5 procent wolniej niż **/Od** kompilacji).
 
-Dyrektywy preprocesora __MSVC_RUNTIME_CHECKS zostanie zdefiniowana, jeśli używasz jakiejkolwiek **usunęliśmy** opcji lub [GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).
+Dyrektywy preprocesora __MSVC_RUNTIME_CHECKS zostanie zdefiniowana, jeśli używasz jakiejkolwiek **usunęliśmy** opcji lub [GZ](gz-enable-stack-frame-run-time-error-checking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -119,6 +119,6 @@ Dyrektywy preprocesora __MSVC_RUNTIME_CHECKS zostanie zdefiniowana, jeśli używ
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Instrukcje: Korzystanie z natywnego sprawdzania w trakcie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks)

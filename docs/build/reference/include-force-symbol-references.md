@@ -12,12 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 418b66cb16954f23036eaa65e07a4abf80fdba79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439341"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810981"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Wymuszaj odwołania do symboli)
 
@@ -38,11 +38,11 @@ Aby określić wiele symboli, wpisz przecinek (,), średnika (;) lub odstęp mi�
 
 Konsolidator usuwa `symbol` , dodając obiekt, który zawiera definicję symbolu do programu. Ta funkcja jest przydatna, w tym obiektu biblioteki, które w przeciwnym razie nie będzie można połączone z tym programem.
 
-Określanie symbolu z tą opcją zastąpienia usunięcie tego symbolu przez [/OPT: REF](../../build/reference/opt-optimizations.md).
+Określanie symbolu z tą opcją zastąpienia usunięcie tego symbolu przez [/OPT: REF](opt-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -54,7 +54,7 @@ Określanie symbolu z tą opcją zastąpienia usunięcie tego symbolu przez [/OP
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

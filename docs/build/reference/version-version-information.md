@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /VERSION linker option
 - VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
-ms.openlocfilehash: 3e24a5307b8c4f60f29de390d38d9694f1cacf29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 626461fc7a9fc6dd7b6578e836733d154a66862a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529704"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807602"
 ---
 # <a name="version-version-information"></a>/VERSION (Informacje o wersji)
 
@@ -31,17 +31,17 @@ Numer wersji, które mają w nagłówku pliku .exe lub .dll.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja / Version informuje konsolidator, aby umieścił numer wersji w nagłówku pliku .exe lub .dll. Użyj polecenia DUMPBIN [/HEADERS](../../build/reference/headers.md) aby zobaczyć pole wersji obrazu OPCJONALNYCH wartości NAGŁÓWKA, aby zobaczyć efekt Version.
+Opcja / Version informuje konsolidator, aby umieścił numer wersji w nagłówku pliku .exe lub .dll. Użyj polecenia DUMPBIN [/HEADERS](headers.md) aby zobaczyć pole wersji obrazu OPCJONALNYCH wartości NAGŁÓWKA, aby zobaczyć efekt Version.
 
 *Głównych* i *pomocnicza* argumenty są liczbami dziesiętnymi z zakresu od 0 do 65 535. Wartość domyślna to wersja 0,0.
 
 Informacje o określony za pomocą Version nie ma wpływu na informacje o wersji, który pojawia się dla aplikacji, gdy wyświetlić jego właściwości w Eksploratorze plików. Czy informacje o wersji pochodzą z pliku zasobu, który jest używany do tworzenia aplikacji. Zobacz [Edytor informacji o wersji](../../windows/version-information-editor.md) Aby uzyskać więcej informacji.
 
-Innym sposobem, aby wstawić numer wersji jest [wersji](../../build/reference/version-c-cpp.md) instrukcji definicji modułu.
+Innym sposobem, aby wstawić numer wersji jest [wersji](version-c-cpp.md) instrukcji definicji modułu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -53,7 +53,7 @@ Innym sposobem, aby wstawić numer wersji jest [wersji](../../build/reference/ve
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

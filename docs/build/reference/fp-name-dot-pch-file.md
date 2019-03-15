@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 30a569b367d10a4f230d0054b19833c6614afac7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517094"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820393"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Nazwa pliku .Pch)
 
@@ -32,7 +32,7 @@ Zawiera nazwę ścieżki dla prekompilowanego nagłówka, zamiast używać domy�
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tej opcji z [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) lub [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) o podanie nazwy ścieżki dla prekompilowanego nagłówka, zamiast używać domyślnej nazwy ścieżki. Można również użyć **/FP** z **/Yc** Aby określić plik prekompilowanego pliku nagłówkowego, która różni się od **/Yc**<em>filename</em> argumentów i z podstawowej nazwy pliku źródłowego.
+Użyj tej opcji z [/Yc (Utwórz prekompilowany plik nagłówkowy)](yc-create-precompiled-header-file.md) lub [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](yu-use-precompiled-header-file.md) o podanie nazwy ścieżki dla prekompilowanego nagłówka, zamiast używać domyślnej nazwy ścieżki. Można również użyć **/FP** z **/Yc** Aby określić plik prekompilowanego pliku nagłówkowego, która różni się od **/Yc**<em>filename</em> argumentów i z podstawowej nazwy pliku źródłowego.
 
 Jeśli nie określisz rozszerzenie jako część nazwy ścieżki, przyjmowana jest rozszerzeniem .pch. Jeśli określisz katalogu bez nazwy pliku, domyślna nazwa pliku jest VC*x*0.pch, gdzie *x* jest główną wersją Visual C++ w użyciu.
 
@@ -40,7 +40,7 @@ Można również użyć **/FP** z opcją **/Yu**.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -68,9 +68,9 @@ Poniższe polecenie Określa użycie pliku wstępnie skompilowanego nagłówka o
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)
+[Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Określanie nazwy ścieżki](specifying-the-pathname.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-ms.openlocfilehash: a5a1e8f8e1d022fab9dc1bf4f67713302c11f758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7724069a401aadcdb2e3e8487dc85273dac357fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446725"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818651"
 ---
 # <a name="bscmake-command-line"></a>Wiersz polecenia BSCMAKE
 
@@ -33,8 +33,8 @@ Następujące polecenie uruchamia BSCMAKE do tworzenia pliku o nazwie MAIN.bsc z
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-Aby uzyskać powiązane informacje, zobacz [plik polecenia BSCMAKE](../../build/reference/bscmake-command-file-response-file.md) i [opcje BSCMAKE](../../build/reference/bscmake-options.md).
+Aby uzyskać powiązane informacje, zobacz [plik polecenia BSCMAKE](bscmake-command-file-response-file.md) i [opcje BSCMAKE](bscmake-options.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)
+[BSCMAKE — dokumentacja](bscmake-reference.md)

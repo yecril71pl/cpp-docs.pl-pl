@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: effefa2c370634c450b03ed18187769e12e40adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500389"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810240"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)
 
@@ -49,7 +49,7 @@ Kompilując DLL, zwykle tworzysz plik nagłówka, który zawiera prototypy funkc
 #define DllExport   __declspec( dllexport )
 ```
 
-**__declspec(dllexport)** przechowuje nazwy funkcji w tabeli eksportu biblioteki DLL. Jeśli chcesz zoptymalizować rozmiar tabeli, zobacz [eksportowanie funkcji z biblioteki DLL według liczby porządkowej zamiast nazwy](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+**__declspec(dllexport)** przechowuje nazwy funkcji w tabeli eksportu biblioteki DLL. Jeśli chcesz zoptymalizować rozmiar tabeli, zobacz [eksportowanie funkcji z biblioteki DLL według liczby porządkowej zamiast nazwy](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
 > [!NOTE]
 >  Portowaniu kodu źródłowego DLL z Win16 do Win32, Zastąp każde wystąpienie **__export** z **__declspec(dllexport)**.
@@ -58,28 +58,28 @@ Jako odwołanie Przeszukaj pliku nagłówkowym Win32 Winbase.h. Zawiera przykła
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Eksportowanie z biblioteki DLL za pomocą plików .def](../build/exporting-from-a-dll-using-def-files.md)
+- [Eksportowanie z biblioteki DLL za pomocą plików .def](exporting-from-a-dll-using-def-files.md)
 
-- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Eksportuj funkcje C++ do użycia w plikach wykonywalnych języka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Eksportuj funkcje C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Eksportuj funkcje C do użycia w plikach wykonywalnych języka C lub języka C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Eksportuj funkcje C do użycia w plikach wykonywalnych języka C lub języka C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Określić, której metody eksportowania użyjesz](../build/determining-which-exporting-method-to-use.md)
+- [Określić, której metody eksportowania użyjesz](determining-which-exporting-method-to-use.md)
 
-- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Zainicjuj bibliotekę DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
 - [__Declspec — słowo kluczowe](../cpp/declspec.md)
 
-- [Importowanie i eksportowanie funkcji śródwierszowych](../build/importing-and-exporting-inline-functions.md)
+- [Importowanie i eksportowanie funkcji śródwierszowych](importing-and-exporting-inline-functions.md)
 
-- [Importy wzajemne](../build/mutual-imports.md)
+- [Importy wzajemne](mutual-imports.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
+[Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)

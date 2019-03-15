@@ -1,15 +1,15 @@
 ---
-title: 'Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia'
+title: 'Przewodnik: Kompilowanie programu w języku C + +/ CX w wierszu polecenia'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 6acfa707ac64a647e838fd1dbcd5564c79faa1a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515144"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809512"
 ---
-# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Przewodnik: Kompilowanie programu w języku C + +/ CX w wierszu polecenia
 
 Można tworzyć programy Visual C++, które przeznaczone dla środowiska uruchomieniowego Windows i utworzyć je w wiersza polecenia. Visual C++ obsługuje rozszerzeniami składnika środowiska Visual C++ (C + +/ CX), który ma dodatkowe typy i podmioty, pod kątem modelu programowania środowiska wykonawczego Windows. Można użyć C + +/ CX, aby tworzyć aplikacje dla Windows platformy Uniwersalnej systemu Windows Phone 8.1 i Windows desktop. Aby uzyskać więcej informacji, zobacz [samouczek c + +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) i [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).
 
@@ -24,11 +24,11 @@ Należy zrozumieć podstawy języka C++.
 
 ## <a name="compiling-a-ccx-program"></a>Kompilowanie programu w języku C + +/ CX programu
 
-Aby włączyć kompilacji w języku C + +/ CX, należy użyć [/ZW](../build/reference/zw-windows-runtime-compilation.md) — opcja kompilatora. Kompilator języka Visual C++ generuje plik .exe, który jest przeznaczony dla środowiska wykonawczego Windows, opinii i linkami do wymaganych bibliotek.
+Aby włączyć kompilacji w języku C + +/ CX, należy użyć [/ZW](reference/zw-windows-runtime-compilation.md) — opcja kompilatora. Kompilator MSVC generuje plik .exe, który jest przeznaczony dla środowiska wykonawczego Windows, opinii i linkami do wymaganych bibliotek.
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Aby skompilować w języku C + +/ CX aplikacji w wierszu polecenia
 
-1. Otwórz **wiersz polecenia dla deweloperów** okna. (Na **Start** otwarte okno **aplikacji**. Otwórz **Visual Studio Tools** folder w używanej wersji programu Visual Studio, a następnie wybierz **wiersz polecenia dla deweloperów** skrótów.) Aby uzyskać więcej informacji na temat otworzyć okno wiersza polecenia dla deweloperów, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md).
+1. Otwórz **wiersz polecenia dla deweloperów** okna. (Na **Start** otwarte okno **aplikacji**. Otwórz **Visual Studio Tools** folder w używanej wersji programu Visual Studio, a następnie wybierz **wiersz polecenia dla deweloperów** skrótów.) Aby uzyskać więcej informacji na temat otworzyć okno wiersza polecenia dla deweloperów, zobacz [możesz używać zestawu narzędzi MSVC z wiersza polecenia](building-on-the-command-line.md).
 
    Poświadczenia administratora może być konieczne pomyślnie skompilować kod, w zależności od konfiguracji i systemu operacyjnego komputera. Aby uruchomić okno wiersza polecenia jako administrator, otwórz menu skrótów dla **wiersz polecenia dla deweloperów** , a następnie wybierz **Uruchom jako administrator**.
 
@@ -51,7 +51,7 @@ Aby włączyć kompilacji w języku C + +/ CX, należy użyć [/ZW](../build/ref
 
    Utworzono plik źródłowy języka Visual C++, który używa środowiska wykonawczego Windows [przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md) przestrzeni nazw.
 
-1. W wierszu polecenia wprowadź **cl/ehsc basiccx.cpp /ZW/Link opcji**. Cl.exe — kompilator kompiluje kod źródłowy w pliku .obj, a następnie uruchamia konsolidator generuje program wykonywalny o nazwie basiccx.exe. ( [/Ehsc](../build/reference/eh-exception-handling-model.md) — opcja kompilatora Określa model obsługi wyjątków C++ i [/link](../build/reference/link-pass-options-to-linker.md) Flaga Określa, aplikacja konsolowa.)
+1. W wierszu polecenia wprowadź **cl/ehsc basiccx.cpp /ZW/Link opcji**. Cl.exe — kompilator kompiluje kod źródłowy w pliku .obj, a następnie uruchamia konsolidator generuje program wykonywalny o nazwie basiccx.exe. ( [/Ehsc](reference/eh-exception-handling-model.md) — opcja kompilatora Określa model obsługi wyjątków C++ i [/link](reference/link-pass-options-to-linker.md) Flaga Określa, aplikacja konsolowa.)
 
 1. Aby uruchomić basiccx.exe program w wierszu polecenia, wprowadź **basiccx**.
 
@@ -61,8 +61,7 @@ Aby włączyć kompilacji w języku C + +/ CX, należy użyć [/ZW](../build/ref
     This is a C++/CX program.
     ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>
-[Opcje kompilatora](../build/reference/compiler-options.md)
+[Projekty i systemów kompilacji](projects-and-build-systems-cpp.md)<br/>
+[MSVC Compiler Options](reference/compiler-options.md)

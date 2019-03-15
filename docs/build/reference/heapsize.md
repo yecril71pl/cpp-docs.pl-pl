@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - HEAPSIZE .def file statement
 ms.assetid: 3c4d3117-491d-41e6-a693-648b3a35eeb9
-ms.openlocfilehash: 7761390f4175121ca12eed06c503d23c0eab91b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71baa6558ec3ffe9db009c7d264f5e4c1a72f92d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617155"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816896"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 
-Udostępnia taką samą funkcjonalność jak [/STERTY](../../build/reference/heap-set-heap-size.md) — opcja konsolidatora.
+Udostępnia taką samą funkcjonalność jak [/STERTY](heap-set-heap-size.md) — opcja konsolidatora.
 
 ```
 /HEAP:reserve[,commit]
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+[Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)

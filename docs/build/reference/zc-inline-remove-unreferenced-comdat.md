@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441239"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820523"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (usuwanie nieużywanej sekcji COMDAT)
 
@@ -27,7 +27,7 @@ Usuwa nieużywane funkcje lub dane, które są Comdat lub mieć tylko powiązani
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **/Zc: inline** jest określony, kompilator nie emituje informacje o symbolach dla nieużywanej sekcji COMDAT funkcji lub danych lub funkcji lub dane, które mają tylko powiązanie wewnętrzne. Tego rodzaju optymalizacji upraszcza część pracy wykonanej przez konsolidator w kompilacjach wydania lub opcji konsolidatora [/OPT: REF](../../build/reference/opt-optimizations.md) jest określony. Gdy kompilator wykonuje tego rodzaju optymalizacji, można znacznie zmniejszyć rozmiar pliku .obj i zwiększyć szybkość konsolidatora. Nie włączono tę opcję kompilatora, gdy są wyłączone optymalizacje ([/Od](../../build/reference/od-disable-debug.md)) lub gdy [/GL (Optymalizacja Całoprogramowa)](../../build/reference/gl-whole-program-optimization.md) jest określony.
+Gdy **/Zc: inline** jest określony, kompilator nie emituje informacje o symbolach dla nieużywanej sekcji COMDAT funkcji lub danych lub funkcji lub dane, które mają tylko powiązanie wewnętrzne. Tego rodzaju optymalizacji upraszcza część pracy wykonanej przez konsolidator w kompilacjach wydania lub opcji konsolidatora [/OPT: REF](opt-optimizations.md) jest określony. Gdy kompilator wykonuje tego rodzaju optymalizacji, można znacznie zmniejszyć rozmiar pliku .obj i zwiększyć szybkość konsolidatora. Nie włączono tę opcję kompilatora, gdy są wyłączone optymalizacje ([/Od](od-disable-debug.md)) lub gdy [/GL (Optymalizacja Całoprogramowa)](gl-whole-program-optimization.md) jest określony.
 
 Domyślnie ta opcja jest wyłączona (**/Zc:inline-**). [/ Permissive-](permissive-standards-conformance.md) opcji nie włącza **/Zc: inline**.
 
@@ -123,7 +123,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** stronę właściwości.
 
@@ -131,4 +131,4 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>

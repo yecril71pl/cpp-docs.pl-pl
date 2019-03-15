@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: a9efa2fa191cbdda99e057ac9329d79bc598743c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c18a5310646ea39c0599f709e9fddc3990b7a2b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510698"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813061"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/ Zc: externconstexpr (Włącz zmienne extern constexpr)
 
@@ -30,13 +30,13 @@ Jeśli nagłówek pliku zawiera zmiennej zadeklarowanej `extern constexpr`, musz
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
 1. Dodaj **/Zc: externconstexpr** lub **/Zc:externConstexpr-** do **dodatkowe opcje:** okienka.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>
 [Auto, słowo kluczowe](../../cpp/auto-keyword.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: e253381cef2fc46cf40792be85ad8367d75eef70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595758"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816506"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Określ plik odpowiedzi konsolidatora)
 
@@ -32,7 +32,7 @@ Plik tekstowy, określając polecenia konsolidatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Zobacz [@ (Określ plik odpowiedzi kompilatora)](../../build/reference/at-specify-a-compiler-response-file.md) Aby uzyskać więcej informacji.
+Zobacz [@ (Określ plik odpowiedzi kompilatora)](at-specify-a-compiler-response-file.md) Aby uzyskać więcej informacji.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
@@ -42,7 +42,7 @@ Zobacz [@ (Określ plik odpowiedzi kompilatora)](../../build/reference/at-specif
 
 - Nie można zmienić tę opcję konsolidatora w programowo.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

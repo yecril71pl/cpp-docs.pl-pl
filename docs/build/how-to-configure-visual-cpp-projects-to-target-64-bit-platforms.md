@@ -1,19 +1,19 @@
 ---
-title: 'Porady: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platformy'
+title: 'Instrukcje: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platformy'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523940"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813958"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Porady: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platformy
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Instrukcje: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platformy
 
 Konfiguracje projektu w środowisku IDE programu Visual Studio służy do konfigurowania aplikacji w języku C++ pod kątem 64-bitowy, x64 platform. Możesz również migrować ustawień projektu Win32 w konfiguracji projektu 64-bitowych.
 
@@ -21,7 +21,7 @@ Konfiguracje projektu w środowisku IDE programu Visual Studio służy do konfig
 
 1. Otwórz projekt C++, który chcesz skonfigurować.
 
-1. Otwórz strony właściwości dla tego projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+1. Otwórz strony właściwości dla tego projektu. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
    > Upewnij się, że w przypadku projektów .NET **właściwości konfiguracji** węzła lub jeden z jego węzłów podrzędnych wybrano  **\<nazwa_projektu > strony właściwości** okno dialogowe; w przeciwnym razie  **Menedżer konfiguracji** przycisk jest niedostępna.
@@ -43,21 +43,20 @@ Konfiguracje projektu w środowisku IDE programu Visual Studio służy do konfig
 
 - Gdy **nowa platforma rozwiązania** jest otwarte okno dialogowe podczas konfigurowania projektu do elementu docelowego platformy 64-bitowej w **Kopiuj ustawienia** listy rozwijanej wybierz **Win32**. Te ustawienia projektu są automatycznie aktualizowane na poziomie projektu:
 
-  - [/MACHINE](../build/reference/machine-specify-target-platform.md) ustawiono opcję konsolidatora **/MACHINE:X 64**.
+  - [/MACHINE](reference/machine-specify-target-platform.md) ustawiono opcję konsolidatora **/MACHINE:X 64**.
 
-  - **Zarejestruj dane wyjściowe** jest wyłączone. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](../ide/linker-property-pages.md).
+  - **Zarejestruj dane wyjściowe** jest wyłączone. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](reference/linker-property-pages.md).
 
-  - **Docelowe środowisko** ustawiono **/ENV x64**. Aby uzyskać więcej informacji, zobacz [strony właściwości MIDL: Ogólne](../ide/midl-property-pages-general.md).
+  - **Docelowe środowisko** ustawiono **/ENV x64**. Aby uzyskać więcej informacji, zobacz [strony właściwości MIDL: Ogólne](reference/midl-property-pages-general.md).
 
-  - **Sprawdza poprawność parametrów** jest czyszczona i Zresetuj wartość domyślną. Aby uzyskać więcej informacji, zobacz [strony właściwości MIDL: zaawansowane](../ide/midl-property-pages-advanced.md).
+  - **Sprawdza poprawność parametrów** jest czyszczona i Zresetuj wartość domyślną. Aby uzyskać więcej informacji, zobacz [strony właściwości MIDL: Zaawansowane](reference/midl-property-pages-advanced.md).
 
-  - Jeśli **formatu informacji debugowania** została ustawiona na **/zi** w konfiguracji projektu Win32, następnie ustawiana jest na **/zi** w konfiguracji projektu 64-bitowych. Aby uzyskać więcej informacji, zobacz [/z7, / zi, /ZI (Format informacji debugowania)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Jeśli **formatu informacji debugowania** została ustawiona na **/zi** w konfiguracji projektu Win32, następnie ustawiana jest na **/zi** w konfiguracji projektu 64-bitowych. Aby uzyskać więcej informacji, zobacz [/z7, / zi, /ZI (Format informacji debugowania)](reference/z7-zi-zi-debug-information-format.md).
 
   > [!NOTE]
   > Żadna z tych właściwości projektu są zmieniane, jeśli zostaną one zastąpione na poziomie plików.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[.NET framework 64-bitowych aplikacji](/dotnet/framework/64-bit-apps)<br/>
-[Konfigurowanie Visual C++ dla wersji 64-bitowych, platformy docelowe x64](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Konfigurowanie projektów w języku C++ x64 64-bitowy, obiektów docelowych](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Debugowanie aplikacji 64-bitowych](/visualstudio/debugger/debug-64-bit-applications)

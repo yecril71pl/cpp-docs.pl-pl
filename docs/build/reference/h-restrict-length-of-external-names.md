@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: 194f8d2c87eb6aa307f417ff022e7975edf2ccc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811267"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Ograniczaj długość nazw zewnętrznych)
 
@@ -68,13 +68,13 @@ void func2(void) {}
 
 Należy zachować ostrożność przy użyciu **/h** opcji z powodu kompilatora wstępnie zdefiniowane identyfikatory. Jeśli długość maksymalna identyfikator jest za mała, niektórych wstępnie zdefiniowane identyfikatory będzie wywołania funkcji nierozwiązane, a także niektóre biblioteki. Na przykład jeśli `printf` funkcja jest używana opcja **/H5** jest określona w czasie kompilacji, symbol **_prin** zostanie utworzony, aby można było odwoływać się do `printf`, i to nie zostanie znaleziony w bibliotece.
 
-Korzystanie z **/h** jest niezgodny z [/GL (Optymalizacja Całoprogramowa)](../../build/reference/gl-whole-program-optimization.md).
+Korzystanie z **/h** jest niezgodny z [/GL (Optymalizacja Całoprogramowa)](gl-whole-program-optimization.md).
 
-**/H** opcja jest przestarzały, ponieważ Visual Studio 2005; maksymalna długość granicach zostały zwiększone i **/h** nie jest już potrzebny. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).
+**/H** opcja jest przestarzały, ponieważ Visual Studio 2005; maksymalna długość granicach zostały zwiększone i **/h** nie jest już potrzebny. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
@@ -84,7 +84,7 @@ Korzystanie z **/h** jest niezgodny z [/GL (Optymalizacja Całoprogramowa)](../.
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

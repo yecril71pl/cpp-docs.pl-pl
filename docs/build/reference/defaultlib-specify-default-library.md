@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 59a4b48e412cee6b2a90608747aa6fb3e1b79ca7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326389"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815960"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Określ bibliotekę domyślną)
 
@@ -34,11 +34,11 @@ Nazwa biblioteki wyszukiwania podczas rozpoznawania odwołań zewnętrznych.
 
 **/DEFAULTLIB** opcja dodaje jeden *biblioteki* listę bibliotek, które łączy wyszukiwania podczas rozpoznawania odwołań. Określony za pomocą biblioteki **/DEFAULTLIB** przeszukiwany jest po biblioteki określone jawnie w wierszu polecenia i przed domyślne biblioteki o nazwie w plikach .obj.
 
-Gdy jest używana bez argumentów, [/nodefaultlib (Ignoruj wszystkie domyślne biblioteki)](../../build/reference/nodefaultlib-ignore-libraries.md) opcja przesłania wszystkie **/DEFAULTLIB**:*biblioteki* opcje. **/Nodefaultlib**:*biblioteki* opcję zastąpienia **/DEFAULTLIB**:*biblioteki* gdy takie same *biblioteki*nazwa jest określona w obu.
+Gdy jest używana bez argumentów, [/nodefaultlib (Ignoruj wszystkie domyślne biblioteki)](nodefaultlib-ignore-libraries.md) opcja przesłania wszystkie **/DEFAULTLIB**:*biblioteki* opcje. **/Nodefaultlib**:*biblioteki* opcję zastąpienia **/DEFAULTLIB**:*biblioteki* gdy takie same *biblioteki*nazwa jest określona w obu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
@@ -50,5 +50,5 @@ Gdy jest używana bez argumentów, [/nodefaultlib (Ignoruj wszystkie domyślne b
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)
-- [Opcje konsolidatora](../../build/reference/linker-options.md)
+- [Odwołania konsolidatora MSVC](linking.md)
+- [Opcje konsolidatora MSVC](linker-options.md)

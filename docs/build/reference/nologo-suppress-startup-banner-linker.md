@@ -13,12 +13,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: 1b966c1f7af556a85aadcafaa8ed43da5b3f75df
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422159"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812502"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Pomiń transparent początkowy) (Konsolidator)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57422159"
 
 Opcja/nologo uniemożliwia wyświetlanie liczby o prawach autorskich komunikat i wersji.
 
-Ta opcja powoduje również pominięcie wyświetlania pliku polecenia. Aby uzyskać więcej informacji, zobacz [pliki poleceń LINK](../../build/reference/link-command-files.md).
+Ta opcja powoduje również pominięcie wyświetlania pliku polecenia. Aby uzyskać więcej informacji, zobacz [pliki poleceń LINK](linking.md).
 
 Domyślnie te informacje są wysyłane przez konsolidator, aby w oknie danych wyjściowych. W wierszu polecenia jest wysyłane do wyjścia standardowego i mogą zostać przekierowane do pliku.
 
@@ -44,5 +44,5 @@ Domyślnie te informacje są wysyłane przez konsolidator, aby w oknie danych wy
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

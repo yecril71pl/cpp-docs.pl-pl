@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Fo compiler option [C++]
 - -Fo compiler option [C++]
 ms.assetid: 0e6d593e-4e7f-4990-9e6e-92e1dcbcf6e6
-ms.openlocfilehash: 19e84cbb1be53c8e1a7ae32b6ea2fc3ceeb2edae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8f2c1a196f18e6d310fd41d4dbed751440a4c20
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640339"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819668"
 ---
 # <a name="fo-object-file-name"></a>/Fo (Nazwa pliku obiektu)
 
@@ -34,7 +34,7 @@ Jeśli ta opcja nie zostanie użyta, korzysta z nazwa podstawowa pliku źródło
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -54,9 +54,9 @@ Następujące polecenie tworzy plik obiektu o nazwie THIS.obj w istniejącym kat
 CL /FoB:\OBJECT\ THIS.C
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)
+[Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Określanie nazwy ścieżki](specifying-the-pathname.md)

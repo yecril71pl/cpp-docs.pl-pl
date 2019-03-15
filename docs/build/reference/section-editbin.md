@@ -9,12 +9,12 @@ helpviewer_keywords:
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 23a7ab9efc96ec10f4ad14547b0c0a20f13ac014
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523308"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822434"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -36,7 +36,7 @@ Ustawianie lub zmienianie sekcji `attributes`, określ przecinek (**,**) następ
 |d|Discardable|
 |e|pliku wykonywalnego|
 |mogę|zainicjowana klasa danych|
-|K|Pamięć wirtualna|
+|k|Pamięć wirtualna|
 |m|Usuń łącze|
 |o|informacje o łączu|
 |p|stronicowana pamięć wirtualna|
@@ -60,6 +60,6 @@ Do kontroli *wyrównanie*, określić znak **A** następuje jedna z następując
 
 Określ `attributes` i *wyrównanie* znaków w postaci ciągu z żadne inne białe. Znaki nie są z uwzględnieniem wielkości liter.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

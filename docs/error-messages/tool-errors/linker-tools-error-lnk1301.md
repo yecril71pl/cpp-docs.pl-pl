@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: b112c4498913c18d82ce8fbc4f6c6d211b906263
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431242"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812099"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Błąd narzędzi konsolidatora LNK1301
 
@@ -29,7 +29,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [Optymalizacje sterowane profilem](../../build/reference/profile-guided-optimizations.md)
+- [Optymalizacje sterowane profilem](../../build/profile-guided-optimizations.md)
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 

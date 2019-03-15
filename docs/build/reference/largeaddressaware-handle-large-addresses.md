@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -LARGEADDRESSAWARE linker option
 - /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-ms.openlocfilehash: 6a83ac89c6ddf14885107193b32d9b7fe7853659
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a560ebf083e2f93d9bb514fc401186291d7f41
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543058"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808121"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Obsługa dużych adresów)
 
@@ -26,11 +26,11 @@ ms.locfileid: "50543058"
 
 Opcja/largeaddressaware informuje konsolidator, że aplikacja może obsługiwać adresy większe niż 2 gigabajty. W 64-bitowych kompilatorów ta opcja jest domyślnie. W 32-bitowych kompilatorów ustawione jest/largeaddressaware Jeśli/largeaddressaware nie jest określona inaczej w linii konsolidatora.
 
-Jeśli aplikacja została połączona z/largeaddressaware, DUMPBIN [/HEADERS](../../build/reference/headers.md) spowoduje to wyświetlenie informacji w tym celu.
+Jeśli aplikacja została połączona z/largeaddressaware, DUMPBIN [/HEADERS](headers.md) spowoduje to wyświetlenie informacji w tym celu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -42,7 +42,7 @@ Jeśli aplikacja została połączona z/largeaddressaware, DUMPBIN [/HEADERS](..
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

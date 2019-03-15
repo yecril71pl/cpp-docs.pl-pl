@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-ms.openlocfilehash: fb9ab3152efe565501e91fbad5ebb279c4396968
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7090dda72868ad7ee4d5f8e4f1ba6a0ad121c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652429"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822470"
 ---
 # <a name="command-line-warning-d9025"></a>Ostrzeżenie D9025 dla wiersza polecenia
 
@@ -23,7 +23,7 @@ Dwie opcje określenia sprzecznych lub niezgodne dyrektywy, zostanie użyta dyre
 
 Jeśli pobieranie tego ostrzeżenia podczas kompilowania środowiska programowania, a nie pewności, skąd pochodzą opcje powodujące konflikt, należy rozważyć następujące kwestie:
 
-- Opcjonalnie można określić w kodzie lub w ustawieniach projektu z projektu. Jeśli przyjrzymy się kompilatora [strony właściwości wiersza polecenia](../../ide/command-line-property-pages.md) i jeśli widzisz opcje powodujące konflikt w **wszystkie opcje** pola, a następnie opcje są ustawione na stronach właściwości projektu, w przeciwnym razie, opcje są ustawione w kodzie źródłowym.
+- Opcjonalnie można określić w kodzie lub w ustawieniach projektu z projektu. Jeśli przyjrzymy się kompilatora [strony właściwości wiersza polecenia](../../build/reference/command-line-property-pages.md) i jeśli widzisz opcje powodujące konflikt w **wszystkie opcje** pola, a następnie opcje są ustawione na stronach właściwości projektu, w przeciwnym razie, opcje są ustawione w kodzie źródłowym.
 
    Jeśli opcje są ustawione na stronach właściwości projektu, sprawdź na stronie właściwości preprocesora kompilatora (z węzła projektu wybranego w oknie Solution Explorer).  Jeśli nie widzisz opcji tam ustawione, sprawdź ustawienia strony preprocesora właściwości dla każdego pliku kodu źródłowego (w Eksploratorze rozwiązań), aby upewnić się, nie został dodany istnieje.
 

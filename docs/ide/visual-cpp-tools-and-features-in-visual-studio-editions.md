@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 3e5b173741700ed6cccf95b479eb5693a62ed02e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751898"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810487"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Narzędzia języka Visual C++ i funkcji w wersjach programu Visual Studio
 
@@ -176,5 +176,5 @@ W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dost
 
 [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co nowego w programie Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[Typy projektów Visual C++](../ide/visual-cpp-project-types.md)<br/>
+[Typy projektów Visual C++](../build/reference/visual-cpp-project-types.md)<br/>
 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686)<br/>

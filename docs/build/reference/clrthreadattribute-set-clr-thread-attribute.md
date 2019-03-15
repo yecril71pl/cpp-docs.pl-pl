@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: 3aae02a004226bf1042488d3a654dae9f751e8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668484"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806782"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Ustaw atrybut wątku CTR)
 
@@ -41,7 +41,7 @@ Ustawienie atrybutu wątku jest prawidłowy tylko podczas kompilowania .exe, jak
 
 Jeśli używasz domyślnego punktu wejścia (main lub wmain, na przykład) Określ model wątkowości, za pomocą /CLRTHREADATTRIBUTE lub przez umieszczenie wątkowości atrybutu (STAThreadAttribute lub MTAThreadAttribute) na domyślnej funkcji wpis.
 
-Korzystając z punktem wejścia innych niż domyślne, określ model wątkowy przy użyciu /CLRTHREADATTRIBUTE lub umieszczając wątkowości atrybutu na funkcji wejścia innych niż domyślne, a następnie określ punkt wejścia innych niż domyślne, za pomocą [/Entry](../../build/reference/entry-entry-point-symbol.md) .
+Korzystając z punktem wejścia innych niż domyślne, określ model wątkowy przy użyciu /CLRTHREADATTRIBUTE lub umieszczając wątkowości atrybutu na funkcji wejścia innych niż domyślne, a następnie określ punkt wejścia innych niż domyślne, za pomocą [/Entry](entry-entry-point-symbol.md) .
 
 Jeśli model wątkowy określona w kodzie źródłowym nie zgadza się z modelu wątkowości określony za pomocą /CLRTHREADATTRIBUTE, konsolidator zignoruje /CLRTHREADATTRIBUTE i zastosowanie modelu wątkowości, określona w kodzie źródłowym.
 
@@ -49,7 +49,7 @@ Będzie trzeba użyć pojedynczego wątków na przykład CLR program udostępnia
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji** węzła.
 
@@ -63,7 +63,7 @@ Będzie trzeba użyć pojedynczego wątków na przykład CLR program udostępnia
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

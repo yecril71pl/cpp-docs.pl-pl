@@ -1,12 +1,12 @@
 ---
 title: Przegląd Konwencji ARM64 ABI
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599787"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816545"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd Konwencji ARM64 ABI
 
@@ -58,11 +58,11 @@ Architektura AArch64 obsługuje 32 rejestrów liczby całkowitej, podsumowano po
 |Rejestruj|Nietrwałe?|Rola|
 |-|-|-|
 x0|Volatile|Parametr/podstaw Zarejestruj 1, zarejestruj się wynik
-x1 x7|Volatile|Parametr/podstaw rejestru od 2 do 8
-x8 x15|Volatile|Rejestruje pliki tymczasowe
-x16 x17|Volatile|Rejestruje pliki tymczasowe wewnątrz procedury wywołania
+x1-x7|Volatile|Parametr/podstaw rejestru od 2 do 8
+x8-x15|Volatile|Rejestruje pliki tymczasowe
+x16-x17|Volatile|Rejestruje pliki tymczasowe wewnątrz procedury wywołania
 x18|Non-volatile|Rejestr platformy: w trybie jądra wskazuje KPCR dla bieżącego procesora; w trybie użytkownika wskazuje TEB
-x19 x28|Non-volatile|Rejestruje pliki tymczasowe
+x19-x28|Non-volatile|Rejestruje pliki tymczasowe
 x29/fp|Non-volatile|Wskaźnik ramki
 x30/lr|Non-volatile|Rejestruje łącza
 
@@ -80,10 +80,10 @@ Architektura AArch64 obsługuje również 32 rejestrów floating point/SIMD, pod
 
 Rejestruj|Nietrwałe?|Rola
 |-|-|-|
-V0|Volatile|Parametr/podstaw Zarejestruj 1, zarejestruj się wynik
-w wersji 1 w wersji 7|Volatile|Parametr/podstaw rejestruje od 2 do 8
-v8-15|Non-volatile|Pliki tymczasowe rejestrów (należy pamiętać, że niski 64 bity są trwałej)
-v16 v31|Volatile|Rejestruje pliki tymczasowe
+v0|Volatile|Parametr/podstaw Zarejestruj 1, zarejestruj się wynik
+v1-v7|Volatile|Parametr/podstaw rejestruje od 2 do 8
+v8-v15|Non-volatile|Pliki tymczasowe rejestrów (należy pamiętać, że niski 64 bity są trwałej)
+v16-v31|Volatile|Rejestruje pliki tymczasowe
 
 Każdego rejestru można uzyskać dostęp jako pełna wartość 128-bitowego (za pośrednictwem v0 v31 lub q0 q31), jako wartość 64-bitowa (za pośrednictwem d0-d31) jako 32-bitową wartość (za pośrednictwem s0-s31), jako wartość 16-bitowych (za pośrednictwem h0 h31) lub jako wartości 8-bitowa (za pośrednictwem b0 b31). Uzyskuje dostęp do mniejszy niż 128 bitów dostęp tylko niższe bitów rejestru 128 bitów i pozostawienie pozostałych bitów w charakterze, chyba że określono inaczej. (Zwróć uwagę, że to znacznie różnią się od AArch32, gdzie mniejszych rejestrów umieszczono je na podstawie rejestrów większy).
 
@@ -95,7 +95,7 @@ Bity|Znaczenie|Nietrwałe?|Rola
 25|NAZWA WYRÓŻNIAJĄCA|-Volatile|Domyślny formant tryb NaN
 24|FZ|Non-volatile|Kontrolka trybu opróżniania do zera.
 23-22|RMode|Non-volatile|Tryb formant zaokrąglenia
-15,12-8|Środowisko IDE/IXE/itd.|-Volatile|Wyjątek przechwytywania włączenie usługi bits, zawsze musi mieć wartość 0
+15,12-8|IDE/IXE/etc|-Volatile|Wyjątek przechwytywania włączenie usługi bits, zawsze musi mieć wartość 0
 
 ## <a name="system-registers"></a>System rejestrów
 
@@ -103,7 +103,7 @@ Jak AArch32 Specyfikacja AArch64 zawiera trzy kontrolowane przez system "identyf
 
 Rejestruj|Rola
 |-|-|
-TPIDR_EL0|Zastrzeżone
+TPIDR_EL0|Zarezerwowany
 TPIDRRO_EL0|Zawiera numer procesora CPU dla bieżącego procesora
 TPIDR_EL1|Wskazuje strukturę KPCR dla bieżącego procesora
 
@@ -171,7 +171,7 @@ Dla każdego argumentu na liście następujące reguły są stosowane z kolei, d
 
 1. Argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
 
-### <a name="addendum-variadic-functions"></a>Dodatek: Ze zmienną liczbą argumentów funkcji
+### <a name="addendum-variadic-functions"></a>Dodatek: Funkcje ze zmienną liczbą argumentów
 
 Funkcje, które przyjmują zmienną liczbę argumentów są obsługiwane inaczej niż powyżej, w następujący sposób:
 
@@ -203,7 +203,7 @@ Stosu trybu jądra domyślne w Windows to sześć stron (24k). W trybie jądra, 
 
 ## <a name="stack-walking"></a>Przechodzenie po stosie
 
-Kod w Windows jest kompilowany za pomocą wskaźników ramek włączone ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) umożliwiające szybkie stos. Upshot to to, że x29 (fp) zwykle wskazuje łącze do następnej w łańcuchu, czyli {fp, lr} pary wskazujący wskaźnik do poprzedniej ramki na stosie i adres zwrotny. Zaleca się kodu innych firm również włączyć wskaźników ramek w celu umożliwienia ulepszone profilowania i śledzenia.
+Kod w Windows jest kompilowany za pomocą wskaźników ramek włączone ([/Oy-](reference/oy-frame-pointer-omission.md)) umożliwiające szybkie stos. Upshot to to, że x29 (fp) zwykle wskazuje łącze do następnej w łańcuchu, czyli {fp, lr} pary wskazujący wskaźnik do poprzedniej ramki na stosie i adres zwrotny. Zaleca się kodu innych firm również włączyć wskaźników ramek w celu umożliwienia ulepszone profilowania i śledzenia.
 
 ## <a name="exception-unwinding"></a>Odwijanie wyjątków
 
@@ -221,5 +221,5 @@ Zwróć uwagę, że wartość licznika cyklu licznika cyklu wartość true, nie 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Obsługa wyjątków ARM64](../build/arm64-exception-handling.md)
+[Typowe problemy przy migracji Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
+[Obsługa wyjątków ARM64](arm64-exception-handling.md)

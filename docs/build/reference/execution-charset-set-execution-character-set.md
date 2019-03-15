@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 13ff185cf7026f1b42f732aae26c11e98d13e9a2
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 0a140bf438a44df152b1578f4569a087a604061c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849612"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807718"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-Charset (Ustaw zestaw znaków wykonywania)
 
@@ -43,7 +43,7 @@ Jeśli chcesz ustawić zestaw znaków źródła i wykonania zestawu znaków na U
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji**, **C/C++**, **wiersza polecenia** folderu.
 
@@ -51,10 +51,10 @@ Jeśli chcesz ustawić zestaw znaków źródła i wykonania zestawu znaków na U
 
 1. Wybierz **OK** Aby zapisać zmiany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[/source-charset (Ustaw źródłowy zestaw znaków)](../../build/reference/source-charset-set-source-character-set.md)<br/>
-[/utf-8 (Ustaw źródłowy i wykonywalny zestaw znaków na UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
-[/validate-charset (Zweryfikuj zgodność znaków)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[/source-charset (Ustaw źródłowy zestaw znaków)](source-charset-set-source-character-set.md)<br/>
+[/utf-8 (Ustaw źródłowy i wykonywalny zestaw znaków na UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (Zweryfikuj zgodność znaków)](validate-charset-validate-for-compatible-characters.md)

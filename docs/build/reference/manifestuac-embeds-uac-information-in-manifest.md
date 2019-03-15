@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecc30baabdcb60a030418e9643e2fcffe5ba8281
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625098"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813269"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Osadza informacje UAC w manifeście)
 
@@ -33,7 +33,7 @@ Określa, czy informacje kontroli konta użytkownika (UAC) są osadzone w manife
 
 ### <a name="parameters"></a>Parametry
 
-*Fragment*<br/>
+*fragment*<br/>
 Ciąg, który zawiera `level` i `uiAccess` wartości. Aby uzyskać więcej informacji zobacz sekcję Uwagi w dalszej części tego tematu.
 
 *_level*<br/>
@@ -48,11 +48,11 @@ Jeśli określisz wiele opcji /MANIFESTUAC w wierszu polecenia, ostatni z nich w
 
 Dostępne są następujące opcje dla /MANIFESTUAC:level:
 
-- `asInvoker`Aplikacja zostanie uruchomiona przy użyciu tych samych uprawnień jako proces, który je zainicjował. Aplikacja może być z podwyższonym poziomem uprawnień na wyższy poziom uprawnień, wybierając **Uruchom jako Administrator**.
+- `asInvoker`: Aplikacja zostanie uruchomiona przy użyciu tych samych uprawnień jako proces, który je zainicjował. Aplikacja może być z podwyższonym poziomem uprawnień na wyższy poziom uprawnień, wybierając **Uruchom jako Administrator**.
 
-- highestAvailable: aplikacja zostanie uruchomiona przy użyciu najwyższy poziom uprawnień, który jest to możliwe. Jeśli użytkownik uruchamia aplikację jest członkiem grupy Administratorzy, ta opcja jest taka sama jak requireAdministrator. Jeśli najwyższy poziom uprawnień dostępne jest wyższy niż poziom procesu otwierania, system wyświetli monit o podanie poświadczeń.
+- highestAvailable: Aplikacja zostanie uruchomiona przy użyciu najwyższy poziom uprawnień, który jest to możliwe. Jeśli użytkownik uruchamia aplikację jest członkiem grupy Administratorzy, ta opcja jest taka sama jak requireAdministrator. Jeśli najwyższy poziom uprawnień dostępne jest wyższy niż poziom procesu otwierania, system wyświetli monit o podanie poświadczeń.
 
-- requireAdministrator: aplikacja będzie uruchamiana z uprawnieniami administratora. Użytkownik, który uruchamia aplikację musi być członkiem grupy Administratorzy. Jeśli proces otwierania nie jest uruchomiony z uprawnieniami administracyjnymi, system wyświetli monit o podanie poświadczeń.
+- requireAdministrator: Aplikacja zostanie uruchomiona z uprawnieniami administratora. Użytkownik, który uruchamia aplikację musi być członkiem grupy Administratorzy. Jeśli proces otwierania nie jest uruchomiony z uprawnieniami administracyjnymi, system wyświetli monit o podanie poświadczeń.
 
 Przy użyciu opcji /MANIFESTUAC:fragment, można określić poziom i uiAccess wartości w jednym kroku. Fragment musi mieć następującą formę:
 
@@ -62,7 +62,7 @@ Przy użyciu opcji /MANIFESTUAC:fragment, można określić poziom i uiAccess wa
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji** węzła.
 
@@ -76,7 +76,7 @@ Przy użyciu opcji /MANIFESTUAC:fragment, można określić poziom i uiAccess wa
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>, i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

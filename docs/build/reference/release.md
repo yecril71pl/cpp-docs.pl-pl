@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /RELEASE editbin option
 - checksum setting
 ms.assetid: 183422eb-6b3c-474e-9589-04a0e69dec5d
-ms.openlocfilehash: 1fe3688de14b61ed840c29a868897a6f97ddc485
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0437e67a977512cb0ba6f327ad3d1bda0c147485
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677256"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822382"
 ---
 # <a name="release"></a>/RELEASE
 
@@ -28,6 +28,6 @@ Ta opcja ustawia sumę kontrolną w nagłówku pliku wykonywalnego.
 
 System operacyjny wymaga sumę kontrolną dla sterowników urządzeń. Zaleca się ustawienie sumy kontrolnej dla wersji sterowników urządzeń do zapewnienia zgodności z przyszłych systemów operacyjnych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

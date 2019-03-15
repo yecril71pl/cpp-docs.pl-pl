@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: 782cb55d30bfb11f55a0074a5c3245dd389323ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561229"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813516"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (przyjmowanie zgłasza nowy operator)
 
@@ -30,7 +30,7 @@ Gdy **/Zc:throwingNew** opcja zostanie określona, kompilator optymalizuje wywo�
 
 Od czasu ISO C ++ 98 standard została określona, domyślnie [nowy operator](../../standard-library/new-operators.md#op_new) zgłasza `std::bad_alloc` Jeśli alokacja pamięci nie powiedzie się. Wystąpił błąd alokacji wersji programu Visual C++ do Visual Studio 6.0 zwrócona wskaźnikiem typu null. Począwszy od programu Visual Studio 2002, `operator new` jest zgodny ze standardem i zgłoszenie błędu. Do obsługi kodu, który używa starszego stylu alokacji, program Visual Studio udostępnia możliwym implementacji `operator new` w nothrownew.obj, która zwraca wskaźnik o wartości null w przypadku niepowodzenia. Domyślnie kompilator generuje obrony sprawdzanie wartości null, aby uniemożliwić powoduje natychmiastowe awarii w przypadku niepowodzenia tych buforów starszym stylu. **/Zc:throwingNew** opcji informuje kompilator, aby pozostawić te kontrole wartości null, przy założeniu, że wszystkie połączone pamięci puli buforów jest zgodna ze standardem. Dotyczy to jawne niezgłaszające `operator new` przeciążeń, które są zadeklarowane za pomocą dodatkowy parametr typu `std::nothrow_t` i mieć jawnego `noexcept` specyfikacji.
 
-Model do utworzenia obiektu w wolnym magazynie, kompilator generuje kod, aby przydzielić pamięci a następnie wywołać jej konstruktora można zainicjować pamięci. Ponieważ kompilator języka Visual C++ normalnie nie wiadomo, ten kod będzie połączona z alokatora niezgodnych, niezgłaszające, domyślnie generuje również sprawdzanie wartości null, przed wywołaniem konstruktora. Zapobiega to pustego wskaźnika cofnięcia odwołania w wywołaniu konstruktora, jeśli niezgłaszające alokacja nie powiedzie się. W większości przypadków te testy są zbędne, ponieważ wartość domyślna `operator new` buforów throw zamiast zwracać wskaźników o wartości null. Kontrole również mieć niefortunne efekty uboczne. One wybrzuszanie rozmiar kodu, ich zalać predykcyjne gałęzi i ich wstrzymywania inne optymalizacje kompilatora użyteczne, takie jak devirtualization lub const propagacji poza zainicjowanego obiektu. Sprawdza obecność tylko do obsługi kodu, który stanowi łącze do *nothrownew.obj* lub niestandardowe niezgodnych `operator new` implementacji. Jeśli nie używasz niezgodnych `operator new`, zalecamy użycie **/Zc:throwingNew** optymalizacji kodu.
+Model do utworzenia obiektu w wolnym magazynie, kompilator generuje kod, aby przydzielić pamięci a następnie wywołać jej konstruktora można zainicjować pamięci. Ponieważ kompilator MSVC zwykle nie wiadomo, ten kod będzie połączona z alokatora niezgodnych, niezgłaszające, domyślnie generuje również sprawdzanie wartości null, przed wywołaniem konstruktora. Zapobiega to pustego wskaźnika cofnięcia odwołania w wywołaniu konstruktora, jeśli niezgłaszające alokacja nie powiedzie się. W większości przypadków te testy są zbędne, ponieważ wartość domyślna `operator new` buforów throw zamiast zwracać wskaźników o wartości null. Kontrole również mieć niefortunne efekty uboczne. One wybrzuszanie rozmiar kodu, ich zalać predykcyjne gałęzi i ich wstrzymywania inne optymalizacje kompilatora użyteczne, takie jak devirtualization lub const propagacji poza zainicjowanego obiektu. Sprawdza obecność tylko do obsługi kodu, który stanowi łącze do *nothrownew.obj* lub niestandardowe niezgodnych `operator new` implementacji. Jeśli nie używasz niezgodnych `operator new`, zalecamy użycie **/Zc:throwingNew** optymalizacji kodu.
 
 **/Zc:throwingNew** opcja jest domyślnie wyłączona i nie ma wpływu [/ permissive-](permissive-standards-conformance.md) opcji.
 
@@ -44,7 +44,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Z **konfiguracji** menu rozwijanym, wybierz polecenie **wszystkie konfiguracje**.
 
@@ -54,9 +54,9 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [Specyfikacje wyjątków (throw) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Zakończenie (wyjątku)](../../standard-library/exception-functions.md#terminate)<br/>

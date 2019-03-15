@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456003"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810513"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Ostrzeżenia kompilatora od C4200 do C4399
 
@@ -175,7 +174,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|"*elementu członkowskiego*": nie można zainicjować statycznej składowej danych za pośrednictwem pochodnej klasy|
 |[Ostrzeżenie kompilatora (poziom 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|Znaleziono argument tablicy parametrów w liście formalnych argumentów dla delegata "*delegować*"zignorowano podczas generowania"*funkcja*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|"*operator*": zwracany typ połączonych delegatów nie jest "void"; zwrócona wartość jest niezdefiniowana|
-|[Ostrzeżenie kompilatora (poziom 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|"*typu*": specyfikator wyrównania jest mniejszy niż rzeczywiste wyrównanie ("*wyrównanie*") i zostaną zignorowane.|
+|[Ostrzeżenie kompilatora (poziom 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|"*typu*": Specyfikator wyrównania jest mniejszy niż rzeczywiste wyrównanie ("*wyrównanie*") i zostaną zignorowane.|
 |Ostrzeżenie kompilatora (poziom 2) C4362|"*typu*": wyrównanie większe niż 8 bajtów nie jest obsługiwana przez CLR|
 |[Ostrzeżenie kompilatora (poziom 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using dla zestawu "*zestawu*"poprzednio widziano w"*lokalizacji*" ("*line_number*") bez jako\_atrybut friend; ponieważ\_zaprzyjaźniona nie zastosowane|
 |[Ostrzeżenie kompilatora (poziom 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|"*wyrażenie*': konwersja z"*type1*"to"*type2*', niezgodność ze znakiem/bez znaku|
@@ -192,7 +191,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|typy natywne są domyślnie; prywatny -d1PrivateNativeTypes jest przestarzały|
 |[Ostrzeżenie kompilatora (poziom 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Należy uzyskać wskaźniki do funkcji, aby uruchomić inicjatory; należy wziąć pod uwagę system::ModuleHandle:: resolvemethodhandle|
 |[Ostrzeżenie kompilatora (poziom 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Wersja "*numer_wersji*" common language runtime nie jest obsługiwana przez ten kompilator. Korzystanie z tej wersji może spowodować nieoczekiwane wyniki|
-|Ostrzeżenie kompilatora (poziom 1, błąd) C4380|"*klasy*": Konstruktor domyślny nie staną się przestarzałe|
+|Ostrzeżenie kompilatora (poziom 1, błąd) C4380|"*klasy*": Domyślny konstruktor nie staną się przestarzałe|
 |[Ostrzeżenie kompilatora (poziom 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|"*function1*": metoda interfejsu nie będzie zaimplementowana przez niepubliczna metoda "*function2*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|Zgłaszanie "*typu*": typ z destruktorem __clrcall lub konstruktorem kopiującym można tylko przechwycić w/CLR: pure modułu|
 |[Ostrzeżenie kompilatora (poziom 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|"*instance_dereference_operator*": znaczenie usunięcia odwołania do dojścia można zmienić, gdy zdefiniowana przez użytkownika "*instance_dereference_operator*" operator istnieje; Zapisz operator jako statyczna funkcję, aby była niejawna przy korzystaniu z operandu|

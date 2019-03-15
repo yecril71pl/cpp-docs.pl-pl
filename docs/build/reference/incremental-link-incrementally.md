@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 0ef6e8c7fed2c58e8fc2949a84483015bbc9d6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642031"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816142"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (Łącz stopniowo)
 
@@ -54,7 +54,7 @@ Większość programów może być łączonych przyrostowo. Jednak niektóre zmi
 
 - Wybrano /ORDER
 
-/ INCREMENTAL jest implikowane przy określeniu [/DEBUG](../../build/reference/debug-generate-debug-info.md) jest określony.
+/ INCREMENTAL jest implikowane przy określeniu [/DEBUG](debug-generate-debug-info.md) jest określony.
 
 Poza tym polecenie LINK wykonuje pełne połączenie, jeżeli wystąpi którakolwiek z następujących sytuacji:
 
@@ -72,7 +72,7 @@ Poza tym polecenie LINK wykonuje pełne połączenie, jeżeli wystąpi którakol
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **konsolidatora** folderu.
 
@@ -84,7 +84,7 @@ Poza tym polecenie LINK wykonuje pełne połączenie, jeżeli wystąpi którakol
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkIncremental%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

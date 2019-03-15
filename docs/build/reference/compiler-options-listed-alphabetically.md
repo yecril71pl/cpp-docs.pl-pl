@@ -3,12 +3,12 @@ title: Opcje kompilatora w porządku alfabetycznym
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646735"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811943"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -41,13 +41,13 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/FA](fa-fa-listing-file.md)|Tworzy plik listingu.|
 |[/Fa](fa-fa-listing-file.md)|Ustawia nazwę pliku listingu.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Wyświetla pełną ścieżkę do plików kodu źródłowego jest przekazywana do cl.exe w tekście diagnostycznym.|
-|[/FD](fd-program-database-file-name.md)|Zmienia nazwę pliku bazy danych programu.|
+|[/Fd](fd-program-database-file-name.md)|Zmienia nazwę pliku bazy danych programu.|
 |[/Fe](fe-name-exe-file.md)|Zmienia nazwę pliku wykonywalnego.|
 |[/FI](fi-name-forced-include-file.md)|Wstępnie przetwarza określony plik do dołączenia.|
 |[/Fi](fi-preprocess-output-file-name.md)|Ustawia nazwę pliku wstępnie przetworzone produkty wyjściowe.|
 |[/Fm](fm-name-mapfile.md)|Tworzy plik mapy.|
-|[/FO](fo-object-file-name.md)|Tworzy plik obiektu.|
-|[/ FP](fp-specify-floating-point-behavior.md)|Określenie zachowania zmiennoprzecinkowego.|
+|[/Fo](fo-object-file-name.md)|Tworzy plik obiektu.|
+|[/fp](fp-specify-floating-point-behavior.md)|Określenie zachowania zmiennoprzecinkowego.|
 |[/ FP](fp-name-dot-pch-file.md)|Określa nazwę prekompilowanego pliku nagłówka.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|Generuje pliki przeglądarki. **/FR** jest przestarzała.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza zapisanie do pliku bazy danych (PDB) programu w celu serializowana za pośrednictwem MSPDBSRV. PLIK EXE.|
@@ -79,7 +79,7 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Tworzy obraz hotpatchable.|
 |[/I](i-additional-include-directories.md)|Przeszukuje katalog plików dołączanych.|
 |[/J](j-default-char-type-is-unsigned.md)|Zmienia domyślny `char` typu.|
-|[/ JMC](jmc.md)|Obsługuje debugowanie natywne C++ tylko mój kod.|
+|[/JMC](jmc.md)|Obsługuje debugowanie natywne C++ tylko mój kod.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Kompilator i konsolidator utworzą plik binarny, który może zostać wykonany w jądrze Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę DLL.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę DLL debugowania.|
@@ -89,14 +89,14 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/MDd](md-mt-ld-use-run-time-library.md)|Tworzy debugowania wielowątkową bibliotekę DLL używającą biblioteki MSVCRTD.lib.|
 |[/MP](mp-build-with-multiple-processes.md)|Kompiluje wiele plików źródłowych przy użyciu wielu procesów.|
 |[/MT](md-mt-ld-use-run-time-library.md)|Tworzy wielowątkowy plik wykonywalny używający biblioteki LIBCMT.lib.|
-|[/ MTd](md-mt-ld-use-run-time-library.md)|Tworzy wielowątkowy plik wykonywalny debugowania używający biblioteki LIBCMTD.lib.|
+|[/MTd](md-mt-ld-use-run-time-library.md)|Tworzy wielowątkowy plik wykonywalny debugowania używający biblioteki LIBCMTD.lib.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Pomija wyświetlanie transparentu logowania.|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Tworzy mały kod.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Tworzy szybki kod.|
 |[/Ob](ob-inline-function-expansion.md)|Kontroluje wbudowane rozwijanie.|
 |[/Od](od-disable-debug.md)|Wyłącza optymalizację.|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa globalnych optymalizacji.|
-|[/OI](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
+|[/Oi](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
 |[/ OpenMP](openmp-enable-openmp-2-0-support.md)|Włącza [#pragma omp](../../preprocessor/omp.md) w kodzie źródłowym.|
 |[/ OS](os-ot-favor-small-code-favor-fast-code.md)|Preferuje mały kod.|
 |[/OT](os-ot-favor-small-code-favor-fast-code.md)|Preferuje szybki kod.|
@@ -111,13 +111,13 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Używa całkowitoliczbowych instrukcji przeniesienia dla wartości zmiennopozycyjnych i wyłącza niektóre ładowania zmiennopozycyjnego.|
 |[/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](qvec-report-auto-vectorizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznej wektoryzacji.|
 |[/RTC](rtc-run-time-error-checks.md)|Włącza sprawdzanie błędów czasu wykonywania.|
-|[/ SDL](sdl-enable-additional-security-checks.md)|Umożliwia dodatkowe funkcje zabezpieczeń i ostrzeżenia.|
-|[/ showincludes](showincludes-list-include-files.md)|Wyświetla listę wszystkich plików dołączanych podczas kompilacji.|
+|[/sdl](sdl-enable-additional-security-checks.md)|Umożliwia dodatkowe funkcje zabezpieczeń i ostrzeżenia.|
+|[/showIncludes](showincludes-list-include-files.md)|Wyświetla listę wszystkich plików dołączanych podczas kompilacji.|
 |[/ Source-Charset](source-charset-set-source-character-set.md)|Ustaw źródłowy zestaw znaków.|
 |[/ STD](std-specify-language-standard-version.md)|Selektor zgodności wersję standardu języka C++.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy C.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Określa, że wszystkie pliki źródłowe znajdują się C.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy języka C++.|
+|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy języka C++.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa, że wszystkie pliki źródłowe C++.|
 |[/U](u-u-undefine-symbols.md)|Usuwa wstępnie zdefiniowane makro.|
 |[/u](u-u-undefine-symbols.md)|Usuwa wszystkie wstępnie zdefiniowane makra.|
@@ -135,10 +135,10 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Ustawia poziom ostrzeżeń, które w danych wyjściowych.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Ustawia poziom ostrzeżeń dla określonego ostrzeżenia.|
 |[/Wall](compiler-option-warning-level.md)|Włącza wszystkie ostrzeżenia, łącznie z ostrzeżeniami, które są domyślnie wyłączone.|
-|[/WD](compiler-option-warning-level.md)|Wyłącza określone ostrzeżenie.|
+|[/wd](compiler-option-warning-level.md)|Wyłącza określone ostrzeżenie.|
 |[/we](compiler-option-warning-level.md)|Traktuje określone ostrzeżenie jako błąd.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Włącza diagnostykę dla błędów i komunikaty ostrzegawcze podczas kompilowania kodu źródłowego języka C++ z poziomu wiersza polecenia.|
-|[/WO](compiler-option-warning-level.md)|Wyświetla określoną ostrzeżenie tylko raz.|
+|[/wo](compiler-option-warning-level.md)|Wyświetla określoną ostrzeżenie tylko raz.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Nieaktualne. Wykrywa problemy przenośności w programowaniu 64-bitowych.|
 |[/Wv](compiler-option-warning-level.md)|Wyświetlane żadne ostrzeżenia wprowadzone po określonej wersji kompilatora.|
 |[/WX](compiler-option-warning-level.md)|Traktuje wszystkie ostrzeżenia jako błędy.|
@@ -162,8 +162,7 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/Zs](zs-syntax-check-only.md)|Sprawdza tylko składnię.|
 |[/ZW](zw-windows-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia na środowiska wykonawczego Windows.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja kompilacji w języku C/C++](c-cpp-building-reference.md)<br/>
-[Opcje kompilatora](compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

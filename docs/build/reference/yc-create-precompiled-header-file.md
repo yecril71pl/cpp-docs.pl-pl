@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: bda384152962bc59ab37b1aae138091aa6f4514c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536844"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821433"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Utwórz prekompilowany plik nagłówka)
 
@@ -40,23 +40,23 @@ Określa plik nagłówka (.h). Jeśli ten argument jest używany, kompilator kom
 
 Gdy **/Yc** jest określona bez argumentu, kompilator kompiluje cały kod do końca pliku źródłowego podstawowej lub do punktu w pliku podstawowego gdzie [hdrstop](../../preprocessor/hdrstop.md) występuje dyrektywie. Wynikowy plik .pch ma taką samą nazwę podstawowej jako pliku źródłowego podstawowego, chyba że określono nazwę innego pliku za pomocą **hdrstop** pragma lub **/FP** opcji.
 
-Wstępnie skompilowany kod jest zapisywany w pliku o nazwie utworzone na podstawie podstawowej nazwy pliku określonego przez **/Yc** opcja i rozszerzeniem .pch. Można również użyć  [ /FP (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md) opcję, aby określić nazwę pliku wstępnie skompilowanego nagłówka.
+Wstępnie skompilowany kod jest zapisywany w pliku o nazwie utworzone na podstawie podstawowej nazwy pliku określonego przez **/Yc** opcja i rozszerzeniem .pch. Można również użyć  [ /FP (nazwa. Plik pch)](fp-name-dot-pch-file.md) opcję, aby określić nazwę pliku wstępnie skompilowanego nagłówka.
 
-Jeśli używasz __/Yc__*filename*, kompilator kompiluje całego kodu, w tym określony plik do późniejszego użytku z [/Yu (Użyj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) opcji.
+Jeśli używasz __/Yc__*filename*, kompilator kompiluje całego kodu, w tym określony plik do późniejszego użytku z [/Yu (Użyj Prekompilowanego pliku nagłówka)](yu-use-precompiled-header-file.md) opcji.
 
 Jeśli opcje __/Yc__*filename* i __/Yu__*filename* odbywa się na tym samym wierszu polecenia, a oba odwołania, lub w sposób sugerujący, taką samą nazwę pliku, __/Yc__*filename* ma pierwszeństwo. Ta funkcja ułatwia zapisywanie plików reguł programu make.
 
 Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:
 
-- [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Prekompilowane nagłówki)](y-precompiled-headers.md)
 
-- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+- [Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
 1. Wybierz plik .cpp. Plik CPP musi #include plik .h, który zawiera informacje o wstępnie skompilowanego nagłówka. Projekt **/Yc** ustawienie można zastąpić na poziomie plików.
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Otwórz **właściwości konfiguracji**, **C/C++**, **prekompilowanych nagłówków** stronę właściwości.
 
@@ -83,8 +83,8 @@ Rozważmy poniższy kod:
 
 Kiedy ten kod jest kompilowany przy użyciu polecenia `CL /YcMYAPP.H PROG.CPP`, kompilator zapisuje wszystkie przetwarzania wstępnego dla AFXWIN.h, RESOURCE.h, i MYAPP.h w pliku wstępnie skompilowanego nagłówka o nazwie MYAPP.pch.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)

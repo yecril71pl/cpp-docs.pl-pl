@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 42cbcb911fcd0aa7753d84aae5523d28371b9972
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422042"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815406"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -26,7 +26,7 @@ ms.locfileid: "57422042"
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja ustawia adres podstawowy dla określonych plików. EDITBIN przypisuje nowe adresy podstawowego przestrzeni adresowej ciągłych zgodnie z rozmiarem każdego pliku, zaokrąglony do najbliższej 64 KB. Aby uzyskać szczegółowe informacje o adresach podstawowej, zobacz [adres bazowy](../../build/reference/base-base-address.md) (/ BASE) — opcja konsolidatora.
+Ta opcja ustawia adres podstawowy dla określonych plików. EDITBIN przypisuje nowe adresy podstawowego przestrzeni adresowej ciągłych zgodnie z rozmiarem każdego pliku, zaokrąglony do najbliższej 64 KB. Aby uzyskać szczegółowe informacje o adresach podstawowej, zobacz [adres bazowy](base-base-address.md) (/ BASE) — opcja konsolidatora.
 
 Określ pliki wykonywalne i bibliotek DLL w programie *pliki* argument w wierszu polecenia EDITBIN w kolejności, w których są one oparte. Opcjonalnie można określić co najmniej jeden *Modyfikatory*, rozdzielonych przecinkami (**,**):
 
@@ -38,4 +38,4 @@ Określ pliki wykonywalne i bibliotek DLL w programie *pliki* argument w wierszu
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

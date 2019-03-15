@@ -13,12 +13,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: c709e991574cef481aa8357a789701bba9831d92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528092"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814166"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Domyślny typ char nie jest podpisany)
 
@@ -53,8 +53,8 @@ ANSI C i C++ nie wymagają określonej implementacji `char` typu. Ta opcja jest 
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Praca z właściwościami projektu](../../ide/working-with-project-properties.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji](../working-with-project-properties.md)

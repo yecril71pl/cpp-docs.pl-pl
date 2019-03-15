@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 5c7f71e51e0741c534761b22a66ac77a6df8f870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59b0483d76a2a98c1f278a323a827b243d21adea
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661087"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822496"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Korzystaj z bibliotek wykonawczych)
 
@@ -61,21 +61,21 @@ Wskazuje, czy moduł wielowątkowy jest biblioteką DLL i określa wersje biblio
 |**/MD**|Powoduje, że aplikacja korzysta z wersji biblioteki wykonawczej specyficznej dla wielowątkowości i specyficznej dla DLL. Definiuje `_MT` i `_DLL` i powoduje, że kompilator umieszcza nazwę biblioteki MSVCRT.lib w pliku .obj.<br /><br /> Aplikacje skompilowane przy użyciu tej opcji są łączone statycznie z MSVCRT.lib. Ta biblioteka zawiera warstwę kodu, która umożliwia konsolidatorowi rozwiązywanie odwołań zewnętrznych. Rzeczywisty kod roboczy znajduje się w MSVCR*numerwersji*. Biblioteki DLL, która musi być dostępna w czasie wykonywania dla aplikacji łączonych z MSVCRT.lib.|
 |**/MDd**|Definiuje `_DEBUG`, `_MT`, i `_DLL` i powoduje, że aplikacji do korzystania z wersji wielowątkowości dotyczące bibliotek DLL i debugowania biblioteki wykonawczej. Powoduje też, że kompilator umieszcza nazwę biblioteki MSVCRTD.lib w pliku .obj.|
 |**/MT**|Powoduje, że aplikacja korzysta ze statycznej, wielowątkowej wersji biblioteki wykonawczej. Definiuje `_MT` i powoduje, że kompilator umieszcza nazwę biblioteki LIBCMT.lib w pliku .obj, tak aby konsolidator użył LIBCMT.lib, aby rozwiązać zewnętrzne symbole.|
-|**/ MTd**|Definiuje `_DEBUG` i `_MT`. Ta opcja również powoduje, że kompilator umieszcza nazwę biblioteki LIBCMTD.lib w pliku .obj, tak aby konsolidator użył LIBCMTD.lib, aby rozwiązać zewnętrzne symbole.|
-|**/LD**|Tworzy DLL.<br /><br /> Przebiegi **/dll** opcję do konsolidatora. Konsolidator szuka, ale nie wymaga `DllMain` funkcji. Jeśli nie napiszesz `DllMain` funkcji, konsolidator wstawi `DllMain` funkcja, która zwraca wartość TRUE.<br /><br /> Łączy kod uruchamiający biblioteki DLL.<br /><br /> Tworzy bibliotekę importu (.lib), jeżeli nie określono pliku eksportu (.exp) w wierszu polecenia. Bibliotekę importu łączy się z aplikacjami, które wywołują bibliotekę DLL.<br /><br /> Interpretuje [/Fe (Nazwij plik EXE)](../../build/reference/fe-name-exe-file.md) jako nazwę biblioteki DLL, a nie pliku .exe. Domyślnie nazwa programu staje się *basename*.dll zamiast *basename*.exe.<br /><br /> Oznacza **/MT** chyba że jawnie określisz **/MD**.|
+|**/MTd**|Definiuje `_DEBUG` i `_MT`. Ta opcja również powoduje, że kompilator umieszcza nazwę biblioteki LIBCMTD.lib w pliku .obj, tak aby konsolidator użył LIBCMTD.lib, aby rozwiązać zewnętrzne symbole.|
+|**/LD**|Tworzy DLL.<br /><br /> Przebiegi **/dll** opcję do konsolidatora. Konsolidator szuka, ale nie wymaga `DllMain` funkcji. Jeśli nie napiszesz `DllMain` funkcji, konsolidator wstawi `DllMain` funkcja, która zwraca wartość TRUE.<br /><br /> Łączy kod uruchamiający biblioteki DLL.<br /><br /> Tworzy bibliotekę importu (.lib), jeżeli nie określono pliku eksportu (.exp) w wierszu polecenia. Bibliotekę importu łączy się z aplikacjami, które wywołują bibliotekę DLL.<br /><br /> Interpretuje [/Fe (Nazwij plik EXE)](fe-name-exe-file.md) jako nazwę biblioteki DLL, a nie pliku .exe. Domyślnie nazwa programu staje się *basename*.dll zamiast *basename*.exe.<br /><br /> Oznacza **/MT** chyba że jawnie określisz **/MD**.|
 |**/LDd**|Tworzy DLL przeznaczoną do debugowania. Definiuje `_MT` i `_DEBUG`.|
 
-Aby uzyskać więcej informacji na temat biblioteki wykonawczej C i bibliotek, które są używane podczas kompilowania z [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md), zobacz [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
+Aby uzyskać więcej informacji na temat biblioteki wykonawczej C i bibliotek, które są używane podczas kompilowania z [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](clr-common-language-runtime-compilation.md), zobacz [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 
 Wszystkie moduły przekazane do danego wywołania konsolidatora muszą być skompilowane przy użyciu tych samych opcji kompilatora biblioteki wykonawczej (**/MD**, **/MT**, **/LD**).
 
 Aby uzyskać więcej informacji o sposobie używania wersji debugowania bibliotek uruchomieniowych, zobacz [odwołanie do biblioteki wykonawczej C](../../c-runtime-library/c-run-time-library-reference.md).
 
-Aby uzyskać więcej informacji o bibliotekach DLL, zobacz [biblioteki dll w programie Visual C++](../../build/dlls-in-visual-cpp.md).
+Aby uzyskać więcej informacji o bibliotekach DLL, zobacz [biblioteki dll w programie Visual C++](../dlls-in-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **C/C++** folderu.
 
@@ -87,7 +87,7 @@ Aby uzyskać więcej informacji o bibliotekach DLL, zobacz [biblioteki dll w pro
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

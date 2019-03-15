@@ -2,12 +2,12 @@
 title: x64 prologu i epilogu
 ms.date: 12/17/2018
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-ms.openlocfilehash: b808703e9c89b8e455e9df2b5959a2f0dd10b939
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: a225786853fcc2eb7b6a21de29f1ccf4901e4377
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627231"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809990"
 ---
 # <a name="x64-prolog-and-epilog"></a>x64 prologu i epilogu
 
@@ -93,6 +93,6 @@ Gdy wskaźnik ramki nie jest używany, należy użyć epilogu `add RSP,constant`
 
 Następujących reguł umożliwia kodu odwijania, aby ustalić, czy jest aktualnie wykonywana epilogu i symulowanie wykonania pozostałej części epilogu, aby zezwolić na ponowne utworzenie kontekście funkcji wywołującej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[x64 konwencje kodowania](../build/x64-software-conventions.md)
+[Konwencje kodowania x64](x64-software-conventions.md)

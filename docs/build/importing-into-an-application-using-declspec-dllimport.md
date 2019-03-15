@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: 925cd588c1851c6fb135fffbb83e9cfd680bea28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610477"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810227"
 ---
-# <a name="importing-into-an-application-using-declspecdllimport"></a>Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)
+# <a name="import-into-an-application-using-declspecdllimport"></a>Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)
 
 Program, który używa symboli publicznych, zdefiniowane przez bibliotekę DLL jest nazywany je zaimportować. Po utworzeniu pliki nagłówkowe dla aplikacji korzystających z biblioteki dll do kompilacji, użyj **__declspec(dllimport)** w deklaracjach symboli publicznych. Słowo kluczowe **__declspec(dllimport)** działa, czy w przypadku eksportowania za pomocą plików .def lub za pomocą **__declspec(dllexport)** — słowo kluczowe.
 
@@ -45,14 +45,14 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Zainicjuj bibliotekę DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Importowanie i eksportowanie funkcji śródwierszowych](../build/importing-and-exporting-inline-functions.md)
+- [Importowanie i eksportowanie funkcji śródwierszowych](importing-and-exporting-inline-functions.md)
 
-- [Importy wzajemne](../build/mutual-imports.md)
+- [Importy wzajemne](mutual-imports.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Importowanie do aplikacji](../build/importing-into-an-application.md)
+[Importowanie do aplikacji](importing-into-an-application.md)

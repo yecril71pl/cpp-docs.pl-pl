@@ -5,25 +5,25 @@ f1_keywords:
 - CWindowImpl
 - ATLWIN/ATL::CWindowImpl
 - ATLWIN/ATL::CWindowImpl::Create
-- ATLWIN/ATL::DefWindowProc
-- ATLWIN/ATL::GetCurrentMessage
-- ATLWIN/ATL::GetWindowProc
-- ATLWIN/ATL::OnFinalMessage
-- ATLWIN/ATL::SubclassWindow
-- ATLWIN/ATL::UnsubclassWindow
-- ATLWIN/ATL::GetWndClassInfo
-- ATLWIN/ATL::WindowProc
-- ATLWIN/ATL::m_pfnSuperWindowProc
+- ATLWIN/ATL::CWindowImpl::DefWindowProc
+- ATLWIN/ATL::CWindowImpl::GetCurrentMessage
+- ATLWIN/ATL::CWindowImpl::GetWindowProc
+- ATLWIN/ATL::CWindowImpl::OnFinalMessage
+- ATLWIN/ATL::CWindowImpl::SubclassWindow
+- ATLWIN/ATL::CWindowImpl::UnsubclassWindow
+- ATLWIN/ATL::CWindowImpl::GetWndClassInfo
+- ATLWIN/ATL::CWindowImpl::WindowProc
+- ATLWIN/ATL::CWindowImpl::m_pfnSuperWindowProc
 helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f835f2869af20a1cb22595837c317eb165ef5fe9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290706"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820354"
 ---
 # <a name="cwindowimpl-class"></a>Klasa CWindowImpl
 
@@ -147,7 +147,7 @@ HWND Create(
 [in] Dojście do okna nadrzędnego lub właściciela.
 
 *Rect*<br/>
-[in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.
+[in] A [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.
 
 *szWindowName*<br/>
 [in] Określa nazwę okna. Wartością domyślną jest NULL.

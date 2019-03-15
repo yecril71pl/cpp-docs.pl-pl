@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /ASSEMBLYMODULE linker option
 - -ASSEMBLYMODULE linker option
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
-ms.openlocfilehash: d08b5bca38f4ff590a0e1bfb8d8693c374a43444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 728e8a84ff8d1afac99f99dbb975c7fd9360bcc1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621510"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815258"
 ---
 # <a name="assemblymodule-add-a-msil-module-to-the-assembly"></a>/ASSEMBLYMODULE (Dodaj moduł MSIL do zestawu)
 
@@ -37,7 +37,7 @@ Użyj [#using](../../preprocessor/hash-using-directive-cpp.md) do dodania odwoł
 
 Na przykład rozważmy następujący scenariusz:
 
-1. Utwórz moduł przy użyciu [/LN](../../build/reference/ln-create-msil-module.md).
+1. Utwórz moduł przy użyciu [/LN](ln-create-msil-module.md).
 
 1. Użyj assemblymodule z innego projektu, aby uwzględnić moduł w bieżącej kompilacji, które spowoduje utworzenie zestawu. Ten projekt nie zostanie wprowadzone odniesienie moduł za pomocą `#using`.
 
@@ -45,25 +45,25 @@ Na przykład rozważmy następujący scenariusz:
 
 Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [/ ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [/ DELAYSIGN](delaysign-partially-sign-an-assembly.md)
 
-- [/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [/ NOASSEMBLY](noassembly-create-a-msil-module.md)
 
-- [/ KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/ KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/ KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-Konsolidator Visual C++ akceptuje pliki .netmodule — wejście plik wyjściowy, generowany przez konsolidator. zostanie ona zestaw lub moduł .netmodule z ma zależności środowiska wykonawczego na żadnym z modułów .netmodule, że dane wejściowe do konsolidatora.  Aby uzyskać więcej informacji, zobacz [pliki .netmodule — wejście konsolidatora](../../build/reference/netmodule-files-as-linker-input.md).
+Konsolidator MSVC akceptuje pliki .netmodule — wejście plik wyjściowy, generowany przez konsolidator. zostanie ona zestaw lub moduł .netmodule z ma zależności środowiska wykonawczego na żadnym z modułów .netmodule, że dane wejściowe do konsolidatora.  Aby uzyskać więcej informacji, zobacz [pliki .netmodule — wejście konsolidatora](netmodule-files-as-linker-input.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -75,7 +75,7 @@ Konsolidator Visual C++ akceptuje pliki .netmodule — wejście plik wyjściowy,
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AddModuleNamesToAssembly%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

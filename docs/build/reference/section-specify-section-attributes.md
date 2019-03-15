@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543705"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816558"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Określ atrybuty sekcji)
 
@@ -33,19 +33,19 @@ Nie należy używać następujących nazw, ponieważ powodują konfliktów z naz
 
 - .BSS
 
-- .Data
+- .data
 
 - .edata
 
 - .idata
 
-- .PData
+- .pdata
 
 - .rdata
 
 - .reloc
 
-- rsrc
+- .rsrc
 
 - .sbss
 
@@ -71,15 +71,15 @@ Aby odwrócić atrybutu, należy poprzedzić jej znakiem wykrzyknika (!). W tej 
 |K|Podlega buforowaniu|Oznacza sekcji nie podlega buforowaniu|
 |P|Stronicowanej|Oznacza sekcji nie stronicowanej|
 
-K i P są w tej flagi sekcji, które odnoszą się do nich są używane w tym sensie, ujemna. Jeśli należy określić jeden z nich w sekcji .text za pomocą **/SECTION:.text, K** opcji, nie ma żadnej różnicy w sekcji flagi, po uruchomieniu [DUMPBIN](../../build/reference/dumpbin-options.md) z [/HEADERS](../../build/reference/headers.md)opcji; sekcja już niejawnie był buforowany. Nie można usunąć domyślnego, określ **/SECTION:.text,! K** zamiast tego. DUMPBIN, co spowoduje wyświetlenie właściwości sekcji, w tym "Nie pamięci podręcznej."
+K i P są w tej flagi sekcji, które odnoszą się do nich są używane w tym sensie, ujemna. Jeśli należy określić jeden z nich w sekcji .text za pomocą **/SECTION:.text, K** opcji, nie ma żadnej różnicy w sekcji flagi, po uruchomieniu [DUMPBIN](dumpbin-options.md) z [/HEADERS](headers.md)opcji; sekcja już niejawnie był buforowany. Nie można usunąć domyślnego, określ **/SECTION:.text,! K** zamiast tego. DUMPBIN, co spowoduje wyświetlenie właściwości sekcji, w tym "Nie pamięci podręcznej."
 
 Do sekcji w pliku PE, który nie ma E, R lub ustaw W jest prawdopodobnie nieprawidłowy.
 
-**ALIGN =**_numer_ argument pozwala określić wartość wyrównania dla określonej sekcji. _Numer_ argument w bajtach i musi być potęgą liczby dwa. Zobacz [/ALIGN](../../build/reference/align-section-alignment.md) Aby uzyskać więcej informacji.
+**ALIGN =**_numer_ argument pozwala określić wartość wyrównania dla określonej sekcji. _Numer_ argument w bajtach i musi być potęgą liczby dwa. Zobacz [/ALIGN](align-section-alignment.md) Aby uzyskać więcej informacji.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
@@ -91,5 +91,5 @@ Do sekcji w pliku PE, który nie ma E, R lub ustaw W jest prawdopodobnie niepraw
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

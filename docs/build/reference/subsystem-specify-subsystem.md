@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518394"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821264"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Określ podsystem)
 
@@ -42,7 +42,7 @@ Aplikacja trybu znaków Win32. System operacyjny zapewnia konsolę dla aplikacji
 Podsystemy rozszerzalnego interfejsu oprogramowania układowego. Zobacz specyfikację interfejsu EFI, aby uzyskać więcej informacji. Przykłady zobacz witrynę sieci Web Intel. Minimalna wersja wersji i domyślne to 1.0.
 
 **NATYWNE**<br/>
-Sterowniki trybu jądra Windows NT. Ta opcja jest zazwyczaj zarezerwowana dla składników systemu Windows. Jeśli [WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) określono NATYWNYCH jest ustawieniem domyślnym.
+Sterowniki trybu jądra Windows NT. Ta opcja jest zazwyczaj zarezerwowana dla składników systemu Windows. Jeśli [WDM](driver-windows-nt-kernel-mode-driver.md) określono NATYWNYCH jest ustawieniem domyślnym.
 
 **POSIX**<br/>
 Aplikacja uruchamiana z podsystem POSIX w Windows NT.
@@ -64,16 +64,16 @@ Opcjonalne minimalnych i domyślnych *głównych* i *pomocnicza* numery wersji d
 |Podsystem|Minimalnie|Domyślny|
 |---------------|-------------|-------------|
 |BOOT_APPLICATION|1.0|1.0|
-|KONSOLA|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
-|SYSTEMU WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
-|NATYWNY (DRIVER: WDM)|1,00 (x 86) — x64 ARM 64 1.10|1,00 (x 86) — x64 ARM 64 1.10|
-|NATYWNE (bez WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|
+|KONSOLA|5.01 (x86) 5.02 (x64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
+|SYSTEMU WINDOWS|5.01 (x86) 5.02 (x64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
+|NATYWNY (DRIVER: WDM)|1.00 (x86) 1.10 (x64, ARM)|1.00 (x86) 1.10 (x64, ARM)|
+|NATYWNE (bez WDM)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|4.00 (x86) 5.02 (x64) 6.02 (ARM)|
 |POSIX|1.0|19.90|
 |EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz folder konsolidatora.
 
@@ -85,7 +85,7 @@ Opcjonalne minimalnych i domyślnych *głównych* i *pomocnicza* numery wersji d
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

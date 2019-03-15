@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562087"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808459"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Kompilacja z wieloma procesami)
 
@@ -50,10 +50,10 @@ W poniższej tabeli wymieniono opcje kompilatora i funkcje językowe, które są
 |Opcja lub funkcja językowa|Opis|
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy preprocesora|Konwertuje typy w bibliotece typów na klasy C++, a następnie zapisuje te klasy w pliku nagłówka.|
-|[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego (**stdout**).|
-|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Umożliwia przyrostowe ponownej kompilacji.|
-|[/ showincludes](../../build/reference/showincludes-list-include-files.md)|Zapisuje listę wszystkich plików dołączanych do błędu standardowego (**stderr**).|
-|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Zapisuje prekompilowanego pliku nagłówkowego.|
+|[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego (**stdout**).|
+|[/Gm](gm-enable-minimal-rebuild.md)|Umożliwia przyrostowe ponownej kompilacji.|
+|[/showIncludes](showincludes-list-include-files.md)|Zapisuje listę wszystkich plików dołączanych do błędu standardowego (**stderr**).|
+|[/Yc](yc-create-precompiled-header-file.md)|Zapisuje prekompilowanego pliku nagłówkowego.|
 
 ## <a name="diagnostic-messages"></a>Komunikaty diagnostyczne
 
@@ -61,7 +61,7 @@ W przypadku określenia opcji lub język funkcji, która jest niezgodna z **/MP*
 
 |Komunikat diagnostyczny|Opis|Zachowanie kompilatora|
 |------------------------|-----------------|-----------------------|
-|**C2813**|**#Import** dyrektywy nie jest zgodny z **/MP** opcji.|Kompilacja kończy się, chyba że [poziom ostrzeżeń kompilatora](../../build/reference/compiler-option-warning-level.md) opcja określa, w przeciwnym razie.|
+|**C2813**|**#Import** dyrektywy nie jest zgodny z **/MP** opcji.|Kompilacja kończy się, chyba że [poziom ostrzeżeń kompilatora](compiler-option-warning-level.md) opcja określa, w przeciwnym razie.|
 |**D9014**|Określono nieprawidłową wartość dla *processMax* argumentu.|Kompilator ignoruje nieprawidłową wartość i przyjmuje wartość 1.|
 |**D9030**|Określona opcja jest niezgodna z **/MP**.|Kompilator ignoruje **/MP** opcji.|
 
@@ -99,7 +99,7 @@ Pliki źródłowe może nie zostać skompilowany w tej samej kolejności, w jaki
 
 Plik źródłowy jest kompilowana, gdy proces jest dostępny do kompilowania go. W przypadku więcej plików niż procesy pierwszego zestawu plików jest kompilowany przy dostępne procesy. Pozostałe pliki są przetwarzane, gdy proces zakończy się obsługa poprzedni plik jest dostępny do pracy na jednym z pozostałych plików.
 
-Nie określaj tym samym pliku źródłowym wiele razy w wierszu polecenia. Taka sytuacja może wystąpić, na przykład, jeśli narzędzie automatycznie tworzy [pliku reguł programu make](../../build/contents-of-a-makefile.md) opartego na informacje o zależnościach w projekcie. Jeśli nie określisz **/MP** opcja, kompilator przetwarza sekwencyjnie listę plików i następuje rekompilacja każde wystąpienie pliku. Jednak w przypadku określenia **/MP** opcji różne kompilatory może skompilować ten sam plik w tym samym czasie. W konsekwencji różne kompilatory podejmie próbę zapisu do tego samego pliku wyjściowego, w tym samym czasie. Jeden kompilatora będzie uzyskać wyłącznego dostępu zapisu do pliku wyjściowego i powiedzie się i innych kompilatorów zakończy się niepowodzeniem z powodu błędu dostępu do pliku.
+Nie określaj tym samym pliku źródłowym wiele razy w wierszu polecenia. Taka sytuacja może wystąpić, na przykład, jeśli narzędzie automatycznie tworzy [pliku reguł programu make](contents-of-a-makefile.md) opartego na informacje o zależnościach w projekcie. Jeśli nie określisz **/MP** opcja, kompilator przetwarza sekwencyjnie listę plików i następuje rekompilacja każde wystąpienie pliku. Jednak w przypadku określenia **/MP** opcji różne kompilatory może skompilować ten sam plik w tym samym czasie. W konsekwencji różne kompilatory podejmie próbę zapisu do tego samego pliku wyjściowego, w tym samym czasie. Jeden kompilatora będzie uzyskać wyłącznego dostępu zapisu do pliku wyjściowego i powiedzie się i innych kompilatorów zakończy się niepowodzeniem z powodu błędu dostępu do pliku.
 
 ### <a name="using-type-libraries-import"></a>Korzystanie z bibliotek typów (#import)
 
@@ -131,6 +131,6 @@ Domyślnie, projekt kompilacji umożliwia **/Gm** — opcja kompilatora (kompila
 
 ## <a name="see-also"></a>Zobacz także
 
-[#import — dyrektywa](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[#import Directive](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Dokumentacja wiersza polecenia](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
 [/Zf (Szybsze generowanie pliku PDB)](zf.md)<br/>

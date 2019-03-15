@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 94478f01655ff68b6b8067771eb3fdab42d1af01
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326000"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807575"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Dodawanie obiektów i kontrolek do projektu ATL
 
@@ -47,8 +47,7 @@ Można użyć jednego z kreatorów kodu biblioteki ATL, można dodać obiektu lu
 ## <a name="see-also"></a>Zobacz także
 
 [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Typy projektów Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Typy projektów Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)

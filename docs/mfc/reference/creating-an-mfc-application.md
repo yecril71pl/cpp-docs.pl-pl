@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 30fac6579d05eed276b60918b2417cd96044359a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251275fd866ce7c9d697787c35c6207ef77862db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292630"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818599"
 ---
 # <a name="creating-an-mfc-application"></a>Tworzenie aplikacji MFC
 
@@ -36,7 +36,7 @@ Kreator aplikacji MFC generuje odpowiednie klasy i pliki dla dowolnego z tych ty
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Aby utworzyć aplikację MFC przy użyciu Kreatora aplikacji MFC
 
-1. Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu za pomocą Kreatora aplikacji Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu aplikacji konsoli w języku C++](../../get-started/tutorial-console-cpp.md).
 
 1. W **nowy projekt** okno dialogowe, wybierz opcję **aplikacji MFC** w okienku szablonów, aby otworzyć kreatora.
 
@@ -47,9 +47,10 @@ Kreator aplikacji MFC generuje odpowiednie klasy i pliki dla dowolnego z tych ty
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i otworzyć nowy projekt w środowisku programistycznym.
 
-Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Strony właściwości](../../ide/property-pages-visual-cpp.md)
+[Strony właściwości](../../build/reference/property-pages-visual-cpp.md)
+

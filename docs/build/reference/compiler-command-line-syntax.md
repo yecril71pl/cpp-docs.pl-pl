@@ -1,16 +1,16 @@
 ---
-title: Składnia wiersza polecenia kompilatora
+title: Składnia wiersza polecenia kompilatora MSVC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - syntax, CL compiler command line
 - cl.exe compiler, command-line syntax
 ms.assetid: acba2c1c-0803-4a3a-af25-63e849b930a2
-ms.openlocfilehash: a350a2cb793630b90143b7d190ada9469a79bfc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cee76d5c053dbcfef33a191dc38a958338e4a82
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581301"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821498"
 ---
 # <a name="compiler-command-line-syntax"></a>Składnia wiersza polecenia kompilatora
 
@@ -24,20 +24,19 @@ W poniższej tabeli opisano dane wejściowe polecenia CL.
 
 |Wpis|Znaczenie|
 |-----------|-------------|
-|*Opcja*|Co najmniej jeden [opcji CL](../../build/reference/compiler-options.md). Należy pamiętać, że wszystkie opcje mają zastosowanie do wszystkich plików określonego źródła. Opcje są określone przez ukośnika (/) lub minus (-). Jeśli opcja przyjmuje argument, a opcja opis dokumentów czy spacji między opcją a argumenty. Nazwy opcji (z wyjątkiem opcji/Help) jest uwzględniana wielkość liter. Zobacz [kolejność opcji CL](../../build/reference/order-of-cl-options.md) Aby uzyskać więcej informacji.|
-|`file`|Nazwę jednego lub więcej plików źródłowych, pliki .obj lub biblioteki. CL kompiluje pliki źródłowe i przekazuje nazwy plików .obj i biblioteki do konsolidatora. Zobacz [Składnia nazwy pliku CL](../../build/reference/cl-filename-syntax.md) Aby uzyskać więcej informacji.|
+|*Opcja*|Co najmniej jeden [opcji CL](compiler-options.md). Należy pamiętać, że wszystkie opcje mają zastosowanie do wszystkich plików określonego źródła. Opcje są określone przez ukośnika (/) lub minus (-). Jeśli opcja przyjmuje argument, a opcja opis dokumentów czy spacji między opcją a argumenty. Nazwy opcji (z wyjątkiem opcji/Help) jest uwzględniana wielkość liter. Zobacz [kolejność opcji CL](order-of-cl-options.md) Aby uzyskać więcej informacji.|
+|`file`|Nazwę jednego lub więcej plików źródłowych, pliki .obj lub biblioteki. CL kompiluje pliki źródłowe i przekazuje nazwy plików .obj i biblioteki do konsolidatora. Zobacz [Składnia nazwy pliku CL](cl-filename-syntax.md) Aby uzyskać więcej informacji.|
 |*lib*|Jeden lub więcej nazw bibliotek. CL przekazuje te nazwy do konsolidatora.|
-|*Plik polecenia*|Plik, który zawiera wiele opcji i nazw plików. Zobacz [pliki poleceń CL](../../build/reference/cl-command-files.md) Aby uzyskać więcej informacji.|
-|*zoptymalizowany pod kątem linku*|Co najmniej jeden [opcje konsolidatora](../../build/reference/linker-options.md). CL przekazuje te opcje do konsolidatora.|
+|*command-file*|Plik, który zawiera wiele opcji i nazw plików. Zobacz [pliki poleceń CL](cl-command-files.md) Aby uzyskać więcej informacji.|
+|*zoptymalizowany pod kątem linku*|Co najmniej jeden [opcje konsolidatora MSVC](linker-options.md). CL przekazuje te opcje do konsolidatora.|
 
 Można określić dowolną liczbę opcji, nazw plików i nazw bibliotek, tak długo, jak liczba znaków w wierszu polecenia nie przekracza 1024, limit definiowane przez system operacyjny.
 
-Aby uzyskać informacje o wartości zwracanej przez cl.exe, zobacz [zwracają wartość zwracania cl.exe](../../build/reference/return-value-of-cl-exe.md) .
+Aby uzyskać informacje o wartości zwracanej przez cl.exe, zobacz [zwracają wartość zwracania cl.exe](return-value-of-cl-exe.md) .
 
 > [!NOTE]
 >  Limit danych wejściowych wiersza polecenia 1024 znaków nie gwarantuje pozostają bez zmian w przyszłych wydaniach systemu Windows.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)

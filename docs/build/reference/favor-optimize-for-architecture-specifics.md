@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 63affcced5dfc5bb56b0226021e1c32d93ec5d4f
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: b914d3e6e7a2865ec610249ff51d320d7890adcb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626750"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820458"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (optymalizacja pod kątem specyfiki architektury)
 
@@ -20,7 +20,7 @@ ms.locfileid: "53626750"
 
 ## <a name="syntax"></a>Składnia
 
-> **/ favor:**{**blend** | **ATOM** | **AMD64** | **INTEL64**}
+> **/favor:**{**blend** | **ATOM** | **AMD64** | **INTEL64**}
 
 ## <a name="remarks"></a>Uwagi
 
@@ -39,11 +39,11 @@ ms.locfileid: "53626750"
 > [!NOTE]
 > Architektura Intel64 była wcześniej znana jako technologia Extended Memory 64, a odpowiadające opcje kompilatora był **/favor:EM64T**.
 
-Aby uzyskać informacje na temat programu x64 architektury, zobacz [x64 konwencje kodowania](../../build/x64-software-conventions.md).
+Aby uzyskać informacje na temat programu x64 architektury, zobacz [x64 konwencje kodowania](../x64-software-conventions.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **C/C++** folderu.
 
@@ -55,7 +55,7 @@ Aby uzyskać informacje na temat programu x64 architektury, zobacz [x64 konwencj
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

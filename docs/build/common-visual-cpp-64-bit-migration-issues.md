@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: 1eb5a7f8d708d16241f1637269f31563378f084d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468773"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816116"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Typowe problemy przy migracji Visual C++ w wersji 64-bitowej
 
@@ -41,11 +41,11 @@ Korzystając z programu Visual C++ do tworzenia aplikacji do uruchomienia w 64-b
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Opcje kompilatora](../build/reference/compiler-options.md)
+- [MSVC Compiler Options](reference/compiler-options.md)
 
 - [Wskazówki dotyczące migracji](/windows/desktop/WinProg64/migration-tips)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Konfigurowanie Visual C++ dla wersji 64-bitowych, platformy docelowe x64](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Konfigurowanie projektów w języku C++ x64 64-bitowy, obiektów docelowych](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5722dcc06f5141818910e44a6160d12bcd4eaecd
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977761"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817728"
 ---
 # <a name="create-a-c-console-app-project"></a>Tworzenie projektu aplikacji konsoli w języku C++
 
@@ -19,7 +19,7 @@ Zwykle początkowy punkt jest programistą języka C++ "Hello, world!" Aplikacja
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Program Visual Studio za pomocą programowanie aplikacji klasycznych, z obciążeniem C++ zainstalowany i uruchomiony na komputerze. Jeśli nie jest jeszcze zainstalowany, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio 2017](../build/vscpp-step-0-installation.md).
+- Program Visual Studio za pomocą programowanie aplikacji klasycznych, z obciążeniem C++ zainstalowany i uruchomiony na komputerze. Jeśli nie jest jeszcze zainstalowany, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio 2017](vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Utwórz projekt aplikacji
 
@@ -27,11 +27,11 @@ Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *r
 
 1. W programie Visual Studio, otwórz **pliku** menu i wybierz polecenie **nowy > Projekt** otworzyć **nowy projekt** okna dialogowego.
 
-   ![Otwórz okno dialogowe Nowy projekt](../build/media/vscpp-file-new-project.gif "otwarcie okna dialogowego Nowy projekt")
+   ![Otwórz okno dialogowe Nowy projekt](media/vscpp-file-new-project.gif "otwarcie okna dialogowego Nowy projekt")
 
 1. W **nowy projekt** okno dialogowe, wybierz opcję **zainstalowane**, **Visual C++** Jeśli jeszcze nie jest zaznaczone, a następnie wybierz **pusty projekt** szablon. W **nazwa** wprowadź *HelloWorld*. Wybierz **OK** do tworzenia projektu.
 
-   ![Nazwy i Utwórz nowy projekt](../build/media/vscpp-concierge-project-name-callouts.png "nazwy i Utwórz nowy projekt")
+   ![Nazwy i Utwórz nowy projekt](media/vscpp-concierge-project-name-callouts.png "nazwy i Utwórz nowy projekt")
 
 Program Visual Studio tworzy nowy, pusty projekt, gotowe do specialize dla rodzaju aplikacji, którą chcesz utworzyć i dodać pliki kodu źródłowego. Należy to zrobić to w następnym kroku.
 
@@ -45,7 +45,7 @@ Program Visual Studio można utworzyć wszelkiego rodzaju aplikacje i składniki
 
 1. W **stron właściwości** okna dialogowego, w obszarze **właściwości konfiguracji**, wybierz opcję **konsolidatora**, **systemu**, a następnie wybierz pole edycji obok pozycji **podsystemu** właściwości. W wyświetlonym menu rozwijanym wybierz **Konsola (/ SUBSYSTEM: CONSOLE)**. Wybierz **OK** Aby zapisać zmiany.
 
-   ![Otwórz okno dialogowe strony właściwości](../build/media/vscpp-properties-linker-subsystem.gif "Otwórz okno dialogowe strony właściwości")
+   ![Otwórz okno dialogowe strony właściwości](media/vscpp-properties-linker-subsystem.gif "Otwórz okno dialogowe strony właściwości")
 
 Program Visual Studio teraz wie, aby skompilować projekt, aby uruchomić w oknie konsoli. Następnie dodasz plik kodu źródłowego i wprowadź kod dla aplikacji.
 
@@ -57,7 +57,7 @@ Program Visual Studio teraz wie, aby skompilować projekt, aby uruchomić w okni
 
 1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **Visual C++** w obszarze **zainstalowane** Jeśli nie została jeszcze wybrana. W środkowym okienku wybierz **plik C++ (.cpp)**. Zmiana **nazwa** do *HelloWorld.cpp*. Wybierz **Dodaj** aby zamknąć okno dialogowe, a następnie utwórz plik.
 
-   ![Dodawanie pliku źródłowego dla HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "dodać plik źródłowy dla HelloWorld.cpp")
+   ![Dodawanie pliku źródłowego dla HelloWorld.cpp](media/vscpp-add-new-item.gif "dodać plik źródłowy dla HelloWorld.cpp")
 
 Visual studio tworzy plik kodu źródłowego na nowy, pusty i otwiera go w oknie edytora gotowa do przejścia w kodzie źródłowym.
 
@@ -79,7 +79,7 @@ Visual studio tworzy plik kodu źródłowego na nowy, pusty i otwiera go w oknie
 
    Kod powinien wyglądać następująco w oknie edytora:
 
-   ![Witaj, świecie kodu w edytorze](../build/media/vscpp-hello-world-editor.png "kodu Witaj, świecie w edytorze")
+   ![Witaj, świecie kodu w edytorze](media/vscpp-hello-world-editor.png "kodu Witaj, świecie w edytorze")
 
 Gdy kod wygląda to w edytorze, wszystko będzie gotowe, przejdź do następnego kroku i skompiluj aplikację.
 

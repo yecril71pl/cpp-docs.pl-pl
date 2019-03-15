@@ -10,12 +10,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 8017fc3d-e5dd-4668-a1f7-3120daa95d20
-ms.openlocfilehash: 6be3b15efb56e97d658edb5890c3bdce4f64fbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfe351daf43b913f10df74b1059ba98f7d5d657b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625163"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815167"
 ---
 # <a name="c-compile-without-linking"></a>/c (Kompiluj bez konsolidacji)
 
@@ -55,7 +55,7 @@ Aby utworzyć plik wykonywalny, należy wywołać łącza:
 LINK firsti.obj second.obj third.obj /OUT:filename.exe
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

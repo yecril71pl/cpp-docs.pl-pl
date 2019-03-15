@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4634
 ms.assetid: 3e3496ce-2ac7-43d0-a48a-f514c950e81d
-ms.openlocfilehash: a26356dd32f1513eadf4ef2b82175cf71aed13a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d0e2af13128a201d96aa905d85621e14441a673
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536672"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818261"
 ---
 # <a name="compiler-warning-level-4-c4634"></a>Kompilator ostrzeżenie (poziom 4) C4634
 
@@ -19,7 +19,7 @@ Komentarz dokumentu XML: nie można zastosować: Przyczyna
 
 Tagów dokumentacji XML nie można zastosować do wszystkich C++ konstrukcji.  Na przykład nie można dodać komentarza do dokumentacji do przestrzeni nazw lub szablonu.
 
-Aby uzyskać więcej informacji, zobacz [dokumentacji XML](../../ide/xml-documentation-visual-cpp.md).
+Aby uzyskać więcej informacji, zobacz [dokumentacji XML](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Przykład
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-ms.openlocfilehash: a2d87039e2195c96e4209c7b5098473a6f52c486
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3633cfe34a4f9c627f84cf401cb559f02f8c8229
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424447"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810214"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Określ katalogi metadanych)
 
@@ -37,7 +37,7 @@ Tylko jeden katalog może być przekazywany do **/AI** wywołania. Określ jedn�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **ogólne** stronę właściwości.
 
@@ -49,6 +49,6 @@ Tylko jeden katalog może być przekazywany do **/AI** wywołania. Określ jedn�
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [#using — dyrektywa](../../preprocessor/hash-using-directive-cpp.md)

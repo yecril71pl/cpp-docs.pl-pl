@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5cc6a042c04bc205dd3cf2242d48f2572a51885c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599692"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814569"
 ---
 # <a name="project-build-error-prj0025"></a>Błąd PRJ0025 kompilacji projektu
 
@@ -23,4 +23,4 @@ System projektu znaleziono unikodowe w niestandardowej reguły kompilacji lub tw
 
 Rozwiązanie dotyczące tego błędu jest aktualizować zawartość reguły kompilacji lub zdarzenie, aby użyć ANSI lub Zainstaluj stronę kodową na swoim komputerze i jest ustawiony jako domyślny system kompilacji.
 
-Aby uzyskać więcej informacji na temat niestandardowych kroków kompilacji i zdarzenia kompilacji, zobacz [niestandardowych krokach kompilacji zrozumienie i zdarzenia kompilacji](../../ide/understanding-custom-build-steps-and-build-events.md).
+Aby uzyskać więcej informacji na temat niestandardowych kroków kompilacji i zdarzenia kompilacji, zobacz [niestandardowych krokach kompilacji zrozumienie i zdarzenia kompilacji](../../build/understanding-custom-build-steps-and-build-events.md).

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1d7c9fcb94a9351ce94b66e04b4bfc523248f4e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601295"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812203"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Określ bazę danych dla optymalizacji sterowanych profilem)
 
@@ -29,15 +29,15 @@ Określa nazwę pliku .pgd, który jest używany do przechowywania informacji na
 
 ## <a name="remarks"></a>Uwagi
 
-Korzystając z przestarzałego [pginstrument](../../build/reference/ltcg-link-time-code-generation.md) opcji, należy użyć **/PGD** do określenia niedomyślną nazwą lub lokalizacją pliku .pgd. Jeśli nie określisz **/PGD**, nazwa podstawowa pliku .pgd jest taka sama jak nazwa pliku wyjściowego (.exe lub .dll) podstawowej i jest tworzony w tym samym katalogu, z którego wywołano łącze.
+Korzystając z przestarzałego [pginstrument](ltcg-link-time-code-generation.md) opcji, należy użyć **/PGD** do określenia niedomyślną nazwą lub lokalizacją pliku .pgd. Jeśli nie określisz **/PGD**, nazwa podstawowa pliku .pgd jest taka sama jak nazwa pliku wyjściowego (.exe lub .dll) podstawowej i jest tworzony w tym samym katalogu, z którego wywołano łącze.
 
 Korzystając z przestarzałego **/LTCG:PGOPTIMIZE** opcji, należy użyć **/PGD** opcję, aby określić nazwę pliku .pgd można użyć do utworzenia zoptymalizowanego obrazu. *Filename* argument powinien być zgodny *filename* określony do **pginstrument**.
 
-Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/reference/profile-guided-optimizations.md).
+Aby uzyskać więcej informacji, zobacz [optymalizacje Profile-Guided](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** stronę właściwości.
 
@@ -49,5 +49,5 @@ Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: 892203d300c07711d06cff602128ec6e9ceb351c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504579"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817361"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Przetwarzaj wstępnie do stdout)
 
@@ -28,15 +28,15 @@ Wstępnie przetwarza pliki źródłowe C i C++ i kopiuje pliki wstępnie przetwo
 
 ## <a name="remarks"></a>Uwagi
 
-W ramach tego procesu są przeprowadzane wszystkie dyrektywy preprocesora, makra rozszerzenia są wykonywane i komentarze są usuwane. Aby zachować komentarzy w wstępnie przetworzone produkty wyjściowe, należy użyć [/C (Zachowaj komentarze podczas przetwarzania wstępnego)](../../build/reference/c-preserve-comments-during-preprocessing.md) również opcję kompilatora.
+W ramach tego procesu są przeprowadzane wszystkie dyrektywy preprocesora, makra rozszerzenia są wykonywane i komentarze są usuwane. Aby zachować komentarzy w wstępnie przetworzone produkty wyjściowe, należy użyć [/C (Zachowaj komentarze podczas przetwarzania wstępnego)](c-preserve-comments-during-preprocessing.md) również opcję kompilatora.
 
 **/E** dodaje `#line` dyrektywy danych wyjściowych na początku i końcu każdego dołączony plik i wokół wierszy usuniętych przez dyrektywy preprocesora dla kompilacji warunkowej. Te dyrektywy numerowania wierszy wstępnie przetworzonego pliku. W rezultacie wygenerowane błędy podczas późniejszych etapach przetwarzania można znaleźć numery wierszy oryginalnego pliku źródłowego, a nie wiersze z wstępnie przetworzonego pliku.
 
-**/E** opcja pomija kompilację. Należy ponownie przesłać wstępnie przetworzony plik dla kompilacji. **/E** powoduje również pominięcie pliki wyjściowe z **/FA**, **/Fa**, i **/Fm** opcje. Aby uzyskać więcej informacji, zobacz [/FA, /Fa (wyświetlanie listy plików)](../../build/reference/fa-fa-listing-file.md) i [/Fm (nazwa Mapfile)](../../build/reference/fm-name-mapfile.md).
+**/E** opcja pomija kompilację. Należy ponownie przesłać wstępnie przetworzony plik dla kompilacji. **/E** powoduje również pominięcie pliki wyjściowe z **/FA**, **/Fa**, i **/Fm** opcje. Aby uzyskać więcej informacji, zobacz [/FA, /Fa (wyświetlanie listy plików)](fa-fa-listing-file.md) i [/Fm (nazwa Mapfile)](fm-name-mapfile.md).
 
-Aby pominąć `#line` użyć dyrektyw, [/EP (wstępnie Przetwórz do stdout bez dyrektyw #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) zamiast opcji.
+Aby pominąć `#line` użyć dyrektyw, [/EP (wstępnie Przetwórz do stdout bez dyrektyw #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) zamiast opcji.
 
-Aby wysłać wstępnie przetworzone produkty wyjściowe do pliku, nie do `stdout`, użyj [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) zamiast opcji.
+Aby wysłać wstępnie przetworzone produkty wyjściowe do pliku, nie do `stdout`, użyj [/P (Przetwarzaj wstępnie do pliku)](p-preprocess-to-a-file.md) zamiast opcji.
 
 Aby pominąć `#line` dyrektywy i wysyłanie wstępnie przetworzone produkty wyjściowe do pliku, użyj **/P** i **/EP** ze sobą.
 
@@ -62,7 +62,7 @@ cl -E test.cpp > test2.cpp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -82,7 +82,7 @@ Następujące polecenie w wierszu wstępnie przetwarza `ADD.C`, zachowuje koment
 CL /E /C ADD.C
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

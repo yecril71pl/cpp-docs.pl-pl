@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422120"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811891"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generuj funkcje wewnętrzne)
 
@@ -41,7 +41,7 @@ Zobacz [wewnętrzne](../../preprocessor/intrinsic.md) Aby uzyskać więcej infor
 
 Wewnętrzne funkcje zmiennoprzecinkowe nie wykonywać żadnych specjalnych kontrole wartości wejściowe więc pracować w zakresach ograniczonych danych wejściowych i obsługę różnych wyjątków i warunków ograniczających niż biblioteki procedur o takiej samej nazwie. Za pomocą formularzy wewnętrzne true oznacza utraty IEEE wyjątków i utraty `_matherr` i `errno` funkcjonalności; jego oznacza utratę zgodność ANSI. Jednak wewnętrzne formularzy znacznie przyspieszyć floating-point intensywnie programów i wiele programów, problemów ze zgodnością są nieco praktyczne wartości.
 
-Możesz użyć [Za](../../build/reference/za-ze-disable-language-extensions.md) opcję kompilatora, aby zastąpić generowania true wewnętrzne opcje zmiennoprzecinkowych. W takich przypadkach funkcje są generowane jako biblioteki procedur, które argumenty przekazywane bezpośrednio do zmiennoprzecinkowych mikroukładu zamiast wypychanie ich na stosie program.
+Możesz użyć [Za](za-ze-disable-language-extensions.md) opcję kompilatora, aby zastąpić generowania true wewnętrzne opcje zmiennoprzecinkowych. W takich przypadkach funkcje są generowane jako biblioteki procedur, które argumenty przekazywane bezpośrednio do zmiennoprzecinkowych mikroukładu zamiast wypychanie ich na stosie program.
 
 **KONIEC x86 określonych**
 
@@ -49,7 +49,7 @@ Możesz także użyć [wewnętrzne](../../preprocessor/intrinsic.md) tworzyć fu
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -63,7 +63,7 @@ Możesz także użyć [wewnętrzne](../../preprocessor/intrinsic.md) tworzyć fu
 
 ## <a name="see-also"></a>Zobacz także
 
-[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[/O Opcje (Optymalizuj kod)](o-options-optimize-code.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md)

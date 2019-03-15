@@ -29,12 +29,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: b4025413fcf6389249fc011da020c0cd7c6f4519
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447440"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813893"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Rozszerzenia Microsoft do C i C++
 
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-- [/Za, /Ze (Wyłącz rozszerzenia językowe)](../../build/reference/za-ze-disable-language-extensions.md)
-- [Opcje kompilatora](../../build/reference/compiler-options.md)
-- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+- [/Za, /Ze (Wyłącz rozszerzenia językowe)](za-ze-disable-language-extensions.md)
+- [MSVC Compiler Options](compiler-options.md)
+- [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

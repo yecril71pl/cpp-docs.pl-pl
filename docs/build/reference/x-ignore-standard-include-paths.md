@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 23942803ae0a25aaddd7f5844b303528c2c7ccb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663765"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818404"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Ignoruj standardowe ścieżki dołączanych plików)
 
@@ -32,11 +32,11 @@ Zabezpiecza kompilator przed wyszukiwaniem dołączonych plików w katalogach ok
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć tej opcji z [/I (dodatkowe katalogi dołączenia)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) opcji.
+Można użyć tej opcji z [/I (dodatkowe katalogi dołączenia)](i-additional-include-directories.md) (**/I**`directory`) opcji.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -56,7 +56,7 @@ W poniższym poleceniu `/X` informuje kompilator, aby zignorować lokalizacjach,
 CL /X /I \ALT\INCLUDE MAIN.C
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

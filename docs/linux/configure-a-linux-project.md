@@ -2,12 +2,12 @@
 title: Konfigurowanie projektu systemu Linux w języku C++ w programie Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745189"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808368"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -89,8 +89,8 @@ Do zarządzania pamięcią podręczną usługi nagłówka, przejdź do **Narzęd
 
 ## <a name="see-also"></a>Zobacz także
 
-[Praca z właściwościami projektu](../ide/working-with-project-properties.md)<br/>
-[Właściwości ogólne C++ (Linux C++)](prop-pages/general-linux.md)<br/>
-[Katalogi VC ++ (Linux C++)](prop-pages/directories-linux.md)<br/>
-[Kopiuj źródła właściwości projektu (Linux C++)](prop-pages/copy-sources-project.md)<br/>
-[Tworzenie właściwości zdarzenia (Linux C++)](prop-pages/build-events-linux.md)
+[Ustaw kompilatora i właściwości kompilacji](../build/working-with-project-properties.md)<br/>
+[Właściwości ogólne C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[Katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Kopiuj źródła właściwości projektu (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
+[Tworzenie właściwości zdarzenia (Linux C++)](../linux/prop-pages/build-events-linux.md)

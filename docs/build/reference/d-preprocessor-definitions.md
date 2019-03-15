@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 18bbdb980c63b3c04b432602afb2402c5e2c42e7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424681"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812086"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Definicje preprocesora)
 
@@ -62,7 +62,7 @@ CL /DTEST=%% TEST.C
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. W okienku po lewej stronie wybierz **właściwości konfiguracji**, **C/C++**, **preprocesora**.
 
@@ -97,8 +97,8 @@ TEST defined 1
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[/U, /u (Usuń definicje symboli)](../../build/reference/u-u-undefine-symbols.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[/U, /u (Usuń definicje symboli)](u-u-undefine-symbols.md)<br/>
 [#undef, dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
 [#define, dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

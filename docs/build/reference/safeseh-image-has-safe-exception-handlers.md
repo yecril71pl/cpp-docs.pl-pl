@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-ms.openlocfilehash: 85c59d99a17c4e13750f5e51fd85d348346ff922
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62784933cbecd4f312c52ae98cab7d232b893f35
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450222"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822343"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (Obraz ma bezpieczną obsługę wyjątków)
 
@@ -25,7 +25,7 @@ Gdy **opcja/SAFESEH** jest określona, konsolidator generuje tylko obraz jeśli 
 
 **/ SAFESEH** jest prawidłowy tylko podczas łączenia do x86 elementów docelowych. **/ SAFESEH** nie jest obsługiwana dla platform, które mają już zapisaną procedurę obsługi wyjątków. Na przykład na x64 i ARM wszystkie obsługi wyjątków są zapisane w PDATA. ML64.exe obsługuje dodawanie adnotacji, które emitują informację strukturalnej obsługi wyjątków (XDATA i PDATA) do obrazu, pozwalając na odpoczynek, dzięki funkcji ml64. Zobacz [MASM x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) Aby uzyskać więcej informacji.
 
-Jeśli **opcja/SAFESEH** nie jest określona, konsolidator generuje obraz z tabeli obsługi bezpiecznych wyjątków, jeśli wszystkie moduły są zgodne z funkcją obsługi wyjątków bezpiecznych. Jeśli wszystkie moduły nie były zgodne z funkcją obsługi bezpiecznych wyjątków, obraz wynikowy nie będzie zawierać tabeli obsługi bezpiecznych wyjątków. Jeśli [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) określa WINDOWSCE lub jedną z opcji EFI_ * konsolidator nie będzie próbował utworzyć obrazu z tabeli obsługi bezpiecznych wyjątków, ponieważ żaden z tych podsystemów ułatwia korzystanie z informacji.
+Jeśli **opcja/SAFESEH** nie jest określona, konsolidator generuje obraz z tabeli obsługi bezpiecznych wyjątków, jeśli wszystkie moduły są zgodne z funkcją obsługi wyjątków bezpiecznych. Jeśli wszystkie moduły nie były zgodne z funkcją obsługi bezpiecznych wyjątków, obraz wynikowy nie będzie zawierać tabeli obsługi bezpiecznych wyjątków. Jeśli [/Subsystem](subsystem-specify-subsystem.md) określa WINDOWSCE lub jedną z opcji EFI_ * konsolidator nie będzie próbował utworzyć obrazu z tabeli obsługi bezpiecznych wyjątków, ponieważ żaden z tych podsystemów ułatwia korzystanie z informacji.
 
 Jeśli **/SAFESEH:NO** jest określony, program łączący wyprodukuje obraz z tabeli obsługi bezpiecznych wyjątków nawet, jeśli wszystkie moduły są zgodne z funkcją obsługi bezpiecznych wyjątków.
 
@@ -35,7 +35,7 @@ Funkcję można zarejestrować jako obsługę wyjątków strukturalnych, za pomo
 
 Nie istnieje możliwość oznaczenia istniejących danych binarnych jako posiadające obsługę wyjątków bezpiecznych (lub brak obsługi wyjątków); informację na temat obsługi wyjątków bezpiecznych muszą zostać dodane w czasie kompilacji.
 
-Konsolidator posiada możliwość utworzenia tabeli obsługi bezpiecznych wyjątków zależnych od aplikacji przy użyciu biblioteki środowiska uruchomieniowego C. Jeśli łączysz się z [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) i chcesz uzyskać tabelę obsługi wyjątków bezpiecznych, konieczne podanie ustawień obciążeń struct (na przykład można znaleźć w pliku źródłowym loadcfg.c CRT) zawierający wszystkie wpisy, które są zdefiniowane dla Visual C++. Na przykład:
+Konsolidator posiada możliwość utworzenia tabeli obsługi bezpiecznych wyjątków zależnych od aplikacji przy użyciu biblioteki środowiska uruchomieniowego C. Jeśli łączysz się z [/nodefaultlib](nodefaultlib-ignore-libraries.md) i chcesz uzyskać tabelę obsługi wyjątków bezpiecznych, konieczne podanie ustawień obciążeń struct (na przykład można znaleźć w pliku źródłowym loadcfg.c CRT) zawierający wszystkie wpisy, które są zdefiniowane dla Visual C++. Na przykład:
 
 ```
 #include <windows.h>
@@ -98,7 +98,7 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **konsolidatora** folderu.
 
@@ -110,7 +110,7 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

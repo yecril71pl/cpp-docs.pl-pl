@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628010"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822200"
 ---
 # <a name="fatal-error-c1083"></a>Błąd krytyczny C1083
 
@@ -71,11 +71,11 @@ Nawet kiedy pliki nagłówkowe są wymienione w **Eksploratora rozwiązań** w r
 
 Aby rozwiązać ten problem, popraw ścieżkę, której kompilator używa do wyszukiwania dołączanego lub importowanego pliku. Nowy projekt domyślny używa ścieżki wyszukiwania załączonych elementów. Może być konieczne zmodyfikowanie ścieżkę wyszukiwania dołączenia, aby dodać katalog dla projektu. Jeśli kompilujesz w wierszu polecenia, należy dodać ścieżkę do **INCLUDE** zmiennej środowiskowej lub **/I** opcję kompilatora, aby określić ścieżkę do pliku.
 
-Aby ustawić ścieżkę katalogu plików dołączanych w Visual Studio, otwórz projekt **stron właściwości** okno dialogowe. Wybierz **katalogi VC ++** w obszarze **właściwości konfiguracji** w okienku po lewej stronie, a następnie Edytuj **Dołącz katalogi** właściwości. Aby uzyskać więcej informacji na temat na użytkownika i na projekt, przeszukiwanych przez kompilator w programie Visual Studio, zobacz [VC ++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Aby uzyskać więcej informacji na temat **/I** — opcja kompilatora, zobacz [/I (dodatkowe katalogi dołączenia)](../../build/reference/i-additional-include-directories.md).
+Aby ustawić ścieżkę katalogu plików dołączanych w Visual Studio, otwórz projekt **stron właściwości** okno dialogowe. Wybierz **katalogi VC ++** w obszarze **właściwości konfiguracji** w okienku po lewej stronie, a następnie Edytuj **Dołącz katalogi** właściwości. Aby uzyskać więcej informacji na temat na użytkownika i na projekt, przeszukiwanych przez kompilator w programie Visual Studio, zobacz [VC ++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md). Aby uzyskać więcej informacji na temat **/I** — opcja kompilatora, zobacz [/I (dodatkowe katalogi dołączenia)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>Nie ustawiono wiersza polecenia INCLUDE lub środowiska LIB
 
-Gdy kompilator jest wywoływany w wierszu polecenia, do określania ścieżek wyszukiwania zwykle używa się zmiennych środowiskowych. Jeśli ścieżka wyszukiwania opisana przez **INCLUDE** lub **LIB** zmienna środowiskowa nie jest ustawiona poprawnie, może zostać wygenerowany błąd C1083. Zdecydowanie zalecamy używania skrót do wiersza polecenia dla deweloperów, aby ustawić podstawowe środowisko wiersza polecenia kompilacji. Aby uzyskać więcej informacji, zobacz [kompilacji C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md). Aby uzyskać więcej informacji o sposobie używania zmiennych środowiskowych, zobacz [porady: Użyj zmiennych środowiskowych w kompilacji](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
+Gdy kompilator jest wywoływany w wierszu polecenia, do określania ścieżek wyszukiwania zwykle używa się zmiennych środowiskowych. Jeśli ścieżka wyszukiwania opisana przez **INCLUDE** lub **LIB** zmienna środowiskowa nie jest ustawiona poprawnie, może zostać wygenerowany błąd C1083. Zdecydowanie zalecamy używania skrót do wiersza polecenia dla deweloperów, aby ustawić podstawowe środowisko wiersza polecenia kompilacji. Aby uzyskać więcej informacji, zobacz [kompilacji C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md). Aby uzyskać więcej informacji o sposobie używania zmiennych środowiskowych, zobacz [jak: Użycie zmiennych środowiskowych w kompilacji](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>Plik może być zablokowany lub w użyciu
 
@@ -87,7 +87,7 @@ Błąd C1083 może również wskazywać, że dołączana jest niewłaściwa wers
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Wstępnie skompilowane nagłówki nie są jeszcze wstępnie skompilowane
 
-Gdy konfigurujesz projekt tak, aby używał wstępnie skompilowanych nagłówków, musisz utworzyć odnośne pliki .pch, aby było możliwe skompilowanie plików, które korzystają z zawartości nagłówków. Na przykład plik stdafx.cpp jest automatycznie tworzony w katalogu projektu dla nowych projektów. Najpierw skompiluj ten plik, aby utworzyć wstępnie skompilowane pliki nagłówkowe. W typowej konstrukcji procesu kompilacji odbywa się to automatycznie. Aby uzyskać więcej informacji, zobacz [tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md).
+Gdy konfigurujesz projekt tak, aby używał wstępnie skompilowanych nagłówków, musisz utworzyć odnośne pliki .pch, aby było możliwe skompilowanie plików, które korzystają z zawartości nagłówków. Na przykład plik stdafx.cpp jest automatycznie tworzony w katalogu projektu dla nowych projektów. Najpierw skompiluj ten plik, aby utworzyć wstępnie skompilowane pliki nagłówkowe. W typowej konstrukcji procesu kompilacji odbywa się to automatycznie. Aby uzyskać więcej informacji, zobacz [tworzenie prekompilowanych plików nagłówka](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Inne przyczyny
 
@@ -116,7 +116,7 @@ Poniższy przykład generuje błąd C1083 gdy plik nagłówkowy `"test.h"` nie i
 #include "stdio.h"  // OK
 ```
 
-Aby uzyskać informacje dotyczące sposobu tworzenia projektów C/C++ w IDE lub w wierszu polecenia i informacji na temat ustawiania zmiennych środowiskowych, zobacz [kompilowanie programów C/C++](../../build/building-c-cpp-programs.md).
+Aby uzyskać informacje dotyczące sposobu tworzenia projektów C/C++ w IDE lub w wierszu polecenia, a informacje dotyczące ustawiania zmiennych środowiskowych, zobacz [projektów i systemów kompilacji](../../build/projects-and-build-systems-cpp.md).
 
 ## <a name="see-also"></a>Zobacz także
 

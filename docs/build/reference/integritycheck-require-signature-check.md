@@ -2,12 +2,12 @@
 title: /INTEGRITYCHECK (Wymagaj sprawdzania podpisu)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-ms.openlocfilehash: 8530175cd5bc0ed5dced7f92e5f67a1576bb43e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446ebe3afc06b8db8cc9f36b289c1e5c3ef5f117
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578350"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813685"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Wymagaj sprawdzania podpisu)
 
@@ -25,7 +25,7 @@ Domyślnie **/INTEGRITYCHECK** jest wyłączona.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji** węzła.
 
@@ -35,10 +35,10 @@ Domyślnie **/INTEGRITYCHECK** jest wyłączona.
 
 1. W **dodatkowe opcje**, wprowadź `/INTEGRITYCHECK` lub `/INTEGRITYCHECK:NO`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)<br/>
 [Wymuszone podpisywanie integralności z przenośny plik wykonywalny () plików PE](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
 [Podpisywanie instruktażu kodu trybu jądra](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
 [AppInit dll w Windows 7 i Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

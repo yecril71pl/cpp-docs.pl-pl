@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: 7e9300c6c851eb013d8304bd90e3ca9aa4b2c022
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640829"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812385"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Optymalizacja całego programu)
 
@@ -43,27 +43,27 @@ Informacje dotyczące wszystkich modułów kompilator wykonywać następujące c
 
 - Wbudowanej funkcji w module, nawet wtedy, gdy funkcja jest zdefiniowana w innym module.
 
-pliki .obj utworzone z **/GL** nie będą dostępne do tych narzędzi konsolidatora jako [EDITBIN](../../build/reference/editbin-reference.md) i [DUMPBIN](../../build/reference/dumpbin-reference.md).
+pliki .obj utworzone z **/GL** nie będą dostępne do tych narzędzi konsolidatora jako [EDITBIN](editbin-reference.md) i [DUMPBIN](dumpbin-reference.md).
 
-Jeśli kompilujesz program jest połączony z **/GL** i [/c](../../build/reference/c-compile-without-linking.md), opcję/LTCG — opcja konsolidatora należy używać do tworzenia pliku wyjściowego.
+Jeśli kompilujesz program jest połączony z **/GL** i [/c](c-compile-without-linking.md), opcję/LTCG — opcja konsolidatora należy używać do tworzenia pliku wyjściowego.
 
-[/ Zi](../../build/reference/z7-zi-zi-debug-information-format.md) nie można używać z **/GL**
+[/ Zi](z7-zi-zi-debug-information-format.md) nie można używać z **/GL**
 
 Format plików utworzone z **/GL** w bieżącej wersji mogą nie być odczytywane w kolejnych wersjach Visual C++. Nie powinien wysłać plik .lib, składająca się z plików .obj, które zostały utworzone z **/GL** , chyba że chcesz wysłać kopii pliku .lib dla wszystkich wersji programu Visual C++ można oczekiwać od użytkowników, do użycia, teraz i w przyszłości.
 
 pliki .obj utworzone z **/GL** i prekompilowane pliki nagłówka nie należy używać do tworzenia pliku .lib, chyba że zostanie połączony plik .lib na tym samym komputerze, który **/GL** pliku .obj. Informacje z pliku .obj prekompilowany plik nagłówkowy będzie potrzebna w czasie połączenia.
 
-Aby uzyskać więcej informacji na ograniczenia optymalizacja całego programu i udostępniono optymalizacje, zobacz [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **/GL** również sprawia, że Optymalizacja z przewodnikiem dostępne; zobacz opcję/LTCG.  Podczas kompilowania dla profilowana Optymalizacja i jeśli chcesz, aby funkcja porządkowania z Twojej optymalizacje profilowe z przewodnikiem, należy skompilować z [/Gy](../../build/reference/gy-enable-function-level-linking.md) lub opcję kompilatora, która oznacza /Gy.
+Aby uzyskać więcej informacji na ograniczenia optymalizacja całego programu i udostępniono optymalizacje, zobacz [opcję/LTCG](ltcg-link-time-code-generation.md).  **/GL** również sprawia, że Optymalizacja z przewodnikiem dostępne; zobacz opcję/LTCG.  Podczas kompilowania dla profilowana Optymalizacja i jeśli chcesz, aby funkcja porządkowania z Twojej optymalizacje profilowe z przewodnikiem, należy skompilować z [/Gy](gy-enable-function-level-linking.md) lub opcję kompilatora, która oznacza /Gy.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Zobacz [opcję/LTCG (Generowanie kodu Link-time)](../../build/reference/ltcg-link-time-code-generation.md) instrukcje dotyczące sposobu określania **/GL** w środowisku programistycznym.
+1. Zobacz [opcję/LTCG (Generowanie kodu Link-time)](ltcg-link-time-code-generation.md) instrukcje dotyczące sposobu określania **/GL** w środowisku programistycznym.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

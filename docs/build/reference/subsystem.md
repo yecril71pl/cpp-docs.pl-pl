@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: ec771efcd8fffd1aa1825f2c500404dc0b2a4965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638740"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820497"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -65,10 +65,10 @@ Opcjonalny `major` i `minor` wartości określają minimalną wymaganą wersję 
 
 - Wartości `major` i `minor` musi być z zakresu od 0 do 65 535.
 
-Wybór podsystemu wpływa na domyślny początkowy adres dla programu. Aby uzyskać więcej informacji, zobacz [/Entry (Symbol punktu wejścia)](../../build/reference/entry-entry-point-symbol.md), konsolidatora/Entry:*funkcja* opcji.
+Wybór podsystemu wpływa na domyślny początkowy adres dla programu. Aby uzyskać więcej informacji, zobacz [/Entry (Symbol punktu wejścia)](entry-entry-point-symbol.md), konsolidatora/Entry:*funkcja* opcji.
 
-Aby uzyskać więcej informacji, w tym wartościach minimalnych i domyślnych dla numerów wersji głównych i pomocniczych każdego podsystemu, zobacz [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) — opcja konsolidatora.
+Aby uzyskać więcej informacji, w tym wartościach minimalnych i domyślnych dla numerów wersji głównych i pomocniczych każdego podsystemu, zobacz [/Subsystem](subsystem-specify-subsystem.md) — opcja konsolidatora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

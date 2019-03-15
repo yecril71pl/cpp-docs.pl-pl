@@ -16,12 +16,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: bf87023e3417a922232af60d89a21c17ad6864cc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ca7ef5d1935ddea0441f49e387e35184c6fd1fc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424733"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810201"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Generowanie informacji o debugowaniu)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57424733"
 
 Program łączący umieszcza informacje debugowania z plikiem bazy danych (PDB) programu. Podczas kolejnych kompilacjach program powoduje zaktualizowanie pliku PDB.
 
-Plik wykonywalny (plik .exe lub DLL) utworzone na potrzeby debugowania zawiera nazwę i ścieżkę odpowiedniego pliku PDB. Debuger odczytuje nazwę osadzonego i używa pliku PDB podczas debugowania programu. Konsolidator używa podstawowej nazwy programu i rozszerzenia .pdb nazwę bazy danych programu i osadza ścieżki, w której został utworzony. Aby zastąpić to ustawienie domyślne, należy ustawić [/PDB](../../build/reference/pdb-use-program-database.md) i określ inną nazwę pliku.
+Plik wykonywalny (plik .exe lub DLL) utworzone na potrzeby debugowania zawiera nazwę i ścieżkę odpowiedniego pliku PDB. Debuger odczytuje nazwę osadzonego i używa pliku PDB podczas debugowania programu. Konsolidator używa podstawowej nazwy programu i rozszerzenia .pdb nazwę bazy danych programu i osadza ścieżki, w której został utworzony. Aby zastąpić to ustawienie domyślne, należy ustawić [/PDB](pdb-use-program-database.md) i określ inną nazwę pliku.
 
 **Fastlink** opcja jest dostępna w programie Visual Studio 2017 i nowszym. Tę opcję, pozostawia informacje dotyczące symboli prywatnych w produktach poszczególnych kompilacji używany do tworzenia pliku wykonywalnego. Generuje on ograniczony pliku PDB, będącej indeksem na informacje o debugowaniu w plików obiektów i bibliotek, używany do utworzenia pliku wykonywalnego, zamiast tworzenia pełnej kopii. Tej opcji można połączyć się z dwóch do czterech razy tak szybko, jak Pełna generowania plików PDB i jest zalecana w przypadku lokalnego debugowania i znajdują się dostępne produkty kompilacji. Ta ograniczona PDB nie można używać do debugowania po produkty wymagane kompilacji nie są dostępne, takich jak podczas wdrażania pliku wykonywalnego na innym komputerze. W wierszu polecenia dla deweloperów można użyć narzędzia mspdbcmf.exe wygenerować pełny plik PDB z tej ograniczonej pliku PDB. W programie Visual Studio Użyj elementów menu Projekt lub kompilacji do generowania pełnego pliku PDB, aby utworzyć pełny plik PDB dla projektu lub rozwiązania.
 
@@ -45,17 +45,17 @@ Plik wykonywalny (plik .exe lub DLL) utworzone na potrzeby debugowania zawiera n
 
 Po określeniu **/DEBUG** bez żadnych dodatkowych opcji Domyślnie konsolidator **/Debug: full** dla wiersza polecenia i kompilacji pliku reguł programu make dla wersji kompilacji w środowisku IDE programu Visual Studio i zarówno debug i release kompilacje w programie Visual Studio 2015 i starsze wersje. Począwszy od programu Visual Studio 2017, system kompilacji w środowisku IDE domyślnie **fastlink** po określeniu **/DEBUG** opcji kompilacji debugowania. Aby zachować zgodność z poprzednimi wersjami nie zostały zmienione inne wartości domyślne.
 
-Kompilator [zgodne z C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) opcja powoduje, że kompilator, aby pozostawić informacje o debugowaniu w plikach .obj. Można również użyć [bazy danych programu](../../build/reference/z7-zi-zi-debug-information-format.md) do przechowywania informacji o debugowaniu w pliku PDB dla pliku .obj — opcja kompilatora (/Zi). Konsolidator szuka pliku PDB obiektu najpierw ścieżka bezwzględna zapisywane w pliku .obj, a następnie w katalogu, który zawiera plik .obj. Nie można określić nazwę pliku PDB lub lokalizację, aby konsolidator obiektu.
+Kompilator [zgodne z C7](z7-zi-zi-debug-information-format.md) (/ Z7) opcja powoduje, że kompilator, aby pozostawić informacje o debugowaniu w plikach .obj. Można również użyć [bazy danych programu](z7-zi-zi-debug-information-format.md) do przechowywania informacji o debugowaniu w pliku PDB dla pliku .obj — opcja kompilatora (/Zi). Konsolidator szuka pliku PDB obiektu najpierw ścieżka bezwzględna zapisywane w pliku .obj, a następnie w katalogu, który zawiera plik .obj. Nie można określić nazwę pliku PDB lub lokalizację, aby konsolidator obiektu.
 
-[/ INCREMENTAL](../../build/reference/incremental-link-incrementally.md) jest implikowane, jeśli nie określono opcji/Debug.
+[/ INCREMENTAL](incremental-link-incrementally.md) jest implikowane, jeśli nie określono opcji/Debug.
 
-/ DEBUG zmian wartości domyślne dla [/OPT](../../build/reference/opt-optimizations.md) możliwość z REF z Zapora połączenia internetowego i NOREF NOICF, dzięki czemu w przypadku oryginalnej wartości domyślne, należy jawnie należy określić/OPT: REF lub/OPT: ICF.
+/ DEBUG zmian wartości domyślne dla [/OPT](opt-optimizations.md) możliwość z REF z Zapora połączenia internetowego i NOREF NOICF, dzięki czemu w przypadku oryginalnej wartości domyślne, należy jawnie należy określić/OPT: REF lub/OPT: ICF.
 
 Nie jest możliwe utworzenie .exe lub .dll, który zawiera informacje o debugowaniu. Debugowanie informacje są zawsze umieszczane w pliku PDB lub .obj.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -71,5 +71,5 @@ Nie jest możliwe utworzenie .exe lub .dll, który zawiera informacje o debugowa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

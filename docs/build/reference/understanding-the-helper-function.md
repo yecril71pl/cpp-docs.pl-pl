@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: ee2a8b66eaf4a8ba29ba3de7e63407bea738d626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440147"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817998"
 ---
 # <a name="understanding-the-helper-function"></a>Ogólne informacje funkcji Pomocnik
 
@@ -53,16 +53,16 @@ Domyślny kod pomocnika można znaleźć w Delayhlp.cpp i Delayimp.h (w vc\inclu
 
 Funkcja pomocnika można znaleźć w następujących tematach:
 
-- [Zmiany w funkcjach pomocnika opóźnionego załadunku bibliotek DLL po Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Zmiany w funkcjach pomocnika opóźnionego załadunku bibliotek DLL po Visual C++ 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [Konwencje wywoływania, parametry oraz zwracany typ](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [Konwencje wywoływania, parametry oraz zwracany typ](calling-conventions-parameters-and-return-type.md)
 
-- [Struktura i stała, definicje](../../build/reference/structure-and-constant-definitions.md)
+- [Struktura i stała, definicje](structure-and-constant-definitions.md)
 
-- [Obliczanie niezbędnych wartości](../../build/reference/calculating-necessary-values.md)
+- [Obliczanie niezbędnych wartości](calculating-necessary-values.md)
 
-- [Zwalnianie bibliotek DLL załadowanych z opóźnieniem](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [Zwalnianie bibliotek DLL załadowanych z opóźnieniem](explicitly-unloading-a-delay-loaded-dll.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)

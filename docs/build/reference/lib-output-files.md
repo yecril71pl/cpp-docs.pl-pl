@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: bc505a9a946f564425513dad8107fd962eb054b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7a6352665f12307bfa54025a32f9f7b84311dac
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562906"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807925"
 ---
 # <a name="lib-output-files"></a>Pliki wyjściowe LIB
 
@@ -23,6 +23,6 @@ Pliki wyjściowe utworzone przez LIB zależą od trybu, w którym jest on używa
 |Wyodrębnianie do członka za pomocą/extract|Plik obiektowy (.obj)|
 |Tworzenie eksportu pliku i zaimportować biblioteki z/DEF|Importowanie biblioteki (.lib) oraz pliku eksportu (.exp)|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Informacje o LIB](../../build/reference/overview-of-lib.md)
+[Informacje o LIB](overview-of-lib.md)

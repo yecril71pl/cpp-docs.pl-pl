@@ -2,12 +2,12 @@
 title: Przegląd Konwencji ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436026"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810461"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Przegląd Konwencji ABI ARM32
 
@@ -23,7 +23,7 @@ Obsługa dzielenia liczby całkowitej (UDIV/SDIV) jest zdecydowanie zaleca się,
 
 ## <a name="endianness"></a>Kolejność bajtów
 
-Windows na ARM wykonuje się w trybie little-endian. Kompilator języka Visual C++ i środowisko wykonawcze Windows oczekiwać, że dane little-endian przez cały czas. Chociaż ustawić SETEND instrukcji w instrukcji ARM architektura (ISA) umożliwia kod nawet trybu użytkownika, aby zmienić bieżący kolejność bajtów, wykonanie tej tak nie jest zalecane jest niebezpieczny dla aplikacji. Jeśli wyjątek jest generowany w trybie big-endian zachowanie jest nieprzewidywalne i może prowadzić do błędów aplikacji w trybie użytkownika lub operacji wykrywania błędów w trybie jądra.
+Windows na ARM wykonuje się w trybie little-endian. Kompilator MSVC i środowisko wykonawcze Windows oczekiwać, że dane little-endian przez cały czas. Chociaż ustawić SETEND instrukcji w instrukcji ARM architektura (ISA) umożliwia kod nawet trybu użytkownika, aby zmienić bieżący kolejność bajtów, wykonanie tej tak nie jest zalecane jest niebezpieczny dla aplikacji. Jeśli wyjątek jest generowany w trybie big-endian zachowanie jest nieprzewidywalne i może prowadzić do błędów aplikacji w trybie użytkownika lub operacji wykrywania błędów w trybie jądra.
 
 ## <a name="alignment"></a>Wyrównanie
 
@@ -56,13 +56,13 @@ Użycie IT zgodnie z instrukcjami w kod Thumb-2 jest niedozwolone z wyjątkiem t
    |Rozkazów 16-bitowych|Class|Ograniczenia|
    |---------------------|-----------|------------------|
    |MOV, MVN|Przenieś|Menedżer zasobów! = PC, usług pulpitu zdalnego! = PC|
-   |LDR, LDR [S] B, H LDR [S]|Ładowanie z pamięci|Ale nie LDR literału formularzy|
+   |LDR, LDR[S]B, LDR[S]H|Ładowanie z pamięci|Ale nie LDR literału formularzy|
    |STR, STRB, STRH|Store pamięci||
-   |DODAJ ADC, RSB, PROGRAMOWEJ, SUB|Dodaj lub Odejmij|Ale nie SP ADD/SUBSKRYBOWANIA, PS, imm7 formularzy<br /><br /> Menedżer zasobów! = PC, Rdn! = PC, od Rdm! = PC|
+   |ADD, ADC, RSB, SBC, SUB|Dodaj lub Odejmij|Ale nie SP ADD/SUBSKRYBOWANIA, PS, imm7 formularzy<br /><br /> Menedżer zasobów! = PC, Rdn! = PC, od Rdm! = PC|
    |CMP, CMN|{1&gt;Compare&lt;1}|Menedżer zasobów! = PC, Rn! = PC|
    |MUL|Mnożenie||
-   |USŁUGA ASR, LSL, LSR, ROR|Przesunięcie bitu||
-   |PONADTO ORR KOD IDENTYFIKACYJNY, RÓWNORZĘDNĄ, TST|Bitowe operacje arytmetyczne||
+   |ASR, LSL, LSR, ROR|Przesunięcie bitu||
+   |AND, BIC, EOR, ORR, TST|Bitowe operacje arytmetyczne||
    |BX|Gałąź do zarejestrowania|Menedżer zasobów! = PC|
 
 Mimo że bieżący ARMv7 procesorów CPU, nie można zgłosić użycia formularzy niedozwoloną instrukcję, przyszłych generacji powinny. W przypadku wykrycia tych postaci dowolnego programu, który używa tych może zostać zakończona z powodu wyjątku niezdefiniowane instrukcji.
@@ -78,21 +78,21 @@ Procesor ARM obsługuje 16 rejestrów liczbą całkowitą:
 |Rejestruj|Nietrwałe?|Rola|
 |--------------|---------------|----------|
 |r0|Volatile|Parametr, wynik, pliki tymczasowe rejestr 1|
-|R1|Volatile|Parametr, wynik, pliki tymczasowe rejestru 2|
-|R2|Volatile|Parametr, pliki tymczasowe rejestru 3|
-|R3|Volatile|Parametr, pliki tymczasowe rejestru 4|
+|r1|Volatile|Parametr, wynik, pliki tymczasowe rejestru 2|
+|r2|Volatile|Parametr, pliki tymczasowe rejestru 3|
+|r3|Volatile|Parametr, pliki tymczasowe rejestru 4|
 |R4|Non-volatile||
-|R5|Non-volatile||
-|R6|Non-volatile||
-|R7|Non-volatile||
+|r5|Non-volatile||
+|r6|Non-volatile||
+|r7|Non-volatile||
 |R8|Non-volatile||
-|R9|Non-volatile||
+|r9|Non-volatile||
 |R10|Non-volatile||
-|R11|Non-volatile|Wskaźnik ramki|
-|R12|Volatile|Zarejestruj się wewnątrz procedury wywołania pliki tymczasowe|
-|R13 (SP)|Non-volatile|Wskaźnik stosu|
+|r11|Non-volatile|Wskaźnik ramki|
+|r12|Volatile|Zarejestruj się wewnątrz procedury wywołania pliki tymczasowe|
+|r13 (SP)|Non-volatile|Wskaźnik stosu|
 |R14 (LR)|Non-volatile|Zarejestruj się łącze|
-|R15 (PC)|Non-volatile|Licznik programu|
+|r15 (PC)|Non-volatile|Licznik programu|
 
 Aby uzyskać szczegółowe informacje o sposobie używania parametrów i zwracanej wartości w rejestrach, zobacz sekcję przekazywania parametru, w tym artykule.
 
@@ -104,15 +104,15 @@ Windows obsługuje tylko wariantów ARM, które mają Koprocesor VFPv3 D32 pomoc
 
 |Wybiera|podwojenia|Quads|Nietrwałe?|Rola|
 |-------------|-------------|-----------|---------------|----------|
-|s0 s3|D0 d1|q0|Volatile|Parametry, wyniku scratch rejestru|
-|S7 — S4|d2 d3|1.|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
-|s8 s11|D4 d5|Q2|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
-|S12 s15|D6 d7|K3|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
-|S16 s19|D8 d9|kwartał 4|Non-volatile||
-|S20 s23|D10 d11|Q5|Non-volatile||
-|S24 s27|D12 d13|Q6|Non-volatile||
-|S28 s31|D14 d15|Q7|Non-volatile||
-||D16 d31|Q8 q15|Volatile||
+|s0 s3|d0-d1|q0|Volatile|Parametry, wyniku scratch rejestru|
+|S7 — S4|d2 d3|q1|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
+|s8 s11|D4 d5|q2|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
+|s12-s15|D6 d7|q3|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
+|s16-s19|D8 d9|q4|Non-volatile||
+|s20-s23|D10 d11|q5|Non-volatile||
+|s24-s27|D12 d13|q6|Non-volatile||
+|S28 s31|D14 d15|q7|Non-volatile||
+||D16 d31|q8-q15|Volatile||
 
 W następnej tabeli przedstawiono stanu zmiennoprzecinkowego i kontroli zarejestrować pola bitów (FPSCR):
 
@@ -126,8 +126,8 @@ W następnej tabeli przedstawiono stanu zmiennoprzecinkowego i kontroli zarejest
 |23-22|RMode|Non-volatile|Tryb formant zaokrąglenia|
 |21-20|Pobieżne|Non-volatile|Vector — Stride, zawsze musi mieć wartość 0|
 |18-16|Len|Non-volatile|Długość wektora, zawsze musi mieć wartość 0|
-|15, 12-8|Środowisko IDE, IXE itp.|Non-volatile|Wyjątek przechwytywania włączenie usługi bits, zawsze musi mieć wartość 0|
-|7, 4-0|IDC, IXC itp.|Volatile|Flagi zbiorczą wyjątku|
+|15, 12-8|IDE, IXE, etc.|Non-volatile|Wyjątek przechwytywania włączenie usługi bits, zawsze musi mieć wartość 0|
+|7, 4-0|IDC, IXC, etc.|Volatile|Flagi zbiorczą wyjątku|
 
 ## <a name="floating-point-exceptions"></a>Wyjątki zmiennoprzecinkowe
 
@@ -137,7 +137,7 @@ Większość sprzętu ARM nie obsługuje wyjątki zmiennoprzecinkowe IEEE. Na wa
 
 W przypadku innych zmiennych funkcji Windows na ARM ABI regułom ARM dla parametru, przekazując — w tym rozszerzenia Visual FOXPRO i SIMD zaawansowane. Wykonaj te reguły [standardowe wywołanie procedury dla architektury ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)skonsolidowanego z rozszerzeniem Visual FOXPRO. Przez domyślne pierwsze cztery liczby całkowitej argumentów i maksymalnie osiem zmiennoprzecinkowego lub vector argumenty są przekazywane w rejestrach, a dodatkowe argumenty są przekazywane na stosie. Argumenty są przypisane do rejestrów lub stosu przy użyciu tej procedury:
 
-### <a name="stage-a-initialization"></a>Inicjowanie A: etapu
+### <a name="stage-a-initialization"></a>Etap Odp.: Inicjalizacja
 
 Inicjalizacja jest wykonywana tylko raz, przed rozpoczęciem przetwarzania argumentu:
 
@@ -149,7 +149,7 @@ Inicjalizacja jest wykonywana tylko raz, przed rozpoczęciem przetwarzania argum
 
 1. Jeśli zostanie wywołana funkcja, która zwraca wynik w pamięci, adres wynik jest umieszczany w r0 i NCRN jest równa r1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Etapu B: wstępne wypełnienie i rozszerzenie argumenty
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Etap B: Rozszerzenie argumentów i wstępne wypełnienie
 
 Dla każdego argumentu na liście jest stosowane pierwsza pasująca reguła z następującej listy:
 
@@ -159,7 +159,7 @@ Dla każdego argumentu na liście jest stosowane pierwsza pasująca reguła z na
 
 1. Jeśli argument jest typu złożonego, jego rozmiar jest zaokrąglana w górę do najbliższej wielokrotności 4.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Etapu C: przypisanie argumentów do rejestrów i stosu
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Etap C: Przypisanie argumenty do rejestrów i stosu
 
 Dla każdego argumentu na liście stosowane są następujące reguły z kolei, dopóki nie została przydzielona argument:
 
@@ -205,13 +205,13 @@ Wyliczenia są typów 32-bitowej liczby całkowitej, chyba że co najmniej jedne
 
 ## <a name="stack-walking"></a>Przechodzenie po stosie
 
-Windows kod jest kompilowany za pomocą wskaźników ramek włączone ([/Oy (pominięcie wskaźnika ramki)](../build/reference/oy-frame-pointer-omission.md)) umożliwiające szybkie stos. Ogólnie rzecz biorąc, r11 zarejestrować wskazuje następny link w łańcuchu, czyli {r11, lr} pary, który określa wskaźnik do poprzedniej ramki stosu i adres zwrotny. Zaleca się, że Twój kod również włączyć wskaźników ramek na lepsze profilowania i śledzenia.
+Windows kod jest kompilowany za pomocą wskaźników ramek włączone ([/Oy (pominięcie wskaźnika ramki)](reference/oy-frame-pointer-omission.md)) umożliwiające szybkie stos. Ogólnie rzecz biorąc, r11 zarejestrować wskazuje następny link w łańcuchu, czyli {r11, lr} pary, który określa wskaźnik do poprzedniej ramki stosu i adres zwrotny. Zaleca się, że Twój kod również włączyć wskaźników ramek na lepsze profilowania i śledzenia.
 
 ## <a name="exception-unwinding"></a>Odwijanie wyjątków
 
 Odwijanie podczas obsługi wyjątku stosu jest włączona przy użyciu kodów unwind. Kody unwind to sekwencja bajtów przechowywanych w sekcji .xdata obrazu pliku wykonywalnego. Opisano w nich wykonać kod prologu i epilogu funkcji w sposób abstrakcyjne tak, aby skutki prologu funkcji można cofnąć w ramach przygotowania do rozwinięcia do obiektu wywołującego ramki stosu.
 
-ARM EABI określa odwijania model wyjątków, który używa kodów odwinięcia. Jednak ta specyfikacja nie wystarcza do rozwinięcia w Windows, który musi obsługiwać przypadki, w którym procesor jest w trakcie prologu i epilogu funkcji. Aby uzyskać więcej informacji na temat Windows na dane wyjątków ARM i odwinięcie zobacz [obsługi wyjątków ARM](../build/arm-exception-handling.md).
+ARM EABI określa odwijania model wyjątków, który używa kodów odwinięcia. Jednak ta specyfikacja nie wystarcza do rozwinięcia w Windows, który musi obsługiwać przypadki, w którym procesor jest w trakcie prologu i epilogu funkcji. Aby uzyskać więcej informacji na temat Windows na dane wyjątków ARM i odwinięcie zobacz [obsługi wyjątków ARM](arm-exception-handling.md).
 
 Zaleca się, że dynamicznie generowanego kodu można uznać za pomocą funkcji dynamicznego tabel określone w wywołaniach `RtlAddFunctionTable` i skojarzone funkcje, tak aby wygenerowanego kodu mogą uczestniczyć w programie obsługi wyjątków.
 
@@ -223,5 +223,5 @@ Ten licznik jest licznikiem true cyklu, nie zegara; w związku z tym zliczania c
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Obsługa wyjątków ARM](../build/arm-exception-handling.md)
+[Typowe problemy przy migracji Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
+[Obsługa wyjątków ARM](arm-exception-handling.md)

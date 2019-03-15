@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: 38f2e08139566ce6c70755cd367edf93677ef9af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614412"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814556"
 ---
 # <a name="mutual-imports"></a>Importy wzajemne
 
@@ -41,7 +41,7 @@ Ogólne rozwiązanie do obsługi Importy wzajemne jest:
 
 Poniższa ilustracja przedstawia rozwiązania dla dwóch wzajemnie się importowanie bibliotek DLL, DLL1 i DLL2. Krok 1 jest uruchamianie LIB, z ustawioną opcją/DEF na DLL1. Krok 1 tworzy DLL1.lib biblioteki importowanej oraz DLL1.exp. W kroku 2 Biblioteka importowana jest używany do tworzenia DLL2, który z kolei tworzy bibliotekę importu dla symboli DLL2 firmy. Krok 3 tworzy DLL1, przy użyciu DLL1.exp i DLL2.lib jako dane wejściowe. Należy pamiętać, że plik .exp dla DLL2 nie jest konieczne, ponieważ LIB nie był używany do tworzenia biblioteki importowanej DLL2 firmy.
 
-![Aby połączyć dwa pliki dll za pomocą Importy wzajemne](../build/media/vc37yj1.gif "połączyć dwa pliki dll za pomocą Importy wzajemne")<br/>
+![Aby połączyć dwa pliki dll za pomocą Importy wzajemne](media/vc37yj1.gif "połączyć dwa pliki dll za pomocą Importy wzajemne")<br/>
 Łączenie dwóch bibliotek DLL z Importy wzajemne
 
 ## <a name="limitations-of-afxext"></a>Ograniczenia _afxext —
@@ -109,24 +109,24 @@ class CExampleA : public CObject
 
 ### <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
+- [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)
 
-- [Eksportowanie z biblioteki DLL za pomocą. Pliki DEF](../build/exporting-from-a-dll-using-def-files.md)
+- [Eksportowanie z biblioteki DLL za pomocą. Pliki DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Eksportuj funkcje C++ do użycia w plikach wykonywalnych języka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Eksportuj funkcje C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Określić, której metody eksportowania użyjesz](../build/determining-which-exporting-method-to-use.md)
+- [Określić, której metody eksportowania użyjesz](determining-which-exporting-method-to-use.md)
 
-- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Narzędzie LIB i opcja/DEF](../build/reference/lib-reference.md)
+- [Narzędzie LIB i opcja/DEF](reference/lib-reference.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Importowanie i eksportowanie](../build/importing-and-exporting.md)
+[Importowanie i eksportowanie](importing-and-exporting.md)

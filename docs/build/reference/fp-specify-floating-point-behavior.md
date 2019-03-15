@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894097"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818170"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/FP (określenie zachowania zmiennoprzecinkowego)
 
@@ -51,7 +51,7 @@ W obszarze **/FP: strict**, kompilator generuje kod, który umożliwia programow
 
 #### <a name="fast"></a>Szybka
 
-**Fast** opcja umożliwia kompilator, aby zmienić kolejność, połączyć lub Uprość operacji zmiennoprzecinkowych, aby zoptymalizować kod zmiennoprzecinkowy szybkość i najlepsze miejsce. Kompilator może pominąć Zaokrąglenie w instrukcjach przypisania, rzutowaniach typu lub wywołaniach funkcji. Może zmienić kolejność operacji lub wykonywać przekształcenia algebraiczne, na przykład przy użyciu łączności i rozdzielności przepisów, nawet jeśli takie przekształcenia spowodować ciemniejsza różne zachowanie zaokrąglania. Ze względu na tego rodzaju optymalizacji rozszerzone, wynik kilka obliczeń zmiennoprzecinkowych może różnić się od wyprodukowane przez inne **/FP** opcje. Specjalnych wartości (NaN, + nieskończoność, - nieskończoność,-0.0) nie można propagować lub zachowywać się wyłącznie zgodnie ze standardem IEEE-754. Zmiennoprzecinkowe skrótów mogą być generowane w obszarze **Fast**. Kompilator jest nadal powiązane przez podstawową architekturę, w obszarze **Fast**, i dodatkowe optymalizacje mogą być dostępne za pośrednictwem [/arch](../../build/reference/arch-minimum-cpu-architecture.md) opcji.
+**Fast** opcja umożliwia kompilator, aby zmienić kolejność, połączyć lub Uprość operacji zmiennoprzecinkowych, aby zoptymalizować kod zmiennoprzecinkowy szybkość i najlepsze miejsce. Kompilator może pominąć Zaokrąglenie w instrukcjach przypisania, rzutowaniach typu lub wywołaniach funkcji. Może zmienić kolejność operacji lub wykonywać przekształcenia algebraiczne, na przykład przy użyciu łączności i rozdzielności przepisów, nawet jeśli takie przekształcenia spowodować ciemniejsza różne zachowanie zaokrąglania. Ze względu na tego rodzaju optymalizacji rozszerzone, wynik kilka obliczeń zmiennoprzecinkowych może różnić się od wyprodukowane przez inne **/FP** opcje. Specjalnych wartości (NaN, + nieskończoność, - nieskończoność,-0.0) nie można propagować lub zachowywać się wyłącznie zgodnie ze standardem IEEE-754. Zmiennoprzecinkowe skrótów mogą być generowane w obszarze **Fast**. Kompilator jest nadal powiązane przez podstawową architekturę, w obszarze **Fast**, i dodatkowe optymalizacje mogą być dostępne za pośrednictwem [/arch](arch-minimum-cpu-architecture.md) opcji.
 
 W obszarze **Fast**, kompilator generuje kod przeznaczony do uruchamiania w domyślnym środowisku zmiennoprzecinkowe i przyjęto założenie, że zmiennoprzecinkowych środowisko nie jest dostępne lub zmodyfikowany w czasie wykonywania. Oznacza to założono, że kod nie Anuluj maskowanie wyjątki zmiennoprzecinkowe, odczytu lub zapisu stanu zmiennoprzecinkowego rejestrów lub zmienić trybów zaokrąglania.
 
@@ -67,7 +67,7 @@ Należy pamiętać, że **/FP: z wyjątkiem** nie włącza wyjątki zmiennoprzec
 
 Wiele **/FP** opcje można określić w tym samym wierszu polecenia kompilatora. Tylko jeden z **/FP: strict**, **Fast**, i **/FP: precise** opcji może być wdrożony w w danym momencie. Jeśli więcej niż jedną z tych opcji jest określony w wierszu polecenia, nowsze opcji ma pierwszeństwo, a kompilator generuje ostrzeżenie. **/FP: strict** i **/FP: except** opcje nie są zgodne z **/CLR**.
 
-[/Za](../../build/reference/za-ze-disable-language-extensions.md) opcji (zgodność z ANSI) nie jest zgodny z **/FP**.
+[/Za](za-ze-disable-language-extensions.md) opcji (zgodność z ANSI) nie jest zgodny z **/FP**.
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Za pomocą pragmy do kontroli zachowania zmiennoprzecinkowego
 
@@ -256,7 +256,7 @@ W obszarze **/O2** **Fast** wygenerowany kod jest uproszczony, ponieważ wszystk
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **generowania kodu** stronę właściwości.
 
@@ -268,6 +268,6 @@ W obszarze **/O2** **Fast** wygenerowany kod jest uproszczony, ponieważ wszystk
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](setting-compiler-options.md)<br/>
-[Optymalizacja zmiennopozycyjna Microsoft Visual C++](floating-point-optimization.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Optymalizacja zmiennoprzecinkowy MSVC](floating-point-optimization.md)<br/>

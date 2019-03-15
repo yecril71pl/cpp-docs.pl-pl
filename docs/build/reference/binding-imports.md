@@ -5,19 +5,19 @@ helpviewer_keywords:
 - /DELAY:NOBIND linker option
 - DELAY:NOBIND linker option
 ms.assetid: bb766038-deb1-41b1-bcbc-29a30e8c1e2a
-ms.openlocfilehash: 6ee9d9cc180e77d817b7b52baa1a6eb5209a8365
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4058d738b87b69a73e8f18d977be8435a7d96a14
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486349"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819853"
 ---
 # <a name="binding-imports"></a>Powiązywanie importów
 
 Zachowanie konsolidatora domyślne jest do utworzenia tabeli adresów importowania możliwej do wiązania dla bibliotek DLL ładowanych z opóźnieniem. Jeśli biblioteka DLL jest związany, funkcji pomocnika zostanie podjęta próba wykorzystania powiązane informacje, zamiast wywoływać metodę **GetProcAddress** na wszystkich importów odwołania. Jeśli znacznik czasu lub preferowany adres nie pasują załadowanej biblioteki dll, funkcja pomocnika przyjmie tabeli adresów importowania powiązanej jest nieaktualna i będzie kontynuowane tak, jakby nie istnieje.
 
-Jeśli nigdy nie zamierzasz powiązać importów załadowanych z opóźnieniem biblioteki DLL, określając [/opóźnienie](../../build/reference/delay-delay-load-import-settings.md): nobind w wierszu polecenia konsolidatora uniemożliwi tabeli adresów importowania powiązanej jest wygenerowany i korzystanie z nich miejsca w pliku obrazu.
+Jeśli nigdy nie zamierzasz powiązać importów załadowanych z opóźnieniem biblioteki DLL, określając [/opóźnienie](delay-delay-load-import-settings.md): nobind w wierszu polecenia konsolidatora uniemożliwi tabeli adresów importowania powiązanej jest wygenerowany i korzystanie z nich miejsca w pliku obrazu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)

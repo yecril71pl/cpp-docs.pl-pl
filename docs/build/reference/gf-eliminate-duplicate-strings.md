@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 7504c12584d931b0f39062f393765ad8124fc0dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561561"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812320"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Eliminowanie ciągów zduplikowanych)
 
@@ -45,16 +45,16 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) , używane do edycji i kontynuowania oraz powoduje **/GF** opcji.
+>  [/Zi](z7-zi-zi-debug-information-format.md) , używane do edycji i kontynuowania oraz powoduje **/GF** opcji.
 
 > [!NOTE]
->  **/GF** — opcja kompilatora tworzy adresowalnych sekcji każdy unikatowy ciąg. I domyślnie plik obiektu może zawierać maksymalnie 65 536 adresowalnych sekcji. Jeśli program zawiera więcej niż 65536 ciągów, użyj [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) opcję kompilatora, aby utworzyć więcej sekcji.
+>  **/GF** — opcja kompilatora tworzy adresowalnych sekcji każdy unikatowy ciąg. I domyślnie plik obiektu może zawierać maksymalnie 65 536 adresowalnych sekcji. Jeśli program zawiera więcej niż 65536 ciągów, użyj [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) opcję kompilatora, aby utworzyć więcej sekcji.
 
-**/GF** jest w działa, gdy [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub **/O2** jest używany.
+**/GF** jest w działa, gdy [/O1](o1-o2-minimize-size-maximize-speed.md) lub **/O2** jest używany.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -66,7 +66,7 @@ char *t = "This is a character buffer";
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

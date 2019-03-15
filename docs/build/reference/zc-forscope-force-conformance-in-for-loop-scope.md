@@ -11,24 +11,24 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502027"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810259"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Wymuszaj zgodność w zakresie pętli For)
 
-Używany do implementowania standardowego zachowania C++ dla [dla](../../cpp/for-statement-cpp.md) pętli for z rozszerzeniami Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Używany do implementowania standardowego zachowania C++ dla [dla](../../cpp/for-statement-cpp.md) pętli for z rozszerzeniami Microsoft ([/Ze](za-ze-disable-language-extensions.md)).
 
 ## <a name="syntax"></a>Składnia
 
-> **/ Zc: forscope**[**-**]
+> **/Zc:forScope**[**-**]
 
 ## <a name="remarks"></a>Uwagi
 
-Standardowe zachowanie jest umożliwienie **dla** inicjatora pętli wykraczają poza zakres po **dla** pętli. W obszarze **/Zc:forScope-** i [/Ze](../../build/reference/za-ze-disable-language-extensions.md), **dla** inicjatora pętli pozostaje w zakresie do czasu zakończenia zakres lokalny.
+Standardowe zachowanie jest umożliwienie **dla** inicjatora pętli wykraczają poza zakres po **dla** pętli. W obszarze **/Zc:forScope-** i [/Ze](za-ze-disable-language-extensions.md), **dla** inicjatora pętli pozostaje w zakresie do czasu zakończenia zakres lokalny.
 
 **/Zc: forscope** opcja jest domyślnie włączone. **/ Zc: forscope** nie występuje kiedy [/ permissive-](permissive-standards-conformance.md) określono opcję.
 
@@ -55,13 +55,13 @@ Jeśli używasz **/Zc:forScope-**, ostrzeżenie C4288 (funkcja domyślnie wyłą
 
 Możesz zmodyfikować zachowanie środowiska wykonawczego **/Zc: forscope** przy użyciu [jest zgodna z](../../preprocessor/conform.md) pragmy.
 
-Jeśli używasz **/Zc:forScope-** w projekcie, który ma istniejący plik .pch, generowane jest ostrzeżenie, **/Zc:forScope-** jest ignorowana, a kompilacja jest kontynuowana przy użyciu istniejących plików .pch. Jeśli chcesz, aby plik .pch wygenerowanych, użyj [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md).
+Jeśli używasz **/Zc:forScope-** w projekcie, który ma istniejący plik .pch, generowane jest ostrzeżenie, **/Zc:forScope-** jest ignorowana, a kompilacja jest kontynuowana przy użyciu istniejących plików .pch. Jeśli chcesz, aby plik .pch wygenerowanych, użyj [/Yc (Utwórz prekompilowany plik nagłówkowy)](yc-create-precompiled-header-file.md).
 
 Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** stronę właściwości.
 
@@ -73,5 +73,5 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
-[/Za, /Ze (Wyłącz rozszerzenia językowe)](../../build/reference/za-ze-disable-language-extensions.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>
+[/Za, /Ze (Wyłącz rozszerzenia językowe)](za-ze-disable-language-extensions.md)<br/>

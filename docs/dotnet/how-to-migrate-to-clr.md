@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749117"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816036"
 ---
 # <a name="how-to-migrate-to-clr"></a>Instrukcje: Migracja do/CLR
 
@@ -98,7 +98,7 @@ Ten krok ma różne znaczenie dla projektów, które używają plików reguł pr
 **/ CLR** można wybrać w środowisku programistycznym, postępując zgodnie z instrukcjami w [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md). Jak wspomniano wcześniej, w tym kroku zostanie automatycznie wyłączyć sprzeczne ustawienia projektu.
 
 > [!NOTE]
->  Podczas uaktualniania zarządzanej biblioteki lub projekt usługi sieci web z Visual C++ 2003 **/Zl** kompilatora opcja zostanie dodany do **wiersza polecenia** stronę właściwości. Spowoduje to LNK2001. Usuń **/Zl** z **wiersza polecenia** strony właściwości, aby rozwiązać. Zobacz [/Zl (Pomiń domyślną nazwę biblioteki)](../build/reference/zl-omit-default-library-name.md) i [Praca z właściwościami projektu](../ide/working-with-project-properties.md) Aby uzyskać więcej informacji. Lub Dodaj biblioteki msvcrt.lib i msvcmrt.lib do konsolidatora **dodatkowe zależności** właściwości.
+>  Podczas uaktualniania zarządzanej biblioteki lub projekt usługi sieci web z Visual C++ 2003 **/Zl** kompilatora opcja zostanie dodany do **wiersza polecenia** stronę właściwości. Spowoduje to LNK2001. Usuń **/Zl** z **wiersza polecenia** strony właściwości, aby rozwiązać. Zobacz [/Zl (Pomiń domyślną nazwę biblioteki)](../build/reference/zl-omit-default-library-name.md) i [Ustaw kompilatora i właściwości kompilacji](../build/working-with-project-properties.md) Aby uzyskać więcej informacji. Lub Dodaj biblioteki msvcrt.lib i msvcmrt.lib do konsolidatora **dodatkowe zależności** właściwości.
 
 W przypadku projektów utworzonych za pomocą plików reguł programu make opcje niezgodne kompilatora musi zostać wyłączona ręcznie po **/CLR** zostanie dodany. Zobacz /[/CLR ograniczenia](../build/reference/clr-restrictions.md) informacji o opcjach kompilatora, które nie są zgodne z **/CLR**.
 

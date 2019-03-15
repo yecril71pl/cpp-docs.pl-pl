@@ -5,16 +5,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 9a31d4197e71fb6cf20a0ecfce778552357d7e06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f0bad94cf3f126d27cc29567bd4f6c4a846bf1e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612917"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814387"
 ---
 # <a name="creating-a-resource-only-dll"></a>Tworzenie biblioteki DLL z samymi zasobami
 
-Tylko zasoby biblioteki DLL jest biblioteki DLL, która zawiera zasoby, takie jak ikony, mapy bitowe, ciągi i okna dialogowe. Przy użyciu tylko zasoby biblioteki DLL jest dobrym sposobem na udostępnianie tego samego zestawu zasobów w wielu programów. Jest również dobrym sposobem na udostępnianie aplikacji zlokalizowanej w wielu językach zasoby (zobacz [zlokalizowane zasoby w aplikacjach MFC: satelitarne biblioteki dll](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
+Tylko zasoby biblioteki DLL jest biblioteki DLL, która zawiera zasoby, takie jak ikony, mapy bitowe, ciągi i okna dialogowe. Przy użyciu tylko zasoby biblioteki DLL jest dobrym sposobem na udostępnianie tego samego zestawu zasobów w wielu programów. Jest również dobrym sposobem na udostępnianie aplikacji zlokalizowanej w wielu językach zasoby (zobacz [zlokalizowane zasoby w aplikacjach MFC: Biblioteki DLL Satellite](localized-resources-in-mfc-applications-satellite-dlls.md)).
 
 Aby utworzyć bibliotekę DLL tylko do zasobów, Utwórz nowy projekt biblioteki DLL systemu Win32 (inne niż MFC) i Dodaj zasoby do projektu.
 
@@ -24,11 +24,11 @@ Aby utworzyć bibliotekę DLL tylko do zasobów, Utwórz nowy projekt biblioteki
 
 - Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**, a następnie Wstaw nowy plik .rc w projekcie.
 
-- Określ [/noentry](../build/reference/noentry-no-entry-point.md) — opcja konsolidatora. / NOENTRY Zapobiega łączeniu odwołania do konsolidatora `_main` do biblioteki DLL; ta opcja jest wymagana do utworzenia DLL tylko dla zasobów.
+- Określ [/noentry](reference/noentry-no-entry-point.md) — opcja konsolidatora. / NOENTRY Zapobiega łączeniu odwołania do konsolidatora `_main` do biblioteki DLL; ta opcja jest wymagana do utworzenia DLL tylko dla zasobów.
 
 - Skompiluj bibliotekę DLL.
 
-Aplikacji, która używa tylko zasoby biblioteki DLL powinny wywoływać [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) jawne łącze do biblioteki DLL. Dostęp do zasobów, należy wywołać funkcje ogólne `FindResource` i `LoadResource`, które działają na dowolny rodzaj zasobu lub wywołać jedną z następujących funkcji specyficznych dla zasobów:
+Aplikacji, która używa tylko zasoby biblioteki DLL powinny wywoływać [LoadLibrary](loadlibrary-and-afxloadlibrary.md) jawne łącze do biblioteki DLL. Dostęp do zasobów, należy wywołać funkcje ogólne `FindResource` i `LoadResource`, które działają na dowolny rodzaj zasobu lub wywołać jedną z następujących funkcji specyficznych dla zasobów:
 
 - `FormatMessage`
 
@@ -46,7 +46,7 @@ Aplikacji, która używa tylko zasoby biblioteki DLL powinny wywoływać [LoadLi
 
 Aplikacja powinna wywołać `FreeLibrary` po zakończeniu korzystania z zasobów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z plikami zasobów](../windows/working-with-resource-files.md)<br/>
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)

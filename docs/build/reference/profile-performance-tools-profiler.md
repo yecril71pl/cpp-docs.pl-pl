@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 26f4ba4efc20f5fee70b2937cdb943689c948888
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519924"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810006"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler narzędzi do oceny wydajności)
 
@@ -28,13 +28,13 @@ Tworzy plik wyjściowy, który może służyć z profilerem narzędzi wydajnośc
 
 PROFIL wymaga następujących opcji konsolidatora:
 
-- [/ OPT: REF](../../build/reference/opt-optimizations.md)
+- [/ OPT: REF](opt-optimizations.md)
 
-- / OPT: NOICF
+- /OPT:NOICF
 
-- [/ INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)
+- [/ INCREMENTAL: NO](incremental-link-incrementally.md)
 
-- [/ FIXED: NO](../../build/reference/fixed-fixed-base-address.md)
+- [/ FIXED: NO](fixed-fixed-base-address.md)
 
 PROFIL, powoduje, że konsolidator generuje sekcji relokacji w obrazie programu.  Relokacji umożliwia profiler do przekształcania obrazu programu, który można pobrać danych profilu.
 
@@ -42,7 +42,7 @@ PROFIL, powoduje, że konsolidator generuje sekcji relokacji w obrazie programu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji** węzła.
 
@@ -56,7 +56,7 @@ PROFIL, powoduje, że konsolidator generuje sekcji relokacji w obrazie programu.
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

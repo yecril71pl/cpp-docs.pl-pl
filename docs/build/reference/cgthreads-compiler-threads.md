@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -CGTHREADS linker option
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
-ms.openlocfilehash: 1c459604d90b23953bbf3f250708c393fa78277d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b778802d3fffcaafc0cf01ac46ae85c4efbef95c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495111"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809538"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (wątki kompilatora)
 
@@ -30,13 +30,13 @@ Maksymalna liczba wątków dla cl.exe, aby korzystać z zakresu od 1 do 8.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Cgthreads** opcja określa maksymalną liczbę wątków cl.exe używa równolegle faz optymalizacji i generowania kodu, kompilacji, gdy w czasie konsolidacji generowanie kodu ([opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md)) jest określona. Domyślnie program cl.exe używa cztery wątki tak, jakby **/CGTHREADS:4** zostały określone. Jeśli więcej rdzeni procesora są dostępne, większego `number` wartość może skrócić czas kompilacji.
+**/Cgthreads** opcja określa maksymalną liczbę wątków cl.exe używa równolegle faz optymalizacji i generowania kodu, kompilacji, gdy w czasie konsolidacji generowanie kodu ([opcję/LTCG](ltcg-link-time-code-generation.md)) jest określona. Domyślnie program cl.exe używa cztery wątki tak, jakby **/CGTHREADS:4** zostały określone. Jeśli więcej rdzeni procesora są dostępne, większego `number` wartość może skrócić czas kompilacji.
 
-Można określić wiele poziomów równoległości dla kompilacji. Przełącznik msbuild.exe **/maxcpucount** określa liczbę procesów programu MSBuild, które mogą być uruchamiane równolegle. [/MP (kompilacja z wieloma procesami)](../../build/reference/mp-build-with-multiple-processes.md) flagi kompilatora określa liczbę procesów cl.exe, jednocześnie kompilowane do plików źródłowych. [/Cgthreads](../../build/reference/cgthreads-code-generation-threads.md) — opcja kompilatora określa liczbę wątków używanych przez każdy proces cl.exe. Ponieważ procesor można uruchamiać tylko tyle wątków w tym samym czasie, są rdzenie procesora, nie jest to przydatne do określenia większe wartości dla wszystkich tych opcji, w tym samym czasie i mogą być unikają szkodliwych dla produkcji. Aby uzyskać więcej informacji na temat sposobu tworzenia projektów wykonywane równolegle, zobacz [tworzenie wielu projektów w sposób równoległy](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
+Można określić wiele poziomów równoległości dla kompilacji. Przełącznik msbuild.exe **/maxcpucount** określa liczbę procesów programu MSBuild, które mogą być uruchamiane równolegle. [/MP (kompilacja z wieloma procesami)](mp-build-with-multiple-processes.md) flagi kompilatora określa liczbę procesów cl.exe, jednocześnie kompilowane do plików źródłowych. [/Cgthreads](cgthreads-code-generation-threads.md) — opcja kompilatora określa liczbę wątków używanych przez każdy proces cl.exe. Ponieważ procesor można uruchamiać tylko tyle wątków w tym samym czasie, są rdzenie procesora, nie jest to przydatne do określenia większe wartości dla wszystkich tych opcji, w tym samym czasie i mogą być unikają szkodliwych dla produkcji. Aby uzyskać więcej informacji na temat sposobu tworzenia projektów wykonywane równolegle, zobacz [tworzenie wielu projektów w sposób równoległy](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji**, **konsolidatora** folderu.
 
@@ -48,7 +48,7 @@ Można określić wiele poziomów równoległości dla kompilacji. Przełącznik
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)
+[Opcje konsolidatora MSVC](linker-options.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)

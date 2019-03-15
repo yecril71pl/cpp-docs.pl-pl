@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (uruchamianie PGO w trybie awaryjnym wątku)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544433"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821290"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (uruchamianie PGO w trybie awaryjnym wątku)
 
@@ -26,11 +26,11 @@ Profilowana Optymalizacja (PGO) ma dwa możliwe tryby podczas fazy profilowania:
 
 Domyślnie profilowanie PGO działa w trybie szybkim. **/ POGOSAFEMODE** jest wymagany tylko, jeśli chcesz użyć trybu awaryjnego.
 
-Aby uruchomić profilowanie PGO w trybie awaryjnym, należy użyć **przełączników/genprofile: dokładnie** (preferowany) lub użyć zmiennej środowiskowej [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) lub przełącznika konsolidatora **/POGOSAFEMODE**, w zależności od systemu. Jeśli przeprowadzasz profilowanie na x64 komputera, musisz użyć przełącznika konsolidatora. Jeśli przeprowadzasz profilowanie na x86 komputera, możesz użyć przełącznika konsolidatora lub zdefiniować zmienną środowiskową na dowolną wartość, przed rozpoczęciem procesu Instrumentacji PGO.
+Aby uruchomić profilowanie PGO w trybie awaryjnym, należy użyć **przełączników/genprofile: dokładnie** (preferowany) lub użyć zmiennej środowiskowej [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) lub przełącznika konsolidatora **/POGOSAFEMODE**, w zależności od systemu. Jeśli przeprowadzasz profilowanie na x64 komputera, musisz użyć przełącznika konsolidatora. Jeśli przeprowadzasz profilowanie na x86 komputera, możesz użyć przełącznika konsolidatora lub zdefiniować zmienną środowiskową na dowolną wartość, przed rozpoczęciem procesu Instrumentacji PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** stronę właściwości.
 
@@ -48,5 +48,5 @@ Aby uruchomić profilowanie PGO w trybie awaryjnym, należy użyć **przełączn
 
 [/ GENPROFILE i/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optymalizacje sterowane profilem](../../build/reference/profile-guided-optimizations.md)<br/>
-[Zmienne środowiskowe dla optymalizacji sterowanych profilem](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optymalizacje sterowane profilem](../profile-guided-optimizations.md)<br/>
+[Zmienne środowiskowe dla optymalizacji sterowanych profilem](../environment-variables-for-profile-guided-optimizations.md)<br/>

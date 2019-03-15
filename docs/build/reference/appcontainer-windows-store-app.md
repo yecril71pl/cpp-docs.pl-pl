@@ -2,12 +2,12 @@
 title: / APPCONTAINER (aplikacja platformy uniwersalnej systemu Windows/Microsoft Store)
 ms.date: 11/04/2016
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-ms.openlocfilehash: 306ffc7cda7cc6045b5decd6824fdc3848233824
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ab8cf1ce034580953fdf1403264e8ef3d3ff09
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541326"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812411"
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/ APPCONTAINER (aplikacja Microsoft Store)
 
@@ -29,7 +29,7 @@ Opcja/appcontainer została wprowadzona w systemie Windows 8.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń **właściwości konfiguracji** węzła.
 
@@ -39,7 +39,7 @@ Opcja/appcontainer została wprowadzona w systemie Windows 8.
 
 1. W **dodatkowe opcje**, wprowadź `/APPCONTAINER` lub `/APPCONTAINER:NO`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

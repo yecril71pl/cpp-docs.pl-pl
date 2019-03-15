@@ -9,12 +9,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: fee2d3b84949241cda421d6ea587e1ab9c6e58e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565545"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815804"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Zwykłe biblioteki DLL MFC połączone statycznie z MFC
 
@@ -66,20 +66,20 @@ Standardowe biblioteki dołączanej MFC są określane według Konwencji opisane
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Zainicjuj regularną bibliotekę DLL MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Zainicjuj regularną bibliotekę DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
 - [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-- [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [Tworzenie biblioteki DLL MFC](../mfc/reference/mfc-dll-wizard.md)
 
-- [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md)
+- [Biblioteki DLL rozszerzeń MFC](extension-dlls-overview.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rodzaje bibliotek DLL](../build/kinds-of-dlls.md)
+[Rodzaje bibliotek DLL](kinds-of-dlls.md)

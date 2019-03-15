@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STUB .def file statement
 ms.assetid: 0a3b9643-19ed-47e9-8173-ee16bc8ed056
-ms.openlocfilehash: 95f8e1584bdd87f23e87c27418c0debca5c3181a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5224fdaa2a03dc615c9e7e7bb7f7ba822a40807e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533721"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822122"
 ---
 # <a name="stub"></a>STUB
 
@@ -23,10 +23,10 @@ STUB:filename
 
 ## <a name="remarks"></a>Uwagi
 
-Aby określić sposób równoważny *filename* z [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) — opcja konsolidatora.
+Aby określić sposób równoważny *filename* z [/STUB](stub-ms-dos-stub-file-name.md) — opcja konsolidatora.
 
 STUB jest prawidłowy w pliku definicji modułu tylko wtedy, gdy tworzenie VxD.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+[Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)

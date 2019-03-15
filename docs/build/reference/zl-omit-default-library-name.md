@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: ba30efd76e94749dd261f3528535d674b5e155e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621913"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809590"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Pomiń domyślną nazwę biblioteki)
 
@@ -30,13 +30,13 @@ Pomija domyślną nazwę biblioteki środowiska uruchomieniowego języka C z pli
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat domyślnej biblioteki, zobacz [korzystaj z bibliotek wykonawczych](../../build/reference/md-mt-ld-use-run-time-library.md).
+Aby uzyskać więcej informacji na temat domyślnej biblioteki, zobacz [korzystaj z bibliotek wykonawczych](md-mt-ld-use-run-time-library.md).
 
 Możesz użyć **/Zl** do kompilowania plików .obj, które ma być umieszczony w bibliotece. Mimo że pomijając nazwę biblioteki zapisuje tylko małej ilości miejsca dla pliku obj pojedynczy, całkowita ilość miejsca, zapisane jest znaczący bibliotekę, która zawiera wiele modułów obiektu.
 
 Ta opcja jest to opcja zaawansowana. Ustawienie tej opcji spowoduje usunięcie niektórych Obsługa bibliotek środowiska uruchomieniowego C, które mogą być wymagane przez aplikację, co powoduje błędy w czasie konsolidacji w przypadku aplikacji zależy od tej obsługi. Jeśli używasz tej opcji należy podać wymagane składniki w inny sposób.
 
-Użyj [/nodefaultlib (Ignoruj biblioteki)](../../build/reference/nodefaultlib-ignore-libraries.md). Aby nakazać konsolidator, aby zignorować odwołań do biblioteki we wszystkich plikach .obj.
+Użyj [/nodefaultlib (Ignoruj biblioteki)](nodefaultlib-ignore-libraries.md). Aby nakazać konsolidator, aby zignorować odwołań do biblioteki we wszystkich plikach .obj.
 
 Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 
@@ -56,7 +56,7 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -68,7 +68,7 @@ void Test() {
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

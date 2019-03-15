@@ -6,12 +6,12 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: ac8439e1709b6bbce6f32580bafee50c9ff30e3f
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 6c5adac9bb31287693b7d53c1fa8ff10263f4367
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977748"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815856"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalowanie obsługi języka C++ w programie Visual Studio
 
@@ -27,7 +27,7 @@ Jeśli nie zostały pobrane i jeszcze zainstalowany program Visual Studio 2017 i
 
 Aby uzyskać szczegółowe informacje dotyczące miejsca na dysku i wymagania dotyczące systemu operacyjnego, zobacz [wymagania systemowe rodziny produktów Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs). Instalator raporty, ilość miejsca na dysku jest wymagana dla wybranych opcji.
 
-## <a name="visual-studio-2015-installation"></a>Instalacja programu Visual Studio 2015
+## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 Installation
 
 Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++. Aby dodać obsługę języka C++ do istniejącej instalacji programu Visual Studio 2015, kliknij przycisk Windows Start i typ **Dodaj/Usuń programy**. Otwórz program z listy wyników, a następnie znajdź instalacji programu Visual Studio 2015 na liście zainstalowanych programów. Kliknij go dwukrotnie, a następnie wybierz **Modyfikuj** i wybierz pozycję Visual C++ składniki do zainstalowania.
 
@@ -45,15 +45,15 @@ Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2
 
 1. Znajdź plik Instalatora został pobrany i uruchom go. Może być wyświetlany w przeglądarce lub może okazać się w folderze pobrane. Instalator wymaga uprawnień administratora do uruchomienia. Może zostać wyświetlony **Kontrola konta użytkownika** okno dialogowe z monitem o nadanie uprawnień umożliwiających Instalatora, wprowadzić zmiany do systemu; wybierz **tak**. Jeśli występują problemy, Znajdź pobrany plik w Eksploratorze plików, kliknij prawym przyciskiem myszy na ikonie Instalatora, a następnie wybierz **Uruchom jako Administrator** z menu kontekstowego.
 
-   ![Pobierz i zainstaluj Instalator programu Visual Studio](../build/media/vscpp-concierge-run-installer.gif "pobranie i zainstalowanie Instalatora programu Visual Studio")
+   ![Pobierz i zainstaluj Instalator programu Visual Studio](media/vscpp-concierge-run-installer.gif "pobranie i zainstalowanie Instalatora programu Visual Studio")
 
 1. Instalator przedstawia listy obciążeń, powiązane opcje obszary rozwoju określonych grup. Podpora androidu Pro C++ jest teraz częścią opcjonalne obciążeń, które nie są instalowane domyślnie.
 
-   ![Programowanie aplikacji klasycznych w języku C++](../build/media/desktop-development-with-cpp.png "programowanie aplikacji klasycznych w języku C++")
+   ![Programowanie aplikacji klasycznych w języku C++](media/desktop-development-with-cpp.png "programowanie aplikacji klasycznych w języku C++")
 
    Dla języka C++, wybierz **programowanie aplikacji klasycznych w języku C++** obciążenia, a następnie wybierz **zainstalować**.
 
-   ![Zainstaluj programowanie aplikacji klasycznych w języku C++](../build/media/vscpp-concierge-choose-workload.gif "zainstalować programowanie aplikacji klasycznych w języku C++")
+   ![Zainstaluj programowanie aplikacji klasycznych w języku C++](media/vscpp-concierge-choose-workload.gif "zainstalować programowanie aplikacji klasycznych w języku C++")
 
 1. Po zakończeniu instalacji wybierz **Uruchom** przycisk, aby uruchomić program Visual Studio.
 
@@ -61,13 +61,13 @@ Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2
 
    Visual Studio może potrwać kilka minut w celu przygotowania do użycia przy pierwszym uruchomieniu. Poniżej przedstawiono, jak to wygląda w ujęć poklatkowych szybkie:
 
-   ![Zaloguj się do niego programu Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "Zaloguj się do niego programu Visual Studio 2017")
+   ![Zaloguj się do niego programu Visual Studio 2017](media/vscpp-quickstart-first-run.gif "Zaloguj się do niego programu Visual Studio 2017")
 
    Program Visual Studio rozpoczyna się znacznie szybciej, gdy zostanie uruchomiony ponownie.
 
 1. Po otwarciu programu Visual Studio, należy sprawdzić, jeśli zostanie wyróżniona ikonę flagi na pasku tytułu:
 
-   ![Flaga powiadomienia w usłudze Visual Studio 2017](../build/media/vscpp-first-start-page-flag.png "flagę powiadomienia programu Visual Studio 2017")
+   ![Flaga powiadomienia w usłudze Visual Studio 2017](media/vscpp-first-start-page-flag.png "flagę powiadomienia programu Visual Studio 2017")
 
    Jeśli jest wyróżniona, zaznacz ją, aby otworzyć **powiadomienia** okna. Jeśli istnieją jakiekolwiek aktualizacje dostępne dla programu Visual Studio, zalecamy możesz zainstalować je teraz. Po zakończeniu instalacji uruchom ponownie program Visual Studio.
 

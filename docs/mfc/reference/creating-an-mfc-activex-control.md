@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 031c8596e568f01cdecd7139d959a77923c341eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b2dc48e2568e180820f8bca008c66878af4b575e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294957"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818547"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Tworzenie kontrolki ActiveX MFC
 
@@ -25,7 +25,7 @@ Najprostszym sposobem utworzenia kontrolki MFC ActiveX jest użycie [Kreator kon
 
 ### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Aby utworzyć formant ActiveX MFC przy użyciu Kreatora kontrolek ActiveX MFC
 
-1. Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu za pomocą Kreatora aplikacji Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu aplikacji konsoli w języku C++](../../get-started/tutorial-console-cpp.md).
 
 1. W **nowy projekt** okno dialogowe, wybierz opcję **kontrolki ActiveX MFC** ikonę w okienku szablonów, aby otworzyć Kreator kontrolek ActiveX MFC.
 
@@ -36,11 +36,12 @@ Najprostszym sposobem utworzenia kontrolki MFC ActiveX jest użycie [Kreator kon
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i otworzyć nowy projekt w środowisku programistycznym.
 
-Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 Po utworzeniu projektu umożliwia kreatorów kodu Dodaj [funkcje](../../ide/add-member-function-wizard.md), [zmienne](../../ide/add-member-variable-wizard.md), [zdarzenia](../../ide/add-event-wizard.md), [właściwości](../../ide/names-add-property-wizard.md), i [metody](../../ide/add-method-wizard.md). Aby uzyskać więcej informacji na temat dostosowywania formant ActiveX, zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Strony właściwości](../../ide/property-pages-visual-cpp.md)
+[Strony właściwości](../../build/reference/property-pages-visual-cpp.md)
+

@@ -4,12 +4,12 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - ATL projects, default configurations
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
-ms.openlocfilehash: 449f92f8924114a85d8ca745c7377d30d25bb763
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24f518f3ca5fefbfed1d89da9209bc2c27d890e2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270097"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815479"
 ---
 # <a name="default-atl-project-configurations"></a>Domyślne konfiguracje projektu ATL
 
@@ -25,6 +25,6 @@ Domyślnie Kreator projektów ATL tworzy dwie konfiguracje projektu:
 ## <a name="see-also"></a>Zobacz także
 
 [Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
-[Praca z właściwościami projektu](../../ide/working-with-project-properties.md)<br/>
+[Ustaw kompilatora i właściwości kompilacji](../../build/working-with-project-properties.md)<br/>
 [Okno dialogowe programu Configuration Manager](/visualstudio/ide/understanding-build-configurations)<br/>
 [Kompilowanie i tworzenie](/visualstudio/ide/compiling-and-building-in-visual-studio)

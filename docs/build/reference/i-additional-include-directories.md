@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750395"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807640"
 ---
 # <a name="i-additional-include-directories"></a>/I (dodatkowe katalogi dołączenia)
 
@@ -31,14 +31,14 @@ Dodaje katalog do listy katalogi przeszukiwane w poszukiwaniu plików dołączan
 
 ### <a name="arguments"></a>Argumenty
 
-*Katalog*<br/>
+*directory*<br/>
 Katalog, który ma zostać dodany do listy katalogów wyszukiwane dołączane pliki.
 
 ## <a name="remarks"></a>Uwagi
 
 Aby dodać więcej niż jeden katalog, użyj tej opcji więcej niż jeden raz. Przeszukiwane są katalogi, aż zostanie znaleziony określonegop dołączanego pliku.
 
-Można użyć tej opcji z ([/X (Ignoruj standardowe ścieżki dołączanych plików)](../../build/reference/x-ignore-standard-include-paths.md)) opcji.
+Można użyć tej opcji z ([/X (Ignoruj standardowe ścieżki dołączanych plików)](x-ignore-standard-include-paths.md)) opcji.
 
 Kompilator przeszukuje katalogi w następującej kolejności:
 
@@ -50,7 +50,7 @@ Kompilator przeszukuje katalogi w następującej kolejności:
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **ogólne** stronę właściwości.
 
@@ -62,13 +62,13 @@ Kompilator przeszukuje katalogi w następującej kolejności:
 
 ## <a name="example"></a>Przykład
 
-Następujące polecenie szuka plików dołączanych, żądane przez MAIN.c w następującej kolejności: po pierwsze, jeśli określony, przy użyciu podwójnych cudzysłowów, pliki lokalne są przeszukiwane. Następnie wyszukiwanie jest kontynuowane w katalogu \INCLUDE, a następnie w katalogu \MY\INCLUDE i na koniec w katalogach przypisany do zmiennej środowiskowej INCLUDE.
+Następujące polecenie szuka plików dołączanych, żądane przez MAIN.c w następującej kolejności: Po pierwsze Jeśli określony, przy użyciu podwójnych cudzysłowów, przeszukiwane są pliki lokalne. Następnie wyszukiwanie jest kontynuowane w katalogu \INCLUDE, a następnie w katalogu \MY\INCLUDE i na koniec w katalogach przypisany do zmiennej środowiskowej INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

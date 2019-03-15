@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425058"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816480"
 ---
 # <a name="mfc-extension-dlls-overview"></a>Biblioteki DLL rozszerzeń MFC Omówienie
 
@@ -27,22 +27,22 @@ Pamiętaj, że termin AFXDLL nie jest już używany w dokumentacji języka Visua
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Inicjowanie biblioteki DLL rozszerzenia MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Inicjowanie biblioteki DLL rozszerzenia MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls.md)
+- [Biblioteki DLL rozszerzeń MFC](extension-dlls.md)
 
-- [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [Biblioteki innego typu niż DLL MFC: omówienie](../build/non-mfc-dlls-overview.md)
+- [Biblioteki innego typu niż DLL MFC: omówienie](non-mfc-dlls-overview.md)
 
-- [Regularne biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Regularne biblioteki DLL MFC połączone statycznie z MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [Tworzenie biblioteki DLL MFC](../mfc/reference/mfc-dll-wizard.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Rodzaje bibliotek DLL](../build/kinds-of-dlls.md)
+[Rodzaje bibliotek DLL](kinds-of-dlls.md)

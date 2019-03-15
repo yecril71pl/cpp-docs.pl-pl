@@ -6,46 +6,46 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-ms.openlocfilehash: 041894fa88527061d90399540bc29762bff66f81
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0047f24722644cd9a68bbbf827ced26ad085d4c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424538"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812242"
 ---
 # <a name="module-definition-def-files"></a>Pliki definicji modułu (.Def)
 
-Pliki definicji modułu (.def) zapewniają konsolidatora z informacjami dotyczącymi eksportu, atrybuty i inne informacje o program ma być połączone. Plik .def jest najbardziej przydatne podczas tworzenia biblioteki DLL. Ponieważ istnieją [opcje konsolidatora](../../build/reference/linker-options.md) które mogą być używane zamiast instrukcji definicji modułu .def — pliki nie są zwykle wymagane. Można również użyć [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) jako sposób określania wyeksportowanych funkcji.
+Pliki definicji modułu (.def) zapewniają konsolidatora z informacjami dotyczącymi eksportu, atrybuty i inne informacje o program ma być połączone. Plik .def jest najbardziej przydatne podczas tworzenia biblioteki DLL. Ponieważ istnieją [opcje konsolidatora MSVC](linker-options.md) które mogą być używane zamiast instrukcji definicji modułu .def — pliki nie są zwykle wymagane. Można również użyć [__declspec(dllexport)](../exporting-from-a-dll-using-declspec-dllexport.md) jako sposób określania wyeksportowanych funkcji.
 
-Plik .def można wywołać w fazie konsolidatora z [/DEF (Określ plik definicji modułu)](../../build/reference/def-specify-module-definition-file.md) — opcja konsolidatora.
+Plik .def można wywołać w fazie konsolidatora z [/DEF (Określ plik definicji modułu)](def-specify-module-definition-file.md) — opcja konsolidatora.
 
 Jeśli tworzysz plik .exe, który nie eksportuje żadnych danych, używając pliku .def spowoduje, że Twoje dane wyjściowe pliku większych i wolniejszych podczas ładowania.
 
-Aby uzyskać przykład, zobacz [eksportowanie z biblioteki DLL przy użyciu DEF plików](../../build/exporting-from-a-dll-using-def-files.md).
+Aby uzyskać przykład, zobacz [eksportowanie z biblioteki DLL przy użyciu DEF plików](../exporting-from-a-dll-using-def-files.md).
 
 Zobacz następujące sekcje, aby uzyskać więcej informacji:
 
-- [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+- [Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)
 
-- [EXPORTS](../../build/reference/exports.md)
+- [EXPORTS](exports.md)
 
-- [HEAPSIZE](../../build/reference/heapsize.md)
+- [HEAPSIZE](heapsize.md)
 
-- [LIBRARY](../../build/reference/library.md)
+- [LIBRARY](library.md)
 
-- [NAZWA](../../build/reference/name-c-cpp.md)
+- [NAZWA](name-c-cpp.md)
 
-- [SEKCJE](../../build/reference/sections-c-cpp.md)
+- [SEKCJE](sections-c-cpp.md)
 
-- [STACKSIZE](../../build/reference/stacksize.md)
+- [STACKSIZE](stacksize.md)
 
-- [STUB](../../build/reference/stub.md)
+- [STUB](stub.md)
 
-- [WERSJA](../../build/reference/version-c-cpp.md)
+- [WERSJA](version-c-cpp.md)
 
-- [Słowa zastrzeżone](../../build/reference/reserved-words.md)
+- [Słowa zastrzeżone](reserved-words.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Dokumentacja kompilacji w języku C/C++](c-cpp-building-reference.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

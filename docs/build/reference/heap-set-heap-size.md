@@ -1,5 +1,5 @@
 ---
-title: /HEAP (Ustaw rozmiar sterty)
+title: /HEAP (Ustaw rozmiar stosu)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.HeapCommitSize
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 7ae600b50f791555dddb31fc4b46dcaf85ebd727
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650740"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813297"
 ---
-# <a name="heap-set-heap-size"></a>/HEAP (Ustaw rozmiar sterty)
+# <a name="heap-set-heap-size"></a>/HEAP (Ustaw rozmiar stosu)
 
 ```
 /HEAP:reserve[,commit]
@@ -34,11 +34,11 @@ Opcjonalny `commit` argument określa ilość pamięci fizycznej do przydzieleni
 
 Określ *zarezerwować* i `commit` wartości dziesiętnych lub notacji języka C.
 
-Ta funkcja jest również dostępna za pośrednictwem pliku definicji modułu za pomocą [HEAPSIZE](../../build/reference/heapsize.md).
+Ta funkcja jest również dostępna za pośrednictwem pliku definicji modułu za pomocą [HEAPSIZE](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -50,7 +50,7 @@ Ta funkcja jest również dostępna za pośrednictwem pliku definicji modułu za
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapReserveSize%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapCommitSize%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

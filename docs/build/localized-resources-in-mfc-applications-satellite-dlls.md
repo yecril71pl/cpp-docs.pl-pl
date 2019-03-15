@@ -1,5 +1,5 @@
 ---
-title: 'Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite'
+title: 'Zlokalizowane zasoby w aplikacjach MFC: Satelitarne biblioteki dll'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - multiple language support [C++]
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: e9f9b751da6339cbe8f352bdb7eee4b7af2c359b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658006"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821329"
 ---
-# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite
+# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Zlokalizowane zasoby w aplikacjach MFC: Satelitarne biblioteki dll
 
-MFC w wersji 7.0 lub nowszy zapewnia rozszerzoną obsługę satelitarnej biblioteki dll, funkcja, która pomaga w tworzeniu aplikacji zlokalizowanej w wielu językach. Satelitarne biblioteki DLL jest [DLL tylko dla zasobów](../build/creating-a-resource-only-dll.md) zawierający zasoby aplikacji są zlokalizowane dla określonego języka. Po rozpoczęciu wykonywania aplikacji MFC automatycznie ładuje zlokalizowany najbardziej odpowiednie dla środowiska. Na przykład może mieć aplikacji przy użyciu języka angielskiego zasobów przy użyciu dwóch satelickich bibliotek DLL, zawierające francuska tłumaczenie zasobów, a drugi zawierający niemieckiego tłumaczenia. Po uruchomieniu aplikacji w języku angielskim systemie używa zasobów w języku angielskim. Jeśli działa w systemie, francuskim, używa zasobów francuskim. Jeśli działa w systemie, niemieckim, używa zasobów niemieckim.
+MFC w wersji 7.0 lub nowszy zapewnia rozszerzoną obsługę satelitarnej biblioteki dll, funkcja, która pomaga w tworzeniu aplikacji zlokalizowanej w wielu językach. Satelitarne biblioteki DLL jest [DLL tylko dla zasobów](creating-a-resource-only-dll.md) zawierający zasoby aplikacji są zlokalizowane dla określonego języka. Po rozpoczęciu wykonywania aplikacji MFC automatycznie ładuje zlokalizowany najbardziej odpowiednie dla środowiska. Na przykład może mieć aplikacji przy użyciu języka angielskiego zasobów przy użyciu dwóch satelickich bibliotek DLL, zawierające francuska tłumaczenie zasobów, a drugi zawierający niemieckiego tłumaczenia. Po uruchomieniu aplikacji w języku angielskim systemie używa zasobów w języku angielskim. Jeśli działa w systemie, francuskim, używa zasobów francuskim. Jeśli działa w systemie, niemieckim, używa zasobów niemieckim.
 
 Do obsługi zlokalizowanych zasobów w aplikacji MFC, MFC próbuje załadować satelitarną bibliotekę DLL zawierającą zasoby zlokalizowane dla określonego języka. Biblioteki DLL Satellite są nazywane *ApplicationNameXXX*.dll, gdzie *ApplicationName* nazywa się .exe lub .dll, za pomocą MFC, i *XXX* jest trzyliterowy kod języka zasoby (na przykład "ENU" lub "(DEU)").
 
@@ -51,7 +51,7 @@ Na przykład załóżmy, że aplikacja LangExample.exe używa biblioteki MFC i d
 
 Jeśli nie zostaną znalezione żadne z tych bibliotek DLL, MFC wykorzystuje zasoby w LangExample.exe.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[TN057: lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)
+[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)<br/>
+[TN057: Lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)

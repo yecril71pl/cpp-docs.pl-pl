@@ -1,19 +1,19 @@
 ---
-title: 'Porady: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild'
+title: 'Instrukcje: Dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 48923c997c881e8786a8c20b00077161cf470195
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f160e650c0dd717d7ce0f29259f866d751fdba
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543471"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815271"
 ---
-# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Porady: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Instrukcje: Dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild
 
 Niestandardowego narzędzia kompilacji jest narzędziem zdefiniowanych przez użytkownika, wiersz polecenia, który jest skojarzony z określonego pliku.
 
@@ -48,8 +48,8 @@ Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udo
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Instrukcje: dodawanie niestandardowego kroku kompilacji do projektów MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)
+[Przewodnik: korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Instrukcje: dodawanie niestandardowego kroku kompilacji do projektów MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)

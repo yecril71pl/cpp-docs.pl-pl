@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, command line
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
-ms.openlocfilehash: c19b2f2018caf380c7ac3a09c65955c924fed3e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4065cf2175b69e6aa87b70f7e00c4170f5b0d924
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665832"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807939"
 ---
 # <a name="editbin-command-line"></a>Wiersz polecenia EDITBIN
 
@@ -25,7 +25,7 @@ Określ jeden lub więcej plików, obiektów lub obrazów, które mają być zmi
 
 Po wpisaniu polecenia `editbin` bez żadnych innych danych wiersza polecenia EDITBIN wyświetla instrukcji użycia, który podsumowuje opcje.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[EDITBIN — dokumentacja](../../build/reference/editbin-reference.md)
+[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)<br/>
+[EDITBIN — dokumentacja](editbin-reference.md)

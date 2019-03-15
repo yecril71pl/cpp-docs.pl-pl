@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740247"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808043"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak zgłosić problem za pomocą zestawu narzędzi Visual C++ lub dokumentacji
 
@@ -43,7 +43,7 @@ Potrzebujemy informacji pełnej wersji i architektury docelowej z zestawem narz�
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Aby zgłosić pełną wersję kompilatora, którego używasz
 
-1. Otwórz **wiersz polecenia dla deweloperów** odpowiadającej architektury konfiguracji i wersji programu Visual Studio umożliwia kompilowanie projektu. Na przykład, jeśli tworzysz za pomocą programu Visual Studio 2017 na x64 x64 wybierz elementy docelowe, **x64 natywnych narzędzi wiersza polecenia dla programu VS 2017**. Aby uzyskać więcej informacji, zobacz [skróty wiersza polecenia dla deweloperów](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
+1. Otwórz **wiersz polecenia dla deweloperów** odpowiadającej architektury konfiguracji i wersji programu Visual Studio umożliwia kompilowanie projektu. Na przykład, jeśli tworzysz za pomocą programu Visual Studio 2017 na x64 x64 wybierz elementy docelowe, **x64 natywnych narzędzi wiersza polecenia dla programu VS 2017**. Aby uzyskać więcej informacji, zobacz [skróty wiersza polecenia dla deweloperów](build/building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl /Bv**.
 

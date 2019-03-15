@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447250"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818027"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Zgłaszaj wewnętrzne błędy konsolidatora)
 
@@ -42,7 +42,7 @@ Opcja **/errorreport: Send** automatycznie wysyła informacje o błędzie do fir
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Otwórz **właściwości konfiguracji** > **konsolidatora** > **zaawansowane** stronę właściwości.
 
@@ -54,6 +54,6 @@ Opcja **/errorreport: Send** automatycznie wysyła informacje o błędzie do fir
 
 ## <a name="see-also"></a>Zobacz także
 
-[/errorReport (Zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[/errorReport (Zgłaszaj wewnętrzne błędy kompilatora)](errorreport-report-internal-compiler-errors.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - .pdb files, creating
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
-ms.openlocfilehash: 449b0a2be44f438c35feeb446df6d7c47f270c35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c686de7dc9c9c20c404240db558d2ff66078ceb7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494320"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808992"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Nazwa pliku bazy danych programu)
 
-Określa nazwę pliku, plik bazy danych programu (PDB) utworzone przez [/z7, / zi, /ZI (Format informacji debugowania)](../../build/reference/z7-zi-zi-debug-information-format.md).
+Określa nazwę pliku, plik bazy danych programu (PDB) utworzone przez [/z7, / zi, /ZI (Format informacji debugowania)](z7-zi-zi-debug-information-format.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,7 +43,7 @@ Ta opcja również nazwy pliku stanu (.idb) używany do minimalną ponowną komp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -63,9 +63,9 @@ Ten wiersz polecenia powoduje utworzenie pliku .pdb o nazwie PROG.pdb i .idb pli
 CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)
+[Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Określanie nazwy ścieżki](specifying-the-pathname.md)

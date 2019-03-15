@@ -2,12 +2,12 @@
 title: Typowe problemy przy migracji Visual C++ ARM
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618520"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816259"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Typowe problemy przy migracji Visual C++ ARM
 
@@ -92,7 +92,7 @@ A jeśli istnieje zależność między `operator->(memory_handle)` i `operator*(
 
 ### <a name="volatile-keyword-default-behavior"></a>zachowanie domyślne volatile — słowo kluczowe
 
-Kompilator MSVC obsługuje dwa różne interpretacji `volatile` kwalifikatora magazynu można określić za pomocą przełączników kompilatora. [/Volatile:ms](../build/reference/volatile-volatile-keyword-interpretation.md) przełącznika wybiera Microsoft rozszerzone volatile semantykę, która gwarantuje kolejności silne, ponieważ została w przypadku tradycyjnych x86 i x64 ze względu na modelu silnej pamięci na tych architektur. [/Volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) przełącznika wybiera strict C++ standard volatile semantykę, która nie gwarantuje kolejności silne.
+Kompilator MSVC obsługuje dwa różne interpretacji `volatile` kwalifikatora magazynu można określić za pomocą przełączników kompilatora. [/Volatile:ms](reference/volatile-volatile-keyword-interpretation.md) przełącznika wybiera Microsoft rozszerzone volatile semantykę, która gwarantuje kolejności silne, ponieważ została w przypadku tradycyjnych x86 i x64 ze względu na modelu silnej pamięci na tych architektur. [/Volatile:iso](reference/volatile-volatile-keyword-interpretation.md) przełącznika wybiera strict C++ standard volatile semantykę, która nie gwarantuje kolejności silne.
 
 W architekturze ARM, wartość domyślna to **/volatile:iso** ponieważ procesorów ARM mają słabo uporządkowane model pamięci, a oprogramowanie ARM nie ma się z polegania na rozszerzoną semantykę **/volatile:ms**  i zazwyczaj nie ma do interfejsu z oprogramowaniem, które ma. Będzie jednak nadal czasami wygodne lub nawet wymagane do kompilowania programu ARM, korzysta z semantyki rozszerzonej. Na przykład może być zbyt kosztowne do portu program korzysta z semantyki ISO C++ lub sterownik może mieć stosować się do tradycyjnych semantyki do poprawnego działania. W takich przypadkach można użyć **/volatile:ms** przełącznik; jednak odtworzyć tradycyjnych semantyki volatile dla elementów docelowych ARM, kompilator należy wstawić barier pamięci wokół każdej Odczyt lub zapis `volatile` zmiennej do wymuszania silne kolejność, która może mieć negatywny wpływ na wydajność.
 
@@ -100,4 +100,4 @@ W architekturach x86 i x64, wartość domyślna to **/volatile:ms** ponieważ wi
 
 ## <a name="see-also"></a>Zobacz także
 
-[Konfigurowanie Visual C++ dla procesorów ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[Konfigurowanie Visual C++ dla procesorów ARM](configuring-programs-for-arm-processors-visual-cpp.md)

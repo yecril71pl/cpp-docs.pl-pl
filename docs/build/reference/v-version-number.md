@@ -10,12 +10,12 @@ helpviewer_keywords:
 - V compiler option [C++]
 - -V compiler option [C++]
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
-ms.openlocfilehash: 23c6ebfc0d67c6d00ed0e26d2e23806234cbb6af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bebd3ab9677bb340203bbf857e4ee9f287e36e6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817611"
 ---
 # <a name="v-version-number"></a>/V (Numer wersji)
 
@@ -38,11 +38,11 @@ Etykieta stringcan pliku .obj, za pomocą numeru wersji lub informacje o prawach
 
 Można również użyć [komentarz (C/C++)](../../preprocessor/comment-c-cpp.md) z argumentem typu komentarza kompilator umieszcza nazwę oraz numer wersji kompilatora w pliku .obj.
 
-**/V** opcja jest przestarzały, począwszy od programu Visual Studio 2005; **/V** był głównie używane do obsługi tworzenia sterowniki urządzeń wirtualnych (urządzenia vxd) i tworzenia urządzenia vxd nie jest już obsługiwany przez zestaw narzędzi Visual C++. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).
+**/V** opcja jest przestarzały, począwszy od programu Visual Studio 2005; **/V** był głównie używane do obsługi tworzenia sterowniki urządzeń wirtualnych (urządzenia vxd) i tworzenia urządzenia vxd nie jest już obsługiwany przez zestaw narzędzi Visual C++. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -54,7 +54,7 @@ Można również użyć [komentarz (C/C++)](../../preprocessor/comment-c-cpp.md)
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

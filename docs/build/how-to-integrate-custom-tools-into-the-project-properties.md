@@ -1,19 +1,19 @@
 ---
-title: 'Porady: integrowanie narzędzi niestandardowych we właściwościach projektu'
+title: 'Instrukcje: Integrowanie narzędzi niestandardowych we właściwościach projektu'
 ms.date: 04/27/2016
 f1_keywords:
 - msbuild.cpp.howto.integratecustomtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 7041e6583ba1e2c7f035edcc72617ccdb8d5aa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a959eddb36a2de90ebd5b5b1b9eb5e2f4e67c03a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633015"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810162"
 ---
-# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Porady: integrowanie narzędzi niestandardowych we właściwościach projektu
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Instrukcje: Integrowanie narzędzi niestandardowych we właściwościach projektu
 
 Można dodać opcje niestandardowego narzędzia w programie Visual Studio **stron właściwości** okna, tworząc bazowe pliki schematu XML.
 
@@ -37,6 +37,6 @@ W tym dokumencie wyjaśniono, jak utworzyć plik w katalogu zestawu, który zawi
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, a następnie kliknij przycisk **właściwości**. W **stron właściwości** okna, w okienku po lewej stronie, sprawdź, czy nowy węzeł z nazwą reguły.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
+[Program MSBuild w wierszu polecenia — C++](msbuild-visual-cpp.md)

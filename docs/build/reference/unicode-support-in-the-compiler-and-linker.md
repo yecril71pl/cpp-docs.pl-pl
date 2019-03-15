@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494981"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807515"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Obsługa formatu Unicode w kompilatorze i konsolidatorze
 
@@ -45,8 +45,8 @@ Pliki odpowiedzi i pliki DEF mogą być UTF-16 z BOM lub ANSI.
 
 ## <a name="asm-and-cod-dumps"></a>zrzuty plików .asm i .cod
 
-zrzuty plików .asm i .cod są w formacie ANSI, domyślnie dla zapewnienia zgodności z MASM. Użyj [/fau](../../build/reference/fa-fa-listing-file.md) do wyprowadzenia UTF-8. Należy pamiętać, że jeśli określisz **/FAS**, zmieszane źródło tylko zostanie zostanie wydrukowane bezpośrednio i może wyglądać na zniekształcone, na przykład jeśli kod źródłowy jest UTF-8, a nie określił **/FAsu**.
+zrzuty plików .asm i .cod są w formacie ANSI, domyślnie dla zapewnienia zgodności z MASM. Użyj [/fau](fa-fa-listing-file.md) do wyprowadzenia UTF-8. Należy pamiętać, że jeśli określisz **/FAS**, zmieszane źródło tylko zostanie zostanie wydrukowane bezpośrednio i może wyglądać na zniekształcone, na przykład jeśli kod źródłowy jest UTF-8, a nie określił **/FAsu**.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Kompilowanie kodu C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md)
+[Możesz używać zestawu narzędzi MSVC z wiersza polecenia](../building-on-the-command-line.md)

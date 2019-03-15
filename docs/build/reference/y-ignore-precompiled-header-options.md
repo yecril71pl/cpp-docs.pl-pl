@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-ms.openlocfilehash: 8de7de7a4164916b9662e3a78fe00dd0a40cecc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c56c25d587d84e599718d2e1a74d469def3501f7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542907"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812359"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignoruj opcje prekompilowanego nagłówka)
 
@@ -29,13 +29,13 @@ Powoduje, że wszystkie inne `/Y` kompilatora opcje są ignorowane (i nie może 
 
 Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:
 
-- [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Prekompilowane nagłówki)](y-precompiled-headers.md)
 
-- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+- [Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -47,7 +47,7 @@ Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków z
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

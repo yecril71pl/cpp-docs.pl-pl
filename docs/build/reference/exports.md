@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435678"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814140"
 ---
 # <a name="exports"></a>EKSPORTY
 
@@ -28,7 +28,7 @@ Pierwszy *definicji* mogą znajdować się na tym samym wierszu co `EXPORTS` —
 
 Składnia służąca do eksportu *definicji* jest:
 
-> *Nazwa_wpisu*\[__=__*internal_name*|*other_module.exported_name*] \[ **\@** _porządkowe_ \[ **NONAME**]] \[ \[ **prywatne**] | \[ **Danych**]]
+> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_ordinal_ \[**NONAME**] ] \[ \[**PRIVATE**] | \[**DATA**] ]
 
 *Nazwa_wpisu* jest nazwa zmiennej lub funkcji, który chcesz wyeksportować. Jest to wymagane. Jeśli eksportujesz nazwa różni się od nazwy w bibliotece DLL, określ nazwę eksportu w bibliotece DLL, używając *internal_name*. Na przykład, jeśli biblioteka DLL eksportuje funkcję `func1` i wywołań, aby użyć go jako `func2`, należy określić:
 
@@ -51,9 +51,9 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Ponieważ kompilator języka Visual C++ używa dekorowania nazwy dla funkcji języka C++, należy użyć również nazwę uzupełnioną *internal_name* lub zdefiniować eksportowanych funkcji przy użyciu `extern "C"` w kodzie źródłowym. Kompilator również rozszerza funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) wywoływania Konwencji od znaku podkreślenia (\_) prefiks i sufiks składające się z znakiem (\@) następuje liczba bajtów (w zapisie dziesiętnym) w Lista argumentów.
+Ponieważ kompilator MSVC używa dekorowania nazwy dla funkcji języka C++, należy użyć również nazwę uzupełnioną *internal_name* lub zdefiniować eksportowanych funkcji przy użyciu `extern "C"` w kodzie źródłowym. Kompilator również rozszerza funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) wywoływania Konwencji od znaku podkreślenia (\_) prefiks i sufiks składające się z znakiem (\@) następuje liczba bajtów (w zapisie dziesiętnym) w Lista argumentów.
 
-Aby znaleźć nazwy dekoracyjne wytworzone przez kompilator, użyj [DUMPBIN](../../build/reference/dumpbin-reference.md) narzędzia lub konsolidator [/MAP](../../build/reference/map-generate-mapfile.md) opcji. Nazwy ozdobione są specyficzne dla kompilatora. Jeśli eksportujesz nazwy dekorowane w. Plik DEF, pliki wykonywalne, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji kompilatora. Daje to gwarancję, że nazwy dekorowane w obiekcie wywołującym odpowiadały nazwom eksportowanym w. Plik DEF.
+Aby znaleźć nazwy dekoracyjne wytworzone przez kompilator, użyj [DUMPBIN](dumpbin-reference.md) narzędzia lub konsolidator [/MAP](map-generate-mapfile.md) opcji. Nazwy ozdobione są specyficzne dla kompilatora. Jeśli eksportujesz nazwy dekorowane w. Plik DEF, pliki wykonywalne, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji kompilatora. Daje to gwarancję, że nazwy dekorowane w obiekcie wywołującym odpowiadały nazwom eksportowanym w. Plik DEF.
 
 Możesz użyć \@ *porządkowe* do określenia, czy numer, a nie nazwę funkcji, przechodzi w tabeli eksportu biblioteki DLL. Wiele bibliotek DLL Windows wyeksportować liczb porządkowych do obsługi starszego kodu. Było często używa się w kodzie Windows 16-bitowych liczb porządkowych, ponieważ może to pomóc zminimalizować rozmiar biblioteki DLL. Nie zaleca się eksportowanie funkcji według liczby porządkowej, chyba że klientów biblioteki DLL potrzebny do obsługi starszych wersji. Ponieważ. Plik biblioteki będzie zawierać mapowania między numeru porządkowego a funkcją, można użyć nazwy funkcji, tak jak zwykle w projektach korzystających z biblioteki DLL.
 
@@ -74,7 +74,7 @@ Istnieją cztery sposoby eksportowania definicji, wymienione w zalecanej kolejno
 
 1. `EXPORTS` Instrukcji w. Plik DEF
 
-1. [/EXPORT](../../build/reference/export-exports-a-function.md) specyfikacji za pomocą polecenia łącza
+1. [/EXPORT](export-exports-a-function.md) specyfikacji za pomocą polecenia łącza
 
 1. A [komentarz](../../preprocessor/comment-c-cpp.md) dyrektywę w kodzie źródłowym w postaci `#pragma comment(linker, "/export: definition ")`. W poniższym przykładzie pokazano dyrektywy #pragma komentarz przed deklaracją funkcji, której `PlainFuncName` jest nieozdobioną nazwę i `_PlainFuncName@4` jest dekorowane nazwy funkcji:
 
@@ -102,4 +102,4 @@ Podczas eksportowania zmienną z biblioteki DLL za pomocą. Plik DEF, nie trzeba
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+[Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)

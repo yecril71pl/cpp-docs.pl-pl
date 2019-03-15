@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 4dd7b47245e3359bbc938578f2bcd07b8b295909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578441"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810045"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Ogólna reprezentacja celu)
 
-Używany podczas [/vmb, / vmg (metoda reprezentacji)](../../build/reference/vmb-vmg-representation-method.md) jest wybrany jako [metoda reprezentacji](../../build/reference/vmb-vmg-representation-method.md). Te opcje wskazują model dziedziczenia definicji klasy nie zostały jeszcze — wystąpił.
+Używany podczas [/vmb, / vmg (metoda reprezentacji)](vmb-vmg-representation-method.md) jest wybrany jako [metoda reprezentacji](vmb-vmg-representation-method.md). Te opcje wskazują model dziedziczenia definicji klasy nie zostały jeszcze — wystąpił.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,7 +52,7 @@ Po określeniu jednej z tych opcji modelu dziedziczenia tego modelu jest używan
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
@@ -64,8 +64,8 @@ Po określeniu jednej z tych opcji modelu dziedziczenia tego modelu jest używan
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[/vmb, /vmg (Metoda reprezentacji)](../../build/reference/vmb-vmg-representation-method.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[/vmb, /vmg (Metoda reprezentacji)](vmb-vmg-representation-method.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

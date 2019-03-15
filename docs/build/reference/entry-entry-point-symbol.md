@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 21e17d9ec9c4b145af8909730e5f799de9b72ce2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615530"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807861"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Symbol punktu wejścia)
 
@@ -42,17 +42,17 @@ Domyślnie adres początkowy jest nazwą funkcji z biblioteki wykonawczej C. Kon
 |**WinMainCRTStartup** (lub **wWinMainCRTStartup**)|Aplikacja, która używa/Subsystem:**WINDOWS**; wywołania `WinMain` (lub `wWinMain`), musi być zdefiniowana do użycia `__stdcall`|
 |**_DllMainCRTStartup**|BIBLIOTEKI DLL; wywołania `DllMain` Jeśli istnieje, które muszą być zdefiniowane do użycia `__stdcall`|
 
-Jeśli [/dll](../../build/reference/dll-build-a-dll.md) lub [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opcja nie zostanie określona, konsolidator wybiera punkt podsystemu i zapis w zależności od tego, czy `main` lub `WinMain` jest zdefiniowana.
+Jeśli [/dll](dll-build-a-dll.md) lub [/Subsystem](subsystem-specify-subsystem.md) opcja nie zostanie określona, konsolidator wybiera punkt podsystemu i zapis w zależności od tego, czy `main` lub `WinMain` jest zdefiniowana.
 
 Funkcje `main`, `WinMain`, i `DllMain` są trzy rodzaje punktu wejścia zdefiniowanych przez użytkownika.
 
 Podczas tworzenia obrazu zarządzanego, funkcja określony do/Entry musi mieć podpis (LPVoid — *var1*, DWORD *var2*, LPVoid — *var3*).
 
-Aby uzyskać informacje na temat sposobu definiowania własnych `DllMain` punktu wejścia, zobacz [bibliotek DLL i Visual C++ zachowanie biblioteki wykonawczej](../../build/run-time-library-behavior.md) .
+Aby uzyskać informacje na temat sposobu definiowania własnych `DllMain` punktu wejścia, zobacz [bibliotek DLL i Visual C++ zachowanie biblioteki wykonawczej](../run-time-library-behavior.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -64,7 +64,7 @@ Aby uzyskać informacje na temat sposobu definiowania własnych `DllMain` punktu
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 21d0baccaf74fc08bb110b0ae9f8b7dc108abd6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561580"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822330"
 ---
 # <a name="compiler-controlled-link-options"></a>Opcje LINK kontrolowane przez kompilator
 
@@ -27,22 +27,22 @@ Kompilator CL automatycznie wywołuje łącza, chyba że określono opcję/c. CL
 |*Nazwa pliku*.def|/ DEF przekazuje:*filename*.def|
 |/F*numer*|Przebiegi /STACK:*numer*|
 |/FD*nazwy pliku*|Przekazuje/PDB:*nazwy pliku*|
-|/Fe*nazwy pliku*|Przekazuje/OUT:*nazwy pliku*|
-|/FM*nazwy pliku*|Przebiegi/map:*nazwy pliku*|
+|/Fe*filename*|Przekazuje/OUT:*nazwy pliku*|
+|/Fm*filename*|Przebiegi/map:*nazwy pliku*|
 |/GY|Tworzy funkcje pakowane (COMDATs); Włącza łączenie na poziomie — funkcja|
 |/LD|Przekazuje/dll|
-|/ LDd|Przekazuje/dll|
+|/LDd|Przekazuje/dll|
 |/link|Przekazuje pozostałą część wiersza polecenia do łącza|
 |/MD lub/MT|Umieszcza domyślną nazwę biblioteki w pliku .obj|
 |/ MDd lub/mtd|W pliku .obj, umieszcza domyślną nazwę biblioteki. Definiuje symbol **_DEBUG**|
 |/nologo|/ Nologo przekazuje|
-|/ Zd|Przebiegi/Debug|
+|/Zd|Przebiegi/Debug|
 |Zi lub/z7|Przebiegi/Debug|
-|/ZL|Pomija domyślną nazwę biblioteki z pliku .obj|
+|/Zl|Pomija domyślną nazwę biblioteki z pliku .obj|
 
-Aby uzyskać więcej informacji, zobacz [opcje kompilatora](../../build/reference/compiler-options.md).
+Aby uzyskać więcej informacji, zobacz [opcje kompilatora MSVC](compiler-options.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

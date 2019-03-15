@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e3c39595008d92b390b03a56bdcf5fc8990b2103
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694156"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807562"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie
 
@@ -26,19 +26,19 @@ W tej sekcji omówiono sposób tworzenia aplikacji izolowanych aplikacji C/C++ i
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami wykonywanymi równocześnie](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)
+[Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami wykonywanymi równocześnie](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
 
-[Kompilowanie izolowanych aplikacji C/C++](../build/building-c-cpp-isolated-applications.md)
+[Kompilowanie izolowanych aplikacji C/C++](building-c-cpp-isolated-applications.md)
 
-[Kompilowanie wykonywanych jednocześnie aplikacji C/C++](../build/building-c-cpp-side-by-side-assemblies.md)
+[Kompilowanie wykonywanych jednocześnie aplikacji C/C++](building-c-cpp-side-by-side-assemblies.md)
 
-[Instrukcje: kompilowanie komponentów COM bez rejestrowania](../build/how-to-build-registration-free-com-components.md)
+[Instrukcje: kompilowanie komponentów COM bez rejestrowania](how-to-build-registration-free-com-components.md)
 
-[Instrukcje: kompilowanie izolowanych aplikacji korzystających ze składników COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[Instrukcje: kompilowanie izolowanych aplikacji korzystających ze składników COM](how-to-build-isolated-applications-to-consume-com-components.md)
 
-[Ogólne informacje o tworzeniu manifestu dla programów C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Ogólne informacje o tworzeniu manifestu dla programów C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 
-[Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 

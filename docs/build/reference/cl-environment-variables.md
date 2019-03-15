@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535778"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807965"
 ---
 # <a name="cl-environment-variables"></a>Zmienne środowiskowe CL
 
@@ -30,13 +30,13 @@ Możesz ustawić CL lub \_CL\_ zmienną środowiskową przy użyciu następując
 
 > Ustaw CL = [[*opcji*]... [*pliku*]...] [/ link *zoptymalizowany pod kątem linku* ...] Ustaw \_CL\_= [[*opcji*]... [*pliku*]...] [/ link *zoptymalizowany pod kątem linku* ...]
 
-Aby uzyskać szczegółowe informacje na temat argumentów cl i \_CL\_ zmiennych środowiskowych, zobacz [składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md).
+Aby uzyskać szczegółowe informacje na temat argumentów cl i \_CL\_ zmiennych środowiskowych, zobacz [składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md).
 
 Można użyć tych zmiennych środowiskowych do definiowania plików i opcji, których używasz najczęściej i użyć wiersza polecenia, aby zdefiniować konkretne pliki i opcje do określonych celów. CL i \_CL\_ zmienne środowiskowe są ograniczone do 1024 znaków (wiersza polecenia limit wejściowego).
 
 Nie można użyć opcji/d., aby zdefiniować symbol, który używa znaku równości (=). Można zastąpić znak numeru (#) znaku równości. W ten sposób można użyć CL lub \_CL\_ zmiennych środowiskowych w celu definiowania stałych preprocesora z jawne wartości — na przykład `/DDEBUG#1` do definiowania `DEBUG=1`.
 
-Aby uzyskać powiązane informacje, zobacz [ustawić zmienne środowiskowe](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Aby uzyskać powiązane informacje, zobacz [ustawić zmienne środowiskowe](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
 ## <a name="examples"></a>Przykłady
 
@@ -56,7 +56,7 @@ Ma to taki sam skutek jak następującego polecenia:
 
 > PLIK1 CL. PLIK2 C. PLIK3 C. OBJ
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
-[Opcje kompilatora](../../build/reference/compiler-options.md)
+[Ustawianie opcji kompilatora](compiler-command-line-syntax.md)<br/>
+[MSVC Compiler Options](compiler-options.md)

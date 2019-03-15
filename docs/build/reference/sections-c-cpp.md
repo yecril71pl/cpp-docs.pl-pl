@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-ms.openlocfilehash: 7b6708e760a85a137a01718d07a5f167de849220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5125b09675969c784aafe375faf1fdbc36d8c5d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485868"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815115"
 ---
 # <a name="sections-cc"></a>SEKCJE (C/C++)
 
@@ -58,8 +58,8 @@ section [CLASS 'classname'] specifier
 
 `CLASS` — Słowo kluczowe jest obsługiwana w przypadku zgodności, ale został zignorowany.
 
-Jest równoważne sposób Określ atrybuty sekcji [/SECTION](../../build/reference/section-specify-section-attributes.md) opcji.
+Jest równoważne sposób Określ atrybuty sekcji [/SECTION](section-specify-section-attributes.md) opcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+[Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /LARGEADDRESSAWARE editbin option
 - LARGEADDRESSAWARE editbin option
 ms.assetid: 5db58df3-4457-4808-adf7-2bee6ea97486
-ms.openlocfilehash: c30e7b9340fd45f31dc2a6508a0bcc04ffe8c910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a96d8f5c0f0f0e8a011dffda1549760bcc5f0fe
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605000"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814062"
 ---
 # <a name="largeaddressaware"></a>/LARGEADDRESSAWARE
 
@@ -25,6 +25,6 @@ ms.locfileid: "50605000"
 
 Ta opcja edytuje obraz, aby wskazać, że aplikacja może obsługiwać adresy większe niż 2 gigabajty.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

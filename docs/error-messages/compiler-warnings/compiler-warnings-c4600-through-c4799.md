@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553161"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810084"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Ostrzeżenia kompilatora od C4600 do C4799
 
@@ -147,7 +146,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 4) C4681|"class": klasa coclass nie określa domyślnego interfejsu, który jest źródłem zdarzenia|
 |Ostrzeżenie kompilatora (poziom 4) C4682|"parametru": nie określono atrybutu kierunkowego parametru, domyślnie na [in]|
 |[Ostrzeżenie kompilatora (poziom 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'Funkcja': źródło zdarzenia ma "out"-parameter; należy zachować ostrożność podczas podłączania wielu obsług zdarzeń|
-|[Ostrzeżenie kompilatora (poziom 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|"attribute": ostrzeżenie!! atrybut może powodować generowanie nieprawidłowego kodu: Używaj ostrożnie|
+|[Ostrzeżenie kompilatora (poziom 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|"attribute": OSTRZEŻENIE!! atrybut może powodować generowanie nieprawidłowego kodu: Używaj ostrożnie|
 |Ostrzeżenie kompilatora (poziom 1) C4685|Oczekiwano znaku ">>" znaleziono ">>" podczas analizowania parametrów szablonu|
 |[Ostrzeżenie kompilatora (poziom 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'typ zdefiniowany przez użytkownika': możliwe zmiany w zachowaniu, zmiana w konwencji wywoływania zwrotu UDT|
 |[Ostrzeżenie (błąd) kompilatora C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|"class": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "interface"|
@@ -194,7 +193,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|"type" ma inny rozmiar w 'plik1' i 'plik2': liczbę i liczba bajtów|
 |[Ostrzeżenie kompilatora (poziom 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|"var" ma inny typ w 'plik1' i 'plik2': 'Typ1' i 'type2'|
 |[Ostrzeżenie kompilatora C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp "*wyrażenie*" podlega/volatile:\<iso&#124;ms >; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store funkcje wewnętrzne|
-|[Ostrzeżenie kompilatora (poziom 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Wywołanie zarządzanego "punkt wejścia": kod zarządzany nie mogą być uruchamiane w ramach blokady modułu ładującego, włączając w to punkt wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL|
+|[Ostrzeżenie kompilatora (poziom 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Wywołanie zarządzanego "punkt wejścia": Kod zarządzany nie mogą być uruchamiane w ramach blokady modułu ładującego, włączając w to punkt wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL|
 |Ostrzeżenie kompilatora (poziom 4) C4749|warunkowo obsługiwane: makro offsetof zastosowano do typu nienależące niestandardowym układzie "*typu*"|
 |Ostrzeżenie kompilatora (poziom 1) C4750|'Identyfikator': funkcja zawierająca _alloca() została wbudowana w pętlę|
 |Ostrzeżenie kompilatora (poziom 4) C4751|/ arch: nie ma zastosowania do Intel(R) Streaming SIMD Extensions, się wewnątrz wbudowanego ASM|

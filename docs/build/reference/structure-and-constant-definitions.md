@@ -2,12 +2,12 @@
 title: Struktura i stała — Definicje
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: c4cc5f08c8cbd0e7baea0f612063a6ebdbb56c1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea7aa1ec25bcd0e8531ef63848de26da164da668
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474311"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813360"
 ---
 # <a name="structure-and-constant-definitions"></a>Struktura i stała — Definicje
 
@@ -69,6 +69,6 @@ typedef struct ImgDelayDescr {
     } ImgDelayDescr, * PImgDelayDescr;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ogólne informacje funkcji Pomocnik](../../build/reference/understanding-the-helper-function.md)
+[Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)

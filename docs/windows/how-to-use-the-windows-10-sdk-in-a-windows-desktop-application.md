@@ -1,16 +1,16 @@
 ---
-title: 'Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu Windows'
+title: 'Instrukcje: Użyj systemu Windows 10 SDK w aplikacji pulpitu Windows'
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669121"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809928"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu Windows
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Instrukcje: Użyj systemu Windows 10 SDK w aplikacji pulpitu Windows
 
 Po utworzeniu klasycznego projektu pulpitu Windows w programie Visual Studio 2017 on skonfigurowano domyślnie do tworzenia z wersją systemu Windows 10 SDK został zainstalowany, gdy obciążenie C++ na komputerach został zainstalowany lub jego ostatniej aktualizacji. Ta wersja zestawu Windows SDK jest zgodny, system Windows 7 lub nowszy. Zobacz [przy użyciu nagłówków Windows](/windows/desktop/WinProg/using-the-windows-headers) Aby uzyskać więcej informacji na temat przeznaczony dla określonej wersji systemu Windows.
 
@@ -38,7 +38,7 @@ Począwszy od programu Visual Studio 2015 i zestawu Windows 10 SDK, biblioteki C
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. Otwórz właściwości projektu, a następnie w **właściwości konfiguracji, ogólne** sekcji, zwróć uwagę na wartości z **wersji platformy docelowej Windows**. Zmiana wartości w tym miejscu ma taki sam skutek jak następującej procedury. Zobacz [strona właściwości ogólnych (projekt)](../ide/general-property-page-project.md).
+4. Otwórz właściwości projektu, a następnie w **właściwości konfiguracji, ogólne** sekcji, zwróć uwagę na wartości z **wersji platformy docelowej Windows**. Zmiana wartości w tym miejscu ma taki sam skutek jak następującej procedury. Zobacz [strona właściwości ogólnych (projekt)](../build/reference/general-property-page-project.md).
 
    ![Wersja platformy docelowej](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 

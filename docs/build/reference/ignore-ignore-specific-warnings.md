@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-ms.openlocfilehash: 4826ecae1f16cd3834cb6d47850fc686b3682614
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b374e0e73f9fc14fa32ea4f63fa71039a5cf3c7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479696"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815843"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (ignorowanie określonych ostrzeżeń)
 
@@ -54,7 +54,7 @@ Ogólnie rzecz biorąc ostrzeżenia konsolidatora, które nie mogą zostać pomi
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. W **konsolidatora** folderu, wybierz **wiersza polecenia** stronę właściwości.
 

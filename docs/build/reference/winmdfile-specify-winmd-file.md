@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
-ms.openlocfilehash: 74958e51925b9ed6d1382efe76fe587eed73f4e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d24d1d1aad8442f549dcb1aa4bd6414070c282c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656057"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815986"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (określ plik winmd)
 
-Określa nazwę pliku dla pliku wyjściowego metadanych środowiska wykonawczego Windows (winmd), który jest generowany przez [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) — opcja konsolidatora.
+Określa nazwę pliku dla pliku wyjściowego metadanych środowiska wykonawczego Windows (winmd), który jest generowany przez [/WINMD](winmd-generate-windows-metadata.md) — opcja konsolidatora.
 
 ```
 /WINMDFILE:filename
@@ -25,7 +25,7 @@ Użyj wartości, który jest określony w `filename` do przesłaniania domyślne
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **konsolidatora** folderu.
 
@@ -33,8 +33,8 @@ Użyj wartości, który jest określony w `filename` do przesłaniania domyślne
 
 1. W **plik metadanych Windows** wpisz lokalizację pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[/WINMD (Generuj metadane systemu Windows)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[/WINMD (Generuj metadane systemu Windows)](winmd-generate-windows-metadata.md)<br/>
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

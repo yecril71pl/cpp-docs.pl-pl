@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326163"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815973"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (zestaw domyślne zależne obciążenia flagi)
 
@@ -42,7 +42,7 @@ W przypadku określenia opcji link `/DEPENDENTLOADFLAG:0xA00` (wartość flagi p
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję konsolidatora DEPENDENTLOADFLAG w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
@@ -54,9 +54,9 @@ W przypadku określenia opcji link `/DEPENDENTLOADFLAG:0xA00` (wartość flagi p
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Ustawianie opcji konsolidatora](setting-linker-options.md)
-- [Opcje konsolidatora](linker-options.md)
-- [Jak połączyć niejawnie biblioteki DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [Określić, której metody łączenia użyjesz](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Odwołania konsolidatora MSVC](linking.md)
+- [Opcje konsolidatora MSVC](linker-options.md)
+- [Łączenie pliku wykonywalnego z biblioteką DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Łączenie pliku wykonywalnego z biblioteką DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], swap tuning
 - paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-ms.openlocfilehash: dd854b6ea19ee08bf1a375a42466ad7abd13b1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1927ffd2efc923157fe1956fe905c939bc62719
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480200"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807887"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Ustaw funkcje w kolejności)
 
@@ -36,11 +36,11 @@ Plik tekstowy, który określa kolejność łączy dla sekcji COMDAT funkcji.
 
 **/ORDER** — opcja kompilatora pozwala zoptymalizować zachowanie stronicowania programu przez grupowanie funkcji wraz z funkcji wywoływanych przez nią. Często wywoływane funkcje można także grupować ze sobą. Te techniki, znane jako *dostrajanie swap* lub *optymalizacji stronicowania*, zwiększyć prawdopodobieństwo, że wywoływana funkcja jest w pamięci, gdy jest wymagana i nie ma być stronicowana z dysku.
 
-Podczas kompilowania kodu źródłowego do pliku obiektu, można stwierdzić, kompilator, aby umieścić każdą funkcję w osobnej sekcji o nazwie *COMDAT*, za pomocą [/Gy (włączenie łączenia poziomie funkcji)](../../build/reference/gy-enable-function-level-linking.md) kompilatora Opcja. **/ORDER** — opcja konsolidatora informuje konsolidator umieszcza Comdat w pliku wykonywalnego obrazu, w kolejności, można określić.
+Podczas kompilowania kodu źródłowego do pliku obiektu, można stwierdzić, kompilator, aby umieścić każdą funkcję w osobnej sekcji o nazwie *COMDAT*, za pomocą [/Gy (włączenie łączenia poziomie funkcji)](gy-enable-function-level-linking.md) kompilatora Opcja. **/ORDER** — opcja konsolidatora informuje konsolidator umieszcza Comdat w pliku wykonywalnego obrazu, w kolejności, można określić.
 
-Aby określić kolejność sekcji COMDAT, należy utworzyć *pliku odpowiedzi*, plik tekstowy, który zawiera listę poszczególnych sekcji COMDAT według nazwy, jeden na wiersz, w kolejności, w jakiej mają być nawiązywane przez konsolidator. Przekaż nazwę tego pliku jako *filename* parametru **/ORDER** opcji. W przypadku funkcji C++ nazwę COMDAT jest formie dekorowane nazwy funkcji. Użyj nieozdobioną nazwę zawartej funkcji C `main`, a dla funkcji języka C++ jest zadeklarowany jako `extern "C"`. Nazwy i nazwy dekorowane uwzględniają wielkość liter. Aby uzyskać więcej informacji na temat nazwy dekorowane, zobacz [nazwy dekorowane](../../build/reference/decorated-names.md).
+Aby określić kolejność sekcji COMDAT, należy utworzyć *pliku odpowiedzi*, plik tekstowy, który zawiera listę poszczególnych sekcji COMDAT według nazwy, jeden na wiersz, w kolejności, w jakiej mają być nawiązywane przez konsolidator. Przekaż nazwę tego pliku jako *filename* parametru **/ORDER** opcji. W przypadku funkcji C++ nazwę COMDAT jest formie dekorowane nazwy funkcji. Użyj nieozdobioną nazwę zawartej funkcji C `main`, a dla funkcji języka C++ jest zadeklarowany jako `extern "C"`. Nazwy i nazwy dekorowane uwzględniają wielkość liter. Aby uzyskać więcej informacji na temat nazwy dekorowane, zobacz [nazwy dekorowane](decorated-names.md).
 
-Aby znaleźć uzupełnioną swoje Comdat, należy użyć [DUMPBIN](../../build/reference/dumpbin-reference.md) narzędzia [/symbole](../../build/reference/symbols.md) opcja w pliku obiektu. Konsolidator automatycznie dołącza znaku podkreślenia (**\_**) do funkcji nazwy w odpowiedzi plików, chyba, że nazwa zaczyna się od znaku zapytania (**?**) lub znak ( **\@**). Na przykład, jeśli plik źródłowy example.cpp, zawiera funkcje `int cpp_func(int)`, `extern "C" int c_func(int)` i `int main(void)`, polecenie `DUMPBIN /SYMBOLS example.obj` wyświetla te nazwy dekorowane:
+Aby znaleźć uzupełnioną swoje Comdat, należy użyć [DUMPBIN](dumpbin-reference.md) narzędzia [/symbole](symbols.md) opcja w pliku obiektu. Konsolidator automatycznie dołącza znaku podkreślenia (**\_**) do funkcji nazwy w odpowiedzi plików, chyba, że nazwa zaczyna się od znaku zapytania (**?**) lub znak ( **\@**). Na przykład, jeśli plik źródłowy example.cpp, zawiera funkcje `int cpp_func(int)`, `extern "C" int c_func(int)` i `int main(void)`, polecenie `DUMPBIN /SYMBOLS example.obj` wyświetla te nazwy dekorowane:
 
 ```Output
 ...
@@ -54,14 +54,14 @@ W takim przypadku określić nazwy jako `?cpp_func@@YAHH@Z`, `c_func`, i `main` 
 
 Jeśli istnieje więcej niż jedna **/ORDER** opcja jest wyświetlana w obszarze Opcje konsolidatora, ostatni z nich określone staje się skuteczny.
 
-**/ORDER** opcji wyłącza łączenie przyrostowe. Może zostać wyświetlony konsolidatora ostrzeżenie [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) po określeniu tę opcję, jeśli włączono łączenie przyrostowe lub jeśli określono [/zi (przyrostowe PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) — opcja kompilatora. Aby wyciszyć to ostrzeżenie, można użyć [/incremental: No](../../build/reference/incremental-link-incrementally.md) — opcja konsolidatora wyłączyć przyrostowe konsolidowanie i używać [/zi (Generowanie pliku PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) opcję kompilatora, aby wygenerować pliku PDB bez konsolidacji przyrostowej.
+**/ORDER** opcji wyłącza łączenie przyrostowe. Może zostać wyświetlony konsolidatora ostrzeżenie [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) po określeniu tę opcję, jeśli włączono łączenie przyrostowe lub jeśli określono [/zi (przyrostowe PDB)](z7-zi-zi-debug-information-format.md) — opcja kompilatora. Aby wyciszyć to ostrzeżenie, można użyć [/incremental: No](incremental-link-incrementally.md) — opcja konsolidatora wyłączyć przyrostowe konsolidowanie i używać [/zi (Generowanie pliku PDB)](z7-zi-zi-debug-information-format.md) opcję kompilatora, aby wygenerować pliku PDB bez konsolidacji przyrostowej.
 
 > [!NOTE]
 > ŁĄCZE nie zamówienia statyczne funkcje, ponieważ nazwy statycznej funkcji nie są nazwy symboli publicznych. Gdy **/ORDER** jest określona, konsolidator ostrzeżenie [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) jest generowany dla każdego symbolu w pliku odpowiedzi zamówienia, który jest statyczny lub nie został odnaleziony.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** stronę właściwości.
 
@@ -71,7 +71,7 @@ Jeśli istnieje więcej niż jedna **/ORDER** opcja jest wyświetlana w obszarze
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

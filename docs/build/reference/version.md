@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -VERSION editbin option
 - VERSION editbin option
 ms.assetid: 1fa08266-3088-4261-8d84-d4408e1cef46
-ms.openlocfilehash: a893eb13c3df11299101fcd4b17ec6c310e7e3d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b8d0eb291cc09e96af1a3e471ead4d00519e927
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444177"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819171"
 ---
 # <a name="version"></a>/VERSION
 
@@ -27,6 +27,6 @@ Ta opcja umieszcza numeru wersji w nagłówku obrazu.
 
 Liczba całkowita część wersji numer części z lewej strony punktu dziesiętnego, jest reprezentowane przez `left`. Część ułamkową wersji numer części z prawej strony punktu dziesiętnego, jest reprezentowane przez `right`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)
+[Opcje EDITBIN](editbin-options.md)

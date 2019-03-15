@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -JMC compiler option [C++]
 - User code, debugging
 - JMC compiler option [C++]
-ms.openlocfilehash: a81292b590d96ef93446f9bb59af305c7eda2ef9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c107ad7107d2a65ed19719933aa127c0557916ce
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516860"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808056"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC (debugowanie tylko mój kod)
 
@@ -22,7 +22,7 @@ Określa kompilatora obsługę natywnych *tylko mój kod* debugowania w debugerz
 
 ## <a name="syntax"></a>Składnia
 
-> **/ JMC**\[**-**]
+> **/JMC**\[**-**]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -36,7 +36,7 @@ Aby uzyskać więcej informacji, zobacz [C++ tylko mój kod](/visualstudio/debug
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **ogólne** stronę właściwości.
 
@@ -46,7 +46,7 @@ Aby uzyskać więcej informacji, zobacz [C++ tylko mój kod](/visualstudio/debug
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
