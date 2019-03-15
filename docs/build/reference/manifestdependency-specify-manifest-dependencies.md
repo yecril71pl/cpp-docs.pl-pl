@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: aba4bd1b36bfda35be9e567851596fbedecf38ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654925"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812229"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Określ zależności manifestu)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50654925"
 
 / MANIFESTDEPENDENCY pozwala określić atrybuty, które zostaną umieszczone w \<zależności > sekcji w pliku manifestu.
 
-Zobacz [/MANIFEST (Side-by-Side tworzenie manifestu dla aplikacji)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) informacji na temat tworzenia pliku manifestu.
+Zobacz [/MANIFEST (Side-by-Side tworzenie manifestu dla aplikacji)](manifest-create-side-by-side-assembly-manifest.md) informacji na temat tworzenia pliku manifestu.
 
 Aby uzyskać więcej informacji na temat \<zależności > sekcji pliku manifestu, zobacz [pliki konfiguracyjne wydawcy](/windows/desktop/SbsCs/publisher-configuration-files).
 
@@ -61,7 +61,7 @@ Konsolidator zbierania /MANIFESTDEPENDENCY komentarzy, wyeliminować zduplikowan
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **pliku manifestu** stronę właściwości.
 
@@ -71,7 +71,7 @@ Konsolidator zbierania /MANIFESTDEPENDENCY komentarzy, wyeliminować zduplikowan
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalManifestDependencies%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 268a091d3e0bc825acae96dafc5d92ffa11c7bc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589583"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821316"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (Nazwij bibliotekę importowaną)
 
@@ -32,15 +32,15 @@ Opcja /IMPLIB przesłania domyślną nazwę biblioteki importu, która tworzy ł
 
 - [__Declspec(dllexport)](../../cpp/dllexport-dllimport.md) — słowo kluczowe w kodzie źródłowym
 
-- [EKSPORTY](../../build/reference/exports.md) instrukcja w pliku .def
+- [EKSPORTY](exports.md) instrukcja w pliku .def
 
-- [/EXPORT](../../build/reference/export-exports-a-function.md) specyfikacji za pomocą polecenia łącza
+- [/EXPORT](export-exports-a-function.md) specyfikacji za pomocą polecenia łącza
 
-LINK ignoruje /IMPLIB, gdy nie jest tworzona bibliotekę importu. Jeśli nie określono eksportuje żadnych danych, łącze nie tworzy bibliotekę importu. Jeśli plik eksportu jest używany w kompilacji, łącze przyjęto założenie, że biblioteka importowana już istnieje i nie tworzy jeden. Aby uzyskać informacji na temat bibliotekami importowanymi oraz plikami eksportowanymi, zobacz [odwołanie do biblioteki LIB](../../build/reference/lib-reference.md).
+LINK ignoruje /IMPLIB, gdy nie jest tworzona bibliotekę importu. Jeśli nie określono eksportuje żadnych danych, łącze nie tworzy bibliotekę importu. Jeśli plik eksportu jest używany w kompilacji, łącze przyjęto założenie, że biblioteka importowana już istnieje i nie tworzy jeden. Aby uzyskać informacji na temat bibliotekami importowanymi oraz plikami eksportowanymi, zobacz [odwołanie do biblioteki LIB](lib-reference.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Kliknij przycisk **konsolidatora** folderu.
 
@@ -52,7 +52,7 @@ LINK ignoruje /IMPLIB, gdy nie jest tworzona bibliotekę importu. Jeśli nie okr
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ImportLibrary%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)
+[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Opcje konsolidatora MSVC](linker-options.md)
