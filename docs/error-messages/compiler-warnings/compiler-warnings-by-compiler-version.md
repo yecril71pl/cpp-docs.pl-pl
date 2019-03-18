@@ -4,16 +4,16 @@ ms.date: 10/24/2018
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: ae5d1957694abe09d1e04fba5ccfd2cd87d36940
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79cf78de865f480530df89c778e9fe432b0bbf33
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530185"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142524"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora według wersji kompilatora
 
-Kompilator może pominąć ostrzeżenia, które zostały wprowadzone po wersji, należy określić za pomocą [WV](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Jest to przydatne do zarządzania proces kompilacji, gdy wprowadzenia nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowe ostrzeżenia. Ta opcja odrzuca nowe komunikaty o błędach. Firma Microsoft nie zaleca się pominąć wszystkie nowe ostrzeżenia trwale! Firma Microsoft zaleca, zawsze Kompiluj na najwyższym poziomie ostrzeżenia regularnych, __/W4__i Usuń __WV__ opcji kompilacji tak szybko, jak to możliwe.
+Kompilator może pominąć ostrzeżenia, które zostały wprowadzone po wersji, należy określić za pomocą [WV](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Ta opcja jest przydatna do zarządzania proces kompilacji, gdy wprowadzenia nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowe ostrzeżenia. Ta opcja odrzuca nowe komunikaty o błędach. Firma Microsoft nie zaleca się pominąć wszystkie nowe ostrzeżenia trwale! Firma Microsoft zaleca, zawsze Kompiluj na najwyższym poziomie ostrzeżenia regularnych, __/W4__i Usuń __WV__ opcji kompilacji tak szybko, jak to możliwe.
 
 Te wersje kompilatora wprowadzono nowe ostrzeżenia:
 
@@ -36,10 +36,26 @@ Te wersje kompilatora wprowadzono nowe ostrzeżenia:
 | Visual C++ 2017 w wersji 15.6 | 19.13.26128.0 |
 | Visual C++ 2017 w wersji 15.7 | 19.14.26428.0 |
 | Visual C++ 2017 w wersji 15.8 | 19.15.26726.0 |
+| Visual C++ 2017 w wersji 15.9 | 19.16.26926.0 |
+| Visual C++ 2019 RTM | 19.20.27004.0 |
 
 Można określić tylko główny numer, głównych i pomocniczych numerów lub głównych i pomocniczych i tworzyć numery __WV__ opcji. Kompilator zgłasza wszystkie ostrzeżenia, które odpowiadają wersji, które zaczynają się od podanej liczbie i wyłącza wszystkie ostrzeżenia dla wersji większy niż określoną liczbę. Na przykład __/Wv:17__ raportuje wszystkie ostrzeżenia wprowadzone w lub przed dowolnej wersji programu Visual Studio 2012 i wyłącza wszystkie ostrzeżenia wprowadzone za pomocą dowolnego kompilatora z programu Visual Studio 2013 (wersja 18) lub nowszego. Aby pominąć ostrzeżenia wprowadzone w programie Visual Studio 2015 update 2 i później, możesz użyć __/Wv:19.00.23506__. Użyj __/Wv:19.11__ zgłosić wszystkie ostrzeżenia wprowadzone w dowolnej wersji programu Visual Studio przed Visual Studio 2017 w wersji 15.5, ale pomija ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15.5 lub nowszej.
 
 W poniższych sekcjach wymieniono ostrzeżenia wynikające z każdą wersją programu Visual C++, który można pominąć za pomocą __WV__ — opcja kompilatora. __WV__ opcji nie można pominąć ostrzeżenia, które nie zostały wymienione, które powstały wcześniej niż określona wersji kompilatora.
+
+::: moniker range=">= vs-2019"
+
+## <a name="warnings-introduced-in-visual-c-2019-rc-compiler-version-1920270040"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2019 RC (wersja kompilatora 19.20.27004.0)
+
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.15__.
+
+|||
+|-|-|
+C4848 | Obsługa atrybut standardowy "nie\_unikatowy\_adres w języku C ++ 17 i wcześniejszych wersjach to rozszerzenie dostawcy
+
+::: moniker-end
+::: moniker range=">= vs-2017"
+
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 w wersji 15.8 (wersja kompilatora 19.15.26726.0)
 
@@ -47,7 +63,25 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 
 |||
 |-|-|
-C5046|"*funkcja*": Symbol obejmujące typu z wewnętrznym powiązaniem nie jest zdefiniowana|
+C4643 | Deklarowanie do przodu "*identyfikator*" w przestrzeni nazw std nie jest dozwolona przez C++ Standard.
+C4644 | użycie wzorca na podstawie — makro offsetof w wyrażeniach stałych jest niestandardowych; Makro offsetof zdefiniowanych w standardowej biblioteki języka C++, zamiast tego użyj
+C4845 | "\_\_declspec (nie\_init\_all)" jest ignorowana, jeśli "/ d1initall\[0\|1\|2\|3]' nie została określona w wierszu polecenia
+C4846 | "*wartość*" nie jest prawidłowym argumentem dla "/ d1initall": właściwości wiersza polecenia są ignorowane
+C4847 | "\_\_declspec (nie\_init\_all)" będzie stosowany tylko do funkcji, typem klasy lub zmiennej lokalnej: ignorowane
+C4866 | Kompilator może nie wymusić kolejności oceny od lewej do prawej dla wywołania "*funkcja*"
+C5046 | "*funkcja*": Obejmujące typu z wewnętrznym powiązaniem Niezdefiniowany symbol
+C5047 | Korzystanie z niestandardowych \_ \_Jeśli\_istnieje przy użyciu modułów nie jest obsługiwane
+C5048 | Użyj makra "*makra*" może spowodować-deterministycznych danych wyjściowych
+C5049 | "*ciąg*": Pełna ścieżka do osadzania może spowodować w danych wyjściowych zależnych od maszyny
+C5050 | Możliwe niezgodne środowisko podczas importowania modułu "*nazwa_modułu*": *problem*
+C5100 | \_\_Oceny luk w zabezpieczeniach\_ARGS\_ \_ jest zarezerwowany do użytku w makra wariadyczne
+C5101 | Użycie dyrektywy preprocesora na liście argumentów funkcyjne makro jest niezdefiniowane zachowanie
+C5102 | ignorowanie nieprawidłowa wiersza polecenia definicja makra "*wartość*"
+C5103 | wklejanie "*token1*"i"*token2*" nie powoduje prawidłowy token przetwarzania wstępnego
+C5104 | znaleziono "*ciąg1*#*ciąg2*"na liście zastąpienie makra, czy chodziło Ci o"*ciąg1*" "#*ciąg2*"?
+C5105 | rozwinięciu makra w produkcji "defined" ma niezdefiniowane zachowanie
+C5106 | ponownie zdefiniowany przy użyciu nazwy różnych parametrów — makro
+C5107 | Brak przerywa "*char*" znak
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 wersji 15.7 (wersja kompilatora 19.14.26428.0)
 
@@ -72,7 +106,7 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 
 |||
 |-|-|
-C4843|"*type1*": procedura obsługi wyjątków odwołania do typu funkcji lub tablicy jest nieosiągalna, użyj "*type2*" zamiast niego
+C4843|"*type1*": Procedura obsługi wyjątków odwołania do typu funkcji lub tablicy jest nieosiągalna, użyj "*type2*" zamiast niego
 C4844|"Eksportuj modułu *nazwa_modułu*;" jest teraz preferowana składnia do deklarowania interfejsu modułu
 C5039|"*funkcja*": wskaźnik lub odwołanie do funkcji potencjalnie zgłaszającej wyjątek przekazano do funkcji extern języka C w ramach - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zgłosi wyjątek.
 C5040|specyfikacje wyjątków dynamicznych są prawidłowe tylko w języku C ++ 14 i starszych wersji; traktowanie jako opcja noexcept(false)
@@ -111,6 +145,8 @@ C4468|"fallthrough": atrybut musi następować etykieta case lub default
 C4698|"*funkcji*" jest przeznaczony wyłącznie do celów oceny i może ulec zmianie, albo usunięty w przyszłych aktualizacjach.
 C4839|niestandardowe użycie klasy*klasy*"jako argumentu do funkcji ze zmienną liczbą argumentów
 C4840|nieprzenośne użycie klasy*klasy*"jako argumentu do funkcji ze zmienną liczbą argumentów
+
+::: moniker-end
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 3 (wersja kompilatora 19.00.24215.1)
 
@@ -200,7 +236,7 @@ C5024|"*deklaracji*": Konstruktor przenoszenia został niejawnie zdefiniowany ja
 C5025|"*deklaracji*": Przenieś operator przypisania został niejawnie zdefiniowany jako usunięty
 C5026|"*typu*": Konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
 C5027|"*typu*": Przenieś operator przypisania został niejawnie zdefiniowany jako usunięty
-C5028|"*nazwa*": wyrównanie określone we wcześniejszej deklaracji (*numer*) nie jest określona w definicji
+C5028|"*nazwa*": Wyrównanie określone we wcześniejszej deklaracji (*numer*) nie jest określona w definicji
 C5029|użyto niestandardowego rozszerzenia: atrybuty wyrównania w języku C++ dotyczą zmiennych, składowych danych i tylko dla typów tagów
 C5030|atrybut "*atrybut*" nie został rozpoznany
 
@@ -212,7 +248,7 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 |-|-|
 C4301|"*typu*": przesłanianie wirtualnej funkcji różni się tylko od "*deklaracji*" kwalifikatorem const/volatile
 C4316|"*typu*": obiekt przydzielony na stosie może nie wyrównany *numer*
-C4380|"*typu*": Konstruktor domyślny nie staną się przestarzałe
+C4380|"*typu*": Domyślny konstruktor nie staną się przestarzałe
 C4388|"*tokenu*": niezgodność ze znakiem/bez znaku
 C4423|'std::bad_alloc': zostanie przechwycony przez klasę ('*typu*") w wierszu *numer*
 C4424|przechwycenie '*typu*'poprzedzone przez'*typu*"w wierszu *numer*; nieprzewidywalne zachowanie może powodować, jeśli zostanie zgłoszony 'std::bad_alloc'
@@ -229,7 +265,7 @@ C4882|przekazywanie funktorów z operatorami niestały wywołania do concurrency
 C4973|"*typu*": oznaczone jako przestarzałe
 C4974|"*typu*": oznaczone jako przestarzałe
 C4981|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ zawiera semantykę wyjątku
-C4990|Warbird: *wiadomości*
+C4990|Warbird: *message*
 C4991|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ poziom ochrony przed wstawianiem do treści jest większy niż element nadrzędny
 C4992|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ zawiera wstawiony zestaw, który nie może być chroniony
 
@@ -245,7 +281,7 @@ C4416|__declspec(code_seg(...)) zawiera pusty ciąg: ignorowane
 C4417|utworzenie wystąpienia jawnego szablonu nie może mieć __declspec(code_seg(...)): ignorowane
 C4418|__declspec(code_seg(...)) został zignorowany w wyliczeniu
 C4419|"*nazwa*"nie ma wpływu podczas zastosowane do prywatnej klasy ref"*typu*".
-C4435|"*typu*": układ obiektu pod/vd2 zmieni się z powodu bazy wirtualnej "*typu*"
+C4435|"*typu*": Układ obiektu pod/vd2 zmieni się z powodu bazy wirtualnej "*typu*"
 C4436|dynamic_cast z bazy wirtualnej "*typu*"to"*typu*" w konstruktorze lub destruktorze może zakończyć się niepowodzeniem z częściowo skonstruowanym obiektem
 C4437|dynamic_cast z bazy wirtualnej "*typu*"to"*typu*" może nie działać w niektórych kontekstach
 C4443|Oczekiwano wartości parametru pragma "0", "1" lub "2"
@@ -254,16 +290,16 @@ C4447|podpis "main" bez modelu wątkowości. Rozważ użycie "int głównego (Pl
 C4448|"*typu*" nie ma domyślnego interfejsu określonego w metadanych. Pobrania: "*typu*", która może ulec awarii w czasie wykonywania.
 C4449|"*typu*" typ niezapieczętowany powinien być oznaczony jako "[WebHostHidden]"
 C4450|"*typu*"powinien być oznaczony jako "[WebHostHidden]" ponieważ dziedziczy"*typu*"
-C4451|"*typu*": użycie klasy ref*typu*' wewnątrz tego kontekstu może doprowadzić do nieprawidłowego kierowania obiektami między kontekstami
+C4451|"*typu*": Użycie klasy ref*typu*' wewnątrz tego kontekstu może doprowadzić do nieprawidłowego kierowania obiektami między kontekstami
 C4452|"*typu*": typ publiczny nie może być w zakresie globalnym. Musi być w przestrzeni nazw, który jest elementem podrzędnym nazwy wyjściowego pliku .winmd.
-C4453|"*typu*": typ "[WebHostHidden]", nie powinien być używany na publikowanej powierzchni typu publicznego, który nie jest "[WebHostHidden]"
+C4453|"*typu*": Typ "[WebHostHidden]", nie powinien być używany na publikowanej powierzchni typu publicznego, który nie jest "[WebHostHidden]"
 C4454|"*typu*" jest przeciążony przez więcej niż liczba parametrów wejściowych bez konieczności [DefaultOverload] określony. Pobrania "*deklaracji*" jako domyślne przeciążenie
 C4471|"*nazwa*": deklaracja zapowiadająca wyliczenia nieobjętego zakresem musi mieć podstawowy typ (zakładany jest int)
 C4472|"*nazwa*" jest natywnym wyliczeniem: Dodaj specyfikator dostępu (private/public), aby zadeklarować wyliczenie zarządzane/WinRT
 C4492|"*typu*": dopasowuje metody bazowej klasy referencyjnej "*typu*", ale nie jest oznaczona modyfikatorem "override"
 C4493|Usuń wyrażenie nie przynosi efektu jako destruktor "*typu*" nie ma dostępności "public"
-C4585|"*typu*": WinRT "public ref class" musi być zapieczętowana lub dziedziczyć po istniejącej niezamkniętej klasie
-C4586|"*typu*": typ publiczny nie można zadeklarować w przestrzeni nazw najwyższego poziomu o nazwie "Windows"
+C4585|"*typu*": WinRT "public ref class" musi być zapieczętowana lub dziedziczyć po istniejącej niezapieczętowane klasy
+C4586|"*typu*": Typ publiczny nie można zadeklarować w przestrzeni nazw najwyższego poziomu o nazwie "Windows"
 C4695|#pragma execution_character_set: "*argument*" jest nieobsługiwanym argumentem: obecnie tylko "UTF-8" jest obsługiwany.
 C4703|Użycie potencjalnie niezainicjowanej lokalnej zmiennej wskaźnikowej "*nazwa*" używane
 C4728|/ Opcja Yl-zignorowane, ponieważ wymagane jest odwołanie do PCH
@@ -322,7 +358,7 @@ C4342|Zmiana zachowania: "*typu*" o nazwie, ale operator składowej został wywo
 C4350|Zmiana zachowania: "*deklaracji*"o nazwie zamiast"*deklaracji*"
 C4357|Znaleziono argument tablicy parametrów w liście formalnych argumentów dla delegata "*deklaracji*"zignorowano podczas generowania"*typu*"
 C4358|"*wyrażenie*": zwracany typ połączonych delegatów nie jest "void"; zwrócona wartość jest niezdefiniowana
-C4359|"*typu*": specyfikator wyrównania jest mniejszy niż rzeczywiste wyrównanie (*numer*) i zostaną zignorowane.
+C4359|"*typu*": Specyfikator wyrównania jest mniejszy niż rzeczywiste wyrównanie (*numer*) i zostaną zignorowane.
 C4362|"*typu*": wyrównanie większe niż 8 bajtów nie jest obsługiwana przez CLR
 C4364|#using dla zestawu '*nazwa*"poprzednio widziano w *opis*(*numer*) bez atrybutu as_friend; nie stosowane as_friend
 C4365|"*wyrażenie*': konwersja z"*typu*"to"*typu*', niezgodność ze znakiem/bez znaku
@@ -349,8 +385,8 @@ C4399|"*typu*": symbol w procesie nie powinien być oznaczony przez __declspec (
 C4400|"*typu*": kwalifikatory const/volatile dla tego typu nie są obsługiwane.
 C4412|"*deklaracji*': podpis funkcji podpis zawiera typ"*typu*'; Obiekty C++ są bezpieczne przekazywanie między kodem czystym i mieszanym lub macierzystym.
 C4429|możliwe niekompletne lub niepoprawnie uformowane universal-character-name
-C4430|brak specyfikatora typu — zakładany int. Uwaga: C++ nie obsługuje domyślnie typu int
-C4431|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnego int
+C4430|brak specyfikatora typu — zakładany int. Uwaga: Język C++ obsługuje domyślnie typu int
+C4431|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnie typu int
 C4434|statyczny Konstruktor musi posiadać prywatną dostępność; Zmiana na prywatny dostęp
 C4439|"*typu*": definicja funkcji z zarządzanym typem w sygnaturze musi mieć konwencję wywołania __clrcall
 C4441|Konwencja wywoływania '*Konwencji*"ignorowane. "*Konwencji*" zamiast tego użyć
@@ -377,19 +413,19 @@ C4568|"*typu*": żadne składowe nie odpowiadają sygnaturze jawnego przesłania
 C4569|"*typu*": żadne składowe nie odpowiadają sygnaturze jawnego przesłaniania
 C4570|"*typu*": nie jest jawnie zadeklarowana jako abstrakcyjna, ale ma funkcje abstrakcyjne
 C4571|Informacja: semantyka instrukcji catch(...) została zmieniona od czasu Visual C++ 7.1; Wyjątki strukturalne (SEH) nie są już przechwytywane
-C4572|Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." zamiast niego
+C4572|Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." Zamiast tego
 C4580|[attribute] jest przestarzały; zamiast niego określ *określonego*atrybutu jako klasę bazową
 C4581|zachowanie przestarzałe: ' "*nazwa*" "zastąpione"*nazwa*"Aby przetwarzać atrybut
 C4606|Ostrzeżenie #pragma: "*numer*" ignorowane. Ostrzeżenia analizy kodu nie są skojarzone z poziomami ostrzeżeń
-C4631|Oprogramowanie MSXML lub XPath niedostępna, dokumentu XML, które nie będą przetwarzane komentarze. *Opis elementu*
+C4631|Oprogramowanie MSXML lub XPath niedostępna, dokumentu XML, które nie będą przetwarzane komentarze. *description*
 C4632|Komentarz dokumentu XML: *opis* — odmowa dostępu: *opis*
-C4633|Komentarz dokumentu XML*opis*: błąd: *opis*
-C4634|Komentarz dokumentu XML*opis*: nie można zastosować: *opis*
-C4635|Komentarz dokumentu XML*opis*: niewłaściwie sformułowany kod XML: *opis*
-C4636|Komentarz dokumentu XML*opis*: tag wymaga niepustego "*opis*" atrybutu.
-C4637|Komentarz dokumentu XML*opis*: \<obejmują > tag odrzucone. *Opis elementu*
-C4638|Komentarz dokumentu XML*opis*: odwołanie do nieznanego symbolu "*opis*".
-C4639|Błąd oprogramowania MSXML, dokumentu XML, które nie będą przetwarzane komentarze. *Opis elementu*
+C4633|Komentarz dokumentu XML *opis*: błąd: *opis*
+C4634|Komentarz dokumentu XML *opis*: nie można zastosować: *opis*
+C4635|Komentarz dokumentu XML *opis*: niewłaściwie sformułowany kod XML: *opis*
+C4636|Komentarz dokumentu XML *opis*: tag wymaga niepustego "*opis*" atrybutu.
+C4637|Komentarz dokumentu XML *opis*: \<obejmują > tag odrzucone. *description*
+C4638|Komentarz dokumentu XML *opis*: odwołanie do nieznanego symbolu "*opis*".
+C4639|Błąd oprogramowania MSXML, dokumentu XML, które nie będą przetwarzane komentarze. *description*
 C4641|Komentarz dokumentu XML ma niejednoznaczne odwołanie:
 C4678|Klasa bazowa*deklaracji*"jest mniej dostępny niż"*nazwa*"
 C4679|"*opis*": nie można zaimportować składowej
@@ -417,7 +453,7 @@ C4740|przepływ w lub wyjścia wbudowanego kodu asemblera pomija optymalizację 
 C4742|"*zmiennej*"ma inne wyrównanie "*lokalizacji*"i"*lokalizacji*": *numer* i *numer*
 C4743|"*nazwa*"ma inny rozmiar "*lokalizacji*"i"*lokalizacji*": *numer* i *numer* bajtów
 C4744|"*nazwa*"ma inny typ "*lokalizacji*"i"*lokalizacji*": "*typu*"i"*typu*"
-C4747|Wywołanie zarządzanego "*typu*": kod zarządzany nie mogą być uruchamiane w ramach blokady modułu ładującego, włączając w to punkt wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL
+C4747|Wywołanie zarządzanego "*typu*": Kod zarządzany nie mogą być uruchamiane w ramach blokady modułu ładującego, włączając w to punkt wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL
 C4761|Niezgodność rozmiaru całkowitego w argumencie; podano konwersję
 C4764|Nie można wyrównać obiektów przechwytywania do więcej niż 16 bajtów
 C4788|"*identyfikator*": identyfikator został obcięty do "*numer*" znaków
@@ -430,7 +466,7 @@ C4835|"*typu*": Inicjator dla eksportowanych danych nie będzie działać, dopó
 C4867|"*typu*": niestandardowa składnia; Użyj "&", aby utworzyć wskaźnik do składowej
 C4936|Ta deklaracja __declspec jest obsługiwana tylko w przypadku, gdy skompilowano z opcją/CLR lub/CLR: pure
 C4937|"*nazwa*"i"*nazwa*"są nierozróżnialne jako argumenty"*opcji*"
-C4938|"*typu*": zmiennoprzecinkowy zmiennej redukcji punktu może spowodować niespójne wyniki w obszarze/FP: strict lub #pragma fenv_access
+C4938|"*typu*": Zmiennoprzecinkowe zmiennej redukcji punktu może spowodować niespójne wyniki w obszarze/FP: strict lub #pragma fenv_access
 C4939|#pragma vtordisp jest przestarzała i zostanie usunięta w przyszłej wersji programu Visual C++
 C4947|"*typu*": oznaczony jako przestarzały
 C4949|dyrektywy pragma "managed" i "unmanaged" mają znaczenie, tylko wtedy, gdy skompilowano z opcją "/ clr [: option]"
@@ -442,7 +478,7 @@ C4958|"*wyrażenie*": arytmetyka wskaźnika nie jest możliwe do zweryfikowania
 C4959|Nie można zdefiniować niezarządzanego *klasy* "*typu*" w/CLR: Safe, ponieważ dostęp do jego składowych daje nieweryfikowalny kod
 C4960|"*opis*" jest zbyt duży do profilowania
 C4961|Dane profilowe nie zostały scalone z "*lokalizacji*", profilowana Optymalizacja została wyłączona
-C4962|"*opis*': optymalizacje profilowane wyłączone, ponieważ optymalizacje spowodowały niespójność danych profilu
+C4962|"*opis*": Optymalizacje sterowane profilem wyłączone, ponieważ optymalizacje spowodowały niespójność danych profilu
 C4963|"*opis*": nie znaleziono danych profilowych; różne opcje kompilatora zostały użyte w kompilacji instrumentowanej
 C4964|Opcje optymalizacji nie zostały określone; informacje profilowe nie zostaną zebrane.
 C4965|niejawne rzutowanie liczby całkowitej 0; Użyj nullptr lub jawnego rzutowania
@@ -496,7 +532,7 @@ C4096|"*typu*": interfejs nie jest interfejsem COM; nie będzie emitowany do IDL
 C4097|Oczekiwano wartości parametru pragma "Restore" lub "off"
 C4165|"HRESULT" jest konwertowana na "bool"; Czy na pewno jest to, co chcesz zrobić?
 C4183|"*nazwa*": Brak typu zwracanego; założono, że jest funkcją składową zwracającą "int"
-C4199|*Opis elementu*
+C4199|*description*
 C4255|"*nazwa*": nie podano prototypu funkcji: konwertowanie '()"na"(void)"
 C4256|"*deklaracji*": konstruktor dla klasy z bazami wirtualnymi ma "..."; wywołania mogą nie być zgodne ze starszymi wersjami programu Visual C++
 C4258|"*nazwa*": definicja z pętli for jest zignorowana; służy definicji z otaczającego zakresu
@@ -584,7 +620,7 @@ C4680|"*typu*": klasa coclass nie określa domyślnego interfejsu
 C4681|"*typu*": klasa coclass nie określa domyślnego interfejsu, który jest źródłem zdarzenia
 C4682|"*typu*": nie określono atrybutu kierunkowego parametru, domyślnie na [in]
 C4683|"*deklaracji*": źródło zdarzenia ma "out" — parametru; wskazana jest ostrożność podczas podłączania wielu obsług zdarzeń
-C4684|"*opis*": ostrzeżenie!! atrybut może powodować generowanie nieprawidłowego kodu: Używaj ostrożnie
+C4684|"*opis*": OSTRZEŻENIE!! atrybut może powodować generowanie nieprawidłowego kodu: Używaj ostrożnie
 C4685|Oczekiwano znaku ">>" znaleziono ">>" podczas analizowania parametrów szablonu
 C4700|niezainicjowanej zmiennej lokalnej "*nazwa*" używane
 C4701|Użycie potencjalnie niezainicjowanej zmiennej lokalnej "*nazwa*" używane

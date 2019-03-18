@@ -5,15 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651376"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142550"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Ostrzeżenia kompilatora, które są domyślnie wyłączone
-Kompilator zawiera ostrzeżenia, które są domyślnie wyłączone, ponieważ większość programistów nie chce ich widzieć. W niektórych przypadkach ich reprezentuje wybór stylistyczne, są typowe idiomy starszego kodu lub korzystać z rozszerzeń firmy Microsoft dla języka. W innych przypadkach wskazują obszar, w którym programistów często wprowadzać nieprawidłowe wartości domyślne, które mogą prowadzić do nieoczekiwanych lub niezdefiniowane zachowanie. Niektóre z tych ostrzeżeń mogą być bardzo hałas w nagłówkach biblioteki. Biblioteki środowiska uruchomieniowego C i C++ standardowych bibliotek, które są przeznaczone do emitować nie ostrzeżeń tylko na poziomie ostrzeżenia [/W4](../build/reference/compiler-option-warning-level.md).
+
+Kompilator obsługuje ostrzeżeń, które są domyślnie wyłączone, ponieważ większość programistów nie przydatne je. W niektórych przypadkach ich ostrzec o wybór stylistyczne lub o wspólnej idiomy w starszego kodu. Inne ostrzeżenia to dotyczących używania rozszerzeniem firmy Microsoft dla języka. W innych przypadkach wskazują obszar, w którym programistów często wprowadzać nieprawidłowe wartości domyślne, które mogą prowadzić do nieoczekiwanych lub niezdefiniowane zachowanie. Jeśli włączone, niektóre ostrzeżenia mogą występować wielokrotnie w nagłówków biblioteki. Biblioteki środowiska uruchomieniowego C i C++ standardowych bibliotek, które są przeznaczone do emitować nie ostrzeżeń tylko na poziomie ostrzeżenia [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Włącz ostrzeżenia, które są domyślnie wyłączone
 
@@ -33,7 +34,7 @@ Można włączyć ostrzeżeń, które są normalnie wyłączone domyślnie przy 
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   Dzięki temu ostrzeżenie *nnnn* na poziomie *L*.
+   Ta opcja umożliwia ostrzeżenie *nnnn* na poziomie *L*.
 
 ## <a name="warnings-that-are-off-by-default"></a>Ostrzeżenia, które są domyślnie wyłączone
 
@@ -43,7 +44,8 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (poziom 4)|Moduł wyliczający "*identyfikator*'w przełączniku enum'*wyliczenie*" nie jest jawnie obsługiwany przez etykietę case|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (poziom 4)|Moduł wyliczający "*identyfikator*'w przełączniku enum'*wyliczenie*" nie jest obsługiwany|
-|C4191 (poziom 3)|"*operator*": niebezpieczna konwersja z "*type_of_expression*"to"*type_required*"|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (poziom 1) | "HRESULT" jest konwertowana na "bool"; Czy na pewno jest to, co chcesz zrobić? |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (poziom 3)|"*operator*": niebezpieczna konwersja z "*type_of_expression*"to"*type_required*"|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (poziom 4)|"*identyfikator*': konwersja z"*type1*"to"*type2*", możliwa utrata danych|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (poziom 4)|"*operator*': konwersja z"*type1*"to"*type2*", możliwa utrata danych|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (poziom 4)|"*funkcja*": nie podano prototypu funkcji: konwertowanie '()"na"(void)"|
@@ -64,7 +66,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C4388 (poziom 4)|niezgodność ze znakiem/bez znaku|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (poziom 2)|"*funkcja*': podpis funkcji podpis zawiera typ"*typu*'; Obiekty C++ są bezpieczne przekazywanie między kodem czystym i mieszanym lub macierzystym|
 |C4426 (poziom 1)|flagi optymalizacji zmieniły się po dołączeniu nagłówka, może być #pragma Optimize() <sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (poziom 4)|"*klasa1*": układ obiektu pod/vd2 zmieni się z powodu bazy wirtualnej "*klasa2*"|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (poziom 4)|"*klasa1*": Układ obiektu pod/vd2 zmieni się z powodu bazy wirtualnej "*klasa2*"|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (poziom 4)|dynamic_cast z bazy wirtualnej "*klasa1*"to"*klasa2*" może nie działać w niektórych kontekstach|
 |C4444 (poziom 3)|'__unaligned' najwyższego poziomu nie jest zaimplementowany w tym kontekście|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (poziom 4)|względna ścieżka dołączania zawiera ".."|
@@ -97,6 +99,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (poziom 4)|„klasa pochodna”: nie można wygenerować operatora przypisania, ponieważ operator przypisania klasy bazowej jest niedostępny|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (poziom 1)|dwuznaki nieobsługiwane z -Ze. Znak sekwencji "*dwuznak*'nie jest interpretowana jako alternatywny token dla'*char*"|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (poziom 3)|"*wystąpienia*': konstrukcja lokalnego obiektu statycznego nie jest bezpieczna dla wątków|
+| C4643 (poziom 4) | Deklarowanie do przodu "*identyfikator*" w przestrzeni nazw std nie jest dozwolona przez C++ Standard. <sup>15.8</sup> |
 |C4647 (poziom 3)|Zmiana zachowania: __is_pod (*typu*) ma inną wartość w poprzednich wersjach|
 |C4654 (poziom 4)|Kod umieszczony przed elementem obejmują wstępnie skompilowanego nagłówka wiersza zostaną zignorowane. Dodaj kod do wstępnie skompilowanego nagłówka. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (poziom 4)|"*symbol*'nie jest zdefiniowany jako makro preprocesora, zastępowanie przez '0' dla'*dyrektywy*"|
@@ -112,7 +115,9 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C4774 (poziom 4)|"*ciąg*": ciąg oczekiwany w argumencie formatu *numer* nie jest ciągiem literału|
 |C4777 (poziom 4)|"*— funkcja*": ciąg formatu "*ciąg*"wymaga argumentu typu"*type1*", ale ze zmienną liczbą argumentów *numer* ma typ "*type2*"|
 |C4786 (poziom 3)|"*symbol*': Nazwa obiektu została obcięta do '*numer*' znaków w informacjach debugowania|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (poziom 4) | Niejawna konwersja z "*typu*" na wartość logiczna. Prawdopodobieństwo utraty informacji możliwych <sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (poziom 4)|"*bajtów*"bajtów dopełnienie dodane po konstrukcji"*member_name*"|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (poziom 1) | "*elementu członkowskiego*": funkcja składowa klasy lokalnej nie ma treści |
 |C4826 (poziom 2)|Konwersja z "*type1*"to"*type2*' jest rozszerzona o znak. Może to spowodować nieoczekiwane zachowanie.|
 |C4837 (poziom 4)|Wykryto trójznak: "? *znak*"zastępuje"*znak*"|
 |C4841 (poziom 4)|użyto niestandardowego rozszerzenia: desygnator złożonej składowej użyty w makrze offsetof|
@@ -141,7 +146,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C5035|Użyj funkcji "*funkcji*" powoduje, że funkcja *funkcja* jest kompilowana jako kod gościa <sup>15.3</sup>|
 |C5036 (poziom 1)|Konwersja wskaźnika funkcji typu varargs podczas kompilowania za pomocą /hybrid:x86arm64 "*type1*"to"*type2*" <sup>15.3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (poziom 4)|element członkowski danych "*Członek1*"zostanie zainicjowany po element członkowski danych"*członek2*" <sup>15.3</sup>|
-|C5039 (poziom 4)|"*funkcja*": wskaźnik lub odwołanie do funkcji potencjalnie zgłaszającej wyjątek przekazano do funkcji extern języka C w ramach - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zgłosi wyjątek. <sup>wersji 15.5</sup>|
+|C5039 (poziom 4)|"*funkcja*": wskaźnik lub odwołanie do funkcji potencjalnie zgłaszającej wyjątek przekazano do funkcji extern języka C w ramach - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zgłosi wyjątek. <sup>15.5</sup>|
 |C5042 (poziom 3)|"*funkcja*": deklaracje funkcji w zakresie bloku nie może być określone jako "inline" w standardzie języka C++; Usuń specyfikator "inline" <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Kompilator wstawi krokami zaradczymi dla luki środki zaradcze w przypadku obciążenia pamięci, jeśli zostanie określony przełącznik/qspectre <sup>wersji 15.7</sup>|
 
@@ -150,6 +155,10 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 <sup>15.3</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.3.<br/>
 <sup>15.5</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.5.<br/>
 <sup>15.7</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.7.<br/>
+<sup>15.8</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.8.<br/>
+::: moniker range=">= vs-2019"
+<sup>16.0</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2019 RTM.<br/>
+::: moniker-end
 <sup>Jako trwałą</sup> to ostrzeżenie jest wyłączone, chyba że [/ permissive-](../build/reference/permissive-standards-conformance.md) ustawiono opcję kompilatora.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Ostrzeżenia wyłączone domyślnie we wcześniejszych wersjach
@@ -167,7 +176,7 @@ To ostrzeżenie zostało wyłączone domyślnie wersji kompilatora przed Visual 
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (poziom 4)|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnego int|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (poziom 4)|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnie typu int|
 
 ## <a name="see-also"></a>Zobacz też
 
