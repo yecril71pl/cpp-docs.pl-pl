@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: 0ca03cc2a3afa0d5665f217ccb0d41eb1e41d3be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec2b8c8fb4c7730a78c4403606d6fa61c0ddc374
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480937"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810019"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (niejawne specyfikatory wyjątków)
 
@@ -21,7 +21,7 @@ Gdy **/Zc: implicitnoexcept** opcja zostanie określona, kompilator dodający uk
 
 ## <a name="syntax"></a>Składnia
 
-> **/ Zc: implicitnoexcept**[**-**]
+> **/Zc:implicitNoexcept**[**-**]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -129,7 +129,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
@@ -137,7 +137,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Specyfikacje wyjątków (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Zakończenie](../../standard-library/exception-functions.md#terminate)<br/>

@@ -1,4 +1,4 @@
-# [Dokumentacja języka Visual C++ (C++/CX)](visual-c-language-reference-c-cx.md)
+# [Dokumentacja języka C++/CX](visual-c-language-reference-c-cx.md)
 ## [Krótki przewodnik (C++/CX)](quick-reference-c-cx.md)
 ## [System typów (C++/CX)](type-system-c-cx.md)
 ### [Przestrzenie nazw i widoczność typów (C++/CX)](namespaces-and-type-visibility-c-cx.md)
