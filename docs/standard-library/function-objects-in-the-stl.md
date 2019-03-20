@@ -1,18 +1,18 @@
 ---
 title: Obiekty funkcji w standardowej bibliotece C++
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 7af56f52b59b03dfed9e1233473239274a0dcbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437128"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172962"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Obiekty funkcji w standardowej bibliotece C++
 
@@ -33,9 +33,17 @@ public:
         return a < b;
     }
 };
+
+int main()
+{
+    Functor f;
+    int a = 5;
+    int b = 7;
+    int ans = f(a, b);
+}
 ```
 
-Ostatni wiersz `main` funkcji pokazuje, jak wywołać obiekt funkcji. Tego wywołania wygląda wywołanie do funkcji, ale faktycznie dzwoni operator() typu Funktor. Podobieństwo wywołanie obiektu funkcji i funkcji jest jak obiekt funkcji, który termin dostarczone.
+Ostatni wiersz `main` funkcji pokazuje, jak wywołać obiekt funkcji. Tego wywołania wygląda wywołanie funkcji, ale jego faktycznego wywoływania operator() typu Funktor. Podobieństwo wywołanie obiektu funkcji i funkcji jest jak obiekt funkcji, który termin dostarczone.
 
 ## <a name="function-objects-and-containers"></a>Funkcja obiektów i kontenerów
 
@@ -48,7 +56,7 @@ template <class Key,
 class set
 ```
 
-Typ drugiego argumentu szablonu jest obiektem funkcji `less`. Ta funkcja zwraca **true** czy pierwszy parametr przekazany do jest mniejszy niż drugi parametr przekazany. Ponieważ niektóre kontenery sortowanie swoich elementów, kontener musi sposób porównywania dwóch elementów, a jest to realizowane przy użyciu obiektu funkcji. Można zdefiniować własne sortowanie kryteria dla kontenerów, tworząc obiekt funkcji, a następnie określając jej na liście szablonów dla kontenera.
+Typ drugiego argumentu szablonu jest obiektem funkcji `less`. Ta funkcja zwraca **true** Jeśli pierwszy parametr jest mniejszy niż drugi parametr. Ponieważ niektóre kontenery sortowanie swoich elementów, kontener musi w jakiś sposób porównywania dwóch elementów. Porównanie jest wykonywane przy użyciu obiektu funkcji. Można zdefiniować własne sortowanie kryteria dla kontenerów, tworząc obiekt funkcji, a następnie określając jej na liście szablonów dla kontenera.
 
 ## <a name="function-objects-and-algorithms"></a>Obiekty funkcji i algorytmy
 

@@ -1,6 +1,6 @@
 ---
 title: '&lt;system_error —&gt; funkcji'
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 f1_keywords:
 - system_error/std::generic_category
 - system_error/std::make_error_code
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 24890830456e3c1026b02960aa650a43da3b6067
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78be83af678b553babbf1cde3d96c1507940b611
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554402"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172910"
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;system_error —&gt; funkcji
 
 ||||
 |-|-|-|
 |[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
-|[system_category](#system_category)|
+|[system_category](#system_category)|||
 
-## <a name="generic_category"></a>  generic_category
+## <a name="generic_category"></a> generic_category
 
 Reprezentuje kategorię dla ogólnych błędów.
 
 ```cpp
-extern const error_category& generic_category();
+const error_category& generic_category() noexcept;
 ```
 
 ### <a name="remarks"></a>Uwagi
@@ -43,14 +43,13 @@ extern const error_category& generic_category();
 Tworzy obiekt błędu kodu.
 
 ```cpp
-error_code make_error_code(generic_errno _Errno);
+error_code make_error_code(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*_Errno*|Wartość wyliczenia do przechowywania w obiekcie kodu błędu.|
+*Błąd*\
+`std::errc` Wartość wyliczenia do przechowywania w obiekcie kodu błędu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -63,14 +62,13 @@ Obiekt kodu błędu.
 Tworzy obiekt warunku błędu.
 
 ```cpp
-error_condition make_error_condition(generic_errno _Errno);
+error_condition make_error_condition(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*_Errno*|Wartość wyliczenia do przechowywania w obiekcie warunku błędu.|
+*Błąd*\
+`std::errc` Wartość wyliczenia do przechowywania w obiekcie kodu błędu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -83,7 +81,7 @@ Obiekt warunku błędu.
 Reprezentuje kategorię dla błędów spowodowanych przez system niskiego poziomu przepełnienia.
 
 ```cpp
-extern const error_category& system_category();
+const error_category& system_category() noexcept;
 ```
 
 ### <a name="remarks"></a>Uwagi
@@ -92,4 +90,4 @@ extern const error_category& system_category();
 
 ## <a name="see-also"></a>Zobacz także
 
-[<system_error>](../standard-library/system-error.md)<br/>
+[\<system_error>](../standard-library/system-error.md)<br/>

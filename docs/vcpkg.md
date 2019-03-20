@@ -3,15 +3,15 @@ title: vcpkg — C++ Menedżer pakietów dla Windows, Linux i MacOS
 description: vcpkg to Menedżer pakietów wiersza polecenia, które znacząco upraszcza pozyskiwanie i Instalacja bibliotek C++ typu open source na Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 02/22/2019
+ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809714"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172884"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów języka C++ dla Windows, Linux i MacOS
 
@@ -19,7 +19,7 @@ vcpkg to Menedżer pakietów wiersza polecenia, które znacząco upraszcza pozys
 
 ## <a name="simple-yet-flexible"></a>Proste, a elastyczne
 
-Za pomocą jednego polecenia możesz pobrać źródeł i tworzenie biblioteki. vcpkg to projekt typu open source dostępnych w witrynie GitHub. Można dostosować swoje prywatne clone(s) w jakikolwiek sposób, który chcesz. Na przykład można określić różne biblioteki lub różne wersje bibliotek niż co znajdują się w katalogu publicznych. Może mieć wielu klonach vcpkg na jednym komputerze, każdy z nich tworzyć niestandardowe zestawy bibliotek i/lub przełączniki kompilacji itd. Każdego klonu jest środowiskiem samodzielnych, x-copyable ze swoją własną kopią vcpkg.exe operuje tylko na własnej hierarchii. vcpkg nie została dodana do zmiennych środowiskowych i nie jest zależny w rejestrze Windows lub programu Visual Studio.
+Za pomocą jednego polecenia możesz pobrać źródeł i tworzenie biblioteki. vcpkg to projekt typu open source dostępnych w witrynie GitHub. Można dostosować swoje prywatne clone(s) w jakikolwiek sposób, który chcesz. Na przykład można określić różne biblioteki lub różne wersje bibliotek niż co znajdują się w katalogu publicznych. Może mieć wielu klonach vcpkg na jednym komputerze, każdy z nich tworzyć niestandardowe zestawy bibliotek i/lub przełączniki kompilacji itd. Każdego klonu jest niezależnym środowisku z własną kopię vcpkg.exe operuje tylko na własnej hierarchii. vcpkg nie została dodana do zmiennych środowiskowych i nie jest zależny w rejestrze Windows lub programu Visual Studio.
 
 ## <a name="sources-not-binaries"></a>Źródła nie dane binarne
 
