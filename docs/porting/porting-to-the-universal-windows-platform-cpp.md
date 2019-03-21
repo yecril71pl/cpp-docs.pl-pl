@@ -2,12 +2,12 @@
 title: Przenoszenie na platformę uniwersalną systemu Windows (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518544"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278466"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Przenoszenie na platformę uniwersalną systemu Windows (C++)
 
@@ -21,7 +21,7 @@ Ten temat zawiera poniższe procedury, aby przenoszenie kodu do platformy uniwer
 
 - [Przenoszenie składnika wykonawczego Windows 8.1 do platformy uniwersalnej systemu Windows](#BK_81Component)
 
-Jeśli masz klasycznego pulpitu Win32 plik DLL, i chcesz wywołać go z aplikacją platformy uniwersalnej systemu Windows, możesz zrobić to w także. Korzystanie z tych procedur, można utworzyć warstwę interfejsu użytkownika platformy uniwersalnej systemu Windows, dla istniejącego pulpitu Windows klasycznych aplikacji języka C++ lub standardowego kodu C++ dla wielu platform. Zobacz [porady: używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Jeśli masz klasycznego pulpitu Win32 plik DLL, i chcesz wywołać go z aplikacją platformy uniwersalnej systemu Windows, możesz zrobić to w także. Korzystanie z tych procedur, można utworzyć warstwę interfejsu użytkownika platformy uniwersalnej systemu Windows, dla istniejącego pulpitu Windows klasycznych aplikacji języka C++ lub standardowego kodu C++ dla wielu platform. Zobacz [jak: Używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
 ## <a name="BK_81StoreApp"></a> Przenoszenie aplikacji App Store Windows 8.1 do platformy uniwersalnej systemu Windows
 
@@ -74,7 +74,7 @@ Jeśli masz bibliotekę DLL lub składnik środowiska wykonawczego Windows, któ
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Port składnika wykonawczego Windows 8.1 do platformy uniwersalnej systemu Windows
 
-1. W **nowy projekt** okna dialogowego w programie Visual Studio 2017, zlokalizuj **Windows Universal** węzła. Jeśli nie widzisz tego węzła, zainstaluj [Tools for Windows 10](http://go.microsoft.com/fwlink/p/?LinkID=617903) pierwszy. Wybierz **składnika środowiska wykonawczego Windows** szablonu, nadaj nazwę składnika, a następnie wybierz **OK** przycisku. Nazwa składnika będzie służyć jako nazwa przestrzeni nazw, dzięki czemu możesz chcieć użyć takiej samej nazwie jak obszar nazw usługi starych projektów. Wymaga to tworzenia projektu w innym folderze ze starą. Jeśli wybierzesz inną nazwę, możesz zaktualizować nazwę przestrzeni nazw w plikach wygenerowanego kodu.
+1. W **nowy projekt** okna dialogowego w programie Visual Studio 2017, zlokalizuj **Windows Universal** węzła. Jeśli nie widzisz tego węzła, zainstaluj [zestawu Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) pierwszy. Wybierz **składnika środowiska wykonawczego Windows** szablonu, nadaj nazwę składnika, a następnie wybierz **OK** przycisku. Nazwa składnika będzie służyć jako nazwa przestrzeni nazw, dzięki czemu możesz chcieć użyć takiej samej nazwie jak obszar nazw usługi starych projektów. Wymaga to tworzenia projektu w innym folderze ze starą. Jeśli wybierzesz inną nazwę, możesz zaktualizować nazwę przestrzeni nazw w plikach wygenerowanego kodu.
 
 1. Zamknij projekt.
 

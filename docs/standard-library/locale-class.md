@@ -1,6 +1,6 @@
 ---
 title: locale — Klasa
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677919"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278518"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -154,7 +154,7 @@ Reguły formatowania numerycznego dla kolejnych wstawień do `cout` pozostaje ta
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Łączenie](#combine)|Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.|
+|[combine](#combine)|Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.|
 |[Nazwa](#name)|Zwraca przechowywaną nazwę ustawień regionalnych.|
 
 ### <a name="static-functions"></a>Funkcje statyczne
@@ -403,8 +403,14 @@ The previous locale was: C
 
 Klasa składowej zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.
 
-Identyfikator klasy {chronione: id(); prywatne: id(const id&) / / Niezdefiniowany void operator =(const id&) / / Niezdefiniowany};
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>Uwagi
 
 Klasa elementu członkowskiego opisuje wymagany przez każdy reguł ustawień regionalnych unikatowy obiekt statyczny element członkowski. Należy pamiętać, że nie można kopiować ani przypisać obiekt klasy `id`.
@@ -742,7 +748,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
 [Strony kodowe](../c-runtime-library/code-pages.md)<br/>
 [Nazwy lokalne, języki i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

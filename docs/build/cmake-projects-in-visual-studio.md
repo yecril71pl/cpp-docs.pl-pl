@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 67bf20248933b28e9c7c0d87c598c0449d6bed0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823773"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278453"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake w programie Visual Studio
 
@@ -80,7 +80,7 @@ Nie wszystkie elementy w pamięci podręcznej jest importowany.  Właściwości,
 
 Aby skompilować projekt CMake, masz następujące opcje:
 
-1. Wybierz element docelowy w **debugowania** listy rozwijanej i naciśnij klawisz **F5**, lub kliknij przycisk **Uruchom** przycisku (zielony trójkąt). Automatycznie kompilacje projektu po pierwsze, podobnie jak rozwiązanie programu Visual Studio.
+1. Na pasku narzędzi ogólne, Znajdź **konfiguracje** listy rozwijanej; domyślnie prawdopodobnie jest widoczny "Linux-Debug" lub "x64 debugowanie". Wybierz żądaną konfiguracją i naciśnij klawisz **F5**, lub kliknij przycisk **Uruchom** (zielony trójkąt) przycisk na pasku narzędzi. Automatycznie kompilacje projektu po pierwsze, podobnie jak rozwiązanie programu Visual Studio.
 
 1. Kliknij prawym przyciskiem myszy pliku CMakeLists.txt i wybierz pozycję **kompilacji** z menu kontekstowego. Jeśli masz wiele elementów docelowych w strukturze folderów, można tworzyć wszystkie lub tylko jeden określony element docelowy.
 

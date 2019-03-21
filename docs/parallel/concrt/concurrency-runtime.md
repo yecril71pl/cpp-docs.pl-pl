@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258336"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278557"
 ---
 # <a name="concurrency-runtime"></a>Współbieżność środowiska wykonawczego
 
@@ -99,7 +99,6 @@ Aby uzyskać dokumentację referencyjną, zobacz [odwołania](../../parallel/con
 |||
 |-|-|
 |[Programowanie asynchroniczne wzorców i porady w Hilo (aplikacje Windows Store przy użyciu języków C++ i XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Dowiedz się, jak firma Microsoft umożliwia środowisku uruchomieniowym współbieżności: implementowania asynchronicznych operacji w Hilo, aplikacji środowiska wykonawczego Windows, korzystając z C++ i XAML.|
-|[Przykłady kodu dla środowiska uruchomieniowego współbieżności i Biblioteka równoległych wzorcem w Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Zawiera przykładowe aplikacje i narzędzia, które pokazują, w czasie wykonywania współbieżności.|
 |[Programowanie równoległe w kodzie macierzystym bloga](http://go.microsoft.com/fwlink/p/?linkid=183873)|Udostępnia dodatkowe szczegółowy blog artykuły dotyczące programowania równoległego w środowisku uruchomieniowym współbieżności.|
 |[Przetwarzania równoległego na forum C++ i kodu natywnego](http://go.microsoft.com/fwlink/p/?linkid=183874)|Można uczestniczyć w dyskusjach społeczności o środowisku uruchomieniowym współbieżności.|
 |[Programowanie równoległe](/dotnet/standard/parallel-programming/index)|Zawiera informacje na temat równoległych model programowania, który jest dostępny w programie .NET Framework.|
