@@ -1,15 +1,15 @@
 ---
 title: Obsługa otwierania folderu dla systemów kompilacji języka C++ w programie Visual Studio
-ms.date: 01/21/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a7e352d7978ba5c973d779224639006fa984e4f0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823779"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356091"
 ---
 # <a name="open-folder-projects-for-c"></a>Otwórz Folder projektów w języku C++
 
@@ -49,7 +49,7 @@ Funkcja IntelliSense i przeglądanie częściowo zachowanie zależy od aktywną 
       "includePath": [ "include" ],
       "defines": [ "_DEBUG" ],
       "compilerSwitches": "/std:c++17",
-      "intelliSenseMode": "msvc-x64",
+      "intelliSenseMode": "windows-msvc-x64",
       "forcedInclude": [ "pch.h" ],
       "undefines": []
     }
@@ -64,7 +64,7 @@ Można zautomatyzować skrypty kompilacji lub innych zewnętrznych operacji na p
 
 ![Otwórz Folder skonfigurować zadania](media/open-folder-config-tasks.png)
 
-Tworzy (lub zostanie otwarty) `tasks.vs.json` pliku w folderze .vs, który program Visual Studio tworzy w folderze głównym projektu. Można zdefiniować wszystkie dowolnego zadania w tym pliku, a następnie wywołaj ją z **Eksploratora rozwiązań** menu kontekstowego. Poniższy przykład pokazuje plik pliku tasks.vs.json, który definiuje jedno zadanie. `taskName` Określa nazwę, która jest wyświetlana w menu kontekstowym. `appliesTo` Określa pliki, które można wykonać polecenia na. `command` Właściwość odwołuje się do zmiennej środowiskowej COMSPEC, który określa ścieżkę do konsoli (cmd.exe na Windows). Możesz też przywołać zmienne środowiskowe, które są zadeklarowane w CppProperties.json lub w pliku CMakeSettings.json. `args` Właściwość określa wiersz polecenia do wywołania. `${file}` — Makro pobiera wybranego pliku w **Eksploratora rozwiązań**. Poniższy przykład spowoduje wyświetlenie nazwy pliku .cpp zaznaczony.
+Tworzy (lub zostanie otwarty) **tasks.vs.json** pliku w folderze .vs, który program Visual Studio tworzy w folderze głównym projektu. Można zdefiniować wszystkie dowolnego zadania w tym pliku, a następnie wywołaj ją z **Eksploratora rozwiązań** menu kontekstowego. Poniższy przykład pokazuje plik pliku tasks.vs.json, który definiuje jedno zadanie. `taskName` Określa nazwę, która jest wyświetlana w menu kontekstowym. `appliesTo` Określa pliki, które można wykonać polecenia na. `command` Właściwość odwołuje się do zmiennej środowiskowej COMSPEC, który określa ścieżkę do konsoli (cmd.exe na Windows). Możesz też przywołać zmienne środowiskowe, które są zadeklarowane w CppProperties.json lub w pliku CMakeSettings.json. `args` Właściwość określa wiersz polecenia do wywołania. `${file}` — Makro pobiera wybranego pliku w **Eksploratora rozwiązań**. Poniższy przykład spowoduje wyświetlenie nazwy pliku .cpp zaznaczony.
 
 ```json
 {
@@ -87,7 +87,7 @@ Aby uzyskać więcej informacji, zobacz [odwołanie do schematu pliku Tasks.vs.j
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfiguruj parametry debugowania za pomocą pliku launch.vs.json
 
-Aby dostosować argumenty wiersza polecenia programu, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksploratora rozwiązań** i wybierz **ustawienia debugowania i uruchamiania**. Spowoduje to otwarcie istniejącego `launch.vs.json` pliku, lub jeśli żaden nie istnieje, zostanie utworzony nowy plik wstępnie wypełnione informacjami o programie wybrano.
+Aby dostosować argumenty wiersza polecenia programu, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksploratora rozwiązań** i wybierz **ustawienia debugowania i uruchamiania**. Spowoduje to otwarcie istniejącego **launch.vs.json** pliku, lub jeśli żaden nie istnieje, zostanie utworzony nowy plik wstępnie wypełnione informacjami o programie wybrano.
 
 Aby określić dodatkowe argumenty, wystarczy dodać ich w `args` tablicę JSON, jak pokazano w poniższym przykładzie:
 

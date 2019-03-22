@@ -1,12 +1,12 @@
 ---
 title: Przegląd Konwencji ARM64 ABI
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816545"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356195"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd Konwencji ARM64 ABI
 
@@ -191,7 +191,7 @@ Do zwrócenia przez wartość, nie mogą być przekazywane za pośrednictwem rej
 
 Następujące ABI ogłoszonym przez ARM stos musi pozostać 16-bajtowy dostosowane przez cały czas. AArch64 zawiera funkcja sprzętowa, która generuje wyrównania stosu błędów zawsze wtedy, gdy jest wykonywane względem SP obciążenia lub magazynu i PS jest nie 16-bajtowy wyrównane. Windows działa z tą funkcją włączone przez cały czas.
 
-Funkcje, które przydzielić 4k co najmniej warte stosu należy się upewnić, że jest korzysta z każdej strony przed ostatnią stronę w kolejności, co pozwala na zapewnienie żaden kod nie może "przeć za pośrednictwem" stron ochrony, używane przez program Windows do rozwijania stosu. Zazwyczaj jest to realizowane przez `__chkstk` pomocnika, która ma niestandardowy Konwencja wywoływania spełniającą alokacji stosu całkowita podzielona przez 16 w x8.
+Funkcje, które przydzielić 4k co najmniej warte stosu należy się upewnić, że jest korzysta z każdej strony przed ostatnią stronę w kolejności, co pozwala na zapewnienie żaden kod nie może "przeć za pośrednictwem" stron ochrony, używane przez program Windows do rozwijania stosu. Zazwyczaj jest to realizowane przez `__chkstk` pomocnika, która ma niestandardowy Konwencja wywoływania spełniającą alokacji stosu całkowita podzielona przez 16 w x15.
 
 ## <a name="red-zone"></a>Czerwony strefy
 

@@ -1,14 +1,14 @@
 ---
 title: Plik CppProperties.json — dokumentacja schematu
-ms.date: 03/05/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake in Visual C++
-ms.openlocfilehash: fd655de3313dd95eb3fcefaeba21e703d32e860a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 43ffa0e92649fe233c6a743d4b64a2749cb28f5a
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823685"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356104"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Plik CppProperties.json — dokumentacja schematu
 
@@ -115,7 +115,9 @@ Konfiguracja może mieć jedną z następujących właściwości:
 |`compilerSwitches`|jeden lub więcej dodatkowych przełączników, które mogą mieć wpływ na zachowanie funkcji IntelliSense|
 |`forcedInclude`|Nagłówek, aby automatycznie dołączone każda jednostka kompilacji (mapuje /FI dla MSVC lub - zawierają clang)|
 |`undefines`|Lista makr, być niezdefiniowana (mapuje do /U dla MSVC)|
-|`intelliSenseMode`|Aparat IntelliSense, która ma być używany. Warianty określonej architektury można określić dla MSVC i kompilatora gcc, Clang:<br/><br/>-msvc-x86 (ustawienie domyślne)<br/>- msvc-x64<br/>- msvc-arm<br/>-windows-clang-x86<br/>- windows-clang-x64<br/>-windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>Linux-arm<br/>-gccarm|
+|`intelliSenseMode`|Aparat IntelliSense, która ma być używany. Warianty określonej architektury można określić dla MSVC i kompilatora gcc, Clang:<br/><br/>-windows msvc x86 (ustawienie domyślne)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>-windows-clang-x86<br/>- windows-clang-x64<br/>-windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>Linux-arm<br/>-gccarm|
+
+Uwaga: Wartości `msvc-x86` i `msvc-x64` są obsługiwane tylko dla starszych powodów. Użyj `windows-msvc*` wariantów.
 
 ## <a name="custom-configurations"></a>Konfiguracje niestandardowe
 
@@ -186,7 +188,7 @@ Można zdefiniować niestandardowe zmienne środowiskowe w `CppProperties.json` 
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "inheritEnvironments": [
@@ -199,7 +201,7 @@ Można zdefiniować niestandardowe zmienne środowiskowe w `CppProperties.json` 
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }
@@ -227,7 +229,7 @@ Można również definiować **środowisk** właściwości w konfiguracji, tak �
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "environments": [
@@ -246,7 +248,7 @@ Można również definiować **środowisk** właściwości w konfiguracji, tak �
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }

@@ -1,14 +1,14 @@
 ---
 title: Konfigurowanie narzędzia CMake debugowania sesji w programie Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9a4dd009544a4590c336697ba2162eec45718869
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823921"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356169"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurowanie narzędzia CMake sesjami debugowania
 
@@ -20,7 +20,7 @@ Można również uruchomić sesję debugowania z menu Narzędzia CMake.
 
 ## <a name="customize-debugger-settings"></a>Dostosowywanie ustawień debugera
 
-Aby dostosować ustawienia debugera dla dowolnego pliku wykonywalnego docelowych narzędzia CMake w projekcie, kliknij prawym przyciskiem myszy w określonym pliku CMakeLists.txt, a następnie wybierz **ustawienia debugowania i uruchamiania**. Po wybraniu docelowych narzędzia CMake w podmenu plik o nazwie `launch.vs.json` zostanie utworzony. Ten plik jest wstępnie wypełniane przy użyciu informacji o docelowej narzędzia CMake, wybrana przez Ciebie i pozwala określić dodatkowe parametry, takie jak argumenty programu lub typ debugera. Aby odwołać się dowolnym kluczu w `CMakeSettings.json` plików, należy poprzedzić go `cmake.` w `launch.vs.json`. W poniższym przykładzie przedstawiono prosty `launch.vs.json` pliku, który pobiera wartość `remoteCopySources` w `CMakeSettings.json` pliku dla aktualnie wybranej konfiguracji:
+Aby dostosować ustawienia debugera dla dowolnego pliku wykonywalnego docelowych narzędzia CMake w projekcie, kliknij prawym przyciskiem myszy w określonym pliku CMakeLists.txt, a następnie wybierz **ustawienia debugowania i uruchamiania**. (Lub wybierz element docelowy w **widok elementów docelowych** w **Eksploratora rozwiązań**.) Po wybraniu docelowych narzędzia CMake w podmenu plik o nazwie **launch.vs.json** zostanie utworzony. Ten plik jest wstępnie wypełniane przy użyciu informacji o docelowej narzędzia CMake, wybrana przez Ciebie i pozwala określić dodatkowe parametry, takie jak argumenty programu lub typ debugera. Aby odwołać się dowolnym kluczu w **CMakeSettings.json** plików, należy poprzedzić go `cmake.` w **pliku launch.vs.json**. W poniższym przykładzie przedstawiono prosty **launch.vs.json** pliku, który pobiera wartość `remoteCopySources` w **CMakeSettings.json** pliku dla aktualnie wybranej konfiguracji:
 
 ```json
 {
@@ -38,11 +38,11 @@ Aby dostosować ustawienia debugera dla dowolnego pliku wykonywalnego docelowych
 }
 ```
 
-Zaraz po zapisaniu `launch.vs.json` plik, zostanie utworzony wpis w **element startowy** lista rozwijana z nową nazwą. Edytując `launch.vs.json` pliku, można utworzyć dla dowolnej liczby elementów docelowych narzędzia CMake, takich jak wiele konfiguracji debugowania.
+Zaraz po zapisaniu **launch.vs.json** plik, zostanie utworzony wpis w **element startowy** lista rozwijana z nową nazwą. Edytując **launch.vs.json** pliku, można utworzyć dla dowolnej liczby elementów docelowych narzędzia CMake, takich jak wiele konfiguracji debugowania.
 
 ## <a name="support-for-cmakesettings-variables"></a>Obsługa zmiennych pliku cmakesettings na pozycji
 
- `Launch.vs.json` obsługuje zmienne, które są zadeklarowane w `CMakeSettings.json` (patrz poniżej) i które mają zastosowanie do konfiguracji aktualnie wybrany. Także ma klucz o nazwie `currentDir`, który ustawia bieżący katalog uruchamiania aplikacji:
+ **Launch.VS.JSON** obsługuje zmienne, które są zadeklarowane w **CMakeSettings.json** (patrz poniżej) i które mają zastosowanie do konfiguracji aktualnie wybrany. Także ma klucz o nazwie `currentDir`, który ustawia bieżący katalog uruchamiania aplikacji:
 
 ```json
 {

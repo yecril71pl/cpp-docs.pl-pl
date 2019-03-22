@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 101181e72aaf30ca8bc1d0e4191649fcc4155a64
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328346"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356260"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora od C4800 za pośrednictwem C5999
 
@@ -169,7 +169,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 ## <a name="warning-messages"></a>Komunikaty ostrzegawcze
 
 |Ostrzeżenie|Komunikat|
-|-------------|-------------|
+|-------------|------------|
 |[Ostrzeżenie (poziom 4) kompilatora C4800](compiler-warning-level-3-c4800.md)| Niejawna konwersja z "*typu*" na wartość logiczna. Prawdopodobieństwo utraty informacji możliwych |
 |[Ostrzeżenie kompilatora (poziom 1) C4803](compiler-warning-level-1-c4803.md)|"*metoda*": podniesiona metoda ma klasę magazynu inną od zdarzenia, "*zdarzeń*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4804](compiler-warning-level-1-c4804.md)|"*operacji*": niebezpieczne użycie typu "bool" w operacji|

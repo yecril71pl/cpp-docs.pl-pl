@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746920"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356182"
 ---
 # <a name="managed-types-ccli"></a>Typy zarządzane (C++/CLI)
 
@@ -46,19 +46,21 @@ W poniższej tabeli przedstawiono słowa kluczowe dla wbudowanych typów języka
 
 |Typ wizualizacji języka C++|Typ programu .NET Framework|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**podpisany char** (zobacz [/j.](../build/reference/j-default-char-type-is-unsigned.md) Aby uzyskać więcej informacji)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**podwójne** i **typu long double**|**System.Double**|
-|**float**|**System.Single**|
-|**int**, **podpisany int**, **długie**, i **podpisany długo**|**System.Int32**|
-|**unsigned int** i **unsigned long**|**System.UInt32**|
-|**__int64** i **podpisany __int64**|**System.Int64**|
-|**__int64 bez znaku**|**System.UInt64**|
-|**krótki** i **short ze znakiem**|**System.Int16**|
-|**short bez znaku**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**podpisany char** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**krótki** i **short ze znakiem**|<xref:System.Int16?displayProperty=nameWithType>|
+|**short bez znaku**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**, **podpisany int**, **długie**, i **podpisany długo**|<xref:System.Int32?displayProperty=nameWithType>|
+|**unsigned int** i **unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**__int64** i **podpisany __int64**|<xref:System.Int64?displayProperty=nameWithType>|
+|**__int64 bez znaku**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**podwójne** i **typu long double**|<xref:System.Double?displayProperty=nameWithType>|
+
+Aby uzyskać więcej informacji na temat opcji kompilatora jako domyślna na podpisane lub niepodpisane **char**, zobacz [/J (domyślny typ char jest niepodpisany)](../build/reference/j-default-char-type-is-unsigned.md).
 
 ## <a name="version_issues"></a> Problemy z wersją w przypadku typów wartości zagnieżdżonych w typach natywnych
 

@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278453"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356144"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake w programie Visual Studio
 
@@ -17,7 +17,7 @@ Narzędzie CMake to narzędzie dla wielu platform, typu open-source Definiowanie
 
 W programie Visual Studio 2015, Visual Studio użytkownicy mogą używać [generatora CMake](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) do generowania plików projektu MSBuild, które IDE następnie zużywa dla technologii IntelliSense, przeglądanie i kompilacji.
 
-Program Visual Studio 2017 wprowadzono obsługę narzędzia CMake, w tym [projekty narzędzia CMake dla wielu platform](../linux/cmake-linux-project.md). **Visual C++ Tools for CMake** składnik używa **Otwórz Folder** funkcję, aby włączyć środowisko IDE będzie korzystają z plików projektu narzędzia CMake (na przykład pliku CMakeLists.txt) bezpośrednio na potrzeby funkcji IntelliSense i przeglądania. Generatory Ninja i programu Visual Studio są obsługiwane. Jeśli używasz generator programu Visual Studio, tymczasowy plik projektu zostanie wygenerowany i przekazane do msbuild.exe, ale nigdy nie jest załadowany do celów przeglądaniu lub IntelliSense. Możesz zaimportować istniejąca pamięć podręczna CMake; Program Visual Studio automatycznie wyodrębnia niestandardowe zmienne i tworzy wstępnie wypełnionych `CMakeSettings.json` pliku. 
+Program Visual Studio 2017 wprowadzono obsługę narzędzia CMake, w tym [projekty narzędzia CMake dla wielu platform](../linux/cmake-linux-project.md). **Visual C++ Tools for CMake** składnik używa **Otwórz Folder** funkcję, aby włączyć środowisko IDE będzie korzystają z plików projektu narzędzia CMake (na przykład pliku CMakeLists.txt) bezpośrednio na potrzeby funkcji IntelliSense i przeglądania. Generatory Ninja i programu Visual Studio są obsługiwane. Jeśli używasz generator programu Visual Studio, tymczasowy plik projektu zostanie wygenerowany i przekazane do msbuild.exe, ale nigdy nie jest załadowany do celów przeglądaniu lub IntelliSense. Możesz zaimportować istniejąca pamięć podręczna CMake; Program Visual Studio automatycznie wyodrębnia niestandardowe zmienne i tworzy wstępnie wypełnionych **CMakeSettings.json** pliku. 
 
 ## <a name="installation"></a>Instalacja
 
@@ -47,18 +47,18 @@ Można również wyświetlić swoje projekty logicznie uporządkowane według el
 
 ![Przycisk Widok elementów docelowych narzędzia CMake](media/cmake-targets-view.png)
 
-Program Visual Studio używa pliku o nazwie `CMakeSettings.json` do przechowywania zmiennych środowiskowych lub opcji wiersza polecenia dla Cmake.exe. `CMakeSettings.json` Umożliwia także do definiowania i przechowywać wiele CMake konfiguracje kompilacji i łatwo przełączać się między nimi w środowisku IDE. 
+Program Visual Studio używa pliku o nazwie **CMakeSettings.json** do przechowywania zmiennych środowiskowych lub opcji wiersza polecenia dla Cmake.exe. **CMakeSettings.json** również umożliwia definiowanie i przechowywanie wielu CMake konfiguracje kompilacji i łatwo przełączać się między nimi w środowisku IDE. 
 
-W przeciwnym razie użyj `CMakeLists.txt` tak samo jak w każdym projekcie CMake, wybierz pliki źródłowe, Znajdź bibliotek, ustaw opcje kompilatora i konsolidatora i określ inny system kompilacji będzie można powiązane informacje.
+W przeciwnym razie użyj **CMakeLists.txt** tak samo jak w każdym projekcie CMake, wybierz pliki źródłowe, Znajdź bibliotek, ustaw opcje kompilatora i konsolidatora i określ inny system kompilacji będzie można powiązane informacje.
 
-Jeśli potrzebujesz przekazać argumenty do pliku wykonywalnego w czasie debugowania, możesz użyć innego pliku o nazwie `launch.vs.json`. W niektórych przypadkach program Visual Studio automatycznie wygeneruje tych plików; można edytować je ręcznie. Mogą również samodzielnie utworzyć plik.
+Jeśli potrzebujesz przekazać argumenty do pliku wykonywalnego w czasie debugowania, możesz użyć innego pliku o nazwie **launch.vs.json**. W niektórych przypadkach program Visual Studio automatycznie wygeneruje tych plików; można edytować je ręcznie. Mogą również samodzielnie utworzyć plik.
 
 > [!NOTE]
-> Dla innych rodzajów projektów Otwórz Folder dwa dodatkowe pliki JSON służą: `CppProperties.json` i `tasks.vs.json`. Oba te są odpowiednie dla projektów narzędzia CMake.
+> Dla innych rodzajów projektów Otwórz Folder są używane dwa dodatkowe pliki JSON: **Plik CppProperties.json** i **tasks.vs.json**. Oba te są odpowiednie dla projektów narzędzia CMake.
 
 ## <a name="import-an-existing-cache"></a>Importowanie istniejąca pamięć podręczna
 
-Podczas importowania istniejącego pliku CMakeCache.txt programu Visual Studio wyodrębnia niestandardowe zmienne i automatycznie tworzy wstępnie wypełnionych [ `CMakeSettings.json` ](#cmake_settings) na ich podstawie plików. Oryginalny pamięci podręcznej nie jest modyfikowany w dowolny sposób i nadal można używać z poziomu wiersza polecenia lub przy użyciu dowolnego narzędzia lub IDE został użyty do jego wygenerowania. Nowy `CMakeSettings.json` plik zostanie umieszczony obok projektu głównego pliku CMakeLists.txt. Program Visual Studio generuje nową pamięć podręczną na podstawie pliku ustawień. Można zastąpić Generowanie automatyczne pamięci podręcznej w **narzędzia | Opcje | Narzędzie CMake | Ogólne** okna dialogowego.
+Podczas importowania istniejącego pliku CMakeCache.txt programu Visual Studio wyodrębnia niestandardowe zmienne i automatycznie tworzy wstępnie wypełnionych [ **CMakeSettings.json** ](#cmake_settings) na ich podstawie plików. Oryginalny pamięci podręcznej nie jest modyfikowany w dowolny sposób i nadal można używać z poziomu wiersza polecenia lub przy użyciu dowolnego narzędzia lub IDE został użyty do jego wygenerowania. Nowy **CMakeSettings.json** plik zostanie umieszczony obok projektu głównego pliku CMakeLists.txt. Program Visual Studio generuje nową pamięć podręczną na podstawie pliku ustawień. Można zastąpić Generowanie automatyczne pamięci podręcznej w **narzędzia | Opcje | Narzędzie CMake | Ogólne** okna dialogowego.
 
 Nie wszystkie elementy w pamięci podręcznej jest importowany.  Właściwości, takie jak generator i lokalizację kompilatorów są zastępowane przy użyciu ustawień domyślnych, które są znane do pracy ze środowiska IDE.
 
@@ -88,7 +88,7 @@ Aby skompilować projekt CMake, masz następujące opcje:
 
 ![Polecenia menu kompilacji CMake](media/cmake-build-menu.png "menu poleceń kompilacji CMake")
 
-Konfiguracje kompilacji, zmienne środowiskowe, argumenty wiersza polecenia i inne ustawienia można dostosować bez modyfikowania pliku CMakeLists.txt przy użyciu `CMakeSettings.json` pliku. Aby uzyskać więcej informacji, zobacz [CMake dostosować ustawienia](customize-cmake-settings.md).
+Konfiguracje kompilacji, zmienne środowiskowe, argumenty wiersza polecenia i inne ustawienia można dostosować bez modyfikowania pliku CMakeLists.txt przy użyciu **CMakeSettings.json** pliku. Aby uzyskać więcej informacji, zobacz [CMake dostosować ustawienia](customize-cmake-settings.md).
 
 Jak można oczekiwać wyników kompilacji są wyświetlane w **okno danych wyjściowych** i **lista błędów**.
 
@@ -104,7 +104,7 @@ Aby debugować projekt CMake, wybierz żądaną konfiguracją i naciśnij klawis
 
 **Uruchom** lub **F5** polecenia najpierw skompilować projekt, jeśli zostały zmienione od poprzedniej kompilacji.
 
-Można dostosować CMake z sesji debugowania przez ustawienie właściwości `launch.vs.json` pliku. Aby uzyskać więcej informacji, zobacz [konfigurowania CMake sesjami debugowania](configure-cmake-debugging-sessions.md).
+Można dostosować CMake z sesji debugowania przez ustawienie właściwości **launch.vs.json** pliku. Aby uzyskać więcej informacji, zobacz [konfigurowania CMake sesjami debugowania](configure-cmake-debugging-sessions.md).
 
 
 ## <a name="editing-cmakeliststxt-files"></a>Edytowanie pliku CMakeLists.txt plików
@@ -120,13 +120,13 @@ Bezpośrednio po zapisaniu pliku kroku konfiguracji automatycznie ponownie uruch
 
 ## <a name="cmake-configure-step"></a>Krok konfigurowania CMake
 
-Gdy istotnych zmian do `CMakeSettings.json` lub do pliku CMakeLists.txt plików, programu Visual Studio automatycznie uruchamia ponownie narzędzia CMake krok konfigurowania. Jeśli krok konfiguracja zakończy się bez błędów, zbieranych informacji są dostępne w funkcji C++ IntelliSense i usług językowych również w kompilacji i debugowania operacji.
+Gdy istotnych zmian do **CMakeSettings.json** lub do pliku CMakeLists.txt plików, programu Visual Studio automatycznie uruchamia ponownie narzędzia CMake krok konfigurowania. Jeśli krok konfiguracja zakończy się bez błędów, zbieranych informacji są dostępne w funkcji C++ IntelliSense i usług językowych również w kompilacji i debugowania operacji.
 
 Korzystając z wielu projektów CMake taką samą nazwę konfiguracji narzędzia CMake (na przykład x86-Debug), wszystkie z nich są konfigurowane i wbudowane (folder główny własne kompilacji) po wybraniu tej konfiguracji. Można debugować cele ze wszystkich projektów CMake, które uczestniczą w tej konfiguracji narzędzia CMake.
 
    ![Kompilacji CMake tylko element menu](media/cmake-build-only.png "kompilacji CMake tylko element menu")
 
-Ogranicz kompilacji i debugowania sesji podzestaw projektów w obszarze roboczym, Utwórz nową konfigurację o unikatowej nazwie w `CMakeSettings.json` pliku i dotyczy tylko tych projektów. Po wybraniu tej konfiguracji IntelliSense i kompilacja i debugowanie poleceń są włączone tylko dla tych określonych projektów.
+Ogranicz kompilacji i debugowania sesji podzestaw projektów w obszarze roboczym, Utwórz nową konfigurację o unikatowej nazwie w **CMakeSettings.json** pliku i dotyczy tylko tych projektów. Po wybraniu tej konfiguracji IntelliSense i kompilacja i debugowanie poleceń są włączone tylko dla tych określonych projektów.
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>Rozwiązywanie problemów z błędami pamięci podręcznej narzędzia CMake
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 6c9f44e9619b9c34c9424e0be78186d14f2d6a21
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 618b3e58a52e89561439fe76bf1b30e3cbbce001
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327138"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356208"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -90,7 +90,7 @@ Użyj **setlocale** funkcję, aby ustawić, zmienić lub sprawdzić niektóre lu
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsetlocale —**|**setlocale**|**setlocale**|**_wsetlocale**|
+|**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
 
 *Kategorii* argument określa części informacji o ustawieniach regionalnych programu, których to dotyczy. Makra używane do *kategorii* i części programu, które wpływają, są następujące:
 
@@ -271,8 +271,8 @@ int main()
     unsigned        threadID;
     unsigned char   str[BUFF_SIZE];
 
-    // Configure per-thread locale to cause all subsequently created
-    // threads to have their own locale.
+    // Enable per-thread locale causes all subsequent locale
+    // setting changes in this thread to only affect this thread.
     _configthreadlocale(_ENABLE_PER_THREAD_LOCALE);
 
     // Set the locale of the main thread to US English.

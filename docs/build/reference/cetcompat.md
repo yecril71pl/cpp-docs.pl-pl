@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT (zgodny z technologia wymuszania przepływu sterowania)
+title: / CETCOMPAT (zgodny z CET cień stosu)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809850"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356018"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (zgodny z technologia wymuszania przepływu sterowania)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (zgodny z CET cień stosu)
 
-Określa, czy należy oznaczyć obrazu wykonywalnego jako niezgodny z technologia wymuszania przepływu sterowania (CET).
+Określa, czy należy oznaczyć obrazu wykonywalnego jako niezgodny z stos cieni technologia wymuszania (CET) przepływ sterowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,13 +24,13 @@ Określa, czy należy oznaczyć obrazu wykonywalnego jako niezgodny z technologi
 ## <a name="arguments"></a>Argumenty
 
 **BRAK**<br/>
-Określa, że plik wykonywalny nie powinien być oznaczony zgodny z CET.
+Określa, że plik wykonywalny nie powinien być oznaczony zgodny z CET cień stosu.
 
 ## <a name="remarks"></a>Uwagi
 
-Technologia wymuszania przepływu sterowania (CET) jest funkcją procesora komputera, która oferuje możliwości do obrony przed niektórych rodzajów ataków złośliwego oprogramowania. Aby uzyskać więcej informacji, zobacz [Intel przepływ sterowania wymuszania Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+Stos cieni technologia wymuszania (CET) przepływu sterowania jest funkcją procesora komputera, która zapewnia możliwości do obrony przed zwracanym programowanie zorientowane na obiekty (w prawym GÓRNYM) na podstawie atakami złośliwego oprogramowania. Aby uzyskać więcej informacji, zobacz [Intel przepływ sterowania wymuszania Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-**/CETCOMPAT** — opcja konsolidatora informuje konsolidator, aby oznaczyć danych binarnych jako CET zgodny. **/CETCOMPAT:No** oznacza plik binarny, co nie jest zgodna z CET. Jeśli obie opcje są określone w wierszu polecenia, określony ostatni z nich jest używany. Ten przełącznik dotyczy aktualnie tylko x86 i x64 architektury.
+**/CETCOMPAT** — opcja konsolidatora informuje konsolidator, aby oznaczyć danych binarnych jako zgodnego z CET cień stosu. **/CETCOMPAT:No** oznacza plik binarny, co nie jest zgodna z CET cień stosu. Jeśli obie opcje są określone w wierszu polecenia, określony ostatni z nich jest używany. Ten przełącznik dotyczy aktualnie tylko x86 i x64 architektury.
 
 **/CETCOMPAT** opcja jest dostępna, począwszy od zestawu narzędzi Visual Studio 3 (wersja zapoznawcza) 2019 r.
 

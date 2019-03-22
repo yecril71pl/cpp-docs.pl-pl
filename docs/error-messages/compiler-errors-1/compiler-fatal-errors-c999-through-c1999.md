@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328249"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356221"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Błędy krytyczne kompilatora od C999 do C1999
 
@@ -70,7 +70,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |Błąd|Komunikat|
 |-----------|-------------|
 |[Błąd krytyczny C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|Nieznany komunikat, wybierz polecenie Pomoc techniczna w Visual C++ menu Pomoc lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji|
-|[Błąd krytyczny C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Wystąpił błąd wewnętrzny w kompilatorze.<br /><br /> (plik kompilatora '*pliku*", wiersz *numer*)<br /><br /> Aby obejść ten problem, spróbuj uprościć lub zmienić program w pobliżu miejsc wymienionych powyżej. Wybierz polecenie Pomoc techniczna w Visual C++ menu Pomoc lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji|
+|[Błąd krytyczny C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Wystąpił błąd wewnętrzny w kompilatorze.<br /> (plik kompilatora '*pliku*", wiersz *numer*)<br /> Aby obejść ten problem, spróbuj uprościć lub zmienić program w pobliżu miejsc wymienionych powyżej. Wybierz polecenie Pomoc techniczna w Visual C++ menu Pomoc lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji|
 |[Błąd krytyczny C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|Kompilator nie ma miejsca na stercie w przebiegu 2|
 |[Błąd krytyczny C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|Licznik błędów przekracza *numer*; zatrzymywanie kompilacji|
 |[Błąd krytyczny C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|Nieoczekiwany koniec pliku znaleziono|
@@ -78,7 +78,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd krytyczny C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|Nierozpoznana flaga "*ciąg*"in"*opcji*"|
 |[Błąd krytyczny C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|nie określono pliku wejściowego|
 |[Błąd krytyczny C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|ograniczenie kompilatora: makra są zagnieżdżone zbyt głęboko|
-|[Błąd krytyczny C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego pliku nagłówkowego. Czy zapomniano dodać "#include <*pliku*>" do źródła?|
+|[Błąd krytyczny C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego pliku nagłówkowego. Czy zapomniano dodać "#include \< *pliku*>" do źródła?|
 |[Błąd krytyczny C1012](fatal-error-c1012.md)|niedopasowane nawiasy: brakuje "*znak*"|
 |[Błąd krytyczny C1013](fatal-error-c1013.md)|ograniczenie kompilatora: zbyt wiele otwartych nawiasów|
 |[Błąd krytyczny C1014](fatal-error-c1014.md)|zbyt wiele pliki dołączane: głębokość = *numer*|
