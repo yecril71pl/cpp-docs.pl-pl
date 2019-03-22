@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: 6b77efffca127c79c665cb8dedb916b0874de038
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2ec83fc320d65f5f51c14f9523544972cd69c66c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290732"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328691"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel Class
 
@@ -52,7 +52,7 @@ class CComMultiThreadModel
 
 Zazwyczaj można użyć `CComMultiThreadModel` za pomocą jednego z dwóch **typedef** nazwy albo [CComObjectThreadModel] (atl-typedefs.md #ccomobjectthreadmodel lub [CComGlobalsThreadModel] (atl-typedefs.md #ccomglobalsthreadmodel. Klasa przywoływana przez każdą **typedef** zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:
 
-| — klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
+|— klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
@@ -157,7 +157,7 @@ See [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement
 
-Ta funkcja statyczna wywołuje funkcję Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), która zmniejsza wartość zmiennej wskazywany przez *p*.
+Ta funkcja statyczna wywołuje funkcję Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), która zmniejsza wartość zmiennej wskazywany przez *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -178,7 +178,7 @@ Jeśli wynik dekrementacji wynosi 0, to `Decrement` zwraca wartość 0. Wynik de
 
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment
 
-Ta funkcja statyczna wywołuje funkcję Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), która zwiększa wartość zmiennej, do których prowadzą *p*.
+Ta funkcja statyczna wywołuje funkcję Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), która zwiększa wartość zmiennej, do których prowadzą *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();
