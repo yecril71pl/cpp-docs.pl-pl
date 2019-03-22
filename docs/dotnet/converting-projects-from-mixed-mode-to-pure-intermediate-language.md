@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559682"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328587"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konwertowanie projektów z trybu mieszanego na czysty język bezpośredni
 
@@ -80,16 +80,16 @@ Jeśli używasz wcześniejszej wersji zestawu narzędzi kompilatora Visual C++, 
    |[Boolean](/dotnet/api/system.boolean)|Reprezentuje wartość logiczną.|
    |[Byte](/dotnet/api/system.byte)|Reprezentuje 8-bitowej nieoznaczonej liczby całkowitej.|
    |[Char](/dotnet/api/system.char)|Reprezentuje znak Unicode.|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Reprezentuje moment w czasie, zwykle wyrażona jako datę i godzinę.|
+   |[DateTime](/dotnet/api/system.datetime)|Reprezentuje moment w czasie, zwykle wyrażona jako datę i godzinę.|
    |[Decimal](/dotnet/api/system.decimal)|Reprezentuje liczbę dziesiętną.|
    |[Double](/dotnet/api/system.double)|Reprezentuje liczbę zmiennoprzecinkową podwójnej precyzji.|
    |[Identyfikator GUID](/dotnet/api/system.guid)|Reprezentuje unikatowy identyfikator globalny (GUID).|
    |[Int16](/dotnet/api/system.int16)|Reprezentuje całkowita 16-bitowych.|
    |[Int32](/dotnet/api/system.int32)|Reprezentuje całkowita 32-bitowych.|
    |[Int64](/dotnet/api/system.int64)|Reprezentuje całkowita 64-bitowych.|
-   |[Pola IntPtr](/dotnet/api/system.intptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub uchwytu.|
-   |[SByte](/dotnet/api/system.byte.aspx)|Reprezentuje całkowita 8-bitowych.|
-   |[Single](/dotnet/api/system.single.aspx)|Reprezentuje liczbę zmiennoprzecinkową pojedynczej precyzji.|
+   |[IntPtr](/dotnet/api/system.intptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub uchwytu.|
+   |[SByte](/dotnet/api/system.byte)|Reprezentuje całkowita 8-bitowych.|
+   |[Single](/dotnet/api/system.single)|Reprezentuje liczbę zmiennoprzecinkową pojedynczej precyzji.|
    |[TimeSpan](/dotnet/api/system.timespan)|Reprezentuje przedział czasu.|
    |[UInt16](/dotnet/api/system.uint16)|Reprezentuje 16-bitowa liczba całkowita bez znaku.|
    |[UInt32](/dotnet/api/system.uint32)|Reprezentuje 32-bitowa liczba całkowita bez znaku.|

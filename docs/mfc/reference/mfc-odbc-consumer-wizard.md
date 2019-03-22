@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259935"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328652"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Kreator konsumenta MFC ODBC
 
@@ -25,13 +25,13 @@ Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezb
 
 - **Źródło danych**
 
-  **Źródła danych** przycisk umożliwia konfigurowanie określonym źródłem danych przy użyciu podanego sterownika ODBC. Aby uzyskać więcej informacji na temat pliki źródła danych (DSN), zobacz [plikowych źródeł danych](/previous-versions/windows/desktop/ms715401) w zestawie SDK ODBC.
+  **Źródła danych** przycisk umożliwia konfigurowanie określonym źródłem danych przy użyciu podanego sterownika ODBC. Aby uzyskać więcej informacji na temat pliki źródła danych (DSN), zobacz [plikowych źródeł danych](/sql/odbc/reference/file-data-sources) w zestawie SDK ODBC.
 
   **Wybierz źródło danych** okno dialogowe ma dwie karty:
 
   - **Źródło danych pliku** karty:
 
-     **Przeszukania** pole określa katalog, w którym można wybrać pliki, które ma być używany jako źródła danych. Wartość domyślna to \Program Files\Common Files\ODBC\Data źródeł. Istniejących źródeł danych plików (pliki DSN) są wyświetlane w polu listy głównego. Możesz albo Konfigurowanie źródeł danych w przód od chwili **plikową nazwę DSN** karcie [Administrator źródła danych ODBC](/previous-versions/windows/desktop/ms714024), lub utworzyć nowe przy użyciu tego okna dialogowego.
+     **Przeszukania** pole określa katalog, w którym można wybrać pliki, które ma być używany jako źródła danych. Wartość domyślna to \Program Files\Common Files\ODBC\Data źródeł. Istniejących źródeł danych plików (pliki DSN) są wyświetlane w polu listy głównego. Możesz albo Konfigurowanie źródeł danych w przód od chwili **plikową nazwę DSN** karcie [Administrator źródła danych ODBC](/sql/odbc/admin/odbc-data-source-administrator), lub utworzyć nowe przy użyciu tego okna dialogowego.
 
      Aby utworzyć nowe źródło danych pliku to okno dialogowe, kliknij przycisk `New` do określenia nazwy DSN; **Utwórz nowe źródło danych** pojawi się okno dialogowe. W **Utwórz nowe źródło danych** okna dialogowego pole, wybierz odpowiedni sterownik i kliknij `Next`; kliknij **Przeglądaj**i wybierz nazwę pliku, który ma być używany jako źródło danych (musisz wybrać "Wszystkie pliki" do Wyświetl DSN innych plików, takich jak pliki xls); Kliknij przycisk `Next`, a następnie kliknij przycisk **Zakończ**. (Jeśli wybranego pliku DSN nie zostanie wyświetlony okno dialogowe specyficzne dla sterownika, takie jak "ODBC Instalatora programu Microsoft Excel," który przekonwertuje pliku DSN).
 
@@ -40,13 +40,13 @@ Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezb
 
      **Nazwa DSN** okno pozwala określić nazwę źródła danych pliku. Należy się upewnić, że nazwa DSN kończy się rozszerzeniem odpowiedniego pliku, takie jak xls dla plików programu Excel lub .mdb dla plików programu Access.
 
-     Aby uzyskać więcej informacji na temat nazw DSN, zobacz [plikowych źródeł danych](/previous-versions/windows/desktop/ms715401) w zestawie SDK ODBC.
+     Aby uzyskać więcej informacji na temat nazw DSN, zobacz [plikowych źródeł danych](/sql/odbc/reference/file-data-sources) w zestawie SDK ODBC.
 
   - **Źródła danych komputera** karty:
 
-     Ta karta zawiera listę systemu oraz źródeł danych użytkownika. Źródła danych użytkownika są specyficzne dla użytkownika na tym komputerze. Systemowe źródła danych może służyć przez wszystkich użytkowników na tym komputerze lub w usłudze ogólnosystemowe. Zobacz [źródeł danych komputera](/previous-versions/windows/desktop/ms710952) w zestawie SDK ODBC
+     Ta karta zawiera listę systemu oraz źródeł danych użytkownika. Źródła danych użytkownika są specyficzne dla użytkownika na tym komputerze. Systemowe źródła danych może służyć przez wszystkich użytkowników na tym komputerze lub w usłudze ogólnosystemowe. Zobacz [źródeł danych komputera](/sql/odbc/reference/machine-data-sources) w zestawie SDK ODBC
 
-     Aby uzyskać więcej informacji na temat źródeł danych ODBC, zobacz [źródeł danych](/previous-versions/windows/desktop/ms711688) w zestawie SDK ODBC.
+     Aby uzyskać więcej informacji na temat źródeł danych ODBC, zobacz [źródeł danych](/sql/odbc/reference/data-sources) w zestawie SDK ODBC.
 
   Kliknij przycisk **OK**, aby zakończyć. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę lub wyświetlić, które będą używane przez konsumenta. Należy pamiętać, że przytrzymać klawisz control i klikając elementy można wybrać wiele widoków i tabel. Kliknij przycisk **OK**, aby zakończyć.
 

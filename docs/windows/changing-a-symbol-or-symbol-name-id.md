@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562799"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328847"
 ---
 # <a name="how-to-manage-symbols"></a>Instrukcje: Zarządzanie symboli
 
@@ -85,7 +85,7 @@ Nazwy symboli ma opisowe prefiksy, które wskazują rodzaj zasobu lub obiektów,
 
 ### <a name="to-change-a-symbol-name-id"></a>Aby zmienić nazwę symbolu (ID)
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), wybierz zasób.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), wybierz zasób.
 
 1. W **właściwości** okna, wpisz nową nazwę symbolu lub wybierz z listy istniejących symboli w **identyfikator** pole.
 
@@ -129,7 +129,7 @@ Niektóre ograniczenia wartości symboli są:
 
 ### <a name="to-change-a-symbol-value"></a>Aby zmienić wartości symbolu
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), wybierz zasób.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), wybierz zasób.
 
 1. W **właściwości** okna, typ nazwy symbolu następuje znak równości i całkowitą **identyfikator** polu, na przykład:
 
@@ -185,7 +185,7 @@ Umożliwia także pliki symboli uwzględnione Jeśli masz istniejące zasoby dzi
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Aby uwzględnić symbole udostępnione (tylko do odczytu) w pliku zasobów
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* plik i wybierz [zasób zawiera](../windows/resource-includes-dialog-box.md).
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* plik i wybierz [zasób zawiera](../windows/resource-includes-dialog-box.md).
 
 1. W **dyrektywy symboli tylko do odczytu** , używaj `#include` dyrektywy kompilatora, aby określić plik, którego symbole tylko do odczytu, które mają być przechowywane.
 
@@ -204,7 +204,7 @@ Umożliwia także pliki symboli uwzględnione Jeśli masz istniejące zasoby dzi
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Aby zmienić nazwę pliku nagłówkowego symboli zasobów
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz [zasób zawiera](../windows/resource-includes-dialog-box.md).
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz [zasób zawiera](../windows/resource-includes-dialog-box.md).
 
 1. W **plik nagłówka symbolu** wpisz nową nazwę dla pliku dyrektywy include.
 

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694416"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328964"
 ---
 # <a name="add-a-member-variable"></a>Dodaj zmienną składową
 
-Możesz dodać zmienną członkowską do klasy za pomocą widoku klas. Zmienne składowe mogą być albo dla [wymiany danych i sprawdzanie poprawności danych](../mfc/dialog-data-exchange-and-validation.md), lub może być ogólny. Kreator zmiennej elementu członkowskiego danych zaprojektowano podjąć odpowiednie informacje i użyć go do wstawienia elementów w plikach źródłowych w odpowiednich lokalizacjach. Możesz dodać zmienną członkowską z [Edytor okien dialogowych](../windows/dialog-editor.md) w [widok zasobów](../windows/resource-view-window.md), lub z [Widok klas](/visualstudio/ide/viewing-the-structure-of-code).
+Możesz dodać zmienną członkowską do klasy za pomocą widoku klas. Zmienne składowe mogą być albo dla [wymiany danych i sprawdzanie poprawności danych](../mfc/dialog-data-exchange-and-validation.md), lub może być ogólny. Kreator zmiennej elementu członkowskiego danych zaprojektowano podjąć odpowiednie informacje i użyć go do wstawienia elementów w plikach źródłowych w odpowiednich lokalizacjach. Możesz dodać zmienną członkowską z [Edytor okien dialogowych](../windows/dialog-editor.md) w [widok zasobów](../windows/how-to-create-a-resource-script-file.md#create-resources), lub z [Widok klas](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 > Podczas projektowania i implementowania okno dialogowe, może okazać się bardziej wydajne, można użyć okna dialogowego edytora, aby dodać formanty okna dialogowego, a następnie wdrożyć zmiennych składowych kontrolek.
@@ -64,7 +64,7 @@ Możesz dodać zmienną członkowską do klasy za pomocą widoku klas. Zmienne s
 
 Ten kreator dodaje deklaracji zmiennej składowej do pliku nagłówka. W zależności od opcji można dodać kod do pliku .cpp. Po dodaniu zmiennej składowej, za pomocą kreatora można edytować kod w środowisku programistycznym.
 
-- **Dostęp do**
+- **Dostęp**
 
   Ustawia dostęp do zmiennej elementu członkowskiego. Modyfikatory dostępu są słowami kluczowymi, określające dostęp, innych klas, że zmienna członka. Aby uzyskać więcej informacji na temat określania dostępu, zobacz [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md). Poziom dostępu do zmiennej elementu członkowskiego jest równa `public` domyślnie.
 
@@ -147,16 +147,16 @@ Możesz użyć [Kreator dodawania zmiennej członkowskiej](#add-member-variable-
 
 W poniższej tabeli opisano wszystkie okna dialogowego pole typy formantów które są obsługiwane w MFC i [Edytor okien dialogowych](../windows/dialog-editor.md). Wyświetla również dostępne typy i wartości.
 
-|Formant|Typ formantu|Typ zmiennej sterującej|Typ zmiennej wartości|Minimalnej/maksymalnej wartości (tylko w przypadku typu wartości)|
+|formant|Typ formantu|Typ zmiennej sterującej|Typ zmiennej wartości|Minimalnej/maksymalnej wartości (tylko w przypadku typu wartości)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
 |Kontrolki animacji|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|None; tylko kontroli|Brak|
 |Przycisk|PRZYCISK|[CButton](../mfc/reference/cbutton-class.md)|None; tylko kontroli|Brak|
 |Pole wyboru|SPRAWDŹ|[CButton](../mfc/reference/cbutton-class.md)|`BOOL`|Minimalna wartość/maksymalna wartość|
-|Pole kombi|POLE KOMBI COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|Maksymalna liczba znaków|
+|Pole kombi|COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|Maksymalna liczba znaków|
 |Kontrolka selektora czasu daty|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[Ctime —](../atl-mfc-shared/reference/ctime-class.md)|Minimalna wartość/maksymalna wartość|
 |Pole edycji|EDYTUJ|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime`, lub `COleCurrency`|Minimalna wartość/maksymalna wartość; Niektóre znaki max pomocy technicznej|
 |Kontrola skrótu|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|None; tylko kontroli|Brak|
-|Pole listy|POLE LISTY|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|Maksymalna liczba znaków|
+|Pole listy|LISTBOX|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|Maksymalna liczba znaków|
 |Kontrolka listy|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|None; tylko kontroli|Brak|
 |Kontrolowanie kalendarza miesięcznego|SysMonthCal32|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|`CTime`|Minimalna wartość/maksymalna wartość|
 |Kontrolki postępu|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|None; tylko kontroli|Brak|

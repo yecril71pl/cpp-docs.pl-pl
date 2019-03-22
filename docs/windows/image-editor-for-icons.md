@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563085"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328431"
 ---
 # <a name="image-editor-for-icons-c"></a>Edytor obrazów dla ikon (C++)
 
@@ -60,7 +60,7 @@ Zasoby graficzne są obrazy, które należy zdefiniować dla aplikacji. Można n
 
 Można również użyć **edytora obrazów** i [Edytor plików binarnych](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
 
-Oprócz tworzenia nowych zasobów graficznych, możliwe jest również [importowanie istniejących obrazów](/windows/how-to-copy-resources#import-and-export-resources) do edycji i dodać je do projektu. Możesz również otworzyć i edycji obrazów, które nie są częścią projektu dla [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+Oprócz tworzenia nowych zasobów graficznych, możliwe jest również [importowanie istniejących obrazów](../windows/how-to-copy-resources.md#import-and-export-resources) do edycji i dodać je do projektu. Możesz również otworzyć i edycji obrazów, które nie są częścią projektu dla [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
 
 Instrukcje dotyczące **edytora obrazów**, zobacz instrukcje [Tworzenie ikony lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [edytować obraz](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [Użyj narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Praca z kolorami](../windows/working-with-color-image-editor-for-icons.md), i [klawiszy](../windows/accelerator-keys-image-editor-for-icons.md).
 
@@ -151,7 +151,7 @@ Aby otworzyć to okno dialogowe, wybierz **czcionki** znajdujący się w **narz�
 
 Poniżej przedstawiono przykładowy sposób dodawania tekstu do ikony w aplikacji Windows i manipulowania czcionkę tekstu.
 
-1. Tworzenie aplikacji formularzy Windows w języku C++. Aby uzyskać więcej informacji, zobacz [Tworzenie projektu aplikacji Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). *App.ico* plik zostanie dodany do projektu, domyślnie.
+1. Tworzenie aplikacji formularzy Windows w języku C++. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie aplikacji z formularzem Windows](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). *App.ico* plik zostanie dodany do projektu, domyślnie.
 
 1. W **Eksploratora rozwiązań**, kliknij dwukrotnie plik *app.ico*. **Edytora obrazów** zostanie otwarty.
 

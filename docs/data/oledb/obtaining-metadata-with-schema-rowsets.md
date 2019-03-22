@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 64502c19b55d42ab0ed7f6c2b8b1cf503e7795c8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e61507a187f7625e7e90e2a0e3a1ce404573e29
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422679"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328873"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Uzyskiwanie metadanych za pomocą zestawów wierszy schematu
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 [CRestrictions](../../data/oledb/crestrictions-class.md) klasa zapewnia obsługę ograniczeń. Po utworzeniu wystąpienia zestaw wierszy schematu, wywołaj [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Ta metoda zwraca zestaw wyników, oparte na ograniczenia, które określisz.
 
-Aby określić ograniczenia, zapoznaj się [dodatek B: Zestawy wierszy schematu](/previous-versions/windows/desktop/ms712921(v=vs.85)) i poszukiwanie zestawu wierszy, którego używasz. Na przykład `CColumns` odpowiada [zestawu wierszy kolumn](/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); tego tematu spowoduje wyświetlenie listy kolumn ograniczeń w zestawie wierszy kolumny: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Należy przestrzegać tej kolejności określania Twojej ograniczenia.
+Aby określić ograniczenia, zapoznaj się [dodatek B: Zestawy wierszy schematu](/previous-versions/windows/desktop/ms712921(v=vs.85)) i poszukiwanie zestawu wierszy, którego używasz. Na przykład `CColumns` odpowiada [zestawu wierszy kolumn](/previous-versions/windows/desktop/ms723052(v=vs.85)); tego tematu spowoduje wyświetlenie listy kolumn ograniczeń w zestawie wierszy kolumny: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Należy przestrzegać tej kolejności określania Twojej ograniczenia.
 
 Tak, na przykład, jeśli chcesz ograniczyć, nazwa tabeli nazwa_tabeli to trzecia kolumna ograniczenia, a następnie wywołania `Open`, określając nazwę odpowiedniej tabeli jako trzeci parametr ograniczenia, jak pokazano w poniższym przykładzie.
 

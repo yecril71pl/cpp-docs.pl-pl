@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295022"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328535"
 ---
 # <a name="cdbexception-class"></a>Klasa CDBException
 
@@ -132,7 +132,7 @@ Zawiera ciąg opisujący błąd, który spowodował wyjątek.
 
 Ten ciąg jest formularz "Stan: % s, natywne: % ld źródła: % s", gdzie kody format, w kolejności, zastępuje wartości, które opisują:
 
-- SQLSTATE, ciąg zakończony wartością null zawierający kod błędu pięcioznakowe zwracane w *szSqlState* parametru funkcji ODBC `SQLError`. SQLSTATE wartości wymieniono w załączniku A, [kody błędów ODBC](/previous-versions/windows/desktop/ms714687)w *odwołania programisty ODBC*. Przykład: "S0022".
+- SQLSTATE, ciąg zakończony wartością null zawierający kod błędu pięcioznakowe zwracane w *szSqlState* parametru funkcji ODBC `SQLError`. SQLSTATE wartości wymieniono w załączniku A, [kody błędów ODBC](/previous-versions/windows/desktop/ms714687(v=vs.85))w *odwołania programisty ODBC*. Przykład: "S0022".
 
 - Zwrócony kod błędu macierzystego, specyficzne dla źródła danych w *pfNativeError* parametru `SQLError` funkcji. Przykład: 207.
 
@@ -140,13 +140,13 @@ Ten ciąg jest formularz "Stan: % s, natywne: % ld źródła: % s", gdzie kody f
 
 Framework interpretuje ciąg błędu i umieszcza jej składników `m_strStateNativeOrigin`; Jeśli `m_strStateNativeOrigin` zawiera informacje o więcej niż jeden błąd, błędy są oddzielone tabulacji. Struktura umieszcza tekst błędu alfanumeryczne do `m_strError`.
 
-Aby uzyskać dodatkowe informacje na temat kodów umożliwia tworzą ten ciąg, zobacz [SQLError](/previous-versions/windows/desktop/ms716312) działa w programach *odwołania programisty ODBC*.
+Aby uzyskać dodatkowe informacje na temat kodów umożliwia tworzą ten ciąg, zobacz [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85)) działa w programach *odwołania programisty ODBC*.
 
 ### <a name="example"></a>Przykład
 
-  Z ODBC: "Stan: S0022, natywne: 207, źródło: [Microsoft] [SQL Server sterownika ODBC] [SQL Server] Nieprawidłowa nazwa kolumny"Nazwa kolumny""
+  Z ODBC: "Stan: S0022, natywne: 207, źródło:\[Microsoft]\[sterownik ODBC SQL Server]\[programu SQL Server] Nieprawidłowa nazwa kolumny"Nazwa kolumny""
 
-W `m_strStateNativeOrigin`: "Stan: S0022, natywne: 207, źródło: [Microsoft] [sterownik ODBC SQL Server] [SQL Server]"
+W `m_strStateNativeOrigin`: "State:S0022,Native:207,Origin:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server]"
 
 W `m_strError`: "Nieprawidłowa nazwa kolumny"Nazwa kolumny""
 

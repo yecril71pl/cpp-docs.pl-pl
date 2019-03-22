@@ -2,12 +2,12 @@
 title: Dokumentacja języka Visual C++ (C + +/ CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422965"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328418"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Dokumentacja języka Visual C++ (C + +/ CX)
 
@@ -24,7 +24,7 @@ Za pomocą C + +/ CX, można utworzyć:
 
 - Składniki środowiska uruchomieniowego Windows C++, które mogą być używane przez aplikacje Windows oparte na języku JavaScript. Aby uzyskać więcej informacji, zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-- Gry Windows DirectX i aplikacji intensywnie korzystających z grafiki. Aby uzyskać więcej informacji, zobacz [Tworzenie prostej grze platformy uniwersalnej systemu Windows przy użyciu technologii DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
+- Gry Windows DirectX i aplikacji intensywnie korzystających z grafiki. Aby uzyskać więcej informacji, zobacz [Tworzenie prostej grze platformy uniwersalnej systemu Windows przy użyciu technologii DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game).
 
 ## <a name="related-articles"></a>Pokrewne artykuły:
 
@@ -32,7 +32,7 @@ Za pomocą C + +/ CX, można utworzyć:
 |-|-|
 |[Krótki przewodnik](../cppcx/quick-reference-c-cx.md)|Tabela słów kluczowych i operatory w języku C + +/ CX.|
 |[System typów](../cppcx/type-system-c-cx.md)|W tym artykule opisano podstawowe języka C + +/ CX typów i narzędzi programistycznych oraz jak korzystanie z C + +/ CX, używanie i tworzenie typów środowiska wykonawczego Windows.|
-|[Tworzenie aplikacji i bibliotek](../cppcx/building-apps-and-libraries-c-cx.md)|W tym artykule omówiono sposób używania środowiska IDE do tworzenia aplikacji i link do bibliotek statycznych aned biblioteki dll.|
+|[Tworzenie aplikacji i bibliotek](../cppcx/building-apps-and-libraries-c-cx.md)|W tym artykule omówiono sposób używania środowiska IDE Twórz aplikacje i połączyć z bibliotek statycznych i bibliotek DLL.|
 |[Współdziałanie z innymi językami](../cppcx/interoperating-with-other-languages-c-cx.md)|W tym artykule omówiono sposób składniki, które są tworzone za pomocą C + +/ CX może być używany ze składnikami, które zostały napisane w języku JavaScript, zarządzane dowolnego języka lub biblioteka szablonów C++ środowiska wykonawczego Windows.|
 |[Wątkowość i Marshaling](../cppcx/threading-and-marshaling-c-cx.md)|W tym artykule omówiono sposób określania zachowania wątkowości i organizowania składników, które tworzysz.|
 |[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)|Dokumentacja dotycząca domyślny obszar nazw, przestrzeń nazw platformy, Platform::Collections i pokrewne obszary nazw.|

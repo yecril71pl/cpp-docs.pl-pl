@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850219"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328769"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra i funkcje zarządzania biblioteki dll
 
@@ -21,9 +21,9 @@ ms.locfileid: "55850219"
 |[AfxNetInitModule](#afxnetinitmodule)|Umożliwia obsługę MFC gniazd od zwykłej biblioteki MFC DLL, która jest połączona dynamicznie z MFC.|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|Pobiera bieżący stan flagi stanu dla modułu.|
 |[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Ustawia stan modułu przed zainicjowaniem i/lub w celu przywrócenia poprzedniego stanu modułu po oczyszczaniu.|
-|[AfxInitExtensionModule]()#afxinitextensionmodule|Inicjuje biblioteki DLL.|
+|[AfxInitExtensionModule](#afxinitextensionmodule)|Inicjuje biblioteki DLL.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|Ustaw flagi stanu-module, który ma wpływ na zachowanie folderze WinSxS MFC.|
-|[AfxTermExtensionModule]()#afxtermextensionmodule)|Umożliwia MFC do oczyszczania biblioteki DLL rozszerzenia MFC podczas każdego procesu odłączy się od biblioteki DLL.|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|Umożliwia MFC do oczyszczania biblioteki DLL rozszerzenia MFC podczas każdego procesu odłączy się od biblioteki DLL.|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 

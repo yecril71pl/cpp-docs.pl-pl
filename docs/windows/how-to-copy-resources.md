@@ -30,14 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563046"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328626"
 ---
-# <a name="how-to-manage-resources-c"></a>Instrukcje: Zarządzanie zasobami (C++)
+# <a name="how-to-manage-resources-c"></a>Porady: Zarządzanie zasobami (C++)
 
 ## <a name="copy-and-edit-resources"></a>Kopiuj i edytowanie zasobów
 
@@ -52,7 +52,7 @@ Użytkownik nie przeciągnij i upuść, kopiowanie, wycinanie lub wklejanie dany
 
 ### <a name="to-copy-resources"></a>Aby umożliwić kopiowanie zasobów
 
-1. Otwórz zarówno autonomiczne pliki zasobów (zobacz instrukcje [można otworzyć pliku skryptu zasobu](/how-to-create-a-resource-script-file#use-resource-script-files)). Na przykład otworzyć *Source1.rc* i *Source2.rc*.
+1. Otwórz zarówno autonomiczne pliki zasobów. (Zobacz [używać plików skryptów zasobów](how-to-create-a-resource-script-file.md#use-resource-script-files)). Na przykład otworzyć *Source1.rc* i *Source2.rc*.
 
 1. Wewnątrz pierwszy plik .rc, albo:
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Aby skopiować istniejący zasób i zmień jego języka lub warunku
 
-W *.rc* pliku lub [widok zasobów](../windows/resource-view-window.md) okna, kliknij prawym przyciskiem myszy zasób, o których chcesz skopiować, a następnie wybierz **Wstaw kopiowania**. Następnie określ następujące ustawienia:
+W *.rc* pliku lub [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) okna, kliknij prawym przyciskiem myszy zasób, o których chcesz skopiować, a następnie wybierz **Wstaw kopiowania**. Następnie określ następujące ustawienia:
 
 - Aby uzyskać **języka** pola listy, wybierz język.
 
@@ -107,7 +107,7 @@ Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pask
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>Aby importować zasób do pliku skryptu zasobu
 
-1. W [widok zasobów](../windows/resource-view-window.md) kliknij prawym przyciskiem myszy węzeł pliku skryptu (.rc) zasobu, do którego chcesz dodać zasób, a następnie wybierz pozycję **importu**.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) kliknij prawym przyciskiem myszy węzeł pliku skryptu (.rc) zasobu, do którego chcesz dodać zasób, a następnie wybierz pozycję **importu**.
 
 1. Znajdź i wybierz nazwę pliku mapy bitowej (bmp), ikony (.ico), kursora (.cur), plik html (.htm) lub inny plik do zaimportowania.
 
@@ -118,7 +118,7 @@ Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pask
 
 ### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Aby wyeksportować zasób do użycia poza programem Visual C++
 
-1. W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy zasób, chcesz wyeksportować, a następnie wybierz pozycję **wyeksportować**. Można zaakceptować bieżącej nazwy pliku lub wpisać nową.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy zasób, chcesz wyeksportować, a następnie wybierz pozycję **wyeksportować**. Można zaakceptować bieżącej nazwy pliku lub wpisać nową.
 
 1. Przejdź do folderu, w którym chcesz zapisać plik i wybierz **wyeksportować**.
 

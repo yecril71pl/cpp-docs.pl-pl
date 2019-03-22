@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563306"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328899"
 ---
 # <a name="string-editor-c"></a>Edytor ciągów znaków (C++)
 
@@ -56,7 +56,7 @@ Tabele ciągów należy ułatwia lokalizowanie aplikacji w różnych językach. 
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Aby znaleźć zasobu ciągu w tabeli ciągów
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Przejdź do menu **Edytuj** > **Znajdź i Zamień** i wybierz polecenie **znaleźć**.
 
@@ -79,7 +79,7 @@ Można szybko wstawiania lub usuwania wpisów do tabeli ciągów przy użyciu **
 
 #### <a name="to-add-a-string-table-entry"></a>Aby dodać wpis tabeli ciągów
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Kliknij prawym przyciskiem myszy w tabeli ciągów, a następnie wybierz **nowy ciąg**.
 
@@ -124,7 +124,7 @@ Umożliwia edycję w miejscu zmienić **identyfikator**, **wartość**, i **podp
 
 #### <a name="to-change-a-string-or-its-identifier"></a>Aby zmienić ciąg lub jego identyfikator.
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wybierz parametry chcesz edytować, a następnie kliknij dwukrotnie ikonę **identyfikator**, **wartość**, lub **podpis** kolumny, a następnie użytkownik może:
 
@@ -136,7 +136,7 @@ Umożliwia edycję w miejscu zmienić **identyfikator**, **wartość**, i **podp
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Aby zmienić właściwości podpisu lub wielu zasobów ciągów
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wybierz parametry, aby zmienić, przytrzymując **Ctrl** klucza, zgodnie z wybraniu każdej z nich.
 
@@ -146,7 +146,7 @@ Umożliwia edycję w miejscu zmienić **identyfikator**, **wartość**, i **podp
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Aby dodać znaków specjalnych ani formatowania do zasobu ciągu
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wybierz ciąg, który chcesz zmodyfikować.
 

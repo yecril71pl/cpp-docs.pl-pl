@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 96e5b8777bb8b0c976277a06e8ad49b3334921fb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694520"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328574"
 ---
 # <a name="add-an-event-handler"></a>Dodawanie obsługi zdarzeń
 
@@ -25,7 +25,7 @@ Zdarzenie można dodać do klasy wdrożenie przy użyciu okno dialogowe [okno w�
 
 **Aby dodać program obsługi zdarzeń do formantu pola w oknie dialogowym:**
 
-1. Kliknij dwukrotnie zasobu okna dialogowego pole w [widok zasobów](../windows/resource-view-window.md) można otworzyć zasobu okna dialogowego pole, który zawiera formant w [Edytor okien dialogowych](../windows/dialog-editor.md).
+1. Kliknij dwukrotnie zasobu okna dialogowego pole w [widok zasobów](../windows/how-to-create-a-resource-script-file.md#create-resources) można otworzyć zasobu okna dialogowego pole, który zawiera formant w [Edytor okien dialogowych](../windows/dialog-editor.md).
 
 1. Kliknij prawym przyciskiem myszy formant, dla którego chcesz obsłużyć zdarzenie powiadomienia.
 

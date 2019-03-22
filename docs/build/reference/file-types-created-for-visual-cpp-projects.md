@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823841"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327584"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy plików utworzonych dla projektów języka C++ w programie Visual Studio
 
 W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów programu Visual Studio dla klasycznych aplikacji klasycznych. Rzeczywiste pliki zawarte w projekcie są zależne od typu projektu i opcje wybrane w przypadku korzystania z kreatora.
 
-- [Pliki projektu i rozwiązania]()
+- [Pliki projektu i rozwiązania](project-and-solution-files.md)
 
 - [Projekty CLR](files-created-for-clr-projects.md)
 
@@ -54,7 +54,7 @@ Poniższa tabela zawiera wspólne pliki w projekcie programu Visual Studio i ide
 |.ATP|Projekt|Plik projektu szablonu aplikacji.|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|Zasób|Pliki obrazów ogólne.|
 |.BSC|Kompilowanie|Plik kodu przeglądarki.|
-|.cpp; .c|Źródło|Pliki kodu źródłowego główne dla twojej aplikacji.|
+|.cpp, .c|Źródło|Pliki kodu źródłowego główne dla twojej aplikacji.|
 |.CUR|Zasób|Plik graficzny mapy bitowej kursora.|
 |.dbp|Projekt|Plik projektu bazy danych.|
 |.disco|Źródło|Dynamiczne odnajdowanie plik dokumentu. Obsługuje odnajdowania usług XML sieci Web.|
@@ -78,8 +78,8 @@ Poniższa tabela zawiera wspólne pliki w projekcie programu Visual Studio i ide
 |.VAP|Projekt|Plik projektu programu Visual Studio Analyzer.|
 |.vbg|Rozwiązanie|Plik grupy projektów zgodny.|
 |.vbp, .vip, .vbproj|Projekt|Plik projektu języka Visual Basic.|
-|.vcxitems|Projekt|Udostępniane elementy projektu do udostępniania plików kodu między wiele projektów w języku C++. Zobacz [plików projektu i plików reguł programu make]() Aby uzyskać więcej informacji.|
-|.vcxproj|Projekt|Plik projektu programu Visual Studio. Zobacz [plików projektu i plików reguł programu make]() Aby uzyskać więcej informacji.|
+|.vcxitems|Projekt|Udostępniane elementy projektu do udostępniania plików kodu między wiele projektów w języku C++. Zobacz [pliki projektu i rozwiązania](project-and-solution-files.md) Aby uzyskać więcej informacji.|
+|.vcxproj|Projekt|Plik projektu programu Visual Studio. Zobacz [pliki projektu i rozwiązania](project-and-solution-files.md) Aby uzyskać więcej informacji.|
 |.vcxproj.filters|Projekt|W przypadku Eksploratora rozwiązań, aby dodać plik do projektu pliku filtrów dla definiuje gdzie w widoku drzewa Eksploratora rozwiązań plik zostanie dodany, oparte na rozszerzenie nazwy pliku.|
 |.vdproj|Projekt|Plik projektu wdrożenia programu Visual Studio.|
 |.vmx|Projekt|Makro pliku projektu.|

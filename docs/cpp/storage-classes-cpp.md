@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520328"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329029"
 ---
 # <a name="storage-classes-c"></a>Klasy magazynu (C++)
 
@@ -24,7 +24,7 @@ A *klasę magazynu* w kontekście C++ deklaracje zmiennych jest specyfikatora ty
 
 1. [Mutable](../cpp/mutable-data-members-cpp.md) — słowo kluczowe może być uznane za Specyfikator klasy magazynowania. Jednak jest ono dostępne tylko na liście składowych definicji klasy.
 
-1. **Visual C++ 2010 i nowszych wersji:** **automatycznie** — słowo kluczowe nie jest już specyfikatora klasy magazynowania C++ i **zarejestrować** — słowo kluczowe jest przestarzały. **Visual Studio 2017 w wersji 15.7 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zarejestrować** — słowo kluczowe zostanie usunięty z języka C++.
+1. **Visual C++ 2010 i nowszych wersji:** **Automatycznie** — słowo kluczowe nie jest już specyfikatora klasy magazynowania C++ i **zarejestrować** — słowo kluczowe jest przestarzały. **Visual Studio 2017 w wersji 15.7 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zarejestrować** — słowo kluczowe zostanie usunięty z języka C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -34,7 +34,7 @@ A *klasę magazynu* w kontekście C++ deklaracje zmiennych jest specyfikatora ty
 
 - [static](#static)
 - [extern](#extern)
-- [Element thread_local](#thread_local)
+- [thread_local](#thread_local)
 
 ## <a name="static"></a> Statyczne
 
@@ -167,7 +167,7 @@ Obiektów i zmiennych zadeklarowanych jako **extern** zadeklarować obiekt, któ
 
 Deklaracja **const** zmiennych o **extern** klasę magazynu wymusza zmienną mają powiązania zewnętrzne. Inicjowanie **extern const** zmiennej jest dozwolone w definiujące jednostce translacji. Inicjalizacje w jednostce translacji niż definiowanie jednostki translacji dać niezdefiniowane wyniki. Aby uzyskać więcej informacji, zobacz [użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) — opcja kompilatora powoduje, że kompilator zastosować [powiązania zewnętrzne]() do zmiennych zadeklarowanych za pomocą `extern constexpr`. We wcześniejszych wersjach programu Visual Studio i domyślnie lub jeśli **/Zc:externConstexpr-** jest określony, program Visual Studio stosuje zewnętrzne do **constexpr** nawet wtedy, gdy zmienne **extern** słowo kluczowe jest używane. **/Zc: externconstexpr** opcja jest dostępna, począwszy od wersji 15.6 programu Visual Studio 2017 Update. i jest domyślnie wyłączona. /Permissive-option nie włączać/Zc: externconstexpr.
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) — opcja kompilatora powoduje, że kompilator zastosować [powiązania zewnętrzne](../c-language/external-linkage.md) do zmiennych zadeklarowanych za pomocą `extern constexpr`. We wcześniejszych wersjach programu Visual Studio i domyślnie lub jeśli **/Zc:externConstexpr-** jest określony, program Visual Studio stosuje zewnętrzne do **constexpr** nawet wtedy, gdy zmienne **extern** słowo kluczowe jest używane. **/Zc: externconstexpr** opcja jest dostępna, począwszy od wersji 15.6 programu Visual Studio 2017 Update. i jest domyślnie wyłączona. /Permissive-option nie włączać/Zc: externconstexpr.
 
 W poniższym kodzie pokazano dwa **extern** deklaracji, `DefinedElsewhere` (która odnosi się do nazwy zdefiniowanej w innej jednostce translacji) i `DefinedHere` (która odnosi się do nazwy zdefiniowanej w zakresie otaczającym):
 
@@ -221,7 +221,7 @@ W Windows `thread_local` jest funkcjonalnym odpowiednikiem [__declspec(thread)](
 
 ##  <a name="register"></a>  Zarejestruj się
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zarejestrować** — słowo kluczowe nie jest już obsługiwaną klasą magazynu. Słowo kluczowe jest nadal zarezerwowane w standardzie do użytku w przyszłości.
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zarejestrować** — słowo kluczowe nie jest już obsługiwaną klasą magazynu. Słowo kluczowe jest nadal zarezerwowane w standardzie do użytku w przyszłości.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

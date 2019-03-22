@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 3f1597ab4947329d6103b417a0f4b5bd6664b110
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7a222100cc7e13ee78f01cf4bb9c376af15f9b0e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692765"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328782"
 ---
 # <a name="data-access-in-visual-c"></a>Dostęp do danych w programie Visual C++
 
 Praktycznie wszystkich produktów bazy danych, SQL i NoSQL, zapewniają interfejs do natywnych aplikacji w języku C++. Standardowy interfejs branży jest ODBC, który jest obsługiwany przez wszystkie główne produkty bazy danych SQL i wielu produktów NoSQL. Dla produktów firmy Microsoft zapoznaj się z dostawcą, aby uzyskać więcej informacji. Dostępne są również biblioteki innej firmy z różnych postanowień licencyjnych.
 
-Od 2011 roku Microsoft ma dostosowane ODBC jako standardowe rozwiązanie dla natywnych aplikacji do procesu łączenia bazy danych programu Microsoft SQL Server — zarówno lokalnie, jak i w chmurze. Aby uzyskać więcej informacji, zobacz [programowanie dostępu do danych \(MFC-ATL\)](data-access-programming-mfc-atl.md). C + +/ bibliotek interfejsu wiersza polecenia można używać sterowników ODBC lub ADO.NET. Aby uzyskać więcej informacji, zobacz [ADO.NET za pomocą dostępu do danych (C + +/ CLI)](/dotnet/data-access-using-adonet-cpp-cli.md) i [uzyskiwanie dostępu do danych w programie Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
+Od 2011 roku Microsoft ma dostosowane ODBC jako standardowe rozwiązanie dla natywnych aplikacji do procesu łączenia bazy danych programu Microsoft SQL Server — zarówno lokalnie, jak i w chmurze. Aby uzyskać więcej informacji, zobacz [programowanie dostępu do danych \(MFC-ATL\)](data-access-programming-mfc-atl.md). C + +/ bibliotek interfejsu wiersza polecenia można używać sterowników ODBC lub ADO.NET. Aby uzyskać więcej informacji, zobacz [ADO.NET za pomocą dostępu do danych (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) i [uzyskiwanie dostępu do danych w programie Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -53,7 +53,7 @@ Azure ułatwia tworzenie aplikacji w języku C++ z większą elastyczność, ska
 Usługa Azure Blob storage to usługa, która przechowuje dane niestrukturalne w chmurze w postaci obiektów blob. Magazyn obiektów blob można przechowywać dowolnego typu dane tekstowe lub binarne, takie jak dokument, plik multimedialny lub Instalator aplikacji. Magazyn obiektów blob jest również określany jako magazyn obiektów.
 
 [ Dokumentacja dotycząca ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
-Interfejsu ODBC jest przeznaczony do użytku z języka programowania C. Korzystanie z interfejsu ODBC obejmuje trzy obszary: instrukcje SQL, ODBC wywołania funkcji gromadzenia i programowania C.
+Interfejsu ODBC jest przeznaczony do użytku z języka programowania C. Korzystanie z interfejsu ODBC obejmuje trzy obszary: Instrukcje SQL, wywołania funkcji ODBC i programowania C.
 
 ## <a name="see-also"></a>Zobacz też
 

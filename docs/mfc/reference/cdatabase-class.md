@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273455"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329003"
 ---
 # <a name="cdatabase-class"></a>Klasa CDatabase
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Uwagi
 
-Pamiętaj, że klasach MFC ODBC nie jest już używać asynchronicznego przetwarzania; do wykonania operacji asynchroniczne, należy bezpośrednio wywołać funkcji interfejsu API ODBC [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564). Aby uzyskać więcej informacji, zobacz [wykonanie asynchroniczne](/previous-versions/windows/desktop/ms713563) w zestawie Windows SDK.
+Pamiętaj, że klasach MFC ODBC nie jest już używać asynchronicznego przetwarzania; Aby wykonać operację asynchroniczną, musi bezpośrednio wywoływać funkcję interfejsu API ODBC [SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function). Aby uzyskać więcej informacji, zobacz [wykonanie asynchroniczne](/sql/odbc/reference/develop-app/asynchronous-execution).
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

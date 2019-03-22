@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: 9b1622525635a4ea852dec9095fcd479b21044c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef2038a203b6cbfb2564bbe11d508ee43df0fd1b
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261560"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328665"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS Class
 
@@ -117,7 +117,7 @@ See [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithr
 
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement
 
-Ta funkcja statyczna wywołuje funkcję Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), która zmniejsza wartość zmiennej wskazywany przez *p*.
+Ta funkcja statyczna wywołuje funkcję Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), która zmniejsza wartość zmiennej wskazywany przez *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -138,7 +138,7 @@ Jeśli wynik dekrementacji wynosi 0, to `Decrement` zwraca wartość 0. Wynik de
 
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment
 
-Ta funkcja statyczna wywołuje funkcję Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), która zwiększa wartość zmiennej, do których prowadzą *p*.
+Ta funkcja statyczna wywołuje funkcję Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), która zwiększa wartość zmiennej, do których prowadzą *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

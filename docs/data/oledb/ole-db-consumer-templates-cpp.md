@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: 6bda050efd7d2d4ac6df196e42ffe6be43ab1a65
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a93b0a48bc5996cbb96194762b9c03ea143556e2
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556611"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328730"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Szablony konsumentów OLE DB (C++)
 
@@ -24,7 +24,7 @@ Szablony OLE DB konsumenta obsługuje specyfikację wersji 2.6 OLE DB. (Szablony
 
 - Natywne typy danych języka C/C++ do programowania OLE DB.
 
-Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie znasz OLE DB, zobacz [OLE DB Podręcznik programisty](https://docs.microsoft.com/previous-versions/windows/desktop/ms718124(v=vs.85)).
+Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie znasz OLE DB, zobacz [Microsoft OLE DB sterownik programu SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
 
 Szablony OLE DB obsługuje istniejący model obiektów OLE DB, a nie dodaje nowy model obiektu. Klasy górnej warstwy w OLE DB szablonami konsumentów równoległe składniki zdefiniowane w specyfikacji OLE DB. Projekt szablony OLE DB konsumenta obejmuje zaawansowane funkcje, takie jak wielu metod dostępu w zestawie wierszy. Korzystanie z szablonów i wielokrotne dziedziczenie sprawia, że biblioteka małe i elastyczne.
 
@@ -60,5 +60,5 @@ Więcej informacji znajduje się w następujących tematach:
 
 [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Dostęp do danych](../data-access-in-cpp.md)<br/>
-[Dokumentacja zestawu SDK usługi OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[Dokumentacja dotycząca OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)
+[Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Sterownik OLE DB firmy Microsoft dla programu SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

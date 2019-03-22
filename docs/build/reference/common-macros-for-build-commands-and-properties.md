@@ -1,6 +1,6 @@
 ---
-title: Typowe makra dla poleceń kompilacji oraz właściwości
-ms.date: 05/29/2018
+title: Typowe makra dla poleceń programu MSBuild i właściwości
+ms.date: 03/20/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -90,26 +90,29 @@ helpviewer_keywords:
 - builds [C++], macros
 - $(FrameworkDir) macro
 - $(PlatformName) macro
+- $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 669114691bc89c1e8136e07a949be57cda3d71b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823301"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327681"
 ---
-# <a name="common-macros-for-build-commands-and-properties"></a>Typowe makra dla poleceń kompilacji oraz właściwości
+# <a name="common-macros-for-msbuild-commands-and-properties"></a>Typowe makra dla poleceń programu MSBuild i właściwości
 
-W zależności od opcje instalacji systemu Visual Studio można udostępnić setki makra dla Ciebie. Odpowiadają one właściwości programu MSBuild, które są ustawione domyślnie, lub w plikach .props i .targets lub w ustawieniach projektu. Te makra można użyć dowolnego miejsca w projekcie **stron właściwości** okno dialogowe, gdzie ciągi są akceptowane. Te makra nie są z uwzględnieniem wielkości liter.
+W zależności od opcje instalacji systemu Visual Studio można udostępnić setki makra do Ciebie w projekcie programu Visual Studio (oparte na MSBuild). Odpowiadają one właściwości programu MSBuild, które są ustawione domyślnie, lub w plikach .props i .targets lub w ustawieniach projektu. Te makra można użyć dowolnego miejsca w projekcie **stron właściwości** okno dialogowe, gdzie ciągi są akceptowane. Te makra nie są z uwzględnieniem wielkości liter.
 
 ## <a name="view-the-current-properties-and-macros"></a>Wyświetl bieżące właściwości i makra
 
-Aby wyświetlić aktualnie dostępnych makr, na dowolnej stronie właściwości **stron właściwości** okno dialogowe, wybierz strzałkę listy rozwijanej na końcu wiersza właściwości. Jeśli **Edytuj** jest dostępna, wybierz go, a następnie w oknie dialogowym Edycja wybierz **makra** przycisku. Bieżący zestaw właściwości i makr widoczne w programie Visual Studio znajduje się wraz z bieżącą wartość dla każdego. Aby uzyskać więcej informacji, zobacz **wartości Specifying User-Defined** części [dokumentacja strony właściwości projektu C++](property-pages-visual-cpp.md).
+Aby wyświetlić wszystkie aktualnie dostępne makra **strony właściwości** okna dialogowego, w obszarze **katalogi VC ++**, wybierz strzałkę listy rozwijanej na końcu wiersza właściwości. Kliknij pozycję **Edytuj** , a następnie w oknie dialogowym Edycja wybierz **makra** przycisku. Bieżący zestaw właściwości i makr widoczne w programie Visual Studio znajduje się wraz z bieżącą wartość dla każdego. Aby uzyskać więcej informacji, zobacz **wartości Specifying User-Defined** części [dokumentacja strony właściwości projektu C++](property-pages-visual-cpp.md).
+
+![Przycisk makra VC ++](../media/vcppdir_libdir_macros.png "menu makra")
 
 ## <a name="list-of-common-macros"></a>Lista typowych makr
 
-W tej tabeli opisano typowe podzbioru dostępnych makr. Ta lista nie jest wyczerpująca. Aby uzyskać szczegółowe informacje dotyczące sposobu tworzenia definicji właściwości programu MSBuild i używany jako makra w pliki.vcxproj, .props i .targets, zobacz [właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties).
+W tej tabeli opisano typowe podzbioru dostępnych makr; istnieje wiele więcej niewymienione w tym miejscu. Przejdź do **makra** okna dialogowego, aby wyświetlić wszystkie właściwości i ich bieżącymi wartościami w projekcie. Aby uzyskać szczegółowe informacje dotyczące sposobu tworzenia definicji właściwości programu MSBuild i używany jako makra w pliki.vcxproj, .props i .targets, zobacz [właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties).
 
 |Macro|Opis|
 |-----------|-----------------|
@@ -122,6 +125,7 @@ W tej tabeli opisano typowe podzbioru dostępnych makr. Ta lista nie jest wyczer
 |**$(IntDir)**|Ścieżka do katalogu określonym dla plików pośrednich. Jeśli jest to ścieżka względna, pliki pośrednie przejdź do tej ścieżki do katalogu projektu. Ścieżka ta powinna mieć znaku ukośnika na końcu. To jest rozpoznawana jako wartość **katalog pośredni** właściwości. Nie używaj **$(OutDir)** do definiowania tej właściwości.|
 |**$(OutDir)**|Ścieżka do katalogu pliku wyjściowego. Jeśli jest to ścieżka względna, pliki wyjściowe przejdź do tej ścieżki do katalogu projektu. Ścieżka ta powinna mieć znaku ukośnika na końcu. To jest rozpoznawana jako wartość **katalog wyjściowy** właściwości. Nie używaj **$(IntDir)** do definiowania tej właściwości.|
 |**$(Platform)**|Nazwa bieżącego projektu platformy, na przykład "Win32".|
+|**$(PlatformShortName)**|Krótka nazwa bieżącego architektury, na przykład "x86" lub "x64".|
 |**$(ProjectDir)**|Katalogu projektu (zdefiniowany jako dysk i ścieżkę); zawiera ukośnik odwrotny na końcu "\\".|
 |**$(ProjectExt)**|Rozszerzenie pliku projektu. Zawiera on "." przed rozszerzeniem pliku.|
 |**$(ProjectFileName)**|Nazwa pliku projektu (zdefiniowany jako podstawowej nazwy + rozszerzenia pliku).|

@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: f27e325a8d766fbaf95037db669e0829671cb104
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562916"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328509"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek (C++)
 
@@ -153,7 +153,7 @@ Po dodaniu wspólne kontrolki lub kontrolki edycji wzbogaconej w oknie dialogowy
 
 1. Utwórz projekt systemu Win32, modyfikując ustawienia aplikacji, dzięki czemu można utworzyć aplikację Windows (nie Aplikacja konsoli).
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij dwukrotnie *.rc* pliku.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij dwukrotnie *.rc* pliku.
 
 1. W obszarze opcji okno dialogowe, kliknij dwukrotnie **o** pole.
 
@@ -231,7 +231,7 @@ Win32
 ## <a name="see-also"></a>Zobacz też
 
 [Zarządzanie formantów okna dialogowego](controls-in-dialog-boxes.md)<br/>
-[Instrukcje: Formanty układu](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Instrukcje: Kontrolki układu](arrangement-of-controls-on-dialog-boxes.md)<br/>
 [Instrukcje: Definiowanie dostępu do kontrolek i ich wartości](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links

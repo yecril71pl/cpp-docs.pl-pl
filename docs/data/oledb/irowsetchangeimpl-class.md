@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: dacf9de0835108ae946e7523472a0adf12e7e222
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 452bd28e3ea061ecc30ef802290242e4cb830792
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556728"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328600"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl — Klasa
 
-Szablony OLE DB implementacji [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) interfejsu w specyfikacji OLE DB.
+Szablony OLE DB implementacji [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) interfejsu w specyfikacji OLE DB.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 *T*<br/>
 Klasa pochodząca z `IRowsetChangeImpl`.
 
-*Magazyn*<br/>
+*Storage*<br/>
 Rekordzie użytkownika.
 
 *BaseInterface*<br/>
@@ -90,7 +90,7 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
 
 |||
 |-|-|
-|[FlushData](#flushdata)|Overidden przez dostawcę, aby zatwierdzić jego magazynu danych.|
+|[FlushData](#flushdata)|Zastąpione przez dostawcę, aby przekazać danych do jego magazynu.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -124,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowsetChange::DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
@@ -141,7 +141,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowsetChange::InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
 
@@ -157,11 +157,11 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowsetChange::SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 
-Overidden przez dostawcę, aby zatwierdzić jego magazynu danych.
+Zastąpione przez dostawcę, aby przekazać danych do jego magazynu.
 
 ### <a name="syntax"></a>Składnia
 

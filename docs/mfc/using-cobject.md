@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-ms.openlocfilehash: 15b5bebb8e75d24b769cd29971d08b3fbf92fcf8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c4355f43df33f37838cfc9be4453e42271ae9f3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302133"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328483"
 ---
 # <a name="using-cobject"></a>Używanie obiektu CObject
 
@@ -31,7 +31,7 @@ ms.locfileid: "57302133"
 
 - [Dynamiczne tworzenie obiektów](../mfc/dynamic-object-creation.md)
 
-- [Zrzuć danych obiektu do celów diagnostycznych](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)
+- [Zrzuć danych obiektu do celów diagnostycznych](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))
 
 - Sprawdzanie poprawności stanu wewnętrznego obiektu (zobacz [MFC ASSERT_VALID i CObject::AssertValid](reference/diagnostic-services.md#assert_valid))
 

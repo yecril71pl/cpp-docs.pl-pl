@@ -3,7 +3,6 @@ title: Ostrzeżenia kompilatora od C4200 do C4399
 ms.date: 11/17/2017
 f1_keywords:
 - C4203
-- C4274
 - C4277
 - C4279
 - C4298
@@ -12,7 +11,6 @@ f1_keywords:
 - C4303
 - C4314
 - C4315
-- C4316
 - C4317
 - C4318
 - C4321
@@ -22,22 +20,20 @@ f1_keywords:
 - C4328
 - C4330
 - C4338
-- C4343
 - C4352
 - C4362
 - C4367
 - C4370
-- C4373
 - C4380
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810513"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328268"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Ostrzeżenia kompilatora od C4200 do C4399
 
@@ -103,7 +99,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|"*identyfikator*": "const" automatyczne dane zainicjowano przy użyciu wygenerowanego przez kompilator domyślnego konstruktora, który zwrócił niepewne wyniki|
 |[Ostrzeżenie kompilatora (poziom 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|"*funkcja*": jest oznaczony jako __declspec(dllimport); należy określić natywną Konwencję wywoływania podczas importu funkcji.|
 |[Ostrzeżenie kompilatora (poziom 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|"*funkcja*": niespójne powiązanie biblioteki dll|
-|Ostrzeżenie kompilatora (poziom 1) C4274|#ident ignorowane. zobacz dokumentację dla #pragma comment (exestr, "string")|
+|[Ostrzeżenie kompilatora (poziom 1) C4274](compiler-warning-level-1-c4274.md)|#ident ignorowane. zobacz dokumentację dla #pragma comment (exestr, "string")|
 |[Ostrzeżenie kompilatora (poziom 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|bez użycia interfejsu biblioteki dll "*classkey*" "*identifier1*"używane jako podstawa dla interfejsu biblioteki dll"*classkey*" "*identifier2*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|"*funkcja*": nie dostarczono prototypu; założono Brak parametrów|
 |Ostrzeżenie kompilatora (poziom 1) C4277|importowany element '*classname*::*elementu członkowskiego*"istnieje zarówno jako element członkowski danych i funkcja składowa; składowa danych została zignorowana|
@@ -140,7 +136,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|"*funkcja*": "*format_specifier*"w formacie ciągu powoduje konflikt z argumentem "*argument_number*"typu"*typu*"|
 |C4314 ostrzeżenia kompilatora|Oczekiwano wartości parametru pragma "32" lub "64"|
 |Ostrzeżenie kompilatora (poziom 4) C4315|"*classname*": wskaźnik "this" dla elementu członkowskiego "*elementu członkowskiego*"może nie być wyrównane"*wyrównanie*" zgodnie z oczekiwaniami, Konstruktor|
-|Ostrzeżenie kompilatora (poziom 3) C4316|"*identyfikator*": obiekt przydzielony na stosie może nie wyrównany "*wyrównanie*"|
+|[Ostrzeżenie kompilatora (poziom 3) C4316](compiler-warning-level-3-c4316.md)|"*identyfikator*": obiekt przydzielony na stosie może nie wyrównany "*wyrównanie*"|
 |Ostrzeżenie kompilatora (poziom 1) C4317|"*printf_family*": przekazano za mało argumentów dla ciągu formatu|
 |C4318 ostrzeżenia kompilatora|przekazanie stałej o wartości zero jako długość do funkcji memset|
 |[Ostrzeżenie kompilatora (poziom 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|"*operator*": zero rozszerzanie "*type1*"to"*type2*' o większym rozmiarze|
@@ -163,7 +159,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|"*typu*": użycie niezdefiniowanego typu wykryte w "WinRT&#124;CLR" meta-data - użycie tego typu może prowadzić do wyjątku czasu wykonywania|
 |[Ostrzeżenie kompilatora (poziom 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|"*wartość*": wartość opakowano z dodatniej do ujemnej wartości|
 |[Ostrzeżenie kompilatora (poziom 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|Zmiana zachowania: "*funkcja*" o nazwie, ale operator składowej został wywołany w poprzednich wersjach|
-|Ostrzeżenie kompilatora (poziom 4) C4343|#pragma optimize("g",off) przesłania opcję /Og|
+|[Ostrzeżenie kompilatora (poziom 4) C4343](compiler-warning-level-4-c4343.md)|#pragma optimize("g",off) przesłania opcję /Og|
 |[Ostrzeżenie kompilatora (poziom 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|Zmiana zachowania: użycie wyników argumentów niejawnego szablonu w wywołaniu elementu "*funkcja*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|"*nazwa*": zależna nazwa nie jest typem|
 |[Ostrzeżenie kompilatora (poziom 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|"*typu*": ponowna definicja domyślnego parametru: parametr "*parameter_number*"|
@@ -184,7 +180,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|"*modułu wyliczającego*": moduł wyliczający wartość "*wartość*"nie może być reprezentowany jako"*typu*", wartość to"*nowa_wartość*"|
 |C4370 ostrzeżenia kompilatora|"*classname*": układ klasy zmienił się z poprzedniej wersji kompilatora ze względu na lepsze pakowanie|
 |[Ostrzeżenie kompilatora (poziom 3) C4371](../../error-messages/compiler-warnings/c4371.md)|"*classname*": układ klasy mógł się zmienić z poprzedniej wersji kompilatora ze względu na lepsze pakowanie składowej '*elementu członkowskiego*"|
-|Ostrzeżenie kompilatora (poziom 3) C4373|"*derived_class*::*funkcja*": przesłonięcia funkcji wirtualnych*element $base_class*::*funkcja*", poprzednie wersje kompilatora nie przesłaniały, gdy parametry różnił się tylko przez kwalifikatory const/volatile|
+|[Ostrzeżenie kompilatora (poziom 3) C4373](compiler-warning-level-3-c4373.md)|"*derived_class*::*funkcja*": przesłonięcia funkcji wirtualnych*element $base_class*::*funkcja*", poprzednie wersje kompilatora nie przesłaniały, gdy parametry różnił się tylko przez kwalifikatory const/volatile|
 |[Ostrzeżenie kompilatora (poziom 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|"*function1*": metoda interfejsu nie będzie zaimplementowana przez niewirtualną metodę "*function2*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|Niepubliczna metoda "*method2*"nie przesłania"*method2*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|Specyfikator dostępu "*old_specifier*:" nie jest już obsługiwany: Użyj "*new_specifier*:" zamiast niego|
@@ -205,7 +201,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|"*zmiennej*": const nie ma wpływu "*literału*" element członkowski danych; ignorowany|
 |[Ostrzeżenie kompilatora C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|"*funkcja*": symbol per-appdomain nie powinien być oznaczony za pomocą __declspec('dllexport')|
 |[Ostrzeżenie kompilatora (poziom 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|"*funkcja*": funkcja składowa zostanie wywołana na kopii składowej danych initonly "*elementu członkowskiego*"|
-|Ostrzeżenie kompilatora (poziom 2) C4396|"*funkcja*": wbudowany specyfikator nie można użyć, gdy zaprzyjaźniona deklaracja odnosi się do specjalizacji szablonu funkcji|
+|[Ostrzeżenie kompilatora (poziom 2) C4396](compiler-warning-level-2-c4396.md)|"*funkcja*": wbudowany specyfikator nie można użyć, gdy zaprzyjaźniona deklaracja odnosi się do specjalizacji szablonu funkcji|
 |[Ostrzeżenie kompilatora (poziom 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute jest ignorowany|
 |[Ostrzeżenie kompilatora (poziom 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|"*zmiennej*": globalny obiekt dla poszczególnych procesu mogą nie działać poprawnie z wieloma domenami aplikacji; należy wziąć pod uwagę użycie __declspec(appdomain)|
 |[Ostrzeżenie kompilatora (poziom 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|"*symbol*": symbol w procesie nie powinien być oznaczony za pomocą __declspec('dllimport'), gdy skompilowano z opcją/CLR: pure|

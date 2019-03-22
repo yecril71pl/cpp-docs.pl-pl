@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: fb2f66474f9700ed7bfdc2e1063865734e4e991a
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557014"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329016"
 ---
 # <a name="crowset-class"></a>Klasa CRowset
 
@@ -273,25 +273,25 @@ Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.
 |-|-|
 |[Addrefrows —](#addrefrows)|Zwiększa liczbę odwołań skojarzone z bieżącego wiersza.|
 |[Zamknij](#close)|Wersje wierszy i bieżący `IRowset` interfejsu.|
-|[Compare](#compare)|Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Compare](#compare)|Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Tworzy nową `CRowset` obiektu i (opcjonalnie) kojarzy ją z `IRowset` interfejs dostarczany jako parametr.|
-|[Delete](#delete)|Usuwa wiersze z wierszy przy użyciu [IRowsetChange:DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
+|[Delete](#delete)|Usuwa wiersze z wierszy przy użyciu [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Wyszukuje następny zgodny wiersz po zakładką.|
-|[Getapproximateposition —](#getapproximateposition)|Zwraca pozycję przybliżony wiersz odpowiadający zakładki.|
+|[GetApproximatePosition](#getapproximateposition)|Zwraca pozycję przybliżony wiersz odpowiadający zakładki.|
 |[GetData](#getdata)|Pobiera dane z zestawu wierszy kopię wiersza.|
-|[GetDataHere —](#getdatahere)|Pobiera dane z określonego bufora.|
+|[GetDataHere](#getdatahere)|Pobiera dane z określonego bufora.|
 |[GetOriginalData](#getoriginaldata)|Pobiera dane ostatnio pobrana z lub przesłana do źródła danych, ignorowanie oczekujące zmiany.|
 |[GetRowStatus](#getrowstatus)|Zwraca stan wszystkich wierszy.|
-|[Wstaw](#insert)|Tworzy i wstawia nowy wiersz za pomocą [IRowsetChange:InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)).|
+|[Wstaw](#insert)|Tworzy i wstawia nowy wiersz za pomocą [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
 |[Issamerow —](#issamerow)|Porównuje określony wiersz z bieżącego wiersza.|
 |[MoveFirst](#movefirst)|Powoduje przeniesienie lokalizacji pobierania następnej pozycji początkowej.|
 |[MoveLast](#movelast)|Przesuwa ostatni rekord.|
 |[MoveNext](#movenext)|Pobiera dane z następny kolejny wiersz lub określoną liczbę pozycji poza następnego wiersza.|
-|[Moveprev —](#moveprev)|Przenosi do poprzedniego rekordu.|
-|[Movetobookmark —](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
+|[MovePrev](#moveprev)|Przenosi do poprzedniego rekordu.|
+|[MoveToBookmark](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
 |[MoveToRatio](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
-|[Releaserows —](#releaserows)|Wywołania [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) zwolnić dojście do bieżącego wiersza.|
-|[SetData](#setdata)|Ustawia wartości danych w jednej lub kilku kolumn przy użyciu wiersza [IRowsetChange:SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)).|
+|[ReleaseRows](#releaserows)|Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) zwolnić dojście do bieżącego wiersza.|
+|[SetData](#setdata)|Ustawia wartości danych w jednej lub kilku kolumn przy użyciu wiersza [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
 |[Cofnij](#undo)|Cofa wszelkie zmiany wprowadzone od czasu ostatniego pobrania wiersza lub [aktualizacji](../../data/oledb/crowset-update.md).|
 |[Aktualizacja](#update)|Przesyła wszystkie oczekujące zmiany wprowadzone od czasu ostatniego pobrania lub aktualizacji bieżący wiersz.|
 |[UpdateAll](#updateall)|Przesyła wszystkie oczekujące zmiany do wszystkich wierszy od czasu ostatniego pobrania lub aktualizacji.|
@@ -304,7 +304,7 @@ Ta klasa nie jest przeznaczona do wystąpienia, ale raczej przekazany jako param
 
 ## <a name="addrefrows"></a> CRowset::AddRefRows
 
-Wywołania [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) do zwiększenia (po jednym) licznik odwołań skojarzonych z bieżącym dojście do wiersza.
+Wywołania [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) do zwiększenia (po jednym) licznik odwołań skojarzonych z bieżącym dojście do wiersza.
 
 ### <a name="syntax"></a>Składnia
 
@@ -322,7 +322,7 @@ Ta metoda zwiększa liczbę odwołań dla dojście do bieżącego wiersza. Wywo�
 
 ## <a name="close"></a> CRowset::Close
 
-Wersje wierszy i bieżący [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) interfejsu.
+Wersje wierszy i bieżący [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) interfejsu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -336,7 +336,7 @@ Ta metoda zwalnia wszystkie wiersze, obecnie w zestawie wierszy.
 
 ## <a name="compare"></a> CRowset::Compare
 
-Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)).
+Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).
 
 ### <a name="syntax"></a>Składnia
 
@@ -369,7 +369,7 @@ Aby dowiedzieć się, jak korzystanie z zakładek w konsumentów, zobacz [przy u
 
 ## <a name="crowset"></a> CRowset::CRowset
 
-Tworzy nową `CRowset` obiektu i (opcjonalnie) kojarzy ją z [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) interfejs dostarczany jako parametr.
+Tworzy nową `CRowset` obiektu i (opcjonalnie) kojarzy ją z [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) interfejs dostarczany jako parametr.
 
 ### <a name="syntax"></a>Składnia
 
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-Wywołania [IRowsetChange::DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) można usunąć bieżący wiersz z zestawu wierszy.
+Wywołania [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) można usunąć bieżący wiersz z zestawu wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -418,22 +418,22 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 #### <a name="parameters"></a>Parametry
 
 *OP*<br/>
-[in] Operacja używania przy porównywaniu wartości wiersza. W przypadku wartości zobacz [IRowsetFind::FindNextRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms723091(v=vs.85)).
+[in] Operacja używania przy porównywaniu wartości wiersza. W przypadku wartości zobacz [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091(v=vs.85)).
 
 *pData*<br/>
 [in] Wskaźnik do wartości, które mają być dopasowywane.
 
 *wType*<br/>
-[in] Wskazuje typ danych wartości części buforu. Informacje wskaźników typu, zobacz [typy danych](https://docs.microsoft.com/previous-versions/windows/desktop/ms723969(v=vs.85)) w *OLE DB Podręcznik programisty* w zestawie Windows SDK.
+[in] Wskazuje typ danych wartości części buforu. Informacje wskaźników typu, zobacz [typy danych](/previous-versions/windows/desktop/ms723969(v=vs.85)) w *OLE DB Podręcznik programisty* w zestawie Windows SDK.
 
 *nLength*<br/>
-[in] Długość, w bajtach, struktury danych konsumentów przydzielonych do wartości danych. Aby uzyskać szczegółowe informacje, zobacz opis `cbMaxLen` w [struktury DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) w *OLE DB Podręcznik programisty.*
+[in] Długość, w bajtach, struktury danych konsumentów przydzielonych do wartości danych. Aby uzyskać szczegółowe informacje, zobacz opis `cbMaxLen` w [struktury DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) w *OLE DB Podręcznik programisty.*
 
 *bPrecision*<br/>
-[in] Maksymalna dozwolona dokładność używany podczas pobierania danych. Używane tylko wtedy, gdy *wType* jest DBTYPE_NUMERIC. Aby uzyskać więcej informacji, zobacz [konwersje obejmujące DBTYPE_NUMERIC lub DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85)) w *OLE DB Podręcznik programisty*.
+[in] Maksymalna dozwolona dokładność używany podczas pobierania danych. Używane tylko wtedy, gdy *wType* jest DBTYPE_NUMERIC. Aby uzyskać więcej informacji, zobacz [konwersje obejmujące DBTYPE_NUMERIC lub DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 *bScale*<br/>
-[in] Skala używany podczas pobierania danych. Używane tylko wtedy, gdy *wType* DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Aby uzyskać więcej informacji, zobacz [konwersje obejmujące DBTYPE_NUMERIC lub DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85)) w *OLE DB Podręcznik programisty*.
+[in] Skala używany podczas pobierania danych. Używane tylko wtedy, gdy *wType* DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Aby uzyskać więcej informacji, zobacz [konwersje obejmujące DBTYPE_NUMERIC lub DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 *bSkipCurrent*<br/>
 [in] Liczba wierszy z zakładki, od którego należy rozpocząć wyszukiwanie.
@@ -633,7 +633,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT. S_OK wskazuje, że wiersze są takie same. Aby uzyskać inne wartości, zobacz [IRowsetIndentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) w *OLE DB Podręcznik programisty* w zestawie Windows SDK.
+Standardowa HRESULT. S_OK wskazuje, że wiersze są takie same. Aby uzyskać inne wartości, zobacz [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) w *OLE DB Podręcznik programisty* w zestawie Windows SDK.
 
 ## <a name="movefirst"></a> CRowset::MoveFirst
 
@@ -651,7 +651,7 @@ Standardowa HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) służące do zmiany położenia lokalizacji pobierania następnej pozycji początkowej (pozycja został lokalizacji pobierania następnego podczas tworzenia zestawu wierszy) i pobiera początkowy wiersz.
+Wywołania [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) służące do zmiany położenia lokalizacji pobierania następnej pozycji początkowej (pozycja został lokalizacji pobierania następnego podczas tworzenia zestawu wierszy) i pobiera początkowy wiersz.
 
 ## <a name="movelast"></a> CRowset::MoveLast
 
@@ -669,7 +669,7 @@ Standardowa HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) służące do zmiany położenia lokalizacji pobierania dalej do ostatniej pozycji i pobiera ostatni wiersz.
+Wywołania [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) służące do zmiany położenia lokalizacji pobierania dalej do ostatniej pozycji i pobiera ostatni wiersz.
 
 Ta metoda wymaga, aby ustawić `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy. (Lepszą wydajność, możesz również ustawić `DBPROP_QUICKRESTART` VARIANT_TRUE.)
 
@@ -789,13 +789,13 @@ Standardowa HRESULT.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)).
+Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)).
 
 Ta metoda wymaga opcjonalny interfejs `IRowsetScroll`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetScroll` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
 
 ## <a name="releaserows"></a> CRowset::ReleaseRows
 
-Wywołania [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) zwolnić dojście do bieżącego wiersza.
+Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) zwolnić dojście do bieżącego wiersza.
 
 ### <a name="syntax"></a>Składnia
 

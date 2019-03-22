@@ -3,12 +3,12 @@ title: 'Instrukcje: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z me
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334974"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328721"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Instrukcje: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu windows
 
@@ -18,7 +18,7 @@ Można użyć tych narzędzi w dwa główne scenariusze:
 
 - Tworzenie niestandardowych IDL i pliki nagłówkowe, tak, aby napisane przy użyciu biblioteki szablonów środowiska uruchomieniowego Windows (WRL) aplikacji w języku C++ mogą wykorzystywać niestandardowych składników Windows Runtime.
 
-- Generowanie plików serwera proxy i klas zastępczych dla typów zdarzeń zdefiniowanych przez użytkownika w składnika środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [niestandardowe zdarzenia i metody dostępu zdarzeń w składnikach środowiska wykonawczego Windows](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Generowanie plików serwera proxy i klas zastępczych dla typów zdarzeń zdefiniowanych przez użytkownika w składnika środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [niestandardowe zdarzenia i metody dostępu zdarzeń w składnikach środowiska wykonawczego Windows](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
 Te narzędzia są wymagane tylko w przypadku analizowania plików winmd niestandardowych. Plików .idl i .h składników systemu operacyjnego Windows już są generowane dla Ciebie. Domyślnie w Windows 8.1 znajdują się one w \Program pliki (x86) \Windows Kits\8.1\Include\winrt\\.
 
@@ -75,4 +75,4 @@ Następnie midlrt jest uruchamiane w wygenerowanym pliku IDL. Należy zauważyć
 
 Plik wyjściowy z operacją winmdidl ma taką samą nazwę jak plik wejściowy, ale ma rozszerzenie nazwy pliku .idl.
 
-Jeśli tworzysz składnik środowiska wykonawczego Windows, który uzyskuje się dostęp z WRL można określić winmdidl.exe i midlrt.exe, aby uruchomić jako kroków wykonywanych po kompilacji, tak, aby plików .idl i .h są generowane dla każdej kompilacji. Aby uzyskać przykład, zobacz [Raising Events w składnikach środowiska wykonawczego Windows](/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Jeśli tworzysz składnik środowiska wykonawczego Windows, który uzyskuje się dostęp z WRL można określić winmdidl.exe i midlrt.exe, aby uruchomić jako kroków wykonywanych po kompilacji, tak, aby plików .idl i .h są generowane dla każdej kompilacji. Aby uzyskać przykład, zobacz [Raising Events w składnikach środowiska wykonawczego Windows](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

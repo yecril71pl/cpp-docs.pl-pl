@@ -4,16 +4,16 @@ description: Środowiska IDE programu Visual Studio obsługuje C++, programowani
 ms.date: 03/08/2019
 helpviewer_keywords:
 - Visual C++, development tools
-ms.openlocfilehash: cb64891b18fcf309fd217240012e4ad35c644902
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dfbe98cdbae6df7dacdc2f3076891971ba86927e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823961"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328121"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Omówienie programowania C++ w programie Visual Studio
 
-W ramach programu zintegrowanego rozwoju środowiska (IDE) Visual Studio C++ firmy Microsoft (MSVC) udostępnia wiele systemu windows i narzędzia wspólnych innych języków. Wiele z nich w tym **Eksploratora rozwiązań**, Edytor kodu i debugera, opisano w [środowiska IDE programu Visual Studio](/visualstudbuild/visual-studio-ide). Często udostępnione narzędzia lub okno ma nieco inny zestaw funkcji dla języka C++ niż dla języków .NET lub JavaScript. Kilka systemu windows lub narzędzi są dostępne tylko w wersjach programu Visual Studio Professional lub Visual Studio Enterprise.
+W ramach programu zintegrowanego rozwoju środowiska (IDE) Visual Studio C++ firmy Microsoft (MSVC) udostępnia wiele systemu windows i narzędzia wspólnych innych języków. Wiele z nich w tym **Eksploratora rozwiązań**, Edytor kodu i debugera, opisano w [środowiska IDE programu Visual Studio](/visualstudio/get-started/visual-studio-ide). Często udostępnione narzędzia lub okno ma nieco inny zestaw funkcji dla języka C++ niż dla języków .NET lub JavaScript. Kilka systemu windows lub narzędzi są dostępne tylko w wersjach programu Visual Studio Professional lub Visual Studio Enterprise.
 
 Oprócz narzędzi udostępnionych w programie Visual Studio IDE MSVC ma kilka narzędzi specjalnie do tworzenie kodu natywnego. Te narzędzia są również wyszczególnione w tym artykule. Aby uzyskać listę narzędzi są dostępne w każdej wersji programu Visual Studio, zobacz [C++ narzędzia i funkcje w wersji programu Visual Studio](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 

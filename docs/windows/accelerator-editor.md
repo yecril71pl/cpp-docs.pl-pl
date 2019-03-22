@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562948"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328405"
 ---
 # <a name="accelerator-editor-c"></a>Edytor klawiszy skrótów (C++)
 
@@ -116,7 +116,7 @@ Poniższe procedury dotyczą używanie stron właściwości standardowych, jedna
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Edytowanie w tabeli akceleratora
 
-1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wybierz wpis w tabeli, a następnie wybierz, aby aktywować edycji w miejscu.
 
@@ -132,7 +132,7 @@ Poniższe procedury dotyczą używanie stron właściwości standardowych, jedna
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Aby znaleźć wpisu w tabeli akceleratora Otwórz
 
-1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wybierz główny kolumny, aby posortować alfabetycznie zawartości kolumny. Na przykład wybierz **identyfikator** do wyświetlenia wszystkich identyfikatorów w tabeli akceleratora alfabetycznie.
 
@@ -140,7 +140,7 @@ Poniższe procedury dotyczą używanie stron właściwości standardowych, jedna
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Aby dodać wpis do tabeli akceleratora
 
-1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Kliknij prawym przyciskiem myszy w tabeli klawiszy skrótów, a następnie wybierz **nowy akcelerator**, lub zaznacz pusty wiersz w dolnej części tabeli.
 
@@ -155,7 +155,7 @@ Poniższe procedury dotyczą używanie stron właściwości standardowych, jedna
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Aby usunąć wpis z tabeli akceleratora
 
-1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wybierz wpis, aby usunąć lub naciśnij i przytrzymaj **Ctrl** lub **Shift** klucza podczas zaznaczania, aby wybrać wiele wpisów.
 
@@ -177,7 +177,7 @@ Poniższe procedury dotyczą używanie stron właściwości standardowych, jedna
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Aby zmienić właściwości kilku klawiszy skrótów
 
-1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wybierz klawisze skrótów chcesz zmienić, przytrzymując **Ctrl** klucza, zgodnie z wybraniu każdej z nich.
 

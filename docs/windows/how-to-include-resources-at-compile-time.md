@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562838"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328392"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Instrukcje: Dołączanie zasobów w czasie kompilacji (C++)
 
@@ -48,7 +48,7 @@ Jeśli masz sekcje w istniejących plikach .rc, które spełniają dowolne z tyc
 
 Możesz dodać zasoby z innych plików do projektu w czasie kompilacji przez wymienienie ich w **dyrektywy czasu kompilacji** pole w **zasób zawiera** okno dialogowe. Użyj **zasób zawiera** okno dialogowe, aby zmodyfikować środowisko projektu normalnej pracy rozmieszczenie przechowywania wszystkich zasobów w pliku .rc projektu, a wszystkie [symbole](../windows/symbols-resource-identifiers.md) w `Resource.h`.
 
-Aby rozpocząć, otwórz **zasób zawiera** okno dialogowe, klikając prawym przyciskiem myszy plik .rc w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), wybierz opcję **zasób zawiera** i zanotuj następujące właściwości:
+Aby rozpocząć, otwórz **zasób zawiera** okno dialogowe, klikając prawym przyciskiem myszy plik .rc w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), wybierz opcję **zasób zawiera** i zanotuj następujące właściwości:
 
 | Właściwość | Opis |
 |---|---|
@@ -65,7 +65,7 @@ Po dokonaniu zmian do pliku zasobów za pomocą **zasób zawiera** okno dialogow
 
 1. Umieść zasoby w pliku skryptu zasobu przy użyciu unikatowej nazwy pliku. Nie używaj *projectname.rc*, ponieważ jest to nazwa pliku używany dla pliku skryptu zasobu głównego.
 
-1. Kliknij prawym przyciskiem myszy *.rc* w pliku [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources) i wybierz **zasób zawiera**.
+1. Kliknij prawym przyciskiem myszy *.rc* w pliku [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) i wybierz **zasób zawiera**.
 
 1. W **dyrektywy czasu kompilacji** Dodaj [#include](../preprocessor/hash-include-directive-c-cpp.md) dyrektywy kompilatora, które mają zostać objęte nowego pliku zasobu z głównego pliku zasobów w środowisku programistycznym.
 

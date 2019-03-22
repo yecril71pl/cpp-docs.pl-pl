@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563059"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328496"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Instrukcje: Tworzenie ikony lub innego obrazu
 
@@ -167,7 +167,7 @@ Użyj **Otwórz &lt;urządzenia&gt; obraz** okno dialogowe, aby otworzyć obraza
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>Aby utworzyć nową ikonę lub kursora
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, kliknąć prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, kliknąć prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
 
 1. W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz opcję **ikonę** lub **kursora** i wybierz polecenie **New**. Ikony ta akcja powoduje utworzenie przy użyciu 32 x 32, ikona 16 kolorów zasobu ikony. Dla kursorów, 32 x 32, tworzony jest monochromatyczny obrazu (w kolorze 2).
 
@@ -228,7 +228,7 @@ Za pomocą **edytora obrazów**, ikon i kursorów można wielkości dużych (64 
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>Tworzenie ikony 256 kolorów lub kursora
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, kliknąć prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, kliknąć prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
 
 1. W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz opcję **ikonę** lub **kursora** i wybierz polecenie **New**.
 
@@ -295,7 +295,7 @@ Możesz otworzyć obrazów GIF lub JPEG w **edytora obrazów** i zapisz je jako 
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Aby dodać nowy zasób obrazu do niezarządzanego projektu C++
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, użytkownik może po prostu kliknij prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz **Wstaw zasobów**. Jeśli masz już istniejący zasób obrazu swojej *.rc* plików, takich jak kursora, użytkownik może po prostu kliknij prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora**.
 
 1. W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz typ zasobu obrazu, które chcesz utworzyć (**mapy bitowej**, na przykład) wybierz **New**.
 

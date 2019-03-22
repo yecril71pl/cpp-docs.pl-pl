@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563020"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328808"
 ---
 # <a name="resource-editors-c"></a>Edytory zasobów (C++)
 
@@ -63,13 +63,13 @@ Zasoby można również edytować poza projektem, bez konieczności otwarty proj
 > [!NOTE]
 > Można modyfikować właściwości zasobu za pomocą **właściwości** okna.
 
-- Aby edytować właściwości zasobu w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources), kliknij prawym przyciskiem myszy zasób, o których chcesz edytować, a następnie wybierz **właściwości**.  Następnie w [okno właściwości](/visualstudio/ide/reference/properties-window), zmiana właściwości zasobu.
+- Aby edytować właściwości zasobu w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy zasób, o których chcesz edytować, a następnie wybierz **właściwości**.  Następnie w [okno właściwości](/visualstudio/ide/reference/properties-window), zmiana właściwości zasobu.
 
 - Aby cofnąć zmiany wprowadzone do właściwości zasobu, upewnij się, zasób ma fokus w **widok zasobów** i wybierz polecenie **Cofnij** z **Edytuj** menu.
 
 ### <a name="win32-resources"></a>Zasoby Win32
 
-Dostęp zasobów Win32 w [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources) okienka.
+Dostęp zasobów Win32 w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) okienka.
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Aby wyświetlić zasób Win32 w edytorze zasobów
 
@@ -113,7 +113,7 @@ Poniższe zasoby nie przedstawiają wyświetlania podglądu: Akcelerator, inform
 
 ### <a name="to-preview-resources"></a>Aby wyświetlić podgląd zasobów
 
-1. W [widok zasobów](/windows/how-to-create-a-resource-script-file#create-resources) lub okno dokumentu, wybierz zasób, na przykład **IDD_ABOUTBOX**.
+1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) lub okno dokumentu, wybierz zasób, na przykład **IDD_ABOUTBOX**.
 
 1. W [okno właściwości](/visualstudio/ide/reference/properties-window), wybierz opcję **stron właściwości** przycisku.
 

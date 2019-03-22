@@ -3,12 +3,12 @@ title: Dostosowywanie ustawień kompilacji CMake w programie Visual Studio
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: aa840dd41ee6843afae80343e42ba62741bbcd80
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823249"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328301"
 ---
 # <a name="customize-cmake-build-settings"></a>Dostosowywanie ustawień kompilacji CMake
 
@@ -53,19 +53,19 @@ Można także bezpośrednio edytować `CMakeSettings.json` pokazuje Przykładowa
 
 - **Generator**: mapuje do narzędzia CMake **- G** przełącznika i określa generator, który ma być używany. Ta właściwość może również służyć jako makra, `${generator}`, tworząc wartości innych właściwości. Program Visual Studio obsługuje obecnie następujące generatory CMake:
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+  - "Ninja"
+  - "Visual Studio 14 2015"
+  - "Visual Studio 14 2015 ARM"
+  - "Visual Studio 14 2015 Win64"
+  - "Visual Studio 15 2017"
+  - "Visual Studio 15 2017 ARM"
+  - "Visual Studio 15 2017 Win64"
 
-    Ponieważ Ninja jest przeznaczona dla szybkości szybkie kompilacji zamiast elastyczności i funkcji, jest ustawiona jako domyślna. Jednak niektóre projekty narzędzia CMake, może być nie można poprawnie tworzyć zawartość przy użyciu Ninja. W takiej sytuacji można nakazać narzędzia CMake w celu wygenerowania projektu programu Visual Studio, zamiast tego.
+  Ponieważ Ninja jest przeznaczona dla szybkości szybkie kompilacji zamiast elastyczności i funkcji, jest ustawiona jako domyślna. Jednak niektóre projekty narzędzia CMake, może być nie można poprawnie tworzyć zawartość przy użyciu Ninja. W takiej sytuacji można nakazać narzędzia CMake w celu wygenerowania projektu programu Visual Studio, zamiast tego.
 
-    Aby określić generator programu Visual Studio, otwórz `CMakeSettings.json` z menu głównego, wybierając **CMake | Zmień ustawienia narzędzia CMake**. Usuń "Ninja", a następnie wpisz "V". Aktywuje funkcję IntelliSense, która pozwala na dokonanie wyboru generator, który ma.
+  Aby określić generator programu Visual Studio, otwórz `CMakeSettings.json` z menu głównego, wybierając **CMake | Zmień ustawienia narzędzia CMake**. Usuń "Ninja", a następnie wpisz "V". Aktywuje funkcję IntelliSense, która pozwala na dokonanie wyboru generator, który ma.
 
-    Podczas aktywnej konfiguracji określa generator programu Visual Studio, domyślnie MSBuild.exe jest wywoływana z `-m -v:minimal` argumentów. Dostosowywanie kompilacji, wewnątrz `CMakeSettings.json` plików, można określić dodatkowe [argumenty wiersza polecenia programu MSBuild](../build/msbuild-visual-cpp-overview.md) mają być przekazane do systemu kompilacji, za pośrednictwem `buildCommandArgs` właściwości:
+  Podczas aktywnej konfiguracji określa generator programu Visual Studio, domyślnie MSBuild.exe jest wywoływana z `-m -v:minimal` argumentów. Dostosowywanie kompilacji, wewnątrz `CMakeSettings.json` plików, można określić dodatkowe [argumenty wiersza polecenia programu MSBuild](../build/reference/msbuild-visual-cpp-overview.md) mają być przekazane do systemu kompilacji, za pośrednictwem `buildCommandArgs` właściwości:
     
     ```json
     "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -132,7 +132,7 @@ usage: ninja [options] [targets...]
 |   -n       | Wysuszyć Uruchom (nie uruchamiać polecenia, ale działają tak, jak one powiodło się)|
 |   -v       | Pokaż wszystkie wiersze polecenia podczas tworzenia|
 |   -d tryb  | Włącz debugowanie (tryby listy do użycia -d)|
-|   t - narzędzie  | Uruchom subtool (Użyj -t listy do narzędzi niższego poziomu). kończy toplevel opcje; Dodatkowo flagi są przekazywane do narzędzia|
+|   t - narzędzie  | Uruchom subtool (Użyj -t listy do narzędzi niższego poziomu). kończy najwyższego poziomu opcje; Dodatkowo flagi są przekazywane do narzędzia|
 |   -w flagi  | Dostosuj ostrzeżenia (Użyj -w listy do ostrzeżenia)|
 
 ## <a name="inherited-environments"></a>Dziedziczonych środowisk
