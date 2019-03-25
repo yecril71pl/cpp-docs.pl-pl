@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: b984460d5b87e6a1d195e4127234479f8f7c8b0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649478"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416965"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -66,15 +66,25 @@ char *strtok(
    char *strToken,
    const char *strDelimit
 );
+char *strtok_l(
+   char *strToken,
+   const char *strDelimit,
+   _locale_t locale
+);
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
+);
+wchar_t *wcstok_l(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   _locale_t locale
 );
 unsigned char *_mbstok(
    unsigned char*strToken,
    const unsigned char *strDelimit
 );
-unsigned char *_mbstok(
+unsigned char *_mbstok_l(
    unsigned char*strToken,
    const unsigned char *strDelimit,
    _locale_t locale
@@ -114,8 +124,8 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstok —**|**strtok**|**_mbstok**|**wcstok**|
-|**_tcstok —**|**_strtok_l**|**_mbstok_l**|**_wcstok_l**|
+|**_tcstok**|**strtok**|**_mbstok**|**wcstok**|
+|**_tcstok**|**_strtok_l**|**_mbstok_l**|**_wcstok_l**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -123,7 +133,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbstok —**, **_mbstok_l —**|\<mbstring.h>|
+|**_mbstok**, **_mbstok_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

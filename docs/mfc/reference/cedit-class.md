@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289965"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417004"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 
@@ -570,11 +570,11 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżący limit tekstu, w bajtach dla tego `CEdit` obiektu.
+Bieżący limit tekstu, w TCHARs, dla tego `CEdit` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Limit tekstu jest maksymalną ilość tekstu, w bajtach, akceptujące kontrolki edycji.
+Limit tekstu jest maksymalną ilość tekstu w TCHARs, akceptujące kontrolki edycji.
 
 > [!NOTE]
 >  Ta funkcja członkowska jest dostępnych w programie Windows 95 i Windows NT 4.0.
@@ -606,14 +606,14 @@ int GetLine(
 Określa numer wiersza, który można pobrać z wielu linii do kontrolki edycji. Numery wierszy są oparte na zerze; wartość 0 określa pierwszy wiersz. Ten parametr jest ignorowany przez kontrolę edycji jeden wiersz.
 
 *lpszBuffer*<br/>
-Wskazuje buforu, który otrzymuje kopię wiersza. Pierwszy wyraz buforu, należy określić maksymalną liczbę znaków, które mogą być kopiowane do buforu.
+Wskazuje buforu, który otrzymuje kopię wiersza. Pierwszy wyraz buforu, należy określić maksymalną liczbę TCHARs, które mogą być kopiowane do buforu.
 
 *nMaxLength*<br/>
-Określa maksymalną liczbę bajtów, które mogą być kopiowane do buforu. `GetLine` umieszcza tę wartość w pierwszy wyraz *lpszBuffer* przed wykonaniem wywołania do Windows.
+Określa maksymalną liczbę znaków TCHAR, które mogą być kopiowane do buforu. `GetLine` umieszcza tę wartość w pierwszy wyraz *lpszBuffer* przed wykonaniem wywołania do Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba bajtów skopiowanych w rzeczywistości. Wartość zwracana to 0, jeśli numer wiersza określonego przez *nIndex* jest większa niż liczba wierszy w formancie edycji.
+Liczba znaków rzeczywiście skopiowanych. Wartość zwracana to 0, jeśli numer wiersza określonego przez *nIndex* jest większa niż liczba wierszy w formancie edycji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>Parametry
 
 *nChars*<br/>
-Określa długość (w bajtach) tekst, który użytkownik może wprowadzić. Jeśli ten parametr ma wartość 0, długość tekstu jest równa UINT_MAX bajtów. Jest to zachowanie domyślne.
+Określa długość (w TCHARs) tekst, który użytkownik może wprowadzić. Jeśli ten parametr ma wartość 0, długość tekstu jest równa UINT_MAX bajtów. Jest to zachowanie domyślne.
 
 ### <a name="remarks"></a>Uwagi
 

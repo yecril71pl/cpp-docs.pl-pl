@@ -1,18 +1,18 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645097"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416952"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -23,22 +23,23 @@ Składnia atrybutów rozszerzonych służących do określania informacji klasy 
 ## <a name="grammar"></a>Gramatyka
 
 *Decl-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl modyfikator seq***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
 
-*rozszerzony decl modyfikator seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl modyfikator*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl modyfikator* *extended-decl modyfikator seq*
+*extended-decl-modifier-seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
 
-*rozszerzony decl modyfikator*:<br/>
+*extended-decl-modifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Wyrównaj (** *#* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Przydziel ("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Allocator**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**domeny aplikacji**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg ("** *segname* **")**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**przestarzałe**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"naked"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**noalias**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**noinline**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**<br/>
@@ -46,16 +47,16 @@ Składnia atrybutów rozszerzonych służących do określania informacji klasy 
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Proces**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**właściwości (** { **uzyskać =**_get_func_name_ &#124; **, umieść =**_put_func_name_ } **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ograniczenia**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**restrict**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Wątek**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Identyfikator UUID ("** *ComObjectGUID* **")**
+&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**
 
 Spacja oddziela sekwencje modyfikatora deklaracji. Przykłady są zamieszczone w kolejnych sekcjach.
 
-Gramatyka atrybutów rozszerzonych obsługuje te atrybuty klasy magazynu specyficzne dla firmy Microsoft: [wyrównać](../cpp/align-cpp.md), [przydzielić](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [przestarzałe](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), ["naked"](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [procesu](../cpp/process.md), [ograniczyć](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [krokami zaradczymi dla luki](../cpp/spectre.md), i [wątku](../cpp/thread.md). Obsługuje również te atrybuty obiektu COM: [właściwość](../cpp/property-cpp.md) i [uuid](../cpp/uuid-cpp.md).
+Gramatyka atrybutów rozszerzonych obsługuje te atrybuty klasy magazynu specyficzne dla firmy Microsoft: [wyrównać](../cpp/align-cpp.md), [przydzielić](../cpp/allocate.md), [alokatora](../cpp/allocator.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [przestarzałe](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), ["naked"](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md), [procesu](../cpp/process.md), [ograniczyć](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [krokami zaradczymi dla luki](../cpp/spectre.md), i [wątku](../cpp/thread.md). Obsługuje również te atrybuty obiektu COM: [właściwość](../cpp/property-cpp.md) i [uuid](../cpp/uuid-cpp.md).
 
 **Code_seg**, **dllexport**, **dllimport**, **"naked"**, **noalias**, **nothrow** , **właściwość**, **ograniczyć**, **selectany**, **wątku**, i **uuid**atrybuty klasy magazynu są właściwości tylko dla deklaracji obiektu lub funkcji, do której są stosowane. **Wątku** atrybut ma wpływ na dane i obiekty tylko. **"Naked"** i **krokami zaradczymi dla luki** tylko funkcje mają wpływ na atrybuty. **Dllimport** i **dllexport** atrybuty mają wpływ na funkcje, dane i obiekty. **Właściwość**, **selectany**, i **uuid** atrybuty mają wpływ na obiekty COM.
 
