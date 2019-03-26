@@ -3,12 +3,12 @@ title: System typów języka C++ (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220676"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476906"
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 
@@ -102,9 +102,7 @@ Podczas definiowania **klasy**, **struktury**, **Unii**, lub **wyliczenia**, ten
 
 - Kompilator nie ma wbudowanej wiedzy o typie zdefiniowanym przez użytkownika. Informacje tego typu po pierwszym napotkaniu definicji podczas procesu kompilacji.
 
-- Ty określasz, jakie operacje mogą zostać przeprowadzone na typie i jak może on zostać przekonwertowany do innych typów, definiując (przez przeciążenie) odpowiednie operatory, albo jako funkcje składowych, albo jako funkcje, które nie są składowymi. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md).
-
-- Nie muszą zostać statycznie wpisane (zasada, że typ obiektu nigdy nie ulega zmianie). Poprzez mechanizm *dziedziczenia* i *polimorfizm*, Zmienna zadeklarowana jako typ zdefiniowany przez użytkownika, klasy (nazywany wystąpieniem obiektu klasy) może mieć inny typ w czasie wykonywania niż w czas kompilacji. Aby uzyskać więcej informacji, zobacz [dziedziczenia](../cpp/inheritance-cpp.md).
+- Ty określasz, jakie operacje mogą zostać przeprowadzone na typie i jak może on zostać przekonwertowany do innych typów, definiując (przez przeciążenie) odpowiednie operatory, albo jako funkcje składowych, albo jako funkcje, które nie są składowymi. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md)
 
 ## <a name="pointer-types"></a>Typy wskaźnika
 

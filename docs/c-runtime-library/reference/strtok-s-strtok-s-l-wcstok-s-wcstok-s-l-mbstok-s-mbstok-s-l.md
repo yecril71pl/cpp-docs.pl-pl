@@ -1,6 +1,6 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 0020d4944ffb379584a044023bc34169b4a5c983
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416978"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476893"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -137,13 +137,15 @@ Jeśli *str* jest **NULL** , ale *kontekstu* jest wskaźnikiem do wskaźnika pra
 
 **Strtok_s —** rodzinę funkcji znajduje następny token w *str*. Zestaw znaków *ograniczniki* określa ograniczniki możliwe tokenu, który ma zostać odnaleziona w *str* w bieżącym wywołaniu. **wcstok_s —** i **_mbstok_s —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strtok_s —**. Argumenty i wartości zwracane **wcstok_s —** i **_wcstok_s_l —** są znakami dwubajtowymi ciągów; te z **_mbstok_s —** i **_mbstok_s_l —** są ciągami znaków wielobajtowych. Funkcje te zachowują się identycznie.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli wystąpi błąd, tak jak w tabeli błędów, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **NULL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Gdy wystąpi błąd, tak jak w tabeli warunki błędu, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **NULL**.
 
-W pierwszym wywołaniu **strtok_s —** funkcja pomija wiodących ograniczniki i zwraca wskaźnik do pierwszego token w *str*, przerywa token znakiem null. Kolejnych tokenów można zaburzyć poza pozostałą część *str* przez szereg wywołań do **strtok_s —**. Każde wywołanie **strtok_s —** modyfikuje *str* przez wstawienie znaku null po tokenowi zwróconemu przez to wywołanie. *Kontekstu* śledzi informacje o wskaźnik ciągu, który jest odczytywany, gdzie w ciągu następnego tokenu jest do odczytu. Można odczytać następnego tokenu z *str*, wywołaj **strtok_s —** z **o wartości NULL** wartość *str* argument i przekazać takie same  *kontekst* parametru. **NULL** *str* powoduje, że argument **strtok_s —** aby wyszukać następny token w zmodyfikowanego *str*. *Ograniczniki* argument może przyjąć dowolną wartość z jednego wywołania do następnego tak, aby zestaw ograniczników mogą się różnić.
+W pierwszym wywołaniu **strtok_s —**, funkcja pomija wiodących ograniczniki i zwraca wskaźnik do pierwszego token w *str*, przerywa token znakiem null. Kolejnych tokenów można zaburzyć poza pozostałą część *str* przez szereg wywołań do **strtok_s —**. Każde wywołanie **strtok_s —** modyfikuje *str* przez wstawienie znaku null po tokenowi zwróconemu przez to wywołanie. *Kontekstu* śledzi informacje o wskaźnik ciągu, który jest odczytywany, gdzie w ciągu następnego tokenu jest do odczytu. Można odczytać następnego tokenu z *str*, wywołaj **strtok_s —** z **o wartości NULL** wartość *str* argument i przekazać takie same  *kontekst* parametru. **NULL** *str* powoduje, że argument **strtok_s —** aby wyszukać następny token w zmodyfikowanego *str*. *Ograniczniki* argument może przyjąć dowolną wartość z jednego wywołania do następnego tak, aby zestaw ograniczników mogą się różnić.
 
 Ponieważ *kontekstu* parametr zastępuje statyczne buforów używane w **strtok —** i **_strtok_l —**, można przeanalizować dwa ciągi jednocześnie w tym samym wątku.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnych wątku tego zachowania zależnego od ustawień regionalnych. Wersje **_l** sufiksem są identyczne, z tą różnicą, że używają w zamian *ustawień regionalnych* parametru. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md).
+
+Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnych wątku tego zachowania zależnego od ustawień regionalnych. Wersje **_l** sufiksem są identyczne, z wyjątkiem używają w zamian ustawień regionalnych określonych przez *ustawień regionalnych* parametru. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 

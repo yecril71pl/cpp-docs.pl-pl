@@ -2,12 +2,12 @@
 title: Obsługa wyjątków ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814543"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476945"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Athough prologu i epilogu każdy ma indeks kody unwind, tabela jest współużytkowana przez je. Nie jest niczym niezwykłym, że wszystkie udostępniają te same kody unwind. Zaleca się, że twórcom kompilatorów zoptymalizować dla tego przypadku, ponieważ największego indeksu, który może być określony wynosi 255 i który ogranicza łączną liczbę kodów unwind możliwe dla danej funkcji.
+Mimo że prologu i epilogu każdy ma indeks kody odwijania, tabela jest współużytkowana przez je. Nie jest niczym niezwykłym, że wszystkie udostępniają te same kody unwind. Zaleca się, że twórcom kompilatorów zoptymalizować dla tego przypadku, ponieważ największego indeksu, który może być określony wynosi 255 i który ogranicza łączną liczbę kodów unwind możliwe dla danej funkcji.
 
 ### <a name="unwind-codes"></a>Kodów odwinięcia
 

@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416965"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476919"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -81,11 +81,11 @@ wchar_t *wcstok_l(
    _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit
 );
 unsigned char *_mbstok_l(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -104,7 +104,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do następnego tokenu w *strToken*. Zwracają **NULL** gdy znajdują się żadnych kolejnych tokenów. Każde wywołanie modyfikuje *strToken* , zastępując znak null w poszukiwaniu ogranicznika pierwszy, która występuje po zwrócony token.
+Zwraca wskaźnik do następnego tokenu w *strToken*. Te funkcje zwracają **NULL** gdy znajdują się żadnych kolejnych tokenów. Każde wywołanie modyfikuje *strToken* , zastępując znak null w poszukiwaniu ogranicznika pierwszy, która występuje po zwrócony token.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -115,7 +115,9 @@ Zwraca wskaźnik do następnego tokenu w *strToken*. Zwracają **NULL** gdy znaj
 
 W pierwszym wywołaniu **strtok —**, funkcja pomija wiodących ograniczniki i zwraca wskaźnik do pierwszego token w *strToken*, przerywa token znakiem null. Kolejnych tokenów można zaburzyć poza pozostałą część *strToken* przez szereg wywołań do **strtok —**. Każde wywołanie **strtok —** modyfikuje *strToken* przez wstawienie znaku null po **tokenu** zwrócony przez to wywołanie. Można odczytać następnego tokenu z *strToken*, wywołaj **strtok —** z **o wartości NULL** wartość *strToken* argumentu. **NULL** *strToken* powoduje, że argument **strtok —** aby wyszukać następny token w zmodyfikowanego *strToken*. *StrDelimit* argument może przyjąć dowolną wartość z jednego wywołania do następnego tak, aby zestaw ograniczników mogą się różnić.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md).
+
+Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych. Wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Każda funkcja używa statycznej zmiennej lokalnej wątku do analizowania parametrów na tokeny. W związku z tym wiele wątków jednocześnie może wywołać te funkcje, bez niepożądane skutki. Jednak w ramach pojedynczego wątku z przeplotem wywołania do jednej z tych funkcji jest wysoce może powodować uszkodzenie danych i nieprecyzyjne wyniki. Podczas analizy różnych ciągów, Zakończ analizowania jednego ciągu przed przystąpieniem do następnego przeanalizować. Ponadto należy pamiętać o możliwym zagrożenia podczas wywoływania jednej z tych funkcji z w ramach pętli, gdzie jest wywoływana innej funkcji. Inne funkcje kończy się przy użyciu jednej z tych funkcji, przeplotem sekwencję wywołań spowoduje, wyzwalając uszkodzenie danych.

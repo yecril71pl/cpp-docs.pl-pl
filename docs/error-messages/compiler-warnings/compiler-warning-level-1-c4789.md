@@ -1,17 +1,17 @@
 ---
 title: Kompilator ostrzeżenie (poziom 1) C4789
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: f489915f07eefd0909cbcd806a590f93f674c258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677399"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476858"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Kompilator ostrzeżenie (poziom 1) C4789
 
@@ -19,9 +19,11 @@ ms.locfileid: "50677399"
 
 ## <a name="remarks"></a>Uwagi
 
-Ostrzega o buforu przepełnienia, gdy są używane określone funkcje (CRT) środowiska wykonawczego języka C, parametry są przekazywane i przydziały są wykonywane, taki sposób, że rozmiary danych są znane w czasie kompilacji. Ostrzeżenie jest wyświetlane w sytuacjach, które mogą elude wykrywania typowych niezgodność rozmiaru danych.
+**C4789** ostrzega o przepełnienia buforu, stosowania określonych funkcji wykonawczej (CRT) C. Można również raporty niezgodności rozmiar gdy parametry są przekazywane lub przypisania zostały wprowadzone. To ostrzeżenie jest możliwe w przypadku ilości danych, są znane w czasie kompilacji. Ostrzeżenie jest wyświetlane w sytuacjach, które mogą elude wykrywania typowych niezgodność rozmiaru danych.
 
-Ostrzeżenie jest wyświetlane, gdy danych, którego długość jest znany w czas kompilacji, jest kopiowany i umieścić w bloku danych, której rozmiar jest znany w czasie kompilacji będzie zbyt mała dla danych. Kopia musi odbywać się za pomocą formularza wewnętrzne jednego z następujących funkcji CRT:
+**C4789** ostrzega, gdy dane są kopiowane do bloku danych, który jest znany będzie zbyt mała w czasie kompilacji.
+
+To ostrzeżenie występuje, gdy kopii używa wewnętrznej postaci jednej z tych funkcji CRT:
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -29,18 +31,18 @@ Ostrzeżenie jest wyświetlane, gdy danych, którego długość jest znany w cza
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy —](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-Ostrzeżenie jest wyświetlane, gdy typu danych parametru jest niezgodny przy użyciu rzutowania, a następnie jest podejmowana próba przypisania kopiowania, z odwołaniem lvalue.
+Ostrzeżenie jest wyświetlane, gdy rzutować parametru na większych typ danych, a następnie dokonaj przydzieleniu kopii, z odwołaniem lvalue.
 
-Visual C++ może wygenerować tego ostrzeżenia dla ścieżki kodu, który nigdy nie jest wykonywane. Ostrzeżenie można tymczasowo wyłączyć za pomocą `#pragma`, jak pokazano w poniższym przykładzie:
+Visual C++ może wygenerować tego ostrzeżenia dla ścieżki kodu, który nigdy nie jest wykonywany. Ostrzeżenie można tymczasowo wyłączyć za pomocą `#pragma`, jak pokazano w poniższym przykładzie:
 
 ```cpp
-#pragma(push)
-#pragma warning ( disable : 4789 )
+#pragma warning( push )
+#pragma warning( disable : 4789 )
 // unused code that generates compiler warning C4789`
-#pragma(pop)
+#pragma warning( pop )
 ```
 
-Dzięki temu Visual C++ na generowanie ostrzeżenia dla tego określonego bloku kodu. `#pragma(push)` Zachowuje istniejące stan przed wykonaniem `#pragma warning(disable: 4789)` ją zmieni. `#pragma(pop)` Przywraca stan wypychanie i usuwa skutki `#pragma warning(disable:4789)`. Aby uzyskać więcej informacji na temat dyrektywy preprocesora języka C++ `#pragma`, zobacz [ostrzeżenie](../../preprocessor/warning.md) i [dyrektywy Pragma i słowo kluczowe __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Tego idiomu przechowuje Visual C++ z wygenerowane ostrzeżenie dla tego określonego bloku kodu. `#pragma warning(push)` Zachowuje istniejące stan przed wykonaniem `#pragma warning(disable: 4789)` ją zmieni. `#pragma warning(pop)` Przywraca stan wypychanie i usuwa skutki `#pragma warning(disable:4789)`. Aby uzyskać więcej informacji na temat dyrektywy preprocesora języka C++ `#pragma`, zobacz [ostrzeżenie](../../preprocessor/warning.md) i [dyrektywy Pragma i słowo kluczowe __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Przykład
 

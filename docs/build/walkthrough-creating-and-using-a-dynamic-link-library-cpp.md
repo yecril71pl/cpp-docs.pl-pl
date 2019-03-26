@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813971"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476932"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)
 
@@ -296,9 +296,11 @@ Następnie można wywołać funkcji MathLibrary w kodzie źródłowym, projekt m
 
 1. W górnym okienku kliknij dwukrotnie ikonę **dodatkowe katalogi dołączenia** okno dialogowe, aby włączyć formant edycji.
 
-1. W formancie edycji, wpisz ścieżkę do lokalizacji **MathLibrary.h** pliku nagłówka. W takim przypadku można użyć ścieżki względnej:
+1. W formancie edycji, wpisz ścieżkę do lokalizacji **MathLibrary.h** pliku nagłówka. W takim przypadku można użyć ścieżki względnej z folderu, który zawiera pliki .cpp w projekcie klienta do folderu, który zawiera plik .h klasy w projekcie biblioteki DLL. Jeśli projekt klienta znajduje się w oddzielnym rozwiązaniu, w tym samym folderze, jako rozwiązanie do biblioteki DLL, ścieżka względna powinien wyglądać następująco:
 
    `..\..\MathLibrary\MathLibrary`
+
+   Projekty biblioteki DLL i klienta znajdują się w tym samym rozwiązaniu, czy te rozwiązania są w różnych folderach, następnie należy dostosować ścieżki względnej odpowiednio.
 
    ![Dodaj nagłówek lokalizacji do właściwości dodatkowe katalogi dołączenia](media/mathclient-additional-include-directories.png "Dodaj lokalizację nagłówka do właściwości dodatkowe katalogi dołączenia")
 
