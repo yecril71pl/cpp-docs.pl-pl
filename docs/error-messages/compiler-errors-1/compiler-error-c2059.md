@@ -1,19 +1,19 @@
 ---
-title: Błąd kompilatora C2059
-ms.date: 11/04/2016
+title: Compiler Error C2059
+ms.date: 03/26/2019
 f1_keywords:
 - C2059
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: dec5f7a9eb91603b129cfb589352b6ee2579e553
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521794"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508835"
 ---
-# <a name="compiler-error-c2059"></a>Błąd kompilatora C2059
+# <a name="compiler-error-c2059"></a>Compiler Error C2059
 
 Błąd składniowy: "token"
 
@@ -33,7 +33,18 @@ Aby ustalić przyczynę tego błędu, sprawdź nie tylko wiersz, który znajduje
 
 Jeśli komunikat o błędzie pojawia się na symbol, który poprzedza `typedef` zmiennej, upewnij się, że zmienna jest zdefiniowana w kodzie źródłowym.
 
-C2059 może wystąpić, jeśli symbol daje w wyniku nic, co może mieć miejsce, gdy **/D** `symbol` **=** jest używana do kompilowania.
+C2059 jest wywoływane, gdy nazwa symbol preprocesora jest ponownie używane jako identyfikator. W poniższym przykładzie, kompilator będzie widział `DIGITS.ONE` jako numer 1, która jest nieprawidłowa jako nazwa elementu typu wyliczeniowego:
+
+```cpp
+#define ONE 1
+
+enum class DIGITS {
+    ZERO,
+    ONE // error C2059
+};
+```
+
+C2059 może wystąpić, jeśli symbol daje w wyniku nic, co może mieć miejsce, gdy **/D**_symbol_ **=** jest używana do kompilowania.
 
 ```
 // C2059a.cpp

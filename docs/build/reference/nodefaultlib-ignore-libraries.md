@@ -1,6 +1,6 @@
 ---
 title: /NODEFAULTLIB (Ignoruj biblioteki)
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLinkerTool.OVERWRITEDefaultLibraryNames
@@ -13,18 +13,16 @@ helpviewer_keywords:
 - /NODEFAULTLIB linker option
 - ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-ms.openlocfilehash: cacc1ef312065da5d6e62ddba1040e87fae9d709
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 24528eb4c387c4cd0921ab089370d72b076ad640
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807458"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508757"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (Ignoruj biblioteki)
 
-```
-/NODEFAULTLIB[:library]
-```
+> **/ NODEFAULTLIB**[__:__*biblioteki*]
 
 ## <a name="arguments"></a>Argumenty
 
@@ -35,25 +33,23 @@ Biblioteka, która ma konsolidator, aby ignorować podczas rozpoznawania odwoła
 
 Opcja/nodefaultlib informuje konsolidator, aby usunąć co najmniej jedną domyślną bibliotekę z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych.
 
-Aby utworzyć pliku .obj, który nie zawiera odwołania do bibliotek domyślnych, użyj [/Zl (Pomiń domyślną nazwę biblioteki)](zl-omit-default-library-name.md).
+Aby utworzyć pliku .obj, który nie zawiera żadnych odwołań do bibliotek domyślnych, użyj [/Zl (Pomiń domyślną nazwę biblioteki)](zl-omit-default-library-name.md).
 
-Domyślnie/nodefaultlib usuwa wszystkie domyślne biblioteki z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych. Opcjonalny *biblioteki* parametr pozwala usunąć określonej biblioteki lub biblioteki z listy bibliotek wyszukiwania podczas rozpoznawania odwołań zewnętrznych. Określ jedną z opcji/nodefaultlib bibliotek, które chcesz wykluczyć.
+Domyślnie/nodefaultlib usuwa wszystkie domyślne biblioteki z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych. Opcjonalny *biblioteki* parametr umożliwia usunięcie określonej biblioteki z listy bibliotek wyszukiwania podczas rozpoznawania odwołań zewnętrznych. Określ jedną z opcji/nodefaultlib bibliotek, które chcesz wykluczyć.
 
-Konsolidator usuwa odwołań na definicje zewnętrzne, wyszukując najpierw w bibliotekach, które zostaną jawnie określone, a następnie w domyślnych bibliotek określony za pomocą opcji /DEFAULTLIB, a następnie na domyślne biblioteki o nazwie w plikach .obj.
+Konsolidator usuwa odwołań na definicje zewnętrzne, wyszukując najpierw w bibliotekach, które zostaną jawnie określone, a następnie w domyślnych bibliotek określony za pomocą [/DEFAULTLIB:](defaultlib-specify-default-library.md) opcji, a następnie, w domyślnym biblioteki o nazwie w .obj pliki.
 
-/ NODEFAULTLIB:*biblioteki* zastępuje [/DEFAULTLIB:](defaultlib-specify-default-library.md)*biblioteki* gdy takie same *biblioteki* nazwa jest określona w obu.
+/ NODEFAULTLIB:*biblioteki* zastępuje /DEFAULTLIB:*biblioteki* gdy takie same *biblioteki* nazwa jest określona w obu.
 
-Użycie opcji/nodefaultlib, na przykład do tworzenia programu bez biblioteki wykonawczej C, może być konieczne także użyć [/Entry](entry-entry-point-symbol.md) do określenia punktu wejścia (funkcja) w programie. Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
+Użycie opcji/nodefaultlib do budowania programu bez biblioteki wykonawczej języka C, należy również użyć [/Entry](entry-entry-point-symbol.md) Aby określić funkcję punktu wejścia programu. Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **dane wejściowe** stronę właściwości.
 
-1. Kliknij przycisk **dane wejściowe**stronę właściwości.
-
-1. Wybierz **Ignoruj wszystkie domyślne biblioteki** właściwości lub określ listę bibliotek, aby zignorować w **Ignoruj określoną bibliotekę** właściwości. **Wiersza polecenia** właściwości strony wyświetli wpływu zmian do tych właściwości.
+1. Wybierz **Ignoruj wszystkie domyślne biblioteki** właściwości. Lub określ rozdzieloną średnikami listę bibliotek, aby zignorować w **Ignoruj określone biblioteki domyślne** właściwości. **Wiersza polecenia** strona właściwości pokazuje wpływ zmian do tych właściwości.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
@@ -61,5 +57,5 @@ Użycie opcji/nodefaultlib, na przykład do tworzenia programu bez biblioteki wy
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

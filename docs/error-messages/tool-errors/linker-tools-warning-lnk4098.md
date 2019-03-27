@@ -1,42 +1,40 @@
 ---
 title: Ostrzeżenie LNK4098 narzędzi konsolidatora
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 f1_keywords:
 - LNK4098
 helpviewer_keywords:
 - LNK4098
 ms.assetid: 1f1b1408-1316-4e34-80f5-6a02f2db0ac1
-ms.openlocfilehash: 088124fcce7cafad3fab3280ae0b3ae0d893283e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66cf1a1bc75405ffc9bae8158bfc8682776a8228
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468721"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508731"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Ostrzeżenie LNK4098 narzędzi konsolidatora
 
-użycie "library" defaultlib w konflikcie z innymi bibliotekami; Użyj /NODEFAULTLIB:library
+> defaultlib "*biblioteki*" powoduje konflikt z innymi bibliotekami; Użyj/nodefaultlib:*biblioteki*
 
 Próbujesz połączyć się z bibliotekami niezgodne.
 
 > [!NOTE]
->  Biblioteki wykonawcze zawierają teraz dyrektywy, aby zapobiec mieszaniu różnych typów. W tym samym programie otrzyma tego ostrzeżenia, Jeśli spróbujesz użyć różnych typów lub debugowania i bez debugowania wersji biblioteki wykonawczej. Na przykład jeśli skompilowano jeden plik do korzystania z jednego rodzaju biblioteki wykonawczej specyficznej innego pliku używać innego typu (na przykład jednowątkowe a wielowątkowe) i próbował łączyć je otrzymasz to ostrzeżenie. Należy skompilować wszystkich plików źródłowych przy użyciu tej samej biblioteki wykonawczej. Zobacz [korzystaj z bibliotek wykonawczych](../../build/reference/md-mt-ld-use-run-time-library.md) (**/MD**, **/MT**, **/LD**) opcje kompilatora, aby uzyskać więcej informacji.
+> Biblioteki wykonawcze zawierają teraz dyrektywy, aby zapobiec mieszaniu różnych typów. W tym samym programie otrzyma tego ostrzeżenia, Jeśli spróbujesz użyć różnych typów lub debugowania i bez debugowania wersji biblioteki wykonawczej. Na przykład, jeśli skompilowany jeden plik, aby użyć jednego rodzaju biblioteki wykonawczej i inny plik używać innego typu (na przykład debug i sprzedaży detalicznej) i próbował łączyć je, otrzymasz ostrzeżenie. Należy skompilować wszystkich plików źródłowych przy użyciu tej samej biblioteki wykonawczej. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md) opcje kompilatora.
 
-Możesz użyć konsolidatora [opisu](../../build/reference/verbose-print-progress-messages.md) przełącznik, aby określić, które biblioteki, program łączący się wyszukiwanie. Jeśli zostanie wyświetlony LNK4098 i chcesz, aby utworzyć plik wykonywalny, który używa, na przykład jednowątkowe, bez debugowania biblioteki wykonawczej, należy użyć **opisu** opcję, aby dowiedzieć się, które biblioteki, program łączący się wyszukiwanie. Konsolidator powinien drukowanie LIBC.lib i nie LIBCMT.lib, MSVCRT.lib, LIBCD.lib, biblioteki LIBCMTD.lib lub biblioteki MSVCRTD.lib jako przeszukiwane biblioteki. Można stwierdzić, konsolidator, aby Ignoruj nieprawidłowe biblioteki czasu wykonywania przy użyciu [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) dla każdej biblioteki, aby zignorować.
+Możesz użyć konsolidatora [opisu](../../build/reference/verbose-print-progress-messages.md) przełącznika, aby dowiedzieć się, które biblioteki wyszukiwania konsolidatora. Na przykład gdy plik wykonywalny używa biblioteki wykonawczej wielowątkowych, -debug, lista zgłoszonych powinna zawierać LIBCMT.lib, a nie LIBCMTD.lib, MSVCRT.lib lub biblioteki MSVCRTD.lib. Można stwierdzić, konsolidator, aby Ignoruj nieprawidłowe biblioteki czasu wykonywania przy użyciu [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) dla każdej biblioteki, aby zignorować.
 
-W poniższej tabeli przedstawiono, które biblioteki należy zignorować w zależności od tego, które biblioteki czasu wykonywania, do którego chcesz użyć.
+W poniższej tabeli przedstawiono, które biblioteki należy zignorować w zależności od tego, które biblioteki czasu wykonywania, do którego chcesz użyć. W wierszu polecenia, użyj jednej **/nodefaultlib** opcję dla wszystkich bibliotek do zignorowania. W programie Visual Studio IDE, oddzielnych bibliotek do zignorowania średnikami w **Ignoruj określone biblioteki domyślne** właściwości.
 
-|Aby użyć tej biblioteki wykonawczej|Ignoruj te biblioteki|
+| Aby użyć tej biblioteki wykonawczej | Ignoruj te biblioteki |
 |-----------------------------------|----------------------------|
-|Jednowątkowe (libc.lib)|biblioteki libcmt.lib msvcrt.lib, libcd.lib, libcmtd.lib, biblioteki msvcrtd.lib|
-|Wielowątkowe (libcmt.lib)|libc.lib msvcrt.lib, libcd.lib, libcmtd.lib, biblioteki msvcrtd.lib|
-|Wielowątkowe przy użyciu biblioteki DLL (msvcrt.lib)|libc.lib libcmt.lib, libcd.lib, libcmtd.lib, biblioteki msvcrtd.lib|
-|Jednowątkowe debugowania (libcd.lib)|libc.lib libcmt.lib, msvcrt.lib, libcmtd.lib, biblioteki msvcrtd.lib|
-|Debuguj wielowątkowe (libcmtd.lib)|libc.lib libcmt.lib, msvcrt.lib, libcd.lib, biblioteki msvcrtd.lib|
-|Debuguj wielowątkowe przy użyciu biblioteki DLL (msvcrtd.lib)|libc.lib libcmt.lib, msvcrt.lib, libcd.lib, biblioteki libcmtd.lib|
+| Wielowątkowe (libcmt.lib) | msvcrt.lib; libcmtd.lib; msvcrtd.lib |
+| Wielowątkowe przy użyciu biblioteki DLL (msvcrt.lib) | libcmt.lib; libcmtd.lib; msvcrtd.lib |
+| Debuguj wielowątkowe (libcmtd.lib) | libcmt.lib; msvcrt.lib; msvcrtd.lib |
+| Debuguj wielowątkowe przy użyciu biblioteki DLL (msvcrtd.lib) | libcmt.lib; msvcrt.lib; libcmtd.lib |
 
-Na przykład jeśli chcesz utworzyć plik wykonywalny, który używa-debug, jednowątkowe wersji biblioteki wykonawczej otrzymany to ostrzeżenie, można użyć następujących opcji za pomocą konsolidatora:
+Na przykład Odebrano to ostrzeżenie, jeśli chcesz utworzyć plik wykonywalny, korzysta z wersji biblioteki DLL bez debugowania biblioteki wykonawczej, za pomocą konsolidatora, można użyć następujących opcji:
 
-```
-/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
+```cmd
+/NODEFAULTLIB:libcmt.lib NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
 ```

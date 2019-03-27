@@ -29,14 +29,17 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b1d62e8d122cb4f08feef60d6936359b3e246749
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812060"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508788"
 ---
 # <a name="bscmake-options"></a>Opcje BSCMAKE
+
+> [!WARNING]
+> Mimo że BSCMAKE jest nadal zainstalowany za pomocą programu Visual Studio, nie jest już jest używany przez środowisko IDE. Od programu Visual Studio 2008 przeglądania i symbol informacji znajduje się automatycznie w plik sdf programu SQL Server, w folderze rozwiązania.
 
 W tej sekcji opisano opcjami dostępnymi na potrzeby kontrolowania BSCMAKE. Kilka opcji kontrolować zawartość pliku informacyjnego przeglądarki, z wyłączeniem lub pewne informacje w tym. Opcje wykluczenia umożliwia BSCMAKE odbywało się szybciej i może skutkować mniejszą pliku .bsc. Opcja nazwy jest uwzględniana wielkość liter (z wyjątkiem **/HELP** i **/nologo**).
 

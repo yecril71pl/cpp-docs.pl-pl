@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508705"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Utwórz plik .Sbr)
 
@@ -32,6 +32,9 @@ Tworzy pliki .sbr.
 ```
 
 ## <a name="remarks"></a>Uwagi
+
+> [!WARNING]
+> Mimo że BSCMAKE jest nadal zainstalowany za pomocą programu Visual Studio, nie jest już jest używany przez środowisko IDE. Od programu Visual Studio 2008 przeglądania i symbol informacji znajduje się automatycznie w plik sdf programu SQL Server, w folderze rozwiązania.
 
 Podczas procesu kompilacji Microsoft Przeglądaj informacje o pliku konserwacji Utility (BSCMAKE) używa do tworzenia tych plików. Plik BSC służy do wyświetlania informacji o przeglądaniu.
 
@@ -61,6 +64,6 @@ Jeśli nie określisz `filename`, plik .sbr pobiera tej samej nazwie podstawowej
 ## <a name="see-also"></a>Zobacz także
 
 [Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Określanie nazwy ścieżki](specifying-the-pathname.md)

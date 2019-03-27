@@ -9,14 +9,17 @@ helpviewer_keywords:
 - local symbols in browse information
 - symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-ms.openlocfilehash: 75c3b926a605de66c876e9350218807031cd9a43
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a2e685d33b108ce542fdc6e3e0565cc37299c1c
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810409"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508744"
 ---
 # <a name="creating-an-sbr-file"></a>Tworzenie pliku .Sbr
+
+> [!WARNING]
+> Mimo że BSCMAKE jest nadal zainstalowany za pomocą programu Visual Studio, nie jest już jest używany przez środowisko IDE. Od programu Visual Studio 2008 przeglądania i symbol informacji znajduje się automatycznie w plik sdf programu SQL Server, w folderze rozwiązania.
 
 Pliki wejściowe dla BSCMAKE to pliki .sbr. Kompilator tworzy plik SBR dla każdego pliku obiektu (.obj) kompiluje. Podczas tworzenia lub zaktualizuj plik informacji przeglądania wszystkich plików SBR dla Twojego projektu musi być dostępny na dysku.
 
