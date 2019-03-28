@@ -1,6 +1,6 @@
 ---
 title: Konwersje z niepodpisanych typów całkowitych
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579692"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565025"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Konwersje z niepodpisanych typów całkowitych
 
-Liczba całkowita bez znaku jest konwertowany krótszy całkowitą bez znaku lub podpisany przez obcinanie bardziej znaczących bitów lub już bez znaku lub podpisany liczby całkowitej przez zero, rozszerzenie (zobacz [konwersje z niepodpisanych typów całkowitych](#_clang_table_4..3) tabeli).
+Liczbą całkowitą bez znaku jest konwertowana na krótszą liczba całkowita bez znaku lub podpisany tworzy bardziej znaczących bitów lub już bez znaku lub podpisanej liczby całkowitej przez zero, rozszerzenie. Aby uzyskać więcej informacji, zobacz [konwersje z niepodpisanych typów całkowitych tabeli](#conversions-from-unsigned-integral-types-table).
 
 Gdy wartością typu całkowitego jest obniżony do liczby całkowitej ze znakiem o rozmiarze mniejszym lub liczbą całkowitą bez znaku jest konwertowany na liczbę całkowitą ze znakiem odpowiednie, wartość jest bez zmian, jeśli mogą być reprezentowane w nowego typu. Jednak wartość reprezentuje zmiany, jeśli ustawiono bit znaku, jak w poniższym przykładzie.
 
@@ -35,23 +35,23 @@ Wartości bez znaku są konwertowane w sposób, który zachowuje ich wartości i
 
 W poniższej tabeli przedstawiono konwersje z niepodpisanych typów całkowitych.
 
-## <a name="conversions-from-unsigned-integral-types"></a>Konwersje z niepodpisanych typów całkowitych
+## <a name="conversions-from-unsigned-integral-types-table"></a>Konwersje z niepodpisanych typów całkowitych tabeli
 
 |Z|Zadanie|Metoda|
 |----------|--------|------------|
 |**unsigned char**|**char**|Zachowaj wzorzec bitowy; bit wyższego rzędu staje się bitu znaku|
-|**unsigned char**|**short**|Rozszerzanie zero|
-|**unsigned char**|**long**|Rozszerzanie zero|
-|**unsigned char**|**short bez znaku**|Rozszerzanie zero|
-|**unsigned char**|**unsigned long**|Rozszerzanie zero|
+|**unsigned char**|**short**|Zero-extend|
+|**unsigned char**|**long**|Zero-extend|
+|**unsigned char**|**short bez znaku**|Zero-extend|
+|**unsigned char**|**unsigned long**|Zero-extend|
 |**unsigned char**|**float**|Konwertuj na **długie**; Konwertuj **długie** do **float**|
 |**unsigned char**|**double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|
 |**unsigned char**|**Liczba typu double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|
 |**short bez znaku**|**char**|Zachowaj mniej znaczący bajt|
 |**short bez znaku**|**short**|Zachowaj wzorzec bitowy; bit wyższego rzędu staje się bitu znaku|
-|**short bez znaku**|**long**|Rozszerzanie zero|
+|**short bez znaku**|**long**|Zero-extend|
 |**short bez znaku**|**unsigned char**|Zachowaj mniej znaczący bajt|
-|**short bez znaku**|**unsigned long**|Rozszerzanie zero|
+|**short bez znaku**|**unsigned long**|Zero-extend|
 |**short bez znaku**|**float**|Konwertuj na **długie**; Konwertuj **długie** do **float**|
 |**short bez znaku**|**double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|
 |**short bez znaku**|**Liczba typu double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|

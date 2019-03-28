@@ -1,15 +1,15 @@
 ---
 title: Projekty CMake w programie Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356144"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565298"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake w programie Visual Studio
 
@@ -58,7 +58,7 @@ Jeśli potrzebujesz przekazać argumenty do pliku wykonywalnego w czasie debugow
 
 ## <a name="import-an-existing-cache"></a>Importowanie istniejąca pamięć podręczna
 
-Podczas importowania istniejącego pliku CMakeCache.txt programu Visual Studio wyodrębnia niestandardowe zmienne i automatycznie tworzy wstępnie wypełnionych [ **CMakeSettings.json** ](#cmake_settings) na ich podstawie plików. Oryginalny pamięci podręcznej nie jest modyfikowany w dowolny sposób i nadal można używać z poziomu wiersza polecenia lub przy użyciu dowolnego narzędzia lub IDE został użyty do jego wygenerowania. Nowy **CMakeSettings.json** plik zostanie umieszczony obok projektu głównego pliku CMakeLists.txt. Program Visual Studio generuje nową pamięć podręczną na podstawie pliku ustawień. Można zastąpić Generowanie automatyczne pamięci podręcznej w **narzędzia | Opcje | Narzędzie CMake | Ogólne** okna dialogowego.
+Podczas importowania istniejącego pliku CMakeCache.txt programu Visual Studio wyodrębnia niestandardowe zmienne i automatycznie tworzy wstępnie wypełnionych **CMakeSettings.json** na ich podstawie plików. Oryginalny pamięci podręcznej nie jest modyfikowany w dowolny sposób i nadal można używać z poziomu wiersza polecenia lub przy użyciu dowolnego narzędzia lub IDE został użyty do jego wygenerowania. Nowy **CMakeSettings.json** plik zostanie umieszczony obok projektu głównego pliku CMakeLists.txt. Program Visual Studio generuje nową pamięć podręczną na podstawie pliku ustawień. Można zastąpić Generowanie automatyczne pamięci podręcznej w **narzędzia | Opcje | Narzędzie CMake | Ogólne** okna dialogowego.
 
 Nie wszystkie elementy w pamięci podręcznej jest importowany.  Właściwości, takie jak generator i lokalizację kompilatorów są zastępowane przy użyciu ustawień domyślnych, które są znane do pracy ze środowiska IDE.
 
@@ -132,7 +132,7 @@ Ogranicz kompilacji i debugowania sesji podzestaw projektów w obszarze roboczym
 
 Jeśli potrzebujesz więcej informacji na temat stanu pamięci podręcznej narzędzia CMake, aby zdiagnozować problem, otwórz **CMake** menu głównego lub **CMakeLists.txt** menu kontekstowego w **Eksploratora rozwiązań**do uruchamiania jednego z następujących poleceń:
 
-- **Wyświetlanie pamięci podręcznej** otwiera plik CMakeCache.txt wobec folderu głównego kompilacji w edytorze. (Wszystkie zmiany wprowadzone w tym miejscu CMakeCache.txt są wyczyszczone, jeśli czyszczenia pamięci podręcznej. Aby wprowadzić zmiany, które są zachowywane po czyszczeniu pamięci podręcznej, zobacz [CMake ustawienia i konfiguracje niestandardowe](#cmake_settings) we wcześniejszej części tego artykułu.)
+- **Wyświetlanie pamięci podręcznej** otwiera plik CMakeCache.txt wobec folderu głównego kompilacji w edytorze. (Wszystkie zmiany wprowadzone w tym miejscu CMakeCache.txt są wyczyszczone, jeśli czyszczenia pamięci podręcznej. Aby wprowadzić zmiany, które są zachowywane po czyszczeniu pamięci podręcznej, zobacz [CMake dostosować ustawienia](customize-cmake-settings.md).)
 
 - **Otwórz Folder pamięci podręcznej** zostanie otwarte okno Eksploratora do folderu głównego kompilacji.
 

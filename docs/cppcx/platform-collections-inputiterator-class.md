@@ -1,18 +1,18 @@
 ---
 title: 'Platform::Collections:: inputiterator, klasa'
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745799"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565142"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections:: inputiterator, klasa
 
@@ -53,7 +53,7 @@ Element typename InputIterator szablonu klasy.
 |Nazwa|Opis|
 |----------|-----------------|
 |[InputIterator::operator! = — Operator](#operator-inequality)|Wskazuje, czy bieżący InputIterator nie jest równa określonej InputIterator.|
-|[InputIterator::operator * — Operator](#operator-decrement)|Pobiera odwołanie do elementu określonego przez bieżący InputIterator.|
+|[InputIterator::operator * — Operator](#operator-dereference)|Pobiera odwołanie do elementu określonego przez bieżący InputIterator.|
 |[InputIterator::operator ++ — Operator](#operator-increment)|Zwiększa narastająco InputIterator bieżącego.|
 |[InputIterator::operator == — Operator](#operator-equality)|Wskazuje, czy bieżący InputIterator jest równe określonej InputIterator.|
 |[InputIterator::operator -> — Operator](#operator-arrow)|Pobiera adres elementu przywoływane przez bieżący InputIterator.|
@@ -76,12 +76,12 @@ Inicjuje nowe wystąpienie klasy InputIterator.
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*iter*<br/>
+*iterator*<br/>
 Obiekt iteratora.
 
 ## <a name="operator-arrow"></a>  InputIterator::operator -&gt; — Operator

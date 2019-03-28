@@ -1,6 +1,6 @@
 ---
 title: CStringT, klasa
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750874"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565821"
 ---
 # <a name="cstringt-class"></a>CStringT, klasa
 
@@ -182,7 +182,7 @@ Określa, czy klasa string konieczne Obsługa bibliotek C Run-Time (CRT) i gdzie
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Przypisuje nową wartość do `CStringT` obiektu.|
+|[CStringT::operator =](#operator_eq)|Przypisuje nową wartość do `CStringT` obiektu.|
 |[CStringT::operator +](#operator_add)|Łączy dwa ciągi lub znak i ciąg.|
 |[CStringT::operator +=](#operator_add_eq)|Łączy nowy ciąg na końcu istniejącego ciągu.|
 |[CStringT::operator ==](#operator_eq_eq)|Określa, czy dwa ciągi są logicznie równe.|
@@ -1023,6 +1023,56 @@ Ta funkcja jest niedostępna w przypadku _UNICODE zdefiniowano.
 ### <a name="example"></a>Przykład
 
 Zobacz przykład [CStringT::AnsiToOem](#ansitooem).
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+Przypisuje nową wartość ciągu.
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>Parametry
+
+*strSrc*<br/>
+Element `CStringT` można przypisać do tego ciągu.
+
+*str*<br/>
+Odwołanie do `CThisSimpleString` obiektu.
+
+*bMFCDLL*<br/>
+Wartość logiczna, określając, czy projekt jest biblioteki MFC DLL.
+
+*BaseType*<br/>
+Bazowy typ ciągu.
+
+*var*<br/>
+Variant — obiekt można przypisać do tego ciągu.
+
+*ch*<br/>
+Znak ANSI lub Unicode można przypisać do ciągu.
+
+*pszSrc*<br/>
+Wskaźnik do oryginalnego ciągu, które są przypisywane.
+
+### <a name="remarks"></a>Uwagi
+
+Operator przypisania przyjmuje innego `CStringT` obiektu, wskaźnik znaku lub jeden znak. Należy pamiętać, że ilość pamięci, które mogą wystąpić wyjątki, zawsze gdy używasz tego operatora, ponieważ można przydzielić nowego magazynu.
+
+Instrukcje dotyczące `CThisSimpleString`, zobacz sekcję Uwagi [CStringT::CStringT](#cstringt).
+
+> [!NOTE]
+> Chociaż istnieje możliwość utworzenia `CStringT` wystąpień, które zawierają osadzone znaki o wartości null, zaleca się przed nim. Wywoływanie metody i operatory na `CStringT` obiektów, które zawierają znaki null embedded może wygenerować niepożądanych wyników.
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

@@ -1,6 +1,6 @@
 ---
 title: '&lt;valarray —&gt; operatorów'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::operator!=
 - valarray/std::operator%
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: daaddf6de79411aea58b79feb0fbfd0f8ff56f5c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332611"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565925"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray —&gt; operatorów
 
@@ -44,8 +44,8 @@ ms.locfileid: "51332611"
 |[operator!=](#op_neq)|[operator%](#op_mod)|[Operator&amp;](#op_amp)|
 |[Operator&amp;&amp;](#op_amp_amp)|[Operator&gt;](#op_gt)|[Operator&gt;&gt;](#op_gt_gt)|
 |[Operator&gt;=](#op_gt_eq)|[Operator&lt;](#op_lt)|[Operator&lt;&lt;](#op_lt_lt)|
-|[Operator&lt;=](#op_lt_eq)|[operator *](#op_star)|[operator +](#op_add)|
-|[operator-](#operator-)|[operator /](#op_div)|[operator==](#op_eq_eq)|
+|[Operator&lt;=](#op_lt_eq)|[operator*](#op_star)|[operator +](#op_add)|
+|[operator-](#operator-)|[operator/](#op_div)|[operator==](#op_eq_eq)|
 |[operator^](#op_xor)|[operator&#124;](#op_or)|[operator&#124;&#124;](#op_lor)|
 
 ## <a name="op_neq"></a>  operator! =
@@ -268,7 +268,7 @@ Valarray, której elementy są element-wise kombinacji operacja bitowa i z *po l
 
 Operacja bitowa należy używać tylko do manipulowania bitów **char** i **int** typów danych i wariantów a nie w systemie **float**, **double**, **longdouble**, **void**, **bool** lub innych, bardziej złożone typy danych.
 
-Operatora testu koniunkcji `AND` ma tej samej tabeli prawdziwych danych jako logiczny `AND` , ale ma zastosowanie do typu danych na poziomie pojedynczych bitów. [Operator & &](../standard-library/valarray-operators.md#amp) ma zastosowanie na poziomie elementu inwentaryzacji wszystkich wartości niezerowych jako PRAWDA, a wynik jest valarray wartościami logicznymi. Operatora testu koniunkcji **ANDoperator &**, z kolei może doprowadzić do tablicy valarray, o wartości innej niż 0 lub 1, w zależności od wyniku operacji na poziomie bitowym.
+Operatora testu koniunkcji `AND` ma tej samej tabeli prawdziwych danych jako logiczny `AND` , ale ma zastosowanie do typu danych na poziomie pojedynczych bitów. [Operator & &](#op_amp_amp) ma zastosowanie na poziomie elementu inwentaryzacji wszystkich wartości niezerowych jako PRAWDA, a wynik jest valarray wartościami logicznymi. Operatora testu koniunkcji `AND` [operator &](#op_amp), z kolei może doprowadzić do tablicy valarray, o wartości innej niż 0 lub 1, w zależności od wyniku operacji na poziomie bitowym.
 
 ### <a name="example"></a>Przykład
 
@@ -356,7 +356,7 @@ Valarray, której elementy są typu wartość logiczna i element-wise kombinacja
 
 ### <a name="remarks"></a>Uwagi
 
-Logiczny `ANDoperator&&` ma zastosowanie na poziomie elementu inwentaryzacji wszystkich wartości niezerowych jako PRAWDA, a wynik jest valarray wartościami logicznymi. Bitowe wersję `AND`, [operatora &,](../standard-library/valarray-operators.md#op_amp), z kolei może doprowadzić do tablicy valarray, o wartości innej niż 0 lub 1, w zależności od wyniku operacji na poziomie bitowym.
+Logiczny `ANDoperator&&` ma zastosowanie na poziomie elementu inwentaryzacji wszystkich wartości niezerowych jako PRAWDA, a wynik jest valarray wartościami logicznymi. Bitowe wersję `AND`, [operatora &,](#op_amp), z kolei może doprowadzić do tablicy valarray, o wartości innej niż 0 lub 1, w zależności od wyniku operacji na poziomie bitowym.
 
 ### <a name="example"></a>Przykład
 
@@ -1430,7 +1430,7 @@ Valarray, której elementy są element-wise kombinacji operatora testu koniunkcj
 
 Operacja bitowa należy używać tylko do manipulowania bitów **char** i **int** typów danych i wariantów a nie w systemie **float**, **double**, **typu long double**, **void**, **bool** lub innych, bardziej złożone typy danych.
 
-Wyłączny sumy bitowej `OR` ( **XOR**) charakteryzuje się następującą semantyką: podany bitów *b*1 i *b*2, *b*1  **XOR** *b*2 jest **true** Jeśli dokładnie jeden z bitów jest PRAWDA. **false** Jeśli oba bity są fałszywe lub jeśli spełnione są oba bity.
+Wyłączny sumy bitowej `OR` ( **XOR**) charakteryzuje się następującą semantyką: Biorąc pod uwagę bitów *b*1 i *b*2, *b*1 **XOR** *b*2 jest **true** Jeśli dokładnie jeden z bitów jest PRAWDA. **false** Jeśli oba bity są fałszywe lub jeśli spełnione są oba bity.
 
 ### <a name="example"></a>Przykład
 
@@ -1672,4 +1672,4 @@ valarray: ( 0 0 0 1 0 1 1 1 0 1 ).
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<valarray — >](../standard-library/valarray.md)<br/>
+[\<valarray>](../standard-library/valarray.md)<br/>

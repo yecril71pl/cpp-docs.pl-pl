@@ -1,6 +1,6 @@
 ---
 title: CMFCVisualManagerWindows7 Class
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269400"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565522"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 Class
 
@@ -34,7 +34,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Domyślny konstruktor.|
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Domyślny destruktor.|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|Domyślny destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -42,7 +42,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|Usuwa bieżący styl wizualny i przywraca domyślny styl wizualny.|
 |`CMFCVisualManagerWindows7::CleanUp`|Czyści wszystkie obiekty w interfejsie użytkownika i resetuje menu.|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Rysuje przycisku w obszarze-client w ramce. Zastosowań framework tę metodę, aby narysować zminimalizować, Maksymalizuj, zamknij i przywrócić przycisków w prawym górnym rogu ramki okna. Ta metoda nie jest wywoływana, gdy program używa-Aero motywu.|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Rysuje przycisku w obszarze-client w ramce. Zastosowań framework tę metodę, aby narysować zminimalizować, Maksymalizuj, zamknij i przywrócić przycisków w prawym górnym rogu ramki okna. Ta metoda jest wywoływana tylko wtedy, gdy jest używana `Aero` motywu.|
 |`CMFCVisualManagerWindows7::DrawNcText`|Rysuje tekst w obszarze-client w ramce. Struktura używa tej metody, aby narysować Tytuł aplikacji na pasku tytułu w górnej części okna ramki.|
 |`CMFCVisualManagerWindows7::DrawSeparator`|Rysuje separatorem w [klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).|
 |`CMFCVisualManagerWindows7::GetRibbonBar`|Pobiera [klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) skojarzoną z interfejsem użytkownika.|
@@ -173,7 +173,7 @@ Struktura wywołuje tę metodę, gdy wypełnił obszar wokół obrazu elementu m
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in] Wskaźnik do `CMFCToolBarButton`. Struktura wypełnia tło tego przycisku.
 
-*Rect*<br/>
+*Prostokąt*<br/>
 [in] Prostokąt, który określa granice obszar obrazu przycisku menu.
 
 *state*<br/>

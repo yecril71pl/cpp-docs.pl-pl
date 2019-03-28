@@ -1,6 +1,6 @@
 ---
 title: Makra debugowania i raportowania błędów
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287326"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565045"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowania błędów
 
@@ -29,7 +29,7 @@ Te makra udostępniać przydatne narzędzia do debugowania i śledzenia.
 |[ATLASSERT](#atlassert)|Wykonuje te same funkcje co [_asserte —](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) — makro dostępnych w bibliotece wykonawczej C.|
 |[ATLENSURE](#atlensure)|Sprawdza poprawność parametrów. Wywołaj `AtlThrow` w razie potrzeby|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Wysyła komunikat do urządzenia zrzutu określona funkcja nie jest zaimplementowana.|
-|[ATLTRACE](#alttrace)|Raporty ostrzeżenia na urządzeniach, takich jak okna debugera, zgodnie z wskazany flagami i poziomów. Dostępny dla zgodności z poprzednimi wersjami.|
+|[ATLTRACE](#atltrace)|Raporty ostrzeżenia na urządzeniach, takich jak okna debugera, zgodnie z wskazany flagami i poziomów. Dostępny dla zgodności z poprzednimi wersjami.|
 |[ATLTRACE2](#atltrace2)|Raporty ostrzeżenia na urządzeniach, takich jak okna debugera, zgodnie z wskazany flagami i poziomów.|
 
 ##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES

@@ -1,18 +1,18 @@
 ---
 title: 'Platform::Collections:: backinsertiterator, klasa'
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739530"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564726"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections:: backinsertiterator, klasa
 
@@ -141,7 +141,7 @@ Odwołanie do bieżącego BackInsertIterator.
 
 Zgodnie z projektem w pierwszym przykładzie składni wstępnie zwiększa bieżącego BackInsertIterator, i drugi składni po zwiększa BackInsertIterator bieżącego. `int` Typu w drugim składni wskazuje operacji po inkrementacji, nie operandu rzeczywistej liczby całkowitej.
 
-Jednak ten operator nie modyfikuje w rzeczywistości BackInsertIterator. Zamiast tego operatora zwraca odwołanie do iteratora niezmodyfikowanego; bieżący. To jest takie samo zachowanie jako [operator *](#dereference-operator).
+Jednak ten operator nie modyfikuje w rzeczywistości BackInsertIterator. Zamiast tego operatora zwraca odwołanie do iteratora niezmodyfikowanego; bieżący. To jest takie samo zachowanie jako [operator *](#operator-dereference).
 
 ## <a name="see-also"></a>Zobacz także
 

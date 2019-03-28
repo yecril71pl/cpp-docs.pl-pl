@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739427"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565704"
 ---
 # <a name="crect-class"></a>CRect, klasa
 
@@ -950,7 +950,7 @@ Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury l
 
 Parametr *x* i *y* (lub `cx` i `cy`) wartości są dodawane do `CRect`.
 
-Trzecie przeciążenie zwiększa `CRect` według liczby jednostek określona w każdym elemencie członkowskim parametru.
+Trzecie przeciążenie zwiększa `CRect` , liczba jednostek określona w każdym elemencie członkowskim parametru.
 
 ### <a name="example"></a>Przykład
 
@@ -988,7 +988,7 @@ Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury l
 
 Parametr *x* i *y* (lub `cx` i `cy`) wartości są odejmowane od `CRect`.
 
-Trzecie przeciążenie deflates `CRect` według liczby jednostek określona w każdym elemencie członkowskim parametru. Należy zauważyć, że tego przeciążenia funkcji, takich jak [DeflateRect](#deflaterect).
+Trzecie przeciążenie deflates `CRect` , liczba jednostek określona w każdym elemencie członkowskim parametru. Należy zauważyć, że tego przeciążenia funkcji, takich jak [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Przykład
 
@@ -1085,7 +1085,7 @@ Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury l
 
 Parametr *x* i *y* (lub `cx` i `cy`) parametry są dodawane do `CRect`jego położenie.
 
-Trzecie przeciążenie zwraca nowy `CRect` jest równa `CRect` zwiększony według liczby jednostek określona w każdym elemencie członkowskim parametru.
+Trzecie przeciążenie zwraca nowy `CRect` jest równa `CRect` zwiększony, liczba jednostek określona w każdym elemencie członkowskim parametru.
 
 ### <a name="example"></a>Przykład
 
@@ -1128,7 +1128,7 @@ Wskazuje [Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) struktury l
 
 Parametr *x* i *y* (lub `cx` i `cy`) parametry są odejmowane od `CRect`jego położenie.
 
-Trzecie przeciążenie zwraca nowy `CRect` jest równa `CRect` zmniejszony według liczby jednostek określona w każdym elemencie członkowskim parametru. Należy zauważyć, że tego przeciążenia funkcji, takich jak [DeflateRect](#deflaterect), a nie [SubtractRect](#subtractrect).
+Trzecie przeciążenie zwraca nowy `CRect` jest równa `CRect` zmniejszony, liczba jednostek określona w każdym elemencie członkowskim parametru. Należy zauważyć, że tego przeciążenia funkcji, takich jak [DeflateRect](#deflaterect), a nie [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Przykład
 

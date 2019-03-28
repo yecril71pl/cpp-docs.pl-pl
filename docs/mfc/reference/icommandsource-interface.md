@@ -1,6 +1,6 @@
 ---
 title: Klasa Icommandsource
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296023"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565613"
 ---
 # <a name="icommandsource-interface"></a>Klasa Icommandsource
 
@@ -179,7 +179,7 @@ Identyfikator polecenia.
 
 Ta metoda usuwa mapowane na cmdID z obiektu źródła polecenia program obsługi poleceń.
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 Usuwa grupę programy obsługi poleceń z obiektu źródła polecenia.
 ```
@@ -196,7 +196,7 @@ Indeks początkowy zakresu Identyfikatora polecenia.
 Końcowy indeks zakres Identyfikatora polecenia.
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda usuwa grupę programy obsługi komunikatów, mapowane do określonych identyfikatorów poleceń cmdIDMin i cmdIDMax, z obiektu źródła polecenia.
+Ta metoda usuwa grupę programy obsługi komunikatów, mapowane na identyfikatory poleceń, określonego przez cmdIDMin i cmdIDMax z obiektu źródła polecenia.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ Indeks początkowy zakresu Identyfikatora polecenia.
 Końcowy indeks zakres Identyfikatora polecenia.
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda usuwa grupę użytkownika interfejsu polecenia programy obsługi komunikatów, mapowane do określonych identyfikatorów poleceń cmdIDMin i cmdIDMax, z obiektu źródła polecenia.
+Ta metoda usuwa grupę użytkownika interfejsu polecenia programy obsługi komunikatów, mapowane na identyfikatory poleceń, określonego przez cmdIDMin i cmdIDMax z obiektu źródła polecenia.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

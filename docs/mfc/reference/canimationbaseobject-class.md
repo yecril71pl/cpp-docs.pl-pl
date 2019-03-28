@@ -1,6 +1,6 @@
 ---
 title: Klasa CAnimationBaseObject
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationBaseObject
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e9c5ed98d654eb37be7ab8523d44c9da6eecd9c7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258921"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565893"
 ---
 # <a name="canimationbaseobject-class"></a>Klasa CAnimationBaseObject
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Przeciążone. Konstruuje obiekt animacji.|
-|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt animacji.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#_dtorcanimationbaseobject)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt animacji.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -91,7 +91,7 @@ class CAnimationBaseObject : public CObject;
 |[CAnimationBaseObject::GetGroupID](#getgroupid)|Zwraca bieżący identyfikator grupy.|
 |[CAnimationBaseObject::GetObjectID](#getobjectid)|Zwraca identyfikator bieżącego obiektu.|
 |[CAnimationBaseObject::GetUserData](#getuserdata)|Zwraca dane zdefiniowane przez użytkownika.|
-|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Ustawia flagę, która porządkuje automatycznie zniszczyć przejścia.|
+|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Ustawia flagę, aby automatycznie zniszczyć przejścia.|
 |[CAnimationBaseObject::SetID](#setid)|Ustawia nowych identyfikatorów.|
 |[CAnimationBaseObject::SetUserData](#setuserdata)|Zestawy danych zdefiniowane przez użytkownika.|
 
@@ -150,7 +150,7 @@ virtual BOOL ApplyTransitions(
 Wskaźnik do scenorysu.
 
 *bDependOnKeyframes*<br/>
-O wartości FAŁSZ metoda ta umożliwia dodanie tych przejść, które nie są zależne od ramek kluczowych.
+W przypadku wartości FAŁSZ, Metoda ta umożliwia dodanie tych przejść, które nie są zależne od ramek kluczowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -305,17 +305,17 @@ Zbiera wskaźniki do zmiennych zawartej animacji.
 ```
 virtual void GetAnimationVariableList(
     CList<CAnimationVariable*,
-    CAnimationVariable*>& lst) = 0;
+    CAnimationVariable*>& list) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lst*<br/>
+*list*<br/>
 Lista, które należy podać ze zmiennymi animacji w obiekcie animacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to czysty metodę wirtualną, która musi zostać zastąpiona w klasie pochodnej. Obiekt Animacja w zależności od jego typu, zawiera co najmniej jednej zmiennej animacji. Na przykład CAnimationPoint zawiera dwie zmienne dla współrzędne X i Y odpowiednio. Klasa bazowa CAnimationBaseObject implementuje kilka metod ogólnych, które działają na listę zmiennych animacji: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Te metody wywołania GetAnimationVariableList, która jest wypełniona w klasie pochodnej zmiennych rzeczywistych animacji zawarte w obiekcie określonym animacji, a następnie pętli listy i wykonać odpowiednie działania. Jeśli tworzysz obiekt animacji niestandardowej, należy dodać do dzieł wszystkie zmienne animacji zawarte w tym obiekcie.
+Ten czystej wirtualnej metody musi zostać zastąpiona w klasie pochodnej. Obiekt Animacja w zależności od jego typu, zawiera co najmniej jednej zmiennej animacji. Na przykład CAnimationPoint zawiera dwie zmienne dla współrzędne X i Y odpowiednio. Klasa bazowa CAnimationBaseObject implementuje kilka metod ogólnych, które działają na listę zmiennych animacji: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Te metody wywołania GetAnimationVariableList, która jest wypełniona w klasie pochodnej zmiennych rzeczywistych animacji zawarte w obiekcie określonym animacji, a następnie pętli listy i wykonać odpowiednie działania. Jeśli tworzysz obiekt animacji niestandardowej, należy dodać do *listy* wszystkie zmienne animacji zawarte w tym obiekcie.
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -423,7 +423,7 @@ CAnimationController* m_pParentController;
 
 ##  <a name="setautodestroytransitions"></a>  CAnimationBaseObject::SetAutodestroyTransitions
 
-Ustawia flagę, która porządkuje automatycznie zniszczyć przejścia.
+Ustawia flagę, aby automatycznie zniszczyć przejścia.
 
 ```
 void SetAutodestroyTransitions(BOOL bValue);
@@ -470,7 +470,7 @@ virtual void SetParentAnimationObjects();
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to dysk pomocnika, który może służyć do ustanawiania relacji między zmienne animacji, zawarte w obiektu animacji oraz ich kontenerów. Działa za pośrednictwem zmiennych animacji w pętli i ustawia wskaźnik wstecz do obiektu nadrzędnego animacji do każdej zmiennej animacji. W bieżącej implementacji, które rzeczywistego relacji jest określana w CAnimationBaseObject::ApplyTransitions w związku z tym wskaźniki Wstecz nie są ustawione, dopóki nie wywołasz CAnimationGroup::Animate. Poznanie zależności mogą być przydatne, gdy pozwala na rozpoczęcie przetwarzania zdarzeń i musisz pobrać animacji nadrzędnego obiektu z CAnimationVariable (Użyj CAnimationVariable::GetParentAnimationObject).
+Pomocnik ten może służyć do ustanawiania relacji między zmiennymi animacji zawarte w obiektu animacji oraz ich kontenerów. Działa za pośrednictwem zmiennych animacji w pętli i ustawia wskaźnik wstecz do obiektu nadrzędnego animacji do każdej zmiennej animacji. W bieżącej implementacji rzeczywistego relacji jest określana w CAnimationBaseObject::ApplyTransitions, w związku z tym wskaźniki Wstecz nie są ustawione, dopóki nie zostanie wywołana CAnimationGroup::Animate. Poznanie zależności mogą być przydatne, gdy użytkownik przetwarzania zdarzeń i musisz pobrać animacji nadrzędnego obiektu z CAnimationVariable. Użyj CAnimationVariable::GetParentAnimationObject.
 
 ##  <a name="setuserdata"></a>  CAnimationBaseObject::SetUserData
 

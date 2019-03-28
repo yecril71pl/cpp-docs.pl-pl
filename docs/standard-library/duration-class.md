@@ -1,6 +1,6 @@
 ---
 title: duration — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568895"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565574"
 ---
 # <a name="duration-class"></a>duration — Klasa
 
@@ -68,11 +68,11 @@ Argument szablonu `Rep` opisuje typ, który jest używany do przechowywania licz
 |[DURATION::operator-](#operator-)|Zwraca kopię obiektu `duration` obiektu wraz z liczbą cykli zanegowanych.|
 |[DURATION::operator--](#operator--)|Dekrementuje przechowywanych cykli.|
 |[DURATION::operator =](#op_eq)|Zmniejsza liczbę cykli przechowywanych modulo określonej wartości.|
-|[DURATION::operator * =](#op_star_eq)|Mnoży liczbę przechowywanych cykli przez określoną wartość.|
+|[duration::operator*=](#op_star_eq)|Mnoży liczbę przechowywanych cykli przez określoną wartość.|
 |[DURATION::operator / =](#op_div_eq)|Dzieli liczbę przechowywanych cykli przez liczbę cykli określonego `duration` obiektu.|
 |[DURATION::operator +](#op_add)|Zwraca `*this`.|
 |[DURATION::operator ++](#op_add_add)|Zwiększa liczbę przechowywanych cykli.|
-|[DURATION::operator +=](#op_add_eq)|Dodaje liczbę taktów określonego `duration` obiektu do liczby przechowywanych taktów.|
+|[duration::operator+=](#op_add_eq)|Dodaje liczbę taktów określonego `duration` obiektu do liczby przechowywanych taktów.|
 |[DURATION::operator-=](#operator-_eq)|Odejmuje liczbę taktów określonego `duration` obiektu na podstawie liczby przechowywanych taktów.|
 
 ## <a name="requirements"></a>Wymagania
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 W efekcie zwraca `duration(duration_values<rep>::min())`.
 
-## <a name="duration__operator-"></a>  DURATION::operator-
+## <a name="operator-"></a>  DURATION::operator-
 
 Zwraca kopię obiektu `duration` obiektu wraz z liczbą cykli zanegowanych.
 
@@ -167,7 +167,7 @@ Zwraca kopię obiektu `duration` obiektu wraz z liczbą cykli zanegowanych.
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  DURATION::operator--
+## <a name="operator--"></a>  DURATION::operator--
 
 Dekrementuje przechowywanych cykli.
 
@@ -277,7 +277,7 @@ Element `duration` obiektu.
 
 `duration` Obiektu po wykonaniu dodawania.
 
-## <a name="duration__operator-_eq"></a>  DURATION::operator-=
+## <a name="operator-_eq"></a>  DURATION::operator-=
 
 Odejmuje liczbę taktów określonego `duration` obiektu na podstawie liczby przechowywanych taktów.
 

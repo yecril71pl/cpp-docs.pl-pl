@@ -1,6 +1,6 @@
 ---
 title: valarray — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525317"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565743"
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 
@@ -59,7 +59,7 @@ W szczególności nie subtelne może różnice między konstrukcja kopiowania i 
 
 |Konstruktor|Opis|
 |-|-|
-|[valarray —](#valarray)|Konstruuje `valarray` o określonym rozmiarze lub z elementami określonej wartości lub jako kopię innej `valarray` lub podzbioru innej `valarray`.|
+|[valarray](#valarray)|Konstruuje `valarray` o określonym rozmiarze lub z elementami określonej wartości lub jako kopię innej `valarray` lub podzbioru innej `valarray`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -88,7 +88,7 @@ W szczególności nie subtelne może różnice między konstrukcja kopiowania i 
 |-|-|
 |[operator!](#op_not)|Jednoargumentowy operator, który uzyskuje logicznej `NOT` wartości każdego elementu w `valarray`.|
 |[operator%=](#op_mod_eq)|Uzyskuje resztę z dzielenia element-wise elementów tablicy przy określonym `valarray` lub według wartości Typ elementu.|
-|[operator&=](#op_amp_eq)|Uzyskuje bitowe `AND` elementów w tablicy przy użyciu odpowiednie elementy w określonej `valarray` przy użyciu wartości typu elementu.|
+|[operator&=](#op_and_eq)|Uzyskuje bitowe `AND` elementów w tablicy przy użyciu odpowiednie elementy w określonej `valarray` przy użyciu wartości typu elementu.|
 |[operator>>=](#op_gt_gt_eq)|Usługa bits dla każdego elementu przesunięcia w prawo o `valarray` określoną liczbę pozycji lub według określonej ilości element-wise określony przez drugi argument operacji `valarray`.|
 |[Operator << =](#op_lt_lt_eq)|Usługi bits dla każdego elementu przesunięcia w lewo z `valarray` określoną liczbę pozycji lub według określonej ilości element-wise określony przez drugi argument operacji `valarray`.|
 |[operator*=](#op_star_eq)|Mnoży elementy określonego `valarray` lub wartości typu elementu element-wise, aby argument operacji `valarray`.|
@@ -96,12 +96,12 @@ W szczególności nie subtelne może różnice między konstrukcja kopiowania i 
 |[operator+=](#op_add_eq)|Dodaje elementy określonej `valarray` lub wartości typu elementu element-wise, aby argument operacji `valarray`.|
 |[operator-](#operator-)|Jednoargumentowy operator, który ma zastosowanie minus do każdego elementu w `valarray`.|
 |[operator-=](#operator-_eq)|Odejmuje elementy określonego `valarray` lub wartości typu elementu element-wise, od argumentu `valarray`.|
-|[operator / =](#op_div_eq)|Dzieli operand `valarray` element-wise przez elementy określonego `valarray` lub wartości typu elementu.|
+|[operator/=](#op_div_eq)|Dzieli operand `valarray` element-wise przez elementy określonego `valarray` lub wartości typu elementu.|
 |[operator=](#op_eq)|Przypisuje elementów `valarray` których wartości są określone, bezpośrednio lub jako część innej `valarray` lub `slice_array`, `gslice_array`, `mask_array`, lub `indirect_array`.|
 |[operator&#91;&#93;](#op_at)|Zwraca odwołanie do elementu lub jego wartość w określonym indeksie lub określony podzbiór.|
 |[operator^=](#op_xor_eq)|Uzyskuje operator wyłączny element-wise logiczne or ( `XOR`) tablicy przy użyciu określonej tablicy valarray lub wartości typu elementu.|
 |[operator&#124;=](#op_or_eq)|Uzyskuje bitowe `OR` elementów w tablicy przy użyciu odpowiednie elementy w określonej `valarray` przy użyciu wartości typu elementu.|
-|[operator ~](#op_dtor)|Jednoargumentowy operator, który uzyskuje bitowe `NOT` wartości każdego elementu w `valarray`.|
+|[operator~](#op_dtor)|Jednoargumentowy operator, który uzyskuje bitowe `NOT` wartości każdego elementu w `valarray`.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>  valarray::operator&amp;=
+## <a name="op_and_eq"></a>  valarray::operator&amp;=
 
 Uzyskuje bitowe **i** elementów w tablicy przy użyciu odpowiednie elementy w określonej tablicy valarray lub z wartością typu elementu.
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::operator-
+## <a name="operator-"></a>  valarray::operator-
 
 Jednoargumentowy operator minus dotyczy każdego elementu w tablicy valarray.
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>  valarray::operator-=
+## <a name="operator-_eq"></a>  valarray::operator-=
 
 Odejmuje elementów określonej tablicy valarray lub wartości typu elementu element-wise, z operand valarray.
 
@@ -1276,7 +1276,7 @@ Valarray, której elementy są wyłączne element-wise, logiczne **XOR** z opera
 
 ### <a name="remarks"></a>Uwagi
 
-Wyłączne logiczny lub są nazywane **XOR**, charakteryzuje się następującą semantyką: dane elementy *e*1 i *e*2, *e*1  **XOR** *e*2 jest **true** Jeśli dokładnie jeden z elementów ma wartość true; **false** Jeśli oba te elementy są fałszywe lub jeśli spełnione są oba te elementy.
+Wyłączne logiczny lub są nazywane **XOR**, charakteryzuje się następującą semantyką: Biorąc pod uwagę elementy *e*1 i *e*2, *e*1 **XOR** *e*2 jest **true** Jeśli dokładnie jeden z elementów ma wartość true; **false** Jeśli oba te elementy są fałszywe lub jeśli spełnione są oba te elementy.
 
 ### <a name="example"></a>Przykład
 
@@ -1852,7 +1852,7 @@ Liczba elementów, które mają się znaleźć w tablicy valarray.
 *Val*<br/>
 Wartość, która ma być użyta do inicjowania elementów w tablicy valarray.
 
-*PTR*<br/>
+*Ptr*<br/>
 Wskaźnik do wartości, które mają użyte do inicjowania elementów w tablicy valarray.
 
 *po prawej stronie*<br/>

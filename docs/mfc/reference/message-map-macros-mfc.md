@@ -1,6 +1,6 @@
 ---
 title: Makra mapy komunikatów (MFC)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850275"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565544"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 
@@ -45,7 +45,7 @@ Aby zapewnić obsługę mapy komunikatów, MFC dostarcza następujące makra:
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Deklaruje, używane w klasie do mapy wiadomości do funkcji (muszą być używane w deklaracji klasy) mapy komunikatów.|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Rozpoczyna się definicji mapy komunikatów (muszą być używane w implementacji klasy).|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Rozpoczyna się definicji mapy komunikatów dla typu klasy zawierającego argumentu jednego szablonu. |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|Rozpoczyna się definicji mapy komunikatów dla typu klasy zawierającego argumentu jednego szablonu. |
 |[END_MESSAGE_MAP](#end_message_map)|Kończy definicję mapy komunikatów (muszą być używane w implementacji klasy).|
 
 ### <a name="message-mapping-macros"></a>Makra mapowania wiadomości
@@ -67,7 +67,7 @@ Aby zapewnić obsługę mapy komunikatów, MFC dostarcza następujące makra:
 |||
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|Wskazuje funkcję, która będzie obsługiwać zakres identyfikatorów poleceń określony za pomocą dwóch pierwszych parametrów do makra.|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Wskazuje, które procedury obsługi aktualizacji będzie obsługiwać zakres identyfikatorów poleceń określony w pierwszych dwóch pa] arametry do makra.|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Wskazuje, które procedury obsługi aktualizacji będzie obsługiwać zakres identyfikatorów poleceń określony za pomocą dwóch pierwszych parametrów do makra.|
 |[ON_CONTROL_RANGE](#on_control_range)|Wskazuje, funkcja, która będzie obsługiwać powiadomienia z zakresu kontroli identyfikatory określone w parametrach drugi i trzeci do makra. Pierwszy parametr jest komunikat z powiadomieniem kontrolki, takie jak BN_CLICKED.|
 
 Aby uzyskać więcej informacji na temat mapy komunikatów, deklaracja mapy komunikatów i odgraniczenie makr i makra mapowania wiadomości, zobacz [mapy wiadomości](../../mfc/reference/message-maps-mfc.md) i [obsługi wiadomości i tematy mapowania](../../mfc/message-handling-and-mapping.md). Aby uzyskać więcej informacji na temat zakresów map komunikatów, zobacz [programy obsługi dla zakresów Map komunikatów](../../mfc/handlers-for-message-map-ranges.md).
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **Nagłówek:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 Rozpoczyna się definicji mapy komunikatów dla typu klasy zawierającego argumentu jednego szablonu.
 
@@ -199,12 +199,12 @@ To makro mapuje komunikatem polecenia do funkcji członkowskiej.
 ### <a name="syntax"></a>Składnia
 
 ```
-ON_COMMAND( id, memberFxn )
+ON_COMMAND( commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
+*commandId*<br/>
 Identyfikator polecenia.
 
 *memberFxn*<br/>
@@ -216,7 +216,7 @@ Oznacza to funkcja, która będzie obsługiwać komunikatem polecenia z poleceni
 
 Gdy obiekt docelowy polecenia otrzymuje komunikat Windows WM_COMMAND o określonym identyfikatorze, ON_COMMAND będzie wywoływać funkcja elementu członkowskiego `memberFxn` , by obsłużyć komunikat.
 
-ON_COMMAND umożliwia mapowanie jednego polecenia do funkcji członkowskiej. Użyj [ON_COMMAND_RANGE](#on_command_range) do mapowania zakresu identyfikatorów poleceń do funkcji jednego członka. Identyfikator polecenia może odnosić się tylko jeden wpis mapy komunikatów. Oznacza to, że nie można zamapować polecenia do więcej niż jednego programu obsługi. Aby uzyskać więcej informacji i przykładów, zobacz [wiadomościami i mapowanie tematów](../../mfc/message-handling-and-mapping.md).
+ON_COMMAND umożliwia mapowanie jednego polecenia do funkcji członkowskiej. Użyj [ON_COMMAND_RANGE](#on_command_range) do mapowania zakresu identyfikatorów poleceń do funkcji jednego członka. Identyfikator polecenia może odnosić się tylko jeden wpis mapy komunikatów Oznacza to, że nie można zamapować polecenia do więcej niż jednego programu obsługi. Aby uzyskać więcej informacji i przykładów, zobacz [wiadomościami i mapowanie tematów](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Przykład
 
@@ -237,12 +237,12 @@ Rozszerzona funkcja elementu członkowskiego program obsługi poleceń.
 ### <a name="syntax"></a>Składnia
 
 ```
-ON_COMMAND_EX(id, memberFxn);
+ON_COMMAND_EX(commandId, memberFxn);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
+*commandId*<br/>
 Identyfikator polecenia.
 
 *memberFxn*<br/>
@@ -265,7 +265,7 @@ Wskazuje funkcję, która będzie obsługiwać komunikat z powiadomieniem forman
 ### <a name="syntax"></a>Składnia
 
 ```
-ON_CONTROL( wNotifyCode, id, memberFxn )
+ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -273,7 +273,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 *wNotifyCode*<br/>
 Kod powiadomienia formantu.
 
-*id*<br/>
+*commandId*<br/>
 Identyfikator polecenia.
 
 *memberFxn*<br/>
@@ -356,7 +356,7 @@ Kieruje poleceń przez interfejs ekspedycji polecenia `IOleCommandTarget`.
 ### <a name="syntax"></a>Składnia
 
 ```
-ON_OLECMD( pguid, olecmdid, id )
+ON_OLECMD( pguid, olecmdid, commandId )
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -367,7 +367,7 @@ Identyfikator grupy poleceń, do której należy to polecenie. Na użytek standa
 *olecmdid*<br/>
 Identyfikator polecenia OLE.
 
-*id*<br/>
+*commandId*<br/>
 Identyfikator menu, pasek narzędzi identyfikator, identyfikator przycisku lub innych identyfikator zasobu lub obiekt wydanie polecenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -575,12 +575,12 @@ To makro wskazuje funkcję, która będzie obsługiwać komunikatem polecenia ak
 ### <a name="syntax"></a>Składnia
 
 ```
-ON_UPDATE_COMMAND_UI( id, memberFxn )
+ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
+*messageId*<br/>
 Identyfikator komunikatu.
 
 *memberFxn*<br/>

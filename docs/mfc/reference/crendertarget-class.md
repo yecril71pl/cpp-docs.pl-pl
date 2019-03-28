@@ -1,6 +1,6 @@
 ---
 title: Klasa CRenderTarget
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259883"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565775"
 ---
 # <a name="crendertarget-class"></a>Klasa CRenderTarget
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Tworzy obiekt CRenderTarget.|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt docelowy renderowania.|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt docelowy renderowania.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -502,7 +502,7 @@ Rysuje zarys prostokąt, który ma określony wymiary i styl obrysu.
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*Prostokąt*<br/>
 Wymiary prostokąta, aby narysować w pikselach niezależnych od urządzenia
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ Rysuje określony tekst przy użyciu dostarczonych przez obiekt IDWriteTextForma
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Wskaźnik do tablicy znaków Unicode, aby narysować.
 
-*Rect*<br/>
+*Prostokąt*<br/>
 Rozmiar i położenie obszaru, w którym jest narysowany tekst.
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ Malowanie wnętrza określonego prostokąta.
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*Prostokąt*<br/>
 Wymiar prostokąta do malowania w pikselach niezależnych od urządzenia.
 
 *pBrush*<br/>
@@ -999,7 +999,7 @@ void PushAxisAlignedClip(
 Rozmiar i położenie obszaru przycinania w pikselach niezależnych od urządzenia.
 
 *Tryb*<br/>
-Tryb antialiasingu, który jest używany do rysowania krawędziami prostokąty klipu, które mają subpixel granice i klipów z zawartością sceny programu blend. Mieszanie odbywa się po po jest wywoływana metoda PopAxisAlignedClip i nie ma zastosowania do każdego podstawowego w ramach warstwy.
+Tryb antialiasingu, który jest używany do rysowania krawędziami prostokątami klipu, które mają subpixel granice i klipów z zawartością sceny programu blend. Mieszanie odbywa się po po jest wywoływana metoda PopAxisAlignedClip i nie ma zastosowania do każdego podstawowego w ramach warstwy.
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 

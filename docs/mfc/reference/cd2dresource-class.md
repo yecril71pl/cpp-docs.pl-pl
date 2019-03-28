@@ -1,6 +1,6 @@
 ---
 title: Klasa CD2DResource
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284869"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564778"
 ---
 # <a name="cd2dresource-class"></a>Klasa CD2DResource
 
-Abstrakcyjna klasa, która udostępnia interfejs do tworzenia i zarządzania zasobami D2D, takimi jak pędzle, warstwy i teksty.
+Abstrakcyjna klasa, która zapewnia interfejs do tworzenia i zarządzania zasobami D2D, takimi jak pędzle, warstwy i teksty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Tworzy obiekt CD2DResource.|
-|[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt zasobów D2D.|
+|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt zasobów D2D.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -67,7 +67,7 @@ class CD2DResource : public CObject;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Zasób zostanie destoyed przez właściciela (CRenderTarget)|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Zasób jest niszczony przez właściciela (CRenderTarget)|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Wskaźnik do elementu nadrzędnego CRenderTarget)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
@@ -157,7 +157,7 @@ Wartość TRUE, jeśli zasób jest ważny; w przeciwnym razie wartość FALSE.
 
 ##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
 
-Zasób zostanie destoyed przez właściciela (CRenderTarget)
+Zasób jest niszczony przez właściciela (CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;

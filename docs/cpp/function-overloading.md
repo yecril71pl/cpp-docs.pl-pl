@@ -1,23 +1,23 @@
 ---
 title: Przeładowywanie funkcji
-ms.date: 11/19/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6cc432e404a7a66de63cf87f0fe87f0ccdcb5d70
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176305"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565977"
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 
-C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Są to tak zwane *przeciążone* funkcji. Przeciążone funkcje umożliwiają podanie różnego znaczenia dla funkcji, w zależności od typu i liczby argumentów.
+C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Funkcje te są nazywane *przeciążone* funkcji. Przeciążone funkcje umożliwiają podanie różnego znaczenia dla funkcji, w zależności od typu i liczby argumentów.
 
-Na przykład `print` funkcji, która przyjmuje `std::string` argument może wykonywać bardzo różne zadania niż ta, która przyjmuje argument typu **double**. Przeciążanie pozwala uniknąć używać nazw takich jak `print_string` lub `print_double`. W czasie kompilacji kompilator wybiera, które przeładowanie do użycia na podstawie typu przekazanych przez obiekt wywołujący argumentów.  Jeśli wywołasz `print(42.0)` , a następnie `void print(double d)` zostanie wywołana funkcja. Jeśli wywołasz `print("hello world")` , a następnie `void print(std::string)` przeciążenia zostaną wywołane.
+Na przykład `print` funkcji, która przyjmuje `std::string` argument może wykonywać bardzo różne zadania niż ta, która przyjmuje argument typu **double**. Przeciążanie pozwala uniknąć używać nazw takich jak `print_string` lub `print_double`. W czasie kompilacji kompilator wybiera, które przeładowanie do użycia na podstawie typu przekazanych przez obiekt wywołujący argumentów.  Jeśli wywołasz `print(42.0)`, a następnie `void print(double d)` zostanie wywołana funkcja. Jeśli wywołasz `print("hello world")`, a następnie `void print(std::string)` przeciążenia zostaną wywołane.
 
 Możesz doprowadzić do przeciążenia funkcji elementów członkowskich i funkcje nieczłonkowskie. W poniższej tabeli przedstawiono, które części deklaracji funkcji język C++ używa do rozróżniania grup funkcji o tej samej nazwie w tym samym zakresie.
 
@@ -32,7 +32,7 @@ Możesz doprowadzić do przeciążenia funkcji elementów członkowskich i funkc
 |Korzystanie z **typedef** nazwy|Nie|
 |Nieokreślone granice tablic|Nie|
 |**Const** lub **volatile**|Tak, gdy jest stosowany do całej funkcji|
-|[ref-qualifier](#ref-qualifier)|Tak|
+|[Kwalifikatory REF](#ref-qualifiers)|Tak|
 
 ## <a name="example"></a>Przykład
 
@@ -113,13 +113,13 @@ int print(double dvalue, int prec)
 
 Poprzedni kod pokazuje przeciążenie funkcji `print` w zakresie pliku.
 
-Argument domyślny nie jest uważany za część dla typu funkcji. W związku z tym nieużywanych wyborze przeciążonych funkcji. Dwie funkcje, które różnią się tylko w ich argumenty domyślne są traktowane jako wiele definicji zamiast przeciążone funkcje.
+Argument domyślny nie jest uważany za część typu funkcji. W związku z tym nieużywanych wyborze przeciążonych funkcji. Dwie funkcje, które różnią się tylko w ich argumenty domyślne są traktowane jako wiele definicji zamiast przeciążone funkcje.
 
 Nie można dostarczyć domyślne argumenty dla operatorów przeciążonych.
 
 ## <a name="argument-matching"></a>Dopasowywanie argumentów
 
-Funkcje przeciążone są zaznaczone dla najlepsze dopasowanie deklaracji funkcji w bieżącym zakresie argumentów w wywołaniu funkcji. Jeśli odpowiednia funkcja zostanie znaleziony, że funkcja jest wywoływana. "Odpowiedni" w tym kontekście oznacza, że jeden z następujących czynności:
+Funkcje przeciążone są zaznaczone dla najlepsze dopasowanie deklaracji funkcji w bieżącym zakresie argumentów w wywołaniu funkcji. Jeśli odpowiednia funkcja zostanie znaleziony, że funkcja jest wywoływana. "Odpowiedni" w tym kontekście oznacza:
 
 - Znaleziono dokładnego dopasowania.
 
@@ -135,7 +135,7 @@ Funkcje przeciążone są zaznaczone dla najlepsze dopasowanie deklaracji funkcj
 
 Kompilator tworzy zestaw Release Candidate funkcji dla każdego argumentu. Funkcje kandydujące są funkcje, w których rzeczywisty argument, w tym miejscu można przekonwertować na typ argumentu formalnego.
 
-Zestaw "najlepiej dopasowaną funkcji" jest przeznaczony dla każdego argumentu i wybranej funkcji jest przecięcia wszystkich zestawów. Jeśli część wspólną zawiera więcej niż jedną funkcję, przeciążenie jest niejednoznaczne i generuje błąd. Funkcja, która jest ostatecznie zaznaczone jest zawsze lepsze dopasowane niż co innych funkcji, w grupie co najmniej jednego argumentu. Wywołanie funkcji generuje błąd, jeśli nie jest to wymagane (jeśli ma nie wyczyść zwycięzca).
+Zestaw "najlepiej dopasowaną funkcji" jest przeznaczony dla każdego argumentu i wybranej funkcji jest przecięcia wszystkich zestawów. Jeśli część wspólną zawiera więcej niż jedną funkcję, przeciążenie jest niejednoznaczne i generuje błąd. Funkcja, która jest ostatecznie zaznaczone jest zawsze lepsze dopasowane niż co innych funkcji, w grupie co najmniej jednego argumentu. Jeśli nie ma żadnych wyczyść zwycięzcy, wywołanie funkcji spowoduje wygenerowanie błędu.
 
 Rozważ następujące deklaracje (funkcje są oznaczone `Variant 1`, `Variant 2`, i `Variant 3`, dla identyfikatora w następujących dyskusji):
 
@@ -155,7 +155,7 @@ F1 = Add( F2, 23 );
 
 Poprzednia instrukcja tworzy dwa zestawy:
 
-|Zestaw 1: Release Candidate funkcji, które mają pierwszy Argument typu ułamka|Zestaw 2: Release Candidate funkcje Whose drugi Argument można przekonwertować na typ **int**|
+|Ustaw 1: Funkcje Release Candidate, które mają pierwszy Argument typu ułamka|Ustaw 2: Release Candidate funkcje Whose drugi Argument można przekonwertować na typ **int**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 |Wariantu 1|Wariantu 1 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|
 |Variant 3||
@@ -170,15 +170,15 @@ F1 = Add( 3, 6 );
 
 Poprzedniego wywołania funkcji kompilacje następujących zestawów:
 
-|Zestaw 1: Release Candidate funkcje, mają pierwszy Argument typu **int**|Zestaw 2: Release Candidate funkcje, mieć drugi Argument typu **int**|
+|Ustaw 1: Release Candidate funkcje, mają pierwszy Argument typu **int**|Ustaw 2: Release Candidate funkcje, mieć drugi Argument typu **int**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
 |Variant 2 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|Wariantu 1 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|
 
-Należy pamiętać, że część wspólną między tymi dwoma zestawami jest pusty. W związku z tym kompilator generuje komunikat o błędzie.
+Ponieważ część wspólną tymi dwoma zestawami jest pusta, kompilator generuje komunikat o błędzie.
 
 Dla argumentu dopasowania funkcji z *n* argumenty domyślne jest traktowany jako *n*funkcje oddzielne + 1, każda z różną liczbę argumentów.
 
-Działa wielokropek (...) jako symbolu wieloznacznego; Dopasowuje dowolny z rzeczywistych argumentów. Może to prowadzić do wielu zestawów niejednoznaczny, jeżeli nie należy projektować swoje zestawy przeciążonej funkcji z rozwagą.
+Działa wielokropek (...) jako symbolu wieloznacznego; Dopasowuje dowolny z rzeczywistych argumentów. Może to prowadzić do wielu zestawów niejednoznaczny, projektując nie Twoje zestawy przeciążonej funkcji z rozwagą.
 
 > [!NOTE]
 >  Nie można ustalić niejednoznaczności przeciążonych funkcji, dopóki nie zostanie osiągnięty wywołania funkcji. W tym momencie zestawy są tworzone dla każdego argumentu w wywołaniu funkcji, a następnie można określić, czy istnieje jednoznaczna przeciążenie. Oznacza to, że niejednoznaczności może pozostać w kodzie, dopóki nie są one przywołane przez wywołanie konkretną funkcję.
@@ -189,7 +189,7 @@ Przeciążone funkcje rozróżnienia między typami argumentów, które przyjmuj
 
 Z tego samego powodu argumenty typu, który został zmodyfikowany przez funkcji **const** lub **volatile** nie są traktowane inaczej niż typu podstawowego na potrzeby logowania.
 
-Jednak funkcja przeciążenie mechanizm może rozróżnić odwołań, które są kwalifikowane przez **const** i **volatile** i odwołania do typu podstawowego. To sprawia, że kod taki jak następujące możliwości:
+Jednak funkcja przeciążenie mechanizm może rozróżnić odwołań, które są kwalifikowane przez **const** i **volatile** i odwołania do typu podstawowego. Dzięki niej kod, takie jak następujące możliwości:
 
 ```cpp
 // argument_type_differences.cpp
@@ -294,11 +294,11 @@ Poprzedni reguła ma zastosowanie tylko na ścieżce danego pochodnym. Należy w
 ![Wiele&#45;dziedziczenia, pokazujący preferowanych konwersje](../cpp/media/vc391t2.gif "wielu&#45;dziedziczenia, pokazujący preferowanych konwersje") <br/>
 Wykres dziedziczenia wielokrotnego, który pokazuje preferowaną konwersje
 
-Konwersja z typu `C*` na typ `B*` jest konwersja z typu `C*` na typ `A*`. Przyczyną jest to, że znajdują się w tej samej ścieżce i `B*` zbliżonej. Jednak konwersja z typu `C*` na typ `D*` nieodpowiednim do konwersji na typ `A*`; jest Brak preferencji, ponieważ konwersje postępuj zgodnie z różnych ścieżek.
+Konwersja z typu `C*` na typ `B*` jest konwersja z typu `C*` na typ `A*`. Przyczyną jest to, że znajdują się w tej samej ścieżce i `B*` zbliżonej. Jednak konwersja z typu `C*` na typ `D*` nie jest preferowane konwersji na typ `A*`; jest Brak preferencji, ponieważ konwersje postępuj zgodnie z różnych ścieżek.
 
 1. Zgodna z konwersje zdefiniowane przez użytkownika. Ta sekwencja nie mogą być klasyfikowane jako dokładne dopasowanie, dopasowanie za pomocą promocji lub przy użyciu standardowych konwersji dopasowania. Sekwencja musi zawierać tylko konwersje zdefiniowane przez użytkownika, konwersje standardowe lub trivial konwersji jest uważany za dopasowania konwersje zdefiniowane przez użytkownika. Dopasowania konwersje zdefiniowane przez użytkownika jest uważany za lepsze dopasowane niż dopasowania z wielokropkiem, ale nie tak dobrze, dopasowanie jako zgodny ze standardowych konwersji.
 
-1. Zgodne z wielokropkiem. Dowolnej sekwencji, który odpowiada wielokropek w deklaracji jest klasyfikowana jako zgodny z wielokropkiem. To jest traktowany jako najsłabsza dopasowania.
+1. Zgodne z wielokropkiem. Dowolnej sekwencji, który odpowiada wielokropek w deklaracji jest klasyfikowana jako zgodny z wielokropkiem. Ma on uznawany za najsłabsza dopasowania.
 
 Konwersje zdefiniowane przez użytkownika są stosowane, jeśli nie ma wbudowanych podwyższania poziomu ani konwersji. Te konwersje są wybierane na podstawie typu argumentu są dopasowywane. Rozważmy poniższy kod:
 
@@ -337,9 +337,9 @@ UDC udc;
 LogToFile( udc );
 ```
 
-W poprzednim przykładzie, konwersja zdefiniowana przez użytkownika **operator długie**, zostanie wywołana można skonwertować `udc` na typ **długie**. Jeśli nie zdefiniowana przez użytkownika konwersja na typ **długie** była zdefiniowana, konwersja będzie mieć zanalizować w następujący sposób: typ `UDC` będzie konwertowany na typ **int** przy użyciu zdefiniowanych przez użytkownika Konwersja. Następnie standardowa konwersja z typu **int** na typ **długie** będzie stosowane do dopasowania argumentów w deklaracji.
+W poprzednim przykładzie, konwersja zdefiniowana przez użytkownika **operator długie**, zostanie wywołana można skonwertować `udc` na typ **długie**. Jeśli nie zdefiniowana przez użytkownika konwersja na typ **długie** była zdefiniowana, konwersja będzie mieć zanalizować w następujący sposób: Typ `UDC` będzie konwertowany na typ **int** za pomocą konwersji zdefiniowanej przez użytkownika. Następnie standardowa konwersja z typu **int** na typ **długie** będzie stosowane do dopasowania argumentów w deklaracji.
 
-Jeśli wszystkie konwersje zdefiniowane przez użytkownika muszą być zgodne z argumentem, konwersje standardowe nie są używane podczas obliczania najlepsze dopasowanie. Ta zasada obowiązuje nawet wtedy, gdy więcej niż jednej funkcji kandydata wymaga konwersji zdefiniowanej przez użytkownika; w takim przypadku funkcje są uznawane za równe. Na przykład:
+Jeśli wszystkie konwersje zdefiniowane przez użytkownika muszą być zgodne z argumentem, konwersje standardowe nie są używane podczas obliczania najlepsze dopasowanie. Nawet wtedy, gdy więcej niż jednej funkcji kandydata wymaga konwersji zdefiniowanej przez użytkownika, funkcje są uznawane za równe. Na przykład:
 
 ```cpp
 // argument_matching2.cpp
@@ -371,7 +371,7 @@ Obie wersje `Func` wymaga konwersji zdefiniowanej przez użytkownika w celu konw
 
 - Konwersja z typu **int** na typ **długie**; a następnie przekonwertować na typ `UDC2` (konwersji dwuetapowej).
 
-Mimo że drugi z nich wymaga konwersji standardowej, a także konwersja zdefiniowana przez użytkownika, dwa konwersje są nadal uważane za równe.
+Mimo że drugi wymaga konwersji standardowych i konwersji zdefiniowanych przez użytkownika, dwa konwersje są nadal uważane za równe.
 
 > [!NOTE]
 >  Konwersje zdefiniowane przez użytkownika są traktowane jako konwersji, konstruowania lub konwersja przez inicjowanie (funkcja konwersji). Obie metody są traktowane jako równe, rozważając najlepsze dopasowanie.
@@ -453,7 +453,7 @@ Możesz doprowadzić do przeciążenia **nowy operator** wyłącznie w oparciu o
 
 - Nie można przeciążyć funkcje Członkowskie wyłącznie na podstawie jednej są statyczne i innych nonstatic.
 
-- **Element TypeDef** deklaracji nie zdefiniujesz nowe typy; wprowadzają synonimy dla istniejących typów. Nie wpływają one mechanizm przeciążania operacji. Rozważmy poniższy kod:
+- **Element TypeDef** deklaracji nie zdefiniujesz nowe typy; wprowadzają synonimy dla istniejących typów. Nie wpływają one na mechanizm przeciążania operacji. Rozważmy poniższy kod:
 
     ```cpp
     typedef char * PSTR;
@@ -466,7 +466,7 @@ Możesz doprowadzić do przeciążenia **nowy operator** wyłącznie w oparciu o
 
 - Typy wyliczone są różnych typów i może służyć do rozróżnienia przeciążonych funkcji.
 
-- Typy "tablica" i "wskaźnik" są traktowane jako w identyczne do celów rozróżniania przeciążonych funkcji. Jest to istotne tylko dla tablic zwymiarowany pojedynczo. W związku z tym następujące przeciążone funkcje konfliktu i generować komunikat o błędzie:
+- Typy "tablica" i "wskaźnik" są traktowane jako identyczne do celów rozróżniania między przeciążonych funkcji, ale tylko w przypadku pojedynczo wymiary tablic. Dlatego te przeciążone funkcje konfliktu i generować komunikat o błędzie:
 
     ```cpp
     void Print( char *szToPrint );
@@ -485,11 +485,11 @@ Możesz doprowadzić do przeciążenia **nowy operator** wyłącznie w oparciu o
 
 Wszelkie dwie deklaracje funkcji o tej samej nazwie w tym samym zakresie, mogą odwoływać się do tej samej funkcji lub do dwóch funkcji dyskretnych, które są przeciążone. Jeśli wykazy argumentów deklaracji zawierają równoważne typy argumentów (zgodnie z opisem w poprzedniej sekcji), deklaracje funkcji odnoszą się do tej samej funkcji. W przeciwnym razie, odnoszą się do dwóch różnych funkcji, które są wybrane za pomocą przeciążenia.
 
-Zakres klasy jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w klasie bazowej nie jest w tym samym zakresie, co funkcja zadeklarowana w klasie pochodnej. Jeśli funkcja w klasie pochodnej jest zadeklarowana z taką samą nazwę jak funkcję wirtualną w klasie bazowej, funkcja klasy pochodnej *zastępuje* funkcji klasy podstawowej. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).
+Zakres klasy jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w klasie bazowej nie znajduje się w tym samym zakresie, co funkcja zadeklarowana w klasie pochodnej. Jeśli funkcja w klasie pochodnej jest zadeklarowana z taką samą nazwę jak funkcję wirtualną w klasie bazowej, funkcja klasy pochodnej *zastępuje* funkcji klasy podstawowej. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).
 
 Jeśli funkcja klasy bazowej nie jest zadeklarowana jako "virtual", a następnie funkcja klasy pochodnej jest nazywany *Ukryj* go. Zastępowanie i ukrywanie różnią się od przeciążenia.
 
-Zakres bloku jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w zakresie pliku nie jest w tym samym zakresie, co funkcja zadeklarowana lokalnie. Jeśli funkcja zadeklarowana lokalnie ma taką samą nazwę, co funkcja zadeklarowana w zakresie pliku, funkcja zadeklarowana lokalnie ukrywa funkcje należącą do zakresu pliku, zamiast powodować przeciążenie. Na przykład:
+Zakres bloku jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w zakresie pliku nie znajduje się w tym samym zakresie, co funkcja zadeklarowana lokalnie. Jeśli funkcja zadeklarowana lokalnie ma taką samą nazwę, co funkcja zadeklarowana w zakresie pliku, funkcja zadeklarowana lokalnie ukrywa funkcje należącą do zakresu pliku, zamiast powodować przeciążenie. Na przykład:
 
 ```cpp
 // declaration_matching1.cpp
@@ -521,9 +521,9 @@ Poprzedni kod pokazuje dwie definicje funkcji `func`. Definicja która przyjmuje
 
 Dla przeciążonych funkcji członkowskich, różne wersje funkcji mogą mieć różne przywileje dostępu. Ale nadal uważa się, że znajdują się w zakresie otaczającym klasę, a więc są funkcjami przeciążonymi. Rozważmy poniższy kod, w którym funkcja członkowska `Deposit` jest przeciążona; jedna wersja jest publiczna, inne są prywatne.
 
-Zamiarem tego przykładu jest dostarczenie klasy `Account`, w której wymagane jest poprawne hasło, aby wykonać depozyty. Jest to uzyskiwane za pomocą przeciążenia.
+Zamiarem tego przykładu jest dostarczenie klasy `Account`, w której wymagane jest poprawne hasło, aby wykonać depozyty. Odbywa się za pomocą przeciążenia.
 
-Należy zauważyć, że wywołanie `Deposit` w klasie `Account::Deposit` wywołuje prywatne funkcje członkowskie. To wywołanie jest poprawne, ponieważ `Account::Deposit` jest funkcją składową, a zatem ma dostęp do prywatnych składowych klasy.
+Wywołanie `Deposit` w `Account::Deposit` wywołuje prywatne funkcje Członkowskie. To wywołanie jest poprawne ponieważ `Account::Deposit` jest funkcją składową, a ma dostęp do prywatnych składowych klasy.
 
 ```cpp
 // declaration_matching2.cpp

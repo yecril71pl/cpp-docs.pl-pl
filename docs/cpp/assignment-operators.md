@@ -1,6 +1,6 @@
 ---
 title: Operatory przypisania
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328477"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565483"
 ---
 # <a name="assignment-operators"></a>Operatory przypisania
 
@@ -57,7 +57,7 @@ Operatory przypisania przechowują wartość w obiekcie wyznaczonym przez lewy o
 
 Wszystkie operatory przypisania w tabeli poniżej, z wyjątkiem operatora =, są operatorami przypisania złożonego.
 
-### <a name="assignment-operators"></a>Operatory przypisania
+### <a name="assignment-operators-table"></a>Tabela operatory przypisania
 
 |Operator|Znaczenie|
 |--------------|-------------|
@@ -73,7 +73,7 @@ Wszystkie operatory przypisania w tabeli poniżej, z wyjątkiem operatora =, są
 |**^=**|Uzyskuje bitowe wykluczające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
 |**\|=**|Uzyskuje bitowe zawierające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
 
-**Słowa kluczowe operatora**
+### <a name="operator-keywords"></a>Słowa kluczowe operatora
 
 Trzy z operatorów przypisania złożonego mają odpowiedniki tekstowe. Są to:
 
@@ -180,7 +180,7 @@ może mieć jeden z następujących efektów:
 
 ## <a name="compound-assignment"></a>Przydział złożony
 
-Złożone operatory przypisania, jak pokazano w tabeli w [operatory przypisania](#assignment-operators), są określone w formie *e1* *op*= *e2*, gdzie *e1* jest modyfikowalną l wartością nie **const** typu i *e2* jest jednym z następujących czynności:
+Złożone operatory przypisania, objętego [tabeli operatory przypisania](#assignment-operators-table), są określone w formie *e1* *op*= *e2*, gdzie *e1* jest modyfikowalną l wartością nie **const** typu i *e2* jest jednym z następujących czynności:
 
 - Typ arytmetyczny
 

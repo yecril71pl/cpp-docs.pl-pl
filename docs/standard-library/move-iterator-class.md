@@ -1,6 +1,6 @@
 ---
 title: move_iterator — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: c9ff9385d43ac1c53f91a548ea01c04c1c67dc18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656159"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565070"
 ---
 # <a name="moveiterator-class"></a>move_iterator — Klasa
 
@@ -175,7 +175,7 @@ Zwraca nowy bieżącego elementu.
 
 Dodaje operator *_Off* przechowywanego iteratora. Następnie zwraca `*this`.
 
-## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
+## <a name="operator-_eq"></a>  move_iterator::operator-=
 
 Przechodzi przez określoną liczbę poprzednich elementów. Ten operator odejmowania przesunięcie od przechowywanego iteratora.
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 Operator zwraca `(reference)*(*this + _Off)`.
 
-## <a name="move_iterator__operator--"></a>  move_iterator::operator--
+## <a name="operator--"></a>  move_iterator::operator--
 
 Operatory wstępnej i postdekrementacyjne elementów członkowskich przeprowadzania dekrementacji przechowywany iterator.
 
@@ -251,7 +251,7 @@ Pierwszy zmniejsza — operator (operacja predekrementacji) elementu członkowsk
 
 Drugi operator (postdecrement) wykonuje kopię `*this`, ocenia `--*this`. Następnie zwraca kopię.
 
-## <a name="move_iterator__operator-"></a>  move_iterator::operator-
+## <a name="operator-"></a>  move_iterator::operator-
 
 Dekrementuje przechowywanego iteratora i zwraca podaną wartość.
 
@@ -328,6 +328,6 @@ Typ jest synonimem dla cech iteratora `typename iterator_traits<RandomIterator>:
 ## <a name="see-also"></a>Zobacz także
 
 [\<iterator>](../standard-library/iterator.md)<br/>
-[Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[Wartości Lvalue i Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
 [Konstruktory przenoszące i przenoszące operatory przypisania (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

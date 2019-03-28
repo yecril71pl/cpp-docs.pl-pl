@@ -1,6 +1,6 @@
 ---
 title: Klasa CD2DGradientBrush
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DGradientBrush
 - AFXRENDERTARGET/CD2DGradientBrush
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290979"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565467"
 ---
 # <a name="cd2dgradientbrush-class"></a>Klasa CD2DGradientBrush
 
@@ -42,7 +42,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Tworzy obiekt CD2DGradientBrush.|
-|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla gradientów D2D.|
+|[CD2DGradientBrush::~CD2DGradientBrush](#_dtorcd2dgradientbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla gradientów D2D.|
 
 ### <a name="protected-methods"></a>Metody chronione
 

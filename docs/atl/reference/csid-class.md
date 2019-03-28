@@ -1,6 +1,6 @@
 ---
 title: Klasa CSid
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301899"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565873"
 ---
 # <a name="csid-class"></a>Klasa CSid
 
@@ -86,8 +86,8 @@ class CSid
 |-|-|
 |[operator ==](#operator_eq_eq)|Testuje dwa obiekty deskryptora zabezpieczeń pod kątem równości|
 |[operator! =](#operator_neq)|Testuje dwa obiekty deskryptora zabezpieczeń pod kątem nierówności|
-|[Operator \<](#operator_lt_)|Porównuje wartość względną dwa obiekty deskryptora zabezpieczeń.|
-|[operator >](#operator_gt_)|Porównuje wartość względną dwa obiekty deskryptora zabezpieczeń.|
+|[Operator \<](#operator_lt)|Porównuje wartość względną dwa obiekty deskryptora zabezpieczeń.|
+|[operator >](#operator_gt)|Porównuje wartość względną dwa obiekty deskryptora zabezpieczeń.|
 |[Operator \<=](#operator_lt__eq)|Porównuje wartość względną dwa obiekty deskryptora zabezpieczeń.|
 |[operator > =](#operator_gt__eq)|Porównuje wartość względną dwa obiekty deskryptora zabezpieczeń.|
 
@@ -119,7 +119,7 @@ Zwraca LPCTSTR wskazuje nazwę konta.
 
 Ta metoda próbuje odnaleźć nazwy dla określonego `SID` (identyfikator zabezpieczeń). Aby uzyskać szczegółowe informacje, zobacz [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Jeśli brak nazwy konta dla `SID` można znaleźć `AccountName` zwraca pusty ciąg. Może to wystąpić, jeśli limit czasu sieci uniemożliwia znajdowanie nazwę tej metody. Wystąpi ona również identyfikatorów zabezpieczeń bez odpowiedniej nazwy konta, takie jak logowanie `SID` określający sesję logowania.
+Jeśli brak nazwy konta dla `SID` można znaleźć `AccountName` zwraca pusty ciąg. Może to wystąpić, jeśli limit czasu sieci uniemożliwia znajdowanie nazwę tej metody. Wystąpi ona również identyfikatorów zabezpieczeń bez odpowiedniej nazwy konta, takie jak `SID` określający sesji logowania.
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -210,7 +210,7 @@ Zwraca `LPCTSTR` wskazuje do domeny.
 
 Ta metoda próbuje odnaleźć nazwy dla określonego `SID` (identyfikator zabezpieczeń). Aby uzyskać szczegółowe informacje, zobacz [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Jeśli brak nazwy konta dla `SID` można znaleźć `Domain` zwraca domeny w postaci pustego ciągu. Może to wystąpić, jeśli limit czasu sieci uniemożliwia znajdowanie nazwę tej metody. Wystąpi ona również identyfikatorów zabezpieczeń bez odpowiedniej nazwy konta, takie jak logowanie `SID` określający sesję logowania.
+Jeśli brak nazwy konta dla `SID` można znaleźć `Domain` zwraca domeny w postaci pustego ciągu. Może to wystąpić, jeśli limit czasu sieci uniemożliwia znajdowanie nazwę tej metody. Wystąpi ona również identyfikatorów zabezpieczeń bez odpowiedniej nazwy konta, takie jak `SID` określający sesji logowania.
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 

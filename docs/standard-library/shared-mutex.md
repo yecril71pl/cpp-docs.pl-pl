@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751820"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565389"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ Nagłówek &lt;shared_mutex > określa klasy `shared_mutex` i `shared_timed_mute
 
 |Klasy|Opis|
 |-------------|-----------------|
-|[shared_mutex Class](../standard-library/shared-mutex.md#class_shared_mutex)|Typ obiektu mutex udostępnionego, który może być zablokowana przez jeden agent lub udostępnione-wyłącznie przez wielu agentów.|
-|[shared_timed_mutex klasy](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Typ udostępnionego mutex Przekroczono limit czasu, który może być zablokowana przez jeden agent lub udostępnione-wyłącznie przez wielu agentów.|
-|[shared_lock klasy](../standard-library/shared-mutex.md#class_shared_lock)|Klasa szablonu, który otacza udostępnionego obiektu mutex do obsługi operacji przekroczono limit czasu blokady i niewyłączną udostępniania przez wielu agentów.|
+|[shared_mutex Class](#class_shared_mutex)|Typ obiektu mutex udostępnionego, który może być zablokowana przez jeden agent lub udostępnione-wyłącznie przez wielu agentów.|
+|[shared_timed_mutex klasy](#class_shared_timed_mutex)|Typ udostępnionego mutex Przekroczono limit czasu, który może być zablokowana przez jeden agent lub udostępnione-wyłącznie przez wielu agentów.|
+|[shared_lock klasy](#class_shared_lock)|Klasa szablonu, który otacza udostępnionego obiektu mutex do obsługi operacji przekroczono limit czasu blokady i niewyłączną udostępniania przez wielu agentów.|
 
 |Funkcje|Opis|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|Zamienia zawartości obiektów udostępnionych mutex odwołuje się do parametrów funkcji.|
+|[swap](#function_swap)|Zamienia zawartości obiektów udostępnionych mutex odwołuje się do parametrów funkcji.|
 
 ## <a name="syntax"></a>Składnia
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a> shared_lock klasy
+###  <a name="class_shared_lock"></a> shared_lock klasy
 
 Klasa szablonu `shared_lock` kontroluje wspólnej własności obiektu mutex udostępnionych w obrębie zakresu. Parametr szablonu musi być typem udostępnionego elementu mutex.
 

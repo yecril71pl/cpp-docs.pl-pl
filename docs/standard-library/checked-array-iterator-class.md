@@ -1,6 +1,6 @@
 ---
 title: checked_array_iterator — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476610"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565717"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator — Klasa
 
@@ -169,8 +169,8 @@ int main()
 |[operator>](#op_gt)|Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest większy niż `checked_array_iterator` po prawej stronie.|
 |[Operator < =](#op_lt_eq)|Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest mniejszy niż lub równe `checked_array_iterator` po prawej stronie.|
 |[operator>=](#op_gt_eq)|Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest większy niż lub równa `checked_array_iterator` po prawej stronie.|
-|[operator *](#op_star)|Zwraca element `checked_array_iterator` adresów.|
-|[operator ->](#op_arrow)|Zwraca wskaźnik do elementu kierowanego przez `checked_array_iterator`.|
+|[operator*](#op_star)|Zwraca element `checked_array_iterator` adresów.|
+|[operator->](#op_arrow)|Zwraca wskaźnik do elementu kierowanego przez `checked_array_iterator`.|
 |[operator++](#op_add_add)|Zwiększa `checked_array_iterator` do następnego elementu.|
 |[operator--](#operator--)|Dekrementuje `checked_array_iterator` do poprzedniego elementu.|
 |[operator+=](#op_add_eq)|Dodaje określone przesunięcie do `checked_array_iterator`.|
@@ -495,7 +495,7 @@ Zobacz [checked_array_iterator::operator&lt; ](#op_lt) dla przykładu kodu.
 
 Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=
+## <a name="op_lt_eq"></a>  checked_array_iterator::operator&lt;=
 
 Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest mniejszy niż lub równe `checked_array_iterator` po prawej stronie.
 
@@ -514,7 +514,7 @@ Zobacz [checked_array_iterator::operator&gt; = ](#op_gt_eq) dla przykładu kodu.
 
 Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=
+## <a name="op_gt_eq"></a>  checked_array_iterator::operator&gt;=
 
 Sprawdza, czy `checked_array_iterator` po lewej stronie operatora jest większy niż lub równa `checked_array_iterator` po prawej stronie.
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
+## <a name="operator--"></a>  checked_array_iterator::operator--
 
 Dekrementuje `checked_array_iterator` do poprzedniego elementu.
 
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
+## <a name="operator-_eq"></a>  checked_array_iterator::operator-=
 
 Dekrementuje określone przesunięcie od `checked_array_iterator`.
 
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
+## <a name="operator-"></a>  checked_array_iterator::operator-
 
 Dekrementuje przesunięcie od iteratora i zwraca nowy `checked_array_iterator` odnoszący się do wstawionego elementu w nowym położeniu przesunięcia.
 
@@ -910,8 +910,6 @@ Przesunięcie do zmniejszenia z `checked_array_iterator`.
 A `checked_array_iterator` odnoszący się do przesunięcia elementu.
 
 ### <a name="remarks"></a>Uwagi
-
-Zobacz [checked_array_iterator::operator -](#operator-) dla przykładu kodu.
 
 Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md).
 

@@ -1,6 +1,6 @@
 ---
 title: 'Platform::Collections:: map, klasa'
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745180"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565285"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map, klasa
 
@@ -47,7 +47,7 @@ Typ wartości w pary klucz wartość.
 *C*<br/>
 Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Domyślnie [std::less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()* funkcja wygenerowanego przez kompilator, która sprawdza typ *K* i *V* zawiera przyjazny komunikat o błędzie, jeśli typ nie może być przechowywany w mapie.
+*__is_valid_winrt_type()* generowanych przez kompilator funkcji, która weryfikuje typ *K* i *V* zawiera przyjazny komunikat o błędzie, jeśli typ nie może być przechowywany w mapie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -93,7 +93,7 @@ Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md)
 |||
 |-|-|
 |Nazwa|Opis|
-|[Map::mapchanged —](#mapchanged-event.md) `event`|Występuje po zmianie mapy.|
+|[Map::mapchanged —](#mapchanged) zdarzeń|Występuje po zmianie mapy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -238,7 +238,7 @@ Element typename bieżącej mapy.
 Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie.
 
 *m*<br/>
-Odwołanie lub [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do `map Class` używany do zainicjowania bieżącej mapy.
+Odwołanie lub [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) do `map Class` używany do zainicjowania bieżącej mapy.
 
 *pierwszy*<br/>
 Iterator danych wejściowych pierwszego elementu w zakresie elementów używane do zainicjowania bieżącej mapy.

@@ -1,16 +1,16 @@
 ---
-title: Udział lub resuse ustawienia programu Visual Studio project - C++
-ms.date: 11/28/2018
+title: Udostępnianie ani nie używaj ponownie ustawienia projektu programu Visual Studio — C++
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 50e3795a4708a3c15ed25ee7ff6565470ef6989a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823924"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565129"
 ---
-# <a name="share-or-resuse-visual-studio-project-settings"></a>Udział lub resuse ustawienia projektu programu Visual Studio
+# <a name="share-or-reuse-visual-studio-project-settings"></a>Udostępnianie ani nie używaj ponownie ustawienia projektu programu Visual Studio
 
 Aby utworzyć niestandardowe grupy ustawień, które można udostępniać innym użytkownikom lub ponownego użycia w wielu projektach, użyj **Menedżer właściwości** utworzyć *arkusza właściwości* (plik .props) do przechowywania ustawień dla każdego rodzaju Projekt, który chcesz mieć możliwość ponownego użycia lub udostępnienia innym osobom. Przy użyciu właściwości arkusze są znacznie mniej podatne na błędy niż inne sposoby tworzenia "ustawienia"globalne". 
 

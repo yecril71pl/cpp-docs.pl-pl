@@ -1,6 +1,6 @@
 ---
 title: fpos — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: bf15cdf0ec4df1301b074ba2ae179dee3619d30d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564206"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565077"
 ---
 # <a name="fpos-class"></a>fpos — Klasa
 
@@ -221,7 +221,7 @@ Funkcja elementu członkowskiego dodaje *_Off* przechowywanych przesunięcia ele
 
 Zobacz [operator! =](#op_neq) przykład użycia `operator+=`.
 
-## <a name="fpos__operator-"></a>  fpos::operator-
+## <a name="operator-"></a>  fpos::operator-
 
 Wskaźnik zmniejsza położenie pliku.
 
@@ -247,7 +247,7 @@ Pierwsza funkcja elementu członkowskiego zwraca `(streamoff)*this - (streamoff)
 
 Zobacz [operator! =](#op_neq) przykład użycia `operator-`.
 
-## <a name="fpos__operator-_eq"></a>  fpos::operator-=
+## <a name="operator-_eq"></a>  fpos::operator-=
 
 Wskaźnik zmniejsza położenie pliku.
 

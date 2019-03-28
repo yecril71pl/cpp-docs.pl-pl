@@ -1,19 +1,19 @@
 ---
 title: Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji
 description: Użyj środowiska IDE programu Visual Studio, aby zmienić opcje kompilatora i konsolidatora C++ i inne ustawienia kompilacji.
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823913"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564921"
 ---
 # <a name="set-compiler-and-build-properties"></a>Ustaw kompilatora i właściwości kompilacji
 
@@ -65,7 +65,7 @@ Poniższa ilustracja przedstawia strony właściwości dla projektu Visual C++. 
 
 ![Strony właściwości projektu](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-Edytor właściwości służy do wyświetlania wartości wszystkich dostępnych makr. Makra są omówione w [makra strony właściwości](#bkmkPropertiesVersusMacros) sekcję w dalszej części tego artykułu.)
+Edytor właściwości służy do wyświetlania wartości wszystkich dostępnych makr.
 
 ### <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -79,7 +79,7 @@ Ma składnię `%(name)`. Dla pliku makro elementu dotyczy tylko tego pliku — n
 
 Możesz utworzyć *zdefiniowane przez użytkownika makra* do wykorzystania jako zmienne w kompilacjach projektu. Na przykład, można utworzyć makro zdefiniowane przez użytkownika, które udostępnia wartość do niestandardowego kroku kompilacji lub niestandardowego narzędzia kompilacji. Makro zdefiniowane przez użytkownika to para nazwa/wartość. W pliku projektu użyj **$(**<em>nazwa</em>**)** Notacja do uzyskania dostępu do wartości.
 
-Makro zdefiniowane przez użytkownika jest przechowywane w arkuszu właściwości. Jeśli projekt nie zawiera jeszcze arkusza właściwości, można utworzyć jeden, wykonując kroki opisane w temacie [udziału lub resuse ustawienia projektu Visual Studio C++](#bkmkPropertySheets).
+Makro zdefiniowane przez użytkownika jest przechowywane w arkuszu właściwości. Jeśli projekt nie zawiera jeszcze arkusza właściwości, można utworzyć jeden, wykonując kroki opisane w temacie [udziału lub ponowne użycie ustawienia projektu programu Visual Studio](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Aby utworzyć makro zdefiniowane przez użytkownika
 
@@ -128,13 +128,13 @@ W okienku po prawej stronie Zmień **środowiska** lub **Scal środowisko** usta
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Udział lub resuse ustawienia projektu programu Visual Studio](create-reusable-property-configurations.md)<br/>
+[Udostępnianie lub ponowne używanie ustawień projektów programu Visual Studio](create-reusable-property-configurations.md)<br/>
 Jak utworzyć plik .props za pomocą ustawień niestandardowej kompilacji, które mogą być udostępniane lub resused.
 
 [Dziedziczenie właściwości projektu](project-property-inheritance.md)<br/>
 W tym artykule opisano kolejność obliczania, .props, .targets, pliki.vcxproj i zmiennych środowiskowych w procesie kompilacji.
 
-[Modyfikowanie właściwości i obiektów docelowych bez wprowadzania zmian w pliku projektu](modify-project-properties-without-changing-project-file.md)<br/>
+[Modyfikowanie właściwości i obiektów docelowych bez zmieniania pliku projektu](modify-project-properties-without-changing-project-file.md)<br/>
 Jak utworzyć ustawienia tymczasowego kompilacji bez konieczności modyfikowania pliku projektu. 
 
 ## <a name="see-also"></a>Zobacz także

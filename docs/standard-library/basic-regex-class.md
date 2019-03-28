@@ -1,17 +1,17 @@
 ---
 title: basic_regex — Klasa
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633413"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565454"
 ---
 # <a name="basicregex-class"></a>basic_regex — Klasa
 
@@ -59,12 +59,12 @@ Te funkcje elementów członkowskich również przyjmują argument `flags` , kt�
 |publiczne statyczne icase flag_type const|regex_constants::icase|
 |publiczne statyczne nosubs flag_type const|regex_constants::nosubs|
 |Optymalizowanie publiczne statyczne flag_type const|regex_constants::Optimize|
-|collate publiczne statyczne flag_type const|regex_constants::COLLATE|
+|collate publiczne statyczne flag_type const|regex_constants::collate|
 |publiczne statyczne flag_type const ECMAScript|regex_constants::ECMAScript|
-|publiczne statyczne const flag_type podstawowe|regex_constants::Basic|
-|publiczne statyczne flag_type const rozszerzone|regex_constants::Extended|
-|publiczne statyczne awk flag_type const|regex_constants::AWK|
-|publiczne statyczne grep flag_type const|regex_constants::GREP|
+|publiczne statyczne const flag_type podstawowe|regex_constants::basic|
+|publiczne statyczne flag_type const rozszerzone|regex_constants::extended|
+|publiczne statyczne awk flag_type const|regex_constants::awk|
+|publiczne statyczne grep flag_type const|regex_constants::grep|
 |publiczne statyczne egrep flag_type const|regex_constants::egrep|
 |prywatne cech RXtraits||
 
@@ -88,7 +88,7 @@ Te funkcje elementów członkowskich również przyjmują argument `flags` , kt�
 |-|-|
 |[Przypisz](#assign)|Przypisuje wartość do obiektu będącego wyrażeniem regularnym.|
 |[flagi](#flags)|Zwraca składni flagi opcji.|
-|[get_loc](#get_loc)|Zwraca obiekt ustawień regionalnych przechowywanych.|
+|[getloc](#getloc)|Zwraca obiekt ustawień regionalnych przechowywanych.|
 |[imbue](#imbue)|Zmienia obiektu przechowywanych ustawień regionalnych.|
 |[mark_count —](#mark_count)|Zwraca liczbę dopasowane podwyrażenia.|
 |[swap](#swap)|Zamienia dwa obiekty wyrażeń regularnych.|
@@ -248,7 +248,7 @@ Wskaźnik do początku sekwencji do skopiowania.
 *flagi*<br/>
 Flagi opcji składni można dodać podczas kopiowania.
 
-*LEN/TD >*<br/>
+*len/TD>*<br/>
 Długość sekwencji do skopiowania.
 
 *str*<br/>
@@ -257,7 +257,7 @@ Ciąg do skopiowania.
 *pierwszy*<br/>
 Początek sekwencji do skopiowania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji do skopiowania.
 
 *IList*<br/>
@@ -322,7 +322,7 @@ Wskaźnik do początku sekwencji do skopiowania.
 *flagi*<br/>
 Flagi opcji składni można dodać podczas kopiowania.
 
-*LEN/TD >*<br/>
+*len/TD>*<br/>
 Długość sekwencji do skopiowania.
 
 *str*<br/>
@@ -331,7 +331,7 @@ Ciąg do skopiowania.
 *pierwszy*<br/>
 Początek sekwencji do skopiowania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji do skopiowania.
 
 *IList*<br/>

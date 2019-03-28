@@ -1,6 +1,6 @@
 ---
 title: Klasa CMultiPageDHtmlDialog
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMultiPageDHtmlDialog
 - AFXDHTML/CMultiPageDHtmlDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 66ab996a810c7409d689d600758828130d4237f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283751"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566003"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Klasa CMultiPageDHtmlDialog
 
@@ -32,7 +32,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Tworzy obiekt wielostronicowe okna dialogowego DHTML (stylu kreatora).|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Niszczy obiekt wielostronicowe okna dialogowego DHTML.|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Niszczy obiekt wielostronicowe okna dialogowego DHTML.|
 
 ## <a name="remarks"></a>Uwagi
 

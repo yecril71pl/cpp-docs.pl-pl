@@ -1,6 +1,6 @@
 ---
 title: CDataConnection — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326544"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565509"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection — Klasa
 
@@ -119,7 +119,7 @@ Za pomocą `CDataConnection`, wystarczy tylko utworzyć obiekt połączenia, prz
 > [!NOTE]
 >  Jeśli tworzysz aplikację baza danych, która musi obsługiwać wiele sesji, należy użyć [opennewsession —](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="#cdataconnection"></a> CDataConnection::CDataConnection
+## <a name="cdataconnection"></a> CDataConnection::CDataConnection
 
 Tworzy i inicjuje `CDataConnection` obiektu.
 
@@ -141,7 +141,7 @@ Zastąpienie pierwszy tworzy nową `CDataConnection` obiektu przy użyciu ustawi
 
 Drugi zastąpienie tworzy nową `CDataConnection` obiektu z odpowiednikiem obiektu połączenia danych, należy określić ustawienia.
 
-## <a name="#copy"></a> CDataConnection::Copy
+## <a name="copy"></a> CDataConnection::Copy
 
 Tworzy kopię istniejącego połączenia danych.
 
@@ -156,7 +156,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *ds*<br/>
 [in] Odwołanie do istniejącego połączenia danych do skopiowania.
 
-## <a name="#open"></a> CDataConnection::Open
+## <a name="open"></a> CDataConnection::Open
 
 Otwiera połączenie ze źródłem danych przy użyciu parametrów inicjacji.
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 Standardowa HRESULT.
 
-## <a name="#opennewsession"></a> CDataConnection::OpenNewSession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 Zostanie otwarta nowa sesja przy użyciu bieżącego obiektu połączenia źródła danych.
 

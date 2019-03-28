@@ -1,6 +1,6 @@
 ---
 title: tiled_index — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257907"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565220"
 ---
 # <a name="tiledindex-class"></a>tiled_index — Klasa
 
@@ -110,7 +110,7 @@ Długość najmniej znaczącego wymiaru.
 
 **Namespace:** Współbieżność
 
-## <a name="tiled_index__ctor"></a>  tiled_index — Konstruktor
+## <a name="ctor"></a>  tiled_index — Konstruktor
 
 Inicjuje nowe wystąpienie klasy `tiled_index` klasy.
 

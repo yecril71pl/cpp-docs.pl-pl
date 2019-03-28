@@ -1,6 +1,6 @@
 ---
 title: Klasa CJumpList
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CJumpList
 - AFXADV/CJumpList
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: b72ea6f3715be1e4a11d457dbdeaba7a622ef8b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259078"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565311"
 ---
 # <a name="cjumplist-class"></a>Klasa CJumpList
 
@@ -60,7 +60,7 @@ class CJumpList;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CJumpList::CJumpList](#cjumplist)|Konstruuje `CJumpList` obiektu.|
-|[CJumpList::~CJumpList](#cjumplist__~cjumplist)|Niszczy `CJumpList` obiektu.|
+|[CJumpList::~CJumpList](#_dtorcjumplist)|Niszczy `CJumpList` obiektu.|
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -188,7 +188,7 @@ BOOL AddTask(IShellLink* pShellLink);
 Określa ścieżkę docelową zadania.
 
 *strCommandLineArgs*<br/>
-Określa argumenty wiersza polecenia pliku wykonywalnego, określony przez strTargetExecutablePath.
+Określa argumenty wiersza polecenia pliku wykonywalnego, określony przez *strTargetExecutablePath*.
 
 *strTitle*<br/>
 Nazwa zadania, która będzie wyświetlana na liście docelowego.

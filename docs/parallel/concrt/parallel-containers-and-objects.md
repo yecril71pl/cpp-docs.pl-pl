@@ -1,17 +1,17 @@
 ---
 title: Równoległe kontenery oraz obiekty
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333296"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565951"
 ---
 # <a name="parallel-containers-and-objects"></a>Równoległe kontenery oraz obiekty
 
@@ -27,13 +27,13 @@ W tym temacie opisano następujące równoległe kontenery oraz obiekty, które 
 
 Kontenery współbieżne:
 
-- [concurrent_vector, klasa](#ctor)
+- [concurrent_vector, klasa](#vector)
 
-   - [Różnice między concurrent_vector i wektorów](#ctor)
+   - [Różnice między concurrent_vector i wektorów](#vector-differences)
 
-   - [Operacje bezpieczne pod względem współbieżności](#ctor)
+   - [Operacje bezpieczne pod względem współbieżności](#vector-safety)
 
-   - [Wyjątek bezpieczeństwa](#ctor)
+   - [Wyjątek bezpieczeństwa](#vector-exceptions)
 
 - [concurrent_queue, klasa](#queue)
 
@@ -98,7 +98,7 @@ W poniższej tabeli przedstawiono typowe `concurrent_vector` metody i operatory,
 |[at](reference/concurrent-vector-class.md#at)|[koniec](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
 |[begin](reference/concurrent-vector-class.md#begin)|[Frontonu](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
 |[back](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
-|[Pojemność](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend —](reference/concurrent-vector-class.md#rend)|
+|[Pojemność](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
 |[pusty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[Rozmiar](reference/concurrent-vector-class.md#size)|
 
 Operacje, które środowisko wykonawcze zapewnia zgodność ze standardowej biblioteki C++, na przykład `reserve`, nie są bezpieczne pod względem współbieżności. W poniższej tabeli przedstawiono typowe metody i operatory, które nie są bezpieczne pod względem współbieżności.
@@ -181,7 +181,7 @@ A `concurrent_queue` iteratora przechodzi przez elementy w kierunku do przodu ty
 
 [[Górnej](#top)]
 
-##  <a name="unordered_map"></a> concurrent_unordered_map — klasa
+##  <a name="unordered_map"></a> concurrent_unordered_map Class
 
 [Concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) klasy jest klasą kontenerem asocjacyjnym, która, podobnie jak w przypadku [std::unordered_map](../../standard-library/unordered-map-class.md) klasy, kontroluje różnej długości sekwencje elementów typu [std::pair\<const Key, Ty >](../../standard-library/pair-structure.md). Mapy nieuporządkowanej można traktować jako słownik, który można dodać parę klucza i wartości do lub wyszukać wartość według klucza. Ta klasa jest przydatna, jeśli masz wiele wątków lub zadania, które mają jednocześnie dostęp do udostępnionych kontenerów, Wstaw do niej lub go zaktualizować.
 
@@ -189,7 +189,7 @@ Poniższy przykład pokazuje podstawową strukturę przy użyciu `concurrent_uno
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-Aby uzyskać przykład, który używa `concurrent_unordered_map` na wykonywanie mapowania i zmniejszanie operacji w sposób równoległy, zobacz [jak: wykonywać mapy i zmniejszyć operacji wykonywane równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Aby uzyskać przykład, który używa `concurrent_unordered_map` na wykonywanie mapowania i zmniejszanie operacji w sposób równoległy, zobacz [jak: Wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 ###  <a name="map-differences"></a> Różnice między concurrent_unordered_map — i unordered_map
 
@@ -214,7 +214,7 @@ W celu uniknięcia zakleszczenia, Metoda `concurrent_unordered_map` posiada blok
 |[at](reference/concurrent-unordered-map-class.md#at)|`count`|`find`|[key_eq](reference/concurrent-unordered-map-class.md#key_eq)|
 |`begin`|`empty`|`get_allocator`|`max_size`|
 |`cbegin`|`end`|`hash_function`|[operator&#91;&#93;](reference/concurrent-unordered-map-class.md#operator_at)|
-|`cend`|`equal_range`|[Wstaw](reference/concurrent-unordered-map-class.md#insert)|`size`|
+|`cend`|`equal_range`|[insert](reference/concurrent-unordered-map-class.md#insert)|`size`|
 
 Mimo że `count` metoda można bezpiecznie wywołać z jednocześnie uruchomionych wątków, różnych wątków może odbierać różne wyniki, jeśli jednocześnie dodaje się nową wartość do kontenera.
 
@@ -229,7 +229,7 @@ Oprócz tych metod dowolnej metody, rozpoczyna się od `unsafe_` również nie j
 
 [[Górnej](#top)]
 
-##  <a name="unordered_multimap"></a> concurrent_unordered_multimap — klasa
+##  <a name="unordered_multimap"></a> concurrent_unordered_multimap Class
 
 [Concurrency::concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) klasa przypomina `concurrent_unordered_map` klasy, z tą różnicą, że umożliwia ona wiele wartości mapować do tego samego klucza. Również różni się od `concurrent_unordered_map` w następujący sposób:
 
@@ -253,7 +253,7 @@ Poniższy przykład pokazuje podstawową strukturę przy użyciu `concurrent_uno
 
 [[Górnej](#top)]
 
-##  <a name="unordered_multiset"></a> concurrent_unordered_multiset — klasa
+##  <a name="unordered_multiset"></a> concurrent_unordered_multiset Class
 
 [Concurrency::concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) klasa przypomina `concurrent_unordered_set` klasy, z tą różnicą, że umożliwia ona zduplikowanych wartości. Również różni się od `concurrent_unordered_set` w następujący sposób:
 
@@ -281,7 +281,7 @@ W poniższej tabeli przedstawiono niektóre ważne metody `combinable` klasy. Ab
 |------------|-----------------|
 |[local](reference/combinable-class.md#local)|Pobiera odwołanie do zmiennej lokalnej, która jest skojarzona z bieżącym kontekstem wątku.|
 |[Usuń zaznaczenie](reference/combinable-class.md#clear)|Usuwa wszystkie zmiennymi lokalnymi wątku z `combinable` obiektu.|
-|[Łączenie](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Funkcja łączenia podana wygenerować wartość końcową na podstawie zbiór wszystkich obliczeń lokalnej wątku.|
+|[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Funkcja łączenia podana wygenerować wartość końcową na podstawie zbiór wszystkich obliczeń lokalnej wątku.|
 
 `combinable` Klasa jest klasą szablonu, które są parametryzowane na wynik końcowy scalone. Jeśli wywołanie konstruktora domyślnego `T` typu parametru szablonu muszą mieć domyślny konstruktor i Konstruktor kopiujący. Jeśli `T` typu parametru szablonu, nie ma domyślnego konstruktora, wywołaj przeciążona wersja konstruktora, który przyjmuje funkcję inicjowania jako parametr.
 

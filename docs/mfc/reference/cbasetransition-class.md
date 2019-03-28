@@ -1,6 +1,6 @@
 ---
 title: Klasa CBaseTransition
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258375"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565912"
 ---
 # <a name="cbasetransition-class"></a>Klasa CBaseTransition
 
@@ -73,8 +73,8 @@ class CBaseTransition : public CObject;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Tworzy obiekt transtion podstawowej.|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt przejścia.|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|Tworzy obiekt podstawowy przejścia.|
+|[CBaseTransition:: ~ CBaseTransition](#_dtorcbasetransition)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt przejścia.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -170,7 +170,7 @@ Ma zastosowanie przejścia do zmiennych powiązanych z scenorysu. Jeśli określ
 
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
 
-Tworzy obiekt transtion podstawowej.
+Tworzy obiekt podstawowy przejścia.
 
 ```
 CBaseTransition();
@@ -228,7 +228,7 @@ Nieprawidłowy wskaźnik do ramki kluczowej lub wartość NULL, jeśli nie możn
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda może służyć do dostępu do obiektu klatki kluczowej, która wcześniej została ustawiona przez SetKeyframes. Jest wywoływana przez kodu najwyższego poziomu podczas przejścia są dodawane do scenorysu.
+Ta metoda może służyć do dostępu do obiektu klatki kluczowej, która wcześniej została ustawiona przez SetKeyframes. Jest on wywoływany przez kod najwyższego poziomu, podczas przejścia są dodawane do scenorysu.
 
 ##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable
 
@@ -260,7 +260,7 @@ Nieprawidłowy wskaźnik do ramki kluczowej lub wartość NULL, jeśli przejści
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda może służyć do dostępu do obiektu klatki kluczowej, która wcześniej została ustawiona przez SetKeyframes. Jest wywoływana przez kodu najwyższego poziomu podczas przejścia są dodawane do scenorysu.
+Ta metoda może służyć do dostępu do obiektu klatki kluczowej, która wcześniej została ustawiona przez SetKeyframes. Jest on wywoływany przez kod najwyższego poziomu, podczas przejścia są dodawane do scenorysu.
 
 ##  <a name="gettransition"></a>  CBaseTransition::GetTransition
 
@@ -320,7 +320,7 @@ Zwraca wartość TRUE, jeśli dodano przejścia do scenorysu, w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Ta flaga jest ustawiona wewnętrznie, gdy kod najwyższego poziomu powoduje dodanie przejścia do scenorysu.
+Ta flaga jest ustawiona wewnętrznie, gdy najwyższego poziomu kodu dodaje przejścia do scenorysu.
 
 ##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
 

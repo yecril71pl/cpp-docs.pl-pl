@@ -1,6 +1,6 @@
 ---
 title: COleDateTimeSpan, klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748492"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565652"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan, klasa
 
@@ -745,7 +745,7 @@ Aby uzyskać krótki opis tych wartości stanu przejrzyj następującą listę:
 - `COleDateTimeSpan::null` Wskazuje, że `COleDateTimeSpan` obiekt ma wartość null, oznacza to, że wartość nie została podana dla tego obiektu. (To jest "null" w sensie bazy danych o"Brak wartości" w przeciwieństwie do języka C++ o wartości NULL).
 
    > [!CAUTION]
-   > Ta funkcja jest zaawansowane sytuacjach programistycznych. Ta funkcja nie zmienia danych w tym obiekcie. W większości przypadków posłuży do ustawiania stanu **null** lub **nieprawidłowy**. Należy pamiętać, że operator przypisania ( [operator =](#eq)) i [SetDateTimeSpan](#setdatetimespan) ustawić stan obiektu, w oparciu o wartości źródła.
+   > Ta funkcja jest zaawansowane sytuacjach programistycznych. Ta funkcja nie zmienia danych w tym obiekcie. W większości przypadków posłuży do ustawiania stanu **null** lub **nieprawidłowy**. Należy pamiętać, że operator przypisania ([operator =](#operator_eq)) i [SetDateTimeSpan](#setdatetimespan) ustawić stan obiektu, w oparciu o wartości źródła.
 
 ### <a name="example"></a>Przykład
 
