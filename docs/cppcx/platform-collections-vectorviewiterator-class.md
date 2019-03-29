@@ -1,18 +1,18 @@
 ---
 title: 'Platform::Collections:: vectorviewiterator, klasa'
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743741"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565665"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections:: vectorviewiterator, klasa
 
@@ -61,7 +61,7 @@ Element typename VectorViewIterator szablonu klasy.
 |[VectorViewIterator::operator\[\]](#operator-at)|Pobiera odwołanie do elementu, który jest określony przesunięcia z bieżącej VectorViewIterator.|
 |[VectorViewIterator::operator + — Operator](#operator-plus)|Zwraca VectorViewIterator, która odwołuje się do elementu w określonym przemieszczenia VectorViewIterator określony.|
 |[VectorViewIterator::operator++ Operator](#operator-increment)|Zwiększa narastająco VectorViewIterator bieżącego.|
-|[VectorViewIterator::operator+= Operator](#operator-plus-assign)|Zwiększa bieżącego VectorViewIterator o określonym przemieszczenia.|
+|[VectorViewIterator::operator+= Operator](#operator-plus-equals)|Zwiększa bieżącego VectorViewIterator o określonym przemieszczenia.|
 |[VectorViewIterator::operator < — Operator](#operator-less-than)|Wskazuje, czy bieżący VectorViewIterator jest mniejsza niż określony VectorViewIterator.|
 |[VectorViewIterator::operator\<= — Operator](#operator-less-than-or-equals)|Wskazuje, czy bieżący VectorViewIterator jest mniejsza niż lub równa określonej VectorViewIterator.|
 |[VectorViewIterator::operator-= — Operator](#operator-minus-assign)|Zmniejsza bieżące VectorViewIterator przemieszczenie określony.|

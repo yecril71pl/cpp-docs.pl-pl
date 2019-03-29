@@ -1,6 +1,6 @@
 ---
 title: reverse_iterator — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: c865caa6d47d68462740fb4e9b2f6b712d9b6df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae4a3da8f15f838900cb5a4324fbaeda01d918a2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640222"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565639"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator — Klasa
 
@@ -84,7 +84,7 @@ W praktyce oznacza to, że w odwróconej sekwencji reverse_iterator będzie się
 |[operator-](#operator-)|Odejmuje przesunięcie z `reverse_iterator` i zwraca `reverse_iterator` odnoszący się do elementu w położeniu przesunięcia.|
 |[operator--](#operator--)|Dekrementuje `reverse_iterator` do poprzedniego elementu.|
 |[operator-=](#operator-_eq)|Odejmuje określone przesunięcie od `reverse_iterator`.|
-|[operator ->](#operator-_gt)|Zwraca wskaźnik do elementu kierowanego przez `reverse_iterator`.|
+|[operator->](#op-arrow)|Zwraca wskaźnik do elementu kierowanego przez `reverse_iterator`.|
 |[operator&#91;&#93;](#op_at)|Zwraca odwołanie do przesunięcia elementu z elementu kierowanego przez `reverse_iterator` przez określoną liczbę pozycji.|
 
 ## <a name="requirements"></a>Wymagania
@@ -477,7 +477,7 @@ After the +2 offset, the iterator rVPOS1 now points
 to the third element in the reversed sequence: 6.
 ```
 
-## <a name="reverse_iterator__operator-"></a>  reverse_iterator::operator-
+## <a name="operator-"></a>  reverse_iterator::operator-
 
 Odejmuje przesunięcie z `reverse_iterator` i zwraca `reverse_iterator` odnoszący się do elementu w położeniu przesunięcia.
 
@@ -554,7 +554,7 @@ After the -2 offset, the iterator rVPOS2 points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="reverse_iterator__operator--"></a>  reverse_iterator::operator--
+## <a name="operator--"></a>  reverse_iterator::operator--
 
 Dekrementuje reverse_iterator do poprzedniego elementu.
 
@@ -627,7 +627,7 @@ After the decrement, the iterator rVPOS1 points
 to the next-to-last element in the reversed sequence: 3.
 ```
 
-## <a name="reverse_iterator__operator-_eq"></a>  reverse_iterator::operator-=
+## <a name="operator-_eq"></a>  reverse_iterator::operator-=
 
 Odejmuje określone przesunięcie od `reverse_iterator`.
 
@@ -702,7 +702,7 @@ After the -2 offset, the iterator rVPOS1 now points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="op_arrow"></a>  reverse_iterator::operator-&gt;
+## <a name="op-arrow"></a>  reverse_iterator::operator-&gt;
 
 Zwraca wskaźnik do elementu kierowanego przez `reverse_iterator`.
 

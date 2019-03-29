@@ -1,15 +1,15 @@
 ---
 title: Makra i funkcje zarządzania biblioteki dll
-ms.date: 04/03/2017
+ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328769"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565428"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra i funkcje zarządzania biblioteki dll
 
@@ -20,10 +20,10 @@ ms.locfileid: "58328769"
 |[AfxOleInitModule](#afxoleinitmodule)|Zapewnia obsługę OLE od zwykłej biblioteki MFC DLL, która jest połączona dynamicznie z MFC.|
 |[AfxNetInitModule](#afxnetinitmodule)|Umożliwia obsługę MFC gniazd od zwykłej biblioteki MFC DLL, która jest połączona dynamicznie z MFC.|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|Pobiera bieżący stan flagi stanu dla modułu.|
-|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Ustawia stan modułu przed zainicjowaniem i/lub w celu przywrócenia poprzedniego stanu modułu po oczyszczaniu.|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Ustawia stan modułu przed zainicjowaniem i/lub w celu przywrócenia poprzedniego stanu modułu po oczyszczania.|
 |[AfxInitExtensionModule](#afxinitextensionmodule)|Inicjuje biblioteki DLL.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|Ustaw flagi stanu-module, który ma wpływ na zachowanie folderze WinSxS MFC.|
-|[AfxTermExtensionModule](#afxtermextensionmodule)|Umożliwia MFC do oczyszczania biblioteki DLL rozszerzenia MFC podczas każdego procesu odłączy się od biblioteki DLL.|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|Umożliwia MFC, aby wyczyścić rozszerzenia MFC biblioteki DLL, gdy każdy proces odłączy się od biblioteki DLL.|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -79,7 +79,7 @@ Zamienia to bieżący stan modułu ze stanem zwróciło [AfxGetStaticModuleState
 Aby uzyskać więcej informacji na temat Stany modułu i MFC, zobacz temat "Zarządzanie stanu danych z MFC — moduły" w [tworzenie nowych dokumentów, Windows i widoki](../creating-new-documents-windows-and-views.md) i [techniczne 58 Uwaga](../tn058-mfc-module-state-implementation.md).
 
 > [!NOTE]
->  Gdy MFC tworzy kontekst aktywacji dla zestawu, używa [afxwininit —](#afxwininit) można utworzyć kontekstu i `AFX_MANAGE_STATE` Włączanie i wyłączanie go. Należy zauważyć, że `AFX_MANAGE_STATE` jest włączona dla statycznej biblioteki MFC, a także biblioteki MFC dll, aby umożliwić kodu MFC można wykonać w kontekście właściwej aktywacji wybranych przez użytkownika pliku DLL. Aby uzyskać więcej informacji, zobacz [Obsługa kontekstów aktywacji w stanie modułu MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
+>  Gdy MFC tworzy kontekst aktywacji dla zestawu, używa [afxwininit —](application-information-and-management.md#afxwininit) można utworzyć kontekstu i `AFX_MANAGE_STATE` Włączanie i wyłączanie go. Należy zauważyć, że `AFX_MANAGE_STATE` jest włączona dla statycznej biblioteki MFC, a także biblioteki MFC dll, aby umożliwić kodu MFC można wykonać w kontekście właściwej aktywacji wybranych przez użytkownika pliku DLL. Aby uzyskać więcej informacji, zobacz [Obsługa kontekstów aktywacji w stanie modułu MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -151,7 +151,7 @@ Kontekst modułu jest określana na podstawie jego manifestu, zwykle osadzone w 
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
-Wywołaj tę funkcję, aby ustawić stan modułu przed zainicjowaniem i/lub w celu przywrócenia poprzedniego stanu modułu po oczyszczaniu.
+Wywołaj tę funkcję, aby ustawić stan modułu przed zainicjowaniem i/lub w celu przywrócenia poprzedniego stanu modułu po oczyszczania.
 
 ### <a name="syntax"></a>Składnia
 
@@ -181,7 +181,7 @@ Aby uzyskać więcej informacji na temat Stany modułu i MFC, zobacz temat "Zarz
 
 **Nagłówek:** afxstat_.h
 
-## <a name="afxinitextensionmodule"></a> Afxinitextensionmodule —
+## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
 
 Wywołaj tę funkcję w rozszerzenia MFC biblioteki DLL w `DllMain` można zainicjować biblioteki DLL.
 
@@ -228,7 +228,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 `AfxInitExtensionModule` Tworzy kopię HMODULE biblioteki DLL i przechwytuje klasy środowiska wykonawczego bibliotek DLL (`CRuntimeClass` struktury) oraz jego obiekt fabryki (`COleObjectFactory` obiektów) do użycia po późniejszym `CDynLinkLibrary` obiekt zostanie utworzony.
 Rozszerzenia MFC biblioteki DLL trzeba wykonać dwie czynności w ich `DllMain` funkcji:
 
-- Wywołaj [afxinitextensionmodule —](#_mfc_afxinitextensionmodule) i sprawdź wartość zwracaną.
+- Wywołaj [afxinitextensionmodule —](#afxinitextensionmodule) i sprawdź wartość zwracaną.
 
 - Tworzenie `CDynLinkLibrary` obiektu, jeśli biblioteka DLL będzie eksportowanie [struktura CRuntimeClass](cruntimeclass-structure.md) obiektów lub ma swoje własne niestandardowe zasoby.
 
@@ -275,7 +275,7 @@ BOOL CMFCListViewApp::InitInstance()
 
 ## <a name="afxtermextensionmodule"></a>  Afxtermextensionmodule —
 
-Wywołaj tę funkcję, aby umożliwić MFC do oczyszczania biblioteki DLL rozszerzenia MFC podczas każdego procesu odłączy się od biblioteki DLL (której się dzieje, gdy kończy proces lub zwalnianie biblioteki DLL na `AfxFreeLibrary` wywołania).
+Wywołaj tę funkcję, aby umożliwić MFC, aby wyczyścić rozszerzenia MFC biblioteki DLL, gdy każdy proces odłączy się od biblioteki DLL (której się dzieje, gdy kończy proces lub zwalnianie biblioteki DLL na `AfxFreeLibrary` wywołania).
 
 ### <a name="syntax"></a>Składnia
 
@@ -289,7 +289,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 Odwołanie do [afx_extension_module —](afx-extension-module-structure.md) struktury, który zawiera stan modułu biblioteki DLL rozszerzenia MFC.
 
 *Piłka*<br/>
-Jeśli PRAWDA, wyczyść wszystkie moduły biblioteki DLL rozszerzeń MFC. W przeciwnym razie Oczyszczanie tylko bieżący moduł biblioteki DLL.
+W przypadku opcji TRUE wyczyścić wszystkie moduły biblioteki DLL rozszerzeń MFC. W przeciwnym razie wyczyść tylko bieżący moduł biblioteki DLL.
 
 ### <a name="remarks"></a>Uwagi
 

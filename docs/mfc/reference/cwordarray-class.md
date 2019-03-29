@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259454"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565363"
 ---
 # <a name="cwordarray-class"></a>Klasa CWordArray
 
@@ -292,7 +292,7 @@ Końcowy indeks zakres Identyfikatora polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda usuwa grupę programy obsługi komunikatów, mapowane na określonych identyfikatorów poleceń przez *cmdIDMin* i *cmdIDMax*, z obiektu źródła polecenia.
+Ta metoda usuwa grupę programy obsługi komunikatów, mapowane na określony przez identyfikatory poleceń *cmdIDMin* i *cmdIDMax*, z obiektu źródła polecenia.
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
@@ -314,7 +314,7 @@ Końcowy indeks zakres Identyfikatora polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda usuwa grupę użytkownika interfejsu polecenia programy obsługi komunikatów, mapowane na określonych identyfikatorów poleceń przez *cmdIDMin* i *cmdIDMax*, z obiektu źródła polecenia.
+Ta metoda usuwa grupę użytkownika interfejsu polecenia programy obsługi komunikatów, mapowane na określony przez identyfikatory poleceń *cmdIDMin* i *cmdIDMax*, z obiektu źródła polecenia.
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 

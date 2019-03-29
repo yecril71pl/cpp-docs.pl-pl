@@ -1,6 +1,6 @@
 ---
 title: basic_ostream — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543640"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565730"
 ---
 # <a name="basicostream-class"></a>basic_ostream — Klasa
 
@@ -48,7 +48,7 @@ Znak `traits_type`.
 
 ## <a name="remarks"></a>Uwagi
 
-Większość elementu członkowskiego funkcje tego przeciążenia [operator <<](#op_lt_lt) sformatowane wyniki funkcji. Są zgodne ze wzorcem:
+Większość elementu członkowskiego funkcje tego przeciążenia [operator <<](#basic_ostream_operator_lt_lt) sformatowane wyniki funkcji. Są zgodne ze wzorcem:
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ Zobacz przykład [basic_ofstream — klasa](../standard-library/basic-ofstream-c
 |[put](#put)|Umieszcza znak w strumieniu.|
 |[seekp](#seekp)|Resetuje pozycji w strumieniu wyjściowym.|
 |[Sentry](#sentry)|Zagnieżdżona klasa opisująca obiekt, którego deklaracji struktury, funkcje sformatowane wyniki i funkcje niesformatowany danych wyjściowych.|
-|[swap](#op_eq)|Wymienia wartości to `basic_ostream` obiektu dla osób z dostarczonych `basic_ostream` obiektu.|
+|[swap](#swap)|Wymienia wartości to `basic_ostream` obiektu dla osób z dostarczonych `basic_ostream` obiektu.|
 |[tellp —](#tellp)|Raporty pozycji w strumieniu wyjściowym.|
 |[write](#write)|Umieszcza znaków w strumieniu.|
 
@@ -130,7 +130,7 @@ Zobacz przykład [basic_ofstream — klasa](../standard-library/basic-ofstream-c
 
 |Operator|Opis|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|Przypisuje wartość podane `basic_ostream` obiektu parametr do tego obiektu.|
+|[operator=](#op_eq)|Przypisuje wartość podane `basic_ostream` obiektu parametr do tego obiektu.|
 |[Operator <<](#basic_ostream_operator_lt_lt)|Operacje zapisu do strumienia.|
 
 ## <a name="requirements"></a>Wymagania

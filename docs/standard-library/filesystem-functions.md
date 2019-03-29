@@ -1,6 +1,6 @@
 ---
 title: '&lt;System plików&gt; funkcji'
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::absolute
 - FILESYSTEM/std::experimental::filesystem::canonical
@@ -84,12 +84,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: 49a5b59234d92d2587abceff80382e477f66e762
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 11a1857052dd7c242993e8a19afe26aae3c97c06
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333312"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565700"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;System plików&gt; funkcji
 
@@ -97,7 +97,7 @@ Bezpłatne funkcje w [ \<filesystem >](../standard-library/filesystem.md) nagł�
 
 ||||
 |-|-|-|
-|[absolute](#absolute)|[begin](#begin)|[Canonical](#canonical)|
+|[absolute](#absolute)|[begin](#begin)|[canonical](#canonical)|
 |[Kopiuj](#copy)|[copy_file](#copy_file)|[copy_symlink](#copy_symlink)|
 |[create_directories —](#create_directories)|[create_directory](#create_directory)|[create_directory_symlink](#create_directory_symlink)|
 |[create_hard_link](#create_hard_link)|[create_symlink](#create_symlink)|[current_path](#current_path)|
@@ -106,9 +106,9 @@ Bezpłatne funkcje w [ \<filesystem >](../standard-library/filesystem.md) nagł�
 |[is_block_file](#is_block_file)|[is_character_file](#is_character_file)|[is_directory](#is_directory)|
 |[is_empty](#is_empty)|[is_fifo](#is_fifo)|[is_other](#is_other)|
 |[is_regular_file](#is_regular_file)|[is_socket](#is_socket)|[is_symlink](#is_symlink)|
-|[last_write_time](#last_write_time)|[Uprawnienia](#permissions)|[read_symlink](#read_symlink)|
+|[last_write_time](#last_write_time)|[uprawnienia](#permissions)|[read_symlink](#read_symlink)|
 |[remove](#remove)|[remove_all](#remove_all)|[Zmień nazwę](#rename)|
-|[resize_file](#resize_file)|[miejsce](#space)|[status](#status)|
+|[resize_file](#resize_file)|[space](#space)|[status](#status)|
 |[status_known](#status_known)|[swap](#swap)|[symlink_status](#symlink_status)|
 |[system_complete](#system_complete)|[temp_directory_path](#temp_directory_path)|[u8path](#u8path)|
 
@@ -236,7 +236,7 @@ W przeciwnym razie, jeśli `!exists(to) || opts & copy_options::overwrite_existi
 
 Te funkcje zwracają **true** Jeśli kopii jest podejmowana próba zakończy się powodzeniem, w przeciwnym razie **false**.
 
-## <a name="copy_symlink "></a>  copy_symlink
+## <a name="copy_symlink"></a>  copy_symlink
 
 ```cpp
 void copy_symlink(const path& from, const path& to);
@@ -266,7 +266,7 @@ bool create_directory(const path& pval, const path& attr, error_code& ec) noexce
 
 Funkcja tworzy katalog *pval* zgodnie z potrzebami. Zwraca wartość true, tylko jeśli faktycznie tworzy katalog *pval*, w którym to przypadku kopiuje uprawnienia z istniejącego pliku *attr*, natomiast przy użyciu `perms::all` dla przeciążeń, bez *attr*  parametru.
 
-## <a name="create_directory_symlink "></a>  create_directory_symlink —
+## <a name="create_directory_symlink"></a>  create_directory_symlink —
 
 ```cpp
 void create_directory_symlink(const path& to, const path& link);
@@ -284,7 +284,7 @@ void create_hard_link(const path& to, const path& link, error_code& ec) noexcept
 
 Funkcja tworzy link jako twarde łącze do katalogu lub pliku *do*.
 
-## <a name="create_symlink "></a>  create_symlink —
+## <a name="create_symlink"></a>  create_symlink —
 
 ```cpp
 void create_symlink(const path& to,  const path& link);
@@ -379,7 +379,7 @@ bool is_character_file(const path& pval, error_code& ec) noexcept;
 
 Pierwsza funkcja zwraca `stat.type() == file_type::character`. Pozostałe funkcje zwracają `is_character_file(status(pval))`.
 
-## <a name="is_directory "></a>  is_directory
+## <a name="is_directory"></a>  is_directory
 
 ```cpp
 bool is_directory(file_status stat) noexcept;
@@ -419,7 +419,7 @@ bool is_other(const path& pval, error_code& ec) noexcept;
 
 Pierwsza funkcja zwraca `stat.type() == file_type::other`. Pozostałe funkcje zwracają `is_other(status(pval))`.
 
-## <a name="s_regular_file"></a>  is_regular_file —
+## <a name="is_regular_file"></a>  is_regular_file
 
 ```cpp
 bool is_regular_file(file_status stat) noexcept;
