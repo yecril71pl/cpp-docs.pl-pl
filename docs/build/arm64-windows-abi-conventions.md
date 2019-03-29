@@ -1,12 +1,12 @@
 ---
 title: Przegląd Konwencji ARM64 ABI
 ms.date: 03/27/2019
-ms.openlocfilehash: 2695ba69c642b2100ec041d1f85debb4ad7041c8
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
+ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508861"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639449"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd Konwencji ARM64 ABI
 
@@ -187,27 +187,21 @@ Wartości całkowitych są zwracane w x0.
 
 Wartości zmiennoprzecinkowe są zwracane w s0/d0/v0 zgodnie z potrzebami.
 
-Typy zwracane przez wartość są obsługiwane inaczej w zależności od tego, czy mają one pewne właściwości.
+Typy zwracane przez wartość są obsługiwane inaczej w zależności od tego, czy mają one pewne właściwości. Typy, które mają wszystkie te właściwości
 
-Typy są podane stylu zwracany "C" Jeśli łączny przez C ++ 14 standardowa definicję. Czyli
+- są one *agregacji* przez C ++ 14 definicję standardowych, oznacza to, że mają dostarczone przez użytkownika konstruktorów, nie prywatnych lub chronionych niestatycznych składowych danych, nie mają klas bazowych i żadnych funkcji wirtualnych i
+- mają one operator przypisania kopiowania prosta i
+- mają one proste destruktora
 
-- mają one dostarczone przez użytkownika konstruktorów, nie prywatnych lub chronionych niestatycznych składowych danych, nie mają klas bazowych i żadnych funkcji wirtualnych
-- mają one konstruktora kopiującego prosta i
-- mają one proste destruktora.
+Użyj następujących stylu zwracany:
 
-Wszystkie inne typy są podane stylu zwracany "C++".
+- Typy zwracane są mniejsze niż 8 bajtów w x0.
+- Typy zwracane są mniej niż 16-bajtowy x0 i x1 z x0 zawierający niższego rzędu 8 bajtów.
+- Dla typów więcej niż 16 bajtów obiekt wywołujący zachowuje blok pamięci w procentach wystarczający rozmiar i wyrównanie na potrzeby przechowywania wyniku. Adres bloku pamięci jest przekazywany jako dodatkowy argument do funkcji w x8. Obiekt wywoływany może modyfikować blok pamięci wynik w dowolnym momencie podczas wykonywania procedury. Obiekt wywoływany nie jest wymagane, aby zachować wartość przechowywaną w x8.
 
-### <a name="c-return-style"></a>Zwracany stylu C
+Wszystkie pozostałe typy Użyj niniejszej Konwencji:
 
-Typy zwracane są mniejsze niż 8 bajtów w x0.
-
-Typy zwracane są mniej niż 16-bajtowy x0 i x1 z x0 zawierający niższego rzędu 8 bajtów.
-
-Dla typów więcej niż 16 bajtów obiekt wywołujący zachowuje blok pamięci w procentach wystarczający rozmiar i wyrównanie na potrzeby przechowywania wyniku. Adres bloku pamięci jest przekazywany jako dodatkowy argument do funkcji w x8. Obiekt wywoływany może modyfikować blok pamięci wynik w dowolnym momencie podczas wykonywania procedury. Obiekt wywoływany nie jest wymagane, aby zachować wartość przechowywaną w x8.
-
-### <a name="c-return-style"></a>Styl zwracany C++
-
-Obiekt wywołujący zachowuje blok pamięci w procentach wystarczający rozmiar i wyrównanie na potrzeby przechowywania wyniku. Adres bloku pamięci jest przekazywany jako dodatkowy argument do funkcji w x0 lub x1 Jeśli $te informacje są przekazywane w x0. Obiekt wywoływany może modyfikować blok pamięci wynik w dowolnym momencie podczas wykonywania procedury. / / Wywoływany zwraca x0 adres bloku pamięci.
+- Obiekt wywołujący zachowuje blok pamięci w procentach wystarczający rozmiar i wyrównanie na potrzeby przechowywania wyniku. Adres bloku pamięci jest przekazywany jako dodatkowy argument do funkcji w x0 lub x1 Jeśli $te informacje są przekazywane w x0. Obiekt wywoływany może modyfikować blok pamięci wynik w dowolnym momencie podczas wykonywania procedury. / / Wywoływany zwraca x0 adres bloku pamięci.
 
 ## <a name="stack"></a>Stos
 
