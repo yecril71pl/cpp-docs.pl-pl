@@ -1,6 +1,6 @@
 ---
 title: '#Importuj dyrektywy (C++)'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822629"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564967"
 ---
 # <a name="import-directive-c"></a>#import — dyrektywa (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 natychmiast po **#import** instrukcji w kodzie źródłowym.
 
-Przestrzeń nazw może być pominięty przy użyciu [no_namespace](#_predir_no_namespace) atrybutu **#import** dyrektywy. Jednakże pomijanie przestrzeni nazw może prowadzić do konfliktów nazw. Przestrzeń nazw również może mieć zmienionej nazwy przez [rename_namespace](#_predir_rename_namespace) atrybutu.
+Przestrzeń nazw może być pominięty przy użyciu [no_namespace](no-namespace.md)) atrybutu **#import** dyrektywy. Jednakże pomijanie przestrzeni nazw może prowadzić do konfliktów nazw. Przestrzeń nazw również może mieć zmienionej nazwy przez [rename_namespace](rename-namespace.md) atrybutu.
 
 Kompilator zapewnia pełną ścieżkę do dowolnego typu zależności biblioteki wymaganego przez bibliotekę typu, którą aktualnie przetwarza. Ścieżka jest zapisana w formie komentarzy w nagłówku biblioteki typów (. Tlh —), kompilator generuje dla każdej przetworzonej biblioteki typów.
 
