@@ -1,2 +1,0 @@
-> [!IMPORTANT]
-> Ten przykładowy kod ma za zadanie zilustrowanie koncepcji i zawiera tylko kod związany z tą koncepcją. Ten kod może nie spełniać wymagań dotyczących zabezpieczeń, które obowiązują w danym środowisku, i nie należy używać go w dokładnie takiej formie, w jakiej jest przedstawiony. Zalecane jest dodawanie do projektów kodu zabezpieczeń i kodu służącego do obsługi błędów w celu zagwarantowania wyższego poziomu bezpieczeństwa i niezawodności tych projektów. Firma Microsoft udostępnia ten przykładowy kod „w stanie, w jakim jest” bez udzielania żadnych gwarancji.
