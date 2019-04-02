@@ -1,16 +1,16 @@
 ---
 title: Projektowania aplikacji w języku C++ w środowisku Visual Studio IDE
-ms.date: 06/08/2018
+ms.date: 03/14/2019
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 45dcf185f57f7deedb3734d31ce17a6201c81959
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7417c46097b1f0c6282e3684a7556880c21be42a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612280"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773570"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Projektowania aplikacji w języku C++ w środowisku Visual Studio IDE
 
@@ -26,9 +26,9 @@ Jeśli jeszcze nie zainstalowano programu Visual Studio, nadszedł czas.
 
 **Instalacja programu Visual Studio 2017**
 
-Aby uzyskać program Visual Studio 2017, możesz ją pobrać z [pobieranie Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Pamiętaj obejmują narzędzia deweloperskie programu Visual C++, po zainstalowaniu programu Visual Studio, ponieważ nie są zainstalowane domyślnie. Aby uzyskać więcej informacji o sposobie instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
+Aby uzyskać program Visual Studio 2017, możesz ją pobrać z [pobieranie Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Pamiętaj obejmują narzędzia deweloperskie programu Visual C++, po zainstalowaniu programu Visual Studio, ponieważ nie są zainstalowane domyślnie. Aby uzyskać więcej informacji o sposobie instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
 
-**Instalacja programu Visual Studio 2015**
+**Visual Studio 2015 Installation**
 
 Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++.
 
@@ -40,19 +40,19 @@ Po zakończeniu instalacji programu Visual Studio, jesteś gotowy kontynuować.
 
 Aby rozpocząć pracę, przy użyciu programu Visual Studio IDE do tworzenia aplikacji w języku C++, pracować za pośrednictwem każdej z tych tematów w kolejności. Każdy z nich jest oparta na pracy, który ukończone w poprzednich tematach:
 
-- [Przewodnik: praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)
+- [Przewodnik: Praca z projektami i rozwiązaniami (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
 
-- [Przewodnik: tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)
+- [Przewodnik: Tworzenie projektu (C++)](walkthrough-building-a-project-cpp.md)
 
-- [Przewodnik: testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)
+- [Przewodnik: Testowanie projektu (C++)](walkthrough-testing-a-project-cpp.md)
 
-- [Przewodnik: debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
+- [Przewodnik: Debugowanie projektu (C++)](walkthrough-debugging-a-project-cpp.md)
 
-- [Przewodnik: wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+- [Przewodnik: Wdrażanie programu (C++)](walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po wykonaniu tych przewodników, możesz rozpocząć tworzenie własnych projektów. Aby uzyskać więcej informacji i zasoby projektowe Visual C++, zobacz [Visual C++ w programie Visual Studio](../visual-cpp-in-visual-studio.md).
+Po wykonaniu tych przewodników, możesz rozpocząć tworzenie własnych projektów. Aby uzyskać więcej informacji i zasoby projektowe Visual C++, zobacz [Visual C++ w programie Visual Studio](../overview/visual-cpp-in-visual-studio.md).
 
 ## <a name="see-also"></a>Zobacz także
 

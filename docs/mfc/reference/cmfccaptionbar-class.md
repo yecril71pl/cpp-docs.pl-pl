@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264992"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781877"
 ---
 # <a name="cmfccaptionbar-class"></a>Klasa CMFCCaptionBar
 
@@ -87,7 +87,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCCaptionBar::Create](#create)|Tworzy kontrolkę paska podpisu i dołącza je do `CMFCCaptionBar` obiektu.|
 |[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Wskazuje, czy innego okienka można dynamicznie wstawione między pasek podpisu i jej nadrzędnej ramki. (Przesłania [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
@@ -114,7 +114,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Metoda wywoływana przez platformę, by wypełnienia tła paska podpisu.|
 |[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Metoda wywoływana przez platformę, by narysować obramowanie pasek podpisu.|
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Kolor tła paska podpisu.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Kolor obramowania paska podpisu.|
@@ -148,7 +148,7 @@ Aby włączyć tryb pasek komunikatów, należy wywołać [CMFCCaptionBar::Creat
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCCaptionBar` klasy. W przykładzie pokazano, jak utworzyć formant paska podpisu, ustawianie obramowanie 3D paska podpisu, określ odległość w pikselach, między krawędzi podpis paska elementy krawędzią formantu paska podpisu, skonfigurować przycisk na pasku podpisu , ustawić etykietkę narzędzia dla przycisku, Ustaw tekst etykiety dla pasek podpisu, Ustaw obraz mapy bitowej dla pasek podpisu i ustawić etykietkę narzędzia dla obrazu w pasek podpisu. Ten fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCCaptionBar` klasy. W przykładzie pokazano, jak utworzyć formant paska podpisu, ustawianie obramowanie 3D paska podpisu, określ odległość w pikselach, między krawędzi podpis paska elementy krawędzią formantu paska podpisu, skonfigurować przycisk na pasku podpisu , ustawić etykietkę narzędzia dla przycisku, Ustaw tekst etykiety dla pasek podpisu, Ustaw obraz mapy bitowej dla pasek podpisu i ustawić etykietkę narzędzia dla obrazu w pasek podpisu. Ten fragment kodu jest częścią [próbka MS Office 2007 Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]

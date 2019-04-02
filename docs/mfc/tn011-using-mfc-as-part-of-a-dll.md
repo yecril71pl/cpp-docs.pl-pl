@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7e9fda44e2af4ec32bae6299fbcc0eda17984f9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326455"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769735"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Używanie MFC jako części biblioteki DLL
 
@@ -57,7 +57,7 @@ Należy także zdefiniować te symbole i używać tych przełączników kompilat
 
 Interfejsy API między aplikacją a biblioteki DLL musi być jawnie eksportowany. Firma Microsoft zaleca definiowanie interfejsów sieci o niskiej przepustowości się i używać tylko C interfejsów, jeżeli jest to możliwe. Bezpośrednie interfejsy C są łatwiejsze w obsłudze niż bardziej złożonych klasy C++.
 
-Umieść swoje interfejsy API w oddzielnych nagłówka, który może być dołączony przez pliki C i C++. Zobacz nagłówek ScreenCap.h w próbce zaawansowanych koncepcji MFC [DLLScreenCap](../visual-cpp-samples.md) przykład. Aby wyeksportować funkcji, należy wprowadzić je w `EXPORTS` sekcji w pliku definicji modułu (. DEF), lub Uwzględnij `__declspec(dllexport)` w definicji funkcji. Użyj `__declspec(dllimport)` do importowania tych funkcji do pliku wykonywalnego klienta.
+Umieść swoje interfejsy API w oddzielnych nagłówka, który może być dołączony przez pliki C i C++. Zobacz nagłówek ScreenCap.h w próbce zaawansowanych koncepcji MFC [DLLScreenCap](../overview/visual-cpp-samples.md) przykład. Aby wyeksportować funkcji, należy wprowadzić je w `EXPORTS` sekcji w pliku definicji modułu (. DEF), lub Uwzględnij `__declspec(dllexport)` w definicji funkcji. Użyj `__declspec(dllimport)` do importowania tych funkcji do pliku wykonywalnego klienta.
 
 Na początku wszystkich eksportowanych funkcji w zwykłych bibliotekach MFC dll, która łączy dynamicznie MFC, należy dodać AFX_MANAGE_STATE — makro. To makro ustawia bieżący stan modułu dla biblioteki DLL. Aby użyć tego makra, należy dodać następujący wiersz kodu na początku funkcji wyeksportowanych z biblioteki DLL:
 

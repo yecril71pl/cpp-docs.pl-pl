@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300413"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773557"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc Class
 
@@ -57,7 +57,7 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="remarks"></a>Uwagi
 
-Aplikację kontenera, który obsługuje łączenie elementów osadzonych nosi nazwę "link container". [OCLIENT](../../visual-cpp-samples.md) przykładowej aplikacji znajduje się przykład kontenera łącza.
+Aplikację kontenera, który obsługuje łączenie elementów osadzonych nosi nazwę "link container". [OCLIENT](../../overview/visual-cpp-samples.md) przykładowej aplikacji znajduje się przykład kontenera łącza.
 
 Gdy połączony element źródłem jest element osadzony w innym dokumencie, że dokumentu zawierającego muszą być ładowane w kolejności osadzonego elementu do edycji. Z tego powodu należy mógł zostać uruchomiony przez inną aplikację kontenera, gdy użytkownik chce, aby edytować źródło połączony element kontenera łącze. Aplikacja musi także zostać użyta [element COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) klasy tak, aby móc tworzyć dokumenty, gdy uruchomiony programowo.
 
@@ -75,7 +75,7 @@ Połącz swoje `COleTemplateServer` obiektu do szablonów dokumentów przez wywo
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Przykład `CWinApp`-definicji klasy pochodnej i `InitInstance` funkcji, zobacz OCLIENT. H i OCLIENT. CPP próbki MFC [OCLIENT](../../visual-cpp-samples.md).
+Przykład `CWinApp`-definicji klasy pochodnej i `InitInstance` funkcji, zobacz OCLIENT. H i OCLIENT. CPP próbki MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 Aby uzyskać więcej informacji na temat korzystania z `COleLinkingDoc`, zobacz artykuły [kontenerów: Implementowanie kontenera](../../mfc/containers-implementing-a-container.md) i [kontenerów: Zaawansowane funkcje](../../mfc/containers-advanced-features.md).
 
@@ -193,7 +193,7 @@ Podczas zamykania pliku o nazwie wywołać tę funkcję, ale zwykle nie trzeba b
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleDocument](../../mfc/reference/coledocument-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283660"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778302"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 
@@ -66,14 +66,14 @@ class CRegKey
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Konstruktor.|
 |[CRegKey::~CRegKey](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRegKey::Attach](#attach)|Wywołanie tej metody, aby dołączyć HKEY do `CRegKey` obiektu przez ustawienie [m_hKey](#m_hkey) elementu członkowskiego dojścia do `hKey`.|
 |[CRegKey::Close](#close)|Wywołaj tę metodę, aby zwolnić [m_hKey](#m_hkey) elementu członkowskiego obsługi i ustaw ją na wartość NULL.|
@@ -106,14 +106,14 @@ class CRegKey
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CRegKey::operator HKEY](#operator_hkey)|Konwertuje `CRegKey` obiektu HKEY.|
 |[CRegKey::operator =](#operator_eq)|Operator przypisania.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRegKey::m_hKey](#m_hkey)|Zawiera uchwyt klucza rejestru, skojarzone z `CRegKey` obiektu.|
 |[CRegKey::m_pTM](#m_ptm)|Wskaźnik do `CAtlTransactionManager` obiektu|
@@ -1058,5 +1058,5 @@ Trzeci wywołania metody [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-r
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowy model DCOM](../../visual-cpp-samples.md)<br/>
+[Przykładowy model DCOM](../../overview/visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

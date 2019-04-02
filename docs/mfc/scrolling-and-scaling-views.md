@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283712"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777585"
 ---
 # <a name="scrolling-and-scaling-views"></a>Przewijanie i skalowanie widoków
 
 Biblioteka MFC obsługuje widoki, które przewiń i widoki, które są automatycznie skalowane do rozmiaru okna ramki, które wyświetla je. Klasa `CScrollView` obsługuje oba rodzaje widoków.
 
-Aby uzyskać więcej informacji na temat przewijanie i skalowanie Zobacz klasy [CScrollView](../mfc/reference/cscrollview-class.md) w *odwołanie MFC*. Na przykład przewijania, zobaczyć [próbki Bazgroły](../visual-cpp-samples.md).
+Aby uzyskać więcej informacji na temat przewijanie i skalowanie Zobacz klasy [CScrollView](../mfc/reference/cscrollview-class.md) w *odwołanie MFC*. Na przykład przewijania, zobaczyć [próbki Bazgroły](../overview/visual-cpp-samples.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
 

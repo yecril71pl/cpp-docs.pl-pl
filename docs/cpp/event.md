@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606482"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778263"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ Zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-nativ
 
 Zdarzenia COM to interfejsy. Parametry metody w interfejsie źródła zdarzeń powinny być *w* parametrów (ale nie jest to wymuszane rygorystycznie), ponieważ *się* parametr jest przydatne, gdy multiemisji. Ostrzeżenia poziomu 1 będą wystawiane, jeśli używasz *się* parametru.
 
-Typ zwracany jest zazwyczaj HRESULT lub **void**, ale może być dowolnym typem integralnym, w tym **wyliczenia**. Gdy zdarzenie używa zwracanym typem całkowitym i program obsługi zdarzeń zwraca wartość różną od zera, jest warunkiem błędu, w których przypadku dla wywoływanego zdarzenia przerywa wywołań do innych obiektów delegowanych. Należy pamiętać, kompilator automatycznie oznaczy interfejsu źródła zdarzeń jako [źródła](../windows/source-cpp.md) w wygenerowanym pliku IDL.
+Typ zwracany jest zazwyczaj HRESULT lub **void**, ale może być dowolnym typem integralnym, w tym **wyliczenia**. Gdy zdarzenie używa zwracanym typem całkowitym i program obsługi zdarzeń zwraca wartość różną od zera, jest warunkiem błędu, w których przypadku dla wywoływanego zdarzenia przerywa wywołań do innych obiektów delegowanych. Należy pamiętać, kompilator automatycznie oznaczy interfejsu źródła zdarzeń jako [źródła](../windows/attributes/source-cpp.md) w wygenerowanym pliku IDL.
 
 [__Interface](../cpp/interface.md) — słowo kluczowe jest zawsze wymagana po **__event** dla źródła zdarzenia COM.
 
@@ -75,7 +75,7 @@ Zobacz [zdarzenie obsługi w modelu COM](../cpp/event-handling-in-com.md) przyk�
 
 ## <a name="managed-events"></a>Zdarzenia zarządzane
 
-Aby uzyskać informacji na temat kodowania zdarzenia w nowej składni, zobacz [zdarzeń](../windows/event-cpp-component-extensions.md).
+Aby uzyskać informacji na temat kodowania zdarzenia w nowej składni, zobacz [zdarzeń](../extensions/event-cpp-component-extensions.md).
 
 Zdarzenia zarządzane są elementy członkowskie danych lub metody. W przypadku użycia ze zdarzeniem, zwracany typ delegata muszą być zgodne z [specyfikacja Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Zwracany typ procedury obsługi zdarzeń musi odpowiadać zwracany typ delegata. Aby uzyskać więcej informacji na temat obiektów delegowanych, zobacz [delegaci i zdarzenia](../dotnet/delegates-and-events.md). Jeśli zdarzenie zarządzane jest element członkowski danych, jego typ musi być wskaźnikiem do delegata.
 
@@ -131,8 +131,8 @@ public:
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Obsługa zdarzeń](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

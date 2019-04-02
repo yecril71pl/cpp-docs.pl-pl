@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305071"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779030"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
 
@@ -189,14 +189,14 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Konstruuje `CMFCPropertyGridProperty` obiektu.|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::AddOption](#addoption)|Dodaje nowy element listy do listy właściwości kontrolki.|
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Dodaje element podrzędny do właściwości.|
@@ -269,7 +269,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Metoda wywoływana przez platformę, by dodać pole kombi z właściwością.|
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Wskazuje, czy jakaś właściwość zawiera przycisk.|
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Ciąg formatu dla wartości typu double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Ciąg formatu dla wartości typu zmiennoprzecinkowego.|
@@ -297,7 +297,7 @@ Obiekt właściwości może reprezentować typów danych, takich jak ciągi daty
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób tworzenia `CMFCPropertyGridProperty` obiektu. W przykładzie pokazano również sposób użycia różnych metod w `CMFCPropertyGridProperty` klasy, dodaj opcję, Dodaj element podrzędny, włączyć właściwości i wyświetlić właściwości. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano sposób tworzenia `CMFCPropertyGridProperty` obiektu. W przykładzie pokazano również sposób użycia różnych metod w `CMFCPropertyGridProperty` klasy, dodaj opcję, Dodaj element podrzędny, włączyć właściwości i wyświetlić właściwości. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 

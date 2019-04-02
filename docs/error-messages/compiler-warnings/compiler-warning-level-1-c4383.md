@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 61bc3951a7d57a5a4eefb69b5a0c4399df99160a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548801"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778042"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Kompilator ostrzeżenie (poziom 1) C4383
 
@@ -19,7 +19,7 @@ ms.locfileid: "50548801"
 
 Po dodaniu zastępowania wystąpienia zdefiniowanych przez użytkownika operator wyłuskania w typ zarządzany, potencjalnie zastąpienie operator wyłuskania typu możliwość zwracania uchwyt obiektu. Należy wziąć pod uwagę pisanie statycznych, zdefiniowane przez użytkownika operator dereferencji.
 
-Aby uzyskać więcej informacji, zobacz [Operator uchwytu do obiektu (^)](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md) i [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [Operator uchwytu do obiektu (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) i [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 Ponadto operator wystąpienia nie jest dostępna dla innych kompilatorów języka za pomocą odwołania metadanych. Aby uzyskać więcej informacji, zobacz [operatory zdefiniowane przez użytkownika (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 

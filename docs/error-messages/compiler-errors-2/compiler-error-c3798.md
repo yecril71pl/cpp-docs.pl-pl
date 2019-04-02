@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3798
 ms.assetid: b2f8b1d8-8812-49b8-a346-28e48f02ba5c
-ms.openlocfilehash: 52900a662211609e1e7adeb7cb493cf2d72ab846
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a11c88f536e3282e887e32ef437077e61f4424cc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548268"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773271"
 ---
 # <a name="compiler-error-c3798"></a>Błąd kompilatora C3798
 
@@ -19,11 +19,11 @@ ms.locfileid: "50548268"
 
 Właściwość została zadeklarowana niepoprawnie. Aby uzyskać więcej informacji, zobacz artykuł
 
-- [właściwość](../../windows/property-cpp-component-extensions.md)
+- [właściwość](../../extensions/property-cpp-component-extensions.md)
 
-- [abstract](../../windows/abstract-cpp-component-extensions.md)
+- [abstract](../../extensions/abstract-cpp-component-extensions.md)
 
-- [sealed](../../windows/sealed-cpp-component-extensions.md)
+- [sealed](../../extensions/sealed-cpp-component-extensions.md)
 
 ## <a name="example"></a>Przykład
 

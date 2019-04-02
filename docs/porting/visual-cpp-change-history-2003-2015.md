@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 20920a5f1a1cdf2a4e10263a7b1de3010f24f9c0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329042"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775416"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
 W tym artykule opisano wszystkie przełomowe zmiany z programu Visual Studio 2015 po powrocie do programu Visual Studio 2003, a w tym artykule terminy "nowe zachowanie" lub "teraz" odnoszą się do programu Visual Studio 2015 i nowszych. Terminy "stare zachowanie" i "before" odnoszą się do programu Visual Studio 2013 i jego starszych wersji.
 
-Aby uzyskać informacje o programie Visual Studio 2017, zobacz [co nowego w języku Visual C++ w programie Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodności w programie Visual C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md).
+Aby uzyskać informacje o programie Visual Studio 2017, zobacz [co nowego w języku Visual C++ w programie Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodności w programie Visual C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
 
 > [!NOTE]
 > Nie ma żadnych danych binarnych przełomowych zmian między wersjami programu Visual Studio 2015 i Visual Studio 2017.
@@ -2009,9 +2009,9 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Przykłady przywróconej ostrzeżeń, które znajdują się w dokumentacji.
 
-- **#include: użycie specyfikatora katalog nadrzędny ".." w pathname** (dotyczy tylko `/Wall` `/WX`)
+- **#include: użycie specyfikatora katalog nadrzędny "." w pathname** (dotyczy tylko `/Wall` `/WX`)
 
-   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny ".." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
+   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny "." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
 
     ```Output
     warning C4464: relative include path contains '..'
@@ -2029,7 +2029,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories
     ```
 
-   Ponadto, mimo że kompilator nie zapewnia określonych diagnostyczne, również zalecamy specyfikator katalogu nadrzędnego ".." nie powinny być używane do określania, katalogi dołączane projektu.
+   Ponadto, mimo że kompilator nie zapewnia określonych diagnostyczne, również zalecamy specyfikator katalogu nadrzędnego "." nie powinny być używane do określania, katalogi dołączane projektu.
 
 - **#pragma optimize() wykracza poza końcem pliku nagłówkowego** (dotyczy tylko `/Wall` `/WX`)
 
@@ -3524,4 +3524,4 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 ## <a name="see-also"></a>Zobacz także
 
-[Co nowego w języku Visual C++ w programie Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
+[Co nowego w języku Visual C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

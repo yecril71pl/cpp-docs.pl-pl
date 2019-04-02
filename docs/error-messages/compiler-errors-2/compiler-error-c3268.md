@@ -1,19 +1,19 @@
 ---
-title: Błąd kompilatora C3268
+title: Compiler Error C3268
 ms.date: 11/04/2016
 f1_keywords:
 - C3268
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480538"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778011"
 ---
-# <a name="compiler-error-c3268"></a>Błąd kompilatora C3268
+# <a name="compiler-error-c3268"></a>Compiler Error C3268
 
 > "*funkcja*": funkcja ogólna lub funkcji składowej klasy ogólnej nie może mieć zmiennej listy parametrów
 
@@ -21,7 +21,7 @@ ms.locfileid: "50480538"
 
 **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-Zobacz [ogólne](../../windows/generics-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Zobacz [ogólne](../../extensions/generics-cpp-component-extensions.md) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

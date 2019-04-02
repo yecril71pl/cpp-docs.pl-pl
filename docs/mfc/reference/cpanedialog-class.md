@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-ms.openlocfilehash: 16aa707792cc1289ced380e54abef3f15289e7cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c78b8f2cd19e87fa559c3f9bbd24d07543d887c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274560"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769748"
 ---
 # <a name="cpanedialog-class"></a>Klasa CPaneDialog
 
@@ -33,14 +33,14 @@ class CPaneDialog : public CDockablePane
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CPaneDialog::CPaneDialog`|Domyślny konstruktor.|
 |`CPaneDialog::~CPaneDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPaneDialog::Create](#create)|Tworzy dokowane okno dialogowe i dołącza je do `CPaneDialog` obiektu.|
 |`CPaneDialog::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
@@ -150,7 +150,7 @@ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie w
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `Create` method in Class metoda `CPaneDialog` klasy. W tym przykładzie jest częścią [przykładowe ustawić rozmiar okienka](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `Create` method in Class metoda `CPaneDialog` klasy. W tym przykładzie jest częścią [przykładowe ustawić rozmiar okienka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]

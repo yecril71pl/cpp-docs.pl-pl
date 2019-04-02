@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 518697a35a51c75b76efd22ed55980c778f1f6c9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9f0f917de7eeb2ace6800368d10958cec7d36e6a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523783"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770385"
 ---
 # <a name="ole-db-templates"></a>Szablony OLE DB
 
@@ -33,7 +33,7 @@ W tym artykule opisano, co to jest OLE DB, a w tym artykule omówiono Uniwersaln
 [Dokumentacja dotycząca OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
 Zawiera łącza do dokumentacji zestawu Windows SDK dla OLE DB.
 
-[Przykłady szablonów OLE DB](../../visual-cpp-samples.md)<br/>
+[Przykłady szablonów OLE DB](../../overview/visual-cpp-samples.md)<br/>
 Zawiera łącza do przykładów szablonów OLE DB, które pokazują, jak korzystać z OLE DB w swoich projektach.
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

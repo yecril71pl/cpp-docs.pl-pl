@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288886"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773440"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Klasa CMFCOutlookBarPane
 
@@ -111,7 +111,7 @@ Na przykład paska Outlook Zobacz OutlookDemo przykładowy projekt.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia różnych metod `CMFCOutlookBarPane` klasy. W przykładzie pokazano sposób tworzenia okienko paska Outlook, Włącz tryb przewiń stronę, Włącz dokowanie i ustawić kolor tła paska Outlook. Ten fragment kodu jest częścią [przykładowy program Outlook wielu widoków](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia różnych metod `CMFCOutlookBarPane` klasy. W przykładzie pokazano sposób tworzenia okienko paska Outlook, Włącz tryb przewiń stronę, Włącz dokowanie i ustawić kolor tła paska Outlook. Ten fragment kodu jest częścią [przykładowy program Outlook wielu widoków](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]

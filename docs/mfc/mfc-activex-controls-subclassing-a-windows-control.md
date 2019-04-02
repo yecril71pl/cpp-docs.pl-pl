@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277056"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773258"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Kontrolki ActiveX MFC: Tworzenie podklasy kontrolki Windows
 
-W tym artykule opisano proces Tworzenie podklasy kontrolki Windows wspólnego, aby utworzyć formant ActiveX. Tworzenie podklasy Windows istniejący formant jest możliwość szybkiego tworzenia formantu ActiveX. Nowy formant mają możliwości formantów będących podklasami Windows, takich jak malowanie i odpowiadanie na kliknięcia myszą. Przykładowe kontrolki MFC ActiveX [przycisk](../visual-cpp-samples.md) jest przykładem Tworzenie podklasy kontrolki Windows.
+W tym artykule opisano proces Tworzenie podklasy kontrolki Windows wspólnego, aby utworzyć formant ActiveX. Tworzenie podklasy Windows istniejący formant jest możliwość szybkiego tworzenia formantu ActiveX. Nowy formant mają możliwości formantów będących podklasami Windows, takich jak malowanie i odpowiadanie na kliknięcia myszą. Przykładowe kontrolki MFC ActiveX [przycisk](../overview/visual-cpp-samples.md) jest przykładem Tworzenie podklasy kontrolki Windows.
 
 >[!IMPORTANT]
 > ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
@@ -93,7 +93,7 @@ Aby dodać program obsługi komunikatów dla komunikatów odbitych okna ręcznie
 
 - Również w. Plik CPP zaimplementować `OnOcmCommand` funkcja elementu członkowskiego do przetwarzania komunikatów odbitych. *WParam* i *lParam* parametry są takie same jak oryginalne komunikatów okien.
 
-Przykładowy sposób uwzględnione, komunikaty są przetwarzane, znaleźć przykładowe kontrolki MFC ActiveX [przycisk](../visual-cpp-samples.md). Pokazuje `OnOcmCommand` program obsługi, który wykrywa BN_CLICKED kod powiadomienia i odpowiada wyzwalania (wysyłającym) `Click` zdarzeń.
+Przykładowy sposób uwzględnione, komunikaty są przetwarzane, znaleźć przykładowe kontrolki MFC ActiveX [przycisk](../overview/visual-cpp-samples.md). Pokazuje `OnOcmCommand` program obsługi, który wykrywa BN_CLICKED kod powiadomienia i odpowiada wyzwalania (wysyłającym) `Click` zdarzeń.
 
 ## <a name="see-also"></a>Zobacz także
 

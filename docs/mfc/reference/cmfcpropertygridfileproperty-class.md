@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 5022063fe7eb8242f01684438e2fdeeeedc80616
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 20a0a50198357602d70a2111c6884058f7578af7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302900"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773336"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty Class
 
@@ -105,7 +105,7 @@ Aby uzyskać pełną listę dostępnych flag, zobacz [LPSTRFILE struktury openfi
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób tworzenia obiektu przy użyciu konstruktora `CMFCPropertyGridFileProperty` klasy. W tym przykładzie jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).
+Poniższy przykład przedstawia sposób tworzenia obiektu przy użyciu konstruktora `CMFCPropertyGridFileProperty` klasy. W tym przykładzie jest częścią [Visual Studio przykład](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 
