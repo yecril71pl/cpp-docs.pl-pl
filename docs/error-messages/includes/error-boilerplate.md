@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58807794"
+---
 Narzędzia do kompilacji i Kompilatory języka Visual Studio może zgłaszać wiele rodzajów błędów i ostrzeżeń. Po znalezieniu błędu lub ostrzeżenia narzędzia do kompilacji mogą zakładają kod i próbować kontynuować, dzięki czemu mogą być zgłaszane więcej problemów, w tym samym czasie. Jeśli narzędzia przyjmą złe założenie, późniejsze błędy lub ostrzeżenia mogą nie mieć zastosowania do projektu. Gdy poprawiasz problemy w projekcie, zawsze należy zaczynać się od pierwszego błędu lub ostrzeżenia, który jest zgłaszany i często rekompiluj. Poprawka co może spowodować wiele kolejnych błędów znika.
 
 Aby uzyskać pomoc dotyczącą danego komunikatu diagnostycznego w programie Visual Studio, wybierz ją w **dane wyjściowe** okna, a następnie naciśnij klawisz **F1** klawisz, aby otworzyć stronę dokumentacji dla tego błędu, jeśli taka istnieje. Można również znaleźć artykuły o błędach lub ostrzeżenia za pomocą narzędzia wyszukiwania powyżej lub przeglądając listę błędów i ostrzeżeń, narzędzia i typ w okienku nawigacji.
@@ -7,4 +15,4 @@ Aby uzyskać pomoc dotyczącą danego komunikatu diagnostycznego w programie Vis
 
 Może się okazać uzyskać dodatkową pomoc błędów i ostrzeżeń na forach publicznych firmy Microsoft. Możesz wyszukać błąd lub ostrzeżenie o numerze na [społeczności deweloperów](https://developercommunity.visualstudio.com/spaces/8/index.html) lokacji. Możesz również wyszukać błędy i ostrzeżenia i zadawać pytania w [Stack Overflow](http://stackoverflow.com/) do rozwiązania.
 
-Aby uzyskać linki do zasobów społeczności i uzyskać dodatkową pomoc, zobacz [pomocy programu Visual C++ i społeczności](../../visual-cpp-help-and-community.md).
+Aby uzyskać linki do zasobów społeczności i uzyskać dodatkową pomoc, zobacz [pomocy programu Visual C++ i społeczności](../../overview/visual-cpp-help-and-community.md).
