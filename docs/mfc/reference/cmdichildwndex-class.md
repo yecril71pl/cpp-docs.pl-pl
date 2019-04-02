@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293432"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781760"
 ---
 # <a name="cmdichildwndex-class"></a>Klasa CMDIChildWndEx
 
@@ -135,7 +135,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Metoda wywoływana wewnętrznie przez platformę, by aktywować ramek najwyższego poziomu, gdy aplikacji należy aktywować z poziomu karty paska zadań.|
 |`CMDIChildWndEx::AddDockSite`|Ta metoda jest używana lub nie zaimplementowane.|
@@ -201,7 +201,7 @@ Aby móc korzystać z rozszerzonych funkcji dokowania w aplikacji MDI, pochodną
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pochodzi z klasy `CMDIChildWndEx`. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../visual-cpp-samples.md).
+Poniższy przykład pochodzi z klasy `CMDIChildWndEx`. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ W przypadku struktura jest przywracania stanu później nazwa dokumentu jest odc
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie `GetDocumentName` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano użycie `GetDocumentName` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ Ta funkcja jest używana, aby uniemożliwić zapisywanie dokumentów tylko do od
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano zastępowanie `IsReadOnly` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano zastępowanie `IsReadOnly` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 

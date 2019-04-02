@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: b221abf772df06541ecde247a9db9401c0ed3c3a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7776bf504d502feee8ef51949b8adc8e44f94c8e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278018"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772296"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar Class
 
@@ -49,7 +49,7 @@ class CMFCReBar : public CPane
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCReBar::AddBar](#addbar)|Dodaje obiekt band do paska pomocniczego.|
 |[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Przesłania [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
@@ -71,7 +71,7 @@ Obiekt paska pomocniczego działa podobnie jak obiekt paska narzędzi. Kontrolki
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCReBar` klasy. W przykładzie pokazano, jak utworzyć kontrolkę paska pomocniczego i dodawanie grupy do niej. Funkcje pasek narzędzi wewnętrznych. Ten fragment kodu jest częścią [paska pomocniczego próbkę](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCReBar` klasy. W przykładzie pokazano, jak utworzyć kontrolkę paska pomocniczego i dodawanie grupy do niej. Funkcje pasek narzędzi wewnętrznych. Ten fragment kodu jest częścią [paska pomocniczego próbkę](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]

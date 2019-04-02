@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303610"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779810"
 ---
 # <a name="ckeyboardmanager-class"></a>Klasa CKeyboardManager
 
@@ -53,14 +53,14 @@ class CKeyboardManager : public CObject
 
 |||
 |-|-|
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Konstruuje `CKeyboardManager` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
-|Nazwa|Opis|
+|Name|Opis|
 |[CKeyboardManager::CleanUp](#cleanup)|Czyści tabelami klawiszy skrótów.|
 |[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Pobiera domyślny klucz skrótu dla określonego polecenia i okna.|
 |[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Określa, czy klucz jest obsługiwany przez tabeli klawiszy skrótu.|
@@ -81,7 +81,7 @@ Nie należy tworzyć `CKeyboardManager` obiektu ręcznie. Zostanie on utworzony 
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak pobrać wskaźnika do `CKeyboardManager` obiektu z `CWinAppEx` klasy i sposób wyświetlania wszystkich klawiszy skrótów, skojarzone z poleceń menu. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak pobrać wskaźnika do `CKeyboardManager` obiektu z `CWinAppEx` klasy i sposób wyświetlania wszystkich klawiszy skrótów, skojarzone z poleceń menu. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 

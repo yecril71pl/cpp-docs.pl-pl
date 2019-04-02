@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: 65b8631560ec1b768521d917256c32c75c531fab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644187"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780434"
 ---
 # <a name="atl-com-desktop-components"></a>Składniki ATL COM pulpitu
 
@@ -47,7 +47,7 @@ Zawiera tematy dotyczące programowania przy użyciu Active Template Library (AT
 [ALT — samouczek](../atl/active-template-library-atl-tutorial.md)<br/>
 Poprowadzi Cię przez tworzenie formantu i pokazuje podstawowe informacje dotyczące niektórych ATL w procesie.
 
-[Przykłady ATL](../visual-cpp-samples.md)<br/>
+[Przykłady ATL](../overview/visual-cpp-samples.md)<br/>
 Przykładowy kod, który pokazuje, jak na potrzeby zapisywania obiektów COM ATL.
 
 [Szablony OLE DB](../data/oledb/ole-db-templates.md)<br/>

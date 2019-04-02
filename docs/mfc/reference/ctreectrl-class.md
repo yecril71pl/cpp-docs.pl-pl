@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271401"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58782007"
 ---
 # <a name="ctreectrl-class"></a>Klasa CTreeCtrl
 
@@ -183,13 +183,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Konstruuje `CTreeCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CTreeCtrl::Create](#create)|Tworzy kontrolki widoku drzewa i dołącza je do `CTreeCtrl` obiektu.|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Tworzy mapę bitową przeciągania elementu widoku drzewa.|
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Określa styl kontrolki widoku drzewa. Zastosuj style okna ramowego opisanego w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)i dowolną kombinację [style kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) zgodnie z opisem w zestawie Windows SDK.
 
 *Rect*<br/>
-Określa rozmiar i położenie kontrolki widoku drzewa. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Określa rozmiar i położenie kontrolki widoku drzewa. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki widok drzewa, zwykle `CDialog`. Nie może być równa NULL.
@@ -361,7 +361,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Określa styl kontrolki widoku drzewa. Zastosuj style okna ramowego opisanego w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)i dowolną kombinację [style kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) zgodnie z opisem w zestawie Windows SDK.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in] Dojście do elementu kontrolki widoku drzewa.|
 |*nPart*|[in] Identyfikator dla części. Musi być równa TVGIPR_BUTTON.|
-|*lpRect*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta części określony przez *hItem* i *nPart*.|
+|*lpRect*|[out] Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta części określony przez *hItem* i *nPart*.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 Uchwyt elementu kontrolki widoku drzewa.
 
 *lpRect*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający. Współrzędne są podawane względem lewego górnego rogu kontrolki widoku drzewa.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która odbiera prostokąt otaczający. Współrzędne są podawane względem lewego górnego rogu kontrolki widoku drzewa.
 
 *bTextOnly*<br/>
 Jeśli ten parametr ma wartość różną od zera, prostokąt otaczający zawiera tylko tekst elementu. W przeciwnym razie obejmuje cały wiersz zajmowany przez element w kontrolce widoku drzewa.
@@ -2341,7 +2341,7 @@ Funkcja porównywania struktury, `lpfnCompare`, musi zwracać wartość ujemną,
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CImageList](../../mfc/reference/cimagelist-class.md)

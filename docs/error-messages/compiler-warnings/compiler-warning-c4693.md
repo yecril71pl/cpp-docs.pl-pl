@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536662"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781903"
 ---
 # <a name="compiler-warning-c4693"></a>Ostrzeżenie kompilatora C4693
 
 > "class": zapieczętowana klasa abstrakcyjna nie może mieć żadnych składowych wystąpienia "Test"
 
-Jeśli typ jest oznaczony [zapieczętowanego](../../windows/sealed-cpp-component-extensions.md) i [abstrakcyjne](../../windows/abstract-cpp-component-extensions.md), może mieć tylko statyczne elementy członkowskie.
+Jeśli typ jest oznaczony [zapieczętowanego](../../extensions/sealed-cpp-component-extensions.md) i [abstrakcyjne](../../extensions/abstract-cpp-component-extensions.md), może mieć tylko statyczne elementy członkowskie.
 
 To ostrzeżenie zostanie automatycznie podwyższony do błędu. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md).
 

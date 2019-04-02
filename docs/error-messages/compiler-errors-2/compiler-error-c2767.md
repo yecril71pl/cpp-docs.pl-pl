@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2767
 ms.assetid: e8f84178-a160-4d71-a236-07e4fcc11e96
-ms.openlocfilehash: 6c13610b6fd7aae4b4232b836a0307867bd591d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78b171b634aea66115c4029c696fec042593bb30
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550153"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779589"
 ---
 # <a name="compiler-error-c2767"></a>Błąd kompilatora C2767
 
 zarządzane lub WinRTarray wymiaru niezgodność: Oczekiwano następującej liczby argumentów: N - M podane
 
-A zarządzany lub deklaracja tablicy WinRT został niewłaściwie sformatowany. Aby uzyskać więcej informacji, zobacz [tablicy](../../windows/arrays-cpp-component-extensions.md).
+A zarządzany lub deklaracja tablicy WinRT został niewłaściwie sformatowany. Aby uzyskać więcej informacji, zobacz [tablicy](../../extensions/arrays-cpp-component-extensions.md).
 
 Poniższy przykład generuje C2767 i pokazuje, jak go naprawić:
 

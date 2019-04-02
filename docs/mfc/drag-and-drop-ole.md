@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305045"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766810"
 ---
 # <a name="drag-and-drop-ole"></a>Przeciąganie i upuszczanie (OLE)
 
@@ -26,7 +26,7 @@ Korzystając z OLE przeciągania i upuszczania, możesz usunąć dwa kroki z pro
 
 Korzystając z OLE przeciągania i upuszczania, dane można przenieść z jednej lokalizacji do drugiej w ramach dokumentu, między różnymi dokumentami lub aplikacji. Można ją wdrożyć w kontenerze lub aplikacji serwera, a każda aplikacja może być miejsca źródłowego i/lub miejsca docelowego. Jeśli aplikacja obsługuje zarówno miejsca źródłowego i docelowego upuszczania zaimplementowane, przeciągania i upuszczania włączono między oknami podrzędnymi lub w obrębie jednego okna. Ta funkcja ułatwia aplikacji znacznie łatwiejsze do użycia.
 
-Jeśli chcesz korzystać z możliwości przeciągania i upuszczania OLE, zobacz [przeciąganie i upuszczanie: Dostosowywanie](../mfc/drag-and-drop-customizing.md). Za pomocą techniki opisane w tym artykule można wprowadzić do aplikacji innych niż OLE, Porzuć źródeł. Artykuł [przeciąganie i upuszczanie: Implementowanie docelowego upuszczania](../mfc/drag-and-drop-implementing-a-drop-target.md) w tym artykule opisano sposób wdrażania docelowego upuszczania obsługę zarówno OLE, jak i aplikacji innych niż OLE. Konieczne będzie również przydatne zbadać przykłady MFC OLE [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md).
+Jeśli chcesz korzystać z możliwości przeciągania i upuszczania OLE, zobacz [przeciąganie i upuszczanie: Dostosowywanie](../mfc/drag-and-drop-customizing.md). Za pomocą techniki opisane w tym artykule można wprowadzić do aplikacji innych niż OLE, Porzuć źródeł. Artykuł [przeciąganie i upuszczanie: Implementowanie docelowego upuszczania](../mfc/drag-and-drop-implementing-a-drop-target.md) w tym artykule opisano sposób wdrażania docelowego upuszczania obsługę zarówno OLE, jak i aplikacji innych niż OLE. Konieczne będzie również przydatne zbadać przykłady MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md).
 
 Jeśli nie znasz [obiekty danych i źródeł danych (OLE)](../mfc/data-objects-and-data-sources-ole.md) rodziny artykuły, możesz to zrobić teraz. Artykuły te wyjaśniają zasady podstawowe informacje dotyczące transferu danych i sposobie jego implementowania w swoich aplikacjach.
 

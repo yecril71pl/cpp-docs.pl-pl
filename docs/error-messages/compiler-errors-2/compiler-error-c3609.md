@@ -1,23 +1,23 @@
 ---
-title: Błąd kompilatora C3609
+title: Compiler Error C3609
 ms.date: 11/04/2016
 f1_keywords:
 - C3609
 helpviewer_keywords:
 - C3609
 ms.assetid: 801e7f79-4ac6-4f8f-955f-703cdf095d00
-ms.openlocfilehash: 5572f39082e2dcd8746bb464595c5c00e2f77356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27eba3df800c42cc53a7031e958a675c84255440
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556448"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780980"
 ---
-# <a name="compiler-error-c3609"></a>Błąd kompilatora C3609
+# <a name="compiler-error-c3609"></a>Compiler Error C3609
 
 "członek": funkcja zapieczętowana ani końcowego musi być funkcją wirtualną
 
-[Zapieczętowanego](../../windows/sealed-cpp-component-extensions.md) i [końcowego](../../cpp/final-specifier.md) słowa kluczowe są dozwolone tylko dla klasy, struktury lub element członkowski funkcji oznaczonej `virtual`.
+[Zapieczętowanego](../../extensions/sealed-cpp-component-extensions.md) i [końcowego](../../cpp/final-specifier.md) słowa kluczowe są dozwolone tylko dla klasy, struktury lub element członkowski funkcji oznaczonej `virtual`.
 
 Poniższy przykład spowoduje wygenerowanie C3609:
 

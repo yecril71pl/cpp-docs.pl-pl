@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296010"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781981"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Klasa CMFCPropertyGridCtrl
 
@@ -173,14 +173,14 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Konstruuje `CMFCPropertyGridCtrl` obiektu.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCPropertyGridCtrl::accHitTest`|Metoda wywoływana przez platformę, by pobrać element podrzędny lub obiekt podrzędny w danym momencie na ekranie. (Przesłania [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CMFCPropertyGridCtrl::accLocation`|Metoda wywoływana przez platformę, by pobrać bieżącą lokalizację ekranu określony obiekt. (Przesłania [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Odrysowuje formant siatki właściwości i ich właściwości.|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Wywoływane przez formant siatki właściwości, aby posortować właściwości.|
@@ -282,7 +282,7 @@ Zamiast reprezentujący wartość, element właściwości można uruchomić okno
 
 W poniższej tabeli wymieniono cztery typy właściwości zaznaczenia:
 
-|Class|Opis|
+|Klasa|Opis|
 |-----------|-----------------|
 |[Klasa CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Właściwość ogólnego przeznaczenia, który jest używany do określenia wartości ciągów, wartości logicznych, daty i tak dalej.|
 |[Klasa CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Właściwość, która jest używana do wybierania wartości koloru.|
@@ -297,7 +297,7 @@ Poniższa ilustracja przedstawiać formant siatki właściwości, który wyświe
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować obiekt formantu siatki właściwości przy użyciu różnych metod w `CMFCPropertyGridCtrl` klasy. W przykładzie pokazano, jak włączyć kontrolki nagłówka, włącz obszar opisu i ustawić wyglądu formantu siatki właściwości. W przykładzie pokazano również sposób Ustawianie trybu alfabetycznego dla formantu, według której formant sortowania wszystkich właściwości, które zawiera nazwy właściwości oraz Ustawianie kolorów niestandardowych dla różnych elementów na formancie siatki właściwości. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować obiekt formantu siatki właściwości przy użyciu różnych metod w `CMFCPropertyGridCtrl` klasy. W przykładzie pokazano, jak włączyć kontrolki nagłówka, włącz obszar opisu i ustawić wyglądu formantu siatki właściwości. W przykładzie pokazano również sposób Ustawianie trybu alfabetycznego dla formantu, według której formant sortowania wszystkich właściwości, które zawiera nazwy właściwości oraz Ustawianie kolorów niestandardowych dla różnych elementów na formancie siatki właściwości. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -480,7 +480,7 @@ Aby utworzyć formant siatki właściwości, pierwsze wywołanie [CMFCPropertyGr
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `Create` method in Class metoda `CMFCPropertyGridCtrl` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `Create` method in Class metoda `CMFCPropertyGridCtrl` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 

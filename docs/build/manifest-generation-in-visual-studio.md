@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809733"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781682"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generowanie manifestu w Visual Studio
 
@@ -27,7 +27,7 @@ System kompilacji w programie Visual Studio umożliwia manifest osadzone w pliku
 
 1. Jeśli manifestem osadzonym w pliku binarnym jest taka sama jak manifest wygenerowany przez narzędzie manifestu, kompilacja będzie następne kroki kompilacji.
 
-Manifest jest osadzony w końcowym pliku binarnym jako zasób tekstu i można je wyświetlić, otwierając końcowy danych binarnych jako plik w programie Visual Studio. Aby upewnić się, że manifest wskazuje prawidłowy bibliotek, wykonaj czynności opisane w [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) lub postępować zgodnie z sugestii opisanego w [Rozwiązywanieproblemów](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) sekcji.
+Manifest jest osadzony w końcowym pliku binarnym jako zasób tekstu i można je wyświetlić, otwierając końcowy danych binarnych jako plik w programie Visual Studio. Aby upewnić się, że manifest wskazuje prawidłowy bibliotek, wykonaj czynności opisane w [poznanie zależności aplikacji Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md) lub postępować zgodnie z sugestii opisanego w [Rozwiązywanieproblemów](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) sekcji.
 
 ## <a name="see-also"></a>Zobacz także
 

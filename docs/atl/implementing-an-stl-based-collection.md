@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 90583f34c9e9fb500bb48fdbd3c1a17d343d865f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292929"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779251"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementowanie kolekcję C++ Standard Library
 
 ATL udostępnia `ICollectionOnSTLImpl` interfejs umożliwia szybkie implementowanie interfejsów kolekcji opartej na standardowej biblioteki języka C++ na obiekty. Aby zrozumieć, jak działa ta klasa, będzie działać, za pośrednictwem stanowi prosty przykład (poniżej) korzysta z tej klasy do zaimplementowania występowaniu klientów automatyzacji kolekcji tylko do odczytu.
 
-Przykładowy kod pochodzi z [przykładowe ATLCollections](../visual-cpp-samples.md).
+Przykładowy kod pochodzi z [przykładowe ATLCollections](../overview/visual-cpp-samples.md).
 
 Aby wykonać tę procedurę, wykonasz następujące czynności:
 
@@ -75,7 +75,7 @@ Definicje typów, które do tej pory utworzono zawierają wszystkie informacje p
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-W tym przykładzie można użyć niestandardowego `GenericCopy` klasy zdefiniowanej w VCUE_Copy.h i VCUE_CopyString.h z [ATLCollections](../visual-cpp-samples.md) próbki. Możesz użyć tej klasy w innym kodzie, ale może być konieczne dalsze zdefiniuj specjalizacje `GenericCopy` do obsługi typów danych używanych w własne kolekcje. Aby uzyskać więcej informacji, zobacz [klasy zasad kopii ATL](../atl/atl-copy-policy-classes.md).
+W tym przykładzie można użyć niestandardowego `GenericCopy` klasy zdefiniowanej w VCUE_Copy.h i VCUE_CopyString.h z [ATLCollections](../overview/visual-cpp-samples.md) próbki. Możesz użyć tej klasy w innym kodzie, ale może być konieczne dalsze zdefiniuj specjalizacje `GenericCopy` do obsługi typów danych używanych w własne kolekcje. Aby uzyskać więcej informacji, zobacz [klasy zasad kopii ATL](../atl/atl-copy-policy-classes.md).
 
 ##  <a name="vcconenumeration_and_collection"></a> Tworzenie definicji typów dla wyliczenia i kolekcji
 
@@ -102,5 +102,5 @@ Teraz możesz przetestować kod przy użyciu wybranego klienta.
 ## <a name="see-also"></a>Zobacz także
 
 [Kolekcje i wyliczenia](../atl/atl-collections-and-enumerators.md)<br/>
-[ATLCollections Sample](../visual-cpp-samples.md)<br/>
+[ATLCollections Sample](../overview/visual-cpp-samples.md)<br/>
 [Klasy zasad kopii ATL](../atl/atl-copy-policy-classes.md)

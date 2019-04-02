@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 95dcbbc2b445e2ff67979b90816daed0fb0c0fba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303966"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767720"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty Class
 
@@ -41,14 +41,14 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty](#cmfcpropertygridcolorproperty)|Konstruuje `CMFCPropertyGridColorProperty` obiektu.|
 |`CMFCPropertyGridColorProperty::~CMFCPropertyGridColorProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Włącza *automatyczne* przycisku na okno dialogowe wyboru kolorów. (Standardowa automatyczne przycisk ma etykietę **automatyczne**.)|
 |[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Włącza *innych* przycisku na okno dialogowe wyboru kolorów. (Standardowe innych przycisk ma etykietę **więcej kolorów**.)|
@@ -69,7 +69,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCPropertyGridColorProperty` klasy i skonfigurować ten obiekt za pomocą różnych metod `CMFCPropertyGridColorProperty` klasy. Kod wyjaśnia, jak włączyć automatyczne i inne przyciski i jak ustawić kolor i liczba kolumn. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCPropertyGridColorProperty` klasy i skonfigurować ten obiekt za pomocą różnych metod `CMFCPropertyGridColorProperty` klasy. Kod wyjaśnia, jak włączyć automatyczne i inne przyciski i jak ustawić kolor i liczba kolumn. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]
 

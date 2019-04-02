@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: bda980c26f9791e1d4f03026f7e118e69a4ab881
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: d53d3afb464b9dcfa32ab3cf4ee51446f8313a92
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565808"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771828"
 ---
 # <a name="cdhtmldialog-class"></a>Klasa CDHtmlDialog
 
@@ -137,14 +137,14 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Tworzy obiekt CDHtmlDialog.|
 |[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|Niszczy obiekt CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Możliwym do zastąpienia o nazwie jako kontroli dostępu, czy obiekty skryptowe na stronie załadować uzyskać dostęp do zewnętrznych wysyłania kontroli lokacji. Sprawdza, czy na pewno wysyłki jest bezpieczny dla skryptów albo bieżącej strefy umożliwia obiektów, które nie są bezpieczne dla skryptów.|
 |[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Overridable użyty do utworzenia wystąpienia witryny formantu do hostowania formantu WebBrowser w oknie dialogowym.|
@@ -197,7 +197,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Wskazuje, czy ma być używany tytuł dokumentu HTML jako okna dialogowego podpisu.|
 |[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|Zasób identyfikator HTML zasobów do wyświetlenia.|
@@ -1524,6 +1524,6 @@ Ta funkcja członkowska jest implementacją firmy CDHtmlDialog [IDocHostUIHandle
 
 ## <a name="see-also"></a>Zobacz także
 
-[DHtmlExplore próbki MFC](../../visual-cpp-samples.md)<br/>
+[DHtmlExplore próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Makra pomocnika DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302887"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781214"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer Class
 
@@ -35,13 +35,13 @@ class COleTemplateServer : public COleObjectFactory
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Konstruuje `COleTemplateServer` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Nawiązanie połączenia z szablonu dokumentu bazowego `COleObjectFactory` obiektu.|
 |[COleTemplateServer::Unregister](#unregister)|Wyrejestrowuje szablonu powiązanego dokumentu.|
@@ -171,7 +171,7 @@ Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](/
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>

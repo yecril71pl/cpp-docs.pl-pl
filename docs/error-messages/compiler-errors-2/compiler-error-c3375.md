@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3375
 ms.assetid: f1df78c6-e6ca-48f3-8b29-4e1710002bf3
-ms.openlocfilehash: b3dfc17f9df495fe6907b816bace0dac1eff08cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba1dbf08fb56364d2ab5b8c40847ab89484dc005
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545278"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781396"
 ---
 # <a name="compiler-error-c3375"></a>Błąd kompilatora C3375
 
@@ -19,7 +19,7 @@ ms.locfileid: "50545278"
 
 Podczas tworzenia wystąpienia delegata mogło być do statycznej funkcji członkowskiej lub jako niezwiązanego delegata do funkcji wystąpienia, kompilator wydany tego błędu.
 
-Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../../windows/delegate-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

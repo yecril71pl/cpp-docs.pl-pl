@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295191"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781526"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Instrukcje: Tworzenie bezpiecznej kolekcji
 
@@ -27,7 +27,7 @@ W tym artykule wyjaśniono, jak tworzyć kolekcje bezpieczny dla typów danych. 
 
 - [Używanie klas kolekcji nieszablonu](#_core_using_nontemplate_collection_classes)
 
-Biblioteki klas Microsoft Foundation udostępnia wstępnie zdefiniowane bezpieczne kolekcje na podstawie szablonów języka C++. Ponieważ są one szablonów, w ramach tych zajęć pomagają zapewnić bezpieczeństwo typów i łatwość użycia bez rzutowania typu i inne dodatkowe prace związane ze stosowaniem klasy nieszablonu w tym celu. Próbki MFC [ZBIERANIE](../visual-cpp-samples.md) demonstruje użycie klasy kolekcji oparte na szablonach, które w aplikacji MFC. Ogólnie rzecz biorąc Użyj tych klas za każdym razem, gdy piszesz nowy kod kolekcji.
+Biblioteki klas Microsoft Foundation udostępnia wstępnie zdefiniowane bezpieczne kolekcje na podstawie szablonów języka C++. Ponieważ są one szablonów, w ramach tych zajęć pomagają zapewnić bezpieczeństwo typów i łatwość użycia bez rzutowania typu i inne dodatkowe prace związane ze stosowaniem klasy nieszablonu w tym celu. Próbki MFC [ZBIERANIE](../overview/visual-cpp-samples.md) demonstruje użycie klasy kolekcji oparte na szablonach, które w aplikacji MFC. Ogólnie rzecz biorąc Użyj tych klas za każdym razem, gdy piszesz nowy kod kolekcji.
 
 ##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Przy użyciu klas na podstawie szablonu dla zabezpieczeń typów
 

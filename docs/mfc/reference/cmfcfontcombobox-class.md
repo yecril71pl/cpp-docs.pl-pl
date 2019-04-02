@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-ms.openlocfilehash: 6d0b2fc22d1d0779db17e970118694270a206439
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272675"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781305"
 ---
 # <a name="cmfcfontcombobox-class"></a>Klasa CMFCFontComboBox
 
@@ -37,14 +37,14 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Konstruuje `CMFCFontComboBox` obiektu.|
 |`CMFCFontComboBox::~CMFCFontComboBox`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCFontComboBox::CompareItem`|Metoda wywoływana przez platformę, aby określić względne położenie nowego elementu w polu posortowaną listę bieżącego formant pola kombi czcionki. (Przesłania [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
 |`CMFCFontComboBox::DrawItem`|Metoda wywoływana przez platformę, by narysować określonego elementu w bieżącym formant pola kombi czcionki. (Przesłania [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|
@@ -56,7 +56,7 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Wskazuje Framework czcionki, która za pomocą rysowania etykiety elementów w bieżącym polu kombi czcionki.|
 
@@ -151,7 +151,7 @@ Ta metoda umożliwia wybieranie, a następnie przewiń listę do elementu w polu
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `SelectFont` method in Class metoda `CMFCFontComboBox` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `SelectFont` method in Class metoda `CMFCFontComboBox` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
@@ -188,7 +188,7 @@ Ta metoda inicjuje pole kombi czcionki Wyliczanie zainstalowanych czcionek, któ
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `Setup` method in Class metoda `CMFCFontComboBox` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `Setup` method in Class metoda `CMFCFontComboBox` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]

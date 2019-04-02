@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 307bf991853264fcf03dfc5b22eed8e91a3e7aa8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301405"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779615"
 ---
 # <a name="coleipframewnd-class"></a>Klasa COleIPFrameWnd
 
@@ -33,13 +33,13 @@ class COleIPFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|Konstruuje `COleIPFrameWnd` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Wywoływane przez platformę, gdy element jest aktywowany do edycji w miejscu.|
 |[COleIPFrameWnd::RepositionFrame](#repositionframe)|Metoda wywoływana przez platformę, by zmienić położenie okna edycji w miejscu.|
@@ -132,7 +132,7 @@ Układ pasków sterowania w oknie kontenera, który różni się od, wykonywane 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)

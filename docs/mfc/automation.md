@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265573"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767733"
 ---
 # <a name="automation"></a>Automatyzacja
 
@@ -55,17 +55,17 @@ Pomaga kłopotliwe w tworzeniu metod automatyzacji jednolitego mechanizm "bezpie
 
 ## <a name="automation-samples"></a>Przykłady automatyzacji
 
-- [Aplikacji AUTOCLIK](../visual-cpp-samples.md) korzystać z tej próbki, Poznaj techniki automatyzacji i jako podstawa uczenia automatyzacji zdalnej.
+- [Aplikacji AUTOCLIK](../overview/visual-cpp-samples.md) korzystać z tej próbki, Poznaj techniki automatyzacji i jako podstawa uczenia automatyzacji zdalnej.
 
-- [Acdual —](../visual-cpp-samples.md) dodaje dwa interfejsy aplikację serwera automatyzacji.
+- [Acdual —](../overview/visual-cpp-samples.md) dodaje dwa interfejsy aplikację serwera automatyzacji.
 
-- [CALCDRIV](../visual-cpp-samples.md) nawyki MFCCALC automatyzacji aplikacji klienta.
+- [CALCDRIV](../overview/visual-cpp-samples.md) nawyki MFCCALC automatyzacji aplikacji klienta.
 
-- [INPROC](../visual-cpp-samples.md) pokazuje aplikację serwera automatyzacji w procesie.
+- [INPROC](../overview/visual-cpp-samples.md) pokazuje aplikację serwera automatyzacji w procesie.
 
-- [IPDRIVE](../visual-cpp-samples.md) zachęcanie INPROC automatyzacji aplikacji klienta.
+- [IPDRIVE](../overview/visual-cpp-samples.md) zachęcanie INPROC automatyzacji aplikacji klienta.
 
-- [MFCCALC](../visual-cpp-samples.md) pokazuje automatyzacji aplikacji klienta.
+- [MFCCALC](../overview/visual-cpp-samples.md) pokazuje automatyzacji aplikacji klienta.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
 

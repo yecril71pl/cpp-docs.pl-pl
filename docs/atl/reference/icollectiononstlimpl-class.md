@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: fc1e4988237cb839cca9421b56dbcdd04067059d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266461"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779225"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl Class
 
@@ -50,7 +50,7 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)— klasa zgodna mo
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Zwraca obiekt modułu wyliczającego dla kolekcji.|
 |[ICollectionOnSTLImpl::getcount](#get_count)|Zwraca liczbę elementów w kolekcji.|
@@ -58,7 +58,7 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)— klasa zgodna mo
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[ICollectionOnSTLImpl::m_coll](#m_coll)|Kolekcja.|
 
@@ -163,5 +163,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>Zobacz także
 
-[ATLCollections Sample](../../visual-cpp-samples.md)<br/>
+[ATLCollections Sample](../../overview/visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300625"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781656"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet — klasa
 
@@ -73,13 +73,13 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Konstruuje `CPropertySheet` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropertySheet::AddPage](#addpage)|Dodaje strony do arkusza właściwości.|
 |[CPropertySheet::Construct](#construct)|Konstruuje `CPropertySheet` obiektu.|
@@ -105,7 +105,7 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struktury. Zapewnia dostęp do właściwości podstawowe parametry arkusza.|
 
@@ -607,7 +607,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Wskazuje [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera okno dialogowe służy do koordynowania ma zostać przekonwertowany.
+Wskazuje [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera okno dialogowe służy do koordynowania ma zostać przekonwertowany.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -830,9 +830,9 @@ Wywołaj `SetWizardMode` przed wywołaniem [DoModal](#domodal). Po wywołaniu me
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
-[MFC Sample PROPDLG](../../visual-cpp-samples.md)<br/>
-[Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

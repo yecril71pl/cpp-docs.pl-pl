@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299105"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779381"
 ---
 # <a name="cautorevertimpersonation-class"></a>Klasa CAutoRevertImpersonation
 
@@ -32,14 +32,14 @@ class CAutoRevertImpersonation
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Konstruuje `CAutoRevertImpersonation` obiektu|
 |[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Niszczy obiekt i przywraca personifikacji tokenu dostępu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAutoRevertImpersonation::Attach](#attach)|Automatyzuje operacja cofania personifikacji tokenu dostępu.|
 |[CAutoRevertImpersonation::Detach](#detach)|Anuluje operacja cofania automatyczne personifikacji.|
@@ -137,6 +137,6 @@ Jeśli ta metoda jest wywoływana dla celów, które zawierają operacja cofania
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Przykładowe ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

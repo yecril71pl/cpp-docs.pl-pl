@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4572
 ms.assetid: 482dee5a-29bd-4fc3-b769-9dfd4cd2a964
-ms.openlocfilehash: b4d3356522faacfc343c33908b64597387fbe51c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e32509e4d32eef4f53b8d43a7db769844f1182c7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521076"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781552"
 ---
 # <a name="compiler-warning-level-1-c4572"></a>Kompilator ostrzeżenie (poziom 1) C4572
 
-Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." zamiast niego
+Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." Zamiast tego
 
-Użyto przestarzały styl do określania listy zmiennych argumentów. Podczas kompilowania dla środowiska CLR, należy użyć składni wielokropka zamiast <xref:System.ParamArrayAttribute>. Aby uzyskać więcej informacji, zobacz [zmiennej listy argumentów (...) (C + +/ CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Użyto przestarzały styl do określania listy zmiennych argumentów. Podczas kompilowania dla środowiska CLR, należy użyć składni wielokropka zamiast <xref:System.ParamArrayAttribute>. Aby uzyskać więcej informacji, zobacz [zmiennej listy argumentów (...) (C + +/ CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: d66a9ed445e28de2341aa2a07f249c10cba83da4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812008"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779745"
 ---
 # <a name="std-specify-language-standard-version"></a>/ STD (Określ wersję standardu języka)
 
@@ -37,11 +37,11 @@ Wartość domyślna **/STD: c ++ 14** opcja udostępnia zestaw funkcji C ++ 14 i
 
 - [literały znakowe U8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-Aby uzyskać dodatkowe informacje na które funkcji C ++ 14 i C ++ 17 są włączone podczas **/STD: c ++ 14** jest określony, zobacz uwagi w [Visual zgodność języka C++](../../visual-cpp-language-conformance.md).
+Aby uzyskać dodatkowe informacje na które funkcji C ++ 14 i C ++ 17 są włączone podczas **/STD: c ++ 14** jest określony, zobacz uwagi w [Visual zgodność języka C++](../../overview/visual-cpp-language-conformance.md).
 
 **/STD: c ++ 17** opcja umożliwia pełny zestaw funkcji C ++ 17 implementowane za pomocą kompilatora MSVC. Ta opcja powoduje wyłączenie kompilatora i biblioteki standardowej obsługi funkcji, które zostały zmienione lub nowych wersjach pracy roboczą i wad aktualizacje C++ Standard po C ++ 17.
 
-**/STD: c ++ najnowsze** opcja umożliwia wpis-C ++ 17 funkcje języka i biblioteki obecnie wdrażany w kompilatorze i bibliotekach. Mogą one zawierać funkcje C ++ 20 pracy roboczą i wad aktualizacji Standard C++, które nie są uwzględnione w C ++ 17, a także eksperymentalne propozycje standardzie roboczym. Aby uzyskać listę obsługiwanych języków i funkcji biblioteki, zobacz [What's New for Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). **/STD: c ++ najnowsze** opcji nie włącza funkcji chroniony przez **/ eksperymentalne** przełącznika, ale może wymagać, aby je włączyć.
+**/STD: c ++ najnowsze** opcja umożliwia wpis-C ++ 17 funkcje języka i biblioteki obecnie wdrażany w kompilatorze i bibliotekach. Mogą one zawierać funkcje C ++ 20 pracy roboczą i wad aktualizacji Standard C++, które nie są uwzględnione w C ++ 17, a także eksperymentalne propozycje standardzie roboczym. Aby uzyskać listę obsługiwanych języków i funkcji biblioteki, zobacz [What's New for Visual C++](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md). **/STD: c ++ najnowsze** opcji nie włącza funkcji chroniony przez **/ eksperymentalne** przełącznika, ale może wymagać, aby je włączyć.
 
 > [!IMPORTANT]
 > Funkcje kompilatora i biblioteki, włączane przez **/STD: c ++ najnowsze** są dostarczane jako — jest i nie obsługują. Podlegają istotne zmiany lub usunięcia bez powiadomienia. One w wersji zapoznawczej funkcji języka, które mogą się pojawić w następnej wersji standard, ale jest w toku. Użyj **/STD: c ++ 17** korzystać z funkcji najnowszego standardu ISO C++.
@@ -51,7 +51,7 @@ Aby uzyskać dodatkowe informacje na które funkcji C ++ 14 i C ++ 17 są włąc
 **/STD: c ++ 14** i **/STD: c ++ najnowsze** opcje są dostępne począwszy od wersji programu Visual C++ 2015 Update 3. **/STD: c ++ 17** opcja jest dostępna począwszy od wersji programu Visual C++ 2017 w wersji 15.3. Jak wspomniano powyżej, niektóre standardzie C ++ 17 zachowanie jest włączone **/STD: c ++ 14** opcja, ale wszystkie inne funkcje C ++ 17, są włączane przez **/STD: c ++ 17**.
 
 > [!NOTE]
-> MSVC kompilatora wersji lub aktualizacji poziom, niektórych funkcji C ++ 14 i C ++ 17 może nie być w pełni zaimplementowane lub w pełni zgodna po określeniu **/STD: c ++ 14** lub **/STD: c ++ 17** opcje. Na przykład, kompilator Visual C++ 2017 RTM nie obsługuje w pełni języka C ++ 14 zgodność `constexpr`, wyrażenie SFINAE lub wyszukiwanie nazwy fazy 2. Omówienie zgodność języka C++ w programie Visual C++ w wersji, zobacz [Visual zgodność języka C++](../../visual-cpp-language-conformance.md).
+> MSVC kompilatora wersji lub aktualizacji poziom, niektórych funkcji C ++ 14 i C ++ 17 może nie być w pełni zaimplementowane lub w pełni zgodna po określeniu **/STD: c ++ 14** lub **/STD: c ++ 17** opcje. Na przykład, kompilator Visual C++ 2017 RTM nie obsługuje w pełni języka C ++ 14 zgodność `constexpr`, wyrażenie SFINAE lub wyszukiwanie nazwy fazy 2. Omówienie zgodność języka C++ w programie Visual C++ w wersji, zobacz [Visual zgodność języka C++](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
@@ -63,5 +63,5 @@ Aby uzyskać dodatkowe informacje na które funkcji C ++ 14 i C ++ 17 są włąc
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293787"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774558"
 ---
 # <a name="catlmap-class"></a>Klasa CAtlMap
 
@@ -76,7 +76,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CAtlMap::KINARGTYPE](#kinargtype)|Typ używany, gdy klucz jest przekazywany jako argument wejściowy|
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|Typ używany, gdy klucz jest zwracany jako argument dane wyjściowe.|
@@ -85,27 +85,27 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ### <a name="public-classes"></a>Publiczne klasy
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[Klasa CAtlMap::CPair](#cpair_class)|Klasa zawierająca elementy klucza i wartości.|
 
 ### <a name="cpair-data-members"></a>Elementy członkowskie danych CPair
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CPair::m_key](#m_key)|Element członkowski danych, przechowywania klucza elementu.|
 |[CPair::m_value](#m_value)|Element członkowski danych, przechowywania element wartości.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Konstruktor.|
 |[CAtlMap::~CAtlMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CAtlMap::AssertValid](#assertvalid)|Wywołaj tę metodę, aby spowodować ASSERT, jeśli `CAtlMap` jest nieprawidłowy.|
 |[CAtlMap::DisableAutoRehash](#disableautorehash)|Wywołaj tę metodę, aby wyłączyć automatyczne rehashing z `CAtlMap` obiektu.|
@@ -133,7 +133,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Zastępuje lub dodaje nowy element do `CAtlMap`.|
 
@@ -782,6 +782,6 @@ Typ elementu wartości.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe Neon](../../visual-cpp-samples.md)<br/>
+[Przykładowe Neon](../../overview/visual-cpp-samples.md)<br/>
 [Przykładowe UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
-ms.openlocfilehash: 6a509827b3b8e14b6d28995b5b4ca468ee9a662e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 4116de3240c3ef334db51095997f946731372708
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741174"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769241"
 ---
 # <a name="platformdelegate-class"></a>Platform::Delegate, klasa
 
@@ -30,7 +30,7 @@ Klasa obiektu delegowanego ma metodę Equals, element GetHashCode(), i metody To
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [delegować](../windows/delegate-cpp-component-extensions.md) — słowo kluczowe do tworzenia obiektów delegowanych; nie należy używać Platform::Delegate jawnie. Aby uzyskać więcej informacji, zobacz [delegatów](../cppcx/delegates-c-cx.md). Na przykład sposobu tworzenia i wykorzystywania delegata zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Użyj [delegować](../extensions/delegate-cpp-component-extensions.md) — słowo kluczowe do tworzenia obiektów delegowanych; nie należy używać Platform::Delegate jawnie. Aby uzyskać więcej informacji, zobacz [delegatów](../cppcx/delegates-c-cx.md). Na przykład sposobu tworzenia i wykorzystywania delegata zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ### <a name="requirements"></a>Wymagania
 

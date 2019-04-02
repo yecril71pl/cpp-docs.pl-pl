@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293488"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780005"
 ---
 # <a name="cmfccolorbutton-class"></a>Klasa CMFCColorButton
 
@@ -65,13 +65,13 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Tworzy nowy `CMFCColorButton` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Włącza i wyłącza przycisk "Automatyczny", który znajduje się powyżej regularne kolor przycisków. (Przycisk Automatyczny standardowych systemowych jest oznaczona etykietą **automatyczne**.)|
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Włącza i wyłącza "other" przycisk, który znajduje się poniżej regularne kolor przycisków. (Standardowy system "other" przycisk ma etykietę **więcej kolorów**.)|
@@ -86,7 +86,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Wskazuje, czy bieżący przycisk koloru jest wyświetlany w stylu wizualnego systemu Windows XP.|
 |[CMFCColorButton::OnDraw](#ondraw)|Metoda wywoływana przez platformę, by wyświetlić obrazu przycisku.|
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`m_bAltColorDlg`|Wartość logiczna. W przypadku opcji TRUE ramach Wyświetla [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) okno dialogowe kolorów, kiedy *innych* kliknięto przycisk lub w przypadku wartości FAŁSZ system kolor okno dialogowe. Wartość domyślna to TRUE. Aby uzyskać więcej informacji, zobacz [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Wartość logiczna. W przypadku opcji TRUE ramach Ustawia fokus na menu Kolor menu wyświetlanym lub w przypadku wartości FAŁSZ nie zmienia się fokus. Wartość domyślna to TRUE.|
@@ -126,7 +126,7 @@ Okno dialogowe próbnika kolorów ( [klasa CMFCColorBar](../../mfc/reference/cmf
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować przycisk koloru przy użyciu różnych metod w `CMFCColorButton` klasy. Metody Ustaw kolor przycisku koloru i jego numer kolumny, a następnie włączyć automatyczne i inne przyciski. W tym przykładzie jest częścią [próbka Demo pasek stanu](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować przycisk koloru przy użyciu różnych metod w `CMFCColorButton` klasy. Metody Ustaw kolor przycisku koloru i jego numer kolumny, a następnie włączyć automatyczne i inne przyciski. W tym przykładzie jest częścią [próbka Demo pasek stanu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]

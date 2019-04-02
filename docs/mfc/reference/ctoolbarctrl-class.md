@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424486"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781266"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 
@@ -203,13 +203,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|Konstruuje `CToolBarCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CToolBarCtrl::AddBitmap](#addbitmap)|Dodaje jeden lub więcej obrazów przycisk mapy bitowej do listy przycisku obrazów dostępnych dla formantu paska narzędzi.|
 |[CToolBarCtrl::AddButtons](#addbuttons)|Dodaje jeden lub więcej przycisków do formantu paska narzędzi.|
@@ -2386,8 +2386,8 @@ Ta funkcja członkowska emuluje funkcjonalność [TB_SETWINDOWTHEME](/windows/de
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[Próbki MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CToolBar](../../mfc/reference/ctoolbar-class.md)

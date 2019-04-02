@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3622
 ms.assetid: 02836f78-0cf2-4947-b87e-710187d81014
-ms.openlocfilehash: 69565a1a2d159623bca927a94543834d18c13299
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed307f46db1261d79d5b0ec6b36852cac2e6d13e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518095"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781916"
 ---
 # <a name="compiler-error-c3622"></a>Błąd kompilatora C3622
 
 "class": klasy zadeklarowanej jako "— słowo kluczowe" nie można utworzyć wystąpienia
 
-Nastąpiła próba tworzenia wystąpienia klasy oznaczonej jako [abstrakcyjne](../../windows/abstract-cpp-component-extensions.md). Klasa jest oznaczona jako `abstract` może być klasą bazową, ale nie można utworzyć wystąpienia.
+Nastąpiła próba tworzenia wystąpienia klasy oznaczonej jako [abstrakcyjne](../../extensions/abstract-cpp-component-extensions.md). Klasa jest oznaczona jako `abstract` może być klasą bazową, ale nie można utworzyć wystąpienia.
 
 ## <a name="example"></a>Przykład
 

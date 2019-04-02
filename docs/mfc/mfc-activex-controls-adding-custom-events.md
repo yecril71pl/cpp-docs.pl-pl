@@ -15,12 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263016"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781006"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Kontrolki ActiveX MFC: Dodawanie zdarzeń niestandardowych
 
@@ -92,7 +92,7 @@ Teraz, że dodano clickin — zdarzenie niestandardowe za pomocą Kreatora dodaw
 
 1. Kliknij dwukrotnie przycisk Nowa funkcja obsługi w widoku klas, aby przejść do kod procedury obsługi komunikatów w implementacji (. Plik CPP) kontrolki ActiveX.
 
-Poniższy kod wywoła przykład `InCircle` funkcja za każdym razem, gdy kliknięto lewego przycisku myszy w oknie Kontrola. W tym przykładzie można znaleźć w funkcji obsługi WM_LBUTTONDOWN `OnLButtonDown`w [przykładowe OK](../visual-cpp-samples.md) abstrakcyjne.
+Poniższy kod wywoła przykład `InCircle` funkcja za każdym razem, gdy kliknięto lewego przycisku myszy w oknie Kontrola. W tym przykładzie można znaleźć w funkcji obsługi WM_LBUTTONDOWN `OnLButtonDown`w [przykładowe OK](../overview/visual-cpp-samples.md) abstrakcyjne.
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 

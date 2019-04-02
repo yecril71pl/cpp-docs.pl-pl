@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: 2ae7c941b527a7cbaa01bf43ef4d41c9a4975dac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302406"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768305"
 ---
 # <a name="cdialogbar-class"></a>Klasa CDialogBar
 
@@ -31,13 +31,13 @@ class CDialogBar : public CControlBar
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDialogBar::CDialogBar](#cdialogbar)|Konstruuje `CDialogBar` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDialogBar::Create](#create)|Tworzy Pasek dialogowy Windows i dołącza je do `CDialogBar` obiektu.|
 
@@ -143,7 +143,7 @@ Jeśli określisz style wyrównania CBRS_TOP lub CBRS_BOTTOM, Pasek dialogowy si
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Próbki MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CFormView](../../mfc/reference/cformview-class.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 04136b3550675f0e50f905047fee551e27da7069
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271869"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768111"
 ---
 # <a name="cfont-class"></a>Klasa CFont
 
@@ -41,13 +41,13 @@ class CFont : public CGdiObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFont::CFont](#cfont)|Konstruuje `CFont` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFont::CreateFont](#createfont)|Inicjuje `CFont` o określonej charakterystyce.|
 |[CFont::CreateFontIndirect](#createfontindirect)|Inicjuje `CFont` obiekt z właściwościami w `LOGFONT` struktury.|
@@ -58,7 +58,7 @@ class CFont : public CGdiObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[HFONT CFont::operator](#operator_hfont)|Zwraca uchwyt czcionki Windows GDI dołączonych do `CFont` obiektu.|
 
@@ -359,6 +359,6 @@ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [o
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

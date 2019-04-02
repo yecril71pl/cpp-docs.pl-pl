@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294674"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768137"
 ---
 # <a name="docking-and-floating-toolbars"></a>Zadokowane i przestawne paski narzędzi
 
@@ -50,7 +50,7 @@ Inne tematy omówione w tym artykule obejmują:
 
 - [Ustawienie zawijania stanowisk dla stałej styl paska narzędzi](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-Zobacz przykładową ogólne MFC [DOCKTOOL](../visual-cpp-samples.md) przykłady.
+Zobacz przykładową ogólne MFC [DOCKTOOL](../overview/visual-cpp-samples.md) przykłady.
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Włączanie dokowania w oknie ramowym
 
@@ -80,7 +80,7 @@ Implementacja MFC dokowalne pasków narzędzi nie zawiera niektóre z rozszerzon
 
 Począwszy od Visual C++ w wersji 4.0 możesz wprowadzić go możliwe dla użytkowników aplikacji, aby dynamicznie Zmień rozmiar przestawne paski narzędzi. Zwykle pasek narzędzi ma kształt długie, liniowej, wyświetlać poziomo. Ale możesz zmienić orientację na pasku narzędzi i jego kształtu. Na przykład po użytkownik dokowane narzędzi względem jednej pionowy strony okna ramki, kształt zostanie zmieniony na układ pionowy. Użytkownik może również zmienić kształt na pasku narzędzi w prostokąt z wielu wierszy przycisków.
 
-Można:
+Możesz:
 
 - Określ dynamiczna zmiana rozmiaru jako cecha paska narzędzi.
 
@@ -104,7 +104,7 @@ Dla paska narzędzi o rozmiarze stałej styl wyznaczyć narzędzi przycisk indek
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-Próbki MFC-ogólne [DOCKTOOL](../visual-cpp-samples.md) pokazuje, jak używać funkcji elementów członkowskich klas [CControlBar](../mfc/reference/ccontrolbar-class.md) i [CToolBar](../mfc/reference/ctoolbar-class.md) Zarządzanie układ dynamiczny paska narzędzi. Zobacz plik EDITBAR. CPP w DOCKTOOL.
+Próbki MFC-ogólne [DOCKTOOL](../overview/visual-cpp-samples.md) pokazuje, jak używać funkcji elementów członkowskich klas [CControlBar](../mfc/reference/ccontrolbar-class.md) i [CToolBar](../mfc/reference/ctoolbar-class.md) Zarządzanie układ dynamiczny paska narzędzi. Zobacz plik EDITBAR. CPP w DOCKTOOL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
 

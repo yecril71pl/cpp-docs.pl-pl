@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 57b1df49616967841a433a36a504beed0b900cde
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278538"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780448"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Klasa CMFCImageEditorDialog
 
@@ -29,7 +29,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Konstruuje `CMFCImageEditorDialog` obiektu.|
 
@@ -99,7 +99,7 @@ Aby zmodyfikować obraz, przekazać wskaźnik obrazu do `CMFCImageEditorDialog` 
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCImageEditorDialog` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCImageEditorDialog` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]

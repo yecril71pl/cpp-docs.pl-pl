@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302107"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781448"
 ---
 # <a name="csplitterwnd-class"></a>Klasa CSplitterWnd
 
@@ -93,13 +93,13 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSplitterWnd::CSplitterWnd](#csplitterwnd)|Wywołania do konstruowania `CSplitterWnd` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Wykonuje polecenie następne okienko lub poprzednie okienko.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Sprawdza, czy polecenia następne okienko lub poprzednie okienko jest obecnie możliwe.|
@@ -133,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSplitterWnd::OnDraw](#ondraw)|Metoda wywoływana przez platformę, by narysować okno rozdzielacza.|
 |[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|Renderuje Obraz okna podziału.|
@@ -175,9 +175,9 @@ Aby uzyskać więcej informacji na temat okna podziału, zobacz [techniczne 29 U
 
 Aby uzyskać więcej informacji na temat tworzenia dynamiczne okna podziału zobacz:
 
-- Próbki MFC [Bazgroły](../../visual-cpp-samples.md)
+- Próbki MFC [Bazgroły](../../overview/visual-cpp-samples.md)
 
-- Próbki MFC [VIEWEX](../../visual-cpp-samples.md).
+- Próbki MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -1036,7 +1036,7 @@ Wskaźnik do kontekstu urządzenia.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC VIEWEX](../../visual-cpp-samples.md)<br/>
+[Próbki MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CView](../../mfc/reference/cview-class.md)<br/>

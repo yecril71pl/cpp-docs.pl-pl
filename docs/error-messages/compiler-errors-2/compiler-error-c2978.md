@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428109"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780304"
 ---
 # <a name="compiler-error-c2978"></a>Błąd kompilatora C2978
 
 Błąd składniowy: oczekiwano "keyword1" lub 'keyword2'; znaleziono typ 'keyword3'; Parametry bez typu nie są obsługiwane w typach ogólnych
 
-Klasa generyczna zadeklarowano niepoprawnie. Zobacz [ogólne](../../windows/generics-cpp-component-extensions.md)Aby uzyskać więcej informacji.
+Klasa generyczna zadeklarowano niepoprawnie. Zobacz [ogólne](../../extensions/generics-cpp-component-extensions.md)Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

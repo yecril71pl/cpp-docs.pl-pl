@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: c45ce5e2e72c6a987a0053cb4b1bbb151c149faf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496544"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779602"
 ---
 # <a name="compiler-error-c3352"></a>Błąd kompilatora C3352
 
@@ -19,7 +19,7 @@ ms.locfileid: "50496544"
 
 Parametr, który wyświetla listę dla `function` i delegata nie są zgodne.
 
-Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../../windows/delegate-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../../extensions/delegate-cpp-component-extensions.md).
 
 Poniższy przykład spowoduje wygenerowanie C3352:
 

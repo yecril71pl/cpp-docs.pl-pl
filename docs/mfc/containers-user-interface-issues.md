@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-ms.openlocfilehash: e35f831f3e1a0b2fede03de0bbd846525f3c41f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68a56983bccbdb2ed7f6701577ea5abaa7ea04c6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304265"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779667"
 ---
 # <a name="containers-user-interface-issues"></a>Kontenery: Problemy z interfejsem użytkownika
 
@@ -21,7 +21,7 @@ Należy dodać pewną liczbę funkcji do aplikacji kontenera interfejs użytkown
 |------------------------|---------|
 |Dodatkowe menu dla kontenerów|[Menu i zasoby: Dodatki do kontenera](../mfc/menus-and-resources-container-additions.md)|
 |Dodatkowe zasoby dla kontenerów|[Menu i zasoby: Dodatki do kontenera](../mfc/menus-and-resources-container-additions.md)|
-|Malowanie połączone lub osadzone elementy|[Przykładowy kontener](../visual-cpp-samples.md)|
+|Malowanie połączone lub osadzone elementy|[Przykładowy kontener](../overview/visual-cpp-samples.md)|
 |Nowe okno dialogowe, dla kontenerów|[Okna dialogowe w OLE](../mfc/dialog-boxes-in-ole.md)|
 
 ## <a name="see-also"></a>Zobacz także

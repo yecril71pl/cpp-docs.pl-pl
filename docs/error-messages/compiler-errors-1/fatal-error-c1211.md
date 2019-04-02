@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
-ms.openlocfilehash: 01b9dbc63ec4dee7335579c4805d34b4ff7214fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f39ab027d8d81762ae1cf8f38405f3e21524da2e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534397"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781942"
 ---
 # <a name="fatal-error-c1211"></a>Błąd krytyczny C1211
 
@@ -23,4 +23,4 @@ Niektóre funkcje kompilatora może nie działać w poprzedniej wersji w czasie 
 
 Aby rozwiązać C1211 instalacji środowiska uruchomieniowego języka wspólnego dostarczanej przez kompilator używasz.
 
-Aby uzyskać więcej informacji, zobacz [przekazywania dalej typów (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywania dalej typów (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).

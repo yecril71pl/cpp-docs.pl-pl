@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: f6440ef202d0eafc4730b1e63ca4627d5dab61bc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d5b9d2a0dc1e716ea8cb20f0d0dcb4c5d765079
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299962"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769059"
 ---
 # <a name="coledispatchexception-class"></a>Klasa COleDispatchException
 
@@ -37,7 +37,7 @@ class COleDispatchException : public CException
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Kontekst Pomoc dla błędu.|
 |[COleDispatchException::m_strDescription](#m_strdescription)|Opis błędu słownej.|
@@ -131,7 +131,7 @@ Ten element członkowski jest ustawiany przez funkcję [afxthrowoledispatchexcep
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
+[Próbki MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)<br/>

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301340"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780226"
 ---
 # <a name="cmfccolormenubutton-class"></a>Klasa CMFCColorMenuButton
 
@@ -65,13 +65,13 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CMFCColorMenuButton](#cmfccolormenubutton)|Konstruuje `CMFCColorMenuButton` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)|Włącza i wyłącza przycisk "Automatyczny", który znajduje się powyżej regularne kolor przycisków. (Przycisk Automatyczny standardowych systemowych jest oznaczona etykietą **automatyczne**.)|
 |[CMFCColorMenuButton::EnableDocumentColors](#enabledocumentcolors)|Umożliwia wyświetlanie kolorów specyficzne dla dokumentu zamiast kolory systemowe.|
@@ -89,7 +89,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CopyFrom](#copyfrom)|Kopiuje bieżącego przycisku inny przycisk paska narzędzi.|
 |[CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu)|Tworzy okno dialogowe próbnika kolorów.|
@@ -105,7 +105,7 @@ Okno dialogowe próbnika kolorów jest tworzony podczas przetwarzania [CMFCColor
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak utworzyć i skonfigurować przycisk menu Kolor przy użyciu różnych metod w `CMFCColorMenuButton` klasy. W tym przykładzie `CPalette` obiekt jest najpierw jest tworzony i następnie używane do konstruowania obiektu `CMFCColorMenuButton` klasy. `CMFCColorMenuButton` Obiekt jest następnie konfigurowana przez włączenie jej automatyczne i inne przyciski i ustawianie jego kolor i liczbę kolumn. Ten kod jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak utworzyć i skonfigurować przycisk menu Kolor przy użyciu różnych metod w `CMFCColorMenuButton` klasy. W tym przykładzie `CPalette` obiekt jest najpierw jest tworzony i następnie używane do konstruowania obiektu `CMFCColorMenuButton` klasy. `CMFCColorMenuButton` Obiekt jest następnie konfigurowana przez włączenie jej automatyczne i inne przyciski i ustawianie jego kolor i liczbę kolumn. Ten kod jest częścią [przykład konsola programu Word](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]

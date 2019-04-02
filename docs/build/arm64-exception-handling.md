@@ -1,12 +1,12 @@
 ---
 title: Obsługa wyjątków ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 78d3d7d206adcb123c9537e91c2d5976b8be5baa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816155"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770073"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -54,7 +54,7 @@ Poniżej przedstawiono założeniom w opis obsługi wyjątków:
 
 ![Ramka stosu — układ](media/arm64-exception-handling-stack-frame.png "układ ramki stosu")
 
-Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu w zmiennej lokalnej w zależności od zagadnienia dotyczące optymalizacji. Celem jest, aby zmaksymalizować liczbę zmiennych lokalnych, które można osiągnąć przez jeden pojedynczej instrukcji, w oparciu o wskaźnik ramki (r29) lub wskaźnik stosu (sp). Jednak dla `alloca` funkcji, muszą być powiązane i r29 musi wskazywać na dole stosu. Aby umożliwić lepsze pokrycie rejestru pary adresowanie trybu, nieulotnej zarejestrować aave, które obszary są umieszczone na górze stosu sieci lokalnej. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej efektywny sposób sekwencji prologu. Dla jasności i lepsze lokalność pamięci podręcznej kolejność przechowywania zapisane wywoływanego rejestrów w wszystkich prologs canonical jest w kolejności "rosnącą się". `#framesz` poniżej reprezentuje rozmiar całego stosu (z wyjątkiem obszaru alloca). `#localsz` i `#outsz` oznaczają rozmiar lokalnego (Zapisz w tym obszar \<r29, lr > pary) i odpowiednio wychodzące rozmiar parametru.
+Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu w zmiennej lokalnej w zależności od zagadnienia dotyczące optymalizacji. Celem jest, aby zmaksymalizować liczbę zmiennych lokalnych, które można osiągnąć przez jeden pojedynczej instrukcji, w oparciu o wskaźnik ramki (r29) lub wskaźnik stosu (sp). Jednak dla `alloca` funkcji, muszą być powiązane i r29 musi wskazywać na dole stosu. Aby umożliwić lepsze pokrycie rejestru pary adresowanie trybu, nieulotnej rejestru zapisywania obszarów są umieszczone w górnej części stosu sieci lokalnej. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej efektywny sposób sekwencji prologu. Dla jasności i lepsze lokalność pamięci podręcznej kolejność przechowywania zapisane wywoływanego rejestrów w wszystkich prologs canonical jest w kolejności "rosnącą się". `#framesz` poniżej reprezentuje rozmiar całego stosu (z wyjątkiem obszaru alloca). `#localsz` i `#outsz` oznaczają rozmiar lokalnego (Zapisz w tym obszar \<r29, lr > pary) i odpowiednio wychodzące rozmiar parametru.
 
 1. Tworzenie łańcucha #localsz \<= 512
 
@@ -267,7 +267,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Należy zauważyć, że chociaż prologu i epilogu każdy ma własny indeks na kody odwijania, tabela jest współużytkowana przez je i jest przepływności (i nie jest całkowicie rzadko), wszystkie udostępniają te same kody (Zobacz przykład 2 w załączniku A poniżej). Twórcom kompilatorów powinien optymalizować generowany dla tego przypadku, w szczególności ponieważ największego indeksu, który może być określony wynosi 255, co ogranicza łączną liczbę kodów unwind dla danej funkcji.
+Należy zauważyć, że chociaż prologu i epilogu każdy ma własny indeks na kody odwijania, tabela jest współużytkowana przez je i jest przepływności (i nie jest całkowicie rzadko), wszystkie udostępniają te same kody (Zobacz przykład 2 w etykiety sekcji Przykłady Pokaż). Twórcom kompilatorów powinien optymalizować generowany dla tego przypadku, w szczególności ponieważ największego indeksu, który może być określony wynosi 255, co ogranicza łączną liczbę kodów unwind dla danej funkcji.
 
 ### <a name="unwind-codes"></a>Kodów odwinięcia
 
@@ -340,7 +340,7 @@ Dostępne są następujące pola:
 
 - **Funkcja Start RVA** jest RVA 32-bitowych uruchomienia funkcji.
 - **Flaga** jest polem bitowym 2, jak opisano powyżej, mają następujące znaczenie:
-  - 00 = upakowaną nie jest używany; dane operacji unwind pozostałych bitów wskazują rekord .xdata poniżej
+  - 00 = upakowaną nie jest używany; dane operacji unwind pozostałych bitów wskazują rekord .xdata
   - 01 = spakowane dane używane zgodnie z poniższym opisem za pomocą pojedynczego prologu i epilogu na początku i na końcu zakresu operacji unwind
   - 10 = upakowaną używane zgodnie z poniższym opisem dla kodu bez żadnych prologu i epilogu; dane operacji unwind jest to przydatne do opisywania segmentów rozdzielonych funkcji.
   - 11 = zastrzeżone;
@@ -353,17 +353,17 @@ Dostępne są następujące pola:
   - 11 = łańcuchowych funkcji instrukcji pary magazynu/obciążenia jest używana w prologu i epilogu \<r29, lr >
 - **H** jest 1-bitowego flagę wskazującą, czy funkcja homes parametru liczby całkowitej rejestruje (r0 r7), umieszczając je na samym początku funkcji. (0 = nie główna rejestrów, 1 = rejestrów domów).
 - **RegI** pole 4-bitowy, określającą liczbę rejestrów INT-volatile (r19 r28) zapisywane w lokalizacji canonical stosu.
-- **RegF** jest polem 3-bitową określającą liczbę rejestrów FP-volatile (d8 d15) zapisywane w lokalizacji canonical stosu. (0 = nie FP jest zapisywane w rejestrze, m > 0: m + 1 rejestrów FP są zapisywane). Dla funkcji zapisywania tylko jeden rejestr FP, pakowane unwind danych nie można zastosować.
+- **RegF** jest polem 3-bitową określającą liczbę rejestrów FP-volatile (d8 d15) zapisywane w lokalizacji canonical stosu. (RegF = 0: nie rejestr FP są zapisywane. RegF > 0: RegF + 1 rejestrów FP są zapisywane). Spakowane unwind danych nie można użyć funkcji, który tylko jeden rejestr FP zapisać.
 
 Canonical prologs, które można podzielić na kategorie 1, 2 (bez wychodzących obszaru parametrów), 3 i 4 w powyższej sekcji może być reprezentowany przez format upakowaną unwind.  Epilogs funkcje canonical postępuj zgodnie z formularza bardzo podobne, z wyjątkiem **H** nie ma wpływu, `set_fp` instrukcji zostanie pominięty, a kolejność kroków, jak również instrukcje w każdym kroku zostały cofnięte w epilogu. Algorytm upakowaną xdata obejmuje następujące kroki, szczegółowo opisane w poniższej tabeli:
 
 Krok 0: Wykonaj wstępne obliczania rozmiaru każdego obszaru.
 
-Krok 1. Zapisz Int zapisane wywoływanego rejestrów.
+Krok 1: Zapisz Int zapisane wywoływanego rejestrów.
 
-Krok 2. Ten krok jest specyficzny dla typu 4 na początku sekcji. LR zostanie zapisany pod koniec Int obszaru.
+Krok 2: Ten krok jest specyficzny dla typu 4 na początku sekcji. LR zostanie zapisany pod koniec Int obszaru.
 
-Krok 3. Zapisz FP zapisane wywoływanego rejestrów.
+Krok 3: Zapisz FP zapisane wywoływanego rejestrów.
 
 Krok 4. Zapisz argumentów wejściowych w obszarze parametrów macierzystego.
 
@@ -386,7 +386,7 @@ Krok #|Wartości flagi|Liczba instrukcji|OpCode|Kodzie operacji unwind
 
 \*\* Jeśli **RegI** == **CR** == 0, a **RegF** ! = 0 i pierwszy stp dla liczb zmiennoprzecinkowych jest operacja predekrementacji.
 
-\*\*\* Nie instrukcji odpowiadający `mov r29, sp` znajduje się w epilogu. Jeśli funkcja wymaga przywracaniem SP z r29, wówczas nie możemy korzystać z spakowane dane operacji unwind.
+\*\*\* Nie instrukcji odpowiadający `mov r29, sp` znajduje się w epilogu. Spakowane unwind danych nie można użyć, jeśli funkcja wymaga przywracaniem SP z r29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Odwijania prologs częściowe i epilogs
 

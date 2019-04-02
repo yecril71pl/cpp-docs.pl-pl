@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277682"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780317"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Standardowe zasoby MFC
 
@@ -23,7 +23,7 @@ Ta uwaga opisuje standardowe zasoby dostarczany z usługą i wymagane przez bibl
 
 MFC udostępnia dwie kategorie wstępnie zdefiniowanych zasobów, które można użyć w aplikacji: zasoby pozyskiwać i standardowych zasobów RAM.
 
-Obiekty clipart zasoby są dodatkowe zasoby, w ramach nie zależy od, ale które możesz zechcieć dodać do interfejsu użytkownika aplikacji. W następujących zasobach pozyskiwać są zawarte w próbki MFC-ogólne [CLIPART](../visual-cpp-samples.md):
+Obiekty clipart zasoby są dodatkowe zasoby, w ramach nie zależy od, ale które możesz zechcieć dodać do interfejsu użytkownika aplikacji. W następujących zasobach pozyskiwać są zawarte w próbki MFC-ogólne [CLIPART](../overview/visual-cpp-samples.md):
 
 - Common.RC: Pojedynczego pliku zasobów zawierającego:
 

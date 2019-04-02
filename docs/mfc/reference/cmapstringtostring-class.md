@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: d18cad73f9cf42ffd04ecbcde840d50f6167743a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266227"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780369"
 ---
 # <a name="cmapstringtostring-class"></a>Klasa CMapStringToString
 
@@ -71,19 +71,19 @@ na przykład przekłada się na
 
 ### <a name="public-structures"></a>Publiczne struktury
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMapStringToString::CPair](#cpair)|Struktura zagnieżdżona zawierające wartości klucza i wartości z obiektem ciągu skojarzone.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów na tej mapie.|
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa aktualną liczbę elementów w tabeli wyznaczania wartości skrótu.|
@@ -104,7 +104,7 @@ na przykład przekłada się na
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
 
@@ -226,6 +226,6 @@ Wywołaj tę metodę, aby wyszukać element mapy za pomocą klucza, który dokł
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)<br/>
+[Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301197"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779680"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Wiele typów dokumentów, widoków i okien ramowych
 
@@ -67,9 +67,9 @@ Poniższy rysunek podzielony na części, b i c, przedstawia trzy modele interfe
 ![Wiele&#45;wyświetlić interfejsy użytkownika](../mfc/media/vc37a71.gif "wielu&#45;wyświetlić interfejsy użytkownika") <br/>
 Interfejsy użytkownika widoku wielu
 
-Struktura zapewnia tych modeli, implementując polecenie nowe okno i udostępnienie klasy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), zgodnie z opisem w [Windows rozdzielacz](#_core_splitter_windows). Możesz zaimplementować innych modeli przy użyciu je jako punkt początkowy. Aby uzyskać przykładowe programy, które ilustrują różne konfiguracje widoków, oknami ramek i rozdzielaczy, zobacz [próbki MFC](../visual-cpp-samples.md).
+Struktura zapewnia tych modeli, implementując polecenie nowe okno i udostępnienie klasy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), zgodnie z opisem w [Windows rozdzielacz](#_core_splitter_windows). Możesz zaimplementować innych modeli przy użyciu je jako punkt początkowy. Aby uzyskać przykładowe programy, które ilustrują różne konfiguracje widoków, oknami ramek i rozdzielaczy, zobacz [próbki MFC](../overview/visual-cpp-samples.md).
 
-Aby uzyskać więcej informacji na temat `UpdateAllViews`, można znaleźć klasy [CView](../mfc/reference/cview-class.md) w *odwołanie MFC* i [próbki Bazgroły](../visual-cpp-samples.md).
+Aby uzyskać więcej informacji na temat `UpdateAllViews`, można znaleźć klasy [CView](../mfc/reference/cview-class.md) w *odwołanie MFC* i [próbki Bazgroły](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_multiple_frame_windows"></a> Wiele Windows ramki
 
@@ -79,11 +79,11 @@ Polecenie nowe okno w menu Okno dla aplikacji MDI utworzyć drugi ramki okna teg
 
 Okno rozdzielacza okna jest lub można podzielić na dwie lub więcej przewijany okienka. Rozdzielacz kontrolki (lub "Podziel okno") w ramki okna obok pasków przewijania umożliwia użytkownik może dostosować względne rozmiary okienek. Każde okienko jest widok tego samego dokumentu. W "dynamiczne" rozdzielaczy widoki są tej samej klasy przedstawione w części b rysunek widoku wielu interfejsów użytkownika. W "statyczne" rozdzielaczy widoków może być różnych klas. Okna podziału obu rodzajów są obsługiwane przez klasę [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
 
-Dynamiczne okna podziału, za pomocą widoków tej samej klasy Zezwalaj użytkownikowi na dzielenie okna w wiele okienek z życzeniem, a następnie przewiń listę różnych okienek, aby wyświetlić różne części dokumentu. Użytkownik może także cofnąć podziału okna, aby usunąć dodatkowe widoki. Okna podziału dodane do [próbki Bazgroły](../visual-cpp-samples.md) służą jako przykład. Ten temat opisuje techniki tworzenia dynamiczne okna podziału. Dynamiczne okno rozdzielacza jest wyświetlany w części b rysunek widoku wielu interfejsów użytkownika.
+Dynamiczne okna podziału, za pomocą widoków tej samej klasy Zezwalaj użytkownikowi na dzielenie okna w wiele okienek z życzeniem, a następnie przewiń listę różnych okienek, aby wyświetlić różne części dokumentu. Użytkownik może także cofnąć podziału okna, aby usunąć dodatkowe widoki. Okna podziału dodane do [próbki Bazgroły](../overview/visual-cpp-samples.md) służą jako przykład. Ten temat opisuje techniki tworzenia dynamiczne okna podziału. Dynamiczne okno rozdzielacza jest wyświetlany w części b rysunek widoku wielu interfejsów użytkownika.
 
 Statyczne okna podziału, za pomocą widoków różnymi klasami, rozpoczynać się okna podzielić na wiele okienek, każdy z innego celu. Na przykład do edytora mapy bitowej Visual C++ okna obraz pokazuje dwa okienka obok siebie. W okienku po lewej stronie wyświetlane life-sized obraz lustrzany mapy bitowej. Prawe okienko wyświetla powiększonego lub pomniejszenie obraz lustrzany mapy bitowej, ten sam. Okienka są oddzielone "pasek podziału", który użytkownik można przeciągnąć, aby zmieniać względne rozmiary okienek. Okno statyczny rozdzielacz jest wyświetlany w części c rysunek widoku wielu interfejsów użytkownika.
 
-Aby uzyskać więcej informacji, zobacz klasy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) w *odwołanie MFC* i [próbki MFC](../visual-cpp-samples.md).
+Aby uzyskać więcej informacji, zobacz klasy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) w *odwołanie MFC* i [próbki MFC](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Zobacz także
 

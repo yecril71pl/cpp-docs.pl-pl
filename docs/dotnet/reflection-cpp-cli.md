@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 9d7d2623608d7dab27de78567582c7043468e98f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444021"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770817"
 ---
 # <a name="reflection-ccli"></a>Odbicie (C++/CLI)
 
@@ -31,12 +31,12 @@ Odbicie umożliwia znanych danych typy poddanych w czasie wykonywania. Odbicie u
 
 Należy pamiętać, że podana nazwa zestawu silną nazwę (zobacz [tworzenie i zestawy Using Strong-Named](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), która obejmuje wersję zestawu, kultura i informacje o podpisywaniu. Należy zauważyć, że nazwa przestrzeni nazw, w którym zdefiniowano typ danych mogą być pobierane, wraz z nazwą klasy bazowej.
 
-Najczęstszym sposobem uzyskania dostępu do funkcji odbicie jest za pośrednictwem <xref:System.Object.GetType%2A> metody. Ta metoda jest dostarczany przez [System::Object](https://msdn.microsoft.com/library/system.object.aspx), z której pochodzą wszystkie klasy zebranych elementów bezużytecznych.
+Najczęstszym sposobem uzyskania dostępu do funkcji odbicie jest za pośrednictwem <xref:System.Object.GetType%2A> metody. Ta metoda jest dostarczany przez <xref:System.Object?displayProperty=nameWithType>, z której pochodzą wszystkie klasy zebranych elementów bezużytecznych.
 
 > [!NOTE]
 > Rozważania na temat .exe utworzonych za pomocą kompilatora języka Visual C++ jest dozwolone tylko, jeśli .exe został utworzony za pomocą **/CLR: pure** lub **/CLR: Safe** opcje kompilatora. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i niedostępne w programie Visual Studio 2017. Zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji.
 
-Aby uzyskać więcej informacji, zobacz [Namespace System.Reflection](https://msdn.microsoft.com/library/system.reflection.aspx)
+Aby uzyskać więcej informacji zobacz <xref:System.Reflection>
 
 ## <a name="example-gettype"></a>Przykład: GetType
 
@@ -79,7 +79,7 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>Przykład: typeid
 
-Podobnie jak w przypadku `GetType` metody [typeid](../windows/typeid-cpp-component-extensions.md) operator zwraca wskaźnik do **typu** obiektu, dlatego ten kod wskazuje nazwę typu **System.Int32**. Wyświetlanie nazwy typu jest najbardziej podstawowa funkcja odbicia, ale potencjalnie bardziej przydatną techniką jest sprawdzić lub odnajdywanie prawidłowe wartości dla typów wyliczeniowych. Można to zrobić przy użyciu statycznej **Enum::GetNames** funkcja, która zwraca tablicę ciągów, każdy z nich zawierający wartości wyliczenia w postaci tekstu.  Poniższy przykład pobiera tablicę ciągów, które opisano w wartości wyliczenia wartości **opcje** wyliczenia (CLR) i wyświetla je w pętli.
+Podobnie jak w przypadku `GetType` metody [typeid](../extensions/typeid-cpp-component-extensions.md) operator zwraca wskaźnik do **typu** obiektu, dlatego ten kod wskazuje nazwę typu **System.Int32**. Wyświetlanie nazwy typu jest najbardziej podstawowa funkcja odbicia, ale potencjalnie bardziej przydatną techniką jest sprawdzić lub odnajdywanie prawidłowe wartości dla typów wyliczeniowych. Można to zrobić przy użyciu statycznej **Enum::GetNames** funkcja, która zwraca tablicę ciągów, każdy z nich zawierający wartości wyliczenia w postaci tekstu.  Poniższy przykład pobiera tablicę ciągów, które opisano w wartości wyliczenia wartości **opcje** wyliczenia (CLR) i wyświetla je w pętli.
 
 Jeśli dostępny czwarty etap jest dodawany do **opcje** wyliczenia, ten kod będzie zgłaszać nowa opcja bez ponownej kompilacji, nawet jeśli nie zdefiniowano wyliczenia w osobnym zestawie.
 
@@ -114,7 +114,7 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>Przykład: Właściwości i elementy członkowskie gettype —
+## <a name="example-gettype-members-and-properties"></a>Przykład: Właściwości i elementy członkowskie GetType
 
 `GetType` Obiekt obsługuje szereg elementów członkowskich i właściwości, których można użyć do sprawdzenia typu. Ten kod pobiera i wyświetla niektóre z tych informacji:
 
@@ -177,9 +177,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Przykład: inspekcja zestawów
 
-Jeśli powyższy kod jest kompilowany do biblioteki DLL o nazwie vcpp_reflection_6.dll, można następnie używać odbicia, aby sprawdzić zawartość tego zestawu. Wiąże się to przy użyciu odbicia statycznych funkcji interfejsu API [Assembly::Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) można załadować zestawu. Ta funkcja zwróci adres **zestawu** obiektu, który następnie może być odpytywany modułów i typów w ramach informacje.
+Jeśli powyższy kod jest kompilowany do biblioteki DLL o nazwie vcpp_reflection_6.dll, można następnie używać odbicia, aby sprawdzić zawartość tego zestawu. Obejmuje to przy użyciu odbicia statyczne xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType funkcji interfejsu API można załadować zestawu. Ta funkcja zwróci adres **zestawu** obiektu, który następnie może być odpytywany modułów i typów w ramach informacje.
 
-Gdy system odbicia pomyślnie ładuje zestaw tablicę **typu** obiektów jest pobierany za pomocą [Assembly::GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) funkcji. Każdy element tablicy informacjami o innego typu, mimo że w tym przypadku tylko jedna klasa jest zdefiniowana. Za pomocą pętli, każdy **typu** w tej tablicy jest wysyłane zapytanie o elementy członkowskie typu przy użyciu **Type::GetMembers** funkcji. Ta funkcja zwraca tablicę **MethodInfo** obiektów, każdy obiekt zawierający informacje o funkcji elementu członkowskiego, element członkowski danych lub właściwości w typie.
+Gdy system odbicia pomyślnie ładuje zestaw tablicę **typu** obiektów jest pobierany za pomocą <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> funkcji. Każdy element tablicy informacjami o innego typu, mimo że w tym przypadku tylko jedna klasa jest zdefiniowana. Za pomocą pętli, każdy **typu** w tej tablicy jest wysyłane zapytanie o elementy członkowskie typu przy użyciu **Type::GetMembers** funkcji. Ta funkcja zwraca tablicę **MethodInfo** obiektów, każdy obiekt zawierający informacje o funkcji elementu członkowskiego, element członkowski danych lub właściwości w typie.
 
 Uwaga lista metod jawnie obejmuje funkcje zdefiniowane w **TestClass** i funkcji niejawnie dziedziczone z **System::Object** klasy. W ramach opisywanego na platformie .NET, a nie przy użyciu składni języka Visual C++ właściwości są wyświetlane jako podstawowy element członkowski danych uzyskiwał dostęp do funkcji get/set. Funkcje get/set są wyświetlane na tej liście jako metody regularnego. Odbicie jest obsługiwany przez środowisko uruchomieniowe języka wspólnego, nie przez kompilator języka Visual C++.
 
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-## <a name="implement"></a> Porady: implementacja architektury składnika Plug-In przy użyciu odbicia
+## <a name="implement"></a> Jak: Implementacja architektury składnika Plug-In przy użyciu odbicia
 
 Poniższe przykłady kodu ilustrują użycie odbicia do implementowania prostego architektury "wtyczki". Pierwszy listy jest aplikacją, a drugi ma wtyczce. Aplikacja jest wiele formularza dokumentu, która wypełnia się przy użyciu klas na podstawie formularza w biblioteki DLL dodatku plug-in dostarczana jako argument wiersza polecenia.
 
@@ -340,7 +340,7 @@ protected:
 };
 ```
 
-## <a name="enumerate"></a> Porady: Wyliczanie typów danych w zestawach za pomocą odbicia
+## <a name="enumerate"></a> Jak: Wyliczanie typów danych w zestawach za pomocą odbicia
 
 Poniższy przykład demonstruje wyliczanie typów publicznych i elementów członkowskich przy użyciu <xref:System.Reflection>.
 

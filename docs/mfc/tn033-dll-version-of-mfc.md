@@ -1,5 +1,5 @@
 ---
-title: 'TN033: wersja DLL biblioteki MFC'
+title: 'TN033: Wersja dll biblioteki MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.dll
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523971"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767785"
 ---
-# <a name="tn033-dll-version-of-mfc"></a>TN033: wersja DLL biblioteki MFC
+# <a name="tn033-dll-version-of-mfc"></a>TN033: Wersja dll biblioteki MFC
 
 Ta uwaga opisuje, jak można użyć MFCxx.DLL i MFCxxD.DLL (gdzie x jest numerem wersji MFC) udostępniane biblioteki łączone dynamicznie z aplikacjami MFC oraz biblioteki DLL rozszerzeń MFC. Aby uzyskać więcej informacji na temat regularnych bibliotek DLL MFC, zobacz [przy użyciu biblioteki MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).
 
@@ -31,18 +31,18 @@ Ta uwaga techniczna obejmuje trzy aspekty biblioteki dll. Ostatnie dwa są dla b
 
 Jeśli interesuje Cię Tworzenie biblioteki DLL przy użyciu biblioteki MFC, które mogą być używane z innego typu niż MFC aplikacji (jest to nazywane zwykłej biblioteki MFC DLL), zapoznaj się [techniczne Uwaga 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md).
 
-## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Omówienie obsługi MFCxx.DLL: terminologii i pliki
+## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Omówienie obsługi MFCxx.DLL: Terminologia i pliki
 
-**Regularne biblioteki DLL MFC**: używasz regularnej biblioteki DLL MFC do tworzenia autonomicznych biblioteki DLL, przy użyciu niektórych klas MFC. Interfejsy granicę aplikacji/DLL są interfejsy "C", a aplikacja kliencka nie musi być aplikacji MFC.
+**Regularne biblioteki DLL MFC**: Używasz regularnej biblioteki DLL MFC do tworzenia autonomicznych biblioteki DLL, przy użyciu niektórych klas MFC. Interfejsy granicę aplikacji/DLL są interfejsy "C", a aplikacja kliencka nie musi być aplikacji MFC.
 
-To jest wersja Obsługa DLL obsługiwane w wersji 1.0 z MFC. Jest on opisany w [techniczne Uwaga 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) i próbce zaawansowanych koncepcji MFC [DLLScreenCap](../visual-cpp-samples.md).
+To jest wersja Obsługa DLL obsługiwane w wersji 1.0 z MFC. Jest on opisany w [techniczne Uwaga 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) i próbce zaawansowanych koncepcji MFC [DLLScreenCap](../overview/visual-cpp-samples.md).
 
 > [!NOTE]
 > Począwszy od Visual C++ w wersji 4.0 termin **USRDLL** jest przestarzały i został zastąpiony przez zwykłej biblioteki MFC DLL, która statycznie łączy się MFC. Mogą także tworzyć zwykłej biblioteki MFC DLL, która łączy dynamicznie z MFC.
 
 MFC 3.0 (i nowsze wersje) obsługuje zwykłych bibliotekach MFC dll z nowych funkcji, łącznie z klasy OLE i bazy danych.
 
-**AFXDLL**: to jest również nazywany udostępnionych wersji biblioteki MFC. Jest to nowe biblioteki DLL dodano obsługę MFC w wersji 2.0. Sama biblioteka MFC jest w szeregu bibliotek DLL (opisanych poniżej), a aplikacja kliencka lub biblioteki DLL dynamicznie łączy biblioteki dll, które są wymagane. Interfejsy granicę aplikacji/DLL są w języku C + +/ interfejsu klasy MFC. Aplikacja kliencka musi być aplikacji MFC. To obsługuje wszystkie funkcje MFC 3.0 (wyjątek: UNICODE nie jest obsługiwane dla klas baz danych).
+**AFXDLL**: Jest to również nazywane udostępnionych wersji biblioteki MFC. Jest to nowe biblioteki DLL dodano obsługę MFC w wersji 2.0. Sama biblioteka MFC jest w szeregu bibliotek DLL (opisanych poniżej), a aplikacja kliencka lub biblioteki DLL dynamicznie łączy biblioteki dll, które są wymagane. Interfejsy granicę aplikacji/DLL są w języku C + +/ interfejsu klasy MFC. Aplikacja kliencka musi być aplikacji MFC. To obsługuje wszystkie funkcje MFC 3.0 (wyjątek: UNICODE nie jest obsługiwane dla klas baz danych).
 
 > [!NOTE]
 > Począwszy od Visual C++ w wersji 4.0 tego rodzaju DLL nazywa się "Rozszerzeniem DLL."
@@ -51,7 +51,7 @@ Ta uwaga użyje MFCxx.DLL do odwoływania się do całego ustawionych biblioteki
 
 - Debugowanie: MFCxxD.DLL (połączona) i MFCSxxD.LIB (statyczny).
 
-- Wydanie: MFCxx.DLL (połączona) i MFCSxx.LIB (statyczny).
+- Wersja: MFCxx.DLL (połączona) i MFCSxx.LIB (statyczny).
 
 - Debugowanie kodu Unicode: MFCxxUD.DLL (połączona) i MFCSxxD.LIB (statyczny).
 
@@ -64,7 +64,7 @@ Linki z aplikacji do odpowiednich Importuj biblioteki:
 
 - Debugowanie: MFCxxD.LIB
 
-- Wydanie: MFCxx.LIB
+- Wersja: MFCxx.LIB
 
 - Debugowanie kodu Unicode: MFCxxUD.LIB
 
@@ -98,7 +98,7 @@ Biblioteka DLL rozszerzenia MFC jest biblioteki DLL zawierającej klasy i funkcj
 
 - Biblioteka DLL rozszerzenia MFC zapewniają zazwyczaj procedury inicjowania, aby utworzyć `CDynLinkLibrary` Jeśli rozszerzeń MFC DLL chce do wyeksportowania `CRuntimeClass`ak lub zasoby do aplikacji. Klasy pochodne `CDynLinkLibrary` mogą być używane, jeśli dane poszczególnych aplikacji musi być utrzymywana przez rozszerzenia MFC biblioteki DLL.
 
-Te zagadnienia są opisane bardziej szczegółowo poniżej. Ponadto należy zapoznać się w próbce zaawansowanych koncepcji MFC [DLLHUSK](../visual-cpp-samples.md) , ponieważ zawiera ono:
+Te zagadnienia są opisane bardziej szczegółowo poniżej. Ponadto należy zapoznać się w próbce zaawansowanych koncepcji MFC [DLLHUSK](../overview/visual-cpp-samples.md) , ponieważ zawiera ono:
 
 - Tworzenie aplikacji przy użyciu biblioteki udostępnione. (DLLHUSK. Plik EXE jest aplikacja MFC, która łączy dynamicznie do biblioteki MFC dll, a także inne).
 
@@ -324,7 +324,7 @@ Dynamiczne tworzenie obiektów C++ podana nazwa klasy języka C++ jest podobny. 
 
 Jeśli chcesz, aby aplikacja kliencka, aby użyć klasy w rozszerzeniu MFC DLL, które są `DECLARE_SERIAL`, a następnie należy wyeksportować w Twoich zajęciach, które mają być widoczne dla aplikacji klienckiej. To również odbywa się przez zalet `CDynLinkLibrary` listy.
 
-W przypadku próbce zaawansowanych koncepcji MFC [DLLHUSK](../visual-cpp-samples.md), listy wygląda mniej więcej tak:
+W przypadku próbce zaawansowanych koncepcji MFC [DLLHUSK](../overview/visual-cpp-samples.md), listy wygląda mniej więcej tak:
 
 ```Example
 head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
@@ -339,7 +339,7 @@ head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
 
 MFCxx.DLL jest zwykle ostatni zasób i lista klas. MFCxx.DLL obejmuje wszystkie standardowe zasoby MFC, w tym monitu ciągi dla identyfikatorów poleceń standardowych. Umieszczając go na końcu listy umożliwia bibliotek DLL i aplikacja kliencka nie mają własnej kopii standardowe zasoby MFC, ale można polegać na zasoby udostępnione w MFCxx.DLL zamiast tego.
 
-Scalanie zasobów i nazwy klasy wszystkie biblioteki dll w przestrzeni nazw aplikacji klienta ma wadą przeznaczonego do należy zachować ostrożność, jakie identyfikatory lub nazwy, które można wybrać. Można oczywiście tę funkcję można wyłączyć przez nie wyeksportowanie albo zasobów lub `CDynLinkLibrary` obiektu do aplikacji klienckiej. [DLLHUSK](../visual-cpp-samples.md) przykładowe zarządza przestrzeń nazw udostępnionych zasobów przy użyciu wiele plików nagłówkowych. Zobacz [techniczne 35 Uwaga](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) więcej porad na temat korzystania z plików udostępnionych zasobów.
+Scalanie zasobów i nazwy klasy wszystkie biblioteki dll w przestrzeni nazw aplikacji klienta ma wadą przeznaczonego do należy zachować ostrożność, jakie identyfikatory lub nazwy, które można wybrać. Można oczywiście tę funkcję można wyłączyć przez nie wyeksportowanie albo zasobów lub `CDynLinkLibrary` obiektu do aplikacji klienckiej. [DLLHUSK](../overview/visual-cpp-samples.md) przykładowe zarządza przestrzeń nazw udostępnionych zasobów przy użyciu wiele plików nagłówkowych. Zobacz [techniczne 35 Uwaga](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) więcej porad na temat korzystania z plików udostępnionych zasobów.
 
 ### <a name="initializing-the-dll"></a>Inicjowanie biblioteki DLL
 
@@ -411,7 +411,7 @@ Jeśli jest używana funkcja zewnętrznego pliku reguł programu make Visual c++
 
 Flagi kompilatora wymagane:
 
-- **/ / MD D_AFXDLL**
+- **/D_AFXDLL /MD**
    **/D_AFXDLL**
 
 Standardowe nagłówki MFC należy ten symbol do zdefiniowania:
@@ -432,7 +432,7 @@ Większość przykładowych programów MFC mogą być wbudowane z Visual C++ lub
 
 Aby przekonwertować żadnego z tych przykładów, aby użyć MFCxx.DLL, można załadować. Klucz MAK pliku w Visual C++ i ustaw opcje projektu, zgodnie z powyższym opisem. Jeśli używasz kompilacji NMAKE, można określić "AFXDLL = 1" w NMAKE wiersz polecenia i który będzie skompilować przykład za pomocą udostępnionej biblioteki MFC.
 
-W próbce zaawansowanych koncepcji MFC [DLLHUSK](../visual-cpp-samples.md) został utworzony za pomocą wersja dll biblioteki MFC. W tym przykładzie nie tylko przedstawiono sposób kompilowania aplikacji połączonej z MFCxx.DLL, ale również dwie inne funkcje opcji pakowania biblioteki MFC DLL, takich jak opisane w dalszej części tego Uwaga techniczna bibliotek DLL rozszerzeń MFC.
+W próbce zaawansowanych koncepcji MFC [DLLHUSK](../overview/visual-cpp-samples.md) został utworzony za pomocą wersja dll biblioteki MFC. W tym przykładzie nie tylko przedstawiono sposób kompilowania aplikacji połączonej z MFCxx.DLL, ale również dwie inne funkcje opcji pakowania biblioteki MFC DLL, takich jak opisane w dalszej części tego Uwaga techniczna bibliotek DLL rozszerzeń MFC.
 
 ### <a name="packaging-notes"></a>Uwagi dotyczące tworzenia pakietów
 

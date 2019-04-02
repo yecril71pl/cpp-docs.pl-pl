@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 87beb468fb8fe61358a03e2cd287903a268a18ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 5e19ab9b9339f3e6f61abf7731a40ed3832b50c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740496"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767365"
 ---
 # <a name="csize-class"></a>CSize, klasa
 
@@ -32,13 +32,13 @@ class CSize : public tagSIZE
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSize::CSize](#csize)|Konstruuje `CSize` obiektu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSize::operator-](#operator_-)|Odejmuje dwa rozmiary.|
 |[CSize::operator! =](#operator_neq)|Sprawdza pod kątem nierówności pomiędzy `CSize` i rozmiar.|
@@ -226,7 +226,7 @@ Czwarty operatora jednoargumentowego znaku minusa, zmienia znak `CSize` wartoś�
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint, klasa](../../atl-mfc-shared/reference/cpoint-class.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269855"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781240"
 ---
 # <a name="ceditview-class"></a>Klasa CEditView
 
@@ -61,13 +61,13 @@ class CEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CEditView::CEditView](#ceditview)|Tworzy obiekt typu `CEditView`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CEditView::FindText](#findtext)|Wyszukuje ciąg w tekście.|
 |[CEditView::GetBufferLength](#getbufferlength)|Pobiera długość buforu znaków.|
@@ -83,7 +83,7 @@ class CEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CEditView::OnFindNext](#onfindnext)|Znajduje następne wystąpienie ciągu tekstowego.|
 |[CEditView::OnReplaceAll](#onreplaceall)|Zamienia wszystkie wystąpienia podanego ciągu nowy ciąg.|
@@ -92,7 +92,7 @@ class CEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CEditView::dwStyleDefault](#dwstyledefault)|Domyślny styl dla obiektów typu `CEditView`.|
 
@@ -492,7 +492,7 @@ Wywołaj `UnlockBuffer` po zakończeniu przy użyciu wskaźnika zwrócony przez 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Próbki MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CEdit](../../mfc/reference/cedit-class.md)<br/>

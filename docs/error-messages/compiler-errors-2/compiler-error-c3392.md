@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 34097de7d50e260ee82a8891cee988b1533debdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556575"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779537"
 ---
 # <a name="compiler-error-c3392"></a>Błąd kompilatora C3392
 
 "type_arg": nieprawidłowy typ argumentu dla parametru generycznego param, z ogólnego "generic_type" musi mieć publicznego konstruktora bez parametrów
 
-Niepoprawnie wystąpienia typu ogólnego. Sprawdź definicję typu. Aby uzyskać więcej informacji, zobacz [ogólne](../../windows/generics-cpp-component-extensions.md).
+Niepoprawnie wystąpienia typu ogólnego. Sprawdź definicję typu. Aby uzyskać więcej informacji, zobacz [ogólne](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

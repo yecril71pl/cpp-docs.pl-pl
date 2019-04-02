@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 61c8dfa85363509ee09eaaccdb6d45d70390c344
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262769"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780343"
 ---
 # <a name="cdatapathproperty-class"></a>Klasa CDataPathProperty
 
@@ -41,13 +41,13 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Konstruuje `CDataPathProperty` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDataPathProperty::GetControl](#getcontrol)|Pobiera asynchroniczny kontrolkę OLE skojarzone z `CDataPathProperty` obiektu.|
 |[CDataPathProperty::GetPath](#getpath)|Pobiera nazwę właściwości ścieżki.|
@@ -217,7 +217,7 @@ void SetPath(LPCTSTR lpszPath);
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obraz przykładowej MFC](../../visual-cpp-samples.md)<br/>
+[Obraz przykładowej MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)

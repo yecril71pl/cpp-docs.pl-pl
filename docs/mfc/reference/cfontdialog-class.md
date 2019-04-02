@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 3dea0f2ba358582b49de107c234a66a751e8f0b0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b711ca65e552d495e466ea2e46a6779cf43ecbe3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267189"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767747"
 ---
 # <a name="cfontdialog-class"></a>Klasa CFontDialog
 
@@ -55,13 +55,13 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFontDialog::CFontDialog](#cfontdialog)|Konstruuje `CFontDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFontDialog::DoModal](#domodal)|Wyświetla okno dialogowe i umożliwia użytkownikowi dokonać wyboru.|
 |[CFontDialog::GetCharFormat](#getcharformat)|Pobiera formatowanie znaków w wybranej czcionki.|
@@ -78,7 +78,7 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFontDialog::m_cf](#m_cf)|Struktury używane w celu dostosowania `CFontDialog` obiektu.|
 
@@ -394,6 +394,6 @@ Po konstruowanie `CFontDialog` obiektu, możesz użyć `m_cf` do modyfikowania r
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

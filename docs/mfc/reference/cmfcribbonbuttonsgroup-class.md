@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 3a0806d5c45f429f975b7b8ef0085252fe2b2528
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39979d48eb7b0f7aba9dbe7bd42c2f91845af968
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295893"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781994"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Klasa CMFCRibbonButtonsGroup
 
@@ -51,13 +51,13 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup](#cmfcribbonbuttonsgroup)|Konstruuje `CMFCRibbonButtonsGroup` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Dodaje przycisk do grupy.|
 |[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Dodaje listę przycisków do grupy.|
@@ -77,7 +77,7 @@ Grupy jest tworzony na podstawie [CMFCBaseRibbonElement](../../mfc/reference/cmf
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonButtonsGroup` klasy. W przykładzie pokazano sposób tworzenia `CMFCRibbonButtonsGroup` obiektu, przypisywanie obrazów do grupy przycisków Wstążki i dodać przycisk do grupy przycisków wstążki. Ten fragment kodu jest częścią [Rysowanie Client sample](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonButtonsGroup` klasy. W przykładzie pokazano sposób tworzenia `CMFCRibbonButtonsGroup` obiektu, przypisywanie obrazów do grupy przycisków Wstążki i dodać przycisk do grupy przycisków wstążki. Ten fragment kodu jest częścią [Rysowanie Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 

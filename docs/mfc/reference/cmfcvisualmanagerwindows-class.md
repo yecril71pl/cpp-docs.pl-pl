@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d26e679135f6e8c8236803bae0343e956000c9e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275964"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779121"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows Class
 
@@ -163,13 +163,13 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|Domyślny konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Struktura wywołuje tę metodę w celu określenia, czy karty 3D zawsze powinien być wyróżniony w aplikacji. (Przesłania [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Przesłania `CMFCVisualManager::DrawComboBorderWinXP`).|
@@ -240,7 +240,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Określa, czy motyw Windows XP wyświetla karty 3D.|
 
@@ -252,7 +252,7 @@ Jednak motyw Windows może być niedostępna, jeśli aplikacja jest uruchomiona 
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `CMFCVisualManagerWindows`. Ten fragment kodu jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `CMFCVisualManagerWindows`. Ten fragment kodu jest częścią [próbka Demo alertu pulpitu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]
 

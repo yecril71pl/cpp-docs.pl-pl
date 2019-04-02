@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304525"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780616"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -285,13 +285,13 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CListCtrl::CListCtrl](#clistctrl)|Konstruuje `CListCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|Określa szerokość i wysokość, wymagany, aby wyświetlić elementy kontrolka widoku listy.|
 |[CListCtrl::Arrange](#arrange)|Wyrównuje elementy na siatce.|
@@ -619,7 +619,7 @@ virtual BOOL Create(
 Określa styl kontrolki listy. Zastosuj dowolną kombinację stylów kontrolki listy do formantu. Zobacz [stylów okna widoku listy](/windows/desktop/Controls/list-view-window-styles) w zestawie Windows SDK dla pełnej listy tych stylów. Rozszerzone style specyficzne dla kontrolkę za pomocą zestawu [SetExtendedStyle](#setextendedstyle).
 
 *Rect*<br/>
-Określa rozmiar i położenie kontrolki listy. Może być albo `CRect` obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Określa rozmiar i położenie kontrolki listy. Może być albo `CRect` obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki listy, zwykle `CDialog`. Nie może być równa NULL.
@@ -667,7 +667,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Określa styl kontrolki listy. Zastosuj dowolną kombinację stylów kontrolki listy do formantu. Aby uzyskać pełną listę tych stylów, zobacz [stylów okna widoku listy](/windows/desktop/Controls/list-view-window-styles) w zestawie Windows SDK.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 Indeks elementu, którego przeciągnij obraz lista ma zostać utworzony.
 
 *lpPoint*<br/>
-Adres [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która otrzymuje początkową lokalizację w lewym górnym rogu obrazu, w widoku współrzędne.
+Adres [punktu](/previous-versions/dd162805\(v=vs.85\)) strukturę, która otrzymuje początkową lokalizację w lewym górnym rogu obrazu, w widoku współrzędne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parametr|Opis|
 |---------------|-----------------|
 |*iGroupId*|[in] Określa grupę.|
-|*lpRect*|[out w] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta grupy, który jest określony przez *iGroupId*.|
+|*lpRect*|[out w] Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta grupy, który jest określony przez *iGroupId*.|
 |*iCoords*|[in] Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:<br /><br /> -LVGGR_GROUP - współrzędnych (ustawienie domyślne) rozwiniętej całej grupy.<br />-LVGGR_HEADER - współrzędne tylko nagłówek (zwinięte grupy).<br />-LVGGR_SUBSETLINK - współrzędne tylko łącze podzestawu (znaczników podzbioru).|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1451,7 +1451,7 @@ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razi
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt wywołujący jest odpowiedzialny za przydzielanie [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) wskazywanej przez *pRect* parametru.
+Obiekt wywołujący jest odpowiedzialny za przydzielanie [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) wskazywanej przez *pRect* parametru.
 
 Ta metoda wysyła [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect) komunikat, który jest opisany w zestawie Windows SDK.
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in] Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę dla nadrzędnego elementu podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Ten parametr nie może mieć wartości NULL.|
 |*iColumn*|[in] Liczony od zera indeks kolumny w kontrolce.|
 |*rectType*|[in] Część podelement widoku listy, dla której jest pobierana prostokąt otaczający. Określ jedną z następujących wartości:<br /><br /> LVIR_BOUNDS — zwraca prostokąt otaczający podelement całego, w tym ikony oraz etykiety.<br /><br /> LVIR_ICON — zwraca prostokąt otaczający ikony lub małą ikonę podelement.<br /><br /> LVIR_LABEL — zwraca prostokąt otaczający podelement tekstu.|
-|*pRect*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje na temat prostokąt otaczający podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ten parametr nie może mieć wartości NULL.|
+|*pRect*|[out] Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która otrzymuje informacje na temat prostokąt otaczający podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury. Ten parametr nie może mieć wartości NULL.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 Indeks elementu, którego pozycja ma być pobrana.
 
 *lpPoint*<br/>
-Adres [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, która odbiera położenie elementu lewego górnego rogu, w widoku współrzędne.
+Adres [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury, która odbiera położenie elementu lewego górnego rogu, w widoku współrzędne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 Indeks elementu, którego pozycja ma być pobrana.
 
 *lpRect*<br/>
-Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający.
+Adres [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która odbiera prostokąt otaczający.
 
 *nCode*<br/>
 Część elementu widoku listy, dla którego mają zostać pobrane prostokąt otaczający. Może to być jedna z następujących wartości:
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoint*<br/>
-Adres [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która odbiera początkowego widoku.
+Adres [punktu](/previous-versions/dd162805\(v=vs.85\)) strukturę, która odbiera początkowego widoku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Adres [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parametry
 
 *pPoint*<br/>
-Wskaźnik do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, który zawiera test trafień służy do koordynowania, względem obszaru klienckiego kontrolki listy.
+Wskaźnik do [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury, który zawiera test trafień służy do koordynowania, względem obszaru klienckiego kontrolki listy.
 
 *lvim*<br/>
 Wskaźnik do [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) strukturę, która określa punkt wstawiania najbliżej współrzędne zdefiniowane przez parametr punktu.
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 Indeks elementu, którego pozycja ma być utworzony.
 
 *(czas pacyficzny)*<br/>
-A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, określając nowe miejsce, w widoku współrzędne, elementu lewego górnego rogu.
+A [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury, określając nowe miejsce, w widoku współrzędne, elementu lewego górnego rogu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4422,7 +4422,7 @@ Tę funkcję również rozmieszcza kontrolka widoku listy, jeśli ma on styl LVS
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Próbki MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](cwnd-class.md)<br/>
 [Wykres hierarchii](../hierarchy-chart.md)<br/>
 [Klasa CImageList](cimagelist-class.md)

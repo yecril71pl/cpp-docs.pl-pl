@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 6e593d023c486aa504f0b5eee8578fa8c307bcc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432711"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769202"
 ---
 # <a name="uuidof-operator"></a>Operator __uuidof
 
@@ -39,7 +39,7 @@ Użyj słowa kluczowego, aby wyodrębnić identyfikator GUID podłączony do:
 
 - Obiekt o [uuid](../cpp/uuid-cpp.md) atrybutów rozszerzonych.
 
-- Blok biblioteki utworzonych za pomocą [modułu](../windows/module-cpp.md) atrybutu.
+- Blok biblioteki utworzonych za pomocą [modułu](../windows/attributes/module-cpp.md) atrybutu.
 
 > [!NOTE]
 > Do kompilacji debugowanej **__uuidof** zawsze inicjuje obiekt dynamicznie (w czasie wykonywania). W kompilacji wydania **__uuidof** statycznie (w czasie kompilacji) można zainicjować obiektu.
@@ -84,4 +84,4 @@ StringFromCLSID(__LIBID_, &lpolestr);
 ## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)
+[słowa kluczowe](../cpp/keywords-cpp.md)

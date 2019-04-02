@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818378"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780824"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX
 
@@ -51,7 +51,7 @@ Podczas tworzenia projektu, nazwę projektu. Domyślnie nazwa projektu jest rów
 
 Kompilator Microsoft Visual C++ implementuje kilka rozszerzeń do standardowego języka programowania C++ do obsługi programowania dla systemów operacyjnych Windows. Te rozszerzenia są używane, aby określić atrybuty klasy magazynu, funkcji, Konwencje wywoływania i adresowanie, między innymi na podstawie. Aby uzyskać pełną listę wszystkich obsługiwanych rozszerzeń języka C++, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-Wszystkie rozszerzenia charakterystyczne dla Microsoft c++ można wyłączyć za pomocą `/Za` — opcja kompilatora. Ta opcja jest zalecana, jeśli chcesz napisać kod do uruchamiania na wielu platformach. Aby uzyskać więcej informacji na temat `/Za` — opcja kompilatora, zobacz [/za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md). Aby uzyskać więcej informacji na temat zgodności kompilatora języka C++, zobacz [Visual zgodność języka C++](../visual-cpp-language-conformance.md) i [niestandardowe zachowanie](../cpp/nonstandard-behavior.md).
+Wszystkie rozszerzenia charakterystyczne dla Microsoft c++ można wyłączyć za pomocą `/Za` — opcja kompilatora. Ta opcja jest zalecana, jeśli chcesz napisać kod do uruchamiania na wielu platformach. Aby uzyskać więcej informacji na temat `/Za` — opcja kompilatora, zobacz [/za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md). Aby uzyskać więcej informacji na temat zgodności kompilatora języka C++, zobacz [Visual zgodność języka C++](../overview/visual-cpp-language-conformance.md) i [niestandardowe zachowanie](../cpp/nonstandard-behavior.md).
 
 ## <a name="precompiled-headers"></a>Prekompilowane nagłówki
 
@@ -65,4 +65,4 @@ Aby uzyskać więcej informacji, zobacz [eksportowanie z systemu UNIX do Win32](
 
 ## <a name="see-also"></a>Zobacz także
 
-[Projekty i systemów kompilacji](../build/projects-and-build-systems-cpp.md)
+[Projekty i systemy kompilacji](../build/projects-and-build-systems-cpp.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332442"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779264"
 ---
 # <a name="postfix-expressions"></a>Wyrażenia przyrostków
 
@@ -149,7 +149,7 @@ Elipsy oznaczają, że argumenty mogą być wymagane, ale że liczba i typy nie 
 
 Elipsy, jeśli używane, muszą być zagwarantowane ostatnio na liście argumentów. Aby uzyskać więcej informacji o przekazywaniu zmienną liczbę argumentów, zobacz Omówienie [va_arg, va_start i va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) w *odwołanie do biblioteki wykonawczej*.
 
-Aby uzyskać informacje o domyślnych argumentach w programowaniu CLR, zobacz [zmiennej listy argumentów (...) (C + +/ CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Aby uzyskać informacje o domyślnych argumentach w programowaniu CLR, zobacz [zmiennej listy argumentów (...) (C + +/ CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Argumenty domyślne umożliwiają określenie wartości, które argument założyć, że jeśli nie zostanie podana w wywołaniu funkcji. Poniższy fragment kodu pokazuje, jak działają argumenty domyślne. Aby uzyskać więcej informacji na temat ograniczeń w określaniu domyślnych argumentów, zobacz [argumenty domyślne](../cpp/default-arguments.md).
 

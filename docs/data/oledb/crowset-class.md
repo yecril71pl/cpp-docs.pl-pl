@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329016"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779459"
 ---
 # <a name="crowset-class"></a>Klasa CRowset
 
@@ -275,7 +275,7 @@ Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.
 |[Zamknij](#close)|Wersje wierszy i bieżący `IRowset` interfejsu.|
 |[Compare](#compare)|Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Tworzy nową `CRowset` obiektu i (opcjonalnie) kojarzy ją z `IRowset` interfejs dostarczany jako parametr.|
-|[Delete](#delete)|Usuwa wiersze z wierszy przy użyciu [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
+|[Usuwanie](#delete)|Usuwa wiersze z wierszy przy użyciu [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Wyszukuje następny zgodny wiersz po zakładką.|
 |[GetApproximatePosition](#getapproximateposition)|Zwraca pozycję przybliżony wiersz odpowiadający zakładki.|
 |[GetData](#getdata)|Pobiera dane z zestawu wierszy kopię wiersza.|
@@ -534,7 +534,7 @@ Standardowa HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład jak używać tej funkcji, zobacz [MultiRead przykładowe](../../visual-cpp-samples.md).
+Na przykład jak używać tej funkcji, zobacz [MultiRead przykładowe](../../overview/visual-cpp-samples.md).
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
@@ -937,8 +937,8 @@ Standardowa HRESULT.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe DBViewer](../../visual-cpp-samples.md)<br/>
-[Przykładowe multiRead](../../visual-cpp-samples.md)<br/>
-[Przykładowe multiRead atrybutów](../../visual-cpp-samples.md)<br/>
+[Przykładowe DBViewer](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowe multiRead](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowe multiRead atrybutów](../../overview/visual-cpp-samples.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

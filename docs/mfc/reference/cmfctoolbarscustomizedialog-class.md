@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295035"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780967"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Klasa CMFCToolBarsCustomizeDialog
 
@@ -47,14 +47,14 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Konstruuje `CMFCToolBarsCustomizeDialog` obiektu.|
 |`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Wstawia listę poleceń przycisku paska narzędzi na **polecenia** strony|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Ładuje menu z zasobów i wywołania [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) Aby dodać menu do listy poleceń na **polecenia** strony.|
@@ -80,7 +80,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Metoda wywoływana przez platformę, aby określić, czy lista narzędzi zdefiniowane przez użytkownika jest prawidłowa.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Wywoływane przez platformę, gdy zmienią się właściwości narzędzia zdefiniowanego przez użytkownika.|
@@ -96,7 +96,7 @@ Gdy **Dostosuj** okno dialogowe jest aktywne, aplikacja działa w specjalnym try
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCToolBarsCustomizeDialog` klasy. W przykładzie pokazano, jak zastąpić przycisku paska narzędzi, w polu listy poleceń na **polecenia** strony, należy włączyć tworzenie nowych pasków narzędzi za pomocą **Dostosuj** okno dialogowe i wyświetlanie  **Dostosowywanie** okno dialogowe. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCToolBarsCustomizeDialog` klasy. W przykładzie pokazano, jak zastąpić przycisku paska narzędzi, w polu listy poleceń na **polecenia** strony, należy włączyć tworzenie nowych pasków narzędzi za pomocą **Dostosuj** okno dialogowe i wyświetlanie  **Dostosowywanie** okno dialogowe. Ten fragment kodu jest częścią [próbka IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
@@ -158,7 +158,7 @@ Jeśli `iInsertBefore` wynosi -1, ten przycisk jest dołączany do listy kategor
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `AddButton` metody `CMFCToolBarsCustomizeDialog` klasy. Ten fragment kodu jest częścią [przykładowe suwaka](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `AddButton` metody `CMFCToolBarsCustomizeDialog` klasy. Ten fragment kodu jest częścią [przykładowe suwaka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]
 
@@ -246,7 +246,7 @@ Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `AddToolBar` method in Class metoda `CMFCToolBarsCustomizeDialog` klasy. Ten fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `AddToolBar` method in Class metoda `CMFCToolBarsCustomizeDialog` klasy. Ten fragment kodu jest częścią [przykład konsola programu Word](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]
 
@@ -327,7 +327,7 @@ Aby uzyskać więcej informacji na temat wartości, które można przekazać *ui
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCToolBarsCustomizeDialog` klasy. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCToolBarsCustomizeDialog` klasy. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]
 
@@ -725,7 +725,7 @@ Gdy [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDial
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `ReplaceButton` method in Class metoda `CMFCToolBarsCustomizeDialog` klasy. Ten fragment kodu jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `ReplaceButton` method in Class metoda `CMFCToolBarsCustomizeDialog` klasy. Ten fragment kodu jest częścią [Visual Studio przykład](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]
 

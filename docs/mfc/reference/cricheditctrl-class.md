@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303437"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779277"
 ---
 # <a name="cricheditctrl-class"></a>Klasa CRichEditCtrl
 
@@ -173,13 +173,13 @@ class CRichEditCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Konstruuje `CRichEditCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRichEditCtrl::CanPaste](#canpaste)|Określa, jeśli zawartość Schowka można wkleić do tego formantu bogatej edycji.|
 |[CRichEditCtrl::CanRedo](#canredo)|Określa, czy istnieją wszystkie akcje w kolejce do ponownego wykonywania formantu.|
@@ -269,7 +269,7 @@ Aby uzyskać więcej informacji na temat korzystania z `CRichEditCtrl`, zobacz:
 
 - [Korzystanie z CRichEditCtrl](../../mfc/using-cricheditctrl.md)
 
-Na przykład użycie kontrolki edycji wzbogaconej w aplikacji MFC, zobacz [WORDPAD](../../visual-cpp-samples.md) przykładowej aplikacji.
+Na przykład użycie kontrolki edycji wzbogaconej w aplikacji MFC, zobacz [WORDPAD](../../overview/visual-cpp-samples.md) przykładowej aplikacji.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -489,7 +489,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Określa styl kontrolki edycji. Stosowanie kombinacji Style okna, na liście **uwagi** części [Utwórz](#create) i [style kontrolki edycji](/windows/desktop/Controls/edit-control-styles), które zostały opisane w zestawie Windows SDK.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -2198,7 +2198,7 @@ Aby uzyskać więcej informacji, zobacz [EM_UNDO](/windows/desktop/Controls/em-u
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Próbki MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CEdit](../../mfc/reference/cedit-class.md)<br/>

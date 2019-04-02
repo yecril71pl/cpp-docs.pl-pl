@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298636"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780395"
 ---
 # <a name="cmfcribbongallery-class"></a>Klasa CMFCRibbonGallery
 
@@ -100,13 +100,13 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|Tworzy i inicjuje `CMFCRibbonGallery` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCRibbonGallery::AddGroup](#addgroup)|Dodaje nową grupę, do galerii.|
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|Dodaje nowy element menu do menu rozwijanego.|
@@ -145,7 +145,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Wywoływane przez platformę podczas rysowania ikon galerii.|
 
@@ -155,7 +155,7 @@ Przycisk galerii zachowuje się jak przycisk menu regularnych, z tą różnicą,
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonGallery` klasa umożliwiająca skonfigurowanie `CMFCRibbonGallery` obiektu. W przykładzie pokazano, jak określić liczbę elementów na wiersz w galerii, włącz opcję zmiany rozmiaru panelu menu, Włącz pasku bocznym po lewej stronie menu podręczne i galerii wstążki są wyświetlane jako palety bezpośrednio w pasku wstążki. Ten fragment kodu jest częścią [Rysowanie Client sample](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonGallery` klasa umożliwiająca skonfigurowanie `CMFCRibbonGallery` obiektu. W przykładzie pokazano, jak określić liczbę elementów na wiersz w galerii, włącz opcję zmiany rozmiaru panelu menu, Włącz pasku bocznym po lewej stronie menu podręczne i galerii wstążki są wyświetlane jako palety bezpośrednio w pasku wstążki. Ten fragment kodu jest częścią [Rysowanie Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 

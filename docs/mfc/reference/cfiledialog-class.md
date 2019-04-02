@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262106"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779212"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog Class
 
@@ -153,13 +153,13 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|Konstruuje `CFileDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Dodaje przycisk wyboru do okna dialogowego.|
 |[CFileDialog::AddComboBox](#addcombobox)|Dodaje pole kombi do okna dialogowego.|
@@ -214,7 +214,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Wywoływane po kliknięciu przycisku.|
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Wywołuje się, gdy pole wyboru jest zaznaczone niezaznaczone.|
@@ -230,7 +230,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFileDialog::m_ofn](#m_ofn)|Windows `OPENFILENAME` struktury. Zapewnia dostęp do parametrów okno dialogowe podstawowy plik.|
 
@@ -251,7 +251,7 @@ Niektóre `CFileDialog` metody nie są obsługiwane w Windows Vista lub nowszym.
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Komunikaty systemu windows dla `CFileDialog` klasy różnią się zależnie od jakiego systemu operacyjnego, którego używasz. Na przykład Windows XP nie obsługuje [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) i [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) dla `CFileDialog` klasy. Jednakże Windows Vista i nowszych systemów operacyjnych obsługują je. Aby uzyskać więcej informacji o różnych komunikatów, które są generowane i kolejności, w której zostały odebrane, zobacz [CFileDialog próbki: Rejestrowanie kolejności zdarzeń](../../visual-cpp-samples.md).
+Komunikaty systemu windows dla `CFileDialog` klasy różnią się zależnie od jakiego systemu operacyjnego, którego używasz. Na przykład Windows XP nie obsługuje [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) i [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) dla `CFileDialog` klasy. Jednakże Windows Vista i nowszych systemów operacyjnych obsługują je. Aby uzyskać więcej informacji o różnych komunikatów, które są generowane i kolejności, w której zostały odebrane, zobacz [CFileDialog próbki: Rejestrowanie kolejności zdarzeń](../../overview/visual-cpp-samples.md).
 
 Aby użyć `CFileDialog` obiektów, należy najpierw utworzyć obiekt przy użyciu `CFileDialog` konstruktora. Po został skonstruowany okna dialogowego, można ustawić lub zmodyfikować dowolne wartości na [CFileDialog::m_ofn](#m_ofn) strukturę, aby zainicjować wartości lub stany formantów okna dialogowego. `m_ofn` Struktury jest typu `OPENFILENAME`. Aby uzyskać więcej informacji, zobacz [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktury w zestawie Windows SDK.
 

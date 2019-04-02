@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
-ms.openlocfilehash: f37b5ed43d375c5ee31eb233ce49f7ec88200155
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c94198eca0a88174c8655e0d571c37f82a2df36
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559929"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781968"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>Kompilator ostrzeżenie (poziom 1) C4688
 
 "ograniczenia": Lista ograniczeń zawiera prywatny typ zestawu "type"
 
-Lista ograniczeń zawiera prywatny typ zestawu, co oznacza, że nie będzie dostępny, gdy typ jest dostępne spoza zestawu. Aby uzyskać więcej informacji, zobacz [ogólne](../../windows/generics-cpp-component-extensions.md).
+Lista ograniczeń zawiera prywatny typ zestawu, co oznacza, że nie będzie dostępny, gdy typ jest dostępne spoza zestawu. Aby uzyskać więcej informacji, zobacz [ogólne](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

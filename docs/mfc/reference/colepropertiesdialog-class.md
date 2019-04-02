@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263874"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781864"
 ---
 # <a name="colepropertiesdialog-class"></a>Klasa COlePropertiesDialog
 
@@ -43,20 +43,20 @@ class COlePropertiesDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Konstruuje `COlePropertiesDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COlePropertiesDialog::DoModal](#domodal)|Zostanie wyświetlone okno dialogowe i umożliwia użytkownikowi dokonać wyboru.|
 |[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Wywoływane przez platformę, gdy skalowanie element dokumentu został zmieniony.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COlePropertiesDialog::m_gp](#m_gp)|Struktury używane do zainicjowania strony "Ogólne" `COlePropertiesDialog` obiektu.|
 |[COlePropertiesDialog::m_lp](#m_lp)|Struktury używane do zainicjowania strony "Link" `COlePropertiesDialog` obiektu.|
@@ -261,7 +261,7 @@ Domyślna implementacja nic nie robi. Musisz przesłonić tę funkcję, aby wł�
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample CIRC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CIRC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>

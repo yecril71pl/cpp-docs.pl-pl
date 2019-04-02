@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281959"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767206"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menu i zasoby: Dodatki do serwera
 
 W tym artykule opisano zmiany, które należy podjąć, menu i innych zasobów w ramach visual edycji aplikacji serwera (składnik). Aplikacja serwera wymaga wielu dodatków do struktury menu i innych zasobów, ponieważ może być uruchamiany w jednym z trzech trybów: autonomiczna samodzielnie, embedded, lub w miejscu. Zgodnie z opisem w [menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md) artykułu, są maksymalnie cztery zestawy menu. Wszystkie cztery są używane dla aplikacji MDI pełny serwer, a tylko trzy są używane na potrzeby miniserver. Kreator aplikacji utworzy układ menu niezbędne dla typu serwera, który ma. Dostosowania, może być konieczne.
 
-Jeśli nie używasz Kreatora aplikacji, możesz przyjrzeć się HIERSVR. RC, skrypt zasobu dla przykładowej aplikacji MFC [HIERSVR](../visual-cpp-samples.md), aby zobaczyć, jak te zmiany są zaimplementowane.
+Jeśli nie używasz Kreatora aplikacji, możesz przyjrzeć się HIERSVR. RC, skrypt zasobu dla przykładowej aplikacji MFC [HIERSVR](../overview/visual-cpp-samples.md), aby zobaczyć, jak te zmiany są zaimplementowane.
 
 Tematy omówione w tym artykule obejmują:
 
@@ -56,13 +56,13 @@ Dwa nowe zasoby tabeli akceleratora muszą zostać dodane do serwera aplikacji; 
 
 Druga tabela jest niemal dokładną kopię tego widoku tabeli klawiszy skrótu. Ewentualne różnice równoległe zmiany wprowadzone w pełni otwarty menu wymienionych w [dodatki do serwera Menu](#_core_server_menu_additions).
 
-Na przykład te zmiany w tabeli akceleratora Porównaj tabel akceleratora IDR_HIERSVRTYPE_SRVR_IP i IDR_HIERSVRTYPE_SRVR_EMB IDR_MAINFRAME w HIERSVR. Plik RC zawarte w przykładzie MFC OLE [HIERSVR](../visual-cpp-samples.md). Akceleratory plików i okna Brak tabeli w miejscu i dokładnie ich kopie znajdują się w tabeli osadzonych.
+Na przykład te zmiany w tabeli akceleratora Porównaj tabel akceleratora IDR_HIERSVRTYPE_SRVR_IP i IDR_HIERSVRTYPE_SRVR_EMB IDR_MAINFRAME w HIERSVR. Plik RC zawarte w przykładzie MFC OLE [HIERSVR](../overview/visual-cpp-samples.md). Akceleratory plików i okna Brak tabeli w miejscu i dokładnie ich kopie znajdują się w tabeli osadzonych.
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Parametry tabeli dodatki dla aplikacji serwerowych
 
 W aplikacji serwera konieczne jest dodanie tabeli tylko jeden ciąg — ciąg do oznaczają, że Inicjalizacja OLE nie powiodło się. Na przykład Oto wpis tabeli ciągów, który generuje Kreatora aplikacji:
 
-|ID|String|
+|Identyfikator|String|
 |--------|------------|
 |IDP_OLE_INIT_FAILED|Zainicjowanie OLE nie powiodło się. Upewnij się, że biblioteki OLE są w poprawnej wersji.|
 

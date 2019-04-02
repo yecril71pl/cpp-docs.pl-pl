@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751521"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780876"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++
 
@@ -28,7 +28,7 @@ Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/m
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak ciąg BSTR (ciąg formatu w programowaniu modelu COM) mogą być przekazywane z zarządzanego do niezarządzanej funkcji. Wywołanie zarządzanego funkcja <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> uzyskać adres BSTR reprezentacja zawartość .NET System.String. This, wskaźnik jest przypięty, za pomocą [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) aby upewnić się, że adres fizyczny nie ulega zmianie podczas cyklu kolekcji wyrzucania elementów, gdy wykonuje niezarządzanej funkcji. Moduł zbierający elementy bezużyteczne zakaz przenoszenia pamięci do momentu [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) wykracza poza zakres.
+W poniższym przykładzie pokazano, jak ciąg BSTR (ciąg formatu w programowaniu modelu COM) mogą być przekazywane z zarządzanego do niezarządzanej funkcji. Wywołanie zarządzanego funkcja <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> uzyskać adres BSTR reprezentacja zawartość .NET System.String. This, wskaźnik jest przypięty, za pomocą [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) aby upewnić się, że adres fizyczny nie ulega zmianie podczas cyklu kolekcji wyrzucania elementów, gdy wykonuje niezarządzanej funkcji. Moduł zbierający elementy bezużyteczne zakaz przenoszenia pamięci do momentu [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) wykracza poza zakres.
 
 ```
 // MarshalBSTR1.cpp

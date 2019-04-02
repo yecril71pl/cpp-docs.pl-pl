@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266064"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781799"
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap — klasa
 
@@ -47,7 +47,7 @@ Klasa obiektu przechowywany w mapie.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Pobiera następny element do wykonania iteracji.|
 |[CTypedPtrMap::Lookup](#lookup)|Zwraca `KEY` na podstawie `VALUE`.|
@@ -56,7 +56,7 @@ Klasa obiektu przechowywany w mapie.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CTypedPtrMap::operator \[ \]](#operator_at)|Wstawia element do mapy.|
 
@@ -216,7 +216,7 @@ Aby uzyskać bardziej szczegółowe uwagi, zobacz [CMapStringToOb::SetAt](../../
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)<br/>
+[Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [Klasa CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)<br/>

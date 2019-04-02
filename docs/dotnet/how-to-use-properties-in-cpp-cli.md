@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739282"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781630"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Instrukcje: Korzystanie z właściwości w języku C + +/ CLI
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Właściwości abstrakcyjne i zapieczętowane
 
-Mimo że [abstrakcyjne](../windows/abstract-cpp-component-extensions.md) i [zapieczętowanego](../windows/sealed-cpp-component-extensions.md) słowa kluczowe są określane jako prawidłowa w ECMA C + +/ specyfikacja interfejsu wiersza polecenia, kompilator języka Visual C++ nie można określić je od proste właściwości ani właściwości Deklaracja właściwości nietrywialnymi.
+Mimo że [abstrakcyjne](../extensions/abstract-cpp-component-extensions.md) i [zapieczętowanego](../extensions/sealed-cpp-component-extensions.md) słowa kluczowe są określane jako prawidłowa w ECMA C + +/ specyfikacja interfejsu wiersza polecenia, kompilator języka Visual C++ nie można określić je od proste właściwości ani właściwości Deklaracja właściwości nietrywialnymi.
 
 Aby zadeklarować właściwość zapieczętowana ani abstract, należy zdefiniować właściwość nietrywialnymi, a następnie określ `abstract` lub `sealed` get — słowo kluczowe funkcje.
 
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[właściwość](../windows/property-cpp-component-extensions.md)
+[właściwość](../extensions/property-cpp-component-extensions.md)

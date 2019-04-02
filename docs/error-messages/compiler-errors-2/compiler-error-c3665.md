@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3665
 ms.assetid: 893bb47e-8de1-43aa-af7d-fa47ad149ee9
-ms.openlocfilehash: 30aaf67ac9f912059bb5726681e61feabc1e557d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40de7a7b1ede5e6dbbc20d2128b782c0ad6f798b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644122"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781032"
 ---
 # <a name="compiler-error-c3665"></a>Błąd kompilatora C3665
 
@@ -19,7 +19,7 @@ ms.locfileid: "50644122"
 
 Słowo kluczowe użyto nie jest dozwolona na destruktora ani finalizatora.
 
-Na przykład nowe miejsce nie można żądać na destruktora ani finalizatora.  Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../windows/explicit-overrides-cpp-component-extensions.md) i [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Na przykład nowe miejsce nie można żądać na destruktora ani finalizatora.  Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../extensions/explicit-overrides-cpp-component-extensions.md) i [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Poniższy przykład spowoduje wygenerowanie C3665:
 

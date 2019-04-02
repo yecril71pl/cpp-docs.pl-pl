@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: d23662d6dd6d2f241c48e0c83f2fa5ed9532c3f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807952"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766062"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie
 
@@ -31,7 +31,7 @@ Jeśli aplikacja ma nie manifestu i jest zależna od biblioteki DLL, która Wind
 
 Jeśli aplikacja jest wdrażana na komputerze, na którym nie zainstalowano oprogramowania Visual Studio uległa awarii z komunikatami o błędach, które przypominają poprzednie, należy sprawdzić te rzeczy:
 
-1. Postępuj zgodnie z instrukcjami opisanymi w [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Modułu przeszukiwania zależności można wyświetlić większość zależności dla aplikacji lub biblioteki DLL. Jeśli zauważysz, że brakuje niektórych bibliotek DLL, należy je zainstalować na komputerze, na którym chcesz uruchomić aplikację.
+1. Postępuj zgodnie z instrukcjami opisanymi w [poznanie zależności aplikacji Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Modułu przeszukiwania zależności można wyświetlić większość zależności dla aplikacji lub biblioteki DLL. Jeśli zauważysz, że brakuje niektórych bibliotek DLL, należy je zainstalować na komputerze, na którym chcesz uruchomić aplikację.
 
 1. Program ładujący systemu operacyjnego używa manifest aplikacji, aby ładować zestawy, od których zależy aplikacja. Manifest mogą być osadzone w pliku binarnym jako zasób lub zainstalowane jako osobny plik w folderze aplikacji. Aby sprawdzić, czy manifest jest osadzony w pliku binarnym, otwórz plik binarny w programie Visual Studio i poszukaj RT_MANIFEST na liście zasobów. Jeśli nie możesz znaleźć manifestu osadzonego, poszukaj w folderze aplikacji dla pliku, która ma nazwę podobną < binary_name >. \<rozszerzenia > manifest.
 

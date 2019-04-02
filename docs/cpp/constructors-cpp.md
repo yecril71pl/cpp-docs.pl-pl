@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cad88af9e81a60857fbbd6c90cf81cdcafbd7a12
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694065"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781474"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -636,7 +636,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-**Visual Studio 2017 w wersji 15.7 lub nowszej**: **przy użyciu** instrukcji w **/STD: c ++ 17** tryb sprowadza się do zakresu wszystkie konstruktory z klasy bazowej, z wyjątkiem tych, które mają identyczne do konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc najlepiej jest używać dziedziczącej konstruktorów, gdy klasa pochodna nie deklaruje żadnych nowych elementów członkowskich danych lub konstruktory. Zobacz też [ulepszeń w programie Visual Studio 2017 wersji 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
+**Visual Studio 2017 w wersji 15.7 lub nowszej**: **Przy użyciu** instrukcji w **/STD: c ++ 17** tryb sprowadza się do zakresu wszystkie konstruktory z klasy bazowej, z wyjątkiem tych, które mają identyczne podpisu konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc najlepiej jest używać dziedziczącej konstruktorów, gdy klasa pochodna nie deklaruje żadnych nowych elementów członkowskich danych lub konstruktory. Zobacz też [ulepszeń w programie Visual Studio 2017 wersji 15.7](../overview/cpp-conformance-improvements-2017.md#improvements_157).
 
 Szablon klasy mogą dziedziczyć wszystkie konstruktory argument typu Jeśli ten typ Określa klasę bazową:
 

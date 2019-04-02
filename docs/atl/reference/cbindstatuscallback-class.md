@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259207"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773128"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback Class
 
@@ -64,14 +64,14 @@ Określa flagi powiązania, które są zwracane przez [GetBindInfo](#getbindinfo
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Konstruktor.|
 |[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CBindStatusCallback::Download](#download)|Tworzy metodę statyczną, która rozpoczyna się proces pobierania `CBindStatusCallback` obiektu i wywołania `StartAsyncDownload`.|
 |[CBindStatusCallback::GetBindInfo](#getbindinfo)|Metoda wywoływana przez asynchroniczne moniker na żądanie informacji od typu powiązania ma zostać utworzony.|
@@ -86,7 +86,7 @@ Określa flagi powiązania, które są zwracane przez [GetBindInfo](#getbindinfo
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Liczba bajtów dostępnych do odczytu.|
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Całkowita liczba bajtów do odczytu.|
@@ -101,7 +101,7 @@ Określa flagi powiązania, które są zwracane przez [GetBindInfo](#getbindinfo
 
 `CBindStatusCallback` Klasy implementuje `IBindStatusCallback` interfejsu. `IBindStatusCallback` muszą być zaimplementowane przez aplikację, więc może ona odbierać powiadomienia z transferu asynchronicznego danych. Używa asynchronicznej krótkiej nazwy systemu `IBindStatusCallback` metody służące do wysyłania i odbierania informacji o danych asynchroniczne przesyłanie do i z obiektu.
 
-Zazwyczaj `CBindStatusCallback` obiekt jest skojarzony z operacją określonego powiązania. Na przykład w [ASYNC](../../visual-cpp-samples.md) próbki, gdy ustawiona jest właściwość URL tworzy `CBindStatusCallback` obiektów w wywołaniu `Download`:
+Zazwyczaj `CBindStatusCallback` obiekt jest skojarzony z operacją określonego powiązania. Na przykład w [ASYNC](../../overview/visual-cpp-samples.md) próbki, gdy ustawiona jest właściwość URL tworzy `CBindStatusCallback` obiektów w wywołaniu `Download`:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
@@ -528,7 +528,7 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-W poniższym przykładzie (z [ASYNC](../../visual-cpp-samples.md) przykładowych), funkcja `OnData` zapisuje odebrane dane w polu tekstowym.
+W poniższym przykładzie (z [ASYNC](../../overview/visual-cpp-samples.md) przykładowych), funkcja `OnData` zapisuje odebrane dane w polu tekstowym.
 
 ### <a name="example"></a>Przykład
 

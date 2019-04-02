@@ -1,23 +1,23 @@
 ---
-title: Błąd kompilatora C3288
+title: Compiler Error C3288
 ms.date: 11/04/2016
 f1_keywords:
 - C3288
 helpviewer_keywords:
 - C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
-ms.openlocfilehash: 30a88d1047f8395fc8e3042cf2a1da88e6e5c2d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d076dabe0df91cefb90be5ec9e90f371331a51f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608419"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771010"
 ---
-# <a name="compiler-error-c3288"></a>Błąd kompilatora C3288
+# <a name="compiler-error-c3288"></a>Compiler Error C3288
 
 "type": niedozwolone anulowanie odwołania do typu uchwytu
 
-Kompilator wykrył niedozwolony wyłuskania dla typu uchwytu. Można wyłuskać na typ dojścia i przypisać ją do odwołania. Aby uzyskać więcej informacji, zobacz [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+Kompilator wykrył niedozwolony wyłuskania dla typu uchwytu. Można wyłuskać na typ dojścia i przypisać ją do odwołania. Aby uzyskać więcej informacji, zobacz [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

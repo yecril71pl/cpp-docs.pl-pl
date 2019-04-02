@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294996"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781734"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Splitter — Windows
 
@@ -46,7 +46,7 @@ Maksymalna liczba okienek, które można określić dla dynamicznych rozdzielacz
 
 ## <a name="splitter-examples"></a>Splitter — przykłady
 
-Wiele przykładowych programów MFC użyj okna podziału, bezpośrednio lub pośrednio. Próbki MFC-ogólne [VIEWEX](../visual-cpp-samples.md) ilustruje kilka zastosowań rozdzielaczy statyczne, w tym jak dokonać podziału należy umieścić w rozdzielacz.
+Wiele przykładowych programów MFC użyj okna podziału, bezpośrednio lub pośrednio. Próbki MFC-ogólne [VIEWEX](../overview/visual-cpp-samples.md) ilustruje kilka zastosowań rozdzielaczy statyczne, w tym jak dokonać podziału należy umieścić w rozdzielacz.
 
 ClassWizard służy również do tworzenia nowego wiele dokumentów interfejsu (MDI) podrzędnych ramki okna klasę, która zawiera okno rozdzielacza. Aby uzyskać więcej informacji na temat okna podziału, zobacz [wiele typów dokumentów, widoków i ramek Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: b37b28b4332b46aaaf803f58090a72c25e83f47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587762"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781812"
 ---
 # <a name="compiler-error-c3181"></a>Błąd kompilatora C3181
 
 "type": nieprawidłowy operand dla operatora
 
-Nieprawidłowy parametr został przekazany do [typeid](../../windows/typeid-cpp-component-extensions.md) operatora. Parametr musi być typu zarządzanego.
+Nieprawidłowy parametr został przekazany do [typeid](../../extensions/typeid-cpp-component-extensions.md) operatora. Parametr musi być typu zarządzanego.
 
 Należy pamiętać, że kompilator używa aliasów dla natywnych typów, które mapują do typów w środowisko uruchomieniowe języka wspólnego.
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4580
 ms.assetid: fef6e8e0-0d6a-44fa-b22a-2fe7ba2ef379
-ms.openlocfilehash: e215dc98f62a90325e83068a640b0503a612c434
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd2ecff5adc6538f75c61772b785acbfc89092ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427810"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781773"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Kompilator ostrzeżenie (poziom 3) C4580
 
 [attribute] jest przestarzały; zamiast niego Określ System::Attribute lub Platform::Metadata jako klasę bazową
 
-[[atrybut](../../windows/attributes/attribute.md)] nie jest już preferowana składnia do tworzenia atrybuty zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md). Dla kodu CLR pochodzić atrybuty z `System::Attribute`. Dla kodu środowiska uruchomieniowego Windows pochodzić atrybuty z `Platform::Metadata`.
+[[atrybut](../../windows/attributes/attribute.md)] nie jest już preferowana składnia do tworzenia atrybuty zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md). Dla kodu CLR pochodzić atrybuty z `System::Attribute`. Dla kodu środowiska uruchomieniowego Windows pochodzić atrybuty z `Platform::Metadata`.
 
 ## <a name="example"></a>Przykład
 

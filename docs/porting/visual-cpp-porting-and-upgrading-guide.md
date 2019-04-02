@@ -2,12 +2,12 @@
 title: Visual C++, przenoszenie i uaktualnianie przewodnik
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752431"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767681"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 
@@ -76,8 +76,8 @@ Alternatywnie być może masz teraz nowe wymagania lub przewidujesz potrzebę pr
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|W tym artykule omówiono sposób używania projekty utworzone we wcześniejszych wersjach programu Visual C++.|
-|[What's New for kompilator języka C++ w programie Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Zmiany w środowisku IDE i narzędzia programu Visual Studio 2015 do programu Visual Studio 2017|
-|[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md)|Ulepszenia zgodności standardów z programu Visual Studio 2015 do programu Visual Studio 2017|
+|[What's New for kompilator języka C++ w programie Visual Studio 2017 RC](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Zmiany w środowisku IDE i narzędzia programu Visual Studio 2015 do programu Visual Studio 2017|
+|[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)|Ulepszenia zgodności standardów z programu Visual Studio 2015 do programu Visual Studio 2017|
 |[Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)|Lista wszystkich zmian bibliotek języka Visual C++ i narzędzia do kompilacji programu Visual Studio 2003 do 2015, które mogą wymagać zmian w kodzie.|
 |[Visual C++ — co nowego od roku 2003 do 2015](visual-cpp-what-s-new-2003-through-2015.md)|Wszystkie "co nowego" informacje Visual c++ dla programu Visual Studio 2003 za pomocą programu Visual Studio 2015.|
 |[Przenoszenie bibliotek innych firm](porting-third-party-libraries.md)|Jak używać **vcpkg** narzędzia wiersza polecenia do portu starsze bibliotek typu open source do wersji skompilowany przy użyciu nowszego zestawy narzędzi Visual C++.|
@@ -88,4 +88,4 @@ Alternatywnie być może masz teraz nowe wymagania lub przewidujesz potrzebę pr
 
 ## <a name="see-also"></a>Zobacz także
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

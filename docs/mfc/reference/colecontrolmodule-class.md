@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COleControlModule class [MFC]
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
-ms.openlocfilehash: 42239ff060d5e081f273ce9dd7d87d1dbbeca716
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f6d486c7bacb897d70d85414ac3d0bd0d13e447b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302159"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780291"
 ---
 # <a name="colecontrolmodule-class"></a>Klasa COleControlModule
 
@@ -50,5 +50,5 @@ Aby uzyskać więcej informacji na temat korzystania z `COleControlModule` klasy
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[Próbki MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

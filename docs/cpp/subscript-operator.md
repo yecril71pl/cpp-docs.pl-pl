@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572916"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767928"
 ---
 # <a name="subscript-operator-"></a>Operator indeksu dolnego]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Wyrażenie przyrostkowe (który również może być wyrażeniem podstawowym) następuje operator indeksu dolnego **[**, określa indeksowanie tablicy.
 
-Aby uzyskać informacje o zarządzanych tablic, zobacz [tablic](../windows/arrays-cpp-component-extensions.md).
+Aby uzyskać informacje o zarządzanych tablic w języku C + +/ CLI, zobacz [tablic](../extensions/arrays-cpp-component-extensions.md).
 
 Zwykle reprezentowany przez wartość *wyrażeniem przyrostkowym* jest wartością wskaźnika, takich jak identyfikator tablicy, a *wyrażenie* jest wartością całkowitą (w tym typy wyliczone). Jednakże, wszystko co jest wymagane składniowo tego jednego z wyrażeń jest typu wskaźnika i innych być typu całkowitego. Ten sposób może być wartością typu całkowitego *wyrażeniem przyrostkowym* położenie i wartość wskaźnika można w nawiasach w *wyrażenie* lub indeksu dolnego pozycji. Rozważmy następujący fragment kodu:
 

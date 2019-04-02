@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525174"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780356"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Kompilator ostrzeżenie (poziom 4) C4754
 
@@ -19,7 +19,7 @@ Reguły konwersji dla operacji arytmetycznych w porównaniu oznaczają, że jedn
 
 Ostrzeżenie C4754 jest wyświetlone, ponieważ wynikiem porównania jest zawsze taki sam. Oznacza to, że jednej gałęzi warunku nigdy nie jest wykonywana, prawdopodobnie ponieważ wyrażenie całkowite skojarzone jest niepoprawny. Ta wada kodu często występuje w niepoprawne tablicy nadmiaru na 64-bitowych architekturach.
 
-Reguły konwersji liczby całkowitej są skomplikowane wiąże się z wielu subtelne pułapek. Jako alternatywę do ustalania każde ostrzeżenie C4754 można zaktualizować kod, aby użyć [Biblioteka SafeInt](../../windows/safeint-library.md).
+Reguły konwersji liczby całkowitej są skomplikowane wiąże się z wielu subtelne pułapek. Jako alternatywę do ustalania każde ostrzeżenie C4754 można zaktualizować kod, aby użyć [Biblioteka SafeInt](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Przykład
 

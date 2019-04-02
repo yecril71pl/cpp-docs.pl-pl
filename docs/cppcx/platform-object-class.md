@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 8e2304ca2c4a6e974262fdb1b449a64b5871a474
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749883"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781019"
 ---
 # <a name="platformobject-class"></a>Platform::Object, klasa
 
@@ -33,13 +33,13 @@ public ref class Object : Object
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[Object::Object](#ctor)|Inicjuje nowe wystąpienie klasy obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[Object::Equals](#equals)|Określa, czy określony obiekt jest równy bieżącemu obiektowi.|
 |[Object::GetHashCode](#gethashcode)|Zwraca kod skrótu dla tego wystąpienia.|
@@ -118,7 +118,7 @@ Statyczne [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) pozwa
 
 [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) klasa jest używana w interfejsach API Windows jako niezależny od języka sposób przekazywania informacji o typie między składnikami Windows i aplikacji. T[Platform::Type, klasa](../cppcx/platform-type-class.md) ma operatory konwersji między `Type` i `TypeName`.
 
-Użyj [typeid](../windows/typeid-cpp-component-extensions.md) operator, aby zwrócić `Platform::Type` obiektu dla nazwy klasy, na przykład podczas przechodzenia między stronami XAML:
+Użyj [typeid](../extensions/typeid-cpp-component-extensions.md) operator, aby zwrócić `Platform::Type` obiektu dla nazwy klasy, na przykład podczas przechodzenia między stronami XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
