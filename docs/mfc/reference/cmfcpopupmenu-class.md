@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292279"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776014"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu Class
 
@@ -182,13 +182,13 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Konstruuje `CMFCPopupMenu` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||
 |[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Określa, czy menu podręczne jest włączona, aby wyświetlić pusty wpisy dla narzędzia zdefiniowane przez użytkownika.|
@@ -266,7 +266,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCPopupMenu::CreateTearOffBar](#createtearoffbar)||
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||
@@ -278,7 +278,7 @@ Zwykle MFC wyskakujących menu automatycznie tworzy. Jeśli chcesz tworzyć `CMF
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować obiekt menu podręcznego. W przykładzie pokazano, jak ustawić logo i dźwięk menu podręcznego, Ustaw typ i szybkość animacji, rysowania cieni menu, gdy poza głównej ramki pojawi się podręczne menu, ustawia maksymalną szerokość i ustawić wyrównanie prawym menu w menu podręcznym. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować obiekt menu podręcznego. W przykładzie pokazano, jak ustawić logo i dźwięk menu podręcznego, Ustaw typ i szybkość animacji, rysowania cieni menu, gdy poza głównej ramki pojawi się podręczne menu, ustawia maksymalną szerokość i ustawić wyrównanie prawym menu w menu podręcznym. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -451,7 +451,7 @@ Jeśli *bOwnMessage* jest wartość TRUE, trasy framework komunikaty menu do *pW
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `Create` metody `CMFCPopuMenu` klasy. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `Create` metody `CMFCPopuMenu` klasy. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 

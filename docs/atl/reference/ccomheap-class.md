@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276168"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770749"
 ---
 # <a name="ccomheap-class"></a>Klasa CComHeap
 
@@ -35,7 +35,7 @@ class CComHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|Wywołaj tę metodę można przydzielić bloku pamięci.|
 |[CComHeap::Free](#free)|Wywołaj tę metodę w celu zwolnienia bloku pamięci przydzielonej przez tego menedżera pamięci.|
@@ -149,7 +149,7 @@ Implementowany przy użyciu [CoTaskMemRealloc](/windows/desktop/api/combaseapi/n
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Przykładowe DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasa CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
 [Klasa CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>

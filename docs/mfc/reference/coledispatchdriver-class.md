@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274584"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774779"
 ---
 # <a name="coledispatchdriver-class"></a>Klasa COleDispatchDriver
 
@@ -47,13 +47,13 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|Konstruuje `COleDispatchDriver` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|Dołącza `IDispatch` połączenie `COleDispatchDriver` obiektu.|
 |[COleDispatchDriver::CreateDispatch](#createdispatch)|Tworzy `IDispatch` połączenia i dołącza je do `COleDispatchDriver` obiektu.|
@@ -65,14 +65,14 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleDispatchDriver::operator =](#operator_eq)|Kopiuje zawartość źródła do `COleDispatchDriver` obiektu.|
 |[COleDispatchDriver::operator LPDISPATCH](#operator_lpdispatch)|Uzyskuje dostęp do podstawowych `IDispatch` wskaźnika.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Określa, czy ma zostać zwolniony `IDispatch` podczas `ReleaseDispatch` lub zniszczenia obiektu.|
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Wskazuje, wskaźnik do `IDispatch` interfejs podłączony do tego `COleDispatchDriver`.|
@@ -408,7 +408,7 @@ Pojedynczy parametr typu określonego przez *vtProp*.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[Próbki MFC acdual —](../../visual-cpp-samples.md)<br/>
+[Próbki MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC acdual —](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)

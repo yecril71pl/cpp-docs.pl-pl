@@ -9,17 +9,17 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++/CLI], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-ms.openlocfilehash: 4c9af2491518112425668a0856473cd8418338d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8b0f9231b8aeaf90b56730a12932b7bf5971b29
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668796"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767382"
 ---
 # <a name="attribute"></a>— atrybut
 
 > [!NOTE]
-> **Atrybut** atrybutu jest już przestarzały.  Użyj wspólnego atrybutu środowisko uruchomieniowe języka `System.Attribute` można bezpośrednio utworzyć atrybuty zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../user-defined-attributes-cpp-component-extensions.md).
+> **Atrybut** atrybutu jest już przestarzały.  Użyj wspólnego atrybutu środowisko uruchomieniowe języka `System.Attribute` można bezpośrednio utworzyć atrybuty zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Zobacz też
 

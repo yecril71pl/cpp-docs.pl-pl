@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304083"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775260"
 ---
 # <a name="cmfcoutlookbar-class"></a>Klasa CMFCOutlookBar
 
@@ -59,14 +59,14 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCOutlookBar::CMFCOutlookBar`|Domyślny konstruktor.|
 |`CMFCOutlookBar::~CMFCOutlookBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Określa, czy mogą zostać zniszczone pustego okienka z zakładkami. (Overrides [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|
 |[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Określa, czy do okienko paska Outlook może być zadokowane innego okienka. (Przesłania CDockablePane::CanAcceptPane).|
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Uwagi
 
-Na przykład paska Outlook zobacz [OutlookDemo próbki: Aplikacja OutlookDemo MFC](../../visual-cpp-samples.md).
+Na przykład paska Outlook zobacz [OutlookDemo próbki: Aplikacja OutlookDemo MFC](../../overview/visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementacja paska Outlook
 
@@ -294,7 +294,7 @@ Zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) li
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `Create` metody `CMFCOutlookBar` klasy. Ten fragment kodu jest częścią [przykładowy program Outlook wielu widoków](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `Create` metody `CMFCOutlookBar` klasy. Ten fragment kodu jest częścią [przykładowy program Outlook wielu widoków](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]

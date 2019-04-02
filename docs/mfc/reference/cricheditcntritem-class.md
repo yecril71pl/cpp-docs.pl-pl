@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268489"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773843"
 ---
 # <a name="cricheditcntritem-class"></a>Klasa CRichEditCntrItem
 
@@ -31,13 +31,13 @@ class CRichEditCntrItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|Konstruuje `CRichEditCntrItem` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Uaktywnia elementu jako innego typu.|
 
@@ -49,7 +49,7 @@ class CRichEditCntrItem : public COleClientItem
 
 Ten formant Windows wspólnej (i w związku z tym [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) i pokrewne klasy) jest dostępna tylko dla programów uruchomionych w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.
 
-Przykład przy użyciu bogatej edycji kontenerów elementów w aplikacji MFC, zobacz [WORDPAD](../../visual-cpp-samples.md) przykładowej aplikacji.
+Przykład przy użyciu bogatej edycji kontenerów elementów w aplikacji MFC, zobacz [WORDPAD](../../overview/visual-cpp-samples.md) przykładowej aplikacji.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -110,7 +110,7 @@ Aby uzyskać więcej informacji, zobacz [DVASPECT](/windows/desktop/api/wtypes/n
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Próbki MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>

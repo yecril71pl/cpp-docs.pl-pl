@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486778"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769527"
 ---
 # <a name="unhook"></a>__unhook
 
@@ -45,10 +45,10 @@ long  __unhook(
 
 - Zdarzenia COM: *SourceClass* interfejs źródła zdarzeń i *EventMethod* jest jednym z jej metody.
 
-- Zarządzanych zdarzeń: *SourceClass* jest klasie źródła zdarzeń i *EventMethod* jest zdarzenie.
+- Zdarzenia zarządzane: *SourceClass* jest klasie źródła zdarzeń i *EventMethod* jest zdarzenie.
 
 *interface*<br/>
-Nazwa interfejsu, jest unhooked z *odbiorcy*, tylko w przypadku odbiorników zdarzeń COM, w którym *layout_dependent* parametru [event_receiver](../windows/event-receiver.md) atrybut jest **true**.
+Nazwa interfejsu, jest unhooked z *odbiorcy*, tylko w przypadku odbiorników zdarzeń COM, w którym *layout_dependent* parametru [event_receiver](../windows/attributes/event-receiver.md) atrybut jest **true**.
 
 *source*<br/>
 Wskaźnik na wystąpienie źródła zdarzeń. W zależności od kodu `type` określonych w `event_receiver`, *źródła* może być jedną z następujących czynności:
@@ -65,11 +65,11 @@ Wskaźnik na wystąpienie źródła zdarzeń. W zależności od kodu `type` okre
 
 - Zdarzenia COM: *ReceiverClass* interfejs odbiorcy zdarzeń i `HandlerMethod` jest jednym z jego obsługę.
 
-- Zarządzanych zdarzeń: *ReceiverClass* jest klasy odbiorcy zdarzeń i `HandlerMethod` jest programem obsługi.
+- Zdarzenia zarządzane: *ReceiverClass* jest klasy odbiorcy zdarzeń i `HandlerMethod` jest programem obsługi.
 
 *odbiornik*(opcjonalnie) wskaźnik do wystąpienia klasy odbiorcy zdarzeń. Jeśli odbiornik nie zostanie określony, wartością domyślną jest odbiorcy klasy lub struktury, w którym **__unhook** jest wywoływana.
 
-## <a name="usage"></a>Użycie
+## <a name="usage"></a>Sposób użycia
 
 Może być użycie w zakresie dowolnej funkcji, łącznie z głównym, poza klasy odbiorcy zdarzeń.
 
@@ -89,7 +89,7 @@ Z wyjątkiem zdarzeń COM **__hook** i **__unhook** może być wywołana poza od
 
 Alternatywa dla użycia **__unhook** jest użycie operatora-=.
 
-Aby uzyskać informacji na temat kodowania zarządzanych zdarzeń w nowej składni, zobacz [zdarzeń](../windows/event-cpp-component-extensions.md).
+Aby uzyskać informacji na temat kodowania zarządzanych zdarzeń w nowej składni, zobacz [zdarzeń](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 >  Szablonem klasy lub struktury nie mogą zawierać zdarzenia.
@@ -100,9 +100,9 @@ Zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-nativ
 
 ## <a name="see-also"></a>Zobacz także
 
-[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__raise](../cpp/raise.md)

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: 7fa2f0bc5717c7481b4ed415e89fbb0cc8df0ffc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289367"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777093"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager Class
 
@@ -65,13 +65,13 @@ class CUserToolsManager : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|Konstruuje `CUserToolsManager`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CUserToolsManager::CreateNewTool](#createnewtool)|Tworzy nowe narzędzie użytkownika.|
 |[CUserToolsManager::FindTool](#findtool)|Zwraca wskaźnik do `CMFCUserTool` obiektu, który jest skojarzony z identyfikatorem określonego polecenia.|
@@ -108,7 +108,7 @@ Na przykład narzędzi użytkownika Zobacz VisualStudioDemo przykładowy projekt
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak pobrać odwołanie do `CUserToolsManager` obiektu oraz sposobu tworzenia nowych narzędzi użytkownika. Ten fragment kodu jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak pobrać odwołanie do `CUserToolsManager` obiektu oraz sposobu tworzenia nowych narzędzi użytkownika. Ten fragment kodu jest częścią [Visual Studio przykład](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]
 

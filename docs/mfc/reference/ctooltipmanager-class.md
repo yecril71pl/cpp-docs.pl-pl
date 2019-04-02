@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260637"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776508"
 ---
 # <a name="ctooltipmanager-class"></a>Klasa CTooltipManager
 
@@ -37,7 +37,7 @@ class CTooltipManager : public CObject
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|Tworzy formant etykietki narzędzia dla typów formantu Windows.|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Usuwa kontrolkę etykiety narzędzia.|
@@ -156,7 +156,7 @@ Ta metoda jest wywoływana, wszystkich istniejących właścicieli etykietka nar
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `SetTooltipParams` metody `CTooltipManager` klasy. Ten fragment kodu jest częścią [Rysowanie Client sample](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `SetTooltipParams` metody `CTooltipManager` klasy. Ten fragment kodu jest częścią [Rysowanie Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 

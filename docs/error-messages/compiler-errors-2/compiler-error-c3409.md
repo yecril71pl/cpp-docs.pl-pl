@@ -1,25 +1,25 @@
 ---
-title: Błąd kompilatora C3409
+title: Compiler Error C3409
 ms.date: 11/06/2018
 f1_keywords:
 - C3409
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a4d9271153618fab47a8b5b9cb11b2a5eed35230
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330089"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769306"
 ---
-# <a name="compiler-error-c3409"></a>Błąd kompilatora C3409
+# <a name="compiler-error-c3409"></a>Compiler Error C3409
 
 > pusty blok atrybutu nie jest dozwolone.
 
 ## <a name="remarks"></a>Uwagi
 
-Nawiasy kwadratowe są interpretowane przez kompilator jako [atrybut](../../windows/cpp-attributes-reference.md) znaleziono blok, ale żadne atrybuty.
+Nawiasy kwadratowe są interpretowane przez kompilator jako [atrybut](../../windows/attributes-alphabetical-reference.md) znaleziono blok, ale żadne atrybuty.
 
 Kompilator może wygenerować tego błędu, korzystając z nawiasami kwadratowymi jako część definicji wyrażenia lambda. Ten błąd występuje, gdy kompilator nie może określić, czy nawiasy kwadratowe są częścią definicji wyrażenia lambda lub bloku atrybutu. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lambda](../../cpp/lambda-expressions-in-cpp.md).
 
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>Zobacz też
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
+[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
 [Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Składnia wyrażenia lambda](../../cpp/lambda-expression-syntax.md)

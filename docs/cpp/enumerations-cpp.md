@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332416"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772568"
 ---
 # <a name="enumerations-c"></a>Wyliczenia (C++)
 
 Wyliczenie to typ zdefiniowany przez użytkownika, który składa się z szeregu nazwanych stałych liczbach całkowitych, które są znane jako moduły wyliczające.
 
 > [!NOTE]
->  Ten artykuł omawia język ISO Standard C++ **wyliczenia** typu i o określonym zakresie (lub silnie typizowane) **klasa wyliczeniowa** typu, który został wprowadzony w C ++ 11. Uzyskać informacji na temat **klasy publicznym typie wyliczeniowym** lub **klasa wyliczeniowa prywatnej** typów w języku C + +/ CLI i C + +/ CX, zobacz [klasa wyliczeniowa](../windows/enum-class-cpp-component-extensions.md).
+>  Ten artykuł omawia język ISO Standard C++ **wyliczenia** typu i o określonym zakresie (lub silnie typizowane) **klasa wyliczeniowa** typu, który został wprowadzony w C ++ 11. Uzyskać informacji na temat **klasy publicznym typie wyliczeniowym** lub **klasa wyliczeniowa prywatnej** typów w języku C + +/ CLI i C + +/ CX, zobacz [klasa wyliczeniowa](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,7 +49,7 @@ enum class C : short;  // ... may have any integral underlying type
 *Identyfikator*<br/>
 Nazwa typu nadana enumeracji.
 
-*Typ*<br/>
+*type*<br/>
 Podstawowy typ enumeratorów; wszystkie moduły wyliczające mają ten sam typ podstawowy. Może być dowolnego typu całkowitoliczbowego.
 
 *Lista wyliczenia*<br/>
@@ -145,7 +145,7 @@ Należy zauważyć, że wiersz `hand = account_num;` nadal powoduje błąd wyst�
 
 ## <a name="no_enumerators"></a> Typy wyliczeniowe atrybutem nie modułów wyliczających
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): definiując wyliczenia (regularnych lub zakresie) za pomocą jawnego typu podstawowego i nie wyliczenia, możesz obowiązuje wprowadzić nową typu całkowitego nie ma niejawnej konwersji do żadnego innego typu. Przy użyciu tego typu, a nie jej wbudowany typ podstawowy, można wyeliminować ryzyko drobne błędy spowodowane przypadkowego niejawne konwersje.
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Definiując wyliczenia (regularnych lub zakresie) za pomocą jawnego typu podstawowego i nie wyliczenia, obowiązuje można wprowadzać nowe integralny typ, który nie ma niejawnej konwersji do żadnego innego typu. Przy użyciu tego typu, a nie jej wbudowany typ podstawowy, można wyeliminować ryzyko drobne błędy spowodowane przypadkowego niejawne konwersje.
 
 ```cpp
 enum class byte : unsigned char { };
@@ -184,4 +184,4 @@ int main()
 ## <a name="see-also"></a>Zobacz także
 
 [Deklaracje modułów wyliczających języka C](../c-language/c-enumeration-declarations.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)
+[słowa kluczowe](../cpp/keywords-cpp.md)

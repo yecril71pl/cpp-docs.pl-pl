@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297492"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772127"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Formanty niestandardowe
 
 Ta uwaga opisuje Obsługa MFC dla formantów niestandardowych i własnym rysowania. Ponadto w tym artykule opisano podklasy dynamiczne i opisuje relację między [CWnd](../mfc/reference/cwnd-class.md) obiektów i `HWND`s.
 
-Przykładowa aplikacja MFC CTRLTEST ilustruje sposób użycia wielu formantów niestandardowych. Zobacz kod źródłowy dla próbki MFC-ogólne [CTRLTEST](../visual-cpp-samples.md) i pomocy online.
+Przykładowa aplikacja MFC CTRLTEST ilustruje sposób użycia wielu formantów niestandardowych. Zobacz kod źródłowy dla próbki MFC-ogólne [CTRLTEST](../overview/visual-cpp-samples.md) i pomocy online.
 
 ## <a name="owner-draw-controlsmenus"></a>Formanty rysowane przez właściciela/menu
 
@@ -104,7 +104,7 @@ Samodzielnie rysowania pola listy i pola kombi, `OnDeleteItem` nie jest zazwycza
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>Przykłady samodzielnie rysowania formantów i menu
 
-Próbki MFC-ogólne [CTRLTEST](../visual-cpp-samples.md) zawiera przykłady menu własnym rysowania i pole listy własnym rysowania.
+Próbki MFC-ogólne [CTRLTEST](../overview/visual-cpp-samples.md) zawiera przykłady menu własnym rysowania i pole listy własnym rysowania.
 
 Najbardziej typowym przykładem własnym rysowania przycisk to przycisk mapy bitowej. Przycisk, który zawiera jeden, dwa lub trzy obrazy mapy bitowej w różnych regionach jest przycisk mapy bitowej. Na przykład znajduje się w klasie MFC [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
@@ -130,7 +130,7 @@ Podklasy dynamicznej można osiągnąć za pomocą metody [CWnd::SubclassWindow]
 
 Dołącz oba procedury `CWnd` obiektu do istniejącego `HWND`. `SubclassWindow` Trwa `HWND` bezpośrednio. `SubclassDlgItem` jest funkcja pomocnicza, która przyjmuje identyfikator formantu i okno nadrzędne. `SubclassDlgItem` jest przeznaczona dla dołączanie obiektów C++ do formantów okna dialogowego utworzonego na podstawie szablonu okna dialogowego.
 
-Zobacz [CTRLTEST](../visual-cpp-samples.md) przykład kilka przykładów zastosowania `SubclassWindow` i `SubclassDlgItem`.
+Zobacz [CTRLTEST](../overview/visual-cpp-samples.md) przykład kilka przykładów zastosowania `SubclassWindow` i `SubclassDlgItem`.
 
 ## <a name="see-also"></a>Zobacz także
 

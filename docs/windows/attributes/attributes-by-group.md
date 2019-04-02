@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-ms.openlocfilehash: 7452ad3db642e132f4e46c1688d429dbaf78419a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe78a4c5a1773cf621d6554969b1c41c333bc5aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532772"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778588"
 ---
 # <a name="attributes-by-group"></a>Atrybuty według grup
 
@@ -24,7 +24,7 @@ Atrybuty C++ są podzielone na następujące grupy funkcjonalnej.
 |[Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)|Wstrzyknięcie kodu — na podstawie [szablony OLE DB konsumenta](../../data/oledb/ole-db-consumer-templates-reference.md)— Aby utworzyć pracy OLE DB użytkownikowi, który wykonuje zadania, takie jak otwieranie tabel, wykonując polecenia i uzyskiwanie dostępu do danych.|
 |[Atrybuty kompilatora](compiler-attributes.md)|Dostarczony przez kompilator Microsoft C++.|
 
-Aby uzyskać informacje na temat definiowania atrybutów niestandardowych dla aplikacji środowiska .NET Framework, zobacz [atrybuty zdefiniowane przez użytkownika](../user-defined-attributes-cpp-component-extensions.md).
+Aby uzyskać informacje na temat definiowania atrybutów niestandardowych dla aplikacji środowiska .NET Framework, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Zobacz też
 

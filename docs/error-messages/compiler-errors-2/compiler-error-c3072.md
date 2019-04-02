@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 34b5cff9191814b2a16a42d9e234bab09f29c117
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490028"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777132"
 ---
 # <a name="compiler-error-c3072"></a>Błąd kompilatora C3072
 
@@ -19,7 +19,7 @@ Nie można zastosować operatora "operator" do wystąpienia klasy ref
 
 Użyj jednoargumentowego "`operator` " operator do konwertowania wystąpienia klasy ref dla typu uchwytu
 
-Typ CLR wymaga operatorów CLR, nie Operatorzy lokalny (lub standardowa).  Aby uzyskać więcej informacji, zobacz [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+Typ CLR wymaga operatorów CLR, nie Operatorzy lokalny (lub standardowa).  Aby uzyskać więcej informacji, zobacz [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

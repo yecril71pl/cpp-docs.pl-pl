@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: 81316864c9c04c18ca1c96d1e74ad9988734eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541495"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778315"
 ---
 # <a name="compiler-error-c3225"></a>Błąd kompilatora C3225
 
@@ -19,7 +19,7 @@ argument Typ generycznego dla "arg" nie może być "type", musi on być typem wa
 
 Argument typu ogólnego nie jest poprawnego typu.
 
-Aby uzyskać więcej informacji, zobacz [ogólne](../../windows/generics-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [ogólne](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

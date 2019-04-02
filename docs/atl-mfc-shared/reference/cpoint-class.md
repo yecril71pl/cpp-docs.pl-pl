@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740387"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768032"
 ---
 # <a name="cpoint-class"></a>CPoint, klasa
 
@@ -32,19 +32,19 @@ class CPoint : public tagPOINT
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CPoint::CPoint](#cpoint)|Konstruuje `CPoint`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPoint::Offset](#offset)|Dodaje wartości do `x` i `y` członkowie `CPoint`.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|Zwraca różnicę `CPoint` i rozmiarze lub negacji punktu lub różnica w rozmiarze między dwoma punktami lub przesunięcie przez ujemnym rozmiarem.|
 |[CPoint::operator! =](#operator_neq)|Sprawdza, czy pod kątem nierówności pomiędzy dwoma punktami.|
@@ -342,7 +342,7 @@ Aby odwrócić punkt, należy użyć operatora jednoargumentowego. Na przykład 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Struktura POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)<br/>

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259818"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774480"
 ---
 # <a name="cbasepane-class"></a>CBasePane Class
 
@@ -187,14 +187,14 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CBasePane::CBasePane`|Domyślny konstruktor.|
 |`CBasePane::~CBasePane`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CBasePane::accHitTest`|Metoda wywoływana przez platformę, by pobrać element podrzędny lub obiekt podrzędny w danym momencie na ekranie. (Przesłania [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CBasePane::accLocation`|Metoda wywoływana przez platformę, by pobrać bieżącą lokalizację ekranu dla określonego obiektu. (Przesłania [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -302,7 +302,7 @@ class CBasePane : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CBasePane::DoPaint](#dopaint)|Wypełnia tło okienka.|
 
@@ -342,7 +342,7 @@ Poniższe porady dotyczące dostosowywania odnoszą się do `CBasePane Class` i 
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CBasePane` klasy. W przykładzie pokazano, jak pobrać okienko od `CFrameWndEx` klasy i jak ustawić tryb dokowania, wyrównanie okienka i stylu okienka. Kod pochodzi z [przykład konsola programu Word](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CBasePane` klasy. W przykładzie pokazano, jak pobrać okienko od `CFrameWndEx` klasy i jak ustawić tryb dokowania, wyrównanie okienka i stylu okienka. Kod pochodzi z [przykład konsola programu Word](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 

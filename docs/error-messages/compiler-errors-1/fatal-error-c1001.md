@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821368"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770931"
 ---
 # <a name="fatal-error-c1001"></a>Błąd krytyczny C1001
 
@@ -23,4 +23,4 @@ Można często rozwiązać problem optymalizacji, usuwając jeden lub więcej op
 
 Jeśli optymalizacji nie są odpowiedzialne za błąd, spróbuj ponowne napisanie wiersza, w której zgłaszany jest błąd lub kilka wierszy kodu wokół tego wiersza. Aby wyświetlić kod w sposób kompilator widzi on po przetwarzania wstępnego, można użyć [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) opcji.
 
-Aby uzyskać więcej informacji na temat izolowania źródła błędu oraz zgłosić błąd wewnętrzny kompilatora do firmy Microsoft, zobacz [jak zgłosić Problem za pomocą zestawu narzędzi Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Aby uzyskać więcej informacji na temat izolowania źródła błędu oraz zgłosić błąd wewnętrzny kompilatora do firmy Microsoft, zobacz [jak zgłosić Problem za pomocą zestawu narzędzi Visual C++](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).

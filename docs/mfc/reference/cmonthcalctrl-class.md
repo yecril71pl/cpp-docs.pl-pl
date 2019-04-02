@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303673"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777171"
 ---
 # <a name="cmonthcalctrl-class"></a>Klasa CMonthCalCtrl
 
@@ -111,13 +111,13 @@ class CMonthCalCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Konstruuje `CMonthCalCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMonthCalCtrl::Create](#create)|Tworzy formant kalendarza miesięcznego i dołącza je do `CMonthCalCtrl` obiektu.|
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Pobiera szerokość obramowania formantu kalendarza bieżącego miesiąca.|
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Określa kombinację style Windows, które dotyczą kontrolki kalendarza miesięcznego. Zobacz [style kontrolki kalendarza miesięcznego](/windows/desktop/Controls/month-calendar-control-styles) w zestawie SDK Windows, aby uzyskać więcej informacji o stylach.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Zawiera położenie i rozmiar kontrolki kalendarza miesięcznego.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury. Zawiera położenie i rozmiar kontrolki kalendarza miesięcznego.
 
 *(czas pacyficzny)*<br/>
-Odwołanie do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która określa lokalizację formant kalendarza miesięcznego.
+Odwołanie do [punktu](/previous-versions/dd162805\(v=vs.85\)) strukturę, która określa lokalizację formant kalendarza miesięcznego.
 
 *pParentWnd*<br/>
 Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki kalendarza miesięcznego. Nie może być równa NULL.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parametry
 
 *pRect*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który będzie otrzymywał otaczający informacji prostokąta. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, który będzie otrzymywał otaczający informacji prostokąta. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*lpRect*|[in] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąt, który zawiera odpowiednią liczbę kalendarzy.|
+|*lpRect*|[in] Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która definiuje prostokąt, który zawiera odpowiednią liczbę kalendarzy.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąta, którego rozmiar jest mniejszy niż lub równe prostokąta zdefiniowane przez *lprect —* parametru.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która definiuje prostokąta, którego rozmiar jest mniejszy niż lub równe prostokąta zdefiniowane przez *lprect —* parametru.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1304,7 +1304,7 @@ Ta metoda wysyła [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerecttomi
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822469"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779355"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
 
@@ -67,13 +67,13 @@ Co najmniej jeden z następujących przełączników rozdzielaną przecinkami.
 
 Kod, który może być kontrolowane i zarządzane przez środowisko CLR jest kod zarządzany. Kod zarządzany dostęp do obiektów zarządzanych. Aby uzyskać więcej informacji, zobacz [/CLR ograniczenia](clr-restrictions.md).
 
-Aby uzyskać informacje o sposobie tworzenia aplikacji, które Definiowanie oraz stosowanie typami zarządzanymi, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../../windows/component-extensions-for-runtime-platforms.md).
+Aby uzyskać informacje o sposobie tworzenia aplikacji, które Definiowanie oraz stosowanie typami zarządzanymi, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../../extensions/component-extensions-for-runtime-platforms.md).
 
 Aplikacja skompilowana przy użyciu **/CLR** może lub nie może zawierać danych zarządzanych.
 
 Aby włączyć debugowanie aplikacji zarządzanej, zobacz [/assemblydebug (Dodaj DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
-Wyłącznie typy CLR zostaną utworzone na stercie zebranych elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md). Aby skompilować funkcję do kodu macierzystego, użyj `unmanaged` pragmy. Aby uzyskać więcej informacji, zobacz [zarządzane, niezarządzane](../../preprocessor/managed-unmanaged.md).
+Wyłącznie typy CLR zostaną utworzone na stercie zebranych elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [klas i struktur](../../extensions/classes-and-structs-cpp-component-extensions.md). Aby skompilować funkcję do kodu macierzystego, użyj `unmanaged` pragmy. Aby uzyskać więcej informacji, zobacz [zarządzane, niezarządzane](../../preprocessor/managed-unmanaged.md).
 
 Domyślnie **/CLR** nie jest włączone. Gdy **/CLR** jest aktywna, **/MD** jest również w obiekcie. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](md-mt-ld-use-run-time-library.md). **/ MD** gwarantuje, że wybrane są połączone dynamicznie, wielowątkowe wersje procedury czasu wykonywania, przy użyciu plików standardowych nagłówków (.h). Wielowątkowość jest wymagany dla zarządzanych przy użyciu programowania, ponieważ moduł odśmiecania pamięci CLR uruchamia finalizatory pomocniczego wątku.
 
@@ -105,5 +105,5 @@ Ildasm.exe umożliwia wyświetlanie metadanych.
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

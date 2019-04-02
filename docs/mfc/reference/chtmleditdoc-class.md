@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: f468de46cf6d8a8bfcd60521df8b1076a98f0735
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285337"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767070"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc Class
 
@@ -35,13 +35,13 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Konstruuje `CHtmlEditDoc` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CHtmlEditDoc::GetView](#getview)|Pobiera `CHtmlEditView` obiekt dołączony do tego dokumentu.|
 |[CHtmlEditDoc::IsModified](#ismodified)|Zwraca, czy formant WebBrowser skojarzony widok zawiera dokument, który został zmodyfikowany przez użytkownika.|
@@ -108,5 +108,5 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe HTMLEdit](../../visual-cpp-samples.md)<br/>
+[Przykładowe HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

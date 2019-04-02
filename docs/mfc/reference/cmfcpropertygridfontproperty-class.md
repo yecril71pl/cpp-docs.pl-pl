@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: 2ab4f43b2b12dff88148097e2961f235669aaa62
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b348dc2ac68ced89fb0702073f57a114befaf1cb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295672"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769358"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty Class
 
@@ -33,14 +33,14 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Konstruuje `CMFCPropertyGridFontProperty` obiektu.|
 |`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCPropertyGridFontProperty::FormatProperty`|Formatuje tekst reprezentujący wartość właściwości. (Przesłania [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
 |[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Pobiera kolor czcionki, który użytkownik wybiera z okno dialogowe czcionki.|
@@ -102,7 +102,7 @@ A `CMFCPropertyGridFontProperty` obiekt reprezentuje właściwość czcionki w k
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonstruować obiekt `CMFCPropertyGridFontProperty` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonstruować obiekt `CMFCPropertyGridFontProperty` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]
 

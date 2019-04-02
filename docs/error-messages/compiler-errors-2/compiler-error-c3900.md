@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3900
 ms.assetid: a94cc561-8fa8-4344-9e01-e81ff462fae5
-ms.openlocfilehash: d031b55407d108b4f8be362156911bfae688326a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35df94ccfcd7942f9057cb37ceee349c09b80607
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512362"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777418"
 ---
 # <a name="compiler-error-c3900"></a>Błąd kompilatora C3900
 
 "członek": niedozwolona w bieżącym zakresie
 
-Właściwość bloków może zawierać deklaracje i funkcji tylko definicje funkcji śródwierszowej. Żadne składowe inne niż funkcje są dozwolone w blokach właściwości. Nie definicji typów, Operatorzy lub friend funkcje są dozwolone. Aby uzyskać więcej informacji, zobacz [właściwość](../../windows/property-cpp-component-extensions.md).
+Właściwość bloków może zawierać deklaracje i funkcji tylko definicje funkcji śródwierszowej. Żadne składowe inne niż funkcje są dozwolone w blokach właściwości. Nie definicji typów, Operatorzy lub friend funkcje są dozwolone. Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
 
 Definicje zdarzeń może zawierać tylko metody dostępu i funkcje.
 

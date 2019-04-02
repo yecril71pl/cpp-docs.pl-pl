@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298207"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777366"
 ---
 # <a name="cmfcmenubutton-class"></a>Klasa CMFCMenuButton
 
@@ -43,20 +43,20 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Konstruuje `CMFCMenuButton` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Metoda wywoływana przez platformę, by tłumaczenie okna komunikatów przed ich wysłaniem. (Przesłania `CMFCButton::PreTranslateMessage`).|
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|Zmienia rozmiar przycisku zgodnie z rozmiarem tekstu i obrazów.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Określa, czy, aby wyświetlić menu podręcznego systemu domyślne lub użyć [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Określa, czy menu podręcznym pojawi się poniżej lub po prawej stronie przycisku.|
@@ -72,7 +72,7 @@ Po utworzeniu `CMFCMenuButton`, trzeba przekazać w dojścia do skojarzonego men
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak ustawić uchwyt menu dołączone do przycisku, Zmień rozmiar przycisku zgodnie z rozmiarem tekstu i obrazów i ustawienie menu podręcznego, który jest wyświetlany przez szablon. Ten fragment kodu jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak ustawić uchwyt menu dołączone do przycisku, Zmień rozmiar przycisku zgodnie z rozmiarem tekstu i obrazów i ustawienie menu podręcznego, który jest wyświetlany przez szablon. Ten fragment kodu jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]

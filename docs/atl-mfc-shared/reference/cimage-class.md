@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: c954955ad52197316da0952dc6dd415a91782444
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739438"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775949"
 ---
 # <a name="cimage-class"></a>CImage, klasa
 
@@ -78,13 +78,13 @@ class CImage
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CImage::CImage](#cimage)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CImage::AlphaBlend](#alphablend)|Wyświetla mapy bitowe, które mają przezroczyste lub półprzezroczystych pikseli.|
 |[CImage::Attach](#attach)|Dołącza HBITMAP do `CImage` obiektu. Może służyć za pomocą mapy bitowe sekcji bez DIB lub mapy bitowe sekcji DIB.|
@@ -128,7 +128,7 @@ class CImage
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[HBITMAP CImage::operator](#operator_hbitmap)|Zwraca uchwyt Windows dołączonych do `CImage` obiektu.|
 
@@ -1658,8 +1658,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe MMXSwarm](../../visual-cpp-samples.md)<br/>
-[Przykładowe SimpleImage](../../visual-cpp-samples.md)<br/>
+[Przykładowe MMXSwarm](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowe SimpleImage](../../overview/visual-cpp-samples.md)<br/>
 [Map bitowych niezależnych od urządzenia](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>

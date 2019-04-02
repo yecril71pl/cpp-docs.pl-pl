@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: a2af04502082f7fb30d59af5e6434161227c6d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81445ff42aca78a8e40e9c88eff4bb76a41a8669
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437277"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772660"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>Kompilator ostrzeżenie (poziom 3) C4534
 
@@ -19,7 +19,7 @@ ms.locfileid: "50437277"
 
 Niezarządzane klasa może mieć konstruktora z parametrami, które mają przypisane wartości domyślne, a kompilator zostanie ona użyta jako domyślnego konstruktora. Klasa jest oznaczona za pomocą `value` — słowo kluczowe nie będzie używać konstruktora przy użyciu wartości domyślnych dla jego parametrów jako domyślnego konstruktora.
 
-Aby uzyskać więcej informacji, zobacz [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [klas i struktur](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 Poniższy przykład spowoduje wygenerowanie C4534:
 

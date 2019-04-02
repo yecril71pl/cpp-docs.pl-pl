@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 7138f1a3cecaaf75fbab01fd1aee18529b7a3a84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5afb829485e0e9533a14e818e6d6785f268a83b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652473"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772097"
 ---
 # <a name="compiler-warning-c4485"></a>Ostrzeżenie kompilatora C4485
 
@@ -19,7 +19,7 @@ ms.locfileid: "50652473"
 
 Zastępuje metodę dostępu, z lub bez `virtual` — słowo kluczowe, funkcja dostępu klasy bazowej, ale `override` lub `new` specyfikator nie jest częścią nadrzędnych sygnatura funkcji. Dodaj `new` lub `override` specyfikator w celu rozwiązania tego ostrzeżenia.
 
-Zobacz [zastąpienia](../../windows/override-cpp-component-extensions.md) i [new (nowe gniazdo w vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Zobacz [zastąpienia](../../extensions/override-cpp-component-extensions.md) i [new (nowe gniazdo w vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) Aby uzyskać więcej informacji.
 
 C4485 zawsze jest wystawiany jako błąd. Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma może pominąć C4485.
 

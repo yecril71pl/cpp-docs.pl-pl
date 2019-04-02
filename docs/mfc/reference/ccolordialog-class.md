@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc9bc76b328359d4c8ec7796de7dfaa7d3a9cf2c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304213"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772842"
 ---
 # <a name="ccolordialog-class"></a>Klasa CColorDialog
 
@@ -41,13 +41,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CColorDialog::CColorDialog](#ccolordialog)|Konstruuje `CColorDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CColorDialog::DoModal](#domodal)|Wyświetla okno dialogowe kolorów i umożliwia użytkownikowi dokonać wyboru.|
 |[CColorDialog::GetColor](#getcolor)|Zwraca `COLORREF` struktury zawierającej wartości kolorów.|
@@ -56,13 +56,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CColorDialog::OnColorOK](#oncolorok)|Przesłonić, aby zweryfikować kolor wprowadzane do okna dialogowego.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CColorDialog::m_cc](#m_cc)|Struktura służące do dostosowywania ustawień w oknie dialogowym.|
 
@@ -268,7 +268,7 @@ Ta funkcja jest wywoływana z w ramach programu obsługi komunikatów lub `OnCol
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
-[Próbki MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

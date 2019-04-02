@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9d4100037c5a6cd2eeef1a50fb2d5a46b2cb6505
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260754"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772726"
 ---
 # <a name="cpropertypage-class"></a>Cpropertypage — klasa
 
@@ -61,13 +61,13 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Konstruuje `CPropertyPage` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropertyPage::CancelToClose](#canceltoclose)|Zmienia przycisk OK, aby odczytać Zamknij i wyłącza przycisk Anuluj, po zmianie nieodwracalny, na stronie modalny arkusz właściwości.|
 |[CPropertyPage::Construct](#construct)|Konstruuje `CPropertyPage` obiektu. Użyj `Construct` czy chcesz określić parametry w czasie wykonywania, czy używasz tablic.|
@@ -87,7 +87,7 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktury. Zapewnia dostęp do właściwości podstawowe parametry strony.|
 
@@ -574,10 +574,10 @@ Struktura zapewnia śledzenia, które strony są "zanieczyszczony", oznacza to, 
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
-[MFC Sample PROPDLG](../../visual-cpp-samples.md)<br/>
-[Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CPropertySheet](../../mfc/reference/cpropertysheet-class.md)<br/>

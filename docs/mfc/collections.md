@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273312"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767187"
 ---
 # <a name="collections"></a>Kolekcje
 
@@ -41,7 +41,7 @@ Klasa kolekcji jest określony przez jego "kształt" i typów elementów. Kszta�
 
 Każdy z trzech kształtów w określonej kolekcji opisano skrótowo w dalszej części tego tematu. Aby porównać funkcje kształty, aby pomóc w podjęciu decyzji, co jest najlepsze dla Twojego programu, zobacz [zalecenia dotyczące wybierania klasy kolekcji](../mfc/recommendations-for-choosing-a-collection-class.md).
 
-- Lista
+- List
 
    Klasa listy udostępnia uporządkowana lista nieindeksowanych elementów, zaimplementowane jako podwójnie połączoną listą. Lista "head" i "tail" i jest bardzo szybkie dodawanie lub usuwanie elementów, head lub ogona, lub wstawiania lub usuwania elementów w środku.
 
@@ -55,13 +55,13 @@ Każdy z trzech kształtów w określonej kolekcji opisano skrótowo w dalszej c
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Klasy kolekcji oparte na szablonach
 
-Najłatwiejszym sposobem realizowania bezpiecznej kolekcji, który zawiera obiekty dowolnego typu jest użyć jednej z klas MFC na podstawie szablonu. Aby uzyskać przykłady tych klas, zobacz przykład MFC [ZBIERANIE](../visual-cpp-samples.md).
+Najłatwiejszym sposobem realizowania bezpiecznej kolekcji, który zawiera obiekty dowolnego typu jest użyć jednej z klas MFC na podstawie szablonu. Aby uzyskać przykłady tych klas, zobacz przykład MFC [ZBIERANIE](../overview/visual-cpp-samples.md).
 
 W poniższej tabeli wymieniono klasy kolekcji oparte na szablonach MFC.
 
 ### <a name="collection-template-classes"></a>Kolekcja klas szablonów
 
-|Zawartość kolekcji|Tablice|Listy|Mapy|
+|Zawartość kolekcji|Tablice|Listy|Maps|
 |-------------------------|------------|-----------|----------|
 |Kolekcje obiektów dowolnego typu|`CArray`|`CList`|`CMap`|
 |Kolekcje wskaźników do obiektów dowolnego typu|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
@@ -72,7 +72,7 @@ Jeśli aplikacja już korzysta z klasy nieszablonu MFC, można nadal z nich korz
 
 ### <a name="nontemplate-collection-classes"></a>Klasy kolekcji nieszablonu
 
-|Tablice|Listy|Mapy|
+|Tablice|Listy|Maps|
 |------------|-----------|----------|
 |`CObArray`|`CObList`|`CMapPtrToWord`|
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|

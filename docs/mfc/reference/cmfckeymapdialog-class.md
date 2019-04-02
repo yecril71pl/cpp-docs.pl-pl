@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: 94c6968d2f534ed0b6d247420e67910ecf906b05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 65aa5ab0f24999ee23a97f383577b69584825502
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294606"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774792"
 ---
 # <a name="cmfckeymapdialog-class"></a>Klasa CMFCKeyMapDialog
 
@@ -47,19 +47,19 @@ class CMFCKeyMapDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Konstruuje `CMFCKeyMapDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCKeyMapDialog::DoModal](#domodal)|Wyświetlane jest okno dialogowe mapowania klawiatury.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCKeyMapDialog::FormatItem](#formatitem)|Metoda wywoływana przez platformę, by tworzyć ciąg, który opisuje mapowanie klawiszy. Domyślnie ciąg zawiera nazwę polecenia klawiszy skrótów i Opis klucza skrótu.|
 |[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Pobiera ciąg, który zawiera listę skrótów skojarzony z określonym poleceniem.|
@@ -116,7 +116,7 @@ CMFCKeyMapDialog(
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCKeyMapDialog` klasy. W tym przykładzie jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCKeyMapDialog` klasy. W tym przykładzie jest częścią [Visual Studio przykład](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]
 

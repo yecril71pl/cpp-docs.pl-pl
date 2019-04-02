@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272103"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774988"
 ---
 # <a name="atl-collection-classes"></a>Klasy kolekcji ATL
 
@@ -36,7 +36,7 @@ ATL zawiera wiele klas do przechowywania i uzyskiwania dostępu do danych. Klasy
 
 ATL zawiera następujące klasy tablic radzenia sobie z małej liczby obiektów. Te klasy są jednak ograniczone i przeznaczone do użytku wewnętrznego przez ATL. Nie zaleca się używania ich w swoich programach.
 
-|Class|Typ magazynu danych|
+|Klasa|Typ magazynu danych|
 |-----------|--------------------------|
 |[CSimpleArray](../atl/reference/csimplearray-class.md)|Implementuje klasę tablicy radzenia sobie z małej liczby obiektów.|
 |[CSimpleMap](../atl/reference/csimplemap-class.md)|Implementuje klasę mapowania radzenia sobie z małej liczby obiektów.|
@@ -45,7 +45,7 @@ ATL zawiera następujące klasy tablic radzenia sobie z małej liczby obiektów.
 
 Klasy postępuj zgodnie z implementacji tablic, list i map i są dostępne jako klasy kolekcji ogólnego przeznaczenia:
 
-|Class|Typ magazynu danych|
+|Klasa|Typ magazynu danych|
 |-----------|--------------------------|
 |[CAtlArray](../atl/reference/catlarray-class.md)|Implementuje tablicy.|
 |[CAtlList](../atl/reference/catllist-class.md)|Implementuje listę.|
@@ -59,7 +59,7 @@ W ramach tych zajęć wyłapuje wiele błędy programowania, gdy są używane w 
 
 Dostępne są również bardziej wyspecjalizowane klasy kolekcji do zarządzania i wskaźnikami interfejsu pamięci:
 
-|Class|Cel|
+|Klasa|Cel|
 |-----------|-------------|
 |[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Udostępnia metody przydatne przy konstruowaniu tablicy inteligentnych wskaźników.|
 |[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Udostępnia metody przydatne podczas tworzenia listy inteligentne wskaźniki.|
@@ -84,7 +84,7 @@ Każdą z klas kolekcji dostępne oferuje różną charakterystykę wydajności,
 
 |Kształt|Uporządkowane|Indeksowane|Wstaw<br /><br /> — element|Wyszukaj<br /><br /> określony element|Zduplikowany<br /><br /> elementy|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
-|Lista|Tak|Nie|Szybko (stały czas)|Powolne O(n)|Tak|
+|List|Tak|Nie|Szybko (stały czas)|Powolne O(n)|Tak|
 |Tablica|Tak|Przez int (stały czas)|Powolne O(n), z wyjątkiem sytuacji, w przypadku wstawiania na końcu, w których wielkość stałym czasie|Powolne O(n)|Tak|
 |Mapa|Nie|Według klucza (stały czas)|Szybko (stały czas)|Szybko (stały czas)|Tak (wartości) (kluczy)|
 |Mapa red czarny|Tak (według kluczy)|Według klucza O (log n)|Szybkie O (log n)|Szybkie O (log n)|Nie|
@@ -116,13 +116,13 @@ Poniższy diagram przedstawia hierarchii klas dla ctraits — klasy.
 
 Poniższe przykłady pokazują klas kolekcji:
 
-- [Przykładowe MMXSwarm](../visual-cpp-samples.md)
+- [Przykładowe MMXSwarm](../overview/visual-cpp-samples.md)
 
-- [Przykładowe DynamicConsumer](../visual-cpp-samples.md)
+- [Przykładowe DynamicConsumer](../overview/visual-cpp-samples.md)
 
 - [Przykładowe UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [Przykładowe Neon](../visual-cpp-samples.md)
+- [Przykładowe Neon](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Zobacz także
 

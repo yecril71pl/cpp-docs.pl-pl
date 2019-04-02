@@ -1,25 +1,25 @@
 ---
-title: Błąd kompilatora C3290
+title: Compiler Error C3290
 ms.date: 11/04/2016
 f1_keywords:
 - C3290
 helpviewer_keywords:
 - C3290
 ms.assetid: 0baf684b-1143-4953-ac99-a2fa267d8017
-ms.openlocfilehash: d82d3272563f7a5af5de399a2f7fff621500e612
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2a346354d8da7d78c5517b01b4438bfb8af50ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490484"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774844"
 ---
-# <a name="compiler-error-c3290"></a>Błąd kompilatora C3290
+# <a name="compiler-error-c3290"></a>Compiler Error C3290
 
 "type": właściwość prosta nie może mieć typu referencyjnego
 
 Właściwość została zadeklarowana niepoprawnie. Zadeklaruj właściwość prosta, kompilator tworzy zmienną, która spowoduje zaktualizowanie właściwości, gdy nie jest możliwe śledzenie odwołania do zmiennej w klasie.
 
-Zobacz [właściwość](../../windows/property-cpp-component-extensions.md) i [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Zobacz [właściwość](../../extensions/property-cpp-component-extensions.md) i [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260390"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771321"
 ---
 # <a name="cdockingmanager-class"></a>Klasa CDockingManager
 
@@ -181,7 +181,7 @@ class CDockingManager : public CObject
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Tworzy okienko dokowania i dodaje go do listy pasków sterowania.|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Dodaje dojścia do paska okienko do listy ukrytych MDI, z zakładkami paska okienka.|
@@ -258,7 +258,7 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Określa, czy Menedżer dokowania powoduje ukrycie okienka w trybie kontenera OLE.|
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Określa tryb dokowania globalny.|
@@ -292,7 +292,7 @@ Poniższe porady dotyczą `CDockingManager` obiektów:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CDockingManager` klasa umożliwiająca skonfigurowanie `CDockingManager` obiektu. W przykładzie pokazano, jak można wyświetlić dodatkowe przycisk, który otwiera menu podręcznego transkrypcji wszystkich okienek dokowania oraz jak ustawić tryb dokowania obiektu. Ten fragment kodu jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CDockingManager` klasa umożliwiająca skonfigurowanie `CDockingManager` obiektu. W przykładzie pokazano, jak można wyświetlić dodatkowe przycisk, który otwiera menu podręcznego transkrypcji wszystkich okienek dokowania oraz jak ustawić tryb dokowania obiektu. Ten fragment kodu jest częścią [Visual Studio przykład](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 

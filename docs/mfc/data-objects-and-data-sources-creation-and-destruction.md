@@ -15,12 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304452"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775247"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Obiekty danych i źródeł danych: Tworzenie i likwidacja
 
@@ -68,7 +68,7 @@ Jeśli wykonasz innej metody obsługi operacji wklejania, upewnij się, że obie
 
 1. Jeśli jest to **Wytnij** operacji lub `DoDragDrop` zwraca **DROPEFFECT_MOVE**, wybrane w kroku 1 dane są usuwane z dokumentu.
 
-Ten scenariusz jest implementowany przez przykłady MFC OLE [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md). Przyjrzyj się źródła dla każdej aplikacji `CView`-klasy dla wszystkie elementy oprócz `GetClipboardData` i `OnGetClipboardData` funkcji. Te dwie funkcje są albo `COleClientItem` lub `COleServerItem`-implementacji klasy pochodnej. Te przykładowe programy zapewniają dobrym przykładem sposobu wdrożenia tych pojęć.
+Ten scenariusz jest implementowany przez przykłady MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md). Przyjrzyj się źródła dla każdej aplikacji `CView`-klasy dla wszystkie elementy oprócz `GetClipboardData` i `OnGetClipboardData` funkcji. Te dwie funkcje są albo `COleClientItem` lub `COleServerItem`-implementacji klasy pochodnej. Te przykładowe programy zapewniają dobrym przykładem sposobu wdrożenia tych pojęć.
 
 Jeden innej sytuacji, w których warto utworzyć `COleDataSource` obiekt występuje w przypadku modyfikowania domyślne zachowanie operacji przeciągania i upuszczania. Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie: Dostosowywanie](../mfc/drag-and-drop-customizing.md) artykułu.
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 041c0c22b7ae842073bfd6656d9cbb3b2a20af9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ef4352101541391a7cda88471fbaa6aeae4ffb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430059"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770372"
 ---
 # <a name="compiler-error-c3451"></a>Błąd kompilatora C3451
 
 "attribute": nie można zastosować niezarządzanego atrybutu "type"
 
-Atrybut C++ nie można zastosować do typu CLR. Zobacz [dokumentacja atrybutów C++](../../windows/cpp-attributes-reference.md) Aby uzyskać więcej informacji.
+Atrybut C++ nie można zastosować do typu CLR. Zobacz [dokumentacja atrybutów C++](../../windows/attributes/attributes-alphabetical-reference.md) Aby uzyskać więcej informacji.
 
-Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: [uuid](../../windows/uuid-cpp-attributes.md) atrybut nie jest dozwolony dla atrybutu użytkownika przy użyciu CLR — programowanie. Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.GuidAttribute>.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 8848dca10a75bec6f5ff6251a3af5be8e9a7b6e6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dae4937661db945fa17f15ea39b0d17a8bf72640
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816376"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768227"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Uaktualnianie projektów ze starszych wersji programu Visual C++
 
@@ -45,6 +45,6 @@ Aby uzyskać informacje o tym, jak można zaktualizować docelowej wersji Window
 
 ## <a name="see-also"></a>Zobacz też
 
-[Co nowego w języku Visual C++ w programie Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Co nowego w języku Visual C++ w programie Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Visual C++ — historia zmian w latach 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Niestandardowe zachowanie](../cpp/nonstandard-behavior.md)

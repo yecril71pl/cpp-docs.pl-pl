@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279355"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770346"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menu i zasoby: Dodatki do kontenera
 
@@ -29,7 +29,7 @@ W tym artykule opisano zmiany, które należy podjąć, menu i innych zasobów w
 
 W aplikacjach kontenera dwa rodzaje zmian, należy wykonać: modyfikacje do istniejących zasobów do obsługi edycja wizualna OLE i dodawania nowych zasobów używany do aktywacji w miejscu. Jeśli tworzenie aplikacji kontenera za pomocą Kreatora aplikacji, zostaną wykonane następujące kroki dla Ciebie, ale mogą one wymagać dostosowania.
 
-Jeśli nie używasz Kreatora aplikacji, możesz przyjrzeć się OCLIENT. RC, skrypt zasobu OCLIENT przykładowej aplikacji, aby zobaczyć, jak te zmiany są zaimplementowane. Zobacz przykładową MFC OLE [OCLIENT](../visual-cpp-samples.md).
+Jeśli nie używasz Kreatora aplikacji, możesz przyjrzeć się OCLIENT. RC, skrypt zasobu OCLIENT przykładowej aplikacji, aby zobaczyć, jak te zmiany są zaimplementowane. Zobacz przykładową MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
 
 Tematy omówione w tym artykule obejmują:
 
@@ -58,13 +58,13 @@ Jeśli chcesz obsługiwać aktywacji w miejscu zawartych w niej elementów, nale
 
 Niewielkie zmiany zasobów Tabela akceleratora aplikacji kontenera są niezbędne, jeśli są obsługiwane aktywacji w miejscu. Pierwsza zmiana umożliwia użytkownikowi naciśnij klawisz ESC (ESC), aby anulować tryb edycji w miejscu. Dodaj następujący wpis do tabeli akceleratora główne:
 
-|ID|Key|Typ|
+|Identyfikator|Klucz|Type|
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-Zmień drugi polega na utworzeniu nowej tabeli akceleratora, który odnosi się do nowego zasobu menu utworzone dla aktywacji w miejscu. Ta tabela zawiera wpisy dla menu Plik i okna, oprócz wpisu vk_escape — powyżej. Poniższy przykład jest tabela akceleratora utworzone dla aktywacji w miejscu, w przykładzie MFC [kontenera](../visual-cpp-samples.md):
+Zmień drugi polega na utworzeniu nowej tabeli akceleratora, który odnosi się do nowego zasobu menu utworzone dla aktywacji w miejscu. Ta tabela zawiera wpisy dla menu Plik i okna, oprócz wpisu vk_escape — powyżej. Poniższy przykład jest tabela akceleratora utworzone dla aktywacji w miejscu, w przykładzie MFC [kontenera](../overview/visual-cpp-samples.md):
 
-|ID|Key|Typ|
+|Identyfikator|Klucz|Type|
 |--------|---------|----------|
 |ID_FILE_NEW —|CTRL+N|**VIRTKEY**|
 |ID_FILE_OPEN —|CTRL+O|**VIRTKEY**|
@@ -78,7 +78,7 @@ Zmień drugi polega na utworzeniu nowej tabeli akceleratora, który odnosi się 
 
 Większość zmian do tabel ciągów dla aplikacji kontenera odnoszą się do elementów menu dodatkowych wymienione w [dodatki do kontenera Menu](#_core_container_menu_additions). Dostarczają tekstu wyświetlanego na pasku stanu, gdy każdy element menu jest wyświetlany. Na przykład poniżej przedstawiono wpisów tabeli ciągów, które generuje Kreatora aplikacji:
 
-|ID|String|
+|Identyfikator|String|
 |--------|------------|
 |IDP_OLE_INIT_FAILED|Zainicjowanie OLE nie powiodło się. Upewnij się, że biblioteki OLE są w poprawnej wersji.|
 |IDP_FAILED_TO_CREATE|Nie można utworzyć obiektu. Upewnij się, że obiekt wprowadzono do rejestru systemu.|

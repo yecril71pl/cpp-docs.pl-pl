@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 19e230f150803019d47e1ea710e7d713d1822a53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0faae50afcd26948bdcb4d4333efb25d5cca33ea
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270098"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772972"
 ---
 # <a name="catlfile-class"></a>Klasa CAtlFile
 
@@ -44,13 +44,13 @@ class CAtlFile : public CHandle
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlFile::CAtlFile](#catlfile)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlFile::Create](#create)|Wywołaj tę metodę, aby utworzyć lub otworzyć pliku.|
 |[CAtlFile::Flush](#flush)|Wywołaj tę metodę, aby wyczyścić buforów dla pliku i spowodować, że wszystkie buforowane dane są zapisywane w pliku.|
@@ -66,7 +66,7 @@ class CAtlFile : public CHandle
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CAtlFile::m_pTM](#m_ptm)|Wskaźnik do `CAtlTransactionManager` obiektu|
 
@@ -449,6 +449,6 @@ Pierwsze trzy formularze wywołać [WriteFile](/windows/desktop/api/fileapi/nf-f
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe Neon](../../visual-cpp-samples.md)<br/>
+[Przykładowe Neon](../../overview/visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasa CHandle](../../atl/reference/chandle-class.md)

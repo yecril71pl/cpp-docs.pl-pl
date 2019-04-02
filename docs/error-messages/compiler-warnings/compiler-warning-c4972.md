@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4972
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
-ms.openlocfilehash: dcf08f26809c7c61e3e00c41c555416c95f4a0e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c58258298fb91d04014e719732135a1f33f13b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598838"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777080"
 ---
 # <a name="compiler-warning-c4972"></a>Ostrzeżenie kompilatora C4972
 
@@ -19,7 +19,7 @@ Nie jest bezpośrednia modyfikacja lub traktowanie wyniku operacji odpakowywania
 
 Usunięcia odwołania do dojścia do typu wartości, znany także jako Rozpakowywanie i następnie przypisując do niej nie jest możliwe do zweryfikowania.
 
-Aby uzyskać więcej informacji, zobacz [pakowania](../../windows/boxing-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [pakowania](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295139"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769795"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc Class
 
@@ -35,7 +35,7 @@ class CRichEditDoc : public COleServerDoc
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRichEditDoc::CreateClientItem](#createclientitem)|Wywołana w celu przeprowadzenia czyszczenia dokumentu.|
 |[CRichEditDoc::GetStreamFormat](#getstreamformat)|Wskazuje, czy strumień danych wejściowych i wyjściowych powinna zawierać informacje o formatowaniu.|
@@ -43,7 +43,7 @@ class CRichEditDoc : public COleServerDoc
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRichEditDoc::m_bRTF](#m_brtf)|Wskazuje, czy strumień we/wy powinna zawierać formatowania.|
 
@@ -55,7 +55,7 @@ class CRichEditDoc : public COleServerDoc
 
 Ten formant Windows wspólnej (i w związku z tym [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) i pokrewne klasy) jest dostępna tylko dla programów uruchomionych w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.
 
-Przykład przy użyciu bogatej edycji dokumentu w aplikacji MFC, zobacz [WORDPAD](../../visual-cpp-samples.md) przykładowej aplikacji.
+Przykład przy użyciu bogatej edycji dokumentu w aplikacji MFC, zobacz [WORDPAD](../../overview/visual-cpp-samples.md) przykładowej aplikacji.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Próbki MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CRichEditView](../../mfc/reference/cricheditview-class.md)<br/>

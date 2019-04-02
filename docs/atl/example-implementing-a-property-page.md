@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267241"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777041"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementowanie strony właściwości
 
 W tym przykładzie pokazano, jak strona właściwości, która wyświetla (i pozwala na zmianę) właściwości budowania [klasy dokumentów](../mfc/document-classes.md) interfejsu.
 
-Przykład jest oparty na [przykładowe ATLPages](../visual-cpp-samples.md).
+Przykład jest oparty na [przykładowe ATLPages](../overview/visual-cpp-samples.md).
 
 Aby ukończyć w tym przykładzie, wykonasz następujące czynności:
 
@@ -164,4 +164,4 @@ Po uruchomieniu tego makra, zostanie wyświetlona strona właściwości, przedst
 ## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../atl/atl-com-property-pages.md)<br/>
-[Przykładowe ATLPages](../visual-cpp-samples.md)
+[Przykładowe ATLPages](../overview/visual-cpp-samples.md)

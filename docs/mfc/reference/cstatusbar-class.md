@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279500"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777340"
 ---
 # <a name="cstatusbar-class"></a>Klasa CStatusBar
 
@@ -57,13 +57,13 @@ class CStatusBar : public CControlBar
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CStatusBar::CStatusBar](#cstatusbar)|Konstruuje `CStatusBar` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CStatusBar::CommandToIndex](#commandtoindex)|Pobiera indeks dla identyfikatora dla danego wskaźnika.|
 |[CStatusBar::Create](#create)|Tworzy pasek stanu, dołącza go do `CStatusBar` obiektu i ustawia początkowa wysokość czcionki i paskiem.|
@@ -283,7 +283,7 @@ void GetItemRect(
 Indeks wskaźnika, którego współrzędne prostokąt, które mają być pobierane.
 
 *lpRect*<br/>
-Wskazuje [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który będzie otrzymywał współrzędne wskaźnika określonej przez *nIndex*.
+Wskazuje [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który będzie otrzymywał współrzędne wskaźnika określonej przez *nIndex*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -506,8 +506,8 @@ Po wywołaniu metody `SetPaneText`, należy dodać program obsługi aktualizacji
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
-[MFC Sample DLGCBR32](../../visual-cpp-samples.md)<br/>
+[Próbki MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)<br/>

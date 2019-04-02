@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b9e94f131448cb9be6c31962ecd19607ceb1b708
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821407"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776040"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(Wyłącz dwufazowe wyszukiwanie nazw)
 
@@ -158,7 +158,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 W obszarze **/Zc:twoPhase-** i w starszych kompilatory, kompilator wymaga on tylko `template` — słowo kluczowe w wierszu 2. Domyślnie, a w trybie zgodności, kompilator teraz wymaga również `template` — słowo kluczowe w wierszu 4, aby wskazać, że `T::X<T>` jest szablonem. Wyszukaj kod, który nie ma to słowo kluczowe i dostarczenia go do kodu są zgodne ze standardem.
 
-Aby uzyskać więcej informacji na temat problemów ze zgodnością, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio](../../cpp-conformance-improvements-2017.md) i [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio](../../overview/cpp-conformance-improvements-2017.md) i [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 

@@ -2,12 +2,12 @@
 title: Aplikacje klasyczne (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694572"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771922"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 
@@ -43,7 +43,7 @@ Można użyć dowolnej aplikacji klasycznych w języku C++, C Runtime (CRT) i st
 |[Dodawanie plików do pustych aplikacji Win32](adding-files-to-an-empty-win32-applications.md)|Jak dodać pliki do pustego projektu.|
 |[Praca z plikami zasobów](working-with-resource-files.md)|Jak dodać obrazy, ikony, tabele ciągów i innych zasobów do aplikacji klasycznej.|
 |[Zasoby służące do tworzenia gier za pomocą programu DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Zawiera łącza do zawartości do tworzenia gier w języku C++.|
-|[Wskazówki: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md)|Jak utworzyć plik binarny lib.|
+|[Przewodnik: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md)|Jak utworzyć plik binarny lib.|
 |[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera instrukcje dotyczące konfigurowania projektu kompilować przy użyciu zestawu SDK systemu Windows 10.|
 
 ## <a name="related-articles"></a>Powiązane artykuły
@@ -51,9 +51,9 @@ Można użyć dowolnej aplikacji klasycznych w języku C++, C Runtime (CRT) i st
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Tworzenie aplikacji dla systemu Windows](/windows/desktop/index)|Zawiera informacje o interfejsie Windows API i modelu COM. (Niektóre interfejsy API Windows i biblioteki DLL innych firm, są implementowane jako obiekty COM.)|
-|[Hilo: Projektowanie aplikacji Windows 7 w języku C++](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Opisuje sposób tworzenia aplikacji klasycznych Windows wzbogaconego klienta używającej animacji Windows i Direct2D do utworzenia interfejsu użytkownika opartego na karuzeli.  W tym samouczku nie został jeszcze zaktualizowany od Windows 7, ale nadal zapewnia szczegółowe wprowadzenie do programowania systemu Win32.|
+|[Hilo: Projektowanie aplikacji C++ dla Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Opisuje sposób tworzenia aplikacji klasycznych Windows wzbogaconego klienta używającej animacji Windows i Direct2D do utworzenia interfejsu użytkownika opartego na karuzeli.  W tym samouczku nie został jeszcze zaktualizowany od Windows 7, ale nadal zapewnia szczegółowe wprowadzenie do programowania systemu Win32.|
 |[Omówienie programowania w systemie Windows w języku C++](overview-of-windows-programming-in-cpp.md)|W tym artykule opisano najważniejsze funkcje pulpitu Windows programowania w języku C++.|
 
 ## <a name="see-also"></a>Zobacz też
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

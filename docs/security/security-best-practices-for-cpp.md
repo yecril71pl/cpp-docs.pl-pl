@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742470"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769865"
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
 
@@ -46,7 +46,7 @@ Biblioteka środowiska uruchomieniowego C (CRT) został uzupełniony obejmujący
 
 ## <a name="safeint-library"></a>Biblioteka SafeInt
 
-[Biblioteka SafeInt](../windows/safeint-library.md) pomaga uniknąć przepełnienia liczby całkowitej i inne możliwe do wykorzystania błędy, które mogą wystąpić, gdy aplikacja wykonuje operacje matematyczne. `SafeInt` Biblioteka zawiera [safeint — klasa](../windows/safeint-class.md), [safeintexception — klasa](../windows/safeintexception-class.md)oraz kilka [safeint — funkcje](../windows/safeint-functions.md).
+[Biblioteka SafeInt](../safeint/safeint-library.md) pomaga uniknąć przepełnienia liczby całkowitej i inne możliwe do wykorzystania błędy, które mogą wystąpić, gdy aplikacja wykonuje operacje matematyczne. `SafeInt` Biblioteka zawiera [safeint — klasa](../safeint/safeint-class.md), [safeintexception — klasa](../safeint/safeintexception-class.md)oraz kilka [safeint — funkcje](../safeint/safeint-functions.md).
 
 `SafeInt` Klasy chroni przed przepełnienie liczby całkowitej i wykorzystuje dzielenie przez zero. Służy do obsługi porównanie wartości o różnych typach. Udostępnia dwie zasady obsługi błędów. Domyślna zasada dotyczy `SafeInt` klasy, aby zgłosić `SafeIntException` klasy wyjątku do raportu, dlaczego nie można ukończyć operacji matematycznych. Drugie zasady jest `SafeInt` klasy, aby zatrzymać wykonywanie programów. Można również definiować niestandardowe zasady.
 
@@ -68,7 +68,7 @@ Analiza kodu dla kodu zarządzanego, znany także jako FxCop, sprawdza, czy zest
 
 - Wydajność
 
-- Zabezpieczenia
+- Bezpieczeństwo
 
 ## <a name="windows-application-verifier"></a>Weryfikator aplikacji Windows
 

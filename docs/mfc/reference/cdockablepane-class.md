@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271917"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769696"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
 
@@ -153,13 +153,13 @@ class CDockablePane : public CPane
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDockablePane::CDockablePane](#cdockablepane)|Tworzy i inicjuje `CDockablePane` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Dołącza okienko do innego okienka. Spowoduje to utworzenie okienka z zakładkami.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Zwraca rozmiar prostokąta okienka.|
@@ -229,7 +229,7 @@ class CDockablePane : public CPane
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Określa, czy jest ukryty (w trybie autoukrywania) dla okienka dokowania.|
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Określa, kiedy automatyczne ukrywanie okienka dokowania powinna zostać przerwana w kroczącym.|
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Określa, czy animacja automatyczne ukrywanie okienka dokowalne jest wyłączona.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Określa zachowanie okienka, gdy okienka jest w trybie autoukrywania.|
@@ -290,7 +290,7 @@ Poniższe porady dotyczą `CDockablePane` obiektów:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować `CDockablePane` obiektu przy użyciu różnych metod w `CDockablePane` klasy. W przykładzie pokazano, jak włączyć automatyczne ukrywanie wszystkich funkcji dla tego okienka dokowalne, podpis lub uchwytu, Włącz tryb automatycznego ukrywania, wyświetlenie okienka i animować okienka w którym znajduje się w trybie autoukrywania. Ten fragment kodu jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować `CDockablePane` obiektu przy użyciu różnych metod w `CDockablePane` klasy. W przykładzie pokazano, jak włączyć automatyczne ukrywanie wszystkich funkcji dla tego okienka dokowalne, podpis lub uchwytu, Włącz tryb automatycznego ukrywania, wyświetlenie okienka i animować okienka w którym znajduje się w trybie autoukrywania. Ten fragment kodu jest częścią [Visual Studio przykład](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]

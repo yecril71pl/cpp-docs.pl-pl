@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0416d7387fe4250c7a42dca5a0d6d56d7857aed2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259116"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776196"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget — klasa
 
@@ -67,13 +67,13 @@ class CCmdTarget : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Konstruuje `CCmdTarget` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Wyświetla kursora w postaci klepsydry kursora.|
 |[CCmdTarget::DoOleVerb](#dooleverb)|Powoduje, że określone przez zlecenia OLE do wykonania akcji.|
@@ -169,7 +169,7 @@ Wskaźnik do [MSG](/windows/desktop/api/winuser/ns-winuser-msg) struktury opisuj
 Uchwyt okna dokumentu z obiektem.
 
 *lpRect*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury zawierającej współrzędne, w pikselach, które definiują obiekt użytkownika blokujących prostokąta w *hwndParent*.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury zawierającej współrzędne, w pikselach, które definiują obiekt użytkownika blokujących prostokąta w *hwndParent*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -524,7 +524,7 @@ void RestoreWaitCursor();
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC acdual —](../../visual-cpp-samples.md)<br/>
+[Próbki MFC acdual —](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CCmdUI](../../mfc/reference/ccmdui-class.md)<br/>

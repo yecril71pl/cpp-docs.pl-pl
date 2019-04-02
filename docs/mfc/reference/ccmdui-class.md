@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302878"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770892"
 ---
 # <a name="ccmdui-class"></a>Klasa CCmdUI
 
@@ -47,7 +47,7 @@ class CCmdUI
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CCmdUI::ContinueRouting](#continuerouting)|Informuje mechanizm routingu poleceń, aby kontynuować, routing do bieżącej wiadomości w łańcuchu obsługi.|
 |[CCmdUI::Enable](#enable)|Włącza lub wyłącza elementu interfejsu użytkownika dla tego polecenia.|
@@ -57,7 +57,7 @@ class CCmdUI
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CCmdUI::m_nID](#m_nid)|Identyfikator obiektu interfejsu użytkownika.|
 |[CCmdUI::m_nIndex](#m_nindex)|Indeks obiektu interfejsu użytkownika.|
@@ -77,7 +77,7 @@ Element menu, można zastąpić przycisk paska sterowania lub inny obiekt interf
 
 W poniższej tabeli zestawiono wpływ `CCmdUI`przez funkcje Członkowskie mają na różne elementy interfejsu użytkownika polecenia.
 
-|Element interfejsu użytkownika|Włącz|SetCheck|SetRadio|SetText|
+|Element interfejsu użytkownika|Włączenie|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
 |Element menu|Włącza lub wyłącza|Sprawdza, czy lub usuwa zaznaczenie|Umożliwia sprawdzenie za pomocą pojedynczego znaku kropki|Ustawia element tekstu|
 |Przycisk paska narzędzi|Włącza lub wyłącza|Wybiera, usuwa, lub nieokreślony|Takie same jak `SetCheck`|(Nie dotyczy)|
@@ -231,6 +231,6 @@ Wskaźnik do ciągu tekstowego.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)

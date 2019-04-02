@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294334"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775169"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager Class
 
@@ -367,13 +367,13 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCVisualManager::CMFCVisualManager`|Domyślny konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak można pobrać z wartościami domyślnymi `CMFCVisualManager` obiektu. Ten fragment kodu jest częścią [przykładowe okienko zadania](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak można pobrać z wartościami domyślnymi `CMFCVisualManager` obiektu. Ten fragment kodu jest częścią [przykładowe okienko zadania](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -4331,7 +4331,7 @@ Domyślna implementacja tej metody wypełnienia tła paska kolorem tła 3d ze zm
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `OnFillBarBackground` w `CMFCVisualManager` klasy. Ten fragment kodu jest częścią [próbka Outlook Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `OnFillBarBackground` w `CMFCVisualManager` klasy. Ten fragment kodu jest częścią [próbka Outlook Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 

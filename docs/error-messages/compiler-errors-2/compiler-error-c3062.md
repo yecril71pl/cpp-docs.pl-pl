@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3062
 ms.assetid: 78632e6d-255f-42c3-b124-31a9194ff86d
-ms.openlocfilehash: ac45847c94e7d2dc731eba71b0a38105eb915e53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f4157db4a2a1b1864446a082deddc73df2e2fe9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590414"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776378"
 ---
 # <a name="compiler-error-c3062"></a>C3062 błąd kompilatora
 
@@ -19,7 +19,7 @@ ms.locfileid: "50590414"
 
 Można określić typu podstawowego dla wyliczenia. Jednak niektóre typy wymagają przypisania wartości do każdego modułu wyliczającego.
 
-Aby uzyskać więcej informacji na temat typów wyliczeniowych, zobacz [klasa wyliczeniowa](../../windows/enum-class-cpp-component-extensions.md).
+Aby uzyskać więcej informacji na temat typów wyliczeniowych, zobacz [klasa wyliczeniowa](../../extensions/enum-class-cpp-component-extensions.md).
 
 Poniższy przykład spowoduje wygenerowanie C3062:
 

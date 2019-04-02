@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299078"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774186"
 ---
 # <a name="cdocument-class"></a>Klasa CDocument
 
@@ -141,13 +141,13 @@ class CDocument : public CCmdTarget
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDocument::CDocument](#cdocument)|Konstruuje `CDocument` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDocument::AddView](#addview)|Dołącza widoku do dokumentu.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Inicjuje Podziel odczytu.|
@@ -200,14 +200,14 @@ class CDocument : public CCmdTarget
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDocument::OnFileSendMail](#onfilesendmail)|Wysyła wiadomość e-mail z dołączony dokument.|
 |[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Włącza polecenia Wyślij pocztę, jeśli występuje obsługi poczty.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|Określa, że `CDocument` obiekt został utworzony przez dllhost miniatur. Powinny być sprawdzane `CView::OnDraw`.|
 |[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Określa, że `CDocument` obiekt został utworzony przez prevhost dla `Rich Preview`. Powinny być sprawdzane `CView::OnDraw`.|
@@ -1254,9 +1254,9 @@ Ta funkcja wywołuje [CView::OnUpdate](../../mfc/reference/cview-class.md#onupda
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>
-[Próbki MFC NPP](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC NPP](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>

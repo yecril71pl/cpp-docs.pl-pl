@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268216"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767551"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Kontrolki ActiveX MFC: Lokalizowanie kontrolki ActiveX
 
@@ -28,7 +28,7 @@ Jeśli chcesz dostosować kontrolki ActiveX na rynku międzynarodowym można zlo
 
 Ogólnie rzecz biorąc kontrolek ActiveX zawsze należy oprzeć ich ustawienia regionalne na zmieniono właściwość identyfikator ustawień regionalnych. Istnieją trzy sposoby, w tym celu:
 
-- Ładowanie zasobów, zawsze na żądanie, w oparciu o bieżącą wartość właściwości otoczenia identyfikator ustawień regionalnych. Przykładowe kontrolki MFC ActiveX [LOKALIZUJ](../visual-cpp-samples.md) korzysta z tej strategii.
+- Ładowanie zasobów, zawsze na żądanie, w oparciu o bieżącą wartość właściwości otoczenia identyfikator ustawień regionalnych. Przykładowe kontrolki MFC ActiveX [LOKALIZUJ](../overview/visual-cpp-samples.md) korzysta z tej strategii.
 
 - Ładowanie zasobów, gdy pierwszy formant jest wystąpienia, na podstawie właściwości otoczenia identyfikator ustawień regionalnych, a dzięki tym zasobom dla wszystkich innych wystąpień. W tym artykule przedstawiono tej strategii.
 
@@ -40,7 +40,7 @@ Ogólnie rzecz biorąc kontrolek ActiveX zawsze należy oprzeć ich ustawienia r
     > [!NOTE]
     >  Będzie to działać dla formantu, ale biblioteki wykonawczej DLL nie dynamicznie zaktualizuje własnych zasobów po zmianie właściwości otoczenia identyfikator ustawień regionalnych. Ponadto wykonawczej DLL dla formantów ActiveX użyj ustawienia regionalne wątku, aby określić ustawienia regionalne dla jego zasobów.
 
-W pozostałej części tego artykułu opisano dwa lokalizowanie strategie. Pierwsza strategia [lokalizuje interfejs programowania formantu](#_core_localizing_your_control.92.s_programmability_interface) (nazwy właściwości, metody i zdarzenia). Druga strategia [lokalizuje interfejsu użytkownika formantu](#_core_localizing_the_control.92.s_user_interface), za pomocą kontenera właściwości identyfikator ustawień regionalnych. Demonstracyjne lokalizacji formantu, zobacz przykład kontrolki MFC ActiveX [LOKALIZUJ](../visual-cpp-samples.md).
+W pozostałej części tego artykułu opisano dwa lokalizowanie strategie. Pierwsza strategia [lokalizuje interfejs programowania formantu](#_core_localizing_your_control.92.s_programmability_interface) (nazwy właściwości, metody i zdarzenia). Druga strategia [lokalizuje interfejsu użytkownika formantu](#_core_localizing_the_control.92.s_user_interface), za pomocą kontenera właściwości identyfikator ustawień regionalnych. Demonstracyjne lokalizacji formantu, zobacz przykład kontrolki MFC ActiveX [LOKALIZUJ](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Lokalizowanie formantu programowania interfejsu
 
@@ -88,7 +88,7 @@ Poniższy przykład kodu demonstruje jedno z podejść do lokalizowania i ładow
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-Należy pamiętać, że identyfikator podjęzyk można sprawdzić w każdym przypadku instrukcji switch w celu zapewnienia bardziej wyspecjalizowane lokalizacji. Do pokazania tej funkcji, zobacz `GetResourceHandle` funkcji w MFC ActiveX kontroluje przykładowe [LOKALIZUJ](../visual-cpp-samples.md).
+Należy pamiętać, że identyfikator podjęzyk można sprawdzić w każdym przypadku instrukcji switch w celu zapewnienia bardziej wyspecjalizowane lokalizacji. Do pokazania tej funkcji, zobacz `GetResourceHandle` funkcji w MFC ActiveX kontroluje przykładowe [LOKALIZUJ](../overview/visual-cpp-samples.md).
 
 Gdy formant najpierw ładuje się w kontenerze, może wywołać [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) można pobrać identyfikatora ustawień regionalnych. Kontrolki można następnie przekazać wartość Identyfikatora ustawień regionalnych zwrócone do `GetLocalizedResourceHandle` funkcji, która ładuje bibliotekę odpowiedniego zasobu. Formant należy przekazywać wynikowy uchwyt, aby [afxsetresourcehandle —](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

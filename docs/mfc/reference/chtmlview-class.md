@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 07f942e6582eb9fabe6001c4823ec9e2b1a83bf6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328977"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777288"
 ---
 # <a name="chtmlview-class"></a>Klasa CHtmlView
 
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CHtmlView::Create](#create)|Tworzy formant WebBrowser.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Overridable użyty do utworzenia wystąpienia witryny formantu do hostowania formantu w formularzu.|
@@ -1507,7 +1507,7 @@ virtual void OnNewWindow2(
 *ppDisp*<br/>
 Wskaźnik do wskaźnika interfejsu, który opcjonalnie odbiera `IDispatch` wskaźnika interfejsu tego nowy obiekt WebBrowser lub Internet Explorer.
 
-*Anulowanie*<br/>
+*Cancel*<br/>
 Wskaźnik flagi anulowania. Aplikacja możne ustawić ten parametr na wartość różną od zera, aby anulować operację nawigacji lub równą zero, aby zezwalała na kontynuować.
 
 ### <a name="remarks"></a>Uwagi
@@ -2233,7 +2233,7 @@ Ma zastosowanie do programu Internet Explorer i WebBrowser.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFormView](../../mfc/reference/cformview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)

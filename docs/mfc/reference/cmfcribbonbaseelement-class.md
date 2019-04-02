@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289978"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773076"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement Class
 
@@ -253,13 +253,13 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`CMFCRibbonBaseElement`|Konstruuje `CMFCRibbonBaseElement` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Dodaje poradę dotyczącą klawiszy dla elementu wstążki do tablicy wskazówki.|
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Dodaje element wstążki do wstążki określonego pola listy poleceń.|
@@ -375,7 +375,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Wywoływane przez platformę, gdy użytkownik naciśnie klawisz skrótu.|
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Wywoływane przez platformę, gdy element wstążki otrzymuje lub traci fokus wprowadzania.|
@@ -394,7 +394,7 @@ W zależności od jego rozmiar element wstążki Wyświetla albo obraz małych l
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonBaseElement` klasy. W przykładzie pokazano, jak uzyskać `CMFCRibbonBaseElement` obiektu z `CMFCRibbonStatusBar` klasy, Ustaw opis elementu wstążki, ustawianie tekstu, ustaw poradę dotyczącą klawiszy i Ustaw tekst etykietki narzędzia dla elementu wstążki. Ten fragment kodu jest częścią [Rysowanie Client sample](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonBaseElement` klasy. W przykładzie pokazano, jak uzyskać `CMFCRibbonBaseElement` obiektu z `CMFCRibbonStatusBar` klasy, Ustaw opis elementu wstążki, ustawianie tekstu, ustaw poradę dotyczącą klawiszy i Ustaw tekst etykietki narzędzia dla elementu wstążki. Ten fragment kodu jest częścią [Rysowanie Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -1964,7 +1964,7 @@ Poniższa tabela zawiera podsumowanie logikę tej metody.
 |*bCompactMode*|Bieżący rozmiar elementu wstążki|Nowy rozmiar elementu wstążki|
 |--------------------|---------------------------------|-----------------------------|
 |WARTOŚĆ TRUE|Kompaktowanie|Bez zmian.|
-|WARTOŚĆ TRUE|Średni|Kompaktowanie, jeśli jest to możliwe.|
+|WARTOŚĆ TRUE|Średnio zaawansowany|Kompaktowanie, jeśli jest to możliwe.|
 |WARTOŚĆ TRUE|Duże|Pośredni, jeśli jest to możliwe.|
 |FAŁSZ|Kompaktowanie|Pośredni, jeśli jest to możliwe; w przeciwnym razie dużych.|
 

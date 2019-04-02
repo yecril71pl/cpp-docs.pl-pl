@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c3fd57510a38d597b827f80ab98a0be280ad31e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265941"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767772"
 ---
 # <a name="ccomboboxex-class"></a>Klasa CComboBoxEx
 
@@ -57,13 +57,13 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Konstruuje `CComboBoxEx` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CComboBoxEx::Create](#create)|Tworzy pola kombi i dołącza je do `CComboBoxEx` obiektu.|
 |[CComboBoxEx::CreateEx](#createex)|Tworzy pola kombi w określonym stylu rozszerzonej Windows i dołącza je do `ComboBoxEx` obiektu.|
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Określa kombinację style pola kombi stosowane do pola kombi. Zobacz **uwagi** poniżej więcej informacji o stylach.
 
 *Rect*<br/>
-Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która jest położenie i rozmiar pola kombi.
+Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, która jest położenie i rozmiar pola kombi.
 
 *pParentWnd*<br/>
 Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt okna nadrzędnego pola kombi (zazwyczaj `CDialog`). Nie może być równa NULL.
@@ -210,7 +210,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Styl kontrolki pola kombi. Zobacz [Utwórz](#create) listę style.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -470,7 +470,7 @@ Ta funkcja członkowska emuluje funkcjonalność [CBEM_SETWINDOWTHEME](/windows/
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CComboBox](../../mfc/reference/ccombobox-class.md)

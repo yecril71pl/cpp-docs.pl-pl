@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303322"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776911"
 ---
 # <a name="colepastespecialdialog-class"></a>Klasa COlePasteSpecialDialog
 
@@ -49,13 +49,13 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Konstruuje `COlePasteSpecialDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Dodaje formatów niestandardowych do listy formatów, które można wkleić aplikacji.|
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Dodaje nowy wpis do listy obsługiwanych formatów Schowka.|
@@ -69,7 +69,7 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COlePasteSpecialDialog::m_ps](#m_ps)|Struktura typu OLEUIPASTESPECIAL kontrolujące funkcji okna dialogowego.|
 
@@ -383,7 +383,7 @@ Aby uzyskać więcej informacji, zobacz [OLEUIPASTESPECIAL](/windows/desktop/api
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)

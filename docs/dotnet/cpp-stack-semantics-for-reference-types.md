@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740926"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772608"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantyka stosu języka C++ dla typów odwołań
 
-Przed Visual C++ 2005, wystąpienia typu referencyjnego można można tworzyć tylko za pomocą `new` operatora, który utworzył obiekt w pamięci zbierane sterty. Teraz można jednak utworzyć wystąpienia typu referencyjnego przy użyciu tej samej składni, którego używasz do utworzenia wystąpienia typu natywnego w stosie. Dlatego nie trzeba używać [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) do utworzenia obiektu typu referencyjnego. A gdy obiekt wykracza poza zakres, kompilator wywołuje destruktor obiektu.
+Przed Visual C++ 2005, wystąpienia typu referencyjnego można można tworzyć tylko za pomocą `new` operatora, który utworzył obiekt w pamięci zbierane sterty. Teraz można jednak utworzyć wystąpienia typu referencyjnego przy użyciu tej samej składni, którego używasz do utworzenia wystąpienia typu natywnego w stosie. Dlatego nie trzeba używać [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) do utworzenia obiektu typu referencyjnego. A gdy obiekt wykracza poza zakres, kompilator wywołuje destruktor obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -41,9 +41,9 @@ Kompilator zapewnia również `%` operatora jednoargumentowego do konwertowania 
 
 Następujące typy odwołań nie są dostępne do użytku z programem semantyka stosu:
 
-- [delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (C++ Component Extensions)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Tablice](../windows/arrays-cpp-component-extensions.md)
+- [Tablice](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+[Klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

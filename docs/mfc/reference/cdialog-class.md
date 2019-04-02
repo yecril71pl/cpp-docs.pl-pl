@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305097"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771355"
 ---
 # <a name="cdialog-class"></a>Cdialog — klasa
 
@@ -61,13 +61,13 @@ class CDialog : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDialog::CDialog](#cdialog)|Konstruuje `CDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDialog::Create](#create)|Inicjuje `CDialog` obiektu. Tworzy niemodalne okno dialogowe i dołącza je do `CDialog` obiektu.|
 |[CDialog::CreateIndirect](#createindirect)|Tworzy niemodalne okno dialogowe z szablonu okna dialogowego w pamięci (nie opartego na zasobach).|
@@ -86,7 +86,7 @@ class CDialog : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDialog::OnCancel](#oncancel)|Należy przesłonić, aby wykonać przycisk anulowania lub działania kluczowych ESC. Domyślnie zamknięcie okna dialogowego i `DoModal` zwraca IDCANCEL.|
 |[CDialog::OnOK](#onok)|Przesłonięcie w celu wykonania akcji przycisku OK w modalne okno dialogowe. Domyślnie zamknięcie okna dialogowego i `DoModal` zwraca IDOK.|
@@ -558,7 +558,7 @@ Określa identyfikator pomocy kontekstowej.
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample DLGCBR32](../../visual-cpp-samples.md)<br/>
-[Próbki MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
+[MFC Sample DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC DLGTEMPL](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

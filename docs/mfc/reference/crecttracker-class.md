@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259584"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775689"
 ---
 # <a name="crecttracker-class"></a>Crecttracker — klasa
 
@@ -59,13 +59,13 @@ class CRectTracker
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRectTracker::CRectTracker](#crecttracker)|Konstruuje `CRectTracker` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CRectTracker::AdjustRect](#adjustrect)|Wywołuje się, gdy zmieniany jest rozmiar prostokąta.|
 |[CRectTracker::Draw](#draw)|Renderuje prostokąta.|
@@ -81,7 +81,7 @@ class CRectTracker
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|Określa rozmiar uchwytami zmiany rozmiaru.|
 |[CRectTracker::m_nStyle](#m_nstyle)|Bieżący style(s) z obiektem śledzącym.|
@@ -481,8 +481,8 @@ Ta funkcja będzie przechwytywać mysz, dopóki użytkownik zwolni przycisk mysz
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC śledzenia](../../visual-cpp-samples.md)<br/>
-[Próbki MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Próbki MFC śledzenia](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleResizeBar](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)

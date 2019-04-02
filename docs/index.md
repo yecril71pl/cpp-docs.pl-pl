@@ -1,15 +1,9 @@
 ---
 layout: HubPage
 title: Dokumentacji języka Visual C++
-description: Dowiedz się, jak używać języka C++, aby tworzyć aplikacje, usługi i narzędzia dla platform i urządzeń.
+description: 'Dowiedz się, jak używać języka C++, aby tworzyć aplikacje, usługi i narzędzia dla platform i urządzeń.'
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e8fe8dec14560579e255446c4de3ee5a17e302f6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703210"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -51,7 +45,7 @@ ms.locfileid: "55703210"
                 </a>
             </li>
             <li>
-                <a href="/cpp/what-s-new-for-visual-cpp-in-visual-studio">
+                <a href="/cpp/what-s-new-for-overview/visual-cpp-in-visual-studio.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -271,7 +265,7 @@ ms.locfileid: "55703210"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Test</h3>
+                                                    <h3>Testowanie</h3>
                                                     <p>Tworzenie testów jednostkowych dla kodu C++.</p>
                                                 </div>
                                             </div>
@@ -290,7 +284,7 @@ ms.locfileid: "55703210"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Deploy</h3>
+                                                    <h3>Wdrażanie</h3>
                                                     <p>Dystrybucja programu gotowego do użytkowników końcowych.</p>
                                                 </div>
                                             </div>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 630bc41ee20aa7cf6f62cd320b15b8dca0d3fedf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268398"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776313"
 ---
 # <a name="cdataexchange-class"></a>Cdataexchange — klasa
 
@@ -41,13 +41,13 @@ class CDataExchange
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDataExchange::CDataExchange](#cdataexchange)|Konstruuje `CDataExchange` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDataExchange::Fail](#fail)|Wywołuje się, gdy weryfikacja nie powiedzie się. Przywraca poprzedni formant fokus i zgłasza wyjątek.|
 |[CDataExchange::PrepareCtrl](#preparectrl)|Przygotowuje określoną kontrolkę do wymiany danych lub sprawdzania poprawności. Na użytek nonedit kontrolki.|
@@ -56,7 +56,7 @@ class CDataExchange
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Flaga kierunku DDX i DDV.|
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Okno dialogowe lub okna, w którym wymiany danych odbywa się.|
@@ -230,7 +230,7 @@ Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC VIEWEX](../../visual-cpp-samples.md)<br/>
+[Próbki MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)<br/>
 [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)

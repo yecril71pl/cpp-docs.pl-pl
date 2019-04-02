@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271427"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767889"
 ---
 # <a name="containers-implementing-a-container"></a>Kontenery: Implementowanie kontenera
 
@@ -36,7 +36,7 @@ Te funkcje są dostarczane dla Ciebie automatycznie podczas tworzenia aplikacji 
 
 1. Implementowanie `OnSize` obsługi wiadomości, aby informować OLE osadzonych elementów należy zmienić jego prostokąt, aby odzwierciedlić zmiany rozmiaru jej widok zawierający.
 
-Ponieważ implementacji tych funkcji różni się znacznie z jednej aplikacji do następnego Kreatora aplikacji dostarcza podstawową implementację. Prawdopodobnie trzeba będzie dostosować te funkcje można pobrać aplikację, aby działać prawidłowo. Aby na przykład, zobacz [kontenera](../visual-cpp-samples.md) próbki.
+Ponieważ implementacji tych funkcji różni się znacznie z jednej aplikacji do następnego Kreatora aplikacji dostarcza podstawową implementację. Prawdopodobnie trzeba będzie dostosować te funkcje można pobrać aplikację, aby działać prawidłowo. Aby na przykład, zobacz [kontenera](../overview/visual-cpp-samples.md) próbki.
 
 #### <a name="to-handle-embedded-and-linked-items"></a>Aby obsłużyć elementy osadzone i połączone
 
@@ -44,7 +44,7 @@ Ponieważ implementacji tych funkcji różni się znacznie z jednej aplikacji do
 
 1. Zastąp `OnChange`, `OnChangeItemPosition`, i `OnGetItemPosition`. Te funkcje uchwyt zmiany rozmiaru, pozycjonowanie i modyfikowania elementy osadzone i połączone.
 
-Kreator aplikacji, z której pochodzą klasę dla Ciebie, ale prawdopodobnie trzeba będzie zastąpić `OnChange` i inne funkcje wyświetlane z nim w kroku 2 w poprzedniej procedurze. Implementacje szkielet muszą zostać dostosowane dla większości aplikacji, ponieważ te funkcje są implementowane w inny sposób z jednej aplikacji do następnego. Przykłady tego, zobacz przykłady MFC [DRAWCLI](../visual-cpp-samples.md) i [kontenera](../visual-cpp-samples.md).
+Kreator aplikacji, z której pochodzą klasę dla Ciebie, ale prawdopodobnie trzeba będzie zastąpić `OnChange` i inne funkcje wyświetlane z nim w kroku 2 w poprzedniej procedurze. Implementacje szkielet muszą zostać dostosowane dla większości aplikacji, ponieważ te funkcje są implementowane w inny sposób z jednej aplikacji do następnego. Przykłady tego, zobacz przykłady MFC [DRAWCLI](../overview/visual-cpp-samples.md) i [kontenera](../overview/visual-cpp-samples.md).
 
 Liczba elementów należy dodać do aplikacji kontenera menu struktury do obsługi OLE. Aby uzyskać więcej informacji na ten temat, zobacz [menu i zasoby: Dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).
 

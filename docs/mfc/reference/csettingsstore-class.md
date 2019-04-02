@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1e1373da86c1c3fea3b1ddd6ff17f0fac4f76980
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274547"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770398"
 ---
 # <a name="csettingsstore-class"></a>Klasa CSettingsStore
 
@@ -43,13 +43,13 @@ class CSettingsStore : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSettingsStore::CSettingsStore](#csettingsstore)|Konstruuje `CSettingsStore` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSettingsStore::Close](#close)|Zamyka otworzyć klucza rejestru.|
 |[CSettingsStore::CreateKey](#createkey)|Otwiera określony klucz lub go utworzy, jeśli nie istnieje.|
@@ -65,7 +65,7 @@ Funkcje elementów członkowskich `CreateKey` i `Open` są bardzo podobne. Jeśl
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia metody Open i Odczyt `CSettingsStore` klasy. Ten fragment kodu jest częścią [próbka Demo Porada narzędzie](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia metody Open i Odczyt `CSettingsStore` klasy. Ten fragment kodu jest częścią [próbka Demo Porada narzędzie](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]
 

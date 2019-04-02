@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265525"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773830"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Kreatorzy i edytory zasobów
 
@@ -46,7 +46,7 @@ W oknie właściwości utworzy funkcji elementów członkowskich pusty program o
 
 Używać Visual C++ [edytory zasobów](../windows/resource-editors.md) do tworzenia i edytowania menu, okna dialogowe, niestandardowe formanty, klawiszy skrótów, mapy bitowe, ikony, kursorów, ciągi i zasoby wersji. Począwszy od Visual C++ w wersji 4.0 Edytor paska narzędzi pasków narzędzi tworzenia bardzo ułatwia.
 
-Aby pomóc Ci jeszcze więcej, biblioteki klas Microsoft Foundation udostępnia plik o nazwie wspólne. RES, który zawiera zasoby "clipart", które można skopiować z typowych. RES i Wklej w pliku zasobów. WSPÓLNE. RES zawiera przyciski paska narzędzi, typowe kursorów, ikony i inne. Można użyć, modyfikowania i rozpowszechniania tych zasobów w aplikacji. Aby uzyskać więcej informacji na temat typowych. RES, zobacz [przykładowe Clipart](../visual-cpp-samples.md).
+Aby pomóc Ci jeszcze więcej, biblioteki klas Microsoft Foundation udostępnia plik o nazwie wspólne. RES, który zawiera zasoby "clipart", które można skopiować z typowych. RES i Wklej w pliku zasobów. WSPÓLNE. RES zawiera przyciski paska narzędzi, typowe kursorów, ikony i inne. Można użyć, modyfikowania i rozpowszechniania tych zasobów w aplikacji. Aby uzyskać więcej informacji na temat typowych. RES, zobacz [przykładowe Clipart](../overview/visual-cpp-samples.md).
 
 Kreator aplikacji MFC, kreatorów Visual C++, edytory zasobów i struktura MFC sporego nakładu pracy dla siebie i należy kodu znacznie łatwiejsze zarządzanie. Duża część kodu aplikacji znajduje się w Twoich zajęciach dokument i widok.
 

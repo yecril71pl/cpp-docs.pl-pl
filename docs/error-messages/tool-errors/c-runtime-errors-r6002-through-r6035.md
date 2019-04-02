@@ -4,12 +4,12 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178265"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766889"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>Błędy środowiska wykonawczego języka C r6035 od R6002
 
@@ -17,7 +17,7 @@ Ta sekcja jest odwołaniem do błędów, które mogą być generowane przez bibl
 
 Może się okazać uzyskać dodatkową pomoc błędów i ostrzeżeń na forach publicznych firmy Microsoft. Możesz wyszukać błąd lub ostrzeżenie o numerze na [społeczności deweloperów](https://developercommunity.visualstudio.com) lokacji. [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) forum to pytania na temat języka Visual C++, które nie są omawiane na innych forach. Możesz również wyszukać błędy i ostrzeżenia i zadawać pytania w [Stack Overflow](http://stackoverflow.com/) do rozwiązania.
 
-Aby uzyskać linki do zasobów społeczności i uzyskać dodatkową pomoc, zobacz [pomocy programu Visual C++ i społeczności](../../visual-cpp-help-and-community.md).
+Aby uzyskać linki do zasobów społeczności i uzyskać dodatkową pomoc, zobacz [pomocy programu Visual C++ i społeczności](../../overview/visual-cpp-help-and-community.md).
 
 ## <a name="c-runtime-errors"></a>Błędy środowiska wykonawczego języka C
 

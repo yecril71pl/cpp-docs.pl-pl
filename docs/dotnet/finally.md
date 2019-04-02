@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: cb2bbdb36a102c7ef8974a9ac210473f2306f5d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746776"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771516"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ Oprócz `try` i `catch` klauzul, obsługa obsługuje wyjątków CLR `finally` kl
 
 Celem `finally` bloku jest Oczyść wszystkie zasoby w lewo po wystąpieniu wyjątku. Należy pamiętać, że `finally` bloku jest wykonywane zawsze, nawet wtedy, gdy żaden wyjątek został zgłoszony. `catch` Bloku jest wykonywana tylko w przypadku zarządzanych wyjątku w obrębie skojarzonej `try` bloku.
 
-`finally` jest kontekstowej słowem kluczowym; zobacz [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+`finally` jest kontekstowej słowem kluczowym; zobacz [Context-Sensitive Keywords](../extensions/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)
+[Obsługa wyjątków](../extensions/exception-handling-cpp-component-extensions.md)

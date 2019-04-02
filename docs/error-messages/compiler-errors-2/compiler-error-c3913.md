@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3913
 ms.assetid: a678bfce-9524-470d-9f23-7d08ecb972c8
-ms.openlocfilehash: bf83be5e95109c9e7fa0516cde780ca6907416ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a38f7bffd56f025510e092ad37b5f810cb11a9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516388"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776521"
 ---
 # <a name="compiler-error-c3913"></a>Błąd kompilatora C3913
 
@@ -19,7 +19,7 @@ Domyślna właściwość musi być indeksowana
 
 Domyślna właściwość został niepoprawnie zdefiniowany.
 
-Aby uzyskać więcej informacji, zobacz [właściwość](../../windows/property-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
 
 Poniższy przykład spowoduje wygenerowanie C3913:
 

@@ -1,19 +1,19 @@
 ---
-title: Błąd kompilatora C3699
+title: Compiler Error C3699
 ms.date: 11/04/2016
 f1_keywords:
 - C3699
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: e413e4a08ce22ef109179ff0f98baf32ebba41c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525856"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776742"
 ---
-# <a name="compiler-error-c3699"></a>Błąd kompilatora C3699
+# <a name="compiler-error-c3699"></a>Compiler Error C3699
 
 'operator': nie można użyć tego operatora pośredniego na typie "type"
 
@@ -36,7 +36,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Właściwość prosta nie może mieć typu referencyjnego. Zobacz [właściwość](../../windows/property-cpp-component-extensions.md) Aby uzyskać więcej informacji. Poniższy przykład spowoduje wygenerowanie C3699.
+Właściwość prosta nie może mieć typu referencyjnego. Zobacz [właściwość](../../extensions/property-cpp-component-extensions.md) Aby uzyskać więcej informacji. Poniższy przykład spowoduje wygenerowanie C3699.
 
 ```
 // C3699_b.cpp

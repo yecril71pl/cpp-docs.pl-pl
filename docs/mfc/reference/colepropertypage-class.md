@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271258"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776989"
 ---
 # <a name="colepropertypage-class"></a>Klasa COlePropertyPage
 
@@ -59,13 +59,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|Konstruuje `COlePropertyPage` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Wskazuje, czy użytkownik zmienił wartość w formancie.|
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|Zwraca tablicę obiektów edytowanych przez stronę właściwości.|
@@ -385,8 +385,8 @@ Wskaźnik do ciągu zawierającego nazwę strony właściwości.
 
 ## <a name="see-also"></a>Zobacz także
 
-[CIRC3 próbki MFC](../../visual-cpp-samples.md)<br/>
-[Próbki MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[CIRC3 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDialog](../../mfc/reference/cdialog-class.md)

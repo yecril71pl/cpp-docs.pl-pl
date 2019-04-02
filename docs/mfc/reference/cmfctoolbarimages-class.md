@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303351"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776417"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
 
@@ -161,13 +161,13 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|Konstruuje `CMFCToolBarImages` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||
 |[CMFCToolBarImages::AddIcon](#addicon)|Dodaje ikony do paska narzędzi obrazów.|
@@ -236,13 +236,13 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::PreMultiplyAlpha](#premultiplyalpha)||
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|Wartość TRUE, jeśli alfa truecolor mieszania (w kolorze 32-bitowa) jest wyłączona.|
 
@@ -252,7 +252,7 @@ Pełne map bitowych paska narzędzi obrazów zarządzanych przez `CMFCToolbarIma
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować `CMFCToolBarImages` obiektu przy użyciu różnych metod w `CMFCToolBarImages` klasy. W przykładzie pokazano, jak ustawić rozmiar obrazu paska narzędzi, załaduj obraz i ustawić przezroczysty kolor obrazu. Ten fragment kodu jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować `CMFCToolBarImages` obiektu przy użyciu różnych metod w `CMFCToolBarImages` klasy. W przykładzie pokazano, jak ustawić rozmiar obrazu paska narzędzi, załaduj obraz i ustawić przezroczysty kolor obrazu. Ten fragment kodu jest częścią [Visual Studio przykład](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]

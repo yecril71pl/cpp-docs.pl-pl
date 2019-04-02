@@ -2,12 +2,12 @@
 title: Uaktualnienie kodu do Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: ba987c6c88a3b559b8fe6224fd27dfbfe8c9d821
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 368b61820310135f14cbe4225b9315e62d3686a7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741333"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769189"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Uaktualnienie kodu do Universal CRT
 
@@ -35,9 +35,9 @@ Gdy aktualizacja projektów Visual C++, jeśli ustawisz projekt **konsolidatora*
 
 Ponieważ UCRT jest obecnie składnikiem systemu operacyjnego Microsoft Windows, jest dołączony jako część systemu operacyjnego w systemie Windows 10 i jest dostępna za pośrednictwem usługi Windows Update dla starszych systemów operacyjnych Windows Vista do Windows 8.1. W wersji redystrybucyjnej jest dostępna dla Windows XP. Jako składnik systemu operacyjnego UCRT aktualizacje i obsługa są zarządzane przez usługę Windows Update niezależnie od wersji kompilatora Visual Studio i Microsoft C++. Ponieważ UCRT to składnik Windows, bezpieczeństwo i łatwość aktualizacji i mniejszy rozmiar obrazu, zdecydowanie zalecamy centralne wdrożenie UCRT dla aplikacji.
 
-UCRT można użyć w dowolnej wersji systemu Windows, obsługiwane przez program Visual Studio 2015 lub Visual Studio 2017. Można redystrybuować go za pomocą pakietu vcredist dla obsługiwanych wersji systemu Windows innych niż Windows 10. Pakiety programu vcredist zawiera składniki UCRT i automatycznie instalowane w systemach operacyjnych Windows, które nie masz je zainstalowane domyślnie. Aby uzyskać więcej informacji, zobacz [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).
+UCRT można użyć w dowolnej wersji systemu Windows, obsługiwane przez program Visual Studio 2015 lub Visual Studio 2017. Można redystrybuować go za pomocą pakietu vcredist dla obsługiwanych wersji systemu Windows innych niż Windows 10. Pakiety programu vcredist zawiera składniki UCRT i automatycznie instalowane w systemach operacyjnych Windows, które nie masz je zainstalowane domyślnie. Aby uzyskać więcej informacji, zobacz [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
-Wdrożenia lokalnego dla aplikacji UCRT jest obsługiwane, ale niezalecane ze względów wydajności i zabezpieczeń. Biblioteki DLL dla wdrożenia lokalnego dla aplikacji zostały dołączone jako część zestawu Windows SDK, w obszarze **redist** podkatalogu. Biblioteki DLL wymagane obejmują ucrtbase.dll oraz zestaw **APISet usługi przesyłania dalej** biblioteki dll o nazwie interfejsu api-ms-win -_podzbioru_.dll. Różni się zbiór bibliotek DLL wymagane w każdym systemie operacyjnym, dlatego zaleca się obejmują wszystkie biblioteki DLL korzystając z wdrożenia lokalnego dla aplikacji. Dodatkowe szczegóły i ostrzeżenia dotyczące wdrożenia lokalnego dla aplikacji, zobacz [wdrożenia w programie Visual C++](../ide/deployment-in-visual-cpp.md).
+Wdrożenia lokalnego dla aplikacji UCRT jest obsługiwane, ale niezalecane ze względów wydajności i zabezpieczeń. Biblioteki DLL dla wdrożenia lokalnego dla aplikacji zostały dołączone jako część zestawu Windows SDK, w obszarze **redist** podkatalogu. Biblioteki DLL wymagane obejmują ucrtbase.dll oraz zestaw **APISet usługi przesyłania dalej** biblioteki dll o nazwie interfejsu api-ms-win -_podzbioru_.dll. Różni się zbiór bibliotek DLL wymagane w każdym systemie operacyjnym, dlatego zaleca się obejmują wszystkie biblioteki DLL korzystając z wdrożenia lokalnego dla aplikacji. Dodatkowe szczegóły i ostrzeżenia dotyczące wdrożenia lokalnego dla aplikacji, zobacz [wdrożenia w programie Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Zmiany w funkcji Universal CRT i makra
 
@@ -49,4 +49,4 @@ Wiele funkcji dodane lub zaktualizowane w UCRT w celu zwiększenia zgodności IS
 [Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)<br/>
-[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md)
+[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)

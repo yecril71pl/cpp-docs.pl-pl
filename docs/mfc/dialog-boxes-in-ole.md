@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270894"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767655"
 ---
 # <a name="dialog-boxes-in-ole"></a>Okna dialogowe w OLE
 
@@ -31,7 +31,7 @@ To okno dialogowe pozwala użytkownikowi na kontrolowanie format używany podcza
 To okno dialogowe umożliwia użytkownikowi wybranie ikony, która jest wyświetlana reprezentujący element osadzony lub połączony. Wyświetl to okno dialogowe, gdy użytkownik wybierze ikonę zmiany z menu Edycja lub wybierze przycisk Zmień ikonę Wklej specjalne lub konwertowanie, okno dialogowe. Również wyświetlać go po użytkownik otwiera okno dialogowe Wstawianie obiektu, a wyświetlana jako ikona. Użyj [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) klasy, aby wyświetlić to okno dialogowe.
 
 *Konwertuj*<br/>
-To okno dialogowe umożliwia użytkownikowi zmianę typu elementu osadzony lub połączony. Na przykład jeśli zostały osadzone metaplik w dokumencie złożonym, a później chcesz Użyj innej aplikacji, aby zmodyfikować metaplik osadzone, można użyć okno dialogowe Konwertowanie. To okno dialogowe jest zwykle wyświetlany przez kliknięcie przycisku *typ elementu* obiekt menu Edycja, a następnie w menu kaskadowych, klikając konwersji. Użyj [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) klasy, aby wyświetlić to okno dialogowe. Aby uzyskać przykład, uruchom aplikację przykładową MFC OLE [OCLIENT](../visual-cpp-samples.md).
+To okno dialogowe umożliwia użytkownikowi zmianę typu elementu osadzony lub połączony. Na przykład jeśli zostały osadzone metaplik w dokumencie złożonym, a później chcesz Użyj innej aplikacji, aby zmodyfikować metaplik osadzone, można użyć okno dialogowe Konwertowanie. To okno dialogowe jest zwykle wyświetlany przez kliknięcie przycisku *typ elementu* obiekt menu Edycja, a następnie w menu kaskadowych, klikając konwersji. Użyj [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) klasy, aby wyświetlić to okno dialogowe. Aby uzyskać przykład, uruchom aplikację przykładową MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Edytuj linki lub linki aktualizacji*<br/>
 Okno dialogowe Edytuj linki umożliwia użytkownikowi zmianę informacji o źródle połączonego obiektu. Okno dialogowe aktualizacji łącza sprawdza źródeł połączone elementy w bieżącym oknie dialogowym i wyświetla okno dialogowe Edytuj linki, jeśli to konieczne. Wyświetl okno dialogowe Edytuj linki, gdy użytkownik wybierze łącza z menu Edycja. Przy pierwszym otwarciu dokumencie złożonym, zwykle wyświetlane jest okno dialogowe aktualizacji linków. Użyj jednej [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) lub [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) klasy, w zależności od tego, okno dialogowe, które mają być wyświetlane.

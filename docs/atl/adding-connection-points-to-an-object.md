@@ -5,12 +5,12 @@ helpviewer_keywords:
 - connection points [C++], adding to ATL objects
 - Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-ms.openlocfilehash: 39943c1bb071efba4fc3f2b42b227a4516e3856c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7341e69852ed804122e0196b51d305f5af0c35b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299926"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772947"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Dodawanie punktów połączenia do obiektu
 
@@ -36,7 +36,7 @@ W obu przypadkach kreator implementacji punktu połączenia używa biblioteki ty
 
    [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-   Można znaleźć w pliku .idl w [OK](../visual-cpp-samples.md) próbki ATL, na przykład.
+   Można znaleźć w pliku .idl w [OK](../overview/visual-cpp-samples.md) próbki ATL, na przykład.
 
 3. Widok klas umożliwia dodawanie metod i właściwości interfejsu zdarzenia. Kliknij prawym przyciskiem myszy klasę w widoku klas, wskaż opcję **Dodaj** w menu skrótów, a następnie kliknij przycisk **Dodawanie punktów połączenia**.
 

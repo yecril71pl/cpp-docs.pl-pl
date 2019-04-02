@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 210eea760e80814041b4e97f50c4164ef98d75e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93bfcc93c680618ea3a51eabd145548a4f47563a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457554"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772335"
 ---
 # <a name="event-handling-in-native-c"></a>Obsługa zdarzeń w natywnym kodzie C++
 
-W obsłudze zdarzeń natywnego języka C++, można skonfigurować zdarzenia źródło i zdarzenie odbiornika zdarzenia za pomocą [event_source](../windows/event-source.md) i [event_receiver](../windows/event-receiver.md) , odpowiednio, atrybutów, określając `type` = `native`. Te atrybuty zezwalać na klasy, do których są stosowane klasom wywoływanie zdarzeń i obsługa zdarzeń w kontekście natywnego, innego niż COM.
+W obsłudze zdarzeń natywnego języka C++, można skonfigurować zdarzenia źródło i zdarzenie odbiornika zdarzenia za pomocą [event_source](../windows/attributes/event-source.md) i [event_receiver](../windows/attributes/event-receiver.md) , odpowiednio, atrybutów, określając `type` = `native`. Te atrybuty zezwalać na klasy, do których są stosowane klasom wywoływanie zdarzeń i obsługa zdarzeń w kontekście natywnego, innego niż COM.
 
 ## <a name="declaring-events"></a>Deklarowanie zdarzeń
 

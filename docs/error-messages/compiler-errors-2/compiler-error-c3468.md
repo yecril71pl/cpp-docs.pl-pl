@@ -1,19 +1,19 @@
 ---
-title: Błąd kompilatora C3468
+title: Compiler Error C3468
 ms.date: 11/04/2016
 f1_keywords:
 - C3468
 helpviewer_keywords:
 - C3468
 ms.assetid: cfd320db-2f6e-4e0d-ba02-e79ece87e1e0
-ms.openlocfilehash: 185bd35bb732f592c75912fe69d4491252fe9d0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3870fa21e2b4a932937edd49091980406a5ff0d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476118"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777235"
 ---
-# <a name="compiler-error-c3468"></a>Błąd kompilatora C3468
+# <a name="compiler-error-c3468"></a>Compiler Error C3468
 
 "type": można tylko przekazać dalej typ do zestawu:
 
@@ -21,7 +21,7 @@ ms.locfileid: "50476118"
 
 Może być przekazywany tylko typy w zestawie.
 
-Aby uzyskać więcej informacji, zobacz [przekazywania dalej typów (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywania dalej typów (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

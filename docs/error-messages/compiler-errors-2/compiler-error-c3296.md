@@ -1,25 +1,25 @@
 ---
-title: Błąd kompilatora C3296
+title: Compiler Error C3296
 ms.date: 11/04/2016
 f1_keywords:
 - C3296
 helpviewer_keywords:
 - C3296
 ms.assetid: fc4c9dcd-16cf-4eee-a1ac-c43e7c29e443
-ms.openlocfilehash: 2e9787b063a5a37af8d0e0fdd04492a743792646
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0a162590ac2a72dda17b2ecfc96899e94cde24c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588113"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767044"
 ---
-# <a name="compiler-error-c3296"></a>Błąd kompilatora C3296
+# <a name="compiler-error-c3296"></a>Compiler Error C3296
 
 "właściwość": właściwość o tej nazwie już istnieje.
 
 Kompilator napotkał więcej niż jedną właściwość o tej samej nazwie. Każdej właściwości w typie musi mieć unikatową nazwę.
 
-Aby uzyskać więcej informacji, zobacz [właściwość](../../windows/property-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

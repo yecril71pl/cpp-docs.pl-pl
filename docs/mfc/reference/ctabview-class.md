@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326598"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772098"
 ---
 # <a name="ctabview-class"></a>Klasa CTabView
 
@@ -43,7 +43,7 @@ class CTabbedView : public CView
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CTabView::AddView](#addview)|Dodaje nowy widok do formantu karty.|
 |[CTabView::FindTab](#findtab)|Zwraca indeks określonej widoku w kontrolce karty.|
@@ -54,7 +54,7 @@ class CTabbedView : public CView
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CTabView::IsScrollBar](#isscrollbar)|Wywoływane przez platformę, podczas tworzenia karty widoku w celu ustalenia, czy karty widoku ma udostępnionego poziomy pasek przewijania.|
 |[CTabView::OnActivateView](#onactivateview)|Wywoływane przez platformę, gdy karty widoku aktywne lub nieaktywne.|
@@ -65,7 +65,7 @@ Ta klasa sprawia, że łatwo umieścić widok z kartami w aplikacji dokument/wid
 
 Na przykład, Niewykluczone, że dokument, który może być reprezentowany na różne sposoby: jako arkusz kalkulacyjny, wykres edytowalnego formularza i tak dalej. Można utworzyć pojedyncze widoki rysowania danych zgodnie z potrzebami, umieść je w swojej `CTabView`— pochodzi z obiektu i je z zakładkami, bez dodatkowego kodowania.
 
-[Przykład TabbedView: Aplikacja widok z kartami MFC](../../visual-cpp-samples.md) ilustruje użycie `CTabView`.
+[Przykład TabbedView: Aplikacja widok z kartami MFC](../../overview/visual-cpp-samples.md) ilustruje użycie `CTabView`.
 
 ## <a name="example"></a>Przykład
 

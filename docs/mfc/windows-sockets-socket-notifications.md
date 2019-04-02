@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289913"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774337"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Powiadomienia dotyczące gniazd
 
@@ -43,7 +43,7 @@ Podczas operacji takich jak odbierania lub wysyłania danych `CSocket` obiekt st
 > [!NOTE]
 >  W `CSocket`, `OnConnect` nigdy nie jest wywoływana funkcja powiadamiania. W przypadku połączeń Wywołaj `Connect`, co spowoduje zwrócenie zakończeniu połączenie (pomyślnie lub w wyniku błędu). Sposób obsługi powiadomień połączenia jest szczegółowo opisuje implementacja MFC.
 
-Aby uzyskać szczegółowe informacje o każdej z nich powiadomień, zobacz opis funkcji w ramach klasy `CAsyncSocket` w *odwołanie MFC*. Kod źródłowy i informacje o próbki MFC, zobacz [próbki MFC](../visual-cpp-samples.md).
+Aby uzyskać szczegółowe informacje o każdej z nich powiadomień, zobacz opis funkcji w ramach klasy `CAsyncSocket` w *odwołanie MFC*. Kod źródłowy i informacje o próbki MFC, zobacz [próbki MFC](../overview/visual-cpp-samples.md).
 
 Aby uzyskać więcej informacji, zobacz:
 

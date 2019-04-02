@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296738"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769904"
 ---
 # <a name="cbitmap-class"></a>Klasa CBitmap
 
@@ -55,13 +55,13 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CBitmap::CBitmap](#cbitmap)|Konstruuje `CBitmap` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Inicjuje obiekt z mapą bitową pamięci zależne od urządzenia, która ma określoną szerokość, wysokość i wzorca bitowego.|
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inicjuje obiekt z mapy bitowej przy użyciu szerokości, wysokości i wzorca bitowego (jeśli jest określony) podany w `BITMAP` struktury.|
@@ -79,7 +79,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[HBITMAP CBitmap::operator](#operator_hbitmap)|Zwraca uchwyt Windows dołączonych do `CBitmap` obiektu.|
 
@@ -521,6 +521,6 @@ Interfejs GDI nie używa tych wartości, z wyjątkiem sytuacji, aby przywrócić
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

@@ -2,16 +2,16 @@
 title: Mapy poleceń edycji DHTML
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278265"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776157"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapy poleceń edycji DHTML
 
-Następujące makra może służyć do mapy poleceń edycji DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-klas pochodnych. Na przykład ich użycie zobacz [przykładowe HTMLEdit](../../visual-cpp-samples.md).
+Następujące makra może służyć do mapy poleceń edycji DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-klas pochodnych. Na przykład ich użycie zobacz [przykładowe HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="dhtml-editing-command-map-macros"></a>Makra mapy poleceń edycji DHTML
 
@@ -46,7 +46,7 @@ Użyj [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) do zaimplementowan
 
 ### <a name="example"></a>Przykład
 
-Zobacz [przykładowe HTMLEdit](../../visual-cpp-samples.md).
+Zobacz [przykładowe HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -89,7 +89,7 @@ Używany w połączeniu z [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap
 
 ### <a name="example"></a>Przykład
 
-Zobacz [przykładowe HTMLEdit](../../visual-cpp-samples.md).
+Zobacz [przykładowe HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -113,7 +113,7 @@ Edytowania polecenia, do którego HTML *cmdID* map (na przykład IDM_COPY).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [przykładowe HTMLEdit](../../visual-cpp-samples.md).
+Zobacz [przykładowe HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -140,7 +140,7 @@ Nazwa funkcji obsługi wiadomości, na który jest mapowany polecenia.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [przykładowe HTMLEdit](../../visual-cpp-samples.md).
+Zobacz [przykładowe HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -167,7 +167,7 @@ Typ elementu interfejsu użytkownika; jeden z AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELE
 
 ### <a name="example"></a>Przykład
 
-Zobacz [przykładowe HTMLEdit](../../visual-cpp-samples.md).
+Zobacz [przykładowe HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -197,7 +197,7 @@ Typ elementu interfejsu użytkownika; jeden z AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELE
 
 ### <a name="example"></a>Przykład
 
-Zobacz [przykładowe HTMLEdit](../../visual-cpp-samples.md).
+Zobacz [przykładowe HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Wymagania
 

@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289883"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768554"
 ---
 # <a name="cfile-class"></a>Klasa CFile
 
@@ -81,13 +81,13 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFile::CFile](#cfile)|Konstruuje `CFile` obiekt z uchwyt pliku lub ścieżki.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFile::Abort](#abort)|Zamykanie pliku, ignorując wszystkie ostrzeżenia i błędy.|
 |[CFile::Close](#close)|Zamyka plik, a następnie usuwa obiekt.|
@@ -115,20 +115,20 @@ class CFile : public CObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFile::operator UCHWYTU](#operator_handle)|Dojście do `CFile` obiektu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFile::hFileNull](#hfilenull)|Określa, czy `CFile` obiekt ma prawidłowy uchwyt.|
 |[CFile::m_hFile](#m_hfile)|Zazwyczaj zawiera dojście do pliku systemu operacyjnego.|
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFile::m_pTM](#m_ptm)|Wskaźnik do `CAtlTransactionManager` obiektu.|
 
@@ -600,9 +600,9 @@ W poniższej tabeli opisano możliwe wyniki `Open`.
 
 |`pError`|Wystąpił błąd|Wartość zwracana|Zawartość CFileException|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|Nie|WARTOŚĆ TRUE|n/d|
+|NULL|Nie|WARTOŚĆ TRUE|Nie dotyczy|
 |wskaźnika `CFileException`|Nie|WARTOŚĆ TRUE|bez zmian|
-|NULL|Tak|FAŁSZ|n/d|
+|NULL|Tak|FAŁSZ|Nie dotyczy|
 |wskaźnika `CFileException`|Tak|FAŁSZ|zainicjowana w celu opisania błędu|
 
 ### <a name="example"></a>Przykład
@@ -918,7 +918,7 @@ Co więcej, zapoznaj się z przykładami dla [CFile::CFile](#cfile) i [CFile::Op
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Próbki MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CStdioFile](../../mfc/reference/cstdiofile-class.md)<br/>

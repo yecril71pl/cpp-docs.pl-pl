@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304993"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774588"
 ---
 # <a name="cmdichildwnd-class"></a>Cmdichildwnd — klasa
 
@@ -43,13 +43,13 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Konstruuje `CMDIChildWnd` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMDIChildWnd::Create](#create)|Tworzy okno podrzędne Windows MDI, które są skojarzone z `CMDIChildWnd` obiektu.|
 |[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Zwraca element nadrzędny MDI ramki okna MDI klienta.|
@@ -287,9 +287,9 @@ Wywołaj tę funkcję, aby ustawić menu i akcelerator zasoby używane przez obi
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
-[Próbki MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

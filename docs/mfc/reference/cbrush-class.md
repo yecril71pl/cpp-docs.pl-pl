@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 38f9c6953999e07f1a72ed6a9c0661184f075ea0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303082"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778874"
 ---
 # <a name="cbrush-class"></a>Klasa CBrush
 
@@ -45,13 +45,13 @@ class CBrush : public CGdiObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CBrush::CBrush](#cbrush)|Konstruuje `CBrush` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicjuje pędzla, style, kolor i wzorcem określonym w [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicjuje pędzla ze wzorcem określonym przez map bitowych niezależnych od urządzenia (DIB).|
@@ -64,7 +64,7 @@ class CBrush : public CGdiObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[HBRUSH CBrush::operator](#operator_hbrush)|Zwraca uchwyt Windows dołączonych do `CBrush` obiektu.|
 
@@ -435,7 +435,7 @@ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [o
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample PROPDLG](../../visual-cpp-samples.md)<br/>
+[MFC Sample PROPDLG](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CBitmap](../../mfc/reference/cbitmap-class.md)<br/>

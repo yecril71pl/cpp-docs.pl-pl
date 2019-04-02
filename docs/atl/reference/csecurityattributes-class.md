@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: ef0756ee1dd0aa7d82caf218aa2c417df0c2778c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66188a2c944379cfae813220937ac1e7e98fb41d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269257"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768344"
 ---
 # <a name="csecurityattributes-class"></a>Klasa CSecurityAttributes
 
@@ -33,13 +33,13 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSecurityAttributes::Set](#set)|Wywołanie tej metody, aby ustawić atrybuty `CSecurityAttributes` obiektu.|
 
@@ -98,7 +98,7 @@ Ta metoda jest używana przez konstruktora, aby zainicjować `CSecurityAttribute
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
+[Zabezpieczenia — przykład](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
 [Deskryptor zabezpieczeń](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>

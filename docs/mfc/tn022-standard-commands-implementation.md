@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279375"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775834"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementacja poleceń standardowych
 
@@ -221,7 +221,7 @@ Dla każdego Identyfikatora polecenia występuje ciąg monitu standardową wiado
 
    Obecnie nie ma żadnych standardowej implementacji dla tego polecenia. Musisz zaimplementować to dla każdej `CView`-klasy pochodnej.
 
-   Jeśli wybierzesz do zaimplementowania tego polecenia, zaleca się używać tego identyfikatora polecenia. Zobacz przykładowy samouczek MFC [BAZGROŁY](../visual-cpp-samples.md) związanych z implementacją przykładu.
+   Jeśli wybierzesz do zaimplementowania tego polecenia, zaleca się używać tego identyfikatora polecenia. Zobacz przykładowy samouczek MFC [BAZGROŁY](../overview/visual-cpp-samples.md) związanych z implementacją przykładu.
 
 - Id_edit_copy — kopiuje bieżące zaznaczenie do Schowka.
 
@@ -438,7 +438,7 @@ Dla każdego Identyfikatora polecenia występuje ciąg monitu standardową wiado
 
    Wszystkie aplikacje klienckie OLE powinny implementować to polecenie. AppWizard, z opcją OLE, zostanie utworzony szkielet implementacji `OnInsertObject` w klasie widoku, który trzeba będzie wykonać.
 
-   Zobacz przykładową MFC OLE [OCLIENT](../visual-cpp-samples.md) przykład pełną implementację tego polecenia.
+   Zobacz przykładową MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) przykład pełną implementację tego polecenia.
 
 - Id_ole_edit_links — edytuje OLE łącza
 

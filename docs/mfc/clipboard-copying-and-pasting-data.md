@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270738"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776105"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schowek: Kopiowanie i wklejanie danych
 
@@ -32,7 +32,7 @@ Aby można było zaimplementować kopiowanie lub wklejanie, najpierw należy pod
 
 1. Jeśli użytkownik wybrał operacji wycinania, zamiast operacji kopiowania, usuwania wybranych danych z aplikacji.
 
-Aby zapoznać się z przykładem tej sekwencji, zobacz `OnEditCut` i `OnEditCopy` funkcji OLE MFC przykładowe programy [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md). Należy pamiętać, że te przykłady konserwacji wskaźnik do danych aktualnie zaznaczonego, aby kroku 1 jest już ukończone.
+Aby zapoznać się z przykładem tej sekwencji, zobacz `OnEditCut` i `OnEditCopy` funkcji OLE MFC przykładowe programy [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md). Należy pamiętać, że te przykłady konserwacji wskaźnik do danych aktualnie zaznaczonego, aby kroku 1 jest już ukończone.
 
 ##  <a name="_core_pasting_data"></a> Wklejanie danych
 
@@ -50,7 +50,7 @@ Wklejanie danych jest bardziej skomplikowane niż kopiowania go, ponieważ musis
 
 1. Wkleić formatu.
 
-Aby uzyskać przykład sposobu działania, zobacz wykonania `OnEditPaste` funkcje Członkowskie w klas widoków zdefiniowanych w MFC OLE przykładowych programów [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md).
+Aby uzyskać przykład sposobu działania, zobacz wykonania `OnEditPaste` funkcje Członkowskie w klas widoków zdefiniowanych w MFC OLE przykładowych programów [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
 >  Główną zaletą oddzielenie operacji wklejania do jego własnej funkcji jest, że ten sam kod Wklej mogą być używane po upuszczeniu danych w aplikacji podczas operacji przeciągania i upuszczania. Jak OCLIENT i HIERSVR Twoje `OnDrop` funkcji można również wywołać `DoPasteItem`, ponowne użycie kodu zapisywane do implementowania operacji wklejania.

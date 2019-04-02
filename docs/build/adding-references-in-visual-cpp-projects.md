@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823774"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780473"
 ---
 # <a name="consuming-libraries-and-components"></a>Korzystanie z biblioteki i składniki
 
@@ -20,7 +20,7 @@ Często projektu w języku C++ musi wywoływać funkcje lub dostęp do danych w 
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Korzystanie z biblioteki pobrane za pośrednictwem vcpkg
 
-Korzystanie z biblioteki, które zostały pobrane przy użyciu **vcpkg** Menedżera pakietów, można zignorować poniższe instrukcje. See [vcpkg: Menedżer pakietów języka C++ dla Windows, Linux i MacOS](../vcpkg.md#integrate-with-visual-studio-windows) Aby uzyskać więcej informacji.
+Korzystanie z biblioteki, które zostały pobrane przy użyciu **vcpkg** Menedżera pakietów, można zignorować poniższe instrukcje. See [vcpkg: Menedżer pakietów języka C++ dla Windows, Linux i MacOS](vcpkg.md#integrate-with-visual-studio-windows) Aby uzyskać więcej informacji.
 
 ## <a name="consuming-static-libraries"></a>Korzystanie z bibliotek statycznych
 
@@ -167,4 +167,4 @@ Następujące właściwości znajdują się na odwołania do zestawu modelu COM 
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja strony właściwości projektu C++](reference/property-pages-visual-cpp.md)<br>
-[Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji](working-with-project-properties.md)
+[Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)

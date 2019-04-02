@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276016"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772361"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl Class
 
@@ -61,13 +61,13 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Konstruuje `CMFCColorPickerCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::GetColor](#getcolor)|Pobiera kolor wybranego przez użytkownika.|
 |[CMFCColorPickerCtrl::GetHLS](#gethls)|Pobiera wartości hue, jasność i nasycenie koloru, wybierany przez użytkownika.|
@@ -87,7 +87,7 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Wywoływane przez platformę, przed wyświetleniem kursor, który wskazuje na wybranym kolorze.|
 
@@ -111,7 +111,7 @@ Wykonaj poniższe kroki, aby dołączyć `CMFCColorPickerCtrl` kontroli do dialo
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować `CMFCColorPickerCtrl` obiektu przy użyciu różnych metod w `CMFCColorPickerCtrl` klasy. W przykładzie pokazano, jak ustawić typ formantu selektora i jak ustawić kolor, hue, jasność i nasycenie. Przykład jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować `CMFCColorPickerCtrl` obiektu przy użyciu różnych metod w `CMFCColorPickerCtrl` klasy. W przykładzie pokazano, jak ustawić typ formantu selektora i jak ustawić kolor, hue, jasność i nasycenie. Przykład jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]

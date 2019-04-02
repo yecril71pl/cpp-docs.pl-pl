@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 5abd2ef73ff8af9ebc2f1827cb5403025d5383ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330999"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774818"
 ---
 # <a name="class-c"></a>klasa (C++)
 
@@ -31,19 +31,19 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>Parametry
 
-*specyfikacje szablonu*<br/>
+*template-spec*<br/>
 Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zobacz [szablony](templates-cpp.md).
 
 *class*<br/>
 **Klasy** — słowo kluczowe.
 
-*MS-decl-spec*<br/>
+*ms-decl-spec*<br/>
 Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zobacz [__declspec](../cpp/declspec.md) — słowo kluczowe.
 
 *Tag*<br/>
 Nazwa typu nadana tej klasy. Znacznik staje się słowem zastrzeżonym w zakresie klasy. Znacznik jest opcjonalny. W przypadku pominięcia jest zdefiniowana klasa anonimowa. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).
 
-*Lista podstawowego*<br/>
+*base-list*<br/>
 Opcjonalna lista klas lub struktur tej klasy, z której pochodzą składowe. Zobacz [klasy podstawowej](../cpp/base-classes.md) Aby uzyskać więcej informacji. Każda podstawowa nazwy klasy lub struktury może być poprzedzona przez specyfikator dostępu ([publicznych](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), [chronione](../cpp/protected-cpp.md)) i [wirtualnego](../cpp/virtual-cpp.md) słowo kluczowe. Zobacz tabelę dostępu do elementu członkowskiego w [kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md) Aby uzyskać więcej informacji.
 
 *Lista elementów członkowskich*<br/>
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji na temat klas ogólnie rzecz biorąc, można sko
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Aby uzyskać informacje dotyczące zarządzanych klas i struktur, zobacz [klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+Aby uzyskać informacje dotyczące zarządzanych klas i struktur w języku C + +/ CLI i C + +/ CX, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Przykład
 
@@ -143,5 +143,5 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

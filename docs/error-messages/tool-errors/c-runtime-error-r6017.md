@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
-ms.openlocfilehash: 75e2512196937b483d6bc1a9817f6957bb468418
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45f3b07f540cb72a955b19420130a5a806b750d7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653924"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774701"
 ---
 # <a name="c-runtime-error-r6017"></a>R6017 błąd środowiska uruchomieniowego języka C
 
@@ -30,4 +30,4 @@ Błąd nieoczekiwanego blokady wielowątkowych
 
 Proces Odebrano nieoczekiwany błąd podczas próby uzyskania dostępu do języka C środowiska uruchomieniowego wielowątkowych blokady dla zasobu systemowego. Ten błąd występuje przeważnie, jeśli proces przypadkowo zmienia dane sterty środowiska uruchomieniowego. Jednak to może również być spowodowane błąd wewnętrzny w bibliotece wykonawczej lub kodu systemu operacyjnego.
 
-Aby rozwiązać ten problem, sprawdź, czy błędy uszkodzenia sterty w kodzie. Aby uzyskać więcej informacji i przykładów, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Następnie sprawdź, czy są przy użyciu najnowszych pakietów redystrybucyjnych dla danego wdrożenia aplikacji. Aby uzyskać informacje, zobacz [wdrożenia w programie Visual C++](../../ide/deployment-in-visual-cpp.md).
+Aby rozwiązać ten problem, sprawdź, czy błędy uszkodzenia sterty w kodzie. Aby uzyskać więcej informacji i przykładów, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Następnie sprawdź, czy są przy użyciu najnowszych pakietów redystrybucyjnych dla danego wdrożenia aplikacji. Aby uzyskać informacje, zobacz [wdrożenia w programie Visual C++](../../windows/deployment-in-visual-cpp.md).

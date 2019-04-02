@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3363
 ms.assetid: 41aa922f-608e-4f7a-ba66-451fc1161935
-ms.openlocfilehash: 05a9a339a48ede37f83696e7c524858c3fb03b54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eca598233dbe4cae4730e952b45945653ec8ffaa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427993"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775507"
 ---
 # <a name="compiler-error-c3363"></a>Błąd kompilatora C3363
 
 "type": "typeid" można stosować tylko do typu
 
-[Typeid](../../windows/typeid-cpp-component-extensions.md) operator zostało niepoprawnie użyte.
+[Typeid](../../extensions/typeid-cpp-component-extensions.md) operator zostało niepoprawnie użyte.
 
 ## <a name="example"></a>Przykład
 

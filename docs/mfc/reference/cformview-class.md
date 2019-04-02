@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 4d1f6a19e0fb2ddb88602600e02aec45936ce599
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8a0c11352ffab37f50ede5c67aa810fa20e838ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305110"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777275"
 ---
 # <a name="cformview-class"></a>Klasa CFormView
 
@@ -31,13 +31,13 @@ class CFormView : public CScrollView
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFormView::CFormView](#cformview)|Konstruuje `CFormView` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Używane na potrzeby synchronizacji podczas inicjowania.|
 
@@ -115,8 +115,8 @@ Wartość true, jeśli funkcja inicjowania dla tego okna dialogowego zostało uk
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>
-[Próbki MFC VIEWEX](../../visual-cpp-samples.md)<br/>
+[Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CScrollView](../../mfc/reference/cscrollview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDialog](../../mfc/reference/cdialog-class.md)<br/>

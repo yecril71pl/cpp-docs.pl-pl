@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1beac6106b825c775012b85ccd01226c3dfab795
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280124"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770022"
 ---
 # <a name="cdacl-class"></a>Klasa CDacl
 
@@ -37,14 +37,14 @@ class CDacl : public CAcl
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDacl::CDacl](#cdacl)|Konstruktor.|
 |[CDacl::~CDacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CDacl::AddAllowedAce](#addallowedace)|Dodaje dozwolonych ACE (wpis kontroli dostępu) do `CDacl` obiektu.|
 |[CDacl::AddDeniedAce](#adddeniedace)|Dodaje odmowy ACE `CDacl` obiektu.|
@@ -54,7 +54,7 @@ class CDacl : public CAcl
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDacl::operator =](#operator_eq)|Operator przypisania.|
 
@@ -262,7 +262,7 @@ Usuwa co `ACE` struktury (wpis kontroli dostępu) (jeśli istnieją) w `CDacl` o
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
+[Zabezpieczenia — przykład](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CAcl](../../atl/reference/cacl-class.md)<br/>
 [Listy kontroli dostępu](/windows/desktop/SecAuthZ/access-control-lists)<br/>
 [Wpisy kontroli dostępu](/windows/desktop/SecAuthZ/access-control-entries)<br/>

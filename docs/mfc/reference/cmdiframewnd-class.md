@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282451"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776534"
 ---
 # <a name="cmdiframewnd-class"></a>Cmdiframewnd — klasa
 
@@ -55,13 +55,13 @@ class CMDIFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Konstruuje `CMDIFrameWnd`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMDIFrameWnd::CreateClient](#createclient)|Tworzy okno MdiClient — Windows, w tym `CMDIFrameWnd`. Wywoływane przez `OnCreate` funkcji składowej typu `CWnd`.|
 |[CMDIFrameWnd::CreateNewChild](#createnewchild)|Tworzy nowe podrzędne okno.|
@@ -459,9 +459,9 @@ Zobacz przykład [CMDIFrameWnd::MDICascade](#mdicascade).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
-[Próbki MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

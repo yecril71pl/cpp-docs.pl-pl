@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738449"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775975"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Instrukcje: Dostęp do znaków w obiekcie System::String
 
@@ -22,7 +22,7 @@ Możesz uzyskać dostęp znaków <xref:System.String> obiektu dla połączeń o 
 
 `PtrToStringChars` Zwraca <xref:System.Char>, czyli wskaźnika wewnętrznego (znany także jako `byref`). W efekcie podlega wyrzucania elementów bezużytecznych. Nie masz przypiąć ten wskaźnik, chyba że zamierzasz przekazać go do funkcji macierzystej.
 
-Rozważmy poniższy kod.  Przypinanie nie jest potrzebna, ponieważ `ppchar` jest wskaźnika wewnętrznego, a jeśli moduł odśmiecania pamięci przenosi ciąg wskazuje on, również spowoduje zaktualizowanie `ppchar`. Bez [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md), ten kod będzie działać i nie ma potencjalnych wpływający na wydajność powodowane przez przypinanie.
+Rozważmy poniższy kod.  Przypinanie nie jest potrzebna, ponieważ `ppchar` jest wskaźnika wewnętrznego, a jeśli moduł odśmiecania pamięci przenosi ciąg wskazuje on, również spowoduje zaktualizowanie `ppchar`. Bez [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md), ten kod będzie działać i nie ma potencjalnych wpływający na wydajność powodowane przez przypinanie.
 
 W przypadku przekazania `ppchar` funkcji macierzystej, następnie musi być przypiętego wskaźnika; moduł odśmiecania pamięci nie będzie można zaktualizować wszystkie wskaźniki w ramce stosu w niezarządzanym.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3917
 ms.assetid: a24cd0c9-262f-46e5-9488-1c01f945933d
-ms.openlocfilehash: 393d1213f58ab50424093927cbc975651ce34e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb6d594124d995d766df280da2584665ab6d7a2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567483"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769671"
 ---
 # <a name="compiler-error-c3917"></a>Błąd kompilatora C3917
 
@@ -19,7 +19,7 @@ ms.locfileid: "50567483"
 
 Definicja właściwości lub zdarzenia używane składni z wersji przed Visual Studio 2005.
 
-Aby uzyskać więcej informacji, zobacz [właściwość](../../windows/property-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

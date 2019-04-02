@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279994"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779758"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl Class
 
@@ -50,7 +50,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Włącza lub wyłącza menu skrótów.|
 |[CMFCShellTreeCtrl::GetFlags](#getflags)|Zwraca kombinacja flag, które są przekazywane do [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).|
@@ -86,7 +86,7 @@ Ta klasa rozszerza `CTreeCtrl` klasy, należy włączyć program, aby uwzględni
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób tworzenia obiektu `CMFCShellTreeCtrl` klasy. Ten fragment kodu jest częścią [Eksplorator kondycji](../../visual-cpp-samples.md).
+Poniższy przykład przedstawia sposób tworzenia obiektu `CMFCShellTreeCtrl` klasy. Ten fragment kodu jest częścią [Eksplorator kondycji](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#4](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#5](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]

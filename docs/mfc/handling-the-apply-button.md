@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279448"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770840"
 ---
 # <a name="handling-the-apply-button"></a>Obsługa przycisku Zastosuj
 
@@ -30,7 +30,7 @@ Należy wywołać [CPropertyPage::SetModified](../mfc/reference/cpropertypage-cl
 
 Aby zaimplementować efekt przycisk Zastosuj, arkusz właściwości musisz poinformować jego właściciela lub innych zewnętrznych obiektów w aplikacji, aby zastosować bieżące ustawienia na stronach właściwości. W tym samym czasie arkusza właściwości należy wyłączyć przycisk Zastosuj, wywołując `CPropertyPage::SetModified( FALSE )` dla wszystkich stron, które stosowane ich modyfikacji obiektu zewnętrznego.
 
-Na przykład ten proces Zobacz próbki MFC-ogólne [PROPDLG](../visual-cpp-samples.md).
+Na przykład ten proces Zobacz próbki MFC-ogólne [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Zobacz także
 

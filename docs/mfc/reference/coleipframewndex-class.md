@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ce0e3a8ecf4774bc0d259c0304b1e88532336bd1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285350"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771152"
 ---
 # <a name="coleipframewndex-class"></a>Klasa COleIPFrameWndEx
 
@@ -116,7 +116,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleIPFrameWndEx::AddDockSite](#adddocksite)||
 |[COleIPFrameWndEx::AddPane](#addpane)||
@@ -164,13 +164,13 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Informuje platformę, by zainicjować szereg kontroli identyfikatorów, które są przypisane do paska narzędzi zdefiniowane przez użytkownika.|
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób podklasy wystąpienie `COleIPFrameWndEx` klasy i przez zastąpienie jej metody. W przykładzie pokazano, jak się ponad `OnDestory` metody `RepositionFrame` metody `RecalcLayout` metody i `CalcWindowRect` metody. Ten fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano sposób podklasy wystąpienie `COleIPFrameWndEx` klasy i przez zastąpienie jej metody. W przykładzie pokazano, jak się ponad `OnDestory` metody `RepositionFrame` metody `RecalcLayout` metody i `CalcWindowRect` metody. Ten fragment kodu jest częścią [przykład konsola programu Word](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 

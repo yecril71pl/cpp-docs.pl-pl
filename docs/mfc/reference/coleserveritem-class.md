@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270556"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777379"
 ---
 # <a name="coleserveritem-class"></a>Klasa COleServerItem
 
@@ -95,13 +95,13 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleServerItem::COleServerItem](#coleserveritem)|Konstruuje `COleServerItem` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Umieszcza prezentacji i konwersji formatów w `COleDataSource` obiektu.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Kopiuje element do Schowka.|
@@ -134,7 +134,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleServerItem::GetDataSource](#getdatasource)|Pobiera obiekt używany do przechowywania konwersji formatów.|
 |[COleServerItem::OnHide](#onhide)|Metoda wywoływana przez platformę, by ukryć element OLE.|
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|Informuje serwer o tym, ile elementu OLE jest widoczny.|
 
@@ -997,7 +997,7 @@ Nazwa musi być unikatowa w obrębie dokumentu. Aplikacja serwera wywołanego do
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

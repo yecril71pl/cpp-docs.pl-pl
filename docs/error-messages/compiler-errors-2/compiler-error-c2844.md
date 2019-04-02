@@ -1,23 +1,23 @@
 ---
-title: Błąd kompilatora C2844
+title: Compiler Error C2844
 ms.date: 11/04/2016
 f1_keywords:
 - C2844
 helpviewer_keywords:
 - C2844
 ms.assetid: dcaf4cd2-21b0-4280-ae42-0a706c524d83
-ms.openlocfilehash: 8af9f42be279f728f72fc6968aeba98ee5d2474a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2676a32cee487595a2241359496ae9b0380126b8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462715"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775014"
 ---
-# <a name="compiler-error-c2844"></a>Błąd kompilatora C2844
+# <a name="compiler-error-c2844"></a>Compiler Error C2844
 
 'składowa': nie może być składową interfejsu "interface"
 
-[Interfejsu klasy](../../windows/interface-class-cpp-component-extensions.md) nie może zawierać element członkowski danych, chyba że jest to również właściwość.
+[Interfejsu klasy](../../extensions/interface-class-cpp-component-extensions.md) nie może zawierać element członkowski danych, chyba że jest to również właściwość.
 
 Coś innego niż właściwość lub funkcji składowej jest niedozwolony w interfejsie. Ponadto konstruktory, destruktory i operatory są niedozwolone.
 

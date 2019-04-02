@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 71a5943f65f4bd490ecb02824fef7a96741709f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540326"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770632"
 ---
 # <a name="compiler-error-c3104"></a>Błąd kompilatora C3104
 
@@ -19,7 +19,7 @@ Niedozwolony argument atrybutu
 
 Określono nieprawidłowy argument do atrybutu.
 
-Zobacz [typy parametrów atrybutu](../../windows/attribute-parameter-types-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Zobacz [typy parametrów atrybutu](../../extensions/attribute-parameter-types-cpp-component-extensions.md) Aby uzyskać więcej informacji.
 
 Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: podczas przekazywania tablic do atrybutów niestandardowych, typ tablicy nie jest już jest wyprowadzony z listy inicjowania agregacji. Kompilator teraz wymaga określenia typu tablicy, jak również lista inicjatora.
 

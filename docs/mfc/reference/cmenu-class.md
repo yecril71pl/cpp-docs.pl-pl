@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293865"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770853"
 ---
 # <a name="cmenu-class"></a>Cmenu — klasa
 
@@ -105,13 +105,13 @@ class CMenu : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMenu::CMenu](#cmenu)|Konstruuje `CMenu` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|Dołącza nowy element do końca tego menu.|
 |[CMenu::Attach](#attach)|Dołącza Windows uchwyt menu, aby `CMenu` obiektu.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|Pobiera uchwyt obiekt menu.|
 |[CMenu::operator! =](#operator_neq)|Określa, czy dwa obiekty menu nie są równe.|
@@ -161,7 +161,7 @@ class CMenu : public CObject
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMenu::m_hMenu](#m_hmenu)|Określa dojścia do menu Windows dołączonych do `CMenu` obiektu.|
 
@@ -561,7 +561,7 @@ Zobacz [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) opis `DR
 
 ### <a name="example"></a>Przykład
 
-Następujący kod pochodzi z MFC [CTRLTEST](../../visual-cpp-samples.md) próbki:
+Następujący kod pochodzi z MFC [CTRLTEST](../../overview/visual-cpp-samples.md) próbki:
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
@@ -1094,7 +1094,7 @@ Zobacz [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) op
 
 ### <a name="example"></a>Przykład
 
-Następujący kod pochodzi z MFC [CTRLTEST](../../visual-cpp-samples.md) próbki:
+Następujący kod pochodzi z MFC [CTRLTEST](../../overview/visual-cpp-samples.md) próbki:
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
@@ -1484,8 +1484,8 @@ Zmiennoprzecinkowe menu podręcznego może występować w dowolnym miejscu na ek
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
-[Próbki MFC DYNAMENU](../../visual-cpp-samples.md)<br/>
+[Próbki MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)

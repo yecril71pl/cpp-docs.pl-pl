@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 2d6b2cb15cfaa0b72b946c0edb3b451737b51772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553507"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769993"
 ---
 # <a name="compiler-error-c3379"></a>Błąd kompilatora C3379
 
@@ -19,7 +19,7 @@ ms.locfileid: "50553507"
 
 W przypadku zastosowania do typu zarządzanego, takich jak klasy lub struktury, [publicznych](../../cpp/public-cpp.md) i [prywatnej](../../cpp/private-cpp.md) słowa kluczowe wskazuje, czy klasa będzie udostępniana przez metadane zestawu. `public` lub `private` nie można zastosować do klasy zagnieżdżonej, która odziedziczy dostęp do zestawu otaczającej klasy.
 
-Gdy jest używane z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` i `value` słowa kluczowe wskazują, że klasa jest zarządzana (zobacz [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md)).
+Gdy jest używane z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` i `value` słowa kluczowe wskazują, że klasa jest zarządzana (zobacz [klas i struktur](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 Poniższy przykład spowoduje wygenerowanie C3379:
 

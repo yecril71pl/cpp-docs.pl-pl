@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 7d1b28e2b3e279bc3b2e3ccb116ab24017c07cd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301262"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767213"
 ---
 # <a name="chtmleditview-class"></a>Klasa CHtmlEditView
 
@@ -35,13 +35,13 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CHtmlEditView::CHtmlEditView](#chtmleditview)|Konstruuje `CHtmlEditView` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CHtmlEditView::Create](#create)|Tworzy nowy obiekt okna.|
 |[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Zwraca `IHTMLDocument2` interfejsu do bieżącego dokumentu.|
@@ -106,7 +106,7 @@ Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna
 Określa atrybuty stylu okna. WS_VISIBLE oraz Windows WS_CHILD style są domyślnie.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając rozmiar i położenie okna. *RectDefault* zezwala na wartość Windows określić rozmiar i położenie w nowym oknie.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, określając rozmiar i położenie okna. *RectDefault* zezwala na wartość Windows określić rozmiar i położenie w nowym oknie.
 
 *pParentWnd*<br/>
 Wskaźnik do okno nadrzędne kontrolki.
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>Parametry
 
 *ppDocument*<br/>
-[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfejsu.
+[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfejsu.
 
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
 
@@ -144,5 +144,5 @@ virtual LPCTSTR GetStartDocument();
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe HTMLEdit](../../visual-cpp-samples.md)<br/>
+[Przykładowe HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

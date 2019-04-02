@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425032"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776352"
 ---
 # <a name="cspinbuttonctrl-class"></a>Klasa CSpinButtonCtrl
 
@@ -53,13 +53,13 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Konstruuje `CSpinButtonCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSpinButtonCtrl::Create](#create)|Tworzy kontrolkę przycisku pokrętła i dołącza je do `CSpinButtonCtrl` obiektu.|
 |[CSpinButtonCtrl::CreateEx](#createex)|Tworzy kontrolkę przycisku pokrętła z określonym style rozszerzone Windows i dołącza go do `CSpinButtonCtrl` obiektu.|
@@ -399,7 +399,7 @@ Funkcja elementu członkowskiego `SetRange32` Ustawia zakres 32-bitowych dla kon
 
 ## <a name="see-also"></a>Zobacz także
 
-[CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CSliderCtrl](../../mfc/reference/csliderctrl-class.md)

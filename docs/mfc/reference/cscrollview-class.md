@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259259"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774156"
 ---
 # <a name="cscrollview-class"></a>Klasa CScrollView
 
@@ -49,13 +49,13 @@ class CScrollView : public CView
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CScrollView::CScrollView](#cscrollview)|Konstruuje `CScrollView` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CScrollView::CheckScrollBars](#checkscrollbars)|Wskazuje, czy widok przewijania, ma poziome i pionowe paski przewijania.|
 |[CScrollView::FillOutsideRect](#filloutsiderect)|Wypełnia obszar poza obszarem przewijania widoku.|
@@ -82,7 +82,7 @@ Automatyczne przewijanie w odpowiedzi na wiadomości przy użyciu klawiatury, Do
 
 Może obsługiwać obrót kółkiem myszy do przewijania samodzielnie przez zastąpienie mapowanych komunikat [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) i [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funkcji elementów członkowskich. Są one dla `CScrollView`, te funkcje elementów członkowskich obsługuje zalecane zachowania [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), komunikat obrót kółkiem.
 
-Można skorzystać z automatycznego przewijania, pochodzi z klasy widoku `CScrollView` zamiast z `CView`. Widok najpierw utworzenia, aby obliczyć rozmiar przewijany widok, w zależności od rozmiaru dokumentu, wywołanie `SetScrollSizes` funkcji składowej z przesłonięcia albo [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) lub [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Należy napisać własny kod do wykonywania zapytań rozmiar dokumentu. Aby uzyskać przykład, zobacz [próbki Bazgroły](../../visual-cpp-samples.md).)
+Można skorzystać z automatycznego przewijania, pochodzi z klasy widoku `CScrollView` zamiast z `CView`. Widok najpierw utworzenia, aby obliczyć rozmiar przewijany widok, w zależności od rozmiaru dokumentu, wywołanie `SetScrollSizes` funkcji składowej z przesłonięcia albo [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) lub [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Należy napisać własny kod do wykonywania zapytań rozmiar dokumentu. Aby uzyskać przykład, zobacz [próbki Bazgroły](../../overview/visual-cpp-samples.md).)
 
 Wywołanie `SetScrollSizes` funkcja elementu członkowskiego Ustawia tryb mapowania tego widoku, łączna liczba wymiarów w widoku przewijania i kwoty, aby przewijać w poziomie i w pionie. Wszystkie rozmiary są w jednostkach logicznych. Rozmiar logiczny widoku zwykle jest obliczana na podstawie danych przechowywanych w dokumencie, ale w niektórych przypadkach możesz chcieć określić stały rozmiar. Aby zapoznać się z przykładami w obu przypadkach efekt, zobacz [CScrollView::SetScrollSizes](#setscrollsizes).
 
@@ -376,7 +376,7 @@ Należy ustawić tryb mapowania do dowolnego z trybów mapowania Windows z wyją
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Próbki MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CView](../../mfc/reference/cview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CView](../../mfc/reference/cview-class.md)<br/>

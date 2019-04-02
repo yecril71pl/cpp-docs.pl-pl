@@ -3,12 +3,12 @@ title: Zapraszamy ponownie do języka C++ (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334628"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771789"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Zapraszamy ponownie do języka C++ (Modern C++)
 
@@ -132,4 +132,4 @@ Aby uzyskać więcej informacji, zobacz artykuł Stack Overflow [idiomy który C
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Wizualne zgodność języka C++](../visual-cpp-language-conformance.md)
+[Wizualne zgodność języka C++](../overview/visual-cpp-language-conformance.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: e400c181f987a83588f8aedc63ecdedb82be310f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05a861a2baedb86482503b6860098f12c41bd78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568686"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767176"
 ---
 # <a name="compiler-error-c3399"></a>Błąd kompilatora C3399
 
@@ -19,7 +19,7 @@ ms.locfileid: "50568686"
 
 Po określeniu `gcnew()` ograniczenia, należy określić że typu ograniczenie konstruktora bez parametrów. Dlatego jest błąd, aby spróbować utworzyć wystąpienia tego typu i przekazywania parametru.
 
-Zobacz [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) Aby uzyskać więcej informacji.
+Zobacz [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

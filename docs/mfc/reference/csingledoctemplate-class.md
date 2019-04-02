@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: fe85119761d2b56ca72c8efff00664c62d4767bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1361734f38d903e2171839b95888863126974a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299533"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771700"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate Class
 
@@ -29,7 +29,7 @@ class CSingleDocTemplate : public CDocTemplate
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Konstruuje `CSingleDocTemplate` obiektu.|
 
@@ -117,7 +117,7 @@ Dynamiczne przydzielanie `CSingleDocTemplate` obiektu i przekazać ją do `CWinA
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[MFC Sample DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>

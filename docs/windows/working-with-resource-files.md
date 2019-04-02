@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0a13fb05f0e6e8582d5e476eb889e307458f528d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562968"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767304"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 
@@ -49,7 +49,7 @@ W tym artykule opisano edytory zasobów dostępnych w programie Visual Studio i 
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Oferuje łącza do dokumentacji języka Visual C++.
 
 [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)<br/>

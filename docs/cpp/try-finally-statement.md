@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175928"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778341"
 ---
 # <a name="try-finally-statement"></a>try-finally — instrukcja
 
@@ -49,7 +49,7 @@ Następująca składnia opisuje **try-finally** instrukcji:
 
 **Try-finally** instrukcja jest rozszerzeniem firmy Microsoft do języków C i C++, które umożliwiają aplikacji docelowej, co gwarantuje wykonywanie czyszczenia kodu, gdy działanie zostanie zakłócone wykonanie bloku kodu. Oczyszczanie składa się z zadania, takie jak cofanie przydziału pamięci, zamykanie plików i zwalniania dojścia do plików. **Try-finally** instrukcji jest szczególnie przydatne dla procedur, które mają w kilku miejscach, w którym dokonuje błędu, który może spowodować przedwczesne zwracają rutynowych.
 
-Aby uzyskać powiązane informacje i przykładowy kod, zobacz [spróbuj-except, instrukcja](../cpp/try-except-statement.md). Aby uzyskać więcej informacji na temat ogólnie rzecz biorąc obsługi wyjątków strukturalnych, zobacz [obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać więcej informacji na temat obsługi wyjątków w aplikacji zarządzanych, zobacz [obsługi wyjątków w ramach/CLR](../windows/exception-handling-cpp-component-extensions.md).
+Aby uzyskać powiązane informacje i przykładowy kod, zobacz [spróbuj-except, instrukcja](../cpp/try-except-statement.md). Aby uzyskać więcej informacji na temat ogólnie rzecz biorąc obsługi wyjątków strukturalnych, zobacz [obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać więcej informacji na temat obsługi wyjątków w aplikacji zarządzanych za pomocą C + +/ CLI, zobacz [obsługi wyjątków w ramach/CLR](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
 > Strukturalna obsługa wyjątków działa z Win32 dla plików źródłowych C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto, obsługa wyjątków C++ jest bardziej elastyczna, gdyż może obsługiwać wyjątki dowolnego typu. Programy w języku C++, zalecane jest używanie mechanizmu obsługi wyjątków C++ ([try, catch i throw](../cpp/try-throw-and-catch-statements-cpp.md) instrukcji).
@@ -66,7 +66,7 @@ Kontrola osiąga **__try** oświadczenie proste wykonywania sekwencyjnego (poni�
 
 Jeśli wystąpi wyjątek w **__try** bloku, system operacyjny musi odnaleźć program obsługi wyjątku lub program zakończy się niepowodzeniem. Jeśli program obsługi zostanie znaleziony, wszystkie **__finally** bloki są wykonywane i wykonanie zostanie wznowione w obsłudze.
 
-Załóżmy na przykład, serii wywołań funkcji łącza funkcji A działać D, jak pokazano na poniższej ilustracji. Każda funkcja ma jednego programu obsługi zakończenia. Jeśli wyjątek jest zgłaszany w funkcji D i obsłużony a, programy obsługi zakończenia są nazywane w podanej kolejności, jak system rozwija stos: D, C, B.
+Załóżmy na przykład, serii wywołań funkcji łącza funkcji A działać D, jak pokazano na poniższej ilustracji. Każda funkcja ma jednego programu obsługi zakończenia. Jeśli wyjątek jest zgłaszany w funkcji D, obsługiwane, a jako system rozwija stos obsługi zakończenia są wywoływane w następującej kolejności: D, C, B.
 
 ![Kolejność zakończenia&#45;wykonanie procedury obsługi](../cpp/media/vc38cx1.gif "kolejność zakończenia&#45;wykonanie procedury obsługi") <br/>
 Kolejność wykonywania programu obsługi zakończenia
@@ -96,5 +96,5 @@ Program obsługi przerwania nie jest wywoływana, gdy proces jest zabita w środ
 
 [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Składnia programu obsługi zakończenia](/windows/desktop/Debug/termination-handler-syntax)

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
-ms.openlocfilehash: 81372c7a2468becf6dba3b30b62ee266eed272ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a674ce7819c88dd4e26355c0129a6c181da5c276
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562919"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781955"
 ---
 # <a name="compiler-error-c3461"></a>Błąd kompilatora C3461
 
 "type": tylko typ zarządzany może być przekazywany
 
-Przekazywanie dalej typu może występować tylko w typach CLR.  Zobacz [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Przekazywanie dalej typu może występować tylko w typach CLR.  Zobacz [klas i struktur](../../extensions/classes-and-structs-cpp-component-extensions.md) Aby uzyskać więcej informacji.
 
-Aby uzyskać więcej informacji, zobacz [przekazywania dalej typów (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywania dalej typów (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

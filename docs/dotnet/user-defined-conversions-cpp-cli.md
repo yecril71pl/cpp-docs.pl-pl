@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: cd3b27e0667b5ab9707db4b2cce2d7eef4611219
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743186"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772426"
 ---
 # <a name="user-defined-conversions-ccli"></a>Konwersje zdefiniowane przez użytkownika (C++/CLI)
 
@@ -21,7 +21,7 @@ Konwersja zdefiniowana przez użytkownika, może to być jawne lub niejawne.  UD
 
 Konstruktor klasy natywnej, można przekonwertować typu odwołania lub wartość klasy natywnej.
 
-Aby uzyskać więcej informacji dotyczących konwersji, zobacz [pakowania](../windows/boxing-cpp-component-extensions.md) i [konwersje standardowe](../cpp/standard-conversions.md).
+Aby uzyskać więcej informacji dotyczących konwersji, zobacz [pakowania](../extensions/boxing-cpp-component-extensions.md) i [konwersje standardowe](../cpp/standard-conversions.md).
 
 ```
 // mcpp_User_Defined_Conversions.cpp
@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in N::N
@@ -133,7 +133,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in operator
@@ -168,7 +168,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 10
@@ -197,7 +197,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 10.3
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 True
@@ -267,7 +267,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 5
@@ -310,7 +310,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 13
@@ -321,4 +321,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+[Klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

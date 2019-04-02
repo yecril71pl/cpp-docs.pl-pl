@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273286"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770681"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl Class
 
@@ -47,14 +47,14 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Domyślny konstruktor.|
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Włącza lub wyłącza (ukrywa) przycisk przeglądania.|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Włącza przycisk Przeglądaj i umieszcza formant przeglądania edycji w *przeglądanie plików* trybu.|
@@ -120,7 +120,7 @@ Wykonaj poniższe kroki, aby włączyć formant przeglądania edycji w Twojej ap
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak istnieją dwie metody w `CMFCEditBrowseCtrl` klasy: `EnableFolderBrowseButton` i `EnableFileBrowseButton`. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak istnieją dwie metody w `CMFCEditBrowseCtrl` klasy: `EnableFolderBrowseButton` i `EnableFileBrowseButton`. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]

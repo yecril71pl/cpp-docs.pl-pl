@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259753"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768708"
 ---
 # <a name="coledocument-class"></a>COleDocument Class
 
@@ -73,13 +73,13 @@ class COleDocument : public CDocument
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|Konstruuje `COleDocument` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDocument::AddItem](#additem)|Dodaje element do listy elementów utrzymane w dokumencie.|
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|Ustawia print-urządzenie dla wszystkich elementów klienta w dokumencie.|
@@ -97,7 +97,7 @@ class COleDocument : public CDocument
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Obsługuje zdarzenia w poleceniu menu Zmień ikonę.|
 |[COleDocument::OnEditConvert](#oneditconvert)|Obsługuje konwersji obiekt osadzony lub połączony z jednego typu na inny.|
@@ -544,7 +544,7 @@ Dzięki temu platformę, aby monitować użytkownika o Zapisz dokument przed jeg
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC kontenera](../../visual-cpp-samples.md)<br/>
-[Próbki MFC MFCBIND](../../visual-cpp-samples.md)<br/>
+[Próbki MFC kontenera](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CDocument](../../mfc/reference/cdocument-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

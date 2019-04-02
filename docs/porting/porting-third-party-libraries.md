@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e1aefc82eb23a8479035dd3372fa9ec24ab8feb1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750965"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774207"
 ---
 # <a name="porting-third-party-libraries"></a>Przenoszenie bibliotek innych firm
 
@@ -18,7 +18,7 @@ Po uaktualnieniu projektu do bieżącej wersji programu Visual C++, należy uakt
 
 ## <a name="introducing-vcpkg"></a>Wprowadzenie do vcpkg
 
-W przeszłości Znajdowanie i uaktualnianie 3rd bibliotek innych firm był czasami nietrywialnymi zadania. Aby ułatwić uzyskiwanie i Odbuduj C++ 3rd bibliotek typu open source innych firm, zespołu Visual C++ został utworzony z wiersza polecenia narzędzia o nazwie **narzędzia pakowania VC ++** lub **vcpkg**. Vcpkg ma przeszukiwanie wykazu wielu popularnych bibliotek typu open-source języka C++. Można zainstalować wszystkie biblioteki w wykazie bezpośrednio z poziomu wiersza polecenia vcpkg. Podczas instalowania biblioteki Vcpkg tworzy drzewo katalogów na komputerze i dodaje .h, lib i plikach binarnych, w tym folderze. Możesz użyć tego folderu w wierszu polecenia kompilacji, lub zintegrować ją z programu Visual Studio 2015 lub później za pomocą vcpkg integracja polecenia install. Po zintegrowaniu lokalizację biblioteki programu Visual Studio można je znaleźć i dodać go do nowego projektu, które tworzysz. Aby użyć biblioteki, po prostu `#include` i programu Visual Studio będzie automatycznie dodać ścieżkę .lib do ustawień projektu i skopiuj bibliotekę dll do folderu rozwiązania. Aby uzyskać więcej informacji, zobacz [vcpkg: Menedżer pakietów dla języka C++](../vcpkg.md).
+W przeszłości Znajdowanie i uaktualnianie 3rd bibliotek innych firm był czasami nietrywialnymi zadania. Aby ułatwić uzyskiwanie i Odbuduj C++ 3rd bibliotek typu open source innych firm, zespołu Visual C++ został utworzony z wiersza polecenia narzędzia o nazwie **narzędzia pakowania VC ++** lub **vcpkg**. Vcpkg ma przeszukiwanie wykazu wielu popularnych bibliotek typu open-source języka C++. Można zainstalować wszystkie biblioteki w wykazie bezpośrednio z poziomu wiersza polecenia vcpkg. Podczas instalowania biblioteki Vcpkg tworzy drzewo katalogów na komputerze i dodaje .h, lib i plikach binarnych, w tym folderze. Możesz użyć tego folderu w wierszu polecenia kompilacji, lub zintegrować ją z programu Visual Studio 2015 lub później za pomocą vcpkg integracja polecenia install. Po zintegrowaniu lokalizację biblioteki programu Visual Studio można je znaleźć i dodać go do nowego projektu, które tworzysz. Aby użyć biblioteki, po prostu `#include` i programu Visual Studio będzie automatycznie dodać ścieżkę .lib do ustawień projektu i skopiuj bibliotekę dll do folderu rozwiązania. Aby uzyskać więcej informacji, zobacz [vcpkg: Menedżer pakietów dla języka C++](../build/vcpkg.md).
 
 ## <a name="reporting-issues"></a>Raportowanie problemów
 

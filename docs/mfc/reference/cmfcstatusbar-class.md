@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326754"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775962"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar Class
 
@@ -95,7 +95,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Przesłania [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||
@@ -132,32 +132,32 @@ class CMFCStatusBar : public CPane
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCStatusBar::OnDrawPane](#ondrawpane)|Wywoływane przez platformę, gdy jej odrysowuje okienka paska stanu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Na poniższym diagramie przedstawiono na rysunku na pasku stanu z [próbka Demo pasek stanu](../../visual-cpp-samples.md) aplikacji.
+Na poniższym diagramie przedstawiono na rysunku na pasku stanu z [próbka Demo pasek stanu](../../overview/visual-cpp-samples.md) aplikacji.
 
 ![Przykład CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "przykład CMFCStatusBar")
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano zmienne lokalne, których korzysta aplikacja, wywołania różne metody `CMFCStatusBar` klasy. Te zmienne są deklarowane w StatusBarDemoView.h. Głównej ramki jest zadeklarowana w MainFrm.h, dokument jest zadeklarowana w StatusBarDemoDoc.h i widok jest zadeklarowana w StatusBarDemoView.h. Ten fragment kodu jest częścią [próbka Demo pasek stanu](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano zmienne lokalne, których korzysta aplikacja, wywołania różne metody `CMFCStatusBar` klasy. Te zmienne są deklarowane w StatusBarDemoView.h. Głównej ramki jest zadeklarowana w MainFrm.h, dokument jest zadeklarowana w StatusBarDemoDoc.h i widok jest zadeklarowana w StatusBarDemoView.h. Ten fragment kodu jest częścią [próbka Demo pasek stanu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak odwołać się do `CMFCStatusBar` obiektu, wprowadzając `GetStatusBar` metoda w MainFrm.h i następnie wywołanie tej metody z `GetStatusBar` metody w StatusBarDemoView.h. Ten fragment kodu jest częścią [próbka Demo pasek stanu](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak odwołać się do `CMFCStatusBar` obiektu, wprowadzając `GetStatusBar` metoda w MainFrm.h i następnie wywołanie tej metody z `GetStatusBar` metody w StatusBarDemoView.h. Ten fragment kodu jest częścią [próbka Demo pasek stanu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób wywołania różnych metod `CMFCStatusBar` klasy w StatusBarDemoView.cpp. Stałe są deklarowane w MainFrm.h. W przykładzie pokazano sposób ustawiania ikony, Ustaw tekst etykietki narzędzia w okienku paska stanu, wyświetlany pasek postępu w okienku określonego, przypisać animacji do okienka określonego, ustawić tekst i szerokość w okienku paska stanu i ustaw wskaźnik postępu bieżącego progr pasek dostępu dla tego okienka paska stanu. Ten fragment kodu jest częścią [próbka Demo pasek stanu](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób wywołania różnych metod `CMFCStatusBar` klasy w StatusBarDemoView.cpp. Stałe są deklarowane w MainFrm.h. W przykładzie pokazano sposób ustawiania ikony, Ustaw tekst etykietki narzędzia w okienku paska stanu, wyświetlany pasek postępu w okienku określonego, przypisać animacji do okienka określonego, ustawić tekst i szerokość w okienku paska stanu i ustaw wskaźnik postępu bieżącego progr pasek dostępu dla tego okienka paska stanu. Ten fragment kodu jest częścią [próbka Demo pasek stanu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]

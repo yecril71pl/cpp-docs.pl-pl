@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: eb49ee135dce4ee0d5e37acd2382a34e1d99b083
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265486"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772192"
 ---
 # <a name="caccesstoken-class"></a>Klasa CAccessToken
 
@@ -76,13 +76,13 @@ class CAccessToken
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAccessToken::~CAccessToken](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CAccessToken::Attach](#attach)|Wywołaj tę metodę, aby przejąć prawo własności uchwyt token dostęp.|
 |[CAccessToken::CheckTokenMembership](#checktokenmembership)|Wywołaj tę metodę w celu określenia, czy określony identyfikator SID jest włączone w `CAccessToken` obiektu.|
@@ -1181,6 +1181,6 @@ Grupa podstawowa jest domyślną grupą nowych obiektów tworzonych ten token do
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Przykładowe ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

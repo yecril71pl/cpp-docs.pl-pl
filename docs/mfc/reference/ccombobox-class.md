@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304473"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778523"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
 
@@ -129,13 +129,13 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Konstruuje `CComboBox` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|Dodaje ciąg do końca listy w polu listy, pola kombi lub pozycja posortowanej listy pól ze stylem CBS_SORT.|
 |[CComboBox::Clear](#clear)|Usuwa (czyści) bieżące zaznaczenie w formancie edycji.|
@@ -198,8 +198,8 @@ W poniższej tabeli porównano trzy pola kombi [style](../../mfc/reference/style
 
 |Styl|Widoczne jest pole listy|Formant statyczny lub edycji|
 |-----------|-------------------------------|-----------------------------|
-|Proste|zawsze|Edytowanie|
-|Lista rozwijana|Gdy rozwinął|Edytowanie|
+|Proste|zawsze|Edytuj|
+|Lista rozwijana|Gdy rozwinął|Edytuj|
 |Listy rozwijanej|Gdy rozwinął|Static|
 
 Możesz utworzyć `CComboBox` obiektu z szablonu okna dialogowego lub bezpośrednio w kodzie. W obu przypadkach należy najpierw wywołać konstruktora `CComboBox` do konstruowania `CComboBox` obiektu; następnie wywołać [Utwórz](#create) funkcja elementu członkowskiego, aby utworzyć formantu i dołączyć go do `CComboBox` obiektu.
@@ -1557,7 +1557,7 @@ Ta funkcja elementu członkowskiego nie ma wpływu na utworzone za pomocą pola 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Próbki MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

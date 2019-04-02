@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279927"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772767"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Przy użyciu wielu plików zasobów i plików nagłówków z programem Visual C++
 
@@ -177,7 +177,7 @@ Visual C++ i kompilator zasobów obsługują wiele. RC — pliki w tym samym pro
 
 - Jeśli chcesz obsługiwać zasób za pomocą edytora tekstów w czytelnej formie, powinieneś go utrzymywać. Plik RC oddzielnie od jednego edycje Visual C++.
 
-- Jeśli trzeba utrzymywać zasób zdefiniowany przez użytkownika w postaci binarnej lub tekstowej, interpretowanej przez inny wyspecjalizowany Edytor danych, następnie należy go przechowywać w osobnym. Plik RC, Visual C++ nie zmienił jego formatu na dane szesnastkowe. . Zasoby plików WAV (dźwięk) w próbce zaawansowanych koncepcji MFC [SPEAKN](../visual-cpp-samples.md) są dobrym przykładem.
+- Jeśli trzeba utrzymywać zasób zdefiniowany przez użytkownika w postaci binarnej lub tekstowej, interpretowanej przez inny wyspecjalizowany Edytor danych, następnie należy go przechowywać w osobnym. Plik RC, Visual C++ nie zmienił jego formatu na dane szesnastkowe. . Zasoby plików WAV (dźwięk) w próbce zaawansowanych koncepcji MFC [SPEAKN](../overview/visual-cpp-samples.md) są dobrym przykładem.
 
 Możesz #include sekundy. RC w dyrektywach czasu kompilacji w oknie dialogowym Zestaw zawiera:
 

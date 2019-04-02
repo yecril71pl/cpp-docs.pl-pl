@@ -9,12 +9,12 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283764"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775286"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: Praca w miejscu MFC/OLE — Zmienianie rozmiaru i powiększanie
 
@@ -40,7 +40,7 @@ Większość obciążeń jest umieszczany na implementujący serwera, serwer mus
 
 Można określić bieżące współczynnika powiększenia przez wywołanie metody `COleServerDoc::GetZoomFactor`. To wywołanie, gdy dokument nie jest aktywny w miejscu zawsze spowoduje współczynnik powiększeniu 100% (lub współczynnik 1:1). Jej wywołanie gdy aktywny w miejscu może zwrócić coś innego niż 100%.
 
-Na przykład powiększanie poprawnie zobacz przykładową MFC OLE [HIERSVR](../visual-cpp-samples.md). Powiększanie HIERSVR jest skomplikowane faktem, że wyświetla tekst i tekstu, ogólnie rzecz biorąc, nie działa w sposób liniowy (wskazówek, konwencje związane z typografią, projekt szerokości i wysokości wszystkich skomplikować sprawy). Jednak HIERSVR jest uzasadnione odwołanie do implementowania powiększanie poprawnie, a więc jest to samouczek MFC [BAZGROŁY](../visual-cpp-samples.md) (krok 7).
+Na przykład powiększanie poprawnie zobacz przykładową MFC OLE [HIERSVR](../overview/visual-cpp-samples.md). Powiększanie HIERSVR jest skomplikowane faktem, że wyświetla tekst i tekstu, ogólnie rzecz biorąc, nie działa w sposób liniowy (wskazówek, konwencje związane z typografią, projekt szerokości i wysokości wszystkich skomplikować sprawy). Jednak HIERSVR jest uzasadnione odwołanie do implementowania powiększanie poprawnie, a więc jest to samouczek MFC [BAZGROŁY](../overview/visual-cpp-samples.md) (krok 7).
 
 `COleServerDoc::GetZoomFactor` Określa współczynnika powiększenia, w oparciu o szereg różnych dostępnych metryk z kontenera lub z wdrożenia usługi `COleServerItem` i `COleServerDoc` klasy. Krótko mówiąc bieżący współczynnika powiększenia jest określany za pomocą następującego wzoru:
 

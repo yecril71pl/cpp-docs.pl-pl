@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518570"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776339"
 ---
 # <a name="auto-c"></a>Auto (C++)
 
@@ -34,13 +34,13 @@ auto declarator initializer;
 
 Firma Microsoft zaleca użycie **automatycznie** — słowo kluczowe w większości sytuacji — chyba że naprawdę chcesz konwersji — ponieważ zapewnia następujące korzyści:
 
-- **Niezawodność:** wyrażenia na typ po zmianie — w tym przypadku zmiany zwracanego typu funkcji — po prostu działa.
+- **Niezawodność:** Typ wyrażenia po zmianie — w tym przypadku zmiany zwracanego typu funkcji — po prostu działa.
 
-- **Wydajność:** one zagwarantować, że będzie bez konwersji.
+- **Wydajność:** One zagwarantować, że będzie bez konwersji.
 
-- **Użyteczność:** nie trzeba martwić się o trudności pisownię nazwy typu i literówek.
+- **Użyteczność:** Nie trzeba martwić się o trudności pisownię nazwy typu i literówek.
 
-- **Wydajność:** kodowania może być bardziej wydajne.
+- **Wydajność:** Może być bardziej efektywne kodowania.
 
 Konwersja przypadki, w których możesz nie chcieć użyć **automatycznie**:
 
@@ -52,7 +52,7 @@ Aby użyć **automatycznie** — słowo kluczowe, użyj zamiast typu, aby zadekl
 
 Wyrażenie inicjowania może być przypisanie (składnia znaku równości) inicjalizacji bezpośredniej (składni stylu funkcji) [nowy operator](new-operator-cpp.md) wyrażenie lub wyrażenie może być  *dla zakresu — deklaracja* parametru w [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) instrukcji. Aby uzyskać więcej informacji, zobacz [inicjatory](../cpp/initializers.md) i przykłady kodu w dalszej części tego dokumentu.
 
-**Automatycznie** — słowo kluczowe jest symbolem zastępczym dla typu, ale nie sam jest typem. W związku z tym **automatycznie** słów kluczowych nie można używać w rzutowania lub operatorów takich jak [sizeof](../cpp/sizeof-operator.md) i [typeid](../windows/typeid-cpp-component-extensions.md).
+**Automatycznie** — słowo kluczowe jest symbolem zastępczym dla typu, ale nie sam jest typem. W związku z tym **automatycznie** słów kluczowych nie można używać w rzutowania lub operatorów takich jak [sizeof](../cpp/sizeof-operator.md) i (C + +/ interfejsu wiersza polecenia) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Użyteczność
 
@@ -133,7 +133,7 @@ W poniższej tabeli wymieniono ograniczenia dotyczące użytkowania **automatycz
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Nie można używać symbolu, zanim zostanie zainicjowany. W praktyce oznacza to, że zmienna nie może służyć do zainicjowania.|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Nie można rzutować na typ, która jest zadeklarowana za pomocą **automatycznie** — słowo kluczowe.|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Wszystkie symbole, na liście deklaratorów, która jest zadeklarowana za pomocą **automatycznie** — słowo kluczowe musi zostać rozpoznany tego samego typu. Aby uzyskać więcej informacji, zobacz [deklaracje i definicje](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md) i [typeid](../windows/typeid-cpp-component-extensions.md) operatorów nie można zastosować do symbolu, która jest zadeklarowana za pomocą **automatycznie** — słowo kluczowe.|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md) i [typeid](../extensions/typeid-cpp-component-extensions.md) operatorów nie można zastosować do symbolu, która jest zadeklarowana za pomocą **automatycznie** — słowo kluczowe.|
 
 ## <a name="examples"></a>Przykłady
 
@@ -222,10 +222,10 @@ int main()
 ## <a name="see-also"></a>Zobacz także
 
 [Auto, słowo kluczowe](../cpp/auto-keyword.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (Dedukuj typ zmiennej)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof, operator](../cpp/sizeof-operator.md)<br/>
-[TypeID](../windows/typeid-cpp-component-extensions.md)<br/>
+[TypeID](../extensions/typeid-cpp-component-extensions.md)<br/>
 [nowy operator](new-operator-cpp.md)<br/>
 [Deklaracje i definicje](declarations-and-definitions-cpp.md)<br/>
 [Przykłady wyrażeń lambda](../cpp/examples-of-lambda-expressions.md)<br/>

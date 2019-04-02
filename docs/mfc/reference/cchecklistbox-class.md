@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273065"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768045"
 ---
 # <a name="cchecklistbox-class"></a>Klasa CCheckListBox
 
@@ -49,13 +49,13 @@ class CCheckListBox : public CListBox
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CCheckListBox::CCheckListBox](#cchecklistbox)|Konstruuje `CCheckListBox` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CCheckListBox::Create](#create)|Tworzy okno Lista kontrolna Windows i dołącza je do `CCheckListBox` obiektu.|
 |[CCheckListBox::DrawItem](#drawitem)|Metoda wywoływana przez platformę, gdy zmieni się wizualny aspekt zmian pole listy rysowane przez właściciela.|
@@ -379,7 +379,7 @@ Aby uzyskać informacji na temat tych stylów, zobacz [style przycisku](../../mf
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample TSTCON](../../visual-cpp-samples.md)<br/>
+[MFC Sample TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CListBox](../../mfc/reference/clistbox-class.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: d58293b94eeaf499c48f750972b15256e9c19794
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293189"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773739"
 ---
 # <a name="cmousemanager-class"></a>Klasa CMouseManager
 
@@ -43,7 +43,7 @@ class CMouseManager : public CObject
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMouseManager::AddView](#addview)|Dodaje `CView` obiekt **dostosowywania** okno dialogowe. **Dostosowywania** okno dialogowe umożliwia użytkownikowi skojarzenie dwukrotne kliknięcie za pomocą polecenia dla każdego z widoków na liście.|
 |[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Zwraca polecenia, który jest wykonywany, gdy użytkownik kliknie dwukrotnie wewnątrz podana widoku.|
@@ -117,7 +117,7 @@ Aby uzyskać więcej informacji na temat jak zapewnić zachowanie myszy niestand
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak pobrać wskaźnika do `CMouseManager` obiektu za pomocą `CWinAppEx::GetMouseManager` metody i `AddView` method in Class metoda `CMouseManager` klasy. Ten fragment kodu jest częścią [próbka zbierania stanu](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak pobrać wskaźnika do `CMouseManager` obiektu za pomocą `CWinAppEx::GetMouseManager` metody i `AddView` method in Class metoda `CMouseManager` klasy. Ten fragment kodu jest częścią [próbka zbierania stanu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 

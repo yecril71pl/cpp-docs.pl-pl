@@ -9,18 +9,18 @@ helpviewer_keywords:
 - drag and drop [MFC], initiating drag operations
 - drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
-ms.openlocfilehash: cceed8517c7b63588c7b1b90e3306d90f0921b78
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2aa593fa953f7a9874036d48124ae7b92d88e0a6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300755"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768643"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Przeciąganie i upuszczanie: Implementowanie miejsca źródłowego
 
 W tym artykule wyjaśniono, jak pobrać aplikację, aby dostarczać dane do operacji przeciągania i upuszczania.
 
-Podstawową implementację miejsca źródłowego jest stosunkowo prosta. Pierwszym krokiem jest ustalenie, jakie zdarzenia rozpocząć operację przeciągania. Zalecane wskazówki dotyczące interfejsu użytkownika definiują początku operacji przeciągania jako wyboru danych i **WM_LBUTTONDOWN** zdarzeń występujących w punkcie wewnątrz wybranych danych. Przykłady MFC OLE [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md) przestrzegać następujących wytycznych.
+Podstawową implementację miejsca źródłowego jest stosunkowo prosta. Pierwszym krokiem jest ustalenie, jakie zdarzenia rozpocząć operację przeciągania. Zalecane wskazówki dotyczące interfejsu użytkownika definiują początku operacji przeciągania jako wyboru danych i **WM_LBUTTONDOWN** zdarzeń występujących w punkcie wewnątrz wybranych danych. Przykłady MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md) przestrzegać następujących wytycznych.
 
 Jeśli aplikacja jest kontenerem, a wybrane dane są połączone lub osadzonego obiektu typu `COleClientItem`, wywoływanie jej `DoDragDrop` funkcja elementu członkowskiego. W przeciwnym razie konstruowania `COleDataSource` obiektu, Zainicjuj go przy użyciu zaznaczenie i wywoływać obiektu źródła danych `DoDragDrop` funkcja elementu członkowskiego. Jeśli aplikacja jest serwerem, użyj `COleServerItem::DoDragDrop`. Aby uzyskać informacje o dostosowywaniu standardowe zachowanie przeciągnij i upuść, zobacz artykuł [przeciąganie i upuszczanie: Dostosowywanie](../mfc/drag-and-drop-customizing.md).
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 4f6b13d2adf9acb17d97876ae2fe5b693f682a5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748713"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771314"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Instrukcje: Definiowanie i korzystanie z obiektów delegowanych (C + +/ CLI)
 
@@ -151,7 +151,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 Invoking delegate a:
@@ -209,7 +209,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 Call to Managed Function
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 hello
@@ -336,7 +336,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 2
@@ -412,7 +412,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 11
@@ -451,7 +451,7 @@ int main() {
 };
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in f(R ^ r)
@@ -495,7 +495,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 12
@@ -504,4 +504,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)
+[delegate (C++ Component Extensions)](../extensions/delegate-cpp-component-extensions.md)

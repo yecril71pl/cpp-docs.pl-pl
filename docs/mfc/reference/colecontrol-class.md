@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283426"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771503"
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Tworzy `COleControl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Pobiera bieżący wygląd formantu.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Zwraca wartość właściwości BackColor otoczenia.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Wywoływane przez platformę, gdy musi zostać zaktualizowany wygląd formantu.|
 |[COleControl::DrawMetafile](#drawmetafile)|Wywoływane przez platformę, gdy jest używane w kontekście urządzenia metaplików.|
@@ -4209,8 +4209,8 @@ Wywołaj tę funkcję, możesz wysyłać określonych wiadomości za pomocą for
 
 ## <a name="see-also"></a>Zobacz także
 
-[CIRC3 próbki MFC](../../visual-cpp-samples.md)<br/>
-[Próbki MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[CIRC3 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COlePropertyPage](../../mfc/reference/colepropertypage-class.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

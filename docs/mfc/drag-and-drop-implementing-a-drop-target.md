@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46501193569d7f3098e23c67c68c76ce20a82ea3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281955"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766680"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Przeciąganie i upuszczanie: Implementowanie miejsca docelowego
 
@@ -33,7 +33,7 @@ W tym artykule opisano sposób wprowadzania aplikacji miejsca docelowego. Implem
     |`OnDrop`|Obsługa danych Trwa porzucanie w określonym oknie.|
     |`OnScrollBy`|Specjalnego zachowania w przypadku gdy przewijania jest niezbędne w okno docelowe.|
 
-Zobacz MAINVIEW. CPP pliku część próbki MFC OLE [OCLIENT](../visual-cpp-samples.md) przykład jak te funkcje współdziałają ze sobą.
+Zobacz MAINVIEW. CPP pliku część próbki MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) przykład jak te funkcje współdziałają ze sobą.
 
 Aby uzyskać więcej informacji, zobacz:
 

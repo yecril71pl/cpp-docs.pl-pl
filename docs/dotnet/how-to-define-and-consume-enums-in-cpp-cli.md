@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751456"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774740"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Instrukcje: Definiowanie oraz stosowanie wyliczeń w języku C + +/ CLI
 
@@ -38,7 +38,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 sun
@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 a and day2 are the same
@@ -92,7 +92,7 @@ Operatory &#124; ^ & ~ ++ — są zdefiniowane tylko w przypadku wyliczenia z po
 Kompilator wykonuje nie statycznych lub dynamicznych sprawdzanie wyniku operacji wyliczenia. Operacja może spowodować wartość nie jest w zakresie prawidłowe moduły wyliczające wyliczenia.
 
 > [!NOTE]
->  C ++ 11 wprowadza typy klasy enum w niezarządzanym kodzie, które różnią się znacznie od zarządzanych Wylicz klasy w języku C + +/ interfejsu wiersza polecenia. W szczególności, typ klasy C ++ 11 wyliczenia nie obsługuje tego samego operatorów jako typ klasy wyliczenie zarządzane w języku C + +/ CLI i C + +/ kod źródłowy interfejsu wiersza polecenia należy podać specyfikator ułatwień dostępu w typie wyliczeniowym zarządzanych deklaracje klas, aby odróżnić je od niezarządzane (C++ 11) deklaracje klas wyliczeń. Aby uzyskać więcej informacji na temat Wylicz klasy w języku C + +/ CLI, C + +/ CX i C ++ 11, zobacz [klasa wyliczeniowa](../windows/enum-class-cpp-component-extensions.md).
+>  C ++ 11 wprowadza typy klasy enum w niezarządzanym kodzie, które różnią się znacznie od zarządzanych Wylicz klasy w języku C + +/ interfejsu wiersza polecenia. W szczególności, typ klasy C ++ 11 wyliczenia nie obsługuje tego samego operatorów jako typ klasy wyliczenie zarządzane w języku C + +/ CLI i C + +/ kod źródłowy interfejsu wiersza polecenia należy podać specyfikator ułatwień dostępu w typie wyliczeniowym zarządzanych deklaracje klas, aby odróżnić je od niezarządzane (C++ 11) deklaracje klas wyliczeń. Aby uzyskać więcej informacji na temat Wylicz klasy w języku C + +/ CLI, C + +/ CX i C ++ 11, zobacz [klasa wyliczeniowa](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -127,7 +127,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 4
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa wyliczeniowa](../windows/enum-class-cpp-component-extensions.md)
+[Klasa wyliczeniowa](../extensions/enum-class-cpp-component-extensions.md)

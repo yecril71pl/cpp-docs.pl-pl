@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ec2abf243e7f3865609f81fa4f3bf81e1b4c3d92
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269386"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769990"
 ---
 # <a name="cshellmanager-class"></a>Klasa CShellManager
 
@@ -49,13 +49,13 @@ class CShellManager : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CShellManager::CShellManager](#cshellmanager)|Konstruuje `CShellManager` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CShellManager::BrowseForFolder](#browseforfolder)|Wyświetlane jest okno dialogowe, który umożliwia użytkownikowi wybranie folderu powłoki.|
 |[CShellManager::ConcatenateItem](#concatenateitem)|Łączy dwa PIDLs.|
@@ -128,7 +128,7 @@ Jeśli chcesz wywołać tę metodę, aplikacja tworzy i wyświetla okno dialogow
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak pobrać odwołanie do `CShellManager` obiektu za pomocą `CWinAppEx::GetShellManager` metody i sposobu używania `BrowseForFolder` metody. Ten fragment kodu jest częścią [Eksplorator kondycji](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak pobrać odwołanie do `CShellManager` obiektu za pomocą `CWinAppEx::GetShellManager` metody i sposobu używania `BrowseForFolder` metody. Ten fragment kodu jest częścią [Eksplorator kondycji](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 

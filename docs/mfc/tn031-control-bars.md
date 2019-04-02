@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286469"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772517"
 ---
 # <a name="tn031-control-bars"></a>TN031: Paski sterowania
 
@@ -136,7 +136,7 @@ Wszystkie przyciski mapy bitowej na pasku narzędzi są pobierane z jednego mapy
 
 Każdy przycisk musi być taki sam rozmiar. Wartość domyślna to standardowa 24 x 22 piksele. Każdy obraz/glifu musi być taki sam rozmiar i musi być side-by-side w mapie bitowej. Domyślny rozmiar obrazu/glifu to 16 x 15 pikseli. W związku z tym pasek narzędzi za pomocą przycisków 10 (przy użyciu standardowych rozmiarów maszyn wirtualnych), należy mapy bitowej, który jest 160 pikseli szerokości i wysokości 15 pikseli.
 
-Każdy przycisk ma jeden i tylko jeden obraz/glifu. Inny przycisk stanów i style (na przykład naciśnięty w górę, w dół, wyłączona, wyłączona w dół i w nieokreślonej) algorithmically są generowane na podstawie jednego obrazu/glifu. Teoretycznie można kolorów mapy bitowej ani DIB. Algorytm generowania inny przycisk stanów działa najlepiej przypadku oryginalny obraz na odcienie szarości. Przyjrzyj się przycisków na pasku narzędzi Standardowy i clipart przycisku paska narzędzi, podano w przykładzie ogólne MFC [CLIPART](../visual-cpp-samples.md) przykłady.
+Każdy przycisk ma jeden i tylko jeden obraz/glifu. Inny przycisk stanów i style (na przykład naciśnięty w górę, w dół, wyłączona, wyłączona w dół i w nieokreślonej) algorithmically są generowane na podstawie jednego obrazu/glifu. Teoretycznie można kolorów mapy bitowej ani DIB. Algorytm generowania inny przycisk stanów działa najlepiej przypadku oryginalny obraz na odcienie szarości. Przyjrzyj się przycisków na pasku narzędzi Standardowy i clipart przycisku paska narzędzi, podano w przykładzie ogólne MFC [CLIPART](../overview/visual-cpp-samples.md) przykłady.
 
 Kolorów używanych na pasku narzędzi są również zgodne z zaleceniem Podręcznik projektowania aplikacji interfejsu Windows. Te kolory nie są kodowane trudne, a zostaną zmienione dynamicznie w odpowiedzi na dostosowywanie użytkownika w Panelu sterowania.
 

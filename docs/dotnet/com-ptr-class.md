@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8909f91e31279f1fc1395610aea4708b79731113
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805971"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774175"
 ---
 # <a name="comptr-class"></a>com::ptr — Klasa
 
@@ -43,7 +43,7 @@ Interfejs COM.
 
 Element `com::ptr` można również jako funkcja lokalna zmienna Aby uprościć różne zadania COM i automatyzować zarządzanie okresem istnienia.
 
-A `com::ptr` nie można używać bezpośrednio jako parametru funkcji; Użyj [operator odwołania śledzenia](../windows/tracking-reference-operator-cpp-component-extensions.md) lub [operator uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) zamiast tego.
+A `com::ptr` nie można używać bezpośrednio jako parametru funkcji; Użyj [operator odwołania śledzenia](../extensions/tracking-reference-operator-cpp-component-extensions.md) lub [operator uchwytu do obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) zamiast tego.
 
 Element `com::ptr` nie może być bezpośrednio zwracana przez funkcję; zamiast tego użyj dojście.
 
@@ -167,14 +167,14 @@ int main() {
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis| 
+|Name|Opis| 
 |---------|-----------| 
 |[ptr::ptr](#ptr)|Konstruuje `com::ptr` opakowywać obiektu COM.| 
 |[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`.| 
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |---------|-----------| 
 |[ptr::Attach](#attach)|Dołącza do obiektów COM `com::ptr`.| 
 |[ptr::CreateInstance](#createInstance)|Tworzy wystąpienie obiektu COM w ramach `com::ptr`.| 
@@ -185,7 +185,7 @@ int main() {
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |---------|-----------| 
 |[PTR::operator, wartość —&gt;](#operator-arrow)|Operator dostępu do elementu członkowskiego, używany do wywoływania metod na należących do obiektu COM.| 
 |[ptr::operator=](#operator-assign)|Dołącza do obiektów COM `com::ptr`.| 

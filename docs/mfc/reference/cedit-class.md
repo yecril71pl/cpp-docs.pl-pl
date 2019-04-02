@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417004"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773752"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Konstruuje `CEdit` obiekt formantu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Określa, czy można cofnąć operacji kontrolki edycji.|
 |[CEdit::CharFromPos](#charfrompos)|Pobiera wiersz i znak indeksów dla najbardziej zbliżony do określonej pozycji znaku.|
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>Parametry
 
 *nChars*<br/>
-Określa długość (w TCHARs) tekst, który użytkownik może wprowadzić. Jeśli ten parametr ma wartość 0, długość tekstu jest równa UINT_MAX bajtów. Jest to zachowanie domyślne.
+Określa długość (w TCHARs) tekst, który użytkownik może wprowadzić. Jeśli ten parametr ma wartość 0, długość tekstu jest równa UINT_MAX bajtów. To zachowanie domyślne.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1449,8 +1449,8 @@ Aby uzyskać więcej informacji, zobacz [EM_UNDO](/windows/desktop/Controls/em-u
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
+[Próbki MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](cwnd-class.md)<br/>

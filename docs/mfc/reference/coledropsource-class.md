@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304980"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778510"
 ---
 # <a name="coledropsource-class"></a>Klasa COleDropSource
 
@@ -35,13 +35,13 @@ class COleDropSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDropSource::COleDropSource](#coledropsource)|Konstruuje `COleDropSource` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDropSource::GiveFeedback](#givefeedback)|Kursor zmienia się podczas operacji przeciągania i upuszczania.|
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Obsługuje przechwytywanie myszy podczas operacji przeciągania i upuszczania.|
@@ -163,7 +163,7 @@ Ponieważ ta funkcja jest często wywoływana, należy można zoptymalizować mo
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

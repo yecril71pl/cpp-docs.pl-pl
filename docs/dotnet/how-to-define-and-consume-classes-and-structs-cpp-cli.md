@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751833"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774922"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Instrukcje: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 *Niejawnie abstrakcyjne klasy* nie można utworzyć wystąpienia. Klasa jest niejawnie abstrakcyjne, jeśli typ podstawowy tej klasy jest interfejsem, a klasa nie obsługuje wszystkie funkcje składowe interfejsu.
 
-Jeśli nie jest możliwe do konstruowania obiektów z klasy, który pochodzi z interfejsu, przyczyną może być, że klasa jest niejawnie abstrakcyjne. Aby uzyskać więcej informacji na temat klasy abstrakcyjne, zobacz [abstrakcyjne](../windows/abstract-cpp-component-extensions.md).
+Jeśli nie jest możliwe do konstruowania obiektów z klasy, który pochodzi z interfejsu, przyczyną może być, że klasa jest niejawnie abstrakcyjne. Aby uzyskać więcej informacji na temat klasy abstrakcyjne, zobacz [abstrakcyjne](../extensions/abstract-cpp-component-extensions.md).
 
 Poniższy przykład kodu pokazuje, że `MyClass` klasy nie można utworzyć wystąpienia, ponieważ funkcja `MyClass::func2` nie jest zaimplementowana. Aby włączyć przykładu tak, aby skompilować, usuń znaczniki komentarza `MyClass::func2`.
 
@@ -165,7 +165,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in Public_Class
@@ -212,7 +212,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in Public_Class
@@ -227,9 +227,9 @@ Ta tabela zawiera podsumowanie wpływu różnych specyfikatory dostępu:
 |Specyfikator|Efekt|
 |---------------|------------|
 |public|Element członkowski jest dostępny i spoza zestawu.  Zobacz [publicznych](../cpp/public-cpp.md) Aby uzyskać więcej informacji.|
-|private|Element członkowski jest niedostępny, wewnątrz ani spoza zestawu.  Zobacz [prywatnej](../cpp/private-cpp.md) Aby uzyskać więcej informacji.|
+|prywatna|Element członkowski jest niedostępny, wewnątrz ani spoza zestawu.  Zobacz [prywatnej](../cpp/private-cpp.md) Aby uzyskać więcej informacji.|
 |protected|Element członkowski jest dostępny, wewnątrz lub na spoza zestawu, ale tylko dla typów pochodnych.  Zobacz [chronione](../cpp/protected-cpp.md) Aby uzyskać więcej informacji.|
-|internal|Element członkowski jest publiczna w zestawie, ale prywatnej spoza zestawu.  `internal` jest kontekstowej słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md).|
+|internal|Element członkowski jest publiczna w zestawie, ale prywatnej spoza zestawu.  `internal` jest kontekstowej słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [Context-Sensitive Keywords](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |publiczne chronionych - lub - chronione publiczne|Element członkowski jest publiczna w zestawie, którzy są chronieni spoza zestawu.|
 |prywatne prywatnych chronionych - lub - chronionych|Element członkowski jest chroniony wewnątrz zestawu, ale prywatnej spoza zestawu.|
 
@@ -296,7 +296,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in Public_Function
@@ -393,7 +393,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in Public_Function
@@ -483,7 +483,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in static constructor
@@ -499,9 +499,9 @@ Te różne semantykę `this` wskaźnika może spowodować nieoczekiwane zachowan
 
 Aby uzyskać więcej informacji, zobacz artykuł
 
-- [Operator uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Operator uchwytu do obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -539,7 +539,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 10.89
@@ -582,7 +582,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 Base::Test
@@ -613,7 +613,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 Derived::Test2
@@ -647,7 +647,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 Derived::Test4
@@ -701,7 +701,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 S object 0 being constructed, this=0018F378
@@ -797,7 +797,7 @@ Kod, który został napisany w języku Visual C++ i kompilowany przy użyciu **/
 
 - Obiekt jest elementem członkowskim w obiekcie, którego destruktor jest uruchomiona.
 
-- Należy wywołać [Usuń](../cpp/delete-operator-cpp.md) operator uchwyt ([Operator uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).
+- Należy wywołać [Usuń](../cpp/delete-operator-cpp.md) operator uchwyt ([Operator uchwytu do obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)).
 
 - Jawnie wywołać destruktor.
 
@@ -844,7 +844,7 @@ Po uruchomieniu finalizatora obiektu finalizatory w żadnych klas bazowych są r
 
 Jeśli finalizator usunie wskaźnik natywny w typ zarządzany, upewnij się, czy odwołania lub za pośrednictwem wskaźnik natywny nie są zbierane przedwcześnie; wywołać destruktor dla typu zarządzanego zamiast <xref:System.GC.KeepAlive%2A>.
 
-W czasie kompilacji można wykryć, czy typ ma finalizator lub destruktor. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+W czasie kompilacji można wykryć, czy typ ma finalizator lub destruktor. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 Następny przykład zawiera dwa typy: taki, który ma zasoby niezarządzane, a taki, który ma zarządzane zasoby, które są dostępne w sposób deterministyczny.
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+[Klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[Klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

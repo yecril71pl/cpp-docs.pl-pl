@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305019"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775312"
 ---
 # <a name="cview-class"></a>Cview — klasa
 
@@ -73,13 +73,13 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CView::CView](#cview)|Konstruuje `CView` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CView::DoPreparePrinting](#doprepareprinting)|Wyświetla okno dialogowe Drukuj i tworzy kontekst urządzenia drukarki; Wywołaj podczas zastępowania `OnPreparePrinting` funkcja elementu członkowskiego.|
 |[CView::GetDocument](#getdocument)|Zwraca dokument skojarzony z widokiem.|
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|Wywołuje się, gdy okno ramowe zawierające widok jest aktywowane lub dezaktywowane.|
 |[CView::OnActivateView](#onactivateview)|Wywołuje się, gdy widok jest aktywowany.|
@@ -351,7 +351,7 @@ Wartość z zakresu od DROPEFFECT wyliczany typ, który wskazuje typ listy, któ
 
 - DROPEFFECT_MOVE dla MK_ALT tworzy kopię upuszczony obiekt i usunięcie oryginalnego obiektu. Zazwyczaj jest to domyślny efekt listy, jeśli widok może zaakceptować tego obiektu danych.
 
-Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OCLIENT](../../visual-cpp-samples.md).
+Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -405,7 +405,7 @@ Wartość z zakresu od DROPEFFECT wyliczany typ, który wskazuje typ listy, któ
 
 - DROPEFFECT_MOVE dla MK_ALT tworzy kopię upuszczony obiekt i usunięcie oryginalnego obiektu. Zazwyczaj jest to domyślny efekt listy, jeśli widok może zaakceptować obiekt danych.
 
-Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OCLIENT](../../visual-cpp-samples.md).
+Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -445,7 +445,7 @@ Wartość z zakresu od DROPEFFECT wyliczany typ, który wskazuje typ listy, któ
 
 - DROPEFFECT_SCROLL wskazuje, że operacja przewijania przeciągania może nastąpić lub odbywa się w widok elementu docelowego.
 
-Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OCLIENT](../../visual-cpp-samples.md).
+Aby uzyskać więcej informacji, zobacz próbce zaawansowanych koncepcji MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -871,7 +871,7 @@ Jeśli *lHint* wynosi 0 i *pHint* ma wartość NULL, dokumentu zostało wysłane
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

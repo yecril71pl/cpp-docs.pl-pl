@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: bb420021ec5b9839091c42b5eae6e1d5b9f7f977
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c23d76e8f3ea54fe34e7956ad5b4e7dc9780def
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281242"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773063"
 ---
 # <a name="cmultipaneframewnd-class"></a>Klasa CMultiPaneFrameWnd
 
@@ -103,7 +103,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMultiPaneFrameWnd::AddPane](#addpane)|Dodaje okienko. (Przesłania [CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane).)|
 |[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||
@@ -155,7 +155,7 @@ Aby uzyskać informacje na temat wyprowadzanie klasy z `CPaneFrameWnd` klasy i t
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak pobrać wskaźnika do `CMultiPaneFrameWnd` obiektu. Ten fragment kodu jest częścią [przykładowe ustawić rozmiar okienka](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak pobrać wskaźnika do `CMultiPaneFrameWnd` obiektu. Ten fragment kodu jest częścią [przykładowe ustawić rozmiar okienka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]
 

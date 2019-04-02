@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565045"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775052"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowania błędów
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>Uwagi
 
-Krótkiej formy ATLTRACE2 zapisuje ciąg w oknie danych wyjściowych debugera. Druga forma ATLTRACE2 również zapisuje dane wyjściowe do okna danych wyjściowych debugera, ale jest zgodnie z ustawieniami narzędzie śledzenia ATL/MFC (zobacz [przykładowe ATLTraceTool](../../visual-cpp-samples.md)). Na przykład jeśli ustawisz *poziom* 4. i narzędzie śledzenia ATL/MFC do poziomu 0, nie zostanie wyświetlony komunikat. *poziom* może być 0, 1, 2, 3 lub 4. Wartość domyślna 0, raporty najpoważniejszych problemów.
+Krótkiej formy ATLTRACE2 zapisuje ciąg w oknie danych wyjściowych debugera. Druga forma ATLTRACE2 również zapisuje dane wyjściowe do okna danych wyjściowych debugera, ale jest zgodnie z ustawieniami narzędzie śledzenia ATL/MFC (zobacz [przykładowe ATLTraceTool](../../overview/visual-cpp-samples.md)). Na przykład jeśli ustawisz *poziom* 4. i narzędzie śledzenia ATL/MFC do poziomu 0, nie zostanie wyświetlony komunikat. *poziom* może być 0, 1, 2, 3 lub 4. Wartość domyślna 0, raporty najpoważniejszych problemów.
 
 *Kategorii* parametru wyświetla listę flag śledzenia, aby ustawić. Te flagi odnoszą się do typów, metod, dla których chcesz sporządzić raport. W poniższych tabelach flagi śledzenia prawidłowy, można użyć dla *kategorii* parametru.
 

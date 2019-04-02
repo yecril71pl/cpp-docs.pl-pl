@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 87f889a079b1c55d82f547230a1917540de276af
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565873"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770508"
 ---
 # <a name="csid-class"></a>Klasa CSid
 
@@ -45,20 +45,20 @@ class CSid
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSid::CSidArray](#csidarray)|Tablica `CSid` obiektów.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSid::CSid](#csid)|Konstruktor.|
 |[CSid::~CSid](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSid::AccountName](#accountname)|Zwraca nazwę na koncie skojarzonym z `CSid` obiektu.|
 |[CSid::Domain](#domain)|Zwraca nazwę domeny skojarzonej z `CSid` obiektu.|
@@ -574,7 +574,7 @@ Wywołaj [CSid::LoadAccount](#loadaccount) można zaktualizować `CSid` obiekt p
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
+[Zabezpieczenia — przykład](../../overview/visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)<br/>
 [Operatory](../../atl/reference/atl-operators.md)

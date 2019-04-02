@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295360"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773986"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem Class
 
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Konstruuje `COleClientItem` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleClientItem::Activate](#activate)|Otwiera element OLE dla danej operacji, a następnie wykonuje określone zlecenie.|
 |[COleClientItem::ActivateAs](#activateas)|Uaktywnia elementu jako innego typu.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|Metoda wywoływana przez platformę, aby określić, czy Aktywacja w miejscu jest dozwolona.|
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Wywoływane przez platformę, gdy zmienia położenie elementu.|
@@ -2187,8 +2187,8 @@ Aby uzyskać więcej informacji, zobacz [IOleLink::Update](/windows/desktop/api/
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MFCBIND](../../visual-cpp-samples.md)<br/>
-[Próbki MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Próbki MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleServerItem](../../mfc/reference/coleserveritem-class.md)

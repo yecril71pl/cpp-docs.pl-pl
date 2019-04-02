@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 0c4a74ce69f5c52eb6fc107ea477e5715e86ecd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823288"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775429"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Projekty języka C/C++ i systemów kompilacji w programie Visual Studio
 
@@ -74,10 +74,12 @@ Przekazując plik .vcxproj wraz z opcjami wiersza polecenia, można wywołać pr
 
 [Kompilacje wydania](release-builds.md) sposób tworzenia i rozwiązywanie problemów z zoptymalizowane wersji kompilacji do wdrożenia dla użytkowników końcowych.
 
-[Możesz używać zestawu narzędzi MSVC z wiersza polecenia](building-on-the-command-line.md)<br/>
+[Używanie zestawu narzędzi MSVC z poziomu wiersza polecenia](building-on-the-command-line.md)<br/>
 W tym artykule omówiono sposób użycia kompilator C/C++ i narzędzia build tools bezpośrednio z poziomu wiersza polecenia, a nie przy użyciu programu Visual Studio IDE.
 
 [Kompilowanie biblioteki dll w programie Visual Studio](dlls-in-visual-cpp.md) jak tworzyć, debugować i wdrażać bibliotek DLL języka C/C++ (biblioteki udostępnione) w programie Visual Studio.
+
+[Przewodnik: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md) sposobu tworzenia pliku binarnego. lib.
 
 [Kompilowanie aplikacji izolowanych C/C++ i zestawów Side-by-side](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) w tym artykule opisano model wdrażania dla aplikacji Windows Desktop z koncepcję izolowanymi oraz aplikacjami wykonywanymi side-by-side.
 

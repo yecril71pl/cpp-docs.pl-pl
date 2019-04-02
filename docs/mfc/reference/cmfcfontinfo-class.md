@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281190"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781331"
 ---
 # <a name="cmfcfontinfo-class"></a>Klasa CMFCFontInfo
 
@@ -39,19 +39,19 @@ class CMFCFontInfo : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCFontInfo`|Konstruuje `CMFCFontInfo` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCFontInfo::GetFullName](#getfullname)|Pobiera nazwy połączonych czcionkę i jej znak zestawu (skrypt).|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|Wartość, która określa zestaw znaków (skrypt) skojarzony z czcionki.|
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Wartość, która określa gęstość i rodzinę czcionek.|
@@ -65,7 +65,7 @@ Możesz dołączyć `CMFCFontInfo` obiektu do elementu [klasa CMFCToolBarFontCom
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać różnych członków `CMFCFontInfo` klasy. W przykładzie pokazano, jak uzyskać `CMFCFontInfo` obiektu z `CMFCRibbonFontComboBox`i jak uzyskać dostęp do jego zmiennych lokalnych. W tym przykładzie jest częścią [próbka MSOffice 2007 Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak używać różnych członków `CMFCFontInfo` klasy. W przykładzie pokazano, jak uzyskać `CMFCFontInfo` obiektu z `CMFCRibbonFontComboBox`i jak uzyskać dostęp do jego zmiennych lokalnych. W tym przykładzie jest częścią [próbka MSOffice 2007 Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 

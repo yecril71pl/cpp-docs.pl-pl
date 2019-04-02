@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283608"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776638"
 ---
 # <a name="csliderctrl-class"></a>Klasa CSliderCtrl
 
@@ -95,13 +95,13 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Konstruuje `CSliderCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CSliderCtrl::ClearSel](#clearsel)|Czyści bieżące zaznaczenie w kontrolce suwaka.|
 |[CSliderCtrl::ClearTics](#cleartics)|Usuwa bieżący znaczniki w kontrolce suwaka.|
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Określa styl kontrolki slider. Zastosuj dowolną kombinację [style formantu suwaka](/windows/desktop/Controls/trackbar-control-styles), które zostały opisane w zestawie Windows SDK, do formantu.
 
 *Rect*<br/>
-Określa rozmiar i położenie kontrolki slider. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Określa rozmiar i położenie kontrolki slider. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki suwaka, zwykle `CDialog`. Nie może być równa NULL.
@@ -251,7 +251,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Określa styl kontrolki slider. Zastosuj dowolną kombinację [style formantu suwaka](/windows/desktop/Controls/trackbar-control-styles), które zostały opisane w zestawie Windows SDK, do formantu.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -801,7 +801,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB
 
 ## <a name="see-also"></a>Zobacz także
 
-[CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CProgressCtrl](../../mfc/reference/cprogressctrl-class.md)

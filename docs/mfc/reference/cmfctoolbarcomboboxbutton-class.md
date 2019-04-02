@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303173"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772075"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Klasa CMFCToolBarComboBoxButton
 
@@ -85,13 +85,13 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton](#cmfctoolbarcomboboxbutton)|Konstruuje `CMFCToolBarComboBoxButton`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::AddItem](#additem)|Dodaje element do końca listy pola kombi.|
 |[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Dodaje element do listy pola kombi. Kolejność elementów na liście jest określona przez `Compare`.|
@@ -136,7 +136,7 @@ Aby uzyskać więcej informacji, zobacz [instruktażu: Umieszczanie formantów n
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCToolBarComboBoxButton` klasy. W przykładzie pokazano, jak włączyć pola edycji i kombi, ustawić położenie w pionie kombi pola w aplikacji, ustawianie wysokości pola listy, po upuszczeniu go w dół, ustaw płaski wygląd przycisków pola kombi w aplikacji i ustawiać tekst w polu edycji kombi przycisk pola. Ten fragment kodu jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCToolBarComboBoxButton` klasy. W przykładzie pokazano, jak włączyć pola edycji i kombi, ustawić położenie w pionie kombi pola w aplikacji, ustawianie wysokości pola listy, po upuszczeniu go w dół, ustaw płaski wygląd przycisków pola kombi w aplikacji i ustawiać tekst w polu edycji kombi przycisk pola. Ten fragment kodu jest częścią [Visual Studio przykład](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]

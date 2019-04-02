@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738484"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780239"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą międzyoperacyjności języka C++
 
@@ -23,7 +23,7 @@ Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/m
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak niezarządzanej funkcji, która przyjmuje struktury zawierającej wskaźniki, można wywołać z funkcji zarządzanej. Funkcji zarządzanej tworzenia wystąpienia struktury i inicjuje osadzone wskaźnika za pomocą słowa kluczowego new (zamiast [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) — słowo kluczowe). Ponieważ to przydziela pamięć na natywnej stercie, nie ma potrzeby przypinanie tablicy, aby pominąć wyrzucania elementów bezużytecznych. Jednak pamięć muszą zostać jawnie usunięte w celu uniknięcia wycieku pamięci.
+W poniższym przykładzie pokazano, jak niezarządzanej funkcji, która przyjmuje struktury zawierającej wskaźniki, można wywołać z funkcji zarządzanej. Funkcji zarządzanej tworzenia wystąpienia struktury i inicjuje osadzone wskaźnika za pomocą słowa kluczowego new (zamiast [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) — słowo kluczowe). Ponieważ to przydziela pamięć na natywnej stercie, nie ma potrzeby przypinanie tablicy, aby pominąć wyrzucania elementów bezużytecznych. Jednak pamięć muszą zostać jawnie usunięte w celu uniknięcia wycieku pamięci.
 
 ```
 // marshal_embedded_pointer.cpp

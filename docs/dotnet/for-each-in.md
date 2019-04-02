@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746325"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770694"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczo
 Typ `identifier`.
 
 *Identyfikator*<br/>
-Zmienna iteracyjna, która reprezentuje element kolekcji.  Gdy `identifier` jest [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md), można zmodyfikować element.
+Zmienna iteracyjna, która reprezentuje element kolekcji.  Gdy `identifier` jest [Tracking Reference Operator](../extensions/tracking-reference-operator-cpp-component-extensions.md), można zmodyfikować element.
 
 *expression*<br/>
 Wyrażenie tablicy lub kolekcja. Element kolekcji musi być tak, aby kompilator mógł go konwertować do `identifier` typu.
@@ -49,7 +49,7 @@ Jedna lub więcej instrukcji do wykonania.
 
 *Instrukcji* są wykonywane dla każdego elementu w tablicy lub kolekcji. Po zakończeniu iteracji wszystkich elementów w kolekcji formant jest przekazywany do kolejnej instrukcji `for each` bloku.
 
-`for each` i `in` są [kontekstowymi słowami kluczowymi](../windows/context-sensitive-keywords-cpp-component-extensions.md).
+`for each` i `in` są [kontekstowymi słowami kluczowymi](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 Informacje dodatkowe:
 
@@ -97,7 +97,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 abcd
@@ -149,7 +149,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 abcd
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 78d3df4a96cb769cb31760c53c8486c86189e00c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893343"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780863"
 ---
 # <a name="struct-c"></a>struktura (C++)
 
@@ -56,7 +56,7 @@ Typ struktury jest zdefiniowanym przez użytkownika typem złożonym. Składa si
 
 W języku C++ struktura jest taka sama jak klasa z tą różnicą, że jej składowe są **publicznych** domyślnie.
 
-Aby uzyskać informacje dotyczące zarządzanych klas i struktur, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).
+Aby uzyskać informacje dotyczące zarządzanych klas i struktur w języku C + +/ CLI, zobacz [klas i struktur](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="using-a-structure"></a>Korzystanie ze struktury
 

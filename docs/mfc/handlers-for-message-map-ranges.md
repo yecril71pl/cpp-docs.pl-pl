@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266370"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773999"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Programy obsługi dla zakresów map komunikatów
 
@@ -95,7 +95,7 @@ Aby uzyskać więcej informacji o wymaganiach parametrów dla funkcji obsługi a
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> Przykład polecenia zakres identyfikatorów
 
-Może być zastosowania zakresów przykładem jest obsługi poleceń, takich jak polecenia Powiększenie próbki MFC w [HIERSVR](../visual-cpp-samples.md). To polecenie powiększa widok skalowanie od 25% i % 300 normalne rozmiaru. Klasa widoku HIERSVR firmy używa zakresu do obsługi poleceń powiększenia wpis mapy komunikatów, podobne do tego:
+Może być zastosowania zakresów przykładem jest obsługi poleceń, takich jak polecenia Powiększenie próbki MFC w [HIERSVR](../overview/visual-cpp-samples.md). To polecenie powiększa widok skalowanie od 25% i % 300 normalne rozmiaru. Klasa widoku HIERSVR firmy używa zakresu do obsługi poleceń powiększenia wpis mapy komunikatów, podobne do tego:
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 

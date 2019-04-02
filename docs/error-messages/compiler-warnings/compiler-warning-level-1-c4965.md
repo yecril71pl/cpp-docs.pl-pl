@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 7d77df395d680b467d1a04a3f59c9822842f99f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653105"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771061"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Kompilator ostrzeżenie (poziom 1) C4965
 
@@ -19,7 +19,7 @@ niejawne rzutowanie liczby całkowitej 0; Użyj nullptr lub jawnego rzutowania
 
 Visual C++ funkcje niejawna konwersja boxing typów wartości. Instrukcji, która spowodowała przypisanie wartości null, przy użyciu zarządzanych rozszerzeń języka C++ teraz staje się przypisania do spakowanej int.
 
-Aby uzyskać więcej informacji, zobacz [pakowania](../../windows/boxing-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [pakowania](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 

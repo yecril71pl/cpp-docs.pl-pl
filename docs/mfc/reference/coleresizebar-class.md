@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 631276a065652ec991c4c1b5264e87b7244fb7b9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275951"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769162"
 ---
 # <a name="coleresizebar-class"></a>Klasa COleResizeBar
 
@@ -31,13 +31,13 @@ class COleResizeBar : public CControlBar
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleResizeBar::COleResizeBar](#coleresizebar)|Konstruuje `COleResizeBar` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleResizeBar::Create](#create)|Tworzy i inicjuje okno podrzędne Windows i kojarzy ją do `COleResizeBar` obiektu.|
 
@@ -105,7 +105,7 @@ Wartość różną od zera, jeśli utworzono pasek; w przeciwnym razie 0.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Próbki MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleServerDoc](../../mfc/reference/coleserverdoc-class.md)

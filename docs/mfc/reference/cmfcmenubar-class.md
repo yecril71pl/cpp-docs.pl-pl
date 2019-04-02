@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267371"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775897"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 
@@ -128,7 +128,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Przesłania `CMFCToolBar::AdjustLocations`).|
 |[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Określa, czy etykiety tekstowe może być wyświetlany w obszarze obrazów na przycisków paska narzędzi. (Przesłania [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
@@ -191,7 +191,7 @@ Aby użyć `CMFCMenuBar` obiektów, osadzenie go w obiekcie ramki głównego okn
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCMenuBar` klasy. W przykładzie pokazano, jak ustawić styl okienka, włączyć przycisk Dostosuj, włącz okno pomocy, Włącz cieni menu podręczne i aktualizacji na pasku menu. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCMenuBar` klasy. W przykładzie pokazano, jak ustawić styl okienka, włączyć przycisk Dostosuj, włącz okno pomocy, Włącz cieni menu podręczne i aktualizacji na pasku menu. Ten fragment kodu jest częścią [próbka IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -395,7 +395,7 @@ W przypadku list dodatkowe style, zobacz [formantu paska narzędzi oraz style pr
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `CreateEx` metody `CMFCMenuBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `CreateEx` metody `CMFCMenuBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]

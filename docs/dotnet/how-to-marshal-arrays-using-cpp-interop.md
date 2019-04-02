@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740002"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776898"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu tablic za pomocą — międzyoperacyjności języka C++
 
@@ -24,7 +24,7 @@ Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/m
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak przekazać tablicy zarządzanej do niezarządzanej funkcji. Używa funkcji zarządzanej [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) do pomijania wyrzucania elementów bezużytecznych dla tablicy przed wywołaniem funkcji niezarządzanej. Dostarczając niezarządzanej funkcji za pomocą przypiętego wskaźnika do sterty GC, należy unikać obciążenie skopiowanie elementu tablicy. Wykazanie, że niezarządzanej funkcji uzyskuje dostęp do pamięci sterty GC, modyfikuje zawartości tablicy, a zmiany zostaną uwzględnione podczas funkcji zarządzanej wznawia kontroli.
+Poniższy przykład pokazuje, jak przekazać tablicy zarządzanej do niezarządzanej funkcji. Używa funkcji zarządzanej [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) do pomijania wyrzucania elementów bezużytecznych dla tablicy przed wywołaniem funkcji niezarządzanej. Dostarczając niezarządzanej funkcji za pomocą przypiętego wskaźnika do sterty GC, należy unikać obciążenie skopiowanie elementu tablicy. Wykazanie, że niezarządzanej funkcji uzyskuje dostęp do pamięci sterty GC, modyfikuje zawartości tablicy, a zmiany zostaną uwzględnione podczas funkcji zarządzanej wznawia kontroli.
 
 ```
 // PassArray1.cpp

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsic functions [C++], event handling
 - event handling [C++], Visual C++
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: d1a89d5afce2e3715b5a61c0815d88ed2fbae8b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523256"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769475"
 ---
 # <a name="event-handling"></a>Obsługa zdarzeń
 
-Obsługa zdarzeń przede wszystkim jest obsługiwana dla klasy COM (klasy C++, które implementują obiektów COM, zazwyczaj przy użyciu klasy ATL lub [coclass](../windows/coclass.md) atrybutu).  Aby uzyskać więcej informacji, zobacz [zdarzenie obsługi w modelu COM](../cpp/event-handling-in-com.md).
+Obsługa zdarzeń przede wszystkim jest obsługiwana dla klasy COM (klasy C++, które implementują obiektów COM, zazwyczaj przy użyciu klasy ATL lub [coclass](../windows/coclass.md) atrybutu). Aby uzyskać więcej informacji, zobacz [zdarzenie obsługi w modelu COM](../cpp/event-handling-in-com.md).
 
 Obsługa zdarzeń jest również obsługiwana dla macierzystych klas C++ (klasy C++, które nie implementują obiektów COM), jednak obsługujących jest przestarzały i zostanie usunięta w przyszłej wersji.  Aby uzyskać więcej informacji, zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-native-cpp.md).
 
@@ -25,8 +25,8 @@ Visual C++ zawiera atrybuty i słowa kluczowe do deklarowania zdarzenia i proced
 
 |Temat|Opis|
 |-----------|-----------------|
-|[event_source](../windows/event-source.md)|Tworzy źródła zdarzenia.|
-|[event_receiver](../windows/event-receiver.md)|Tworzy odbiorca zdarzenia (ujścia).|
+|[event_source](../windows/attributes/event-source.md)|Tworzy źródła zdarzenia.|
+|[event_receiver](../windows/attributes/event-receiver.md)|Tworzy odbiorca zdarzenia (ujścia).|
 |[__event](../cpp/event.md)|Deklaruje zdarzenie.|
 |[__raise](../cpp/raise.md)|Kładzie nacisk witryny wywołania zdarzenia.|
 |[__hook](../cpp/hook.md)|Kojarzy metody obsługi ze zdarzeniem.|
@@ -35,4 +35,4 @@ Visual C++ zawiera atrybuty i słowa kluczowe do deklarowania zdarzenia i proced
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)
+[słowa kluczowe](../cpp/keywords-cpp.md)

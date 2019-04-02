@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301639"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768292"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Klasa CMFCDesktopAlertWndInfo
 
@@ -35,19 +35,19 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Dojście do ikony, która jest wyświetlana.|
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|Identyfikator polecenia skojarzony z linkiem na okno alertu pulpitu.|
@@ -68,7 +68,7 @@ Gdy okno dialogowe domyślne nie są wystarczające, można utworzyć niestandar
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać różnych członków w `CMFCDesktopAlertWndInfo` klasy. W przykładzie pokazano, jak ustawić dojście do ikonę, która jest wyświetlana, tekst, który jest wyświetlany na okno alertu pulpitu, łącza, który jest wyświetlany na okno alertu pulpitu i identyfikator polecenia, który jest skojarzony z linkiem na okno alertu pulpitu. W tym przykładzie jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak używać różnych członków w `CMFCDesktopAlertWndInfo` klasy. W przykładzie pokazano, jak ustawić dojście do ikonę, która jest wyświetlana, tekst, który jest wyświetlany na okno alertu pulpitu, łącza, który jest wyświetlany na okno alertu pulpitu i identyfikator polecenia, który jest skojarzony z linkiem na okno alertu pulpitu. W tym przykładzie jest częścią [próbka Demo alertu pulpitu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

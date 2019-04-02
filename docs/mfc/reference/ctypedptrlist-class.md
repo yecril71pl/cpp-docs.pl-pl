@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9233e83a08fde87c15be5cc1c42a2f1dd3b56511
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286026"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767993"
 ---
 # <a name="ctypedptrlist-class"></a>Ctypedptrlist — klasa
 
@@ -56,7 +56,7 @@ Typ elementów przechowywane na liście klas podstawowych.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CTypedPtrList::AddHead](#addhead)|Dodaje nagłówek listy (sprawia, że nowy główny) elementu (lub wszystkie elementy w innej listy).|
 |[CTypedPtrList::AddTail](#addtail)|Dodaje ogona listy (sprawia, że nowe tail) elementu (lub wszystkie elementy w innej listy).|
@@ -379,7 +379,7 @@ Aby uzyskać bardziej szczegółowe uwagi, zobacz [CObList::SetAt](../../mfc/ref
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)<br/>
+[Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CPtrList](../../mfc/reference/cptrlist-class.md)<br/>
 [Klasa CObList](../../mfc/reference/coblist-class.md)

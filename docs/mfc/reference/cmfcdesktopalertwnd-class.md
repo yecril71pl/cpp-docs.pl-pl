@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291642"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776976"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Klasa CMFCDesktopAlertWnd
 
@@ -66,7 +66,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCDesktopAlertWnd::Create](#create)|Tworzy i inicjuje okno alertu pulpitu.|
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Zwraca szybkość animacji.|
@@ -120,7 +120,7 @@ Aby kontrolować zachowanie okno alertu pulpitu, należy użyć następujących 
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób używania różnych metod w `CMFCDesktopAlertWnd` klasa umożliwiająca skonfigurowanie `CMFCDesktopAlertWnd` obiektu. W przykładzie pokazano, jak ustawić typ animacji, ustaw przezroczystość okna podręcznego, określ, czy okno alertu powoduje wyświetlenie małych podpisu i ustawić czas, jaki musi upłynąć, zanim okno alertu zostanie automatycznie zamknięte. W przykładzie pokazano również sposób tworzenia i zainicjować okno alertu pulpitu. Ten fragment kodu jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób używania różnych metod w `CMFCDesktopAlertWnd` klasa umożliwiająca skonfigurowanie `CMFCDesktopAlertWnd` obiektu. W przykładzie pokazano, jak ustawić typ animacji, ustaw przezroczystość okna podręcznego, określ, czy okno alertu powoduje wyświetlenie małych podpisu i ustawić czas, jaki musi upłynąć, zanim okno alertu zostanie automatycznie zamknięte. W przykładzie pokazano również sposób tworzenia i zainicjować okno alertu pulpitu. Ten fragment kodu jest częścią [próbka Demo alertu pulpitu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 

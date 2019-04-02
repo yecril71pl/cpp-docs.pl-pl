@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258401"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775494"
 ---
 # <a name="toolbar-fundamentals"></a>Paski narzędzi — podstawowe założenia
 
@@ -62,7 +62,7 @@ Tworzenie narzędzi występuje w `CMainFrame::OnCreate`. Wywołania MFC [OnCreat
 1. Wywołuje funkcje umożliwiające dokowania, zmiennoprzecinkowe i etykietek narzędzi. Aby uzyskać szczegółowe informacje o tych wywołań, zobacz artykuł [dokowanie i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  Próbki MFC-ogólne [DOCKTOOL](../visual-cpp-samples.md) obejmuje ilustracje starych i nowych pasków narzędzi MFC. Paski narzędzi, które używają `COldToolbar` wymagają wywołań w kroku 2, aby `LoadBitmap` (zamiast `LoadToolBar`) i `SetButtons`. Nowych pasków narzędzi wymagają wywołań `LoadToolBar`.
+>  Próbki MFC-ogólne [DOCKTOOL](../overview/visual-cpp-samples.md) obejmuje ilustracje starych i nowych pasków narzędzi MFC. Paski narzędzi, które używają `COldToolbar` wymagają wywołań w kroku 2, aby `LoadBitmap` (zamiast `LoadToolBar`) i `SetButtons`. Nowych pasków narzędzi wymagają wywołań `LoadToolBar`.
 
 Dokowanie, liczb zmiennoprzecinkowych i narzędzie porady wywołania są opcjonalne. Możesz usunąć te wiersze z `OnCreate` Jeśli użytkownik sobie tego życzy. Wynik jest pasek narzędzi, który pozostaje stały, mógł zmiennoprzecinkowego lub redock i nie można wyświetlić etykietek narzędzi.
 

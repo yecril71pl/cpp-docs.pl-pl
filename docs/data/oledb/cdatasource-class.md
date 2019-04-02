@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557079"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770812"
 ---
 # <a name="cdatasource-class"></a>CDataSource — Klasa
 
@@ -86,7 +86,7 @@ class CDataSource
 |-|-|
 |[Zamknij](#close)|Zamyka połączenie.|
 |[GetInitializationString](#getinitializationstring)|Pobiera ciąg inicjowania źródła danych, która jest obecnie otwarta.|
-|[Getproperties —](#getproperties)|Pobiera wartości właściwości ustawione dla połączonego źródła danych.|
+|[GetProperties](#getproperties)|Pobiera wartości właściwości ustawione dla połączonego źródła danych.|
 |[GetProperty](#getproperty)|Pobiera wartość jednej właściwości aktualnie ustawione dla połączonego źródła danych.|
 |[Otwórz](#open)|Tworzy połączenie dostawcy (źródła danych) przy użyciu `CLSID`, `ProgID`, lub `CEnumerator` moniker dostarczane przez obiekt wywołujący.|
 |[OpenFromFileName](#openfromfilename)|Otwiera źródło danych z pliku określonego przez nazwę pliku dostarczone przez użytkownika.|
@@ -98,7 +98,7 @@ class CDataSource
 
 Co najmniej jednej sesji bazy danych mogą być tworzone dla pojedynczego połączenia. Sesje te są reprezentowane przez `CSession`. Należy wywołać [CDataSource::Open](../../data/oledb/cdatasource-open.md) można otworzyć połączenia przed utworzeniem sesji z `CSession::Open`.
 
-Aby uzyskać przykład sposobu użycia `CDataSource`, zobacz [CatDB](../../visual-cpp-samples.md) próbki.
+Aby uzyskać przykład sposobu użycia `CDataSource`, zobacz [CatDB](../../overview/visual-cpp-samples.md) próbki.
 
 ## <a name="close"></a> CDataSource::Close
 
@@ -152,7 +152,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK.
+Zobacz [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -244,10 +244,10 @@ HRESULT Open(LPCSTR szProgID,
 [in] `CLSID` Dostawcy danych.
 
 *pPropSet*<br/>
-[in] Wskaźnik do tablicy [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK.
+[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK.
 
 *nPropertySets*<br/>
-[in] Liczba [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury przekazany *pPropSet* argumentu.
+[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury przekazany *pPropSet* argumentu.
 
 *pName*<br/>
 [in] Nazwa bazy danych, którym chcesz się połączyć.
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] Hasło użytkownika.
 
 *nInitMode*<br/>
-[in] Tryb inicjowania bazy danych. Zobacz [właściwości inicjowania](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))w *OLE DB Podręcznik programisty* w zestawie Windows SDK dla listy metod inicjowania prawidłowe. Jeśli *nInitMode* to inicjowanie, zerowego, tryb znajduje się zestaw właściwości używany do otwierania połączenia.
+[in] Tryb inicjowania bazy danych. Zobacz [właściwości inicjowania](/previous-versions/windows/desktop/ms723127(v=vs.85))w *OLE DB Podręcznik programisty* w zestawie Windows SDK dla listy metod inicjowania prawidłowe. Jeśli *nInitMode* to inicjowanie, zerowego, tryb znajduje się zestaw właściwości używany do otwierania połączenia.
 
 *szProgID*<br/>
 [in] Identyfikator programu.
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] Nazwa pliku, zwykle połączenie ze źródłem danych (. Plik UDL).
 
-Aby uzyskać więcej informacji na temat danych łączy pliki (udl), zobacz [omówienie interfejsu API łącza danych](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat danych łączy pliki (udl), zobacz [omówienie interfejsu API łącza danych](/previous-versions/windows/desktop/ms718102(v=vs.85)) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -399,10 +399,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [in] Identyfikator programu dostawcę danych.
 
 *pPropset*<br/>
-[in] Wskaźnik do tablicy [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK. Jeśli obiekt źródła danych jest inicjowany, właściwości muszą należeć do grupy właściwości źródła danych. Jeśli tę samą właściwość została określona więcej niż jeden raz w *pPropset*, która wartość zostaje użyta jest specyficzny dla dostawcy. Jeśli *ulPropSets* wynosi zero, ten parametr jest ignorowany.
+[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK. Jeśli obiekt źródła danych jest inicjowany, właściwości muszą należeć do grupy właściwości źródła danych. Jeśli tę samą właściwość została określona więcej niż jeden raz w *pPropset*, która wartość zostaje użyta jest specyficzny dla dostawcy. Jeśli *ulPropSets* wynosi zero, ten parametr jest ignorowany.
 
 *ulPropSets*<br/>
-[in] Liczba [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury przekazany *pPropSet* argumentu. Jeśli jest to zero, dostawca ignoruje *pPropset*.
+[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury przekazany *pPropSet* argumentu. Jeśli jest to zero, dostawca ignoruje *pPropset*.
 
 ### <a name="return-value"></a>Wartość zwracana
 

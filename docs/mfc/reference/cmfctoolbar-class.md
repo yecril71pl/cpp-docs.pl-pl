@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283140"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775637"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 
@@ -334,14 +334,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`CMFCToolBar::CMFCToolBar`|Domyślny konstruktor.|
 |`CMFCToolBar::~CMFCToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Dodaje polecenie menu do listy poleceń, które są zawsze wyświetlane, gdy użytkownik otwiera menu.|
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Zwiększa o jeden licznik, który jest skojarzony z danego polecenia.|
@@ -493,7 +493,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Określa, czy pasek narzędzi jest wyświetlany na liście na **pasków narzędzi** okienku **Dostosuj** okno dialogowe.|
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Oblicza maksymalną wysokość przycisku na pasku narzędzi.|
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Określa, czy wykonać skalowanie lub nie paska narzędzi obrazów w trybie wysokiej rozdzielczości DPI.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Określa stosunek między wymiary (szerokość lub wysokość) duże obrazy i wymiar zwykłych obrazów.|
@@ -525,7 +525,7 @@ Aby wstawić specjalny przycisk, takie jak pola kombi lub rozwijany pasek narzę
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCToolBar` klasy. W przykładzie pokazano, jak ustawić tekst etykiety okna paska narzędzi, Ustawianie obramowania, ustaw styl okienka i włączyć **apletu Dodaj lub usuń przyciski** przycisk, który pojawia się na końcu paska narzędzi. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCToolBar` klasy. W przykładzie pokazano, jak ustawić tekst etykiety okna paska narzędzi, Ustawianie obramowania, ustaw styl okienka i włączyć **apletu Dodaj lub usuń przyciski** przycisk, który pojawia się na końcu paska narzędzi. Ten fragment kodu jest częścią [próbka IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ Wywołanie tej metody, zamiast [CMFCToolBar::Create](#create) kiedy chcesz zapew
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `CreateEx` metody `CMFCToolBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `CreateEx` metody `CMFCToolBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ virtual void GetItemRect(
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `GetItemRect` metody `CMFCToolBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `GetItemRect` metody `CMFCToolBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ Struktura wywołuje tę metodę podczas inicjowania do ładowania obrazów, któ
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `LoadToolBar` method in Class metoda `CMFCToolBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `LoadToolBar` method in Class metoda `CMFCToolBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ Wywołaj tę metodę, aby dodać przyciski paska narzędzi, której nie można z
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `ReplaceButton` method in Class metoda `CMFCToolBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `ReplaceButton` method in Class metoda `CMFCToolBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]

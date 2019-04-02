@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275236"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776391"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Klasa CMFCToolBarButton
 
@@ -181,14 +181,14 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Tworzy i inicjuje `CMFCToolBarButton` obiektu.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Określa, czy użytkownika można umieścić przycisk na pasku narzędzi lub menu podczas dostosowywania.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Określa, czy przycisk mogą być przechowywane.|
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Określa, czy obraz jest wyświetlany na przycisku.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Określa, czy etykieta tekstowa jest wyświetlany na przycisku.|
@@ -287,7 +287,7 @@ Gdy użytkownik kliknie przycisk paska narzędzi, narzędzi jej nadrzędnej prze
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować `CMFCToolBarButton` obiektu przy użyciu różnych metod w `CMFCToolBarButton` klasy. W przykładzie pokazano, jak włączyć myszy i klawiatury i ustawić indeks obrazu przycisku, ustaw prostokąt otaczający przycisku i widoczności przycisku. Ten fragment kodu jest częścią [próbka formantów kartę](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować `CMFCToolBarButton` obiektu przy użyciu różnych metod w `CMFCToolBarButton` klasy. W przykładzie pokazano, jak włączyć myszy i klawiatury i ustawić indeks obrazu przycisku, ustaw prostokąt otaczający przycisku i widoczności przycisku. Ten fragment kodu jest częścią [próbka formantów kartę](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 4b5dd2de2924b62dd76d7f16a494566849357de8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6874df550103abf727573d8e34b8adadd9643db8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300365"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767811"
 ---
 # <a name="coleexception-class"></a>Klasa COleException
 
@@ -31,13 +31,13 @@ class COleException : public CException
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[COleException::Process](#process)|Wykonuje translację przechwycony wyjątek do zwróciło kod powrotny OLE.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleException::m_sc](#m_sc)|Zawiera kod stanu, która wskazuje przyczynę wyjątku.|
 
@@ -109,6 +109,6 @@ Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błę
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
+[Próbki MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

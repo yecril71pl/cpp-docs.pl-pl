@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270320"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772754"
 ---
 # <a name="cmfccolordialog-class"></a>Klasa CMFCColorDialog
 
@@ -43,14 +43,14 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Konstruuje `CMFCColorDialog` obiektu.|
 |`CMFCColorDialog::~CMFCColorDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|Zwraca bieżący kolor wybrany.|
 |[CMFCColorDialog::GetPalette](#getpalette)|Zwraca wartość palety kolorów.|
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`m_bIsMyPalette`|Wartość TRUE, jeśli okno dialogowe wyboru kolorów używa własnego paletę kolorów, lub FAŁSZ, jeśli okno dialogowe korzysta z palety, który jest określony w `CMFCColorDialog` konstruktora.|
 |`m_bPickerMode`|Wartość TRUE, gdy użytkownik jest wybór koloru z okna dialogowego wyboru; w przeciwnym razie wartość FALSE.|
@@ -100,7 +100,7 @@ Można skonstruować `CMFCColorDialog` obiektów na stosie, a następnie wywoła
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować okna dialogowego kolorów przy użyciu różnych metod w `CMFCColorDialog` klasy. W przykładzie pokazano, jak ustawić bieżącą i nowe kolory okna dialogowego i sposobu ustawiania składników czerwonego, zielonego i niebieskiego wybrany kolor na stronach właściwości dwa okna dialogowego kolorów. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować okna dialogowego kolorów przy użyciu różnych metod w `CMFCColorDialog` klasy. W przykładzie pokazano, jak ustawić bieżącą i nowe kolory okna dialogowego i sposobu ustawiania składników czerwonego, zielonego i niebieskiego wybrany kolor na stronach właściwości dwa okna dialogowego kolorów. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 

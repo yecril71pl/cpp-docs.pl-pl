@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305175"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769839"
 ---
 # <a name="cmap-class"></a>Klasa CMap
 
@@ -73,19 +73,19 @@ Typ danych używany dla *wartość* argumentów; zazwyczaj odwołanie do *warto�
 
 ### <a name="public-structures"></a>Publiczne struktury
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Struktura zagnieżdżona zawierające wartości klucza i wartości skojarzonego obiektu.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMap::CMap](#cmap)|Konstruuje kolekcję mapujący klucze do wartości.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMap::GetCount](#getcount)|Zwraca liczbę elementów na tej mapie.|
 |[CMap::GetHashTableSize](#gethashtablesize)|Zwraca liczbę elementów w tabeli wyznaczania wartości skrótu.|
@@ -104,7 +104,7 @@ Typ danych używany dla *wartość* argumentów; zazwyczaj odwołanie do *warto�
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMap::operator \[ \]](#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
 
@@ -538,6 +538,6 @@ Najpierw jest wyszukiwana klucza. Jeśli klucz zostanie znaleziony, a następnie
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)<br/>
+[Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

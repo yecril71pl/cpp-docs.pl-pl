@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296348"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776963"
 ---
 # <a name="atl-copy-policy-classes"></a>Klasy zasad kopii ATL
 
@@ -62,7 +62,7 @@ ATL zawiera dwie klasy zasad kopii w formie `_Copy` i `_CopyInterface` klasy sza
 
 ## <a name="custom-implementations"></a>Niestandardowe implementacje
 
-Zazwyczaj należy zdefiniować własne klasy zasad kopii heterogenicznych kopiowania (czyli konwersji między typami danych). Niektóre przykłady kopii niestandardowych zasad klas, Przyjrzyj się pliki VCUE_Copy.h i VCUE_CopyString.h w [ATLCollections](../visual-cpp-samples.md) próbki. Te pliki zawierają dwie klasy zasad kopię szablonu, `GenericCopy` i `MapCopy`, oraz liczbę specjalizacje `GenericCopy` dla różnych typów danych.
+Zazwyczaj należy zdefiniować własne klasy zasad kopii heterogenicznych kopiowania (czyli konwersji między typami danych). Niektóre przykłady kopii niestandardowych zasad klas, Przyjrzyj się pliki VCUE_Copy.h i VCUE_CopyString.h w [ATLCollections](../overview/visual-cpp-samples.md) próbki. Te pliki zawierają dwie klasy zasad kopię szablonu, `GenericCopy` i `MapCopy`, oraz liczbę specjalizacje `GenericCopy` dla różnych typów danych.
 
 ### <a name="genericcopy"></a>GenericCopy
 
@@ -81,4 +81,4 @@ VCUE_Copy.h zawiera również następujące specjalizacje tej klasy: `GenericCop
 ## <a name="see-also"></a>Zobacz także
 
 [Implementowanie kolekcji opartej na standardowej bibliotece C++](../atl/implementing-an-stl-based-collection.md)<br/>
-[ATLCollections Sample](../visual-cpp-samples.md)
+[ATLCollections Sample](../overview/visual-cpp-samples.md)

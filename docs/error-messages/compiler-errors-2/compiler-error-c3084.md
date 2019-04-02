@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3084
 ms.assetid: 0362cb70-e24e-476f-a24d-8f5bb97c3afd
-ms.openlocfilehash: 7659c17d999a8720ffb0ccdcdb631b27949167b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01e229fe0ae5bf9e04c577bb653ff1ed7fdb33bf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572682"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773908"
 ---
 # <a name="compiler-error-c3084"></a>Błąd kompilatora C3084
 
@@ -19,7 +19,7 @@ ms.locfileid: "50572682"
 
 Nieprawidłowo zadeklarowano finalizator lub destruktor.
 
-Na przykład, destruktor nie powinien być oznaczony jako zapieczętowany.  Destruktor jest niedostępna dla typów pochodnych.  Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../windows/explicit-overrides-cpp-component-extensions.md) i [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Na przykład, destruktor nie powinien być oznaczony jako zapieczętowany.  Destruktor jest niedostępna dla typów pochodnych.  Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../extensions/explicit-overrides-cpp-component-extensions.md) i [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Przykład
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283257"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771410"
 ---
 # <a name="cmfccolorbar-class"></a>Klasa CMFCColorBar
 
@@ -95,13 +95,13 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|Konstruuje `CMFCColorBar` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorBar::ContextToSize](#contexttosize)|Oblicza marże poziome i pionowe, które muszą zawierać przycisków w formancie paska koloru i ustala lokalizację tych przycisków.|
 |[CMFCColorBar::CreateControl](#createcontrol)|Tworzy okno kontrolki paska koloru, dołącza go do `CMFCColorBar` obiektu i zmienia rozmiar kontrolki zawierają określony palety kolorów.|
@@ -123,7 +123,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCColorBar::AdjustLocations](#adjustlocations)|Dopasowuje pozycji kolor przycisków w formancie paska kolorów.|
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Wskazuje, czy etykieta tekstowa kolor przycisków można zmienić.|
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`m_bInternal`|Pole wartość logiczna określająca, czy są przetwarzane zdarzenia myszy. Zazwyczaj zdarzenia myszy są przetwarzane, gdy to pole ma wartość TRUE, a Tryb dostosowywania ma wartość FALSE.|
 |`m_bIsEnabled`|Wartość logiczna, która wskazuje, czy kontrolka jest włączona.|
@@ -202,7 +202,7 @@ Gdy użytkownik kliknie przycisk formantu paska koloru, środowisko wykorzystuje
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować paska kolorów przy użyciu różnych metod w `CMFCColorBar` klasy. Metody ustawić marginesy poziome i pionowe, Włącz przycisk inne, utwórz okno kontrolki paska koloru i ustawia aktualnie wybranego koloru. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować paska kolorów przy użyciu różnych metod w `CMFCColorBar` klasy. Metody ustawić marginesy poziome i pionowe, Włącz przycisk inne, utwórz okno kontrolki paska koloru i ustawia aktualnie wybranego koloru. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]

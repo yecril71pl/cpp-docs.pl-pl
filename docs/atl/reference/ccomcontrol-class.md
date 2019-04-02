@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261586"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771555"
 ---
 # <a name="ccomcontrol-class"></a>Klasa CComControl
 
@@ -53,13 +53,13 @@ Klasa bazowa implementuje funkcji obsługi okien. Wartość domyślna to [CWindo
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CComControl::CComControl](#ccomcontrol)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|Pobiera wskaźnik do żądanego interfejsu.|
 |[CComControl::CreateControlWindow](#createcontrolwindow)|Tworzy okno, dla formantu.|
@@ -73,7 +73,7 @@ Klasa bazowa implementuje funkcji obsługi okien. Wartość domyślna to [CWindo
 
 Aby uzyskać więcej informacji na temat tworzenia kontrolki zobacz [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md). Aby uzyskać więcej informacji na temat Kreator projektów ATL, zobacz artykuł [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md).
 
-Do pokazania `CComControl` metod i składowych danych, zobacz [OK](../../visual-cpp-samples.md) próbki.
+Do pokazania `CComControl` metod i składowych danych, zobacz [OK](../../overview/visual-cpp-samples.md) próbki.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

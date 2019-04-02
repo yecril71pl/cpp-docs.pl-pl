@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 9a8940aa23b23281a6de6ce7e75bb1e43341b14a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277888"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778094"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 
@@ -51,13 +51,13 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Konstruuje `CPageSetupDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Tworzy kontekst urządzenia do drukowania.|
 |[CPageSetupDialog::DoModal](#domodal)|Zostanie wyświetlone okno dialogowe i umożliwia wybór użytkownika wykonującego.|
@@ -72,7 +72,7 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CPageSetupDialog::m_psd](#m_psd)|Struktury używane w celu dostosowania `CPageSetupDialog` obiektu.|
 
@@ -405,6 +405,6 @@ Należy przesłonić tę funkcję, aby dostosować rysowania obrazu. Jeśli moż
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Próbki MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

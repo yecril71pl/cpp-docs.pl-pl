@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269815"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768221"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 
@@ -101,14 +101,14 @@ class CMFCButton : public CButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCButton::CMFCButton`|Domyślny konstruktor.|
 |`CMFCButton::~CMFCButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCButton::CleanUp](#cleanup)|Resetuje wewnętrznych zmiennych i zwalnia przydzielone zasoby, takie jak obrazy, bitmap i ikon.|
 |`CMFCButton::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
@@ -143,7 +143,7 @@ class CMFCButton : public CButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCButton::OnDraw](#ondraw)|Metoda wywoływana przez platformę, by narysować przycisku.|
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Metoda wywoływana przez platformę, by narysować obramowanie przycisku.|
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Określa wyrównanie tekstu przycisku.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Określa, czy używać kompozycji Windows XP.|
@@ -180,7 +180,7 @@ Do obsługi komunikatów powiadomień w aplikacji okno dialogowe, należy dodać
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować właściwości przycisku przy użyciu różnych metod w `CMFCButton` klasy. Przykład jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować właściwości przycisku przy użyciu różnych metod w `CMFCButton` klasy. Przykład jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -542,7 +542,7 @@ W poniższej tabeli wymieniono `CMFCButton::m_nFlatStyle` wartości wyliczenia, 
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób ustawiania wartości `m_nFlatStyle` zmiennej składowej w `CMFCButton` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+W poniższym przykładzie pokazano sposób ustawiania wartości `m_nFlatStyle` zmiennej składowej w `CMFCButton` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia różnych wersjach `SetImage` method in Class metoda `CMFCButton` klasy. Przykład jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia różnych wersjach `SetImage` method in Class metoda `CMFCButton` klasy. Przykład jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ Ta metoda umożliwia kojarzenie obraz do kursora, takich jak kursor ręcznie prz
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `SetMouseCursor` method in Class metoda `CMFCButton` klasy. Przykład jest częścią kodu w [przykładowe nowych formantów](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `SetMouseCursor` method in Class metoda `CMFCButton` klasy. Przykład jest częścią kodu w [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]

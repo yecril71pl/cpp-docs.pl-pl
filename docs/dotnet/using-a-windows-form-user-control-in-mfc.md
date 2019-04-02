@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494162"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773102"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Używanie formantu użytkownika formularza systemu Windows w MFC
 
@@ -34,7 +34,7 @@ W poniższych sekcjach opisano sposób:
 > [!NOTE]
 > W przypadku tworzenia aplikacji za pomocą prywatnej kopii (zmodyfikowany) interfejsy formularzy Windows w MFC DLL (mfcmifc80.dll), nie będzie można zainstalować w GAC, chyba że Zastąp klucz firmy Microsoft przy użyciu własnego klucza dostawcy. Aby uzyskać więcej informacji na temat podpisywanie zestawu, zobacz [programowanie za pomocą zestawów](/dotnet/framework/app-domains/programming-with-assemblies) i [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Jeśli Twoja aplikacja MFC używa Windows Forms, musisz ponownie rozdzielić mfcmifc80.dll z aplikacją. Aby uzyskać więcej informacji, zobacz [redystrybuowanie biblioteki MFC](../ide/redistributing-the-mfc-library.md).
+Jeśli Twoja aplikacja MFC używa Windows Forms, musisz ponownie rozdzielić mfcmifc80.dll z aplikacją. Aby uzyskać więcej informacji, zobacz [redystrybuowanie biblioteki MFC](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -62,7 +62,7 @@ Jeśli Twoja aplikacja MFC używa Windows Forms, musisz ponownie rozdzielić mfc
 
 [CommandHandler](../atl/commandhandler.md)
 
-[Ddx_managedcontrol —](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)
 
 [Uicheckstate —](../mfc/reference/uicheckstate-enumeration.md)
 

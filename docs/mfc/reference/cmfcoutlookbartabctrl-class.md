@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269945"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776807"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -65,14 +65,14 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Domyślny konstruktor.|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name|Opis|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Dodaje formant Windows na nowej karcie w pasek programu Outlook.|
 |`CMFCOutlookBarTabCtrl::CalcRectEdit`|Wywoływane przez platformę, aby określić wymiary pola edycji, który jest wyświetlany, gdy użytkownik zmienia nazwę karty. (Przesłania `CMFCBaseTabCtrl::CalcRectEdit`).|
@@ -109,7 +109,7 @@ Aby utworzyć pasek programu Outlook, zapewniający obsługę dokującej, użyj 
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak zainicjować `CMFCOutlookBarTabCtrl` obiektu i korzystać z różnych metod w `CMFCOutlookBarTabCtrl` klasy. W przykładzie przedstawiono sposób umożliwić edycję w miejscu etykietę tekst na przyciskach kartę strony paska Outlook, włączyć animacji, Włącz uchwyty przewijania, umożliwiające użytkownikom przechodzenie między przyciskami na okienko paska Outlook, rozmiar obramowania CD kartę programu Outlook roli i ustaw wyrównanie etykiety tekstowe na karcie przycisków paska Outlook. Ten fragment kodu jest częścią [próbka Outlook Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak zainicjować `CMFCOutlookBarTabCtrl` obiektu i korzystać z różnych metod w `CMFCOutlookBarTabCtrl` klasy. W przykładzie przedstawiono sposób umożliwić edycję w miejscu etykietę tekst na przyciskach kartę strony paska Outlook, włączyć animacji, Włącz uchwyty przewijania, umożliwiające użytkownikom przechodzenie między przyciskami na okienko paska Outlook, rozmiar obramowania CD kartę programu Outlook roli i ustaw wyrównanie etykiety tekstowe na karcie przycisków paska Outlook. Ten fragment kodu jest częścią [próbka Outlook Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ Jeśli ustawisz *bDetachable* na wartość TRUE, `AddControl` wewnętrznie tworz
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `AddControl` method in Class metoda `CMFCOutlookBarTabCtrl` klasy. Ten fragment kodu jest częścią [próbka Outlook Demo](../../visual-cpp-samples.md).
+Poniższy przykład pokazuje sposób użycia `AddControl` method in Class metoda `CMFCOutlookBarTabCtrl` klasy. Ten fragment kodu jest częścią [próbka Outlook Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 

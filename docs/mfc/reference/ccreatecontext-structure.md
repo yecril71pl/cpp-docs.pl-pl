@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: f84c0da7530a774ebe2b33aea0bddc5b0bf0fe17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326351"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768489"
 ---
 # <a name="ccreatecontext-structure"></a>Struktura CCreateContext
 
@@ -31,7 +31,7 @@ Podczas tworzenia okna wartości w tej strukturze zapewniają informacje używan
 
 A `CCreateContext` struktura zawiera wskaźniki do dokumentu, okno ramowe, widok i szablonu dokumentu. Zawiera ona także wskaźnik do `CRuntimeClass` określający typ widoku, aby utworzyć. Informacje o klasie czasu wykonywania i bieżący wskaźnik dokumentu są używane do tworzenie nowego widoku dynamicznego. Poniższa tabela sugeruje, jak i kiedy każdego `CCreateContext` element członkowski może być używany:
 
-|Element członkowski|Typ|Co to jest|
+|Element członkowski|Type|Co to jest|
 |------------|----------|--------------------|
 |`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` Aby utworzyć nowego widoku.|
 |`m_pCurrentDoc`|`CDocument*`|Istniejący dokument ma zostać skojarzony z nowego widoku.|
@@ -56,7 +56,7 @@ Poniżej przedstawiono kilka ogólnych wytycznych:
 
 Ogólnie rzecz biorąc, korzystając z ustawień domyślnych framework, możesz zignorować `CCreateContext`. Jeśli spróbujesz bardziej zaawansowane modyfikacje, kod źródłowy biblioteki klas Microsoft Foundation lub przykładowych programów, takich jak VIEWEX, pomocne. Jeśli nie pamiętasz wymaganego parametru asercję framework informuje użytkownik zapomniał.
 
-Aby uzyskać więcej informacji na temat `CCreateContext`, zobacz przykładową MFC [VIEWEX](../../visual-cpp-samples.md).
+Aby uzyskać więcej informacji na temat `CCreateContext`, zobacz przykładową MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="requirements"></a>Wymagania
 
