@@ -2,12 +2,12 @@
 title: Visual C++, przenoszenie i uaktualnianie przewodnik
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767681"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898794"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 
@@ -76,13 +76,13 @@ Alternatywnie być może masz teraz nowe wymagania lub przewidujesz potrzebę pr
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|W tym artykule omówiono sposób używania projekty utworzone we wcześniejszych wersjach programu Visual C++.|
-|[What's New for kompilator języka C++ w programie Visual Studio 2017 RC](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Zmiany w środowisku IDE i narzędzia programu Visual Studio 2015 do programu Visual Studio 2017|
-|[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)|Ulepszenia zgodności standardów z programu Visual Studio 2015 do programu Visual Studio 2017|
-|[Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)|Lista wszystkich zmian bibliotek języka Visual C++ i narzędzia do kompilacji programu Visual Studio 2003 do 2015, które mogą wymagać zmian w kodzie.|
-|[Visual C++ — co nowego od roku 2003 do 2015](visual-cpp-what-s-new-2003-through-2015.md)|Wszystkie "co nowego" informacje Visual c++ dla programu Visual Studio 2003 za pomocą programu Visual Studio 2015.|
-|[Przenoszenie bibliotek innych firm](porting-third-party-libraries.md)|Jak używać **vcpkg** narzędzia wiersza polecenia do portu starsze bibliotek typu open source do wersji skompilowany przy użyciu nowszego zestawy narzędzi Visual C++.|
+|[What's New for kompilator języka C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Zmiany w środowisku IDE i narzędzia do bieżącej wersji programu Visual Studio|
+|[Ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md)|Ulepszenia zgodności standardów z programu Visual Studio 2015 do programu Visual Studio|
+|[Visual C++ — Historia latach 2003 – 2015 zmian](visual-cpp-change-history-2003-2015.md)|Lista wszystkich zmian bibliotek języka Visual C++ i narzędzia do kompilacji programu Visual Studio 2003 do 2015, które mogą wymagać zmian w kodzie.|
+|[Visual C++ co jest nowego od roku 2003 do 2015](visual-cpp-what-s-new-2003-through-2015.md)|Wszystkie "co nowego" informacje Visual c++ dla programu Visual Studio 2003 za pomocą programu Visual Studio 2015.|
+|[Przenoszenie bibliotek innych firm 3](porting-third-party-libraries.md)|Jak używać **vcpkg** narzędzia wiersza polecenia do portu starsze bibliotek typu open source do wersji skompilowany przy użyciu nowszego zestawy narzędzi Visual C++.|
 |[Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](porting-and-upgrading-examples-and-case-studies.md)|W tej sekcji firma Microsoft przenoszone uaktualnia kilka przykładów i aplikacji i omówiono środowiska i wyników. Może się okazać, że odczytywanie te zapewnia możesz zorientować się, co jest zaangażowane w przenoszeniu i uaktualnianiu procesu. W całym procesie, możemy omówić porady i wskazówki dotyczące uaktualniania i pokazują, jak określone błędy zostały usunięte.|
-|[Przenoszenie na platformę Windows Universal](porting-to-the-universal-windows-platform-cpp.md)|Zawiera informacje dotyczące przenoszenia kodu do systemu Windows 10|
+|[Przenoszenie na platformę uniwersalną systemu Windows](porting-to-the-universal-windows-platform-cpp.md)|Zawiera informacje dotyczące przenoszenia kodu do systemu Windows 10|
 |[Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX](introduction-to-visual-cpp-for-unix-users.md)|Zawiera informacje dla użytkowników systemu UNIX, którzy jesteś nowym użytkownikiem Visual C++ i chcesz stać się za pomocą go.|
 |[Eksportowanie z systemu UNIX do Win32](porting-from-unix-to-win32.md)|W tym artykule omówiono opcje do migrowania aplikacji systemu UNIX do Windows.|
 

@@ -4,18 +4,18 @@ title: Dokumentacji języka Visual C++
 description: Dowiedz się, jak używać języka C++, aby tworzyć aplikacje, usługi i narzędzia dla platform i urządzeń.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 77a35fdd35d6af617ec9503f3613134ccbc9cdd6
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
-ms.translationtype: HT
+ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870770"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898677"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/visualstudio/install/install-visual-studio">
+                <a href="/cpp/build/vscpp-step-0-installation">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -33,7 +33,7 @@ ms.locfileid: "58870770"
                 </a>
             </li>
             <li>
-                <a href="/visualstudio/ide/getting-started-with-cpp-in-visual-studio">
+                <a href="/cpp/get-started/tutorial-console-cpp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -61,7 +61,7 @@ ms.locfileid: "58870770"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Co nowego w języku C++ w programie Visual Studio 2017</h3>
+                                    <h3>Co nowego w języku C++ w programie Visual Studio</h3>
                                 </div>
                             </div>
                         </div>

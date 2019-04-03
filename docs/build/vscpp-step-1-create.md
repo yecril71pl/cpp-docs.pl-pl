@@ -2,16 +2,16 @@
 title: Tworzenie projektu aplikacji konsoli w języku C++
 description: Tworzenie aplikacji konsolowej Hello World w języku Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817728"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898781"
 ---
 # <a name="create-a-c-console-app-project"></a>Tworzenie projektu aplikacji konsoli w języku C++
 
@@ -19,11 +19,31 @@ Zwykle początkowy punkt jest programistą języka C++ "Hello, world!" Aplikacja
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Program Visual Studio za pomocą programowanie aplikacji klasycznych, z obciążeniem C++ zainstalowany i uruchomiony na komputerze. Jeśli nie jest jeszcze zainstalowany, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio 2017](vscpp-step-0-installation.md).
+- Program Visual Studio za pomocą programowanie aplikacji klasycznych, z obciążeniem C++ zainstalowany i uruchomiony na komputerze. Jeśli nie jest jeszcze zainstalowany, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Utwórz projekt aplikacji
 
 Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *rozwiązania* do organizowania projektów. Projekt zawiera wszystkie opcje, konfiguracji i reguły używane do tworzenia aplikacji i zarządza relacji między plików wszystkich projektów i plików zewnętrznych. Aby utworzyć aplikację, najpierw należy utworzyć nowy projekt i rozwiązanie.
+
+::: moniker range=">=vs-2019"
+
+1. W programie Visual Studio, otwórz **pliku** menu i wybierz polecenie **New** > **projektu** otworzyć **Utwórz nowy projekt** okna dialogowego. Wybierz **aplikacja Konsolowa** szablonu, a następnie wybierz **dalej**.
+
+   ![Utwórz nowy projekt](media/vs2019-choose-console-app.png "otworzyć tworzenia okna dialogowego Nowy projekt")
+
+1. W **konfigurowania nowego projektu** okno dialogowe, wprowadź *HelloWorld* w **Nazwa projektu** pole edycji. Wybierz **Utwórz** do tworzenia projektu.
+
+   ![Nazwy i Utwórz nowy projekt](media/vs2019-configure-new-project-hello-world.png "nazwy i Utwórz nowy projekt")
+
+   Program Visual Studio tworzy nowy projekt, gotowy do dodawania oraz edytowania kodu źródłowego. Domyślnie szablon Aplikacja konsoli wypełnia kodu źródłowego za pomocą aplikacji "Hello World":
+
+   ![Witaj świecie projektu w IDE](media/vs2019-hello-world-code.png "projektu Hello World w środowisku IDE")
+
+   Gdy kod wygląda to w edytorze, wszystko będzie gotowe, przejdź do następnego kroku i skompiluj aplikację.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 1. W programie Visual Studio, otwórz **pliku** menu i wybierz polecenie **nowy > Projekt** otworzyć **nowy projekt** okna dialogowego.
 
@@ -85,10 +105,14 @@ Gdy kod wygląda to w edytorze, wszystko będzie gotowe, przejdź do następnego
 
 [Wystąpił problem.](#add-a-source-code-file-issues)
 
+::: moniker-end
+
 ## <a name="next-steps"></a>Następne kroki
 
 > [!div class="nextstepaction"]
 > [Kompilowanie i uruchamianie projektu w języku C++](vscpp-step-2-build.md)
+
+::: moniker range="<=vs-2017"
 
 ## <a name="troubleshooting-guide"></a>Przewodnik rozwiązywania problemów
 
@@ -125,5 +149,7 @@ Jeśli przypadkowo zamknięty źródło pliku okna edytora kodu, aby otworzyć g
 Czerwone symbole są wyświetlane w obszarze dowolne elementy w edytorze kodu źródłowego, sprawdź, czy kod jest zgodna w przykładzie w pisowni, znaki interpunkcyjne i wielkości liter. Sprawa jest istotne w przypadku kodu C++.
 
 [Przejdź wstecz](#add-code-to-the-source-file).
+
+::: moniker-end
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

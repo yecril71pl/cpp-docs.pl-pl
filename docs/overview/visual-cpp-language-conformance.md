@@ -5,18 +5,18 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 151ffecc0a9497d84b23a631477827ed2e86711a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787364"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898807"
 ---
 # <a name="visual-c-language-conformance"></a>Zgodność języka Visual C++
 
 Ten temat zawiera podsumowanie ISO C ++ 03, C ++ 11, C ++ 14, C ++ 17 i projekt C ++ 20 języka zgodność ze standardami funkcje kompilatora i biblioteki standardowej funkcji dla kompilatora języka C++ w Visual Studio 2017 i wcześniejszych wersji. Każdy kompilator i biblioteki standardowej funkcji Nazwa łącza do standardu ISO C++ papieru wniosek, który zawiera opis funkcji, jeśli jest dostępny w momencie publikacji. Kolumna obsługiwane zawiera listę wersji programu Visual Studio, w której obsługa dla funkcji najpierw pojawiły się.
 
-Aby uzyskać więcej informacji na temat udoskonaleń zgodności i inne zmiany w programie Visual Studio 2017, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements-2017.md) i [What's New for Visual C++ w programie Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Zgodność ze zmian we wcześniejszych wersjach, zobacz [Visual C++ — Historia zmian](../porting/visual-cpp-change-history-2003-2015.md) i [Visual C++ co w nowym roku 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md). Aby uzyskać bieżące informacje od zespołu języka C++, odwiedź stronę [blog zespołu Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
+Aby uzyskać więcej informacji na temat udoskonaleń zgodności i inne zmiany w programie Visual Studio 2017, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements.md) i [What's New for Visual C++ w programie Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Zgodność ze zmian we wcześniejszych wersjach, zobacz [Visual C++ — Historia zmian](../porting/visual-cpp-change-history-2003-2015.md) i [Visual C++ co w nowym roku 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md). Aby uzyskać bieżące informacje od zespołu języka C++, odwiedź stronę [blog zespołu Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
 
 > [!NOTE]
 > Nie ma żadnych danych binarnych przełomowych zmian między wersjami programu Visual Studio 2015 i Visual Studio 2017.
@@ -313,10 +313,10 @@ Poniżej są obecnie niezrównoleglone:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
+[Materiał referencyjny na temat języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
-[Co nowego w języku Visual C++ w programie Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Ulepszenia zgodności języka C++ w programie Visual Studio](cpp-conformance-improvements.md)<br/>
+[Co nowego w języku Visual C++ w programie Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historia zmian w usłudze Visual C++ 2003 do 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
-[Visual C++ — co nowego od roku 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[Visual C++ co jest nowego od roku 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Blogu zespołu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)
