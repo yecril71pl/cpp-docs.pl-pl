@@ -1,12 +1,12 @@
 ---
 title: Obsługa wyjątków ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 78d3d7d206adcb123c9537e91c2d5976b8be5baa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 43e43beae5ee02f9ef4537da08a1c9915056b777
+ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770073"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870796"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -359,11 +359,11 @@ Canonical prologs, które można podzielić na kategorie 1, 2 (bez wychodzących
 
 Krok 0: Wykonaj wstępne obliczania rozmiaru każdego obszaru.
 
-Krok 1: Zapisz Int zapisane wywoływanego rejestrów.
+Krok 1. Zapisz Int zapisane wywoływanego rejestrów.
 
-Krok 2: Ten krok jest specyficzny dla typu 4 na początku sekcji. LR zostanie zapisany pod koniec Int obszaru.
+Krok 2. Ten krok jest specyficzny dla typu 4 na początku sekcji. LR zostanie zapisany pod koniec Int obszaru.
 
-Krok 3: Zapisz FP zapisane wywoływanego rejestrów.
+Krok 3. Zapisz FP zapisane wywoływanego rejestrów.
 
 Krok 4. Zapisz argumentów wejściowych w obszarze parametrów macierzystego.
 
@@ -371,7 +371,7 @@ Krok 5. Przydziel pozostałe stosu, takich jak lokalny obszar \<r29, lr > pary i
 
 Krok #|Wartości flagi|Liczba instrukcji|OpCode|Kodzie operacji unwind
 -|-|-|-|-
-0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
+0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
 1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
 3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`

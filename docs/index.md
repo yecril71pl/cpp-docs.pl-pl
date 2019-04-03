@@ -1,9 +1,15 @@
 ---
 layout: HubPage
 title: Dokumentacji języka Visual C++
-description: 'Dowiedz się, jak używać języka C++, aby tworzyć aplikacje, usługi i narzędzia dla platform i urządzeń.'
+description: Dowiedz się, jak używać języka C++, aby tworzyć aplikacje, usługi i narzędzia dla platform i urządzeń.
 author: mikeblome
 ms.author: mblome
+ms.openlocfilehash: 77a35fdd35d6af617ec9503f3613134ccbc9cdd6
+ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870770"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -45,7 +51,7 @@ ms.author: mblome
                 </a>
             </li>
             <li>
-                <a href="/cpp/what-s-new-for-overview/visual-cpp-in-visual-studio.md">
+                <a href="/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -68,13 +74,13 @@ ms.author: mblome
         <h1>Dokumentacji języka Visual C++</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Obciążenia</a>
+                <a href="#workloads">Pakiety robocze</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">Obciążenia</a>
+                        <a href="#workloads1">Pakiety robocze</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
-                                <a href="/cpp/windows/universal-windows-apps-cpp">
+                                <a href="/cpp/cppcx/universal-windows-apps-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -217,7 +223,7 @@ ms.author: mblome
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/ide/building-cpp-projects-in-visual-studio">
+                                <a href="/cpp/build/projects-and-build-systems-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -265,7 +271,7 @@ ms.author: mblome
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Testowanie</h3>
+                                                    <h3>Test</h3>
                                                     <p>Tworzenie testów jednostkowych dla kodu C++.</p>
                                                 </div>
                                             </div>
@@ -274,7 +280,7 @@ ms.author: mblome
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/ide/deploying-native-desktop-applications-visual-cpp">
+                                <a href="/cpp/windows/deploying-native-desktop-applications-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -284,7 +290,7 @@ ms.author: mblome
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Wdrażanie</h3>
+                                                    <h3>Deploy</h3>
                                                     <p>Dystrybucja programu gotowego do użytkowników końcowych.</p>
                                                 </div>
                                             </div>
@@ -360,7 +366,7 @@ ms.author: mblome
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/windows/component-extensions-for-runtime-platforms">
+                                <a href="/cpp/extensions/component-extensions-for-runtime-platforms">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -436,7 +442,7 @@ ms.author: mblome
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/windows/windows-runtime-cpp-template-library-wrl">
+                                <a href="/cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
