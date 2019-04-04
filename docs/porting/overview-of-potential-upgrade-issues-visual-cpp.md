@@ -2,12 +2,12 @@
 title: Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 16918a70d4ce56a7415c3a807485e72c085d1194
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775045"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898833"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 
@@ -111,7 +111,7 @@ Na przykład `/Zc:forScope` switch została wprowadzona na wczesnym etapie histo
 
 Jednym z przykładów typowych błąd kompilatora, które można napotkać podczas uaktualniania jest, gdy argument wartości innej niż stała jest przekazywany do parametru const. Starsze wersje kompilatora nie zawsze są oznaczane to jako błąd. Aby uzyskać więcej informacji, zobacz [konwersje bardziej rygorystyczne kompilatora](porting-guide-spy-increment.md#stricter_conversions).
 
-Aby uzyskać więcej informacji na temat zgodności określonego ulepszeń, zobacz [Visual C++ — Historia latach 2003 – 2015 zmian](visual-cpp-change-history-2003-2015.md) i [ulepszenia zgodności języka C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+Aby uzyskać więcej informacji na temat zgodności określonego ulepszeń, zobacz [Visual C++ — Historia latach 2003 – 2015 zmian](visual-cpp-change-history-2003-2015.md) i [ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md).
 
 ## <a name="errors-involving-stdinth-integral-types"></a>Błędy dotyczące \<stdint.h > typów całkowitych
 
@@ -127,7 +127,7 @@ Możesz nacisnąć przycisk **F12** (**przejdź do definicji**) aby zobaczyć, g
 
 Wprowadzono wiele zmian do środowiska wykonawczego języka C przez lata. Dodano wiele bezpieczne wersje funkcji, a niektóre zostały usunięte. Ponadto zgodnie z opisem we wcześniejszej części tego artykułu, implementacja firmy Microsoft CRT został wycofany w programie Visual Studio 2015 na nowe pliki binarne i pliki .lib skojarzone.
 
-Jeśli błąd dotyczy funkcji CRT, wyszukaj [Visual C++ — Historia latach 2003 – 2015 zmian](visual-cpp-change-history-2003-2015.md) lub [ulepszenia zgodności języka C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md) aby zobaczyć, jeśli te tematy zawierają informacje dodatkowe. Jeśli błąd jest LNK2019, nierozpoznany zewnętrzny, upewnij się, że funkcja nie została usunięta. W przeciwnym razie, gdy masz pewność, że funkcja jest nadal istnieje i kod wywołujący jest poprawny, sprawdź, czy projekt używa `/NODEFAULTLIB`. Jeśli tak, musisz zaktualizować listę bibliotek, tak, że projekt korzysta z nowej uniwersalnej bibliotek (UCRT). Zobacz sekcję powyżej na biblioteki i zależności, aby uzyskać więcej informacji.
+Jeśli błąd dotyczy funkcji CRT, wyszukaj [Visual C++ — Historia latach 2003 – 2015 zmian](visual-cpp-change-history-2003-2015.md) lub [ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md) aby zobaczyć, jeśli te tematy zawierają informacje dodatkowe. Jeśli błąd jest LNK2019, nierozpoznany zewnętrzny, upewnij się, że funkcja nie została usunięta. W przeciwnym razie, gdy masz pewność, że funkcja jest nadal istnieje i kod wywołujący jest poprawny, sprawdź, czy projekt używa `/NODEFAULTLIB`. Jeśli tak, musisz zaktualizować listę bibliotek, tak, że projekt korzysta z nowej uniwersalnej bibliotek (UCRT). Zobacz sekcję powyżej na biblioteki i zależności, aby uzyskać więcej informacji.
 
 Jeśli ten błąd obejmuje `printf` lub `scanf`, upewnij się, że nie prywatnie definiujesz każdą z tych funkcji bez uwzględniania stdio.h. Jeśli tak, Usuń definicje prywatnej lub link do starszego\_stdio —\_definitions.lib. Możesz ustawić **stron właściwości** , okno dialogowe **właściwości konfiguracji** > **konsolidatora** > **dane wejściowe**w **dodatkowe zależności** właściwości. Jeśli łączenia z Windows SDK 8.1 lub starszy, Dodaj starsza wersja\_stdio —\_definitions.lib.
 
@@ -161,7 +161,7 @@ Aby uzyskać więcej informacji, zobacz [aktualizowanie docelową wersję Window
 
 ## <a name="atl--mfc"></a>ATL / MFC
 
-ATL i MFC są stosunkowo stabilne interfejsy API, ale zmiany wprowadzone od czasu do czasu. Zobacz [Visual C++ — Historia latach 2003 – 2015 zmian](visual-cpp-change-history-2003-2015.md) Aby uzyskać więcej informacji i [What's New for Visual C++ w programie Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodności języka C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+ATL i MFC są stosunkowo stabilne interfejsy API, ale zmiany wprowadzone od czasu do czasu. Zobacz [Visual C++ — Historia latach 2003 – 2015 zmian](visual-cpp-change-history-2003-2015.md) Aby uzyskać więcej informacji i [What's New for Visual C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md).
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 już zdefiniowana w biblioteki MSVCRTD.lib
 
@@ -182,4 +182,4 @@ Aby uzyskać więcej informacji, zobacz [przenoszenie z MBCS na Unicode](porting
 ## <a name="see-also"></a>Zobacz także
 
 [Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)
+[Ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md)

@@ -2,19 +2,19 @@
 title: Visual C++ co&#39;s nowego od roku 2003 do 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e2a785871d85ce742bee7b78586756cced38986e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768688"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898859"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
 
 Ta strona zbiera wszystkie "co nowego jest" strony dla wszystkich wersji programu Visual C++ z programu Visual Studio 2015 do 2003. Te informacje są dostarczane dla wygody w przypadku, gdy może okazać się przydatne w przypadku uaktualniania z wcześniejszych wersji programu Visual C++.
 
 > [!NOTE]
-> Aby uzyskać informacje o programie Visual Studio 2017, zobacz [co nowego w języku Visual C++ w programie Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodności w programie Visual C++ w programie Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+> Aby uzyskać informacje o bieżącej wersji programu Visual Studio, zobacz [co nowego w języku Visual C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodności w programie Visual C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md).
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Co nowego w języku C++ w programie Visual Studio 2015
 
@@ -1104,7 +1104,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     };
    ```
 
-- `volatile` **zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania** poprzednie wersje kompilatora mogą klasy, która ma **volatile** zmienne Członkowskie mają domyślne kopiowania/przenoszenia konstruktorów i Operatory przypisania kopiowania/przenoszenia domyślne generowane automatycznie. To zachowanie starej była nieprawidłowa i nie jest zgodny ze standardem C++. Kompilator traktuje teraz klasę, która ma zmiennych Członkowskich volatile nietrywialnymi konstrukcji i operatory przypisania co uniemożliwia automatyczne generowanie domyślnej implementacji tych operatorów. Jeśli taka klasa jest elementem członkowskim Unii (lub anonimowej Unii wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania kopiowania/przenoszenia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty. Próbuje utworzyć lub skopiować Unii (lub klasa zawierająca anonimowej Unii) bez jawne określenie ich jest błędne błąd kompilatora problemów kompilatora C2280 w wyniku.
+- `volatile` ***zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania** poprzednie wersje kompilatora mogą klasy, która ma **volatile** zmienne Członkowskie mają domyślne kopiowania/przenoszenia konstruktorów i Operatory przypisania kopiowania/przenoszenia domyślne generowane automatycznie.TTo zachowanie starej była nieprawidłowa i nie jest zgodny ze standardem C++.TKompilator traktuje teraz klasę, która ma zmiennych Członkowskich volatile nietrywialnymi konstrukcji i operatory przypisania co uniemożliwia automatyczne generowanie domyślnej implementacji tych operatorów.WJeśli taka klasa jest elementem członkowskim Unii (lub anonimowej Unii wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania kopiowania/przenoszenia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty.APróbuje utworzyć lub skopiować Unii (lub klasa zawierająca anonimowej Unii) bez jawne określenie ich jest błędne błąd kompilatora problemów kompilatora C2280 w wyniku.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1555,7 +1555,7 @@ Obsługa tych funkcji C ++ 14:
 - \<niepodzielne > otrzymał wiele udoskonaleń zwiększających wydajność.
 - \<type_traits > otrzymał główną stabilizację i Kod poprawki.
 
-### <a name="breaking-changes"></a>Zmiany powodujące niezgodność
+### <a name="breaking-changes"></a>Fundamentalne zmiany
 
 Tym Ulepszona obsługa standardów ISO C/C++ może wymagać zmian w istniejącym kodzie, który jest zgodny z C ++ 11 i skompilowany poprawnie w programie Visual C++ w programie Visual Studio 2013.
 
@@ -1777,7 +1777,7 @@ Pokrycie kodu został zaktualizowany do dynamicznie instrument binarnych w czasi
 
 ### <a name="c-compiler-and-linker"></a>Kompilator języka C++ i konsolidatora
 
-**auto Keyword.** **Automatycznie** — słowo kluczowe ma nowy cel. Użyj domyślnego rozumieniu **automatycznie** — słowo kluczowe, aby zadeklarować zmienną, którego typ jest ustalić na podstawie wyrażenia inicjowania w deklaracji zmiennej. `/Zc:auto` — Opcja kompilatora wywołuje nowy lub poprzedniego znaczenie **automatycznie** — słowo kluczowe.
+**Auto — słowo kluczowe.** **Automatycznie** — słowo kluczowe ma nowy cel. Użyj domyślnego rozumieniu **automatycznie** — słowo kluczowe, aby zadeklarować zmienną, którego typ jest ustalić na podstawie wyrażenia inicjowania w deklaracji zmiennej. `/Zc:auto` — Opcja kompilatora wywołuje nowy lub poprzedniego znaczenie **automatycznie** — słowo kluczowe.
 
 **decltype — Specyfikator typu.** **Decltype** Specyfikator typu zwraca typ określonego wyrażenia. Użyj **decltype** Specyfikator typu w połączeniu z **automatycznie** — słowo kluczowe do deklarowania typu złożonego lub znanego tylko w kompilatorze. Na przykład użyć kombinacji do deklarowania funkcji szablonu, którego typem zwracanym jest zależna od typów argumentów szablonu. Można również zadeklarować funkcji szablonu, który wywołuje inną funkcję, a następnie zwraca typ zwracany funkcji o nazwie.
 
@@ -1790,7 +1790,7 @@ Pokrycie kodu został zaktualizowany do dynamicznie instrument binarnych w czasi
 **nullptr i __nullptr słów kluczowych.** Kompilator języka Visual C++ pozwala na używanie **nullptr** — słowo kluczowe z kodu macierzystego lub kodu zarządzanego. **Nullptr** słowo kluczowe wskazuje, że dojście do obiektu, posługiwanie się nimi wskaźnika lub typu wskaźnik natywny nie wskazuje obiektu. Kompilator interpretuje **nullptr** jako kodu zarządzanego, gdy używasz `/clr` — opcja kompilatora i kodu natywnego, gdy nie używasz `/clr` opcji.
 Specyficzne dla firmy Microsoft **__nullptr** — słowo kluczowe ma takie samo znaczenie jak **nullptr**, ale dotyczy ona tylko kodu natywnego. Jeśli kompilujesz natywnego kodu C/C++ za pomocą `/clr` — opcja kompilatora, kompilator nie może określić czy **nullptr** — słowo kluczowe jest natywny lub terminów zarządzanych. Aby zamiaru Wyczyść, aby kompilator, użyj nullptr — słowo kluczowe, aby określić termin zarządzanych i **__nullptr** Aby określić termin natywnych.
 
-**/ Zc: trigraphs — opcja kompilatora.** Domyślnie pomoc techniczna dotycząca trójznaków jest wyłączona. Użyj `/Zc:trigraphs` opcję kompilatora, aby włączyć obsługę trójznaków.
+**/Zc:trigraphs Compiler Option.** Domyślnie pomoc techniczna dotycząca trójznaków jest wyłączona. Użyj `/Zc:trigraphs` opcję kompilatora, aby włączyć obsługę trójznaków.
 Trójznak składa się z dwóch następujących po sobie znaki zapytania (?) następuje znak trzeci unikatowy. Kompilator zastępuje trójznak odpowiedni znak interpunkcyjny. Na przykład, kompilator zamienia? = — trigram znakiem # (znak liczby). Używać trójznaków w plikach źródłowych języka C, korzystających z zestawu znaków, który nie zawiera niektóre znaki interpunkcyjne.
 
 **Nowa opcja optymalizacji sterowanej profilem.** PogoSafeMode to nowa opcja optymalizacji sterowanej profilem, co pozwala określić, czy ma być używany tryb awaryjny lub trybie szybkim, podczas optymalizacji aplikacji. Tryb awaryjny jest bezpieczna dla wątków, ale wolniejsza niż w trybie szybkim. Tryb szybki jest zachowaniem domyślnym.
@@ -1803,7 +1803,7 @@ Trójznak składa się z dwóch następujących po sobie znaki zapytania (?) nas
 
 ### <a name="visual-c-projects-and-the-build-system"></a>Projekty języka Visual C++ i systemu kompilacji
 
-**MSBuild.** Visual C++ rozwiązania i projekty są teraz tworzone przy użyciu MSBuild.exe, która zastępuje VCBuild.exe. Program MSBuild jest tego samego narzędzia kompilacji elastycznych funkcji, rozszerzalne, oparte na języku XML, który jest używany przez inne języki Visual Studio i typów projektów. Ze względu na tę zmianę pliki projektu Visual C++ teraz używać pliku w formacie XML i mają rozszerzenie nazwy pliku .vcxproj. Pliki projektu Visual C++ z wcześniejszych wersji programu Visual Studio automatycznie są konwertowane na nowy format pliku.
+**Program MSBuild.** Visual C++ rozwiązania i projekty są teraz tworzone przy użyciu MSBuild.exe, która zastępuje VCBuild.exe. Program MSBuild jest tego samego narzędzia kompilacji elastycznych funkcji, rozszerzalne, oparte na języku XML, który jest używany przez inne języki Visual Studio i typów projektów. Ze względu na tę zmianę pliki projektu Visual C++ teraz używać pliku w formacie XML i mają rozszerzenie nazwy pliku .vcxproj. Pliki projektu Visual C++ z wcześniejszych wersji programu Visual Studio automatycznie są konwertowane na nowy format pliku.
 
 **Katalogi VC ++.** Katalogi VC ++ ustawienie teraz znajduje się w dwóch miejscach. Użyj strony właściwości projektu, aby ustawić wartości na projekt katalogi VC ++. Użyj **Menedżer właściwości** i arkusz właściwości do ustawienia globalne, wartości dla konfiguracji katalogi VC ++.
 
@@ -2059,9 +2059,9 @@ Kompilator zawiera istotne zmiany w tej wersji.
 - __CLR_VER dodano wstępnie zdefiniowane makro.
 - Dyrektywy komentarza (C/C++) będzie teraz akceptować `/MANIFESTDEPENDENCY` jako komentarz konsolidatora. Opcja exestr, aby dodać komentarz jest już przestarzały.
 - `embedded_idl` atrybut ( `#import` dyrektywy) teraz przyjmuje opcjonalny parametr.
-- `fenv_access` Dyrektywy pragma
-- `float_control` Dyrektywy pragma
-- `fp_contract` Dyrektywy pragma
+- `fenv_access` pragma
+- `float_control` pragma
+- `fp_contract` pragma
 - Zmienne globalne nie zostaną zainicjowane w kolejności, w której są deklarowane, jeśli zmienne globalne pragma zarządzane, niezarządzane i niezarządzanych. To potencjalne istotnej zmiany, jeśli na przykład niezarządzanych zmienna globalna jest inicjowany za pomocą zarządzanych zmiennych globalnych i pełni skonstruowanego obiektu zarządzanego jest wymagana.
 - Sekcje określony za pomocą init_seg są teraz tylko do odczytu i nie odczytu/zapisu w poprzednich wersjach.
 - domyślne inline_depth jest teraz 16. Domyślnie 16 została również obowiązywać w Visual C++ .NET 2003.
@@ -2069,7 +2069,7 @@ Kompilator zawiera istotne zmiany w tej wersji.
 - _M_CEE _M_CEE_PURE i _M_CEE_SAFE wstępnie zdefiniowane makra dodane, zobacz wstępnie zdefiniowane makra.
 - _M_IX86_FP dodano wstępnie zdefiniowane makro.
 - _M_X64 dodano wstępnie zdefiniowane makro.
-- `make_public` Dyrektywy pragma
+- `make_public` pragma
 - `managed`, `unmanaged` zaktualizowano składnię pragma (ma teraz `push` i `pop`)
 - Aby biblioteka mscorlib.dll teraz niejawnie odwołuje się `#using` dyrektywy we wszystkich `/clr` kompilacje.
 - _OPENMP dodano wstępnie zdefiniowane makro.
@@ -2235,4 +2235,4 @@ Dodano następujące przełączniki konsolidatora:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](visual-cpp-porting-and-upgrading-guide.md)
+[Visual C++, przenoszenie i uaktualnianie przewodnik](visual-cpp-porting-and-upgrading-guide.md)
