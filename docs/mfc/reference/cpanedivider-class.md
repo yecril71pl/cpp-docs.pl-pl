@@ -85,10 +85,10 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
 ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/04/2019
 ms.locfileid: "58773856"
 ---
 # <a name="cpanedivider-class"></a>Klasa CPaneDivider
@@ -107,13 +107,13 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaneDivider::CPaneDivider](#cpanedivider)||
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaneDivider::AddPaneContainer](#addpanecontainer)||
 |[CPaneDivider::AddPane](#addpane)||
@@ -152,14 +152,14 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaneDivider::GetPanes](#getpanes)|Zwraca listę wszystkich okienek, które znajdują się w [klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w przypadku domyślnego okienka separatorów.|
 |[CPaneDivider::GetPaneDividers](#getpanedividers)|Zwraca listę separatorów okienko, które znajdują się w [klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w przypadku domyślnego okienka separatorów.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Określa domyślną szerokość w pikselach wszystkich separator okienka w aplikacji.|
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Przechowuje wskaźnik do informacji o klasie czasu wykonywania o `CPaneDivider`-pochodnych obiektu.|
@@ -733,9 +733,9 @@ void StoreRecentTabRelatedInfo(
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)<br/>
-[Klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md)<br/>
+[CPaneContainer Class](../../mfc/reference/cpanecontainer-class.md)<br/>
 [Klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md)<br/>
-[Klasa CBasePane](../../mfc/reference/cbasepane-class.md)
+[CBasePane Class](../../mfc/reference/cbasepane-class.md)
