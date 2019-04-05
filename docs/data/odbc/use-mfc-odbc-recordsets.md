@@ -5,12 +5,12 @@ helpviewer_keywords:
 - recordsets, MFC ODBC
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-ms.openlocfilehash: 72e394ae8d8bef72acf62edd81b356b76b1b18c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d6a2b49f518fd9eaacf589e893bc240d1409a4b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567937"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023896"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>Używanie zestawów rekordów MFC ODBC
 
@@ -76,6 +76,6 @@ Te tematy wyjaśniają, jak pracować z zestawów rekordów ODBC za pomocą MFC.
 
 - [Powiązanie kolumn danych w zestawie rekordów dynamicznie w czasie wykonywania](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

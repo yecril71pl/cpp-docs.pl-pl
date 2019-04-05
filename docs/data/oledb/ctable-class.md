@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556689"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038777"
 ---
 # <a name="ctable-class"></a>Klasa CTable
 
@@ -51,7 +51,7 @@ Klasy zestawów wierszy.
 
 |||
 |-|-|
-|[Otwórz](#open)|Zostanie otwarty tabeli.|
+|[Otwarcie](#open)|Zostanie otwarty tabeli.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -91,14 +91,14 @@ HRESULT Open(const CSession& session,
 *szTableName*<br/>
 [in] Nazwa tabeli, aby otworzyć, jest przekazywany jako ciąg ANSI.
 
-*dbid*<br/>
+*DBID*<br/>
 [in] `DBID` Tabeli, aby otworzyć.
 
 *pPropSet*<br/>
-[in] Wskaźnik do tablicy [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.
+[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696(v=vs.85)) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.
 
 *ulPropSets*<br/>
-[in] Liczba [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury przekazany *pPropSet* argumentu.
+[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury przekazany *pPropSet* argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -106,9 +106,9 @@ Standardowa HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)

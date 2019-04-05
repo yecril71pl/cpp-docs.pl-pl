@@ -2,16 +2,16 @@
 title: Kompilator ostrzeżenie (poziom 4) C4435
 ms.date: 11/04/2016
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 7db1d483f571289c5b890c223ba1e59ba3d1f41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572331"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041231"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>Kompilator ostrzeżenie (poziom 4) C4435
 
-'klasa1': Układ obiektu pod /vd2 zmieni się ze względu na wirtualną klasę podstawową 'klasa2'
+'klasa1': Układ obiektu pod/vd2 zmieni się ze względu na wirtualną klasę podstawową 'klasa2'
 
 To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
 
@@ -35,7 +35,7 @@ class B : public virtual A  // C4435
 {};
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
 [/vd (Wyłącz przemieszczanie konstrukcji)](../../build/reference/vd-disable-construction-displacements.md)

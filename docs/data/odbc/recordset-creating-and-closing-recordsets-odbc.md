@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)'
+title: 'Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, creating
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581509"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041270"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -71,7 +71,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Po wywołaniu metody `Open`, użyj członków funkcje i dane Członkowskie obiektu, aby pracować z rekordami. W niektórych przypadkach możesz chcieć Requery — ani nie odświeżaj zestawu rekordów, aby uwzględnić zmiany, które wystąpiły w źródle danych. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Po wywołaniu metody `Open`, użyj członków funkcje i dane Członkowskie obiektu, aby pracować z rekordami. W niektórych przypadkach możesz chcieć Requery — ani nie odświeżaj zestawu rekordów, aby uwzględnić zmiany, które wystąpiły w źródle danych. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
 >  Ciąg parametrów połączenia, używane podczas programowania może nie być ten sam ciąg połączenia, który ostatecznej użytkownicy potrzebują. Aby poznać, w związku z tym uogólnianie aplikacji, zobacz [źródła danych: Zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
@@ -107,8 +107,8 @@ Po zakończeniu wprowadzania zmian przy użyciu rekordów, należy ją usunąć 
 
 `Close` zwalnia zestawu rekordów `HSTMT` obsługi. Go nie niszczy obiektów C++.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Zestaw rekordów: Przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

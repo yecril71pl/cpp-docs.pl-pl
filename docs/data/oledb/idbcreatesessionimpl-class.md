@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ecc06bf5e3514ea87c86de17dbafd59b9da9f8b6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556425"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028538"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl — Klasa
 
-Udostępnia implementację na potrzeby [IDBCreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms724076(v=vs.85)) interfejsu.
+Udostępnia implementację na potrzeby [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,7 +49,7 @@ Obiekt sesji.
 
 |||
 |-|-|
-|[Createsession —](#createsession)|Tworzy nową sesję z obiektu źródła danych i zwraca żądanego interfejsu na nowo utworzoną sesji.|
+|[CreateSession](#createsession)|Tworzy nową sesję z obiektu źródła danych i zwraca żądanego interfejsu na nowo utworzoną sesji.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -69,9 +69,9 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IDBCreateSession::CreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms714942(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

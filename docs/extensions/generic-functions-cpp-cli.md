@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: b2935c4c1a9e5fbbbcc8078d3d599128d989ed38
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787340"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038701"
 ---
 # <a name="generic-functions-ccli"></a>Funkcje ogólne (C++/CLI)
 
@@ -53,22 +53,22 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybuty*<br/>
+*atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
-*Modyfikatory*<br/>
+*modyfikatory*<br/>
 (Opcjonalnie) Modyfikator właściwy dla funkcji, takich jak statyczny.  **wirtualne** jest niedozwolona, ponieważ metody wirtualne nie może być ogólny.
 
 *zwracany typ*<br/>
 Typ zwracany przez metodę. Jeśli typ zwracany void, nie zwraca wartości jest wymagana.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 Nazwa funkcji.
 
 *identyfikatory parametr typu*<br/>
 Lista identyfikatorów rozdzielonych przecinkami.
 
-*parametrów formalnych*<br/>
+*formal-parameters*<br/>
 (Opcjonalnie) Lista parametrów.
 
 *type-parameter-constraints-clauses*<br/>
@@ -181,7 +181,7 @@ My function returned an int: 2003
 My function returned a string: Hello generic functions!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
 [Typy ogólne](generics-cpp-component-extensions.md)

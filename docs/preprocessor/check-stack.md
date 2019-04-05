@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451990"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023382"
 ---
 # <a name="checkstack"></a>check_stack
 Instruuje kompilator, aby wyłączyć sondy stosu, jeśli `off` (lub `-`) jest określony, lub Włącz sondy stosu, jeśli `on` (lub `+`) jest określony.
@@ -41,6 +41,6 @@ Jeśli nie udzielisz argument **check_stack** pragma, sprawdzeniem stosu powraca
 |`#pragma check_stack(on)`<br /><br /> lub `#pragma check_stack +`|Tak lub nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|
 |`#pragma check_stack(off)`<br /><br /> lub `#pragma check_stack -`|Tak lub nie|Wyłącza sprawdzanie stosu dla funkcji, które należy wykonać|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

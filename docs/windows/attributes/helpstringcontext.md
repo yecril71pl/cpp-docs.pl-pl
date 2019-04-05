@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: d292dd53ff3009a571dd5b0a1ba102e75b648e4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533604"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026113"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -54,17 +54,17 @@ __interface IMyI
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **interfejsu**, interfejs — metoda|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **interfejsu**, interfejs — metoda|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[module](module-cpp.md)
+[moduł](module-cpp.md)

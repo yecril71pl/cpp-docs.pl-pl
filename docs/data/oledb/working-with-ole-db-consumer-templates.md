@@ -5,12 +5,12 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 79eb11a2a9d6403eb267098bb4f893b4424d6a67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466342"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040809"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Praca z szablonami konsumentów OLE DB
 
@@ -18,7 +18,7 @@ Przykłady dotyczące używania szablonów konsumentów bazy danych OLE w typowy
 
 - [Upraszczanie dostępu do danych za pomocą atrybutów bazy danych](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
-- [Składowe danych dotyczące stanu pola w metodach dostępu generowanych przez kreatora](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
+- [Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
 
 - [Przechodzenie przez prosty zestaw wierszy](../../data/oledb/traversing-a-simple-rowset.md)
 
@@ -28,7 +28,7 @@ Przykłady dotyczące używania szablonów konsumentów bazy danych OLE w typowy
 
 - [Aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md)
 
-- [Korzystanie z procedur składowanych](../../data/oledb/using-stored-procedures.md)
+- [korzystanie z procedur składowanych](../../data/oledb/using-stored-procedures.md)
 
 - [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)
 
@@ -58,6 +58,6 @@ Można również znaleźć przykłady sposobów użycia szablony OLE DB klientó
 
 - [MultiRead](https://github.com/Microsoft/VCSamples)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

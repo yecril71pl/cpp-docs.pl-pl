@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512934"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041153"
 ---
 # <a name="data-member-attributes"></a>Atrybuty elementów członkowskich danych
 
@@ -27,12 +27,12 @@ Następujące atrybuty dotyczą elementów członkowskich danych w klasie, klasa
 |[db_table](db-table.md)|Zostanie otwarty tabeli OLE DB.|
 |[defaultbind](defaultbind.md)|Wskazuje pojedynczą, które można powiązać właściwość, która najlepiej reprezentuje obiekt.|
 |[displaybind](displaybind.md)|Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak możliwa do powiązania.|
-|[id](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
+|[identyfikator](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
 |[range](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
 |[rdx](rdx.md)|Tworzy klucz rejestru lub modyfikuje istniejący klucz rejestru.|
 |[readonly](readonly-cpp.md)|Zabrania przypisania element członkowski danych.|
 |[requestedit](requestedit.md)|Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomień.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

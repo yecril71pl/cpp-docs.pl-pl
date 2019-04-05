@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-ms.openlocfilehash: 1fb5164b9e744175f60c920a1d92278e9d5213f2
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: f46c6f493ae41570c75c384fcc836707faeab99f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264661"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023753"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Buforowanie zasobów i usługi OLE DB
 
@@ -28,6 +28,6 @@ Dostawcy połączenia ze zdalną bazą danych, które może wykryć, czy połąc
 
 Na koniec rejestracji automatycznej transakcji ogólnie nie działa, chyba że jest stosowana na tym samym poziomie, występujący buforowanie. Dostawcy, obsługujące rejestracji automatycznej transakcji powinien obsługiwać wyłączenie tej rejestracji przez udostępnianie właściwości DBPROP_INIT_OLEDBSERVICES i wyłączenie rejestracji, jeśli nie jest zaznaczona DBPROPVAL_OS_TXNENLISTMENT.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)

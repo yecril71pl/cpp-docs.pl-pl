@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: przewijanie (ODBC)'
+title: 'Zestaw rekordów: Przewijanie (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets [C++], end of
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579610"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040059"
 ---
-# <a name="recordset-scrolling-odbc"></a>Zestaw rekordów: przewijanie (ODBC)
+# <a name="recordset-scrolling-odbc"></a>Zestaw rekordów: Przewijanie (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -32,7 +32,7 @@ W tym temacie opisano:
 
 ##  <a name="_core_scrolling_from_one_record_to_another"></a> Przewijanie z jednego rekordu do innego
 
-Klasa `CRecordset` zapewnia `Move` funkcji elementów członkowskich do przewijania w zestawie rekordów. Te funkcje przenieść bieżący rekord zestawów wierszy. Jeśli zaimplementowano zbiorcze pobieranie z wiersza, `Move` operacja powoduje przeniesienie zestawu rekordów według rozmiaru zestawu wierszy. Jeśli nie zaimplementowano wiersz zbiorcze pobieranie wywołanie `Move` funkcji powoduje przeniesienie zestaw rekordów w jednym rekordzie każdorazowo. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Klasa `CRecordset` zapewnia `Move` funkcji elementów członkowskich do przewijania w zestawie rekordów. Te funkcje przenieść bieżący rekord zestawów wierszy. Jeśli zaimplementowano zbiorcze pobieranie z wiersza, `Move` operacja powoduje przeniesienie zestawu rekordów według rozmiaru zestawu wierszy. Jeśli nie zaimplementowano wiersz zbiorcze pobieranie wywołanie `Move` funkcji powoduje przeniesienie zestaw rekordów w jednym rekordzie każdorazowo. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Podczas przechodzenia przez zestaw rekordów, usuniętych rekordów nie mogły zostać pominięte. Aby uzyskać więcej informacji, zobacz [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) funkcja elementu członkowskiego.
@@ -89,11 +89,11 @@ rsCustSet.MoveFirst( );
 
 `IsEOF` Zwraca wartość różną od zera, jeśli zestaw rekordów jest umieszczany po ostatnim rekordzie. `IsBOF` Zwraca wartość różną od zera, jeśli zestaw rekordów jest umieszczony przed pierwszym rekordzie (przed wszystkie rekordy). W obu przypadkach nie istnieje bieżący rekord do wykonywania operacji. Jeśli wywołasz `MovePrev` podczas `IsBOF` jest już wartość TRUE, lub zadzwoń `MoveNext` podczas `IsEOF` już ma wartość TRUE, w ramach zgłasza `CDBException`. Można również użyć `IsBOF` i `IsEOF` pod kątem pusty zestaw rekordów.
 
-Aby uzyskać więcej informacji na temat rekordów nawigacji zobacz [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Aby uzyskać więcej informacji na temat rekordów nawigacji zobacz [zestaw rekordów: Zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="_core_when_scrolling_is_supported"></a> Podczas przewijania jest obsługiwana
 
-Pierwotnie zaprojektowane SQL podane tylko do przodu przewijania, ale ODBC rozszerza możliwości przewijania. Dostępny poziom obsługi przewijanie zależy od sterowników ODBC, jeśli aplikacja działa przy użyciu sterowniku stopień zgodności ze standardem interfejsu API ODBC, oraz tego, czy Biblioteka kursorów ODBC jest ładowany do pamięci. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Pierwotnie zaprojektowane SQL podane tylko do przodu przewijania, ale ODBC rozszerza możliwości przewijania. Dostępny poziom obsługi przewijanie zależy od sterowników ODBC, jeśli aplikacja działa przy użyciu sterowniku stopień zgodności ze standardem interfejsu API ODBC, oraz tego, czy Biblioteka kursorów ODBC jest ładowany do pamięci. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [ODBC: ODBC — Biblioteka kursorów](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!TIP]
 >  Można kontrolować, czy ma być używana z biblioteki kursorów. Zobacz *bUseCursorLib* i *dwOptions* parametry [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open).
@@ -101,9 +101,9 @@ Pierwotnie zaprojektowane SQL podane tylko do przodu przewijania, ale ODBC rozsz
 > [!NOTE]
 >  W przeciwieństwie do klas MFC DAO klasach MFC ODBC nie udostępniają zestaw `Find` funkcje do lokalizowania dalej (lub wcześniejszym) rekord, który spełnia określone kryteria.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
 [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
-[Zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Zestaw rekordów: Filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

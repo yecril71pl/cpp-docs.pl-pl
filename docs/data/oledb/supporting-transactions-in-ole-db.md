@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 647112f480f6470f7d893ecd1d5177618dc23708
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3c71200e39641a69443599e0445f89f469aceeda
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556273"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038751"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Obsługa transakcji w OLE DB
 
@@ -22,11 +22,11 @@ A [transakcji](../../data/transactions-mfc-data-access.md) to sposób grupowania
 
 OLE DB obsługuje transakcji z trzech poniższych metod:
 
-- [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [Metody ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))
+- [Metody ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [ITransaction::Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
 
 ## <a name="relationship-of-sessions-and-transactions"></a>Relacja między sesjami i transakcji
 
@@ -48,12 +48,12 @@ Wywoływanie `ITransaction::Commit` lub `ITransaction::Abort` kończy się trans
 
 ## <a name="nested-transactions"></a>Transakcje zagnieżdżone
 
-A [zagnieżdżonych transakcji](https://docs.microsoft.com/previous-versions/windows/desktop/ms716985(v=vs.85)) po uruchomieniu nowej transakcji lokalnej, gdy w sesji istnieje już aktywna transakcja. Nowa transakcja jest uruchomiony jako transakcji zagnieżdżonej poniżej bieżącej transakcji. Jeśli dostawca nie obsługuje transakcji zagnieżdżonych, wywołanie `StartTransaction` gdy istnieje już aktywna transakcja sesji zwraca XACT_E_XTIONEXISTS.
+A [zagnieżdżonych transakcji](/previous-versions/windows/desktop/ms716985(v=vs.85)) po uruchomieniu nowej transakcji lokalnej, gdy w sesji istnieje już aktywna transakcja. Nowa transakcja jest uruchomiony jako transakcji zagnieżdżonej poniżej bieżącej transakcji. Jeśli dostawca nie obsługuje transakcji zagnieżdżonych, wywołanie `StartTransaction` gdy istnieje już aktywna transakcja sesji zwraca XACT_E_XTIONEXISTS.
 
 ## <a name="distributed-transactions"></a>Transakcje rozproszone
 
 Transakcja rozproszona jest transakcji, która aktualizuje rozproszonych danych; oznacza to, że dane na więcej niż jednym komputerze sieciowym. Jeśli chcesz obsługiwać transakcji za pośrednictwem systemu rozproszonego, należy użyć programu .NET Framework, a nie Obsługa transakcji w OLE DB.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

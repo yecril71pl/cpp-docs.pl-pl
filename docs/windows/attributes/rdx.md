@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 0b21e94ce3c54c0234dd7883aac3ef5cadbbc009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677880"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023883"
 ---
 # <a name="rdx"></a>rdx
 
@@ -25,7 +25,7 @@ Tworzy klucz rejestru lub modyfikuje istniejący klucz rejestru.
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*klawisz*<br/>
 Nazwa klucza, który ma zostać utworzony lub otwarty.
 
 *VALUENAME*<br/>
@@ -46,7 +46,7 @@ Ten atrybut może być używany w połączeniu z [coclass](coclass.md), [progid]
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa** lub **struktury** elementu członkowskiego|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa** lub **struktury** elementu członkowskiego|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

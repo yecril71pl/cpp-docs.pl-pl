@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: f66c6247aba92a1528489dcf689239c9341b7d2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560020"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029281"
 ---
 # <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
 
@@ -44,9 +44,9 @@ W poniższych sekcjach wymieniono wszystkie funkcje wewnętrzne, które są dost
 
 - [Alfabetyczna lista funkcji wewnętrznych](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja asemblera ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Microsoft Macro Assembler — dokumentacja](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)
+[Odwołanie do asemblera ARM](../assembler/arm/arm-assembler-reference.md)<br/>
+[Microsoft Macro Assembler — odwołanie](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Odwołanie do biblioteki C-Run-Time](../c-runtime-library/c-run-time-library-reference.md)

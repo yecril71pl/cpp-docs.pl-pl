@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: 9bc083b78cd0c3bd39241de2815580c9eca6a207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654444"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026659"
 ---
 # <a name="implementationonly"></a>implementation_only
 **Określonego język C++**
@@ -37,7 +37,7 @@ Jeśli ten atrybut jest określony, zawartość nagłówka .tli znajduje się w 
 
 **KONIEC określonego języka C++**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

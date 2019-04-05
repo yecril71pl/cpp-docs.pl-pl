@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607275"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023870"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -28,7 +28,7 @@ Zostanie otwarty tabeli OLE DB.
 *db_table*<br/>
 Ciąg określający nazwę tabeli bazy danych (na przykład "produkty").
 
-*Nazwa*<br/>
+*nazwa*<br/>
 (Opcjonalnie) Nazwa uchwyt, używanej do pracy z tabeli. Należy określić ten parametr, aby zwrócić więcej niż jeden wiersz wyników. **db_table —** generuje zmienna o określonej *nazwa* który może służyć do przechodzenia zestawu wierszy lub wykonywać wiele zapytań akcji.
 
 *source_name*<br/>
@@ -68,13 +68,13 @@ Na przykład ten atrybut używany w aplikacji, zobacz przykłady [AtlAgent](http
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)

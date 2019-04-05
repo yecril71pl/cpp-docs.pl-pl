@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: c37d9e67424e8ef5082ac7129956f8577d9c745e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787406"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038698"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Konwersja boxing (C + +/ CLI i C + +/ CX)
 
@@ -82,11 +82,11 @@ Pakowania, jak i rozpakowania Włącz typy wartości powinien być traktowany ja
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Instrukcje: jawne żądanie konwersji boxing](../dotnet/how-to-explicitly-request-boxing.md)
+- [Instrukcje: Jawne żądanie konwersji Boxing](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Instrukcje: używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Instrukcje: Używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Instrukcje: rozpakowywanie](../dotnet/how-to-unbox.md)
+- [Instrukcje: Rozpakowywanie](../dotnet/how-to-unbox.md)
 
 - [Konwersje standardowe i niejawne konwersje boxing](../dotnet/standard-conversions-and-implicit-boxing.md)
 
@@ -188,6 +188,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

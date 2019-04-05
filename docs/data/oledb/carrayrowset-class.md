@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330986"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040241"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset — Klasa
 
@@ -154,8 +154,8 @@ Zawiera liczbę wierszy w zestawie wierszy, które już przeczytana.
 ULONG m_nRowsRead;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[CRowset, klasa](../../data/oledb/crowset-class.md)
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasa CRowset](../../data/oledb/crowset-class.md)

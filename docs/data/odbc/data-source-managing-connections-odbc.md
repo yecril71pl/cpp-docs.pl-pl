@@ -1,5 +1,5 @@
 ---
-title: 'Źródło danych: zarządzanie połączeniami (ODBC)'
+title: 'Źródło danych: Zarządzanie połączeniami (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], multiuser environments
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568509"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041166"
 ---
-# <a name="data-source-managing-connections-odbc"></a>Źródło danych: zarządzanie połączeniami (ODBC)
+# <a name="data-source-managing-connections-odbc"></a>Źródło danych: Zarządzanie połączeniami (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -72,7 +72,7 @@ Przy użyciu pliku programu Excel jako źródła danych i należy skonfigurować
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> Praca w środowisku wielu użytkowników
 
-Jeśli wielu użytkowników jest połączonych ze źródłem danych, mogą zmieniać dane, podczas gdy Ty manipulujesz w zestawach rekordów. Podobnie zmiany mogą mieć wpływ na zestawy rekordów innych użytkowników. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).
+Jeśli wielu użytkowników jest połączonych ze źródłem danych, mogą zmieniać dane, podczas gdy Ty manipulujesz w zestawach rekordów. Podobnie zmiany mogą mieć wpływ na zestawy rekordów innych użytkowników. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).
 
 ##  <a name="_core_generalizing_the_connection_string"></a> Uogólnianie parametrów połączenia
 
@@ -136,8 +136,8 @@ Można użyć ponownie `CDatabase` obiektu po odłączeniu od niego, czy są uż
 
 1. Zamiast zniszczenia obiektu, wywołaj jej `OpenEx` lub `Open` ponownie funkcja elementu członkowskiego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[Źródło danych: określanie schematu źródła danych (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[Źródło danych: Określanie schematu źródła danych (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [Klasa CRecordset](../../mfc/reference/crecordset-class.md)

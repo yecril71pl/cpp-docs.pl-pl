@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 04c0c8d9e9d686d7b9b9ee8e7d47594cf015cbad
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: c5446e5e84491ff7d736ce3b3af49dacd471c010
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787408"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025790"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>New (nowe gniazdo w vtable) (C + +/ CLI i C + +/ CX)
 
@@ -103,8 +103,8 @@ D::g() called
 E::f() called
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
 
-[Specyfikatory przesłonięć](override-specifiers-cpp-component-extensions.md)
+[Specyfikatory zastąpienia](override-specifiers-cpp-component-extensions.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: d00b9036b216e3425615478d6bf92d239a3637d1
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 7151d897469993b2f9be3575eb11a08844af3c69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556702"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028363"
 ---
 # <a name="updating-rowsets"></a>Aktualizowanie zestawów wierszy
 
 Operacja podstawowej bazy danych jest aktualizacji lub zapisać danych do magazynu danych. W OLE DB, jest prosty mechanizm aktualizacji: aplikacja odbiorcy ustawia wartości składników powiązane dane, a następnie zapisuje te wartości, do zestawu wierszy; następnie konsumenta żądań, czy dostawca zaktualizuj magazyn danych.
 
-Klientów można wykonać następujące rodzaje aktualizacje dla zestawu wierszy danych: Ustawianie wartości kolumn w wierszu, wstawienie wiersza i usuwanie wiersza. Wykonywanie takich operacji, klasa szablonu OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) interfejs i zastępuje następujące metody interfejsu:
+Klientów można wykonać następujące rodzaje aktualizacje dla zestawu wierszy danych: Ustawianie wartości kolumn w wierszu, wstawienie wiersza i usuwanie wiersza. Wykonywanie takich operacji, klasa szablonu OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) interfejs i zastępuje następujące metody interfejsu:
 
 - [SetData](../../data/oledb/crowset-setdata.md) zmiany kolumny wartości w wierszu zestawu wierszy; bazom polecenia aktualizacji programu SQL.
 
@@ -203,8 +203,8 @@ Na przykład jeśli pierwszy `Update` wywołań brakuje powyższy kod, wiersza 1
 
 Na koniec głównym celem Odrocz zmian jest aby można było cofnąć ich. Wywoływanie [CRowset::Undo](../../data/oledb/crowset-undo.md) wycofanie stan zmiany w lokalnej pamięci podręcznej do stanu magazynu danych przed wszelkie oczekujące zmiany zostały wprowadzone. Ważne jest, aby pamiętać, że `Undo` nie przywracanie kopii stanu lokalnej pamięci podręcznej w jednym kroku (stan przed ostatnią zmianę); zamiast tego powoduje wyczyszczenie lokalnej pamięci podręcznej dla tego wiersza. Ponadto `Undo` dotyczy tylko bieżącego wiersza.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
-[CRowset, klasa](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>
+[Klasa CRowset](../../data/oledb/crowset-class.md)<br/>
+[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

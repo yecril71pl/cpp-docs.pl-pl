@@ -7,16 +7,16 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 2097ec50eca68cbe5735d30e772644552ab0df3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329023"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023714"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Emituje x64 rozszerzona wersja Convert numerem zmiennopozycyjna pojedynczej precyzji obcinanie do 64-bitowa liczba całkowita (`cvttss2si`) instrukcji.
 
@@ -85,9 +85,9 @@ int main()
 101
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__m128](../cpp/m128.md)<br/>
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

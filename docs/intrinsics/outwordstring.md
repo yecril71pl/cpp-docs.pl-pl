@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: df7ca6ddbb80c21397beb91b8e671f248f2a1d9c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326293"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030371"
 ---
 # <a name="outwordstring"></a>__outwordstring
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje `rep outsw` instrukcji, która wysyła `Count` słów, zaczynając od `Buffer` z portu We/Wy, określony przez `Port`.
 
@@ -39,7 +39,7 @@ void __outwordstring(
 *Bufor*<br/>
 [in] Wskaźnik do danych, które zostaną wysłane do określonego portu.
 
-*Liczba*<br/>
+*Licznik*<br/>
 [in] Liczbę wyrazów do wysłania.
 
 ## <a name="requirements"></a>Wymagania
@@ -54,8 +54,8 @@ void __outwordstring(
 
 Ta procedura jest dostępna wyłącznie jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

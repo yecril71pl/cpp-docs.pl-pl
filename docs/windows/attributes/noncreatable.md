@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: 716cc741de92be73fc2fcdda6b019de736387efd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a10d93650c0ae564019a09b34c3a604d12327998
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578363"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039994"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -55,14 +55,14 @@ class CMyClass : public A
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|**coclass**|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

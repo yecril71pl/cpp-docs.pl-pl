@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654771"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026204"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Alfabetyczna lista funkcji wewnętrznych
 
@@ -69,35 +69,35 @@ W poniższych sekcjach opisano specyficzne dla firmy Microsoft funkcje wewnętrz
 
 [__int2c](../intrinsics/int2c.md)
 
-[Funkcje wewnętrzne _InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)
+[_InterlockedAdd — funkcje wewnętrzne](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
-[Funkcje wewnętrzne _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
+[Funkcje wewnętrzne _interlockedand](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[funkcje wewnętrzne _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[funkcje wewnętrzne _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[Funkcje wewnętrzne _interlockedcompareexchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
-[Funkcje wewnętrzne _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
+[_InterlockedCompareExchangePointer Intrinsic Functions](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)
+[_InterlockedDecrement Intrinsic Functions](../intrinsics/interlockeddecrement-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)
+[Funkcje wewnętrzne _interlockedexchange](../intrinsics/interlockedexchange-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
+[_InterlockedExchangeAdd — funkcje wewnętrzne](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
+[Funkcje wewnętrzne _interlockedexchangepointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)
+[Funkcje wewnętrzne _interlockedincrement](../intrinsics/interlockedincrement-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)
+[_InterlockedOr Intrinsic Functions](../intrinsics/interlockedor-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)
+[Funkcje wewnętrzne _interlockedxor](../intrinsics/interlockedxor-intrinsic-functions.md)
 
 [__invlpg](../intrinsics/invlpg.md)
 
@@ -273,6 +273,6 @@ W poniższych sekcjach opisano specyficzne dla firmy Microsoft funkcje wewnętrz
 
 [__writemsr](../intrinsics/writemsr.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

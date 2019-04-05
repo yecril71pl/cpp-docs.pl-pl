@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: 9c486921e41732ef7736ca5b62b44a86010dcf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621875"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041023"
 ---
 # <a name="llrshift"></a>__ll_rshift
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Przenosi wartość 64-bitową, określonym przez pierwszy parametr w prawo o liczbę bitów określoną w drugim parametrze.
 
@@ -89,9 +89,9 @@ fffffffffffffff0
 
 **Uwaga** Jeśli `_ull_rshift` było używane, BITEM wartość przesunięte w prawo byłby zero, dzięki czemu oczekiwany wynik może nie zostały uzyskane w przypadku wartości ujemnej.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
 [__ll_lshift](../intrinsics/ll-lshift.md)<br/>
