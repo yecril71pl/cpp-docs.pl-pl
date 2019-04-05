@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa67d45dfc0fadd300caeaaeb8a7c25bb1c38bcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667925"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023571"
 ---
 # <a name="method-attributes"></a>Atrybuty metody
 
@@ -20,7 +20,7 @@ Następujące atrybuty dotyczą metod w klasie, klasa coclass lub interfejs.
 |---------------|-----------------|
 |[bindable](bindable.md)|Wskazuje, że właściwość obsługuje powiązanie danych.|
 |[call_as](call-as.md)|Włącza funkcję nonremotable mają być mapowane na funkcję zdalną.|
-|[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
+|[niestandardowy](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
 |[db_column](db-column.md)|Wiąże określonej kolumny zestawu wierszy.|
 |[db_command](db-command.md)|Tworzy polecenie OLE DB.|
 |[db_param](db-param.md)|Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wejściowych lub wyjściowych, a rozgranicza zmiennej.|
@@ -35,7 +35,7 @@ Następujące atrybuty dotyczą metod w klasie, klasa coclass lub interfejs.
 |[helpstringcontext](helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku hlp lub chm.|
 |[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
 |[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
-|[id](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
+|[identyfikator](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
 |[immediatebind](immediatebind.md)|Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanych z danymi.|
 |[in](in-cpp.md)|Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.|
 |[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
@@ -52,6 +52,6 @@ Następujące atrybuty dotyczą metod w klasie, klasa coclass lub interfejs.
 |[synchronize](synchronize.md)|Synchronizuje dostęp do metody docelowej.|
 |[vararg](vararg.md)|Określa, że funkcja przyjmuje zmienną liczbę argumentów.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

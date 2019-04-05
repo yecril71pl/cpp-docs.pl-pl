@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556650"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027208"
 ---
 # <a name="interface-attributes"></a>Atrybuty interfejsu
 
@@ -19,7 +19,7 @@ Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interfa
 |Atrybut|Opis|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
-|[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
+|[niestandardowy](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
 |[dispinterface](dispinterface.md)|Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.|
 |[dual](dual.md)|Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.|
 |[export](export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|
@@ -50,6 +50,6 @@ Musisz przestrzegać tych reguł określających interfejs:
 
 Podczas określania nie [uuid](uuid-cpp-attributes.md) atrybutu i użycie tej samej nazwy interfejsu, w projektach innego atrybutu, ten sam identyfikator GUID jest generowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

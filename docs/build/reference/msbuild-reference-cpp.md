@@ -3,12 +3,12 @@ title: Odwołanie do MSBuild dla projektów języka C++ w programie Visual Studi
 ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
-ms.openlocfilehash: 854dc0554c327f191b4b4b9694548cdb9983c5f8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823652"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024702"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Odwołanie do MSBuild dla projektów języka C++
 
@@ -38,6 +38,6 @@ Opisuje pliki źródłowe i inne elementy, które można dodać do projektu prog
 [Odwołanie do właściwości projektu Visual Studio](property-pages-visual-cpp.md)<br/>
 Dokumentacja dotycząca właściwości projektu, które są ustawiane w środowisku IDE programu Visual Studio.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja kompilacji w języku C/C++](c-cpp-building-reference.md)
+[Odwołanie kompilacji C/C++](c-cpp-building-reference.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 4fb1f9e65210ca9f9e38afd6fc13e01c7eb8f045
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325571"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024858"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Przenosi ilość 128-bitowego, reprezentowane jako dwie ilości 64-bitowych `LowPart` i `HighPart`, w lewo o liczbę bitów określoną przez `Shift` i zwraca wysokiej 64 bity wyniku.
 
@@ -37,7 +37,7 @@ unsigned __int64 __shiftleft128(
 *HighPart*<br/>
 [in] Wysoka 64 bity ilość 128-bitowe przesunięcie.
 
-*SHIFT*<br/>
+*Shift*<br/>
 [in] Liczba bitów, aby przesunąć.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -94,9 +94,9 @@ int main()
 0x100000000000000001 >> 1 = 0x080000000000000000
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__shiftright128](../intrinsics/shiftright128.md)<br/>
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

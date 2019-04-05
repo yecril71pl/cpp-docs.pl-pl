@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)'
+title: 'Zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512375"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024611"
 ---
-# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
 > [!NOTE]
->  Możesz teraz dodać rekordy, w trybie zbiorczym wydajniej. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dodawanie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
+>  Możesz teraz dodać rekordy, w trybie zbiorczym wydajniej. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Dodawanie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Migawki można aktualizować zestawów dynamicznych zezwala na dodawanie, edytowanie (aktualizacja) i usuwania rekordów. W tym temacie opisano:
 
@@ -45,7 +45,7 @@ Migawki można aktualizować zestawów dynamicznych zezwala na dodawanie, edytow
 
 - [Jak usunąć rekord](#_core_deleting_a_record_from_a_recordset).
 
-Aby uzyskać więcej informacji na temat sposobu aktualizacji są przenoszone poza, a aktualizacje są wyświetlane na innych użytkowników, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Normalnie Jeśli dodawanie, edytowanie lub usuwanie rekordu zestawu rekordów ulega zmianie źródła danych natychmiast. Można zamiast tego partii grupy powiązane aktualizacje na transakcji. Jeśli transakcja jest w toku, aktualizacja nie ostatecznie do czasu zatwierdzania transakcji. Dzięki temu można przejąć lub wycofać zmiany. Aby uzyskać informacje dotyczące transakcji, zobacz [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).
+Aby uzyskać więcej informacji na temat sposobu aktualizacji są przenoszone poza, a aktualizacje są wyświetlane na innych użytkowników, zobacz [zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Normalnie Jeśli dodawanie, edytowanie lub usuwanie rekordu zestawu rekordów ulega zmianie źródła danych natychmiast. Można zamiast tego partii grupy powiązane aktualizacje na transakcji. Jeśli transakcja jest w toku, aktualizacja nie ostatecznie do czasu zatwierdzania transakcji. Dzięki temu można przejąć lub wycofać zmiany. Aby uzyskać informacje dotyczące transakcji, zobacz [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).
 
 W poniższej tabeli przedstawiono opcje dostępne dla zestawów rekordów przy użyciu właściwości inną aktualizację.
 
@@ -102,9 +102,9 @@ Można dodać nowych rekordów do zestawu rekordów, jeśli jego [CanAppend](../
 
 1. Wywołanie obiektu zestawu rekordów `Update` funkcja elementu członkowskiego.
 
-   `Update` Wykonuje dodawanie, pisząc nowy rekord w źródle danych. Dla informacji na temat się dzieje w przypadku awarii do wywołania `Update`, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` Wykonuje dodawanie, pisząc nowy rekord w źródle danych. Dla informacji na temat się dzieje w przypadku awarii do wywołania `Update`, zobacz [zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
-Aby uzyskać informacje dotyczące sposobu dodawania rejestruje działania i kiedy dodano rekordy są widoczne w twoim zestawie rekordów, zobacz [zestaw rekordów: jak działają funkcje AddNew, Edit i Usuń pracy (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
+Aby uzyskać informacje dotyczące sposobu dodawania rejestruje działania i kiedy dodano rekordy są widoczne w twoim zestawie rekordów, zobacz [zestaw rekordów: Jak działają funkcje AddNew, edytowanie i usuwanie pracy (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
 
 Poniższy przykład pokazuje, jak dodać nowy rekord:
 
@@ -147,7 +147,7 @@ Jeśli możesz edytować istniejące rekordy w zestawie rekordów [CanUpdate](..
 
 1. Wywołanie obiektu zestawu rekordów `Update` funkcja elementu członkowskiego.
 
-   `Update` kończy edycji, pisząc zmienionego rekordu w źródle danych. Dla informacji na temat się dzieje w przypadku awarii do wywołania `Update`, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` kończy edycji, pisząc zmienionego rekordu w źródle danych. Dla informacji na temat się dzieje w przypadku awarii do wywołania `Update`, zobacz [zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 Po zakończeniu edycji rekordu, edytowany rekord pozostaje bieżącego rekordu.
 
@@ -197,9 +197,9 @@ rsStudent.Delete( );
 rsStudent.MoveNext( );
 ```
 
-Aby uzyskać więcej informacji o skutkach `AddNew`, `Edit`, i `Delete` funkcji elementów członkowskich, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Aby uzyskać więcej informacji o skutkach `AddNew`, `Edit`, i `Delete` funkcji elementów członkowskich, zobacz [zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Zestaw rekordów: Blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

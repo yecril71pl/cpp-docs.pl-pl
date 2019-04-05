@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 62249bff7a278963ea67b2d2015ff52f22fcfc85
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562929"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026282"
 ---
 # <a name="menu-commands-c"></a>Polecenia menu (C++)
 
@@ -33,11 +33,11 @@ Poniższe informacje są organizowane według **Menu** właściwości, które po
 |**BREAK**|Może być jedną z następujących wartości:<br/>  - **Brak**: Bez przerwy. Domyślnie włączone.<br/>  - **Kolumna**: Statyczne menu ta wartość umieszcza polecenie menu w nowym wierszu.<br/>      Ta wartość wyskakujących menu umieszcza polecenia menu w nową kolumnę z nie jednoznaczny kolumn.<br/>      Ustawienie tej właściwości ma wpływ na wygląd menu tylko w czasie wykonywania, nie Edytor menu.<br />   - **Pasek**: Taki sam jak **kolumny** z wyjątkiem sytuacji, menu podręczne tę wartość oddziela nowej kolumny od starego kolumnę z pionowym wierszem.<br/>      Ustawienie tej właściwości określa wygląd menu tylko w czasie wykonywania, nie w **Edytor Menu**.|
 |**Podpis**|Tekst etykiety polecenia menu (Nazwa menu). Aby utworzyć kolekcję liter w podpisie menu poleceń klawisz dostępu, należy poprzedzić handlowe "i" (&).|
 |**Zaznaczone**|Jeśli **True**, polecenia menu jest domyślnie zaznaczone. Wpisz: **wartość logiczna**. Wartość domyślna: **FALSE**.|
-|**Włączone**|Jeśli **False**, element menu jest wyłączona.|
+|**Enabled**|Jeśli **False**, element menu jest wyłączona.|
 |**Wyszarzony**|Jeśli **True**, polecenia menu jest początkowo wygaszone i nieaktywnych. Wpisz: **wartość logiczna**. Wartość domyślna: **FALSE**.|
 |**Pomoc**|Wyrównuje elementu menu z prawej strony. Wartość domyślna: **FALSE**.<br/><br/>Na przykład **pomocy** polecenia menu jest zawsze po prawej stronie we wszystkich aplikacjach Windows. Jeśli ustawisz tę właściwość, element menu, ten element pojawi się po bardzo prawej stronie i na końcu menu. Dotyczy to elementów najwyższego poziomu.|
 |**Identyfikator**|Symbol zdefiniowany w pliku nagłówkowym. Wpisz: **Symbol**, **całkowitą**, lub **ciąg w cudzysłowach**.<br/><br/>Może używać dowolny symbol, który jest powszechnie dostępne we wszystkich edytory, nawet jeśli [okno właściwości](/visualstudio/ide/reference/properties-window) nie zawiera listy rozwijanej, wybierz z.|
-|**Popup**|Jeśli **True**, polecenia menu jest menu podręczne. Wpisz: **wartość logiczna**. Wartość domyślna: **Wartość true,** najwyższego poziomu menu na pasku menu, w przeciwnym razie **False**.|
+|**Okno podręczne**|Jeśli **True**, polecenia menu jest menu podręczne. Wpisz: **wartość logiczna**. Wartość domyślna: **Wartość true,** najwyższego poziomu menu na pasku menu, w przeciwnym razie **False**.|
 |**wiersz**|Zawiera tekst wyświetlany na pasku stanu wyróżnionego to polecenie menu. Tekst jest umieszczany w tabeli ciągów zawierających ten sam identyfikator jak polecenie menu.<br/><br/>Ta właściwość jest dostępna dla wszystkich typów projektów, ale funkcje środowiska wykonawczego jest określone MFC.|
 |**Wyjustuj do prawej do lewej**|Po prawej stronie uzasadnia polecenia menu na pasku menu w czasie wykonywania. Wpisz: **wartość logiczna**. Wartość domyślna: **FALSE**.|
 |**Od prawej do lewej kolejności**|Umożliwia polecenia menu wyświetlić od prawej do lewej, gdy interfejs jest zlokalizowane dla dowolnego języka, który odczytuje prawej do lewej, takich jak hebrajskiego i arabskiego.|
@@ -86,7 +86,7 @@ W projekcie w języku C++ klawisza dostępu (Mnemonik, który umożliwia użytko
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Edytor menu](../windows/menu-editor.md)<br/>
 

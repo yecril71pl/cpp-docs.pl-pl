@@ -1,19 +1,19 @@
 ---
-title: Błąd kompilatora C3496
+title: Compiler Error C3496
 ms.date: 11/04/2016
 f1_keywords:
 - C3496
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: c0075bf0e3749966a5e5b9fcd775b5d73171bf17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 025498f3fe244916cd0a06e36feee6fdb532acc6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599423"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026702"
 ---
-# <a name="compiler-error-c3496"></a>Błąd kompilatora C3496
+# <a name="compiler-error-c3496"></a>Compiler Error C3496
 
 "this" jest zawsze przechwytywany przez wartość: "&" jest ignorowany
 
@@ -40,6 +40,6 @@ class C
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)

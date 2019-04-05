@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: zakładki i położenia bezwzględne (ODBC)'
+title: 'Zestaw rekordów: Zakładki i położenia bezwzględne (ODBC)'
 ms.date: 11/04/2016
 f1_keywords:
 - SetAbsolutePosition
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500945"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023792"
 ---
-# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Zestaw rekordów: zakładki i położenia bezwzględne (ODBC)
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Zestaw rekordów: Zakładki i położenia bezwzględne (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -80,8 +80,8 @@ Aby przenieść bieżący wskaźnik rekordu przy użyciu położenie bezwzględn
 > [!NOTE]
 >  Położenie bezwzględne rekordu jest potencjalnie zawodnych. Jeśli użytkownik usuwa rekordy w zestawie porządkowym kolejnych rekord zmiany. Zakładki są zalecaną metodą przeniesienie bieżącego rekordu. Aby uzyskać więcej informacji, zobacz [zakładki w MFC ODBC](#_core_bookmarks_in_mfc_odbc).
 
-Aby uzyskać więcej informacji na temat rekordów nawigacji zobacz [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Aby uzyskać więcej informacji na temat rekordów nawigacji zobacz [zestaw rekordów: Przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)

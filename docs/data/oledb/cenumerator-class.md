@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a54770e3c5c2bc3805024b237f9875bded1ab26
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58772387"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030183"
 ---
 # <a name="cenumerator-class"></a>Klasa CEnumerator
 
@@ -50,9 +50,9 @@ class CEnumerator :
 
 |||
 |-|-|
-|[Znajdź](#find)|Wyszukuje dostępnych dostawców (źródła danych), wyszukiwania dla jednej z określoną nazwą.|
+|[Znajdowanie](#find)|Wyszukuje dostępnych dostawców (źródła danych), wyszukiwania dla jednej z określoną nazwą.|
 |[GetMoniker](#getmoniker)|Pobiera `IMoniker` interfejsu dla bieżącego rekordu.|
-|[Otwórz](#open)|Zostanie otwarty modułu wyliczającego.|
+|[Otwarcie](#open)|Zostanie otwarty modułu wyliczającego.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -128,15 +128,15 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 *pClsid*<br/>
 [in] Wskaźnik do `CLSID` modułu wyliczającego.
 
-*enumerator*<br/>
+*Moduł wyliczający*<br/>
 [in] Odwołanie do modułu wyliczającego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa HRESULT.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)

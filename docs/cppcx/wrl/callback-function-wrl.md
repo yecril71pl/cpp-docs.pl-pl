@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: e5cccd337514df34729fc916900a7b16a15596fc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786802"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041393"
 ---
 # <a name="callback-function-wrl"></a>Funkcja wywołania zwrotnego (WRL)
 
@@ -227,13 +227,13 @@ Parametr szablonu, który określa typ ósmego argumentu metody wywołania zwrot
 *TArg9*<br/>
 Parametr szablonu, który określa typ dziewiątego argumentu metody wywołania zwrotnego.
 
-*callback*<br/>
+*wywołanie zwrotne*<br/>
 Obiekt, który reprezentuje obiekt wywołania zwrotnego i jej funkcji członkowskiej.
 
 *object*<br/>
 Obiekt, którego funkcja członkowska jest wywoływana, gdy wystąpi zdarzenie.
 
-*— Metoda*<br/>
+*— metoda*<br/>
 Funkcja elementu członkowskiego do wywołania po wystąpieniu zdarzenia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -250,6 +250,6 @@ Podstawą obiektu delegowanego musi być `IUnknown`, a nie `IInspectable`.
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft::WRL — Przestrzeń nazw](microsoft-wrl-namespace.md)

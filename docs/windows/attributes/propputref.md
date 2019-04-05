@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: 0ebf39be6d83e7c5a64ad29f34f9accf0743dbf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e471e467c55e0b8a17be96fd1bcb3cd24cfafe06
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551284"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031832"
 ---
 # <a name="propputref"></a>propputref
 
@@ -37,16 +37,16 @@ Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe *
 
 |||
 |-|-|
-|**Dotyczy**|Metoda|
+|**Informacje zawarte w tym artykule dotyczą**|Metoda|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|`propget`, `propput`|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [propget](propget.md)<br/>
 [propput](propput.md)

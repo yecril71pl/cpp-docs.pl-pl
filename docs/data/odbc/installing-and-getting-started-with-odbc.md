@@ -5,12 +5,12 @@ helpviewer_keywords:
 - installing ODBC
 - ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
-ms.openlocfilehash: 8ebf164fc51d50c45313654a2259126eef5afeb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112593aac74a15279f605c75a52fb3eec6750576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484256"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028655"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalowanie ODBC i wprowadzenie do ODBC
 
@@ -22,6 +22,6 @@ Poniższe tematy pomocy w przypadku zainstalowania składników, które są potr
 
 - [Ponowna dystrybucja składników ODBC wśród klientów](../../data/odbc/odbc-basics.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

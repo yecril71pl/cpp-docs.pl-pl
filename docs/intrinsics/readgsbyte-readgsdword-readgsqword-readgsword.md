@@ -12,16 +12,16 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: fee7101ab72b9a0aecffb8ab8365dda1ec52d170
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: a677b96975e0d2adcc7e548992a12bd597bea6a3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220416"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031498"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczyt pamięci z lokalizacji określonej przez przesunięcie względem początku segmentu GS.
 
@@ -66,9 +66,9 @@ Zawartość pamięci bajt, wyraz, podwójne słowo lub quadword (co zostało wsk
 
 Te procedury są dostępne tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

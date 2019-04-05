@@ -1,5 +1,5 @@
 ---
-title: 'MFC: używanie klas baz danych bez dokumentów i widoków'
+title: 'MFC: Używanie klas baz danych bez dokumentów i widoków'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC applications [C++], without views
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: 558917f1a1485f1a886356b3c272842579f6b03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602218"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024637"
 ---
-# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: używanie klas baz danych bez dokumentów i widoków
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Używanie klas baz danych bez dokumentów i widoków
 
 Czasami nie można używać w ramach architektury dokument/widok w aplikacjach baz danych. W tym temacie opisano:
 
@@ -59,7 +59,7 @@ Kreator aplikacji MFC ma kilka opcji **obsługi bazy danych wybierz**, które s�
 |**Widok bazy danych bez obsługi plików**|Pochodną `CRecordView`|Zapewnia Obsługa dokumentów, ale nie obsługuje serializacji. Dokumentu można zapisać zestawu rekordów i koordynowanie wielu widoków; nie obsługuje serializacji lub **New**, **Otwórz**, **Zapisz**, i **Zapisz jako** poleceń. Zobacz [aplikacje z minimalnym dokumentami](#_core_applications_with_minimal_documents). Jeśli dodasz widok bazy danych, należy określić źródło danych.<br /><br /> Zawiera pliki nagłówkowe bazy danych, bibliotek DLL, widoku rekordu i zestawu rekordów. (Dostępne tylko dla aplikacji za pomocą **Obsługa architektury dokument/widok** opcji wybranej na [typ aplikacji, Kreator aplikacji MFC](../mfc/reference/application-type-mfc-application-wizard.md) strony.)|
 |**Widok bazy danych z obsługą plików**|Pochodną `CRecordView`|Zapewnia obsługę pełny dokument, w tym serializacji i związanych z dokumentami **pliku** poleceń menu. Aplikacje baz danych są zazwyczaj działają na podstawie każdego rekordu, a nie na pliku podstawy i dlatego nie ma potrzeby serializacji. Mogą jednak mieć specjalne użycia serializacji. Zobacz [aplikacje z minimalnym dokumentami](#_core_applications_with_minimal_documents). Jeśli dodasz widok bazy danych, należy określić źródło danych.<br /><br /> Zawiera pliki nagłówkowe bazy danych, bibliotek DLL, widoku rekordu i zestawu rekordów. (Dostępne tylko dla aplikacji za pomocą **Obsługa architektury dokument/widok** opcji wybranej na [typ aplikacji, Kreator aplikacji MFC](../mfc/reference/application-type-mfc-application-wizard.md) strony.)|
 
-Omówienie alternatywami do serializacji i alternatywne używa serializacji, zobacz [serializacja: serializacja a. Baza danych wejściowych/wyjściowych](../mfc/serialization-serialization-vs-database-input-output.md).
+Omówienie alternatywami do serializacji i alternatywne używa serializacji, zobacz [serializacji: Serializacja programu vs. Baza danych wejściowych/wyjściowych](../mfc/serialization-serialization-vs-database-input-output.md).
 
 ##  <a name="_core_applications_with_minimal_documents"></a> Aplikacje z minimalnym dokumentów
 
@@ -81,7 +81,7 @@ Zazwyczaj używasz tej opcji dla prostej aplikacji opartej na formularzu. Kreato
 
 ###  <a name="_core_a_document_with_file_support"></a> Dokument z obsługą plików
 
-Wybierz opcję bazy danych Kreatora aplikacji **bazy danych widoku z obsługą plików** przypadku alternatywnego wykorzystania związanych z dokumentami **pliku** poleceń menu i serializacja dokumentu. Dostęp do danych część programu służy dokumentu w taki sam sposób zgodnie z opisem w [dokumentu bez obsługi plików](#_core_a_document_without_file_support). Na przykład możliwość serializacji dokumentu, można użyć do odczytywania i zapisywania dokumentu profilu użytkownika serializacji, który przechowuje preferencji użytkownika lub inne przydatne informacje. Więcej pomysłów, zobacz [serializacja: serializacja a. Baza danych wejściowych/wyjściowych](../mfc/serialization-serialization-vs-database-input-output.md).
+Wybierz opcję bazy danych Kreatora aplikacji **bazy danych widoku z obsługą plików** przypadku alternatywnego wykorzystania związanych z dokumentami **pliku** poleceń menu i serializacja dokumentu. Dostęp do danych część programu służy dokumentu w taki sam sposób zgodnie z opisem w [dokumentu bez obsługi plików](#_core_a_document_without_file_support). Na przykład możliwość serializacji dokumentu, można użyć do odczytywania i zapisywania dokumentu profilu użytkownika serializacji, który przechowuje preferencji użytkownika lub inne przydatne informacje. Aby uzyskać więcej pomysłów, zobacz [serializacji: Serializacja programu vs. Baza danych wejściowych/wyjściowych](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Kreator aplikacji obsługuje tę opcję, ale należy napisać kod, który serializuje dokumentu. Store zserializowane informacje w składowych danych dokumentu.
 
@@ -119,6 +119,6 @@ Ponieważ żaden dokument nie jest właścicielem `CRecordset` obiektu, prawdopo
 
 - Przy użyciu obiektów zestawu rekordów, tak jak w kontekście dokumentu lub widoku. Tworzenie zestawów rekordów w elemencie członkowskim funkcje aplikacji lub okno ramowe obiektów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy bazy danych MFC](../data/mfc-database-classes-odbc-and-dao.md)

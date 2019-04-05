@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 59ed66acbbd6ef876e6052767dc5a5243d4b8dd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476534"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030248"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -25,7 +25,7 @@ W klasie określa interfejsy źródła obiektu COM dla punktów połączenia. W 
 
 ### <a name="parameters"></a>Parametry
 
-*interfaces*<br/>
+*interfejsy*<br/>
 Jeden lub więcej interfejsów, określ, po zastosowaniu źródła atrybutów do klasy. Ten parametr nie jest używany, gdy źródło jest stosowany do właściwości lub metody.
 
 ## <a name="remarks"></a>Uwagi
@@ -74,16 +74,16 @@ class NN : public b
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **struktury**, **interfejsu**|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **struktury**, **interfejsu**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|`coclass` (w przypadku zastosowania do klasy lub struktury)|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [coclass](coclass.md)

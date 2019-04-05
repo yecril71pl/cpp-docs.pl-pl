@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563358"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023701"
 ---
 # <a name="dialog-box-controls-c"></a>Formanty okna dialogowego (C++)
 
@@ -57,7 +57,7 @@ Formanty standardowe dostępne w **przybornika** z domyślną zdarzenia są:
 
 |Nazwa kontrolki|Domyślne zdarzenia|
 |---|---|
-|[Kontrolka suwaka](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[suwak](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[Kontrolki pokrętła](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[Kontrolki postępu](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[Formantu klawisza dostępu](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY —|
@@ -99,7 +99,7 @@ W przypadku kontrolek niestandardowych są ograniczone do:
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Edytor okien dialogowych](../windows/dialog-editor.md)<br/>
 

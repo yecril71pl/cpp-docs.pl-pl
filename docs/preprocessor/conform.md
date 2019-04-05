@@ -9,12 +9,12 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432906"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026581"
 ---
 # <a name="conform"></a>conform
 **Określonego język C++**
@@ -27,7 +27,7 @@ Określa zachowanie środowiska wykonawczego [/Zc: forscope](../build/reference/
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa*<br/>
+*nazwa*<br/>
 Określa nazwę opcję kompilatora, który ma zostać zmodyfikowana. Jedyne prawidłowe *nazwa* jest `forScope`.
 
 **Pokaż**<br/>
@@ -36,13 +36,13 @@ Określa nazwę opcję kompilatora, który ma zostać zmodyfikowana. Jedyne praw
 **na**, **wyłączone**<br/>
 (Opcjonalnie) Ustawienie *nazwa* do **na** umożliwia [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) — opcja kompilatora. Wartość domyślna to **poza**.
 
-**push**<br/>
+**wypychania**<br/>
 (Opcjonalnie) Wypychanie bieżącej wartości *nazwa* na wewnętrznym stosie kompilatora. Jeśli określisz *identyfikator*, można określić **na** lub **poza** wartość *nazwa* ma zostać wypchnięty na stos. Na przykład `#pragma conform(forScope, push, myname, on)`.
 
 **POP**<br/>
 (Opcjonalnie) Ustawia wartość *nazwa* wartość u góry wewnętrznego stosu kompilatora, a następnie POP stosu. Jeśli identyfikator jest określany za pomocą **pop**, stos będzie zostać zdjęte ze stosu wstecz, aż znajdzie rekord z *identyfikator*, który będzie również zostać zdjęte ze stosu; bieżąca wartość dla *nazwa* w Następny rekord na stosie staje się nową wartość dla *nazwa*. Jeśli określisz **pop** z *identyfikator* nie jest w rekordzie na stosie, **pop** jest ignorowana.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 (Opcjonalnie) Można włączyć **wypychania** lub **pop** polecenia. Jeśli *identyfikator* jest używany, a następnie **na** lub **poza** specyfikator może również służyć.
 
 ## <a name="example"></a>Przykład
@@ -63,6 +63,6 @@ Określa nazwę opcję kompilatora, który ma zostać zmodyfikowana. Jedyne praw
 int main() {}
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

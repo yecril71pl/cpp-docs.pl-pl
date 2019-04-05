@@ -9,16 +9,16 @@ helpviewer_keywords:
 - rsm instruction
 - disable intrinsic
 ms.assetid: 52da3df9-815c-4524-9839-6d1742cff5c6
-ms.openlocfilehash: 64e7031ab578632322dfd5c73eb81e0750c1e0b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93db063c6b53f0bec739ba134728b83379a21f53
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587814"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024683"
 ---
 # <a name="disable"></a>_disable
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Wyłącza przerwań.
 
@@ -44,8 +44,8 @@ Ta funkcja jest dostępna tylko w trybie jądra. Jeśli używane w trybie użytk
 
 Na platformach ARM, ta procedura jest dostępna wyłącznie jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

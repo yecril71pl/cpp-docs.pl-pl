@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDynamicStringAccessorA class
 ms.assetid: ed0d9821-a655-41f1-a902-43c3042ac49c
-ms.openlocfilehash: bfe4cf2d6aa107c21ed0d8b226616ebaa8488102
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a0da9c779230fc1bf58bfa1d685623f844012c7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537439"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031358"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA — Klasa
 
@@ -33,12 +33,12 @@ Oba żądania, że dostawca pobrać wszystkie dane używane z magazynu danych ja
 
 **Nagłówek**: atldbcli.h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
-[CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicStringAccessor, klasa](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasa CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor — Klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor — Klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
+[CDynamicAccessor — Klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessor — Klasa](../../data/oledb/cdynamicstringaccessor-class.md)<br/>

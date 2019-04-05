@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __vmx_vmptrst intrinsic
 - VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-ms.openlocfilehash: 4d7e2ed29daac276c9b6cba07a727371a212fd4a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5ef02dd4401e0c10a84be008d7cb25841e0359cd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331896"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029517"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Przechowuje wskaźnik do bieżącej struktury sterowania maszyny wirtualnej (VMCS) pod podanym adresem.
 
@@ -47,9 +47,9 @@ Wskaźnik VMCS jest 64-bitowy adres fizyczny.
 
 **Plik nagłówkowy** \<intrin.h >
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
 [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

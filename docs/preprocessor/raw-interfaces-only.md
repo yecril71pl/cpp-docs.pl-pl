@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
-ms.openlocfilehash: c07401036261b9f93bb2c07dcf3aff1ecf72e2fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519356"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028263"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
 **Określonego język C++**
@@ -32,7 +32,7 @@ Ten atrybut umożliwia uwidocznienie niskiego poziomu zawartość biblioteki typ
 
 **KONIEC określonego języka C++**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

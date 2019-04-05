@@ -8,16 +8,16 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: 0ff46aa15fbb8728ce02255209a32f01a168609b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4f941baae9f03ed288a99d59e2b06262962e339
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629388"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023323"
 ---
 # <a name="invlpg"></a>__invlpg
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje x86 `invlpg` instrukcji, co unieważnia buforu referencyjnych tłumaczenia (TLB) dla strony skojarzone z pamięci wskazywany przez `Address`.
 
@@ -48,8 +48,8 @@ Wewnętrzne `__invlpg` emituje instrukcja uprzywilejowana i jest dostępna tylko
 
 Ta procedura jest dostępna wyłącznie jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

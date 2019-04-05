@@ -11,16 +11,16 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 87bb2a20e786982d8e0c710696f0339f579a84e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440472"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022570"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Wyszukaj maskowanie danych z co najmniej znaczący bit (najmniej znaczący BAJT) do najbardziej znaczący bit (BITEM) ustawionego bitu (1).
 
@@ -39,7 +39,7 @@ unsigned char _BitScanForward64(
 
 #### <a name="parameters"></a>Parametry
 
-*Index*<br/>
+*Indeks*<br/>
 [out] Pozycja bitu pierwszego ustawionego bitu [1], znaleziono załadowana.
 
 *Maska*<br/>
@@ -106,8 +106,8 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

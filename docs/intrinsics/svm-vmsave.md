@@ -7,16 +7,16 @@ helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: 2ffc68b13d09d15d90670fa135a2cac9d9a1d52f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556619"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023415"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Przechowuje podzbiór procesor, stan, w bloku sterowania określonej maszyny wirtualnej (VMCB).
 
@@ -36,7 +36,7 @@ void __svm_vmsave(
 
 ## <a name="remarks"></a>Uwagi
 
-`__svm_vmsave` Funkcji jest odpowiednikiem `VMSAVE` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" dokument o numerze 24593, wersji 3.11 lub później, w [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokacji.
+`__svm_vmsave` Funkcji jest odpowiednikiem `VMSAVE` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: System programowania,"numer 24593, wersji 3.11 lub później, w dokumentu [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokacji.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -46,9 +46,9 @@ void __svm_vmsave(
 
 **Plik nagłówkowy** \<intrin.h >
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>

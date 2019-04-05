@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: b7bb0ffe169fd9b4167e6af4b772df23acf02212
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575529"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024565"
 ---
 # <a name="connecting-to-a-data-source"></a>Nawiązywanie połączenia ze źródłem danych
 
@@ -33,6 +33,6 @@ Połączenia źródła danych są hermetyzowane przez klasę [CDatabase](../../m
 
 Po zakończeniu pracy z połączenia źródła danych, Zamknij `CDatabase` obiektu, a następnie go zniszcz lub użyć go ponownie do nowego połączenia. Aby uzyskać więcej informacji na temat połączeń ze źródłami danych, zobacz [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

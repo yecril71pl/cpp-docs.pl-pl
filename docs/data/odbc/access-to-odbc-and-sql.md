@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 97aa0f6318a47a93b0079a81dea772b900b5484b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a539d911bbf4f4d9582da0ebedaeffaa0d8fa7b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441772"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030157"
 ---
 # <a name="access-to-odbc-and-sql"></a>Dostęp do ODBC i SQL
 
@@ -22,8 +22,8 @@ Bibliotekę Microsoft Foundation Class hermetyzuje wiele wywołań interfejsu AP
 
 Podobnie, klas baz danych włączyć osłony dla możesz z konieczności współpracy z bardzo z [SQL](../../data/odbc/sql.md), ale można użyć programu SQL bezpośrednio, jeśli chcesz. Można dostosować obiekty zestawu rekordów, przekazując własne instrukcje SQL (lub jej części ustawienie domyślna deklaracja) po otwarciu zestawu rekordów. Można również ustawić jako wywołania SQL bezpośrednio przy użyciu [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) funkcji składowej klasy typu [CDatabase](../../mfc/reference/cdatabase-class.md).
 
-Aby uzyskać więcej informacji, zobacz [ODBC: wywołanie ODBC API funkcje bezpośrednio](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) i [SQL: wprowadzania wywołania SQL bezpośrednich (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
+Aby uzyskać więcej informacji, zobacz [ODBC: Interfejsu API ODBC wywołania funkcji bezpośrednio](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) i [SQL: Wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

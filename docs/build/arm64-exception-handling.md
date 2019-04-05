@@ -1,12 +1,12 @@
 ---
 title: Obsługa wyjątków ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 43e43beae5ee02f9ef4537da08a1c9915056b777
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870796"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031735"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -219,15 +219,15 @@ Tych danych jest dzielony na cztery sekcje:
 
    e. **Liczba epilogu** jest polem 5-bitowy, który ma dwa znaczenia, w zależności od stanu **E** bitowych:
 
-      1. Jeśli **E** jest ustawiona na 0: Określa liczbę całkowita liczba zakresów wyjątek opisane w sekcji 2. Jeśli istnieje więcej niż 31-zakresami, w funkcji, a następnie **wyrazów** pola musi być równa 0 Aby wskazać, że wymagane jest słowo rozszerzenia.
+      1. Jeśli **E** jest ustawiona na 0: Określa liczbę całkowita liczba zakresów epilogu opisane w sekcji 2. Jeśli istnieje więcej niż 31-zakresami, w funkcji, a następnie **wyrazów** pola musi być równa 0 Aby wskazać, że wymagane jest słowo rozszerzenia.
 
       2. Jeśli **E** jest ustawiona na 1, w tym polu określa indeks pierwszego kodu odwijania, opisujący jeden i tylko epilogu.
 
-   f. **Wyrazy kodu** jest polem 5-bitowy, określająca liczbę 32-bitowych słów potrzebne ma zawierać wszystkie kody unwind w sekcji 4. Jeśli wymaganych jest więcej niż 31 wyrazów (czyli więcej niż 124 operacji unwind bajty kodu), a następnie to pole musi być równa 0 Aby wskazać, że wymagane jest rozszerzenie programu word.
+   f. **Wyrazy kodu** jest polem 5-bitowy, określająca liczbę 32-bitowych słów potrzebne ma zawierać wszystkie kody unwind w sekcji 3. Jeśli wymaganych jest więcej niż 31 wyrazów (czyli więcej niż 124 operacji unwind bajty kodu), a następnie to pole musi być równa 0 Aby wskazać, że wymagane jest rozszerzenie programu word.
 
    g. **Rozszerzony liczba epilogu** i **rozszerzone wyrazów** są odpowiednio pola 16-bitowych i 8-bitowych, które zapewniają więcej miejsca na potrzeby kodowania niezwykle dużą liczbę epilogs lub nietypowo dużej liczby operacji unwind wyrazów. Rozszerzenia programu word, zawierające te pola będzie on wyświetlany, jeśli oba **liczba epilogu** i **wyrazów** pól w pierwszy wyraz nagłówka są ustawione na 0.
 
-1. Po wyjątku Jeśli **liczba epilogu** nie jest równa zero, listę informacji o zakresach epilogu spakowane do programu word i przechowywane w celu zwiększenia początkowe przesunięcie. Każdy zakres zawiera następujące usługi bits:
+1. Po nagłówku i opcjonalne nagłówki rozszerzonej opisanych powyżej, jeśli **liczba epilogu** nie jest równa zero, listę informacji o zakresach epilogu spakowane do programu word i przechowywane w celu zwiększenia początkowe przesunięcie. Każdy zakres zawiera następujące usługi bits:
 
    a. **Przesunięcie Start epilogu** jest polem 18-bitowe przesunięcie w bajtach, podzielona przez 4 epilogu względem początku funkcji opisujące
 
@@ -237,7 +237,7 @@ Tych danych jest dzielony na cztery sekcje:
 
 1. Po listy zakresów epilogu zawiera tablicę bajtów, które zawierają kody odwijania, opisano szczegółowo w dalszej części tego tematu. Ta tablica jest uzupełniana na końcu do najbliższej granicy pełny wyraz. Bajty są przechowywane w kolejności little-endian, dzięki czemu mogą być bezpośrednio pobierane w trybie little-endian.
 
-1. Na koniec, po bajty kodu unwind (i, jeśli **X** bit w nagłówku został ustawiony na wartość 1) zawiera informacje o program obsługi wyjątku. Ten krok składa się z pojedynczej **RVA obsługi wyjątków** podając adres obsługi wyjątków, a następnie natychmiast o zmiennej długości ilość danych wymaganych przez program obsługi wyjątków.
+1. Na koniec, po unwind bajty kodu Jeśli **X** bit w nagłówku został ustawiony na wartość 1, zawiera informacje o program obsługi wyjątku. Ten krok składa się z pojedynczej **RVA obsługi wyjątków** podając adres obsługi wyjątków, a następnie natychmiast o zmiennej długości ilość danych wymaganych przez program obsługi wyjątków.
 
 Rekord .xdata powyżej zaprojektowano w taki sposób, że istnieje możliwość pobrania pierwsze 8 bajtów i przy jego użyciu obliczeń w pełnym rozmiarze rekordu (minus długość danych wyjątku o zmiennym rozmiarze, który następuje po). Poniższy fragment kodu oblicza rozmiar rekordu:
 

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 021c754436d6abe877e6b7dd372ba235869d8975
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627496"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024533"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedexchangepointer
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 W trakcie operacji niepodzielnych programu exchange, skopiowanie adresu przekazanego jako drugi argument do pierwszego, która zwraca oryginalny adres pierwszego.
 
@@ -64,7 +64,7 @@ void * _InterlockedExchangePointer_HLERelease(
 
 #### <a name="parameters"></a>Parametry
 
-*Docelowy*<br/>
+*Cel*<br/>
 [out w] Wskaźnik do wskaźnika do wartości do programu exchange. Funkcja ustawia wartość `Value` i zwraca jego poprzednią wartość.
 
 *Wartość*<br/>
@@ -94,9 +94,9 @@ Na platformach firmy Intel, obsługujące instrukcje pominięcia blokady sprzęt
 
 Te procedury są dostępne tylko jako funkcje wewnętrzne.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

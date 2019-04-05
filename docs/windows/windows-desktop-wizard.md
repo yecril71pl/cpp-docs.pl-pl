@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 52ffd992480df517f8677e14161b697eb3ecc321
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787356"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041474"
 ---
 # <a name="windows-desktop-wizard"></a>Kreator aplikacji klasycznej Windows
 
@@ -28,8 +28,8 @@ Poniższa tabela wskazuje, które opcje są dostępne dla każdego typu aplikacj
 |**Pusty projekt**|Tak|Yes|Yes|Nie|
 |**Eksportuj symbole**|Nie|Nie|Yes|Nie|
 |**Prekompilowany plik nagłówkowy**|Nie|Nie|Nie|Tak|
-|**Obsługa biblioteki ATL**|Tak|Nie|Nie|Nie|
-|**Obsługa MFC**|Tak|Nie|Nie|Tak|
+|**obsługa ATL**|Tak|Nie|Nie|Nie|
+|**obsługa MFC**|Tak|Nie|Nie|Tak|
 
 ## <a name="overview"></a>Omówienie
 
@@ -85,6 +85,6 @@ Po utworzeniu aplikacji pulpitu Windows można dodać ogólne klasy C++ za pomoc
 
 Można wyświetlić pliki, Kreator tworzy projekt w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach, Kreator tworzy dla projektu, zobacz plik wygenerowany przez projekt `ReadMe.txt`. Aby uzyskać więcej informacji dotyczących typów plików [typy plików utworzonych dla projektów Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy projektów Visual C++](../build/reference/visual-cpp-project-types.md)

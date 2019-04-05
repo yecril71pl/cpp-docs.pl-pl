@@ -8,16 +8,16 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: f4af272ccafec9789497d0321c0769c2906f76b7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330297"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026347"
 ---
 # <a name="writemsr"></a>__writemsr
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje zapisu, można zarejestrować określonego modelu (`wrmsr`) instrukcji.
 
@@ -32,7 +32,7 @@ void __writemsr(
 
 #### <a name="parameters"></a>Parametry
 
-*Zarejestruj się*<br/>
+*Rejestruj*<br/>
 [in] Rejestr określonego modelu.
 
 *Wartość*<br/>
@@ -50,8 +50,8 @@ void __writemsr(
 
 Ta funkcja może być używana tylko w trybie jądra, a ta procedura jest dostępna jako funkcja wewnętrzna wyłącznie.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

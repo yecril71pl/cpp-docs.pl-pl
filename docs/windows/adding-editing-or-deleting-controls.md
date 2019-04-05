@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328509"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025367"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek (C++)
 
@@ -193,7 +193,7 @@ Program Visual Studio umożliwia wstawianie kontrolki ActiveX z okna dialogowego
 |Właściwość|Opis|
 |---|---|
 |**ActiveX Control**|Wyświetla listę formantów ActiveX.<br/><br/>Wstawianie kontrolki z tego okna dialogowego nie generuje klasę otoki. Klasa otoki, należy użyć [Widok klas](/visualstudio/ide/viewing-the-structure-of-code) aby go utworzyć, zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md).<br/><br/>Jeśli formant ActiveX nie pojawia się w tym oknie dialogowym, spróbuj zainstalować kontroli zgodnie z instrukcjami dostawcy.|
-|**Path**|Wyświetla plik, w którym znajduje się Kontrolka ActiveX.|
+|**Ścieżka**|Wyświetla plik, w którym znajduje się Kontrolka ActiveX.|
 
 > [!CAUTION]
 > Może nie być prawne rozpowszechnianie wszystkich kontrolek ActiveX w Twoim systemie. Zapoznaj się z umową licencyjną dotyczącą oprogramowania, zainstalowanego kontrolki lub skontaktuj się z firmą oprogramowania.
@@ -228,11 +228,11 @@ Kontrolki ActiveX, dostarczone przez niezależnych dostawców może są wyposaż
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie formantów okna dialogowego](controls-in-dialog-boxes.md)<br/>
-[Instrukcje: Kontrolki układu](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[Instrukcje: Definiowanie dostępu do kontrolek i ich wartości](defining-mnemonics-access-keys.md)<br/>
+[Instrukcje: Formanty układu](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Instrukcje: Definiowanie wartości i kontrola dostępu](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

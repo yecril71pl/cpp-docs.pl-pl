@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328925"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026360"
 ---
 # <a name="how-to-create-symbols-c"></a>Instrukcje: Tworzenie symboli (C++)
 
@@ -44,8 +44,8 @@ Okno dialogowe zawiera następujące właściwości:
 |**W użyciu**|Po wybraniu Określa, czy symbol jest używany przez co najmniej jednego zasobu.<br/><br/>Zasób lub zasoby są wymienione w **posługują się** pole.|
 |**Pokaż symbole tylko do odczytu**|Po wybraniu Wyświetla zasoby tylko do odczytu.<br/><br/>Domyślnie **Symbol zasobu** okno dialogowe wyświetla tylko zasoby można modyfikować w pliku skryptu zasobu, ale z wybraniu tej opcji można modyfikować zasoby są wyświetlane pogrubioną czcionką i zasoby tylko do odczytu są wyświetlane w postaci zwykłego tekstu.|
 |**Używane przez**|Wyświetla zasobami przy użyciu symbolu zaznaczony na liście symboli.<br/><br/>Aby przejść do edytora dla danego zasobu, wybierz zasób w **posługują się** pole, a następnie wybierz **Wyświetl użycie**.|
-|**Nowy**|Otwiera **nowy Symbol** okno dialogowe, które pozwala zdefiniować nazwę i, jeśli to konieczne, wartość dla nowego identyfikatora zasobu symboliczne.|
-|**Change**|Otwiera **Zmień Symbol** okno dialogowe, które umożliwia zmianę nazwy lub wartości symbolu.<br/><br/>Jeśli symbol jest dla formantu lub zasobów w użyciu, symbolu można zmienić tylko za pomocą odpowiedniego edytora zasobów. Aby uzyskać więcej informacji, zobacz [Zarządzanie symbole](../windows/changing-unassigned-symbols.md).|
+|**New**|Otwiera **nowy Symbol** okno dialogowe, które pozwala zdefiniować nazwę i, jeśli to konieczne, wartość dla nowego identyfikatora zasobu symboliczne.|
+|**Zmiana**|Otwiera **Zmień Symbol** okno dialogowe, które umożliwia zmianę nazwy lub wartości symbolu.<br/><br/>Jeśli symbol jest dla formantu lub zasobów w użyciu, symbolu można zmienić tylko za pomocą odpowiedniego edytora zasobów. Aby uzyskać więcej informacji, zobacz [Zarządzanie symbole](../windows/changing-unassigned-symbols.md).|
 |**Wyświetl użycie**|Zostanie otwarty zasób, który zawiera symbol w edytorze odpowiednich zasobów.|
 
 ## <a name="create-symbols"></a>Tworzenie symboli
@@ -86,8 +86,8 @@ Podczas przeglądania symboli w **symboli zasobów**, może chcesz, aby uzyskać
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>
-[Instrukcje: Zarządzanie symbolami](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
-[Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)<br/>
+[Identyfikatory zasobów (symbolom)](../windows/symbols-resource-identifiers.md)<br/>
+[Instrukcje: Zarządzanie symboli](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)<br/>

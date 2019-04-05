@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 1152656156a2f1002167fd83762f2d9a33342c49
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787263"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029562"
 ---
 # <a name="generic-delegates-ccli"></a>Delegaty ogólne (C + +/ CLI)
 
@@ -29,7 +29,7 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybuty*<br/>
+*atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
 *Typ — parametr-identyfikatory*<br/>
@@ -38,16 +38,16 @@ Rozdzielana przecinkami lista identyfikatorów dla parametrów typu.
 *type-parameter-constraints-clauses*<br/>
 Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*accessibility-modifiers*<br/>
+*modyfikatory dostępności*<br/>
 (Opcjonalnie) Modyfikatory dostępności (np. **publicznych**, **prywatnej**).
 
-*result-type*<br/>
+*Typ wyniku*<br/>
 Zwracany typ delegata.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 Nazwa obiektu delegowanego.
 
-*parametrów formalnych*<br/>
+*formal-parameters*<br/>
 (Opcjonalnie) Lista parametrów delegata.
 
 ## <a name="example"></a>Przykład
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy ogólne](generics-cpp-component-extensions.md)

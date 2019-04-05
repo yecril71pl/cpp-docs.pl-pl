@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648347"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029625"
 ---
 # <a name="constseg"></a>const_seg
 Określa segment gdzie [const](../cpp/const-cpp.md) zmienne są przechowywane w pliku .obj.
@@ -26,13 +26,13 @@ Określa segment gdzie [const](../cpp/const-cpp.md) zmienne są przechowywane w 
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
+**wypychania**<br/>
 (Opcjonalnie) Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.
 
 **POP**<br/>
 (Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 (Opcjonalnie) Gdy jest używane z **wypychania**, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.
 
 Za pomocą *identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego **pop** polecenia.
@@ -95,6 +95,6 @@ Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) list
 
 Można również określić sekcje dla danych zainicjowanych ([data_seg](../preprocessor/data-seg.md)), niezainicjowanych danych ([bss_seg](../preprocessor/bss-seg.md)) i funkcje ([code_seg](../preprocessor/code-seg.md)).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

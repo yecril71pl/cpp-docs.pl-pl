@@ -7,12 +7,12 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: a18b4fd7873bcc0895354186dc9b0cc7e6b71bd4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786806"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025869"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource, klasa
 
@@ -80,13 +80,13 @@ HRESULT Add(
 *delegateInterface*<br/>
 Interfejs do obiektu delegowanego, który reprezentuje program obsługi zdarzeń.
 
-*token*<br/>
+*Token*<br/>
 Po zakończeniu tej operacji, uchwyt, który reprezentuje zdarzenie. Używanie tego tokenu jako parametr do `Remove()` metodę, aby odrzucić programu obsługi zdarzeń.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft::WRL — Przestrzeń nazw](microsoft-wrl-namespace.md)

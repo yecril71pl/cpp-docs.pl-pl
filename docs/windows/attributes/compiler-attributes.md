@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-ms.openlocfilehash: 8fef953a520572b42e69a48ea391282c7b70ba44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4d3119a640c0642664210384c297e011104411
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667366"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030822"
 ---
 # <a name="compiler-attributes"></a>Atrybuty kompilatora
 
@@ -31,6 +31,6 @@ Atrybuty kompilatora oferują różne funkcje.
 |[satype](satype.md)|Określa typ danych `SAFEARRAY`.|
 |[version](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji interfejsu lub klasy.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty według grup](attributes-by-group.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)'
+title: 'Zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, selecting records
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329478"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041328"
 ---
-# <a name="recordset-how-recordsets-select-records-odbc"></a>Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)
+# <a name="recordset-how-recordsets-select-records-odbc"></a>Zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -40,11 +40,11 @@ W poniższej tabeli przedstawiono opcje, wybierając rekordów.
 |--------------|-------------|
 |Deklarowanie klasy zestawu rekordów z **Dodaj klasę** Kreatora|Określ tabeli, która dokonania wyboru z.<br /><br /> Określ kolumny do dołączenia.<br /><br /> Zobacz [Dodawanie użytkownika MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).|
 |Wykonać implementacji klasy zestawu rekordów|Zastąpienie elementów członkowskich, takich jak `OnSetOptions` (zaawansowane), aby ustawić opcje specyficzne dla aplikacji lub zmienić ustawienia domyślne. Jeśli chcesz, aby sparametryzowane zestawu rekordów, należy określić elementy członkowskie danych parametru.|
-|Konstruowania obiektu zestawu rekordów (przed wywołaniem `Open`)|Określ warunek wyszukiwania (prawdopodobnie złożonego) do użycia w **gdzie** klauzula, która filtruje rekordy. Zobacz [zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Określanie kolejności sortowania do użycia w **ORDER BY** klauzula, która sortuje rekordy. Zobacz [zestaw rekordów: sortowanie rekordów (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Określ wartości parametrów dla wszystkich parametrów, które dodawana do klasy. Zobacz [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
+|Konstruowania obiektu zestawu rekordów (przed wywołaniem `Open`)|Określ warunek wyszukiwania (prawdopodobnie złożonego) do użycia w **gdzie** klauzula, która filtruje rekordy. Zobacz [zestaw rekordów: Filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Określanie kolejności sortowania do użycia w **ORDER BY** klauzula, która sortuje rekordy. Zobacz [zestaw rekordów: Sortowanie rekordów (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Określ wartości parametrów dla wszystkich parametrów, które dodawana do klasy. Zobacz [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
 
-| Uruchom zapytanie w zestawie rekordów, wywołując `Open`| Określ niestandardowy ciąg SQL, aby zastąpić domyślny ciąg SQL skonfigurowany przez kreatora. Zobacz [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) w *klasy odwołanie do biblioteki* i [SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
+| Uruchom zapytanie w zestawie rekordów, wywołując `Open`| Określ niestandardowy ciąg SQL, aby zastąpić domyślny ciąg SQL skonfigurowany przez kreatora. Zobacz [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) w *klasy odwołanie do biblioteki* i [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
 
-| Wywołaj `Requery` do Requery — zestaw rekordów o najnowsze wartości w źródle danych | Określ nowe parametry, filtrowania lub sortowania. Zobacz [zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
+| Wywołaj `Requery` do Requery — zestaw rekordów o najnowsze wartości w źródle danych | Określ nowe parametry, filtrowania lub sortowania. Zobacz [zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
 
 ##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Jak zestaw rekordów tworzy jego instrukcji SQL
 
@@ -78,28 +78,28 @@ Oprócz podawania filtru, kolejności sortowania lub parametry, można wykonać 
 
 - Przekaż niestandardowy ciąg SQL w *lpszSQL* podczas wywoływania [Otwórz](../../mfc/reference/crecordset-class.md#open) zestawu rekordów. Cokolwiek przekazanej *lpsqSQL* ma pierwszeństwo przed co [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funkcja elementu członkowskiego zwraca.
 
-   Aby uzyskać więcej informacji, zobacz [SQL: dostosowywanie Your zestawu rekordów instrukcji SQL (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), która opisuje typy instrukcji SQL (lub częściowe instrukcje), którą można przekazać do `Open` i struktura jest z nimi.
+   Aby uzyskać więcej informacji, zobacz [SQL: Dostosowywanie instrukcji SQL swój zestaw rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), która opisuje typy instrukcji SQL (lub częściowe instrukcje), którą można przekazać do `Open` i struktura jest z nimi.
 
     > [!NOTE]
     >  Niestandardowy ciąg, który należy przekazać zaczyna się od "Wybierz" lub "{CALL", MFC przyjęto założenie, że zawiera on nazwę tabeli. Dotyczy to również do następnego elementu listy.
 
 - Instrukcja ALTER ciąg, który kreator zapisuje w twoim zestawie rekordów `GetDefaultSQL` funkcja elementu członkowskiego. Edytuj kod funkcji, aby zmienić ją zwraca. Domyślnie kreator zapisuje `GetDefaultSQL` funkcja, która zwraca nazwę pojedynczej tabeli.
 
-   Może mieć `GetDefaultSQL` zwracać dowolne elementy, które można przekazać *lpszSQL* parametr `Open`. Jeśli nie przekażesz niestandardowy ciąg SQL w *lpszSQL*, struktura używa parametrów, `GetDefaultSQL` zwraca. Co najmniej `GetDefaultSQL` musi zwrócić nazwę pojedynczej tabeli. Ale może być zwrócić wiele nazw tabel, pełne **wybierz** instrukcji, ODBC **WYWOŁANIA** instrukcji i tak dalej. Lista co można przekazać do *lpszSQL* — lub `GetDefaultSQL` zwracają — zobacz [SQL: dostosowywanie Your zestawu rekordów instrukcji SQL (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+   Może mieć `GetDefaultSQL` zwracać dowolne elementy, które można przekazać *lpszSQL* parametr `Open`. Jeśli nie przekażesz niestandardowy ciąg SQL w *lpszSQL*, struktura używa parametrów, `GetDefaultSQL` zwraca. Co najmniej `GetDefaultSQL` musi zwrócić nazwę pojedynczej tabeli. Ale może być zwrócić wiele nazw tabel, pełne **wybierz** instrukcji, ODBC **WYWOŁANIA** instrukcji i tak dalej. Aby uzyskać listę co możesz przekazać do *lpszSQL* — lub `GetDefaultSQL` zwracają — zobacz [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-   Jeśli przeprowadzasz przyłączenia co najmniej dwie tabele ponownego zapisywania `GetDefaultSQL` dostosować listę tabel w SQL używać **FROM** klauzuli. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: wykonywanie Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Jeśli przeprowadzasz przyłączenia co najmniej dwie tabele ponownego zapisywania `GetDefaultSQL` dostosować listę tabel w SQL używać **FROM** klauzuli. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
 
-- Ręczne powiązanie dodatkowego pola danych elementów członkowskich, być może na podstawie informacji możesz uzyskać dotyczące schematu źródła danych w czasie wykonywania. Dodaj elementy członkowskie danych pola do klasy zestawu rekordów [RFX](../../data/odbc/record-field-exchange-using-rfx.md) lub zbiorcze RFX funkcja wywołuje dla nich [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) lub [dobulkfieldexchange —](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) funkcja elementu członkowskiego i Inicjowanie elementów członkowskich danych w konstruktorze klasy. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dynamiczne powiązanie danych kolumn (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Ręczne powiązanie dodatkowego pola danych elementów członkowskich, być może na podstawie informacji możesz uzyskać dotyczące schematu źródła danych w czasie wykonywania. Dodaj elementy członkowskie danych pola do klasy zestawu rekordów [RFX](../../data/odbc/record-field-exchange-using-rfx.md) lub zbiorcze RFX funkcja wywołuje dla nich [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) lub [dobulkfieldexchange —](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) funkcja elementu członkowskiego i Inicjowanie elementów członkowskich danych w konstruktorze klasy. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 - Zastąpienia funkcji elementów członkowskich zestawu rekordów, takich jak `OnSetOptions`, aby ustawić opcje specyficzne dla aplikacji, lub aby przesłonić wartości domyślne.
 
 Jeśli chcesz utworzyć zestaw rekordów na złożonych instrukcji SQL, należy użyć kombinacji tych metod dostosowywania. Na przykład być może chcesz użyć klauzule SQL i słowa kluczowe nie są bezpośrednio obsługiwane przez zestawy rekordów lub prawdopodobnie są dołączania wielu tabel.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [Podstawy ODBC](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Zestaw rekordów: blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Zestaw rekordów: Blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

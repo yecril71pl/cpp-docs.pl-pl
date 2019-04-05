@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
-ms.openlocfilehash: 69e96a8a8f92316e32074a861456fffb83c79434
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616466"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028989"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
 
@@ -36,7 +36,7 @@ Domyślnie wysokiego poziomu obsługi błędów właściwości i metody są udos
 
 **KONIEC określonego języka C++**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

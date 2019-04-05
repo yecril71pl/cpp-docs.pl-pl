@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: 7b65b11b9a67ba69ca546e9bf5c169f3f2b61765
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: daaba919acaa35615af56831f9458831c3d35427
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787385"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029988"
 ---
 # <a name="enableif-structure"></a>EnableIf — Struktura
 
@@ -58,6 +58,6 @@ Definiuje element członkowski danych o typie określonym przez drugi parametr s
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details — Przestrzeń nazw](microsoft-wrl-details-namespace.md)

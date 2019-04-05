@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)'
+title: 'Zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, requerying
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482755"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024598"
 ---
-# <a name="recordset-requerying-a-recordset-odbc"></a>Zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)
+# <a name="recordset-requerying-a-recordset-odbc"></a>Zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -29,7 +29,7 @@ Ponowne wysyłanie zapytania do zestawu rekordów głównej przyczyny są:
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> Dzięki temu zestaw rekordów w górę do daty
 
-Często warto Requery — obiekt zestawu rekordów przełoży się na bieżąco. W środowisku wielodostępnym bazy danych innych użytkownicy mogą wprowadzać zmiany w danych, w czasie trwania rekordów. Aby uzyskać więcej informacji na temat po rekordów odzwierciedla zmiany dokonane przez innych użytkowników i kiedy zestawy rekordów innych użytkowników będą odzwierciedlać wprowadzone zmiany, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [dynamiczny](../../data/odbc/dynaset.md).
+Często warto Requery — obiekt zestawu rekordów przełoży się na bieżąco. W środowisku wielodostępnym bazy danych innych użytkownicy mogą wprowadzać zmiany w danych, w czasie trwania rekordów. Aby uzyskać więcej informacji na temat po rekordów odzwierciedla zmiany dokonane przez innych użytkowników i kiedy zestawy rekordów innych użytkowników będą odzwierciedlać wprowadzone zmiany, zobacz [zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [dynamiczny](../../data/odbc/dynaset.md).
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> Ponowne wysyłanie zapytania na podstawie nowych parametrów
 
@@ -48,15 +48,15 @@ Ponieważ zestawów dynamicznych są przeznaczone do wyświetlania zestawu rekor
 
 Alternatywnie można zamknąć i otworzyć oryginalny zestaw rekordów przez użytkownika. W obu przypadkach nowy zestaw rekordów reprezentuje bieżący stan źródła danych.
 
-Aby uzyskać przykład, zobacz [widoków rekordów: wypełnianie pola listy z drugiego zestawu rekordów](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Aby uzyskać przykład, zobacz [widoków rekordów: Wypełnianie pola listy z drugiego zestawu rekordów](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
 > [!TIP]
 >  Aby zoptymalizować `Requery` wydajność, unikanie zmieniania zestawu rekordów [filtru](../../data/odbc/recordset-filtering-records-odbc.md) lub [sortowania](../../data/odbc/recordset-sorting-records-odbc.md). Zmień wartość w parametrze przed wywołaniem `Requery`.
 
 Jeśli `Requery` wywołanie zakończy się niepowodzeniem, możesz ponowić próbę wywołania; w przeciwnym razie aplikacja powinna zakończyć działanie zostanie wyłączone poprawnie. Wywołanie `Requery` lub `Open` może zakończyć się niepowodzeniem dla każdego z kilku powodów. Być może występuje błąd sieciowy; Możesz również podczas wywołania po wydaniu istniejących danych, ale zanim nowe dane są uzyskiwane, inny użytkownik może uzyskać wyłącznego dostępu; lub można go usunąć tabeli, od którego zależy rekordów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
-[Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+[Zestaw rekordów: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

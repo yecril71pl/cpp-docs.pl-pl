@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: parametryzacja zestawu rekordów (ODBC)'
+title: 'Zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parameterizing recordsets
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331272"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026165"
 ---
-# <a name="recordset-parameterizing-a-recordset-odbc"></a>Zestaw rekordów: parametryzacja zestawu rekordów (ODBC)
+# <a name="recordset-parameterizing-a-recordset-odbc"></a>Zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -46,7 +46,7 @@ Typowe zastosowania dla parametrów obejmują:
 
 - Przekazywanie argumentów czasu wykonywania dla wstępnie zdefiniowanego zapytania.
 
-   Do przekazania parametrów do procedury składowanej, należy określić pełną ODBC niestandardowe **WYWOŁANIA** instrukcji — z symbolami zastępczymi parametru — gdy wywołujesz `Open`, Zastępowanie domyślnego instrukcji SQL zestawu rekordów. Aby uzyskać więcej informacji, zobacz [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) w *odwołanie do biblioteki klas* i [SQL: dostosowywanie Your zestawu rekordów instrukcji SQL (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) i [ Zestaw rekordów: Deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+   Do przekazania parametrów do procedury składowanej, należy określić pełną ODBC niestandardowe **WYWOŁANIA** instrukcji — z symbolami zastępczymi parametru — gdy wywołujesz `Open`, Zastępowanie domyślnego instrukcji SQL zestawu rekordów. Aby uzyskać więcej informacji, zobacz [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) w *odwołanie do biblioteki klas* i [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) i [zestaw rekordów: Deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 - Wydajne wykonywanie wielu requeries z informacjami o różnych parametrów.
 
@@ -75,19 +75,19 @@ Typowe zastosowania dla parametrów obejmują:
                                        // for some drivers
     ```
 
-   Omówienie sposobu użycia oferty poprawnie dla filtru ciągów, zobacz [zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+   Omówienie sposobu użycia oferty poprawnie dla ciągów filtr, można znaleźć [zestaw rekordów: Filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
    Wartość parametru różni się każdorazowo Requery — zestaw rekordów dla nowego identyfikatora dla uczniów.
 
    > [!TIP]
    > Za pomocą parametru jest bardziej wydajne niż po prostu filtru. Dla sparametryzowane zestawu rekordów bazy danych musi przetworzyć SQL **wybierz** instrukcji tylko raz. Dla filtrowanego zestawu rekordów bez parametrów **wybierz** instrukcja musi zostać przetworzona, każdym razem `Requery` z nową wartością filtru.
 
-Aby uzyskać więcej informacji na temat filtrów, zobacz [zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Aby uzyskać więcej informacji na temat filtrów, zobacz [zestaw rekordów: Filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Parametryzacja zestawu rekordów klasy
 
 > [!NOTE]
-> Ta sekcja jest stosowana do obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz wiersz zbiorcze pobieranie, implementowanie parametrów jest podobny proces. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Ta sekcja jest stosowana do obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz wiersz zbiorcze pobieranie, implementowanie parametrów jest podobny proces. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Przed przystąpieniem do tworzenia klasy zestawu rekordów, należy określić parametry potrzebne, jakie są typy danych i jak zestaw rekordów są one używane.
 
@@ -114,7 +114,7 @@ Przed przystąpieniem do tworzenia klasy zestawu rekordów, należy określić p
 
    Dodaj swoje elementy członkowskie danych parametru po elementy członkowskie danych pola generowane przez kreatora. Konwencji jest Dołącz słowo "Param" do nazwy parametrów zdefiniowanych przez użytkownika.
 
-1. Modyfikowanie [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) definicji funkcji składowej w pliku .cpp. Dodaj wywołanie funkcji RFX dla każdego parametru element członkowski danych dodane do klasy. Informacje na temat pisania funkcji RFX, zobacz [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Należy poprzedzić wywołania RFX parametrów za pomocą pojedynczego wywołania do:
+1. Modyfikowanie [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) definicji funkcji składowej w pliku .cpp. Dodaj wywołanie funkcji RFX dla każdego parametru element członkowski danych dodane do klasy. Informacje na temat pisania funkcji RFX, zobacz [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Należy poprzedzić wywołania RFX parametrów za pomocą pojedynczego wywołania do:
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -173,8 +173,8 @@ Zestaw rekordów zawiera rekordy dla tych studentów, w której rekordy spełnia
 > [!NOTE]
 >  Jeśli to konieczne, można ustawić wartości element członkowski danych parametru na wartość Null, za pomocą [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Możesz również sprawdzić, czy element członkowski danych parametr ma wartość Null, za pomocą [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[Zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

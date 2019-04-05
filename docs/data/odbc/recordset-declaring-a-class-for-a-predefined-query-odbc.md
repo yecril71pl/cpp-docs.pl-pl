@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)'
+title: 'Zestaw rekordów: Deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: e83bf2ecb24a9abfd8dc9800a3a10d2d65025336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611266"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026530"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Zestaw rekordów: Deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
 W tym temacie wyjaśniono, jak utworzyć zestaw rekordów klasy dla wstępnie zdefiniowanego zapytania (nazywane również procedury składowanej, tak jak w programie Microsoft SQL Server).
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli zbiorcze pobieranie z wiersza jest zaimplementowana, proces jest bardzo podobne. Aby zrozumieć różnice między zestawami rekordów, który implementuje zbiorcze pobieranie z wiersza, które nie obsługują, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli zbiorcze pobieranie z wiersza jest zaimplementowana, proces jest bardzo podobne. Aby zrozumieć różnice między zestawami rekordów, który implementuje zbiorcze pobieranie z wiersza, które nie obsługują, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Niektóre systemy zarządzania bazami danych (DBMS) pozwalają na tworzenie wstępnie zdefiniowanego zapytania i wywołać go z Twojego programów, takich jak funkcja. Zapytanie o nazwie, może potrwać parametrów i może zwrócić rekordów. Procedury przedstawione w tym temacie opisano sposób wywoływania wstępnie zdefiniowanego zapytania, które zwraca rekordy (i prawdopodobnie przyjmuje parametry).
 
@@ -63,7 +63,7 @@ Można utworzyć klasy jednym zestawie rekordów do zarządzania, wywołanie wst
 
 1. Jeśli zapytanie pobiera parametry, należy dodać element członkowski danych parametru dla każdego parametru, wywołanie funkcji RFX dla każdego i Inicjowanie dla każdego.
 
-1. Należy zwiększyć `m_nParams` dla każdego dodano parametr, tak jak `m_nFields` przypadku należy dodać pola w kroku 4 tej procedury. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Należy zwiększyć `m_nParams` dla każdego dodano parametr, tak jak `m_nFields` przypadku należy dodać pola w kroku 4 tej procedury. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Ręcznie napisać parametry instrukcji SQL w następującej postaci:
 
@@ -150,9 +150,9 @@ Ten kod tworzy migawkę, przekazuje on parametr uzyskanymi wcześniej z użytkow
 > [!TIP]
 >  Być może chcesz obsługiwać (parametr wyjściowy) wartość zwracana z procedury składowanej. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[Zestaw rekordów: Deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Zestaw rekordów: Wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

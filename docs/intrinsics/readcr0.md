@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr0 intrinsic
 ms.assetid: 25bdb093-d83c-48d7-9c0f-224de8e2c61c
-ms.openlocfilehash: a88d998f95a19f996be62ef665e1875bd32ad19b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 09d44e438b4aa99f9be63927a4cf116f12c6e634
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518271"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027795"
 ---
 # <a name="readcr0"></a>__readcr0
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczytuje rejestru CR0 i zwraca jego wartość.
 
@@ -42,8 +42,8 @@ Wartość rejestru CR0.
 
 Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

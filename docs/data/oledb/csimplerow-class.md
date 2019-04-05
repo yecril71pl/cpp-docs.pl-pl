@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556637"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023844"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
 
@@ -63,9 +63,9 @@ class CSimpleRow
 |||
 |-|-|
 |[Addrefrow —](#addrefrow)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|
-|[Compare](#compare)|Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.|
-|[CSimpleRow](#csimplerow)|Konstruktor.|
-|[Releaserow —](#releaserow)|Wersje wierszy.|
+|[{1&gt;Compare&lt;1}](#compare)|Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.|
+|[Csimplerow —](#csimplerow)|Konstruktor.|
+|[ReleaseRow](#releaserow)|Wersje wierszy.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -105,7 +105,7 @@ Wskaźnik do `CSimpleRow` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych.
+Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych.
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 
@@ -156,8 +156,8 @@ Indeks wierszy reprezentujący kursora.
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetImpl, klasa](../../data/oledb/irowsetimpl-class.md)
+[IRowsetImpl — Klasa](../../data/oledb/irowsetimpl-class.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - int 2c instruction
 - __int2c intrinsic
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
-ms.openlocfilehash: df90e87684a40dcd489c875e2fa49d96ebf94b40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36ef8acd3d71c08a356d4210f16205828f691fa5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486206"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023493"
 ---
 # <a name="int2c"></a>__int2c
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje `int 2c` instrukcji, co powoduje wyzwolenie `2c` przerwania.
 
@@ -36,8 +36,8 @@ void __int2c(void);
 
 **Plik nagłówkowy** \<intrin.h >
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

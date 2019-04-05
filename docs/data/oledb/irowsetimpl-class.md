@@ -91,12 +91,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: a1826155bec3313afe503ee1c58f786a5c4739e8
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556988"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024455"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl — Klasa
 
@@ -140,13 +140,13 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
 |||
 |-|-|
 |[Addrefrows —](#addrefrows)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|
-|[Createrow —](#createrow)|Wywoływane przez [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`. Nie jest wywoływana bezpośrednio przez użytkownika.|
+|[CreateRow](#createrow)|Wywoływane przez [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`. Nie jest wywoływana bezpośrednio przez użytkownika.|
 |[GetData](#getdata)|Pobiera dane z zestawu wierszy kopię wiersza.|
-|[Getdbstatus —](#getdbstatus)|Zwraca stan dla określonego pola.|
+|[GetDBStatus](#getdbstatus)|Zwraca stan dla określonego pola.|
 |[Getnextrows —](#getnextrows)|Pobiera wiersze po kolei, uzupełnij poprzedniej pozycji.|
-|[Irowsetimpl —](#irowsetimpl)|Konstruktor. Nie jest wywoływana bezpośrednio przez użytkownika.|
+|[IRowsetImpl](#irowsetimpl)|Konstruktor. Nie jest wywoływana bezpośrednio przez użytkownika.|
 |[Refrows —](#refrows)|Wywoływane przez [addrefrows —](../../data/oledb/irowsetimpl-addrefrows.md) i [releaserows —](../../data/oledb/irowsetimpl-releaserows.md). Nie jest wywoływana bezpośrednio przez użytkownika.|
-|[Releaserows —](#releaserows)|Wersje wierszy.|
+|[ReleaseRows](#releaserows)|Wersje wierszy.|
 |[Operacja restartposition wykonywana](#restartposition)|Powoduje przeniesienie pozycji następnego pobierania na jego początkowe położenie; oznacza to utworzyć jego położenie podczas pierwszego zestawu wierszy.|
 |[Setdbstatus —](#setdbstatus)|Ustawia flagi stanu dla określonego pola.|
 
@@ -162,7 +162,7 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
 
 ## <a name="remarks"></a>Uwagi
 
-[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) jest interfejsem podstawowy zestaw wierszy.
+[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) jest interfejsem podstawowy zestaw wierszy.
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
@@ -179,7 +179,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 
@@ -222,7 +222,7 @@ STDMETHOD(GetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowset::GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IRowset::GetData`:
 
@@ -255,7 +255,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 
 ### <a name="return-value"></a>Wartość zwracana
 
-[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) flagi dla kolumny.
+[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) flagi dla kolumny.
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 
@@ -273,7 +273,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowset::GetNextRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms709827(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
@@ -305,7 +305,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -327,7 +327,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 
@@ -341,7 +341,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -362,7 +362,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parametry
 
 *statusFlags*<br/>
-[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) flagi, aby określić dla kolumny.
+[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) flagi, aby określić dla kolumny.
 
 *TableRow*<br/>
 Bieżący wiersz.
@@ -444,8 +444,8 @@ MapClass m_rgRowHandles;
 
 Dojść do wierszy są usuwane przez wywołanie metody `ReleaseRows`. Zobacz [irowsetimpl — omówienie](../../data/oledb/irowsetimpl-class.md) dla definicji *MapClass*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[CSimpleRow, klasa](../../data/oledb/csimplerow-class.md)
+[CSimpleRow — Klasa](../../data/oledb/csimplerow-class.md)

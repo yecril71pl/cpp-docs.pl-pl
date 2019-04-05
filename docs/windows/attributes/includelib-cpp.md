@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 4cfadc84b9131aa787323b4967ae9cfc4baabbcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570420"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030003"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -25,7 +25,7 @@ Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygene
 
 ### <a name="parameters"></a>Parametry
 
-*name.IDL*<br/>
+*name.idl*<br/>
 Nazwa pliku .idl, którego mają być dołączane jako część pliku .idl wygenerowany.
 
 ## <a name="remarks"></a>Uwagi
@@ -49,16 +49,16 @@ Poniższy kod jest pokazywana w pliku .cpp:
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
-|**Powtarzalne**|Tak|
+|**Informacje zawarte w tym artykule dotyczą**|Dowolne miejsce|
+|**Powtarzalne**|Yes|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>

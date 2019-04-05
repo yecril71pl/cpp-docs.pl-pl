@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: b37cf7fee6dba46d99788bd91c42a8e36846b1bd
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787270"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021506"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfejsy ogólne (C + +/ CLI)
 
@@ -32,10 +32,10 @@ Aby uzyskać więcej informacji na temat interfejsów, zobacz [interfejsu klasy]
 
 ## <a name="remarks"></a>Uwagi
 
-*Atrybuty*<br/>
+*atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji na temat atrybuty i klasy atrybutów, zobacz **atrybuty**.
 
-*class-key*<br/>
+*klucz klasy*<br/>
 **Klasa** lub **typename**
 
 *Typ — parametr-identyfikatory*<br/>
@@ -44,16 +44,16 @@ Lista identyfikatorów rozdzielonych przecinkami.
 *type-parameter-constraints-clauses*<br/>
 Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*accessibility-modifiers*<br/>
+*modyfikatory dostępności*<br/>
 (Opcjonalnie) Modyfikatory dostępności (np. **publiczne, prywatne**).
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 Nazwa interfejsu.
 
-*base-list*<br/>
+*Lista podstawowego*<br/>
 (Opcjonalnie) Lista, która zawiera co najmniej jeden jawne interfejsy podstawowe rozdzielonych przecinkami.
 
-*interface-body*<br/>
+*treść_interfejsu*<br/>
 Deklaracje członków interfejsu.
 
 *deklaratory*<br/>
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy ogólne](generics-cpp-component-extensions.md)

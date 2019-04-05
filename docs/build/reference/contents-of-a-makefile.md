@@ -5,12 +5,12 @@ helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 5a88edaf2296ad437610c91b41ea53845a4984b0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823569"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021517"
 ---
 # <a name="contents-of-a-makefile"></a>Zawartość pliku reguł programu Make
 
@@ -34,6 +34,6 @@ Inne funkcje, które można używać w pliku reguł programu make są [symboli w
 
 Dla przykładu, zobacz [przykładowy plik reguł programu make](sample-makefile.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[NMAKE — dokumentacja](nmake-reference.md)
+[Odwołanie NMAKE](nmake-reference.md)

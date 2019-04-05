@@ -6,17 +6,17 @@ helpviewer_keywords:
 - records [C++]
 - records [C++], database
 ms.assetid: d9888635-8121-452c-8cb9-a1c5bf268010
-ms.openlocfilehash: 53da1766bdf717e7c8eae890dd646ef24d4a9f96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b308f98a597a080048377b345c27cb5862e5f12
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495982"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033275"
 ---
 # <a name="record-mfc-data-access"></a>Rekord (dostęp do danych MFC)
 
 Rekord jest zbiorem danych o pojedynczej jednostki, takie jak konta usługi lub klienta, przechowywane w tabeli (wiersz tabeli). Rekord zawiera grupę sąsiadujących kolumn (nazywane również polami), które zawierają różne typy danych. Zestaw rekordów wybranych ze źródłem danych — często nazywana zestaw wyników w warunkach bazy danych — nosi nazwę zestawu rekordów w MFC. Aby uzyskać więcej informacji, zobacz [zestawu rekordów (ODBC)](../data/odbc/recordset-odbc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie (MFC/ATL) dostępu do danych](../data/data-access-programming-mfc-atl.md)

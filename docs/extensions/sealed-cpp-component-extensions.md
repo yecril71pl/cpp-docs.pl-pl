@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: cd6b9b54abf6e810fc9d00217ef3d0b9c7a2ee0a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787244"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030454"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed (C + +/ CLI i C + +/ CX)
 
@@ -33,7 +33,7 @@ virtual return-type identifier() sealed {...};
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 Nazwa klasy lub funkcji.
 
 *zwracany typ*<br/>
@@ -138,6 +138,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

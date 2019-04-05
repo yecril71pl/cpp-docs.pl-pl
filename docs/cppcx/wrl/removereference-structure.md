@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-ms.openlocfilehash: 7364fd3a123336bd2419006a9de9d7880f12e538
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 342980ac9a7cae8a98ffd0f367c666487e34e5de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787509"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021621"
 ---
 # <a name="removereference-structure"></a>RemoveReference — Struktura
 
@@ -58,6 +58,6 @@ Usuwa odwołanie lub odwołaniem rvalue cech od parametru szablonu określonej k
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details — Przestrzeń nazw](microsoft-wrl-details-namespace.md)

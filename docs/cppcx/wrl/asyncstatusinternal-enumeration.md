@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: b38d58603eafeaa76c79873bbf375b4a3b405cdb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: f12bf4aafc87e44a6e2fb15ba79de4a9744bea58
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787350"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029729"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal — Wyliczenie
 
@@ -51,6 +51,6 @@ Wartość równoważna `::Windows::Foundation::AsyncStatus::Error`
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details — Przestrzeń nazw](microsoft-wrl-details-namespace.md)

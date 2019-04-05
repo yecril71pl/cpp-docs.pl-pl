@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: 8a6c335c7afe2cc56613f06abf5c181f05f6bfec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585396"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027926"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
 **Określonego język C++**
@@ -30,7 +30,7 @@ Jeśli ten atrybut nie jest określony, tylko ogólne są generowane otoki, któ
 
 **KONIEC określonego języka C++**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

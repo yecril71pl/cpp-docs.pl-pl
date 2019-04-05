@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557092"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023233"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset — Klasa
 
@@ -140,10 +140,10 @@ Klasa metody dostępu.
 |[MoveFirst](#movefirst)|Pobiera pierwszy wiersz danych, wykonywanie nowych pobierania zbiorczego w razie potrzeby.|
 |[MoveLast](#movelast)|Przenosi do ostatniego wiersza.|
 |[MoveNext](#movenext)|Pobiera następny wiersz danych.|
-|[Moveprev —](#moveprev)|Przenosi do poprzedniego wiersza.|
+|[MovePrev](#moveprev)|Przenosi do poprzedniego wiersza.|
 |[Movetobookmark —](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
-|[MoveToRatio](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
-|[Releaserows —](#releaserows)|Ustawia bieżący wiersz (`m_nCurrentRow`) do zera i zwalnia wszystkie wiersze.|
+|[Movetoratio —](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
+|[ReleaseRows](#releaserows)|Ustawia bieżący wiersz (`m_nCurrentRow`) do zera i zwalnia wszystkie wiersze.|
 |[Setrows —](#setrows)|Ustawia liczbę dojść do wierszy mają zostać pobrane przez jedno wywołanie.|
 
 ## <a name="example"></a>Przykład
@@ -154,7 +154,7 @@ W poniższym przykładzie pokazano użycie `CBulkRowset` klasy.
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Wywołania [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) Aby zwiększyć licznik odwołań dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.
+Wywołania [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) Aby zwiększyć licznik odwołań dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.
 
 ### <a name="syntax"></a>Składnia
 
@@ -253,7 +253,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zobacz [IRowset::GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
@@ -284,11 +284,11 @@ Standardowa HRESULT.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Wywołania [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) na liczbę odwołań we wszystkich wierszach, które obecnie są pobierane z zestawu wierszy bulk.
+Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) na liczbę odwołań we wszystkich wierszach, które obecnie są pobierane z zestawu wierszy bulk.
 
 ### <a name="syntax"></a>Składnia
 
@@ -319,7 +319,7 @@ void SetRows(DBROWCOUNT nRows) throw();
 
 Jeśli chcesz wywołać tę funkcję, należy przed otwarciem zestawu wierszy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)

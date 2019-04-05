@@ -1,17 +1,17 @@
 ---
-title: 'Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)'
+title: 'Transakcja: Wykonywanie transakcji w zestawie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659598"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035244"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakcja: Wykonywanie transakcji w zestawie rekordów (ODBC)
 
 W tym temacie opisano sposób wykonania transakcji w zestawie rekordów.
 
@@ -81,9 +81,9 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 > [!NOTE]
 >  Wywoływanie `BeginTrans` ponownie bez wywoływania `CommitTrans` lub `Rollback` , występuje błąd.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[Transakcja: jak transakcje wpływają na aktualizacje (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
+[Transakcja: Jak transakcje wpływają na aktualizacje (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
 [Klasa CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
 [Klasa CRecordset](../../mfc/reference/crecordset-class.md)

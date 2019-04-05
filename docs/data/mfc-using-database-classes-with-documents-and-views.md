@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849750"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026295"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Używanie klas baz danych z dokumentami i widokami
 
@@ -71,6 +71,6 @@ Warto wdrożyć drukowanie niezależnie od rodzaju znajduje się w danym widoku,
 
 Nie można użyć dokumentów i widoków w ogóle. W takim przypadku zobacz [MFC: Używanie klas baz danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy bazy danych MFC](../data/mfc-database-classes-odbc-and-dao.md)

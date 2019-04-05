@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 44a1a55114bcf2466aa5b084f2b53c5457f1a0aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487025"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032209"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -37,13 +37,13 @@ Zobacz [idl_module](idl-module.md) przykład przykład sposobu użycia **usesget
 
 |||
 |-|-|
-|**Dotyczy**|**Moduł** atrybutu|
+|**Informacje zawarte w tym artykule dotyczą**|**Moduł** atrybutu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)
+[atrybuty IDL](idl-attributes.md)

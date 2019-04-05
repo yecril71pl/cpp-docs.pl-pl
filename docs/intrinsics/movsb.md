@@ -8,16 +8,16 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 9dc32f460a2098d2a216c725f49c0389f77043c2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329036"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024997"
 ---
 # <a name="movsb"></a>__movsb
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje ciąg Przenieś (`rep movsb`) instrukcji.
 
@@ -33,13 +33,13 @@ void __movsb(
 
 #### <a name="parameters"></a>Parametry
 
-*miejsce docelowe*<br/>
+*Miejsce docelowe*<br/>
 [out] Wskaźnik do miejsca docelowego kopii.
 
 *Źródło*<br/>
 [in] Wskaźnik do źródła kopii.
 
-*Liczba*<br/>
+*Licznik*<br/>
 [in] Liczba bajtów do skopiowania.
 
 ## <a name="requirements"></a>Wymagania
@@ -80,8 +80,8 @@ int main()
 A big black dog. A big black dog.
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

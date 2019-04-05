@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597706"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041244"
 ---
 # <a name="codeseg"></a>code_seg
 Określa segment tekstu, w którym funkcje są przechowywane w pliku .obj.
@@ -26,13 +26,13 @@ Określa segment tekstu, w którym funkcje są przechowywane w pliku .obj.
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
+**wypychania**<br/>
 (Opcjonalnie) Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.
 
 **POP**<br/>
 (Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 (Opcjonalnie) Gdy jest używane z **wypychania**, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.
 
 *Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu przy użyciu tylko jednego **pop** polecenia.
@@ -84,7 +84,7 @@ Aby uzyskać listę nazw, które nie powinny być używane do tworzenia sekcji, 
 
 Można również określić sekcje dla danych zainicjowanych ([data_seg](../preprocessor/data-seg.md)), niezainicjowanych danych ([bss_seg](../preprocessor/bss-seg.md)) i zmiennych const ([const_seg](../preprocessor/const-seg.md)).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [code_seg (__declspec)](../cpp/code-seg-declspec.md)<br/>
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

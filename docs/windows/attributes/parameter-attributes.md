@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619638"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029554"
 ---
 # <a name="parameter-attributes"></a>Atrybuty parametru
 
@@ -18,7 +18,7 @@ Następujące atrybuty dotyczą parametry metody w klasie lub interfejsie.
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
+|[niestandardowy](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
 |[defaultvalue](defaultvalue.md)|Umożliwia określenie wartości domyślnej dla typizowany parametr opcjonalny.|
 |[first_is](first-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|
 |[iid_is](iid-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|
@@ -37,6 +37,6 @@ Następujące atrybuty dotyczą parametry metody w klasie lub interfejsie.
 |[size_is](size-is.md)|Określa rozmiar pamięci przydzielonej dla wskaźników o rozmiarze, wielkości wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.|
 |[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

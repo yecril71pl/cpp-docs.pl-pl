@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command objects [OLE DB]
 - OLE DB [C++], command object interfaces
 ms.assetid: dacff5ae-252c-4f20-9ad7-4e602cc48536
-ms.openlocfilehash: d9f663d4e857d300e5c0f5783b86445ce824ea8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 755c44cf8d0cb5bf5066197bfd0ead3e0f25e1f9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598877"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032404"
 ---
 # <a name="command-object-interfaces"></a>Interfejsy obiektu polecenia
 
@@ -19,6 +19,6 @@ Obiekt polecenia używa `IAccessor` interfejsu w celu określenia powiązania pa
 
 `ICommandText` Interfejs zapewnia sposób, aby określić polecenie tekstu. `ICommandProperties` Interfejs obsługuje wszystkie właściwości polecenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030027"
 ---
 # <a name="accessors-and-rowsets"></a>Metody dostępu i zestawy wierszy
 
@@ -51,11 +51,11 @@ Poniższa tabela zawiera podsumowanie obsługi w typy metod dostępu szablonów 
 
 |Typ metody dostępu|Dynamiczne|Obsługuje params|Bufor|Wielu metod dostępu|
 |-------------------|-------------|--------------------|------------|------------------------|
-|`CAccessor`|Nie|Tak|Użytkownik|Tak|
-|`CDynamicAccessor`|Tak|Nie|Szablony OLE DB|Nie|
-|`CDynamicParameterAccessor`|Tak|Tak|Szablony OLE DB|Nie|
-|`CDynamicStringAccessor[A,W]`|Tak|Nie|Szablony OLE DB|Nie|
-|`CManualAccessor`|Tak|Tak|Użytkownik|Tak|
+|`CAccessor`|Nie|Yes|Użytkownik|Yes|
+|`CDynamicAccessor`|Yes|Nie|Szablony OLE DB|Nie|
+|`CDynamicParameterAccessor`|Yes|Yes|Szablony OLE DB|Nie|
+|`CDynamicStringAccessor[A,W]`|Yes|Nie|Szablony OLE DB|Nie|
+|`CManualAccessor`|Yes|Tak|Użytkownik|Tak|
 
 ## <a name="rowset-types"></a>Typy zestawów wierszy
 
@@ -68,6 +68,6 @@ Klasy zestawów wierszy
 
 [Zestawy wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nie dostęp do danych w danych przechowywania ale zamiast tego uzyskać dostępu do informacji o magazynie danych o nazwie metadanych. Zestawy wierszy schematu są zwykle używane w sytuacjach, w których struktury bazy danych nie jest znany w czasie kompilacji i musi być uzyskana w czasie wykonywania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

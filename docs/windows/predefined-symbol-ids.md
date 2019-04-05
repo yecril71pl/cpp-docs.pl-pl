@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562760"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024546"
 ---
 # <a name="predefined-symbol-ids"></a>Wstępnie zdefiniowane symbole identyfikatorów
 
@@ -33,8 +33,8 @@ Biblioteki ma wstępnie zdefiniowane symbole, które będą wyświetlane jako cz
 
 Win32, ATL i MFC
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Identyfikatory zasobów (symbolom)](../windows/symbols-resource-identifiers.md)<br/>
 [Instrukcje: Tworzenie symboli](../windows/creating-new-symbols.md)<br/>
-[Instrukcje: Zarządzanie symbolami](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Instrukcje: Zarządzanie symboli](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_registry attribute
 ms.assetid: d30de4e2-551c-428c-98fd-951330d578d3
-ms.openlocfilehash: bd101f5ca1776518ff4c5092da99134110bbb0b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a0fd9a761f765aa9562ab18c095f683b80c7987
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503028"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023428"
 ---
 # <a name="noregistry"></a>no_registry
 
@@ -25,7 +25,7 @@ ms.locfileid: "50503028"
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa pliku*<br/>
+*nazwa_pliku*<br/>
 Biblioteki typów.
 
 ## <a name="remarks"></a>Uwagi
@@ -38,7 +38,7 @@ Podczas `auto_search` jest określony, dodatkowy `#import`s zostanie wygenerowan
 
 **no_registry** jest przydatne, jeśli chcesz zaimportować krzyżowe bibliotek typu odwołania, bez ryzyka stałego skanowania kompilatora znajdowanie starszej wersji pliku w rejestrze. **no_registry** jest również przydatne, jeśli biblioteka typów nie jest zarejestrowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

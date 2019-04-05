@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 888ae6dcf81ad81acd8fa83a4fb0f3dbbc0390e2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 31998cf77e3f3cfdc6bc19ad2fc57a50da77e0f6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787150"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033568"
 ---
 # <a name="generics--ccli-and-ccx"></a>Typy ogólne (C + +/ CLI i C + +/ CX)
 
@@ -26,10 +26,10 @@ Typy ogólne są sparametryzowanych typów i metod. W tej sekcji Dowiedz się, o
 [Przegląd typów ogólnych w języku C + +/ CLI](overview-of-generics-in-visual-cpp.md)<br/>
 Informacje o ogólnych są motywacja dla funkcji języka, definicje terminów używanych do opisu typów ogólnych i informacji na temat używania typów referencyjnych i typów wartości jako parametrów typu dla typów ogólnych.
 
-[Interfejsy ogólne (C++/CLI)](generic-interfaces-visual-cpp.md)<br/>
+[Interfejsy ogólne (C + +/ CLI)](generic-interfaces-visual-cpp.md)<br/>
 Informacje o definiowanie i korzystanie z interfejsów ogólnych.
 
-[Delegaty ogólne (C++/CLI)](generic-delegates-visual-cpp.md)<br/>
+[Delegaty ogólne (C + +/ CLI)](generic-delegates-visual-cpp.md)<br/>
 Informacje dotyczące definiowania i używania delegatów ogólnych.
 
 [Ograniczenia parametrów typu ogólnego (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)<br/>
@@ -38,7 +38,7 @@ Informacje o korzystaniu z ograniczeniami w typach ogólnych.
 [Konsumowanie typów ogólnych (C++/CLI)](consuming-generics-cpp-cli.md)<br/>
 Informacje o użycie typów ogólnych zdefiniowany w zestawach .NET, prawdopodobnie utworzonych w innych językach, w języku C + +/ interfejsu wiersza polecenia.
 
-[Typy ogólne i szablony (C++/CLI)](generics-and-templates-visual-cpp.md)<br/>
+[Typy ogólne i szablony (C + +/ CLI)](generics-and-templates-visual-cpp.md)<br/>
 Porównanie typy ogólne i szablony do użycia każdego i sposób łączenia ich z korzyścią.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Obsługiwane przez środowisko uruchomieniowe języka wspólnego
@@ -54,6 +54,6 @@ Informacje o definiowanie i korzystanie z klas ogólnych.
 [Instrukcje: Iterowanie przez kolekcję ogólną za pomocą instrukcji for każdego](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Za pomocą [dla poszczególnych usług, w](../dotnet/for-each-in.md) słowo kluczowe w ogólnej kolekcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

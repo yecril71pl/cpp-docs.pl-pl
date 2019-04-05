@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: f1837eb785f53e53a4b5ff621a898b0375cfc0fa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: eb9b3907008147cb21f04aec5f42e4896fa35b3c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787510"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029951"
 ---
 # <a name="partial--ccli-and-ccx"></a>częściowe (C + +/ CLI i C + +/ CX)
 
@@ -43,10 +43,10 @@ class-key identifier {
 
 ### <a name="parameters"></a>Parametry
 
-*class-key*<br/>
+*klucz klasy*<br/>
 Słowo kluczowe, która deklaruje klasy lub struktury, która jest obsługiwana przez środowisko wykonawcze Windows. Albo **klasy referencyjnej**, **klasę wartości**, **ref struct**, lub **struktury wartości**.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 Nazwa zdefiniowanego typu.
 
 ### <a name="remarks"></a>Uwagi
@@ -77,6 +77,6 @@ Aby uzyskać więcej informacji o sposobie używania **częściowe** — słowo 
 
 (Tej funkcji języka nie ma zastosowania do środowiska uruchomieniowego języka wspólnego).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy częściowe (C + +/ CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)

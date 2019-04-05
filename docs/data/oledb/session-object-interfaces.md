@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 7e8a9cd204a07afc2b14c6a1e31e7c970c27cfc2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fb91365fec0709e1bb2a26afa519e6565862681
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423381"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031459"
 ---
 # <a name="session-object-interfaces"></a>Interfejsy obiektu sesji
 
@@ -23,13 +23,13 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 |---------------|---------------|--------------------------------------|
 |[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))|Obowiązkowy|Tak|
 |[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))|Obowiązkowy|Tak|
-|[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))|Obowiązkowy|Tak|
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))|Obowiązkowy|Yes|
 |[IAlterIndex](/previous-versions/windows/desktop/ms714943(v=vs.85))|Optional|Nie|
 |[IAlterTable](/previous-versions/windows/desktop/ms719764(v=vs.85))|Optional|Nie|
 |[IBindResource](/previous-versions/windows/desktop/ms714936(v=vs.85))|Optional|Nie|
 |[ICreateRow](/previous-versions/windows/desktop/ms716832(v=vs.85))|Optional|Nie|
 |[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))|Optional|Tak|
-|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))|Optional|Tak|
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))|Optional|Yes|
 |[IIndexDefinition](/previous-versions/windows/desktop/ms711593(v=vs.85))|Optional|Nie|
 |[Interfejs ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|Tak|
 |[ITableCreation](/previous-versions/windows/desktop/ms713639(v=vs.85))|Optional|Nie|
@@ -44,6 +44,6 @@ Obiekt sesji tworzy się obiektu zestawu wierszy. Jeśli dostawca obsługuje pol
 
 ![Diagram koncepcyjny dostawcy](../../data/oledb/media/vc4u551.gif "diagram pojęciowy dostawcy")
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

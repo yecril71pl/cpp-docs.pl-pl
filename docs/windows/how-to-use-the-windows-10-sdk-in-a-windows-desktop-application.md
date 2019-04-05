@@ -3,12 +3,12 @@ title: 'Instrukcje: Użyj systemu Windows 10 SDK w aplikacji pulpitu Windows'
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f3f6897dfa0f180f629a2ca169ff74c5e5588365
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809928"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021531"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Instrukcje: Użyj systemu Windows 10 SDK w aplikacji pulpitu Windows
 
@@ -58,6 +58,6 @@ Począwszy od programu Visual Studio 2015 i zestawu Windows 10 SDK, biblioteki C
 
 2. W **wersji platformy docelowej** listy rozwijanej wybierz **8.1**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Windows aplikacji komputerowych (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

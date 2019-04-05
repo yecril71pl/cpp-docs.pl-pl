@@ -6,12 +6,12 @@ helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: 9640270caa50f53c106bb7b970959f0c092a47df
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: c1e8e7db2879b0226eaff562f5b5b826bce14caf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787294"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029932"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>Specyfikatory zastąpienia (C + +/ CLI i C + +/ CX)
 
@@ -25,7 +25,7 @@ Aby uzyskać więcej informacji na temat nadpisania specyfikatorów zobacz:
 
 - [abstract](abstract-cpp-component-extensions.md)
 
-- [New (nowe gniazdo w vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)
+- [new (nowe gniazdo w vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
@@ -53,6 +53,6 @@ Aby uzyskać informacje dotyczące jawnego przesyłania funkcji klasy podstawowe
 
 — Opcja kompilatora: `/clr`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

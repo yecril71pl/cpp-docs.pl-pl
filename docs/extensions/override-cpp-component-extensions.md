@@ -6,12 +6,12 @@ helpviewer_keywords:
 - overriding, override keyword [C++]
 - override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-ms.openlocfilehash: 291766ade1397fee433198dce1a704949c8223c8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8dc7a0a0e6cf759d956fd701d033bd773e572af3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787512"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025674"
 ---
 # <a name="override--ccli-and-ccx"></a>Przesłoń (C + +/ CLI i C + +/ CX)
 
@@ -81,7 +81,7 @@ ref struct X : public I1 {
 
 — Opcja kompilatora: `/clr`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [override, specyfikator](../cpp/override-specifier.md)<br/>
-[Specyfikatory przesłonięć](override-specifiers-cpp-component-extensions.md)
+[Specyfikatory zastąpienia](override-specifiers-cpp-component-extensions.md)

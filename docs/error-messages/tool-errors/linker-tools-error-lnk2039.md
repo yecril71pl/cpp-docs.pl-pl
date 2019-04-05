@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-ms.openlocfilehash: fad8960424cd73240d547ef894b2ae5cdf358601
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d0c101358f84816c8d0cf96eb5137833df0b48
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498284"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027571"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Błąd narzędzi konsolidatora LNK2039
 
@@ -25,7 +25,7 @@ Klasa ref "<`type`>" są importowane w pliku .obj określony, ale również jest
 
 1. Usuń definicję lub importu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Błędy i ostrzeżenia narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
 [Błąd narzędzi konsolidatora LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

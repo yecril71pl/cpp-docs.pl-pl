@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ATL [C++], database support
 - databases [C++], installing database support
 ms.assetid: 3820ba96-4fb8-4405-83dd-bb3bc5998667
-ms.openlocfilehash: aef54fdb32aa68df5f97984944038e32d4579cb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd0e8892aa208c80fdd30e6c3f4d47bddb9886ac
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543419"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023506"
 ---
 # <a name="installing-database-support-mfcatl"></a>Instalowanie obsługi bazy danych (MFC/ATL)
 
 Visual C++ nie ma żadnego bazy danych. Zadanie
 
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dostęp do danych](data-access-in-cpp.md)

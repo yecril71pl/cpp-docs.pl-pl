@@ -6,12 +6,12 @@ helpviewer_keywords:
 - menus, updating as context changes
 - record views, user interface
 ms.assetid: 2c7914b6-2dc3-40c3-b2f2-8371da2a4063
-ms.openlocfilehash: 914a262560a10ba4085e0605a0c9f677d7a447fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de94b28e713459edfd63aff832caecc7ea49ca33
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630402"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023363"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Aktualizowanie interfejsu użytkownika dla widoków rekordów (dostęp do danych MFC)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50630402"
 
 1. Odwołujące się do informacji o używaniu [Edytor paska narzędzi](../windows/toolbar-editor.md), Edytuj zasób paska narzędzi, aby dodać przyciski paska narzędzi dla poleceń nawigacji między rekordami.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa nawigacji w widoku rekordu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
 [Używanie widoku rekordu](../data/using-a-record-view-mfc-data-access.md)

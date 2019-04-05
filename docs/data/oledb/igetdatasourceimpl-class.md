@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: cd6b56f4281a2fdde77229ec54be6d6289a87148
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 2056b93fd6c1d32b72996970352e87670ff406de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556572"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034212"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl — Klasa
 
-Udostępnia implementację [IGetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms709721(v=vs.85)) obiektu.
+Udostępnia implementację [IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85)) obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,13 +66,13 @@ STDMETHOD(GetDataSource)(REFIID riid,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IGetDataSource::GetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms725443(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
 Parametr jest przydatne, jeśli potrzebujesz uzyskać dostęp do właściwości w obiekcie źródła danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

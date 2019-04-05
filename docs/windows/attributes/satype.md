@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 3d2d921e750adad0089df0d00590f256b56c732e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517692"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025727"
 ---
 # <a name="satype"></a>satype
 
@@ -34,7 +34,7 @@ Typ danych dla `SAFEARRAY` struktury danych, który jest przekazywany jako param
 
 |||
 |-|-|
-|**Dotyczy**|Interfejs parametru metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Interfejs parametru metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -59,9 +59,9 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[id](id.md)
+[identyfikator](id.md)

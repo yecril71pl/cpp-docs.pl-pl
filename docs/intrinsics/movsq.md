@@ -8,16 +8,16 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 06f42befa24d4024b3ad4b0c0a8d0897cb2aee9b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326371"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036750"
 ---
 # <a name="movsq"></a>__movsq
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje ciąg powtarzanych Przenieś (`rep movsq`) instrukcji.
 
@@ -39,7 +39,7 @@ void __movsq(
 *Źródło*<br/>
 [in] Źródło działania.
 
-*Liczba*<br/>
+*Licznik*<br/>
 [in] Liczba wyrazy w liczbie mnogiej do skopiowania.
 
 ## <a name="requirements"></a>Wymagania
@@ -83,8 +83,8 @@ int main()
 950 850 750 650 550 450 350 250 150 50
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

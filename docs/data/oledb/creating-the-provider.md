@@ -4,12 +4,12 @@ ms.date: 10/15/2018
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 05ab045e104e3035f8ccd2fa1924b6959164b8d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538193"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032353"
 ---
 # <a name="creating-the-provider"></a>Tworzenie dostawcy
 
@@ -27,12 +27,12 @@ ms.locfileid: "50538193"
 
    - **Klasa coclass**: Nazwa która używa modelu COM w celu utworzenia dostawcy.
 
-   - **Identyfikator progID**: identyfikator programowy, czyli ciąg tekstowy, który można używać zamiast identyfikatora GUID.
+   - **Identyfikator progID**: Identyfikator programowy, czyli ciąg tekstowy, który można używać zamiast identyfikatora GUID.
 
-   - **Wersja**: używany z ProgID i Coclass do generowania identyfikatora programowe zależne od wersji
+   - **Wersja**: Używane z ProgID i Coclass, aby wygenerować identyfikator programowy zależne od wersji
 
 1. Kliknij przycisk **Zakończ**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

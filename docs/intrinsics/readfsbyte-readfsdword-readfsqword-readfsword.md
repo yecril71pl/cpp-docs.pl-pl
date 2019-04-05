@@ -16,16 +16,16 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: e5610fcd9be369718875f2f7a7bd358e7c2b07dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327684"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036815"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczyt pamięci z lokalizacji określonej przez przesunięcie względem początku segmentu FS.
 
@@ -70,9 +70,9 @@ Zawartość pamięci bajt, wyraz, bitowego lub quadword (co zostało wskazane pr
 
 Te procedury są dostępne tylko jako funkcje wewnętrzne.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

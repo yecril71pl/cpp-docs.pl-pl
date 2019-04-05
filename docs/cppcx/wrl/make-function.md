@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: cab261724399107c57b36a9020906a96697f7eca
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786805"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028250"
 ---
 # <a name="make-function"></a>Make — Funkcja
 
@@ -197,13 +197,13 @@ Typ argumentu 9, który jest przekazywany do określonego środowiska uruchomien
 *arg1*<br/>
 Argument 1, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg2*<br/>
+*argument2*<br/>
 Argument 2, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
 *arg3*<br/>
 Argument 3, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg4*<br/>
+*Arg4*<br/>
 Argument 4, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
 *arg5*<br/>
@@ -235,6 +235,6 @@ Zobacz [jak: Składników biblioteki WRL bezpośrednie tworzenie wystąpień](ho
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft::WRL — Przestrzeń nazw](microsoft-wrl-namespace.md)

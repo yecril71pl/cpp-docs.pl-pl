@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520425"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028094"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else i #endif — dyrektywy (C/C++)
 
@@ -65,7 +65,7 @@ Każdy **#if** dyrektywy w pliku źródłowym musi towarzyszyć zamykający **#e
 
 **#If**, **#elif**, **#else**, i **#endif** dyrektywy można zagnieździć w części tekstowej innych **#if**dyrektywy. Każda zagnieżdżona **#else**, **#elif**, lub **#endif** dyrektywa należy do najbliższej poprzedzającej **#if** dyrektywy.
 
-Wszystkie dyrektywy kompilacji warunkowej, takie jak **#if** i **#ifdef**, muszą się zgadzać z zamknięciem **#endif** dyrektyw przed końcem pliku; w przeciwnym razie błąd komunikat jest generowany. Gdy dyrektywy kompilacji warunkowej są zawarte w plikach dołączonych, muszą spełniać te same warunki: muszą być nie niedopasowane dyrektywy kompilacji warunkowej na końcu pliku dyrektywy include.
+Wszystkie dyrektywy kompilacji warunkowej, takie jak **#if** i **#ifdef**, muszą się zgadzać z zamknięciem **#endif** dyrektyw przed końcem pliku; w przeciwnym razie błąd komunikat jest generowany. Gdy dyrektywy kompilacji warunkowej są zawarte w plików dołączanych, muszą spełniać te same warunki: Musi istnieć nie niedopasowane dyrektywy kompilacji warunkowej na końcu pliku dyrektywy include.
 
 Wymiana makra jest wykonywana w części wiersza polecenia, który następuje po **#elif** poleceń, więc wywołanie makra mogą być używane w *wyrażenie_stałe*.
 
@@ -97,7 +97,7 @@ Operator preprocesora **zdefiniowane** mogą być używane w specjalnym wyrażen
 
 zdefiniowany ( `identifier` )
 
-Definicja `identifier`
+zdefiniowane `identifier`
 
 To wyrażenie stałej jest uważany za wartość true (niezerową), jeśli *identyfikator* jest obecnie zdefiniowany; w przeciwnym razie warunek jest fałszywy (0). Identyfikator zdefiniowany jako pusty tekst jest uważany za zdefiniowany. **Zdefiniowane** dyrektywa może być używana w **#if** i **#elif** dyrektywy, nigdzie indziej.
 
@@ -174,7 +174,7 @@ Poprzedzający kod sprawdza, czy symboliczna stała `EXAMPLE_H` jest zdefiniowan
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej**: Określa, czy nagłówek biblioteki są dostępne do włączenia:
+**Visual Studio 2017 w wersji 15.3 lub nowszej**:  Określa, czy nagłówek biblioteki są dostępne do włączenia:
 
 ```cpp
 #ifdef __has_include
@@ -191,6 +191,6 @@ Poprzedzający kod sprawdza, czy symboliczna stała `EXAMPLE_H` jest zdefiniowan
 #endif
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)

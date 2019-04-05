@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3374
 ms.assetid: 41431299-bd20-47d4-a0c8-1334dd79018b
-ms.openlocfilehash: c9ee9130d77e844ab435ecc34dcf53e12449abba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b00b1cea8ac462c82c11d9f5b207706af74959c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474935"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022635"
 ---
 # <a name="compiler-error-c3374"></a>Błąd kompilatora C3374
 
@@ -42,6 +42,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Instrukcje: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+[Instrukcje: Definiowanie i korzystanie z obiektów delegowanych (C + +/ CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)

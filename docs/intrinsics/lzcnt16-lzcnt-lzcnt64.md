@@ -14,16 +14,16 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 7b1e499eff8c8c7de59dc6f96cb1060ce845e27d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523458"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041341"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Powoduje wyzerowanie liczbę wiodących liczby 16-, 32-lub 64-bitową liczbę całkowitą.
 
@@ -56,7 +56,7 @@ Liczba wiodące zero bitów `value` parametru. Jeśli `value` wynosi zero, warto
 |---------------|------------------|
 |`__lzcnt16`|AMD: Manipulowanie zaawansowane Bit (ABM)<br /><br /> Intel: Haswell|
 |`__lzcnt`|AMD: Manipulowanie zaawansowane Bit (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD: Zaawansowane manipulowania Bit (ABM) w trybie 64-bitowym.<br /><br /> Intel: Haswell|
+|`__lzcnt64`|AMD: Zaawansowane Bit manipulowania (ABM) w trybie 64-bitowym.<br /><br /> Intel: Haswell|
 
 **Plik nagłówkowy** \<intrin.h >
 
@@ -105,10 +105,10 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
 Część tej zawartości są Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

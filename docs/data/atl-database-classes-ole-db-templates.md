@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: 4304c350ce6a9303a7542809fa85fb0cd2560031
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522083"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023441"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Klasy baz danych ATL (Szablony OLE DB)
 
@@ -31,10 +31,10 @@ Należy pamiętać, że biblioteka MFC zawiera jedną klasę [COleDBRecordView](
 
 Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole-db-programming.md) i [OLE DB przewodnik](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie konsumenta OLE DB](../data/oledb/creating-an-ole-db-consumer.md)<br/>
 [Tworzenie dostawcy OLE DB](../data/oledb/creating-an-ole-db-provider.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Szablony dostawców OLE DB — dokumentacja](../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Szablony konsumentów OLE DB — kompendium](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Szablony dostawców OLE DB — kompendium](../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Przykłady szablonów OLE DB](https://github.com/Microsoft/VCSamples)

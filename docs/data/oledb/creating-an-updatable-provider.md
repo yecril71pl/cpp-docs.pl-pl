@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521404"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024743"
 ---
 # <a name="creating-an-updatable-provider"></a>Tworzenie aktualizowalnego dostawcy
 
@@ -109,7 +109,7 @@ Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl
 
    W przypadku zaimplementowania `IRowsetChangeImpl`, należy ustawić następujące właściwości w dostawcy usługi. Te właściwości są używane głównie do żądania interfejsów za pośrednictwem `ICommandProperties::SetProperties`.
 
-   - `DBPROP_IRowsetChange`: Ustawienie tym automatycznie ustawia `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: Ustawienie to automatycznie ustawia `DBPROP_IRowsetChange`.
 
    - `DBPROP_UPDATABILITY`: Maska bitowa określenie obsługiwanych metod na `IRowsetChange`: `SetData`, `DeleteRows`, lub `InsertRow`.
 
@@ -434,6 +434,6 @@ m_rgRowData.Add(trData[0]);
 
 Ten kod określa, między innymi, że kolumna obsługuje wartości domyślnej 0, że jest zapisywalny, i że wszystkie dane w kolumnie mają tę samą długość. Jeśli chcesz, aby dane w kolumnie o zmiennej długości, nie ustawi tę flagę.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie dostawcy OLE DB](creating-an-ole-db-provider.md)

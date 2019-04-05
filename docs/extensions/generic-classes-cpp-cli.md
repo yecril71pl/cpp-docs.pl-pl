@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 77c432542aac82fb4b66e5124e68f16afc52cc05
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787410"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041424"
 ---
 # <a name="generic-classes-ccli"></a>Klasy ogólne [C++/CLI]
 
@@ -37,10 +37,10 @@ class-body
 
 W powyższej składni używane są następujące warunki:
 
-*Atrybuty*<br/>
+*atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
-*class-key*<br/>
+*klucz klasy*<br/>
 Albo **klasy** lub **typename**
 
 *Typ — parametr-identyfikatory*, rozdzielana przecinkami lista identyfikatorów określających nazwy parametrów typu.
@@ -53,19 +53,19 @@ Listy (nie rozdzielanych przecinkami) **gdzie** klauzul określania ograniczenia
 *Lista ograniczeń*<br/>
 *Klasa lub interfejs*[`,` *...* ]
 
-*accessibility-modifiers*<br/>
+*modyfikatory dostępności*<br/>
 Modyfikatory dostępności dla klasy ogólnej. Dla środowiska wykonawczego Windows, jest dozwolony tylko modyfikator **prywatnej**. Środowisko uruchomieniowe języka wspólnego, są dozwolone Modyfikatory **prywatnej** i **publicznych**.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 Nazwa klasy ogólnej dowolnego prawidłowego identyfikatora C++.
 
-*Modyfikatory*<br/>
+*modyfikatory*<br/>
 (Opcjonalnie) Może zawierać Modyfikatory **zapieczętowanego** i **abstrakcyjne**.
 
-*base-list*<br/>
+*Lista podstawowego*<br/>
 Lista, która zawiera jedną klasę bazową i wszystkie zaimplementowane interfejsy, wszystkie rozdzielonych przecinkami.
 
-*class-body*<br/>
+*treści klasy*<br/>
 Treść tej klasy, zawierający pola, funkcje składowe itp.
 
 *deklaratory*<br/>
@@ -710,6 +710,6 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy ogólne](generics-cpp-component-extensions.md)

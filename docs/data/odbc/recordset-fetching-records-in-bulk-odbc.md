@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)'
+title: 'Zestaw rekordów: Pobieranie rekordów zbiorcze (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628205"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027769"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>Zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>Zestaw rekordów: Pobieranie rekordów zbiorcze (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -46,10 +46,10 @@ W poniższej tabeli wymieniono funkcje elementów członkowskich, dostarczone pr
 |Funkcja elementu członkowskiego|Opis|
 |---------------------|-----------------|
 |[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|Funkcja wirtualna, która obsługuje wszystkie błędy, które występują podczas pobierania.|
-|[Dobulkfieldexchange —](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementuje zbiorczo wymiana pól rekordów. Wywołuje się automatycznie z transferami wiele wierszy danych ze źródła danych do obiektu zestawu rekordów.|
+|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementuje zbiorczo wymiana pól rekordów. Wywołuje się automatycznie z transferami wiele wierszy danych ze źródła danych do obiektu zestawu rekordów.|
 |[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Pobiera bieżące ustawienie rozmiaru wierszy.|
 |[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Informuje o tym, ile wierszy rzeczywiście zostały pobrane po pobraniu danego. W większości przypadków jest to rozmiar zestawu wierszy, chyba że pobrano wierszy niekompletne.|
-|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Zwraca stan pobierania dla danego wiersza w zestawie wierszy.|
+|[Getrowstatus —](../../mfc/reference/crecordset-class.md#getrowstatus)|Zwraca stan pobierania dla danego wiersza w zestawie wierszy.|
 |[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Odświeża dane i stan określonego wiersza w zestawie wierszy.|
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Przenosi kursor do określonego wiersza w zestawie wierszy.|
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Funkcja wirtualna, która zmienia ustawienie rozmiaru wierszy z podaną wartością.|
@@ -137,9 +137,9 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  Należy wywołać `Close` funkcji składowej przed swoje pochodnej `CRecordset` klasy wykracza poza zakres. Daje to gwarancję, że wszystkie pamięci przydzielonej przez platformę są zwalniane. Jest dobrą praktyką, aby zawsze jawnie wywołać programowania `Close`, niezależnie od tego, czy udało Ci się wdrożyć zbiorcze pobieranie z wiersza.
 
-Aby uzyskać więcej informacji na temat wymiana pól rekordów (RFX), zobacz [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać więcej informacji o korzystaniu z parametrów, zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) i [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Aby uzyskać więcej informacji na temat wymiana pól rekordów (RFX), zobacz [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać więcej informacji o korzystaniu z parametrów, zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) i [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [CRecordset::m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC drivers, using
 ms.assetid: ae1bf357-4ca4-4748-9336-8fc317f294ab
-ms.openlocfilehash: 6d245a8c4071f8f3822e3bdd6bfe0467251fc852
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa0ccf65584d08088635d3939e609eb2d763abe7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437833"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030079"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Praca z ODBC i sterownikami
 
@@ -27,6 +27,6 @@ ODBC pozwala pisać aplikacje, które nie są zależne od tylko jeden system zar
 
 - [Wywoływanie funkcji ODBC API bezpośrednio w MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

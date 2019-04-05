@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b42ecf6c03dd1023d1ba150d579f77c4bae8998a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556208"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029174"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl — Klasa
 
-Udostępnia implementację na potrzeby [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) interfejsu.
+Udostępnia implementację na potrzeby [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,7 +64,7 @@ Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*.
 
 |||
 |-|-|
-|[Getproperties —](#getproperties)|Zwraca bieżące ustawienia właściwości wszystkich obsługiwanych przez zestaw wierszy.|
+|[GetProperties](#getproperties)|Zwraca bieżące ustawienia właściwości wszystkich obsługiwanych przez zestaw wierszy.|
 |[Getreferencedrowset —](#getreferencedrowset)|Zwraca wskaźnik interfejsu do zestawu wierszy, do której stosują się zakładki.|
 |[Getspecification —](#getspecification)|Zwraca wskaźnik interfejsu na obiekcie (polecenie lub sesji), który utworzył ten zestaw wierszy.|
 
@@ -87,7 +87,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowsetInfo::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
@@ -103,7 +103,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85)) w *OLE DB Podręcznik programisty*. *IOrdinal* parametr musi być kolumną zakładki.
+Zobacz [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) w *OLE DB Podręcznik programisty*. *IOrdinal* parametr musi być kolumną zakładki.
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
@@ -118,13 +118,13 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
 Użyj tej metody za pomocą [igetdatasourceimpl —](../../data/oledb/igetdatasourceimpl-class.md) można pobrać właściwości z obiektu źródła danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

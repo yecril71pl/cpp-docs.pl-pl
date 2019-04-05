@@ -44,16 +44,16 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328522"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021498"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedexchange
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje atomic instrukcji, aby ustawić określoną wartość.
 
@@ -144,7 +144,7 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>Parametry
 
-*Docelowy*<br/>
+*Cel*<br/>
 [out w] Wskaźnik do wartości wymieniane. Funkcja ustawia dla tej zmiennej `Value` i zwraca jego poprzedniej wartości.
 
 *Wartość*<br/>
@@ -180,10 +180,10 @@ Te procedury są dostępne tylko jako funkcje wewnętrzne.
 
 Przykład sposobu użycia `_InterlockedExchange`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-ms.openlocfilehash: 631e78e1a397ec360b1f3b2d94d7340e96925e23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83f4d64252ab5c2b80d62419ea448c1ffd0cdd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582721"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025876"
 ---
 # <a name="using-ole-db-record-views"></a>Korzystanie z widoków rekordów OLE DB
 
@@ -31,7 +31,7 @@ W widoku są wyświetlane pola `CRowset` obiektu w oknie dialogowym formanty. `C
 
 Można użyć funkcji DDX z `COleDbRecordView` pobieranie danych bezpośrednio z rekordów bazy danych i wyświetlania ich w formantu w oknie dialogowym. Użyj **funkcje DDX_** <strong>\*</strong> metody (takie jak `DDX_Text`), a nie **funkcje DDX_Field** <strong>\*</strong> funkcji () takie jak `DDX_FieldText`) przy użyciu `COleDbRecordView`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)<br/>
-[Klasa COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)<br/>
+[Coledbrecordview — klasa](../../mfc/reference/coledbrecordview-class.md)<br/>

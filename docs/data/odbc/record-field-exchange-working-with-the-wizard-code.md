@@ -1,5 +1,5 @@
 ---
-title: 'Wymiana pól rekordów: praca z kodem kreatora'
+title: 'Wymiana pól rekordów: Praca z kodem Kreatora'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492121"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041296"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>Wymiana pól rekordów: praca z kodem kreatora
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Wymiana pól rekordów: Praca z kodem Kreatora
 
 W tym temacie opisano kod, Kreator aplikacji MFC i **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zapisu do obsługi RFX i jak możesz chcieć zmienić kod.
 
 > [!NOTE]
->  Ten temat dotyczy klasy pochodne `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza zbiorcza wymiana pól rekordów (zbiorcze RFX) jest zaimplementowana. Zbiorcze RFX przypomina RFX. Aby poznać różnice, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy klasy pochodne `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza zbiorcza wymiana pól rekordów (zbiorcze RFX) jest zaimplementowana. Zbiorcze RFX przypomina RFX. Aby poznać różnice, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Po utworzeniu klasy zestawu rekordów za pomocą Kreatora aplikacji MFC lub **Dodaj klasę**, kreator zapisuje następujące elementy związane z RFX dla użytkownika, na podstawie źródła danych tabeli, a wybór kolumny wprowadzić w Kreatorze:
 
@@ -99,14 +99,14 @@ Zwróć uwagę, następujące kluczowe funkcje tej funkcji:
 
 - Wywołanie `CFieldExchange::SetFieldType`za pośrednictwem `pFX` wskaźnika. To wywołanie określa, że wszystkie funkcje RFX wywołuje na końcu `DoFieldExchange` lub następnym wywołaniu `SetFieldType` kolumn w danych wyjściowych. Aby uzyskać więcej informacji, zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Kilka wywołań `RFX_Text` funkcja globalna — jednym w każdym polu element członkowski danych (wszystkie są `CString` zmiennych w przykładzie). Te wywołania Określ relację między nazwę kolumny w źródle danych i element członkowski danych pola. Funkcje RFX do transferu danych rzeczywistych. Biblioteka klas dostarcza funkcje RFX wszystkie popularne typy danych. Aby uzyskać więcej informacji na temat funkcji RFX zobacz [wymiana pól rekordów: używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Kilka wywołań `RFX_Text` funkcja globalna — jednym w każdym polu element członkowski danych (wszystkie są `CString` zmiennych w przykładzie). Te wywołania Określ relację między nazwę kolumny w źródle danych i element członkowski danych pola. Funkcje RFX do transferu danych rzeczywistych. Biblioteka klas dostarcza funkcje RFX wszystkie popularne typy danych. Aby uzyskać więcej informacji na temat funkcji RFX zobacz [wymiana pól rekordów: Używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  Kolejność kolumn w zestawie wyników musi być zgodna z kolejnością wywołań funkcji RFX w `DoFieldExchange`.
 
 - `pFX` Wskaźnik do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiekt, który przekazuje platformę, gdy wywołuje `DoFieldExchange`. `CFieldExchange` Obiektu określa operację, `DoFieldExchange` jest wykonanie kierunek transferu i innymi informacjami kontekstu.
 
-##  <a name="_core_the_recordset_constructor"></a> Konstruktor zestawu rekordów
+##  <a name="_core_the_recordset_constructor"></a> Recordset Constructor
 
 Konstruktor zestawu rekordów, który kreatorów zapisu zawiera dwie czynności związane z RFX:
 
@@ -138,6 +138,6 @@ m_nFields += 3;
 
 Jest to kod dodaje trzy nowe pola. Jeśli dodasz wszystkie elementy członkowskie danych parametru, należy zainicjować [m_nparams —](../../mfc/reference/crecordset-class.md#m_nparams) element członkowski danych, która zawiera liczbę elementy członkowskie danych parametru. Umieść `m_nParams` inicjowania poza nawiasy kwadratowe.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)

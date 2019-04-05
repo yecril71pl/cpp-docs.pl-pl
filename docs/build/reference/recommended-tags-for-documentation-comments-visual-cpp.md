@@ -2,12 +2,12 @@
 title: Tagi zalecane dla komentarzy do dokumentacji (komentarze dokumentacji C++)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: adb8440dc07f8f3e193b58be6782859fbb8413e4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823712"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027899"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>Zalecane tagi przeznaczone do komentarzy dokumentacji
 
@@ -27,14 +27,14 @@ Kompilator przetworzy dowolnymi tagami, które jest prawidłowym kodem XML. Nast
 |[\<c>](c-visual-cpp.md)|[\<code>](code-visual-cpp.md)|[\<przykład >](example-visual-cpp.md)|
 |[\<wyjątek >](exception-visual-cpp.md)1|[\<obejmują >](include-visual-cpp.md)1|[\<list>](list-visual-cpp.md)|
 |[\<para>](para-visual-cpp.md)|[\<param>](param-visual-cpp.md)1|[\<paramref>](paramref-visual-cpp.md)1|
-|[\<uprawnienie >](permission-visual-cpp.md)1|[\<Remarks >](remarks-visual-cpp.md)|[\<Zwraca wartość >](returns-visual-cpp.md)|
-|[\<see>](see-visual-cpp.md)1|[\<seealso>](seealso-visual-cpp.md)1|[\<summary>](summary-visual-cpp.md)|
+|[\<uprawnienie >](permission-visual-cpp.md)1|[\<Remarks >](remarks-visual-cpp.md)|[\<returns>](returns-visual-cpp.md)|
+|[\<see>](see-visual-cpp.md)1|[\<seealso>](seealso-visual-cpp.md)1|[\<Summary >](summary-visual-cpp.md)|
 |[\<value>](value-visual-cpp.md)|||
 
 1. Kompilator sprawdza składnię.
 
 W bieżącej wersji za pomocą kompilatora MSVC obsługuje `<paramref>`, tag, który jest obsługiwany przez inne kompilatory programu Visual Studio. Visual C++ może obsługiwać `<paramref>` w przyszłej wersji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja XML](xml-documentation-visual-cpp.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - macros, C++
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
-ms.openlocfilehash: cd5d1237bc025cceb25cc290509b929b595a215f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499895"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024919"
 ---
 # <a name="macros-and-c"></a>Makra i język C++
 C++ zawiera nowe funkcje, niektóre z nich ograniczyć te udostępniane przez ANSI C preprocesora. Te nowe możliwości zwiększenia bezpieczeństwa i stabilności języka:
@@ -27,7 +27,7 @@ Aby uzyskać więcej informacji na temat wbudowanych funkcjach, zobacz [w tekśc
 
 W celu zapewnienia zgodności z poprzednimi wersjami wszystkich preprocesora obiektach, które istniały w ANSI C i C++ specyfikacjach wcześniejszych zostaną zachowane dla Microsoft C++.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)<br/>
 [Makra (C/C++)](../preprocessor/macros-c-cpp.md)

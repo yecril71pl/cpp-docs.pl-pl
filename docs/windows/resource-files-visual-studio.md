@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563007"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029401"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 
@@ -129,8 +129,8 @@ Aby wyświetlić wersję i typ informacji zawartych w zasobu manifestu, otwórz 
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z plikami zasobów](../windows/working-with-resource-files.md)<br/>
-[Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Identyfikatory zasobów (symbolom)](../windows/symbols-resource-identifiers.md)<br/>
 [Edytory zasobów](../windows/resource-editors.md)<br/>

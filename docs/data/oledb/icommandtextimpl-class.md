@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: de9e930056db7b91968ca1ce471a87809693376a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556325"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037107"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl — Klasa
 
-Udostępnia implementację na potrzeby [ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85)) interfejsu.
+Udostępnia implementację na potrzeby [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,7 +82,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85)) w *OLE DB Podręcznik programisty*. *PguidDialect* parametr jest ignorowany, domyślnie.
+Zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) w *OLE DB Podręcznik programisty*. *PguidDialect* parametr jest ignorowany, domyślnie.
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
@@ -97,7 +97,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandText::SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 
@@ -109,7 +109,7 @@ Zapisuje ciąg tekstu polecenia.
 CComBSTR m_strCommandText;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

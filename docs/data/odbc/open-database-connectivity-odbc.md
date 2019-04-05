@@ -6,12 +6,12 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523354"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030092"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 
@@ -32,7 +32,7 @@ Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zob
 
 - [Zarejestruj pola programu Exchange (RFX)](record-field-exchange-rfx.md) między bazą danych a obiektem rekordem
 
-- [ODBC — zestawy rekordów](recordset-odbc.md)
+- [ODBC Recordsets](recordset-odbc.md)
 
 - [SQL](sql.md) dla ODBC
 
@@ -76,6 +76,6 @@ Te zadania są oparte na bibliotece MFC [ODBC](odbc-basics.md) klasy. Aby uzyska
 
 - [Używanie zestawów rekordów MFC ODBC](use-mfc-odbc-recordsets.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie (MFC/ATL) dostępu do danych](../../data/data-access-programming-mfc-atl.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: c4f6cc19897b66bfe26c6d53ccb87c35dbed82c9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777652"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041461"
 ---
 # <a name="csession-class"></a>Klasa CSession
 
@@ -67,11 +67,11 @@ class CSession
 
 |||
 |-|-|
-|[Abort](#abort)|Anuluje (kończy) transakcji.|
-|[Zamknij](#close)|Zamyka sesję.|
+|[Przerwij](#abort)|Anuluje (kończy) transakcji.|
+|[Zamknięcie](#close)|Zamyka sesję.|
 |[Zatwierdzenia](#commit)|zatwierdzeń transakcji.|
 |[GetTransactionInfo](#gettransactioninfo)|Zwraca informacje dotyczące transakcji.|
-|[Otwórz](#open)|Otwiera nową sesję dla obiektu źródła danych.|
+|[Otwarcie](#open)|Otwiera nową sesję dla obiektu źródła danych.|
 |[Starttransaction —](#starttransaction)|Rozpoczyna się nowej transakcji dla tej sesji.|
 
 ## <a name="remarks"></a>Uwagi
@@ -214,8 +214,8 @@ Standardowa HRESULT.
 
 Aby uzyskać więcej informacji, zobacz [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)

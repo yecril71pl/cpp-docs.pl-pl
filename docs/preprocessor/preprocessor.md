@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-ms.openlocfilehash: bd139dcbbbe519cc4c9750a657f8b47c5a5bcd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530969"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028577"
 ---
 # <a name="preprocessor"></a>Preprocesor
 Preprocesor jest procesora tekstu, która manipuluje tekst pliku źródłowego w ramach pierwszej fazy tłumaczenia. Preprocesor nie analizuje tekst źródłowy, ale jej Podziel je na tokeny na potrzeby znajdowania wywołania makra. Mimo że kompilator wywołuje zazwyczaj preprocesor w jego pierwszym przebiegu, preprocesor można również wywołać oddzielnie do przetwarzania tekstu bez kompilacji.
@@ -22,13 +22,13 @@ Materiał odniesienia na preprocesora zawiera następujące sekcje:
 
 - [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)
 
-- [Pragmy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+- [Pragma — dyrektywy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Możesz uzyskać go w kodzie źródłowym po przetwarzanie wstępne za pomocą [/E](../build/reference/e-preprocess-to-stdout.md) lub [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) — opcja kompilatora. Obie opcje preprocesora wywołania i wynikowy tekst na urządzeniu standardowe dane wyjściowe, które w większości przypadków to konsola danych wyjściowych polecenia. Różnica między dwie opcje jest, że zawiera /E `#line` dyrektywy i /EP usuwa te dyrektywy się.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
 ##  <a name="_predir_special_terminology"></a> Terminologię
 
@@ -36,7 +36,7 @@ W dokumentacji preprocesora termin "argument" odnosi się do jednostki, który j
 
 Termin "Zmienna" odnosi się do obiektu proste danych typu C. Termin "object" odnosi się do obiektu języka C++ i zmiennych; to termin (włącznie).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Odwołania preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Fazy tłumaczenia](../preprocessor/phases-of-translation.md)

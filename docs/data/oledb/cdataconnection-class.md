@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565509"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021634"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection — Klasa
 
@@ -94,7 +94,7 @@ class CDataConnection
 |-|-|
 |[CDataConnection](#cdataconnection)|Konstruktor. Tworzy i inicjuje `CDataConnection` obiektu.|
 |[Kopiuj](#copy)|Tworzy kopię istniejącego połączenia danych.|
-|[Otwórz](#open)|Otwiera połączenie ze źródłem danych przy użyciu parametrów inicjacji.|
+|[Otwarcie](#open)|Otwiera połączenie ze źródłem danych przy użyciu parametrów inicjacji.|
 |[OpenNewSession](#opennewsession)|Otwiera nową sesję w bieżącym połączeniu.|
 
 ### <a name="operators"></a>Operatory
@@ -102,11 +102,11 @@ class CDataConnection
 |||
 |-|-|
 |[BOOL — operator](#op_bool)|Określa, czy bieżąca sesja jest otwarty.|
-|[bool — operator](#op_bool_ole)|Określa, czy bieżąca sesja jest otwarty.|
+|[operator bool](#op_bool_ole)|Określa, czy bieżąca sesja jest otwarty.|
 |[Operator CDataSource &](#op_cdata_amp)|Zwraca odwołanie do zamkniętego `CDataSource` obiektu.|
 |[Operator CDataSource *](#op_cdata_star)|Zwraca wskaźnik do zamkniętego `CDataSource` obiektu.|
-|[Operator CSession &](#op_csession_amp)|Zwraca odwołanie do zamkniętego `CSession` obiektu.|
-|[Operator CSession *](#op_csession_star)|Zwraca wskaźnik do zamkniętego `CSession` obiektu.|
+|[operator CSession&](#op_csession_amp)|Zwraca odwołanie do zamkniętego `CSession` obiektu.|
+|[CSession* — Operator](#op_csession_star)|Zwraca wskaźnik do zamkniętego `CSession` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -304,7 +304,7 @@ Ten operator zwraca wskaźnik do zamkniętego `CSession` obiektu, dzięki czemu 
 
 Zobacz [operator CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md) na przykład użycia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)

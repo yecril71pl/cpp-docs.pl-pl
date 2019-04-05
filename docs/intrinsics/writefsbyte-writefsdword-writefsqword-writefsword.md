@@ -1,5 +1,5 @@
 ---
-title: __writefsbyte __writefsdword, __writefsqword, __writefsword
+title: __writefsbyte, __writefsdword, __writefsqword, __writefsword
 ms.date: 11/04/2016
 f1_keywords:
 - __writefsword
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - __writefsbyte intrinsic
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-ms.openlocfilehash: 26322b210105f694be764418d9e0b77a0d419844
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6461ef730760298e3159e4ac70dbbdf7bd827092
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328490"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025784"
 ---
-# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte __writefsdword, __writefsqword, __writefsword
+# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Napisz pamięci w lokalizacji określonej przez przesunięcie względem początku segmentu FS.
 
@@ -73,9 +73,9 @@ void __writefsqword(
 
 Te procedury są dostępne tylko jako funkcje wewnętrzne.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

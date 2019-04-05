@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Tworzenie standardowego programu C++ (C++)'
+title: 'Przewodnik: Tworzenie standardowego programu C++ (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 78d19a277f8bedcdbd098a662c69d6fc622a7cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647476"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030624"
 ---
-# <a name="walkthrough-creating-a-standard-c-program-c"></a>Wskazówki: Tworzenie standardowego programu C++ (C++)
+# <a name="walkthrough-creating-a-standard-c-program-c"></a>Przewodnik: Tworzenie standardowego programu C++ (C++)
 
 Aby tworzyć programy standardowego C++, można użyć Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (IDE). Wykonując kroki opisane w tym instruktażu, można utworzyć projektu, Dodaj nowy plik do projektu, zmodyfikuj plik, aby dodać kod języka C++, a następnie skompilować i uruchomić program za pomocą programu Visual Studio.
 
@@ -73,10 +73,10 @@ Aby ukończyć ten instruktaż, musisz rozumieć podstawy języka C++.
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzedni:** [konsoli aplikacji w języku Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
-**Następnie:** [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Poprzednie:** [Aplikacje konsoli w programie Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**Dalej:** [Przewodnik: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
+[Materiał referencyjny na temat języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>

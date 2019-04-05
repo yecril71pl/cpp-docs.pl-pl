@@ -1,19 +1,19 @@
 ---
-title: 'SQL: typy danych SQL i C++ (ODBC)'
+title: 'SQL: Program SQL oraz typów danych języka C++ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649504"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024351"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: typy danych SQL i C++ (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: Program SQL oraz typów danych języka C++ (ODBC)
 
 > [!NOTE]
 >  Te informacje dotyczą klas MFC ODBC. Pracy przy użyciu klas MFC DAO, zobacz temat "Porównanie programu Microsoft Jet bazy danych aparatu SQL i ANSI SQL" w Pomocy programu DAO.
@@ -28,19 +28,19 @@ Poniższa tabela zawiera mapowanie typów danych ANSI SQL do typów danych języ
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
 |**RZECZYWISTE**|**float**|
-|**LICZBA CAŁKOWITA**|**long**|
+|**INTEGER**|**long**|
 |**FLOAT**|**double**|
-|**PODWÓJNE**|**double**|
+|**DOUBLE**|**double**|
 |**NUMERYCZNE**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**BITOWE**|**BOOL**|
-|**TINYINT**|**BAJTÓW**|
+|**BIT**|**WARTOŚĆ LOGICZNA**|
+|**TINYINT**|**BYTE**|
 |**BIGINT**|`CString` 1|
 |**BINARNY**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
-|**DATA**|`CTime`, `CString`|
+|**DATE**|`CTime`, `CString`|
 |**CZAS**|`CTime`, `CString`|
 |**ZNACZNIK CZASU:**|`CTime`, `CString`|
 
@@ -54,7 +54,7 @@ Jeśli nie jest używany z biblioteki kursorów ODBC, może wystąpić problem p
 
 Jeśli korzystasz z biblioteki kursorów ODBC z klas baz danych MFC ODBC i sterownik Microsoft ODBC dla programu SQL Server **ASERCJA** mogą wystąpić wraz z `CDBException` Jeśli wywołanie `CRecordset::Update` następuje po wywołaniu `CRecordset::Requery`. Zamiast tego należy wywołać `CRecordset::Close` i `CRecordset::Open` zamiast `CRecordset::Requery`. Innym rozwiązaniem jest, aby nie korzystała z biblioteki kursorów ODBC, ponieważ serwer SQL i sterownik SQL Server ODBC zapewniają natywną obsługę kursory natywnie i z biblioteki kursorów ODBC nie jest potrzebna.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL: wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL: Wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-ms.openlocfilehash: cf57d485ab3dd268d217b2ef44ff53bcec3d2e63
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3555b71e15d6f9c618a83f573d6da3cda9e7b705
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518141"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023519"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Zapisuje 64-bitowych danych w lokalizacji pamięci bez zanieczyszczenie pamięci podręcznych.
 
@@ -81,11 +81,11 @@ int main()
 d[0] = -1, d[1] = 1
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_mm_stream_ss](../intrinsics/mm-stream-ss.md)<br/>
 [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)<br/>
