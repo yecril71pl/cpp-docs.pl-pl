@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
 ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776066"
 ---
 # <a name="cmenutearoffmanager-class"></a>Klasa CMenuTearOffManager
@@ -47,13 +47,13 @@ class CMenuTearOffManager : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Konstruuje `CMenuTearOffManager` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMenuTearOffManager::Build](#build)||
 |[CMenuTearOffManager::GetRegPath](#getregpath)||
@@ -222,6 +222,6 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CWinAppEx](../../mfc/reference/cwinappex-class.md)

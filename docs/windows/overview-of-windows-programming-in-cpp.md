@@ -3,10 +3,10 @@ title: Omówienie programowania w systemie Windows w języku C++
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58772907"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
@@ -97,18 +97,18 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Przewodnik: Tworzenie standardowego programu C++](walkthrough-creating-a-standard-cpp-program-cpp.md)| Utwórz aplikację konsolową Windows.|
-|[Przewodnik: tworzenie aplikacji klasycznych systemu Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Utwórz prostą aplikację pulpitu Windows.|
+|[Przewodnik: Tworzenie aplikacji klasycznych Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Utwórz prostą aplikację pulpitu Windows.|
 |[Kreator aplikacji klasycznej Windows](windows-desktop-wizard.md)|Użyj kreatora, aby tworzyć nowe projekty Windows.|
-|[Biblioteka aktywnych szablonów (Active Template Library — ATL)](../atl/TOC.md)|Biblioteka ATL służy do tworzenia składników modelu COM w języku C++.|
+|[Biblioteka Active Template Library (ATL)](../atl/TOC.md)|Biblioteka ATL służy do tworzenia składników modelu COM w języku C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|Używać klasy MFC do tworzenia aplikacji Windows duże lub małe za pomocą okien dialogowych i formantów|
-|[Wspólne klasy ATL i MFC](../atl-mfc-shared/TOC.md)|Użyj klas, takich jak CString, które są udostępniane w ATL i MFC.|
+|[Klasy współdzielone ATL i MFC](../atl-mfc-shared/TOC.md)|Użyj klas, takich jak CString, które są udostępniane w ATL i MFC.|
 |[Dostęp do danych](../data/data-access-in-cpp.md)| OLE DB i ODBC|
 |[Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)|Różne typy parametrów na Windows.|
 |[Zasoby służące do tworzenia gier za pomocą programu DirectX](resources-for-creating-a-game-using-directx.md)
-|[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[Instrukcje: Użyj systemu Windows 10 SDK w aplikacji pulpitu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[Praca z plikami zasobów](working-with-resource-files.md)|Jak dodać obrazy, ikony, tabele ciągów i innych zasobów do aplikacji klasycznej.|
 |[Zasoby służące do tworzenia gier za pomocą programu DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Zawiera łącza do zawartości do tworzenia gier w języku C++.|
-|[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera instrukcje dotyczące konfigurowania projektu kompilować przy użyciu zestawu SDK systemu Windows 10.|
+|[Instrukcje: Użyj systemu Windows 10 SDK w aplikacji pulpitu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera instrukcje dotyczące konfigurowania projektu kompilować przy użyciu zestawu SDK systemu Windows 10.|
 |[Wdrażanie natywnych aplikacji komputerowych](deploying-native-desktop-applications-visual-cpp.md)|Wdrażanie aplikacji natywnych na Windows.|
 
 
@@ -117,8 +117,8 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Temat nadrzędny dla zawartości dla deweloperów Visual C++.|
-[Programowanie na platformie .NET w języku C++/w interfejsie wiersza polecenia](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Tworzenie otok dla natywnych bibliotek C++, które umożliwiają go do komunikacji z aplikacji platformy .NET i składników.|
-|[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](../extensions/component-extensions-for-runtime-platforms.md)|Dokumentacja dotycząca elementy składni udostępniane przez C + +/ CX i C + +/ interfejsu wiersza polecenia.|
+[Programowanie na platformie .NET za pomocą C + +/ CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Tworzenie otok dla natywnych bibliotek C++, które umożliwiają go do komunikacji z aplikacji platformy .NET i składników.|
+|[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](../extensions/component-extensions-for-runtime-platforms.md)|Dokumentacja dotycząca elementy składni udostępniane przez C + +/ CX i C + +/ interfejsu wiersza polecenia.|
 |[Aplikacje uniwersalne systemu Windows (C++)](universal-windows-apps-cpp.md)|Tworzenie aplikacji platformy uniwersalnej systemu Windows za pomocą C + +/ CX lub Windows Runtime szablon biblioteki (WRL).|
-|[Atrybuty języka C++ dla modelu COM i platformy .NET](attributes/cpp-attributes-com-net.md)|Niestandardowe atrybuty tylko do Windows programowania przy użyciu platformy .NET lub model COM.|
+|[Atrybuty C++ dla modelu COM i .NET](attributes/cpp-attributes-com-net.md)|Niestandardowe atrybuty tylko do Windows programowania przy użyciu platformy .NET lub model COM.|
 

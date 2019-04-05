@@ -49,10 +49,10 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
 ms.openlocfilehash: dfe1d3dc058371dd13cc335968b9c3a89e057da2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776053"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Klasa CMFCToolBarDateTimeCtrl
@@ -69,14 +69,14 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl](#cmfctoolbardatetimectrl)|Konstruuje `CMFCToolBarDateTimeCtrl` obiektu.|
 |`CMFCToolBarDateTimeCtrl::~CMFCToolBarDateTimeCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Określa, czy użytkownik rozciągnąć przycisku podczas dostosowywania. (Przesłania [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|
 |[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Kopiuje bieżącego przycisku Właściwości inny przycisk paska narzędzi. (Przesłania [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
@@ -203,7 +203,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parametry
 
-*menuButton*<br/>
+*Przycisk menu*<br/>
 [in] Odwołanie do docelowego przycisku menu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -613,7 +613,7 @@ Wyszukuje dla przycisku kontrolki toolbar przy użyciu polecenie o określonym i
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Przewodnik: Umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md)

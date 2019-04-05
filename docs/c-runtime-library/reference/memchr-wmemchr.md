@@ -1,6 +1,6 @@
 ---
 title: memchr, wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209902"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58866919"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -72,13 +72,13 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*Bufor*<br/>
 Wskaźnik do buforu.
 
 *c*<br/>
 Znak do wyszukania.
 
-*Liczba*<br/>
+*count*<br/>
 Liczba znaków do sprawdzenia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -87,9 +87,9 @@ Jeśli to się powiedzie, zwraca wskaźnik do pierwszej lokalizacji *c* w *bufor
 
 ## <a name="remarks"></a>Uwagi
 
-`memchr` i `wmemchr` wyszukiwania dla pierwszego wystąpienia *c* w pierwszym *liczba* bajtów *buforu*. Zatrzymuje się, gdy znajdzie *c* lub gdy zaznaczone pierwszy *liczba* bajtów.
+`memchr` i `wmemchr` wyszukiwania dla pierwszego wystąpienia *c* w pierwszym *liczba* znaków *buforu*. Zatrzymuje się, gdy znajdzie *c* lub gdy zaznaczone pierwszy *liczba* znaków.
 
-W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie wskaźnika do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non -**const** . _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu overloadsin C++, C++, określ symbol _CONST_RETURN.
+W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie wskaźnika do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non -**const** . Makro \_CRT\_CONST\_Popraw\_PRZECIĄŻENIA jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu przeciążeń C++ w języku C++, zdefiniuj symbol \_CONST\_zwrotu.
 
 ## <a name="requirements"></a>Wymagania
 

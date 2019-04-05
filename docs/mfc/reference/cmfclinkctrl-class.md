@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
 ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776430"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl Class
@@ -35,7 +35,7 @@ class CMFCLinkCtrl : public CMFCButton
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCLinkCtrl::SetURL](#seturl)|Wyświetla wybrany adres URL w postaci tekstu przycisku.|
 |[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Ustawia protokół niejawne (na przykład "http:") adresu URL.|
@@ -43,7 +43,7 @@ class CMFCLinkCtrl : public CMFCButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Wywoływane przez platformę przed narysowaniem prostokąt fokusu przycisku.|
 
@@ -156,7 +156,7 @@ A [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekt, który zawiera 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CLinkCtrl](../../mfc/reference/clinkctrl-class.md)<br/>
 [Klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md)

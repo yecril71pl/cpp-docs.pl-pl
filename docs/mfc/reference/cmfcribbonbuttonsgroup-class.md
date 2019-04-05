@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
 ms.openlocfilehash: 39979d48eb7b0f7aba9dbe7bd42c2f91845af968
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781994"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Klasa CMFCRibbonButtonsGroup
@@ -51,13 +51,13 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup](#cmfcribbonbuttonsgroup)|Konstruuje `CMFCRibbonButtonsGroup` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Dodaje przycisk do grupy.|
 |[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Dodaje listę przycisków do grupy.|
@@ -148,7 +148,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 
 ### <a name="parameters"></a>Parametry
 
-*i*<br/>
+*mogę*<br/>
 [in] Liczony od zera indeks przycisk, aby wrócić.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -298,5 +298,5 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

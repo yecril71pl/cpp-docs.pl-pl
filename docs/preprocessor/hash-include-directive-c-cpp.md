@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821393"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038984"
 ---
 # <a name="include-directive-cc"></a>#include — dyrektywa (C/C++)
 
@@ -69,7 +69,7 @@ Ten przykład dodaje zawartość pliku, który jest określony przez DEFS. H do 
 
 Zagnieżdżanie plików dołączanych można kontynuować do 10 poziomów. Gdy zagnieżdżony **#include** jest przetwarzany, preprocesor w dalszym ciągu Wstawia plik załączany do oryginalnego pliku źródłowego.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Aby zlokalizować pliki źródłowe do zawarcia, preprocesor najpierw przeszukuje katalogi, które są określone przez **/I** — opcja kompilatora. Jeśli **/I** opcji nie istnieje lub nie powiedzie się, preprocesor wykorzysta zmienną środowiskową INCLUDE, aby znaleźć wszystkie pliki dołączane w nawiasach kątowych. Zmienna środowiskowa INCLUDE i **/I** — opcja kompilatora może zawierać wiele ścieżek oddzielonych średnikami (**;**). Jeśli więcej niż jeden katalog pojawia się jako część **/I** opcję lub w ramach zmienną środowiskową INCLUDE, preprocesor przeszukuje je w kolejności, w jakiej są wyświetlane.
 
@@ -92,9 +92,9 @@ Jeśli nazwa pliku jest w pełni określona dla pliku dołączanego, który zawi
 
 Dla plików dołączanych, które są określone jako `#include "path-spec"`, wyszukiwanie katalogów rozpoczyna się od katalogu nadrzędnego pliku, a następnie przechodzi przez katalogi plików nadrzędnych wobec niego. Oznacza to, wyszukiwanie rozpoczyna się względem katalogu zawierającego plik źródłowy, który zawiera **#include** dyrektywę, który jest przetwarzany. Jeśli plik pokolenia nie istnieje, a plik nie został znaleziony, wyszukiwanie jest kontynuowane tak, jakby nazwa pliku została ujęta w nawiasy ostre.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)<br/>
 [/I (dodatkowe katalogi dołączenia)](../build/reference/i-additional-include-directories.md)<br/>

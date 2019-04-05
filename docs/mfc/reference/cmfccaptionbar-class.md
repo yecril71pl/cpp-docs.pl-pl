@@ -67,10 +67,10 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781877"
 ---
 # <a name="cmfccaptionbar-class"></a>Klasa CMFCCaptionBar
@@ -87,7 +87,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCCaptionBar::Create](#create)|Tworzy kontrolkę paska podpisu i dołącza je do `CMFCCaptionBar` obiektu.|
 |[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Wskazuje, czy innego okienka można dynamicznie wstawione między pasek podpisu i jej nadrzędnej ramki. (Przesłania [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
@@ -114,7 +114,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Metoda wywoływana przez platformę, by wypełnienia tła paska podpisu.|
 |[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Metoda wywoływana przez platformę, by narysować obramowanie pasek podpisu.|
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Kolor tła paska podpisu.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Kolor obramowania paska podpisu.|
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parametry
 
-*elem*<br/>
+*Elem*<br/>
 [in] Element paska podpisu dla której mają zostać pobrane wyrównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia paska podpisu.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający do wypełnienia.
 
 ### <a name="remarks"></a>Uwagi
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Kontekst urządzenia, która jest używana do wyświetlania obramowania.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający.
 
 ### <a name="remarks"></a>Uwagi
@@ -406,13 +406,13 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania przycisku.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający przycisku.
 
 *strButton*<br/>
 [in] Etykieta tekstowa przycisku.
 
-*bWłączony*<br/>
+*bEnabled*<br/>
 [in] Wartość TRUE, jeśli ten przycisk jest włączony; Wartość FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania obrazu.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Określa prostokąt otaczający obrazu.
 
 ### <a name="remarks"></a>Uwagi
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania przycisku.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający tekstu.
 
 *strText*<br/>
@@ -731,5 +731,5 @@ Etykieta tekstowa jest wyrównany zgodnie z określonym *TextAlignment to* param
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

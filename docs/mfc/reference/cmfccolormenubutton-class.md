@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780226"
 ---
 # <a name="cmfccolormenubutton-class"></a>Klasa CMFCColorMenuButton
@@ -65,13 +65,13 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CMFCColorMenuButton](#cmfccolormenubutton)|Konstruuje `CMFCColorMenuButton` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)|Włącza i wyłącza przycisk "Automatyczny", który znajduje się powyżej regularne kolor przycisków. (Przycisk Automatyczny standardowych systemowych jest oznaczona etykietą **automatyczne**.)|
 |[CMFCColorMenuButton::EnableDocumentColors](#enabledocumentcolors)|Umożliwia wyświetlanie kolorów specyficzne dla dokumentu zamiast kolory systemowe.|
@@ -89,7 +89,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorMenuButton::CopyFrom](#copyfrom)|Kopiuje bieżącego przycisku inny przycisk paska narzędzi.|
 |[CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu)|Tworzy okno dialogowe próbnika kolorów.|
@@ -390,7 +390,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt, który zakresem obszaru do narysowania.
 
 *pImages*<br/>
@@ -429,7 +429,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt, który granic przycisku do narysowania.
 
 *bSelected*<br/>
@@ -481,7 +481,7 @@ virtual void SetColor(
 
 ### <a name="parameters"></a>Parametry
 
-*clr*<br/>
+*CLR*<br/>
 [in] Wartość koloru RGB.
 
 *bNotify*<br/>
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] Identyfikator zasobu przycisk menu Kolor.
 
-*Kolor*<br/>
+*kolor*<br/>
 [in] Wartość koloru RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
+*kolor*<br/>
 [in] Wartość RGB kolorów, których nazwa zmienia się.
 
 *strName*<br/>
@@ -546,7 +546,7 @@ void SetColumnsNumber(int nColumns);
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>

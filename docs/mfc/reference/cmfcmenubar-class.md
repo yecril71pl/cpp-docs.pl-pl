@@ -107,10 +107,10 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
 ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58775897"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
@@ -128,7 +128,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Przesłania `CMFCToolBar::AdjustLocations`).|
 |[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Określa, czy etykiety tekstowe może być wyświetlany w obszarze obrazów na przycisków paska narzędzi. (Przesłania [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
@@ -602,7 +602,7 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iItem*<br/>
+*Towaru*<br/>
 [in] Indeks elementu menu do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1084,6 +1084,6 @@ Jeśli menu nie są wyświetlane wszystkie polecenia menu, powoduje ukrycie opcj
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)

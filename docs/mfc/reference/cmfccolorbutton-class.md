@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780005"
 ---
 # <a name="cmfccolorbutton-class"></a>Klasa CMFCColorButton
@@ -65,13 +65,13 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Tworzy nowy `CMFCColorButton` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Włącza i wyłącza przycisk "Automatyczny", który znajduje się powyżej regularne kolor przycisków. (Przycisk Automatyczny standardowych systemowych jest oznaczona etykietą **automatyczne**.)|
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Włącza i wyłącza "other" przycisk, który znajduje się poniżej regularne kolor przycisków. (Standardowy system "other" przycisk ma etykietę **więcej kolorów**.)|
@@ -86,7 +86,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Wskazuje, czy bieżący przycisk koloru jest wyświetlany w stylu wizualnego systemu Windows XP.|
 |[CMFCColorButton::OnDraw](#ondraw)|Metoda wywoływana przez platformę, by wyświetlić obrazu przycisku.|
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`m_bAltColorDlg`|Wartość logiczna. W przypadku opcji TRUE ramach Wyświetla [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) okno dialogowe kolorów, kiedy *innych* kliknięto przycisk lub w przypadku wartości FAŁSZ system kolor okno dialogowe. Wartość domyślna to TRUE. Aby uzyskać więcej informacji, zobacz [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Wartość logiczna. W przypadku opcji TRUE ramach Ustawia fokus na menu Kolor menu wyświetlanym lub w przypadku wartości FAŁSZ nie zmienia się fokus. Wartość domyślna to TRUE.|
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Wskazuje kontekst urządzenia, który jest używany do renderowania obrazu przycisku.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt, który granic przycisku.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
+*kolor*<br/>
 [in] Wartość RGB.
 
 ### <a name="remarks"></a>Uwagi
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
+*kolor*<br/>
 [in] Kolor RGB wartość.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
+*kolor*<br/>
 [in] Kolor wybrany przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
@@ -474,13 +474,13 @@ virtual void UpdateColor(COLORREF color);
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md)<br/>
 [Klasa CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
 [Klasa CPalette](../../mfc/reference/cpalette-class.md)<br/>
-[Klasa CArray](../../mfc/reference/carray-class.md)<br/>
-[Klasa CList](../../mfc/reference/clist-class.md)<br/>
+[Carray — klasa](../../mfc/reference/carray-class.md)<br/>
+[Clist — klasa](../../mfc/reference/clist-class.md)<br/>
 [CString](../../atl-mfc-shared/reference/cstringt-class.md)

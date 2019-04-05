@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773076"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement Class
@@ -253,13 +253,13 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCRibbonBaseElement`|Konstruuje `CMFCRibbonBaseElement` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Dodaje poradę dotyczącą klawiszy dla elementu wstążki do tablicy wskazówki.|
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Dodaje element wstążki do wstążki określonego pola listy poleceń.|
@@ -375,7 +375,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Wywoływane przez platformę, gdy użytkownik naciśnie klawisz skrótu.|
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Wywoływane przez platformę, gdy element wstążki otrzymuje lub traci fokus wprowadzania.|
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*type*<br/>
+*— typ*<br/>
 [in] Typ obrazu wyliczany wartości. Zobacz sekcję Spostrzeżenia, aby listę możliwych wartości.
 
 *rectImage*<br/>
@@ -1587,7 +1587,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 
 ### <a name="parameters"></a>Parametry
 
-*qat*<br/>
+*QAT*<br/>
 [in] Pasek narzędzi Szybki dostęp.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1700,7 +1700,7 @@ virtual void OnDrawKeyTip(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt granic dla poradę dotyczącą klawiszy.
 
 *bIsMenu*<br/>
@@ -1723,7 +1723,7 @@ virtual BOOL OnDrawMenuImage(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Menu obrazu prostokąt.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1757,7 +1757,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt wyświetlaną dla elementu wstążki.
 
 *bIsSelected*<br/>
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 W oknie nadrzędnym elementem wstążki.
 
-*data*<br/>
+*dane*<br/>
 Dane ułatwień dostępu dla elementu wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1964,7 +1964,7 @@ Poniższa tabela zawiera podsumowanie logikę tej metody.
 |*bCompactMode*|Bieżący rozmiar elementu wstążki|Nowy rozmiar elementu wstążki|
 |--------------------|---------------------------------|-----------------------------|
 |WARTOŚĆ TRUE|Kompaktowanie|Bez zmian.|
-|WARTOŚĆ TRUE|Średnio zaawansowany|Kompaktowanie, jeśli jest to możliwe.|
+|WARTOŚĆ TRUE|Średni|Kompaktowanie, jeśli jest to możliwe.|
 |WARTOŚĆ TRUE|Duże|Pośredni, jeśli jest to możliwe.|
 |FAŁSZ|Kompaktowanie|Pośredni, jeśli jest to możliwe; w przeciwnym razie dużych.|
 
@@ -2135,7 +2135,7 @@ void SetRect(CRect rect);
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Wymiary prostokąta.
 
 ### <a name="remarks"></a>Uwagi
@@ -2275,5 +2275,5 @@ Wartość TRUE, jeśli element wstążki ma fokus; w przeciwnym razie wartość 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)
