@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781799"
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap — klasa
@@ -47,7 +47,7 @@ Klasa obiektu przechowywany w mapie.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Pobiera następny element do wykonania iteracji.|
 |[CTypedPtrMap::Lookup](#lookup)|Zwraca `KEY` na podstawie `VALUE`.|
@@ -56,7 +56,7 @@ Klasa obiektu przechowywany w mapie.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CTypedPtrMap::operator \[ \]](#operator_at)|Wstawia element do mapy.|
 
@@ -127,7 +127,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Parametr szablonu określający klasą bazową klasy tej mapie.
 
-*Klucz*<br/>
+*klawisz*<br/>
 Klucz elementu, który ma być wyszukiwana.
 
 *WARTOŚĆ*<br/>
@@ -160,7 +160,7 @@ Parametr szablonu określający typ wartości przechowywanych na tej mapie.
 *BASE_CLASS*<br/>
 Parametr szablonu określający klasą bazową klasy tej mapie.
 
-*Klucz*<br/>
+*klawisz*<br/>
 Klucz elementu mają być wyszukiwane lub utworzony w mapie.
 
 ### <a name="remarks"></a>Uwagi
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *KEY*<br/>
 Parametr szablonu określający typ mapy kluczy.
 
-*Klucz*<br/>
+*klawisz*<br/>
 Klucz elementu do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *KEY*<br/>
 Parametr szablonu określający typ mapy kluczy.
 
-*Klucz*<br/>
+*klawisz*<br/>
 Określa wartość klucza newValue.
 
 *newValue*<br/>
@@ -217,8 +217,8 @@ Aby uzyskać bardziej szczegółowe uwagi, zobacz [CMapStringToOb::SetAt](../../
 ## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)<br/>
-[Klasa CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)<br/>
-[Klasa CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)<br/>
-[Klasa CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[CMapPtrToPtr Class](../../mfc/reference/cmapptrtoptr-class.md)<br/>
+[CMapPtrToWord Class](../../mfc/reference/cmapptrtoword-class.md)<br/>
+[CMapWordToPtr Class](../../mfc/reference/cmapwordtoptr-class.md)<br/>
+[CMapStringToPtr Class](../../mfc/reference/cmapstringtoptr-class.md)

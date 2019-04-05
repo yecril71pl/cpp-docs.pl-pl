@@ -47,10 +47,10 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
 ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776781"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar Class
@@ -67,7 +67,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Od razu ponownie oblicza układ w okienku. (Przesłania [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Ładuje elementów menu podręcznego z menu określonego zasobu.|
@@ -91,7 +91,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Określa, czy szarym pasku bocznym, będą wyświetlane, gdy aplikacja ma wygląd Windows XP.|
 
@@ -444,7 +444,7 @@ void StartPopupMenuTimer(
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)<br/>
-[Klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
+[CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)

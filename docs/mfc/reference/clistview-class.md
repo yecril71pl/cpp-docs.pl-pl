@@ -13,10 +13,10 @@ helpviewer_keywords:
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
 ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776625"
 ---
 # <a name="clistview-class"></a>Klasa CListView
@@ -33,19 +33,19 @@ class CListView : public CCtrlView
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CListView::CListView](#clistview)|Konstruuje `CListView` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CListView::GetListCtrl](#getlistctrl)|Zwraca kontrolkę listy skojarzony z widokiem.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CListView::RemoveImageList](#removeimagelist)|Usuwa określony obraz listy z widoku listy.|
 
@@ -112,5 +112,5 @@ Liczony od zera indeks obrazu do usunięcia.
 
 [Próbki MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)

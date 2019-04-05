@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 ms.openlocfilehash: 27bf98ea4fe6951624873c1463d50f37558c9234
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781487"
 ---
 # <a name="coleinsertdialog-class"></a>Klasa COleInsertDialog
@@ -45,13 +45,13 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Konstruuje `COleInsertDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleInsertDialog::CreateItem](#createitem)|Tworzy elementu wybranego w oknie dialogowym.|
 |[COleInsertDialog::DoModal](#domodal)|Wyświetla okno dialogowe Wstawianie obiektu OLE.|
@@ -63,7 +63,7 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleInsertDialog::m_io](#m_io)|Struktura typu OLEUIINSERTOBJECT kontrolujące zachowanie okna dialogowego.|
 
@@ -110,7 +110,7 @@ COleInsertDialog (
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*<br/>
+*Flagidw*<br/>
 Flaga tworzenia, który zawiera dowolną liczbę następujące wartości, które można połączyć za pomocą operatora bitowego OR:
 
 - IOF_SHOWHELP Określa, że przycisk Pomoc, będą wyświetlane, gdy wywoływana jest okno dialogowe.
@@ -169,7 +169,7 @@ INT_PTR
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*<br/>
+*Flagidw*<br/>
 Jeden z następujących wartości:
 
 `COleInsertDialog::DocObjectsOnly` Wstawia tylko DocObjects.
@@ -306,5 +306,5 @@ Aby uzyskać więcej informacji, zobacz [OLEUIINSERTOBJECT](/windows/desktop/api
 
 [Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)

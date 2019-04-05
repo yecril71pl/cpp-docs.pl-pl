@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781240"
 ---
 # <a name="ceditview-class"></a>Klasa CEditView
@@ -61,13 +61,13 @@ class CEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CEditView::CEditView](#ceditview)|Tworzy obiekt typu `CEditView`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CEditView::FindText](#findtext)|Wyszukuje ciąg w tekście.|
 |[CEditView::GetBufferLength](#getbufferlength)|Pobiera długość buforu znaków.|
@@ -83,7 +83,7 @@ class CEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CEditView::OnFindNext](#onfindnext)|Znajduje następne wystąpienie ciągu tekstowego.|
 |[CEditView::OnReplaceAll](#onreplaceall)|Zamienia wszystkie wystąpienia podanego ciągu nowy ciąg.|
@@ -92,7 +92,7 @@ class CEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CEditView::dwStyleDefault](#dwstyledefault)|Domyślny styl dla obiektów typu `CEditView`.|
 
@@ -494,9 +494,9 @@ Wywołaj `UnlockBuffer` po zakończeniu przy użyciu wskaźnika zwrócony przez 
 
 [Próbki MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CEdit](../../mfc/reference/cedit-class.md)<br/>
 [Klasa CDocument](../../mfc/reference/cdocument-class.md)<br/>
-[Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
+[CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Klasa CRichEditView](../../mfc/reference/cricheditview-class.md)

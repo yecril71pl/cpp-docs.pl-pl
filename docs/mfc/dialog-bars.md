@@ -9,10 +9,10 @@ helpviewer_keywords:
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
 ms.openlocfilehash: e4e843327daba6f0aa468cb07394165bc70fa7f0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779511"
 ---
 # <a name="dialog-bars"></a>Paski dialogowe
@@ -33,4 +33,4 @@ Mimo że jest to normalne do wyprowadzenia własne klasy okien dialogowych z `CD
 ## <a name="see-also"></a>Zobacz także
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
-[Próbki](../overview/visual-cpp-samples.md)
+[Przykład](../overview/visual-cpp-samples.md)

@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780954"
 ---
 # <a name="clist-class"></a>Clist — klasa
@@ -72,13 +72,13 @@ class CList : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CList::CList](#clist)|Tworzy pustą listę uporządkowaną.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CList::AddHead](#addhead)|Dodaje nagłówek listy (sprawia, że nowy główny) elementu (lub wszystkie elementy w innej listy).|
 |[CList::AddTail](#addtail)|Dodaje ogona listy (sprawia, że nowe tail) elementu (lub wszystkie elementy w innej listy).|
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYP*<br/>
 Parametr szablonu określający typ obiektu, na liście.
 
-*Stanowisko*<br/>
+*położenie*<br/>
 Pozycja na liście elementu do pobrania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*Stanowisko*<br/>
+*położenie*<br/>
 Wartość pozycji zwrócony przez poprzednie `GetNext`, `GetPrev`, lub `Find` wywołanie funkcji elementu członkowskiego.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*Stanowisko*<br/>
+*położenie*<br/>
 Wartość pozycji zwrócony przez poprzednie `GetNext`, `GetPrev`, lub `Find` wywołanie funkcji elementu członkowskiego.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parametry
 
-*Stanowisko*<br/>
+*położenie*<br/>
 Położenie elementu do usunięcia z listy.
 
 ### <a name="remarks"></a>Uwagi
@@ -699,6 +699,6 @@ Należy się upewnić, że wartość pozycji reprezentuje poprawnej pozycji na l
 
 [Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CMap](../../mfc/reference/cmap-class.md)<br/>
-[Klasa CArray](../../mfc/reference/carray-class.md)
+[Carray — klasa](../../mfc/reference/carray-class.md)

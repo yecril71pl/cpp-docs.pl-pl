@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776638"
 ---
 # <a name="csliderctrl-class"></a>Klasa CSliderCtrl
@@ -95,13 +95,13 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Konstruuje `CSliderCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CSliderCtrl::ClearSel](#clearsel)|Czyści bieżące zaznaczenie w kontrolce suwaka.|
 |[CSliderCtrl::ClearTics](#cleartics)|Usuwa bieżący znaczniki w kontrolce suwaka.|
@@ -208,7 +208,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl kontrolki slider. Zastosuj dowolną kombinację [style formantu suwaka](/windows/desktop/Controls/trackbar-control-styles), które zostały opisane w zestawie Windows SDK, do formantu.
 
-*Rect*<br/>
+*rect*<br/>
 Określa rozmiar i położenie kontrolki slider. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
@@ -250,7 +250,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 *dwStyle*<br/>
 Określa styl kontrolki slider. Zastosuj dowolną kombinację [style formantu suwaka](/windows/desktop/Controls/trackbar-control-styles), które zostały opisane w zestawie Windows SDK, do formantu.
 
-*Rect*<br/>
+*rect*<br/>
 Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -385,10 +385,10 @@ void GetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
+*Nmin.*<br/>
 Odwołanie do liczba całkowita, która otrzymuje minimalnej pozycji.
 
-*nMax*<br/>
+*nmaks.*<br/>
 Odwołanie do liczba całkowita, która odbiera maksymalna pozycji.
 
 ### <a name="remarks"></a>Uwagi
@@ -431,10 +431,10 @@ void GetSelection(
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
+*Nmin.*<br/>
 Odwołanie do wartości całkowitej, otrzymuje początkową bieżącego zaznaczenia.
 
-*nMax*<br/>
+*nmaks.*<br/>
 Odwołanie do liczby całkowitej, która odbiera pozycji końcowej bieżącego zaznaczenia.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -630,10 +630,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
+*Nmin.*<br/>
 Minimalna położenie suwaka.
 
-*nMax*<br/>
+*nmaks.*<br/>
 Maksymalna położenie suwaka.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parametry
 
-*nMax*<br/>
+*nmaks.*<br/>
 Maksymalna położenie suwaka.
 
 *bRedraw*<br/>
@@ -669,7 +669,7 @@ void SetRangeMin(
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
+*Nmin.*<br/>
 Minimalna położenie suwaka.
 
 *bRedraw*<br/>
@@ -687,10 +687,10 @@ void SetSelection(
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
+*Nmin.*<br/>
 Pozycja początkowa suwaka.
 
-*nMax*<br/>
+*nmaks.*<br/>
 Pozycja końcowa dla suwaka.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parametry
 
-*nLocation*<br/>
+*Nlokalizacja*<br/>
 Wartość reprezentująca lokalizację, w której do wyświetlania kontrolki tooltip. Aby uzyskać listę możliwych wartości, zobacz komunikat Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), zgodnie z opisem w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -803,5 +803,5 @@ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB
 
 [CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa CProgressCtrl](../../mfc/reference/cprogressctrl-class.md)
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[CProgressCtrl Class](../../mfc/reference/cprogressctrl-class.md)

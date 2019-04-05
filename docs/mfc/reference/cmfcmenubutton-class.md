@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
 ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777366"
 ---
 # <a name="cmfcmenubutton-class"></a>Klasa CMFCMenuButton
@@ -43,20 +43,20 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Konstruuje `CMFCMenuButton` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Metoda wywoływana przez platformę, by tłumaczenie okna komunikatów przed ich wysłaniem. (Przesłania `CMFCButton::PreTranslateMessage`).|
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|Zmienia rozmiar przycisku zgodnie z rozmiarem tekstu i obrazów.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Określa, czy, aby wyświetlić menu podręcznego systemu domyślne lub użyć [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Określa, czy menu podręcznym pojawi się poniżej lub po prawej stronie przycisku.|
@@ -209,6 +209,6 @@ Nowy rozmiar przycisku jest obliczana do dopasowania tekstu przycisku, obrazu i 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md)

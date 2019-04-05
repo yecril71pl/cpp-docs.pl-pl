@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
 ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779212"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog Class
@@ -153,13 +153,13 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|Konstruuje `CFileDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Dodaje przycisk wyboru do okna dialogowego.|
 |[CFileDialog::AddComboBox](#addcombobox)|Dodaje pole kombi do okna dialogowego.|
@@ -214,7 +214,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Wywoływane po kliknięciu przycisku.|
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Wywołuje się, gdy pole wyboru jest zaznaczone niezaznaczone.|
@@ -230,7 +230,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CFileDialog::m_ofn](#m_ofn)|Windows `OPENFILENAME` struktury. Zapewnia dostęp do parametrów okno dialogowe podstawowy plik.|
 
@@ -549,7 +549,7 @@ explicit CFileDialog(
 *lpszFileName*<br/>
 [in] Początkowa nazwa pliku, który pojawia się w polu Nazwa pliku. Jeśli ma wartość NULL, zostanie wyświetlone nie początkowa nazwa pliku.
 
-*dwFlags*<br/>
+*Flagidw*<br/>
 [in] Połączenie jednego lub więcej flagi, które służy do dostosowywania okna dialogowego. Aby uzyskać opis tych flag, zobacz [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktury w zestawie Windows SDK. Jeśli zmodyfikujesz `m_ofn.Flags` struktury elementu członkowskiego, użyj operatora bitowego OR zmiany, aby zachować domyślne zachowanie.
 
 *lpszFilter*<br/>
@@ -558,7 +558,7 @@ explicit CFileDialog(
 *pParentWnd*<br/>
 [in] Wskaźnik do okna nadrzędnego lub właściciela, okno dialogowe pliku.
 
-*dwSize*<br/>
+*niezerowego*<br/>
 [in] Rozmiar `OPENFILENAME` struktury. Ta wartość jest zależna od wersji systemu operacyjnego. MFC używana tego parametru, aby określić odpowiedni rodzaj okno dialogowe, aby utworzyć. Domyślny rozmiar 0 oznacza, że kod MFC określi rozmiar okno dialogowe poprawne do użycia na podstawie wersji systemu operacyjnego, na którym program jest uruchamiany.
 
 *bVistaStyle*<br/>
@@ -1641,4 +1641,4 @@ W tym przykładzie aktualizuje `CFileDialog` przed wyświetleniem go. Przed zakt
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)

@@ -265,10 +265,10 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780616"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
@@ -285,13 +285,13 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CListCtrl::CListCtrl](#clistctrl)|Konstruuje `CListCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|Określa szerokość i wysokość, wymagany, aby wyświetlić elementy kontrolka widoku listy.|
 |[CListCtrl::Arrange](#arrange)|Wyrównuje elementy na siatce.|
@@ -618,7 +618,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl kontrolki listy. Zastosuj dowolną kombinację stylów kontrolki listy do formantu. Zobacz [stylów okna widoku listy](/windows/desktop/Controls/list-view-window-styles) w zestawie Windows SDK dla pełnej listy tych stylów. Rozszerzone style specyficzne dla kontrolkę za pomocą zestawu [SetExtendedStyle](#setextendedstyle).
 
-*Rect*<br/>
+*rect*<br/>
 Określa rozmiar i położenie kontrolki listy. Może być albo `CRect` obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
@@ -666,7 +666,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 *dwStyle*<br/>
 Określa styl kontrolki listy. Zastosuj dowolną kombinację stylów kontrolki listy do formantu. Aby uzyskać pełną listę tych stylów, zobacz [stylów okna widoku listy](/windows/desktop/Controls/list-view-window-styles) w zestawie Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 Wskaźnik do [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) struktury zawierającej informacje o elementach, które mają być wyszukiwane.
 
-*nStart*<br/>
+*nczas uruchomienia*<br/>
 Indeks elementu, aby rozpocząć wyszukiwanie przy użyciu lub -1, aby rozpocząć od samego początku. Element o *nczas uruchomienia* jest wykluczony z wyszukiwania, jeśli *nczas uruchomienia* nie jest równy-1.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2348,7 +2348,7 @@ BOOL GetSubItemRect(
 
 ### <a name="parameters"></a>Parametry
 
-*iItem*<br/>
+*Towaru*<br/>
 Indeks elementu nadrzędnego podelementu.
 
 *iSubItem*<br/>
@@ -2605,7 +2605,7 @@ int HitTest(
 *pHitTestInfo*<br/>
 Adres `LVHITTESTINFO` strukturę, która zawiera pozycji, aby trafić testu oraz że otrzymuje informacje o wynikach testu trafienia.
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 Punkt, który ma zostać przetestowana.
 
 *pFlags*<br/>
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
+*indeks*<br/>
 Indeks elementu, w której ma zostać wstawiony grupy.
 
 *pgrp*<br/>
@@ -2774,13 +2774,13 @@ Indeks elementu do wstawienia.
 *lpszItem*<br/>
 Adres ciąg zawierający etykietę elementu lub LPSTR_TEXTCALLBACK, jeśli element jest elementem wywołania zwrotnego. Aby uzyskać informacje na elementy wywołania zwrotnego, zobacz [CListCtrl::GetCallbackMask](#getcallbackmask).
 
-*nImage*<br/>
+*Nokreślono*<br/>
 Indeks elementu obrazu lub I_IMAGECALLBACK, jeśli element jest elementem wywołania zwrotnego. Aby uzyskać informacje na elementy wywołania zwrotnego, zobacz [CListCtrl::GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
 *NMask* parametr określa, który element atrybuty przekazywane jako parametry są prawidłowe. Może to być jedna lub więcej wartości maski opisanego w [struktury LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) w zestawie Windows SDK. Prawidłowe wartości można łączyć przy użyciu bitowego operatora OR.
 
-*nState*<br/>
+*nInformacje*<br/>
 Wskazuje, nakładki obrazów, obraz stanu i stanu elementu. Zapoznaj się z tematami zestawu Windows SDK [struktury LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Aby uzyskać więcej informacji i [stanów elementu widoku listy](/windows/desktop/Controls/list-view-item-states) listę prawidłowe flagi.
 
 *nStateMask*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*index*|[in] Liczony od zera indeks elementu w bieżącym kontrolka widoku listy.|
+|*indeks*|[in] Liczony od zera indeks elementu w bieżącym kontrolka widoku listy.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2897,7 +2897,7 @@ UINT MapIDToIndex(UINT id) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*id*|[in] Unikatowy identyfikator elementu.|
+|*identyfikator*|[in] Unikatowy identyfikator elementu.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*index*|[in] Liczony od zera indeks elementu.|
+|*indeks*|[in] Liczony od zera indeks elementu.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3043,7 +3043,7 @@ BOOL RedrawItems(
 *nFirst*<br/>
 Indeks pierwszego elementu, aby odświeżana.
 
-*nLast*<br/>
+*Nostatni*<br/>
 Indeks ostatniego elementu, aby odświeżana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3097,7 +3097,7 @@ BOOL Scroll(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
+*size*<br/>
 A `CSize` określający ilość poziome i pionowe przewijanie w pikselach. `y` Członkiem *rozmiar* jest dzielona przez wysokość w pikselach wiersza kontrolka widoku listy i formant jest przewijane wynikowy liczby wierszy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
+*CR*<br/>
 Kolor tła, aby ustawić lub wartość CLR_NONE bez koloru tła. Kontrolki widoku listy za pomocą kolorów tła odświeżyć się znacznie szybciej niż bez kolory tła. Aby uzyskać informacje, zobacz [COLORREF](/windows/desktop/gdi/colorref) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 Liczony od zera indeks elementu kontrolki listy.
 
-*fCheck*<br/>
+*Zapoznaj*<br/>
 Określa, czy obraz stanu elementu powinien być widoczny, czy nie. Domyślnie *zapoznaj* ma wartość TRUE a obraz stanu jest widoczny. Jeśli *zapoznaj* ma wartość FAŁSZ, nie jest widoczny.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3493,10 +3493,10 @@ CSize SetIconSpacing(CSize size);
 *cx*<br/>
 Odległość (w pikselach) między ikony na osi x.
 
-*cy*<br/>
+*CY*<br/>
 Odległość (w pikselach) między ikony na osi y.
 
-*Rozmiar*<br/>
+*size*<br/>
 A `CSize` określający odległość (w pikselach) między ikony na x - i osiami y.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
+*kolor*<br/>
 A [COLORREF](/windows/desktop/gdi/colorref) struktury, określając kolor, aby ustawić punkt wstawiania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3655,10 +3655,10 @@ Określa atrybuty, które są określone (zobacz Uwagi).
 *lpszItem*<br/>
 Adres ciąg zakończony zerem, określając etykietę elementu.
 
-*nImage*<br/>
+*Nokreślono*<br/>
 Indeks obrazu elementu w obrębie listy obrazów.
 
-*nState*<br/>
+*nInformacje*<br/>
 Określa wartości dla stanów, które mają być zmienione (zobacz Uwagi).
 
 *nStateMask*<br/>
@@ -3739,7 +3739,7 @@ BOOL SetItemCountEx(
 *iCount*<br/>
 Liczba elementów, które ostatecznie zawiera formant.
 
-*dwFlags*<br/>
+*Flagidw*<br/>
 Określa zachowanie kontrolka widoku listy, po przywróceniu liczby elementów. Ta wartość może być kombinacją następujących czynności:
 
 - LVSICF_NOINVALIDATEALL nie spowoduje odświeżenia kontrolka widoku listy, chyba że objęte elementy są obecnie dostępne w widoku. Jest to wartość domyślna.
@@ -3853,7 +3853,7 @@ BOOL SetItemPosition(
 *nItem*<br/>
 Indeks elementu, którego pozycja ma być utworzony.
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 A [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury, określając nowe miejsce, w widoku współrzędne, elementu lewego górnego rogu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3893,7 +3893,7 @@ Indeks elementu, którego stan ma być utworzony.
 *pItem*<br/>
 Adres [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) struktury, zgodnie z opisem w zestawie Windows SDK. Struktura `stateMask` elementu członkowskiego określa określonym stanie bits do zmiany i struktury `state` elementu członkowskiego zawiera nowe wartości dla tych bitów. Inni członkowie są ignorowane.
 
-*nState*<br/>
+*nInformacje*<br/>
 Nowe wartości dla bitów stanu. Aby uzyskać listę możliwych wartości, zobacz [CListCtrl::GetNextItem](#getnextitem) i [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) stanu elementu członkowskiego.
 
 *nMask*<br/>
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
+*kolor*<br/>
 Nowy [COLORREF](/windows/desktop/gdi/colorref) struktury zawierającej kolor konturu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
+*CR*<br/>
 COLORREF, określając nowy kolor tła tekstu. Aby uzyskać informacje, zobacz [COLORREF](/windows/desktop/gdi/colorref) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
+*CR*<br/>
 COLORREF, określając nowy kolor tekstu. Aby uzyskać informacje, zobacz [COLORREF](/windows/desktop/gdi/colorref) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -4424,5 +4424,5 @@ Tę funkcję również rozmieszcza kontrolka widoku listy, jeśli ma on styl LVS
 
 [Próbki MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](cwnd-class.md)<br/>
-[Wykres hierarchii](../hierarchy-chart.md)<br/>
-[Klasa CImageList](cimagelist-class.md)
+[Diagram hierarchii](../hierarchy-chart.md)<br/>
+[CImageList Class](cimagelist-class.md)

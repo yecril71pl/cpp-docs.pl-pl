@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
 ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778094"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
@@ -51,13 +51,13 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Konstruuje `CPageSetupDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Tworzy kontekst urządzenia do drukowania.|
 |[CPageSetupDialog::DoModal](#domodal)|Zostanie wyświetlone okno dialogowe i umożliwia wybór użytkownika wykonującego.|
@@ -72,7 +72,7 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPageSetupDialog::m_psd](#m_psd)|Struktury używane w celu dostosowania `CPageSetupDialog` obiektu.|
 
@@ -119,7 +119,7 @@ CPageSetupDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*<br/>
+*Flagidw*<br/>
 Co najmniej jeden flagi używane do dostosowywania ustawień w oknie dialogowym. Wartości można łączyć, używając operatora bitowego OR. Te wartości mają następujące znaczenie:
 
 - PSD_DEFAULTMINMARGINS określa minimalne szerokości dozwoloną dla marginesy strony, aby być taka sama jak minimalnych drukarki. Ta flaga jest ignorowana, jeśli określono też flagi PSD_MARGINS i PSD_MINMARGINS.
@@ -407,4 +407,4 @@ Należy przesłonić tę funkcję, aby dostosować rysowania obrazu. Jeśli moż
 
 [Próbki MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)

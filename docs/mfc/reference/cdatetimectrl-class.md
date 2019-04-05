@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: 8c69473ab813c2fa692044fddc406a74a5aeb197
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779823"
 ---
 # <a name="cdatetimectrl-class"></a>Klasa CDateTimeCtrl
@@ -61,13 +61,13 @@ class CDateTimeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|Konstruuje `CDateTimeCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|Zamyka bieżący formant selektora daty i godziny.|
 |[CDateTimeCtrl::Create](#create)|Tworzy formant selektora daty i godziny i dołącza je do `CDateTimeCtrl` obiektu.|
@@ -157,7 +157,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa kombinację style kontrolki czasu daty. Zobacz [style daty i godziny selektor formantu](/windows/desktop/Controls/date-and-time-picker-control-styles) w zestawie Windows SDK, aby uzyskać więcej informacji o stylach selektora daty i godziny.
 
-*Rect*<br/>
+*rect*<br/>
 Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, która jest położenie i rozmiar kontrolki selektora daty i godziny.
 
 *pParentWnd*<br/>
@@ -599,7 +599,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [DT
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL1 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)

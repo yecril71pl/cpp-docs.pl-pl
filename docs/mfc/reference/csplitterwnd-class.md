@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781448"
 ---
 # <a name="csplitterwnd-class"></a>Klasa CSplitterWnd
@@ -93,13 +93,13 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CSplitterWnd::CSplitterWnd](#csplitterwnd)|Wywołania do konstruowania `CSplitterWnd` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Wykonuje polecenie następne okienko lub poprzednie okienko.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Sprawdza, czy polecenia następne okienko lub poprzednie okienko jest obecnie możliwe.|
@@ -133,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CSplitterWnd::OnDraw](#ondraw)|Metoda wywoływana przez platformę, by narysować okno rozdzielacza.|
 |[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|Renderuje Obraz okna podziału.|
@@ -391,7 +391,7 @@ virtual BOOL CreateView(
 *wiersz*<br/>
 Określa wiersz okno rozdzielacza, w której chcesz umieścić nowy widok.
 
-*col*<br/>
+*Kolumna*<br/>
 Określa kolumnę okno rozdzielacza, w której chcesz umieścić nowy widok.
 
 *pViewClass*<br/>
@@ -478,7 +478,7 @@ virtual void DeleteView(
 *wiersz*<br/>
 Określa wiersz okna rozdzielacza, od którego należy usunąć widoku.
 
-*col*<br/>
+*Kolumna*<br/>
 Określa kolumnę okno rozdzielacza, od którego należy usunąć widoku.
 
 ### <a name="remarks"></a>Uwagi
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*col*<br/>
+*Kolumna*<br/>
 Określa kolumnę.
 
 *cxCur*<br/>
@@ -652,7 +652,7 @@ CWnd* GetPane(
 *wiersz*<br/>
 Określa wiersz.
 
-*col*<br/>
+*Kolumna*<br/>
 Określa kolumnę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -730,7 +730,7 @@ int IdFromRowCol(
 *wiersz*<br/>
 Określa wiersz okno rozdzielacza.
 
-*col*<br/>
+*Kolumna*<br/>
 Określa kolumnę okno rozdzielacza.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -818,7 +818,7 @@ Wartość `enum ESplitType`, który może być jedną z następujących czynnoś
 
     - `splitBorder` Obramowanie okna podziału.
 
-*Rect*<br/>
+*rect*<br/>
 Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) określający rozmiar i kształt podzielonych okien.
 
 ### <a name="remarks"></a>Uwagi
@@ -837,7 +837,7 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 Odwołanie do `CRect` określający prostokąt śledzenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -880,7 +880,7 @@ virtual void SetActivePane(
 *wiersz*<br/>
 Jeśli *pWnd* ma wartość NULL, określa wiersz w okienku, które będą aktywne.
 
-*col*<br/>
+*Kolumna*<br/>
 Jeśli *pWnd* ma wartość NULL, określa kolumnę w okienku, które będą aktywne.
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*col*<br/>
+*Kolumna*<br/>
 Określa kolumnę okno rozdzielacza.
 
 *cxIdeal*<br/>
@@ -1038,6 +1038,6 @@ Wskaźnik do kontekstu urządzenia.
 
 [Próbki MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa CView](../../mfc/reference/cview-class.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Cview — klasa](../../mfc/reference/cview-class.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)

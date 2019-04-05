@@ -13,10 +13,10 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
 ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779615"
 ---
 # <a name="coleipframewnd-class"></a>Klasa COleIPFrameWnd
@@ -33,13 +33,13 @@ class COleIPFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|Konstruuje `COleIPFrameWnd` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Wywoływane przez platformę, gdy element jest aktywowany do edycji w miejscu.|
 |[COleIPFrameWnd::RepositionFrame](#repositionframe)|Metoda wywoływana przez platformę, by zmienić położenie okna edycji w miejscu.|
@@ -134,5 +134,5 @@ Układ pasków sterowania w oknie kontenera, który różni się od, wykonywane 
 
 [Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)

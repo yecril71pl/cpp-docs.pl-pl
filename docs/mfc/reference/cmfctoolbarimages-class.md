@@ -141,10 +141,10 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776417"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
@@ -161,13 +161,13 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|Konstruuje `CMFCToolBarImages` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||
 |[CMFCToolBarImages::AddIcon](#addicon)|Dodaje ikony do paska narzędzi obrazów.|
@@ -236,13 +236,13 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::PreMultiplyAlpha](#premultiplyalpha)||
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|Wartość TRUE, jeśli alfa truecolor mieszania (w kolorze 32-bitowa) jest wyłączona.|
 
@@ -473,7 +473,7 @@ BOOL Draw(
 *x*<br/>
 [in] Współrzędna X po lewej stronie prostokąt, w którym ma zostać narysowany obraz.
 
-*y*<br/>
+*t*<br/>
 [in] Współrzędna Y górnej krawędzi prostokąta, w której ma zostać narysowany obraz.
 
 *iImageIndex*<br/>
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Współrzędne prostokąta do wypełnienia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1383,7 +1383,7 @@ Wartość TRUE, jeśli zmiana rozmiaru zakończy się pomyślnie; w przeciwnym r
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>

@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780343"
 ---
 # <a name="cdatapathproperty-class"></a>Klasa CDataPathProperty
@@ -41,13 +41,13 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Konstruuje `CDataPathProperty` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDataPathProperty::GetControl](#getcontrol)|Pobiera asynchroniczny kontrolkę OLE skojarzone z `CDataPathProperty` obiektu.|
 |[CDataPathProperty::GetPath](#getpath)|Pobiera nazwę właściwości ścieżki.|
@@ -64,7 +64,7 @@ Klasa `CDataPathProperty` jest tworzony na podstawie `CAysncMonikerFile`. Aby za
 
 Aby uzyskać więcej informacji o sposobie używania formantów ActiveX i monikerów asynchronicznych w aplikacjach internetowych zobacz następujące artykuły:
 
-- [Internet First Steps: ActiveX Controls](../../mfc/activex-controls-on-the-internet.md)
+- [Internet First Steps: Kontrolki ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 - [Internet First Steps: Monikery asynchroniczne](../../mfc/asynchronous-monikers-on-the-internet.md)
 
@@ -218,6 +218,6 @@ void SetPath(LPCTSTR lpszPath);
 ## <a name="see-also"></a>Zobacz także
 
 [Obraz przykładowej MFC](../../overview/visual-cpp-samples.md)<br/>
-[Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)
+[CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)

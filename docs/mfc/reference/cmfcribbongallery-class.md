@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780395"
 ---
 # <a name="cmfcribbongallery-class"></a>Klasa CMFCRibbonGallery
@@ -100,13 +100,13 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|Tworzy i inicjuje `CMFCRibbonGallery` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonGallery::AddGroup](#addgroup)|Dodaje nową grupę, do galerii.|
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|Dodaje nowy element menu do menu rozwijanego.|
@@ -145,7 +145,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Wywoływane przez platformę podczas rysowania ikon galerii.|
 
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] Okno nadrzędne okna Galerii wstążki.
 
-*data*<br/>
+*dane*<br/>
 [out] A `CAccessibilityData` obiekt, który odbiera dane dostępności z galerii wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -818,7 +818,7 @@ Aby ustalić konkretny element, który użytkownik zaznaczył w galerii, należy
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [Klasa CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)

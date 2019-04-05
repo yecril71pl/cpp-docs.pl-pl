@@ -17,10 +17,10 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
 ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781305"
 ---
 # <a name="cmfcfontcombobox-class"></a>Klasa CMFCFontComboBox
@@ -37,14 +37,14 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Konstruuje `CMFCFontComboBox` obiektu.|
 |`CMFCFontComboBox::~CMFCFontComboBox`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCFontComboBox::CompareItem`|Metoda wywoływana przez platformę, aby określić względne położenie nowego elementu w polu posortowaną listę bieżącego formant pola kombi czcionki. (Przesłania [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
 |`CMFCFontComboBox::DrawItem`|Metoda wywoływana przez platformę, by narysować określonego elementu w bieżącym formant pola kombi czcionki. (Przesłania [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|
@@ -56,7 +56,7 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Wskazuje Framework czcionki, która za pomocą rysowania etykiety elementów w bieżącym polu kombi czcionki.|
 
@@ -195,7 +195,7 @@ Poniższy przykład pokazuje sposób użycia `Setup` method in Class metoda `CMF
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[Klasa CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
+[CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
 [Klasa CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md)

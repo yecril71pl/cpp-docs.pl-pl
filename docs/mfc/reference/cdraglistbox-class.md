@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
 ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781591"
 ---
 # <a name="cdraglistbox-class"></a>Klasa CDragListBox
@@ -41,13 +41,13 @@ class CDragListBox : public CListBox
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDragListBox::CDragListBox](#cdraglistbox)|Konstruuje `CDragListBox` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDragListBox::BeginDrag](#begindrag)|Wywoływane przez platformę, gdy rozpoczyna się operacja przeciągania.|
 |[CDragListBox::CancelDrag](#canceldrag)|Wywoływane przez platformę, gdy Anulowano operację przeciągania.|
@@ -92,7 +92,7 @@ virtual BOOL BeginDrag(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne elementu przeciągania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne elementu przeciągania.
 
 ### <a name="remarks"></a>Uwagi
@@ -138,7 +138,7 @@ virtual UINT Dragging(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera x i y ekran współrzędne kursora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -187,7 +187,7 @@ virtual void Dropped(
 *nSrcIndex*<br/>
 Określa liczony od zera indeks porzuconych ciągu.
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne lokacji docelowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -206,7 +206,7 @@ int ItemFromPt(
 
 ### <a name="parameters"></a>Parametry
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne punktu, w polu listy.
 
 *bAutoScroll*<br/>
@@ -218,7 +218,7 @@ Liczony od zera indeks elementu pola listy przeciągania.
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample TSTCON](../../overview/visual-cpp-samples.md)<br/>
-[Klasa CListBox](../../mfc/reference/clistbox-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa CListBox](../../mfc/reference/clistbox-class.md)
+[TSTCON gt; próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[Clistbox — klasa](../../mfc/reference/clistbox-class.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Clistbox — klasa](../../mfc/reference/clistbox-class.md)

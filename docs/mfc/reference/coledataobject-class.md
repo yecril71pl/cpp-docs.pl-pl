@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 ms.openlocfilehash: 24d79c684226d57839161946255781c3bdd5a043
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779095"
 ---
 # <a name="coledataobject-class"></a>Klasa COleDataObject
@@ -49,13 +49,13 @@ class COleDataObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleDataObject::COleDataObject](#coledataobject)|Konstruuje `COleDataObject` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleDataObject::Attach](#attach)|Dołącza określony obiekt danych OLE do `COleDataObject`.|
 |[COleDataObject::AttachClipboard](#attachclipboard)|Dołącza obiekt danych do Schowka.|
@@ -340,7 +340,7 @@ void Release();
 
 [Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDataSource](../../mfc/reference/coledatasource-class.md)<br/>
-[Klasa COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
+[COleClientItem Class](../../mfc/reference/coleclientitem-class.md)<br/>
 [Klasa COleServerItem](../../mfc/reference/coleserveritem-class.md)

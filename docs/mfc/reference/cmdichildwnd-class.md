@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
 ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774588"
 ---
 # <a name="cmdichildwnd-class"></a>Cmdichildwnd — klasa
@@ -43,13 +43,13 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Konstruuje `CMDIChildWnd` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMDIChildWnd::Create](#create)|Tworzy okno podrzędne Windows MDI, które są skojarzone z `CMDIChildWnd` obiektu.|
 |[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Zwraca element nadrzędny MDI ramki okna MDI klienta.|
@@ -150,7 +150,7 @@ Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna
 *dwStyle*<br/>
 Określa okna [styl](../../mfc/reference/styles-used-by-mfc.md#window-styles) atrybutów. Styl WS_CHILD jest wymagana.
 
-*Rect*<br/>
+*rect*<br/>
 Zawiera rozmiar i położenie okna. `rectDefault` Zezwala na wartość Windows określić rozmiar i położenie nowej `CMDIChildWnd`.
 
 *pParentWnd*<br/>
@@ -291,6 +291,6 @@ Wywołaj tę funkcję, aby ustawić menu i akcelerator zasoby używane przez obi
 [Próbki MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Klasa CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)
+[Cmdiframewnd — klasa](../../mfc/reference/cmdiframewnd-class.md)

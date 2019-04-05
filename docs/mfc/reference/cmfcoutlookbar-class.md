@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58775260"
 ---
 # <a name="cmfcoutlookbar-class"></a>Klasa CMFCOutlookBar
@@ -59,14 +59,14 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCOutlookBar::CMFCOutlookBar`|Domyślny konstruktor.|
 |`CMFCOutlookBar::~CMFCOutlookBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Określa, czy mogą zostać zniszczone pustego okienka z zakładkami. (Overrides [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|
 |[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Określa, czy do okienko paska Outlook może być zadokowane innego okienka. (Przesłania CDockablePane::CanAcceptPane).|
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Określa wskaźnik do okna nadrzędnego. Nie może być równa NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Określa program outlook paska rozmiar i położenie w pikselach.
 
 *nID*<br/>
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>Parametry
 
-*uiPage*<br/>
+*klasy uipage o identyfikatorze*<br/>
 [in] Liczony od zera indeks strony w oknie nadrzędnym programu Outlook.
 
 *pTargetWnd*<br/>
@@ -575,8 +575,8 @@ Domyślnie ten tryb jest wyłączona.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[Klasa CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[Klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CBaseTabbedPane Class](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [Klasa CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)

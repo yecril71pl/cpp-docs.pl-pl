@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
 ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776807"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
@@ -65,14 +65,14 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Domyślny konstruktor.|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Dodaje formant Windows na nowej karcie w pasek programu Outlook.|
 |`CMFCOutlookBarTabCtrl::CalcRectEdit`|Wywoływane przez platformę, aby określić wymiary pola edycji, który jest wyświetlany, gdy użytkownik zmienia nazwę karty. (Przesłania `CMFCBaseTabCtrl::CalcRectEdit`).|
@@ -219,7 +219,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Określa początkowy rozmiar i położenie w pikselach.
 
 *pParentWnd*<br/>
@@ -506,8 +506,8 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[Klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [Klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [Klasa CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)

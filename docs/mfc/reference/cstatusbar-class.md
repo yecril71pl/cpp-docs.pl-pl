@@ -37,10 +37,10 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
 ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777340"
 ---
 # <a name="cstatusbar-class"></a>Klasa CStatusBar
@@ -57,13 +57,13 @@ class CStatusBar : public CControlBar
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CStatusBar::CStatusBar](#cstatusbar)|Konstruuje `CStatusBar` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CStatusBar::CommandToIndex](#commandtoindex)|Pobiera indeks dla identyfikatora dla danego wskaźnika.|
 |[CStatusBar::Create](#create)|Tworzy pasek stanu, dołącza go do `CStatusBar` obiektu i ustawia początkowa wysokość czcionki i paskiem.|
@@ -507,8 +507,8 @@ Po wywołaniu metody `SetPaneText`, należy dodać program obsługi aktualizacji
 ## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
-[MFC Sample DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
-[Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[DLGCBR32 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ccontrolbar — klasa](../../mfc/reference/ccontrolbar-class.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)<br/>
-[Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[Ccontrolbar — klasa](../../mfc/reference/ccontrolbar-class.md)

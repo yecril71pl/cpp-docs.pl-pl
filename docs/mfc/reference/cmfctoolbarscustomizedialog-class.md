@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780967"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Klasa CMFCToolBarsCustomizeDialog
@@ -47,14 +47,14 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Konstruuje `CMFCToolBarsCustomizeDialog` obiektu.|
 |`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Wstawia listę poleceń przycisku paska narzędzi na **polecenia** strony|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Ładuje menu z zasobów i wywołania [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) Aby dodać menu do listy poleceń na **polecenia** strony.|
@@ -80,7 +80,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Metoda wywoływana przez platformę, aby określić, czy lista narzędzi zdefiniowane przez użytkownika jest prawidłowa.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Wywoływane przez platformę, gdy zmienią się właściwości narzędzia zdefiniowanego przez użytkownika.|
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Określa identyfikator kategorii, do której mają zostać wstawione przycisku.
 
-*button*<br/>
+*Przycisk*<br/>
 [in] Określa przycisk, aby wstawić.
 
 *iInsertBefore*<br/>
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Wskaźnik do okna nadrzędnego.
 
-*bitmap*<br/>
+*mapa bitowa*<br/>
 [in] Odwołanie do obiektu mapy bitowej do edycji.
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Określa polecenie przycisku, które ma zostać zastąpione.
 
-*button*<br/>
+*Przycisk*<br/>
 [in] A **const** odwołanie do obiektu przycisku paska narzędzi, który zastępuje stare przycisku.
 
 ### <a name="remarks"></a>Uwagi
@@ -752,6 +752,6 @@ Ustawienie kategorii użytkownika nie jest obecnie używany przez platformę.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[Klasa CPropertySheet](../../mfc/reference/cpropertysheet-class.md)
+[Cpropertysheet — klasa](../../mfc/reference/cpropertysheet-class.md)

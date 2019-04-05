@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779849"
 ---
 # <a name="carray-class"></a>Carray — klasa
@@ -72,13 +72,13 @@ Parametr szablonu, który określa typ argumentu, który umożliwia dostęp do o
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CArray::CArray](#carray)|Tworzy pustą tablicę.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CArray::Add](#add)|Dodaje element do końca tablicy; zwiększa rozmiar tablicy, jeśli to konieczne.|
 |[CArray::Append](#append)|Dołącza innej tablicy do tablicy; powiększa się tablica, jeśli to konieczne|
@@ -100,7 +100,7 @@ Parametr szablonu, który określa typ argumentu, który umożliwia dostęp do o
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[operator&#91;&#93;](#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
 
@@ -632,6 +632,6 @@ Ta funkcja służy do ustawiania rozmiaru tablicy, przed rozpoczęciem korzystan
 
 [Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CObArray](../../mfc/reference/cobarray-class.md)<br/>
 [Pomocnicy klasy kolekcji](../../mfc/reference/collection-class-helpers.md)

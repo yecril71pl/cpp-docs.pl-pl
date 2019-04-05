@@ -19,10 +19,10 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
 ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781331"
 ---
 # <a name="cmfcfontinfo-class"></a>Klasa CMFCFontInfo
@@ -39,19 +39,19 @@ class CMFCFontInfo : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCFontInfo`|Konstruuje `CMFCFontInfo` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCFontInfo::GetFullName](#getfullname)|Pobiera nazwy połączonych czcionkę i jej znak zestawu (skrypt).|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|Wartość, która określa zestaw znaków (skrypt) skojarzony z czcionki.|
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Wartość, która określa gęstość i rodzinę czcionek.|
@@ -192,7 +192,7 @@ Aby uzyskać więcej informacji, zobacz *lpszScript* parametru [CMFCFontInfo::CM
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[Klasa CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
-[Klasa CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
+[CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
+[CMFCToolBarFontSizeComboBox Class](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)

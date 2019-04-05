@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
 ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779758"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl Class
@@ -50,7 +50,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Włącza lub wyłącza menu skrótów.|
 |[CMFCShellTreeCtrl::GetFlags](#getflags)|Zwraca kombinacja flag, które są przekazywane do [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).|
@@ -261,7 +261,7 @@ void SetFlags(
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*<br/>
+*Flagidw*<br/>
 [in] Flagi, aby ustawić.
 
 *bRefresh*<br/>
@@ -292,7 +292,7 @@ Użyj metody [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) można pobrać
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CTreeCtrl](../../mfc/reference/ctreectrl-class.md)<br/>
-[Klasa CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)
+[CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md)

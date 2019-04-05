@@ -15,10 +15,10 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781214"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer Class
@@ -35,13 +35,13 @@ class COleTemplateServer : public COleObjectFactory
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Konstruuje `COleTemplateServer` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Nawiązanie połączenia z szablonu dokumentu bazowego `COleObjectFactory` obiektu.|
 |[COleTemplateServer::Unregister](#unregister)|Wyrejestrowuje szablonu powiązanego dokumentu.|
@@ -172,7 +172,7 @@ Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](/
 ## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[Klasa COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>
+[Coleobjectfactory — klasa](../../mfc/reference/coleobjectfactory-class.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Klasa COleServerItem](../../mfc/reference/coleserveritem-class.md)

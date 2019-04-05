@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781695"
 ---
 # <a name="cdrawingmanager-class"></a>Klasa CDrawingManager
@@ -77,14 +77,14 @@ class CDrawingManager : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDrawingManager::CDrawingManager](#cdrawingmanager)|Konstruuje `CDrawingManager` obiektu.|
 |`CDrawingManager::~CDrawingManager`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Tworzy 32-bitowych niezależnych od urządzenia mapy bitowej (DIB) który aplikacji można napisać, aby bezpośrednio.|
 |[CDrawingManager::DrawAlpha](#drawalpha)|Wyświetla mapy bitowe, które mają przezroczyste lub półprzezroczystych pikseli.|
@@ -135,7 +135,7 @@ CDrawingManager(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*dc*<br/>
+*Kontroler domeny*<br/>
 [in] Odwołanie do kontekstu urządzenia. `CDrawingManager` Używa tego kontekstu do rysowania.
 
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32
@@ -157,9 +157,9 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Parametr|Opis|
-|*Rozmiar*|[in] A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, który wskazuje rozmiar mapy bitowej.|
+|*size*|[in] A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, który wskazuje rozmiar mapy bitowej.|
 |*pBits*|[out] Wskaźnik do wskaźnika danych, który odbiera lokalizację DIB wartości bitowe.|
-|*bitmap*|Dojście do oryginalnego mapy bitowej|
+|*mapa bitowa*|Dojście do oryginalnego mapy bitowej|
 |*clrTransparent*|Wartość RGB, określając kolor przezroczysty, oryginalnym mapy bitowej.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -213,7 +213,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający elipsy.
 
 *clrFill*<br/>
@@ -243,7 +243,7 @@ BOOL DrawGradientRing(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] A [CRect](../../atl-mfc-shared/reference/crect-class.md) parametr, który określa granic gradientu pierścienia.
 
 *colorStart*<br/>
@@ -320,7 +320,7 @@ void DrawRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Granice prostokąta.
 
 *clrFill*<br/>
@@ -351,7 +351,7 @@ BOOL DrawShadow(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokątny obszar w aplikacji. Rysowanie Menedżera narysuje cień poniżej tego obszaru.
 
 *nDepth*<br/>
@@ -410,7 +410,7 @@ void Fill4ColorsGradient(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt, aby wypełnić.
 
 *colorStart1*<br/>
@@ -453,7 +453,7 @@ void FillGradient(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokątny obszar, aby wypełnić.
 
 *colorStart*<br/>
@@ -491,7 +491,7 @@ void FillGradient2 (
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokątny obszar, aby wypełnić.
 
 *colorStart*<br/>
@@ -527,7 +527,7 @@ BOOL GrayRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokątny obszar, aby wypełnić.
 
 *nPercentage*<br/>
@@ -564,7 +564,7 @@ BOOL HighlightRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokątny obszar, aby wyróżnić.
 
 *nPercentage*<br/>
@@ -745,7 +745,7 @@ void MirrorRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający obszar do przerzucenia.
 
 *bHorz*<br/>
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] Początkowy kolor piksela.
 
-*percent*<br/>
+*Procent*<br/>
 [in] Liczba od 0 do 100, która przedstawia wartość procentową przezroczystości. Wartość 100 oznacza, że kolor początkowy jest całkowicie przezroczysty.
 
 *percentR*<br/>
@@ -921,16 +921,16 @@ static void __stdcall SetAlphaPixel(
 *pBits*<br/>
 [in] Wskaźnik do wartości bitowe mapy bitowej.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokątny obszar w aplikacji. Rysowanie Menedżera rysuje w tle, poniżej i w prawo tego obszaru.
 
 *x*<br/>
 [in] Współrzędna poziomy pikseli na kolor.
 
-*y*<br/>
+*t*<br/>
 [in] Współrzędna pionowy pikseli na kolor.
 
-*percent*<br/>
+*Procent*<br/>
 [in] Procent przezroczystości.
 
 *iShadowSize*<br/>
@@ -969,10 +969,10 @@ static void __stdcall SetPixel(
 |Parametr|Opis|
 |*pBits*|[in] Wskaźnik do wartości bitowe mapy bitowej.|
 |*cx*|[in] Łączna szerokość mapy bitowej.|
-|*cy*|[in] Całkowita wysokość mapy bitowej.|
+|*CY*|[in] Całkowita wysokość mapy bitowej.|
 |*x*|[in] Współrzędna x piksel w mapie bitowej można zmienić.|
-|*y*|[in] Współrzędna y piksel w mapie bitowej można zmienić.|
-|*Kolor*|[in] Nowy kolor piksela o podanej współrzędnych.|
+|*t*|[in] Współrzędna y piksel w mapie bitowej można zmienić.|
+|*kolor*|[in] Nowy kolor piksela o podanej współrzędnych.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -992,7 +992,7 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Parametr|Opis|
-|*color1*|[in] Pierwszy kolor połączenie.|
+|*kolorem1*|[in] Pierwszy kolor połączenie.|
 |*color2*|[in] Drugi kolor połączenie.|
 |*dblLumRatio*|[in] Współczynnik jasność nowy kolor. `SmartMixColors` Mnoży jasność koloru mieszane przez ten stosunek przed ustaleniem ostateczny kolor.|
 |*k1*|[in] Ważona współczynnik pierwszy kolor.|
@@ -1034,5 +1034,5 @@ Wartość TRUE wskazuje, obracania + 90 stopni; Wartość FALSE wskazuje, obraca
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

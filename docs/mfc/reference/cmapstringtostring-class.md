@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780369"
 ---
 # <a name="cmapstringtostring-class"></a>Klasa CMapStringToString
@@ -71,19 +71,19 @@ na przykład przekłada się na
 
 ### <a name="public-structures"></a>Publiczne struktury
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapStringToString::CPair](#cpair)|Struktura zagnieżdżona zawierające wartości klucza i wartości z obiektem ciągu skojarzone.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów na tej mapie.|
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa aktualną liczbę elementów w tabeli wyznaczania wartości skrótu.|
@@ -104,7 +104,7 @@ na przykład przekłada się na
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
 
@@ -209,7 +209,7 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*klawisz*<br/>
 Wskaźnik do klucza dla elementu, który ma zostać wyszukany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -228,4 +228,4 @@ Wywołaj tę metodę, aby wyszukać element mapy za pomocą klucza, który dokł
 
 [Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)
