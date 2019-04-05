@@ -11,10 +11,10 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
 ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773843"
 ---
 # <a name="cricheditcntritem-class"></a>Klasa CRichEditCntrItem
@@ -31,13 +31,13 @@ class CRichEditCntrItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|Konstruuje `CRichEditCntrItem` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Uaktywnia elementu jako innego typu.|
 
@@ -82,7 +82,7 @@ CRichEditCntrItem(
 *preo*<br/>
 Wskaźnik do [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktury, które opisują elementu OLE. Nowy `CRichEditCntrItem` obiekt jest konstruowany wokół tego elementu OLE. Jeśli *preo* ma wartość NULL, element klienta jest pusty.
 
-*pContainer*<br/>
+*Element pContainer*<br/>
 Wskaźnik do dokumentu kontenera, który będzie zawierać tego elementu. Jeśli *element pContainer* ma wartość NULL, należy jawnie wywołać [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) można dodać tego elementu klienta do dokumentu.
 
 ### <a name="remarks"></a>Uwagi
@@ -111,7 +111,7 @@ Aby uzyskać więcej informacji, zobacz [DVASPECT](/windows/desktop/api/wtypes/n
 ## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
-[Klasa COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>
+[COleClientItem Class](../../mfc/reference/coleclientitem-class.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[CRichEditDoc Class](../../mfc/reference/cricheditdoc-class.md)<br/>
 [Klasa CRichEditView](../../mfc/reference/cricheditview-class.md)

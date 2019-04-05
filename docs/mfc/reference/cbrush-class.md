@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778874"
 ---
 # <a name="cbrush-class"></a>Klasa CBrush
@@ -45,13 +45,13 @@ class CBrush : public CGdiObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBrush::CBrush](#cbrush)|Konstruuje `CBrush` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicjuje pędzla, style, kolor i wzorcem określonym w [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicjuje pędzla ze wzorcem określonym przez map bitowych niezależnych od urządzenia (DIB).|
@@ -64,7 +64,7 @@ class CBrush : public CGdiObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[HBRUSH CBrush::operator](#operator_hbrush)|Zwraca uchwyt Windows dołączonych do `CBrush` obiektu.|
 
@@ -184,7 +184,7 @@ BOOL CreateDIBPatternBrush(
 *hPackedDIB*<br/>
 Identyfikuje obiekt pamięci globalnej, zawierający upakowaną map bitowych niezależnych od urządzenia (DIB).
 
-*nUsage*<br/>
+*Nużycie*<br/>
 Określa, czy `bmiColors[]` pola [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) struktury danych (część "pakowane DIB") zawiera jawne wartości RGB lub indeksów do aktualnie zrealizowane palety logiczne. Parametr musi mieć jedną z następujących wartości:
 
 - DIB_PAL_COLORS tabeli kolorów składa się z tablicy indeksów 16-bitowych.
@@ -435,8 +435,8 @@ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [o
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Próbki MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[CGdiObject Class](../../mfc/reference/cgdiobject-class.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CBitmap](../../mfc/reference/cbitmap-class.md)<br/>
 [Klasa CDC](../../mfc/reference/cdc-class.md)

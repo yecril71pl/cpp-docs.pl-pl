@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
 ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779043"
 ---
 # <a name="cusertool-class"></a>Klasa CUserTool
@@ -51,7 +51,7 @@ class CUserTool : public CObject
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
 |[CUserTool::DrawToolIcon](#drawtoolicon)|Rysuje ikony narzędzie użytkownika w określonym prostokąta.|
@@ -64,13 +64,13 @@ class CUserTool : public CObject
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Ładuje domyślną ikonę narzędzie użytkownika.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Argumenty wiersza polecenia dla narzędzia użytkownika.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Początkowy katalog narzędzia użytkownika.|
@@ -265,7 +265,7 @@ Wywołaj tę metodę, aby załadować ikony, które mają być wyświetlane dla 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
-[Klasa CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)
+[CUserToolsManager Class](../../mfc/reference/cusertoolsmanager-class.md)

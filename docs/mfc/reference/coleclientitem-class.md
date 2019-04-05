@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773986"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem Class
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Konstruuje `COleClientItem` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleClientItem::Activate](#activate)|Otwiera element OLE dla danej operacji, a następnie wykonuje określone zlecenie.|
 |[COleClientItem::ActivateAs](#activateas)|Uaktywnia elementu jako innego typu.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|Metoda wywoływana przez platformę, aby określić, czy Aktywacja w miejscu jest dozwolona.|
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Wywoływane przez platformę, gdy zmienia położenie elementu.|
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
+*size*<br/>
 A [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekt, który zawiera informacje o rozmiarze.
 
 *nDrawAspect*<br/>
@@ -2147,7 +2147,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 
 ### <a name="parameters"></a>Parametry
 
-*ptd*<br/>
+*PTD*<br/>
 Wskaźnik do [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struktury danych, który zawiera informacje dotyczące nowego urządzenia docelowego drukowania. Może mieć wartości NULL.
 
 *PPD*<br/>
@@ -2190,5 +2190,5 @@ Aby uzyskać więcej informacji, zobacz [IOleLink::Update](/windows/desktop/api/
 [Próbki MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleServerItem](../../mfc/reference/coleserveritem-class.md)

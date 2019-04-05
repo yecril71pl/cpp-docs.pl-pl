@@ -103,10 +103,10 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778770"
 ---
 # <a name="clistbox-class"></a>Clistbox — klasa
@@ -123,13 +123,13 @@ class CListBox : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|Konstruuje `CListBox` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|Dodaje ciąg do pola listy.|
 |[CListBox::CharToItem](#chartoitem)|Należy przesłonić, aby podać niestandardowy WM_CHAR obsługi rysowania przez właściciela pola listy, które nie zawierają ciągi.|
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl pola listy. Zastosuj dowolną kombinację [style pola listy](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) do pola.
 
-*Rect*<br/>
+*rect*<br/>
 Określa pole listy rozmiar i położenie. Może być `CRect` obiektu lub `RECT` struktury.
 
 *pParentWnd*<br/>
@@ -1039,7 +1039,7 @@ UINT ItemFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 Punkt, dla której wyszukiwany element najbliższej określony względem lewego górnego rogu obszaru klienckiego pola listy.
 
 *bOutside*<br/>
@@ -1540,10 +1540,10 @@ Zwracana wartość wynosząca 0 lub większy Określa indeks elementu w polu lis
 
 [Próbki MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Klasa CButton](../../mfc/reference/cbutton-class.md)<br/>
-[Klasa CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
+[Ccombobox — klasa](../../mfc/reference/ccombobox-class.md)<br/>
 [Klasa CEdit](../../mfc/reference/cedit-class.md)<br/>
 [Klasa CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Klasa CStatic](../../mfc/reference/cstatic-class.md)

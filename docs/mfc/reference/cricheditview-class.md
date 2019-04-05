@@ -101,10 +101,10 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773726"
 ---
 # <a name="cricheditview-class"></a>Klasa CRichEditView
@@ -625,7 +625,7 @@ long GetTextLengthEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*<br/>
+*Flagidw*<br/>
 Wartość określająca metoda do użycia przy określaniu długość tekstu. Ten element członkowski może być jedną lub więcej wartości wymienione w flagi członkiem [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) opisanego w zestawie Windows SDK.
 
 *uCodePage*<br/>
@@ -1226,7 +1226,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Parametry
 
-*PF*<br/>
+*pf*<br/>
 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) struktury zawierającej nowym domyślnym akapitu atrybuty formatowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1286,6 +1286,6 @@ Override tę funkcję, aby zmodyfikować sposób, w widoku edycji wzbogaconej re
 
 [Próbki MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[CRichEditDoc Class](../../mfc/reference/cricheditdoc-class.md)<br/>
 [Klasa CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)

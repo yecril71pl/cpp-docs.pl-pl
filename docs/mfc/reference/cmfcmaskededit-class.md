@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
 ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773791"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit Class
@@ -45,14 +45,14 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Domyślny konstruktor.|
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Wyłącza sprawdzanie poprawności danych wejściowych użytkownika.|
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Określa, czy `GetWindowText` metoda pobiera tylko maskowanego znaków.|
@@ -66,7 +66,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Metoda wywoływana przez platformę, by sprawdzić poprawność określonego znaku w stosunku do odpowiedniego znaku maski.|
 
@@ -173,7 +173,7 @@ Następująca tabela zawiera listę znaków maski domyślnych:
 |Znak maski|Definicja|
 |--------------------|----------------|
 |D|Cyfry.|
-|d.|Cyfra lub spacja.|
+|d|Cyfra lub spacja.|
 |+|Znak plus ("+") minus ("-"), czy miejsce.|
 |C|Znaku alfabetycznego.|
 |c|Od litery lub znaku miejsca.|
@@ -338,6 +338,6 @@ Ta metoda redefiniuje [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#se
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CEdit](../../mfc/reference/cedit-class.md)

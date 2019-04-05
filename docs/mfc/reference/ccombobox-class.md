@@ -109,10 +109,10 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778523"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
@@ -129,13 +129,13 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Konstruuje `CComboBox` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|Dodaje ciąg do końca listy w polu listy, pola kombi lub pozycja posortowanej listy pól ze stylem CBS_SORT.|
 |[CComboBox::Clear](#clear)|Usuwa (czyści) bieżące zaznaczenie w formancie edycji.|
@@ -198,8 +198,8 @@ W poniższej tabeli porównano trzy pola kombi [style](../../mfc/reference/style
 
 |Styl|Widoczne jest pole listy|Formant statyczny lub edycji|
 |-----------|-------------------------------|-----------------------------|
-|Proste|zawsze|Edytuj|
-|Lista rozwijana|Gdy rozwinął|Edytuj|
+|Proste|zawsze|Edytowanie|
+|Lista rozwijana|Gdy rozwinął|Edytowanie|
 |Listy rozwijanej|Gdy rozwinął|Static|
 
 Możesz utworzyć `CComboBox` obiektu z szablonu okna dialogowego lub bezpośrednio w kodzie. W obu przypadkach należy najpierw wywołać konstruktora `CComboBox` do konstruowania `CComboBox` obiektu; następnie wywołać [Utwórz](#create) funkcja elementu członkowskiego, aby utworzyć formantu i dołączyć go do `CComboBox` obiektu.
@@ -382,7 +382,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl pola kombi. Zastosuj dowolną kombinację [style pola kombi](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) do pola.
 
-*Rect*<br/>
+*rect*<br/>
 Wskazuje położenie i rozmiar pola kombi. Może być [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) lub `CRect` obiektu.
 
 *pParentWnd*<br/>
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bExtended*<br/>
+*bPrzedłużony*<br/>
 Określa, czy pole kombi powinien używać interfejsu użytkownika rozszerzonej lub domyślny interfejs użytkownika. Wartość TRUE wybiera interfejs użytkownika rozszerzone; wartość FALSE wybiera standardowy interfejs użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1559,11 +1559,11 @@ Ta funkcja elementu członkowskiego nie ma wpływu na utworzone za pomocą pola 
 
 [Próbki MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Klasa CButton](../../mfc/reference/cbutton-class.md)<br/>
 [Klasa CEdit](../../mfc/reference/cedit-class.md)<br/>
-[Klasa CListBox](../../mfc/reference/clistbox-class.md)<br/>
+[Clistbox — klasa](../../mfc/reference/clistbox-class.md)<br/>
 [Klasa CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Klasa CStatic](../../mfc/reference/cstatic-class.md)<br/>
-[Klasa CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog — klasa](../../mfc/reference/cdialog-class.md)

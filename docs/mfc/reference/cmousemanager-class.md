@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
 ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773739"
 ---
 # <a name="cmousemanager-class"></a>Klasa CMouseManager
@@ -43,7 +43,7 @@ class CMouseManager : public CObject
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMouseManager::AddView](#addview)|Dodaje `CView` obiekt **dostosowywania** okno dialogowe. **Dostosowywania** okno dialogowe umożliwia użytkownikowi skojarzenie dwukrotne kliknięcie za pomocą polecenia dla każdego z widoków na liście.|
 |[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Zwraca polecenia, który jest wykonywany, gdy użytkownik kliknie dwukrotnie wewnątrz podana widoku.|
@@ -269,7 +269,7 @@ Jeśli *uiCmd* jest ustawiona na wartość 0, określony widok nie jest już sko
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [Dostosowywanie klawiatury i myszy](../../mfc/keyboard-and-mouse-customization.md)
