@@ -2,12 +2,12 @@
 title: Aplikacje klasyczne (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771922"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033120"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 
@@ -37,23 +37,23 @@ Można użyć dowolnej aplikacji klasycznych w języku C++, C Runtime (CRT) i st
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Aplikacje konsoli systemu Windows w języku C++](console-applications-in-visual-cpp.md)|Zawiera informacje o aplikacjach konsoli. Aplikacja konsoli Win32 (lub Win64) ma, nie własnego okna ani pętli komunikatów. Działa w oknie konsoli, a dane wejściowe i wyjściowe są obsługiwane za pośrednictwem wiersza polecenia.|
-|[Przewodnik: tworzenie aplikacji klasycznych systemu Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Utwórz prostą aplikację pulpitu Windows.|
-|[Tworzenie pustej aplikacji klasycznej systemu Windows](creating-an-empty-windows-desktop-application.md)|Jak utworzyć projekt pulpitu Windows, który nie ma żadnych plików domyślne.|
+|[Aplikacje konsoli Windows w języku C++](console-applications-in-visual-cpp.md)|Zawiera informacje o aplikacjach konsoli. Aplikacja konsoli Win32 (lub Win64) ma, nie własnego okna ani pętli komunikatów. Działa w oknie konsoli, a dane wejściowe i wyjściowe są obsługiwane za pośrednictwem wiersza polecenia.|
+|[Przewodnik: Tworzenie aplikacji klasycznych Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Utwórz prostą aplikację pulpitu Windows.|
+|[Tworzenie aplikacji klasycznych Windows pusty](creating-an-empty-windows-desktop-application.md)|Jak utworzyć projekt pulpitu Windows, który nie ma żadnych plików domyślne.|
 |[Dodawanie plików do pustych aplikacji Win32](adding-files-to-an-empty-win32-applications.md)|Jak dodać pliki do pustego projektu.|
 |[Praca z plikami zasobów](working-with-resource-files.md)|Jak dodać obrazy, ikony, tabele ciągów i innych zasobów do aplikacji klasycznej.|
 |[Zasoby służące do tworzenia gier za pomocą programu DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Zawiera łącza do zawartości do tworzenia gier w języku C++.|
 |[Przewodnik: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md)|Jak utworzyć plik binarny lib.|
-|[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera instrukcje dotyczące konfigurowania projektu kompilować przy użyciu zestawu SDK systemu Windows 10.|
+|[Instrukcje: Użyj systemu Windows 10 SDK w aplikacji pulpitu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera instrukcje dotyczące konfigurowania projektu kompilować przy użyciu zestawu SDK systemu Windows 10.|
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Tworzenie aplikacji dla systemu Windows](/windows/desktop/index)|Zawiera informacje o interfejsie Windows API i modelu COM. (Niektóre interfejsy API Windows i biblioteki DLL innych firm, są implementowane jako obiekty COM.)|
+|[Programowanie Windows](/windows/desktop/index)|Zawiera informacje o interfejsie Windows API i modelu COM. (Niektóre interfejsy API Windows i biblioteki DLL innych firm, są implementowane jako obiekty COM.)|
 |[Hilo: Projektowanie aplikacji C++ dla Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Opisuje sposób tworzenia aplikacji klasycznych Windows wzbogaconego klienta używającej animacji Windows i Direct2D do utworzenia interfejsu użytkownika opartego na karuzeli.  W tym samouczku nie został jeszcze zaktualizowany od Windows 7, ale nadal zapewnia szczegółowe wprowadzenie do programowania systemu Win32.|
 |[Omówienie programowania w systemie Windows w języku C++](overview-of-windows-programming-in-cpp.md)|W tym artykule opisano najważniejsze funkcje pulpitu Windows programowania w języku C++.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)

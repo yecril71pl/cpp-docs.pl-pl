@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: b6c34a603f3ba8abaf070759a22ddf2b8e9c2106
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663258"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036305"
 ---
 # <a name="entry"></a>entry
 
@@ -25,7 +25,7 @@ Określa eksportowanych funkcji lub stałą w module, określając punkt wejści
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
+*identyfikator*<br/>
 Identyfikator punktu wejścia.
 
 ## <a name="remarks"></a>Uwagi
@@ -42,13 +42,13 @@ Zobacz przykład [idl_module](idl-module.md) dla przykładowe **wpis**.
 
 |||
 |-|-|
-|**Dotyczy**|`idl_module` Atrybut|
+|**Informacje zawarte w tym artykule dotyczą**|`idl_module` — atrybut|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)
+[atrybuty IDL](idl-attributes.md)

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328860"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038168"
 ---
 # <a name="toolbar-editor-c"></a>Edytor paska narzędzi (C++)
 
@@ -201,7 +201,7 @@ Jeśli chcesz, aby ten efekt przy użyciu **Edytor paska narzędzi**ustaw **moni
 
 ATL i MFC
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Edytory zasobów](../windows/resource-editors.md)
 <!--

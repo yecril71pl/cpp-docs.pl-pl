@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - C4910
 ms.assetid: 67963560-fbca-4ca7-93db-06beaf7055f0
-ms.openlocfilehash: f0d1df0a383b6646d52fc2babc53ca656d49ace6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49cbbf3369fc4765d93e67e2dca84a4d975560d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428200"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027579"
 ---
 # <a name="compiler-warning-level-1-c4910"></a>Kompilator ostrzeżenie (poziom 1) C4910
 
@@ -17,7 +17,7 @@ ms.locfileid: "50428200"
 
 Utworzenie wystąpienia jawnego szablonu o nazwie  *\<identyfikator >* jest modyfikowany przez oba `__declspec(dllexport)` i `extern` słów kluczowych. Jednak te słowa kluczowe są wzajemnie się wykluczają. `__declspec(dllexport)` — Słowo kluczowe oznacza, że wystąpienia klasy szablonu, podczas gdy `extern` — słowo kluczowe oznacza, że nie tworzy automatycznie klasy szablonu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Jawne tworzenie wystąpienia](../../cpp/explicit-instantiation.md)<br/>
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)<br/>

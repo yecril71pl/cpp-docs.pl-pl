@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: architektura (ODBC)'
+title: 'Zestaw rekordów: Architektura (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651194"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039653"
 ---
-# <a name="recordset-architecture-odbc"></a>Zestaw rekordów: architektura (ODBC)
+# <a name="recordset-architecture-odbc"></a>Zestaw rekordów: Architektura (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -33,7 +33,7 @@ W tym temacie opisano elementy członkowskie danych składające się z architek
 - [Za pomocą m_nfields — i m_nparams — elementy członkowskie danych](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli zaimplementowano zbiorcze pobieranie z wiersza architektura jest podobna. Aby poznać różnice, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli zaimplementowano zbiorcze pobieranie z wiersza architektura jest podobna. Aby poznać różnice, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Przykładowa klasa
 
@@ -83,16 +83,16 @@ Definiując elementy członkowskie danych parametru, poinformować szablon o par
 >  MFC nie robi nic, samego, przy użyciu parametrów — w szczególności, ale nie wykonuje podstawianie tekstu. Zamiast tego MFC informuje ODBC do uzyskania parameter; ODBC pobiera dane i wykonuje niezbędne parametryzacji.
 
 > [!NOTE]
->  Ważna jest kolejność parametrów. Uzyskać informacje na ten temat i więcej informacji na temat parametrów, zobacz [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+>  Ważna jest kolejność parametrów. Uzyskać informacje na ten temat i więcej informacji na temat parametrów, zobacz [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ##  <a name="_core_using_m_nfields_and_m_nparams"></a> Przy użyciu m_nfields — i m_nparams —
 
 Gdy kreator zapisuje konstruktora dla klasy, również inicjuje [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields) element członkowski danych, która określa liczbę [elementy członkowskie danych pola](#_core_field_data_members) w klasie. Jeśli dodasz dowolne [parametry](#_core_parameter_data_members) do klasy, musisz również dodać inicjowanie [m_nparams —](../../mfc/reference/crecordset-class.md#m_nparams) element członkowski danych, która określa liczbę elementy członkowskie danych parametru. Struktura używa tych wartości do pracy z elementów członkowskich danych.
 
-Aby uzyskać więcej informacji i przykładów, zobacz [wymiana pól rekordów: za pomocą RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Aby uzyskać więcej informacji i przykładów, zobacz [wymiana pól rekordów: Używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Zestaw rekordów: Deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)

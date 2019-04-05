@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: 813f13e20e74890cfcb52ae25234aa348e1d522d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496306"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028483"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje `rdtscp` instrukcji, zapisuje `TSC_AUX[31:0`] do pamięci i zwraca licznika sygnatury czasu 64-bitowych (`TSC)` wynik.
 
@@ -77,11 +77,11 @@ printf_s("TSC_AUX was %x\n", ui);
 TSC_AUX was 0
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__rdtsc](../intrinsics/rdtsc.md)<br/>
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

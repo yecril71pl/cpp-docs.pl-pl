@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 7db319aa153cb281c8fd8b4eec16972f5ac0c2c9
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265181"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037662"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamicznie określanie kolumn zwracanych do konsumenta
 
@@ -145,6 +145,6 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
 
 Teraz możesz skompilować i uruchomić ulepszony dostawca. Aby przetestować dostawcę, zmodyfikować konsumenta testu, zgodnie z opisem w [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md). Uruchom klienta testowego z dostawcą i sprawdź, czy konsumenta test pobiera odpowiednie ciągi od dostawcy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

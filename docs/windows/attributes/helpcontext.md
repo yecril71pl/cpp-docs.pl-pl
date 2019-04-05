@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 921e5370303cb62830ec281bcefd7c03331efaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552753"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038177"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -25,8 +25,8 @@ Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać inform
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
-Identyfikator kontekstu tematu Pomocy. Zobacz [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) więcej informacji na temat kontekstu identyfikatorów.
+*identyfikator*<br/>
+Identyfikator kontekstu tematu Pomocy. Zobacz [Pomoc HTML: Pomoc kontekstowa do programów Your](../../mfc/html-help-context-sensitive-help-for-your-programs.md) więcej informacji na temat kontekstu identyfikatorów.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -42,16 +42,16 @@ Zobacz przykład [defaultvalue](defaultvalue.md) przykład sposobu użycia **hel
 
 |||
 |-|-|
-|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
+|**Informacje zawarte w tym artykule dotyczą**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: d0ace76fdbbc1ff930bccb4e6fc203895b4f1637
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677282"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038463"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -48,19 +48,19 @@ Zobacz przykład [możliwej do wiązania](bindable.md) przykład sposobu użycia
 
 |||
 |-|-|
-|**Dotyczy**|**interface**|
+|**Informacje zawarte w tym artykule dotyczą**|**interface**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[custom](custom-cpp.md)<br/>
+[niestandardowy](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

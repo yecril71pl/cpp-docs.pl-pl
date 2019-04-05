@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 0162105e0d05ec2be925241c7d1c30c2afdc7a37
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787246"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038879"
 ---
 # <a name="safecast-ccli-and-ccx"></a>safe_cast (C + +/ CLI i C + +/ CX)
 
@@ -45,7 +45,7 @@ ms.locfileid: "58787246"
 *type-id*<br/>
 Typ docelowy konwersji *wyrażenie* do. Dojście do odwołanie lub typ wartości, typem wartości lub odwołanie śledzące do typu odwołania lub wartość.
 
-*expression*<br/>
+*wyrażenie*<br/>
 Na wyrażenie obliczane do uchwytu odwołania lub typu wartości, typem wartości lub odwołanie śledzące do typu odwołania lub wartość.
 
 ### <a name="remarks"></a>Uwagi
@@ -105,7 +105,7 @@ Caught expected exception: InvalidCastException
 *type-id*<br/>
 Dojście do odwołanie lub typ wartości, typem wartości lub odwołanie śledzące do typu odwołania lub wartość.
 
-*expression*<br/>
+*wyrażenie*<br/>
 Na wyrażenie obliczane do uchwytu odwołania lub typu wartości, typem wartości lub odwołanie śledzące do typu odwołania lub wartość.
 
 ### <a name="remarks"></a>Uwagi
@@ -124,9 +124,9 @@ Aby uzyskać więcej informacji na temat rzutowania zobacz [operatorów rzutowan
 
 Aby uzyskać więcej informacji na temat **safe_cast**, zobacz:
 
-- [Rzutowania w stylu języka C z/CLR (C + +/ CLI)](c-style-casts-with-clr-cpp-cli.md)
+- [Rzutowania w stylu C i kompilator /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
 
-- [Instrukcje: korzystanie z polecenia safe_cast w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
+- [Instrukcje: Korzystanie z polecenia safe_cast w języku C + +/ CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Wymagania
 
@@ -164,6 +164,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

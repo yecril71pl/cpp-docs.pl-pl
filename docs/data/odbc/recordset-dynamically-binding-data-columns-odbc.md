@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)'
+title: 'Zestaw rekordów: Dynamically Binding Data Columns (ODBC)'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175668"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035135"
 ---
-# <a name="recordset-dynamically-binding-data-columns-odbc"></a>Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)
+# <a name="recordset-dynamically-binding-data-columns-odbc"></a>Zestaw rekordów: Dynamically Binding Data Columns (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -26,7 +26,7 @@ Zestawy rekordów zarządzać kolumn tabeli powiązania, które określisz w cza
 - [Jak powiązać kolumny dynamicznie w czasie wykonywania](#_core_how_to_bind_columns_dynamically).
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Techniki opisane zazwyczaj nie są zalecane, jeśli używasz zbiorcze pobieranie z wiersza. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Techniki opisane zazwyczaj nie są zalecane, jeśli używasz zbiorcze pobieranie z wiersza. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Kiedy może powiązać kolumny dynamicznie
 
@@ -91,8 +91,8 @@ W poniższej tabeli przedstawiono cztery listy, które są potrzebne do pracy z.
 
 |||
 |-|-|
-|**Kolumny w przypadku tabeli bieżącego**| (Lista 1 na ilustracji) Lista kolumn, które obecnie tabeli w źródle danych. Ta lista może być jest zgodny z listą kolumn, które obecnie powiązany w twoim zestawie rekordów.|
-|**Kolumny w przypadku zestawu rekordów powiązanego**| (Wyświetlanie 2 na ilustracji) Powiązana lista kolumn w twoim zestawie rekordów. Tymi kolumnami już znajdują się instrukcje RFX w swojej `DoFieldExchange` funkcji.|
+|**Current-Table-Columns**| (Lista 1 na ilustracji) Lista kolumn, które obecnie tabeli w źródle danych. Ta lista może być jest zgodny z listą kolumn, które obecnie powiązany w twoim zestawie rekordów.|
+|**Bound-Recordset-Columns**| (Wyświetlanie 2 na ilustracji) Powiązana lista kolumn w twoim zestawie rekordów. Tymi kolumnami już znajdują się instrukcje RFX w swojej `DoFieldExchange` funkcji.|
 |**Kolumny — do — powiązania dynamicznie**| (Lista 3 na ilustracji) Lista kolumn w tabeli, ale nie w twoim zestawie rekordów. Są to kolumny, które chcesz powiązać dynamicznie.|
 |**Dynamiczne kolumny wartości**| (Lista 4 na ilustracji) Lista zawierająca magazynu dla wartości są pobierane z kolumny, które można powiązać dynamicznie. Elementy na tej liście odpowiadają w kolumnach — do — powiązania-dynamicznie, jeden-do-jednego.|
 
@@ -140,7 +140,7 @@ Następnie skonfiguruj lokalizacje magazynu dla kolumn, które mają być dynami
 
    W przypadku najbardziej typowych wartości w przypadku kolumn dynamiczna ma elementów typu `CString`. Jeśli masz do czynienia z kolumnami różnych typów danych, konieczne będzie listę, która może zawierać elementy różnych typów.
 
-Wynikiem powyższych procedur są dwie główne listy: kolumny do Bind — dynamicznie zawierająca nazwy kolumn i Dynamic-— wartości kolumny zawierające wartości w kolumnach dla bieżącego rekordu.
+Wynikiem powyższych procedur to dwie główne listy: Kolumny — do — powiązania-dynamicznie zawierająca nazwy kolumn i Dynamic-— wartości kolumny zawierające wartości w kolumnach dla bieżącego rekordu.
 
 > [!TIP]
 > Jeśli nowych kolumn nie są wszystkie tego samego typu danych, możesz zechcieć paraleli dodatkowych listy zawierającej elementy, które jakiś sposób definiowania typu każdy odpowiadający mu element na liście kolumn. (Można użyć wartości AFX_RFX_BOOL, AFX_RFX_BYTE, i tak dalej dla to, jeśli chcesz otrzymywać. Te stałe są definiowane w AFXDB. H.) Wybierz typ listy, w oparciu o sposób przedstawiania column — typy danych.
@@ -168,7 +168,7 @@ Aby uzyskać więcej informacji na temat funkcji RFX zobacz [makra i funkcje glo
 
 Kiedy struktura wywołuje `DoFieldExchange` podczas `Open` proces, aby powiązać kolumny zestawu rekordów, wywołania RFX dla statycznych kolumn powiązać te kolumny. Następnie pętlę metodyki wielokrotnie wywołuje funkcje RFX dynamiczne kolumn.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: praca z dużymi elementami danych (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[Zestaw rekordów: Praca z dużymi elementami danych (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

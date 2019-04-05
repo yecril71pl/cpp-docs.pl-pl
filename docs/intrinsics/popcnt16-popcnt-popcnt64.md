@@ -11,16 +11,16 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146895"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037013"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Zlicza jednej usługi bits (liczba populacji) w 16-, 32- lub 64-bitowej nieoznaczonej liczby całkowitej.
 
@@ -99,10 +99,10 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - database attributes [C++/CLI]
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-ms.openlocfilehash: 036ac539fcac715ba12e4c7cf7fc83edd7a23c38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f89af963c9c49a8a94b2a4f0c8930ab714926e7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662947"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035734"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atrybuty konsumentów OLE DB
 Atrybuty konsumentów OLE DB wstrzyknięcie kodu, w oparciu o [szablony OLE DB konsumenta](../../data/oledb/ole-db-consumer-templates-reference.md), aby utworzyć pracy OLE DB użytkownikowi, który wykonuje zadania, takie jak otwieranie tabel, wykonując polecenia i uzyskiwanie dostępu do danych.
@@ -28,6 +28,6 @@ Atrybuty konsumentów OLE DB wstrzyknięcie kodu, w oparciu o [szablony OLE DB k
 |[db_source](db-source.md)|Tworzy i hermetyzuje połączenie za pośrednictwem dostawcy, ze źródłem danych.|
 |[db_table](db-table.md)|Zostanie otwarty tabeli OLE DB.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty według grup](attributes-by-group.md)

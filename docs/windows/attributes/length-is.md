@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489566"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039913"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -25,7 +25,7 @@ Określa liczbę elementów tablicy, które mają być przekazywane.
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*<br/>
+*wyrażenie*<br/>
 Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
@@ -42,16 +42,16 @@ Zobacz [first_is —](first-is.md) przykład sposobu określania część tablic
 
 |||
 |-|-|
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>

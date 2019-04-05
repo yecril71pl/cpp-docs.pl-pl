@@ -37,16 +37,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: a01a090d4302983f7d53e051cf4d8a72bd739b4a
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a4f98cdfea9ea1e82ec0a3de09e292604a6c199f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556741"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032118"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl — Klasa
 
-Udostępnia implementację [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) interfejsu.
+Udostępnia implementację [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -78,20 +78,20 @@ Jednostki magazynu na potrzeby informacji o kolumnie. Wartość domyślna to [CA
 
 |||
 |-|-|
-|[Iaccessorimpl —](#iaccessorimpl)|Konstruktor.|
+|[IAccessorImpl](#iaccessorimpl)|Konstruktor.|
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
 |||
 |-|-|
-|[AddRefAccessor](#addrefaccessor)|Dodaje licznik odwołań do istniejącej metody dostępu.|
+|[Addrefaccessor —](#addrefaccessor)|Dodaje licznik odwołań do istniejącej metody dostępu.|
 |[CreateAccessor](#createaccessor)|Tworzy metodę dostępu na podstawie zestawu powiązania.|
 |[Getbindings —](#getbindings)|Zwraca powiązania w metodzie dostępu.|
 |[ReleaseAccessor](#releaseaccessor)|Udostępnia metody dostępu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Jest to parametr obowiązkowy dla polecenia i zestawy wierszy. OLE DB wymaga dostawców w celu zaimplementowania HACCESSOR, czyli tag do tablicy [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) struktury. Dostarczone przez HACCESSORs `IAccessorImpl` są adresy `BindType` struktury. Domyślnie `BindType` jest zdefiniowany jako `ATLBINDINGS` w `IAccessorImpl`w definicji szablonu. `BindType` udostępnia mechanizm używany przez `IAccessorImpl` śledzić liczbę elementów w jego `DBBINDING` tablicy, a także flagi metody dostępu i liczba odwołań.
+Jest to parametr obowiązkowy dla polecenia i zestawy wierszy. OLE DB wymaga dostawców w celu zaimplementowania HACCESSOR, czyli tag do tablicy [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) struktury. Dostarczone przez HACCESSORs `IAccessorImpl` są adresy `BindType` struktury. Domyślnie `BindType` jest zdefiniowany jako `ATLBINDINGS` w `IAccessorImpl`w definicji szablonu. `BindType` udostępnia mechanizm używany przez `IAccessorImpl` śledzić liczbę elementów w jego `DBBINDING` tablicy, a także flagi metody dostępu i liczba odwołań.
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 
@@ -116,7 +116,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IAccessor::AddRefAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms714978(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 
@@ -135,7 +135,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IAccessor::CreateAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IAccessor::GetBindings](https://docs.microsoft.com/previous-versions/windows/desktop/ms721253(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 
@@ -167,9 +167,9 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IAccessor::ReleaseAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719717(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

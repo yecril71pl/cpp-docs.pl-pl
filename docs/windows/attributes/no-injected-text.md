@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: af4bb4b07439c0a5dacfa0d4956db564d2dccefe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618121"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038372"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -25,7 +25,7 @@ Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybut typu wartość logiczna*<br/>
+*wartość logiczna*<br/>
 (Opcjonalnie) **true** Jeśli chcesz, aby bez kodu, które są wstrzykiwane, **false** do kodu, ich wstrzyknięcie. **wartość true,** jest ustawieniem domyślnym.
 
 ## <a name="remarks"></a>Uwagi
@@ -38,13 +38,13 @@ Najbardziej powszechnym zastosowaniem programu **no_injected_text** polega na at
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Informacje zawarte w tym artykule dotyczą**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty kompilatora](compiler-attributes.md)

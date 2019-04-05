@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: 0fb3f9423fd4ca44ac5d5f17624caa7966916c16
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787151"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035340"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Tablice (C + +/ CLI i C + +/ CX)
 
@@ -32,7 +32,7 @@ W przeciwieństwie do standardowego języka C++ Tworzenie indeksów dolnych nie 
 
 Aby uzyskać więcej informacji na temat tablic zobacz:
 
-- [Instrukcje: korzystanie z tablic w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Instrukcje: Korzystanie z tablic w języku C + +/ CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [Listy zmiennych argumentów (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
@@ -55,13 +55,13 @@ W pierwszym przykładzie składni użyto **ref nowe** agregacji — słowo klucz
 *Kwalifikatory*<br/>
 (Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
 
-*Typ tablicy*<br/>
+*array-type*<br/>
 Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy ref i struktury, klasy wartości i struktury i natywnymi wskaźnikami (`type*`).
 
-*rank*<br/>
+*rząd*<br/>
 (Opcjonalnie) Liczba wymiarów tablicy. Musi mieć wartość 1.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 Nazwa zmiennej tablicy.
 
 *typ inicjalizacji*<br/>
@@ -111,13 +111,13 @@ W pierwszym przykładzie składni użyto **gcnew** — słowo kluczowe do przydz
 *Kwalifikatory*<br/>
 (Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
 
-*Typ tablicy*<br/>
+*array-type*<br/>
 Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy i struktury, klasy wartości i struktury odwołania, natywnymi wskaźnikami (`type*`) i natywnych typów POD (zwykłe stare dane).
 
-*rank*<br/>
+*rząd*<br/>
 (Opcjonalnie) Liczba wymiarów tablicy. Wartość domyślna to 1; wartość maksymalna to 32. Każdy wymiar tablicy jest tablicą.
 
-*Identyfikator*<br/>
+*identyfikator*<br/>
 Nazwa zmiennej tablicy.
 
 *typ inicjalizacji*<br/>
@@ -168,6 +168,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

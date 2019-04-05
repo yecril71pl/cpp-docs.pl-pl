@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: blokowanie rekordów (ODBC)'
+title: 'Zestaw rekordów: Blokowanie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - locks [C++], recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 08d7ca1db474a5735ccaabaa7d7d87b359730bb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438704"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037292"
 ---
-# <a name="recordset-locking-records-odbc"></a>Zestaw rekordów: blokowanie rekordów (ODBC)
+# <a name="recordset-locking-records-odbc"></a>Zestaw rekordów: Blokowanie rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -30,7 +30,7 @@ W tym temacie opisano:
 Gdy używasz zestawu rekordów próbę zaktualizowania rekordu w źródle danych aplikacji można zablokować rekordu, więc żaden inny użytkownik może zaktualizować rekord, w tym samym czasie. Stan rekordu, który został zaktualizowany przez dwóch użytkowników, w tym samym czasie jest niezdefiniowana, chyba że system może zagwarantować, że dwóch użytkowników nie można zaktualizować rekord jednocześnie.
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli udało Ci się wdrożyć zbiorcze pobieranie z wiersza, niektóre informacje nie ma zastosowania. Na przykład nie można wywołać `Edit` i `Update` funkcji elementów członkowskich. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli udało Ci się wdrożyć zbiorcze pobieranie z wiersza, niektóre informacje nie ma zastosowania. Na przykład nie można wywołać `Edit` i `Update` funkcji elementów członkowskich. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_record.2d.locking_modes"></a> Tryby blokowania rekordów
 
@@ -63,8 +63,8 @@ Nowy tryb blokowania pozostaje, dopóki ponownie zmienić lub zestawu rekordów 
 > [!NOTE]
 >  Sterowniki ODBC relatywnie mało obecnie obsługuje pesymistycznego blokowania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
-[Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Zestaw rekordów: Wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[Zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

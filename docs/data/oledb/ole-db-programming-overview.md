@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: d19e98d7c5743207dba224214b0d9a0e9f308e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608951"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035533"
 ---
 # <a name="ole-db-programming-overview"></a>Omówienie programowania OLE DB
 
@@ -24,7 +24,7 @@ Jest to, gdzie jest oferowana w modelu COM. OLE DB to zbiór interfejsów COM. U
 
 Oparte na specyfikacji modelu COM, OLE DB definiuje rozszerzalny i łatwego w utrzymaniu zbiór interfejsów, które wziąć pod uwagę i hermetyzacji spójny, wielokrotnego użytku części funkcjonalności systemu DBMS. Niniejsze interfejsy określają granice DBMS składników, takich jak kontenery wiersza, procesory zapytań i transakcji koordynatorów, umożliwiających jednolity transakcyjnych dostęp do informacji z różnych źródeł.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3418ce11e1a607d66fee593b32fd3a4b7d197407
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556767"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033985"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl — Klasa
 
-Udostępnia implementację na potrzeby [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)) interfejsu.
+Udostępnia implementację na potrzeby [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -118,7 +118,7 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IDBInitialize::Initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
@@ -132,7 +132,7 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IDBInitialize::Uninitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 
@@ -172,7 +172,7 @@ Wskaźnik do obiektu implementacji, aby uzyskać informacje o właściwościach 
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

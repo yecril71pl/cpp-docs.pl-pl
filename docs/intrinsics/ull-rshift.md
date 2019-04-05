@@ -7,16 +7,16 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: 940e1e3a957b44f0aaa225f7fc9e107926ba879f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330505"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034527"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 na x64 przesuwa wartość 64-bitową, określonym przez pierwszy parametr w prawo o liczbę bitów określoną w drugim parametrze.
 
@@ -80,9 +80,9 @@ int main()
 1
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__ll_lshift](../intrinsics/ll-lshift.md)<br/>
 [__ll_rshift](../intrinsics/ll-rshift.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: b0b66da845151ca8cad17f3fb33e0e0a736a4813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566364"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035000"
 ---
 # <a name="licensed"></a>licensed
 
@@ -54,14 +54,14 @@ public:
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|`coclass`|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: 94f26a6baeb4d3440d7f16af298b9880b91860f2
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220494"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034968"
 ---
 # <a name="umul128"></a>_umul128
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Mnoży dwie 64-bitowych liczb całkowitych bez znaku przekazany jako pierwsze dwa argumenty i umieszcza wysokiej 64-bitowy produktu w 64-bitowej nieoznaczonej liczby całkowitej wskazywany przez `HighProduct` i zwraca niski 64-bitowy produkt.
 
@@ -77,8 +77,8 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

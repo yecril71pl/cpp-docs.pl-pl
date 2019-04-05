@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: 6f3048e60c10efed05fc5bccc3c61949351f7bf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504705"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037345"
 ---
 # <a name="vararg"></a>vararg
 
@@ -51,14 +51,14 @@ __interface X : public IUnknown
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)

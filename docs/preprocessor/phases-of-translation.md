@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-ms.openlocfilehash: 75fc7f7c768094d90d41840fc47effa8179556fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513002"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036156"
 ---
 # <a name="phases-of-translation"></a>Fazy tłumaczenia
 
@@ -48,13 +48,13 @@ Plik źródłowy jest dzielony na tokeny wstępnego przetwarzania i znaki odstę
 *Przetwarzanie wstępne*<br/>
 Dyrektywy przetwarzania wstępnego są wykonywane, a makra rozwijane do pliku źródłowego. Instrukcja `#include` wywołuje translację począwszy od powyższych trzech kroków translacji na dowolnym dołączonym tekście.
 
-*Mapowanie zestawu znaków*<br/>
+*{1&gt;Mapowanie zestawu znaków&lt;1}*<br/>
 Wszystkie elementy członkowskie zestawu znaków źródła i sekwencje unikowe są konwertowane na ich odpowiedniki w zestawie znaków wykonywania. Zestawy znaków źródła i wykonania są w kodowaniu ASCII w Microsoft C i C++.
 
-*Łączenie ciągów*<br/>
+*{1&gt;Łączenie ciągów&lt;1}*<br/>
 Wszystkie sąsiadujące ciągi znaków i literały szerokiego ciągu są łączone. Na przykład, `"String " "concatenation"` staje się `"String concatenation"`.
 
-*Tłumaczenie*<br/>
+*{1&gt;Translacja&lt;1}*<br/>
 Wszystkie tokeny są analizowane składniowo i semantycznie; tokeny te są przekształcane na kod obiektu.
 
 *Połączenie*<br/>
@@ -64,6 +64,6 @@ Kompilator generuje ostrzeżenia lub błędy podczas faz tłumaczenia, w któryc
 
 Konsolidator usuwa wszystkie odwołania zewnętrzne i tworzy plik wykonywalny lub bibliotekę DLL przez połączenie jednej lub więcej jednostek translacji z bibliotekami standardowymi.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Preprocesor](../preprocessor/preprocessor.md)

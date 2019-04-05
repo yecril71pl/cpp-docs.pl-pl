@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: wykonywanie sprzężenia (ODBC)'
+title: 'Zestaw rekordów: Wykonywanie sprzężenia (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - joins [C++], in recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], joins
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-ms.openlocfilehash: 135992e7eebd56c985c24228370695f10ac6da3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e589f00ec0512794d14accc6bb33c0e7adbd378
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523941"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035416"
 ---
-# <a name="recordset-performing-a-join-odbc"></a>Zestaw rekordów: wykonywanie sprzężenia (ODBC)
+# <a name="recordset-performing-a-join-odbc"></a>Zestaw rekordów: Wykonywanie sprzężenia (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -35,9 +35,9 @@ Aby wybrać rekordy zawierające kolumny z połączonych tabel, potrzebne są na
 
 Możesz dołączyć więcej niż dwie tabele w taki sam sposób, przez equating pary wiele kolumn, każda para dołączane za pomocą słowa kluczowego SQL **i**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+[Zestaw rekordów: Deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Zestaw rekordów: Deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

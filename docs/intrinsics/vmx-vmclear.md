@@ -7,16 +7,16 @@ helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-ms.openlocfilehash: 469621eb828691b5475b453e8be0b8473b3594a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17e3e5c91a58894b25fc6b2a72f7d0056fa88119
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586345"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036540"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Inicjuje struktury sterowania określonej maszyny wirtualnej (VMCS) i ustawia jego stan uruchomienia `Clear`.
 
@@ -56,9 +56,9 @@ Aplikacja może wykonywać operację wprowadź maszyny Wirtualnej przy użyciu [
 
 **Plik nagłówkowy** \<intrin.h >
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
 [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>

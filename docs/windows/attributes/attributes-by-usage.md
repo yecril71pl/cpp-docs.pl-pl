@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
-ms.openlocfilehash: 2536309025506ca66d9c4b7cdfbaabf5787945e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449373"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038073"
 ---
 # <a name="attributes-by-usage"></a>Atrybuty w zależności od zastosowania
 
@@ -26,7 +26,7 @@ Jeśli atrybut poprzedza element, który nie znajduje się w zakresie ten atrybu
 |[Atrybuty klasy](class-attributes.md)|Ma zastosowanie do słowa kluczowego języka C++.|
 |[Atrybuty metody](method-attributes.md)|Ma zastosowanie do metody w klasie, klasa coclass lub interfejs.|
 |[Atrybuty parametru](parameter-attributes.md)|Dotyczy parametry metody w klasie lub interfejsie.|
-|[Atrybuty składowych danych](data-member-attributes.md)|Stosuje się do elementów członkowskich danych w klasie, klasa coclass lub interfejs.|
+|[Atrybuty elementów członkowskich danych](data-member-attributes.md)|Stosuje się do elementów członkowskich danych w klasie, klasa coclass lub interfejs.|
 |[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)|Ma zastosowanie do słów kluczowych języka C++.|
 |[Atrybuty tablicy](array-attributes.md)|Ma zastosowanie do tablic lub `SAFEARRAY`s.|
 |[Oddzielne atrybuty](stand-alone-attributes.md)|Działa bardziej przypominające wiersz kodu, ale nie będzie działać na słowo kluczowe języka C++. Instrukcje autonomicznego atrybutu wymagają średnik na końcu wiersza.|
@@ -46,7 +46,7 @@ Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interfa
 |Atrybut|Opis|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
-|[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
+|[niestandardowy](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
 |[dispinterface](dispinterface.md)|Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.|
 |[dual](dual.md)|Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.|
 |[export](export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|
@@ -77,8 +77,8 @@ Musisz przestrzegać tych reguł określających interfejs:
 
 Podczas określania nie [uuid](uuid-cpp-attributes.md) atrybutu i użycie tej samej nazwy interfejsu, w projektach innego atrybutu, ten sam identyfikator GUID jest generowany.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty języka C++ dla modelu COM i platformy .NET](cpp-attributes-com-net.md)<br/>
+[Atrybuty C++ dla modelu COM i .NET](cpp-attributes-com-net.md)<br/>
 [Atrybuty według grup](attributes-by-group.md)<br/>
 [Alfabetyczny spis atrybutów](attributes-alphabetical-reference.md)

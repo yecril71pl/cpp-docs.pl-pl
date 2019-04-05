@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631728"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037753"
 ---
 # <a name="warning-pragma"></a>Ostrzeżenie Pragma
 Umożliwia selektywne modyfikacji zachowania wiadomości ostrzeżeń kompilatora.
@@ -38,7 +38,7 @@ Dostępne są następujące parametry specyfikator ostrzeżenie.
 |*1, 2, 3, 4*|Zastosowanie danego poziomu do określonego ostrzeżenia. Włącza to również określone ostrzeżenie, która jest domyślnie wyłączona.|
 |*default*|Resetuj zachowanie ostrzeżenie do wartości domyślnej. Włącza to również określone ostrzeżenie, która jest domyślnie wyłączona. Ostrzeżenie będzie generowane w lokalizacji domyślnej, udokumentowane, poziom.<br /><br /> Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |*Wyłącz*|Generuje określony komunikaty ostrzegawcze.|
-|*Błąd*|Należy sporządzić raport określone ostrzeżenia jako błędy.|
+|*error*|Należy sporządzić raport określone ostrzeżenia jako błędy.|
 |*once*|Wyświetl komunikaty określony tylko jeden raz.|
 |*Pomiń*|Wypycha bieżący stan pragmy w stosie, wyłącza określone ostrzeżenie następnego wiersza, a tak, aby stan pragmy jest resetowany punktów POP stosu ostrzeżenie.|
 
@@ -116,6 +116,6 @@ Podczas zapisywania plików nagłówkowych, możesz użyć *wypychania* i *pop* 
 
 Aby uzyskać więcej informacji na temat kompilatora pominąć opcje, które ułatwiają ostrzeżenia, zobacz [/FI](../build/reference/fi-name-forced-include-file.md) i [Wn](../build/reference/compiler-option-warning-level.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

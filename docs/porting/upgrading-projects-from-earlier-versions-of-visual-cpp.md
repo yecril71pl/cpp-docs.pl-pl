@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dae4937661db945fa17f15ea39b0d17a8bf72640
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768227"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034916"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Uaktualnianie projektów ze starszych wersji programu Visual C++
 
@@ -38,13 +38,13 @@ Aby uzyskać informacje o tym, jak można zaktualizować docelowej wersji Window
 [Uaktualnienie kodu do Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
 [Modyfikowanie symboli WINVER i _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
 [Naprawianie zależności w bibliotece wewnętrznej](fix-your-dependencies-on-library-internals.md)<br/>
-[Problemy przy migracji liczb zmiennoprzecinkowych](floating-point-migration-issues.md)<br/>
-[Używanie natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](use-native-multi-targeting.md)<br/>
-[Funkcje środowiska Visual C++, które nie są już obsługiwane w programie Visual Studio 2019 w wersji zapoznawczej](features-deprecated-in-visual-studio.md)<br/>
+[Problemy dotyczące migracji liczb zmiennoprzecinkowych](floating-point-migration-issues.md)<br/>
+[Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](use-native-multi-targeting.md)<br/>
+[Funkcje programu Visual C++ uznane za przestarzałe w wersji zapoznawczej programu Visual Studio 2019 r.](features-deprecated-in-visual-studio.md)<br/>
 [Zmiany systemu kompilacji](build-system-changes.md)<br/>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Co nowego w języku Visual C++ w programie Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-[Visual C++ — historia zmian w latach 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Visual C++ — Historia latach 2003 – 2015 zmian](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Niestandardowe zachowanie](../cpp/nonstandard-behavior.md)

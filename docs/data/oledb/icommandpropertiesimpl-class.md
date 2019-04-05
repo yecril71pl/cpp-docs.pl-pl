@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556156"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034105"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl — Klasa
 
-Udostępnia implementację [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85)) interfejsu.
+Udostępnia implementację [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,8 +53,8 @@ Właściwości klasy.
 
 |||
 |-|-|
-|[Getproperties —](#getproperties)|Zwraca listę właściwości grupy właściwości zestawu wierszy, które obecnie są żądane w zestawie wierszy.|
-|[Setproperties —](#setproperties)|Ustawia właściwości w grupie właściwość zestawu wierszy.|
+|[GetProperties](#getproperties)|Zwraca listę właściwości grupy właściwości zestawu wierszy, które obecnie są żądane w zestawie wierszy.|
+|[SetProperties](#setproperties)|Ustawia właściwości w grupie właściwość zestawu wierszy.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -75,7 +75,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -94,9 +94,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

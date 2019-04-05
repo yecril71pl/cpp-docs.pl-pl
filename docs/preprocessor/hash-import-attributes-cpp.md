@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 3cd1b259270ff8c76ac80ec66000f3c8177140fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624409"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036143"
 ---
 # <a name="import-attributes-c"></a>Atrybuty #import (C++)
 Zawiera łącza do atrybutów przy użyciu `#import` dyrektywy.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Następujące atrybuty są dostępne dla `#import` dyrektywy.
 
@@ -23,7 +23,7 @@ Następujące atrybuty są dostępne dla `#import` dyrektywy.
 |[auto_rename](../preprocessor/auto-rename.md)|Zmienia nazwę słowa zastrzeżone w języku C++, dodając dwa znaki podkreślenia (_) do nazwy zmiennej, aby rozwiązać potencjalne konflikty nazw.|
 |[auto_search](../preprocessor/auto-search.md)|Określa, że jeśli sama odwołuje się do innej biblioteki typów z #import odwołuje się do biblioteki typów, kompilator zrobić niejawne #import biblioteki typów.|
 |[embedded_idl](../preprocessor/embedded-idl.md)|Określa, czy biblioteki typów są zapisywane do pliku .tlh, z zachowanym kodem generowanych atrybutów.|
-|[exclude](../preprocessor/exclude-hash-import.md)|Pomija pliki nagłówkowe biblioteki typów generowanych elementów.|
+|[wykluczanie](../preprocessor/exclude-hash-import.md)|Pomija pliki nagłówkowe biblioteki typów generowanych elementów.|
 |[high_method_prefix](../preprocessor/high-method-prefix.md)|Określa prefiks, który ma być używany w nazwach właściwości ogólne i metody.|
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|Określa alternatywne prefiksów trzy metody właściwości.|
 |[implementation_only](../preprocessor/implementation-only.md)|Powoduje pominięcie generowania pliku nagłówku .tlh (główny plik nagłówka).|
@@ -42,13 +42,13 @@ Następujące atrybuty są dostępne dla `#import` dyrektywy.
 |[raw_method_prefix](../preprocessor/raw-method-prefix.md)|Określa różne prefiks, aby uniknąć konfliktów nazw.|
 |[raw_native_types](../preprocessor/raw-native-types.md)|Wyłącza używanie klas obsługi COM w funkcjach otoki wysokiego poziomu, a zamiast tego wymusza stosowanie typów danych niskiego poziomu.|
 |[raw_property_prefixes](../preprocessor/raw-property-prefixes.md)|Określa alternatywne prefiksów trzy metody właściwości.|
-|[Zmień nazwę](../preprocessor/rename-hash-import.md)|Działania dotyczące problemów kolizji nazw.|
+|[zmień nazwę](../preprocessor/rename-hash-import.md)|Działania dotyczące problemów kolizji nazw.|
 |[rename_namespace](../preprocessor/rename-namespace.md)|Zmienia nazwę przestrzeni nazw, który znajduje się zawartość biblioteki typów.|
 |[rename_search_namespace](../preprocessor/rename-search-namespace.md)|Ma taką samą funkcjonalność jak [rename_namespace](../preprocessor/rename-namespace.md) atrybutu, ale jest używana w bibliotekach typu, które użyj dyrektywy #import z [auto_search —](../preprocessor/auto-search.md) atrybutu.|
 |[tlbid](../preprocessor/tlbid.md)|Umożliwia ładowanie bibliotek innych niż biblioteki typu podstawowego.|
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

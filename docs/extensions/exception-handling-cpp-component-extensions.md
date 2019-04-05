@@ -10,12 +10,12 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-ms.openlocfilehash: ee784130c5a6d7fc72d2b2ad61980089260d217e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b477f7355ee1f4f70a0ad3df8b85c4276c07d397
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787457"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037177"
 ---
 # <a name="exception-handling--ccli-and-ccx"></a>Obsługa wyjątków (C + +/ CLI i C + +/ CX)
 
@@ -32,13 +32,13 @@ W tym artykule omówiono różnice względem standardowe zachowanie programu obs
 [finally](../dotnet/finally.md)<br/>
 W tym artykule omówiono sposób używania finally — słowo kluczowe.
 
-[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
+[Instrukcje: Definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Pokazuje, jak nieobsłużone wyjątki mogą być przechwytywane.
 
-[Instrukcje: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
+[Instrukcje: Przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 Omawia, jak przechwytywać wyjątki środowiska CLR i C++ w kodzie natywnym.
 
-[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
+[Instrukcje: Definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Pokazuje, jak przechwytywać wszystkie nieobsłużone wyjątki.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
@@ -46,6 +46,6 @@ Pokazuje, jak przechwytywać wszystkie nieobsłużone wyjątki.
 [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)<br/>
 W tym artykule opisano obsługę wyjątków w standardowego języka C++.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

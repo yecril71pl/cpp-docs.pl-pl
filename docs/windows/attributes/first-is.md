@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: fcabad8d6c512a84e44f050cd5b34d985d687636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512833"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033086"
 ---
 # <a name="firstis"></a>first_is
 
@@ -25,7 +25,7 @@ Określa indeks pierwszego elementu tablicy mają być przekazywane.
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*<br/>
+*wyrażenie*<br/>
 Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
@@ -62,16 +62,16 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [last_is](last-is.md)<br/>

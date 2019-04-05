@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-ms.openlocfilehash: b6e59dba375e78878d13a6014ce75edf2a21758b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e46e87b0d5d538a0f9fd7e231debfef3fa95210
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611201"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036117"
 ---
 # <a name="creating-an-ole-db-provider"></a>Tworzenie dostawcy OLE DB
 
@@ -36,7 +36,7 @@ Podstawowe kroki są następujące:
    > [!NOTE]
    > Domyślnie kreatorów wygenerować kod, który jest poziom OLE DB 0 zgodne. Aby upewnić się, że aplikacja pozostanie poziom 0 jest zgodne, nie usuwaj żadnego z interfejsów generowane przez kreatora z kodu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Przykładowych CatDB: Przeglądarka schematu źródła danych](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
-[Przykład DBViewer: Baza danych przeglądarki](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)
+[Przykład CatDB: Przeglądarka schematu źródła danych](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
+[Przykład DBViewer: Przeglądarka bazy danych](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)

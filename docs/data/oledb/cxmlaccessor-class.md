@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 1d57251e48f2496b07a4eb4f94976c7a44b165f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328516"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036104"
 ---
 # <a name="cxmlaccessor-class"></a>Klasa CXMLAccessor
 
@@ -124,14 +124,14 @@ Na poniższym obrazie przedstawiono sposób formatowania danych wierszy w formac
 
 `</row>`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[CDynamicStringAccessor, klasa](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
-[CDynamicStringAccessorA, klasa](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
-[CDynamicStringAccessorW, klasa](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
-[CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasa CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicAccessor — Klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicParameterAccessor — Klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicStringAccessor — Klasa](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[CDynamicStringAccessorA — Klasa](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
+[CDynamicStringAccessorW — Klasa](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
+[CManualAccessor — Klasa](../../data/oledb/cmanualaccessor-class.md)

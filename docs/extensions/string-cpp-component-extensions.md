@@ -6,12 +6,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: b91e6cd2f65160767cc102ab9f44364ce9acdea5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8440ddf510f99618c28a6b6d585c8628df85f9cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787243"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038546"
 ---
 # <a name="string--ccli-and-ccx"></a>Ciąg (C + +/ CLI i C + +/ CX)
 
@@ -259,8 +259,8 @@ System.SByte*
 System.String
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
 [Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md)

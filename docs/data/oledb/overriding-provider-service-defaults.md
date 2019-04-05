@@ -5,16 +5,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: 9f845834b844c16bf2820a295768696e8f6a6526
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 08011f65ca220885e124e5ad6072244e4ad6e80d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556299"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033959"
 ---
 # <a name="overriding-provider-service-defaults"></a>Zastępowanie ustawień domyślnych usługi dostawcy
 
-Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna dla [DBPROP_INIT_OLEDBSERVICES](https://docs.microsoft.com/previous-versions/windows/desktop/ms716898(v=vs.85)) inicjowania właściwości obiektu źródła danych.
+Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna dla [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898(v=vs.85)) inicjowania właściwości obiektu źródła danych.
 
 Tak długo, jak istnieje wpis rejestru, obiektów dostawcy są agregowane. Użytkownik może przesłonić ustawienia usługi włączone przez ustawienie właściwości DBPROP_INIT_OLEDBSERVICES przed zainicjowaniem domyślnego dostawcy. Aby włączyć lub wyłączyć określonej usługi, użytkownik pobiera bieżącą wartość właściwości DBPROP_INIT_OLEDBSERVICES, ustawia lub czyści dla danej właściwości, które można włączać lub wyłączać i resetuje właściwości. DBPROP_INIT_OLEDBSERVICES można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przekazano do ADO lub `IDataInitialize::GetDatasource`. Odpowiednie wartości, aby włączyć/wyłączyć poszczególne usługi są wymienione w poniższej tabeli.
 
@@ -28,9 +28,9 @@ Tak długo, jak istnieje wpis rejestru, obiektów dostawcy są agregowane. Użyt
 
 Jeśli wpis rejestru nie istnieje dla dostawcy, menedżerów składników nie są zbierane obiektów dostawcy. Brak usług zostanie włączona, nawet wtedy, gdy wyraźnie żąda przez użytkownika.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z puli zasobów](https://docs.microsoft.com/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
-[Jaki sposób użytkownicy korzystają w puli zasobów](https://docs.microsoft.com/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
-[Jak dostawców wydajnie pracować z puli zasobów](https://docs.microsoft.com/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
+[Korzystanie z puli zasobów](/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
+[Jaki sposób użytkownicy korzystają w puli zasobów](/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[Jak dostawców wydajnie pracować z puli zasobów](/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

@@ -3,12 +3,12 @@ title: Konfigurowanie narzędzia CMake debugowania sesji w programie Visual Stud
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356169"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035351"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurowanie narzędzia CMake sesjami debugowania
 
@@ -42,7 +42,7 @@ Zaraz po zapisaniu **launch.vs.json** plik, zostanie utworzony wpis w **element 
 
 ## <a name="support-for-cmakesettings-variables"></a>Obsługa zmiennych pliku cmakesettings na pozycji
 
- **Launch.VS.JSON** obsługuje zmienne, które są zadeklarowane w **CMakeSettings.json** (patrz poniżej) i które mają zastosowanie do konfiguracji aktualnie wybrany. Także ma klucz o nazwie `currentDir`, który ustawia bieżący katalog uruchamiania aplikacji:
+ **Launch.VS.JSON** obsługuje zmienne, które są zadeklarowane w **CMakeSettings.json** (patrz poniżej) i które mają zastosowanie do konfiguracji aktualnie wybrany. Także ma klucz o nazwie `currentDir`, który ustawia bieżący katalog uruchamiania aplikacji na potrzeby lokalnego projektu:
 
 ```json
 {
@@ -59,12 +59,19 @@ Po uruchomieniu aplikacji, a wartość `currentDir` jest podobny do
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+Klucz "cwd" Ustawia bieżący katalog uruchamiania aplikacji na potrzeby zdalnego projektu. Wartością domyślną jest "${debugInfo.defaultWorkingDirectory}", która daje w wyniku 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>Zobacz także
 
 [Projekty CMake w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>
-[Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Dostosowywanie ustawień kompilacji narzędzia CMake](customize-cmake-settings.md)<br/>
-[Konfigurowanie sesji debugowania narzędzia CMake](configure-cmake-debugging-sessions.md)<br/>
+[Podłącz do komputera zdalnego systemu Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Dostosowywanie ustawień kompilacji CMake](customize-cmake-settings.md)<br/>
+[Konfigurowanie narzędzia CMake sesjami debugowania](configure-cmake-debugging-sessions.md)<br/>
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane](cmake-predefined-configuration-reference.md)<br/>

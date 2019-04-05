@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591727"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033245"
 ---
 # <a name="odbc-basics"></a>Podstawy ODBC
 
@@ -25,7 +25,7 @@ Ten temat zawiera podstawowe informacje z Open Database Connectivity (ODBC):
 
 - [Jakie ODBC — składniki potrzebne do ponownej dystrybucji ze swoimi aplikacjami](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-Należy również przeczytać temat pokrewny [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Należy również przeczytać temat pokrewny [ODBC: ODBC — Biblioteka kursorów](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 > ODBC — źródła danych są dostępne za pośrednictwem klas MFC ODBC, zgodnie z opisem w tym temacie lub przy użyciu klas MFC obiekt DAO (Data Access).
@@ -39,7 +39,7 @@ ODBC jest bazy danych programu Microsoft Windows otwórz usług architektury (WO
 
 Poniżej przedstawiono składniki ODBC:
 
-- INTERFEJSU API ODBC
+- ODBC API
 
    Wywołuje bibliotekę funkcji, zestaw kodów błędów i standard [SQL](../../data/odbc/sql.md) składni do uzyskiwania dostępu do danych dotyczących systemów DBMS.
 
@@ -65,6 +65,6 @@ Klasy bazy danych obsługują dowolnego źródła danych, do której masz sterow
 
 Lista sterowników ODBC zawarte w tej wersji programu Visual C++ i informacji na temat uzyskiwania dodatkowych sterowników, zobacz [lista sterowników ODBC](../../data/odbc/odbc-driver-list.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

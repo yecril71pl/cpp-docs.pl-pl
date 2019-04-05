@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 3ab2e720e5bab834f76b755336b9ad9170d086b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495265"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038307"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -25,7 +25,7 @@ Grupy `db_column` atrybuty, które uczestniczą w `IAccessor`— na podstawie po
 
 #### <a name="parameters"></a>Parametry
 
-*num*<br/>
+*Liczba*<br/>
 Określa numer metody dostępu (indeks nieujemną liczbę całkowitą). Należy określić metody dostępu w rosnącej kolejności liczb całkowitych lub zdefiniowane wartości.
 
 *auto*<br/>
@@ -71,13 +71,13 @@ public:
 
 |||
 |-|-|
-|**Dotyczy**|Bloki atrybutów|
+|**Informacje zawarte w tym artykule dotyczą**|Bloki atrybutów|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)

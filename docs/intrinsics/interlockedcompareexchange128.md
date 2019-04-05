@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 3cfe9d650b66dc08a96599652b52f0b153198afa
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627401"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037873"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Wykonuje porównanie blokowane 128-bitowego i exchange.
 
@@ -34,7 +34,7 @@ unsigned char _InterlockedCompareExchange128(
 
 #### <a name="parameters"></a>Parametry
 
-*miejsce docelowe*<br/>
+*Miejsce docelowe*<br/>
 [out w] Wskaźnik do miejsca docelowego, który jest tablicą dwóch 64-bitowych liczb całkowitych są traktowane jako pola 128-bitowego. Dane docelowego musi być 16-bajtowy wyrównane, aby uniknąć błędów ogólnej ochrony.
 
 *ExchangeHigh*<br/>
@@ -123,12 +123,12 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[Funkcje wewnętrzne _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
+[Funkcje wewnętrzne _interlockedcompareexchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

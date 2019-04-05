@@ -27,16 +27,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 67052bdc5d49673146c036167c027d1efd882495
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556507"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039796"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl — Klasa
 
-Udostępnia implementację [IColumnsInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) interfejsu.
+Udostępnia implementację [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,7 +83,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 
@@ -99,9 +99,9 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IColumnsInfo::MapColumnIDs](https://docs.microsoft.com/previous-versions/windows/desktop/ms714200(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

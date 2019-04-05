@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 176ab83bfae18ff7f43fe0860591f2d1ac50d7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535333"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038560"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -25,7 +25,7 @@ Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*<br/>
+*wyrażenie*<br/>
 Wyrażenie języka C, który określa IID interfejsu COM, wskazywana przez wskaźnik interfejsu.
 
 ## <a name="remarks"></a>Uwagi
@@ -57,14 +57,14 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**Dotyczy**|Parametr interfejsu, element członkowski danych|
+|**Informacje zawarte w tym artykule dotyczą**|Parametr interfejsu, element członkowski danych|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328795"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038099"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -37,19 +37,19 @@ Numer kolumny (liczba porządkowa DBCOLUMNINFO) odpowiadający pole w zestawie w
 
 - DBPARAMIO_NOTPARAM akcesor nie ma parametrów. Ustawienie `eParamIO` tej wartości w wierszu Akcesory przypomina o tym użytkownika, parametry są ignorowane.
 
-*dbtype*<br/>
+*Atrybut DbType*<br/>
 (Opcjonalnie) OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251(v=vs.85)) wpisu kolumny.
 
-*precision*<br/>
+*precyzja*<br/>
 (Opcjonalnie) Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*scale*<br/>
+*skala*<br/>
 (Opcjonalnie) Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*status*<br/>
+*stan*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-*Długość*<br/>
+*length*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi
@@ -108,13 +108,13 @@ struct CSalesbyYear {
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **struktury**, elementu członkowskiego, metoda, lokalne|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **struktury**, elementu członkowskiego, metoda, lokalne|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)

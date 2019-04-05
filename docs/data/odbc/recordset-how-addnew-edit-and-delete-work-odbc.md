@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: jak działają funkcje AddNew, Edit i Delete (ODBC)'
+title: 'Zestaw rekordów: Jak działają funkcje AddNew, edytowanie i usuwanie pracy (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331974"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033212"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Zestaw rekordów: jak działają funkcje AddNew, Edit i Delete (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Zestaw rekordów: Jak działają funkcje AddNew, edytowanie i usuwanie pracy (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -39,9 +39,9 @@ W tym temacie opisano sposób, w jaki `AddNew`, `Edit`, i `Delete` funkcji eleme
 - [Jak usunąć działa rekordów](#_core_deleting_a_record)
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Jako uzupełnienie, warto przeczytać [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), która opisuje odpowiedniej roli RFX podczas operacji aktualizacji.
+Jako uzupełnienie, warto przeczytać [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), która opisuje odpowiedniej roli RFX podczas operacji aktualizacji.
 
 ##  <a name="_core_adding_a_record"></a> Dodawanie rekordu
 
@@ -118,7 +118,7 @@ Gdy wywołujesz `Update` edytowany rekord:
 
    1. W przypadku zmian, `Update` konstrukcji SQL **aktualizacji** instrukcji. Kolumn na liście **aktualizacji** instrukcji opierają się na elementy członkowskie danych pola, które uległy zmianie.
 
-   1. `Update` zatwierdza zmiany — wykonuje **aktualizacji** instrukcji — rekord zostało zmienione w źródle danych, ale nie zatwierdzone Jeśli transakcja jest w toku (zobacz [transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) uzyskać informacji na temat wpływ transakcji aktualizacji). ODBC przechowuje kopię rekord, który zmienia także.
+   1. `Update` zatwierdza zmiany — wykonuje **aktualizacji** instrukcji — rekord zostało zmienione w źródle danych, ale nie zatwierdzone Jeśli transakcja jest w toku (zobacz [transakcji: Wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) uzyskać informacji na temat wpływ transakcji aktualizacji). ODBC przechowuje kopię rekord, który zmienia także.
 
    1. W przeciwieństwie do procesu `AddNew`, `Edit` proces nie powoduje przywrócenia rekordów przechowywanych. Edytowany rekord pozostaje w miejscu jako bieżącego rekordu.
 
@@ -157,8 +157,8 @@ Gdy wywołujesz `Delete`:
 
 Aby uzyskać informacji na temat instrukcji SQL używane podczas operacji aktualizacji, zobacz [SQL](../../data/odbc/sql.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: więcej informacji o aktualizacjach (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[Zestaw rekordów: Więcej informacji na temat aktualizacje (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)

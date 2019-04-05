@@ -1,5 +1,5 @@
 ---
-title: 'Źródło danych: programowe konfigurowanie źródła danych ODBC'
+title: 'Źródło danych: Programowe Konfigurowanie źródła danych ODBC'
 ms.date: 11/04/2016
 f1_keywords:
 - SQLConfigDataSource
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677373"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037961"
 ---
-# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Źródło danych: programowe konfigurowanie źródła danych ODBC
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Źródło danych: Programowe Konfigurowanie źródła danych ODBC
 
 W tym temacie wyjaśniono, jak programowo możesz skonfigurować nazw źródeł danych Open Database Connectivity (ODBC). Zapewnia to elastyczność dostępu do danych bez zmuszania użytkownika do użycia Administratora ODBC lub innych programów do określenia nazw źródeł danych.
 
@@ -26,7 +26,7 @@ Podczas tworzenia źródła danych Microsoft Access ODBC przez administratora OD
 
 Jednak wiele systemów DBMS umożliwia programistyczne tworzenie źródła danych. Niektóre źródła danych utrzymują specyfikację katalogu dla baz danych. Oznacza to, że katalog jest źródłem danych i każdej tabeli w źródle danych są przechowywane w oddzielnym pliku (w przypadku programu dBASE każda tabela to plik dbf). Sterowniki dla innych baz danych ODBC, takich jak program Microsoft Access i SQL Server, wymagają, że niektóre szczególne kryteria zostały spełnione, zanim może zostać nawiązana źródła danych. Na przykład używając sterownika SQL Server ODBC, musisz ustalonymi komputera programu SQL Server.
 
-##  <a name="_core_sqlconfigdatasource_example"></a> Przykład SQLConfigDataSource
+##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource Example
 
 W poniższym przykładzie użyto `::SQLConfigDataSource` funkcji interfejsu API ODBC, aby utworzyć nowe źródło danych programu Excel o nazwie nowe źródło danych programu Excel:
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 Należy pamiętać, że źródła danych jest w rzeczywistości katalogiem (C:\EXCELDIR); Ten katalog musi istnieć. Sterownik programu Excel używa katalogów jako źródła danych i plików jako poszczególnych tabel (jedna tabela na plik xls).
 
-Aby uzyskać więcej informacji na temat tworzenia tabel, zobacz [źródła danych: programowe tworzenie tabeli w źródle danych ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Aby uzyskać więcej informacji na temat tworzenia tabel, zobacz [źródła danych: Programowe tworzenie tabeli w źródle danych ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
 
 Poniższe informacje omawiają parametry, które muszą zostać przekazane do `::SQLConfigDataSource` funkcji interfejsu API ODBC. Aby użyć `::SQLConfigDataSource`, musisz uwzględnić plik nagłówka Odbcinst.h i użyć importu odbcinst.lib. Ponadto Odbccp32.dll musi być w ścieżce w czasie wykonywania (lub Odbcinst.dll dla 16-bitowych).
 
@@ -51,7 +51,7 @@ Administrator ODBC (zazwyczaj zainstalowany w Panelu sterowania) tworzy nowe źr
 
 Mimo że to informacje mogłyby być zapisywane bezpośrednio w rejestrze bez korzystania z `::SQLConfigDataSource`, każda aplikacja, która wykonuje tę funkcję, powołuje się na bieżącą metodę, której Menedżer sterowników używa do przechowywania swoich danych. Jeśli późniejsze poprawki do ODBC Driver Manager zaimplementują przechowywanie rekordów o źródłach danych w inny sposób, każdej aplikacji korzystającej z tej techniki zostanie przerwane. Ogólnie zaleca się wykorzystanie funkcji API, jeśli została dostarczona. Na przykład kodu jest przenośny z 16-bitowego do 32-bitowego, jeśli używasz `::SQLConfigDataSource` działać, ponieważ ta funkcja poprawnie zapisuje dane w pliku Odbc.ini lub w rejestrze.
 
-##  <a name="_core_sqlconfigdatasource_parameters"></a> Parametry SQLConfigDataSource
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters
 
 Poniżej wyjaśniono parametry `::SQLConfigDataSource` funkcji. Wiele informacji jest pobierana z interfejsu API ODBC *odwołania programisty* dostarczone z programem Visual C++ w wersji 1.5 lub nowszej.
 
@@ -68,7 +68,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 *hwndParent*<br/>
 Okno określone jako właściciel każdego okna dialogowego, utworzone przez Menedżera sterowników ODBC lub konkretny sterownik ODBC w celu uzyskania dodatkowych informacji od użytkownika dotyczących nowego źródła danych. Jeśli *lpszAttributes* parametru nie dostarcza wystarczających informacji, pojawi się okno dialogowe. *HwndParent* parametr może mieć wartości NULL.
 
-*Lpsdriver*<br/>
+*lpszDriver*<br/>
 Opis sterownika. Jest to nazwa przedstawiana użytkownikom, a nie nazwa sterownika fizycznego (DLL).
 
 *lpszAttributes*<br/>
@@ -94,7 +94,7 @@ Jednym ze sposobów odszukania nazw kluczy i wartości dla *lpszAttributes* para
 
    - Dla 32-bitowych Znajdź klucz **HKEY_CURRENT_USER\Software\ODBC\ODBC. Źródła danych INI\ODBC** w okienku po lewej stronie.
 
-      W okienku po prawej stronie wyświetla wpisy w postaci: "pub: REG_SZ:*<data source name>*", gdzie *<data source name>* jest źródłem danych, która została już skonfigurowana przy użyciu odpowiednie ustawienia dla sterownika, planowane Aby użyć. Wybierz źródło danych, której potrzebujesz, na przykład SQL Server. Elementy występujące po ciągu "pub:" są w kolejności, klucza i wartości do użycia w Twojej *lpszAttributes* parametru.
+      W okienku po prawej stronie wyświetla wpisy w postaci: "pub: REG_SZ:*<data source name>*", gdzie *<data source name>* jest źródłem danych, która została już skonfigurowana przy użyciu odpowiednie ustawienia dla sterownika, których zamierzasz używać. Wybierz źródło danych, której potrzebujesz, na przykład SQL Server. Elementy występujące po ciągu "pub:" są w kolejności, klucza i wartości do użycia w Twojej *lpszAttributes* parametru.
 
    - Dla 16-bitowych, Znajdź sekcję w pliku Odbc.ini oznaczone przez [*\<nazwa źródła danych >*].
 
@@ -114,6 +114,6 @@ Można też zbadanie dokumentacji dla określonego sterownika, którego chcesz u
 
 Kiedy ODBC Administrator Wyświetla informacje dotyczące tworzenia nowego źródła danych dla tego konkretnego sterownika, kliknij przycisk **pomocy**. Spowoduje to otwarcie pliku pomocy dla tego konkretnego sterownika, który typowo zawiera ważne informacje na temat użycia sterownika.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)

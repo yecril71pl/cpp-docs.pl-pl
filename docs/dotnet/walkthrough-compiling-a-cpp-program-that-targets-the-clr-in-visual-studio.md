@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773050"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034673"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Przewodnik: Kompiluj w języku C + +/ interfejsu wiersza polecenia programu, przeznaczonego dla CLR w programie Visual Studio
 
@@ -74,7 +74,7 @@ Te tematy założono, że rozumiesz podstawy języka C++.
    > [!NOTE]
    > Wybieranie CLR pusty szablon projektu automatycznie ustawiony `/clr` — opcja kompilatora. Aby to sprawdzić, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i klikając **właściwości**, a następnie sprawdź, **Obsługa środowiska uruchomieniowego języka wspólnego** opcji  **Ogólne** węźle **właściwości konfiguracji**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty i systemy kompilacji](../build/projects-and-build-systems-cpp.md)<br/>
+[Materiał referencyjny na temat języka C++](../cpp/cpp-language-reference.md)<br/>
+[Projekty i systemów kompilacji](../build/projects-and-build-systems-cpp.md)<br/>

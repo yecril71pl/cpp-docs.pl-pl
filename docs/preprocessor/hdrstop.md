@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hdrstop pragma
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-ms.openlocfilehash: 5dc47e4b2ec264182d26925df60bf3ee29871b65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1590b5916a8d9c00b6e988bacc7cd857c29d6775
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497090"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035218"
 ---
 # <a name="hdrstop"></a>hdrstop
 Daje dodatkową kontrolę nad nazwami plików kompilacji wstępnej oraz nad lokalizacją, w której zapisywany jest stan kompilacji.
@@ -78,6 +78,6 @@ __inline Disp( char *szToDisplay )   // Define an inline function
 
 W tym przykładzie **hdrstop** pragma pojawia się po dwa pliki zostały włączone i wbudowanej funkcji został zdefiniowany. Pozornie może wydawać się to dziwnym miejscem dla pragmy. Rozważmy jednak, że przy użyciu ręcznych opcji kompilacji wstępnej, `/Yc` i `/Yu`, za pomocą **hdrstop** pragma umożliwia wstępna kompilacja całych plików źródłowych — nawet kodu w tekście. Kompilator Microsoft nie ogranicza do kompilacji wstępnej tylko deklaracji danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

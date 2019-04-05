@@ -14,16 +14,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: a6b2abc97a44117c0fdd7c08c61de7ba900d1115
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ed8b7a271bc6ac234fc9276d6c88d26848da24f8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556312"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039575"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl — Klasa
 
-Udostępnia implementację [ISessionProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms713721(v=vs.85)) interfejsu.
+Udostępnia implementację [ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85)) interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,8 +52,8 @@ Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*.
 
 |||
 |-|-|
-|[Getproperties —](#getproperties)|Zwraca listę właściwości, w grupie właściwości sesji, które obecnie są ustawiane w sesji.|
-|[Setproperties —](#setproperties)|Ustawia właściwości w grupie właściwości sesji.|
+|[GetProperties](#getproperties)|Zwraca listę właściwości, w grupie właściwości sesji, które obecnie są ustawiane w sesji.|
+|[SetProperties](#setproperties)|Ustawia właściwości w grupie właściwości sesji.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -74,7 +74,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ISessionProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723643(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
 
@@ -89,9 +89,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ISessionProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714405(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

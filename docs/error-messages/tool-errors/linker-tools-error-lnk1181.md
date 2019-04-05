@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-ms.openlocfilehash: 834220e6325e332a07c3865b5ff66e1bbc1b8c69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 657e78ece2ce4039eb8dc8561abd455c60aaff75
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657992"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035078"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Błąd narzędzi konsolidatora LNK1181
 
@@ -33,6 +33,6 @@ Inną możliwą przyczyną LNK1181 to, że długiej nazwy pliku ze spacjami nie 
 
 Kompilowanie przy użyciu [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) opcji może spowodować LNK1181, ponieważ ta opcja pomija tworzenie plików .obj.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [/LIBPATH (Dodatkowa Libpath)](../../build/reference/libpath-additional-libpath.md)

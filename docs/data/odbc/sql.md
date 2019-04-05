@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576840"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037860"
 ---
 # <a name="sql"></a>SQL
 
@@ -50,9 +50,9 @@ Klasy bazy danych użyj części programu SQL Server, znane jako język manipula
 |**SELECT**|Aby zidentyfikować, które tabele i kolumny w źródle danych mają być używane.|
 |**WHERE**|Aby zastosować filtr, który Zawęża zaznaczenie.|
 |**ORDER BY**|Aby zastosować kolejność sortowania do zestawu rekordów.|
-|**WSTAW**|Aby dodać nowych rekordów do zestawu rekordów.|
-|**USUŃ**|Do usuwania rekordów z zestawu rekordów.|
-|**AKTUALIZACJA**|Aby zmodyfikować pola rekordu.|
+|**INSERT**|Aby dodać nowych rekordów do zestawu rekordów.|
+|**DELETE**|Do usuwania rekordów z zestawu rekordów.|
+|**UPDATE**|Aby zmodyfikować pola rekordu.|
 
 Oprócz klas baz danych rozpoznaje ODBC **WYWOŁANIA** instrukcji, których można użyć, aby wywołać wstępnie zdefiniowanego zapytania (lub procedura składowana) dla niektórych źródeł danych. Sterownik bazy danych ODBC interpretuje tych instrukcji i zastępuje tego polecenia odpowiednio dla każdego systemu DBMS.
 
@@ -61,9 +61,9 @@ Oprócz klas baz danych rozpoznaje ODBC **WYWOŁANIA** instrukcji, których moż
 
 Jeśli klasy nie może rozpoznać oświadczenie dostarczone przez użytkownika w `CRecordset::Open`, będzie interpretowany jako nazwy tabeli.
 
-Aby wyjaśnienie, jak struktura konstruuje instrukcje SQL, zobacz [zestaw rekordów: jak zestawy rekordów wybierz rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) i [SQL: dostosowywanie Your zestawu rekordów instrukcji SQL (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Wyjaśnienie, jak struktura konstruuje instrukcje SQL, można zobaczyć [zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) i [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-Bazy danych SQL używać typów danych, podobne do tych w C i C++. Omówienie tych podobieństwa, zobacz [SQL: SQL i typów danych języka C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Bazy danych SQL używać typów danych, podobne do tych w C i C++. Omówienie tych podobieństwa, zobacz [SQL: Program SQL oraz typów danych języka C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
 Można znaleźć więcej informacji na temat języka SQL, w tym listę obsługiwanych instrukcji języka SQL, typy danych, Gramatyka języka SQL podstawowych i przeczytania zalecane publikacji o SQL, w *ODBC SDK* *Podręcznik programisty*  na dysku CD z biblioteki MSDN.
 
@@ -79,11 +79,11 @@ Więcej informacji na temat sposobu korzystanie z klas baz danych SQL można zna
 
 - [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL: typy danych SQL i C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL: Program SQL oraz typów danych języka C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL: wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL: Wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Podstawy ODBC](../../data/odbc/odbc-basics.md)

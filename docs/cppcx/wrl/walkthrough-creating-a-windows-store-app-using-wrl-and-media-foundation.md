@@ -3,12 +3,12 @@ title: 'Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z
 ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e6d240152c3740b59c34ae8e0f5aa818ce8be638
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787248"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036039"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation
 
@@ -119,8 +119,8 @@ Poniższa ilustracja przedstawia `MediaCapture app`.
 
 W przykładzie pokazano, jak przechwycić fotografie pochodzące z kamery internetowej domyślne, jeden na raz. [Przykład rozszerzeń z nośnika](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) ma większe. Pokazuje, jak wyliczyć urządzeń kamery internetowej i pracować z lokalnego systemu obsługi i przedstawia skutki dodatkowego nośnika, które działają zarówno w przypadku poszczególnych fotografii, jak i strumieni wideo.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
 [Przykład rozszerzeń z nośnika](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

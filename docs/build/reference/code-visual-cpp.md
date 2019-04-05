@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: c50b14d1905d7d827215ba9583026f8489c3a1e0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823645"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035812"
 ---
 # <a name="ltcodegt"></a>&lt;Kod&gt;
 
@@ -27,7 +27,7 @@ ms.locfileid: "57823645"
 
 #### <a name="parameters"></a>Parametry
 
-*Zawartość*<br/>
+*zawartość*<br/>
 Tekst, który ma zostać oznaczona jako kod.
 
 ## <a name="remarks"></a>Uwagi
@@ -40,6 +40,6 @@ Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Prz
 
 Zobacz [ \<przykład >](example-visual-cpp.md) tematu, aby uzyskać przykład sposobu użycia \<kodu > tag.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja XML](xml-documentation-visual-cpp.md)

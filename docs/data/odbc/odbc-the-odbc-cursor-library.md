@@ -1,5 +1,5 @@
 ---
-title: 'ODBC: biblioteka kursorów ODBC'
+title: 'ODBC: Z biblioteki kursorów ODBC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cursor library [ODBC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-ms.openlocfilehash: e175a9b27cb19b0c2a67a08751b7a7717226ac55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 862303a0dc66fbd49bfcba83336ab29dfc7145c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435142"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032235"
 ---
-# <a name="odbc-the-odbc-cursor-library"></a>ODBC: biblioteka kursorów ODBC
+# <a name="odbc-the-odbc-cursor-library"></a>ODBC: Z biblioteki kursorów ODBC
 
 W tym temacie opisano z biblioteki kursorów ODBC oraz wyjaśniono, jak z niego korzystać. Aby uzyskać więcej informacji, zobacz:
 
@@ -65,6 +65,6 @@ Drugi problem dotyczy ograniczenia klasy [CTime](../../atl-mfc-shared/reference/
 
 Po nawiązaniu połączenia ze źródłem danych, wywołując [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) lub [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) — można określić, czy ma być używany z biblioteki kursorów dla źródła danych. Jeśli zostanie utworzona migawek dla tego źródła danych, należy określić `CDatabase::useCursorLib` opcji `dwOptions` parametru, aby `OpenEx` lub określ wartość TRUE dla *bUseCursorLib* parametru, aby `Open` (wartość domyślna to WARTOŚĆ TRUE). Jeśli sterownik ODBC obsługuje zestawów dynamicznych i chcesz otworzyć zestawów dynamicznych w źródle danych, nie należy używać z biblioteki kursorów (go maskuje niektórych sterowników potrzebnych funkcji dla zestawów dynamicznych). W takiej sytuacji nie należy określać `CDatabase::useCursorLib` w `OpenEx` lub określić wartość FALSE dla *bUseCursorLib* parametru w `Open`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawy ODBC](../../data/odbc/odbc-basics.md)

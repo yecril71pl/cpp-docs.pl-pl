@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: b7bcbd9229529ec00a3b778cafd5678d47af950c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630048"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034699"
 ---
 # <a name="id"></a>identyfikator
 
@@ -42,18 +42,18 @@ Zobacz przykład [możliwej do wiązania](bindable.md) przykład sposobu użycia
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[Atrybuty składowych danych](data-member-attributes.md)<br/>
+[Atrybuty elementów członkowskich danych](data-member-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [in](in-cpp.md)<br/>
 [out](out-cpp.md)

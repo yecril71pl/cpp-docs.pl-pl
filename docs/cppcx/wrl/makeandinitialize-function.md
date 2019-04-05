@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-ms.openlocfilehash: ba34b1fde546187e823a73a063bce9f69f4e7e89
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 14ae5117194748748ceecf97ac83fc8813bba2d3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787126"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037487"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize — Funkcja
 
@@ -79,13 +79,13 @@ Typ argumentu 9, który jest przekazywany do określonego środowiska uruchomien
 *arg1*<br/>
 Argument 1, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg2*<br/>
+*argument2*<br/>
 Argument 2, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
 *arg3*<br/>
 Argument 3, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*arg4*<br/>
+*Arg4*<br/>
 Argument 4, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
 *arg5*<br/>
@@ -117,6 +117,6 @@ Zobacz [jak: Składników biblioteki WRL bezpośrednie tworzenie wystąpień](ho
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details — Przestrzeń nazw](microsoft-wrl-details-namespace.md)

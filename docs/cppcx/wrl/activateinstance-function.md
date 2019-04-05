@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: 4525ee74bc63a9655e7f1142fb1b2b6812d82bb6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 43aa34153f0e71dd665090243ff2288bff704404
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787199"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029083"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance — Funkcja
 
@@ -37,7 +37,7 @@ Typ, aby aktywować.
 *activatableClassId*<br/>
 Nazwa Identyfikatora klasy, który definiuje parametru *T*.
 
-*instance*<br/>
+*wystąpienia*<br/>
 Po zakończeniu tej operacji, odwołanie do wystąpienia *T*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -50,6 +50,6 @@ S_OK w przypadku powodzenia; w przeciwnym razie błąd HRESULT, która wskazuje 
 
 **Namespace:** Windows::Foundation
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Windows::Foundation, przestrzeń nazw](windows-foundation-namespace.md)
+[Windows::Foundation — Przestrzeń nazw](windows-foundation-namespace.md)

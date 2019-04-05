@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 1a03216197462090f38d3bc2065fe227f0667919
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787342"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031277"
 ---
 # <a name="move-function"></a>Move — Funkcja
 
@@ -32,7 +32,7 @@ inline typename RemoveReference<T>::Type&& Move(
 *T*<br/>
 Typ argumentu.
 
-*ARG*<br/>
+*arg*<br/>
 Argument do przenoszenia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -51,6 +51,6 @@ Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rva
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details — Przestrzeń nazw](microsoft-wrl-details-namespace.md)

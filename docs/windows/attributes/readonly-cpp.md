@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: d174399b213bc6c8dbaeb0a01f3e457cfcf3a3e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7eea071b62130c65fbb46ebc8827fc2b428c4c0c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653040"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036919"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -53,14 +53,14 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty składowych danych](data-member-attributes.md)
+[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty elementów członkowskich danych](data-member-attributes.md)

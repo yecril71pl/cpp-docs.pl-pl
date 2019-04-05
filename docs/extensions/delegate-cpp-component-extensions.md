@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: eedaf81a52fc28de4a640de7345ff3486c5f4a3a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787390"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036950"
 ---
 # <a name="delegate--ccli-and-ccx"></a>Delegowanie (C + +/ CLI i C + +/ CX)
 
@@ -47,16 +47,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
+*dostęp*<br/>
 (opcjonalnie) Dostępność delegata, która może być **publicznych** (ustawienie domyślne) lub **prywatnej**. Prototyp funkcji również może być kwalifikowana za **const** lub **volatile** słów kluczowych.
 
 *zwracany typ*<br/>
 Zwracany typ prototypu funkcji.
 
-*delegate-type-identifier*<br/>
+*Delegat typu identyfikator*<br/>
 Nazwa typu zadeklarowana delegata.
 
-*parameters*<br/>
+*parametry*<br/>
 (Opcjonalnie) Typy i identyfikatory prototypu funkcji.
 
 ### <a name="remarks"></a>Uwagi
@@ -81,7 +81,7 @@ function_declaration
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
+*dostęp*<br/>
 (opcjonalnie) Dostępność delegata spoza zestawu może być publicznym lub prywatnym.  Wartość domyślna jest prywatny.  Wewnątrz klasy delegata może mieć żadnych ułatwień dostępu.
 
 *function_declaration*<br/>
@@ -119,9 +119,9 @@ Podczas tworzenia delegata funkcji statycznych lub globalnych, tylko jeden param
 
 Aby uzyskać więcej informacji na temat obiektów delegowanych zobacz
 
-- [Instrukcje: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Instrukcje: Definiowanie i korzystanie z obiektów delegowanych (C + +/ CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Delegaty ogólne (C++/CLI)](generic-delegates-visual-cpp.md)
+- [Delegaty ogólne (C + +/ CLI)](generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Wymagania
 
@@ -200,6 +200,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

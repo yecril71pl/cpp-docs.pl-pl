@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: 0feb258941993ff9776bb9f94f61a556d7d4caec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449845"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038281"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -25,7 +25,7 @@ Określa model wątkowości dla obiektu COM.
 
 ### <a name="parameters"></a>Parametry
 
-*Model*<br/>
+*model*<br/>
 (Opcjonalnie) Jeden z następujących Modele wątkowości:
 
 - `apartment` (wątkowości typu apartment)
@@ -58,14 +58,14 @@ Zobacz [licencjonowane](licensed.md) przykład użycie próbki **wątkowości**.
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|**coclass**|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

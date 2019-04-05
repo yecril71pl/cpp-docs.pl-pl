@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: 27e6190cbb5908d46150acb758e2b4d5efaff1bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611592"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033894"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -37,18 +37,18 @@ Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe *
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[Atrybuty składowych danych](data-member-attributes.md)<br/>
+[Atrybuty elementów członkowskich danych](data-member-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)

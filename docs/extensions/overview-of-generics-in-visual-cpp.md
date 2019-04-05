@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 0f265fcbbbaa708c4c7347bd8002c105b46060d7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787338"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034704"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Przegląd typów ogólnych w języku C + +/ CLI
 
@@ -130,6 +130,6 @@ Domyślne wystąpienie parametru typu można tworzyć przy użyciu `()` operator
 
 gdzie `T` jest parametrem typu w definicji klasy lub metody rodzajowe, inicjuje zmienną na wartość domyślną. Jeśli `T` jest klasą referencyjną, będzie on wskaźnikiem typu null; Jeśli `T` jest klasą wartość obiektu jest inicjowane od zera. Jest to nazywane *domyślny inicjator*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy ogólne](generics-cpp-component-extensions.md)

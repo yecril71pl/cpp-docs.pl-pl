@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775325"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038041"
 ---
 # <a name="visual-studio-projects---c"></a>Projektów programu Visual Studio — C++
 
@@ -60,21 +60,21 @@ Na liście błędów, możesz nacisnąć przycisk **F1** w przypadku wyróżnion
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)<br/>
+[Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji](working-with-project-properties.md)<br/>
 Jak używać stron właściwości i arkuszach właściwości, aby określić własne ustawienia projektu.
 
-[Odwoływanie się do bibliotek i składników podczas kompilacji](adding-references-in-visual-cpp-projects.md)<br/>
+[Dokumentacja bibliotek i składników w czasie kompilacji](adding-references-in-visual-cpp-projects.md)<br/>
 Jak dołączyć biblioteki i biblioteki dll, składniki COM i .NET w projekcie.
  
 [Porządkowanie plików wyjściowych projektu](how-to-organize-project-output-files-for-builds.md)<br/>
 Jak dostosować lokalizację plików wykonywalnych, utworzone w procesie kompilacji.
 
-[Niestandardowe kroki kompilacji i zdarzenia kompilacji](understanding-custom-build-steps-and-build-events.md)<br/>
+[Niestandardowych krokach budowania lub zdarzeniach kompilacji](understanding-custom-build-steps-and-build-events.md)<br/>
 Jak dodać dowolnego dowolnego polecenia do procesu kompilacji w wybranych punktach.
 
 [Tworzenie projektu z istniejącego kodu](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Jak utworzyć nowy projekt programu Visual Studio z kolekcją luźno plików źródłowych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)<br>
+[Projekty i systemów kompilacji](projects-and-build-systems-cpp.md)<br>

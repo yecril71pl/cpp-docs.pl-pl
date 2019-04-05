@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b0f780b122b147d633d5d7cd949da805d267f757
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58327584"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033378"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy plików utworzonych dla projektów języka C++ w programie Visual Studio
 
@@ -33,13 +33,13 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
 
 - [Program MFC lub źródło kontroli i pliki nagłówkowe](mfc-program-or-control-source-and-header-files.md)
 
-- [Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)
+- [Pliki prekompilowanego nagłówka](../creating-precompiled-header-files.md)
 
 - [Pliki zasobów](resource-files-cpp.md)
 
 - [Pliki pomocy (WinHelp)](help-files-winhelp.md)
 
-- [Pliki wskazówek](hint-files.md)
+- [Pliki wskazówki](hint-files.md)
 
 Podczas tworzenia projektu programu Visual Studio, tworzenia nowego rozwiązania, lub może być Dodawanie projektu do rozwiązania. Aplikacje inne niż prosta często są tworzone z użyciem wielu projektów w rozwiązaniu.
 
@@ -91,7 +91,7 @@ Pliki projektu są zorganizowane w foldery w Eksploratorze rozwiązań. Program 
 
 Po dodaniu elementu do projektu, należy dodać element do wszystkie konfiguracje dla tego projektu, niezależnie od tego, czy element jest możliwej do skompilowania. Na przykład jeśli masz projekt o nazwie MyProject, dodanie elementu dodaje go do obu Debug i Release konfiguracje projektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie i zarządzanie projektami Visual Studio C++](../creating-and-managing-visual-cpp-projects.md)<br>
 [Typy projektów C++ w programie Visual Studio](visual-cpp-project-types.md)<br>

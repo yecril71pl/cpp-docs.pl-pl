@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512692"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037649"
 ---
 # <a name="snapshot"></a>Migawka
 
@@ -37,13 +37,13 @@ Obsługa migawki opiera się na z biblioteki kursorów ODBC, która udostępnia 
 Migawki są dostępne tylko wtedy, gdy załadowano z biblioteki kursorów ODBC, kiedy `CDatabase` został skonstruowany obiekt lub sterownik ODBC, którego używasz obsługuje Kursory statyczne.
 
 > [!NOTE]
->  W przypadku niektórych sterowników ODBC migawek (Kursory statyczne) może nie być można aktualizować. Sprawdź dokumentację sterownik dla obsługiwanych typów kursora i typy współbieżności, które obsługują. Aby zagwarantować migawek można aktualizować, upewnij się, załadować z biblioteki kursorów do pamięci podczas tworzenia `CDatabase` obiektu. Aby uzyskać więcej informacji, zobacz [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+>  W przypadku niektórych sterowników ODBC migawek (Kursory statyczne) może nie być można aktualizować. Sprawdź dokumentację sterownik dla obsługiwanych typów kursora i typy współbieżności, które obsługują. Aby zagwarantować migawek można aktualizować, upewnij się, załadować z biblioteki kursorów do pamięci podczas tworzenia `CDatabase` obiektu. Aby uzyskać więcej informacji, zobacz [ODBC: ODBC — Biblioteka kursorów](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 >  Jeśli chcesz użyć migawek i zestawy dynamiczne, należy utworzyć je na dwóch różnych `CDatabase` obiektów (w dwóch różnych połączeń).
 
 Aby uzyskać więcej informacji na temat udostępniania migawek właściwości z wszystkich zestawów rekordów, zobacz [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby uzyskać więcej informacji na temat ODBC i migawki, łącznie z biblioteki kursorów ODBC, zobacz [ODBC](../../data/odbc/odbc-basics.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

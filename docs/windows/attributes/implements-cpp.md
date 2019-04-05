@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 519bbe0bdbef786c95ca3f6711b344b7a4f6b641
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329892"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033686"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -26,7 +26,7 @@ Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclas
 
 ### <a name="parameters"></a>Parametry
 
-*interfaces*<br/>
+*interfejsy*<br/>
 Lista interfejsów, które będą należeć do klasy coclass IDL rozdzielone przecinkami. Metoda skrót do określania jednego interfejsu jest **implementuje (** *nazwa_interfejsu* **)**.
 
 *dispinterfaces*<br/>
@@ -42,7 +42,7 @@ Domyślnie tylko interfejsów COM, które są podstawowej klasy `coclass` są do
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Tak|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -484,7 +484,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e7a58abc617fcfed69020bdace60758a6bf75337
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510568"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035935"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -30,7 +30,7 @@ Tworzy źródła zdarzenia.
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*— typ*<br/>
 Wyliczenie jednego z następujących wartości:
 
 - `native` dla niezarządzanego kodu C/C++ (wartość domyślna dla klasy niezarządzane).
@@ -64,14 +64,14 @@ Gdy *typu* jest `native`, można określić `decorate=false`, aby wskazać, że 
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|**Klasa coclass** po `type`=`com`|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [event_receiver](event-receiver.md)<br/>

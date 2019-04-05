@@ -3,12 +3,12 @@ title: Klasa wyliczenia (C + +/ CLI i C + +/ CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 0c93bc6b8994b8a02050466a1dcba5bc77fddd32
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787276"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037031"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>Klasa wyliczenia (C + +/ CLI i C + +/ CX)
 
@@ -34,13 +34,13 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
+*dostęp*<br/>
 Dostępność wyliczenia, które mogą być **publicznych** lub **prywatnej**.
 
-*enumeration-identifier*<br/>
+*Identyfikator wyliczenia*<br/>
 Nazwa wyliczenia.
 
-*underlying-type*<br/>
+*Typ podstawowy*<br/>
 (Opcjonalnie) Podstawowy typ wyliczenia.
 
 (Opcjonalnie. Tylko Windows Runtime) podstawowym typem wyliczenia, które mogą być **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, lub `uint64`.
@@ -82,16 +82,16 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
+*dostęp*<br/>
 Dostępność wyliczenia. Może być **publicznych** lub **prywatnej**.
 
 *enumerator-list*<br/>
 Rozdzielana przecinkami lista identyfikatorów (moduły wyliczające), która znajduje się w wyliczeniu.
 
-*Nazwa*<br/>
+*nazwa*<br/>
 Nazwa wyliczenia. Anonimowe wyliczenia zarządzane nie są dozwolone.
 
-*type*<br/>
+*— typ*<br/>
 (Opcjonalnie) Typ podstawowy elementu *identyfikatory*. Może to być dowolny typ skalarne, takie jak podpisane lub niepodpisane wersje **int**, **krótki**, lub **długie**.  **wartość logiczna** lub **char** jest również dozwolony.
 
 *var*<br/>
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

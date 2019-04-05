@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)'
+title: 'Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510009"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034485"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -25,7 +25,7 @@ Oprócz możliwość wybierania rekordów ze źródła danych zestawy rekordów 
 >  SQL, na którym Twoja `CRecordset` opiera się obiekt może mieć wpływ na updateability zestawu rekordów. Na przykład jeśli SQL zawiera instrukcję join lub **GROUP BY** klauzuli MFC ustawia updateability na wartość FALSE.
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 W tym temacie opisano:
 
@@ -35,13 +35,13 @@ W tym temacie opisano:
 
 [Zestaw rekordów: Jak działają funkcje AddNew, Edit i Usuń pracy (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) opisuje akcje te funkcje z punktu widzenia zestawu rekordów.
 
-[Zestaw rekordów: Więcej o aktualizacje (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) zakończeniu wątku aktualizacji zestawu rekordów, ponieważ wyjaśnia, jak transakcje wpływają na aktualizacje, jak zamknąć zestawu rekordów lub przewijanie wpływa na aktualizacje w toku i sposób interakcji aktualizacje za pomocą aktualizacji innych Liczba użytkowników.
+[Zestaw rekordów: Więcej o aktualizacje (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) kończy historię aktualizacji zestawu rekordów, wyjaśniające, jak transakcje wpływają na aktualizacje, jak zamknąć zestawu rekordów lub przewijanie wpływa na aktualizacje w toku i sposób interakcji aktualizacje za pomocą aktualizacji innych użytkowników.
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> Twoja rola w aktualizacji zestawu rekordów
 
 W poniższej tabeli przedstawiono Twojej roli przy użyciu zestawów rekordów, aby dodać, edytować lub usuwać rekordy oraz platformę jest dla Ciebie.
 
-### <a name="recordset-updating-you-and-the-framework"></a>Aktualizowanie zestawu rekordów: Możesz i struktury
+### <a name="recordset-updating-you-and-the-framework"></a>Aktualizowanie zestawu rekordów: Użytkownik i struktury
 
 |Można|Struktura|
 |---------|-------------------|
@@ -70,7 +70,7 @@ Gdy wywołujesz [działają funkcje AddNew](../../mfc/reference/crecordset-class
 
 [Zestawy dynamiczne](../../data/odbc/dynaset.md) Odśwież zawartość rekordu podczas przewijania w rekordzie. [Migawki](../../data/odbc/snapshot.md) są statyczne reprezentujących rekordy, więc zawartość rekordu nie są odświeżane, chyba że wywołujesz [Requery](../../mfc/reference/crecordset-class.md#requery). Aby korzystać z funkcji zestawów dynamicznych, musisz pracować ze sterownikiem ODBC, który jest zgodny z odpowiedniego poziomu obsługi interfejsu API ODBC. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [dynamiczny](../../data/odbc/dynaset.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: jak działają funkcje AddNew, Edit i Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Zestaw rekordów: Jak działają funkcje AddNew, edytowanie i usuwanie pracy (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

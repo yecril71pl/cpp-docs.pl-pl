@@ -5,12 +5,12 @@ helpviewer_keywords:
 - record views, classes
 - record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-ms.openlocfilehash: 2feda8f8f446e02a5056287c656707ea038f5387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f8de956065571109c988bd2940d21822bba7cfd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461155"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029878"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>Funkcje klas widoków rekordów (dostęp do danych MFC)
 
@@ -22,9 +22,9 @@ Możecie programowania opartego na formularzach dostępu do danych za pomocą kl
 
 - Po użytkownik przejdzie do innego rekordu aktualizacji zmienia się w bieżącym rekordzie.
 
-Aby uzyskać więcej informacji o nawigacji, zobacz [widoków rekordów: Obsługa nawigacji w widoku rekordu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat nawigacji zobacz [widoków rekordów: Obsługa nawigacji w widoku rekordu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Widoki rekordów (dostęp do danych MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Lista sterowników ODBC](../data/odbc/odbc-driver-list.md)

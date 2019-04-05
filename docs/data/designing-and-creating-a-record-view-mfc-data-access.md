@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: b97ac5e61530742280dd8ee2183ec54229fb4441
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613450"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035546"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Projektowanie i tworzenie widoku rekordu (dostęp do danych MFC)
 
@@ -40,7 +40,7 @@ W poniższych tematach opisano korzystanie z widoków rekordów dodatkowe szczeg
 
 - [Widoki rekordów: Wypełnianie pola listy z drugiego zestawu rekordów](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Widoki rekordów (dostęp do danych MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Zestaw rekordów (ODBC)](../data/odbc/recordset-odbc.md)<br/>

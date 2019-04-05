@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: d16087722752b7bbdabd37410908c7ea2ae18ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435259"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034498"
 ---
 # <a name="recordset-odbc"></a>Zestaw rekordów (ODBC)
 
@@ -69,7 +69,7 @@ Istnieją dwa typy jednostki zestawów rekordów: [migawek](../../data/odbc/snap
 
 ##  <a name="_core_your_recordsets"></a> Zestawach rekordów
 
-Dla każdego distinct tabeli, widoku lub procedury składowanej, który chcesz uzyskać dostęp do zazwyczaj zdefiniować klasę pochodną `CRecordset`. (Wyjątek stanowi połączenie bazy danych, w którym jeden zestaw rekordów reprezentuje kolumn z co najmniej dwóch tabel). Gdy klasa wyprowadzona z zestawu rekordów, możesz włączyć mechanizm wymiany (RFX) pola rekordów lub mechanizm wymiany (zbiorcze RFX) pola rekordów zbiorczego, które są podobne do mechanizm wymiany (DDX) danych w oknie dialogowym. RFX i zbiorcze RFX upraszczają transfer danych ze źródła danych do rekordów; RFX dodatkowo przesyła dane z rekordów w źródle danych. Aby uzyskać więcej informacji, zobacz [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md) i [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Dla każdego distinct tabeli, widoku lub procedury składowanej, który chcesz uzyskać dostęp do zazwyczaj zdefiniować klasę pochodną `CRecordset`. (Wyjątek stanowi połączenie bazy danych, w którym jeden zestaw rekordów reprezentuje kolumn z co najmniej dwóch tabel). Gdy klasa wyprowadzona z zestawu rekordów, możesz włączyć mechanizm wymiany (RFX) pola rekordów lub mechanizm wymiany (zbiorcze RFX) pola rekordów zbiorczego, które są podobne do mechanizm wymiany (DDX) danych w oknie dialogowym. RFX i zbiorcze RFX upraszczają transfer danych ze źródła danych do rekordów; RFX dodatkowo przesyła dane z rekordów w źródle danych. Aby uzyskać więcej informacji, zobacz [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md) i [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Obiekty zestawów rekordów daje dostęp do wszystkich wybranych rekordów. Przewiń do wielu rekordów przy użyciu `CRecordset` funkcjach Członkowskich, takich jak `MoveNext` i `MovePrev`. W tym samym czasie obiektem rekordem reprezentuje tylko jeden z wybranych rekordów bieżącego rekordu. Pola bieżącego rekordu można sprawdzić przez zadeklarowanie rekordów zmienne składowe klasy, które odnoszą się do kolumn w tabeli lub rekordy, które są wynikiem zapytań bazy danych. Aby uzyskać informacji na temat elementów członkowskich danych zestawu rekordów, zobacz [zestaw rekordów: Architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
 
@@ -77,51 +77,51 @@ W poniższych tematach opisano szczegóły przy użyciu obiektów zestawu rekord
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Tematy dotyczące sposobu otwierania, odczytywania i zamykanie zestawów rekordów
 
-- [Zestaw rekordów: architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [Zestaw rekordów: Architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [Zestaw rekordów: Deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+- [Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-- [Zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
+- [Zestaw rekordów: Przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
-- [Zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
+- [Zestaw rekordów: Zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- [Zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+- [Zestaw rekordów: Filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [Zestaw rekordów: sortowanie rekordów (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [Zestaw rekordów: Sortowanie rekordów (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [Zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [Zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Tematy dotyczące sposobu modyfikowania zestawów rekordów
 
-- [Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [Zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [Zestaw rekordów: blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [Zestaw rekordów: Blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [Zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>Tematy dotyczące nieco bardziej zaawansowane techniki
 
-- [Zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [Zestaw rekordów: Wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [Zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [Zestaw rekordów: Deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [Zestaw rekordów: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [Zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [Zestaw rekordów: Pobieranie rekordów zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [Zestaw rekordów: praca z dużymi elementami danych (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [Zestaw rekordów: Praca z dużymi elementami danych (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [Zestaw rekordów: uzyskiwanie sum i innych wyników agregacji (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [Zestaw rekordów: Uzyskiwanie sum i innych wyników agregacji (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>Tematy dotyczące informacji na temat działania zestawów rekordów
 
-- [Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [Zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Klient MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328808"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038664"
 ---
 # <a name="resource-editors-c"></a>Edytory zasobów (C++)
 
@@ -45,7 +45,7 @@ Odpowiedniego edytora jest otwierany automatycznie podczas tworzenia lub otwiera
 |[Edytor obrazów](../windows/image-editor-for-icons.md)|Mapy bitowe, ikony, kursorów i inne pliki obrazów w projektach języka Visual C++, Visual Basic lub Visual C#.|
 |[Edytor menu](../windows/menu-editor.md)|Menu zasobów w projektach języka Visual C++.|
 |[Edytor Ribbon](../mfc/ribbon-designer-mfc.md)|Zasoby wstążki w projektach MFC.|
-|[Edytor ciągów](../windows/string-editor.md)|Ciąg tabel z projektów Visual C++.|
+|[Edytor ciągów znaków](../windows/string-editor.md)|Ciąg tabel z projektów Visual C++.|
 |[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi z projektów Visual C++. **Edytor paska narzędzi** jest częścią **edytora obrazów**.|
 |[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w projektach języka Visual C++.|
 
@@ -126,8 +126,8 @@ Poniższe zasoby nie przedstawiają wyświetlania podglądu: Akcelerator, inform
 
 Brak
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z plikami zasobów](../windows/working-with-resource-files.md)<br/>
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
-[Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Identyfikatory zasobów (symbolom)](../windows/symbols-resource-identifiers.md)<br/>

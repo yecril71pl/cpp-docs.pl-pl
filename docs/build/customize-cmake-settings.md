@@ -3,12 +3,12 @@ title: Dostosowywanie ustawień kompilacji CMake w programie Visual Studio
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328301"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037526"
 ---
 # <a name="customize-cmake-build-settings"></a>Dostosowywanie ustawień kompilacji CMake
 
@@ -234,11 +234,11 @@ W następnym przykładzie konfiguracja debugowania x86 definiuje wartość dla *
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Projekty CMake w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>
-[Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Konfigurowanie sesji debugowania narzędzia CMake](configure-cmake-debugging-sessions.md)<br/>
+[Podłącz do komputera zdalnego systemu Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Konfigurowanie narzędzia CMake sesjami debugowania](configure-cmake-debugging-sessions.md)<br/>
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane](cmake-predefined-configuration-reference.md)<br/>

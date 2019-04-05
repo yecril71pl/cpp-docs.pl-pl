@@ -8,16 +8,16 @@ helpviewer_keywords:
 - rep insb instruction
 - __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
-ms.openlocfilehash: 494c57625bc6f93e09817171476267ff5fb27c3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e515c6452d18ca022707fa2f9e36e2045523ccd5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556783"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038586"
 ---
 # <a name="inbytestring"></a>__inbytestring
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczytuje dane z określonego portu przy użyciu `rep insb` instrukcji.
 
@@ -39,7 +39,7 @@ void __inbytestring(
 *Bufor*<br/>
 [out] Dane odczytywane z portu są zapisywane w tym miejscu.
 
-*Liczba*<br/>
+*Licznik*<br/>
 [in] Liczba bajtów danych do odczytu.
 
 ## <a name="requirements"></a>Wymagania
@@ -54,8 +54,8 @@ void __inbytestring(
 
 Ta procedura jest dostępna wyłącznie jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [MFC]
 - data [MFC], displaying in a form
 ms.assetid: c56185c4-12cb-40b1-b499-02b29ea83e3a
-ms.openlocfilehash: 1694d9cbc770e02c550891fc83c1cc0a9f64824a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50c433e701fbae2e607d79d7abb34efe8eba5b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517796"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033751"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Wyświetlanie danych w formularzu i operowanie nimi
 
@@ -24,6 +24,6 @@ Można użyć Kreatora aplikacji MFC lub **Dodaj klasę** (zgodnie z opisem w [D
 
 Widoków rekordów i rekordów jego są niszczone, po zamknięciu dokumentu. Aby uzyskać więcej informacji na temat widoków rekordów, zobacz [widoków rekordów](../../data/record-views-mfc-data-access.md). Aby uzyskać więcej informacji na temat RFX zobacz [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 77344150f5c0d969c1636ac146138242d96ee39f
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 52c4313de5017b97a193be1afebc020c9896fe6a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556559"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035653"
 ---
 # <a name="supporting-notifications"></a>Obsługa powiadomień
 
@@ -22,7 +22,7 @@ ms.locfileid: "51556559"
 
 Aby zaimplementować powiadomienia, klasa dostawcy musi dziedziczyć z [irowsetnotifycp —](../../data/oledb/irowsetnotifycp-class.md) i [interfejsy IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
 
-`IRowsetNotifyCP` implementuje witryny dostawcy interfejsu punktu połączenia [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy.
+`IRowsetNotifyCP` Implementuje witryny dostawcy interfejsu punktu połączenia [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` Implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy.
 
 Należy również wdrożyć i zarejestrować `IRowsetNotify` na odbiorcę (znany także jako ujścia) za pomocą [irowsetnotifyimpl —](../../data/oledb/irowsetnotifyimpl-class.md) , dzięki czemu użytkownik może obsługiwać powiadomienia. Aby uzyskać informacji na temat implementowania interfejsu punktu połączenia na użytkownika, zobacz [odbieranie powiadomień](../../data/oledb/receiving-notifications.md).
 
@@ -101,6 +101,6 @@ Musisz również dodać następujące właściwości dostawcy. Wystarczy dodać 
 
 Większość implementacji powiadomienia już jest osadzony w szablony OLE DB Provider. Jeśli nie dodasz `IRowsetNotifyCP` na swój łańcuch dziedziczenia kompilator usuwa ten kod z strumienia kompilacji, dzięki czemu mniejszy rozmiar kodu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 0a13fb05f0e6e8582d5e476eb889e307458f528d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767304"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037740"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 
@@ -41,7 +41,7 @@ Aby sprzedawać i lokalizowania zasobów w aplikacjach zarządzanych, zobacz [Gl
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 Opisuje pliki zasobów i sposoby ich używania w aplikacjach pulpitu Windows. Zawiera również łącza do artykułów opisujących sposób korzystania z plików zasobów.
 
-[Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Identyfikatory zasobów (symbolom)](../windows/symbols-resource-identifiers.md)<br/>
 Opisuje symboli i zawiera informacje na temat korzystania z **symboli zasobów** okno dialogowe, aby zarządzać symbole w swoich projektach.
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
@@ -55,7 +55,7 @@ Oferuje łącza do dokumentacji języka Visual C++.
 [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)<br/>
 Zawiera łącza do informacji na temat używania zestawu dokumentacji, kontaktując się z pomocą techniczną i wykorzystujących funkcje ułatwień dostępu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menu i inne zasoby](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

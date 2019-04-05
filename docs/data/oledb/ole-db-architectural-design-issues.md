@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: 3e0175c6b554c319a662ffd726023caf7176d9fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461974"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037675"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Kwestie projektowania architektonicznego OLE DB
 
@@ -33,11 +33,11 @@ Na przykład, jeśli chcesz zaktualizować dane w zestawie wierszy, ale nie pami
 
 Biorąc pod uwagę możliwe kombinacje technologii (na przykład ze składnikami OLE DB przy użyciu składników ADO i migracja kodu ODBC do OLE DB), obejmujące wszystkich sytuacjach wykracza poza zakres z dokumentacji języka Visual C++. Wiele artykułów obejmujących różne scenariusze są jednak dostępne w następujących witrynach sieci web firmy Microsoft:
 
-- [Pomoc i obsługa techniczna firmy Microsoft](https://support.microsoft.com/)
+- [I pomocy technicznej firmy Microsoft](https://support.microsoft.com/)
 
 - [Omówienie artykuły techniczne dotyczące dostępu do danych firmy Microsoft](https://msdn.microsoft.com/library/ms810811.aspx)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Omówienie programowania OLE DB](../../data/oledb/ole-db-programming-overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 7963d820848704921c40d5dc95a6f6d9c766d2be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588204"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030506"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Wypełnianie pola listy z drugiego zestawu rekordów (dostęp do danych MFC)
 
@@ -68,7 +68,7 @@ Ta funkcja korzysta z drugiego zestawu rekordów `m_courseSet`, która zawiera r
 
 Funkcja pobiera `m_courseSet` z dokumentu i otwiera go. A następnie opróżnia je `m_ctlCourseList` i przewija `m_courseSet`. Dla każdego rekordu, funkcja wywołuje pola kombi `AddString` funkcja elementu członkowskiego, aby dodać wartości Identyfikatora kurs z rekordu. Na koniec kod ustawia kombi pola wyboru.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Widoki rekordów (dostęp do danych MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Lista sterowników ODBC](../data/odbc/odbc-driver-list.md)

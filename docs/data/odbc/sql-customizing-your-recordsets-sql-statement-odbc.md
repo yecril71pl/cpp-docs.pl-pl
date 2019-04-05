@@ -1,5 +1,5 @@
 ---
-title: 'SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)'
+title: 'SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, SQL statements
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: 84ce18ccbf3cc59dd9c94826366595d2f128784f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eabaab019ee94b0c5617573c534d920ec710e9b2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459934"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036198"
 ---
-# <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)
+# <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)
 
 W tym temacie opisano:
 
@@ -56,7 +56,7 @@ Aby zastąpić domyślne **wybierz** instrukcji, przekazać ciąg zawierający p
 > [!NOTE]
 >  Jeśli używasz ciągów literałów w filtry (lub innymi częściami instrukcji SQL), może być konieczne "oferta" (należy ująć w określonych ograniczników) takie ciągi z prefiksem literału specyficznych dla systemu DBMS i literał sufiks znak (lub znaki).
 
-W zależności od systemu DBMS, mogą wystąpić specjalnych wymagań składni dla operacji, takich jak sprzężenia zewnętrzne. Aby uzyskać te informacje ze sterownika systemu DBMS, należy użyć funkcji ODBC. Na przykład wywołać `::SQLGetTypeInfo` dla określonego typu danych, takich jak `SQL_VARCHAR`, aby zażądać LITERAL_PREFIX do LITERAL_SUFFIX znaków. Jeśli piszesz kod niezależny od bazy danych, zobacz [Gramatyka języka SQL C: dodatku](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) w [odwołania programisty ODBC](/sql/odbc/reference/odbc-programmer-s-reference) uzyskać szczegółowe informacje o składni.
+W zależności od systemu DBMS, mogą wystąpić specjalnych wymagań składni dla operacji, takich jak sprzężenia zewnętrzne. Aby uzyskać te informacje ze sterownika systemu DBMS, należy użyć funkcji ODBC. Na przykład wywołać `::SQLGetTypeInfo` dla określonego typu danych, takich jak `SQL_VARCHAR`, aby zażądać LITERAL_PREFIX do LITERAL_SUFFIX znaków. Jeśli piszesz kod niezależny od bazy danych, zobacz [dodatek C: Gramatyka języka SQL](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) w [odwołania programisty ODBC](/sql/odbc/reference/odbc-programmer-s-reference) uzyskać szczegółowe informacje o składni.
 
 Obiekty zestawów rekordów tworzy instrukcję SQL, która używa do wybierania rekordów, chyba że przyjmie niestandardową instrukcję SQL. Jak to zrobić zależy głównie od wartości przekazanej *lpszSQL* parametru `Open` funkcja elementu członkowskiego.
 
@@ -144,11 +144,11 @@ Określa listy kolumn są ręcznie zamiast polegać na RFX utworzyć automatyczn
 
    Na przykład, warto uwzględnić nowe kolumny, które po aplikacji została dystrybuowana do tabel bazy danych dodane klienta Twojej aplikacji. Należy dodać te dodatkowe pola danych elementów członkowskich, które nie były znane w czasie tej klasy jest zadeklarowana za pomocą kreatora.
 
-   Twoja lista kolumn powinna odpowiadać nazwy kolumn i typy w tej samej kolejności wymienionych w `DoFieldExchange`, a następnie nazwy ręcznie powiązanych kolumn. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dynamiczne powiązanie danych kolumn (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+   Twoja lista kolumn powinna odpowiadać nazwy kolumn i typy w tej samej kolejności wymienionych w `DoFieldExchange`, a następnie nazwy ręcznie powiązanych kolumn. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 - Chcesz dołączyć do tabel, określając wielu tabel w **FROM** klauzuli.
 
-   Aby uzyskać informacje i obejrzeć przykład, zobacz [zestaw rekordów: wykonywanie Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Aby uzyskać informacje i obejrzeć przykład, zobacz [zestaw rekordów: Wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
 ### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>LpszSQL przypadku 4 = SELECT / z oraz gdzie i/lub ORDER BY
 
@@ -158,9 +158,9 @@ Określasz wszystko: Lista kolumn (wywołania RFX w oparciu o `DoFieldExchange`)
 
 Jeśli musisz wywołać wstępnie zdefiniowanego zapytania (np. procedurę składowaną w bazie danych programu Microsoft SQL Server), należy napisać **WYWOŁANIA** instrukcji w ciągu, są przekazywane do *lpszSQL*. Kreatory nie obsługują deklarowanie klasy dla wstępnie zdefiniowanego zapytania podczas wywoływania zestawu rekordów. Nie wszystkie wstępnie zdefiniowanych zapytań zwracają rekordy.
 
-Jeśli wstępnie zdefiniowane zapytanie nie zwraca rekordy, można użyć `CDatabase` funkcja elementu członkowskiego `ExecuteSQL` bezpośrednio. Dla wstępnie zdefiniowanego zapytania, które zwracają rekordy, należy również ręcznie napisać wywołuje RFX `DoFieldExchange` dla każdej kolumny zwraca procedury. Wywołania RFX musi znajdować się w tej samej kolejności i zwracać ten sam typ jako wstępnie zdefiniowanego zapytania. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+Jeśli wstępnie zdefiniowane zapytanie nie zwraca rekordy, można użyć `CDatabase` funkcja elementu członkowskiego `ExecuteSQL` bezpośrednio. Dla wstępnie zdefiniowanego zapytania, które zwracają rekordy, należy również ręcznie napisać wywołuje RFX `DoFieldExchange` dla każdej kolumny zwraca procedury. Wywołania RFX musi znajdować się w tej samej kolejności i zwracać ten sam typ jako wstępnie zdefiniowanego zapytania. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[SQL: typy danych SQL i C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
-[SQL: wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL: Program SQL oraz typów danych języka C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
+[SQL: Wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: dff36dfb2b898c6a4df65492e2d9386c748f049b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534618"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035666"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor — Klasa
 
@@ -40,7 +40,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 |||
 |-|-|
-|[GetString](#getstring)|Pobiera dane określonej kolumny jako ciąg.|
+|[GetString —](#getstring)|Pobiera dane określonej kolumny jako ciąg.|
 |[Setstring —](#setstring)|Ustawia dane określonej kolumny jako ciąg.|
 
 ## <a name="remarks"></a>Uwagi
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Wskaźnik do ciągu znaków, który zawiera nazwę kolumny.
 
-*Dane*<br/>
+*dane*<br/>
 [in] Wskaźnik do danych ciągu, są zapisywane w określonej kolumnie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -123,14 +123,14 @@ Drugi Zastąp formularz przyjmuje nazwę kolumny jako ciąg ANSI i trzeci Zastą
 
 Jeśli _SECURE_ATL jest zdefiniowana ma wartość różną od zera, jeśli zostanie wygenerowany błąd asercji czasu wykonywania dane wejściowe *danych* ciąg jest dłuższy niż maksymalna dopuszczalna długość kolumny danych występujące w odwołaniu. W przeciwnym razie ciąg wejściowy zostanie obcięty, jeśli przekracza maksymalną dozwoloną długość.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
-[CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicStringAccessorA, klasa](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
-[CDynamicStringAccessorW, klasa](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
-[CXMLAccessor, klasa](../../data/oledb/cxmlaccessor-class.md)
+[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasa CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor — Klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor — Klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
+[CDynamicAccessor — Klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessorA — Klasa](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
+[CDynamicStringAccessorW — Klasa](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
+[Klasa CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893902"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037965"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
@@ -559,6 +559,6 @@ Rzeczywiście, Oto kompletny kod dla działającą aplikację.
 
 Gratulacje! W tym przewodniku zakończeniu i wbudowane tradycyjnych aplikacji pulpitu Windows.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)

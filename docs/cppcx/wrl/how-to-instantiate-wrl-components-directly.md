@@ -3,12 +3,12 @@ title: 'Instrukcje: Bezpośrednie tworzenie wystąpień składników biblioteki 
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-ms.openlocfilehash: 3caa29125de0de8cbe73379b8d7244206a5f9229
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 3f622a79aed6a1e42feccb92e1a01b3bc1277151
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786820"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035747"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Instrukcje: Bezpośrednie tworzenie wystąpień składników biblioteki WRL
 
@@ -45,8 +45,8 @@ Ten dokument zawiera dwa przykłady. W pierwszym przykładzie użyto funkcji `Ma
 
    [!code-cpp[wrl-logger-makeandinitialize#2](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
-[Microsoft::wrl:: Make](make-function.md)<br/>
+[Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[Microsoft::WRL::Make](make-function.md)<br/>
 [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)

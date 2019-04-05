@@ -6,12 +6,12 @@ helpviewer_keywords:
 - transactions [C++]
 - databases [C++], transactions
 ms.assetid: f80afbfe-1517-4fec-8870-9ffc70a58b05
-ms.openlocfilehash: d986250205f9d45c83d88811527e9561b3258b3d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3dc5b9319a8745ddb446ae7dbe895bfcd446c37
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552561"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037610"
 ---
 # <a name="transactions--mfc-data-access"></a>Transakcje (dostęp do danych MFC)
 
@@ -35,6 +35,6 @@ Może obsługiwać transakcji w OLE DB (zobacz [Obsługa transakcji w OLE DB](..
 
 Transakcja rozproszona jest transakcji, która aktualizuje rozproszonej dane, oznacza to, że dane na więcej niż jednym komputerze sieciowym. Jeśli chcesz obsługiwać transakcji za pośrednictwem systemu rozproszonego, należy użyć programu ADO.NET, a nie Obsługa transakcji w OLE DB.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie (MFC/ATL) dostępu do danych](../data/data-access-programming-mfc-atl.md)

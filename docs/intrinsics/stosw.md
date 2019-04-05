@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: 4bfdf2191a4bf88ce6d061e1729e194236564330
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326423"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035760"
 ---
 # <a name="stosw"></a>__stosw
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje instrukcję ciągu magazynu (`rep stosw`).
 
@@ -39,7 +39,7 @@ void __stosw(
 *Dane*<br/>
 [in] Dane, które mają być przechowywane.
 
-*Liczba*<br/>
+*Licznik*<br/>
 [in] Długość bloku słowa do zapisu.
 
 ## <a name="requirements"></a>Wymagania
@@ -80,8 +80,8 @@ int main()
 0 128 128 0
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

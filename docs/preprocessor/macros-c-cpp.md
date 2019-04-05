@@ -6,12 +6,12 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656303"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032183"
 ---
 # <a name="macros-cc"></a>Makra (C/C++)
 Wstępne przetwarzanie rozszerza makra we wszystkich wierszach, które nie są dyrektywami preprocesora (wiersze, które nie mają **#** jako pierwszy znak inny niż biały) w części niektórych dyrektyw, które nie są pomijane jako część kompilacja warunkowa. Dyrektywy „kompilacji warunkowej” pozwalają na pomijanie kompilacji części pliku źródłowego przez testowanie wyrażenia stałego lub identyfikatora służącego do określania bloków tekstu, które są przekazywane do kompilatora i bloków tekstu, które są usuwane z pliku źródłowego podczas przetwarzania wstępnego.
@@ -34,6 +34,6 @@ Aby uzyskać więcej informacji, zobacz,
 
 - [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Odwołania preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

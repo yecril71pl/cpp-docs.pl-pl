@@ -55,16 +55,16 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: 8cb4c4a5f1b8048995684e3f5c630acecc74000b
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627503"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039179"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd — funkcje wewnętrzne
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [_interlockedexchangeadd — funkcje wewnętrzne](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) funkcji.
 
@@ -189,10 +189,10 @@ Te procedury są dostępne tylko jako funkcje wewnętrzne. W związku z tym, są
 
 Przykład sposobu użycia `_InterlockedExchangeAdd`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

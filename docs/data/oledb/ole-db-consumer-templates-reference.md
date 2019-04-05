@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: a476fefa4338e73bf6eaf70fa16a5328a427b56d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649244"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032274"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Szablony konsumentów OLE DB — kompendium
 
@@ -45,7 +45,7 @@ Reprezentuje sesję dostępu do pojedynczej bazy danych. Co najmniej jednej sesj
 [CAccessor](../../data/oledb/caccessor-class.md)<br/>
 Używane dla rekordów, które są statycznie powiązane ze źródłem danych. Klasa metody dostępu jest używana, gdy wiesz struktury źródła danych.
 
-[Caccessorbase —](../../data/oledb/caccessorbase-class.md)<br/>
+[CAccessorBase](../../data/oledb/caccessorbase-class.md)<br/>
 Klasa bazowa dla wszystkich klas dostępu.
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
@@ -83,7 +83,7 @@ Umożliwia dostęp do elementów zestawu wierszy za pomocą składni tablicy.
 [CBulkRowset](../../data/oledb/cbulkrowset-class.md)<br/>
 Używane do pobierania i manipulowanie wierszami w trybie zbiorczym pobierając wielu dojść do wierszy za pomocą jednego wywołania.
 
-[CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
+[Cnorowset —](../../data/oledb/cnorowset-class.md)<br/>
 Może służyć jako argument szablonu, jeśli polecenie nie zwraca zestawu wierszy.
 
 [cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
@@ -95,7 +95,7 @@ Używane do manipulowania, ustawiania i pobierania zestawu wierszy danych.
 [CStreamRowset](../../data/oledb/cstreamrowset-class.md)<br/>
 Zwraca `ISequentialStream` obiektu zamiast zestawu wierszy; następnie użyć `Read` metodę, aby pobrać dane w formacie XML. (SQL Server 2000 jest formatowanie; należy pamiętać, że ta funkcja działa z programem SQL Server 2000 tylko).
 
-[Irowsetnotifyimpl —](../../data/oledb/irowsetnotifyimpl-class.md)<br/>
+[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)<br/>
 Dostarcza implementację zastępczy dla `IRowsetNotify`, za pomocą funkcji puste dla `IRowsetNotify` metody `OnFieldChange`, `OnRowChange`, i `OnRowsetChange`.
 
 [Klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
@@ -116,7 +116,7 @@ Używane jako argument szablonu dla klasy szablonów, taką jak `CCommand` i `CT
 [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)<br/>
 Używane jako argument szablonu dla `CCommand` szablonu, jeśli chcesz, aby polecenia do obsługi pojedynczego zestawu wierszy. `CNoMultipleResults` jest wartością domyślną dla argumentu szablonu.
 
-[CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
+[Cnorowset —](../../data/oledb/cnorowset-class.md)<br/>
 Używane jako argument szablonu dla `CCommand` lub `CTable` Jeśli polecenie lub tabeli nie zwraca zestawu wierszy.
 
 [CTable](../../data/oledb/ctable-class.md)<br/>
@@ -124,7 +124,7 @@ Umożliwia dostęp do prostego zestawu wierszy bez parametrów.
 
 ## <a name="property-classes"></a>Właściwości klasy
 
-[CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
+[Cdbpropidset —](../../data/oledb/cdbpropidset-class.md)<br/>
 Używany do przekazania tablicę identyfikatorów właściwości, dla których użytkownik chce, aby informacje o właściwościach. Właściwości należą do zestawu jednej właściwości.
 
 [CDBPropSet](../../data/oledb/cdbpropset-class.md)<br/>
@@ -137,10 +137,10 @@ Używane jako indeks do uzyskiwania dostępu do danych w zestawie wierszy.
 
 ## <a name="error-class"></a>Klasa błędów
 
-[CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)<br/>
+[Cdberrorinfo —](../../data/oledb/cdberrorinfo-class.md)<br/>
 Używany do pobierania informacji o błędzie OLE DB.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Szablony dostawców OLE DB — dokumentacja](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Szablony dostawców OLE DB — kompendium](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Szablony OLE DB](../../data/oledb/ole-db-templates.md)

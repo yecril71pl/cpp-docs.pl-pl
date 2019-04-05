@@ -8,12 +8,12 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-ms.openlocfilehash: 3adb7ab30b445ab3223246d247be006d24475afa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6061fe77960aa64e2dcb39db05897ef0e7fb5f2e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534605"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039887"
 ---
 # <a name="once"></a>once
 Określa, że plik zostanie uwzględniony (otwarte) tylko raz przez kompilator podczas kompilowania pliku kodu źródłowego.
@@ -54,6 +54,6 @@ Firma Microsoft zaleca `#include guard` idiom, gdy kod musi być przenośny do k
 
 Należy zachować ostrożność nie należy używać `#pragma once` lub `#include guard` idiom w plikach nagłówkowych, opracowane w celu uwzględnienia wiele razy przy użyciu symboli preprocesora Aby kontrolować ich skutki. Na przykład w tym projekcie zobacz \<assert.h > pliku nagłówka. Również należy uważać, aby zarządzać ścieżki, aby uniknąć tworzenia wielu ścieżek do załączone pliki, które może zniweczyć cały dołączanych optymalizacji dla obu obejmują wiele `#include guard`s i `#pragma once`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

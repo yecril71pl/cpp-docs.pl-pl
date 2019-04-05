@@ -52,12 +52,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 0ee4fc505bb3e22046f1b0c197f14326e5a50d7d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423901"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037721"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl — Klasa
 
@@ -87,7 +87,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *T*<br/>
 Klasa pochodząca z `IRowsetUpdateImpl`.
 
-*Storage*<br/>
+*Magazyn*<br/>
 Rekordzie użytkownika.
 
 *UpdateArray*<br/>
@@ -117,9 +117,9 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
 |-|-|
 |[GetOriginalData](#getoriginaldata)|Pobiera dane ostatnio przekazane lub uzyskany ze źródła danych, ignorowanie oczekujące zmiany.|
 |[GetPendingRows](#getpendingrows)|Zwraca listę wierszy z oczekującymi zmianami.|
-|[GetRowStatus](#getrowstatus)|Zwraca stan określonych wierszy.|
+|[Getrowstatus —](#getrowstatus)|Zwraca stan określonych wierszy.|
 |[Cofnij](#undo)|Cofa zmiany wiersza od czasu ostatniego pobrania lub aktualizacji.|
-|[Aktualizacja](#update)|Przesyła wszelkie zmiany wprowadzone do wiersza od czasu ostatniego pobrania lub aktualizacji.|
+|[Aktualizowanie](#update)|Przesyła wszelkie zmiany wprowadzone do wiersza od czasu ostatniego pobrania lub aktualizacji.|
 
 ### <a name="implementation-methods-callback"></a>Metody wdrażania (wywołanie zwrotne)
 
@@ -297,7 +297,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 #### <a name="parameters"></a>Parametry
 
-*status*<br/>
+*stan*<br/>
 [in] Stan Oczekujące operacje na wierszach.
 
 *hRowUpdate*<br/>
@@ -332,7 +332,7 @@ Dojście do wierszy danych.
 *pData*<br/>
 Wskaźnik do danych w pamięci podręcznej. Dane są typu *magazynu* (klasy rekordów użytkowników). Zobacz *magazynu* argumentem szablonu w [irowsetupdateimpl — klasa](../../data/oledb/irowsetupdateimpl-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

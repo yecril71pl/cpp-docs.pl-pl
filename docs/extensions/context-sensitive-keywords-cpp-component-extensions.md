@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 488a047a51547eff09b519afc453138b2e386e73
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: ca289a7ebd4578d5c67bb5d3e403d2a9a2756520
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787251"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038671"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Kontekstowe słowa kluczowe (C + +/ CLI i C + +/ CX)
 
@@ -28,7 +28,7 @@ Oto lista kontekstowych słów kluczowych:
 
 - [delegate](delegate-cpp-component-extensions.md)
 
-- [event](event-cpp-component-extensions.md)
+- [zdarzenie](event-cpp-component-extensions.md)
 
 - [finally](../dotnet/finally.md)
 
@@ -38,11 +38,11 @@ Oto lista kontekstowych słów kluczowych:
 
 - `internal`
 
-- [literał](literal-cpp-component-extensions.md)
+- [literal](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
-- [właściwość](property-cpp-component-extensions.md)
+- [property](property-cpp-component-extensions.md)
 
 - [sealed](sealed-cpp-component-extensions.md)
 
@@ -99,6 +99,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

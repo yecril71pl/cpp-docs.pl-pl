@@ -1,19 +1,19 @@
 ---
-title: Błąd kompilatora C3495
+title: Compiler Error C3495
 ms.date: 11/04/2016
 f1_keywords:
 - C3495
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-ms.openlocfilehash: 81fcbb8102d5df8059aad00772b7ee0cc07c01d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e387fe77c521a4f25ba67205f1fbd552397e272
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452471"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035825"
 ---
-# <a name="compiler-error-c3495"></a>Błąd kompilatora C3495
+# <a name="compiler-error-c3495"></a>Compiler Error C3495
 
 "var": przechwytywania lambda musi mieć automatycznym okresem magazynu
 
@@ -37,7 +37,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)
 

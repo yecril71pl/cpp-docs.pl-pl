@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823853"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035601"
 ---
 # <a name="create-a-c-makefile-project"></a>Tworzenie projektu pliku reguł programu make w języku C++
 
@@ -84,10 +84,10 @@ Funkcja IntelliSense kończy się niepowodzeniem w przypadku projektów plików 
 
 Przy następnym otwarciu projektu pliku reguł programu make w środowisku programowania Visual Studio Uruchom **czyste rozwiązanie** polecenia i następnie **Kompiluj rozwiązanie** polecenia projektu pliku reguł programu make. Funkcja IntelliSense powinny działać poprawnie w środowisku IDE.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense)<br>
-[NMAKE — dokumentacja](nmake-reference.md)<br>
+[Korzystanie z IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Odwołanie NMAKE](nmake-reference.md)<br>
 [Instrukcje: Tworzenie projektu C++ z istniejącego kodu](../how-to-create-a-cpp-project-from-existing-code.md)
 [znaki specjalne w pliku reguł programu make](special-characters-in-a-makefile.md)<br/>
 [Zawartość pliku reguł programu Make](contents-of-a-makefile.md)<br/>

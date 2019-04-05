@@ -7,16 +7,16 @@ helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: 2188b2cdbf5c5f8836197f8cf2ee33928b7e9425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624461"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036763"
 ---
 # <a name="sidt"></a>__sidt
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Przechowuje wartość rejestru Tabela deskryptora przerwania (IDTR) w określonej lokalizacji pamięci.
 
@@ -30,7 +30,7 @@ void __sidt(void * Destination);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*miejsce docelowe*|[in] Wskaźnik do przechowywania IDTR lokalizacji w pamięci.|
+|*Miejsce docelowe*|[in] Wskaźnik do przechowywania IDTR lokalizacji w pamięci.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -42,11 +42,11 @@ void __sidt(void * Destination);
 
 ## <a name="remarks"></a>Uwagi
 
-`__sidt` Funkcji jest odpowiednikiem `SIDT` machine instrukcji. Aby uzyskać więcej informacji, Wyszukaj w dokumencie "ręcznego deweloper oprogramowania architekturze firmy Intel, wolumin 2: odwołania do zestawu instrukcji," w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji.
+`__sidt` Funkcji jest odpowiednikiem `SIDT` machine instrukcji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Manual deweloper oprogramowania architekturze firmy Intel, wolumin 2: Instrukcja Ustaw odwołanie,"w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
 [__lidt](../intrinsics/lidt.md)

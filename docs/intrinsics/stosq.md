@@ -8,16 +8,16 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: f395a8b0fc7194f36bb3388d631628a829f33aca
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331311"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032443"
 ---
 # <a name="stosq"></a>__stosq
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje instrukcję ciągu magazynu (`rep stosq`).
 
@@ -39,7 +39,7 @@ void __stosb(
 *Dane*<br/>
 [in] Dane, które mają być przechowywane.
 
-*Liczba*<br/>
+*Licznik*<br/>
 [in] Długość bloku wyrazy w liczbie mnogiej do zapisania.
 
 ## <a name="requirements"></a>Wymagania
@@ -82,8 +82,8 @@ int main()
 0 ffffffffffff ffffffffffff 0
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
