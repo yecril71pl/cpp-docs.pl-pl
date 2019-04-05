@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a56c15f76b83620e4f67c188450a6b5d2f68c22f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58766043"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041257"
 ---
 # <a name="data-access-in-visual-c"></a>Dostęp do danych w programie Visual C++
 
@@ -55,6 +55,6 @@ Usługa Azure Blob storage to usługa, która przechowuje dane niestrukturalne w
 [ Dokumentacja dotycząca ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 Interfejsu ODBC jest przeznaczony do użytku z języka programowania C. Korzystanie z interfejsu ODBC obejmuje trzy obszary: Instrukcje SQL, wywołania funkcji ODBC i programowania C.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)

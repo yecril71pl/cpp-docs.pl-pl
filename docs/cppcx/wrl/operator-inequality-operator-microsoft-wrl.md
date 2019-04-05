@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 6efe95994a24a00a2c405e81d1bb410add02ff68
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6068a7ddad78e3347f6987b30cc2884dc3f648fd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787227"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040091"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= Operator (Microsoft::WRL)
 
@@ -71,6 +71,6 @@ Obiekt, do prawej.
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft::WRL — Przestrzeń nazw](microsoft-wrl-namespace.md)

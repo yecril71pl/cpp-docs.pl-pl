@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627477"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041312"
 ---
 # <a name="maxis"></a>max_is
 
@@ -25,7 +25,7 @@ Określa maksymalną wartość indeksu prawidłową tablicą.
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*<br/>
+*wyrażenie*<br/>
 Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
@@ -38,7 +38,7 @@ Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
 
 |||
 |-|-|
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|**size_is**|
@@ -49,9 +49,9 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 Zobacz [first_is —](first-is.md) przykład sposobu określania część tablicy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: c6baa07b5bc5e63927f00ecf912c69f8c96a34f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520383"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039380"
 ---
 # <a name="mfc-database-classes"></a>Klasy bazy danych MFC
 
@@ -29,6 +29,6 @@ Więcej informacji znajduje się w następujących tematach:
 
 - [Używanie klas baz danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie (MFC/ATL) dostępu do danych](../data/data-access-programming-mfc-atl.md)

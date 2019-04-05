@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: więcej informacji o aktualizacjach (ODBC)'
+title: 'Zestaw rekordów: Więcej informacji na temat aktualizacje (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665299"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040771"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>Zestaw rekordów: więcej informacji o aktualizacjach (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>Zestaw rekordów: Więcej informacji na temat aktualizacje (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -30,7 +30,7 @@ W tym temacie opisano:
 - [Więcej informacji na temat funkcji elementów członkowskich Update i Delete](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli udało Ci się wdrożyć zbiorcze pobieranie z wiersza, niektóre informacje nie ma zastosowania. Na przykład nie można wywołać `AddNew`, `Edit`, `Delete`, i `Update` funkcji składowych; Jednakże, można wykonać transakcji. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli udało Ci się wdrożyć zbiorcze pobieranie z wiersza, niektóre informacje nie ma zastosowania. Na przykład nie można wywołać `AddNew`, `Edit`, `Delete`, i `Update` funkcji składowych; Jednakże, można wykonać transakcji. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> Jak inne operacje wpływają na aktualizacje
 
@@ -53,7 +53,7 @@ Jeśli zamkniesz zestaw rekordów lub związanych z nią `CDatabase` obiektu z t
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> Jak przewijanie wpływa na aktualizacje
 
-Po użytkownik [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) w zestawie rekordów buforu edycji jest wypełniany każdego nowego rekordu bieżącej (poprzedniego rekordu nie znajduje się najpierw). Przewijanie pomija za pośrednictwem wcześniej usuniętych rekordów. Po przewinięciu w po `AddNew` lub `Edit` wywołania bez wywoływania `Update`, `CommitTrans`, lub `Rollback` najpierw wszelkie zmiany zostaną utracone (z bez ostrzeżenia dla użytkownika) jako nowy rekord jest umieszczany w buforze edycji. Bufor edycji zostanie wypełnione przy użyciu rekordu przewijane w, przechowywane rekordu jest zwalniana i nie zmienią się w źródle danych. Dotyczy to zarówno `AddNew` i `Edit`.
+Gdy użytkownik [zestaw rekordów: Przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) w zestawie rekordów buforu edycji jest wypełniany każdego nowego rekordu bieżącej (poprzedniego rekordu nie znajduje się pierwszy). Przewijanie pomija za pośrednictwem wcześniej usuniętych rekordów. Po przewinięciu w po `AddNew` lub `Edit` wywołania bez wywoływania `Update`, `CommitTrans`, lub `Rollback` najpierw wszelkie zmiany zostaną utracone (z bez ostrzeżenia dla użytkownika) jako nowy rekord jest umieszczany w buforze edycji. Bufor edycji zostanie wypełnione przy użyciu rekordu przewijane w, przechowywane rekordu jest zwalniana i nie zmienią się w źródle danych. Dotyczy to zarówno `AddNew` i `Edit`.
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Aktualizacje i aktualizacje innych użytkowników
 
@@ -102,10 +102,10 @@ Po zgłoszeniu tych wyjątków pozostaną w `AddNew` lub `Edit` stanu aktywnej w
 
 - AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED podczas aktualizowania tabeli nie ma klucza podstawowego lub unikatowego indeksu, a nie ma wystarczającej liczby kolumn w zestawie rekordów do jednoznacznego identyfikowania wiersza tabeli.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md)
+[Wyjątki: Wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780473"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038770"
 ---
 # <a name="consuming-libraries-and-components"></a>Korzystanie z biblioteki i składniki
 
@@ -128,7 +128,7 @@ Następujące właściwości znajdują się na odwołania do zestawu modelu COM 
 
    Wyświetla nazwę zestawu dla przywoływanego zestawu.
 
-- **Kultury**
+- **Kultura**
 
    Wyświetla kultura wybranego odwołania.
 
@@ -164,7 +164,7 @@ Następujące właściwości znajdują się na odwołania do zestawu modelu COM 
 
    Wyświetla wersję przywoływanego zestawu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja strony właściwości projektu C++](reference/property-pages-visual-cpp.md)<br>
-[Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)
+[Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji](working-with-project-properties.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 207dcc92cd308052e4e5e7265bf0632c5096bed4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264726"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041075"
 ---
 # <a name="provider-support-for-bookmarks"></a>Obsługa dostawców dla zakładek
 
@@ -264,6 +264,6 @@ END_ACCESSOR_MAP()
 
 Po zaktualizowaniu kodu, powinno być możliwe tworzenie i wykonywanie dostawcę za pomocą `IRowsetLocate` interfejsu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)

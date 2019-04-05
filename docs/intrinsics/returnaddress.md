@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641786"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041140"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641786"
 
 `_ReturnAddress` Wewnętrzne udostępnia adres instrukcji w funkcji wywołującej, która zostanie wykonana po sterowanie powraca do obiektu wywołującego.
 
-Twórz następujący program i wykonywania krokowego w debugerze. Podczas wykonywania kroków za pośrednictwem programu, należy pamiętać, adres, który jest zwracany z `_ReturnAddress`. Następnie natychmiast po powrocie z tej funkcji gdzie `_ReturnAddress` była używana, otwórz [porady: Korzystanie z okna dezasemblacji](/visualstudio/debugger/how-to-use-the-disassembly-window) i zwróć uwagę, że adres następnej instrukcji do wykonania odpowiada adres, który został zwrócony z `_ReturnAddress`.
+Twórz następujący program i wykonywania krokowego w debugerze. Podczas wykonywania kroków za pośrednictwem programu, należy pamiętać, adres, który jest zwracany z `_ReturnAddress`. Następnie natychmiast po powrocie z tej funkcji gdzie `_ReturnAddress` była używana, otwórz [jak: Korzystanie z okna dezasemblacji](/visualstudio/debugger/how-to-use-the-disassembly-window) i zwróć uwagę, że adres następnej instrukcji do wykonania odpowiada adres, który został zwrócony z `_ReturnAddress`.
 
 Optymalizacje, takie jak wbudowanie może mieć wpływ na adres zwrotny. Na przykład, jeśli poniższy przykładowy program został skompilowany z [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` jest wbudowana w funkcji wywołującej `main`. W związku z tym, wywołania `_ReturnAddress` z `inline_func` i `main` będzie każde produkuje taką samą wartość.
 
@@ -61,10 +61,10 @@ int main(void)
 }
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)
+[słowa kluczowe](../cpp/keywords-cpp.md)

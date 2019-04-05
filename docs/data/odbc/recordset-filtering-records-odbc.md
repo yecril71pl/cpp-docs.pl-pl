@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: filtrowanie rekordów (ODBC)'
+title: 'Zestaw rekordów: Filtrowanie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514754"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041218"
 ---
-# <a name="recordset-filtering-records-odbc"></a>Zestaw rekordów: filtrowanie rekordów (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>Zestaw rekordów: Filtrowanie rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
@@ -44,7 +44,7 @@ Po utworzenia obiekt, ale przed wywołaniem, musisz ustanowić filtr obiektem re
     > [!NOTE]
     >  Ciąg literału "MATH101" jest wyświetlany w pojedynczy cudzysłów powyżej. W specyfikacji ODBC SQL apostrofy służą do oznaczania literału ciągu znaków. Zajrzyj do dokumentacji sterownika ODBC dla quoting wymagań systemu DBMS w takiej sytuacji. Ta składnia jest również omówiona dalsze pod koniec tego tematu.
 
-1. Ustaw inne opcje, których potrzebujesz, takie jak kolejność sortowania, tryb blokowania lub parametrów. Określenie parametru jest szczególnie przydatne. Aby dowiedzieć się, jak parametryzacja filtru, zobacz [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Ustaw inne opcje, których potrzebujesz, takie jak kolejność sortowania, tryb blokowania lub parametrów. Określenie parametru jest szczególnie przydatne. Aby dowiedzieć się, jak parametryzacja filtru, zobacz [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Wywołaj `Open` dla nowego obiektu (lub `Requery` wcześniej otwartych obiektu).
 
@@ -82,15 +82,15 @@ Zwróć uwagę na użycie znaków pojedynczego cudzysłowu. Jeśli ustawisz cią
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-Cytowanie, pokazanym powyżej jest zgodny ze specyfikacją ODBC, ale niektóre systemów DBMS, może być wymagane inne znaki cudzysłowu. Aby uzyskać więcej informacji, zobacz [SQL: dostosowywanie Your zestawu rekordów instrukcji SQL (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Cytowanie, pokazanym powyżej jest zgodny ze specyfikacją ODBC, ale niektóre systemów DBMS, może być wymagane inne znaki cudzysłowu. Aby uzyskać więcej informacji, zobacz [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Jeśli zdecydujesz się zastąpić ciąg SQL domyślnego zestawu rekordów, przekazując własne parametry SQL do `Open`, nie należy ustawiać filtr, jeśli zawiera tekst niestandardowy **gdzie** klauzuli. Aby uzyskać więcej informacji na temat zastępowania domyślny kod SQL zobacz [SQL: dostosowywanie Your zestawu rekordów instrukcji SQL (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Jeśli zdecydujesz się zastąpić ciąg SQL domyślnego zestawu rekordów, przekazując własne parametry SQL do `Open`, nie należy ustawiać filtr, jeśli zawiera tekst niestandardowy **gdzie** klauzuli. Aby uzyskać więcej informacji na temat zastępowania domyślny kod SQL zobacz [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: sortowanie rekordów (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Zestaw rekordów: blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Zestaw rekordów: Sortowanie rekordów (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Zestaw rekordów: Blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

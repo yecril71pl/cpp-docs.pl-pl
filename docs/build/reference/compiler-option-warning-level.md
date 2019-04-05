@@ -57,12 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 997a73541ab95a393bda4ebf5412c11f025b03a3
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.openlocfilehash: 7b5c19c95cff3058bb3dcc6640f8ab07cf01edd6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820692"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040073"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)
 
@@ -96,7 +96,7 @@ Ostrzeżenie opcje i argumenty powiązane są opisane w poniższej tabeli:
 ------------|-----------------|
 |**/w**|Wyłącza wszystkie ostrzeżenia kompilatora.|
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Określa poziom ostrzeżeń generowanej przez kompilator. Prawidłowe ostrzeżenie poziomów z zakresu od 0 do 4:<br />**/ W0** wyłącza wszystkie ostrzeżenia. Jest to równoważne **Wn**.<br />**/ W1** Wyświetla (poważny) ostrzeżenia poziomu 1. **/ W1** jest ustawieniem domyślnym w kompilatorze wiersza polecenia.<br />**/ W2** Wyświetla poziom 1 i poziom 2 (istotne) ostrzeżenia.<br />**/ W3** Wyświetla poziomu 1, na poziomie 2 i 3 ostrzeżenia (jakości produkcyjnej) na poziomie. **/ W3** jest ustawieniem domyślnym w środowisku IDE.<br />**/ W4** Wyświetla poziom 1 i poziom 2, a poziom ostrzeżeń 3 oraz wszystkich poziomu 4 ostrzeżenia (informacyjne), które nie są wyłączane domyślnie. Zalecamy użycie tej opcji zapewnienie lint przypominającej ostrzeżenia. Dla nowego projektu może być najlepiej użyć **/W4** we wszystkich kompilacjach; zapewni najmniejszą liczbą wad możliwe kodu twardych do znalezienia.|
-|**/Wall**|Wyświetla wszystkie ostrzeżenia wyświetlanego przez **/W4** i wszystkie inne ostrzeżenia, **/W4** nie obejmuje — na przykład w przypadku ostrzeżenia, które są domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|**{1&gt;/Wall&lt;1}**|Wyświetla wszystkie ostrzeżenia wyświetlanego przez **/W4** i wszystkie inne ostrzeżenia, **/W4** nie obejmuje — na przykład w przypadku ostrzeżenia, które są domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |**WV**\[**:**_wersji_]|Wyświetla tylko te ostrzeżenia, które wprowadzonych w wersji kompilatora *wersji* i starszych wersji. Można użyć tej opcji, Pomiń nowe ostrzeżenia w kodzie, w przypadku migracji do nowszej wersji kompilatora i obsługa istniejący proces kompilacji, gdy zostaną naprawione. Opcjonalny parametr *wersji* ma postać *nn*[. *mm*[. *bbbbb*]] gdzie *nn* to główny numer wersji, *mm* jest opcjonalny pomocniczy numer wersji, i *bbbbb* jest numerem kompilacji opcjonalne Kompilator. Na przykład użyć */Wv:17* wyświetlania ostrzeżenia wprowadzone w programie Visual Studio 2012 (czyli dowolna wersja kompilatora, który zawiera główny numer wersji 17) lub wcześniej, ale Pomiń ostrzeżenia wprowadzone w programie Visual Studio 2013 (wersja główna 18) lub nowszy. Domyślnie **WV** używa bieżący numer wersji kompilatora i żadne ostrzeżenia nie są pomijane. Aby uzyskać informacje o tym, które ostrzeżenia są pomijane przez wersję kompilatora, zobacz [ostrzeżenia kompilatora według wersji kompilatora](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
 |**/WX**|Traktuje wszystkie ostrzeżenia kompilatora jako błędy. Dla nowego projektu może być najlepiej użyć **/WX** we wszystkich kompilacjach; rozwiązanie wszystkich ostrzeżeń zapewnia najmniejszą liczbą wad możliwe kodu twardych do znalezienia.<br /><br /> Ma również konsolidator **/WX** opcji. Aby uzyskać więcej informacji, zobacz [/WX (Traktuj ostrzeżenia konsolidatora jak błędy)](wx-treat-linker-warnings-as-errors.md).|
 |**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/ W4**_nnnn_|Ustawia poziom ostrzeżeń dla określonego przez numer ostrzeżenia _nnnn_. Dzięki temu można zmienić zachowanie kompilatora tego ostrzeżenia, gdy ustawiono określonego poziomu ostrzeżeń. Te opcje w połączeniu z innymi opcjami ostrzeżenie umożliwia wymuszanie własnych kodowania standardów ostrzeżenia, a nie domyślnej, jednego z dostarczanych przez program Visual Studio.<br /><br /> Na przykład **/w34326** powoduje, że C4326 zostanie wygenerowany jako włączonego ostrzeżenia poziomu 3 zamiast poziomu 1. Jeśli kompilujesz przy użyciu zarówno **/w34326** opcji i **/W2** opcji Ostrzeżenie C4326 nie są generowane.|
@@ -116,7 +116,7 @@ Dyrektywy pragma ostrzeżeń w kodzie źródłowym nie ma wpływu na **Wn** opcj
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
-1. Aby ustawić **/W0**, **/W1**, **/W2**, **/W3**, **/W4**, **/Wall**m **WV**, **/WX** lub **/WX-** opcje, wybierz opcję **właściwości konfiguracji** > **C / C++** > **ogólne** stronę właściwości.
+1. Aby ustawić **/W0**, **/W1**, **/W2**, **/W3**, **/W4**, **/Wall**, **WV**, **/WX** lub **/WX-** opcje, wybierz opcję **właściwości konfiguracji** > **C / C++** > **ogólne** stronę właściwości.
 
    - Aby ustawić **/W0**, **/W1**, **/W2**, **/W3**, **/W4**, lub **/Wall** modyfikowanie opcji **poziom ostrzeżeń** właściwości.
 
@@ -140,5 +140,5 @@ Dyrektywy pragma ostrzeżeń w kodzie źródłowym nie ma wpływu na **Wn** opcj
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

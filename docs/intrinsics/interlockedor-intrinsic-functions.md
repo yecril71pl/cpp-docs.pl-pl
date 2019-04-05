@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _interlockedor
+title: _InterlockedOr Intrinsic Functions
 ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedOr8_nf
@@ -56,16 +56,16 @@ helpviewer_keywords:
 - _InterlockedOr16_rel intrinsic
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
-ms.openlocfilehash: c0006dccb3beb28fb7dcb2d9d8313be022523883
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 9748099e4224a8c55cd4455a57c8e849531f1c9a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627192"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040478"
 ---
-# <a name="interlockedor-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedor
+# <a name="interlockedor-intrinsic-functions"></a>_InterlockedOr Intrinsic Functions
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Wykonaj atomic bitowe lub operacji na zmiennej współużytkowane przez wiele wątków.
 
@@ -224,9 +224,9 @@ int main()
 0xffffff00 0xffff00 0xff00ff00
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

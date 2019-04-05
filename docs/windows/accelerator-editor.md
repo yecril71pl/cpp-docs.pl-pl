@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328405"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041127"
 ---
 # <a name="accelerator-editor-c"></a>Edytor klawiszy skrótów (C++)
 
@@ -72,9 +72,9 @@ Poniżej znajdują się wpisy prawne **modyfikator** właściwości w tabeli akc
    |Wartość|Opis|
    |-----------|-----------------|
    |**Brak**|Użytkownik naciśnie tylko **klucz** wartość.<br/><br/>Ta wartość jest najbardziej efektywne używana przy użyciu wartości ASCII/ANSI 001 za pośrednictwem 026, który jest interpretowany jako ^ od A do ^ Z (**Ctrl + A** za pośrednictwem **Ctrl + Z**).|
-   |**ALT**|Użytkownik musi nacisnąć klawisz **Alt** przed **klucz** wartość.|
+   |**Alt**|Użytkownik musi nacisnąć klawisz **Alt** przed **klucz** wartość.|
    |**Ctrl**|Użytkownik musi nacisnąć klawisz **Ctrl** przed **klucz** wartość nie jest prawidłowy z typem ASCII.|
-   |**SHIFT**|Użytkownik musi nacisnąć klawisz **Shift** przed **klucz** wartość.|
+   |**Shift**|Użytkownik musi nacisnąć klawisz **Shift** przed **klucz** wartość.|
    |**Ctrl+Alt**|Użytkownik musi nacisnąć klawisz **Ctrl** i **Alt** przed **klucz** wartość nie jest prawidłowy z typem ASCII.|
    |**Ctrl+Shift**|Użytkownik musi nacisnąć klawisz **Ctrl** i **Shift** przed **klucz** wartość nie jest prawidłowy z typem ASCII.|
    |**Alt+Shift**|Użytkownik musi nacisnąć klawisz **Alt** i **Shift** przed **klucz** wartość nie jest prawidłowy z typem ASCII.|
@@ -190,7 +190,7 @@ Poniższe procedury dotyczą używanie stron właściwości standardowych, jedna
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
 [Klawisze skrótów](../windows/predefined-accelerator-keys.md)<br/>

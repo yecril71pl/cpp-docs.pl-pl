@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 594ab4d02065e9b4efe1142c5ced9b76642e5481
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488052"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039308"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -25,7 +25,7 @@ Określa nazwę pliku pomocy dla biblioteki typów.
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa pliku*<br/>
+*nazwa_pliku*<br/>
 Nazwa pliku który zawiera tematy Pomocy.
 
 ## <a name="remarks"></a>Uwagi
@@ -42,16 +42,16 @@ Zobacz przykład [modułu](module-cpp.md) przykład sposobu użycia **helpfile**
 
 |||
 |-|-|
-|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, **właściwości**|
+|**Informacje zawarte w tym artykule dotyczą**|**interfejs**, **typedef**, **klasy**, metody, **właściwości**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
