@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-ms.openlocfilehash: ecf59b0d920b39d8f129e3ff25b5518f985d78f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386afe5362f876cd1489a35839f4f8cfc2381e91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516912"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038216"
 ---
 # <a name="attributes-alphabetical-reference"></a>Alfabetyczny spis atrybutów
 
@@ -25,15 +25,15 @@ Następujące atrybuty są dostępne w kompilatorze Microsoft C++:
 |[aggregates](aggregates.md)|Wskazuje, że formant agreguje klasy docelowej.|
 |[appobject](appobject.md)|Identyfikuje coclass jako obiekt aplikacji, która jest skojarzona z pełnej aplikacji EXE i wskazuje, że funkcje i właściwości z koklas, globalnie dostępną w tej bibliotece typów.|
 |[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
-|[attribute](attribute.md)|Umożliwia tworzenie atrybutów niestandardowych.|
+|[— atrybut](attribute.md)|Umożliwia tworzenie atrybutów niestandardowych.|
 |[bindable](bindable.md)|Wskazuje, że właściwość obsługuje powiązanie danych.|
 |[call_as](call-as.md)|Włącza funkcję nonremotable mają być mapowane na funkcję zdalną.|
 |[case](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
 |[coclass](coclass.md)|Tworzy obiekt COM, które można zaimplementować interfejsu COM.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
-|[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
+|[ — formant](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
 |[cpp_quote](cpp-quote.md)|Generuje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|
-|[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
+|[niestandardowy](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
 |[db_accessor](db-accessor.md)|Tworzy powiązanie kolumn w zestawie wierszy i wiąże ich odpowiednich mapowania dostępu.|
 |[db_column](db-column.md)|Wiąże określonej kolumny zestawu wierszy.|
 |[db_command](db-command.md)|Wykonuje polecenie OLE DB.|
@@ -59,7 +59,7 @@ Następujące atrybuty są dostępne w kompilatorze Microsoft C++:
 |[helpstring](helpstring.md)|Określa identyfikator tematu pomocy w pliku hlp lub chm.|
 |[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
 |[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
-|[id](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
+|[identyfikator](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
 |[idl_module](idl-module.md)|Określa punkt wejścia w bibliotece DLL.|
 |[idl_quote](idl-quote.md)|Pozwala na używanie atrybutów lub IDL konstrukcji, które nie są obsługiwane w bieżącej wersji programu Visual C++.|
 |[iid_is](iid-is.md)|Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu.|
@@ -79,7 +79,7 @@ Następujące atrybuty są dostępne w kompilatorze Microsoft C++:
 |[licensed](licensed.md)|Wskazuje, że klasa coclass, do której jest stosowany jest licencjonowana i muszą być tworzone przy użyciu `IClassFactory2`.|
 |[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
 |[max_is](max-is.md)|Określa maksymalną wartość indeksu prawidłową tablicą.|
-|[module](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
 |[ms_union](ms-union.md)|Steruje wyrównaniem reprezentacji danych sieci nonencapsulated Unii.|
 |[no_injected_text](no-injected-text.md)|Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.|
 |[nonbrowsable](nonbrowsable.md)|Wskazuje, czy składowej interfejsu nie powinien być wyświetlany w przeglądarce właściwości.|
@@ -127,8 +127,8 @@ Następujące atrybuty są dostępne w kompilatorze Microsoft C++:
 |[vi_progid](vi-progid.md)|Określa formularza niezależny od wersji identyfikatora ProgID.|
 |[wire_marshal](wire-marshal.md)|Określa typ danych, który będzie używany do przekazywania zamiast typu danych specyficznych dla aplikacji.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty języka C++ dla modelu COM i platformy .NET](cpp-attributes-com-net.md)<br/>
+[Atrybuty C++ dla modelu COM i .NET](cpp-attributes-com-net.md)<br/>
 [Atrybuty według grup](attributes-by-group.md)<br/>
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

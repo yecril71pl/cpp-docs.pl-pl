@@ -13,12 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 9e79ba7378e28fdea863af010decb7064df415cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660099"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027444"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Dyrektywy pragma i słowo kluczowe __Pragma
 
@@ -46,19 +46,19 @@ Kompilatory Microsoft C i C++ rozpoznają następujące pragmy:
 ||||
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
-|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[Komentarz](../preprocessor/comment-c-cpp.md)|
+|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[komentarz](../preprocessor/comment-c-cpp.md)|
 |[składnik](../preprocessor/component.md)|[jest zgodna z](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
-|[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
+|[data_seg](../preprocessor/data-seg.md)|[przestarzałe](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
-|[— Funkcja](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
+|[ — funkcja](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
-|[intrinsic](../preprocessor/intrinsic.md)|[pętla](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[Zarządzane](../preprocessor/managed-unmanaged.md)|[komunikat](../preprocessor/message.md)||
+|[ — funkcja](../preprocessor/intrinsic.md)|[pętla](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
+|[zarządzany](../preprocessor/managed-unmanaged.md)|[ — komunikat](../preprocessor/message.md)||
 |[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||
 |[optymalizuj](../preprocessor/optimize.md)|[pakiet](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|
 |[runtime_checks](../preprocessor/runtime-checks.md)|[sekcja](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[niezarządzane](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[niezarządzana](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
 |[ostrzeżenie](../preprocessor/warning.md)|||
 
 <sup>1</sup> obsługiwana tylko przez kompilator języka C++.
@@ -78,9 +78,9 @@ cl /Zp8 ...
 </file>
 ```
 
-## <a name="the-pragma-keyword"></a>Słowo kluczowe __pragma()
+## <a name="the-pragma-keyword"></a>The __pragma() Keyword
 
-**Microsoft specific**
+**Specyficzne dla firmy Microsoft**
 
 Kompilator obsługuje również **__pragma** słowo kluczowe, które ma taką samą funkcjonalność jako **#pragma** dyrektywy, ale mogą być używane jako wbudowane w definicję makra. **#Pragma** dyrektywy nie można używać w definicji makra, ponieważ kompilator zinterpretuje znak numeru (#) w dyrektywie jako [operator tworzenia ciągu (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -106,8 +106,8 @@ return _hr; \
 
 **Koniec specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
-[Pragma, dyrektywy języka C](../c-language/c-pragmas.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)
+[Odwołania preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Pragma — dyrektywy języka C](../c-language/c-pragmas.md)<br/>
+[słowa kluczowe](../cpp/keywords-cpp.md)

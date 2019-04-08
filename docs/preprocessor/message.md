@@ -1,5 +1,5 @@
 ---
-title: — komunikat
+title: " — komunikat"
 ms.date: 11/04/2016
 f1_keywords:
 - message_CPP
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-ms.openlocfilehash: a55721fb954cf9383022b4fc8e84327ea4c772e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9383238fd308ec59a9767f56af1c07fc3cfcf07
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627386"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030209"
 ---
-# <a name="message"></a>— komunikat
+# <a name="message"></a> — komunikat
 Wysyła ciąg literału do wyjścia standardowego bez przerywania kompilacji.
 
 ## <a name="syntax"></a>Składnia
@@ -57,6 +57,6 @@ Poniższy fragment kodu używa **komunikat** pragma umożliwiające wyświetlani
 #pragma message("")
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

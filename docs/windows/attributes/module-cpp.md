@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893525"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040583"
 ---
 # <a name="module-c"></a>moduł (C++)
 
@@ -25,7 +25,7 @@ Określa blok biblioteki w pliku .idl.
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
+*— typ*<br/>
 (Opcjonalnie) Może być jedną z następujących czynności:
 
 - `dll` Dodaje funkcje i klasy, które umożliwiają wynikowy DLL do działania jako serwer COM w procesie. Jest to wartość domyślna.
@@ -36,7 +36,7 @@ Określa blok biblioteki w pliku .idl.
 
 - `unspecified` Wyłącza iniekcji kodu biblioteki ATL, powiązany z atrybutem modułu: iniekcji modułu ATL klas, _AtlModule globalnego wystąpienia i wpis punktu funkcji. Nie wyłącza iniekcji kodu biblioteki ATL z powodu innych atrybutów w projekcie.
 
-*Nazwa*<br/>
+*nazwa*<br/>
 (Opcjonalnie) Nazwa bloku biblioteki.
 
 *version*<br/>
@@ -48,7 +48,7 @@ Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie
 *lcid*<br/>
 Parametr lokalizacji. Zobacz [lcid](/windows/desktop/Midl/lcid) Aby uzyskać więcej informacji.
 
-*control*<br/>
+* — formant*<br/>
 (Opcjonalnie) Określa, że wszystkie klasy coclass w bibliotece kontrolek.
 
 *helpstring*<br/>
@@ -72,7 +72,7 @@ Określa plik biblioteki typów.
 *restricted*<br/>
 (Opcjonalnie) Elementy członkowskie biblioteki nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
 
-*custom*<br/>
+*niestandardowy*<br/>
 (Opcjonalnie) Co najmniej jeden atrybut; jest to podobne do [niestandardowe](custom-cpp.md) atrybutu. Pierwszy parametr *niestandardowe* jest identyfikatorem GUID atrybutu. Na przykład:
 
 ```
@@ -152,21 +152,21 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Informacje zawarte w tym artykule dotyczą**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[Biblioteka](/windows/desktop/Midl/library)<br/>
+[biblioteka](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

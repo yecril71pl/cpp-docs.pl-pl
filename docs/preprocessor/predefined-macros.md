@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 9dcc0922f3715d1e583605a071535f51fa8b2f57
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678357"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032456"
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -362,17 +362,17 @@ Microsoft Visual C++ obsługuje te dodatkowe wstępnie zdefiniowanych makr.
 
 - **&#95;MSC&#95;VER** zdefiniowany jako literał liczby całkowitej kodująca głównych i pomocniczych numerów elementów numeru wersji kompilatora. Numer główny to pierwszy element numer wersji rozdzielanego kropką, a numer podrzędny to drugi element. Na przykład, jeśli numer wersji kompilatora Visual C++ to 17.00.51106.1  **&#95;MSC&#95;VER** — makro daje w wyniku 1700. Wprowadź `cl /?` w wierszu polecenia, aby wyświetlić numer wersji kompilatora. To makro, zawsze jest definiowany.
 
-   |Visual Studio w wersji|&AMP;#95;MSC&AMP;#95;VER|
+   |Visual Studio w wersji|&#95;MSC&#95;VER|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|
    |Visual Studio .NET 2003 (7.1)|1310|
    |Visual Studio 2005 (8.0)|1400|
-   |Program Visual Studio 2008 (9.0)|1500|
-   |Program Visual Studio 2010 (10.0)|1600|
-   |Program Visual Studio 2012 (11.0)|1700|
+   |Visual Studio 2008 (9.0)|1500|
+   |Visual Studio 2010 (10.0)|1600|
+   |Visual Studio 2012 (11.0)|1700|
    |Visual Studio 2013 (12.0)|1800|
-   |Program Visual Studio 2015 (14.0)|1900|
+   |Visual Studio 2015 (14.0)|1900|
    |Visual Studio 2017 RTW (15.0)|1910|
    |Visual Studio 2017 w wersji 15.3|1911|
    |Visual Studio 2017 w wersji 15.5|1912|
@@ -395,7 +395,7 @@ Microsoft Visual C++ obsługuje te dodatkowe wstępnie zdefiniowanych makr.
 
    Aby uzyskać więcej informacji, zobacz [Visual C++ w wersji kompilatora](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/) w blogu zespołu Visual C++.
 
-- **&#95;MSVC&#95;LANG** zdefiniowany jako literał liczby całkowitej, która określa standard języka C++, które są objęte kompilator. Podczas kompilowania, co kod C++, makro jest liczbą całkowitą wartość literału 201402L, jeśli [/STD: c ++ 14](../build/reference/std-specify-language-standard-version.md) — opcja kompilatora jest ustawiona lub domyślnie ustawiana jest na 201703 L Jeśli [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md) ustawiono opcję kompilatora; i jest równa nowszej, który jest nieokreślona wartość przy [/STD: c ++ najnowsze](../build/reference/std-specify-language-standard-version.md). W przeciwnym razie makro jest niezdefiniowane. **&#95;MSVC&#95;LANG** — makro i [/STD (Określ wersję standardu języka)](../build/reference/std-specify-language-standard-version.md) opcje kompilatora są dostępne począwszy od wersji programu Visual Studio 2015 Update 3.
+- **&#95;MSVC&#95;LANG** zdefiniowany jako literał liczby całkowitej, która określa standard języka C++, które są objęte kompilator. Podczas kompilowania, co kod C++, makro jest liczbą całkowitą wartość literału 201402L, jeśli [/STD: c ++ 14](../build/reference/std-specify-language-standard-version.md) — opcja kompilatora jest ustawiona lub domyślnie ustawiana jest na 201703 L Jeśli [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md) ustawiono opcję kompilatora; i jest równa nowszej, który jest nieokreślona wartość przy [/STD: c ++ najnowsze](../build/reference/std-specify-language-standard-version.md). W przeciwnym razie makro jest niezdefiniowane.  **&#95;MSVC&#95;LANG** — makro i [/STD (Określ wersję standardu języka)](../build/reference/std-specify-language-standard-version.md) opcje kompilatora są dostępne począwszy od wersji programu Visual Studio 2015 Update 3.
 
 - **&#95;&#95;MSVC&#95;środowiska URUCHOMIENIOWEGO&#95;SPRAWDZA** zdefiniowana jako 1, gdy dla jednego z [usunęliśmy](../build/reference/rtc-run-time-error-checks.md) ustawiono opcje kompilatora. W przeciwnym razie jest niezdefiniowany.
 
@@ -420,7 +420,7 @@ Microsoft Visual C++ obsługuje te dodatkowe wstępnie zdefiniowanych makr.
 
 - **&#95;VC&#95;NODEFAULTLIB** zdefiniowana jako 1 gdy [/Zl (Pomiń domyślną nazwę biblioteki)](../build/reference/zl-omit-default-library-name.md) ustawiono opcję kompilatora. W przeciwnym razie jest niezdefiniowany.
 
-- **&#95;WCHAR&#95;T&#95;zdefiniowane** zdefiniowana jako 1 gdy domyślnie [/Zc:](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ustawiono opcję kompilatora. **&#95;WCHAR&#95;T&#95;zdefiniowane** — makro jest zdefiniowany, ale jeśli nie ma wartości `/Zc:wchar_t-` — opcja kompilatora jest ustawiona, i **wchar_t** jest zdefiniowana w systemowym pliku nagłówkowym, objęte usługi Projekt. W przeciwnym razie jest niezdefiniowany.
+- **&#95;WCHAR&#95;T&#95;zdefiniowane** zdefiniowana jako 1 gdy domyślnie [/Zc:](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ustawiono opcję kompilatora.  **&#95;WCHAR&#95;T&#95;zdefiniowane** — makro jest zdefiniowany, ale jeśli nie ma wartości `/Zc:wchar_t-` — opcja kompilatora jest ustawiona, i **wchar_t** jest zdefiniowana w systemowym pliku nagłówkowym, objęte usługi Projekt. W przeciwnym razie jest niezdefiniowany.
 
 - **&#95;Win32** zdefiniowane jako 1, gdy element docelowy kompilacji jest ARM 32-bitowych, ARM 64-bitowych x86, lub x 64. W przeciwnym razie jest niezdefiniowany.
 
@@ -434,7 +434,7 @@ Makra preprocesora, używany do określenia wersji biblioteki ATL lub MFC nie s�
 
 - **&#95;MFC&#95;VER** zdefiniowane w \<afxver_.h > jako literał liczby całkowitej kodująca numerem wersji MFC.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [Operatory preprocesora](../preprocessor/preprocessor-operators.md)<br/>

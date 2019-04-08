@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779030"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
@@ -189,14 +189,14 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Konstruuje `CMFCPropertyGridProperty` obiektu.|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::AddOption](#addoption)|Dodaje nowy element listy do listy właściwości kontrolki.|
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Dodaje element podrzędny do właściwości.|
@@ -269,7 +269,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Metoda wywoływana przez platformę, by dodać pole kombi z właściwością.|
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Wskazuje, czy jakaś właściwość zawiera przycisk.|
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Ciąg formatu dla wartości typu double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Ciąg formatu dla wartości typu zmiennoprzecinkowego.|
@@ -477,7 +477,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Wskaźnik do okna nadrzędnego pola kombi.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający pola kombi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -566,10 +566,10 @@ void EnableSpinControl(
 *bWłączenie*<br/>
 [in] Wartość TRUE, aby włączyć kontrolki przycisku pokrętła; Wartość FALSE umożliwia wyłączenie kontrolka przycisku pokrętła. Wartość domyślna to TRUE.
 
-*nMin*<br/>
+*Nmin.*<br/>
 [in] Minimalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.
 
-*nMax*<br/>
+*nmaks.*<br/>
 [in] Maksymalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.
 
 ### <a name="remarks"></a>Uwagi
@@ -883,7 +883,7 @@ CMFCPropertyGridProperty* HitTest(
 *Punkt*<br/>
 [in] Punkt, aby przetestować we współrzędnych klienta. Ten parametr jest zwykle bieżącej lokalizacji wskaźnika myszy.
 
-*(czas pacyficzny)*<br/>
+*pt*<br/>
 [in] Punkt, aby przetestować we współrzędnych klienta.
 
 *pnArea*<br/>
@@ -1280,7 +1280,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający, która określa, gdzie można narysować opisu właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -1324,7 +1324,7 @@ virtual void OnDrawName(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający, która określa, gdzie można narysować nazwę właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -1344,7 +1344,7 @@ virtual void OnDrawValue(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt otaczający, która określa, gdzie można narysować wartości właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -1589,7 +1589,7 @@ BOOL RemoveSubItem(
 *pProp*<br/>
 [in] Wskaźnik do elementu podrzędnego właściwości.
 
-*bDelete*<br/>
+*bUsuń*<br/>
 [in] Wartość true, Usuń właściwości obiektu, który jest określony przez *pProp* parametru; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1712,6 +1712,6 @@ void Show(
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)

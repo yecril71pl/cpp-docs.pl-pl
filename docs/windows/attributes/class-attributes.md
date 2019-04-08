@@ -4,12 +4,12 @@ ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448870"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025419"
 ---
 # <a name="class-attributes"></a>Atrybuty klasy
 
@@ -23,8 +23,8 @@ Następujące atrybuty dotyczą [klasy](../../cpp/class-cpp.md) słowa kluczoweg
 |[case](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
 |[coclass](coclass.md)|Tworzy formant ActiveX.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
-|[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
-|[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
+|[ — formant](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
+|[niestandardowy](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
 |[db_command](db-command.md)|Tworzy polecenie OLE DB.|
 |[db_param](db-param.md)|Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wejściowych lub wyjściowych, a rozgranicza zmiennej.|
 |[db_source](db-source.md)|Tworzy połączenie ze źródłem danych.|
@@ -40,7 +40,7 @@ Następujące atrybuty dotyczą [klasy](../../cpp/class-cpp.md) słowa kluczoweg
 |[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
 |[implements](implements-cpp.md)|Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.|
 |[implements_category](implements-category.md)|Określa kategorii składników zaimplementowane dla klasy.|
-|[module](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
 |[noncreatable](noncreatable.md)|Definiuje obiekt, który nie może być utworzone samodzielnie.|
 |[progid](progid.md)|Określa identyfikator ProgID kontrolki.|
 |[registration_script](registration-script.md)|Wykonuje skrypt określoną rejestrację.|
@@ -52,6 +52,6 @@ Następujące atrybuty dotyczą [klasy](../../cpp/class-cpp.md) słowa kluczoweg
 |[version](version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji klasy.|
 |[vi_progid](vi-progid.md)|Określa formularza niezależny od wersji identyfikatora ProgID.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

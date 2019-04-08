@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778458"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -125,14 +125,14 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Domyślny konstruktor.|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Wyświetla określoną kartę kontrolą bieżącą kartę i ustawia fokus na tej karcie.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Uniemożliwia bieżącym widokiem utraci fokus, gdy nowa karta jest wstawiany i włączone.|
 
@@ -310,10 +310,10 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*style*<br/>
+* — styl*<br/>
 [in] Styl kontrolki karty. Aby uzyskać więcej informacji zobacz uwagi.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Prostokąt, który granic formantu karty.
 
 *pParentWnd*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] Identyfikator formantu karty.
 
-*location*<br/>
+*lokalizacja*<br/>
 [in] Położenie karty. Wartość domyślna to LOCATION_BOTTOM. Aby uzyskać więcej informacji zobacz uwagi.
 
 *bCloseBtn*<br/>
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [out] Po powrocie z tej metody *prostokąt* parametr zawiera prostokąt, który zakresem wartości obszar karty.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*rect*<br/>
 [out w] Gdy metoda zwróci wartość, ten parametr zawiera prostokąt, który jest zakresem bieżącego formant karty.
 
 ### <a name="remarks"></a>Uwagi
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametry
 
-*style*<br/>
+* — styl*<br/>
 [in] Jedna z wartości wyliczenia, które określa wygląd kontrolki karty. Aby uzyskać więcej informacji zobacz tabelę w uwagi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -846,7 +846,7 @@ Zawsze TRUE.
 
 Wartość *styl* parametr może być jedną z następujących `CMFCTabCtrl::Style` wyliczenia.
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |STYLE_3D|Wyświetla trójwymiarowej, prostokątne karty, które mają zaokrąglone rogi.|
 |STYLE_3D_ONENOTE|Wyświetla trójwymiarowej karty, w tym jednego pionowy bok i jednej strony pochyłego, który ma zaokrąglone rogi.|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 *ResizeMode* parametr może być jedną z następujących `ResizeMode` wartości wyliczenia.
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |RESIZE_NO|Nie można zmienić rozmiaru kontrolki karty.|
 |RESIZE_VERT|Kontrolka karty można zmienić w pionie, ale nie w poziomie.|
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parametry
 
-*bCancel*<br/>
+*banulowanie*<br/>
 [in] Wartość TRUE, aby porzucić bieżącej operacji zmiany rozmiaru; Wartość FALSE, aby zakończyć bieżący rozmiar operacji. W obu przypadkach ramach zatrzymuje się Rysowanie prostokąta zmiany rozmiaru.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar
@@ -1137,8 +1137,8 @@ Ta metoda ma wpływ tylko formant karty, który wyświetla płaską karty. Na pa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
 [Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
-[Klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)

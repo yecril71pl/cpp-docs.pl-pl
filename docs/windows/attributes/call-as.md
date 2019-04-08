@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 16839f5a5040e6b0019005912782ba359178cc47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579906"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023922"
 ---
 # <a name="callas"></a>call_as
 
@@ -25,7 +25,7 @@ Włącza [lokalnego](local-cpp.md) funkcji, które mają być mapowane na funkcj
 
 ### <a name="parameters"></a>Parametry
 
-*— Funkcja*<br/>
+* — funkcja*<br/>
 Funkcja lokalna, który ma być wywoływana, gdy zostanie wywołana funkcja zdalnego.
 
 ## <a name="remarks"></a>Uwagi
@@ -54,15 +54,15 @@ __interface IMInterface {
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty IDL](idl-attributes.md)<br/>
+[atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [local](local-cpp.md)

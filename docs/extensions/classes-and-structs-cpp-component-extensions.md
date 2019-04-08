@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 34158b8d4ff2c052543328767ea928bbe5788ef0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fcc50109ce521e005e32a8c19b13aabe2230989b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787413"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029734"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>Klasa ref i ref struct (C + +/ CLI i C + +/ CX)
 
@@ -38,10 +38,10 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *class_access*<br/>
 (Opcjonalnie) Dostępność klasy lub struktury spoza zestawu. Możliwe wartości to **publicznych** i **prywatnej** (**prywatnej** jest ustawieniem domyślnym). Zagnieżdżone klasy lub struktury nie mogą mieć *class_access* specyfikator.
 
-*Nazwa*<br/>
+*nazwa*<br/>
 Nazwa klasy lub struktury.
 
-*modifier*<br/>
+* — modyfikator*<br/>
 (Opcjonalnie) [abstrakcyjne](abstract-cpp-component-extensions.md) i [zapieczętowanego](sealed-cpp-component-extensions.md) są prawidłowe modyfikatorów.
 
 *inherit_access*<br/>
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji na temat klas i struktur zobacz
 
 - [Semantyka stosu języka C++ dla typów odwołań](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
-- [Klas, struktur i Unii](../cpp/classes-and-structs-cpp.md)
+- [Klasy, struktury i związki](../cpp/classes-and-structs-cpp.md)
 
 - [Destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
@@ -74,7 +74,7 @@ Aby uzyskać więcej informacji na temat klas i struktur zobacz
 
 - [Konwersje zdefiniowane przez użytkownika (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Instrukcje: opakowywanie klasy natywnej do użycia w języku C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Instrukcje: OPAKOWYWANIE klasy natywnej do użycia przezC#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Klasy ogólne [C++/CLI]](generic-classes-cpp-cli.md)
 
@@ -116,6 +116,6 @@ W poniższej tabeli przedstawiono różnice w składni przedstawionej w **wszyst
 
 — Opcja kompilatora: `/clr`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

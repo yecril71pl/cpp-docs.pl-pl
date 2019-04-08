@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612828"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025273"
 ---
 # <a name="comment-cc"></a>komentarz (C/C++)
 
@@ -31,7 +31,7 @@ Umieszcza rekord komentarza do obiektu pliku lub pliku wykonywalnego.
 
 *Typ komentarza* jest jednym z wstępnie zdefiniowane identyfikatory, opisane poniżej, który określa typ rekordu komentarz. Opcjonalny *commentstring* jest ciągiem literału, który zawiera dodatkowe informacje dla niektórych typów komentarz. Ponieważ *commentstring* jest ciągiem literału, jego przestrzegają wszystkie reguły dla literałów ciągów w odniesieniu do znaki ucieczki i osadzone znaki cudzysłowu (`"`) i łączenia.
 
-### <a name="compiler"></a>— kompilator
+### <a name="compiler"></a> — kompilator
 
 Umieszcza nazwę oraz numer wersji kompilatora w pliku obiektu. Ten rekord komentarza jest ignorowane przez konsolidator. Jeśli podasz *commentstring* parametr dla tego typu rekordu, kompilator generuje ostrzeżenie.
 
@@ -67,7 +67,7 @@ Jedynie następujące elementy (*typ komentarza*) są dostępne do przekazania d
 
 - [/MERGE](../build/reference/merge-combine-sections.md)
 
-- [/ SECTION](../build/reference/section-specify-section-attributes.md)
+- [/SECTION](../build/reference/section-specify-section-attributes.md)
 
 ### <a name="user"></a>użytkownik
 
@@ -92,6 +92,6 @@ Następujące pragmy powoduje, że kompilator umieszcza nazwę oraz numer wersji
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ )
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

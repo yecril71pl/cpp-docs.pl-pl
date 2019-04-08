@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653755"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039512"
 ---
 # <a name="define-directive-cc"></a>#define — dyrektywa (C/C++)
 
@@ -62,7 +62,7 @@ Jeśli nazwa definiowanego makra występuje w *ciąg tokenu* (nawet w wyniku inn
 
 Sekundy **#define** dla makra o takiej samej nazwie generuje ostrzeżenie, o ile nie jest identyczny z pierwszym drugiej sekwencji tokenu.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Microsoft C/C++ pozwala na zdefiniowanie makra, jeśli nowa definicja jest syntaktycznie identyczna odpowiadają oryginalnej definicji. Innymi słowy dwie definicje mogą mieć nazwy różnych parametrów. To zachowanie różni się od ANSI C, który wymaga leksykalnej obu definicji.
 
@@ -80,7 +80,7 @@ Z drugiej strony dwa następujące makra nie są identyczne i generują ostrzeż
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
 Ten przykład ilustruje **#define** dyrektywy:
 
@@ -109,12 +109,12 @@ var = 80 + 10 * 20;
 
 który ocenia do 280.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Definiowanie makr i stałych z [/D](../build/reference/d-preprocessor-definitions.md) — opcja kompilatora ma ten sam efekt jak użycie **#define** dyrektywy preprocesora na początku pliku. Do 30 makr można zdefiniować przy użyciu opcji/d.
 
-**END specyficzny dla Microsoft**
+**KONIEC Specyficzne dla firmy Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)

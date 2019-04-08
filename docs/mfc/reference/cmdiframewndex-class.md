@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778562"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
@@ -177,7 +177,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Ponownie oblicza układ aktywnego elementu.|
 |`CMDIFrameWndEx::AddDockSite`|Ta metoda nie jest używana.|
@@ -259,7 +259,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Określa, czy można przekonwertować tafli dokowania oknami podrzędnymi MDI.|
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Włącza lub wyłącza optymalizację ponownego wystawienia dla okien podrzędnych MDI.|
@@ -719,7 +719,7 @@ Określa położenie etykiet kartę.
 *bTabCloseButton*<br/>
 Określa, czy mają być wyświetlane przyciski Zamknij kartę.
 
-*style*<br/>
+* — styl*<br/>
 Określa styl karty. Na użytek STYLE_3D_SCROLLED zwykłe karty lub STYLE_3D_ONENOTE dla programu Microsoft OneNote kart.
 
 *bTabCustomTooltips*<br/>
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Menu*<br/>
+*menu*<br/>
 [in] Odwołanie do [klasa CMenu](../../mfc/reference/cmenu-class.md) obiekt do zmodyfikowania.
 
 *uiViewUserToolbarCmdFirst*<br/>
@@ -2026,7 +2026,7 @@ Ta metoda zastępuje [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Klasa CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532636"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026634"
 ---
 # <a name="initseg"></a>init_seg
 
@@ -36,13 +36,13 @@ Ponieważ inicjowania statycznych obiektów globalnych może obejmować wykonywa
 
 Opcje **init_seg** pragma są:
 
-*compiler*<br/>
+* — kompilator*<br/>
 Zarezerwowane dla inicjowania biblioteki wykonawczej C firmy Microsoft. Obiekty w tej grupie są konstruowane najpierw.
 
 *lib*<br/>
 Dostępne dla inicjowania biblioteki klas w innych dostawców. Obiekty w tej grupie są konstruowane, po oznaczone jako *kompilatora* , ale przed wszystkie inne pola.
 
-*Użytkownik*<br/>
+*użytkownik*<br/>
 Dostępne dla każdego użytkownika. Obiekty w tej grupie są konstruowane ostatnio.
 
 *Nazwa sekcji* umożliwia jawne określenie sekcji inicjowania. Obiekty w określonych przez użytkownika *nazwa sekcji* nie są niejawnie skonstruowany; jednak ich adresy są umieszczane w sekcji o nazwie określonej przez *nazwa sekcji*.
@@ -154,6 +154,6 @@ A()
 ~A()
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

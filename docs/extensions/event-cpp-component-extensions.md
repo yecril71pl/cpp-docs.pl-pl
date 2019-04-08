@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: a0e3ffbd4bce156ea4bf04e1524d2e778d24de79
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786822"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033091"
 ---
 # <a name="event--ccli-and-ccx"></a>zdarzenia (C + +/ CLI i C + +/ CX)
 
@@ -40,19 +40,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
+* — modyfikator*<br/>
 Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.
 
 *delegate*<br/>
 [Delegować](delegate-cpp-component-extensions.md), którego podpis programu obsługi zdarzeń muszą być zgodne.
 
-*nazwa_zdarzenia*<br/>
+*event_name*<br/>
 Nazwa zdarzenia.
 
 *return_value*<br/>
 Wartość zwracaną metody dostępu zdarzeń.  Jako możliwe do zweryfikowania, zwracanym typem musi być **void**.
 
-*parameters*<br/>
+*parametry*<br/>
 (opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.
 
 ### <a name="remarks"></a>Uwagi
@@ -104,19 +104,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
+* — modyfikator*<br/>
 Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.
 
 *delegate*<br/>
 [Delegować](delegate-cpp-component-extensions.md), którego podpis programu obsługi zdarzeń muszą być zgodne.
 
-*nazwa_zdarzenia*<br/>
+*event_name*<br/>
 Nazwa zdarzenia.
 
 *return_value*<br/>
 Wartość zwracaną metody dostępu zdarzeń.  Jako możliwe do zweryfikowania, zwracanym typem musi być **void**.
 
-*parameters*<br/>
+*parametry*<br/>
 (opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.
 
 ### <a name="remarks"></a>Uwagi
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

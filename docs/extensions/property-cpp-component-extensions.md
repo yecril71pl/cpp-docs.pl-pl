@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 31b5673426a8c31cea203002018cc3a465952859
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58787155"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038811"
 ---
 # <a name="property--ccli-and-ccx"></a>właściwości (C + +/ CLI i C + +/ CX)
 
@@ -61,7 +61,7 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
+*— typ*<br/>
 Typ danych wartości właściwości i samej właściwości.
 
 *property_name*<br/>
@@ -113,10 +113,10 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
+* — modyfikator*<br/>
 Modyfikatory, które mogą być używane w deklaracji właściwości lub metody dostępu get/set. Możliwe wartości to **statyczne** i **wirtualnego**.
 
-*type*<br/>
+*— typ*<br/>
 Typ wartości, który jest reprezentowany przez właściwość.
 
 *property_name*<br/>
@@ -213,6 +213,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

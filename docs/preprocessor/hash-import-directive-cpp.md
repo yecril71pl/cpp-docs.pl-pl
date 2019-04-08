@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564967"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031988"
 ---
 # <a name="import-directive-c"></a>#import — dyrektywa (C++)
 
@@ -34,7 +34,7 @@ Używane do przyłączania informacji z biblioteki typów. Zawartość bibliotek
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa pliku*<br/>
+*nazwa_pliku*<br/>
 Określa typ biblioteki do zaimportowania. *Nazwa pliku* może być jedną z następujących czynności:
 
 - Nazwa pliku, który zawiera biblioteki typów, na przykład pliku olb, TLB lub dll. Słowo kluczowe **pliku:**, może poprzedzać nazwę każdego pliku.
@@ -65,7 +65,7 @@ Określa typ biblioteki do zaimportowania. *Nazwa pliku* może być jedną z nas
 
 - Innym formacie pliku, który może być rozumiany przez **LoadTypeLib** interfejsu API.
 
-*Atrybuty*<br/>
+*atrybuty*<br/>
 Co najmniej jeden [#import atrybutów](#_predir_the_23import_directive_import_attributes). Oddziel atrybuty spacją lub przecinkiem. Na przykład:
 
 ```cpp
@@ -191,7 +191,7 @@ Aby uzyskać więcej informacji, zobacz [#import atrybutów](../preprocessor/has
 
 **KONIEC określonego języka C++**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)<br/>
 [Obsługa kompilatora COM](../cpp/compiler-com-support.md)
