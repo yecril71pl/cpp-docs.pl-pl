@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237201"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Instrukcje: Projektowanie pod kątem bezpieczeństwa wyjątków
 
@@ -23,7 +23,7 @@ Bez względu na to, jak funkcja obsługuje wyjątek, w celu zagwarantowania jej 
 
 ### <a name="keep-resource-classes-simple"></a>Prostota klas zasobów
 
-Podczas hermetyzowania ręcznego zarządzania zasobami w klasach należy stosować klasy, które nie wykonują żadnych innych zadań w dziedzinie zarządzania danymi zasobami. W przeciwnym razie mogą się pojawić przecieki pamięci. Użyj [inteligentne wskaźniki](../cpp/smart-pointers-modern-cpp.md) Jeśli to możliwe, jak pokazano w poniższym przykładzie. Przykład jest celowo sztuczny i uproszczony, aby podkreślić różnice względem stosowania wskaźników `shared_ptr`.
+Podczas hermetyzację zarządzania zasobami ręczne w klasach należy użyć klasy, która nie wykonuje żadnych działań z wyjątkiem zarządzania pojedynczy zasób. Klasa prostotę, zmniejszasz ryzyko wprowadzenia przeciekom zasobów. Użyj [inteligentne wskaźniki](../cpp/smart-pointers-modern-cpp.md) Jeśli to możliwe, jak pokazano w poniższym przykładzie. Przykład jest celowo sztuczny i uproszczony, aby podkreślić różnice względem stosowania wskaźników `shared_ptr`.
 
 ```cpp
 // old-style new/delete version

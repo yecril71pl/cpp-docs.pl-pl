@@ -4,12 +4,12 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237136"
 ---
 # <a name="open-folder-projects-for-c"></a>Otwórz Folder projektów w języku C++
 
@@ -107,7 +107,3 @@ Aby określić dodatkowe argumenty, wystarczy dodać ich w `args` tablicę JSON,
 ```
 
 Po zapisaniu tego pliku, nowa konfiguracja zostanie wyświetlona w menu rozwijanym Debuguj element docelowy i możesz wybrać go, aby uruchomić debuger. Można utworzyć wiele konfiguracji debugowania, jak chcesz, dla dowolnej liczby plików wykonywalnych. Jeśli użytkownik naciśnie klawisz **F5** teraz uruchomić i trafiony punkt przerwania, wszelkie może już zostały ustawione przez debuger. Obecnie są dostępne wszystkie znajomego debugera systemu windows i ich funkcje.
-
-## <a name="see-also"></a>Zobacz także
-
-

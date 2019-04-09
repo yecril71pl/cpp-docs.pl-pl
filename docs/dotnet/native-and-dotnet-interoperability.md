@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-ms.openlocfilehash: ae5a4583d5f074b98e346ba090246f533b80803d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237149"
 ---
 # <a name="native-and-net-interoperability"></a>Współdziałanie natywne i .NET
 
@@ -30,10 +30,8 @@ Visual C++ obsługuje funkcje współpracy, które umożliwiają zarządzane i n
 [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
 Opis koncepcji zestawów wygenerowanych przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) opcję kompilatora, która zawiera zarówno zarządzanych i niezarządzanych funkcji.
 
-[Używanie kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
+[Używanie formantu użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 W tym artykule omówiono sposób użycia klasy obsługi formularzy Windows w MFC dla formantów Windows Forms hosta w aplikacji MFC.
 
 [Wywoływanie funkcji natywnych z kodu zarządzanego](../dotnet/calling-native-functions-from-managed-code.md)<br/>
 W tym artykule opisano, jak biblioteki DLL inne niż - CLR można używać z poziomu aplikacji .NET.
-
-## <a name="see-also"></a>Zobacz także

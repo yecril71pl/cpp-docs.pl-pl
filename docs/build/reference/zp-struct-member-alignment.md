@@ -1,6 +1,6 @@
 ---
 title: /Zp (Wyrównanie członka struktury)
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237167"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Wyrównanie członka struktury)
 
@@ -28,7 +28,7 @@ Określa, jak elementy członkowskie struktury są pakowane w pamięci, a nastę
 
 ## <a name="remarks"></a>Uwagi
 
-Po określeniu **/ZP**_n_ opcji, każdy element członkowski struktury po pierwszym jest przechowywany na rozmiarze typ elementu członkowskiego lub *n*-bajtowych granicach (gdzie *n* to 1, 2, 4, 8 lub 16), która kwota jest mniejsza.
+**/ZP**_n_ opcji informuje kompilator, gdzie można przechowywać każdy element członkowski struktury. Kompilator zapisuje elementy członkowskie po pierwszy z nich w granicach mniejszego rozmiaru typ elementu członkowskiego lub *n*-bajtowych granic.
 
 Wartości pakowania dostępne są opisane w poniższej tabeli:
 
@@ -37,13 +37,13 @@ Wartości pakowania dostępne są opisane w poniższej tabeli:
 |1|Struktury pakietów przy 1-bajtowych granicach. Taki sam jak **/ZP**.|
 |2|Struktury pakietów przy 2-bajtowych granicach.|
 |4|Struktury pakietów przy 4-bajtowych granicach.|
-|8|Struktury pakietów przy 8-bajtowych granicach (domyślnie).|
-|16| Struktury pakietów przy 16-bajtowych granicach.|
+|8|Struktury pakietów przy 8-bajtowych granicach (domyślnie dla x86, ARM i ARM64).|
+|16| Struktury pakietów przy 16-bajtowych granicach (domyślnie x64).|
 
 Nie należy używać tej opcji, chyba że masz wymagania wyraźnego związku.
 
 > [!WARNING]
-> Przyjęto założenie, nagłówki C++ w zestawie Windows SDK **/zp8** pakowania. Jeśli może spowodować uszkodzenie pamięci **/ZP** ustawienie to ulegnie zmianie, gdy przy użyciu nagłówków zestawu Windows SDK.
+> Ustaw nagłówki C++ w zestawie Windows SDK i przyjęto założenie, **/zp8** pakowania wewnętrznie. Jeśli może spowodować uszkodzenie pamięci **/ZP** ustawienie to ulegnie zmianie wewnątrz nagłówków zestawu Windows SDK. Nagłówki nie ma wpływu na dowolny **/ZP** opcja zostanie ustawiona w wierszu polecenia.
 
 Można również użyć [pakiet](../../preprocessor/pack.md) do sterowania struktury pakowania. Aby uzyskać więcej informacji na temat wyrównania zobacz:
 
@@ -59,7 +59,7 @@ Można również użyć [pakiet](../../preprocessor/pack.md) do sterowania struk
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **C/C++** > **generowania kodu** stronę właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **generowania kodu** stronę właściwości.
 
 1. Modyfikowanie **wyrównanie członka struktury** właściwości.
 
@@ -69,5 +69,5 @@ Można również użyć [pakiet](../../preprocessor/pack.md) do sterowania struk
 
 ## <a name="see-also"></a>Zobacz także
 
-- [MSVC Compiler Options](compiler-options.md)
-- [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Opcje kompilatora MSVC](compiler-options.md) \
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,41 +1,48 @@
 ---
 title: Kompilator ostrzeżenie (poziom 4) C4062
-ms.date: 11/04/2016
+ms.date: 04/05/2019
 f1_keywords:
 - C4062
 helpviewer_keywords:
 - C4062
 ms.assetid: 36d1c6ae-c917-4b08-bf30-2eb49ee94169
-ms.openlocfilehash: 6a7129f71eebb33e7bde333dfd90ed4ca173d44c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79658afc31565b708cdbd8a88f49b887cdd10cf3
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237188"
 ---
 # <a name="compiler-warning-level-4-c4062"></a>Kompilator ostrzeżenie (poziom 4) C4062
 
-Moduł wyliczający 'Identyfikator' w przełączniku enum 'wyliczenie' nie jest obsługiwany.
+> Moduł wyliczający "*identyfikator*'w przełączniku Enum'*wyliczenie*" nie jest obsługiwany
 
-Wyliczenia nie skojarzony program obsługi ma `switch` instrukcji i ma nie **domyślne** etykiety.
+Moduł wyliczający *identyfikator* nie ma przypisanego skojarzone `case` obsługi w `switch` instrukcji i ma nie `default` etykietę, która może przechwycić go. Brak przypadku może być nadzoru i potencjalny błąd w kodzie. Powiązane ostrzeżenia na nieużywanych moduły wyliczające w `switch` instrukcje, które `default` przypadku zobacz [C4061](compiler-warning-level-4-c4061.md).
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączona. Aby uzyskać więcej informacji o sposobie włączania ostrzeżeń, które są domyślnie wyłączone, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-Poniższy przykład spowoduje wygenerowanie C4062:
+## <a name="example"></a>Przykład
 
-```
+Poniższy przykład generuje C4062 i pokazuje, jak go naprawić:
+
+```cpp
 // C4062.cpp
-// compile with: /W4
+// compile with: /EHsc /W4
 #pragma warning(default : 4062)
 enum E { a, b, c };
 void func ( E e ) {
    switch(e) {
       case a:
       case b:
+   // case c:  // to fix, uncomment this line
       break;   // no default label
-   }   // C4062, enumerate 'c' not handled
+   }   // C4062, enumerator 'c' not handled
 }
 
 int main() {
 }
 ```
+
+## <a name="see-also"></a>Zobacz także
+
+[Kompilator ostrzeżenie (poziom 4) C4061](compiler-warning-level-4-c4061.md)
