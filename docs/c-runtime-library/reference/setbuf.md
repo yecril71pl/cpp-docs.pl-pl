@@ -1,6 +1,6 @@
 ---
 title: setbuf
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 apiname:
 - setbuf
 apilocation:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 3b5fbccd304d406131b0c4f7d16a289f80484642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440499"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424173"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -44,17 +44,17 @@ void setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*strumień*<br/>
 Wskaźnik do **pliku** struktury.
 
-*buffer*<br/>
+*Bufor*<br/>
 Bufor przydzielony przez użytkownika.
 
 ## <a name="remarks"></a>Uwagi
 
-**Setbuf —** funkcji kontrolek buforowania *strumienia*. *Strumienia* argumentu musi odwoływać się do otwartego pliku, który nie odczytu lub zapisu. Jeśli *buforu* argument jest **NULL**, strumień jest niezaznaczone buforowanego. Jeśli nie, rozmiar buforu musi wskazywać na tablicy znaków o długości **BUFSIZ**, gdzie **BUFSIZ** jest rozmiar buforu, zgodnie z definicją w stdio —. H. Bufor określonych przez użytkownika, zamiast bufor przydzielony systemu domyślny dla danego strumienia jest używany dla we/wy buforowania. **Stderr** strumień jest niezaznaczone buforowanego domyślnie, ale można użyć **setbuf —** można przypisać buforów do **stderr**.
+**Setbuf —** funkcji kontrolek buforowania *strumienia*. *Strumienia* argumentu musi odwoływać się do otwartego pliku, który nie został zapisu lub odczytu. Jeśli *buforu* argument jest **NULL**, strumień jest Niebuforowane. Jeśli nie, rozmiar buforu musi wskazywać na tablicy znaków o długości **BUFSIZ**, gdzie **BUFSIZ** jest rozmiar buforu, zgodnie z definicją w stdio —. H. Bufor określonych przez użytkownika, zamiast bufor przydzielony systemu domyślny dla danego strumienia jest używany dla we/wy buforowania. **Stderr** strumienia jest niebuforowanego domyślnie, ale można użyć **setbuf —** można przypisać buforów do **stderr**.
 
-**setbuf —** został zastąpiony przez [setvbuf —](setvbuf.md), czyli preferowany procedury dla nowego kodu. **setbuf —** został zachowany na potrzeby utrzymywania zgodności z istniejącego kodu.
+**setbuf —** został zastąpiony przez [setvbuf —](setvbuf.md), czyli preferowany procedury dla nowego kodu. W odróżnieniu od **setvbuf —**, **setbuf —** nie ma możliwości raportowania błędów. **setvbuf —** umożliwia także kontrolować zarówno w trybie buforowania, jak i w rozmiar buforu. **setbuf —** istnieje dla zgodności z istniejącego kodu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -105,7 +105,7 @@ stream2 buffering disabled
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

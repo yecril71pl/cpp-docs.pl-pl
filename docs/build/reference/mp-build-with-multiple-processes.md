@@ -1,6 +1,6 @@
 ---
 title: /MP (Kompilacja z wieloma procesami)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424147"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Kompilacja z wieloma procesami)
 
@@ -51,7 +51,7 @@ W poniższej tabeli wymieniono opcje kompilatora i funkcje językowe, które są
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy preprocesora|Konwertuje typy w bibliotece typów na klasy C++, a następnie zapisuje te klasy w pliku nagłówka.|
 |[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego (**stdout**).|
-|[/Gm](gm-enable-minimal-rebuild.md)|Umożliwia przyrostowe ponownej kompilacji.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Przestarzałe. Umożliwia przyrostowe ponownej kompilacji.|
 |[/showIncludes](showincludes-list-include-files.md)|Zapisuje listę wszystkich plików dołączanych do błędu standardowego (**stderr**).|
 |[/Yc](yc-create-precompiled-header-file.md)|Zapisuje prekompilowanego pliku nagłówkowego.|
 
@@ -125,12 +125,8 @@ Wytycznych dotyczących decydowania, czy należy użyć programu MSBuild lub **/
 
 - Jeśli liczba projektów i plików na projekt jest równoważone, należy użyć zarówno programu MSBuild i **/MP**. Początkowo ustawić **/maxcpucount** możliwość liczby projektów do kompilacji i **/MP** opcję, aby liczba procesorów na tym komputerze. Mierzenie wydajności, a następnie Dostosuj ustawienia umożliwiające uzyskanie najlepsze rezultaty. Powtórz ten cykl, dopóki jesteś zadowolony z czasem kompilacji łączna liczba.
 
-#### <a name="the-gm-compiler-option"></a>/Gm — opcja kompilatora
-
-Domyślnie, projekt kompilacji umożliwia **/Gm** — opcja kompilatora (kompilacje przyrostowe) dla kompilacji do debugowania i wyłącza opiera się on do wydania. W związku z tym **/MP** — opcja kompilatora jest automatycznie wyłączone w kompilacjach debugowania, ponieważ powoduje on konflikt z domyślnym **/Gm** — opcja kompilatora.
-
 ## <a name="see-also"></a>Zobacz także
 
-[#import Directive](../../preprocessor/hash-import-directive-cpp.md)<br/>
-[Dokumentacja wiersza polecenia](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (Szybsze generowanie pliku PDB)](zf.md)<br/>
+[#import — dyrektywa](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[Informacje w wierszu polecenia](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
+[/ZF (szybsze generowanie pliku PDB)](zf.md)<br/>

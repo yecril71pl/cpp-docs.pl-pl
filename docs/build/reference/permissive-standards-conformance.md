@@ -1,6 +1,6 @@
 ---
 title: / permissive-(zgodność ze standardami)
-ms.date: 06/21/2018
+ms.date: 03/08/2019
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424134"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(zgodność ze standardami)
 
@@ -23,7 +23,7 @@ Określ tryb zgodności standardów do kompilatora. Użyj tej opcji, aby ułatwi
 
 ## <a name="syntax"></a>Składnia
 
-> **/ permissive-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Uwagi
 
@@ -35,15 +35,15 @@ Domyślnie **/ permissive-** opcja jest ustawiana w nowe projekty utworzone prze
 
 **/ Permissive-** opcja jest zgodna z prawie wszystkie pliki nagłówkowe z najnowszych zestawów Windows, takich jak Software Development Kit (SDK) lub Windows Driver Kit (WDK), począwszy od Windows SDK Fall Creators Update (10.0.16299.0). Starsze wersje zestawu SDK może kompilacja nie powiedzie się w obszarze **/ permissive-** różne źródła przyczyny zgodność kodu. Kompilator i dostarczaj zestawów SDK na osiach czasu z różnych wersji, w związku z tym występują pewne problemy pozostałych. W przypadku określonego nagłówka pliku problemów, zobacz [problemów nagłówka Windows](#windows-header-issues) poniżej.
 
-**/ Permissive-** zestawy opcji [/Zc: strictstrings](zc-conformance.md) i [/Zc: rvaluecast](zc-conformance.md) opcje do zachowania zgodności. Wartością domyślną niezgodnych zachowanie. Można przekazać określonego **/Zc** opcje po **/ permissive-** w wierszu polecenia, aby zastąpić to zachowanie.
+**/ Permissive-** zestawy opcji [/Zc: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md), [/Zc: strictstrings](zc-strictstrings-disable-string-literal-type-conversion.md), i [/Zc: rvaluecast](zc-rvaluecast-enforce-type-conversion-rules.md) opcje zgodne zachowanie. Te ustawienia opcje domyślne zachowanie niezgodnych. Można przekazać określonego **/Zc** opcje po **/ permissive-** w wierszu polecenia, aby zastąpić to zachowanie.
 
-W wersjach kompilatora, począwszy od programu Visual Studio 2017 w wersji 15.3 **/ permissive-** zestawy opcji [/Zc: ternary](zc-ternary.md) opcji. Kompilator wykonuje kilka wymagań dotyczących nazwy dwufazowe wyszukiwanie. Gdy **/ permissive-** wyboru jest zaznaczone, w którym kompilator analizuje funkcji i klas definicjach szablonów, identyfikowanie nazwy zależne i zależne od innych niż używane w szablonach. W tej wersji odbywa się tylko nazwa analizy zależności.
+W wersjach kompilatora, począwszy od programu Visual Studio 2017 w wersji 15.3 **/ permissive-** zestawy opcji [/Zc: ternary](zc-ternary.md) opcji. Kompilator wykonuje kilka wymagań dotyczących nazwy dwufazowe wyszukiwanie. Gdy **/ permissive-** wyboru jest zaznaczone, kompilator analizuje definicji szablonu funkcji i klas i identyfikuje nazwy zależne i zależne od innych niż używane w szablonach. W tej wersji odbywa się tylko nazwa analizy zależności.
 
 Rozszerzenia specyficznymi dla środowiska i obszary języka standard pozostawia do wykonania nie dotyczy **/ permissive-**. Na przykład specyficzne dla firmy Microsoft `__declspec`, Konwencja wywoływania i obsługi słów kluczowych i dyrektyw pragma specyficznych dla kompilatora lub atrybutów wyjątków strukturalnych nie są oznaczone przez kompilator w **/ permissive-** trybu.
 
 **/ Permissive-** opcja używa obsługi zgodności w bieżącej wersji kompilatora ustalenie konstrukcji języka, które są niezgodne. Opcja nie określa, czy kod jest zgodny z określoną wersją C++ standard. Aby włączyć wszystkie obsługa kompilatora zaimplementowane do najnowszego standardu projekt, należy użyć [/std:latest](std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługa kompilatora do aktualnie wdrożonych standardzie C ++ 17, należy użyć [/STD: c ++ 17](std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługę kompilatora, aby lepiej dopasować standard C ++ 14, należy użyć [/STD: c ++ 14](std-specify-language-standard-version.md) opcji, co jest ustawieniem domyślnym.
 
-Nie wszystkie C ++ 11, C ++ 14 lub C ++ 17 zgodne z normami kod jest obsługiwany za pomocą kompilatora MSVC w programie Visual Studio 2017. W zależności od wersji programu Visual Studio **/ permissive-** opcji może nie wykryć problemy dotyczące niektóre aspekty dwufazowe wyszukiwanie nazw, powiązanie odwołanie niestałe do tymczasowej, traktowanie init kopię jako bezpośrednie init, umożliwiając wiele zdefiniowanych przez użytkownika konwersje inicjowania lub alternatywne tokenów dla operatorów logicznych i innych zagadnień-obsługiwany zgodność. Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md). Aby uzyskać najbardziej z **/ permissive-**, zaktualizować program Visual Studio do najnowszej wersji.
+Nie wszystkie C ++ 11, C ++ 14 lub C ++ 17 zgodne z normami kod jest obsługiwany za pomocą kompilatora MSVC we wszystkich wersjach programu Visual Studio 2017. W zależności od wersji programu Visual Studio **/ permissive-** opcji może nie wykryć problemy dotyczące niektóre aspekty dwufazowe wyszukiwanie nazw, powiązanie odwołanie niestałe do tymczasowej, traktowanie init kopię jako bezpośrednie init, umożliwiając wiele zdefiniowanych przez użytkownika konwersje inicjowania lub alternatywne tokenów dla operatorów logicznych i innych zagadnień-obsługiwany zgodność. Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md). Aby uzyskać najbardziej z **/ permissive-**, zaktualizować program Visual Studio do najnowszej wersji.
 
 ### <a name="how-to-fix-your-code"></a>Jak naprawić kod
 
@@ -56,7 +56,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>Wyszukiwanie członków w podstawowym zależne
+#### <a name="look-up-members-in-dependent-base"></a>Wyszukiwanie elementów członkowskich w podstawowym zależne
 
 ```cpp
 template <typename T>
@@ -237,7 +237,7 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 W wersjach kompilatora przed Visual Studio 2017 w wersji 15.3, kompilator zaakceptowane argumenty operator warunkowy (lub operator trójargumentowy) `?:` uwzględnianych niejednoznaczne przez Standard. W **/ permissive-** tryb, kompilator generuje teraz jeden lub więcej diagnostyki w przypadkach, w których skompilowany bez diagnostyki we wcześniejszych wersjach.
 
-Błędy typowych, które mogą wynikać z tej zmiany obejmują:
+Typowe błędy, które mogą wynikać z tej zmiany obejmują:
 
 - Błąd C2593: 'operator'? jest niejednoznaczny
 
@@ -247,7 +247,7 @@ Błędy typowych, które mogą wynikać z tej zmiany obejmują:
 
 - Błąd C2446: ":": Brak konwersji z 'B', 'A'
 
-Wzorzec typowy kod, który może być przyczyną tego problemu jest, gdy niektóre klasy C zawiera zarówno niejawnego konstruktora z innego typu T, jak i operator-jawnej konwersji typu T. W takim przypadku zarówno konwersja 2nd argumentów na typ 3 i konwersji argumentu 3, typ 2. są prawidłowe konwersje niejednoznacznego zgodnie ze standardem.
+Wzorzec typowy kod, który może być przyczyną tego problemu jest, gdy niektóre klasy C zawiera zarówno niejawnego konstruktora z innego typu T, jak i operator-jawnej konwersji typu T. W tym przypadku konwersję drugiego argumentu Typ trzeciego argumentu i konwersja trzeci argument na typ drugiego argumentu są prawidłowe konwersji. Ponieważ oba są prawidłowe, jest niejednoznaczne zgodnie ze standardem.
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -313,7 +313,7 @@ const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 
 #### <a name="two-phase-name-look-up"></a>Nazwa dwufazowe wyszukiwanie
 
-Gdy **/ permissive-** wyboru jest zaznaczone, w którym kompilator analizuje funkcji i klas definicjach szablonów, identyfikowanie nazwy zależne i zależne od innych niż używane w szablonach, zgodnie z wymaganiami dla nazwy dwufazowe wyszukiwanie. W programie Visual Studio 2017 w wersji 15.3 Nazwa zależności analiza jest wykonywana. W szczególności nazwy zależne od innych, które nie zostały zadeklarowane w kontekście definicji szablonu spowodować, że komunikat diagnostyczny zgodnie z wymogami normy ISO C++. W programie Visual Studio 2017 wersji 15.7 również odbywa się powiązania nazwy zależne od innych, które wymagają argumentów zależne odnośnika w kontekście definicji.
+Gdy **/ permissive-** wyboru jest zaznaczone, w którym kompilator analizuje funkcji i klas definicjach szablonów, identyfikowanie nazwy zależne i zależne od innych niż używane w szablonach, zgodnie z wymaganiami dla nazwy dwufazowe wyszukiwanie. W programie Visual Studio 2017 w wersji 15.3 Nazwa zależności analiza jest wykonywana. W szczególności nazwy zależne od innych, które nie zostały zadeklarowane w kontekście definicji szablonu spowodować, że komunikat diagnostyczny zgodnie z wymogami normy ISO C++. W programie Visual Studio 2017 wersji 15.7 również odbywa się powiązania nazwy zależne od innych, które wymagają wyszukiwania zależnego od argumentów w kontekście definicji.
 
 ```cpp
 // dependent base
@@ -464,5 +464,5 @@ W wersjach starszych niż program Visual Studio 2017 w wersji 15.5 wykonaj nast�
 
 ## <a name="see-also"></a>Zobacz także
 
-- [MSVC Compiler Options](compiler-options.md)
+- [Opcje kompilatora MSVC](compiler-options.md)
 - [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

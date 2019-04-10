@@ -1,6 +1,6 @@
 ---
 title: /Z7, /Zi, /ZI (Format informacji o debugowaniu)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816324"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424082"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Format informacji o debugowaniu)
 
@@ -52,7 +52,7 @@ Domyślnie jeśli określono żadnej opcji formatu informacji debugowania, kompi
 
 Dla dystrybutorów bibliotek innych firm wersje do debugowania ma swoją zaletę nieposiadanie pliku PDB. Jednak pliki obiektów dla dowolnego wstępnie skompilowanych nagłówków są niezbędne w fazie biblioteki, a także do debugowania. Jeśli jest tylko typ informacji (i nie ma kodu) w pliku obiektu .pch, musisz również użyć [/Yl (wstrzyknąć Odnośnik PCH dla bibliotek debugowania)](yl-inject-pch-reference-for-debug-library.md) opcja, która jest domyślnie włączone, podczas kompilowania biblioteki.
 
-[/Gm (Włącz minimalną ponowną kompilację)](gm-enable-minimal-rebuild.md) opcja jest niedostępna, gdy **/z7** jest określony.
+Przestarzała [/Gm (Włącz minimalną ponowną kompilację)](gm-enable-minimal-rebuild.md) opcja jest niedostępna, gdy **/z7** jest określony.
 
 ### <a name="zi"></a>/Zi
 
@@ -91,6 +91,6 @@ Jeśli tworzysz bibliotekę z obiektów, które zostały skompilowane przy użyc
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
 

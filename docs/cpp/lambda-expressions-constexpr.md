@@ -1,19 +1,19 @@
 ---
 title: wyrażenia constexpr wyrażeń lambda w języku C++
-ms.date: 07/19/2017
+ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424186"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>wyrażenia constexpr wyrażeń lambda w języku C++
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Wyrażenie lambda może być zadeklarowana jako **constexpr** lub używana w wyrażeniu zawartość podczas inicjowania każdego z nich element członkowski danych przechwytuje, lub wprowadza jest dozwolona w wyrażeniu stałym.
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Wyrażenie lambda może być zadeklarowana jako **constexpr** lub używany w wyrażeniu stałym, podczas inicjowania każdej składowej danych, który przechwytuje, lub wprowadza jest dozwolona w wyrażeniu stałym.
 
 ```cpp
     int y = 32;
@@ -53,7 +53,7 @@ Jeśli wyrażenie lambda jest jawnie lub niejawnie **constexpr**i przekonwertuj 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
+[Materiał referencyjny na temat języka C++](../cpp/cpp-language-reference.md)<br/>
 [Obiekty funkcji w standardowej bibliotece C++](../standard-library/function-objects-in-the-stl.md)<br/>
 [Wywołanie funkcji](../cpp/function-call-cpp.md)<br/>
 [for_each](../standard-library/algorithm-functions.md#for_each)

@@ -1,14 +1,14 @@
 ---
 title: Opcje kompilatora w porządku alfabetycznym
-ms.date: 08/20/2018
+ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811943"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424121"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -19,14 +19,14 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[@](at-specify-a-compiler-response-file.md)|Określa plik odpowiedzi.|
 |[/?](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
 |[/AI](ai-specify-metadata-directories.md)|Określa katalog do przeszukania w celu rozpoznania odwołań do plików przekazywanych do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy.|
-|[/ analyze](analyze-code-analysis.md)|Włącz analizę kodu.|
+|[/analyze](analyze-code-analysis.md)|Włącz analizę kodu.|
 |[/ arch](arch-minimum-cpu-architecture.md)|Określa architekturę do generowania kodu.|
-|[/await](await-enable-coroutine-support.md)|Włącz rozszerzenia w koprocedury (z funkcji wznawialnych).|
+|[/ await](await-enable-coroutine-support.md)|Włącz rozszerzenia w koprocedury (z funkcji wznawialnych).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Zwiększa liczbę możliwych do adresowania sekcji w pliku .obj.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Zachowuje komentarze podczas przetwarzania wstępnego.|
 |[/c](c-compile-without-linking.md)|Kompiluje bez konsolidacji.|
-|[/cgthreads](cgthreads-code-generation-threads.md)|Określa liczbę wątków cl.exe na potrzeby optymalizacji i generowania kodu.|
-|[/clr](clr-common-language-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia w środowisku uruchomieniowym języka wspólnego.|
+|[/ cgthreads](cgthreads-code-generation-threads.md)|Określa liczbę wątków cl.exe na potrzeby optymalizacji i generowania kodu.|
+|[/ CLR](clr-common-language-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia w środowisku uruchomieniowym języka wspólnego.|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Szacowanie kontrolki constexpr w czasie kompilacji.|
 |[/D](d-preprocessor-definitions.md)|Definiuje stałe i makra.|
 |[/ Diagnostics](diagnostics-compiler-diagnostic-options.md)|Kontroluje format komunikatów diagnostycznych.|
@@ -48,8 +48,8 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/Fm](fm-name-mapfile.md)|Tworzy plik mapy.|
 |[/Fo](fo-object-file-name.md)|Tworzy plik obiektu.|
 |[/fp](fp-specify-floating-point-behavior.md)|Określenie zachowania zmiennoprzecinkowego.|
-|[/ FP](fp-name-dot-pch-file.md)|Określa nazwę prekompilowanego pliku nagłówka.|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|Generuje pliki przeglądarki. **/FR** jest przestarzała.|
+|[/Fp](fp-name-dot-pch-file.md)|Określa nazwę prekompilowanego pliku nagłówka.|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Generuje pliki przeglądarki. **/FR** jest przestarzała.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza zapisanie do pliku bazy danych (PDB) programu w celu serializowana za pośrednictwem MSPDBSRV. PLIK EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|Wymusza użycie nazwy pliku tak jakby została przekazana do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy.|
 |[/Fx](fx-merge-injected-code.md)|Scala wprowadzony kod z plikiem źródłowym.|
@@ -60,23 +60,23 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/GH](gh-enable-pexit-hook-function.md)|Wywołuje funkcję podłączania `_pexit`.|
 |[/Gh](gh-enable-penter-hook-function.md)|Wywołuje funkcję podłączania `_penter`.|
 |[/GL](gl-whole-program-optimization.md)|Włącza optymalizację całego programu.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Włącza minimalną ponowną kompilację.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Przestarzałe. Włącza minimalną ponowną kompilację.|
 |[/GR](gr-enable-run-time-type-information.md)|Włącza informacje typu run-time (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Używa `__fastcall` (tylko x86) konwencji wywoływania.|
 |[/GS](gs-buffer-security-check.md)|Sprawdzanie zabezpieczeń buforów.|
-|[/ GS](gs-control-stack-checking-calls.md)|Kontroluje sondy stosu.|
+|[/Gs](gs-control-stack-checking-calls.md)|Kontroluje sondy stosu.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Obsługuje bezpieczeństwo włókien dla danych przydzielonych przy użyciu statycznego magazynu wątków lokalnych.|
-|[/ GUARD: CF](guard-enable-control-flow-guard.md)|Dodaje kontrole zabezpieczeń Ochrona przepływu sterowania.|
+|[/guard:cf](guard-enable-control-flow-guard.md)|Dodaje kontrole zabezpieczeń Ochrona przepływu sterowania.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Używa `__vectorcall` konwencji wywoływania. (x86 i x64 tylko)|
 |[/Gw](gw-optimize-global-data.md)|Umożliwia optymalizację danych globalnych całego programu.|
 |[/GX](gx-enable-exception-handling.md)|Przestarzałe. Włącza synchroniczną obsługę wyjątków. Użyj [/EH](eh-exception-handling-model.md) zamiast tego.|
-|[/Gy](gy-enable-function-level-linking.md)|Włącza funkcję łączenie na poziomie.|
+|[/GY](gy-enable-function-level-linking.md)|Włącza funkcję łączenie na poziomie.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Przestarzałe. Taki sam jak [rtc1](rtc-run-time-error-checks.md).|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Używa `__stdcall` (tylko x86) konwencji wywoływania.|
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
 |[/HELP](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
 |[/ homeparams](homeparams-copy-register-parameters-to-stack.md)|Wymusza zapisanie parametrów przekazanych w rejestrach były zapisywane do ich lokalizacji na stosie wejściu do funkcji. Ta opcja kompilatora jest tylko w przypadku x64 kompilatory (kompilacja natywna i krzyżowa).|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Tworzy obraz hotpatchable.|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Tworzy obraz hot-patchable.|
 |[/I](i-additional-include-directories.md)|Przeszukuje katalog plików dołączanych.|
 |[/J](j-default-char-type-is-unsigned.md)|Zmienia domyślny `char` typu.|
 |[/JMC](jmc.md)|Obsługuje debugowanie natywne C++ tylko mój kod.|
@@ -97,24 +97,24 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/Od](od-disable-debug.md)|Wyłącza optymalizację.|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa globalnych optymalizacji.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
-|[/ OpenMP](openmp-enable-openmp-2-0-support.md)|Włącza [#pragma omp](../../preprocessor/omp.md) w kodzie źródłowym.|
-|[/ OS](os-ot-favor-small-code-favor-fast-code.md)|Preferuje mały kod.|
-|[/OT](os-ot-favor-small-code-favor-fast-code.md)|Preferuje szybki kod.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Włącza [ `#pragma omp` ](../../preprocessor/omp.md) dyrektywę w kodzie źródłowym.|
+|[/Os](os-ot-favor-small-code-favor-fast-code.md)|Preferuje mały kod.|
+|[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Preferuje szybki kod.|
 |[/Ox](ox-full-optimization.md)|Używa maksymalnej optymalizacji (/ Ob2gity/GS).|
 |[/Oy](oy-frame-pointer-omission.md)|Pomija wskaźnik ramki (tylko x86).|
 |[/P](p-preprocess-to-a-file.md)|Zapisuje dane wyjściowe preprocesora do pliku.|
-|[/ permissive-](permissive-standards-conformance.md)|Ustaw tryb zgodności standard.|
+|[/permissive-](permissive-standards-conformance.md)|Ustaw tryb zgodności standard.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generuje fast transcendentals.|
-|[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagana (tylko x86).|
+|[/ QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagana (tylko x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` polecenia wewnątrz `try` bloków.|
 |[/Qpar (Automatyczny paralelizator)](qpar-auto-parallelizer.md)|Włącza automatyczne przetwarzanie równoległe pętli, które są oznaczone [#pragma loop()](../../preprocessor/loop.md) dyrektywy.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Używa całkowitoliczbowych instrukcji przeniesienia dla wartości zmiennopozycyjnych i wyłącza niektóre ładowania zmiennopozycyjnego.|
-|[/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](qvec-report-auto-vectorizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznej wektoryzacji.|
+|[/Qvec-raport (Poziom raportowania automatycznej wektoryzacji)](qvec-report-auto-vectorizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznej wektoryzacji.|
 |[/RTC](rtc-run-time-error-checks.md)|Włącza sprawdzanie błędów czasu wykonywania.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Umożliwia dodatkowe funkcje zabezpieczeń i ostrzeżenia.|
 |[/showIncludes](showincludes-list-include-files.md)|Wyświetla listę wszystkich plików dołączanych podczas kompilacji.|
-|[/ Source-Charset](source-charset-set-source-character-set.md)|Ustaw źródłowy zestaw znaków.|
-|[/ STD](std-specify-language-standard-version.md)|Selektor zgodności wersję standardu języka C++.|
+|[/source-charset](source-charset-set-source-character-set.md)|Ustaw źródłowy zestaw znaków.|
+|[/std](std-specify-language-standard-version.md)|Selektor zgodności wersję standardu języka C++.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy C.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Określa, że wszystkie pliki źródłowe znajdują się C.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy języka C++.|
@@ -134,7 +134,7 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/w](compiler-option-warning-level.md)|Wyłącza wszystkie ostrzeżenia.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Ustawia poziom ostrzeżeń, które w danych wyjściowych.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Ustawia poziom ostrzeżeń dla określonego ostrzeżenia.|
-|[/Wall](compiler-option-warning-level.md)|Włącza wszystkie ostrzeżenia, łącznie z ostrzeżeniami, które są domyślnie wyłączone.|
+|[{1&gt;/Wall&lt;1}](compiler-option-warning-level.md)|Włącza wszystkie ostrzeżenia, łącznie z ostrzeżeniami, które są domyślnie wyłączone.|
 |[/wd](compiler-option-warning-level.md)|Wyłącza określone ostrzeżenie.|
 |[/we](compiler-option-warning-level.md)|Traktuje określone ostrzeżenie jako błąd.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Włącza diagnostykę dla błędów i komunikaty ostrzegawcze podczas kompilowania kodu źródłowego języka C++ z poziomu wiersza polecenia.|
@@ -145,7 +145,7 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/X](x-ignore-standard-include-paths.md)|Ignoruje Standardowy katalog plików dołączanych.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Ignoruje wszystkie inne opcje kompilatora wstępnie skompilowanego nagłówka w bieżącej kompilacji.|
 |[/Yc](yc-create-precompiled-header-file.md)|Tworzy prekompilowany plik nagłówka.|
-|[/YD](yd-place-debug-information-in-object-file.md)|Przestarzałe. Umieszcza pełne informacje debugowania we wszystkich plikach obiektu. Użyj [/zi](z7-zi-zi-debug-information-format.md) zamiast tego.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Przestarzałe. Umieszcza pełne informacje debugowania we wszystkich plikach obiektu. Użyj [/zi](z7-zi-zi-debug-information-format.md) zamiast tego.|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Wstawia odwołanie kompilatora PCH podczas tworzenia biblioteki debugowania|
 |[/Yu](yu-use-precompiled-header-file.md)|Używa prekompilowanego pliku nagłówkowego podczas kompilacji.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Generuje informacje debugowania zgodne 7.0 C.|
@@ -164,5 +164,5 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

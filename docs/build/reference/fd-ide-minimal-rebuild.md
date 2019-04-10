@@ -1,6 +1,6 @@
 ---
 title: /FD (Minimalna ponowna kompilacja IDE)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - /FD
 helpviewer_keywords:
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - -FD compiler option [C++]
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-ms.openlocfilehash: 323a0045ab11f23ab996d5179a135d0eb4184f20
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ac63b021dc0cb9ee5964af7fa2e168f710653979
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424056"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Minimalna ponowna kompilacja IDE)
 
-**/FD** nie jest widoczne dla użytkowników z wyjątkiem w [wiersza polecenia](command-line-property-pages.md) strony właściwości projektu C++ **stron właściwości** okno dialogowe, w przypadku i tylko wtedy, gdy [/Gm (Włącz minimalną ponowną kompilację)](gm-enable-minimal-rebuild.md) również nie jest zaznaczone. **/FD** nie obowiązuje, innego niż ze środowiska projektowego. **/FD** nie jest widoczny w danych wyjściowych **cl /?**.
+**/FD** jest dostępne tylko dla użytkowników w [wiersza polecenia](command-line-property-pages.md) stronie właściwości C++ projektu **stron właściwości** okno dialogowe. Dostępne wtedy i tylko wtedy, gdy jest przestarzała i będzie wyłączone domyślnie [/Gm (Włącz minimalną ponowną kompilację)](gm-enable-minimal-rebuild.md) nie została wybrana opcja. **/FD** nie obowiązuje, innego niż ze środowiska projektowego. **/FD** nie jest widoczne w danych wyjściowych `cl /?`.
 
-Jeśli nie włączysz **/Gm** w środowisku programistycznym **/FD** będą używane. **/FD** gwarantuje, że plik .idb ma wystarczające informacje o zależnościach. **/FD** jest używana tylko przez środowisko programistyczne i nie powinny być używane z wiersza polecenia lub skryptu kompilacji.
+Jeśli nie włączysz przestarzałego **/Gm** opcja w środowisku deweloperskim **/FD** jest używany. **/FD** zapewnia pliku .idb ma wystarczające informacje o zależnościach. **/FD** jest używana tylko przez środowisko programistyczne i nie powinny być używane z wiersza polecenia lub skryptu kompilacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Plik wyjściowy (/F) — Opcje](output-file-f-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
