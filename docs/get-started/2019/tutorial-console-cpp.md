@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b558b2e0c381b8521fe0ba5f18647a933175ce07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58867274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59430717"
 ---
 # <a name="create-a-c-console-app-project"></a>Tworzenie projektu aplikacji konsoli w języku C++
 
@@ -34,6 +34,9 @@ Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *r
 1. Na liście szablonów projektu wybierz **aplikacja Konsolowa**, następnie wybierz **dalej**.
 
    ![Wybieranie szablonu aplikacji konsoli](./media/calc-vs2019-choose-console-app.png "Wybieranie szablonu aplikacji konsoli")
+
+   > [!Important]
+   > Upewnij się, że wybrano C++ wersję **aplikacja Konsolowa** szablonu. Ma ona **C++**, **Windows**, i **konsoli** tagów, a ikona ma "++" w prawym górnym rogu.
 
 1. W **konfigurowania nowego projektu** okno dialogowe, wybierz opcję **Nazwa projektu** pole edycji, nadaj nazwę nowego projektu *CalculatorTutorial*, następnie wybierz **Create** .
 
