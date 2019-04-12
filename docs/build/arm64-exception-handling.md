@@ -1,12 +1,12 @@
 ---
 title: Obsługa wyjątków ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59031735"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59534126"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -44,7 +44,7 @@ Poniżej przedstawiono założeniom w opis obsługi wyjątków:
 
 1. Brak warunkowego kodu w epilogs.
 
-1. Rejestr wskaźnika ramki dedykowanej: Jeśli PS zostanie zapisany w innym rejestru (r29) w prologu, który zarejestrował pozostają niezmienione w całej funkcji, dzięki czemu oryginalne sp może zostać odzyskana w dowolnym momencie.
+1. Rejestr wskaźnika ramki dedykowanej: Jeśli PS zostanie zapisany w innym rejestru (x29) w prologu, który zarejestrował pozostają niezmienione w całej funkcji, dzięki czemu oryginalne sp może zostać odzyskana w dowolnym momencie.
 
 1. Chyba że PS jest zapisywany w rejestrze innego, wszystkie operacje na wskaźnik stosu występuje wyłącznie w prologu i epilogu.
 
@@ -54,90 +54,90 @@ Poniżej przedstawiono założeniom w opis obsługi wyjątków:
 
 ![Ramka stosu — układ](media/arm64-exception-handling-stack-frame.png "układ ramki stosu")
 
-Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu w zmiennej lokalnej w zależności od zagadnienia dotyczące optymalizacji. Celem jest, aby zmaksymalizować liczbę zmiennych lokalnych, które można osiągnąć przez jeden pojedynczej instrukcji, w oparciu o wskaźnik ramki (r29) lub wskaźnik stosu (sp). Jednak dla `alloca` funkcji, muszą być powiązane i r29 musi wskazywać na dole stosu. Aby umożliwić lepsze pokrycie rejestru pary adresowanie trybu, nieulotnej rejestru zapisywania obszarów są umieszczone w górnej części stosu sieci lokalnej. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej efektywny sposób sekwencji prologu. Dla jasności i lepsze lokalność pamięci podręcznej kolejność przechowywania zapisane wywoływanego rejestrów w wszystkich prologs canonical jest w kolejności "rosnącą się". `#framesz` poniżej reprezentuje rozmiar całego stosu (z wyjątkiem obszaru alloca). `#localsz` i `#outsz` oznaczają rozmiar lokalnego (Zapisz w tym obszar \<r29, lr > pary) i odpowiednio wychodzące rozmiar parametru.
+Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu w zmiennej lokalnej w zależności od zagadnienia dotyczące optymalizacji. Celem jest, aby zmaksymalizować liczbę zmiennych lokalnych, które można osiągnąć przez jeden pojedynczej instrukcji, w oparciu o wskaźnik ramki (x29) lub wskaźnik stosu (sp). Jednak dla `alloca` funkcji, muszą być powiązane i x29 musi wskazywać na dole stosu. Aby umożliwić lepsze pokrycie rejestru pary adresowanie trybu, nieulotnej rejestru zapisywania obszarów są umieszczone w górnej części stosu sieci lokalnej. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej efektywny sposób sekwencji prologu. Dla jasności i lepsze lokalność pamięci podręcznej kolejność przechowywania zapisane wywoływanego rejestrów w wszystkich prologs canonical jest w kolejności "rosnącą się". `#framesz` poniżej reprezentuje rozmiar całego stosu (z wyjątkiem obszaru alloca). `#localsz` i `#outsz` oznaczają rozmiar lokalnego (Zapisz w tym obszar \<x29, lr > pary) i odpowiednio wychodzące rozmiar parametru.
 
 1. Tworzenie łańcucha #localsz \<= 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        stp    r29, lr, [sp, -#localsz]!    // save <r29,lr> at bottom of local area
-        mov    r29,sp                   // r29 points to bottom of local
-        sub    sp, #outsz               // (optional for #outsz != 0)
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        stp    x29,lr,[sp,#-localsz]!   // save <x29,lr> at bottom of local area
+        mov    x29,sp                   // x29 points to bottom of local
+        sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
 1. Tworzenie łańcucha #localsz > 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        sub    sp,#localsz+#outsz       // allocate remaining frame
-        stp    r29, lr, [sp, #outsz]    // save <r29,lr> at bottom of local area
-        add    r29,sp, #outsz           // setup r29 points to bottom of local area
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        sub    sp,sp,#(localsz+outsz)   // allocate remaining frame
+        stp    x29,lr,[sp,#outsz]       // save <x29,lr> at bottom of local area
+        add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
 1. Unchained, funkcje liścia (lr niezapisane)
 
     ```asm
-        stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp, 16]
-        str    r23 [sp,32]
-        stp    d8,d9,[sp,40]            // save FP regs (optional)
-        stp    d10,d11,[sp,56]
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]
+        str    x23,[sp,#32]
+        stp    d8,d9,[sp,#40]           // save FP regs (optional)
+        stp    d10,d11,[sp,#56]
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<R29, lr > wskazuje na poprzedniej ramki. Rozmiar ramki \<= 512, "Sub-sp,..." może być w celu optymalizacji gdy obszar regs zapisany jest przenoszony do dolnej części stosu. Wadą tego jest nie jest spójna z innymi układów powyżej i zapisane regs brać zakresu dla pary regs i przed i po indeksowanych przesunięcia Tryb adresowania.
+   Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<x29, lr > wskazuje na poprzedniej ramki. Rozmiar ramki \<= 512, "Sub-sp,..." może być w celu optymalizacji gdy obszar regs zapisany jest przenoszony do dolnej części stosu. Wadą tego jest nie jest spójna z innymi układów powyżej i zapisane regs brać zakresu dla pary regs i przed i po indeksowanych przesunięcia Tryb adresowania.
 
 1. Funkcje unchained, elementu członkowskiego typu liść (lr został zapisany w obszarze zapisane Int)
 
     ```asm
-        stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        stp    r23, lr,[sp, 32]         // save last Int reg and lr
-        stp    d8,d9,[sp, 48]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,64]          // ...
-        sub    sp,#framesz-80           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        stp    x23,lr,[sp,#32]          // save last Int reg and lr
+        stp    d8,d9,[sp,#48]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#64]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
    Lub z parzystą liczbą zapisane rejestrów Int
 
     ```asm
-        stp    r19,r20,[sp,-72]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        str    lr,[sp, 32]              // save lr
-        stp    d8,d9,[sp, 40]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,56]          // ...
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        str    lr,[sp,#32]              // save lr
+        stp    d8,d9,[sp,#40]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#56]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Tylko r19 zapisane:
+   Tylko x19 zapisane:
 
     ```asm
-        sub    sp, sp, #16              // reg save area allocation*
-        stp    r19,lr,[sp,0]            // save r19, lr
-        sub    sp,#framesz-16           // allocate the remaining local area
+        sub    sp,sp,#16                // reg save area allocation*
+        stp    x19,lr,[sp]              // save x19, lr
+        sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
    \* Reg Zapisz alokację obszaru nie jest składane do stp, ponieważ stp wstępnie indeksowanych lr reg nie może być reprezentowana z kodami unwind.
 
-   Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<R29 > wskazuje na poprzedniej ramki.
+   Wszystkie zmienne lokalne są dostępne w oparciu o SP. \<x29 > wskazuje na poprzedniej ramki.
 
 1. Tworzenie łańcucha #framesz \<= 512, #outsz = 0
 
     ```asm
-        stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
-        mov    r29,sp                       // r29 points to bottom of stack
-        stp    r19,r20,[sp, #framesz -32]   // save INT pair
-        stp    d8,d9,[sp, #framesz -16]     // save FP pair
+        stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
+        mov    x29,sp                       // x29 points to bottom of stack
+        stp    x19,x20,[sp,#(framesz-32)]   // save INT pair
+        stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
    Porównanie z prologu #1 powyżej, zaletą jest możliwość wszystkich rejestru Zapisz instrukcje gotowe do wykonania od razu po tylko jeden stosu przydzielanie instrukcji. W związku z tym ma zapobieganie zależności na jest dodatkiem, który uniemożliwia równoległości poziomu instrukcji.
@@ -145,38 +145,38 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
 1. Tworzenie łańcucha, rozmiar ramki > 512 (opcjonalnie na potrzeby funkcji, które nie alloca)
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        sub    sp,#framesz-80               // allocate the remaining local area
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   W celu optymalizacji r29 można umieścić w dowolnym miejscu w sieci lokalnej w celu zapewnienia lepszego pokrycia "reg pary" i wstępnie przygotowany/odniesienie-indexed przesunięcie Tryb adresowania. Zmienne lokalne poniżej wskaźników ramek można uzyskać dostęp w oparciu SP.
+   W celu optymalizacji x29 można umieścić w dowolnym miejscu w sieci lokalnej w celu zapewnienia lepszego pokrycia "reg pary" i wstępnie przygotowany/odniesienie-indexed przesunięcie Tryb adresowania. Zmienne lokalne poniżej wskaźników ramek można uzyskać dostęp w oparciu SP.
 
 1. Powiązane, rozmiar ramki > 4K, z lub bez alloca(),
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        mov    r8, #framesz/16
-        bl     chkstk
-        sub    sp, r8*16                    // allocate remaining frame
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        mov    x15,#(framesz/16)
+        bl     __chkstk
+        sub    sp,sp,x15,lsl#4              // allocate remaining frame
                                             // end of prolog
         ...
-        sp = alloca                         // more alloca() in body
+        sub    sp,sp,#alloca                // more alloca() in body
         ...
                                             // beginning of epilog
-        mov    sp,r29                       // sp points to top of local area
-        ldp    d10,d11, [sp,64],
+        mov    sp,x29                       // sp points to top of local area
+        ldp    d10,d11,[sp,#64]
         ...
-        ldp    r29, lr, [sp], -80           // post-indexed, reload <r29,lr>
+        ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
 ## <a name="arm64-exception-handling-information"></a>Informacje o obsługi wyjątku ARM64
@@ -235,7 +235,7 @@ Tych danych jest dzielony na cztery sekcje:
 
    c. **Indeks Start epilogu** jest 10-bitowy (2 bity więcej niż **rozszerzone wyrazów**) pola wskazujący indeks bajtu pierwszego unwind kod, który opisuje to epilogu.
 
-1. Po listy zakresów epilogu zawiera tablicę bajtów, które zawierają kody odwijania, opisano szczegółowo w dalszej części tego tematu. Ta tablica jest uzupełniana na końcu do najbliższej granicy pełny wyraz. Bajty są przechowywane w kolejności little-endian, dzięki czemu mogą być bezpośrednio pobierane w trybie little-endian.
+1. Po listy zakresów epilogu zawiera tablicę bajtów, które zawierają kody odwijania, opisano szczegółowo w dalszej części tego tematu. Ta tablica jest uzupełniana na końcu do najbliższej granicy pełny wyraz. Operacja unwind kody są zapisywane w tej tablicy, zaczynając od najbliżej treści funkcji, w kierunku krawędzi funkcji. Bajtów dla każdego kodu unwind są przechowywane w kolejności big-endian więc one mogą być pobierane bezpośrednio, począwszy od najbardziej znaczącego bajtu najpierw, który identyfikuje operację i długość pozostałej części kodu.
 
 1. Na koniec, po unwind bajty kodu Jeśli **X** bit w nagłówku został ustawiony na wartość 1, zawiera informacje o program obsługi wyjątku. Ten krok składa się z pojedynczej **RVA obsługi wyjątków** podając adres obsługi wyjątków, a następnie natychmiast o zmiennej długości ilość danych wymaganych przez program obsługi wyjątków.
 
@@ -286,22 +286,22 @@ Kody unwind są kodowane zgodnie z poniższą tabelą. Wszystkie kodów odwinię
 |Kodzie operacji unwind|Usługa BITS i interpretacji|
 |-|-|
 |`alloc_s`|000xxxxx: przydzielić mały stos o rozmiarze \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: Zapisz \<r19, 20 > pary w [Z dodatkiem sp # * 8]!, wstępnie indeksowanych przesunięcie > =-248 |
-|`save_fplr`|        01zzzzzz: Zapisz \<r29, lr > pair u [sp + #Z * 8], offset \<= 504. |
-|`save_fplr_x`|        10zzzzzz: Zapisz \<r29, lr > pair w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512 |
+|`save_r19r20_x`|    001zzzzz: Zapisz \<x19, x20 > pary w [Z dodatkiem sp # * 8]!, wstępnie indeksowanych przesunięcie > =-248 |
+|`save_fplr`|        01zzzzzz: Zapisz \<x29, lr > pair u [sp + #Z * 8], offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Zapisz \<x29, lr > pair w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-512 |
 |`alloc_m`|        11000xxx "xxxxxxxx: alokacji stosu dużych o rozmiarze \< 16 KB (2 ^ 11 * 16). |
-|`save_regp`|        110010xx "xxzzzzzz: Zapisz pary r(19+#X) u [sp + #Z * 8], offset \<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: save pair r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
-|`save_reg`|        110100xx "xxzzzzzz: Zapisz r(19+#X) reg w [sp + #Z * 8], offset \<= 504 |
-|`save_reg_x`|        1101010 x "xxxzzzzz: Zapisz r(19+#X) reg w [sp-(#Z + 1) * 8]!, wstępnie indeksowanych przesunięcie > =-256 |
-|`save_lrpair`|         1101011x'xxzzzzzz: save pair \<r19+2 *#X,lr> at [sp+#Z*8], offset \<= 504 |
+|`save_regp`|        110010xx "xxzzzzzz: Zapisz pary x(19+#X) u [sp + #Z * 8], offset \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: save pair x(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
+|`save_reg`|        110100xx'xxzzzzzz: save reg x(19+#X) at [sp+#Z*8], offset \<= 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz: save reg x(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
+|`save_lrpair`|         1101011 x "xxzzzzzz: Zapisz pary \<x (19 + 2 *#X), lr > u [sp + #Z*8], offset \<= 504 |
 |`save_fregp`|        1101100x'xxzzzzzz: save pair d(8+#X) at [sp+#Z*8], offset \<= 504 |
 |`save_fregp_x`|        1101101x'xxzzzzzz: save pair d(8+#X), at [sp-(#Z+1)*8]!, pre-indexed offset >= -512 |
 |`save_freg`|        1101110 x "xxzzzzzz: Zapisz d(8+#X) reg w [sp + #Z * 8], offset \<= 504 |
 |`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`alloc_l`|         xxxxxxxx "xxxxxxxx" xxxxxxxx 11100000': alokacji stosu dużych o rozmiarze \< 256 M (2 ^ 24 * 16) |
-|`set_fp`|        11100001: Konfigurowanie r29: za pomocą: mov r29 sp |
-|`add_fp`|        11100010' xxxxxxxx: Konfigurowanie r29 z: Dodawanie r29 sp #x * 8 |
+|`set_fp`|        11100001: Konfigurowanie x29: za pomocą: mov x29, sp |
+|`add_fp`|        11100010' xxxxxxxx: Konfigurowanie x29 z: sp, Dodaj x29, #x * 8 |
 |`nop`|            11100011: nie operacji unwind operacji jest wymagany. |
 |`end`|            11100100: koniec unwind kodu. Oznacza ret w epilogu. |
 |`end_c`|        11100101: koniec unwind kodu w bieżącym zakresie łańcuchowych. |
@@ -347,12 +347,12 @@ Dostępne są następujące pola:
 - **Funkcja długość** jest polem 11-bitowy, zapewniając długość całej funkcji w bajtach, podzielona przez 4. Funkcja jest większa niż 8 kilobajtów, zamiast tego należy użyć rekordu pełną .xdata.
 - **Rozmiar ramki** jest polem 9-bitową określającą liczbę bajtów stosu, który jest przydzielony dla tej funkcji, podzielona przez 16. Funkcje, które alokują przekracza (KB 8 – 16) bajtów stosu, należy użyć rekordu pełną .xdata. W tym sieci lokalnej zmiennej, wychodzące w obszarze parametrów, zapisane wywoływanego Int i FP obszaru i obszaru głównego parametru, ale z wyłączeniem obszaru dynamicznej alokacji.
 - **CR** jest flaga 2-bitowy, wskazującą, czy funkcja obejmuje dodatkowe instrukcje dotyczące konfigurowania z łańcuchem ramki i zwracany łącza:
-  - 00 = unchained funkcji \<r29, lr > parę nie jest zapisywana w stosie.
+  - 00 = unchained funkcji \<x29, lr > parę nie jest zapisywana w stosie.
   - 01 = unchained funkcji \<lr > jest zapisywany w stos
   - 10 = zastrzeżone;
-  - 11 = łańcuchowych funkcji instrukcji pary magazynu/obciążenia jest używana w prologu i epilogu \<r29, lr >
-- **H** jest 1-bitowego flagę wskazującą, czy funkcja homes parametru liczby całkowitej rejestruje (r0 r7), umieszczając je na samym początku funkcji. (0 = nie główna rejestrów, 1 = rejestrów domów).
-- **RegI** pole 4-bitowy, określającą liczbę rejestrów INT-volatile (r19 r28) zapisywane w lokalizacji canonical stosu.
+  - 11 = łańcuchowych funkcji instrukcji pary magazynu/obciążenia jest używana w prologu i epilogu \<x29, lr >
+- **H** to 1-bitowego flagę wskazującą, czy funkcja homes parametru liczby całkowitej rejestruje (x0 x7), umieszczając je na samym początku funkcji. (0 = nie główna rejestrów, 1 = rejestrów domów).
+- **RegI** pole 4-bitowy, określającą liczbę rejestrów INT-volatile (x19 x28) zapisywane w lokalizacji canonical stosu.
 - **RegF** jest polem 3-bitową określającą liczbę rejestrów FP-volatile (d8 d15) zapisywane w lokalizacji canonical stosu. (RegF = 0: nie rejestr FP są zapisywane. RegF > 0: RegF + 1 rejestrów FP są zapisywane). Spakowane unwind danych nie można użyć funkcji, który tylko jeden rejestr FP zapisać.
 
 Canonical prologs, które można podzielić na kategorie 1, 2 (bez wychodzących obszaru parametrów), 3 i 4 w powyższej sekcji może być reprezentowany przez format upakowaną unwind.  Epilogs funkcje canonical postępuj zgodnie z formularza bardzo podobne, z wyjątkiem **H** nie ma wpływu, `set_fp` instrukcji zostanie pominięty, a kolejność kroków, jak również instrukcje w każdym kroku zostały cofnięte w epilogu. Algorytm upakowaną xdata obejmuje następujące kroki, szczegółowo opisane w poniższej tabeli:
@@ -367,26 +367,26 @@ Krok 3. Zapisz FP zapisane wywoływanego rejestrów.
 
 Krok 4. Zapisz argumentów wejściowych w obszarze parametrów macierzystego.
 
-Krok 5. Przydziel pozostałe stosu, takich jak lokalny obszar \<r29, lr > pary i wychodzących obszarze parametrów. 5a odnosi się do typu canonical 1. 5b i 5c odpowiadają kanoniczna typu 2. 5d 5e dotyczą zarówno typ 3 i 4 typu.
+Krok 5. Przydziel pozostałe stosu, takich jak lokalne, \<x29, lr > pary i wychodzących obszarze parametrów. 5a odnosi się do typu canonical 1. 5b i 5c odpowiadają kanoniczna typu 2. 5d 5e dotyczą zarówno typ 3 i 4 typu.
 
 Krok #|Wartości flagi|Liczba instrukcji|OpCode|Kodzie operacji unwind
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 & & #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &AMP; &AMP;<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** == 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &AMP; &AMP;<br/>512 < #locsz < = 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Jeśli **CR** == 01 i **RegI** jest liczbą nieparzystą kroku 2, a ostatni save_rep w kroku 1 są scalane w jeden save_regp.
 
 \*\* Jeśli **RegI** == **CR** == 0, a **RegF** ! = 0 i pierwszy stp dla liczb zmiennoprzecinkowych jest operacja predekrementacji.
 
-\*\*\* Nie instrukcji odpowiadający `mov r29, sp` znajduje się w epilogu. Spakowane unwind danych nie można użyć, jeśli funkcja wymaga przywracaniem SP z r29.
+\*\*\* Nie instrukcji odpowiadający `mov x29,sp` znajduje się w epilogu. Spakowane unwind danych nie można użyć, jeśli funkcja wymaga przywracaniem SP z x29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Odwijania prologs częściowe i epilogs
 
@@ -397,16 +397,16 @@ Jest trudniejsze na odpoczynek, prawidłowo w przypadku, gdy wystąpi wyjątek l
 Na przykład wykonaj tę sekwencję prologu i epilogu:
 
 ```asm
-0000:    stp    r29, lr, [sp, -256]!        // save_fplr_x  256 (pre-indexed store)
-0004:    stp    d8,d9,[sp,224]              // save_fregp 0, 224
-0008:    stp    r19,r20,[sp,240]            // save_regp 0, 240
-000c:    mov    r29,sp                      // set_fp
+0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
+0004:    stp    d8,d9,[sp,#224]             // save_fregp 0, 224
+0008:    stp    x19,x20,[sp,#240]           // save_regp 0, 240
+000c:    mov    x29,sp                      // set_fp
          ...
-0100:    mov    sp,r29                      // set_fp
-0104:    ldp    r19,r20,[sp,240]            // save_regp 0, 240
+0100:    mov    sp,x29                      // set_fp
+0104:    ldp    x19,x20,[sp,#240]           // save_regp 0, 240
 0108:    ldp    d8,d9,[sp,224]              // save_fregp 0, 224
-010c:    ldp    r29, lr, [sp, -256]!        // save_fplr_x  256 (post-indexed load)
-0110:    ret     lr                         // end
+010c:    ldp    x29,lr,[sp],#256            // save_fplr_x  256 (post-indexed load)
+0110:    ret    lr                          // end
 ```
 
 Obok każdego opcode jest kod odpowiednie odwijania, opisujący tej operacji. Pierwszą rzeczą, którą należy pamiętać, jest serii unwind kodów prologu dokładny obraz lustrzany kody unwind epilogu (bez uwzględnienia końcowej instrukcji epilogu). Jest to sytuacja typowe i z tego powodu unwind kodów prologu są zawsze zakłada, że mają być przechowywane w odwrotnej kolejności w prologu kolejność wykonywania.
@@ -442,9 +442,9 @@ Typowa funkcja fragmentów jest "Kod separacji" przez kompilator może przenieś
 - (w regionie 1: rozpoczęcie)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
@@ -460,9 +460,9 @@ Typowa funkcja fragmentów jest "Kod separacji" przez kompilator może przenieś
 
     ```asm
     ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
@@ -489,27 +489,27 @@ Innego przypadku bardziej skomplikowanych funkcji fragmentów jest "Zmniejszanie
 - (w regionie 1: rozpoczęcie)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
 - (regionie 2: rozpoczęcie)
 
     ```asm
-        stp     r21,r22,[sp,224]        // save_regp 2, 224
+        stp     x21,x22,[sp,#224]       // save_regp 2, 224
         ...
-        ldp     r21,r22,[sp,224]        // save_regp 2, 224
+        ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
 - (regionie 2: koniec)
 
     ```asm
         ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
