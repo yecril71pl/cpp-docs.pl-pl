@@ -5,10 +5,10 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58898885"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
@@ -62,7 +62,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
    Aby naprawić błędy, należy dołączyć \<cmath > Aby uzyskać deklaracji funkcji, które zostały usunięte z \<math.h >. Te funkcje zostały przeniesione:
 
-  - `double abs(double)` and `float abs(float)`
+  - `double abs(double)` i `float abs(float)`
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
@@ -104,7 +104,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
 - **typy va_start i dokumentacja**
 
-   Podczas kompilowania kodu C++ [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) teraz sprawdza się w czasie kompilacji, który argumentu przekazanego do niej nie jest typu referencyjnego. Argumenty typu odwołania są zabronione przez C++ Standard.
+   Podczas kompilowania C++ kodu, [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) teraz sprawdza się w czasie kompilacji, który argumentu przekazanego do niej nie jest typu referencyjnego. Argumenty typu odwołania są zabronione przez C++ Standard.
 
 #### <a name="stdioh-and-conioh"></a>\<stdio.h > i \<conio.h >
 
@@ -261,7 +261,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
 #### <a name="stringh"></a>\<string.h>
 
-- **wcstok —**
+- **wcstok**
 
    Podpis `wcstok` funkcji został zmieniony do dopasowania, co jest wymagane przez C Standard. W poprzednich wersjach biblioteki podpis tej funkcji to:
 
@@ -275,7 +275,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
 #### <a name="timeh"></a>\<time.h>
 
-- **zegar**
+- **clock**
 
    W poprzednich wersjach [zegara](../c-runtime-library/reference/clock.md) funkcja została zaimplementowana za pomocą interfejsu API Windows [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). Ta implementacja clock — funkcja było wrażliwe na czas systemowy i nie jest zatem niekoniecznie monotoniczny. Clock — funkcja ma zostać reimplemented pod względem [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i teraz jest monotoniczny.
 
@@ -313,7 +313,7 @@ Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standard
 
 - **steady_clock**
 
-   \<Chrono > implementacji [steady_clock](../standard-library/steady-clock-struct.md) został zmieniony, aby spełniać wymagania C++ Standard opanowanie i monotonicity. `steady_clock` teraz jest oparty na [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i `high_resolution_clock` jest teraz element typedef dla `steady_clock`. W rezultacie w programie Visual Studio `steady_clock::time_point` jest teraz element typedef dla `chrono::time_point<steady_clock>`; jednak nie jest zawsze w przypadku innych implementacji.
+   \<Chrono > implementacji [steady_clock](../standard-library/steady-clock-struct.md) został zmieniony w celu spełnienia C++ standardowe wymagania dotyczące opanowanie i monotonicity. `steady_clock` teraz jest oparty na [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i `high_resolution_clock` jest teraz element typedef dla `steady_clock`. W rezultacie w programie Visual Studio `steady_clock::time_point` jest teraz element typedef dla `chrono::time_point<steady_clock>`; jednak nie jest zawsze w przypadku innych implementacji.
 
 - **alokatorów i const**
 
@@ -443,11 +443,11 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     }
     ```
 
-- `/Zg` opcja kompilatora
+- `/Zg` — Opcja kompilatora
 
    `/Zg` — Opcja kompilatora (Generuj prototypy funkcji) nie jest już dostępna. Tę opcję kompilatora wcześniej została zakończona.
 
-- Nie może uruchomić testy jednostkowe z C + +/ interfejsu wiersza polecenia z wiersza polecenia mstest.exe. Zamiast tego należy użyć vstest.console.exe. Zobacz [opcje wiersza poleceń VSTest.Console.exe](/visualstudio/test/vstest-console-options).
+- Nie można uruchomić testy jednostkowe z C++sposób niezamierzony z wiersza polecenia mstest.exe. Zamiast tego należy użyć vstest.console.exe. Zobacz [opcje wiersza poleceń VSTest.Console.exe](/visualstudio/test/vstest-console-options).
 
 - **Mutable — słowo kluczowe**
 
@@ -2009,9 +2009,9 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Przykłady przywróconej ostrzeżeń, które znajdują się w dokumentacji.
 
-- **#include: użycie specyfikatora katalog nadrzędny "." w pathname** (dotyczy tylko `/Wall` `/WX`)
+- **#include: użycie specyfikatora katalog nadrzędny ".." w pathname** (dotyczy tylko `/Wall` `/WX`)
 
-   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny "." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
+   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny ".." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
 
     ```Output
     warning C4464: relative include path contains '..'
@@ -2029,7 +2029,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories
     ```
 
-   Ponadto, mimo że kompilator nie zapewnia określonych diagnostyczne, również zalecamy specyfikator katalogu nadrzędnego "." nie powinny być używane do określania, katalogi dołączane projektu.
+   Ponadto, mimo że kompilator nie zapewnia określonych diagnostyczne, również zalecamy specyfikator katalogu nadrzędnego ".." nie powinny być używane do określania, katalogi dołączane projektu.
 
 - **#pragma optimize() wykracza poza końcem pliku nagłówkowego** (dotyczy tylko `/Wall` `/WX`)
 
@@ -2926,7 +2926,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 ### <a name="standard-library"></a>Standardowa biblioteka
 
-Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVEL, który został wprowadzony w programie Visual Studio 2010, i niezgodności RuntimeLibrary. Tych niezgodności wystąpić podczas opcje kompilatora `/MT` (wersja statyczna), `/MTd` (statyczna do debugowania), `/MD` (Oficjalna wersja dynamiczna) i `/MDd` (wersja dynamiczna do debugowania) są mieszane.
+C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVEL, który został wprowadzony w programie Visual Studio 2010, a nie jest zgodny RuntimeLibrary. Tych niezgodności wystąpić podczas opcje kompilatora `/MT` (wersja statyczna), `/MTd` (statyczna do debugowania), `/MD` (Oficjalna wersja dynamiczna) i `/MDd` (wersja dynamiczna do debugowania) są mieszane.
 
 - Twój kod potwierdza szablony aliasów symulowane poprzedniej wersji, należy ją zmienić. Na przykład, zamiast z `allocator_traits<A>::rebind_alloc<U>::other`, teraz należy podać `allocator_traits<A>::rebind_alloc<U>`. Mimo że `ratio_add<R1, R2>::type` nie jest już konieczny i teraz zalecamy powiedzieć `ratio_add<R1, R2>`, pierwsza będzie nadal kompilować ponieważ `ratio<N, D>` musi mieć element typedef "type" dla obniżonego współczynnika, który będzie tego samego typu, jeśli jest on już ograniczony.
 
@@ -3032,7 +3032,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 ### <a name="ide"></a>IDE
 
-- Mimo że zaleca się, że należy tworzyć aplikacje Windows Forms w języku C + +/ CLI, konserwacja istniejących C + +/ interfejsu wiersza polecenia w interfejsie użytkownika aplikacji jest obsługiwany. W przypadku tworzenia aplikacji Windows Forms lub innej aplikacji interfejsu użytkownika platformy .NET, należy użyć języka C# lub Visual Basic. Użyj języka C + +/ CLI współdziałania w ramach wyłącznie do celów.
+- Mimo że zaleca się, że należy tworzyć aplikacje Windows Forms w C++sposób niezamierzony, konserwacja istniejących C++interfejsu wiersza polecenia w interfejsie użytkownika aplikacji jest obsługiwany. W przypadku tworzenia aplikacji Windows Forms lub innej aplikacji interfejsu użytkownika platformy .NET, należy użyć języka C# lub Visual Basic. Użyj C++sposób niezamierzony współdziałania w ramach wyłącznie do celów.
 
 ### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Biblioteka równoległych wzorców i Biblioteka środowiska uruchomieniowego współbieżności
 
@@ -3046,15 +3046,15 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Visual C++ 2010 symulowane szablony wariadyczne — na przykład `make_shared<T>(arg1, arg2, argN)`— do określonego limitu 10 argumentów, przez wybijaniu przeciążenia i specjalizacje z preprocesora maszyny. W programie Visual Studio 2012 to ograniczenie jest ograniczone do pięciu argumentów, aby poprawić czasy kompilacji i zużycie pamięci kompilatora dla większości użytkowników. Jednak można ustawić poprzedniej limit przez jawne określenie _VARIADIC_MAX jako 10, całego projektu.
 
-- C ++ 11 17.6.4.3.1 [macro.names]/2 zabrania makro zastępujące słów kluczowych, gdy nagłówki standardowej biblioteki języka C++, są uwzględnione. Nagłówki teraz emitować błędy kompilatora, jeśli wykryją zastąpione makra słów kluczowych. (Definiowanie _ALLOW_KEYWORD_MACROS umożliwia taki kod skompilować, ale firma Microsoft zdecydowanie odradza to użycie). Jako wyjątek formie — makro `new` jest dozwolona domyślnie, ponieważ nagłówki kompleksowo bronić się przy użyciu `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`. Definiowanie _ENFORCE_BAN_OF_MACRO_NEW ma dokładnie co sama nazwa wskazuje.
+- C ++ 11 17.6.4.3.1 [macro.names]/2 zabrania makro zastępujące słów kluczowych podczas C++ nagłówki standardowej biblioteki są uwzględniane. Nagłówki teraz emitować błędy kompilatora, jeśli wykryją zastąpione makra słów kluczowych. (Definiowanie _ALLOW_KEYWORD_MACROS umożliwia taki kod skompilować, ale firma Microsoft zdecydowanie odradza to użycie). Jako wyjątek formie — makro `new` jest dozwolona domyślnie, ponieważ nagłówki kompleksowo bronić się przy użyciu `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`. Definiowanie _ENFORCE_BAN_OF_MACRO_NEW ma dokładnie co sama nazwa wskazuje.
 
-- Aby zaimplementować różne optymalizacje i kontrole debugowania, implementacja standardowej biblioteki języka C++ celowo łamie zgodność binarną między wersjami programu Visual Studio (2005, 2008, 2010, 2012). W przypadku standardowej biblioteki C++ zabrania mieszania plików obiektów i bibliotek statycznych, które są kompilowane przy użyciu różnych wersji w jednym pliku binarnym (EXE lub DLL), a zabrania przekazywania obiektów standardowej biblioteki języka C++ między plikami binarnymi, które są kompilowane przez przy użyciu różnych wersji. Mieszanie plików obiektów i bibliotek statycznych (przy użyciu standardowej biblioteki języka C++, które zostały skompilowane przy użyciu programu Visual C++ 2010 z tymi, które zostały skompilowane przy użyciu języka C++ kompilator programu Visual Studio 2012 powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER, gdzie _MSC_VER to makra, która zawiera wersję główną kompilatora (1700 dla języka Visual C++ w programie Visual Studio 2012). To sprawdzenie nie może wykryć mieszania bibliotek DLL i nie może wykryć mieszania, które obejmuje Visual C++ 2008 lub starszy.
+- Aby zaimplementować różne optymalizacje i kontrole debugowania, implementacja standardowej biblioteki języka C++ celowo łamie zgodność binarną między wersjami programu Visual Studio (2005, 2008, 2010, 2012). W przypadku standardowej biblioteki C++ zabrania mieszania plików obiektów i bibliotek statycznych, które są kompilowane przy użyciu różnych wersji w jednym pliku binarnym (EXE lub DLL), a zabrania przekazywania obiektów standardowej biblioteki języka C++ między plikami binarnymi, które są kompilowane przez przy użyciu różnych wersji. Mieszanie plików obiektów i bibliotek statycznych (przy użyciu C++ biblioteki standardowej, które zostały skompilowane przy użyciu Visual C++ 2010 z tymi, które zostały skompilowane przy użyciu C++ kompilatora w programie Visual Studio 2012 powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER gdzie _MSC_VER to makro, które zawiera wersję główną kompilatora (1700 wizualizacji C++ w programie Visual Studio 2012). To sprawdzenie nie może wykryć mieszania bibliotek DLL i nie może wykryć mieszania, które obejmuje Visual C++ 2008 lub starszy.
 
-- Oprócz wykrywania niezgodności w _ITERATOR_DEBUG_LEVEL, który został wprowadzony w programie Visual C++ 2010, kompilator języka C++ w programie Visual Studio 2012 wykrywa niezgodności biblioteki środowiska uruchomieniowego. Występują tych niezgodności po opcji kompilatora `/MT` (wersja statyczna), `/MTd` (statyczna do debugowania), `/MD` (Oficjalna wersja dynamiczna) i `/MDd` (wersja dynamiczna do debugowania) są mieszane.
+- Oprócz wykrywania niezgodności w _ITERATOR_DEBUG_LEVEL, który został wdrożony w elemencie wizualnym C++ 2010 C++ kompilatora w programie Visual Studio 2012 wykrywa niezgodności biblioteki środowiska uruchomieniowego. Występują tych niezgodności po opcji kompilatora `/MT` (wersja statyczna), `/MTd` (statyczna do debugowania), `/MD` (Oficjalna wersja dynamiczna) i `/MDd` (wersja dynamiczna do debugowania) są mieszane.
 
 - `operator<()`, `operator>()`, `operator<=()`, i `operator>=()` wcześniej były dostępne dla `std::unordered_map` i `stdext::hash_map` rodzin kontenerów, mimo że ich implementacji nie były przydatne. Te operatory niestandardowe zostały usunięte w programie Visual C++ w programie Visual Studio 2012. Ponadto implementacji `operator==()` i `operator!=()` dla `std::unordered_map` rodziny został rozszerzony na pokrycie `stdext::hash_map` rodziny. (Zaleca się, że należy unikać użycia `stdext::hash_map` rodziny w nowym kodzie.)
 
-- C ++ 11 22.4.1.4 [locale.codecvt] Określa, że `codecvt::length()` i `codecvt::do_length()` powinno zająć można modyfikować `stateT&` parametrów, ale Visual C++ 2010 miał `const stateT&`. Kompilator języka C++ w programie Visual Studio 2012 przyjmuje `stateT&` nieużywanie przez standard. Różnica ta jest znacząca dla każdego, kto próbuje przesłonić funkcji wirtualnej `do_length()`.
+- C ++ 11 22.4.1.4 [locale.codecvt] Określa, że `codecvt::length()` i `codecvt::do_length()` powinno zająć można modyfikować `stateT&` parametrów, ale Visual C++ trwało 2010 `const stateT&`. Kompilator języka C++ w programie Visual Studio 2012 przyjmuje `stateT&` nieużywanie przez standard. Różnica ta jest znacząca dla każdego, kto próbuje przesłonić funkcji wirtualnej `do_length()`.
 
 ### <a name="crt"></a>CRT
 
@@ -3266,7 +3266,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 - Okno dialogowe zakończenia aplikacji nie jest już kończy aplikację. W poprzednich wersjach gdy `abort()` lub `terminate()` funkcja zamknięte kompilacji detalicznej aplikacji, biblioteki wykonawczej C wyświetlany komunikat zakończenia aplikacji w konsoli okno lub okno dialogowe. Wiadomość mówi, w części "Ta aplikacja zażądała środowiska uruchomieniowego do jej zakończenia w nietypowy sposób. Skontaktuj się z zespołem pomocy technicznej aplikacji Aby uzyskać więcej informacji." Komunikat zakończenia aplikacji została nadmiarowe, ponieważ Windows następnie wyświetlany bieżący programu obsługi zakończenia, który zwykle Windows raportowanie błędów (odzyskiwania po awarii. Okno dialogowe Watson) lub debugera programu Visual Studio. Począwszy od programu Visual Studio 2010 biblioteki wykonawczej języka C nie jest wyświetlany komunikat. Ponadto środowisko wykonawcze zapobiega aplikację zakończenie przed uruchomieniem debugera. Jest to istotną zmianę, tylko wtedy, gdy zależą od poprzedniego zachowania komunikat zakończenia aplikacji.
 
-- Specjalnie dla programu Visual Studio 2010, funkcja IntelliSense nie działa dla C + +/ interfejsu wiersza polecenia kodu lub atrybuty, **Znajdź wszystkie odwołania** nie działa dla zmiennych lokalnych i modelu kodu nie pobierać nazwy typów z importowane zestawy lub rozwiązania typy do ich w pełni kwalifikowanych nazw.
+- Specjalnie dla programu Visual Studio 2010, funkcja IntelliSense nie działa dla C++kodu w sposób niezamierzony lub atrybuty, **Znajdź wszystkie odwołania** nie działa dla zmiennych lokalnych i modelu kodu nie pobierać nazwy typów z importowane zestawy lub rozwiązanie typów do ich w pełni kwalifikowanych nazw.
 
 ### <a name="libraries"></a>Biblioteki
 
@@ -3386,7 +3386,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 ### <a name="atl"></a>ATL
 
-- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć #define ATL_MIN_CRT się Projekt ATL minimalny zestaw zależne od CRT. W programie Visual C++ 2008 wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.
+- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć #define ATL_MIN_CRT się Projekt ATL minimalny zestaw zależne od CRT. W elemencie wizualnym C++ 2008, wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.
 
 - Codebase serwera ATL zostało udostępnione jako projekt źródłowy udostępniony w witrynie CodePlex i nie jest instalowany jako część programu Visual Studio. Dane, kodowania i dekodowania klas z atlenc.h wraz z narzędziem funkcji i klas z atlutil.h i atlpath.h przebywać i są teraz częścią biblioteki ATL. Kilka plików skojarzonych z aplikacji serwera ATL. nie są już częścią Visual Studio.
 
@@ -3396,7 +3396,7 @@ Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _I
 
 ### <a name="atlmfc-shared-classes"></a>Klasy współdzielone ATL/MFC
 
-- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć `#define ATL_MIN_CRT` się Projekt ATL minimalny zestaw zależne od CRT. W programie Visual C++ 2008 wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.
+- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć `#define ATL_MIN_CRT` się Projekt ATL minimalny zestaw zależne od CRT. W elemencie wizualnym C++ 2008, wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.
 
 - Codebase serwera ATL zostało udostępnione jako projekt źródłowy udostępniony w witrynie CodePlex i nie jest instalowany jako część programu Visual Studio. Dane, kodowania i dekodowania klas z atlenc.h wraz z narzędziem funkcji i klas z atlutil.h i atlpath.h przebywać i są teraz częścią biblioteki ATL. Kilka plików skojarzonych z aplikacji serwera ATL. nie są już częścią Visual Studio.
 
