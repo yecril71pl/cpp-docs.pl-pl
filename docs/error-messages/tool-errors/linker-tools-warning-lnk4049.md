@@ -1,23 +1,25 @@
 ---
 title: Ostrzeżenie LNK4049 narzędzi konsolidatora
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4049
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: 357bf5a981dddadfd79d2d6981ccc9c478909097
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477356"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674256"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Ostrzeżenie LNK4049 narzędzi konsolidatora
 
 > symbol "*symbol*"zdefiniowane w"*filename.obj*" jest importowany
 
-Symbol został wyeksportowany z i zaimportowany do programu.
+[__declspec(DllImport)](../../cpp/dllexport-dllimport.md) określono *symbol* nawet, jeśli symbol jest zdefiniowany w pliku obiektu *filename.obj* w ten sam obraz. Usuń `__declspec(dllimport)` modyfikator, aby rozwiązać tego ostrzeżenia.
+
+## <a name="remarks"></a>Uwagi
 
 To ostrzeżenie jest generowana przez konsolidator, gdy zdefiniować symbol w jeden obiekt pliku i odwoływać się do niego przy użyciu `__declspec(dllimport)` modyfikator deklaracji w innym.
 
