@@ -24,7 +24,7 @@ Użyj **/constexpr** opcje kompilatora sterowania parametrami dla **constexpr** 
 
 > **/ constexpr: DEPTH**<em>N</em>
 >  **/constexpr: backtrace**<em>N</em>
->  ** /constexpr: Steps** <em>N</em>
+> ** /constexpr: Steps**<em>N</em>
 
 ## <a name="arguments"></a>Argumenty
 
