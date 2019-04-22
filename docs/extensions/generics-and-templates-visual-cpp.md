@@ -1,5 +1,5 @@
 ---
-title: Typy ogólne i szablony (C + +/ CLI)
+title: Typy ogólne i szablony (C++sposób niezamierzony)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
 ms.openlocfilehash: 74cfd791e8400b788d38f272eed3d421ca4230e3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021503"
 ---
-# <a name="generics-and-templates-ccli"></a>Typy ogólne i szablony (C + +/ CLI)
+# <a name="generics-and-templates-ccli"></a>Typy ogólne i szablony (C++sposób niezamierzony)
 
 Typy ogólne i szablony są obie funkcje językowe, pozwalające na obsługę typów sparametryzowanych. Jednak różnią się i mają różne sposoby zastosowania. W tym temacie omówiono wiele różnic.
 
@@ -51,7 +51,7 @@ Podstawową różnicę w typach ogólnych ma wpływ na tworzenie aplikacji łąc
 
 Poniższy przykład pokazuje prosty przykład ze sobą przy użyciu szablonów i typy ogólne. W tym przykładzie klasa szablonu przekazuje parametr za pomocą typu ogólnego. Odwrotnej nie jest możliwe.
 
-Tego idiomu można użyć, gdy chcesz skompilować na istniejące ogólnego interfejsu API za pomocą kodu szablonu, który jest lokalny dla C + +/ interfejsu wiersza polecenia zestawu, lub jeśli potrzebujesz dodać dodatkową warstwę parametryzacji do typu ogólnego, aby móc korzystać z niektórych funkcji szablonów nie obsługiwane b typy ogólne y.
+Tego idiomu można użyć, gdy chcesz skompilować na istniejące ogólnego interfejsu API za pomocą kodu szablonu, który jest lokalną grupą C++sposób niezamierzony zestawu, lub kiedy trzeba dodać dodatkową warstwę parametryzacji do typu ogólnego, aby móc korzystać z niektórych funkcji szablonów nie supp ortowane według typów ogólnych.
 
 ### <a name="code"></a>Kod
 

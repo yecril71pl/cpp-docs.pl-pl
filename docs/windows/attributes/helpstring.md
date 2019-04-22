@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
 ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022208"
 ---
 # <a name="helpstring"></a>helpstring
@@ -42,7 +42,7 @@ Zobacz przykład [defaultvalue](defaultvalue.md) przykład sposobu użycia **Hel
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
+|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -51,7 +51,7 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>

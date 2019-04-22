@@ -5,10 +5,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
 ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025419"
 ---
 # <a name="class-attributes"></a>Atrybuty klasy
@@ -23,8 +23,8 @@ Następujące atrybuty dotyczą [klasy](../../cpp/class-cpp.md) słowa kluczoweg
 |[case](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
 |[coclass](coclass.md)|Tworzy formant ActiveX.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|
-|[ — formant](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
-|[niestandardowy](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
+|[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
+|[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
 |[db_command](db-command.md)|Tworzy polecenie OLE DB.|
 |[db_param](db-param.md)|Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wejściowych lub wyjściowych, a rozgranicza zmiennej.|
 |[db_source](db-source.md)|Tworzy połączenie ze źródłem danych.|
@@ -40,7 +40,7 @@ Następujące atrybuty dotyczą [klasy](../../cpp/class-cpp.md) słowa kluczoweg
 |[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
 |[implements](implements-cpp.md)|Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.|
 |[implements_category](implements-category.md)|Określa kategorii składników zaimplementowane dla klasy.|
-|[moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[module](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
 |[noncreatable](noncreatable.md)|Definiuje obiekt, który nie może być utworzone samodzielnie.|
 |[progid](progid.md)|Określa identyfikator ProgID kontrolki.|
 |[registration_script](registration-script.md)|Wykonuje skrypt określoną rejestrację.|

@@ -1,5 +1,5 @@
 ---
-title: registration_script — (atrybut COM C++)
+title: registration_script — (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
 ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024377"
 ---
 # <a name="registrationscript"></a>registration_script
@@ -30,7 +30,7 @@ Pełna ścieżka do pliku skryptu (.rgs) niestandardową rejestrację. Wartość
 
 ## <a name="remarks"></a>Uwagi
 
-**Registration_script —** atrybutów języka C++ uruchamia skrypt niestandardową rejestrację, określony przez *skryptu*. Jeśli ten atrybut nie jest określony, plik standard .rgs (zawierający informacje dotyczące rejestrowania składnika) jest używany. Aby uzyskać więcej informacji na temat plików .rgs, zobacz [składnik rejestru Alt (Rejestrator)](../../atl/atl-registry-component-registrar.md).
+**Registration_script —** C++ atrybut uruchamia skrypt niestandardowy rejestracji, określony przez *skryptu*. Jeśli ten atrybut nie jest określony, plik standard .rgs (zawierający informacje dotyczące rejestrowania składnika) jest używany. Aby uzyskać więcej informacji na temat plików .rgs, zobacz [składnik rejestru Alt (Rejestrator)](../../atl/atl-registry-component-registrar.md).
 
 Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu.
 
@@ -63,7 +63,7 @@ class CMyClass:public IFace {};
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
 |**Nieprawidłowe atrybuty**|Brak|

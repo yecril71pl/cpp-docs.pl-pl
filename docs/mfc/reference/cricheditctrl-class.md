@@ -153,10 +153,10 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
 ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779277"
 ---
 # <a name="cricheditctrl-class"></a>Klasa CRichEditCtrl
@@ -173,13 +173,13 @@ class CRichEditCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Konstruuje `CRichEditCtrl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRichEditCtrl::CanPaste](#canpaste)|Określa, jeśli zawartość Schowka można wkleić do tego formantu bogatej edycji.|
 |[CRichEditCtrl::CanRedo](#canredo)|Określa, czy istnieją wszystkie akcje w kolejce do ponownego wykonywania formantu.|

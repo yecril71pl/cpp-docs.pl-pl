@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
 ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025088"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Klawisze skrótów (C++ edytor obrazów dla ikon)
@@ -40,7 +40,7 @@ Poniżej przedstawiono klawisze skrótów dla poleceń edytora obrazów, które 
 |Image.LineTool|**Ctrl** + **L**|Rysuje linię prostą o wybranym kształcie, rozmiarze i kolorze.|
 |Image.MagnificationTool|**Ctrl** + **M**|Aktywuje **Magnify** narzędzia, które umożliwia powiększanie określonych fragmentów obrazu.|
 |Image.Magnify|**CTRL** + **Shift** + **M**|Przełącza pomiędzy bieżącym powiększeniem i powiększeniem 1:1.|
-|Image.NewImageType|**Insert**|Uruchamia [New \<urządzenia > okno dialogowe typu obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) za pomocą którego można utworzyć obrazu dla typu inny obraz.|
+|Image.NewImageType|**Wstaw**|Uruchamia [New \<urządzenia > okno dialogowe typu obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) za pomocą którego można utworzyć obrazu dla typu inny obraz.|
 |Image.NextColor|**Ctrl** + **]**<br /><br /> - lub -<br /><br /> **CTRL** + **Strzałka w prawo**|Zmienia kolor pierwszego planu rysunku na następny kolor z palety.|
 |Image.NextRightColor|**Ctrl** + **Shift** + **]**<br /><br /> - lub -<br /><br /> **SHIFT** + **Ctrl** + **Strzałka w prawo**|Zmienia kolor tła rysunku na następny kolor z palety.|
 |Image.OutlinedEllipseTool|**SHIFT** + **Alt** + **P**|Rysuje wypełnioną elipsę z konturem.|
@@ -71,5 +71,5 @@ Brak
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)<br/>
 [Instrukcje: Tworzenie ikony lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Instrukcje: Edytowanie obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Instrukcje: Użyj narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Instrukcje: Używanie narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Instrukcje: Praca z kolorami](../windows/working-with-color-image-editor-for-icons.md)<br/>

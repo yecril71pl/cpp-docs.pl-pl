@@ -2,8 +2,13 @@
 layout: LandingPage
 title: Programowanie dla systemu Linux z dokumentacji języka C++
 description: Twórz i Debuguj aplikacje działające w systemie Linux.
+ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58779771"
 ---
-
 # <a name="linux-development-with-c-documentation"></a>Programowanie dla systemu Linux z dokumentacji języka C++
 
 Użyj programu Visual Studio 2017 do tworzenia i debugowania aplikacji działających w systemie Linux.

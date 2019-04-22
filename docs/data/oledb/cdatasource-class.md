@@ -58,10 +58,10 @@ helpviewer_keywords:
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
 ms.openlocfilehash: 2564d4d9b0a2e5df1f575d6f2627ce80f48533c1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021920"
 ---
 # <a name="cdatasource-class"></a>CDataSource — Klasa
@@ -84,13 +84,13 @@ class CDataSource
 
 |||
 |-|-|
-|[Zamknięcie](#close)|Zamyka połączenie.|
-|[Getinitializationstring —](#getinitializationstring)|Pobiera ciąg inicjowania źródła danych, która jest obecnie otwarta.|
+|[Zamknij](#close)|Zamyka połączenie.|
+|[GetInitializationString](#getinitializationstring)|Pobiera ciąg inicjowania źródła danych, która jest obecnie otwarta.|
 |[GetProperties](#getproperties)|Pobiera wartości właściwości ustawione dla połączonego źródła danych.|
 |[GetProperty](#getproperty)|Pobiera wartość jednej właściwości aktualnie ustawione dla połączonego źródła danych.|
-|[Otwarcie](#open)|Tworzy połączenie dostawcy (źródła danych) przy użyciu `CLSID`, `ProgID`, lub `CEnumerator` moniker dostarczane przez obiekt wywołujący.|
+|[Otwórz](#open)|Tworzy połączenie dostawcy (źródła danych) przy użyciu `CLSID`, `ProgID`, lub `CEnumerator` moniker dostarczane przez obiekt wywołujący.|
 |[OpenFromFileName](#openfromfilename)|Otwiera źródło danych z pliku określonego przez nazwę pliku dostarczone przez użytkownika.|
-|[Openfrominitializationstring —](#openfrominitializationstring)|Otwiera źródło danych, określona przez ciąg inicjalizacji.|
+|[OpenFromInitializationString](#openfrominitializationstring)|Otwiera źródło danych, określona przez ciąg inicjalizacji.|
 |[OpenWithPromptFileName](#openwithpromptfilename)|Zezwala użytkownikowi na wybranie utworzonej wcześniej danych pliku łącza do otwarcia odpowiedniego źródła danych.|
 |[OpenWithServiceComponents](#openwithservicecomponents)|Zostanie otwarty obiekt źródła danych za pomocą okna dialogowego Łącze danych.|
 
@@ -264,7 +264,7 @@ HRESULT Open(LPCSTR szProgID,
 *szProgID*<br/>
 [in] Identyfikator programu.
 
-*Moduł wyliczający*<br/>
+*enumerator*<br/>
 [in] A [CEnumerator](../../data/oledb/cenumerator-class.md) obiekt używany do uzyskania moniker Otwieranie połączenia, gdy obiekt wywołujący nie określi `CLSID`.
 
 *hWnd*<br/>
@@ -415,4 +415,4 @@ Ta metoda zostanie otwarty przy użyciu składników usługi w oledb32.dll; obie
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

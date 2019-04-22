@@ -3,10 +3,10 @@ title: MFC i ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.openlocfilehash: c2cfb77f0e3885e0b315ddfe38bf942ec157375a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780252"
 ---
 # <a name="mfc-and-atl"></a>MFC i ATL
@@ -23,7 +23,7 @@ W programie Visual Studio 2017 i nowsze, MFC i ATL są opcjonalne składniki pod
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Aplikacje dla Pulpitu MFC](../mfc/mfc-desktop-applications.md)|Klasy Microsoft Foundation udostępniają cienką otok obiektowy za pośrednictwem systemu Win32 w celu umożliwienia szybkiego opracowywania aplikacji GUI w języku C++.|
+|[Aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md)|Klasy Microsoft Foundation udostępniają cienką otok obiektowy za pośrednictwem systemu Win32 w celu umożliwienia szybkiego opracowywania aplikacji GUI w języku C++.|
 |[Składniki ATL COM pulpitu](../atl/atl-com-desktop-components.md)|ATL zawiera szablony klas oraz inne użycie konstrukcji, aby uprościć tworzenie obiektów COM w języku C++.|
 |[Klasy współdzielone ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Odwołania do [CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md) i innych klas, które są współużytkowane przez MFC i ATL.|
 |[Praca z plikami zasobów](../windows/working-with-resource-files.md)|Edytor zasobów umożliwia edytowanie zasobów interfejsu użytkownika, takich jak ciągi, obrazy i oknach dialogowych.|

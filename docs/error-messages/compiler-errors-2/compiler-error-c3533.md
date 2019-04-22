@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
 ms.openlocfilehash: 7a567e4396999f98d9e9740db0acf951c443d525
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026308"
 ---
 # <a name="compiler-error-c3533"></a>Błąd kompilatora C3533
@@ -45,5 +45,5 @@ template<auto T> class C {}; // C3533
 
 ## <a name="see-also"></a>Zobacz także
 
-[auto — słowo kluczowe](../../cpp/auto-keyword.md)<br/>
+[Auto, słowo kluczowe](../../cpp/auto-keyword.md)<br/>
 [/Zc:auto (Dedukuj typ zmiennej)](../../build/reference/zc-auto-deduce-variable-type.md)

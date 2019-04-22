@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780954"
 ---
 # <a name="clist-class"></a>Clist — klasa
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYP*<br/>
 Parametr szablonu określający typ obiektu, na liście.
 
-*położenie*<br/>
+*Stanowisko*<br/>
 Pozycja na liście elementu do pobrania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*położenie*<br/>
+*Stanowisko*<br/>
 Wartość pozycji zwrócony przez poprzednie `GetNext`, `GetPrev`, lub `Find` wywołanie funkcji elementu członkowskiego.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*położenie*<br/>
+*Stanowisko*<br/>
 Wartość pozycji zwrócony przez poprzednie `GetNext`, `GetPrev`, lub `Find` wywołanie funkcji elementu członkowskiego.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parametry
 
-*położenie*<br/>
+*Stanowisko*<br/>
 Położenie elementu do usunięcia z listy.
 
 ### <a name="remarks"></a>Uwagi
@@ -699,6 +699,6 @@ Należy się upewnić, że wartość pozycji reprezentuje poprawnej pozycji na l
 
 [Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CMap](../../mfc/reference/cmap-class.md)<br/>
-[Carray — klasa](../../mfc/reference/carray-class.md)
+[Klasa CArray](../../mfc/reference/carray-class.md)

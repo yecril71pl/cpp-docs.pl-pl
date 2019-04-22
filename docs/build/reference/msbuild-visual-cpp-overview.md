@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
 ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021907"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Wewnętrzne MSBuild dla projektów języka C++
@@ -91,14 +91,14 @@ W poniższej tabeli wymieniono kilka przydatne celów ukierunkowanych na użytko
 ## <a name="see-also"></a>Zobacz także
 
 [Odwołanie do zadania MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
-[BscMake — Zadanie](/visualstudio/msbuild/bscmake-task)<br/>
-[CL — Zadanie](/visualstudio/msbuild/cl-task)<br/>
-[CPPClean — Zadanie](/visualstudio/msbuild/cppclean-task)<br/>
-[LIB — Zadanie](/visualstudio/msbuild/lib-task)<br/>
-[Połącz — Zadanie](/visualstudio/msbuild/link-task)<br/>
-[MIDL — Zadanie](/visualstudio/msbuild/midl-task)<br/>
-[MT — Zadanie](/visualstudio/msbuild/mt-task)<br/>
-[RC — Zadanie](/visualstudio/msbuild/rc-task)<br/>
-[SetEnv — Zadanie](/visualstudio/msbuild/setenv-task)<br/>
-[VCMessage — Zadanie](/visualstudio/msbuild/vcmessage-task)<br/>
-[XDCMake — Zadanie](/visualstudio/msbuild/xdcmake-task)<br/>
+[BscMake, zadanie](/visualstudio/msbuild/bscmake-task)<br/>
+[CL, zadanie](/visualstudio/msbuild/cl-task)<br/>
+[CPPClean, zadanie](/visualstudio/msbuild/cppclean-task)<br/>
+[LIB, zadanie](/visualstudio/msbuild/lib-task)<br/>
+[Link, zadanie](/visualstudio/msbuild/link-task)<br/>
+[MIDL, zadanie](/visualstudio/msbuild/midl-task)<br/>
+[MT, zadanie](/visualstudio/msbuild/mt-task)<br/>
+[RC, zadanie](/visualstudio/msbuild/rc-task)<br/>
+[SetEnv, zadanie](/visualstudio/msbuild/setenv-task)<br/>
+[VCMessage, zadanie](/visualstudio/msbuild/vcmessage-task)<br/>
+[XDCMake, zadanie](/visualstudio/msbuild/xdcmake-task)<br/>

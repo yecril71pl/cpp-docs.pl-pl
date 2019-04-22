@@ -92,10 +92,10 @@ helpviewer_keywords:
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
 ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024455"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl — Klasa
@@ -140,7 +140,7 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
 |||
 |-|-|
 |[Addrefrows —](#addrefrows)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|
-|[CreateRow](#createrow)|Wywoływane przez [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`. Nie jest wywoływana bezpośrednio przez użytkownika.|
+|[Createrow —](#createrow)|Wywoływane przez [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`. Nie jest wywoływana bezpośrednio przez użytkownika.|
 |[GetData](#getdata)|Pobiera dane z zestawu wierszy kopię wiersza.|
 |[GetDBStatus](#getdbstatus)|Zwraca stan dla określonego pola.|
 |[Getnextrows —](#getnextrows)|Pobiera wiersze po kolei, uzupełnij poprzedniej pozycji.|
@@ -148,7 +148,7 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
 |[Refrows —](#refrows)|Wywoływane przez [addrefrows —](../../data/oledb/irowsetimpl-addrefrows.md) i [releaserows —](../../data/oledb/irowsetimpl-releaserows.md). Nie jest wywoływana bezpośrednio przez użytkownika.|
 |[ReleaseRows](#releaserows)|Wersje wierszy.|
 |[Operacja restartposition wykonywana](#restartposition)|Powoduje przeniesienie pozycji następnego pobierania na jego początkowe położenie; oznacza to utworzyć jego położenie podczas pierwszego zestawu wierszy.|
-|[Setdbstatus —](#setdbstatus)|Ustawia flagi stanu dla określonego pola.|
+|[SetDBStatus](#setdbstatus)|Ustawia flagi stanu dla określonego pola.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -247,7 +247,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 
 #### <a name="parameters"></a>Parametry
 
-*TableRow*<br/>
+*currentRow*<br/>
 [in] Bieżący wiersz.
 
 *columnNames*<br/>
@@ -364,7 +364,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 *statusFlags*<br/>
 [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) flagi, aby określić dla kolumny.
 
-*TableRow*<br/>
+*currentRow*<br/>
 Bieżący wiersz.
 
 *columnInfo*<br/>
@@ -448,4 +448,4 @@ Dojść do wierszy są usuwane przez wywołanie metody `ReleaseRows`. Zobacz [ir
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[CSimpleRow — Klasa](../../data/oledb/csimplerow-class.md)
+[CSimpleRow, klasa](../../data/oledb/csimplerow-class.md)

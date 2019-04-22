@@ -49,15 +49,15 @@ helpviewer_keywords:
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
 ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021472"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedcompareexchange
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Wykonuje blokowane porównania i wymiany.
 
@@ -178,10 +178,10 @@ __int64 _InterlockedCompareExchange64_rel(
 
 #### <a name="parameters"></a>Parametry
 
-*Miejsce docelowe*<br/>
+*miejsce docelowe*<br/>
 [out w] Wskaźnik do wartości docelowej. Znak jest ignorowany.
 
-*Program Exchange*<br/>
+*Exchange*<br/>
 [in] Wartość programu Exchange. Znak jest ignorowany.
 
 *Wzorzec*<br/>
@@ -431,12 +431,12 @@ int main(
 <29
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)<br/>
-[_InterlockedCompareExchangePointer Intrinsic Functions](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
+[Funkcje wewnętrzne _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

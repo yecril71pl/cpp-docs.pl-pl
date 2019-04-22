@@ -8,10 +8,10 @@ f1_keywords:
 helpviewer_keywords:
 - AgileEventSource class
 ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025869"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource, klasa
@@ -40,7 +40,7 @@ Interfejs do delegata, który reprezentuje program obsługi zdarzeń.
 
 ## <a name="remarks"></a>Uwagi
 
-Większość składników środowiska wykonawczego Windows są składnikami agile. Aby uzyskać więcej informacji, zobacz [wątkowość i Marshaling (C + +/ CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+Większość składników środowiska wykonawczego Windows są składnikami agile. Aby uzyskać więcej informacji, zobacz [wątkowość i Marshaling (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -80,7 +80,7 @@ HRESULT Add(
 *delegateInterface*<br/>
 Interfejs do obiektu delegowanego, który reprezentuje program obsługi zdarzeń.
 
-*Token*<br/>
+*token*<br/>
 Po zakończeniu tej operacji, uchwyt, który reprezentuje zdarzenie. Używanie tego tokenu jako parametr do `Remove()` metodę, aby odrzucić programu obsługi zdarzeń.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -89,4 +89,4 @@ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazu
 
 ## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL — Przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

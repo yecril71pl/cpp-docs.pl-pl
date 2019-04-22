@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
 ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026795"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
@@ -88,10 +88,10 @@ Interfejs polecenia. Wartość domyślna to `ICommand`.
 
 |||
 |-|-|
-|[Anuluj](#cancel)|Anuluje bieżące wykonywanie polecenia.|
-|[Cancelexecution —](#cancelexecution)|Anuluje bieżące wykonywanie polecenia.|
-|[CreateRowset](#createrowset)|Tworzy obiekt zestawu wierszy.|
-|[Wykonywanie](#execute)|Wykonuje polecenie.|
+|[Anulowanie](#cancel)|Anuluje bieżące wykonywanie polecenia.|
+|[CancelExecution](#cancelexecution)|Anuluje bieżące wykonywanie polecenia.|
+|[Createrowset —](#createrowset)|Tworzy obiekt zestawu wierszy.|
+|[Execute](#execute)|Wykonuje polecenie.|
 |[GetDBSession](#getdbsession)|Zwraca wskaźnik interfejsu do sesja, która utworzyła polecenia.|
 |[Icommandimpl —](#icommandimpl)|Konstruktor.|
 

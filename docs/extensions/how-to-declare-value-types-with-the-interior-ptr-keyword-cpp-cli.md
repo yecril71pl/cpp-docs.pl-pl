@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C + +/ CLI)'
+title: 'Instrukcje: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++sposób niezamierzony)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
 ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026102"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Instrukcje: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C + +/ CLI)
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Instrukcje: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++sposób niezamierzony)
 
 **Pomocą interior_ptr** może być używany z typem wartości.
 
@@ -24,7 +24,7 @@ ms.locfileid: "59026102"
 
 ### <a name="description"></a>Opis
 
-Następujące C + +/ interfejsu wiersza polecenia przykład pokazuje, jak używać **pomocą interior_ptr** z typem wartości.
+Następujące C++/interfejsu wiersza polecenia przykład pokazuje, jak używać **pomocą interior_ptr** z typem wartości.
 
 ### <a name="code"></a>Kod
 

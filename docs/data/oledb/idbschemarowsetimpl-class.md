@@ -37,10 +37,10 @@ helpviewer_keywords:
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
 ms.openlocfilehash: b764b571aae81f6225028cbe0d052d817d93d183
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024364"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl — Klasa
@@ -69,8 +69,8 @@ Klasa za pomocą którego `IDBSchemaRowsetImpl` jest dziedziczona. Zazwyczaj ta 
 
 |||
 |-|-|
-|[Checkrestrictions —](#checkrestrictions)|Sprawdza poprawność ograniczenia względem wierszy schematu.|
-|[CreateSchemaRowset](#createschemarowset)|Implementuje funkcji twórcy obiektu COM dla obiektu określonego przez parametr szablonu.|
+|[CheckRestrictions](#checkrestrictions)|Sprawdza poprawność ograniczenia względem wierszy schematu.|
+|[Createschemarowset —](#createschemarowset)|Implementuje funkcji twórcy obiektu COM dla obiektu określonego przez parametr szablonu.|
 |[Setrestrictions —](#setrestrictions)|Określa ograniczenia, które obsługują w zestawie wierszy z określonego schematu.|
 
 ### <a name="interface-methods"></a>Metody interfejsu

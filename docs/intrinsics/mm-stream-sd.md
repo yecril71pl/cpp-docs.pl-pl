@@ -8,15 +8,15 @@ helpviewer_keywords:
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
 ms.openlocfilehash: 3555b71e15d6f9c618a83f573d6da3cda9e7b705
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023519"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Zapisuje 64-bitowych danych w lokalizacji pamięci bez zanieczyszczenie pamięci podręcznych.
 
@@ -34,7 +34,7 @@ void _mm_stream_sd(
 *docelowy*<br/>
 [out] Wskaźnik do lokalizacji, w której będą zapisywane dane źródłowe.
 
-*Źródło*<br/>
+*Element źródłowy*<br/>
 [in] 128-bitowej wartości zawierające `double` wartość do zapisania w jej dolnej 64-bitowy...
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -81,7 +81,7 @@ int main()
 d[0] = -1, d[1] = 1
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 

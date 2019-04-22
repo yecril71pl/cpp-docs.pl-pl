@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
 ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779810"
 ---
 # <a name="ckeyboardmanager-class"></a>Klasa CKeyboardManager
@@ -377,7 +377,7 @@ Funkcja ta jest przydatna w celu zastąpienia istniejącej tabeli skrótów za p
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>

@@ -1,5 +1,5 @@
 ---
-title: call_as (atrybut COM C++)
+title: call_as (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
 ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023922"
 ---
 # <a name="callas"></a>call_as
@@ -25,12 +25,12 @@ Włącza [lokalnego](local-cpp.md) funkcji, które mają być mapowane na funkcj
 
 ### <a name="parameters"></a>Parametry
 
-* — funkcja*<br/>
+*— Funkcja*<br/>
 Funkcja lokalna, który ma być wywoływana, gdy zostanie wywołana funkcja zdalnego.
 
 ## <a name="remarks"></a>Uwagi
 
-**Call_as** atrybut C++ ma taką samą funkcjonalność jak [call_as](/windows/desktop/Midl/call-as) atrybutów w MIDL.
+**Call_as** C++ atrybut ma taką samą funkcjonalność jak [call_as](/windows/desktop/Midl/call-as) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -54,7 +54,7 @@ __interface IMInterface {
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu|
+|**Dotyczy**|Metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -63,6 +63,6 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [local](local-cpp.md)

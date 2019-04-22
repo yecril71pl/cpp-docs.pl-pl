@@ -1,5 +1,5 @@
 ---
-title: ms_union — (atrybut COM C++)
+title: ms_union — (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
 ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022311"
 ---
 # <a name="msunion"></a>ms_union
@@ -25,7 +25,7 @@ Steruje wyrównaniem reprezentacji danych sieci nonencapsulated Unii.
 
 ## <a name="remarks"></a>Uwagi
 
-**Ms_union —** atrybut C++ ma taką samą funkcjonalność jak [ms_union —](/windows/desktop/Midl/ms-union-attrib) atrybutów w MIDL.
+**Ms_union —** C++ atrybut ma taką samą funkcjonalność jak [ms_union —](/windows/desktop/Midl/ms-union-attrib) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -60,7 +60,7 @@ __interface IFireTabCtrl {
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Unie nonencapsulated|
+|**Dotyczy**|Unie nonencapsulated|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
@@ -69,5 +69,5 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)

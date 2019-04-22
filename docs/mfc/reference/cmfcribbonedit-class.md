@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780486"
 ---
 # <a name="cmfcribbonedit-class"></a>Klasa CMFCRibbonEdit
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] Etykieta dla `CMFCRibbonEdit` kontroli.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 [in] Indeks małych obrazów do użycia dla `CMFCRibbonEdit` kontroli. Kolekcja małe obrazy są obsługiwane przez kategorii nadrzędnej wstążki.
 
 ### <a name="remarks"></a>Uwagi
@@ -283,10 +283,10 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 [in] Wartość minimalna przycisku pokrętła.
 
-*nmaks.*<br/>
+*nMax*<br/>
 [in] Maksymalna wartość przycisku pokrętła.
 
 ### <a name="remarks"></a>Uwagi
@@ -532,7 +532,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt wyświetlania dla `CMFCRibbonEdit` kontroli.
 
 *bIsSelected*<br/>
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Wskaźnik do okna nadrzędnego `CMFCRibbonEdit` obiektu.
 
-*dane*<br/>
+*data*<br/>
 Dane dostępności `CMFCRibbonEdit` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -752,7 +752,7 @@ Wartość TRUE, aby ustawić szerokość tryb przestawny Wartość FALSE, aby us
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [Klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

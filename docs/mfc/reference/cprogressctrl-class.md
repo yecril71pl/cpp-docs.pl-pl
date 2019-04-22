@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778952"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl Class
@@ -148,7 +148,7 @@ Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylesdescr
 
 - Wyświetla pbs_smooth — stopniowe, smooth, wypełniając kontrolkę paska postępu. Bez tej flagi kontrolki spowoduje wypełnienie przy użyciu bloków.
 
-*rect*<br/>
+*Rect*<br/>
 Określa rozmiar i położenie formantu paska postępu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury. Ponieważ kontrolki musi być okna podrzędnego, określonych współrzędnych są względne wobec obszaru klienckiego *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -190,7 +190,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 *dwStyle*<br/>
 Określa styl formantu paska postępu. Zastosuj dowolną kombinację Style okna ramowego opisanego w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie Windows SDK.
 
-*rect*<br/>
+*Rect*<br/>
 Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -606,4 +606,4 @@ Przyrost kroku jest ustawiana przez `CProgressCtrl::SetStep` funkcja elementu cz
 
 [CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)

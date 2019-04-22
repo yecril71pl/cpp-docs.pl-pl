@@ -5,10 +5,10 @@ helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
 ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779524"
 ---
 # <a name="exception-handling-in-visual-c"></a>Obsługa wyjątków w języku Visual C++
@@ -33,7 +33,7 @@ Visual C++ wspiera trzy rodzaje obsługi wyjątków:
 
 Użyj [/EH](../build/reference/eh-exception-handling-model.md) opcję kompilatora, aby określić typ obsługi wyjątku do użycia w projekcie; Obsługa wyjątków języka C++ jest ustawieniem domyślnym. Nie należy mieszać mechanizmów; obsługi błędów na przykład nie należy używać wyjątków języka C++ z obsługi wyjątków strukturalnych. Przy użyciu obsługi wyjątków C++ sprawia, że Twój kod bardziej przenośny i pozwala obsługiwać wyjątki dowolnego typu. Aby uzyskać więcej informacji na temat wad strukturalna Obsługa wyjątków, zobacz [obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać porady na temat mieszania makr MFC i wyjątków języka C++, zobacz [wyjątków: Używanie makr MFC i wyjątków C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Aby uzyskać informacje dotyczące obsługi wyjątków w aplikacjach CLR, zobacz [obsługi wyjątków (C + +/ CLI i C + +/ CX)](../extensions/exception-handling-cpp-component-extensions.md).
+Aby uzyskać informacje dotyczące obsługi wyjątków w aplikacjach CLR, zobacz [obsługi wyjątków (C++sposób niezamierzony i C++/CX)](../extensions/exception-handling-cpp-component-extensions.md).
 
 Aby uzyskać informacje dotyczące obsługi wyjątków na x64 procesorów, zobacz [x64 wyjątków](../build/exception-handling-x64.md).
 

@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780369"
 ---
 # <a name="cmapstringtostring-class"></a>Klasa CMapStringToString
@@ -209,7 +209,7 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>Parametry
 
-*klawisz*<br/>
+*Klucz*<br/>
 Wskaźnik do klucza dla elementu, który ma zostać wyszukany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -228,4 +228,4 @@ Wywołaj tę metodę, aby wyszukać element mapy za pomocą klucza, który dokł
 
 [Próbki MFC ZBIERANIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)

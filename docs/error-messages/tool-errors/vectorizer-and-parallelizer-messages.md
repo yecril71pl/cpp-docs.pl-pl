@@ -9,10 +9,10 @@ f1_keywords:
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
 ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023909"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Komunikaty wektoryzatora i paralelizatora
@@ -987,4 +987,4 @@ void code_1505(int *A, int *B)
 [#pragma loop()](../../preprocessor/loop.md)<br/>
 [/Q Opcje (Operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)<br/>
 [/Qpar-raport (Poziom raportowania automatycznej paralelizacji)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[/Qvec-raport (Poziom raportowania automatycznej wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

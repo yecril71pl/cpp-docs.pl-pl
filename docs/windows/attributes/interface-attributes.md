@@ -6,20 +6,20 @@ helpviewer_keywords:
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
 ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027208"
 ---
 # <a name="interface-attributes"></a>Atrybuty interfejsu
 
-Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interface.md) słowa kluczowego języka C++.
+Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interface.md) C++ — słowo kluczowe.
 
 |Atrybut|Opis|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
-|[niestandardowy](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
+|[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
 |[dispinterface](dispinterface.md)|Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.|
 |[dual](dual.md)|Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.|
 |[export](export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|

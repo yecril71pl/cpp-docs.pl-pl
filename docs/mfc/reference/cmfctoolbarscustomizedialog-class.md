@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780967"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Klasa CMFCToolBarsCustomizeDialog
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Określa identyfikator kategorii, do której mają zostać wstawione przycisku.
 
-*Przycisk*<br/>
+*button*<br/>
 [in] Określa przycisk, aby wstawić.
 
 *iInsertBefore*<br/>
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Wskaźnik do okna nadrzędnego.
 
-*mapa bitowa*<br/>
+*bitmap*<br/>
 [in] Odwołanie do obiektu mapy bitowej do edycji.
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Określa polecenie przycisku, które ma zostać zastąpione.
 
-*Przycisk*<br/>
+*button*<br/>
 [in] A **const** odwołanie do obiektu przycisku paska narzędzi, który zastępuje stare przycisku.
 
 ### <a name="remarks"></a>Uwagi
@@ -752,6 +752,6 @@ Ustawienie kategorii użytkownika nie jest obecnie używany przez platformę.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[Cpropertysheet — klasa](../../mfc/reference/cpropertysheet-class.md)
+[Klasa CPropertySheet](../../mfc/reference/cpropertysheet-class.md)

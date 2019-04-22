@@ -109,10 +109,10 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778523"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
@@ -382,7 +382,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl pola kombi. Zastosuj dowolną kombinację [style pola kombi](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) do pola.
 
-*rect*<br/>
+*Rect*<br/>
 Wskazuje położenie i rozmiar pola kombi. Może być [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) lub `CRect` obiektu.
 
 *pParentWnd*<br/>
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bPrzedłużony*<br/>
+*bExtended*<br/>
 Określa, czy pole kombi powinien używać interfejsu użytkownika rozszerzonej lub domyślny interfejs użytkownika. Wartość TRUE wybiera interfejs użytkownika rozszerzone; wartość FALSE wybiera standardowy interfejs użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1559,11 +1559,11 @@ Ta funkcja elementu członkowskiego nie ma wpływu na utworzone za pomocą pola 
 
 [Próbki MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Klasa CButton](../../mfc/reference/cbutton-class.md)<br/>
 [Klasa CEdit](../../mfc/reference/cedit-class.md)<br/>
-[Clistbox — klasa](../../mfc/reference/clistbox-class.md)<br/>
+[Klasa CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Klasa CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Klasa CStatic](../../mfc/reference/cstatic-class.md)<br/>
-[Cdialog — klasa](../../mfc/reference/cdialog-class.md)
+[Klasa CDialog](../../mfc/reference/cdialog-class.md)

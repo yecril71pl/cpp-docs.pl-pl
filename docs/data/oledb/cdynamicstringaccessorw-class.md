@@ -7,10 +7,10 @@ helpviewer_keywords:
 - CDynamicStringAccessorW class
 ms.assetid: 9b7fd5cc-3a9b-4b57-b907-f1e35de2c98f
 ms.openlocfilehash: 20ea4a2d795108e00c4b11c3abea6cf7b9953ca7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025153"
 ---
 # <a name="cdynamicstringaccessorw-class"></a>CDynamicStringAccessorW — Klasa
@@ -36,9 +36,9 @@ Oba żądania, że dostawca pobrać wszystkie dane używane z magazynu danych ja
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Klasa CAccessor](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor — Klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[CManualAccessor — Klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
-[CDynamicAccessor — Klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicStringAccessor — Klasa](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
+[CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessor, klasa](../../data/oledb/cdynamicstringaccessor-class.md)<br/>

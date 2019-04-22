@@ -7,10 +7,10 @@ helpviewer_keywords:
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
 ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023441"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Klasy baz danych ATL (Szablony OLE DB)
@@ -35,6 +35,6 @@ Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole
 
 [Tworzenie konsumenta OLE DB](../data/oledb/creating-an-ole-db-consumer.md)<br/>
 [Tworzenie dostawcy OLE DB](../data/oledb/creating-an-ole-db-provider.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Szablony dostawców OLE DB — kompendium](../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Szablony dostawców OLE DB — dokumentacja](../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Przykłady szablonów OLE DB](https://github.com/Microsoft/VCSamples)

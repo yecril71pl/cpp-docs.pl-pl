@@ -43,10 +43,10 @@ helpviewer_keywords:
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
 ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778302"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
@@ -66,14 +66,14 @@ class CRegKey
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Konstruktor.|
 |[CRegKey::~CRegKey](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRegKey::Attach](#attach)|Wywołanie tej metody, aby dołączyć HKEY do `CRegKey` obiektu przez ustawienie [m_hKey](#m_hkey) elementu członkowskiego dojścia do `hKey`.|
 |[CRegKey::Close](#close)|Wywołaj tę metodę, aby zwolnić [m_hKey](#m_hkey) elementu członkowskiego obsługi i ustaw ją na wartość NULL.|
@@ -106,14 +106,14 @@ class CRegKey
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRegKey::operator HKEY](#operator_hkey)|Konwertuje `CRegKey` obiektu HKEY.|
 |[CRegKey::operator =](#operator_eq)|Operator przypisania.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRegKey::m_hKey](#m_hkey)|Zawiera uchwyt klucza rejestru, skojarzone z `CRegKey` obiektu.|
 |[CRegKey::m_pTM](#m_ptm)|Wskaźnik do `CAtlTransactionManager` obiektu|

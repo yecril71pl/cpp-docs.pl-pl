@@ -103,10 +103,10 @@ helpviewer_keywords:
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
 ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023233"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset — Klasa
@@ -141,8 +141,8 @@ Klasa metody dostępu.
 |[MoveLast](#movelast)|Przenosi do ostatniego wiersza.|
 |[MoveNext](#movenext)|Pobiera następny wiersz danych.|
 |[MovePrev](#moveprev)|Przenosi do poprzedniego wiersza.|
-|[Movetobookmark —](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
-|[Movetoratio —](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
+|[MoveToBookmark](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
+|[MoveToRatio](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
 |[ReleaseRows](#releaserows)|Ustawia bieżący wiersz (`m_nCurrentRow`) do zera i zwalnia wszystkie wiersze.|
 |[Setrows —](#setrows)|Ustawia liczbę dojść do wierszy mają zostać pobrane przez jedno wywołanie.|
 
@@ -322,4 +322,4 @@ Jeśli chcesz wywołać tę funkcję, należy przed otwarciem zestawu wierszy.
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

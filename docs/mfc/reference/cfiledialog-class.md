@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
 ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779212"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog Class
@@ -549,7 +549,7 @@ explicit CFileDialog(
 *lpszFileName*<br/>
 [in] Początkowa nazwa pliku, który pojawia się w polu Nazwa pliku. Jeśli ma wartość NULL, zostanie wyświetlone nie początkowa nazwa pliku.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Połączenie jednego lub więcej flagi, które służy do dostosowywania okna dialogowego. Aby uzyskać opis tych flag, zobacz [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktury w zestawie Windows SDK. Jeśli zmodyfikujesz `m_ofn.Flags` struktury elementu członkowskiego, użyj operatora bitowego OR zmiany, aby zachować domyślne zachowanie.
 
 *lpszFilter*<br/>
@@ -558,7 +558,7 @@ explicit CFileDialog(
 *pParentWnd*<br/>
 [in] Wskaźnik do okna nadrzędnego lub właściciela, okno dialogowe pliku.
 
-*niezerowego*<br/>
+*dwSize*<br/>
 [in] Rozmiar `OPENFILENAME` struktury. Ta wartość jest zależna od wersji systemu operacyjnego. MFC używana tego parametru, aby określić odpowiedni rodzaj okno dialogowe, aby utworzyć. Domyślny rozmiar 0 oznacza, że kod MFC określi rozmiar okno dialogowe poprawne do użycia na podstawie wersji systemu operacyjnego, na którym program jest uruchamiany.
 
 *bVistaStyle*<br/>
@@ -1641,4 +1641,4 @@ W tym przykładzie aktualizuje `CFileDialog` przed wyświetleniem go. Przed zakt
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)

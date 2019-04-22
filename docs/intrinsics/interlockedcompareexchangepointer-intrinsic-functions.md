@@ -25,15 +25,15 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
 ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024819"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer Intrinsic Functions
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Wykonuje operacją niepodzielną, która przechowuje `Exchange` adresem `Destination` adres, jeśli `Comparand` i `Destination` adres są takie same.
 
@@ -79,10 +79,10 @@ long _InterlockedCompareExchangePointer_rel (
 
 #### <a name="parameters"></a>Parametry
 
-*Miejsce docelowe*<br/>
+*miejsce docelowe*<br/>
 [out w] Wskaźnik do wskaźnika do wartości docelowej. Znak jest ignorowany.
 
-*Program Exchange*<br/>
+*Exchange*<br/>
 [in] Wskaźnik do programu Exchange. Znak jest ignorowany.
 
 *Wzorzec*<br/>
@@ -116,9 +116,9 @@ Na platformach firmy Intel, obsługujące instrukcje pominięcia blokady sprzęt
 
 Te procedury są dostępne tylko jako funkcje wewnętrzne.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[słowa kluczowe](../cpp/keywords-cpp.md)
+[Słowa kluczowe](../cpp/keywords-cpp.md)

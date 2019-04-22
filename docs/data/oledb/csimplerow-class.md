@@ -36,10 +36,10 @@ helpviewer_keywords:
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
 ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023844"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
@@ -63,9 +63,9 @@ class CSimpleRow
 |||
 |-|-|
 |[Addrefrow —](#addrefrow)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|
-|[{1&gt;Compare&lt;1}](#compare)|Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.|
-|[Csimplerow —](#csimplerow)|Konstruktor.|
-|[ReleaseRow](#releaserow)|Wersje wierszy.|
+|[Compare](#compare)|Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.|
+|[CSimpleRow](#csimplerow)|Konstruktor.|
+|[Releaserow —](#releaserow)|Wersje wierszy.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -160,4 +160,4 @@ KeyType m_iRowset;
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetImpl — Klasa](../../data/oledb/irowsetimpl-class.md)
+[IRowsetImpl, klasa](../../data/oledb/irowsetimpl-class.md)
