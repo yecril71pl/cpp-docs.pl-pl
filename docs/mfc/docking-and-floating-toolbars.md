@@ -22,10 +22,10 @@ helpviewer_keywords:
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
 ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768137"
 ---
 # <a name="docking-and-floating-toolbars"></a>Zadokowane i przestawne paski narzędzi
@@ -80,7 +80,7 @@ Implementacja MFC dokowalne pasków narzędzi nie zawiera niektóre z rozszerzon
 
 Począwszy od Visual C++ w wersji 4.0 możesz wprowadzić go możliwe dla użytkowników aplikacji, aby dynamicznie Zmień rozmiar przestawne paski narzędzi. Zwykle pasek narzędzi ma kształt długie, liniowej, wyświetlać poziomo. Ale możesz zmienić orientację na pasku narzędzi i jego kształtu. Na przykład po użytkownik dokowane narzędzi względem jednej pionowy strony okna ramki, kształt zostanie zmieniony na układ pionowy. Użytkownik może również zmienić kształt na pasku narzędzi w prostokąt z wielu wierszy przycisków.
 
-Możesz:
+Można:
 
 - Określ dynamiczna zmiana rozmiaru jako cecha paska narzędzi.
 

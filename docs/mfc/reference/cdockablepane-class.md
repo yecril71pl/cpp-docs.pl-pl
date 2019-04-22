@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
 ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769696"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
@@ -153,13 +153,13 @@ class CDockablePane : public CPane
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDockablePane::CDockablePane](#cdockablepane)|Tworzy i inicjuje `CDockablePane` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Dołącza okienko do innego okienka. Spowoduje to utworzenie okienka z zakładkami.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Zwraca rozmiar prostokąta okienka.|
@@ -229,7 +229,7 @@ class CDockablePane : public CPane
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Określa, czy jest ukryty (w trybie autoukrywania) dla okienka dokowania.|
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Określa, kiedy automatyczne ukrywanie okienka dokowania powinna zostać przerwana w kroczącym.|
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Określa, czy animacja automatyczne ukrywanie okienka dokowalne jest wyłączona.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Określa zachowanie okienka, gdy okienka jest w trybie autoukrywania.|

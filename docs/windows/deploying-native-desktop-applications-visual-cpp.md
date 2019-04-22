@@ -10,10 +10,10 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.openlocfilehash: 46ced4ac5f7952a9b7f66418ea037e053b16e9be
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786813"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Wdrażanie natywnych aplikacji komputerowych (Visual C++)
@@ -50,7 +50,7 @@ Artykuły w tej sekcji dokumentacji omówiono sposób zapewnienia, że natywnych
 
 - [Wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
 
-- [Uruchomione c + +/ CLR aplikacji na poprzedniej wersji środowiska uruchomieniowego](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Uruchamianie C++ aplikacji na poprzedniej wersji środowiska uruchomieniowego/CLR](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 

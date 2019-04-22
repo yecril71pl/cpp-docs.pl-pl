@@ -8,10 +8,10 @@ helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
 ms.openlocfilehash: ca3469128cf3d412138d5d39a1587cbc20150699
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040609"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory — Funkcja
@@ -58,4 +58,4 @@ Błąd potwierdzenia jest emitowane, jeśli parametr szablonu *fabryki* nie poch
 
 ## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Wrappers::Details — Przestrzeń nazw](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft::WRL::Wrappers::Details, przestrzeń nazw](microsoft-wrl-wrappers-details-namespace.md)

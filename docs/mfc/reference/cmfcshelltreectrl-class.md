@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
 ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779758"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl Class
@@ -261,7 +261,7 @@ void SetFlags(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 [in] Flagi, aby ustawić.
 
 *bRefresh*<br/>
@@ -292,7 +292,7 @@ Użyj metody [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) można pobrać
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CTreeCtrl](../../mfc/reference/ctreectrl-class.md)<br/>
-[CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md)
+[Klasa CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)

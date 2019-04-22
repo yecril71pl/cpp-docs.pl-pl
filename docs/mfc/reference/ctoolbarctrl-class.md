@@ -183,10 +183,10 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781266"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identyfikator polecenia przycisku, aby zaznacz lub usuń zaznaczenie.
 
-*bSprawdź*<br/>
+*bCheck*<br/>
 Wartość true, sprawdź przycisku, wartość FALSE, aby je wyczyścić.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -626,7 +626,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl formantu paska narzędzi. Paski narzędzi musi zawsze mieć styl WS_CHILD. Ponadto można określić dowolną kombinację toolbar — style i style okna ramowego zgodnie z opisem w obszarze **uwagi**.
 
-*rect*<br/>
+*Rect*<br/>
 Opcjonalnie określa rozmiar i położenie formantu paska narzędzi. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
@@ -680,7 +680,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 *dwStyle*<br/>
 Określa styl formantu paska narzędzi. Paski narzędzi musi zawsze mieć styl WS_CHILD. Ponadto można określić dowolną kombinację toolbar — style i style okna ramowego zgodnie z opisem w **uwagi** części [Utwórz](#create).
 
-*rect*<br/>
+*Rect*<br/>
 Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parametry
 
-*Nciągu*<br/>
+*nString*<br/>
 Indeks ciągu.
 
 *lpstrString*<br/>
@@ -1817,7 +1817,7 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*size*<br/>
+*Rozmiar*<br/>
 Szerokość i wysokość w pikselach bitowymi obrazów.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1864,7 +1864,7 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*size*<br/>
+*Rozmiar*<br/>
 Szerokość i wysokość w pikselach, przyciski.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2326,7 +2326,7 @@ BOOL SetState(
 *nID*<br/>
 Identyfikator polecenia przycisku.
 
-*nInformacje*<br/>
+*nState*<br/>
 Flagi stanu. Może być kombinacją wartości wymienione na stany przycisku w [CToolBarCtrl::AddButtons](#addbuttons).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2386,8 +2386,8 @@ Ta funkcja członkowska emuluje funkcjonalność [TB_SETWINDOWTHEME](/windows/de
 
 ## <a name="see-also"></a>Zobacz także
 
-[CMNCTRL1 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [Próbki MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CToolBar](../../mfc/reference/ctoolbar-class.md)

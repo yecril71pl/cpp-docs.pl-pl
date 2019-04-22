@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780343"
 ---
 # <a name="cdatapathproperty-class"></a>Klasa CDataPathProperty
@@ -64,7 +64,7 @@ Klasa `CDataPathProperty` jest tworzony na podstawie `CAysncMonikerFile`. Aby za
 
 Aby uzyskać więcej informacji o sposobie używania formantów ActiveX i monikerów asynchronicznych w aplikacjach internetowych zobacz następujące artykuły:
 
-- [Internet First Steps: Kontrolki ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Internet First Steps: ActiveX Controls](../../mfc/activex-controls-on-the-internet.md)
 
 - [Internet First Steps: Monikery asynchroniczne](../../mfc/asynchronous-monikers-on-the-internet.md)
 
@@ -218,6 +218,6 @@ void SetPath(LPCTSTR lpszPath);
 ## <a name="see-also"></a>Zobacz także
 
 [Obraz przykładowej MFC](../../overview/visual-cpp-samples.md)<br/>
-[CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)
+[Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)

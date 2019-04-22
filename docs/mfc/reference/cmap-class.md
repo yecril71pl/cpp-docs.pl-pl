@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
 ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769839"
 ---
 # <a name="cmap-class"></a>Klasa CMap
@@ -73,19 +73,19 @@ Typ danych używany dla *wartość* argumentów; zazwyczaj odwołanie do *warto�
 
 ### <a name="public-structures"></a>Publiczne struktury
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Struktura zagnieżdżona zawierające wartości klucza i wartości skojarzonego obiektu.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMap::CMap](#cmap)|Konstruuje kolekcję mapujący klucze do wartości.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMap::GetCount](#getcount)|Zwraca liczbę elementów na tej mapie.|
 |[CMap::GetHashTableSize](#gethashtablesize)|Zwraca liczbę elementów w tabeli wyznaczania wartości skrótu.|
@@ -104,7 +104,7 @@ Typ danych używany dla *wartość* argumentów; zazwyczaj odwołanie do *warto�
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMap::operator \[ \]](#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
 

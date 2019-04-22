@@ -3,10 +3,10 @@ title: Visual C++, przenoszenie i uaktualnianie przewodnik
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898794"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
@@ -67,7 +67,7 @@ Po uaktualnieniu i przetestowany projekt, możesz również chcieć należy wzi�
 
 Jak wygląda interfejs użytkownika? Jeśli używasz biblioteki MFC, możesz chcieć zaktualizować interfejs użytkownika. Używasz dowolnego z nowszych funkcji MFC, które zostały wprowadzone w 2008 roku jako dodatek Feature Pack? Jeśli chcesz nadaj nowszej wygląd i działanie aplikacji bez konieczności ponownego zapisu całej aplikacji, można rozważyć za pomocą wstążki interfejsów API w MFC lub niektóre z nowych funkcji MFC.
 
-Jeśli chcesz nadać swojemu programowi interfejs użytkownika XAML, ale nie chcesz utworzyć aplikację platformy uniwersalnej systemu Windows, służy C# przy użyciu platformy WPF do utworzenia warstwy Interfejsu i Refaktoryzacja logika standard C++ do bibliotek DLL. Utwórz warstwę współdziałanie w języku C + +/ interfejsu wiersza polecenia do łączenia z C# w kodzie macierzystym. Innym rozwiązaniem jest tworzenie aplikacji platformy uniwersalnej systemu Windows przy użyciu [C + +/ CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) lub [C + +/ WinRT](https://github.com/microsoft/cppwinrt). W systemie Windows 10, możesz użyć [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) spakować swoją istniejącą aplikację pulpitu, jak aplikacja platformy uniwersalnej systemu Windows bez konieczności modyfikowania kodu.
+Jeśli chcesz nadać swojemu programowi interfejs użytkownika XAML, ale nie chcesz utworzyć aplikację platformy uniwersalnej systemu Windows, służy C# przy użyciu platformy WPF do utworzenia warstwy Interfejsu i Refaktoryzacja logika standard C++ do bibliotek DLL. Utwórz warstwę współdziałanie w C++sposób niezamierzony połączyć C# w kodzie macierzystym. Innym rozwiązaniem jest tworzenie aplikacji platformy uniwersalnej systemu Windows przy użyciu [ C++/CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) lub [ C++/WinRT](https://github.com/microsoft/cppwinrt). W systemie Windows 10, możesz użyć [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) spakować swoją istniejącą aplikację pulpitu, jak aplikacja platformy uniwersalnej systemu Windows bez konieczności modyfikowania kodu.
 
 Alternatywnie być może masz teraz nowe wymagania lub przewidujesz potrzebę przeznaczonych dla platform innych niż Windows desktop, na przykład Windows Phone lub urządzeń z systemem Android. Można przyłącz kod interfejsu użytkownika do biblioteki interfejsu użytkownika dla wielu platform. Za pomocą tych platform tworzenia interfejsu użytkownika można wiele urządzeń i nadal używać programu Visual Studio i debugerze programu Visual Studio jako środowiska deweloperskiego.
 
@@ -78,11 +78,11 @@ Alternatywnie być może masz teraz nowe wymagania lub przewidujesz potrzebę pr
 |[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|W tym artykule omówiono sposób używania projekty utworzone we wcześniejszych wersjach programu Visual C++.|
 |[What's New for kompilator języka C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Zmiany w środowisku IDE i narzędzia do bieżącej wersji programu Visual Studio|
 |[Ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md)|Ulepszenia zgodności standardów z programu Visual Studio 2015 do programu Visual Studio|
-|[Visual C++ — Historia latach 2003 – 2015 zmian](visual-cpp-change-history-2003-2015.md)|Lista wszystkich zmian bibliotek języka Visual C++ i narzędzia do kompilacji programu Visual Studio 2003 do 2015, które mogą wymagać zmian w kodzie.|
-|[Visual C++ co jest nowego od roku 2003 do 2015](visual-cpp-what-s-new-2003-through-2015.md)|Wszystkie "co nowego" informacje Visual c++ dla programu Visual Studio 2003 za pomocą programu Visual Studio 2015.|
-|[Przenoszenie bibliotek innych firm 3](porting-third-party-libraries.md)|Jak używać **vcpkg** narzędzia wiersza polecenia do portu starsze bibliotek typu open source do wersji skompilowany przy użyciu nowszego zestawy narzędzi Visual C++.|
+|[Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)|Lista wszystkich zmian bibliotek języka Visual C++ i narzędzia do kompilacji programu Visual Studio 2003 do 2015, które mogą wymagać zmian w kodzie.|
+|[Visual C++ — co nowego od roku 2003 do 2015](visual-cpp-what-s-new-2003-through-2015.md)|Wszystkie "co nowego" informacje Visual c++ dla programu Visual Studio 2003 za pomocą programu Visual Studio 2015.|
+|[Przenoszenie bibliotek innych firm](porting-third-party-libraries.md)|Jak używać **vcpkg** narzędzia wiersza polecenia do portu starsze bibliotek typu open source do wersji skompilowany przy użyciu nowszego zestawy narzędzi Visual C++.|
 |[Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](porting-and-upgrading-examples-and-case-studies.md)|W tej sekcji firma Microsoft przenoszone uaktualnia kilka przykładów i aplikacji i omówiono środowiska i wyników. Może się okazać, że odczytywanie te zapewnia możesz zorientować się, co jest zaangażowane w przenoszeniu i uaktualnianiu procesu. W całym procesie, możemy omówić porady i wskazówki dotyczące uaktualniania i pokazują, jak określone błędy zostały usunięte.|
-|[Przenoszenie na platformę uniwersalną systemu Windows](porting-to-the-universal-windows-platform-cpp.md)|Zawiera informacje dotyczące przenoszenia kodu do systemu Windows 10|
+|[Przenoszenie na platformę Windows Universal](porting-to-the-universal-windows-platform-cpp.md)|Zawiera informacje dotyczące przenoszenia kodu do systemu Windows 10|
 |[Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX](introduction-to-visual-cpp-for-unix-users.md)|Zawiera informacje dla użytkowników systemu UNIX, którzy jesteś nowym użytkownikiem Visual C++ i chcesz stać się za pomocą go.|
 |[Eksportowanie z systemu UNIX do Win32](porting-from-unix-to-win32.md)|W tym artykule omówiono opcje do migrowania aplikacji systemu UNIX do Windows.|
 

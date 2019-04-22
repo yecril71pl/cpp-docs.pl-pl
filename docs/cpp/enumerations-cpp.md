@@ -11,10 +11,10 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
 ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772568"
 ---
 # <a name="enumerations-c"></a>Wyliczenia (C++)
@@ -22,7 +22,7 @@ ms.locfileid: "58772568"
 Wyliczenie to typ zdefiniowany przez użytkownika, który składa się z szeregu nazwanych stałych liczbach całkowitych, które są znane jako moduły wyliczające.
 
 > [!NOTE]
->  Ten artykuł omawia język ISO Standard C++ **wyliczenia** typu i o określonym zakresie (lub silnie typizowane) **klasa wyliczeniowa** typu, który został wprowadzony w C ++ 11. Uzyskać informacji na temat **klasy publicznym typie wyliczeniowym** lub **klasa wyliczeniowa prywatnej** typów w języku C + +/ CLI i C + +/ CX, zobacz [klasa wyliczeniowa](../extensions/enum-class-cpp-component-extensions.md).
+>  Ten artykuł omawia język ISO Standard C++ **wyliczenia** typu i o określonym zakresie (lub silnie typizowane) **klasa wyliczeniowa** typu, który został wprowadzony w C ++ 11. Aby uzyskać informacje o **klasy publicznym typie wyliczeniowym** lub **klasa wyliczeniowa prywatnej** typy w C++sposób niezamierzony i C++/CX, zobacz [klasa wyliczeniowa](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -184,4 +184,4 @@ int main()
 ## <a name="see-also"></a>Zobacz także
 
 [Deklaracje modułów wyliczających języka C](../c-language/c-enumeration-declarations.md)<br/>
-[słowa kluczowe](../cpp/keywords-cpp.md)
+[Słowa kluczowe](../cpp/keywords-cpp.md)

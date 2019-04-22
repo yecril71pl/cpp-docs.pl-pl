@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
 ms.openlocfilehash: b52c34014402a235e03c45f82dcd1e5c542e4919
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023103"
 ---
 # <a name="debugbreak"></a>__debugbreak
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Powoduje, że punkt przerwania w kodzie, gdzie użytkownik jest monitowany o uruchomienia debugera.
 
@@ -62,9 +62,9 @@ na x86 komputera.
 
 Ta procedura jest dostępna wyłącznie jako wewnętrzna.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[słowa kluczowe](../cpp/keywords-cpp.md)
+[Słowa kluczowe](../cpp/keywords-cpp.md)

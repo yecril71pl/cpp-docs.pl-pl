@@ -47,10 +47,10 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776196"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget — klasa
@@ -411,7 +411,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator alokacji
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -526,12 +526,12 @@ void RestoreWaitCursor();
 
 [Próbki MFC acdual —](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CCmdUI](../../mfc/reference/ccmdui-class.md)<br/>
 [Klasa CDocument](../../mfc/reference/cdocument-class.md)<br/>
-[CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)<br/>
+[Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Klasa CWinApp](../../mfc/reference/cwinapp-class.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Cview — klasa](../../mfc/reference/cview-class.md)<br/>
+[Klasa CView](../../mfc/reference/cview-class.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Klasa COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)

@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776534"
 ---
 # <a name="cmdiframewnd-class"></a>Cmdiframewnd — klasa
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 Klasa czasu wykonywania okna podrzędnego, który ma zostać utworzony.
 
-*Zasobów*<br/>
+*nResource*<br/>
 Identyfikator skojarzony z okna podrzędnego zasobów udostępnionych.
 
 *hMenu*<br/>
@@ -463,6 +463,6 @@ Zobacz przykład [CMDIFrameWnd::MDICascade](#mdicascade).
 [Próbki MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Cmdichildwnd — klasa](../../mfc/reference/cmdichildwnd-class.md)
+[Klasa CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)

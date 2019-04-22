@@ -117,10 +117,10 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
 ms.openlocfilehash: d53d3afb464b9dcfa32ab3cf4ee51446f8313a92
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771828"
 ---
 # <a name="cdhtmldialog-class"></a>Klasa CDHtmlDialog
@@ -137,14 +137,14 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Tworzy obiekt CDHtmlDialog.|
 |[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|Niszczy obiekt CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Możliwym do zastąpienia o nazwie jako kontroli dostępu, czy obiekty skryptowe na stronie załadować uzyskać dostęp do zewnętrznych wysyłania kontroli lokacji. Sprawdza, czy na pewno wysyłki jest bezpieczny dla skryptów albo bieżącej strefy umożliwia obiektów, które nie są bezpieczne dla skryptów.|
 |[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Overridable użyty do utworzenia wystąpienia witryny formantu do hostowania formantu WebBrowser w oknie dialogowym.|
@@ -197,7 +197,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Wskazuje, czy ma być używany tytuł dokumentu HTML jako okna dialogowego podpisu.|
 |[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|Zasób identyfikator HTML zasobów do wyświetlenia.|

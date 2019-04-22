@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779030"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
@@ -477,7 +477,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Wskaźnik do okna nadrzędnego pola kombi.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt otaczający pola kombi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -566,10 +566,10 @@ void EnableSpinControl(
 *bWłączenie*<br/>
 [in] Wartość TRUE, aby włączyć kontrolki przycisku pokrętła; Wartość FALSE umożliwia wyłączenie kontrolka przycisku pokrętła. Wartość domyślna to TRUE.
 
-*Nmin.*<br/>
+*nMin*<br/>
 [in] Minimalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.
 
-*nmaks.*<br/>
+*nMax*<br/>
 [in] Maksymalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.
 
 ### <a name="remarks"></a>Uwagi
@@ -883,7 +883,7 @@ CMFCPropertyGridProperty* HitTest(
 *Punkt*<br/>
 [in] Punkt, aby przetestować we współrzędnych klienta. Ten parametr jest zwykle bieżącej lokalizacji wskaźnika myszy.
 
-*pt*<br/>
+*(czas pacyficzny)*<br/>
 [in] Punkt, aby przetestować we współrzędnych klienta.
 
 *pnArea*<br/>
@@ -1280,7 +1280,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt otaczający, która określa, gdzie można narysować opisu właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -1324,7 +1324,7 @@ virtual void OnDrawName(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt otaczający, która określa, gdzie można narysować nazwę właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -1344,7 +1344,7 @@ virtual void OnDrawValue(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt otaczający, która określa, gdzie można narysować wartości właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -1589,7 +1589,7 @@ BOOL RemoveSubItem(
 *pProp*<br/>
 [in] Wskaźnik do elementu podrzędnego właściwości.
 
-*bUsuń*<br/>
+*bDelete*<br/>
 [in] Wartość true, Usuń właściwości obiektu, który jest określony przez *pProp* parametru; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1712,6 +1712,6 @@ void Show(
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)

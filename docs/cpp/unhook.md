@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
 ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769527"
 ---
 # <a name="unhook"></a>__unhook
@@ -69,7 +69,7 @@ Wskaźnik na wystąpienie źródła zdarzeń. W zależności od kodu `type` okre
 
 *odbiornik*(opcjonalnie) wskaźnik do wystąpienia klasy odbiorcy zdarzeń. Jeśli odbiornik nie zostanie określony, wartością domyślną jest odbiorcy klasy lub struktury, w którym **__unhook** jest wywoływana.
 
-## <a name="usage"></a>Sposób użycia
+## <a name="usage"></a>Użycie
 
 Może być użycie w zakresie dowolnej funkcji, łącznie z głównym, poza klasy odbiorcy zdarzeń.
 
@@ -100,7 +100,7 @@ Zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-nativ
 
 ## <a name="see-also"></a>Zobacz także
 
-[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [event_source](../windows/attributes/event-source.md)<br/>
 [event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>

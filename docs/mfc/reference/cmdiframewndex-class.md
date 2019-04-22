@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778562"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
@@ -719,7 +719,7 @@ Określa położenie etykiet kartę.
 *bTabCloseButton*<br/>
 Określa, czy mają być wyświetlane przyciski Zamknij kartę.
 
-* — styl*<br/>
+*style*<br/>
 Określa styl karty. Na użytek STYLE_3D_SCROLLED zwykłe karty lub STYLE_3D_ONENOTE dla programu Microsoft OneNote kart.
 
 *bTabCustomTooltips*<br/>
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*menu*<br/>
+*Menu*<br/>
 [in] Odwołanie do [klasa CMenu](../../mfc/reference/cmenu-class.md) obiekt do zmodyfikowania.
 
 *uiViewUserToolbarCmdFirst*<br/>
@@ -2026,7 +2026,7 @@ Ta metoda zastępuje [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Klasa CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)

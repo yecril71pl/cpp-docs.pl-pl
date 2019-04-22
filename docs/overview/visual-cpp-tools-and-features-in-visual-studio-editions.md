@@ -1,5 +1,5 @@
 ---
-title: Narzędzia języka Visual C++ i funkcji w wersjach programu Visual Studio
+title: Narzędzia i funkcje programu Visual C++ w wydaniach programu Visual Studio
 ms.date: 02/28/2018
 helpviewer_keywords:
 - versions [C++]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
 ms.openlocfilehash: 3e5b173741700ed6cccf95b479eb5693a62ed02e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58787471"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Narzędzia języka Visual C++ i funkcji w wersjach programu Visual Studio
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Narzędzia i funkcje programu Visual C++ w wydaniach programu Visual Studio
 
 W poniższych tabelach przedstawiono funkcje języka Visual C++, które są dostępne w programie Visual Studio. Znak X w komórce wskazuje, że funkcja jest dostępna; pusta komórka wskazuje, że funkcja nie jest dostępna. Notatki w nawiasach wskazują, że funkcja jest dostępna, ale jest ograniczona.
 

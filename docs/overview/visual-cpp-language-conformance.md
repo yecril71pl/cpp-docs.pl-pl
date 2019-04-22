@@ -6,10 +6,10 @@ ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898807"
 ---
 # <a name="visual-c-language-conformance"></a>Zgodność języka Visual C++
@@ -313,10 +313,10 @@ Poniżej są obecnie niezrównoleglone:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Materiał referencyjny na temat języka C++](../cpp/cpp-language-reference.md)<br/>
+[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [Ulepszenia zgodności języka C++ w programie Visual Studio](cpp-conformance-improvements.md)<br/>
 [Co nowego w języku Visual C++ w programie Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historia zmian w usłudze Visual C++ 2003 do 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
-[Visual C++ co jest nowego od roku 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[Visual C++ — co nowego od roku 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Blogu zespołu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)

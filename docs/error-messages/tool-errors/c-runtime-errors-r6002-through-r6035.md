@@ -1,17 +1,17 @@
 ---
-title: Błędy środowiska wykonawczego języka C r6035 od R6002
+title: Błąd czasu wykonania języka C od R6002 do R6035
 ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
 ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766889"
 ---
-# <a name="c-runtime-errors-r6002-through-r6035"></a>Błędy środowiska wykonawczego języka C r6035 od R6002
+# <a name="c-runtime-errors-r6002-through-r6035"></a>Błąd czasu wykonania języka C od R6002 do R6035
 
 Ta sekcja jest odwołaniem do błędów, które mogą być generowane przez biblioteki środowiska uruchomieniowego C (CRT), gdy aplikacja jest załadowany lub nie działają. Mimo, że komunikat odwołuje się do środowiska uruchomieniowego języka Microsoft Visual C++, te błędy wskazują błędu w kodzie aplikacji lub warunek, który nie może obsługiwać Biblioteka środowiska uruchomieniowego, takich jak małej ilości pamięci. Użytkownicy końcowi aplikacji mogą zobaczyć te błędy, jeśli nie kodu aplikacji, aby zapobiec warunki powodujące je lub napisać kod, aby przechwytywać te błędy i prezentowanie przyjazny komunikat do użytkowników.
 

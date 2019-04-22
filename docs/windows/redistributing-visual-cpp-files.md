@@ -9,10 +9,10 @@ helpviewer_keywords:
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
 ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786832"
 ---
 # <a name="redistributing-visual-c-files"></a>Redystrybuowanie plików programu Visual C++
@@ -40,7 +40,7 @@ Aby rozwiązać tego rodzaju błąd, upewnij się, że Instalatorem aplikacji po
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Redystrybucja za pomocą modułów scalania](redistributing-components-by-using-merge-modules.md)|W tym artykule opisano, jak używać języka Visual C++ redystrybucyjnych modułów scalania do zainstalowania bibliotek środowiska uruchomieniowego Visual C++ jako współdzielone Dlll w folderze %windir%\system32\.|
+|[Redystrybucja za pomocą modułów scalania](redistributing-components-by-using-merge-modules.md)|Opisuje sposób używania wizualizacji C++ redystrybucyjnych modułów scalania do zainstalowania wizualizacji C++ bibliotek środowiska uruchomieniowego jako współdzielone Dlll w folderze %windir%\system32\.|
 |[Ponowne dystrybuowanie kontrolek ActiveX programu Visual C++](redistributing-visual-cpp-activex-controls.md)|Opisuje sposób rozpowszechniania aplikacji korzystającej z formantów ActiveX.|
 |[Ponowne dystrybuowanie biblioteki MFC](redistributing-the-mfc-library.md)|Opisuje sposób rozpowszechniania aplikacji korzystającej z MFC.|
 |[Ponowne dystrybuowanie aplikacji ATL](redistributing-an-atl-application.md)|Opisuje sposób rozpowszechniania aplikacji korzystającej z ATL. Począwszy od programu Visual Studio 2012, nie biblioteki dla biblioteki ATL jest wymagany.|

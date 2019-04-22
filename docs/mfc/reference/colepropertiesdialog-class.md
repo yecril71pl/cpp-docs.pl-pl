@@ -23,10 +23,10 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
 ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781864"
 ---
 # <a name="colepropertiesdialog-class"></a>Klasa COlePropertiesDialog
@@ -261,8 +261,8 @@ Domyślna implementacja nic nie robi. Musisz przesłonić tę funkcję, aby wł�
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC OK](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample CIRC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>
-[Cpropertypage — klasa](../../mfc/reference/cpropertypage-class.md)
+[Klasa CPropertyPage](../../mfc/reference/cpropertypage-class.md)

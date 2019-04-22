@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Deklarowanie specyfikatorów przesłonięć (C + +/ CLI)'
+title: 'Instrukcje: Deklarowanie specyfikatorów przesłonięć (C++sposób niezamierzony)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
 ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777184"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Instrukcje: Deklarowanie specyfikatorów przesłonięć w kompilacjach kodu natywnego (C + +/ CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Instrukcje: Deklarowanie specyfikatorów przesłonięć w kompilacjach kodu natywnego (C++sposób niezamierzony)
 
 [zapieczętowane](../extensions/sealed-cpp-component-extensions.md), [abstrakcyjne](../extensions/abstract-cpp-component-extensions.md), i [zastąpienia](../extensions/override-cpp-component-extensions.md) są dostępne w kompilacjach, które nie korzystają z **/ZW** lub [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -88,4 +88,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Specyfikatory przesłonięć](../extensions/override-specifiers-cpp-component-extensions.md)
+[Specyfikatory zastąpienia](../extensions/override-specifiers-cpp-component-extensions.md)

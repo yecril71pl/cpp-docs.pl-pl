@@ -7,10 +7,10 @@ helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
 ms.openlocfilehash: 96b6204fe46cb624d22506b2d3e5c1d7621b1865
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772218"
 ---
 # <a name="cprintinfo-structure"></a>Cprintinfo — struktura
@@ -27,7 +27,7 @@ struct CPrintInfo
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPrintInfo::GetFromPage](#getfrompage)|Zwraca numer pierwszej strony drukowanego.|
 |[CPrintInfo::GetMaxPage](#getmaxpage)|Zwraca numer ostatniej strony dokumentu.|
@@ -39,7 +39,7 @@ struct CPrintInfo
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|Zawiera flagę wskazującą, czy w ramach powinno być kontynuowane drukowania pętli.|
 |[CPrintInfo::m_bDirect](#m_bdirect)|Zawiera flagę wskazującą, czy dokument jest drukowany bezpośrednio (bez wyświetlania okna dialogowego drukowania).|

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
 ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023246"
 ---
 # <a name="section"></a>sekcja
@@ -37,12 +37,12 @@ Po zdefiniowaniu sekcji pozostaje prawidłowe na pozostałą część kompilacji
 
 |Atrybut|Opis|
 |-|-|
-|**przeczytaj**|Umożliwia wykonywanie operacji odczytu na danych.|
-|**pisz**|Umożliwia wykonywanie operacji zapisu na danych.|
-|**Wykonywanie**|Umożliwia wykonanie kodu.|
-|**udostępnione**|Udostępnia sekcji między wszystkie procesy, które ładują obrazu.|
+|**read**|Umożliwia wykonywanie operacji odczytu na danych.|
+|**write**|Umożliwia wykonywanie operacji zapisu na danych.|
+|**execute**|Umożliwia wykonanie kodu.|
+|**Udostępnione**|Udostępnia sekcji między wszystkie procesy, które ładują obrazu.|
 |**nopage**|Oznacza sekcji nie stronicowanej; przydatne dla sterowników urządzeń systemu Win32.|
-|**Właściwość NoCache**|Oznacza sekcji nie podlega buforowaniu; przydatne dla sterowników urządzeń systemu Win32.|
+|**nocache**|Oznacza sekcji nie podlega buforowaniu; przydatne dla sterowników urządzeń systemu Win32.|
 |**Odrzuć**|Oznacza sekcji discardable; przydatne dla sterowników urządzeń systemu Win32.|
 |**remove**|Oznacza sekcji, co nie rezydentnego; sterowniki urządzeń wirtualnych (V*x*D) tylko.|
 

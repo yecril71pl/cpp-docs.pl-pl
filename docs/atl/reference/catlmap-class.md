@@ -38,10 +38,10 @@ helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
 ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774558"
 ---
 # <a name="catlmap-class"></a>Klasa CAtlMap
@@ -76,7 +76,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CAtlMap::KINARGTYPE](#kinargtype)|Typ używany, gdy klucz jest przekazywany jako argument wejściowy|
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|Typ używany, gdy klucz jest zwracany jako argument dane wyjściowe.|
@@ -85,27 +85,27 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ### <a name="public-classes"></a>Publiczne klasy
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Klasa CAtlMap::CPair](#cpair_class)|Klasa zawierająca elementy klucza i wartości.|
 
 ### <a name="cpair-data-members"></a>Elementy członkowskie danych CPair
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPair::m_key](#m_key)|Element członkowski danych, przechowywania klucza elementu.|
 |[CPair::m_value](#m_value)|Element członkowski danych, przechowywania element wartości.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Konstruktor.|
 |[CAtlMap::~CAtlMap](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CAtlMap::AssertValid](#assertvalid)|Wywołaj tę metodę, aby spowodować ASSERT, jeśli `CAtlMap` jest nieprawidłowy.|
 |[CAtlMap::DisableAutoRehash](#disableautorehash)|Wywołaj tę metodę, aby wyłączyć automatyczne rehashing z `CAtlMap` obiektu.|
@@ -133,7 +133,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Zastępuje lub dodaje nowy element do `CAtlMap`.|
 

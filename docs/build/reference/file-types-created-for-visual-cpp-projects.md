@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424096"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy plików utworzonych dla projektów języka C++ w programie Visual Studio
@@ -33,13 +33,13 @@ Wiele typów plików są skojarzone z projektów programu Visual Studio dla klas
 
 - [Program MFC lub źródło kontroli i pliki nagłówkowe](mfc-program-or-control-source-and-header-files.md)
 
-- [Pliki prekompilowanego nagłówka](../creating-precompiled-header-files.md)
+- [Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)
 
 - [Pliki zasobów](resource-files-cpp.md)
 
 - [Pliki pomocy (WinHelp)](help-files-winhelp.md)
 
-- [Pliki wskazówki](hint-files.md)
+- [Pliki wskazówek](hint-files.md)
 
 Podczas tworzenia projektu programu Visual Studio, można je utworzyć w nowym rozwiązaniu lub można dodać projektu do istniejącego rozwiązania. Aplikacje inne niż prosta często są tworzone z użyciem wielu projektów w rozwiązaniu.
 
@@ -49,17 +49,17 @@ Poniższa tabela zawiera wspólne pliki w projekcie programu Visual Studio i ide
 
 |Rozszerzenie pliku|Typ|Spis treści|
 |--------------------|----------|--------------|
-|asmx|Źródło|Plik wdrożenia.|
-|ASP|Źródło|Aktywny plik strony serwera.|
+|asmx|Source|Plik wdrożenia.|
+|ASP|Source|Aktywny plik strony serwera.|
 |.ATP|Projekt|Plik projektu szablonu aplikacji.|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|Zasób|Pliki obrazów ogólne.|
 |.BSC|Kompilowanie|Plik kodu przeglądarki.|
-|.cpp, .c|Źródło|Pliki kodu źródłowego główne dla twojej aplikacji.|
+|.cpp, .c|Source|Pliki kodu źródłowego główne dla twojej aplikacji.|
 |.CUR|Zasób|Plik graficzny mapy bitowej kursora.|
 |.dbp|Projekt|Plik projektu bazy danych.|
-|.disco|Źródło|Dynamiczne odnajdowanie plik dokumentu. Obsługuje odnajdowania usług XML sieci Web.|
+|.disco|Source|Dynamiczne odnajdowanie plik dokumentu. Obsługuje odnajdowania usług XML sieci Web.|
 |.exe, .dll|Projekt|Pliki wykonywalne lub dołączanej biblioteki.|
-|.h|Źródło|Nagłówek (Dołącz) pliku.|
+|.h|Source|Nagłówek (Dołącz) pliku.|
 |htm, HTML, .xsp, .asp, .htc, HTA, .xml|Zasób|Wspólne pliki sieci Web.|
 |.HxC|Projekt|Plik projektu pomocy.|
 |.ico|Zasób|Plik graficzny mapy bitowej ikony.|

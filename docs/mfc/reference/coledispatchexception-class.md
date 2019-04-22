@@ -17,10 +17,10 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
 ms.openlocfilehash: 2d5b9d2a0dc1e716ea8cb20f0d0dcb4c5d765079
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769059"
 ---
 # <a name="coledispatchexception-class"></a>Klasa COleDispatchException
@@ -37,7 +37,7 @@ class COleDispatchException : public CException
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Kontekst Pomoc dla błędu.|
 |[COleDispatchException::m_strDescription](#m_strdescription)|Opis błędu słownej.|

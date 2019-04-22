@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778458"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -310,10 +310,10 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-* — styl*<br/>
+*style*<br/>
 [in] Styl kontrolki karty. Aby uzyskać więcej informacji zobacz uwagi.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt, który granic formantu karty.
 
 *pParentWnd*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] Identyfikator formantu karty.
 
-*lokalizacja*<br/>
+*location*<br/>
 [in] Położenie karty. Wartość domyślna to LOCATION_BOTTOM. Aby uzyskać więcej informacji zobacz uwagi.
 
 *bCloseBtn*<br/>
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [out] Po powrocie z tej metody *prostokąt* parametr zawiera prostokąt, który zakresem wartości obszar karty.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [out w] Gdy metoda zwróci wartość, ten parametr zawiera prostokąt, który jest zakresem bieżącego formant karty.
 
 ### <a name="remarks"></a>Uwagi
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametry
 
-* — styl*<br/>
+*style*<br/>
 [in] Jedna z wartości wyliczenia, które określa wygląd kontrolki karty. Aby uzyskać więcej informacji zobacz tabelę w uwagi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parametry
 
-*banulowanie*<br/>
+*bCancel*<br/>
 [in] Wartość TRUE, aby porzucić bieżącej operacji zmiany rozmiaru; Wartość FALSE, aby zakończyć bieżący rozmiar operacji. W obu przypadkach ramach zatrzymuje się Rysowanie prostokąta zmiany rozmiaru.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar
@@ -1137,8 +1137,8 @@ Ta metoda ma wpływ tylko formant karty, który wyświetla płaską karty. Na pa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
 [Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
-[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)
+[Klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)

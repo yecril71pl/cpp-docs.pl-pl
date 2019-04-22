@@ -11,10 +11,10 @@ helpviewer_keywords:
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781318"
 ---
 # <a name="how-to-migrate-to-clr"></a>Instrukcje: Migracja do/CLR
@@ -154,7 +154,7 @@ W niektórych przypadkach CLR można zamykania przed zakończeniem zarządzanego
 
 Po kompiluje aplikację, łączy i działa, możesz rozpocząć korzystanie z funkcji platformy .NET w każdy moduł skompilowany z **/CLR**. Aby uzyskać więcej informacji, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md).
 
-Jeśli używasz zarządzanych rozszerzeń języka C++, można przekonwertować kodu, aby użyć nowej składni. Aby uzyskać szczegółowe informacje dotyczące konwertowania zarządzanych rozszerzeń języka C++, zobacz [C + +/ CLI Podręcznik migracji](../dotnet/cpp-cli-migration-primer.md).
+Jeśli używasz zarządzanych rozszerzeń języka C++, można przekonwertować kodu, aby użyć nowej składni. Aby uzyskać szczegółowe informacje na temat konwertowania zarządzanych rozszerzeń dla C++, zobacz [ C++Podręcznik migracji interfejsu wiersza polecenia](../dotnet/cpp-cli-migration-primer.md).
 
 Aby uzyskać informacje na temat programowania w języku Visual C++ .NET, zobacz:
 

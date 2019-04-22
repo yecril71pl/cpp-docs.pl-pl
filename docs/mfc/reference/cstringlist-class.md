@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
 ms.openlocfilehash: 08e481f010be688fb0b9c219caa1954c9960846f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767278"
 ---
 # <a name="cstringlist-class"></a>Klasa CStringList
@@ -77,7 +77,7 @@ na przykład przekłada się na
 
 `CString& CStringList::GetHead() const;`
 
-i
+and
 
 `POSITION AddHead( CObject* <newElement> );`
 
@@ -87,13 +87,13 @@ przekłada się na
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Tworzy pustą listę.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Dodaje nagłówek listy (sprawia, że nowy główny) elementu (lub wszystkie elementy w innej listy).|
 |[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Dodaje ogona listy (sprawia, że nowe tail) elementu (lub wszystkie elementy w innej listy).|

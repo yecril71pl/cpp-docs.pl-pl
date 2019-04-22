@@ -4,10 +4,10 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
 ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024702"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Odwołanie do MSBuild dla projektów języka C++
@@ -18,10 +18,10 @@ Jeśli z jakiegoś powodu chcesz użyć programu MSBuild bezpośrednio z poziomu
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Wewnętrzne MSBuild dla projektów języka C++](msbuild-visual-cpp-overview.md)<br/>
+[Funkcje wewnętrzne aparatu MSBuild dla projektów w języku C++](msbuild-visual-cpp-overview.md)<br/>
 Informacje dotyczące sposobu cele i właściwości są przechowywane i używane.
 
-[Typowe makra dla poleceń kompilacji oraz właściwości](common-macros-for-build-commands-and-properties.md)<br/>
+[Typowe makra dla właściwości i poleceń kompilacji](common-macros-for-build-commands-and-properties.md)<br/>
 W tym artykule opisano makra (stałych kompilacji), które mogą służyć do definiowania właściwości, takich jak ścieżki i wersji produktu.
 
 [Typy plików utworzonych dla projektów w języku C++](file-types-created-for-visual-cpp-projects.md)<br/>
@@ -30,7 +30,7 @@ W tym artykule opisano różne rodzaje plików, które program Visual Studio two
 [Szablony projektu programu Visual Studio C++](visual-cpp-project-types.md)<br>
 Zawiera opis typów projektów opartych na platformie MSBuild, które są dostępne dla języka C++.
 
-[Nowe szablony elementów języka C++](using-visual-cpp-add-new-item-templates.md)<br>
+[Szablony nowych elementów w języku C++](using-visual-cpp-add-new-item-templates.md)<br>
 Opisuje pliki źródłowe i inne elementy, które można dodać do projektu programu Visual Studio.
 
 [Prekompilowanych plików nagłówka](../creating-precompiled-header-files.md) w jaki sposób używać prekompilowane pliki nagłówka oraz jak tworzyć własne wstępnie skompilowany kod, aby skrócić czas kompilacji.
@@ -40,4 +40,4 @@ Dokumentacja dotycząca właściwości projektu, które są ustawiane w środowi
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie kompilacji C/C++](c-cpp-building-reference.md)
+[Dokumentacja kompilacji w języku C/C++](c-cpp-building-reference.md)

@@ -5,10 +5,10 @@ description: Dowiedz się, jak używać języka C++, aby tworzyć aplikacje, us�
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898677"
 ---
 <div id="main" class="v2">
@@ -74,10 +74,10 @@ ms.locfileid: "58898677"
         <h1>Dokumentacji języka Visual C++</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Pakiety robocze</a>
+                <a href="#workloads">Obciążenia</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">Pakiety robocze</a>
+                        <a href="#workloads1">Obciążenia</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
@@ -110,7 +110,7 @@ ms.locfileid: "58898677"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Programowanie aplikacji Windows w języku C++</h3>
-                                                    <p>Tworzenie klasycznych aplikacji klasycznych Windows i biblioteki statycznej biblioteki DLL przy użyciu systemu Win32, MFC, ATL, COM i/lub C + +/ interfejsu wiersza polecenia.</p>
+                                                    <p>Tworzenie klasycznych aplikacji klasycznych Windows i biblioteki statycznej biblioteki DLL przy użyciu systemu Win32, MFC, ATL COM, i/lub C++sposób niezamierzony.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@ ms.locfileid: "58898677"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Programowanie dla systemu Linux</h3>
+                                                    <h3>Tworzenie aplikacji dla systemu Linux</h3>
                                                     <p>Twórz aplikacje dla różnych dystrybucje systemu Linux.</p>
                                                 </div>
                                             </div>
@@ -377,7 +377,7 @@ ms.locfileid: "58898677"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Component Extensions</h3>
-                                                    <p>Rozszerzenia składnik C++: C + +/ interfejsu wiersza polecenia dla programowania .NET i C + +/ CX programowania platformy uniwersalnej systemu Windows.</p>
+                                                    <p>Rozszerzenia składnik C++: C++/ Interfejs wiersza polecenia programowania .NET i C++/CX programowania platformy uniwersalnej systemu Windows.</p>
                                                 </div>
                                             </div>
                                         </div>

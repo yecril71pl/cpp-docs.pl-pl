@@ -7,10 +7,10 @@ helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
 ms.openlocfilehash: 963e04752dcb797343550d9b89f778bfe0e8a593
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021414"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
@@ -41,5 +41,5 @@ Niskiego poziomu właściwości i metod, które są dostępne w funkcji element�
 
 ## <a name="see-also"></a>Zobacz także
 
-[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import Directive](../preprocessor/hash-import-directive-cpp.md)

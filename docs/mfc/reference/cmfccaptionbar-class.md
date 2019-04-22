@@ -67,10 +67,10 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781877"
 ---
 # <a name="cmfccaptionbar-class"></a>Klasa CMFCCaptionBar
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
+*elem*<br/>
 [in] Element paska podpisu dla której mają zostać pobrane wyrównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia paska podpisu.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt otaczający do wypełnienia.
 
 ### <a name="remarks"></a>Uwagi
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Kontekst urządzenia, która jest używana do wyświetlania obramowania.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt otaczający.
 
 ### <a name="remarks"></a>Uwagi
@@ -406,13 +406,13 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania przycisku.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt otaczający przycisku.
 
 *strButton*<br/>
 [in] Etykieta tekstowa przycisku.
 
-*bEnabled*<br/>
+*bWłączony*<br/>
 [in] Wartość TRUE, jeśli ten przycisk jest włączony; Wartość FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania obrazu.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Określa prostokąt otaczający obrazu.
 
 ### <a name="remarks"></a>Uwagi
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania przycisku.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt otaczający tekstu.
 
 *strText*<br/>
@@ -731,5 +731,5 @@ Etykieta tekstowa jest wyrównany zgodnie z określonym *TextAlignment to* param
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

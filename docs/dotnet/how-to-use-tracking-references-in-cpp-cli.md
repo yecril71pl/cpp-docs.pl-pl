@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Korzystanie z śledzenia odwołań w języku C + +/ CLI'
+title: 'Instrukcje: Korzystanie z odwołań w śledzenia C++sposób niezamierzony'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
 ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777054"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Instrukcje: Korzystanie z śledzenia odwołań w języku C + +/ CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Instrukcje: Korzystanie z odwołań w śledzenia C++sposób niezamierzony
 
-W tym artykule przedstawiono sposób użycia śledzenia odwołania (%) w języku C + +/ interfejsu wiersza polecenia do przekazania języka wspólnego środowiska uruchomieniowego (języka wspólnego CLR) typów przez odwołanie.
+W tym artykule przedstawiono sposób użycia śledzenia odwołania (%) w C++sposób niezamierzony do przekazania języka wspólnego środowiska uruchomieniowego (języka wspólnego CLR) typów przez odwołanie.
 
 ## <a name="to-pass-clr-types-by-reference"></a>Przekazywanie typów CLR przez odwołanie
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-Następny przykład pokazuje, że pobieranie adresu odwołaniem śledzącym zwraca [pomocą interior_ptr (C + +/ CLI)](../extensions/interior-ptr-cpp-cli.md)i pokazuje, jak zmodyfikować i uzyskiwać dostęp do odwołania śledzenia danych.
+Następny przykład pokazuje, że pobieranie adresu odwołaniem śledzącym zwraca [pomocą interior_ptr (C++sposób niezamierzony)](../extensions/interior-ptr-cpp-cli.md)i pokazuje, jak zmodyfikować i uzyskiwać dostęp do odwołania śledzenia danych.
 
 ```cpp
 // tracking_reference_data.cpp

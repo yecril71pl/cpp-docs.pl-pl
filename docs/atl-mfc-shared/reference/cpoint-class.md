@@ -12,10 +12,10 @@ helpviewer_keywords:
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
 ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768032"
 ---
 # <a name="cpoint-class"></a>CPoint, klasa
@@ -32,19 +32,19 @@ class CPoint : public tagPOINT
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPoint::CPoint](#cpoint)|Konstruuje `CPoint`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPoint::Offset](#offset)|Dodaje wartości do `x` i `y` członkowie `CPoint`.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|Zwraca różnicę `CPoint` i rozmiarze lub negacji punktu lub różnica w rozmiarze między dwoma punktami lub przesunięcie przez ujemnym rozmiarem.|
 |[CPoint::operator! =](#operator_neq)|Sprawdza, czy pod kątem nierówności pomiędzy dwoma punktami.|

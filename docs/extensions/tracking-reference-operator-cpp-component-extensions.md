@@ -1,5 +1,5 @@
 ---
-title: Operator odwołania śledzenia (C + +/ CLI i C + +/ CX)
+title: Operator odwołania śledzenia (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
 ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58787427"
 ---
-# <a name="tracking-reference-operator-ccli-and-ccx"></a>Operator odwołania śledzenia (C + +/ CLI i C + +/ CX)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>Operator odwołania śledzenia (C++sposób niezamierzony i C++/CX)
 
 A *odwołanie śledzenia* (`%`) zachowuje się jak zwykłe odniesienie C++ (`&`) z tą różnicą, że gdy obiekt jest przypisany do odwołania śledzenia, zwiększany jest licznik odwołań obiektu.
 
@@ -37,7 +37,7 @@ Odwołanie śledzenia ma następujące cechy.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Odwołanie śledzenia zachowuje się jak odniesienia standardowego języka C++, z tą różnicą, że % jest zliczonych odwołań. Poniższy fragment kodu pokazuje, jak przeprowadzać konwersję między % i ^ typów:
+Odwołanie śledzenia zachowuje się jak standardowy C++ odwołania, chyba że % jest zliczonych odwołań. Poniższy fragment kodu pokazuje, jak przeprowadzać konwersję między % i ^ typów:
 
 ```cpp
 Foo^ spFoo = ref new Foo();
@@ -65,7 +65,7 @@ ref class Foo sealed {};
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-W języku C + +/ CLI, można użyć odwołania śledzenia do uchwytu wiążąc się obiekt typu CLR na stosie zebranych elementów bezużytecznych.
+W C++/interfejsu wiersza polecenia, można użyć odwołania śledzenia do uchwytu wiążąc się obiekt typu CLR na stosie zebranych elementów bezużytecznych.
 
 W cl, wartość odniesienia śledzenia zmienna jest aktualizowana automatycznie, gdy moduł odśmiecania pamięci przenosi przywoływanego obiektu.
 
@@ -73,13 +73,13 @@ Odwołanie śledzenia może być deklarowana tylko na stosie. Odwołanie śledze
 
 Nie jest możliwe macierzyste odwołanie C++ do obiektu na stercie zebranych elementów bezużytecznych.
 
-Aby uzyskać więcej informacji dotyczących śledzenia odwołań w języku C + +/ CLI, zobacz:
+Aby uzyskać więcej informacji dotyczących śledzenia odwołań w C++sposób niezamierzony, zobacz:
 
 - [Instrukcje: korzystanie z odwołań śledzenia w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład dla C + +/ CLI pokazuje, jak używać śledzenia odwołania z typami macierzystym i zarządzanym.
+Następujące przykładowe do C++/interfejsu wiersza polecenia pokazuje, jak używać śledzenia odwołania z typami macierzystym i zarządzanym.
 
 ```cpp
 // tracking_reference_1.cpp
@@ -117,7 +117,7 @@ int main() {
 }
 ```
 
-Poniższy przykład dla C + +/ CLI pokazuje, jak powiązać śledzenie odwołania do tablicy.
+Następujące przykładowe do C++/interfejsu wiersza polecenia pokazuje, jak powiązać śledzenie odwołania do tablicy.
 
 ```cpp
 // tracking_reference_2.cpp

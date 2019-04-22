@@ -113,10 +113,10 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781760"
 ---
 # <a name="cmdichildwndex-class"></a>Klasa CMDIChildWndEx
@@ -828,7 +828,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 Określa nowe prostokątny. Jeśli prostokąta jest pusty lub ma wartość null, wycinka są usuwane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -847,7 +847,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Kombinacja wartości STPFLAG. Aby uzyskać więcej informacji, zobacz [ITaskbarList4::SetTabProperties](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties).
 
 ### <a name="remarks"></a>Uwagi
@@ -941,7 +941,7 @@ Określa wskaźnik do okna nadrzędnego najwyższego poziomu okna aktywowany. Ws
 *nHitTest*<br/>
 Określa numer kierunkowy testowania trafienia. Hit test jest test, który określa lokalizację kursora.
 
-* — komunikat*<br/>
+*komunikat*<br/>
 Określa numer komunikatu myszy.
 
 ### <a name="remarks"></a>Uwagi
@@ -961,7 +961,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa, czy `CWnd` jest aktywowany lub dezaktywowany.
 
 *pWndOther*<br/>
@@ -1185,8 +1185,8 @@ virtual void ActivateTopLevelFrame();
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[Cmdichildwnd — klasa](../../mfc/reference/cmdichildwnd-class.md)<br/>
+[Klasa CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)<br/>
 [Klasa CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
 [Klasa CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)

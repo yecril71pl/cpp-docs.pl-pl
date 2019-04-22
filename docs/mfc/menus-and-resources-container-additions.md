@@ -17,10 +17,10 @@ helpviewer_keywords:
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
 ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770346"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menu i zasoby: Dodatki do kontenera
@@ -58,13 +58,13 @@ Jeśli chcesz obsługiwać aktywacji w miejscu zawartych w niej elementów, nale
 
 Niewielkie zmiany zasobów Tabela akceleratora aplikacji kontenera są niezbędne, jeśli są obsługiwane aktywacji w miejscu. Pierwsza zmiana umożliwia użytkownikowi naciśnij klawisz ESC (ESC), aby anulować tryb edycji w miejscu. Dodaj następujący wpis do tabeli akceleratora główne:
 
-|Identyfikator|Klucz|Type|
+|Identyfikator|Key|Typ|
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 Zmień drugi polega na utworzeniu nowej tabeli akceleratora, który odnosi się do nowego zasobu menu utworzone dla aktywacji w miejscu. Ta tabela zawiera wpisy dla menu Plik i okna, oprócz wpisu vk_escape — powyżej. Poniższy przykład jest tabela akceleratora utworzone dla aktywacji w miejscu, w przykładzie MFC [kontenera](../overview/visual-cpp-samples.md):
 
-|Identyfikator|Klucz|Type|
+|Identyfikator|Key|Typ|
 |--------|---------|----------|
 |ID_FILE_NEW —|CTRL+N|**VIRTKEY**|
 |ID_FILE_OPEN —|CTRL+O|**VIRTKEY**|

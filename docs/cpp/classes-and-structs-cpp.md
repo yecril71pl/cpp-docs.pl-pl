@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
 ms.openlocfilehash: c28f83e7853ffb09bba7721ec71ab43c85aedb0c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779394"
 ---
 # <a name="classes-and-structs-c"></a>Klasy i struktury (C++)
@@ -51,7 +51,7 @@ Uwzględnione są następujące tematy:
 
 Typy trzy klasy są struktury, klasy lub union. Są deklarowane za pomocą [struktury](../cpp/struct-cpp.md), [klasy](../cpp/class-cpp.md), i [Unii](../cpp/unions.md) słów kluczowych. W poniższej tabeli przedstawiono różnice między typami trzy klasy.
 
-Aby uzyskać więcej informacji na temat Unii, zobacz [unie](../cpp/unions.md). Aby uzyskać informacje dotyczące klas i struktur w języku C + +/ CLI i C + +/ CX, zobacz [klas i struktur](../extensions/classes-and-structs-cpp-component-extensions.md).
+Aby uzyskać więcej informacji na temat Unii, zobacz [unie](../cpp/unions.md). Aby uzyskać informacje dotyczące klas i struktur w C++sposób niezamierzony i C++/CX, zobacz [klas i struktur](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Kontrola dostępu i ograniczenia struktury, klasy i unie
 

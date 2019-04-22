@@ -53,10 +53,10 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775312"
 ---
 # <a name="cview-class"></a>Cview — klasa
@@ -73,13 +73,13 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CView::CView](#cview)|Konstruuje `CView` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CView::DoPreparePrinting](#doprepareprinting)|Wyświetla okno dialogowe Drukuj i tworzy kontekst urządzenia drukarki; Wywołaj podczas zastępowania `OnPreparePrinting` funkcja elementu członkowskiego.|
 |[CView::GetDocument](#getdocument)|Zwraca dokument skojarzony z widokiem.|
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|Wywołuje się, gdy okno ramowe zawierające widok jest aktywowane lub dezaktywowane.|
 |[CView::OnActivateView](#onactivateview)|Wywołuje się, gdy widok jest aktywowany.|

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
 ms.openlocfilehash: 5a87f70816e9342c7aa203a53d13699659cebb28
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767265"
 ---
 # <a name="crebar-class"></a>Crebar — klasa
@@ -33,7 +33,7 @@ class CReBar : public CControlBar
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CReBar::AddBar](#addbar)|Dodaje obiekt band do paska pomocniczego.|
 |[CReBar::Create](#create)|Tworzy kontrolkę paska pomocniczego i dołącza je do `CReBar` obiektu.|

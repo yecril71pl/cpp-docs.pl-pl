@@ -3,10 +3,10 @@ title: 'Instrukcje: Używanie istniejącego kodu C++ w aplikacji platformy uniwe
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
 ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424199"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Instrukcje: Używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej Windows
@@ -231,4 +231,4 @@ Jeśli chcesz korzystać z natywnych interfejsów API w bibliotece statycznej w 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przenoszenie na platformę uniwersalną systemu Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)
+[Przenoszenie na platformę Windows Universal](../porting/porting-to-the-universal-windows-platform-cpp.md)

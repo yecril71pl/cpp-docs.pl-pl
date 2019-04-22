@@ -9,10 +9,10 @@ helpviewer_keywords:
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
 ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041244"
 ---
 # <a name="codeseg"></a>code_seg
@@ -26,13 +26,13 @@ Określa segment tekstu, w którym funkcje są przechowywane w pliku .obj.
 
 ### <a name="parameters"></a>Parametry
 
-**wypychania**<br/>
+**push**<br/>
 (Opcjonalnie) Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.
 
 **POP**<br/>
 (Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora.
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 (Opcjonalnie) Gdy jest używane z **wypychania**, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.
 
 *Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu przy użyciu tylko jednego **pop** polecenia.

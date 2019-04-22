@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
 ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772754"
 ---
 # <a name="cmfccolordialog-class"></a>Klasa CMFCColorDialog
@@ -43,14 +43,14 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Konstruuje `CMFCColorDialog` obiektu.|
 |`CMFCColorDialog::~CMFCColorDialog`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|Zwraca bieżący kolor wybrany.|
 |[CMFCColorDialog::GetPalette](#getpalette)|Zwraca wartość palety kolorów.|
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`m_bIsMyPalette`|Wartość TRUE, jeśli okno dialogowe wyboru kolorów używa własnego paletę kolorów, lub FAŁSZ, jeśli okno dialogowe korzysta z palety, który jest określony w `CMFCColorDialog` konstruktora.|
 |`m_bPickerMode`|Wartość TRUE, gdy użytkownik jest wybór koloru z okna dialogowego wyboru; w przeciwnym razie wartość FALSE.|

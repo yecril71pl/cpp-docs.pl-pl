@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
 ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773102"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Używanie formantu użytkownika formularza systemu Windows w MFC
@@ -32,7 +32,7 @@ W poniższych sekcjach opisano sposób:
 > Integracja biblioteki MFC, formularzy Windows działa tylko w projektach, które łączą się dynamicznie z MFC (projekty, w którym `_AFXDLL` jest zdefiniowana).
 
 > [!NOTE]
-> W przypadku tworzenia aplikacji za pomocą prywatnej kopii (zmodyfikowany) interfejsy formularzy Windows w MFC DLL (mfcmifc80.dll), nie będzie można zainstalować w GAC, chyba że Zastąp klucz firmy Microsoft przy użyciu własnego klucza dostawcy. Aby uzyskać więcej informacji na temat podpisywanie zestawu, zobacz [programowanie za pomocą zestawów](/dotnet/framework/app-domains/programming-with-assemblies) i [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> W przypadku tworzenia aplikacji za pomocą prywatnej kopii (zmodyfikowany) interfejsy formularzy Windows w MFC DLL (mfcmifc80.dll), nie będzie można zainstalować w GAC, chyba że Zastąp klucz firmy Microsoft przy użyciu własnego klucza dostawcy. Aby uzyskać więcej informacji na temat podpisywanie zestawu, zobacz [programowanie za pomocą zestawów](/dotnet/framework/app-domains/programming-with-assemblies) i [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Jeśli Twoja aplikacja MFC używa Windows Forms, musisz ponownie rozdzielić mfcmifc80.dll z aplikacją. Aby uzyskać więcej informacji, zobacz [redystrybuowanie biblioteki MFC](../windows/redistributing-the-mfc-library.md).
 

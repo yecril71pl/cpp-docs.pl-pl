@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781981"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Klasa CMFCPropertyGridCtrl
@@ -284,10 +284,10 @@ W poniższej tabeli wymieniono cztery typy właściwości zaznaczenia:
 
 |Class|Opis|
 |-----------|-----------------|
-|[CMFCPropertyGridProperty Class](../../mfc/reference/cmfcpropertygridproperty-class.md)|Właściwość ogólnego przeznaczenia, który jest używany do określenia wartości ciągów, wartości logicznych, daty i tak dalej.|
-|[CMFCPropertyGridColorProperty Class](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Właściwość, która jest używana do wybierania wartości koloru.|
-|[CMFCPropertyGridFileProperty Class](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Właściwość, która jest używana do wybierania pliku.|
-|[CMFCPropertyGridFontProperty Class](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Właściwość, która jest używana do wybierania czcionki.|
+|[Klasa CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Właściwość ogólnego przeznaczenia, który jest używany do określenia wartości ciągów, wartości logicznych, daty i tak dalej.|
+|[Klasa CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Właściwość, która jest używana do wybierania wartości koloru.|
+|[Klasa CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Właściwość, która jest używana do wybierania pliku.|
+|[Klasa CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Właściwość, która jest używana do wybierania czcionki.|
 
 ## <a name="illustrations"></a>Ilustracje
 
@@ -461,7 +461,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*rect*<br/>
+*Rect*<br/>
 [in] Współrzędne prostokąt otaczający, który określa rozmiar i położenie okna w kliencie *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1053,7 +1053,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
+*(czas pacyficzny)*<br/>
 [in] Punkt, w układzie współrzędnych klienta.
 
 *pnArea*<br/>
@@ -1309,7 +1309,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt, który określa, gdzie można narysować obszar opisu.
 
 ### <a name="remarks"></a>Uwagi
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*kolor*<br/>
+*Kolor*<br/>
 [in] Wartość koloru RGB.
 
 ### <a name="remarks"></a>Uwagi
@@ -1641,5 +1641,5 @@ Jeśli zastąpisz tę metodę, zwraca wartość TRUE, jeśli określona właści
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

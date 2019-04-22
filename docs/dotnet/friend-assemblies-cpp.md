@@ -5,10 +5,10 @@ helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
 ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781045"
 ---
 # <a name="friend-assemblies-c"></a>Przyjazne zestawy (C++)
@@ -47,7 +47,7 @@ Mimo że typów w zakresie przestrzeni nazw i zakresu globalnego może być znan
 
 Dostęp do wszystkich typów w zestawie, muszą zostać przyznane jawnie.  Na przykład zestaw C nie ma dostępu do wszystkich typów w zestawie, A Jeśli zestaw B odwołuje się do zestawu języka C, a zestaw B ma dostęp do wszystkich typów w zestawie A.
 
-Aby uzyskać informacje dotyczące sposobu podpisywania — oznacza to udzielanie silnej nazwy do — zestaw, który jest zbudowany za pomocą kompilatora Visual C++, zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ interfejsu wiersza polecenia)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Aby uzyskać informacje dotyczące sposobu podpisywania — czyli udzielanie silnej nazwy do — zestawu, który jest zbudowany za pomocą wizualizacji C++ kompilatora, zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Alternatywa przy użyciu funkcji zestawów friend, można użyć <xref:System.Security.Permissions.StrongNameIdentityPermission> ograniczyć dostęp do poszczególnych typów.
 

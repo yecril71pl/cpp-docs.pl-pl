@@ -5,10 +5,10 @@ helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
 ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772608"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantyka stosu języka C++ dla typów odwołań
@@ -27,7 +27,7 @@ Kompilator nie wygeneruje konstruktora kopiującego dla typu referencyjnego. W z
 
 Kompilator nie wygeneruje operator przypisania domyślny dla typu odwołania. Operator przypisania pozwala utworzyć obiekt przy użyciu semantyka stosu i zainicjować go z istniejącym obiektem utworzone za pomocą semantyka stosu. Operator przypisania dla typu odwołania, ma podpis następującą postać: `void operator=( R% ){}`.
 
-Jeśli używasz semantyka stosu dla typów odwołań danego typu destruktor zwalnia zasoby o znaczeniu krytycznym, nie trzeba jawnie wywołać destruktor (lub zadzwoń `delete`). Aby uzyskać więcej informacji dotyczących destruktorów w typach odwołań, zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Jeśli używasz semantyka stosu dla typów odwołań danego typu destruktor zwalnia zasoby o znaczeniu krytycznym, nie trzeba jawnie wywołać destruktor (lub zadzwoń `delete`). Aby uzyskać więcej informacji dotyczących destruktorów w typach odwołań, zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Operator przypisania generowane przez kompilator będzie śledzić zwykły standardowe reguły języka C++ z następującymi dodatkami:
 

@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775260"
 ---
 # <a name="cmfcoutlookbar-class"></a>Klasa CMFCOutlookBar
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Określa wskaźnik do okna nadrzędnego. Nie może być równa NULL.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Określa program outlook paska rozmiar i położenie w pikselach.
 
 *nID*<br/>
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>Parametry
 
-*klasy uipage o identyfikatorze*<br/>
+*uiPage*<br/>
 [in] Liczony od zera indeks strony w oknie nadrzędnym programu Outlook.
 
 *pTargetWnd*<br/>
@@ -575,8 +575,8 @@ Domyślnie ten tryb jest wyłączona.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[CBaseTabbedPane Class](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[Klasa CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[Klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [Klasa CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)

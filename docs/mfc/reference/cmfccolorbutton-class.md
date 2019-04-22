@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780005"
 ---
 # <a name="cmfccolorbutton-class"></a>Klasa CMFCColorButton
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Wskazuje kontekst urządzenia, który jest używany do renderowania obrazu przycisku.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt, który granic przycisku.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*kolor*<br/>
+*Kolor*<br/>
 [in] Wartość RGB.
 
 ### <a name="remarks"></a>Uwagi
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametry
 
-*kolor*<br/>
+*Kolor*<br/>
 [in] Kolor RGB wartość.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*kolor*<br/>
+*Kolor*<br/>
 [in] Kolor wybrany przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
@@ -474,13 +474,13 @@ virtual void UpdateColor(COLORREF color);
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md)<br/>
 [Klasa CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
 [Klasa CPalette](../../mfc/reference/cpalette-class.md)<br/>
-[Carray — klasa](../../mfc/reference/carray-class.md)<br/>
-[Clist — klasa](../../mfc/reference/clist-class.md)<br/>
+[Klasa CArray](../../mfc/reference/carray-class.md)<br/>
+[Klasa CList](../../mfc/reference/clist-class.md)<br/>
 [CString](../../atl-mfc-shared/reference/cstringt-class.md)

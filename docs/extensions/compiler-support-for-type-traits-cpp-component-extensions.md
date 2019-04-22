@@ -1,5 +1,5 @@
 ---
-title: Obsługa cech typu w kompilatorze (C + +/ CLI i C + +/ CX)
+title: Obsługa cech typu w kompilatorze (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -62,15 +62,15 @@ helpviewer_keywords:
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
 ms.openlocfilehash: d068917a02fef0f1d4b7fd46fd6978da2d358872
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026891"
 ---
-# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Obsługa cech typu w kompilatorze (C + +/ CLI i C + +/ CX)
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Obsługa cech typu w kompilatorze (C++sposób niezamierzony i C++/CX)
 
-Microsoft C++ obsługuje kompilatora *typ cechy* C + +/ CLI i C + +/ CX rozszerzenia, które wskazują różne cechy typu w czasie kompilacji.
+Microsoft C++ kompilator obsługuje *typ cechy* dla C++sposób niezamierzony i C++/CX rozszerzenia, które wskazują różne cechy typu w czasie kompilacji.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
@@ -80,9 +80,9 @@ Cechy typu są szczególnie przydatne dla programistów, którzy bibliotek.
 
 Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wszystkie wpisz powrotu cech **false** Jeśli nie jest spełniony warunek określony przez nazwę typu cechy.
 
-(Na poniższej liście przykłady kodu są zapisywane tylko w języku C + +/ interfejsu wiersza polecenia. Ale obsługiwana jest również odpowiedni cech typu w języku C + +/ CX, chyba że określono inaczej. Termin "platform type" odwołuje się do typów środowiska wykonawczego Windows lub popularnych typów środowiska wykonawczego języka.)
+(Na poniższej liście przykłady kodu są zapisywane tylko w C++sposób niezamierzony. Ale odpowiednie cechy typu jest też obsługiwana na C++/CX chyba że określono inaczej. Termin "platform type" odwołuje się do typów środowiska wykonawczego Windows lub popularnych typów środowiska wykonawczego języka.)
 
-- `__has_assign(` *— typ* `)`
+- `__has_assign(` *Typ* `)`
 
    Zwraca **true** Jeśli platforma lub typ natywny zawiera operator przypisania kopiowania.
 
@@ -96,7 +96,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_copy(` *— typ* `)`
+- `__has_copy(` *Typ* `)`
 
    Zwraca **true** Jeśli platforma lub typ natywny ma Konstruktor kopiujący.
 
@@ -110,9 +110,9 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_finalizer(` *— typ* `)`
+- `__has_finalizer(` *Typ* `)`
 
-   (Nieobsługiwane w języku C + +/ CX.) Zwraca **true** Jeśli typ CLR ma finalizator. Zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Aby uzyskać więcej informacji.
+   (Nieobsługiwane w C++/CX.) Zwraca **true** Jeśli typ CLR ma finalizator. Zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Aby uzyskać więcej informacji.
 
     ```cpp
     using namespace System;
@@ -127,7 +127,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_nothrow_assign(` *— typ* `)`
+- `__has_nothrow_assign(` *Typ* `)`
 
    Zwraca **true** Jeśli specyfikacja wyjątku pusty operator przypisania kopiowania.
 
@@ -143,7 +143,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_nothrow_constructor(` *— typ* `)`
+- `__has_nothrow_constructor(` *Typ* `)`
 
    Zwraca **true** Jeśli specyfikacja wyjątku pusty konstruktor domyślny.
 
@@ -159,7 +159,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_nothrow_copy(` *— typ* `)`
+- `__has_nothrow_copy(` *Typ* `)`
 
    Zwraca **true** Jeśli Konstruktor kopiujący ma specyfikację wyjątku puste.
 
@@ -175,7 +175,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_trivial_assign(` *— typ* `)`
+- `__has_trivial_assign(` *Typ* `)`
 
    Zwraca **true** Jeśli typ ma operatora przypisania prosta, generowane przez kompilator.
 
@@ -189,7 +189,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_trivial_constructor(` *— typ* `)`
+- `__has_trivial_constructor(` *Typ* `)`
 
    Zwraca **true** Jeśli typ ma konstruktora prosta, generowane przez kompilator.
 
@@ -203,7 +203,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_trivial_copy(` *— typ* `)`
+- `__has_trivial_copy(` *Typ* `)`
 
    Zwraca **true** Jeśli typ ma konstruktora kopiującego prosta, generowane przez kompilator.
 
@@ -217,7 +217,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_trivial_destructor(` *— typ* `)`
+- `__has_trivial_destructor(` *Typ* `)`
 
    Zwraca **true** Jeśli typ ma destruktor prosta, generowane przez kompilator.
 
@@ -232,7 +232,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_user_destructor(` *— typ* `)`
+- `__has_user_destructor(` *Typ* `)`
 
    Zwraca **true** Jeśli platforma lub typ natywny ma destruktor zgłoszone przez użytkownika.
 
@@ -249,7 +249,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__has_virtual_destructor(` *— typ* `)`
+- `__has_virtual_destructor(` *Typ* `)`
 
    Zwraca **true** Jeśli typ ma destruktor wirtualny.
 
@@ -268,7 +268,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_abstract(` *— typ* `)`
+- `__is_abstract(` *Typ* `)`
 
    Zwraca **true** Jeśli typ jest typem abstrakcyjnym. Aby uzyskać więcej informacji dotyczących natywnych typów abstrakcyjnych, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md).
 
@@ -308,7 +308,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_class(` *— typ* `)`
+- `__is_class(` *Typ* `)`
 
    Zwraca **true** Jeśli typ jest natywny klasy lub struktury.
 
@@ -340,9 +340,9 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_delegate(` *— typ* `)`
+- `__is_delegate(` *Typ* `)`
 
-   Zwraca **true** Jeśli `type` jest delegat. Aby uzyskać więcej informacji, zobacz [delegowania (C + +/ CLI i C + +/ CX)](delegate-cpp-component-extensions.md).
+   Zwraca **true** Jeśli `type` jest delegat. Aby uzyskać więcej informacji, zobacz [delegowanie (C++sposób niezamierzony i C++/CX)](delegate-cpp-component-extensions.md).
 
     ```cpp
     delegate void MyDel();
@@ -351,7 +351,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_empty(` *— typ* `)`
+- `__is_empty(` *Typ* `)`
 
    Zwraca **true** Jeśli typ nie ma żadnych składowych danych wystąpienia.
 
@@ -367,7 +367,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_enum(` *— typ* `)`
+- `__is_enum(` *Typ* `)`
 
    Zwraca **true** Jeśli typ jest natywnym wyliczeniem.
 
@@ -389,7 +389,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_interface_class(` *— typ* `)`
+- `__is_interface_class(` *Typ* `)`
 
    Zwraca **true** jeśli przekazany interfejsu platformy. Aby uzyskać więcej informacji, zobacz [interfejsu klasy](interface-class-cpp-component-extensions.md).
 
@@ -403,7 +403,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_pod(` *— typ* `)`
+- `__is_pod(` *Typ* `)`
 
    Zwraca **true** Jeśli typ jest klasą lub Unii z żaden konstruktor lub prywatnych lub chronionych niestatycznych elementów członkowskich, nie mają klas bazowych i żadnych funkcji wirtualnych. Zobacz języka C++ w warstwie standardowa sekcje 8.5.1/1, 9/4 i 3.9/10, aby uzyskać więcej informacji o zasobników.
 
@@ -419,7 +419,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_polymorphic(` *— typ* `)`
+- `__is_polymorphic(` *Typ* `)`
 
    Zwraca **true** Jeśli typ natywny ma funkcje wirtualne.
 
@@ -435,7 +435,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_ref_array(` *— typ* `)`
+- `__is_ref_array(` *Typ* `)`
 
    Zwraca **true** Jeśli przekazana tablica platformy. Aby uzyskać więcej informacji, zobacz [tablic](arrays-cpp-component-extensions.md).
 
@@ -447,7 +447,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_ref_class(` *— typ* `)`
+- `__is_ref_class(` *Typ* `)`
 
    Zwraca **true** jeśli przekazany klasy odniesienia. Aby uzyskać więcej informacji na temat typów odwołań zdefiniowanych przez użytkownika, zobacz [klas i struktur](classes-and-structs-cpp-component-extensions.md).
 
@@ -460,7 +460,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_sealed(` *— typ* `)`
+- `__is_sealed(` *Typ* `)`
 
    Zwraca **true** jeśli przekazany platformy lub typem natywnym, oznaczone jako zapieczętowany. Aby uzyskać więcej informacji, zobacz [zapieczętowanego](sealed-cpp-component-extensions.md).
 
@@ -471,7 +471,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_simple_value_class(` *— typ* `)`
+- `__is_simple_value_class(` *Typ* `)`
 
    Zwraca **true** jeśli przekazany typ wartości, która nie zawiera żadnych odwołań do stosu odśmieconej pamięci. Aby uzyskać więcej informacji na temat typów zdefiniowanych przez użytkownika wartości, zobacz [klas i struktur](classes-and-structs-cpp-component-extensions.md).
 
@@ -489,7 +489,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_union(` *— typ* `)`
+- `__is_union(` *Typ* `)`
 
    Zwraca **true** Jeśli typ Unii.
 
@@ -506,7 +506,7 @@ Poniższa lista zawiera cech typu, które są obsługiwane przez kompilator. Wsz
     }
     ```
 
-- `__is_value_class(` *— typ* `)`
+- `__is_value_class(` *Typ* `)`
 
    Zwraca **true** jeśli przekazany typ wartości. Aby uzyskać więcej informacji na temat typów zdefiniowanych przez użytkownika wartości, zobacz [klas i struktur](classes-and-structs-cpp-component-extensions.md).
 
@@ -570,4 +570,4 @@ R is a ref class
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

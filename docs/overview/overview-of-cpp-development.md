@@ -1,5 +1,5 @@
 ---
-title: Omówienie programowania C++ w programie Visual Studio
+title: Omówienie programowania w języku C++ w programie Visual Studio
 description: Środowiska IDE programu Visual Studio obsługuje C++, programowanie na Windows, Linux, Android i iOS za pomocą edytora kodu, debuger, środowisk testowych, analizatory statycznych i innych narzędziach programistycznych.
 ms.date: 03/08/2019
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 207d99419499187715cf9088652d64b79b7ba34d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58787555"
 ---
-# <a name="overview-of-c-development-in-visual-studio"></a>Omówienie programowania C++ w programie Visual Studio
+# <a name="overview-of-c-development-in-visual-studio"></a>Omówienie programowania w języku C++ w programie Visual Studio
 
 W ramach programu zintegrowanego rozwoju środowiska (IDE) Visual Studio C++ firmy Microsoft (MSVC) udostępnia wiele systemu windows i narzędzia wspólnych innych języków. Wiele z nich w tym **Eksploratora rozwiązań**, Edytor kodu i debugera, opisano w [środowiska IDE programu Visual Studio](/visualstudio/get-started/visual-studio-ide). Często udostępnione narzędzia lub okno ma nieco inny zestaw funkcji dla języka C++ niż dla języków .NET lub JavaScript. Kilka systemu windows lub narzędzi są dostępne tylko w wersjach programu Visual Studio Professional lub Visual Studio Enterprise.
 
@@ -86,7 +86,7 @@ Aby uzyskać więcej informacji, zobacz [debugowania w programie Visual Studio](
 
 ## <a name="test"></a>Test
 
-Program Visual Studio obejmuje struktur testów jednostek dla natywnego języka C++ i C + +/ interfejsu wiersza polecenia. Boost.Test platformy Google Test i narzędzia CTest są również obsługiwane. Uruchom testy z **Eksplorator testów** okna:
+Program Visual Studio obejmuje struktur testów jednostek dla obu native C++ i C++sposób niezamierzony. Boost.Test platformy Google Test i narzędzia CTest są również obsługiwane. Uruchom testy z **Eksplorator testów** okna:
 
 ![Test Explorer](media/cpp-test-explorer-passed.png "Visual Studio 2017 Test Explorer")
 
@@ -102,7 +102,7 @@ Tradycyjne aplikacje komputerowe i aplikacje platformy uniwersalnej systemu Wind
 
 Można także wdrożyć macierzystym języku C++ na inny komputer, aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji komputerowych](../windows/deploying-native-desktop-applications-visual-cpp.md).
 
-Aby uzyskać więcej informacji o wdrażaniu w języku C + +/ interfejsu wiersza polecenia programu, zobacz [przewodnik wdrażania dla deweloperów](/dotnet/framework/deployment/deployment-guide-for-developers),
+Aby uzyskać więcej informacji o wdrażaniu C++program sposób niezamierzony zobacz [przewodnik wdrażania dla deweloperów](/dotnet/framework/deployment/deployment-guide-for-developers),
 
 ## <a name="next-steps"></a>Następne kroki
 

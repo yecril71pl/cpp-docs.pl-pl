@@ -7,10 +7,10 @@ helpviewer_keywords:
 - raw_native_types attribute
 ms.assetid: 9f38daa8-8dc0-46a5-aff9-f1ff9c1e6f48
 ms.openlocfilehash: 32b77905ef7025334e5101e76864da9a15c50cf6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024971"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
@@ -32,5 +32,5 @@ Domyślnie wysokiego poziomu metody obsługi błędów za pomocą klas obsługi 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import Directive](../preprocessor/hash-import-directive-cpp.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
 ms.openlocfilehash: 5a91ce5db46b19be570f8d48a584a2caeabcc163
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024468"
 ---
 # <a name="lllshift"></a>__ll_lshift
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Przesuwa podana wartość 64-bitowego w lewo przez określoną liczbę bitów.
 
@@ -85,7 +85,7 @@ int main()
 
 **Uwaga** nie ma wersji bez znaku operacji przesunięcia w lewo. Jest to spowodowane `__ll_lshift` już korzysta z parametrem wejściowym bez znaku. W odróżnieniu od przesunięcia w prawo jest ma zależności logowania dla przesunięcia w lewo, ponieważ najmniej znaczący bit w wyniku jest zawsze równa zero, niezależnie od tego, znak wartości przesunięte.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
 ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58787308"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
@@ -87,7 +87,7 @@ Nie można użyć unieruchamiania wskaźników jako:
 
 **pin_ptr** znajduje się w `cli` przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [platformy, domyślna i cli przestrzenie nazw](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
-Aby uzyskać więcej informacji na temat wskaźników wnętrza zobacz [pomocą interior_ptr (C + +/ CLI)](interior-ptr-cpp-cli.md).
+Aby uzyskać więcej informacji na temat wskaźników wnętrza zobacz [pomocą interior_ptr (C++sposób niezamierzony)](interior-ptr-cpp-cli.md).
 
 Aby uzyskać więcej informacji na temat Unieruchamianie wskaźników, zobacz [jak: Unieruchamianie wskaźników oraz tablic](how-to-pin-pointers-and-arrays.md) i [jak: Deklarowanie unieruchamiania wskaźników i typów wartości](how-to-declare-pinning-pointers-and-value-types.md).
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
 ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777678"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu ciągów Unicode za pomocą międzyoperacyjności języka C++
@@ -30,7 +30,7 @@ W tym temacie pokazano, jak ciągi Unicode mogą być przekazywane z zarządzane
 
 ## <a name="example"></a>Przykład
 
-Aby przekazać ciąg Unicode z zarządzanej do niezarządzanej funkcji, ptrtostringchars — funkcja (deklaracja w Vcclr.h) może służyć do dostępu w pamięci, gdzie zarządzanych ciąg jest przechowywany. Ponieważ ten adres zostanie przekazany do funkcji natywnej, jest ważne, przypinać pamięci za pomocą [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) aby zapobiec przeniesieniu danych ciągu, cykl zbierania śmieci odbędą się podczas wykonuje niezarządzanej funkcji.
+Aby przekazać ciąg Unicode z zarządzanej do niezarządzanej funkcji, ptrtostringchars — funkcja (deklaracja w Vcclr.h) może służyć do dostępu w pamięci, gdzie zarządzanych ciąg jest przechowywany. Ponieważ ten adres zostanie przekazany do funkcji natywnej, jest ważne, przypinać pamięci za pomocą [pin_ptr (C++sposób niezamierzony)](../extensions/pin-ptr-cpp-cli.md) aby zapobiec przeniesieniu danych ciągu, cykl zbierania śmieci odbędą się podczas wykonuje niezarządzanej funkcji.
 
 ```
 // MarshalUnicode1.cpp

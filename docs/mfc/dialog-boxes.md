@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778497"
 ---
 # <a name="dialog-boxes"></a>Okna dialogowe
@@ -53,9 +53,9 @@ Większość okna dialogowe są modalne, która wymaga od użytkownika zamknąć
 
 - [Mapowanie komunikatów Windows na klasę](../mfc/mapping-windows-messages-to-your-class.md)
 
-- [Powszechnie zastępowane funkcje członkowskie](../mfc/commonly-overridden-member-functions.md)
+- [Powszechnie zastępowane funkcje składowe](../mfc/commonly-overridden-member-functions.md)
 
-- [Powszechnie dodawane funkcje członkowskie](../mfc/commonly-added-member-functions.md)
+- [Powszechnie dodawane funkcje składowe](../mfc/commonly-added-member-functions.md)
 
 - [Klasy wspólnych okien dialogowych](../mfc/common-dialog-classes.md)
 

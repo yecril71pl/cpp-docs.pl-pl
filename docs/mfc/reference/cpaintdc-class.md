@@ -13,10 +13,10 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
 ms.openlocfilehash: df1db8a3e65d35f247df7d070119c66b02208815
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772062"
 ---
 # <a name="cpaintdc-class"></a>Cpaintdc — klasa
@@ -33,19 +33,19 @@ class CPaintDC : public CDC
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaintDC::CPaintDC](#cpaintdc)|Konstruuje `CPaintDC` podłączone do określonego [CWnd](../../mfc/reference/cwnd-class.md).|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaintDC::m_ps](#m_ps)|Zawiera [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) używany do rysowania obszaru klienta.|
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaintDC::m_hWnd](#m_hwnd)|HWND, do którego należy to `CPaintDC` obiekt jest dołączony.|
 

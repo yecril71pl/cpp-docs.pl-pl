@@ -7,10 +7,10 @@ helpviewer_keywords:
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768955"
 ---
 # <a name="casting-operators"></a>Operatory rzutowania
@@ -25,7 +25,7 @@ Wiele operatorów rzutowania są specyficzne dla języka C++. Te operatory są p
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md) używane dla prostych reinterpretation bitów.
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) używany w języku C + +/ interfejsu wiersza polecenia, aby wygenerować podlegające weryfikacji MSIL.
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) używane w C++sposób niezamierzony, aby wygenerować podlegające weryfikacji MSIL.
 
 Użyj **const_cast** i **reinterpret_cast** w ostateczności, ponieważ te operatory przedstawić same zagrożenia jako stary rzutowań w stylu. Jednak są nadal niezbędne w celu całkowitego zastąpienia starego rzutowań w stylu.
 

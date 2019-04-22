@@ -7,10 +7,10 @@ helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
 ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040583"
 ---
 # <a name="module-c"></a>moduł (C++)
@@ -25,7 +25,7 @@ Określa blok biblioteki w pliku .idl.
 
 ### <a name="parameters"></a>Parametry
 
-*— typ*<br/>
+*type*<br/>
 (Opcjonalnie) Może być jedną z następujących czynności:
 
 - `dll` Dodaje funkcje i klasy, które umożliwiają wynikowy DLL do działania jako serwer COM w procesie. Jest to wartość domyślna.
@@ -36,7 +36,7 @@ Określa blok biblioteki w pliku .idl.
 
 - `unspecified` Wyłącza iniekcji kodu biblioteki ATL, powiązany z atrybutem modułu: iniekcji modułu ATL klas, _AtlModule globalnego wystąpienia i wpis punktu funkcji. Nie wyłącza iniekcji kodu biblioteki ATL z powodu innych atrybutów w projekcie.
 
-*nazwa*<br/>
+*Nazwa*<br/>
 (Opcjonalnie) Nazwa bloku biblioteki.
 
 *version*<br/>
@@ -48,7 +48,7 @@ Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie
 *lcid*<br/>
 Parametr lokalizacji. Zobacz [lcid](/windows/desktop/Midl/lcid) Aby uzyskać więcej informacji.
 
-* — formant*<br/>
+*control*<br/>
 (Opcjonalnie) Określa, że wszystkie klasy coclass w bibliotece kontrolek.
 
 *helpstring*<br/>
@@ -72,7 +72,7 @@ Określa plik biblioteki typów.
 *restricted*<br/>
 (Opcjonalnie) Elementy członkowskie biblioteki nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
 
-*niestandardowy*<br/>
+*custom*<br/>
 (Opcjonalnie) Co najmniej jeden atrybut; jest to podobne do [niestandardowe](custom-cpp.md) atrybutu. Pierwszy parametr *niestandardowe* jest identyfikatorem GUID atrybutu. Na przykład:
 
 ```
@@ -152,7 +152,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Dowolne miejsce|
+|**Dotyczy**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -161,12 +161,12 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[biblioteka](/windows/desktop/Midl/library)<br/>
+[Biblioteka](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

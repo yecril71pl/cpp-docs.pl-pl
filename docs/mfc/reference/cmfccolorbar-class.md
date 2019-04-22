@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
 ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771410"
 ---
 # <a name="cmfccolorbar-class"></a>Klasa CMFCColorBar
@@ -95,13 +95,13 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|Konstruuje `CMFCColorBar` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorBar::ContextToSize](#contexttosize)|Oblicza marże poziome i pionowe, które muszą zawierać przycisków w formancie paska koloru i ustala lokalizację tych przycisków.|
 |[CMFCColorBar::CreateControl](#createcontrol)|Tworzy okno kontrolki paska koloru, dołącza go do `CMFCColorBar` obiektu i zmienia rozmiar kontrolki zawierają określony palety kolorów.|
@@ -123,7 +123,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCColorBar::AdjustLocations](#adjustlocations)|Dopasowuje pozycji kolor przycisków w formancie paska kolorów.|
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Wskazuje, czy etykieta tekstowa kolor przycisków można zmienić.|
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`m_bInternal`|Pole wartość logiczna określająca, czy są przetwarzane zdarzenia myszy. Zazwyczaj zdarzenia myszy są przetwarzane, gdy to pole ma wartość TRUE, a Tryb dostosowywania ma wartość FALSE.|
 |`m_bIsEnabled`|Wartość logiczna, która wskazuje, czy kontrolka jest włączona.|

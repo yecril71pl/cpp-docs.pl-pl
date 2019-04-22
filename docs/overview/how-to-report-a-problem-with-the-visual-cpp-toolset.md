@@ -1,14 +1,14 @@
 ---
-title: Jak zgłosić problem za pomocą narzędzi Visual C++
+title: Jak zgłosić problem z zestawem narzędzi języka Visual C++
 ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58787464"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak zgłosić problem za pomocą zestawu narzędzi Visual C++ lub dokumentacji
@@ -245,23 +245,23 @@ A *wstępnie przetworzony odtwarzania* jest plikiem jednego źródła, który de
 
 1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl /P** *argumenty* *filename.cpp*, gdzie *argumenty* jest Lista argumentów przechwycone powyżej, a *filename.cpp* to nazwa pliku źródłowego odtwarzania. To polecenie replikuje wiersza polecenia używane do odtworzenia, ale zatrzymuje kompilację po przebiegu preprocesora i generuje kod źródłowy wstępnie przetworzony do *filename*. mam.
 
-Jeśli są przetwarzania wstępnego C + +/ CX pliku z kodem źródłowym, lub są za pomocą funkcji moduły języka C++, niektóre dodatkowe kroki są wymagane. Aby uzyskać więcej informacji zobacz sekcje poniżej.
+Jeśli są przetwarzania wstępnego C++przy użyciu pliku z kodem źródłowym /CX lub C++ funkcją modułów pewne dodatkowe kroki są wymagane. Aby uzyskać więcej informacji zobacz sekcje poniżej.
 
 Po wygenerowaniu wstępnie przetworzonego pliku, to dobry pomysł, aby upewnić się, że problem reprodukcje nadal przy użyciu wstępnie przetworzonego pliku.
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Aby upewnić się, że błąd jest nadal reprodukcje przy użyciu wstępnie przetworzony plik
 
-1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl** *argumenty* **/TP** *filename*.i mówić cl.exe, aby skompilować wstępnie przetworzonego pliku jako pliku źródłowego języka C++, gdzie *argumenty* znajduje się lista argumentów przechwycone powyżej, ale także z dowolnymi **/D** i **/I** argumenty usunięte (ponieważ już zostały umieszczone w pliku wstępnie przetworzony); i gdzie *filename*.i jest nazwę wstępnie przetworzonego pliku.
+1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl** *argumenty* **/TP** *filename*.i mówić cl.exe, aby skompilować Wstępnie przetworzony plik jako C++ pliku źródłowego, gdzie *argumenty* znajduje się lista argumentów przechwycone powyżej, ale także z dowolnymi **/D** i **/I** argumenty usunięte () ponieważ mają one już została uwzględniona w pliku wstępnie przetworzony); i gdzie *filename*.i jest nazwę wstępnie przetworzonego pliku.
 
 1. Upewnij się, że problem jest przedstawiony.
 
 Na koniec dołączyć wstępnie przetworzony odtwarzania *filename*.i do raportu.
 
-### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Wstępnie przetworzony C + +/ CX WinRT/UWP kodu reprodukcje
+### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Wstępnie przetworzony C++/CX reprodukcje kodu WinRT/platformy uniwersalnej systemu Windows
 
-Jeśli używasz języka C + +/ CX, aby utworzyć plik wykonywalny, istnieją pewne dodatkowe kroki wymagane do tworzenia i sprawdzania poprawności wstępnie przetworzony odtwarzania.
+Jeśli używasz C++/CX, aby utworzyć plik wykonywalny, istnieją pewne dodatkowe kroki wymagane do tworzenia i sprawdzania poprawności wstępnie przetworzony odtwarzania.
 
-#### <a name="to-preprocess-ccx-source-code"></a>Można wstępnie przetworzyć C + +/ CX kodu źródłowego
+#### <a name="to-preprocess-ccx-source-code"></a>Można wstępnie przetworzyć C++/CX kodu źródłowego
 
 1. Utwórz plik wstępnie przetworzone źródło, zgodnie z opisem w [można wstępnie przetworzyć plik kodu źródłowego](#to-preprocess-a-source-code-file).
 

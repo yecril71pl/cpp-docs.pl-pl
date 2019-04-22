@@ -1,5 +1,5 @@
 ---
-title: Interfejsy ogólne (C + +/ CLI)
+title: Interfejsy ogólne (C++sposób niezamierzony)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
 ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021506"
 ---
-# <a name="generic-interfaces-ccli"></a>Interfejsy ogólne (C + +/ CLI)
+# <a name="generic-interfaces-ccli"></a>Interfejsy ogólne (C++sposób niezamierzony)
 
-Ograniczenia, które są stosowane do parametrów typu w klasach są takie same jak te, które są stosowane do parametrów typu w interfejsach (zobacz [klasy ogólne (C + +/ CLI)](generic-classes-cpp-cli.md)).
+Ograniczenia, które są stosowane do parametrów typu w klasach są takie same jak te, które są stosowane do parametrów typu w interfejsach (zobacz [klasy ogólne (C++sposób niezamierzony)](generic-classes-cpp-cli.md)).
 
 Reguły które kontrolują, przeciążanie funkcji — są takie same dla funkcji w ramach ogólnego klas lub interfejsów ogólnych.
 
@@ -32,28 +32,28 @@ Aby uzyskać więcej informacji na temat interfejsów, zobacz [interfejsu klasy]
 
 ## <a name="remarks"></a>Uwagi
 
-*atrybuty*<br/>
+*Atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji na temat atrybuty i klasy atrybutów, zobacz **atrybuty**.
 
-*klucz klasy*<br/>
+*class-key*<br/>
 **Klasa** lub **typename**
 
 *Typ — parametr-identyfikatory*<br/>
 Lista identyfikatorów rozdzielonych przecinkami.
 
 *type-parameter-constraints-clauses*<br/>
-Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
+Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modyfikatory dostępności*<br/>
+*accessibility-modifiers*<br/>
 (Opcjonalnie) Modyfikatory dostępności (np. **publiczne, prywatne**).
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 Nazwa interfejsu.
 
-*Lista podstawowego*<br/>
+*base-list*<br/>
 (Opcjonalnie) Lista, która zawiera co najmniej jeden jawne interfejsy podstawowe rozdzielonych przecinkami.
 
-*treść_interfejsu*<br/>
+*interface-body*<br/>
 Deklaracje członków interfejsu.
 
 *deklaratory*<br/>

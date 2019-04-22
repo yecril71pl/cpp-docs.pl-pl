@@ -3,10 +3,10 @@ title: Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
 ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898833"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
@@ -83,7 +83,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t jest typem natywnym)
 
-(W programie Microsoft Visual C++ 6.0 i starszych **wchar_t** nie została zaimplementowana jako typ wbudowany, ale zadeklarowano w wchar.h jako element typedef dla typ unsigned short.) C++ standard wymaga, aby **wchar_t** był typem wbudowanym. Przy użyciu wersji typedef może spowodować problemy przenośności w programowaniu. Jeśli uaktualnienia ze starszych wersji programu Visual Studio i występuje błąd kompilatora C2664, ponieważ kod próbuje niejawnie skonwertować **wchar_t** do **typ unsigned short**, firma Microsoft zaleca, aby zmienić Kod, aby naprawić błąd, zamiast ustawiać `/Zc:wchar_t-`. Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(W Microsoft Visual C++ 6.0 i starszych wersjach **wchar_t** nie została zaimplementowana jako typ wbudowany, ale zadeklarowano w wchar.h jako element typedef dla typ unsigned short.) C++ Standardowa wymaga, aby **wchar_t** był typem wbudowanym. Przy użyciu wersji typedef może spowodować problemy przenośności w programowaniu. Jeśli uaktualnienia ze starszych wersji programu Visual Studio i występuje błąd kompilatora C2664, ponieważ kod próbuje niejawnie skonwertować **wchar_t** do **typ unsigned short**, firma Microsoft zaleca, aby zmienić Kod, aby naprawić błąd, zamiast ustawiać `/Zc:wchar_t-`. Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Uaktualnianie przy użyciu opcji konsolidatora/nodefaultlib/Entry i/noentry
 

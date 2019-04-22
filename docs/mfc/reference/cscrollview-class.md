@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
 ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774156"
 ---
 # <a name="cscrollview-class"></a>Klasa CScrollView
@@ -285,7 +285,7 @@ void ScrollToPosition(POINT pt);
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
+*(czas pacyficzny)*<br/>
 Punkt przewinięcia w jednostkach logicznych. `x` Elementu członkowskiego musi być wartością dodatnią (większe niż lub równa 0, aż do całkowitego rozmiaru widoku). Dotyczy to także `y` przy włączonym trybie mapowania MM_TEXT element członkowski. `y` Elementu członkowskiego ma ujemną wartość w trybach mapowanie innych niż MM_TEXT.
 
 ### <a name="remarks"></a>Uwagi
@@ -377,7 +377,7 @@ Należy ustawić tryb mapowania do dowolnego z trybów mapowania Windows z wyją
 ## <a name="see-also"></a>Zobacz także
 
 [Próbki MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
-[Cview — klasa](../../mfc/reference/cview-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Cview — klasa](../../mfc/reference/cview-class.md)<br/>
+[Klasa CView](../../mfc/reference/cview-class.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasa CView](../../mfc/reference/cview-class.md)<br/>
 [Klasa CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)

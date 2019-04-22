@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
 ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776313"
 ---
 # <a name="cdataexchange-class"></a>Cdataexchange — klasa
@@ -41,13 +41,13 @@ class CDataExchange
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDataExchange::CDataExchange](#cdataexchange)|Konstruuje `CDataExchange` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDataExchange::Fail](#fail)|Wywołuje się, gdy weryfikacja nie powiedzie się. Przywraca poprzedni formant fokus i zgłasza wyjątek.|
 |[CDataExchange::PrepareCtrl](#preparectrl)|Przygotowuje określoną kontrolkę do wymiany danych lub sprawdzania poprawności. Na użytek nonedit kontrolki.|
@@ -56,7 +56,7 @@ class CDataExchange
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Flaga kierunku DDX i DDV.|
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Okno dialogowe lub okna, w którym wymiany danych odbywa się.|

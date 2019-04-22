@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
 ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778172"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar Class
@@ -250,10 +250,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*Nmin.*<br/>
+*nMin*<br/>
 [in] Określa wartość minimum zakresu.
 
-*nmaks.*<br/>
+*nMax*<br/>
 [in] Określa maksymalną wartość zakresu.
 
 ### <a name="remarks"></a>Uwagi
@@ -262,7 +262,7 @@ Ta metoda umożliwia zdefiniowanie zakresu pasek postępu, ustawiając wartości
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
+[Klasa CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

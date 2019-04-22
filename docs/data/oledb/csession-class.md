@@ -41,10 +41,10 @@ helpviewer_keywords:
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
 ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041461"
 ---
 # <a name="csession-class"></a>Klasa CSession
@@ -67,11 +67,11 @@ class CSession
 
 |||
 |-|-|
-|[Przerwij](#abort)|Anuluje (kończy) transakcji.|
-|[Zamknięcie](#close)|Zamyka sesję.|
+|[Abort](#abort)|Anuluje (kończy) transakcji.|
+|[Zamknij](#close)|Zamyka sesję.|
 |[Zatwierdzenia](#commit)|zatwierdzeń transakcji.|
 |[GetTransactionInfo](#gettransactioninfo)|Zwraca informacje dotyczące transakcji.|
-|[Otwarcie](#open)|Otwiera nową sesję dla obiektu źródła danych.|
+|[Otwórz](#open)|Otwiera nową sesję dla obiektu źródła danych.|
 |[Starttransaction —](#starttransaction)|Rozpoczyna się nowej transakcji dla tej sesji.|
 
 ## <a name="remarks"></a>Uwagi
@@ -218,4 +218,4 @@ Aby uzyskać więcej informacji, zobacz [ITransactionLocal::StartTransaction](/p
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

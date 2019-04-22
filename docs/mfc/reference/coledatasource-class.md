@@ -37,10 +37,10 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776833"
 ---
 # <a name="coledatasource-class"></a>Klasa COleDataSource
@@ -152,7 +152,7 @@ void CacheGlobalData(
 *cfFormat*<br/>
 Format Schowka, w którym ma być oferowane danych. Ten parametr może być jednym z wstępnie zdefiniowane formaty Schowka lub wartość zwrócona przez obiekt natywny Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji.
 
-*wartości hGlobal*<br/>
+*hGlobal*<br/>
 Dojście do bloku pamięci globalnej, zawierające dane w formacie określonym.
 
 *lpFormatEtc*<br/>
@@ -490,6 +490,6 @@ void SetClipboard();
 
 [Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
-[CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDataObject](../../mfc/reference/coledataobject-class.md)

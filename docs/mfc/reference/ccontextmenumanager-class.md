@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
 ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779797"
 ---
 # <a name="ccontextmenumanager-class"></a>Klasa CContextMenuManager
@@ -306,7 +306,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 *x*<br/>
 [in] Poziome, przesunięcie do menu skrótów na liście współrzędne klienta.
 
-*t*<br/>
+*y*<br/>
 [in] Przesunięcie w pionie do menu skrótów na liście współrzędne klienta
 
 *pWndOwner*<br/>
@@ -355,7 +355,7 @@ virtual UINT TrackPopupMenu(
 *x*<br/>
 [in] Poziome, przesunięcie do menu skrótów na liście współrzędne klienta.
 
-*t*<br/>
+*y*<br/>
 [in] Przesunięcie do menu skrótów na liście współrzędne klienta w pionie.
 
 *pWndOwner*<br/>
@@ -374,6 +374,6 @@ Ta metoda działa jako modalne wywołanie, aby wyświetlić menu skrótów. Apli
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CWinAppEx](../../mfc/reference/cwinappex-class.md)

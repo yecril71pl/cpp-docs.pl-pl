@@ -33,10 +33,10 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
 ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776352"
 ---
 # <a name="cspinbuttonctrl-class"></a>Klasa CSpinButtonCtrl
@@ -119,7 +119,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl kontrolki przycisku pokrętła. Zastosuj dowolną kombinację style kontrolki przycisku pokrętła do formantu. Te style są opisane w [style kontrolki góra-dół](/windows/desktop/Controls/up-down-control-styles) w zestawie Windows SDK.
 
-*rect*<br/>
+*Rect*<br/>
 Określa rozmiar i położenie kontrolki przycisku pokrętła. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury
 
 *pParentWnd*<br/>
@@ -159,7 +159,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę style rozszerz
 *dwStyle*<br/>
 Określa styl kontrolki przycisku pokrętła. Zastosuj dowolną kombinację style kontrolki przycisku pokrętła do formantu. Te style są opisane w [style kontrolki góra-dół](/windows/desktop/Controls/up-down-control-styles) w zestawie Windows SDK.
 
-*rect*<br/>
+*Rect*<br/>
 Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -401,5 +401,5 @@ Funkcja elementu członkowskiego `SetRange32` Ustawia zakres 32-bitowych dla kon
 
 [CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CSliderCtrl](../../mfc/reference/csliderctrl-class.md)

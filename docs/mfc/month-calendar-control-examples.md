@@ -6,10 +6,10 @@ helpviewer_keywords:
 - CMonthCalCtrl class [MFC], examples
 ms.assetid: 1af7fb59-d6fd-46e0-aaa5-b0394a0a3ed5
 ms.openlocfilehash: b798b5f9fd71b6d18b7fe52d6407ea7b89892c90
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773518"
 ---
 # <a name="month-calendar-control-examples"></a>Przykłady formantów kalendarza miesięcznego
@@ -19,4 +19,4 @@ ms.locfileid: "58773518"
 ## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
-[Formanty](../mfc/controls-mfc.md)
+[Kontrolki](../mfc/controls-mfc.md)

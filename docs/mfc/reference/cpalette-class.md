@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770818"
 ---
 # <a name="cpalette-class"></a>Klasa CPalette
@@ -47,13 +47,13 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPalette::CPalette](#cpalette)|Konstruuje `CPalette` obiektu, nie dołączonych palety Windows. Należy zainicjować `CPalette` obiektu przy użyciu jednego z inicjowanie funkcji Członkowskich, zanim będzie można jej używać.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPalette::AnimatePalette](#animatepalette)|Zastępuje wpisy palety logiczne identyfikowane przez `CPalette` obiektu. Aplikacja nie ma można zaktualizować obszaru klienckiego, ponieważ Windows mapuje nowych wpisów na palecie system natychmiast.|
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Paleta półtonów kontekstu urządzenia i dołącza je do `CPalette` obiektu.|
@@ -67,7 +67,7 @@ class CPalette : public CGdiObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[HPALETTE CPalette::operator](#operator_hpalette)|Zwraca HPALETTE dołączone do `CPalette`.|
 

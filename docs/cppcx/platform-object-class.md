@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
 ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781019"
 ---
 # <a name="platformobject-class"></a>Platform::Object, klasa
@@ -33,13 +33,13 @@ public ref class Object : Object
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Object::Object](#ctor)|Inicjuje nowe wystąpienie klasy obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Object::Equals](#equals)|Określa, czy określony obiekt jest równy bieżącemu obiektowi.|
 |[Object::GetHashCode](#gethashcode)|Zwraca kod skrótu dla tego wystąpienia.|
@@ -156,7 +156,7 @@ Drugi obiekt, który będzie porównywany.
 
 **wartość true,** Jeśli dwa obiekty są takie same; w przeciwnym razie **false**.
 
-## <a name="tostring"></a>  Metoda Object::toString (C + +/ CX)
+## <a name="tostring"></a>  Metoda Object::toString (C++/CX)
 
 Zwraca ciąg, który reprezentuje bieżący obiekt.
 

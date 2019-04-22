@@ -1,5 +1,5 @@
 ---
-title: event_receiver (atrybut COM C++)
+title: event_receiver (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -13,10 +13,10 @@ helpviewer_keywords:
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
 ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023298"
 ---
 # <a name="eventreceiver"></a>event_receiver
@@ -32,7 +32,7 @@ Tworzy odbiorca zdarzenia (ujścia).
 
 ### <a name="parameters"></a>Parametry
 
-*— typ*<br/>
+*type*<br/>
 Wyliczenie jednego z następujących wartości:
 
 - `native` dla niezarządzanego kodu C/C++ (domyślnie dla macierzystych klas).
@@ -54,7 +54,7 @@ Określ *layout_dependent* tylko wtedy, gdy `type` = **com**. *layout_dependent*
 
 ## <a name="remarks"></a>Uwagi
 
-**Event_receiver** atrybut C++ Określa, że klasy lub struktury, do którego jest stosowana będzie odbiorca zdarzenia, przy użyciu modelu zdarzeń ujednoliconego Visual C++.
+**Event_receiver** C++ atrybut określa, że odbiorca zdarzenia, za pomocą wizualizacji będzie klasy lub struktury, do którego zastosowano C++ zdarzenia ujednoliconego modelu.
 
 **event_receiver** jest używana z [event_source](event-source.md) atrybutu i [__hook](../../cpp/hook.md) i [__unhook](../../cpp/unhook.md) słów kluczowych. Użyj `event_source` utworzyć źródła zdarzeń. Użyj **__hook** w metodach odbiorca zdarzenia, aby skojarzyć metody odbiorcy zdarzeń ("hook") na potrzeby zdarzeń źródła zdarzeń. Użyj **__unhook** usunąć ich skojarzenia.
 
@@ -69,7 +69,7 @@ Określ *layout_dependent* tylko wtedy, gdy `type` = **com**. *layout_dependent*
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|`coclass` gdy *layout_dependent*=**true**|
 |**Nieprawidłowe atrybuty**|Brak|

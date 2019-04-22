@@ -17,10 +17,10 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
 ms.openlocfilehash: 394182aa0f9c967524ed0db510d0b9cc0739118e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777158"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Klasa CMFCRibbonMiniToolBar
@@ -125,7 +125,7 @@ BOOL Show(
 *x*<br/>
 [in] Określa położenie w poziomie podręczny pasek narzędzi w współrzędne ekranu.
 
-*t*<br/>
+*y*<br/>
 [in] Określa położenie w pionie podręczny pasek narzędzi w współrzędne ekranu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -149,7 +149,7 @@ BOOL ShowWithContextMenu(
 *x*<br/>
 [in] Określa położenie menu kontekstowego w poziomie w współrzędne ekranu.
 
-*t*<br/>
+*y*<br/>
 [in] Określa położenie menu kontekstowego w pionie w współrzędne ekranu.
 
 *uiMenuResID*<br/>
@@ -192,5 +192,5 @@ virtual BOOL IsRibbonMiniToolBar() const;
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

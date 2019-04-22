@@ -12,10 +12,10 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775052"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowania błędów
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>Parametry
 
 *exp*<br/>
-[in] Parametry i zmienne, aby wysyłać w oknie danych wyjściowych programu Visual C++ lub inna aplikacja te komunikaty pułapek.
+[in] Parametry i zmienne, aby wysłać do wizualizacji C++ okno danych wyjściowych lub inna aplikacja te komunikaty pułapek.
 
 *category*<br/>
 [in] Typ zdarzenia lub metody, na którym do raportu. Zobacz uwagi, aby uzyskać listę kategorii.
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>Parametry
 
 *exp*<br/>
-[in] Ciąg do wysyłania do okna danych wyjściowych Visual C++ lub dowolnej aplikacji, która te komunikaty pułapek.
+[in] Ciąg do wysłania do wizualizacji C++ okno danych wyjściowych lub inna aplikacja te komunikaty pułapek.
 
 *category*<br/>
 [in] Typ zdarzenia lub metody, na którym do raportu. Zobacz uwagi, aby uzyskać listę kategorii.

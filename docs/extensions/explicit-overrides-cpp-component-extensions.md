@@ -1,18 +1,18 @@
 ---
-title: Jawne przesłonięcia (C + +/ CLI i C + +/ CX)
+title: Jawne przesłonięcia (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
 ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021422"
 ---
-# <a name="explicit-overrides--ccli-and-ccx"></a>Jawne przesłonięcia (C + +/ CLI i C + +/ CX)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Jawne przesłonięcia (C++sposób niezamierzony i C++/CX)
 
 W tym temacie omówiono sposób jawnie przesłonić składowej klasy bazowej lub interfejsu. Nazwanego przesłaniania (jawne) należy używać tylko aby przesłonić metodę z metodą pochodnej, która ma inną nazwę.
 
@@ -30,10 +30,10 @@ overriding-function-declarator = function { overriding-function-definition }
 *overriding-function-declarator*<br/>
 Zwracany typ, nazwa i argument lista przesłanianie funkcji.  Pamiętaj, że funkcja pomijania muszą mieć taką samą nazwę jak przesłaniana funkcja.
 
-*— typ*<br/>
+*type*<br/>
 Typ podstawowy, zawierającego funkcję, aby zastąpić.
 
-* — funkcja*<br/>
+*— Funkcja*<br/>
 Rozdzielana przecinkami lista co najmniej jedną nazwę funkcji do zastąpienia.
 
 *overriding-function-definition*<br/>
@@ -174,4 +174,4 @@ public:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

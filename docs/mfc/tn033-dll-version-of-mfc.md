@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767785"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: Wersja dll biblioteki MFC
@@ -42,7 +42,7 @@ To jest wersja Obsługa DLL obsługiwane w wersji 1.0 z MFC. Jest on opisany w [
 
 MFC 3.0 (i nowsze wersje) obsługuje zwykłych bibliotekach MFC dll z nowych funkcji, łącznie z klasy OLE i bazy danych.
 
-**AFXDLL**: Jest to również nazywane udostępnionych wersji biblioteki MFC. Jest to nowe biblioteki DLL dodano obsługę MFC w wersji 2.0. Sama biblioteka MFC jest w szeregu bibliotek DLL (opisanych poniżej), a aplikacja kliencka lub biblioteki DLL dynamicznie łączy biblioteki dll, które są wymagane. Interfejsy granicę aplikacji/DLL są w języku C + +/ interfejsu klasy MFC. Aplikacja kliencka musi być aplikacji MFC. To obsługuje wszystkie funkcje MFC 3.0 (wyjątek: UNICODE nie jest obsługiwane dla klas baz danych).
+**AFXDLL**: Jest to również nazywane udostępnionych wersji biblioteki MFC. Jest to nowe biblioteki DLL dodano obsługę MFC w wersji 2.0. Sama biblioteka MFC jest w szeregu bibliotek DLL (opisanych poniżej), a aplikacja kliencka lub biblioteki DLL dynamicznie łączy biblioteki dll, które są wymagane. Interfejsy granicę aplikacji/DLL są C++/MFC klasy interfejsów. Aplikacja kliencka musi być aplikacji MFC. To obsługuje wszystkie funkcje MFC 3.0 (wyjątek: UNICODE nie jest obsługiwane dla klas baz danych).
 
 > [!NOTE]
 > Począwszy od Visual C++ w wersji 4.0 tego rodzaju DLL nazywa się "Rozszerzeniem DLL."
@@ -476,7 +476,7 @@ Aplikację przy użyciu MFCxx.DLL korzysta z wspólnego alokatora pamięci, dost
 
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>Liczby porządkowe i __declspec(dllexport) klasy i nazwy biblioteki DLL
 
-Nie używamy `class` **__declspec(dllexport)** funkcje kompilatora języka C++. Zamiast tego lista eksportu jest oferowana źródeł biblioteki klas (MFCxx.DEF i MFCxxD.DEF). Tylko te wybranego zestawu punktów wejścia (funkcje i dane) są eksportowane. Inne symbole, takie jak MFC prywatnej implementacji funkcji lub klasy, nie są eksportowane wszystkich eksporty są wykonywane według numeru porządkowego bez nazwy ciągu w tabeli rezydentnego lub niemający nazwy.
+Nie używamy `class` **__declspec(dllexport)** funkcjonalność C++ kompilatora. Zamiast tego lista eksportu jest oferowana źródeł biblioteki klas (MFCxx.DEF i MFCxxD.DEF). Tylko te wybranego zestawu punktów wejścia (funkcje i dane) są eksportowane. Inne symbole, takie jak MFC prywatnej implementacji funkcji lub klasy, nie są eksportowane wszystkich eksporty są wykonywane według numeru porządkowego bez nazwy ciągu w tabeli rezydentnego lub niemający nazwy.
 
 Za pomocą `class` **__declspec(dllexport)** może być wartą rozważenia alternatywą dla tworzenia bibliotek DLL mniejszy, ale w przypadku dużych biblioteki DLL, takie jak MFC, domyślny mechanizm eksportu ma wydajność i pojemność limitów.
 

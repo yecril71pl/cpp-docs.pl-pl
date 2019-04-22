@@ -17,10 +17,10 @@ helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
 ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774175"
 ---
 # <a name="comptr-class"></a>com::ptr — Klasa
@@ -167,14 +167,14 @@ int main() {
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis| 
+|Nazwa|Opis| 
 |---------|-----------| 
 |[ptr::ptr](#ptr)|Konstruuje `com::ptr` opakowywać obiektu COM.| 
 |[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`.| 
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |---------|-----------| 
 |[ptr::Attach](#attach)|Dołącza do obiektów COM `com::ptr`.| 
 |[ptr::CreateInstance](#createInstance)|Tworzy wystąpienie obiektu COM w ramach `com::ptr`.| 
@@ -185,7 +185,7 @@ int main() {
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |---------|-----------| 
 |[PTR::operator, wartość —&gt;](#operator-arrow)|Operator dostępu do elementu członkowskiego, używany do wywoływania metod na należących do obiektu COM.| 
 |[ptr::operator=](#operator-assign)|Dołącza do obiektów COM `com::ptr`.| 

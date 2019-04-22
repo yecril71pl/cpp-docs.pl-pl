@@ -1,5 +1,5 @@
 ---
-title: Przesłoń (C + +/ CLI i C + +/ CX)
+title: Przesłoń (C++sposób niezamierzony i C++/CX)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
 ms.openlocfilehash: 8dc7a0a0e6cf759d956fd701d033bd773e572af3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025674"
 ---
-# <a name="override--ccli-and-ccx"></a>Przesłoń (C + +/ CLI i C + +/ CX)
+# <a name="override--ccli-and-ccx"></a>Przesłoń (C++sposób niezamierzony i C++/CX)
 
 **Zastąpienia** kontekstowe słowo kluczowe wskazuje, że składowej typu zastępuje klasy bazowej lub składowej interfejsu podstawowego.
 

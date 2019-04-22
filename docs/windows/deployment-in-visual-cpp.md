@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
 ms.openlocfilehash: 8dccf581cff88dc2e8c4a889bed8b47fc140eb7c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58787353"
 ---
 # <a name="deployment-in-visual-c"></a>Wdrożenie w Visual C++
@@ -28,7 +28,7 @@ Aby wdrożyć centralnie biblioteki Visual C++, można Użyj jednego z tych dwó
 
 - *Redystrybucyjne moduły scalania* (pliki .msm), którego można użyć do wdrożenia określonych bibliotek i które dołącza się do pliku Instalatora Windows (msi) Twojej aplikacji.
 
-Plik pakietu redystrybucyjnego instaluje wszystkie biblioteki Visual C++ dla określonej architektury systemu. Na przykład jeśli aplikacja jest wbudowana x64, umożliwia pakiet redystrybucyjny vcredist_x64.exe zainstalować wszystkie biblioteki Visual C++, używanych przez aplikację. Można programować Instalatorem aplikacji do uruchamiania pakietu redystrybucyjnego jako warunek wstępny, przed zainstalowaniem aplikacji.
+Plik pakietu redystrybucyjnego instaluje wszystkie biblioteki Visual C++ dla określonej architektury systemu. Na przykład, jeśli aplikacja jest wbudowana x64, umożliwia pakiet redystrybucyjny vcredist_x64.exe instalowanie wszystkich wizualizacji C++ aplikacja używa biblioteki. Można programować Instalatorem aplikacji do uruchamiania pakietu redystrybucyjnego jako warunek wstępny, przed zainstalowaniem aplikacji.
 
 Moduł scalania umożliwia włączenie logiki Instalatora dla określonej biblioteki Visual C++ w pliku instalacyjnym aplikacji Instalatora Windows. Może zawierać jako liczbę modułów scalania, ponieważ wymaganych przez aplikację. Korzystania z modułów scalania, gdy należy zminimalizować rozmiar wdrożenia plików binarnych.
 

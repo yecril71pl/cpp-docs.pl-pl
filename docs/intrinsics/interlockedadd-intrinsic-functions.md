@@ -27,15 +27,15 @@ helpviewer_keywords:
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
 ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040958"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd — funkcje wewnętrzne
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Te funkcje wykonać dodatek atomic upewnia się, że operacja zakończy się pomyślnie po więcej niż jeden wątek ma dostęp do udostępnionej zmiennej.
 
@@ -167,7 +167,7 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

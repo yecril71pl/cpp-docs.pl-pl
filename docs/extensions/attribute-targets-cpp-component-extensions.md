@@ -1,18 +1,18 @@
 ---
-title: Elementy docelowe atrybutu (C + +/ CLI i C + +/ CX)
+title: Elementy docelowe atrybutu (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
 ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026682"
 ---
-# <a name="attribute-targets-ccli-and-ccx"></a>Elementy docelowe atrybutu (C + +/ CLI i C + +/ CX)
+# <a name="attribute-targets-ccli-and-ccx"></a>Elementy docelowe atrybutu (C++sposób niezamierzony i C++/CX)
 
 Specyfikatory użycia atrybutu umożliwiają określenie docelowe atrybuty.  Każdy atrybut jest zdefiniowany dotyczą niektóre elementy języka. Na przykład być stosowana tylko do klasy i struktury można zdefiniować atrybut.  Na poniższej liście przedstawiono możliwe elementy składni, w których można użyć atrybutu niestandardowego. Kombinacje tych wartości (przy użyciu logicznych lub) mogą być używane.
 

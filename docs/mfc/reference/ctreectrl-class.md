@@ -163,10 +163,10 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58782007"
 ---
 # <a name="ctreectrl-class"></a>Klasa CTreeCtrl
@@ -277,7 +277,7 @@ Ta kontrolka (i w związku z tym `CTreeCtrl` klasy) jest dostępna tylko dla pro
 
 Aby uzyskać więcej informacji na temat korzystania z `CTreeCtrl`, zobacz:
 
-- [Formanty](../../mfc/controls-mfc.md)
+- [Kontrolki](../../mfc/controls-mfc.md)
 
 - [Korzystanie z CTreeCtrl](../../mfc/using-ctreectrl.md)
 
@@ -314,7 +314,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl kontrolki widoku drzewa. Zastosuj style okna ramowego opisanego w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)i dowolną kombinację [style kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) zgodnie z opisem w zestawie Windows SDK.
 
-*rect*<br/>
+*Rect*<br/>
 Określa rozmiar i położenie kontrolki widoku drzewa. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
@@ -360,7 +360,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 *dwStyle*<br/>
 Określa styl kontrolki widoku drzewa. Zastosuj style okna ramowego opisanego w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)i dowolną kombinację [style kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) zgodnie z opisem w zestawie Windows SDK.
 
-*rect*<br/>
+*Rect*<br/>
 Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 Uchwyt elementu, którego obraz ma zostać pobrane.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Liczba całkowita, która odbiera indeks obrazu elementu w obrębie listy obrazów w kontrolce widoku drzewa.
 
 *nSelectedImage*<br/>
@@ -1347,7 +1347,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
+*(czas pacyficzny)*<br/>
 Klient współrzędne punktu do testowania.
 
 *pFlags*<br/>
@@ -1427,13 +1427,13 @@ Liczba całkowita określająca atrybutów, które mają ustawiony. Zobacz `TVIT
 *lpszItem*<br/>
 Adres ciąg zawierający tekst elementu.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Indeks obrazu elementu w kontrolce widoku drzewa, listy obrazów.
 
 *nSelectedImage*<br/>
 Indeks obrazu wybranego elementu w kontrolce widoku drzewa, listy obrazów.
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa wartości dla stanów elementu. Zobacz widoku stanów elementu kontrolki drzewa w zestawie Windows SDK dla listy odpowiednie stany.
 
 *nStateMask*<br/>
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 Wartość COLORREF, który zawiera nowy kolor tła. Ta wartość wynosi -1, zostanie przywrócone przy użyciu kolorów systemu koloru tła formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *hItem*<br/>
 HTREEITEM otrzymywać tej zmiany stanu wyboru.
 
-*Zapoznaj*<br/>
+*fCheck*<br/>
 Wskazuje, czy ma być zaznaczony lub niezaznaczony elementu kontrolki drzewa. Domyślnie `SetCheck` ustawia element do sprawdzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1925,13 +1925,13 @@ Liczba całkowita określająca atrybutów, które mają ustawiony. Zobacz `mask
 *lpszItem*<br/>
 Adres ciąg zawierający tekst elementu.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Indeks obrazu elementu w kontrolce widoku drzewa, listy obrazów. Zobacz `iImage` członkiem `TVITEM` struktury.
 
 *nSelectedImage*<br/>
 Indeks obrazu wybranego elementu w kontrolce widoku drzewa, listy obrazów. Zobacz `iSelectedImage` członkiem `TVITEM` struktury.
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa wartości dla stanów elementu. Zobacz `State` członkiem `TVITEM` struktury.
 
 *nStateMask*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 Dojście do elementu, którego obraz ma być utworzony.
 
-*Nokreślono*<br/>
+*nImage*<br/>
 Indeks obrazu elementu w kontrolce widoku drzewa, listy obrazów.
 
 *nSelectedImage*<br/>
@@ -2092,7 +2092,7 @@ BOOL SetItemState(
 *hItem*<br/>
 Dojście do elementu, którego stan ma być utworzony.
 
-*nInformacje*<br/>
+*nState*<br/>
 Określa nowe stany dla elementu.
 
 *nStateMask*<br/>
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*clr*<br/>
 Wartość COLORREF, który zawiera nowy kolor tekstu. Ten argument jest wartość -1, zostanie przywrócone przy użyciu kolorów systemu dla koloru tekstu kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2341,7 +2341,7 @@ Funkcja porównywania struktury, `lpfnCompare`, musi zwracać wartość ujemną,
 
 ## <a name="see-also"></a>Zobacz także
 
-[CMNCTRL1 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[CImageList Class](../../mfc/reference/cimagelist-class.md)
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasa CImageList](../../mfc/reference/cimagelist-class.md)

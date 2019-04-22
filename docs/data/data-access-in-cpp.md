@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
 ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041257"
 ---
 # <a name="data-access-in-visual-c"></a>Dostęp do danych w programie Visual C++
 
 Praktycznie wszystkich produktów bazy danych, SQL i NoSQL, zapewniają interfejs do natywnych aplikacji w języku C++. Standardowy interfejs branży jest ODBC, który jest obsługiwany przez wszystkie główne produkty bazy danych SQL i wielu produktów NoSQL. Dla produktów firmy Microsoft zapoznaj się z dostawcą, aby uzyskać więcej informacji. Dostępne są również biblioteki innej firmy z różnych postanowień licencyjnych.
 
-Od 2011 roku Microsoft ma dostosowane ODBC jako standardowe rozwiązanie dla natywnych aplikacji do procesu łączenia bazy danych programu Microsoft SQL Server — zarówno lokalnie, jak i w chmurze. Aby uzyskać więcej informacji, zobacz [programowanie dostępu do danych \(MFC-ATL\)](data-access-programming-mfc-atl.md). C + +/ bibliotek interfejsu wiersza polecenia można używać sterowników ODBC lub ADO.NET. Aby uzyskać więcej informacji, zobacz [ADO.NET za pomocą dostępu do danych (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) i [uzyskiwanie dostępu do danych w programie Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
+Od 2011 roku Microsoft ma dostosowane ODBC jako standardowe rozwiązanie dla natywnych aplikacji do procesu łączenia bazy danych programu Microsoft SQL Server — zarówno lokalnie, jak i w chmurze. Aby uzyskać więcej informacji, zobacz [programowanie dostępu do danych \(MFC-ATL\)](data-access-programming-mfc-atl.md). C++/ Biblioteki interfejsu wiersza polecenia użyć sterowników ODBC lub ADO.NET. Aby uzyskać więcej informacji, zobacz [ADO.NET za pomocą dostępu do danych (C++sposób niezamierzony)](../dotnet/data-access-using-adonet-cpp-cli.md) i [uzyskiwanie dostępu do danych w programie Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>W tej sekcji
 

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
 ms.openlocfilehash: 5e19ab9b9339f3e6f61abf7731a40ed3832b50c9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767365"
 ---
 # <a name="csize-class"></a>CSize, klasa
@@ -32,13 +32,13 @@ class CSize : public tagSIZE
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CSize::CSize](#csize)|Konstruuje `CSize` obiektu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CSize::operator-](#operator_-)|Odejmuje dwa rozmiary.|
 |[CSize::operator! =](#operator_neq)|Sprawdza pod kątem nierówności pomiędzy `CSize` i rozmiar.|

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
 ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770281"
 ---
 # <a name="cbitmapbutton-class"></a>Klasa CBitmapButton
@@ -35,13 +35,13 @@ class CBitmapButton : public CButton
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBitmapButton::CBitmapButton](#cbitmapbutton)|Konstruuje `CBitmapButton` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBitmapButton::AutoLoad](#autoload)|Kojarzy przycisk w oknie dialogowym z obiektu `CBitmapButton` klasy, ładuje bitmap(s) według nazwy i rozmiar przycisku, aby dopasować mapę bitową.|
 |[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inicjuje obiekt podczas ładowania co najmniej jeden zasób mapy bitowej o nazwie z pliku zasobów aplikacji i dołączanie bitmap do obiektu.|

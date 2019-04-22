@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
 ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769904"
 ---
 # <a name="cbitmap-class"></a>Klasa CBitmap
@@ -55,13 +55,13 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBitmap::CBitmap](#cbitmap)|Konstruuje `CBitmap` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Inicjuje obiekt z mapą bitową pamięci zależne od urządzenia, która ma określoną szerokość, wysokość i wzorca bitowego.|
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inicjuje obiekt z mapy bitowej przy użyciu szerokości, wysokości i wzorca bitowego (jeśli jest określony) podany w `BITMAP` struktury.|
@@ -79,7 +79,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[HBITMAP CBitmap::operator](#operator_hbitmap)|Zwraca uchwyt Windows dołączonych do `CBitmap` obiektu.|
 

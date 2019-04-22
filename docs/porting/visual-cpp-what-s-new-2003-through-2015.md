@@ -3,10 +3,10 @@ title: Visual C++ co&#39;s nowego od roku 2003 do 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
 ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898859"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
@@ -61,7 +61,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    `/Zg` — Opcja kompilatora (Generuj prototypy funkcji) nie jest już dostępna. Tę opcję kompilatora wcześniej została zakończona.
 
-- Nie może uruchomić testy jednostkowe z C + +/ interfejsu wiersza polecenia z wiersza polecenia przy użyciu mstest.exe. Zamiast tego należy użyć vstest.console.exe
+- Nie można uruchomić testy jednostkowe z C++sposób niezamierzony z wiersza polecenia przy użyciu mstest.exe. Zamiast tego należy użyć vstest.console.exe
 
 - **Mutable — słowo kluczowe.**
 
@@ -1104,7 +1104,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     };
    ```
 
-- `volatile` ***zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania** poprzednie wersje kompilatora mogą klasy, która ma **volatile** zmienne Członkowskie mają domyślne kopiowania/przenoszenia konstruktorów i Operatory przypisania kopiowania/przenoszenia domyślne generowane automatycznie.TTo zachowanie starej była nieprawidłowa i nie jest zgodny ze standardem C++.TKompilator traktuje teraz klasę, która ma zmiennych Członkowskich volatile nietrywialnymi konstrukcji i operatory przypisania co uniemożliwia automatyczne generowanie domyślnej implementacji tych operatorów.WJeśli taka klasa jest elementem członkowskim Unii (lub anonimowej Unii wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania kopiowania/przenoszenia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty.APróbuje utworzyć lub skopiować Unii (lub klasa zawierająca anonimowej Unii) bez jawne określenie ich jest błędne błąd kompilatora problemów kompilatora C2280 w wyniku.
+- `volatile` **zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania** poprzednie wersje kompilatora mogą klasy, która ma **volatile** zmienne Członkowskie mają domyślne kopiowania/przenoszenia konstruktorów i Operatory przypisania kopiowania/przenoszenia domyślne generowane automatycznie. To zachowanie starej była nieprawidłowa i nie jest zgodny ze standardem C++. Kompilator traktuje teraz klasę, która ma zmiennych Członkowskich volatile nietrywialnymi konstrukcji i operatory przypisania co uniemożliwia automatyczne generowanie domyślnej implementacji tych operatorów. Jeśli taka klasa jest elementem członkowskim Unii (lub anonimowej Unii wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania kopiowania/przenoszenia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty. Próbuje utworzyć lub skopiować Unii (lub klasa zawierająca anonimowej Unii) bez jawne określenie ich jest błędne błąd kompilatora problemów kompilatora C2280 w wyniku.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1534,7 +1534,7 @@ Kompilator Microsoft Visual C++ obsługuje te funkcje ISO C ++ 11 język:
 - Inicjatory wyznaczone.
 - Mieszanie deklaracji z kodem.
 - Ciąg może być niedozwolona konwersja literału do modyfikowalnych wartości przy użyciu nowej opcji kompilatora `/Zc:strictStrings`. W języku C++ 98 konwersja z literałów ciągów do `char*` (i szerokich literałów ciągów do `wchar_t*`) została zakończona. W języku C++ 11 Konwersja została usunięta całkowicie. Mimo że kompilator może ściśle przestrzegać standardu, zamiast tego zapewnia `/Zc:strictStrings` opcji, dzięki czemu można kontrolować konwersję. Domyślnie opcja jest wyłączona. Należy pamiętać, że gdy używasz tej opcji w trybie debugowania, STL nie zostanie skompilowany.
-- Rzuty referencji rvalue/lvalue. Dzięki odwołaniom rvalue C ++ 11 może jasno rozróżnić między lvalues i rvalues. Wcześniej kompilator nie zapewniał tego w określonych scenariuszach rzutowania. Nową opcję kompilatora, `/Zc:rvalueCast`, została dodana do zgodności kompilatora z Paper(see section 5.4, [expr.cast]/1) pracy języka C++. Domyślne zachowanie, gdy ta opcja nie jest określona, jest taka sama, jak w programie Visual Studio 2012.
+- Rzuty referencji rvalue/lvalue. Dzięki odwołaniom rvalue C ++ 11 może jasno rozróżnić między lvalues i rvalues. Wcześniej kompilator nie zapewniał tego w określonych scenariuszach rzutowania. Nową opcję kompilatora, `/Zc:rvalueCast`, została dodana do zgodności kompilatora z C++ Paper(see section 5.4, [expr.cast]/1) pracy języka. Domyślne zachowanie, gdy ta opcja nie jest określona, jest taka sama, jak w programie Visual Studio 2012.
 
 > [!NOTE]
 > Dla funkcji domyślnych, używających = default, aby zażądać konstruktorów przeniesienia memberwise i przenieść, operatory przypisania nie jest obsługiwana.
@@ -1586,7 +1586,7 @@ Tym Ulepszona obsługa standardów ISO C/C++ może wymagać zmian w istniejącym
 
 - **Bogatsze informacje o wyjątku.**
 
-   C + +/ CX obsługuje nowy model błędu Windows, który umożliwia przechwytywania i propagację informacje o wyjątku sformatowanym między interfejsem binarnym aplikacji (ABI); obejmuje to stosy wywołań i ciągi komunikatów niestandardowych.
+   C++/CX obsługuje nowy model błędu Windows, który umożliwia przechwytywania i propagację informacje o wyjątku sformatowanym między interfejsem binarnym aplikacji (ABI); obejmuje to stosy wywołań i ciągi komunikatów niestandardowych.
 
 - **Object:: ToString() teraz jest wirtualny.**
 
@@ -1648,7 +1648,7 @@ Tym Ulepszona obsługa standardów ISO C/C++ może wymagać zmian w istniejącym
 
 **Okno właściwości projektu C++ o zmiennym rozmiarze**
 
-**Autogenerowanie kod obsługi zdarzeń w języku C + +/ CX i C + +/ interfejsu wiersza polecenia.**  Kiedy wpisujesz kod, aby dodać program obsługi zdarzeń w języku C + +/ CX lub C + +/ interfejsu wiersza polecenia plik kodu, edytor może automatycznie generować definicji delegata wystąpienie i program obsługi zdarzeń. Zostanie wyświetlone okno etykietki narzędzia, gdy kod obsługi zdarzenia mogą być generowane automatycznie.
+**Autogenerowanie kod obsługi zdarzeń w C++/CX i C++sposób niezamierzony.**  Kiedy wpisujesz kod, aby dodać program obsługi zdarzeń w C++/CX lub C++pliku kodu w sposób niezamierzony, edytor może automatycznie generować definicji delegata wystąpienie i program obsługi zdarzeń. Zostanie wyświetlone okno etykietki narzędzia, gdy kod obsługi zdarzenia mogą być generowane automatycznie.
 
 **Wzmocnienie świadomości DPI.** Ustawienie DPI Awareness dla plików manifestu aplikacji teraz obsługuje ustawienie "Na Monitor High DPI Aware".
 
@@ -1682,7 +1682,7 @@ Tym Ulepszona obsługa standardów ISO C/C++ może wymagać zmian w istniejącym
 ### <a name="windows-runtime-app-development-support"></a>Obsługa projektowania aplikacji środowiska wykonawczego Windows
 
 - **Natywny model interfejsu użytkownika opartego na XAML**. W przypadku aplikacji środowiska wykonawczego Windows można użyć nowego modelu natywnego interfejsu użytkownika opartego na XAML.
-- **Visual C++ Component Extensions**. Te rozszerzenia upraszczają zużycia obiektów środowiska wykonawczego Windows, które są niezbędne część aplikacji środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [plan for Windows aplikacji środowiska wykonawczego przy użyciu języka C++](../windows/universal-windows-apps-cpp.md) i [dokumentacji języka Visual C++ (C + +/ CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Visual C++ Component Extensions**. Te rozszerzenia upraszczają zużycia obiektów środowiska wykonawczego Windows, które są niezbędne część aplikacji środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [plan for Windows Runtime używających C++ ](../windows/universal-windows-apps-cpp.md) i [Visual C++ Skorowidz języka (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **Gry DirectX**. Możesz tworzyć atrakcyjne gry przy użyciu nowej funkcji obsługi DirectX dla aplikacji środowiska wykonawczego Windows.
 - **Współdziałanie XAML/DirectX**. Środowisko uruchomieniowe Windows aplikacje korzystające z technologii DirectX i XAML teraz współdziałać wydajnie.
 - **Tworzenie biblioteki DLL składnika środowiska wykonawczego Windows**. Tworzenie biblioteki DLL składnika sprawia, że środowisko wykonawcze Windows extensible.
@@ -1731,7 +1731,7 @@ Oprócz **zadań równoległych** okna i **stosów równoległych** okna program
 
 **Zautomatyzowane wdrażanie na potrzeby debugowania zdalnego.** Wdrażanie plików dla zdalnego debugowania w programie Visual C++ zostały uproszczone. **Wdróż** opcję z menu kontekstowego projektu automatycznie kopiuje komputer zdalny, pliki, które są określone we właściwościach konfiguracji debugowania. Ręczne kopiowanie plików na komputerze zdalnym nie jest już wymagane.
 
-**C++/CLI IntelliSense.** C + +/ CLI ma teraz pełną obsługę technologii IntelliSense. Funkcja IntelliSense funkcje takie jak szybka podpowiedź, parametr pomocy, listę elementów członkowskich i automatyczne uzupełnianie teraz działa dla C + +/ interfejsu wiersza polecenia. Oprócz innych technologii IntelliSense i środowisko IDE rozszerzenia wymienione w niniejszym dokumencie są również działać C + +/ interfejsu wiersza polecenia.
+**C++/CLI IntelliSense.** C++/ Interfejs wiersza polecenia ma teraz pełną obsługę technologii IntelliSense. Funkcja IntelliSense funkcje takie jak szybka podpowiedź, parametr pomocy, listę elementów członkowskich i automatyczne uzupełnianie teraz działa dla C++sposób niezamierzony. Oprócz innych technologii IntelliSense i środowisko IDE rozszerzenia wymienione w niniejszym dokumencie są również działać dla C++sposób niezamierzony.
 
 **Richer IntelliSense Tooltips.** Informacje dotyczące stylu etykietki szybka podpowiedź funkcji IntelliSense języka C++ teraz zawierać bogatsze komentarze dokumentacji XML. Jeśli używasz interfejsu API z poziomu biblioteki — na przykład, C++ AMP — ma komentarze dokumentacji XML, a następnie etykietka funkcji IntelliSense zawiera więcej informacji, niż tylko deklaracji. Ponadto jeśli kod ma komentarze dokumentacji XML, etykietki narzędzi IntelliSense pokaże bogatsze informacje.
 
@@ -1777,7 +1777,7 @@ Pokrycie kodu został zaktualizowany do dynamicznie instrument binarnych w czasi
 
 ### <a name="c-compiler-and-linker"></a>Kompilator języka C++ i konsolidatora
 
-**Auto — słowo kluczowe.** **Automatycznie** — słowo kluczowe ma nowy cel. Użyj domyślnego rozumieniu **automatycznie** — słowo kluczowe, aby zadeklarować zmienną, którego typ jest ustalić na podstawie wyrażenia inicjowania w deklaracji zmiennej. `/Zc:auto` — Opcja kompilatora wywołuje nowy lub poprzedniego znaczenie **automatycznie** — słowo kluczowe.
+**auto Keyword.** **Automatycznie** — słowo kluczowe ma nowy cel. Użyj domyślnego rozumieniu **automatycznie** — słowo kluczowe, aby zadeklarować zmienną, którego typ jest ustalić na podstawie wyrażenia inicjowania w deklaracji zmiennej. `/Zc:auto` — Opcja kompilatora wywołuje nowy lub poprzedniego znaczenie **automatycznie** — słowo kluczowe.
 
 **decltype — Specyfikator typu.** **Decltype** Specyfikator typu zwraca typ określonego wyrażenia. Użyj **decltype** Specyfikator typu w połączeniu z **automatycznie** — słowo kluczowe do deklarowania typu złożonego lub znanego tylko w kompilatorze. Na przykład użyć kombinacji do deklarowania funkcji szablonu, którego typem zwracanym jest zależna od typów argumentów szablonu. Można również zadeklarować funkcji szablonu, który wywołuje inną funkcję, a następnie zwraca typ zwracany funkcji o nazwie.
 
@@ -1790,7 +1790,7 @@ Pokrycie kodu został zaktualizowany do dynamicznie instrument binarnych w czasi
 **nullptr i __nullptr słów kluczowych.** Kompilator języka Visual C++ pozwala na używanie **nullptr** — słowo kluczowe z kodu macierzystego lub kodu zarządzanego. **Nullptr** słowo kluczowe wskazuje, że dojście do obiektu, posługiwanie się nimi wskaźnika lub typu wskaźnik natywny nie wskazuje obiektu. Kompilator interpretuje **nullptr** jako kodu zarządzanego, gdy używasz `/clr` — opcja kompilatora i kodu natywnego, gdy nie używasz `/clr` opcji.
 Specyficzne dla firmy Microsoft **__nullptr** — słowo kluczowe ma takie samo znaczenie jak **nullptr**, ale dotyczy ona tylko kodu natywnego. Jeśli kompilujesz natywnego kodu C/C++ za pomocą `/clr` — opcja kompilatora, kompilator nie może określić czy **nullptr** — słowo kluczowe jest natywny lub terminów zarządzanych. Aby zamiaru Wyczyść, aby kompilator, użyj nullptr — słowo kluczowe, aby określić termin zarządzanych i **__nullptr** Aby określić termin natywnych.
 
-**/Zc:trigraphs Compiler Option.** Domyślnie pomoc techniczna dotycząca trójznaków jest wyłączona. Użyj `/Zc:trigraphs` opcję kompilatora, aby włączyć obsługę trójznaków.
+**/ Zc: trigraphs — opcja kompilatora.** Domyślnie pomoc techniczna dotycząca trójznaków jest wyłączona. Użyj `/Zc:trigraphs` opcję kompilatora, aby włączyć obsługę trójznaków.
 Trójznak składa się z dwóch następujących po sobie znaki zapytania (?) następuje znak trzeci unikatowy. Kompilator zastępuje trójznak odpowiedni znak interpunkcyjny. Na przykład, kompilator zamienia? = — trigram znakiem # (znak liczby). Używać trójznaków w plikach źródłowych języka C, korzystających z zestawu znaków, który nie zawiera niektóre znaki interpunkcyjne.
 
 **Nowa opcja optymalizacji sterowanej profilem.** PogoSafeMode to nowa opcja optymalizacji sterowanej profilem, co pozwala określić, czy ma być używany tryb awaryjny lub trybie szybkim, podczas optymalizacji aplikacji. Tryb awaryjny jest bezpieczna dla wątków, ale wolniejsza niż w trybie szybkim. Tryb szybki jest zachowaniem domyślnym.
@@ -1803,7 +1803,7 @@ Trójznak składa się z dwóch następujących po sobie znaki zapytania (?) nas
 
 ### <a name="visual-c-projects-and-the-build-system"></a>Projekty języka Visual C++ i systemu kompilacji
 
-**Program MSBuild.** Visual C++ rozwiązania i projekty są teraz tworzone przy użyciu MSBuild.exe, która zastępuje VCBuild.exe. Program MSBuild jest tego samego narzędzia kompilacji elastycznych funkcji, rozszerzalne, oparte na języku XML, który jest używany przez inne języki Visual Studio i typów projektów. Ze względu na tę zmianę pliki projektu Visual C++ teraz używać pliku w formacie XML i mają rozszerzenie nazwy pliku .vcxproj. Pliki projektu Visual C++ z wcześniejszych wersji programu Visual Studio automatycznie są konwertowane na nowy format pliku.
+**MSBuild.** Visual C++ rozwiązania i projekty są teraz tworzone przy użyciu MSBuild.exe, która zastępuje VCBuild.exe. Program MSBuild jest tego samego narzędzia kompilacji elastycznych funkcji, rozszerzalne, oparte na języku XML, który jest używany przez inne języki Visual Studio i typów projektów. Ze względu na tę zmianę pliki projektu Visual C++ teraz używać pliku w formacie XML i mają rozszerzenie nazwy pliku .vcxproj. Pliki projektu Visual C++ z wcześniejszych wersji programu Visual Studio automatycznie są konwertowane na nowy format pliku.
 
 **Katalogi VC ++.** Katalogi VC ++ ustawienie teraz znajduje się w dwóch miejscach. Użyj strony właściwości projektu, aby ustawić wartości na projekt katalogi VC ++. Użyj **Menedżer właściwości** i arkusz właściwości do ustawienia globalne, wartości dla konfiguracji katalogi VC ++.
 
@@ -2059,9 +2059,9 @@ Kompilator zawiera istotne zmiany w tej wersji.
 - __CLR_VER dodano wstępnie zdefiniowane makro.
 - Dyrektywy komentarza (C/C++) będzie teraz akceptować `/MANIFESTDEPENDENCY` jako komentarz konsolidatora. Opcja exestr, aby dodać komentarz jest już przestarzały.
 - `embedded_idl` atrybut ( `#import` dyrektywy) teraz przyjmuje opcjonalny parametr.
-- `fenv_access` pragma
-- `float_control` pragma
-- `fp_contract` pragma
+- `fenv_access` Dyrektywy pragma
+- `float_control` Dyrektywy pragma
+- `fp_contract` Dyrektywy pragma
 - Zmienne globalne nie zostaną zainicjowane w kolejności, w której są deklarowane, jeśli zmienne globalne pragma zarządzane, niezarządzane i niezarządzanych. To potencjalne istotnej zmiany, jeśli na przykład niezarządzanych zmienna globalna jest inicjowany za pomocą zarządzanych zmiennych globalnych i pełni skonstruowanego obiektu zarządzanego jest wymagana.
 - Sekcje określony za pomocą init_seg są teraz tylko do odczytu i nie odczytu/zapisu w poprzednich wersjach.
 - domyślne inline_depth jest teraz 16. Domyślnie 16 została również obowiązywać w Visual C++ .NET 2003.
@@ -2069,7 +2069,7 @@ Kompilator zawiera istotne zmiany w tej wersji.
 - _M_CEE _M_CEE_PURE i _M_CEE_SAFE wstępnie zdefiniowane makra dodane, zobacz wstępnie zdefiniowane makra.
 - _M_IX86_FP dodano wstępnie zdefiniowane makro.
 - _M_X64 dodano wstępnie zdefiniowane makro.
-- `make_public` pragma
+- `make_public` Dyrektywy pragma
 - `managed`, `unmanaged` zaktualizowano składnię pragma (ma teraz `push` i `pop`)
 - Aby biblioteka mscorlib.dll teraz niejawnie odwołuje się `#using` dyrektywy we wszystkich `/clr` kompilacje.
 - _OPENMP dodano wstępnie zdefiniowane makro.
@@ -2185,7 +2185,7 @@ Kompilator zawiera istotne zmiany w tej wersji.
 - W każdym temacie funkcja została dodana z sekcji odpowiedników .NET Framework.
 - Kilka funkcji ciągu jest teraz dostępna opcja obcinanie ciągów, a nie kończy się niepowodzeniem, gdy Bufory wyjściowe są zbyt małe; zobacz **_TRUNCATE**.
 - `_set_se_translator` teraz wymaga użycia `/EHa` — opcja kompilatora.
-- `fpos_t` jest teraz **__int64** w obszarze `/Za` (dla kodu C) i kiedy __STDC__ ustawiono na ręcznie (dla kodu C++). Kiedyś **struktury**.
+- `fpos_t` jest teraz **__int64** w obszarze `/Za` (dla kodu C) i kiedy __STDC__ ręcznie ustawić (dla C++ kodu). Kiedyś **struktury**.
 - _CRT_DISABLE_PERFCRIT_LOCKS może poprawić wydajność operacji We/Wy jednowątkowe programów.
 - POSIX — nazwy zostały zaniechane i zastąpione nazwami zgodność ISO C++ (na przykład użyć `_getch` zamiast `getch`).
 - Nowe pliki .obj opcje łącza są dostępne dla pure tryb czysty
@@ -2235,4 +2235,4 @@ Dodano następujące przełączniki konsolidatora:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Visual C++, przenoszenie i uaktualnianie przewodnik](visual-cpp-porting-and-upgrading-guide.md)
+[Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](visual-cpp-porting-and-upgrading-guide.md)
