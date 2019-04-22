@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
 ms.openlocfilehash: fab7415a71d8029952a840b83aae0f066c09084c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775364"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer Class
@@ -143,13 +143,13 @@ class CPaneContainer : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaneContainer::CPaneContainer](#cpanecontainer)|Domyślny konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPaneContainer::AddPane](#addpane)||
 |[CPaneContainer::AddRef](#addref)||

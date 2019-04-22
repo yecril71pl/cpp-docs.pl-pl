@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773752"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
@@ -277,7 +277,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
+*(czas pacyficzny)*<br/>
 Współrzędne punktu w obszarze klienta, to `CEdit` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -348,7 +348,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa styl kontrolki edycji. Zastosuj dowolną kombinację [style edycji](styles-used-by-mfc.md#edit-styles) do formantu.
 
-*rect*<br/>
+*Rect*<br/>
 Określa rozmiar i położenie kontrolki edycji. Może być `CRect` obiektu lub `RECT` struktury.
 
 *pParentWnd*<br/>
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Parametry
 
-*nmaks.*<br/>
+*nMax*<br/>
 Nowy limit tekstu, w znakach.
 
 ### <a name="remarks"></a>Uwagi
@@ -1452,11 +1452,11 @@ Aby uzyskać więcej informacji, zobacz [EM_UNDO](/windows/desktop/Controls/em-u
 [Próbki MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CMNCTRL2 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](cwnd-class.md)<br/>
 [Klasa CButton](cbutton-class.md)<br/>
-[Ccombobox — klasa](ccombobox-class.md)<br/>
-[Clistbox — klasa](clistbox-class.md)<br/>
+[Klasa CComboBox](ccombobox-class.md)<br/>
+[Klasa CListBox](clistbox-class.md)<br/>
 [Klasa CScrollBar](cscrollbar-class.md)<br/>
 [Klasa CStatic](cstatic-class.md)<br/>
-[Cdialog — klasa](cdialog-class.md)
+[Klasa CDialog](cdialog-class.md)

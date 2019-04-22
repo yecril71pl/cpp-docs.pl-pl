@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
 ms.openlocfilehash: b711ca65e552d495e466ea2e46a6779cf43ecbe3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767747"
 ---
 # <a name="cfontdialog-class"></a>Klasa CFontDialog
@@ -55,13 +55,13 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CFontDialog::CFontDialog](#cfontdialog)|Konstruuje `CFontDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CFontDialog::DoModal](#domodal)|Wyświetla okno dialogowe i umożliwia użytkownikowi dokonać wyboru.|
 |[CFontDialog::GetCharFormat](#getcharformat)|Pobiera formatowanie znaków w wybranej czcionki.|
@@ -78,7 +78,7 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CFontDialog::m_cf](#m_cf)|Struktury używane w celu dostosowania `CFontDialog` obiektu.|
 

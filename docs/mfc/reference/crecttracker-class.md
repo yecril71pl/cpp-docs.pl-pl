@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
 ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775689"
 ---
 # <a name="crecttracker-class"></a>Crecttracker — klasa
@@ -59,13 +59,13 @@ class CRectTracker
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRectTracker::CRectTracker](#crecttracker)|Konstruuje `CRectTracker` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRectTracker::AdjustRect](#adjustrect)|Wywołuje się, gdy zmieniany jest rozmiar prostokąta.|
 |[CRectTracker::Draw](#draw)|Renderuje prostokąta.|
@@ -81,7 +81,7 @@ class CRectTracker
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|Określa rozmiar uchwytami zmiany rozmiaru.|
 |[CRectTracker::m_nStyle](#m_nstyle)|Bieżący style(s) z obiektem śledzącym.|

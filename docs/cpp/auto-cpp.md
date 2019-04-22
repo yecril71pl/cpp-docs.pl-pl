@@ -8,10 +8,10 @@ helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776339"
 ---
 # <a name="auto-c"></a>Auto (C++)
@@ -52,7 +52,7 @@ Aby użyć **automatycznie** — słowo kluczowe, użyj zamiast typu, aby zadekl
 
 Wyrażenie inicjowania może być przypisanie (składnia znaku równości) inicjalizacji bezpośredniej (składni stylu funkcji) [nowy operator](new-operator-cpp.md) wyrażenie lub wyrażenie może być  *dla zakresu — deklaracja* parametru w [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) instrukcji. Aby uzyskać więcej informacji, zobacz [inicjatory](../cpp/initializers.md) i przykłady kodu w dalszej części tego dokumentu.
 
-**Automatycznie** — słowo kluczowe jest symbolem zastępczym dla typu, ale nie sam jest typem. W związku z tym **automatycznie** słów kluczowych nie można używać w rzutowania lub operatorów takich jak [sizeof](../cpp/sizeof-operator.md) i (C + +/ interfejsu wiersza polecenia) [typeid](../extensions/typeid-cpp-component-extensions.md).
+**Automatycznie** — słowo kluczowe jest symbolem zastępczym dla typu, ale nie sam jest typem. W związku z tym **automatycznie** słów kluczowych nie można używać w rzutowania lub operatorów takich jak [sizeof](../cpp/sizeof-operator.md) i (dla C++sposób niezamierzony) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Użyteczność
 
@@ -222,10 +222,10 @@ int main()
 ## <a name="see-also"></a>Zobacz także
 
 [Auto, słowo kluczowe](../cpp/auto-keyword.md)<br/>
-[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (Dedukuj typ zmiennej)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof, operator](../cpp/sizeof-operator.md)<br/>
-[TypeID](../extensions/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [nowy operator](new-operator-cpp.md)<br/>
 [Deklaracje i definicje](declarations-and-definitions-cpp.md)<br/>
 [Przykłady wyrażeń lambda](../cpp/examples-of-lambda-expressions.md)<br/>

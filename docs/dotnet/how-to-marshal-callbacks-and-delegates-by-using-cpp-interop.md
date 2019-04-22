@@ -11,10 +11,10 @@ helpviewer_keywords:
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
 ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766940"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Instrukcje: Kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++
@@ -27,7 +27,7 @@ Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/m
 
 Poniższy przykład pokazuje, jak skonfigurować niezarządzanego interfejsu API do wyzwolenia zarządzanych delegata. Zarządzane delegata jest tworzony i jednej z metod międzyoperacyjny <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, służy do pobierania podstawowego punktu wejścia dla delegata. Ten adres jest następnie przekazywany do niezarządzanej funkcji, który ją wywołuje nie znajomości fakt, że jest implementowana jako funkcji zarządzanej.
 
-Zwróć uwagę, że jest to możliwe, ale nie jest to konieczne, aby przypiąć delegata za pomocą [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) aby zapobiec jej się ponownie lub usuwane przez moduł odśmiecania pamięci. Konieczna jest ochrona z przedwczesne wyrzucania elementów bezużytecznych, ale przypinanie chroni więcej niż jest to konieczne, ponieważ zapobiega kolekcji, ale także zapobiega relokacji.
+Należy zauważyć, że jest to możliwe, ale nie jest to konieczne, aby przypiąć delegata za pomocą [pin_ptr (C++sposób niezamierzony)](../extensions/pin-ptr-cpp-cli.md) aby zapobiec jej się ponownie lub usuwane przez moduł odśmiecania pamięci. Konieczna jest ochrona z przedwczesne wyrzucania elementów bezużytecznych, ale przypinanie chroni więcej niż jest to konieczne, ponieważ zapobiega kolekcji, ale także zapobiega relokacji.
 
 Jeśli delegat znajduje się ponownie, wyrzucanie elementów bezużytecznych, nie wpłynie to wywołanie zwrotne underlaying zarządzane, dlatego <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> służy do dodawania odwołania do delegata, umożliwiając przenoszenia obiektu delegowanego, ale uniemożliwia usuwania. Za pomocą GCHandle — zamiast pin_ptr zmniejsza ryzyko fragmentację sterty zarządzanej.
 

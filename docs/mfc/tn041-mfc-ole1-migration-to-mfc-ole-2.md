@@ -14,10 +14,10 @@ helpviewer_keywords:
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
 ms.openlocfilehash: b398a1adbf2f47343eed076f32ade5bb2564cd52
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767980"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: MFC/Ole1 do MFC/OLE 2
@@ -291,7 +291,7 @@ W tym momencie OCLIENT jest funkcjonalności aplikacji kontenera OLE. Jest możl
 
 Jedną z najbardziej interesujących funkcji OLE jest aktywacja w miejscu (lub "Edycja wizualna"). Ta funkcja umożliwia aplikacji serwera do przejęcia części interfejsu użytkownika kontenera podać więcej edycji interfejs użytkownika. Aby zaimplementować aktywacji w miejscu do OCLIENT, specjalne zasoby, należy dodać oraz dodatkowy kod. Te zasoby i kod zwykle są dostarczane przez AppWizard — w rzeczywistości większość tutaj kod został pobierają bezpośrednio z nowej aplikacji przez kreatora AppWizard z obsługą "Container".
 
-Po pierwsze jest to konieczne, można dodać zasobu menu, który ma być używany, gdy istnieje element, który jest aktywny w miejscu. Kopiowanie zasobów IDR_OCLITYPE i usuwając wszystkie z wyjątkiem plików i okno wyskakujące okienka, można utworzyć tego zasobu dodatkowe menu w programie Visual C++. Dwa pasków separatorów są wstawiane do plików i okno wyskakujące okienka do wskazania rozdzielenie grup (powinien wyglądać podobnie jak: File &#124;&#124; Window). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener zobacz [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
+Po pierwsze jest to konieczne, można dodać zasobu menu, który ma być używany, gdy istnieje element, który jest aktywny w miejscu. Ten zasób dodatkowe menu można utworzyć w wizualizacji C++ Kopiowanie zasobów IDR_OCLITYPE i usuwając wszystkie z wyjątkiem plików i okno wyskakujące okienka. Dwa pasków separatorów są wstawiane do plików i okno wyskakujące okienka do wskazania rozdzielenie grup (powinien wyglądać podobnie jak: File &#124;&#124; Window). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener zobacz [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
 
 Po utworzeniu tych menu utworzone, możesz podać tę informację framework wiedzieć o nich. Jest to realizowane przez wywołanie `CDocTemplate::SetContainerInfo` dla szablonu dokumentu, aby można go dodać do listy szablonów dokumentów w elemencie InitInstance. Nowy kod, aby zarejestrować szablon dokumentu, który wygląda następująco:
 
@@ -307,7 +307,7 @@ pTemplate->SetContainerInfo(IDR_OLECLITYPE_INPLACE);
 AddDocTemplate(pTemplate);
 ```
 
-Zasób IDR_OLECLITYPE_INPLACE jest specjalnym zasobem w miejscu, utworzone w programie Visual C++.
+Zasób IDR_OLECLITYPE_INPLACE jest specjalnym zasobem w miejscu, utworzone w elemencie wizualnym C++.
 
 Aby włączyć aktywacji w miejscu, istnieją pewne elementy, które trzeba zmienić zarówno `CView` klasy pochodnej (CMainView), jak również `COleClientItem` klasy (CRectItem). Wszystkie te zastąpienia są dostarczane przez AppWizard, a większość implementacji pojawią się bezpośrednio z aplikacji przez kreatora AppWizard domyślne.
 
@@ -353,7 +353,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 
 W tym momencie jest wystarczająca ilość kodu, aby umożliwić element jest aktywowany w miejscu i zmiany rozmiaru i przenoszenie elementu, gdy będzie aktywny, ale żaden kod nie umożliwi użytkownikowi Zakończ sesję edycji. Mimo że niektóre serwery udostępni tę funkcję samodzielnie dzięki obsłudze klawisz escape, zaleca się, że kontenery zapewniają Dezaktywuj element na dwa sposoby: (1) klikając poza elementu i (2), naciskając klawisz ESC.
 
-Klawisz ESCAPE Dodaj akcelerator z programem Visual C++, która mapuje vk_escape — klawisz do polecenia, ID_CANCEL_EDIT jest dodawany do tych zasobów. Obsługa tego polecenia są następujące:
+Klawisz ESCAPE, Dodaj akcelerator z wizualizacją C++ mapujący vk_escape — klawisz do polecenia ID_CANCEL_EDIT jest dodawany do tych zasobów. Obsługa tego polecenia są następujące:
 
 ```cpp
 // The following command handler provides the standard
@@ -527,7 +527,7 @@ BOOL COLEServerApp::InitInstance()
 
 Zauważysz, że powyższy kod odwołuje się do nowych identyfikatorów zasobów, IDR_HIERSVRTYPE_SRVR_EMB. Jest to zasób menu do użycia podczas edycji dokumentu, który jest osadzony w innym kontenerze. W MFC/OLE1 określonych edytować element osadzony elementów menu zostały zmienione na bieżąco. Przy użyciu struktury menu zupełnie innego, podczas edytowania element osadzony zamiast edytowania dokumentu oparte na plikach w znacznie ułatwia zapewnia różnych interfejsów użytkownika dla te dwa różne tryby. Jak zobaczysz później, zasobu menu całkowicie oddzielona jest używany podczas edytowania osadzonego obiektu w miejscu.
 
-Do tworzenia tego zasobu, ładowania skrypt zasobów Visual C++, a następnie skopiować istniejący zasób IDR_HIERSVRTYPE w menu. Zmień nazwę nowego zasobu IDR_HIERSVRTYPE_SRVR_EMB (jest to tej samej konwencji nazewnictwa, która przez kreatora AppWizard używa). Następnie zmień "Zapisz" na "Aktualizuj plik"; Nadaj mu identyfikator id_file_update — polecenie. Również zmienić "Zapisz plik jako" do "Pliku Zapisz kopię jako"; Nadaj mu identyfikator id_file_save_copy_as — polecenie. Struktura dostarcza implementację oba te polecenia.
+Do tworzenia tego zasobu, należy załadować skrypt zasobu do wizualizacji C++ i skopiuj istniejący zasób IDR_HIERSVRTYPE w menu. Zmień nazwę nowego zasobu IDR_HIERSVRTYPE_SRVR_EMB (jest to tej samej konwencji nazewnictwa, która przez kreatora AppWizard używa). Następnie zmień "Zapisz" na "Aktualizuj plik"; Nadaj mu identyfikator id_file_update — polecenie. Również zmienić "Zapisz plik jako" do "Pliku Zapisz kopię jako"; Nadaj mu identyfikator id_file_save_copy_as — polecenie. Struktura dostarcza implementację oba te polecenia.
 
 ```Output
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations
@@ -644,7 +644,7 @@ Aby dodać "Edycja wizualna" (lub aktywacji w miejscu) do tej aplikacji, istniej
 
 - Musisz poinformować szablon o tych specjalnych zasobów i klas.
 
-Zasób menu jest łatwo jest tworzyć. Uruchom program Visual C++, Kopiuj zasób menu IDR_HIERSVRTYPE do zasobu menu o nazwie IDR_HIERSVRTYPE_SRVR_IP. Zmodyfikuj menu, tak, aby pozostało tylko edytowanie i pomocy menu wyskakujące okienka. Dodaj separatory, dwóch menu Between menu Edycja i pomocy (powinien wyglądać podobnie jak: Edytuj &#124; &#124; pomocy). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener, zobacz [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
+Zasób menu jest łatwo jest tworzyć. Uruchamianie wizualizacji C++, Kopiuj zasób menu IDR_HIERSVRTYPE do zasobu menu o nazwie IDR_HIERSVRTYPE_SRVR_IP. Zmodyfikuj menu, tak, aby pozostało tylko edytowanie i pomocy menu wyskakujące okienka. Dodaj separatory, dwóch menu Between menu Edycja i pomocy (powinien wyglądać podobnie jak: Edytuj &#124; &#124; pomocy). Aby uzyskać więcej informacji na temat znaczenie tych separatory i jak scalania menu serwer i kontener, zobacz [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
 
 Mapy bitowe dla paska narzędzi podzbioru można łatwo utworzyć przez skopiowanie jednego z nowej aplikacji wygenerowane przez kreatora AppWizard z zaznaczoną opcją "Server". Następnie można zaimportować tej mapy bitowej do Visual C++. Należy podać identyfikator IDR_HIERSVRTYPE_SRVR_IP mapy bitowej.
 

@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
 ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768695"
 ---
 # <a name="ctypedptrarray-class"></a>Ctypedptrarray — klasa
@@ -52,7 +52,7 @@ Typ elementów przechowywanych w tablicy klasy bazowej.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CTypedPtrArray::Add](#add)|Dodaje nowy element do końca tablicy. Powiększa się tablica, jeśli to konieczne|
 |[CTypedPtrArray::Append](#append)|Dodaje zawartość jednej tablicy do końca innej. Powiększa się tablica, jeśli to konieczne|
@@ -65,7 +65,7 @@ Typ elementów przechowywanych w tablicy klasy bazowej.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CTypedPtrArray::operator \[ \]](#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
 

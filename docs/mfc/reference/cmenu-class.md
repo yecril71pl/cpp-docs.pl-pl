@@ -85,10 +85,10 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770853"
 ---
 # <a name="cmenu-class"></a>Cmenu — klasa
@@ -105,13 +105,13 @@ class CMenu : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMenu::CMenu](#cmenu)|Konstruuje `CMenu` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|Dołącza nowy element do końca tego menu.|
 |[CMenu::Attach](#attach)|Dołącza Windows uchwyt menu, aby `CMenu` obiektu.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|Pobiera uchwyt obiekt menu.|
 |[CMenu::operator! =](#operator_neq)|Określa, czy dwa obiekty menu nie są równe.|
@@ -161,7 +161,7 @@ class CMenu : public CObject
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMenu::m_hMenu](#m_hmenu)|Określa dojścia do menu Windows dołączonych do `CMenu` obiektu.|
 

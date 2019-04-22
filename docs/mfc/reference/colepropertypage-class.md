@@ -39,10 +39,10 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
 ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776989"
 ---
 # <a name="colepropertypage-class"></a>Klasa COlePropertyPage
@@ -59,13 +59,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|Konstruuje `COlePropertyPage` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Wskazuje, czy użytkownik zmienił wartość w formancie.|
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|Zwraca tablicę obiektów edytowanych przez stronę właściwości.|

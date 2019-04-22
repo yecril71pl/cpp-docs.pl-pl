@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
 ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771355"
 ---
 # <a name="cdialog-class"></a>Cdialog — klasa
@@ -61,13 +61,13 @@ class CDialog : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDialog::CDialog](#cdialog)|Konstruuje `CDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDialog::Create](#create)|Inicjuje `CDialog` obiektu. Tworzy niemodalne okno dialogowe i dołącza je do `CDialog` obiektu.|
 |[CDialog::CreateIndirect](#createindirect)|Tworzy niemodalne okno dialogowe z szablonu okna dialogowego w pamięci (nie opartego na zasobach).|
@@ -86,7 +86,7 @@ class CDialog : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CDialog::OnCancel](#oncancel)|Należy przesłonić, aby wykonać przycisk anulowania lub działania kluczowych ESC. Domyślnie zamknięcie okna dialogowego i `DoModal` zwraca IDCANCEL.|
 |[CDialog::OnOK](#onok)|Przesłonięcie w celu wykonania akcji przycisku OK w modalne okno dialogowe. Domyślnie zamknięcie okna dialogowego i `DoModal` zwraca IDOK.|

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
 ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774818"
 ---
 # <a name="class-c"></a>klasa (C++)
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji na temat klas ogólnie rzecz biorąc, można sko
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Aby uzyskać informacje dotyczące zarządzanych klas i struktur w języku C + +/ CLI i C + +/ CX, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
+Aby uzyskać informacje dotyczące zarządzanych klas i struktur w C++sposób niezamierzony i C++/CX, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Przykład
 
@@ -143,5 +143,5 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

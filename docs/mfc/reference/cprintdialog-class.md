@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
 ms.openlocfilehash: 2a856c8067394e33976ba8ccdaa34be81ee11091
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771048"
 ---
 # <a name="cprintdialog-class"></a>Klasa CPrintDialog
@@ -61,13 +61,13 @@ class CPrintDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPrintDialog::CPrintDialog](#cprintdialog)|Konstruuje `CPrintDialog` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPrintDialog::CreatePrinterDC](#createprinterdc)|Tworzy kontekst urządzenia drukarki, bez wyświetlania okna dialogowego drukowania.|
 |[CPrintDialog::DoModal](#domodal)|Zostanie wyświetlone okno dialogowe i umożliwia użytkownikowi dokonać wyboru.|
@@ -87,7 +87,7 @@ class CPrintDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CPrintDialog::m_pd](#m_pd)|Struktury używane w celu dostosowania `CPrintDialog` obiektu.|
 

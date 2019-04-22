@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
 ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772767"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Przy użyciu wielu plików zasobów i plików nagłówków z programem Visual C++
@@ -286,7 +286,7 @@ Visual C++ obchodzi zależność od ZASOBU. H przez dołączenie poniższego kom
 
 Środowisko programistyczne interpretuje ten komentarz, ignorując zmiany w ZASOBIE. Godz. Dlatego zależne. Plikach CPP nie trzeba ponownie skompilowana.
 
-Visual C++ zawsze dodaje //{{NO_DEPENDENCIES}} komentarz wiersz. Plik RC podczas zapisywania pliku. W niektórych przypadkach obejście zależności kompilacji dla ZASOBU. H może prowadzić do błędów czasu wykonywania niewykrytych w czasie. Na przykład, jeśli używasz przeglądarki symboli można zmienić wartości numerycznej przypisanej do symbolu dla zasobu, zasób będzie nie być poprawnie znaleziono i ładowany w przypadku czasu wykonywania aplikacji. Plik CPP odwołujące się do zasobu nie jest ponownie kompilowana. W takich przypadkach należy jawnie zrekompilować żadnego. Plikach CPP, które mają wpływ zmiany symboli w ZASOBACH. H lub wybierz **Kompiluj wszystko ponownie**. Jeśli potrzebujesz często zmieniać wartości symboli dla określonej grupy zasobów, prawdopodobnie znajdziesz go bardziej wygodne i bezpieczniejsze umożliwiające rozbicie tych symboli w pliku oddzielne nagłówkowych tylko do odczytu, zgodnie z opisem w powyższej sekcji [łącznie Dodatkowych plików nagłówkowych](#_mfcnotes_tn035_including).
+Wizualne C++ zawsze dodaje //{{NO_DEPENDENCIES}} komentarz wiersz. Plik RC podczas zapisywania pliku. W niektórych przypadkach obejście zależności kompilacji dla ZASOBU. H może prowadzić do błędów czasu wykonywania niewykrytych w czasie. Na przykład, jeśli używasz przeglądarki symboli można zmienić wartości numerycznej przypisanej do symbolu dla zasobu, zasób będzie nie być poprawnie znaleziono i ładowany w przypadku czasu wykonywania aplikacji. Plik CPP odwołujące się do zasobu nie jest ponownie kompilowana. W takich przypadkach należy jawnie zrekompilować żadnego. Plikach CPP, które mają wpływ zmiany symboli w ZASOBACH. H lub wybierz **Kompiluj wszystko ponownie**. Jeśli potrzebujesz często zmieniać wartości symboli dla określonej grupy zasobów, prawdopodobnie znajdziesz go bardziej wygodne i bezpieczniejsze umożliwiające rozbicie tych symboli w pliku oddzielne nagłówkowych tylko do odczytu, zgodnie z opisem w powyższej sekcji [łącznie Dodatkowych plików nagłówkowych](#_mfcnotes_tn035_including).
 
 ## <a name="_mfcnotes_tn035_set_includes"></a> Jak Visual C++ zarządza zestaw zawiera informacje o **
 
@@ -364,7 +364,7 @@ Dyrektywy czasu kompilacji są umieszczane na końcu MYAPP. RC w następującej 
 #endif  // not APSTUDIO_INVOKED
 ```
 
-Dyrektywa #ifndef APSTUDIO_INVOKED nakazuje językowi Visual C++ pominąć dyrektywy czasu kompilacji.
+Dyrektywa #ifndef APSTUDIO_INVOKED nakazuje Visual C++ pominąć dyrektywy czasu kompilacji.
 
 Odpowiedni zasób TEXTINCLUDE to:
 

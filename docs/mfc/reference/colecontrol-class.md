@@ -335,10 +335,10 @@ helpviewer_keywords:
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
 ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771503"
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Tworzy `COleControl` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Pobiera bieżący wygląd formantu.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Zwraca wartość właściwości BackColor otoczenia.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Wywoływane przez platformę, gdy musi zostać zaktualizowany wygląd formantu.|
 |[COleControl::DrawMetafile](#drawmetafile)|Wywoływane przez platformę, gdy jest używane w kontekście urządzenia metaplików.|

@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774186"
 ---
 # <a name="cdocument-class"></a>Klasa CDocument
@@ -753,7 +753,7 @@ virtual void OnDrawThumbnail(
 
 ### <a name="parameters"></a>Parametry
 
-*Kontroler domeny*<br/>
+*dc*<br/>
 Odwołanie do kontekstu urządzenia.
 
 *lprcBounds*<br/>
@@ -1070,7 +1070,7 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Parametry
 
-*Guid*<br/>
+*Identyfikator GUID*<br/>
 Określa identyfikator GUID fragment, który ma zostać usunięty.
 
 *Identyfikator PID*<br/>
@@ -1257,8 +1257,8 @@ Ta funkcja wywołuje [CView::OnUpdate](../../mfc/reference/cview-class.md#onupda
 [Próbki MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Próbki MFC NPP](../../overview/visual-cpp-samples.md)<br/>
-[CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Cview — klasa](../../mfc/reference/cview-class.md)<br/>
-[CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)
+[Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
+[Klasa CView](../../mfc/reference/cview-class.md)<br/>
+[Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)

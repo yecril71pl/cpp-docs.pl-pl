@@ -1,20 +1,20 @@
 ---
-title: 'Instrukcje: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)'
+title: 'Instrukcje: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774922"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Instrukcje: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Instrukcje: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)
 
-W tym artykule pokazano, jak definiowanie oraz stosowanie typy odwołań zdefiniowanych przez użytkownika i typów wartości w języku C + +/ interfejsu wiersza polecenia.
+W tym artykule pokazano, jak definiowanie oraz stosowanie typy odwołań zdefiniowanych przez użytkownika i typów wartości w C++sposób niezamierzony.
 
 ##  <a name="BKMK_Contents"></a> Zawartość
 
@@ -165,7 +165,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 in Public_Class
@@ -212,7 +212,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 in Public_Class
@@ -227,7 +227,7 @@ Ta tabela zawiera podsumowanie wpływu różnych specyfikatory dostępu:
 |Specyfikator|Efekt|
 |---------------|------------|
 |public|Element członkowski jest dostępny i spoza zestawu.  Zobacz [publicznych](../cpp/public-cpp.md) Aby uzyskać więcej informacji.|
-|prywatna|Element członkowski jest niedostępny, wewnątrz ani spoza zestawu.  Zobacz [prywatnej](../cpp/private-cpp.md) Aby uzyskać więcej informacji.|
+|private|Element członkowski jest niedostępny, wewnątrz ani spoza zestawu.  Zobacz [prywatnej](../cpp/private-cpp.md) Aby uzyskać więcej informacji.|
 |protected|Element członkowski jest dostępny, wewnątrz lub na spoza zestawu, ale tylko dla typów pochodnych.  Zobacz [chronione](../cpp/protected-cpp.md) Aby uzyskać więcej informacji.|
 |internal|Element członkowski jest publiczna w zestawie, ale prywatnej spoza zestawu.  `internal` jest kontekstowej słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [Context-Sensitive Keywords](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |publiczne chronionych - lub - chronione publiczne|Element członkowski jest publiczna w zestawie, którzy są chronieni spoza zestawu.|
@@ -296,7 +296,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 in Public_Function
@@ -393,7 +393,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 in Public_Function
@@ -455,7 +455,7 @@ Kompilator nie wbudowanego wywołanie konstruktora, jeśli klasa ma Konstruktor 
 
 Umożliwia definiowanie statycznego konstruktora jako funkcja prywatnego elementu członkowskiego, ponieważ oznaczało to ma zostać wywołana tylko przez środowisko CLR.
 
-Aby uzyskać więcej informacji na temat konstruktorów statycznych, zobacz [jak: Definiowanie statycznego konstruktora interfejsu (C + +/ CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Aby uzyskać więcej informacji na temat konstruktorów statycznych, zobacz [jak: Definiowanie statycznego konstruktora interfejsu (C++sposób niezamierzony)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr
@@ -483,7 +483,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 in static constructor
@@ -539,7 +539,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 10.89
@@ -582,7 +582,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 Base::Test
@@ -613,7 +613,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 Derived::Test2
@@ -647,7 +647,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 Derived::Test4
@@ -701,7 +701,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 S object 0 being constructed, this=0018F378

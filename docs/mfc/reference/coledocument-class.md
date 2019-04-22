@@ -53,10 +53,10 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
 ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768708"
 ---
 # <a name="coledocument-class"></a>COleDocument Class
@@ -73,13 +73,13 @@ class COleDocument : public CDocument
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|Konstruuje `COleDocument` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleDocument::AddItem](#additem)|Dodaje element do listy elementów utrzymane w dokumencie.|
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|Ustawia print-urządzenie dla wszystkich elementów klienta w dokumencie.|
@@ -97,7 +97,7 @@ class COleDocument : public CDocument
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Obsługuje zdarzenia w poleceniu menu Zmień ikonę.|
 |[COleDocument::OnEditConvert](#oneditconvert)|Obsługuje konwersji obiekt osadzony lub połączony z jednego typu na inny.|

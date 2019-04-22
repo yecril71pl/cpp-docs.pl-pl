@@ -107,10 +107,10 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
 ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775897"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
@@ -602,7 +602,7 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Towaru*<br/>
+*iItem*<br/>
 [in] Indeks elementu menu do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1084,6 +1084,6 @@ Jeśli menu nie są wyświetlane wszystkie polecenia menu, powoduje ukrycie opcj
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)

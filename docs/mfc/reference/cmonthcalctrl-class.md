@@ -91,10 +91,10 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777171"
 ---
 # <a name="cmonthcalctrl-class"></a>Klasa CMonthCalCtrl
@@ -226,10 +226,10 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Określa kombinację style Windows, które dotyczą kontrolki kalendarza miesięcznego. Zobacz [style kontrolki kalendarza miesięcznego](/windows/desktop/Controls/month-calendar-control-styles) w zestawie SDK Windows, aby uzyskać więcej informacji o stylach.
 
-*rect*<br/>
+*Rect*<br/>
 Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury. Zawiera położenie i rozmiar kontrolki kalendarza miesięcznego.
 
-*pt*<br/>
+*(czas pacyficzny)*<br/>
 Odwołanie do [punktu](/previous-versions/dd162805\(v=vs.85\)) strukturę, która określa lokalizację formant kalendarza miesięcznego.
 
 *pParentWnd*<br/>
@@ -584,7 +584,7 @@ Wskaźnik do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemti
 *pMaxRange*<br/>
 Wskaźnik do `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Wartość określająca zakres limitów zasięgu, które mają zostać pobrane. Ta wartość musi być jedną z następujących czynności.
 
 |Wartość|Znaczenie|
@@ -862,7 +862,7 @@ BOOL SetCalID(CALID calid);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*ID_kalendarza*|[in] Jedną z [identyfikator kalendarza](/windows/desktop/Intl/calendar-identifiers) stałe.|
+|*calid*|[in] Jedną z [identyfikator kalendarza](/windows/desktop/Intl/calendar-identifiers) stałe.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>Parametry
 
-*nmaks.*<br/>
+*nMax*<br/>
 Wartość, która zostanie ustawiona do reprezentowania maksymalną liczbę dni można wybierać.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1304,7 +1304,7 @@ Ta metoda wysyła [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerecttomi
 
 ## <a name="see-also"></a>Zobacz także
 
-[CMNCTRL1 próbki MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)

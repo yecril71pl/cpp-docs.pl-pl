@@ -55,10 +55,10 @@ helpviewer_keywords:
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
 ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775949"
 ---
 # <a name="cimage-class"></a>CImage, klasa
@@ -78,13 +78,13 @@ class CImage
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CImage::CImage](#cimage)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CImage::AlphaBlend](#alphablend)|Wyświetla mapy bitowe, które mają przezroczyste lub półprzezroczystych pikseli.|
 |[CImage::Attach](#attach)|Dołącza HBITMAP do `CImage` obiektu. Może służyć za pomocą mapy bitowe sekcji bez DIB lub mapy bitowe sekcji DIB.|
@@ -128,7 +128,7 @@ class CImage
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[HBITMAP CImage::operator](#operator_hbitmap)|Zwraca uchwyt Windows dołączonych do `CImage` obiektu.|
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
 ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772426"
 ---
 # <a name="user-defined-conversions-ccli"></a>Konwersje zdefiniowane przez użytkownika (C++/CLI)
@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 in N::N
@@ -133,7 +133,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 in operator
@@ -168,7 +168,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 10
@@ -197,7 +197,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 10.3
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 True
@@ -267,7 +267,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 5
@@ -310,7 +310,7 @@ int main() {
 }
 ```
 
-**Dane wyjściowe**
+**Output**
 
 ```Output
 13

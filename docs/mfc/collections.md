@@ -18,10 +18,10 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767187"
 ---
 # <a name="collections"></a>Kolekcje
@@ -41,7 +41,7 @@ Klasa kolekcji jest określony przez jego "kształt" i typów elementów. Kszta�
 
 Każdy z trzech kształtów w określonej kolekcji opisano skrótowo w dalszej części tego tematu. Aby porównać funkcje kształty, aby pomóc w podjęciu decyzji, co jest najlepsze dla Twojego programu, zobacz [zalecenia dotyczące wybierania klasy kolekcji](../mfc/recommendations-for-choosing-a-collection-class.md).
 
-- List
+- Lista
 
    Klasa listy udostępnia uporządkowana lista nieindeksowanych elementów, zaimplementowane jako podwójnie połączoną listą. Lista "head" i "tail" i jest bardzo szybkie dodawanie lub usuwanie elementów, head lub ogona, lub wstawiania lub usuwania elementów w środku.
 
@@ -61,7 +61,7 @@ W poniższej tabeli wymieniono klasy kolekcji oparte na szablonach MFC.
 
 ### <a name="collection-template-classes"></a>Kolekcja klas szablonów
 
-|Zawartość kolekcji|Tablice|Listy|Maps|
+|Zawartość kolekcji|Tablice|Listy|Mapy|
 |-------------------------|------------|-----------|----------|
 |Kolekcje obiektów dowolnego typu|`CArray`|`CList`|`CMap`|
 |Kolekcje wskaźników do obiektów dowolnego typu|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
@@ -72,7 +72,7 @@ Jeśli aplikacja już korzysta z klasy nieszablonu MFC, można nadal z nich korz
 
 ### <a name="nontemplate-collection-classes"></a>Klasy kolekcji nieszablonu
 
-|Tablice|Listy|Maps|
+|Tablice|Listy|Mapy|
 |------------|-----------|----------|
 |`CObArray`|`CObList`|`CMapPtrToWord`|
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|

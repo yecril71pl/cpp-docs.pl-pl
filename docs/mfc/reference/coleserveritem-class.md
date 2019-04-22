@@ -75,10 +75,10 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777379"
 ---
 # <a name="coleserveritem-class"></a>Klasa COleServerItem
@@ -95,13 +95,13 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleServerItem::COleServerItem](#coleserveritem)|Konstruuje `COleServerItem` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Umieszcza prezentacji i konwersji formatów w `COleDataSource` obiektu.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Kopiuje element do Schowka.|
@@ -134,7 +134,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleServerItem::GetDataSource](#getdatasource)|Pobiera obiekt używany do przechowywania konwersji formatów.|
 |[COleServerItem::OnHide](#onhide)|Metoda wywoływana przez platformę, by ukryć element OLE.|
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|Informuje serwer o tym, ile elementu OLE jest widoczny.|
 

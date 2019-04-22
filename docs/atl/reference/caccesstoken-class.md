@@ -53,10 +53,10 @@ helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
 ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772192"
 ---
 # <a name="caccesstoken-class"></a>Klasa CAccessToken
@@ -76,13 +76,13 @@ class CAccessToken
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CAccessToken::~CAccessToken](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CAccessToken::Attach](#attach)|Wywołaj tę metodę, aby przejąć prawo własności uchwyt token dostęp.|
 |[CAccessToken::CheckTokenMembership](#checktokenmembership)|Wywołaj tę metodę w celu określenia, czy określony identyfikator SID jest włączone w `CAccessToken` obiektu.|

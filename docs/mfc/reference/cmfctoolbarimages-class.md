@@ -141,10 +141,10 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776417"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
@@ -473,7 +473,7 @@ BOOL Draw(
 *x*<br/>
 [in] Współrzędna X po lewej stronie prostokąt, w którym ma zostać narysowany obraz.
 
-*t*<br/>
+*y*<br/>
 [in] Współrzędna Y górnej krawędzi prostokąta, w której ma zostać narysowany obraz.
 
 *iImageIndex*<br/>
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Współrzędne prostokąta do wypełnienia.
 
 ### <a name="remarks"></a>Uwagi
@@ -1383,7 +1383,7 @@ Wartość TRUE, jeśli zmiana rozmiaru zakończy się pomyślnie; w przeciwnym r
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>

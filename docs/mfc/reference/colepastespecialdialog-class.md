@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776911"
 ---
 # <a name="colepastespecialdialog-class"></a>Klasa COlePasteSpecialDialog
@@ -214,7 +214,7 @@ COlePasteSpecialDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*<br/>
+*dwFlags*<br/>
 Flagi tworzenia zawiera dowolną liczbę następujące flagi, które są połączone za pomocą operatora bitowego OR:
 
 - PSF_SELECTPASTE Określa, że przycisk radiowy Wklej będą sprawdzane początkowo, gdy okno dialogowe jest wywoływana. Nie można używać w połączeniu z PSF_SELECTPASTELINK. Domyślnie włączone.
@@ -385,5 +385,5 @@ Aby uzyskać więcej informacji, zobacz [OLEUIPASTESPECIAL](/windows/desktop/api
 
 [Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)

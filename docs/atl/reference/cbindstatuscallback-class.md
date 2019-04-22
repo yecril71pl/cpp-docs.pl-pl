@@ -30,10 +30,10 @@ helpviewer_keywords:
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
 ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773128"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback Class
@@ -64,14 +64,14 @@ Określa flagi powiązania, które są zwracane przez [GetBindInfo](#getbindinfo
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Konstruktor.|
 |[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBindStatusCallback::Download](#download)|Tworzy metodę statyczną, która rozpoczyna się proces pobierania `CBindStatusCallback` obiektu i wywołania `StartAsyncDownload`.|
 |[CBindStatusCallback::GetBindInfo](#getbindinfo)|Metoda wywoływana przez asynchroniczne moniker na żądanie informacji od typu powiązania ma zostać utworzony.|
@@ -86,7 +86,7 @@ Określa flagi powiązania, które są zwracane przez [GetBindInfo](#getbindinfo
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Liczba bajtów dostępnych do odczytu.|
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Całkowita liczba bajtów do odczytu.|

@@ -17,10 +17,10 @@ helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
 ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772833"
 ---
 # <a name="ctokengroups-class"></a>Klasa CTokenGroups
@@ -40,14 +40,14 @@ class CTokenGroups
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Konstruktor.|
 |[CTokenGroups::~CTokenGroups](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CTokenGroups::Add](#add)|Dodaje `CSid` lub istniejące `TOKEN_GROUPS` struktury do `CTokenGroups` obiektu.|
 |[CTokenGroups::Delete](#delete)|Usuwa `CSid` i jego atrybuty skojarzone z `CTokenGroups` obiektu.|
@@ -60,7 +60,7 @@ class CTokenGroups
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CTokenGroups::operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|Rzutowania `CTokenGroups` obiektu na wskaźnik do `TOKEN_GROUPS` struktury.|
 |[CTokenGroups::operator =](#operator_eq)|Operator przypisania.|

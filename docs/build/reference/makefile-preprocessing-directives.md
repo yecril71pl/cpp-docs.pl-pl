@@ -56,11 +56,11 @@ Dyrektywy przetwarzania wstępnego nie jest uwzględniana wielkość liter. Pier
 
    Tylko /D / po, /N i /S mogą być używane w pliku reguł programu make. W Tools.ini, wszystkie opcje są dozwolone z wyjątkiem /F, / Help, / nologo, / X, a /?. Zmiany określony w bloku opis wprowadzone do czasu kolejnego bloku opisu. Ta dyrektywa aktualizuje **MAKEFLAGS**; zmiany są dziedziczone podczas rekursji, jeśli **MAKEFLAGS** jest określony.
 
-- **! Błąd***tekstu*
+- **! Błąd** *tekstu*
 
    Wyświetla *tekstu* w błąd U1050, a następnie zostanie zatrzymana NMAKE, nawet wtedy, gdy /K, / I **. Ignoruj**, **! CMDSWITCHES**, lub jest używany modyfikator polecenia kreski (-). Spacje lub tabulatory przed *tekstu* są ignorowane.
 
-- **! KOMUNIKAT***tekstu*
+- **! KOMUNIKAT** *tekstu*
 
    Wyświetla *tekst* do wyjścia standardowego. Spacje lub tabulatory przed *tekstu* są ignorowane.
 
@@ -72,11 +72,11 @@ Dyrektywy przetwarzania wstępnego nie jest uwzględniana wielkość liter. Pier
 
    Przetwarza instrukcje między **! Jeśli** , a następnie **! ELSE** lub **! ENDIF** Jeśli *constant_expression* ma wartość różną od zera.
 
-- **! IFDEF***makra*
+- **! IFDEF** *makra*
 
    Przetwarza instrukcje między **! IFDEF** , a następnie **! ELSE** lub **! ENDIF** Jeśli *makra* jest zdefiniowana. Null — makro jest uważany za można zdefiniować.
 
-- **! IFNDEF***makra*
+- **! IFNDEF** *makra*
 
    Przetwarza instrukcje między **! IFNDEF** , a następnie **! ELSE** lub **! ENDIF** Jeśli *makra* nie został zdefiniowany.
 
@@ -100,7 +100,7 @@ Dyrektywy przetwarzania wstępnego nie jest uwzględniana wielkość liter. Pier
 
    Oznacza koniec **! Jeśli**, **! IFDEF**, lub **! IFNDEF** bloku. Dowolny tekst po **! ENDIF** jest ignorowane w tym samym wierszu.
 
-- **! UNDEF***makra*
+- **! UNDEF** *makra*
 
    Jedno anulowanie definicji *makra*.
 

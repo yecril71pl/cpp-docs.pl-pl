@@ -195,10 +195,10 @@ helpviewer_keywords:
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
 ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777288"
 ---
 # <a name="chtmlview-class"></a>Klasa CHtmlView
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CHtmlView::Create](#create)|Tworzy formant WebBrowser.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Overridable użyty do utworzenia wystąpienia witryny formantu do hostowania formantu w formularzu.|
@@ -1507,7 +1507,7 @@ virtual void OnNewWindow2(
 *ppDisp*<br/>
 Wskaźnik do wskaźnika interfejsu, który opcjonalnie odbiera `IDispatch` wskaźnika interfejsu tego nowy obiekt WebBrowser lub Internet Explorer.
 
-*Cancel*<br/>
+*Anulowanie*<br/>
 Wskaźnik flagi anulowania. Aplikacja możne ustawić ten parametr na wartość różną od zera, aby anulować operację nawigacji lub równą zero, aby zezwalała na kontynuować.
 
 ### <a name="remarks"></a>Uwagi

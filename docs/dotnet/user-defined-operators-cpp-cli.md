@@ -5,10 +5,10 @@ helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
 ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774571"
 ---
 # <a name="user-defined-operators-ccli"></a>Operatory zdefiniowane przez użytkownika (C++/CLI)
@@ -36,31 +36,31 @@ Można zdefiniować następujące operatory:
 |Operator|Formularze jedno/dwuargumentowy?|
 |--------------|--------------------------|
 |!|Jednoargumentowy|
-|!=|Binarny|
-|%|Binarny|
+|!=|plików binarnych|
+|%|plików binarnych|
 |&|Jednoargumentowy i danych binarnych|
-|&&|Binarny|
+|&&|plików binarnych|
 |*|Jednoargumentowy i danych binarnych|
 |+|Jednoargumentowy i danych binarnych|
 |++|Jednoargumentowy|
-|, |Binarny|
+|,|plików binarnych|
 |-|Jednoargumentowy i danych binarnych|
 |--|Jednoargumentowy|
 |->|Jednoargumentowy|
-|/|Binarny|
-|<|Binarny|
-|<<|Binarny|
-|\<=|Binarny|
-|=|Binarny|
-|==|Binarny|
-|>|Binarny|
-|>=|Binarny|
-|>>|Binarny|
-|^|Binarny|
+|/|plików binarnych|
+|<|plików binarnych|
+|<<|plików binarnych|
+|\<=|plików binarnych|
+|=|plików binarnych|
+|==|plików binarnych|
+|>|plików binarnych|
+|>=|plików binarnych|
+|>>|plików binarnych|
+|^|plików binarnych|
 |false|Jednoargumentowy|
 |true|Jednoargumentowy|
-|&#124;|Binarny|
-|&#124;&#124;|Binarny|
+|&#124;|plików binarnych|
+|&#124;&#124;|plików binarnych|
 |~|Jednoargumentowy|
 
 ## <a name="example"></a>Przykład

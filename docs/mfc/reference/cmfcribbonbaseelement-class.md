@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773076"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement Class
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*— typ*<br/>
+*type*<br/>
 [in] Typ obrazu wyliczany wartości. Zobacz sekcję Spostrzeżenia, aby listę możliwych wartości.
 
 *rectImage*<br/>
@@ -1587,7 +1587,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 
 ### <a name="parameters"></a>Parametry
 
-*QAT*<br/>
+*qat*<br/>
 [in] Pasek narzędzi Szybki dostęp.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1700,7 +1700,7 @@ virtual void OnDrawKeyTip(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt granic dla poradę dotyczącą klawiszy.
 
 *bIsMenu*<br/>
@@ -1723,7 +1723,7 @@ virtual BOOL OnDrawMenuImage(
 *pDC*<br/>
 [in] Wskaźnik do kontekstu urządzenia.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Menu obrazu prostokąt.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1757,7 +1757,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.
 
-*rect*<br/>
+*Rect*<br/>
 [in] Prostokąt wyświetlaną dla elementu wstążki.
 
 *bIsSelected*<br/>
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 W oknie nadrzędnym elementem wstążki.
 
-*dane*<br/>
+*data*<br/>
 Dane ułatwień dostępu dla elementu wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2135,7 +2135,7 @@ void SetRect(CRect rect);
 
 ### <a name="parameters"></a>Parametry
 
-*rect*<br/>
+*Rect*<br/>
 [in] Wymiary prostokąta.
 
 ### <a name="remarks"></a>Uwagi
@@ -2275,5 +2275,5 @@ Wartość TRUE, jeśli element wstążki ma fokus; w przeciwnym razie wartość 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)
