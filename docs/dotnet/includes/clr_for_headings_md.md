@@ -1,1 +1,0 @@
-środowiska uruchomieniowe w trakcie wykonania

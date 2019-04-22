@@ -1,1 +1,0 @@
-Środowisko wykonawcze systemu Windows
