@@ -25,10 +25,10 @@ helpviewer_keywords:
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
 ms.openlocfilehash: a3ab63206ce7ac53ff996ecf1bb64bdaa0b79fcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031689"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP — Klasa
@@ -72,12 +72,12 @@ Tablica typu [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class
 |||
 |-|-|
 |[Fire_OnFieldChange](#onfieldchange)|Powiadamia klientów zmiany wartości kolumny.|
-|[Fire_onrowchange —](#onrowchange)|Powiadamia klientów zmiany wpływające na wiersze.|
+|[Fire_OnRowChange](#onrowchange)|Powiadamia klientów zmiany wpływające na wiersze.|
 |[Fire_OnRowsetChange](#onrowsetchange)|Powiadamia klientów zmiany wpływające na cały zestaw wierszy.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IRowsetNotifyCP` Implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy.
+`IRowsetNotifyCP` implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy.
 
 Należy zauważyć, że należy również wdrożyć i zarejestrować `IRowsetNotify` na odbiorcę (znany także jako "obiekt sink"), za pomocą [irowsetnotifyimpl —](../../data/oledb/irowsetnotifyimpl-class.md) , dzięki czemu użytkownik może obsługiwać powiadomienia. Zobacz [odbieranie powiadomień](../../data/oledb/receiving-notifications.md) dotyczących implementowania interfejsu punktu połączenia na odbiorcy.
 

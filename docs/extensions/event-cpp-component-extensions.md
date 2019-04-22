@@ -1,5 +1,5 @@
 ---
-title: zdarzenia (C + +/ CLI i C + +/ CX)
+title: zdarzenia (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
 ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033091"
 ---
-# <a name="event--ccli-and-ccx"></a>zdarzenia (C + +/ CLI i C + +/ CX)
+# <a name="event--ccli-and-ccx"></a>zdarzenia (C++sposób niezamierzony i C++/CX)
 
 **Zdarzeń** deklaruje — słowo kluczowe *zdarzeń*, czyli powiadomienia do subskrybentów zarejestrowany (*procedury obsługi zdarzeń*) która jest przeprowadzana w stanie się coś istotnego.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-C + +/ CX obsługuje deklarowania *składowej zdarzenia* lub *bloku zdarzeń*. Element członkowski zdarzenia jest skrótem do deklarowania bloku zdarzeń. Domyślnie deklaruje element członkowski zdarzenia `add()`, `remove()`, i `raise()` funkcje, które są jawnie zadeklarowane w bloku zdarzeń. Aby dostosować funkcje w element członkowski zdarzenia, zamiast deklarowania bloku zdarzeń, a następnie zastąpić funkcje, których potrzebujesz.
+C++/CX obsługuje deklarowania *składowej zdarzenia* lub *bloku zdarzeń*. Element członkowski zdarzenia jest skrótem do deklarowania bloku zdarzeń. Domyślnie deklaruje element członkowski zdarzenia `add()`, `remove()`, i `raise()` funkcje, które są jawnie zadeklarowane w bloku zdarzeń. Aby dostosować funkcje w element członkowski zdarzenia, zamiast deklarowania bloku zdarzeń, a następnie zastąpić funkcje, których potrzebujesz.
 
 ### <a name="syntax"></a>Składnia
 
@@ -40,19 +40,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-* — modyfikator*<br/>
+*modifier*<br/>
 Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.
 
 *delegate*<br/>
 [Delegować](delegate-cpp-component-extensions.md), którego podpis programu obsługi zdarzeń muszą być zgodne.
 
-*event_name*<br/>
+*nazwa_zdarzenia*<br/>
 Nazwa zdarzenia.
 
 *return_value*<br/>
 Wartość zwracaną metody dostępu zdarzeń.  Jako możliwe do zweryfikowania, zwracanym typem musi być **void**.
 
-*parametry*<br/>
+*parameters*<br/>
 (opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.
 
 ### <a name="remarks"></a>Uwagi
@@ -75,7 +75,7 @@ Możesz użyć **+= operatory** i **operator-=** do dodawania i usuwania zdarzen
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [zdarzenia (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Aby uzyskać więcej informacji, zobacz [zdarzenia (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
 
 Jeśli zamierzasz dodać, a następnie usuń procedurę obsługi zdarzeń, musisz najpierw zapisać struktury EventRegistrationToken, który jest zwracany przez operacji dodawania. Następnie w operacji usuwania, należy użyć zapisanych struktury EventRegistrationToken do identyfikowania programu obsługi zdarzeń do usunięcia.
 
@@ -104,19 +104,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-* — modyfikator*<br/>
+*modifier*<br/>
 Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.
 
 *delegate*<br/>
 [Delegować](delegate-cpp-component-extensions.md), którego podpis programu obsługi zdarzeń muszą być zgodne.
 
-*event_name*<br/>
+*nazwa_zdarzenia*<br/>
 Nazwa zdarzenia.
 
 *return_value*<br/>
 Wartość zwracaną metody dostępu zdarzeń.  Jako możliwe do zweryfikowania, zwracanym typem musi być **void**.
 
-*parametry*<br/>
+*parameters*<br/>
 (opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.
 
 ### <a name="remarks"></a>Uwagi
@@ -161,7 +161,7 @@ Poniższe kroki należy podjąć w celu tworzenia i używania zdarzenia w progra
 
    - Utwórz obiekt klasy, która zawiera definicji zdarzeń.
 
-Aby uzyskać więcej informacji na temat języka C + +/ CLI zdarzenia, zobacz
+Aby uzyskać więcej informacji na temat C++/zdarzenia interfejsu wiersza polecenia, zobacz
 
 - [Zdarzenia w interfejsie](../dotnet/how-to-use-events-in-cpp-cli.md)
 
@@ -272,4 +272,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

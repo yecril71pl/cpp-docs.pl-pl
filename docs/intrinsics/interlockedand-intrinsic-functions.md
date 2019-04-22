@@ -57,15 +57,15 @@ helpviewer_keywords:
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
 ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033323"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedand
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Używane do wykonywania bitowe AND operacją niepodzielną na zmiennej współużytkowane przez wiele wątków.
 
@@ -225,7 +225,7 @@ int main()
 0xff00 0xffff00 0xff00ff00
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

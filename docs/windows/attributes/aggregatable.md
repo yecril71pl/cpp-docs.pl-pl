@@ -7,10 +7,10 @@ helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
 ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029294"
 ---
 # <a name="aggregatable"></a>aggregatable
@@ -72,7 +72,7 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -81,7 +81,7 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregacji](/windows/desktop/com/aggregation)
+[Agregacja](/windows/desktop/com/aggregation)

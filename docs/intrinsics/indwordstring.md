@@ -9,15 +9,15 @@ helpviewer_keywords:
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
 ms.openlocfilehash: 6f50aed8e6efe3b0b0a6e7eaebef5719475463ea
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027873"
 ---
 # <a name="indwordstring"></a>__indwordstring
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Odczytuje dane z określonego portu przy użyciu `rep insd` instrukcji.
 
@@ -39,7 +39,7 @@ void __indwordstring(
 *Bufor*<br/>
 [out] Dane odczytywane z portu są zapisywane w tym miejscu.
 
-*Licznik*<br/>
+*Liczba*<br/>
 [in] Liczba bajtów danych do odczytu.
 
 ## <a name="requirements"></a>Wymagania
@@ -54,7 +54,7 @@ void __indwordstring(
 
 Ta procedura jest dostępna wyłącznie jako wewnętrzna.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

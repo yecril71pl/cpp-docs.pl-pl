@@ -9,10 +9,10 @@ helpviewer_keywords:
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
 ms.openlocfilehash: 2fb91365fec0709e1bb2a26afa519e6565862681
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031459"
 ---
 # <a name="session-object-interfaces"></a>Interfejsy obiektu sesji
@@ -22,14 +22,14 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 |Interface|Wymagany?|Implementowany przez Szablony OLE DB?|
 |---------------|---------------|--------------------------------------|
 |[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))|Obowiązkowy|Tak|
-|[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))|Obowiązkowy|Tak|
-|[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))|Obowiązkowy|Yes|
+|[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))|Obowiązkowy|Yes|
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))|Obowiązkowy|Tak|
 |[IAlterIndex](/previous-versions/windows/desktop/ms714943(v=vs.85))|Optional|Nie|
 |[IAlterTable](/previous-versions/windows/desktop/ms719764(v=vs.85))|Optional|Nie|
 |[IBindResource](/previous-versions/windows/desktop/ms714936(v=vs.85))|Optional|Nie|
 |[ICreateRow](/previous-versions/windows/desktop/ms716832(v=vs.85))|Optional|Nie|
 |[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))|Optional|Tak|
-|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))|Optional|Yes|
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))|Optional|Tak|
 |[IIndexDefinition](/previous-versions/windows/desktop/ms711593(v=vs.85))|Optional|Nie|
 |[Interfejs ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|Tak|
 |[ITableCreation](/previous-versions/windows/desktop/ms713639(v=vs.85))|Optional|Nie|

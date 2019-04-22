@@ -9,10 +9,10 @@ helpviewer_keywords:
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
 ms.openlocfilehash: 1f3e6066af4b6870c5fa90f7bde373bb7be476ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032956"
 ---
 # <a name="rowset-object-interfaces"></a>Interfejsy obiektu zestawu wierszy
@@ -21,10 +21,10 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 
 |Interface|Wymagany?|Implementowany przez Szablony OLE DB?|
 |---------------|---------------|--------------------------------------|
-|[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|Obowiązkowy|Yes|
-|[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obowiązkowy|Tak|
+|[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|Obowiązkowy|Tak|
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obowiązkowy|Yes|
 |[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|Obowiązkowy|Tak|
-|[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|Obowiązkowy|Tak|
+|[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|Obowiązkowy|Yes|
 |[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obowiązkowy|Yes|
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180(v=vs.85))|Optional|Nie|
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953(v=vs.85))|Optional|Nie|
@@ -38,10 +38,10 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 |[IRowsetFind](/previous-versions/windows/desktop/ms724221(v=vs.85))|Optional|Nie|
 |[IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85))|Opcjonalnie (ale wymagane dla dostawców poziom 0)|Yes|
 |[IRowsetIndex](/previous-versions/windows/desktop/ms719604(v=vs.85))|Optional|Nie|
-|[IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))|Optional|Tak|
+|[Irowsetlocate —](/previous-versions/windows/desktop/ms721190(v=vs.85))|Optional|Yes|
 |[IRowsetRefresh](/previous-versions/windows/desktop/ms714892(v=vs.85))|Optional|Nie|
 |[IRowsetScroll](/previous-versions/windows/desktop/ms712984(v=vs.85))|Optional|Nie|
-|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))|Optional|Tak|
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))|Optional|Yes|
 |[IRowsetView](/previous-versions/windows/desktop/ms709755(v=vs.85))|Optional|Nie|
 |[Interfejs ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|Tak|
 |[IRowsetBookmark](/previous-versions/windows/desktop/ms714246(v=vs.85))|Optional|Nie|

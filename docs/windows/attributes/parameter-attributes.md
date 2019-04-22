@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
 ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029554"
 ---
 # <a name="parameter-attributes"></a>Atrybuty parametru
@@ -18,7 +18,7 @@ Następujące atrybuty dotyczą parametry metody w klasie lub interfejsie.
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|[niestandardowy](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
+|[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
 |[defaultvalue](defaultvalue.md)|Umożliwia określenie wartości domyślnej dla typizowany parametr opcjonalny.|
 |[first_is](first-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|
 |[iid_is](iid-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032274"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Szablony konsumentów OLE DB — kompendium
@@ -83,7 +83,7 @@ Umożliwia dostęp do elementów zestawu wierszy za pomocą składni tablicy.
 [CBulkRowset](../../data/oledb/cbulkrowset-class.md)<br/>
 Używane do pobierania i manipulowanie wierszami w trybie zbiorczym pobierając wielu dojść do wierszy za pomocą jednego wywołania.
 
-[Cnorowset —](../../data/oledb/cnorowset-class.md)<br/>
+[CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 Może służyć jako argument szablonu, jeśli polecenie nie zwraca zestawu wierszy.
 
 [cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
@@ -116,7 +116,7 @@ Używane jako argument szablonu dla klasy szablonów, taką jak `CCommand` i `CT
 [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)<br/>
 Używane jako argument szablonu dla `CCommand` szablonu, jeśli chcesz, aby polecenia do obsługi pojedynczego zestawu wierszy. `CNoMultipleResults` jest wartością domyślną dla argumentu szablonu.
 
-[Cnorowset —](../../data/oledb/cnorowset-class.md)<br/>
+[CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 Używane jako argument szablonu dla `CCommand` lub `CTable` Jeśli polecenie lub tabeli nie zwraca zestawu wierszy.
 
 [CTable](../../data/oledb/ctable-class.md)<br/>
@@ -124,7 +124,7 @@ Umożliwia dostęp do prostego zestawu wierszy bez parametrów.
 
 ## <a name="property-classes"></a>Właściwości klasy
 
-[Cdbpropidset —](../../data/oledb/cdbpropidset-class.md)<br/>
+[CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
 Używany do przekazania tablicę identyfikatorów właściwości, dla których użytkownik chce, aby informacje o właściwościach. Właściwości należą do zestawu jednej właściwości.
 
 [CDBPropSet](../../data/oledb/cdbpropset-class.md)<br/>
@@ -137,10 +137,10 @@ Używane jako indeks do uzyskiwania dostępu do danych w zestawie wierszy.
 
 ## <a name="error-class"></a>Klasa błędów
 
-[Cdberrorinfo —](../../data/oledb/cdberrorinfo-class.md)<br/>
+[CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)<br/>
 Używany do pobierania informacji o błędzie OLE DB.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Szablony dostawców OLE DB — kompendium](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Szablony dostawców OLE DB — dokumentacja](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Szablony OLE DB](../../data/oledb/ole-db-templates.md)

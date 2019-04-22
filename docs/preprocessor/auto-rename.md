@@ -7,17 +7,17 @@ helpviewer_keywords:
 - auto_rename attribute
 ms.assetid: 1075f3ab-f6fc-4e04-8e22-ebe02695a567
 ms.openlocfilehash: ba07b8532ba64c99f835e59d7c71aac8e3f2b03d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035123"
 ---
 # <a name="autorename"></a>auto_rename
 
 **Określonego język C++**
 
-Zmienia nazwę słowa zastrzeżone w języku C++, dodając dwa znaki podkreślenia (_) do nazwy zmiennej, aby rozwiązać potencjalne konflikty nazw.
+Zmienia nazwę C++ słowa zastrzeżone przez dołączenie dwóch znaków podkreślenia (_) do nazwy zmiennej, aby rozwiązać potencjalne konflikty nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,5 +33,5 @@ Ten atrybut jest używany podczas importowania biblioteki typów, korzystającą
 
 ## <a name="see-also"></a>Zobacz także
 
-[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import Directive](../preprocessor/hash-import-directive-cpp.md)

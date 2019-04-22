@@ -23,10 +23,10 @@ helpviewer_keywords:
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
 ms.openlocfilehash: 807cdf55a5a2fa6e0cc063c22b1685d8156c41a5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031342"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl — Klasa
@@ -58,7 +58,7 @@ Z klasą pochodną `IDBPropertiesImpl`.
 |-|-|
 |[GetProperties](#getproperties)|Zwraca wartości właściwości w grupach właściwości źródła danych, informacje o źródle danych i inicjowania, które są aktualnie ustawiony na obiekt źródła danych lub wartości właściwości w grupie właściwości inicjowania, które obecnie są ustawione na Moduł wyliczający.|
 |[GetPropertyInfo](#getpropertyinfo)|Zwraca informacje o wszystkich właściwości obsługiwane przez dostawcę.|
-|[SetProperties](#setproperties)|Ustawia właściwości grupy właściwości źródła danych i inicjowanie, obiekty źródła danych lub grupie właściwości inicjowania dla modułów wyliczających.|
+|[Setproperties —](#setproperties)|Ustawia właściwości grupy właściwości źródła danych i inicjowanie, obiekty źródła danych lub grupie właściwości inicjowania dla modułów wyliczających.|
 
 ## <a name="remarks"></a>Uwagi
 

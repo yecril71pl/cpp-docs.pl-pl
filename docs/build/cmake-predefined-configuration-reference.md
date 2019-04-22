@@ -5,10 +5,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031453"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Konfiguracje kompilacji CMake wstępnie zdefiniowane
@@ -348,7 +348,7 @@ Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym, przed i po komp
 
 [Projekty CMake w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>
-[Podłącz do komputera zdalnego systemu Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Konfigurowanie narzędzia CMake sesjami debugowania](configure-cmake-debugging-sessions.md)<br/>
+[Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Konfigurowanie sesji debugowania narzędzia CMake](configure-cmake-debugging-sessions.md)<br/>
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane](cmake-predefined-configuration-reference.md)<br/>

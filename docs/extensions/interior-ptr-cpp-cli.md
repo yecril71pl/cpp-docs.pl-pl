@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
 ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028326"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
@@ -47,13 +47,13 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 *cv_qualifier*<br/>
 **Const** lub **volatile** kwalifikatorów.
 
-*— typ*<br/>
+*type*<br/>
 Typ *inicjatora*.
 
 *var*<br/>
 Nazwa **pomocą interior_ptr** zmiennej.
 
-*Inicjator*<br/>
+*initializer*<br/>
 Element członkowski typu odwołania, element tablicy zarządzanej lub inny obiekt, który można przypisać na wskaźnik natywny.
 
 ### <a name="remarks"></a>Uwagi
@@ -74,13 +74,13 @@ Aby uzyskać informacje na temat sposobu deklarowania wnętrza wskaźnika, któr
 
 Aby uzyskać więcej informacji na wskaźnikach posługiwanie się nimi Zobacz
 
-- [Instrukcje: Deklarowanie i użycie wewnętrznych wskaźników i zarządzanych tablic (C + +/ CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
+- [Instrukcje: deklarowanie wewnętrznych wskaźników i zarządzanych tablic oraz posługiwanie się nimi (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
-- [Instrukcje: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C + +/ CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
+- [Instrukcje: deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
-- [Instrukcje: Funkcje przeładowania z wewnętrznymi i Natywnymi wskaźnikami (C + +/ CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
+- [Instrukcje: funkcje przeładowania z wewnętrznymi i natywnymi wskaźnikami (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
 
-- [Instrukcje: Deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C + +/ CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
+- [Instrukcje: deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
 ### <a name="requirements"></a>Wymagania
 
@@ -124,4 +124,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

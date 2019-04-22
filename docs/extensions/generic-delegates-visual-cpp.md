@@ -1,5 +1,5 @@
 ---
-title: Delegaty ogólne (C + +/ CLI)
+title: Delegaty ogólne (C++sposób niezamierzony)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
 ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029562"
 ---
-# <a name="generic-delegates-ccli"></a>Delegaty ogólne (C + +/ CLI)
+# <a name="generic-delegates-ccli"></a>Delegaty ogólne (C++sposób niezamierzony)
 
-Można używać parametrów typu ogólnego, przy użyciu delegatów. Aby uzyskać więcej informacji na temat obiektów delegowanych, zobacz [delegowania (C + +/ CLI i C + +/ CX)](delegate-cpp-component-extensions.md).
+Można używać parametrów typu ogólnego, przy użyciu delegatów. Aby uzyskać więcej informacji na temat obiektów delegowanych, zobacz [delegowanie (C++sposób niezamierzony i C++/CX)](delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,25 +29,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametry
 
-*atrybuty*<br/>
+*Atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
 *Typ — parametr-identyfikatory*<br/>
 Rozdzielana przecinkami lista identyfikatorów dla parametrów typu.
 
 *type-parameter-constraints-clauses*<br/>
-Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
+Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modyfikatory dostępności*<br/>
+*accessibility-modifiers*<br/>
 (Opcjonalnie) Modyfikatory dostępności (np. **publicznych**, **prywatnej**).
 
-*Typ wyniku*<br/>
+*result-type*<br/>
 Zwracany typ delegata.
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 Nazwa obiektu delegowanego.
 
-*formal-parameters*<br/>
+*parametrów formalnych*<br/>
 (Opcjonalnie) Lista parametrów delegata.
 
 ## <a name="example"></a>Przykład

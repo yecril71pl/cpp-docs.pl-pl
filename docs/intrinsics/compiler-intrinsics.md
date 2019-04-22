@@ -8,10 +8,10 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
 ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029281"
 ---
 # <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
@@ -46,7 +46,7 @@ W poniższych sekcjach wymieniono wszystkie funkcje wewnętrzne, które są dost
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do asemblera ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Microsoft Macro Assembler — odwołanie](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
-[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[Odwołanie do biblioteki C-Run-Time](../c-runtime-library/c-run-time-library-reference.md)
+[Dokumentacja asemblera ARM](../assembler/arm/arm-assembler-reference.md)<br/>
+[Microsoft Macro Assembler — dokumentacja](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)

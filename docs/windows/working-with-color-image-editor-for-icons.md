@@ -63,10 +63,10 @@ helpviewer_keywords:
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
 ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034147"
 ---
 # <a name="how-to-work-with-color"></a>Instrukcje: Praca z kolorami
@@ -230,5 +230,5 @@ Brak
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)<br/>
 [Instrukcje: Tworzenie ikony lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Instrukcje: Edytowanie obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Instrukcje: Użyj narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Instrukcje: Używanie narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

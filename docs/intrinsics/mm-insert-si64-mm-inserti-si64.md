@@ -10,15 +10,15 @@ helpviewer_keywords:
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
 ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033021"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje `insertq` instrukcji, aby wstawić bitów z drugim argumentem operacji do swojego pierwszego operandu.
 
@@ -42,13 +42,13 @@ __m128i _mm_inserti_si64(
 *Źródło1*<br/>
 [in] Pole 128-bitowego z danymi wejściowymi w jej dolnej 64 bitów, w których zostanie wstawione pole.
 
-*Źródło2*<br/>
+*Source2*<br/>
 [in] Pole 128-bitowego z danymi można wstawić w jego bitów ma niski.  Aby uzyskać `_mm_insert_si64`, również zawiera pole deskryptor w jego bitów.
 
 *Długość*<br/>
 [in] Stała liczba całkowita określająca długość pola do wstawienia.
 
-*Indeks*<br/>
+*Index*<br/>
 [in] Stała liczba całkowita, określająca indeks najmniej znaczący bit pola, do którego zostaną wstawione dane.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -118,7 +118,7 @@ result2 = 0xfffffffff3210fff
 result3 = 0xfffffffff3210fff
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 

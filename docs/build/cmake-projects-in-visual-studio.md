@@ -5,10 +5,10 @@ helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 ms.openlocfilehash: 22a8ecc34e6413c32628381241d45d3d76b39ecc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030436"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake w programie Visual Studio
@@ -160,11 +160,11 @@ Po zainstalowaniu narzędzia CMake z Instalatora programu Visual Studio, można 
   
 ## <a name="see-also"></a>Zobacz także
 
-[Samouczek: Tworzenie projektów dla wielu platform w języku C++ w programie Visual Studio](get-started-linux-cmake.md)<br/>
+[Samouczek: Tworzenie międzyplatformowych projektów w języku C++ w programie Visual Studio](get-started-linux-cmake.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>
-[Podłącz do komputera zdalnego systemu Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Dostosowywanie ustawień kompilacji CMake](customize-cmake-settings.md)<br/>
-[Odwołanie do pliku CMakeSettings.json](cmakesettings-reference.md)<br/>
-[Konfigurowanie narzędzia CMake sesjami debugowania](configure-cmake-debugging-sessions.md)<br/>
+[Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Dostosowywanie ustawień kompilacji narzędzia CMake](customize-cmake-settings.md)<br/>
+[Dokumentacja pliku CMakeSettings.json](cmakesettings-reference.md)<br/>
+[Konfigurowanie sesji debugowania narzędzia CMake](configure-cmake-debugging-sessions.md)<br/>
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane](cmake-predefined-configuration-reference.md)<br/>

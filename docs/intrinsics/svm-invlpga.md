@@ -8,15 +8,15 @@ helpviewer_keywords:
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
 ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031139"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Unieważnienie wpisu mapowania adresu w buforze aside wygląd tłumaczenia tego komputera. Parametry określają wirtualny adres i adresu miejsca identyfikator strony do unieważnienia.
 
@@ -30,7 +30,7 @@ void __svm_invlpga(void *Va, int ASID);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Va*|[in] Wirtualny adres strony do unieważnienia.|
+|*oceny luk w zabezpieczeniach*|[in] Wirtualny adres strony do unieważnienia.|
 |*ASID*|[in] Adres miejsca identyfikator (ASID) strony do unieważnienia.|
 
 ## <a name="remarks"></a>Uwagi
@@ -45,7 +45,7 @@ void __svm_invlpga(void *Va, int ASID);
 
 **Plik nagłówkowy** \<intrin.h >
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

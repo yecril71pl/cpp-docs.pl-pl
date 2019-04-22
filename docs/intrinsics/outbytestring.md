@@ -9,15 +9,15 @@ helpviewer_keywords:
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
 ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032196"
 ---
 # <a name="outbytestring"></a>__outbytestring
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje `rep outsb` instrukcji, która wysyła pierwszy `Count` bajtów danych wskazywanego przez `Buffer` port określony przez `Port`.
 
@@ -39,7 +39,7 @@ void __outbytestring(
 *Bufor*<br/>
 [in] Dane, które zostaną wysłane do określonego portu.
 
-*Licznik*<br/>
+*Liczba*<br/>
 [in] Liczba bajtów danych do wysłania.
 
 ## <a name="requirements"></a>Wymagania
@@ -54,7 +54,7 @@ void __outbytestring(
 
 Ta procedura jest dostępna wyłącznie jako wewnętrzna.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
 ms.openlocfilehash: b16e809781170d0c5dfe301e6dd73e6a27046835
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028622"
 ---
 # <a name="displaybind"></a>displaybind
@@ -37,7 +37,7 @@ Zobacz przykład [możliwej do wiązania](bindable.md) przykład sposobu użycia
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu|
+|**Dotyczy**|Metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -46,9 +46,9 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[Atrybuty elementów członkowskich danych](data-member-attributes.md)<br/>
+[Atrybuty składowych danych](data-member-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
 [requestedit](requestedit.md)

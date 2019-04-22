@@ -12,15 +12,15 @@ helpviewer_keywords:
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
 ms.openlocfilehash: 1d29b8bec646bb2da8acfe20479fe0e238db0de5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035231"
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje `bt` instrukcji, która sprawdza, czy bit w pozycji `b` adresu `a`i zwraca wartość tego bitu.
 
@@ -100,7 +100,7 @@ Binary representation:
 0000000000000010011000010110010
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

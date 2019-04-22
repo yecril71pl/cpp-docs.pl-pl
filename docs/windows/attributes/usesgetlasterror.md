@@ -7,10 +7,10 @@ helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
 ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032209"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
@@ -37,7 +37,7 @@ Zobacz [idl_module](idl-module.md) przykład przykład sposobu użycia **usesget
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Moduł** atrybutu|
+|**Dotyczy**|**Moduł** atrybutu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -46,4 +46,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)
+[Atrybuty IDL](idl-attributes.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
 ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033417"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Wykonuje dodawanie blokowane, w której pierwszy argument operacji jest wartość 64-bitową.
 
@@ -56,7 +56,7 @@ Tym wewnętrzne nie jest atomic, ponieważ jest stosowana jako dwa osobne instru
 
 Ta funkcja działa jako czynnik blokujący odczytu i zapisu. Aby uzyskać więcej informacji, zobacz [_readwritebarrier —](../intrinsics/readwritebarrier.md).
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

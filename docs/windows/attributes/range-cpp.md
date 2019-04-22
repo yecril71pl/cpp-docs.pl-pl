@@ -7,10 +7,10 @@ helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
 ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029541"
 ---
 # <a name="range-c"></a>range (C++)
@@ -28,7 +28,7 @@ Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wart
 *Niska*<br/>
 Wartość zakresu niski.
 
-*Wysoka*<br/>
+*high*<br/>
 Wartość zakresu wysoka.
 
 ## <a name="remarks"></a>Uwagi
@@ -57,7 +57,7 @@ __interface ICustom {
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu, parametr interfejsu|
+|**Dotyczy**|Metody interfejsu, parametr interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
-[Atrybuty elementów członkowskich danych](data-member-attributes.md)
+[Atrybuty składowych danych](data-member-attributes.md)

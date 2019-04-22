@@ -1,5 +1,5 @@
 ---
-title: first_is — (atrybut COM C++)
+title: first_is — (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
 ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033086"
 ---
 # <a name="firstis"></a>first_is
@@ -25,12 +25,12 @@ Określa indeks pierwszego elementu tablicy mają być przekazywane.
 
 ### <a name="parameters"></a>Parametry
 
-*wyrażenie*<br/>
+*expression*<br/>
 Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
 
-**First_is —** atrybut C++ ma taką samą funkcjonalność jak [first_is —](/windows/desktop/Midl/first-is) atrybutów w MIDL.
+**First_is —** C++ atrybut ma taką samą funkcjonalność jak [first_is —](/windows/desktop/Midl/first-is) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -62,7 +62,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -71,7 +71,7 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [last_is](last-is.md)<br/>

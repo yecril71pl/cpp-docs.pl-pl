@@ -6,10 +6,10 @@ helpviewer_keywords:
 - multiple result sets
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
 ms.openlocfilehash: 69e5c956d897e217501cbac9b9b93db868731221
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028428"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Używanie wielu zestawów wyników z jednej procedury składowanej
@@ -28,4 +28,4 @@ Większość procedur składowanych zwrócić wielu zestawów wyników. Procedur
 
 ## <a name="see-also"></a>Zobacz także
 
-[korzystanie z procedur składowanych](../../data/oledb/using-stored-procedures.md)
+[Korzystanie z procedur składowanych](../../data/oledb/using-stored-procedures.md)

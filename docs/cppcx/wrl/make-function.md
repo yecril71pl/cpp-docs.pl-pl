@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
 ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028250"
 ---
 # <a name="make-function"></a>Make — Funkcja
@@ -197,13 +197,13 @@ Typ argumentu 9, który jest przekazywany do określonego środowiska uruchomien
 *arg1*<br/>
 Argument 1, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*argument2*<br/>
+*arg2*<br/>
 Argument 2, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
 *arg3*<br/>
 Argument 3, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
-*Arg4*<br/>
+*arg4*<br/>
 Argument 4, który jest przekazywany do określonego środowiska uruchomieniowego klasy.
 
 *arg5*<br/>
@@ -237,4 +237,4 @@ Zobacz [jak: Składników biblioteki WRL bezpośrednie tworzenie wystąpień](ho
 
 ## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL — Przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

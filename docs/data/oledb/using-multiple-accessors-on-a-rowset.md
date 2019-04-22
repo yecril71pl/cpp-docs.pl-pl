@@ -8,10 +8,10 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
 ms.openlocfilehash: d1ab314edeebedef4cff14cd5364a7ca16c74769
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033310"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Używanie wielu metod dostępu w zestawie wierszy
@@ -159,4 +159,4 @@ int main(int argc, char* argv[])
 ## <a name="see-also"></a>Zobacz także
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)<br/>
-[Rekordy użytkownika](../../data/oledb/user-records.md)
+[Rekordy użytkowników](../../data/oledb/user-records.md)

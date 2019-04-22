@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027634"
 ---
 # <a name="arm-intrinsics"></a>Funkcje wewnętrzne ARM
@@ -2211,7 +2211,7 @@ Koprocesor specyficzne opcode z zakresu od 0 do 7
 *crn*<br/>
 Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa pierwszego operandu w instrukcji.
 
-*CRM*<br/>
+*crm*<br/>
 Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.
 
 *opcode2*<br/>
@@ -2247,7 +2247,7 @@ Koprocesor liczbą z zakresu od 0 do 15.
 *opcode1*<br/>
 Koprocesor specyficzne opcode z zakresu od 0 do 15.
 
-*CRM*<br/>
+*crm*<br/>
 Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.
 
 **Zwraca wartość**
@@ -2298,7 +2298,7 @@ Koprocesor specyficzne opcode z zakresu od 0 do 7.
 *crn*<br/>
 Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa pierwszego operandu w instrukcji.
 
-*CRM*<br/>
+*crm*<br/>
 Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.
 
 *opcode2*<br/>
@@ -2335,7 +2335,7 @@ Koprocesor liczbą z zakresu od 0 do 15.
 *opcode1*<br/>
 Koprocesor specyficzne opcode z zakresu od 0 do 15.
 
-*CRM*<br/>
+*crm*<br/>
 Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.
 
 #### <a name="return-value"></a>Wartość zwracana
@@ -2578,5 +2578,5 @@ Funkcje wewnętrzne zwykły bittest blokowane są wspólne dla wszystkich platfo
 ## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[Odwołanie do asemblera ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Materiał referencyjny na temat języka C++](../cpp/cpp-language-reference.md)
+[Dokumentacja asemblera ARM](../assembler/arm/arm-assembler-reference.md)<br/>
+[Dokumentacja języka C++](../cpp/cpp-language-reference.md)

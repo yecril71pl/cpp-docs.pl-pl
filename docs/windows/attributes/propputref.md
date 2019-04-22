@@ -7,10 +7,10 @@ helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
 ms.openlocfilehash: e471e467c55e0b8a17be96fd1bcb3cd24cfafe06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031832"
 ---
 # <a name="propputref"></a>propputref
@@ -37,7 +37,7 @@ Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe *
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Metoda|
+|**Dotyczy**|Metoda|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|`propget`, `propput`|
@@ -46,7 +46,7 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [propget](propget.md)<br/>
 [propput](propput.md)

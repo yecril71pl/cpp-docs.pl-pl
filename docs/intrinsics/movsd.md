@@ -9,15 +9,15 @@ helpviewer_keywords:
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
 ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031303"
 ---
 # <a name="movsd"></a>__movsd
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje ciąg Przenieś (`rep movsd`) instrukcji.
 
@@ -36,10 +36,10 @@ void __movsd(
 *docelowy*<br/>
 [out] Lokalizacja docelowa wykonać operację.
 
-*Źródło*<br/>
+*Element źródłowy*<br/>
 [in] Źródło działania.
 
-*Licznik*<br/>
+*Liczba*<br/>
 [in] Liczba wyrazy w liczbie mnogiej do skopiowania.
 
 ## <a name="requirements"></a>Wymagania
@@ -83,7 +83,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

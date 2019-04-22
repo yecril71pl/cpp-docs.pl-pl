@@ -9,15 +9,15 @@ helpviewer_keywords:
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
 ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035007"
 ---
 # <a name="stosb"></a>__stosb
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje instrukcję ciągu magazynu (`rep stosb`).
 
@@ -39,7 +39,7 @@ void __stosb(
 *Dane*<br/>
 [in] Dane, które mają być przechowywane.
 
-*Licznik*<br/>
+*Liczba*<br/>
 [in] Długość bloku bajtów do zapisania.
 
 ## <a name="requirements"></a>Wymagania
@@ -83,7 +83,7 @@ int main()
 *@@@@@@**************************
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

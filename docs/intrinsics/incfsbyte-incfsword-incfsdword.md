@@ -14,15 +14,15 @@ helpviewer_keywords:
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
 ms.openlocfilehash: 9e1e2630f8c0a66b681be2aa550f9c9255c92173
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027006"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Dodaj je do wartości w lokalizacji w pamięci określonej przez przesunięcie względem początku `FS` segmentu.
 
@@ -57,7 +57,7 @@ void __incfsdword(
 
 Te funkcje wewnętrzne są dostępne tylko w trybie jądra i procedury są dostępne tylko jako funkcje wewnętrzne.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

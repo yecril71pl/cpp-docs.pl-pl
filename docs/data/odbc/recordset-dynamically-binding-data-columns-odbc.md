@@ -9,10 +9,10 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035135"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Zestaw rekordów: Dynamically Binding Data Columns (ODBC)
@@ -91,7 +91,7 @@ W poniższej tabeli przedstawiono cztery listy, które są potrzebne do pracy z.
 
 |||
 |-|-|
-|**Current-Table-Columns**| (Lista 1 na ilustracji) Lista kolumn, które obecnie tabeli w źródle danych. Ta lista może być jest zgodny z listą kolumn, które obecnie powiązany w twoim zestawie rekordów.|
+|**Kolumny w przypadku tabeli bieżącego**| (Lista 1 na ilustracji) Lista kolumn, które obecnie tabeli w źródle danych. Ta lista może być jest zgodny z listą kolumn, które obecnie powiązany w twoim zestawie rekordów.|
 |**Bound-Recordset-Columns**| (Wyświetlanie 2 na ilustracji) Powiązana lista kolumn w twoim zestawie rekordów. Tymi kolumnami już znajdują się instrukcje RFX w swojej `DoFieldExchange` funkcji.|
 |**Kolumny — do — powiązania dynamicznie**| (Lista 3 na ilustracji) Lista kolumn w tabeli, ale nie w twoim zestawie rekordów. Są to kolumny, które chcesz powiązać dynamicznie.|
 |**Dynamiczne kolumny wartości**| (Lista 4 na ilustracji) Lista zawierająca magazynu dla wartości są pobierane z kolumny, które można powiązać dynamicznie. Elementy na tej liście odpowiadają w kolumnach — do — powiązania-dynamicznie, jeden-do-jednego.|

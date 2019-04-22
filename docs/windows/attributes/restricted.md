@@ -7,10 +7,10 @@ helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
 ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029518"
 ---
 # <a name="restricted"></a>restricted
@@ -27,7 +27,7 @@ Określa, że jest członkiem moduł, interfejs lub dispinterface nie może być
 
 ### <a name="parameters"></a>Parametry
 
-*interfejsy*<br/>
+*interfaces*<br/>
 Jeden lub więcej interfejsów, które może nie być wywoływana arbitralnie obiektu COM. Ten parametr jest prawidłowy tylko w przypadku zastosowania do klasy.
 
 ## <a name="remarks"></a>Uwagi
@@ -67,7 +67,7 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Metody interfejsu **interfejsu**, **klasy**, **— struktura**|
+|**Dotyczy**|Metody interfejsu **interfejsu**, **klasy**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|**Klasa coclass** (po zastosowaniu do **klasy** lub **struktury**)|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -76,6 +76,6 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)

@@ -1,5 +1,5 @@
 ---
-title: Specyfikatory zastąpienia (C + +/ CLI i C + +/ CX)
+title: Specyfikatory zastąpienia (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
 ms.openlocfilehash: c1e8e7db2879b0226eaff562f5b5b826bce14caf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029932"
 ---
-# <a name="override-specifiers--ccli-and-ccx"></a>Specyfikatory zastąpienia (C + +/ CLI i C + +/ CX)
+# <a name="override-specifiers--ccli-and-ccx"></a>Specyfikatory zastąpienia (C++sposób niezamierzony i C++/CX)
 
 *Specyfikatory przesłonięć* zmodyfikować sposób dziedziczone typy i członkowie typów dziedziczonych zachowują się w typach pochodnych.
 
@@ -55,4 +55,4 @@ Aby uzyskać informacje dotyczące jawnego przesyłania funkcji klasy podstawowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

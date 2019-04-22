@@ -12,10 +12,10 @@ helpviewer_keywords:
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028509"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Ogólne informacje o niestandardowych krokach kompilacji lub zdarzeniach kompilacji
@@ -69,9 +69,9 @@ Zdarzenia kompilacji i niestandardowe tworzenie kroki uruchamiane w następując
 [Określanie niestandardowych narzędzi kompilacji](specifying-custom-build-tools.md)<br/>
 [Określanie zdarzeń kompilacji](specifying-build-events.md)<br/>
 [Rozwiązywanie problemów z dostosowaniami kompilacji](troubleshooting-build-customizations.md)<br/>
-[Format danych wyjściowych niestandardowego kroku budowania lub zdarzenia kompilacji](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[Formatowanie danych wyjściowych niestandardowego kroku kompilacji lub zdarzenia kompilacji](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
 
 ## <a name="see-also"></a>Zobacz także
 
 [Projekty programu Visual Studio — C++](creating-and-managing-visual-cpp-projects.md)<br>
-[Typowe makra dla poleceń kompilacji oraz właściwości](reference/common-macros-for-build-commands-and-properties.md)
+[Typowe makra dla właściwości i poleceń kompilacji](reference/common-macros-for-build-commands-and-properties.md)

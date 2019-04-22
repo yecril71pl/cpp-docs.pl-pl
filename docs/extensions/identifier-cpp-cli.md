@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
 ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034516"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
@@ -41,7 +41,7 @@ Korzystanie z **__identifier** — słowo kluczowe dla identyfikatorów, które 
 
 **Przykład**
 
-W poniższym przykładzie klasę o nazwie **szablonu** jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W języku C + +/ CLI program, który używa **szablonu** klasy, **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardowa słowa kluczowego języka C++.
+W poniższym przykładzie klasę o nazwie **szablonu** jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W C++sposób niezamierzony program, który używa **szablonu** klasy **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardem C++ — słowo kluczowe.
 
 ```cs
 // identifier_template.cs
@@ -73,7 +73,7 @@ int main() {
 
 ### <a name="examples"></a>Przykłady
 
-W poniższym przykładzie klasę o nazwie **szablonu** jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W języku C + +/ CLI program, który używa **szablonu** klasy, **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardowa słowa kluczowego języka C++.
+W poniższym przykładzie klasę o nazwie **szablonu** jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W C++sposób niezamierzony program, który używa **szablonu** klasy **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardem C++ — słowo kluczowe.
 
 ```cs
 // identifier_template.cs
@@ -96,5 +96,5 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

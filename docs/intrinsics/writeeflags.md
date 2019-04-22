@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
 ms.openlocfilehash: 6679a3b16def3ed413c5cec2a4bb7d5fe5d732c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030358"
 ---
 # <a name="writeeflags"></a>__writeeflags
@@ -42,7 +42,7 @@ Te procedury są dostępne tylko jako funkcje wewnętrzne.
 
 **Plik nagłówkowy** \<intrin.h >
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032680"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Wymiana pól rekordów: Jak działa RFX

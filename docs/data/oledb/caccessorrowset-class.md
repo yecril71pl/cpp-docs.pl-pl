@@ -31,10 +31,10 @@ helpviewer_keywords:
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
 ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033907"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset — Klasa
@@ -67,9 +67,9 @@ Klasy zestawów wierszy.
 
 |||
 |-|-|
-|[powiązania](#bind)|Tworzy powiązania (używane podczas `bBind` jest określony jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md)).|
+|[Bind](#bind)|Tworzy powiązania (używane podczas `bBind` jest określony jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Konstruktor.|
-|[Zamknięcie](#close)|Zamyka zestawu wierszy i wszelkie metody dostępu.|
+|[Zamknij](#close)|Zamyka zestawu wierszy i wszelkie metody dostępu.|
 |[FreeRecordMemory](#freerecordmemory)|Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.|
 |[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
 
@@ -157,4 +157,4 @@ Aby uzyskać więcej informacji, zobacz [IColumnsInfo::GetColumnInfo](/previous-
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

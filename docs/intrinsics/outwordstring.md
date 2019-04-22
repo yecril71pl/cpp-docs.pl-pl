@@ -9,15 +9,15 @@ helpviewer_keywords:
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
 ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030371"
 ---
 # <a name="outwordstring"></a>__outwordstring
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje `rep outsw` instrukcji, która wysyła `Count` słów, zaczynając od `Buffer` z portu We/Wy, określony przez `Port`.
 
@@ -39,7 +39,7 @@ void __outwordstring(
 *Bufor*<br/>
 [in] Wskaźnik do danych, które zostaną wysłane do określonego portu.
 
-*Licznik*<br/>
+*Liczba*<br/>
 [in] Liczbę wyrazów do wysłania.
 
 ## <a name="requirements"></a>Wymagania
@@ -54,7 +54,7 @@ void __outwordstring(
 
 Ta procedura jest dostępna wyłącznie jako wewnętrzna.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
 ms.openlocfilehash: eb1d15a12bfebbf44f7335a848d68c367c285586
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027562"
 ---
 # <a name="compiler-error-c3345"></a>Błąd kompilatora C3345
@@ -54,6 +54,6 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 ## <a name="see-also"></a>Zobacz także
 
-[__iscsym —](../../c-runtime-library/reference/iscsym-functions.md)<br/>
+[__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[moduł](../../windows/module-cpp.md)
+[module](../../windows/module-cpp.md)

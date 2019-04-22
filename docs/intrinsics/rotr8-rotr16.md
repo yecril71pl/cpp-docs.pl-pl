@@ -9,15 +9,15 @@ helpviewer_keywords:
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
 ms.openlocfilehash: 27c3a9d914d04ecdffb7fa74dc3c8f79a442445c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028746"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Obróć wartości wejściowe w prawo do najmniej znaczący bit (najmniej znaczący BAJT) przez określoną liczbę pozycji bitów.
 
@@ -99,7 +99,7 @@ Rotating 0x41 right by 7 bits gives 0x82
 Rotating unsigned short 0x12 right by 10 bits gives 0x480
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

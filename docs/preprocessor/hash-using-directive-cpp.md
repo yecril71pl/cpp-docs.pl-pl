@@ -1,5 +1,5 @@
 ---
-title: '#Using — Dyrektywa (C + +/ CLI)'
+title: '#Using — Dyrektywa (C++sposób niezamierzony)'
 ms.date: 10/18/2018
 f1_keywords:
 - friend_as_cpp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
 ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034264"
 ---
-# <a name="using-directive-ccli"></a>#using — dyrektywa (C + +/ CLI)
+# <a name="using-directive-ccli"></a>#using — dyrektywa (C++sposób niezamierzony)
 
 Importuje metadane do programu, który został skompilowany przy użyciu [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -31,7 +31,7 @@ Importuje metadane do programu, który został skompilowany przy użyciu [/CLR](
 
 ### <a name="parameters"></a>Parametry
 
-*plik*<br/>
+*Plik*<br/>
 MSIL .dll, .exe, .netmodule, lub. obiektu Na przykład
 
 `#using <MyComponent.dll>`

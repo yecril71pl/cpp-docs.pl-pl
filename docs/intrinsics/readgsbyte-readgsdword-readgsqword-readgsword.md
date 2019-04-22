@@ -13,15 +13,15 @@ helpviewer_keywords:
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
 ms.openlocfilehash: a677b96975e0d2adcc7e548992a12bd597bea6a3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031498"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Odczyt pamięci z lokalizacji określonej przez przesunięcie względem początku segmentu GS.
 
@@ -66,7 +66,7 @@ Zawartość pamięci bajt, wyraz, podwójne słowo lub quadword (co zostało wsk
 
 Te procedury są dostępne tylko jako wewnętrzna.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

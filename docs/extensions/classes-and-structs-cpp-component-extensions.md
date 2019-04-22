@@ -1,5 +1,5 @@
 ---
-title: Klasa ref i ref struct (C + +/ CLI i C + +/ CX)
+title: Klasa ref i ref struct (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
 ms.openlocfilehash: fcc50109ce521e005e32a8c19b13aabe2230989b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029734"
 ---
-# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>Klasa ref i ref struct (C + +/ CLI i C + +/ CX)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>Klasa ref i ref struct (C++sposób niezamierzony i C++/CX)
 
 **Klasy referencyjnej** lub **ref struct** rozszerzenia zadeklarować klasy lub struktury którego *okres istnienia obiektu* są zarządzane automatycznie. Gdy obiekt nie jest już dostępny, lub wykracza poza zakres, pamięć jest zwalniana.
 
@@ -38,10 +38,10 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *class_access*<br/>
 (Opcjonalnie) Dostępność klasy lub struktury spoza zestawu. Możliwe wartości to **publicznych** i **prywatnej** (**prywatnej** jest ustawieniem domyślnym). Zagnieżdżone klasy lub struktury nie mogą mieć *class_access* specyfikator.
 
-*nazwa*<br/>
+*Nazwa*<br/>
 Nazwa klasy lub struktury.
 
-* — modyfikator*<br/>
+*modifier*<br/>
 (Opcjonalnie) [abstrakcyjne](abstract-cpp-component-extensions.md) i [zapieczętowanego](sealed-cpp-component-extensions.md) są prawidłowe modyfikatorów.
 
 *inherit_access*<br/>
@@ -66,15 +66,15 @@ Aby uzyskać więcej informacji na temat klas i struktur zobacz
 
 - [Semantyka stosu języka C++ dla typów odwołań](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
-- [Klasy, struktury i związki](../cpp/classes-and-structs-cpp.md)
+- [Klas, struktur i Unii](../cpp/classes-and-structs-cpp.md)
 
-- [Destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Operatory zdefiniowane przez użytkownika (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
 - [Konwersje zdefiniowane przez użytkownika (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Instrukcje: OPAKOWYWANIE klasy natywnej do użycia przezC#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Instrukcje: opakowywanie klasy natywnej do użycia w języku C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Klasy ogólne [C++/CLI]](generic-classes-cpp-cli.md)
 
@@ -101,7 +101,7 @@ Kiedy Deklarujesz obiektu za pomocą **klasę wartości** lub **struktury warto�
 
 ### <a name="remarks"></a>Uwagi
 
-W poniższej tabeli przedstawiono różnice w składni przedstawionej w **wszystkie środowiska wykonawcze** sekcji, które są specyficzne dla języka C + +/ interfejsu wiersza polecenia.
+W poniższej tabeli przedstawiono różnice w składni przedstawionej w **wszystkie środowiska wykonawcze** sekcji, które są specyficzne dla C++sposób niezamierzony.
 
 ### <a name="parameters"></a>Parametry
 
@@ -118,4 +118,4 @@ W poniższej tabeli przedstawiono różnice w składni przedstawionej w **wszyst
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

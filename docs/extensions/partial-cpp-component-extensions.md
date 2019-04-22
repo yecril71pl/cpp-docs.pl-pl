@@ -1,5 +1,5 @@
 ---
-title: częściowe (C + +/ CLI i C + +/ CX)
+title: częściowe (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
 ms.openlocfilehash: eb9b3907008147cb21f04aec5f42e4896fa35b3c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029951"
 ---
-# <a name="partial--ccli-and-ccx"></a>częściowe (C + +/ CLI i C + +/ CX)
+# <a name="partial--ccli-and-ccx"></a>częściowe (C++sposób niezamierzony i C++/CX)
 
 **Częściowe** — słowo kluczowe umożliwia różne części klasy ref autora, niezależnie od siebie i w różnych plikach.
 
@@ -43,10 +43,10 @@ class-key identifier {
 
 ### <a name="parameters"></a>Parametry
 
-*klucz klasy*<br/>
+*class-key*<br/>
 Słowo kluczowe, która deklaruje klasy lub struktury, która jest obsługiwana przez środowisko wykonawcze Windows. Albo **klasy referencyjnej**, **klasę wartości**, **ref struct**, lub **struktury wartości**.
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 Nazwa zdefiniowanego typu.
 
 ### <a name="remarks"></a>Uwagi
@@ -67,7 +67,7 @@ Szablony: Częściowe klasy nie może być szablonem.
 
 Typy ogólne: Klasy częściowej mogą być ogólne, jeśli pełna definicja może być ogólna. Ale co klasy częściowe i pełne musi mieć dokładnie tych samych parametrom, w tym nazwy parametrów formalnych.
 
-Aby uzyskać więcej informacji o sposobie używania **częściowe** — słowo kluczowe, zobacz [klasy częściowe (C + +/ CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).
+Aby uzyskać więcej informacji o sposobie używania **częściowe** — słowo kluczowe, zobacz [klasy częściowe (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -79,4 +79,4 @@ Aby uzyskać więcej informacji o sposobie używania **częściowe** — słowo 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasy częściowe (C + +/ CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)
+[Klasy częściowe (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)

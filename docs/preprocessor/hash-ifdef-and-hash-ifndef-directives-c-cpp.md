@@ -12,10 +12,10 @@ helpviewer_keywords:
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
 ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027233"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>Dyrektywy #ifdef i #ifndef (C/C++)
@@ -40,7 +40,7 @@ Te dyrektywy są uwzględnione jedynie w celu zgodności z poprzednimi wersjami 
 
 **#Ifndef** dyrektywy sprawdza przeciwieństwo warunku sprawdzone przez **#ifdef**. Jeśli nie zdefiniowano identyfikatora (lub jego definicja została usunięta z `#undef`), warunek ma wartość true (niezerową). W przeciwnym razie warunek jest fałszywy (0).
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 *Identyfikator* może być przekazywany z wiersza polecenia przy użyciu `/D` opcji. Do 30 makr można określić za pomocą `/D`.
 
@@ -54,7 +54,7 @@ Jest to przydatne w przypadku sprawdzania, czy definicja istnieje, ponieważ def
 #endif
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

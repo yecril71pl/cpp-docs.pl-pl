@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
 ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030497"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation — Przestrzeń nazw
@@ -31,8 +31,8 @@ namespace Windows::Foundation;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[ActivateInstance — Funkcja](activateinstance-function.md)|Rejestruje i pobiera wystąpienia danego typu zdefiniowane w identyfikatorze określonej klasy.|
-|[GetActivationFactory — Funkcja](getactivationfactory-function.md)|Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.|
+|[ActivateInstance, funkcja](activateinstance-function.md)|Rejestruje i pobiera wystąpienia danego typu zdefiniowane w identyfikatorze określonej klasy.|
+|[GetActivationFactory, funkcja](getactivationfactory-function.md)|Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.|
 
 ## <a name="requirements"></a>Wymagania
 

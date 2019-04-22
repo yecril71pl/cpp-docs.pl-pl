@@ -9,15 +9,15 @@ helpviewer_keywords:
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
 ms.openlocfilehash: 8c87c7a5fa1c2bee475b0e4508b5c1571dc449de
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028292"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Obróć wartości wejściowe w lewo do najbardziej znaczący bit (BITEM) przez określoną liczbę pozycji bitów.
 
@@ -98,7 +98,7 @@ Rotating 0x41 left by 7 bits gives 0xa0
 Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

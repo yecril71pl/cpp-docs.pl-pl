@@ -1,5 +1,5 @@
 ---
-title: com_interface_entry — (atrybut COM C++)
+title: com_interface_entry — (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
 ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030410"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
@@ -31,7 +31,7 @@ Ciąg zawierający tekst wpisu. Aby uzyskać listę możliwych wartości, zobacz
 
 ## <a name="remarks"></a>Uwagi
 
-**Com_interface_entry —** atrybut C++ wstawia retransmitowanych w systemie zawartość ciągu znaków do mapy interfejsu COM, obiektu docelowego. Jeśli ten atrybut jest stosowany jeden raz do obiektu docelowego, wpis jest wstawiany do początku istniejącej mapy interfejsu. Jeśli ten atrybut jest stosowany wielokrotnie do tego samego obiektu docelowego, wpisy zostaną wstawione na początku mapę interfejsu w kolejności, w której zostały odebrane.
+**Com_interface_entry —** C++ atrybut wstawia retransmitowanych w systemie zawartość ciągu znaków do mapy interfejsu COM, obiektu docelowego. Jeśli ten atrybut jest stosowany jeden raz do obiektu docelowego, wpis jest wstawiany do początku istniejącej mapy interfejsu. Jeśli ten atrybut jest stosowany wielokrotnie do tego samego obiektu docelowego, wpisy zostaną wstawione na początku mapę interfejsu w kolejności, w której zostały odebrane.
 
 Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
 
@@ -109,7 +109,7 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Tak|
 |**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
 |**Nieprawidłowe atrybuty**|Brak|

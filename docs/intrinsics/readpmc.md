@@ -9,15 +9,15 @@ helpviewer_keywords:
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
 ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029346"
 ---
 # <a name="readpmc"></a>__readpmc
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje `rdpmc` instrukcji, które odczytuje monitorowania określony przez licznik wydajności `counter`.
 
@@ -50,7 +50,7 @@ Wartość licznika wydajności określony.
 
 Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

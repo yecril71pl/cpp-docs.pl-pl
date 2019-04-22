@@ -9,10 +9,10 @@ helpviewer_keywords:
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
 ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034381"
 ---
 # <a name="vtordisp"></a>vtordisp
@@ -32,7 +32,7 @@ Kontroluje dodanie ukrytego elementu członkowskiego przemieszczenia konstruktor
 
 ### <a name="parameters"></a>Parametry
 
-*wypychania*<br/>
+*push*<br/>
 Umieszcza bieżące ustawienie vtordisp na wewnętrznym stosie kompilatora i ustawia nowe ustawienie vtordisp na *n*.  Jeśli *n* nie zostanie określony, bieżące ustawienie vtordisp nie ulega zmianie.
 
 *POP*<br/>
@@ -44,7 +44,7 @@ Określa nową wartość dla ustawienia vtordisp. Możliwe wartości to 0, 1 lub
 *on*<br/>
 Odpowiednikiem `#pragma vtordisp(1)`.
 
-*wyłączone*<br/>
+*Wyłączone*<br/>
 Odpowiednikiem `#pragma vtordisp(0)`.
 
 ## <a name="remarks"></a>Uwagi
@@ -57,7 +57,7 @@ Określanie 1 lub *na*, domyślnie, włącza ukryte **vtordisp** elementów czł
 
 Określanie 2 Włącza ukryte **vtordisp** elementów członkowskich dla wszystkich baz wirtualnych z funkcjami wirtualnymi.  `vtordisp(2)` może być konieczne do zapewnienia prawidłowej wydajności **dynamic_cast** na częściowo skonstruowanym obiektem. Aby uzyskać więcej informacji, zobacz [ostrzeżenie kompilatora (poziom 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
-`#pragma vtordisp()`, bez argumentów przywraca ustawienie vtordisp do ustawienia początkowego.
+`#pragma vtordisp()` bez argumentów przywraca ustawienie vtordisp do ustawienia początkowego.
 
 ```cpp
 #pragma vtordisp(push, 2)

@@ -41,10 +41,10 @@ helpviewer_keywords:
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
 ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033297"
 ---
 # <a name="how-to-edit-an-image"></a>Instrukcje: Edytowanie obrazu
@@ -211,7 +211,7 @@ Można ustawić lub zmodyfikować właściwości obrazu, użyj [okno właściwo�
    |**Nazwa pliku**|Określa nazwę pliku obrazu.<br/><br/>Domyślnie program Visual Studio przypisuje podstawowej nazwy pliku tworzone przez usunięcie pierwsze cztery znaki ("IDB_") z domyślnego identyfikatora zasobu (IDB_BITMAP1) i dodawanie odpowiedniego rozszerzenia. Nazwa pliku obrazu, w tym przykładzie byłaby *BITMAP1.bmp*. Można zmienić jego nazwę *MYBITMAP1.bmp*.|
    |**Wysokość**|Określa wysokość obrazu (w pikselach). Wartość domyślna to 48.<br/><br/>Obraz zostanie przycięty lub puste miejsce jest dodawana poniżej istniejącego obrazu.|
    |**Identyfikator**|Ustawia identyfikator zasobu.<br/><br/>Obraz programu Microsoft Visual Studio domyślnie przypisuje następny dostępny identyfikator w serii: IDB_BITMAP1 IDB_BITMAP2 i tak dalej. Podobne nazwy są używane do ikony i kursory.|
-   |**Palette**|Zmiany kolorów właściwości.<br/><br/>Kliknij dwukrotnie, aby wybrać kolor i wyświetlić [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednich polach.|
+   |**Paleta**|Zmiany kolorów właściwości.<br/><br/>Kliknij dwukrotnie, aby wybrać kolor i wyświetlić [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednich polach.|
    |**SaveCompressed**|Wskazuje, czy obraz jest w formacie skompresowanym. Ta właściwość jest tylko do odczytu.<br/><br/>Visual Studio nie zezwala na zapisywanie obrazów w formacie skompresowany, więc wszystkie obrazy utworzone w programie Visual Studio, ta właściwość będzie miał **False**. Jeśli otworzysz skompresowanego obrazu (utworzonym w innym programie) w programie Visual Studio, ta właściwość będzie miał **True**. Jeśli zapiszesz skompresowanego obrazu za pomocą programu Visual Studio, będzie ona bez kompresji i ta właściwość zostanie przywrócona do **False**.|
    |**Szerokość**|Ustawia szerokość obrazu (w pikselach). Wartość domyślna dla map bitowych to 48.<br/><br/>Obraz zostanie przycięty lub puste miejsce zostanie dodany do istniejącego obrazu po prawej stronie.|
 
@@ -223,6 +223,6 @@ Brak
 
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)<br/>
 [Instrukcje: Tworzenie ikony lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Instrukcje: Użyj narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Instrukcje: Używanie narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Instrukcje: Praca z kolorami](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

@@ -22,10 +22,10 @@ helpviewer_keywords:
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
 ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028094"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else i #endif — dyrektywy (C/C++)
@@ -97,7 +97,7 @@ Operator preprocesora **zdefiniowane** mogą być używane w specjalnym wyrażen
 
 zdefiniowany ( `identifier` )
 
-zdefiniowane `identifier`
+Definicja `identifier`
 
 To wyrażenie stałej jest uważany za wartość true (niezerową), jeśli *identyfikator* jest obecnie zdefiniowany; w przeciwnym razie warunek jest fałszywy (0). Identyfikator zdefiniowany jako pusty tekst jest uważany za zdefiniowany. **Zdefiniowane** dyrektywa może być używana w **#if** i **#elif** dyrektywy, nigdzie indziej.
 

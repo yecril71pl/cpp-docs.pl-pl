@@ -1,15 +1,15 @@
 ---
-title: Stylu C rzutuje z / clr (C + +/ CLI)
+title: Stylu C rzutuje z / clr (C++sposób niezamierzony)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
 ms.openlocfilehash: d9544e3002cfa489e9700b83367b15b164e9b513
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030266"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Rzutowania w stylu C i kompilator /clr (C++/CLI)
@@ -162,4 +162,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
 ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031201"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Zapisuje 32-bitowych danych w lokalizacji pamięci bez zanieczyszczenie pamięci podręcznych.
 
@@ -34,7 +34,7 @@ void _mm_stream_ss(
 *docelowy*<br/>
 [out] Wskaźnik do lokalizacji, w którym zapisywana jest źródło danych.
 
-*Źródło*<br/>
+*Element źródłowy*<br/>
 [in] 128-bitową liczbą, która zawiera `float` wartość do zapisania w jej dolnej 32-bitowy...
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -87,7 +87,7 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 

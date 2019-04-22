@@ -34,10 +34,10 @@ helpviewer_keywords:
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
 ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034251"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet — Klasa
@@ -144,7 +144,7 @@ CDBPropSet();
 *Identyfikator GUID*<br/>
 [in] Identyfikator GUID służący do zainicjowania `guidPropertySet` pola.
 
-*zestaw właściwości*<br/>
+*propset*<br/>
 [in] Inny `CDBPropSet` obiekt do tworzenia kopii.
 
 ## <a name="setguid"></a> CDBPropSet::SetGUID
@@ -179,7 +179,7 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[CDBPropIDSet — Klasa](../../data/oledb/cdbpropidset-class.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CDBPropIDSet, klasa](../../data/oledb/cdbpropidset-class.md)<br/>
 [Struktura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
 [DBPROP struktury](/previous-versions/windows/desktop/ms717970(v=vs.85))

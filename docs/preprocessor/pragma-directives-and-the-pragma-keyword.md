@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
 ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027444"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Dyrektywy pragma i słowo kluczowe __Pragma
@@ -46,19 +46,19 @@ Kompilatory Microsoft C i C++ rozpoznają następujące pragmy:
 ||||
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
-|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[komentarz](../preprocessor/comment-c-cpp.md)|
+|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[Komentarz](../preprocessor/comment-c-cpp.md)|
 |[składnik](../preprocessor/component.md)|[jest zgodna z](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
-|[data_seg](../preprocessor/data-seg.md)|[przestarzałe](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
+|[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
-|[ — funkcja](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
+|[— Funkcja](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
-|[ — funkcja](../preprocessor/intrinsic.md)|[pętla](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[zarządzany](../preprocessor/managed-unmanaged.md)|[ — komunikat](../preprocessor/message.md)||
+|[intrinsic](../preprocessor/intrinsic.md)|[pętla](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
+|[Zarządzane](../preprocessor/managed-unmanaged.md)|[komunikat](../preprocessor/message.md)||
 |[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||
 |[optymalizuj](../preprocessor/optimize.md)|[pakiet](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|
 |[runtime_checks](../preprocessor/runtime-checks.md)|[sekcja](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[niezarządzana](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[niezarządzane](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
 |[ostrzeżenie](../preprocessor/warning.md)|||
 
 <sup>1</sup> obsługiwana tylko przez kompilator języka C++.
@@ -80,7 +80,7 @@ cl /Zp8 ...
 
 ## <a name="the-pragma-keyword"></a>The __pragma() Keyword
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft specific**
 
 Kompilator obsługuje również **__pragma** słowo kluczowe, które ma taką samą funkcjonalność jako **#pragma** dyrektywy, ale mogą być używane jako wbudowane w definicję makra. **#Pragma** dyrektywy nie można używać w definicji makra, ponieważ kompilator zinterpretuje znak numeru (#) w dyrektywie jako [operator tworzenia ciągu (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -108,6 +108,6 @@ return _hr; \
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
-[Pragma — dyrektywy języka C](../c-language/c-pragmas.md)<br/>
-[słowa kluczowe](../cpp/keywords-cpp.md)
+[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Pragma, dyrektywy języka C](../c-language/c-pragmas.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)

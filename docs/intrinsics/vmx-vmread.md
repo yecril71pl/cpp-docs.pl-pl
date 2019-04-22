@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
 ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028389"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Odczytuje określone pole od bieżącej struktury sterowania maszyny wirtualnej (VMCS) i umieszcza je w określonej lokalizacji.
 
@@ -34,7 +34,7 @@ unsigned char __vmx_vmread(
 |Parametr|Opis|
 |---------------|-----------------|
 |*Pole*|[in] Pole VMCS do odczytu.|
-|*Wartość FieldValue*|[in] Wskaźnik do lokalizacji, do przechowywania wartości odczytywać określone przez pole VMCS `Field` parametru.|
+|*FieldValue*|[in] Wskaźnik do lokalizacji, do przechowywania wartości odczytywać określone przez pole VMCS `Field` parametru.|
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmread(
 
 **Plik nagłówkowy** \<intrin.h >
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

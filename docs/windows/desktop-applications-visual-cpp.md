@@ -3,10 +3,10 @@ title: Aplikacje klasyczne (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033120"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
@@ -29,7 +29,7 @@ W Visual Studio 2017 w wersji 15.4 lub nowszy można utworzyć projekt pakietu a
 
 - Aplikacja MFC jest używanego przez aplikację pulpitu Windows [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md) do tworzenia interfejsu użytkownika. Aplikacja MFC umożliwia również składników COM, a także CRT i standardowych interfejsów API w bibliotece. Biblioteka MFC zawiera alokowania elastycznego otok obiektowy C++ przez API Windows i pętli komunikatów okien. MFC jest opcją domyślną dla aplikacji — zwłaszcza aplikacji typu korporacyjnego — które mają wiele formantów interfejsu użytkownika lub niestandardowych formantów użytkownika. MFC udostępnia wygodne klasy pomocnika do zarządzania systemem Windows, serializacji, operacji na tekście, drukowania i elementy interfejsu użytkownika modern, takie jak wstążki. Zaczęła obowiązywać z MFC, należy zapoznać się z systemu Win32.
 
-- W języku C + +/ interfejsu wiersza polecenia aplikacji lub składnika używa rozszerzeń do składni języka C++ (zgodnie ze specyfikacją języka C++) umożliwiające interakcje między kodu .NET i natywnego języka C ++.  W języku C + +/ interfejsu wiersza polecenia aplikacji mogą mieć części, które działa natywnie i części, działających w .NET Framework z dostępem do Biblioteka klasy podstawowej platformy .NET. C + +/ interfejsu wiersza polecenia jest preferowaną opcją, gdy masz macierzystego kodu C++, który musi współpracować przy użyciu kodu napisanego w języku C# lub Visual Basic. Jest przeznaczona głównie do użytku w bibliotekach DLL platformy .NET, a nie w kodzie interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [programowania .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+- A C++/rozszerzenia korzysta z interfejsu wiersza polecenia aplikacji lub składnika C++ składni (zgodnie z C++ specyfikacji) umożliwiające interakcje między kodu .NET i natywnego języka C ++.  A C++/aplikacja interfejsu wiersza polecenia może mieć części, które działa natywnie i części, działających w .NET Framework z dostępem do Biblioteka klasy podstawowej platformy .NET. C++/ Interfejs wiersza polecenia jest preferowaną opcją w przypadku natywnych C++ kod, który musi współpracować przy użyciu kodu napisanego w C# lub Visual Basic. Jest przeznaczona głównie do użytku w bibliotekach DLL platformy .NET, a nie w kodzie interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [.NET, programowanie za pomocą C++sposób niezamierzony (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 Można użyć dowolnej aplikacji klasycznych w języku C++, C Runtime (CRT) i standardową bibliotekę klas i funkcji, obiektów COM i funkcji Windows publicznych, które są łącznie znane jako interfejsu API Windows. Aby zapoznać się z wprowadzeniem do Windows aplikacji klasycznych w języku C++, zobacz [wprowadzenie Win32 i C++](/windows/desktop/LearnWin32/learn-to-program-for-windows).
 
@@ -37,20 +37,20 @@ Można użyć dowolnej aplikacji klasycznych w języku C++, C Runtime (CRT) i st
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Aplikacje konsoli Windows w języku C++](console-applications-in-visual-cpp.md)|Zawiera informacje o aplikacjach konsoli. Aplikacja konsoli Win32 (lub Win64) ma, nie własnego okna ani pętli komunikatów. Działa w oknie konsoli, a dane wejściowe i wyjściowe są obsługiwane za pośrednictwem wiersza polecenia.|
-|[Przewodnik: Tworzenie aplikacji klasycznych Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Utwórz prostą aplikację pulpitu Windows.|
-|[Tworzenie aplikacji klasycznych Windows pusty](creating-an-empty-windows-desktop-application.md)|Jak utworzyć projekt pulpitu Windows, który nie ma żadnych plików domyślne.|
+|[Aplikacje konsoli systemu Windows w języku C++](console-applications-in-visual-cpp.md)|Zawiera informacje o aplikacjach konsoli. Aplikacja konsoli Win32 (lub Win64) ma, nie własnego okna ani pętli komunikatów. Działa w oknie konsoli, a dane wejściowe i wyjściowe są obsługiwane za pośrednictwem wiersza polecenia.|
+|[Przewodnik: tworzenie aplikacji klasycznych systemu Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Utwórz prostą aplikację pulpitu Windows.|
+|[Tworzenie pustej aplikacji klasycznej systemu Windows](creating-an-empty-windows-desktop-application.md)|Jak utworzyć projekt pulpitu Windows, który nie ma żadnych plików domyślne.|
 |[Dodawanie plików do pustych aplikacji Win32](adding-files-to-an-empty-win32-applications.md)|Jak dodać pliki do pustego projektu.|
 |[Praca z plikami zasobów](working-with-resource-files.md)|Jak dodać obrazy, ikony, tabele ciągów i innych zasobów do aplikacji klasycznej.|
 |[Zasoby służące do tworzenia gier za pomocą programu DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Zawiera łącza do zawartości do tworzenia gier w języku C++.|
 |[Przewodnik: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md)|Jak utworzyć plik binarny lib.|
-|[Instrukcje: Użyj systemu Windows 10 SDK w aplikacji pulpitu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera instrukcje dotyczące konfigurowania projektu kompilować przy użyciu zestawu SDK systemu Windows 10.|
+|[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera instrukcje dotyczące konfigurowania projektu kompilować przy użyciu zestawu SDK systemu Windows 10.|
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Programowanie Windows](/windows/desktop/index)|Zawiera informacje o interfejsie Windows API i modelu COM. (Niektóre interfejsy API Windows i biblioteki DLL innych firm, są implementowane jako obiekty COM.)|
+|[Tworzenie aplikacji dla systemu Windows](/windows/desktop/index)|Zawiera informacje o interfejsie Windows API i modelu COM. (Niektóre interfejsy API Windows i biblioteki DLL innych firm, są implementowane jako obiekty COM.)|
 |[Hilo: Projektowanie aplikacji C++ dla Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Opisuje sposób tworzenia aplikacji klasycznych Windows wzbogaconego klienta używającej animacji Windows i Direct2D do utworzenia interfejsu użytkownika opartego na karuzeli.  W tym samouczku nie został jeszcze zaktualizowany od Windows 7, ale nadal zapewnia szczegółowe wprowadzenie do programowania systemu Win32.|
 |[Omówienie programowania w systemie Windows w języku C++](overview-of-windows-programming-in-cpp.md)|W tym artykule opisano najważniejsze funkcje pulpitu Windows programowania w języku C++.|
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
 ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026634"
 ---
 # <a name="initseg"></a>init_seg
@@ -36,13 +36,13 @@ Ponieważ inicjowania statycznych obiektów globalnych może obejmować wykonywa
 
 Opcje **init_seg** pragma są:
 
-* — kompilator*<br/>
+*compiler*<br/>
 Zarezerwowane dla inicjowania biblioteki wykonawczej C firmy Microsoft. Obiekty w tej grupie są konstruowane najpierw.
 
 *lib*<br/>
 Dostępne dla inicjowania biblioteki klas w innych dostawców. Obiekty w tej grupie są konstruowane, po oznaczone jako *kompilatora* , ale przed wszystkie inne pola.
 
-*użytkownik*<br/>
+*Użytkownik*<br/>
 Dostępne dla każdego użytkownika. Obiekty w tej grupie są konstruowane ostatnio.
 
 *Nazwa sekcji* umożliwia jawne określenie sekcji inicjowania. Obiekty w określonych przez użytkownika *nazwa sekcji* nie są niejawnie skonstruowany; jednak ich adresy są umieszczane w sekcji o nazwie określonej przez *nazwa sekcji*.

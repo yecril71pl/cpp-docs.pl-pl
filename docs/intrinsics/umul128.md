@@ -7,15 +7,15 @@ helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
 ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034968"
 ---
 # <a name="umul128"></a>_umul128
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Mnoży dwie 64-bitowych liczb całkowitych bez znaku przekazany jako pierwsze dwa argumenty i umieszcza wysokiej 64-bitowy produktu w 64-bitowej nieoznaczonej liczby całkowitej wskazywany przez `HighProduct` i zwraca niski 64-bitowy produkt.
 
@@ -77,7 +77,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

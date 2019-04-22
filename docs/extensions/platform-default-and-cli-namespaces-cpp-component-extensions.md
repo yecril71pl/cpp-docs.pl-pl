@@ -1,5 +1,5 @@
 ---
-title: Platformy, domyślna i cli przestrzenie nazw (C + +/ CLI i C + +/ CX)
+title: Platformy, domyślna i cli przestrzenie nazw (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
 ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028514"
 ---
-# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platformy, domyślna i cli przestrzenie nazw (C + +/ CLI i C + +/ CX)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platformy, domyślna i cli przestrzenie nazw (C++sposób niezamierzony i C++/CX)
 
 Przestrzeń nazw kwalifikuje nazwy elementów języka, tak aby nazwy nie były sprzeczne z identycznymi nazwami zdefiniowanymi w innych miejscach w kodzie źródłowym. Na przykład kolizja nazwy może uniemożliwić kompilatorowi rozpoznawaniu [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md). Przestrzenie nazw są używane przez kompilator, ale nie są zachowywane w skompilowanym zestawie.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-Visual Studio zawiera domyślny obszar nazw dla projektu podczas tworzenia projektu. Można ręcznie zmienić nazwę obszaru nazw, chociaż w języku C + +/ CX nazwa pliku winmd musi odpowiadać nazwie głównej przestrzeni nazw.
+Visual Studio zawiera domyślny obszar nazw dla projektu podczas tworzenia projektu. Można ręcznie zmienić nazwę przestrzeni nazw, chociaż w C++/CX nazwa pliku winmd musi odpowiadać nazwie głównej przestrzeni nazw.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Aby uzyskać więcej informacji, zobacz [przestrzenie nazw i typ widoczności (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+Aby uzyskać więcej informacji, zobacz [przestrzenie nazw i typ widoczności (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -42,7 +42,7 @@ using namespace cli;
 
 ### <a name="remarks"></a>Uwagi
 
-C + +/ interfejsu wiersza polecenia obsługuje **interfejsu wiersza polecenia** przestrzeni nazw. Podczas kompilowania za pomocą `/clr`, **przy użyciu** jest implikowane instrukcji w sekcji składni.
+C++/Interfejs wiersza polecenia obsługuje **interfejsu wiersza polecenia** przestrzeni nazw. Podczas kompilowania za pomocą `/clr`, **przy użyciu** jest implikowane instrukcji w sekcji składni.
 
 Następujące funkcje języka znajdują się w **interfejsu wiersza polecenia** przestrzeni nazw:
 
@@ -80,4 +80,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

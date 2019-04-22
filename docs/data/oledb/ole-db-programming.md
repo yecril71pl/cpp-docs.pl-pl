@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
 ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031650"
 ---
 # <a name="ole-db-programming"></a>Programowanie OLE DB

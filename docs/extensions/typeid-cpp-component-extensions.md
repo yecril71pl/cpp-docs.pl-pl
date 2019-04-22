@@ -1,18 +1,18 @@
 ---
-title: TypeID (C + +/ CLI i C + +/ CX)
+title: TypeID (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
 ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031516"
 ---
-# <a name="typeid--ccli-and-ccx"></a>TypeID (C + +/ CLI i C + +/ CX)
+# <a name="typeid--ccli-and-ccx"></a>TypeID (C++sposób niezamierzony i C++/CX)
 
 Pobiera wartość wskazującą typ obiektu.
 
@@ -47,7 +47,7 @@ Nazwa typu.
 
 ### <a name="remarks"></a>Uwagi
 
-W języku C + +/ CX typeid zwraca [Platform::Type](../cppcx/platform-type-class.md) , są konstruowane na podstawie informacji o typie środowiska uruchomieniowego.
+W C++/CX typeid returns [Platform::Type](../cppcx/platform-type-class.md) , są konstruowane na podstawie informacji o typie środowiska uruchomieniowego.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -63,7 +63,7 @@ type::typeid
 
 ### <a name="parameters"></a>Parametry
 
-*— typ*<br/>
+*type*<br/>
 Nazwa typu (abstrakcyjnym deklaratorze), dla którego chcesz `System::Type` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -74,7 +74,7 @@ Nazwa typu (abstrakcyjnym deklaratorze), dla którego chcesz `System::Type` obie
 
 `typeid` musi mieć możliwość oceny nazwę typu (typ) w czasie kompilacji, natomiast GetType ocenia typ do zwrócenia w czasie wykonywania.
 
-`typeid` może potrwać nazwy natywnego typu lub wspólnej alias środowiska uruchomieniowego języka dla nazwy typu natywnego; zobacz [.NET Framework odpowiedniki typów natywnych języka C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Aby uzyskać więcej informacji.
+`typeid` może potrwać nazwy natywnego typu lub wspólnej alias środowiska uruchomieniowego języka dla nazwy typu natywnego; zobacz [odpowiedniki programie .NET Framework C++ typach natywnych (C++sposób niezamierzony)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Aby uzyskać więcej informacji.
 
 `typeid` współpracuje również z natywnych typów, chociaż nadal zwróci System::Type.  Aby uzyskać strukturę type_info, użyj [typeid, Operator](../cpp/typeid-operator.md).
 
@@ -190,4 +190,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

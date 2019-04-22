@@ -239,10 +239,10 @@ helpviewer_keywords:
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
 ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032328"
 ---
 # <a name="crowset-class"></a>Klasa CRowset
@@ -272,28 +272,28 @@ Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.
 |||
 |-|-|
 |[Addrefrows —](#addrefrows)|Zwiększa liczbę odwołań skojarzone z bieżącego wiersza.|
-|[Zamknięcie](#close)|Wersje wierszy i bieżący `IRowset` interfejsu.|
-|[{1&gt;Compare&lt;1}](#compare)|Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Zamknij](#close)|Wersje wierszy i bieżący `IRowset` interfejsu.|
+|[Compare](#compare)|Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Tworzy nową `CRowset` obiektu i (opcjonalnie) kojarzy ją z `IRowset` interfejs dostarczany jako parametr.|
-|[Usuwanie](#delete)|Usuwa wiersze z wierszy przy użyciu [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
-|[Findnextrow —](#findnextrow)|Wyszukuje następny zgodny wiersz po zakładką.|
+|[Delete](#delete)|Usuwa wiersze z wierszy przy użyciu [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
+|[FindNextRow](#findnextrow)|Wyszukuje następny zgodny wiersz po zakładką.|
 |[GetApproximatePosition](#getapproximateposition)|Zwraca pozycję przybliżony wiersz odpowiadający zakładki.|
 |[GetData](#getdata)|Pobiera dane z zestawu wierszy kopię wiersza.|
 |[GetDataHere](#getdatahere)|Pobiera dane z określonego bufora.|
 |[GetOriginalData](#getoriginaldata)|Pobiera dane ostatnio pobrana z lub przesłana do źródła danych, ignorowanie oczekujące zmiany.|
-|[Getrowstatus —](#getrowstatus)|Zwraca stan wszystkich wierszy.|
-|[Insert](#insert)|Tworzy i wstawia nowy wiersz za pomocą [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
-|[IsSameRow](#issamerow)|Porównuje określony wiersz z bieżącego wiersza.|
+|[GetRowStatus](#getrowstatus)|Zwraca stan wszystkich wierszy.|
+|[Wstaw](#insert)|Tworzy i wstawia nowy wiersz za pomocą [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
+|[Issamerow —](#issamerow)|Porównuje określony wiersz z bieżącego wiersza.|
 |[MoveFirst](#movefirst)|Powoduje przeniesienie lokalizacji pobierania następnej pozycji początkowej.|
 |[MoveLast](#movelast)|Przesuwa ostatni rekord.|
 |[MoveNext](#movenext)|Pobiera dane z następny kolejny wiersz lub określoną liczbę pozycji poza następnego wiersza.|
 |[MovePrev](#moveprev)|Przenosi do poprzedniego rekordu.|
-|[Movetobookmark —](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
-|[Movetoratio —](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
+|[MoveToBookmark](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
+|[MoveToRatio](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
 |[ReleaseRows](#releaserows)|Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) zwolnić dojście do bieżącego wiersza.|
 |[SetData](#setdata)|Ustawia wartości danych w jednej lub kilku kolumn przy użyciu wiersza [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
 |[Cofnij](#undo)|Cofa wszelkie zmiany wprowadzone od czasu ostatniego pobrania wiersza lub [aktualizacji](../../data/oledb/crowset-update.md).|
-|[Aktualizowanie](#update)|Przesyła wszystkie oczekujące zmiany wprowadzone od czasu ostatniego pobrania lub aktualizacji bieżący wiersz.|
+|[Aktualizacja](#update)|Przesyła wszystkie oczekujące zmiany wprowadzone od czasu ostatniego pobrania lub aktualizacji bieżący wiersz.|
 |[UpdateAll](#updateall)|Przesyła wszystkie oczekujące zmiany do wszystkich wierszy od czasu ostatniego pobrania lub aktualizacji.|
 
 ## <a name="remarks"></a>Uwagi
@@ -941,4 +941,4 @@ Standardowa HRESULT.
 [Przykładowe multiRead](../../overview/visual-cpp-samples.md)<br/>
 [Przykładowe multiRead atrybutów](../../overview/visual-cpp-samples.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

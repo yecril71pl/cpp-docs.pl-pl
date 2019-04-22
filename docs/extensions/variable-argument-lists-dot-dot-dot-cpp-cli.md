@@ -7,18 +7,18 @@ helpviewer_keywords:
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
 ms.openlocfilehash: ec1e2cefa33bc9d749d0f05e170c2f2db9b25f02
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031613"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listy zmiennych argumentów (...) (C++/CLI)
 
-W tym przykładzie pokazano, jak za pomocą `...` składnię w języku C + +/ interfejsu wiersza polecenia, aby zaimplementować funkcje, które mają zmienną liczbę argumentów.
+W tym przykładzie pokazano, jak za pomocą `...` składni C++sposób niezamierzony do implementacji funkcji, które mają zmienną liczbę argumentów.
 
 > [!NOTE]
-> Ten temat dotyczy C + +/ interfejsu wiersza polecenia. Aby uzyskać informacje o korzystaniu z `...` w ISO Standard C++, zobacz [wielokropki i szablony Wariadyczne](../cpp/ellipses-and-variadic-templates.md) i wielokropki i argumenty domyślne w [wyrażenia przyrostków](../cpp/postfix-expressions.md).
+> Ten temat dotyczy C++sposób niezamierzony. Aby uzyskać informacje o korzystaniu z `...` w ISO Standard C++, zobacz [wielokropki i szablony Wariadyczne](../cpp/ellipses-and-variadic-templates.md) i wielokropki i argumenty domyślne w [wyrażenia przyrostków](../cpp/postfix-expressions.md).
 
 Parametr, który używa `...` musi być ostatnim parametrem na liście parametrów.
 

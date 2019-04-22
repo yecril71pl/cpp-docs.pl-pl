@@ -1,5 +1,5 @@
 ---
-title: sealed (C + +/ CLI i C + +/ CX)
+title: sealed (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
 ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030454"
 ---
-# <a name="sealed--ccli-and-ccx"></a>sealed (C + +/ CLI i C + +/ CX)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C++sposób niezamierzony i C++/CX)
 
 **zapieczętowane** jest słowem kluczowym kontekstowych dla klasy ref, która wskazuje, że wirtualny element członkowski nie może być zastąpiona, lub typu nie można użyć jako typu podstawowego.
 
@@ -33,7 +33,7 @@ virtual return-type identifier() sealed {...};
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 Nazwa klasy lub funkcji.
 
 *zwracany typ*<br/>
@@ -140,4 +140,4 @@ public:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

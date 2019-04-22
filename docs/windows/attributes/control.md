@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
 ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034715"
 ---
 # <a name="control"></a> — formant
@@ -50,7 +50,7 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -59,6 +59,6 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)

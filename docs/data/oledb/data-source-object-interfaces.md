@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OLE DB [C++], interfaces
 ms.assetid: 929e100c-c08c-4b64-8437-d8d1357226f6
 ms.openlocfilehash: fc8d2f5edf854766dcb5dcc8ed6d57a849b8f2a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033193"
 ---
 # <a name="data-source-object-interfaces"></a>Interfejsy obiektu źródła danych
@@ -25,7 +25,7 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 |`IDBCreateSession`|Obowiązkowy|Yes|
 |`IDBInitialize`|Obowiązkowy|Tak|
 |`IDBProperties`|Obowiązkowy|Tak|
-|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|Obowiązkowy|Tak|
+|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|Obowiązkowy|Yes|
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|Nie|
 |`IDBDataSourceAdmin`|Optional|Nie|
 |`IDBInfo`|Optional|Nie|

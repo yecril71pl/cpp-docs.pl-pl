@@ -15,10 +15,10 @@ helpviewer_keywords:
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
 ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027769"
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Zestaw rekordów: Pobieranie rekordów zbiorcze (ODBC)
@@ -49,7 +49,7 @@ W poniższej tabeli wymieniono funkcje elementów członkowskich, dostarczone pr
 |[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementuje zbiorczo wymiana pól rekordów. Wywołuje się automatycznie z transferami wiele wierszy danych ze źródła danych do obiektu zestawu rekordów.|
 |[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Pobiera bieżące ustawienie rozmiaru wierszy.|
 |[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Informuje o tym, ile wierszy rzeczywiście zostały pobrane po pobraniu danego. W większości przypadków jest to rozmiar zestawu wierszy, chyba że pobrano wierszy niekompletne.|
-|[Getrowstatus —](../../mfc/reference/crecordset-class.md#getrowstatus)|Zwraca stan pobierania dla danego wiersza w zestawie wierszy.|
+|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Zwraca stan pobierania dla danego wiersza w zestawie wierszy.|
 |[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Odświeża dane i stan określonego wiersza w zestawie wierszy.|
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Przenosi kursor do określonego wiersza w zestawie wierszy.|
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Funkcja wirtualna, która zmienia ustawienie rozmiaru wierszy z podaną wartością.|

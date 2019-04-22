@@ -66,10 +66,10 @@ helpviewer_keywords:
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
 ms.openlocfilehash: b1ab6b0984cbf84690d69a3ffe7eb3931bf59563
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029476"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl — Klasa
@@ -103,7 +103,7 @@ Klasa, która reprezentuje obiekt błędu OLE DB.
 |-|-|
 |[GetErrorDescriptionString](#geterrordescriptionstring)|Pobiera ciąg opisu błędu z rekord błędu.|
 |[Geterrorguid —](#geterrorguid)|Pobiera błąd identyfikatora GUID z rekord błędu.|
-|[Geterrorhelpcontext —](#geterrorhelpcontext)|Pobiera identyfikator kontekstu pomocy z rekord błędu.|
+|[GetErrorHelpContext](#geterrorhelpcontext)|Pobiera identyfikator kontekstu pomocy z rekord błędu.|
 |[GetErrorHelpFile](#geterrorhelpfile)|Pobiera pełną nazwę ścieżki pliku pomocy z rekord błędu.|
 |[GetErrorSource](#geterrorsource)|Pobiera kod źródłowy błąd z rekord błędu.|
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
 ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030624"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Przewodnik: Tworzenie standardowego programu C++ (C++)
@@ -78,5 +78,5 @@ Aby ukończyć ten instruktaż, musisz rozumieć podstawy języka C++.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Materiał referencyjny na temat języka C++](../cpp/cpp-language-reference.md)<br/>
+[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>

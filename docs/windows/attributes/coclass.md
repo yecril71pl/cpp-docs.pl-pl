@@ -7,10 +7,10 @@ helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
 ms.openlocfilehash: e1f99a2780ab4f451533a3e797e473f60680c6ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035205"
 ---
 # <a name="coclass"></a>coclass
@@ -131,7 +131,7 @@ public:
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -140,7 +140,7 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

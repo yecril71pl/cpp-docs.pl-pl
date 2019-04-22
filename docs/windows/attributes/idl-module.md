@@ -1,5 +1,5 @@
 ---
-title: idl_module (atrybut COM C++)
+title: idl_module (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034981"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -26,10 +26,10 @@ function declaration
 
 ### <a name="parameters"></a>Parametry
 
-*nazwa*<br/>
+*Nazwa*<br/>
 Zdefiniowana przez użytkownika nazwa dla bloku kodu, który będzie wyświetlany w pliku .idl.
 
-*Parametr DllName*<br/>
+*dllname*<br/>
 (Opcjonalnie) Plik .dll, który zawiera eksportu.
 
 *uuid*<br/>
@@ -55,7 +55,7 @@ Funkcja, która będą definiować.
 
 ## <a name="remarks"></a>Uwagi
 
-**Idl_module** atrybut C++ umożliwia określenie punktu wejścia w pliku .dll, dzięki czemu można zaimportować z pliku dll.
+**Idl_module** C++ atrybut umożliwia określenie punktu wejścia w pliku .dll, dzięki czemu można zaimportować z pliku dll.
 
 **Idl_module** atrybut ma funkcje podobne do [modułu](/windows/desktop/Midl/module) atrybutów w MIDL.
 
@@ -82,7 +82,7 @@ void FuncName(int i);
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Dowolne miejsce|
+|**Dotyczy**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -91,6 +91,6 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>
 [entry](entry.md)

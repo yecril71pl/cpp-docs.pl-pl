@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
 ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032170"
 ---
 # <a name="stosd"></a>__stosd
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje instrukcję ciągu magazynu (`rep stosd`).
 
@@ -39,7 +39,7 @@ void __stosd(
 *Dane*<br/>
 [in] Dane, które mają być przechowywane.
 
-*Licznik*<br/>
+*Liczba*<br/>
 [in] Długość bloku wyrazy w liczbie mnogiej do zapisania.
 
 ## <a name="requirements"></a>Wymagania
@@ -85,7 +85,7 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
