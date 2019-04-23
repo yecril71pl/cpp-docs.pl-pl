@@ -7,10 +7,10 @@ helpviewer_keywords:
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 ms.openlocfilehash: 6fe4a37cc3665ac2b7886589018339b77babab2d
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59477421"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Błędy i ostrzeżenia narzędzi konsolidatora
@@ -165,98 +165,98 @@ ms.locfileid: "59477421"
 
 ## <a name="linker-warnings"></a>Ostrzeżenia konsolidatora
 
-[Ostrzeżenie LNK4001 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4001](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md)
 
-[Ostrzeżenie LNK4002 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)
 
-[Ostrzeżenie LNK4006 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4006.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4006](../../error-messages/tool-errors/linker-tools-warning-lnk4006.md)
 
-[Ostrzeżenie LNK4010 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4010](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md)
 
-[Ostrzeżenie LNK4014 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
 
 [Linker Tools Warning LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
-[Ostrzeżenie LNK4022 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 
-[Ostrzeżenie LNK4039 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4039.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4039](../../error-messages/tool-errors/linker-tools-warning-lnk4039.md)
 
-[Ostrzeżenie LNK4044 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)
 
-[Ostrzeżenie LNK4049 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4049.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4049](../../error-messages/tool-errors/linker-tools-warning-lnk4049.md)
 
-[Ostrzeżenie LNK4065 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4065.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4065](../../error-messages/tool-errors/linker-tools-warning-lnk4065.md)
 
-[Ostrzeżenie LNK4070 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4070.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4070](../../error-messages/tool-errors/linker-tools-warning-lnk4070.md)
 
-[Ostrzeżenie LNK4071 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4071](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md)
 
-[Ostrzeżenie LNK4073 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4073](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md)
 
-[Ostrzeżenie LNK4075 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)
 
-[Ostrzeżenie LNK4076 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4076](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md)
 
-[Ostrzeżenie LNK4078 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4078](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md)
 
-[Ostrzeżenie LNK4086 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)
 
-[Ostrzeżenie LNK4092 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4092](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md)
 
-[Ostrzeżenie LNK4096 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4096](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md)
 
-[Ostrzeżenie LNK4098 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4098](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md)
 
-[Ostrzeżenie LNK4099 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4099](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md)
 
-[Ostrzeżenie LNK4102 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4102](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md)
 
-[Ostrzeżenie LNK4104 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4104](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md)
 
-[Ostrzeżenie LNK4105 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)
 
-[Ostrzeżenie LNK4194 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4194](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md)
 
-[Ostrzeżenie LNK4197 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4197](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md)
 
-[Ostrzeżenie LNK4199 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4199](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md)
 
-[Ostrzeżenie LNK4200 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4200](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md)
 
-[Ostrzeżenie LNK4204 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)
 
-[Ostrzeżenie LNK4205 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)
 
-[Ostrzeżenie LNK4206 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)
 
-[Ostrzeżenie LNK4210 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4210](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md)
 
-[Ostrzeżenie LNK4216 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4216](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md)
 
-[Ostrzeżenie LNK4217 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)
 
-[Ostrzeżenie LNK4219 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4219](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md)
 
-[Ostrzeżenie LNK4220 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4220](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md)
 
-[Ostrzeżenie LNK4221 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4221](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md)
 
-[Ostrzeżenie LNK4222 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4222](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md)
 
-[Ostrzeżenie LNK4224 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)
 
-[Ostrzeżenie LNK4227 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4227.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4227](../../error-messages/tool-errors/linker-tools-warning-lnk4227.md)
 
-[Ostrzeżenie LNK4229 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)
 
-[Ostrzeżenie LNK4237 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4237.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4237](../../error-messages/tool-errors/linker-tools-warning-lnk4237.md)
 
-[Ostrzeżenie LNK4247 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4247.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4247](../../error-messages/tool-errors/linker-tools-warning-lnk4247.md)
 
-[Ostrzeżenie LNK4248 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4248.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4248](../../error-messages/tool-errors/linker-tools-warning-lnk4248.md)
 
-[Ostrzeżenie LNK4253 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4253](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md)
 
-[Ostrzeżenie LNK4254 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md)
+[Ostrzeżenie narzędzi konsolidatora LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md)
 
 [Linker Tools Warning LNK4286](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)

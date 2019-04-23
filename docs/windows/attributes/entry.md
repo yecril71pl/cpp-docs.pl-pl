@@ -7,10 +7,10 @@ helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
 ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036305"
 ---
 # <a name="entry"></a>entry
@@ -25,7 +25,7 @@ Określa eksportowanych funkcji lub stałą w module, określając punkt wejści
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator*<br/>
+*id*<br/>
 Identyfikator punktu wejścia.
 
 ## <a name="remarks"></a>Uwagi
@@ -42,7 +42,7 @@ Zobacz przykład [idl_module](idl-module.md) dla przykładowe **wpis**.
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|`idl_module` — atrybut|
+|**Dotyczy**|`idl_module` Atrybut|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -51,4 +51,4 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)
+[Atrybuty IDL](idl-attributes.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037740"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
@@ -18,7 +18,7 @@ ms.locfileid: "59037740"
 > [!WARNING]
 > Ta sekcja dotyczy Windows aplikacji klasycznych w języku C++.
 >
-> Aby uzyskać informacji na temat zasobów w aplikacjach platformy uniwersalnej Windows w języku C++, zobacz [Definiowanie zasobów aplikacji](/windows/uwp/app-resources/), lub na temat dodawania zasobów dla C + +/ projektów interfejsu wiersza polecenia (zarządzane), zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w Przewodnik dewelopera .NET Framework.
+> Aby uzyskać informacje dotyczące zasobów w aplikacjach platformy uniwersalnej Windows napisanych w C++, zobacz [Definiowanie zasobów aplikacji](/windows/uwp/app-resources/), lub na temat dodawania zasobów do C++/see projektów interfejsu wiersza polecenia (zarządzane) [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w przewodniku dewelopera .NET Framework.
 
 Zasobów może składać się z szerokiej gamy elementów, takich jak:
 
@@ -41,7 +41,7 @@ Aby sprzedawać i lokalizowania zasobów w aplikacjach zarządzanych, zobacz [Gl
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 Opisuje pliki zasobów i sposoby ich używania w aplikacjach pulpitu Windows. Zawiera również łącza do artykułów opisujących sposób korzystania z plików zasobów.
 
-[Identyfikatory zasobów (symbolom)](../windows/symbols-resource-identifiers.md)<br/>
+[Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>
 Opisuje symboli i zawiera informacje na temat korzystania z **symboli zasobów** okno dialogowe, aby zarządzać symbole w swoich projektach.
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>

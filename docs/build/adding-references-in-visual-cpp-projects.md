@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038770"
 ---
 # <a name="consuming-libraries-and-components"></a>Korzystanie z biblioteki i składniki
@@ -46,11 +46,11 @@ Jeśli biblioteka DLL nie jest częścią rozwiązania aplikacji, potrzebujesz p
 
 ## <a name="com-objects"></a>obiekty COM
 
-Jeśli aplikacja natywna C++ musi korzystać z obiektów COM i dany obiekt jest *zarejestrowany*, wszystkie trzeba będzie wywołać CoCreateInstance i przekazać identyfikator CLSID obiektu. System będzie znajduje się w rejestrze systemu Windows i załaduj go. W języku C + +/ projektu interfejsu wiersza polecenia, które mogą wykorzystywać obiektu COM w taki sam sposób, lub przez dodanie odwołania do niego z **Add References > COM** listy i korzystania z nich za pośrednictwem jego [wywoływana otoka środowiska uruchomieniowego](/dotnet/framework/interop/runtime-callable-wrapper). 
+Jeśli aplikacja natywna C++ musi korzystać z obiektów COM i dany obiekt jest *zarejestrowany*, wszystkie trzeba będzie wywołać CoCreateInstance i przekazać identyfikator CLSID obiektu. System będzie znajduje się w rejestrze systemu Windows i załaduj go. A C++/projekt interfejsu wiersza polecenia mogą wykorzystywać obiektów COM w taki sam sposób, lub przez dodanie odwołania do niego z **Add References > COM** listy i korzystania z nich za pośrednictwem jego [wywoływana otoka środowiska uruchomieniowego](/dotnet/framework/interop/runtime-callable-wrapper). 
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Zestawy .NET i składników środowiska wykonawczego Windows
 
-W platformy uniwersalnej systemu Windows lub w języku C + +/ projektów interfejsu wiersza polecenia, używanie zestawów platformy .NET lub składników środowiska wykonawczego Windows, dodając *odwołania* do zestawem lub składnikiem. W obszarze **odwołania** węzła w platformy uniwersalnej systemu Windows lub w języku C + +/ projektu interfejsu wiersza polecenia, zobacz odwołania do składników często używane. Kliknij prawym przyciskiem myszy **odwołania** w węźle **Eksploratora rozwiązań** aby przywołać **Menadżer odwołań** i przeglądanie dodatkowych składników, które są znane systemowi. Kliknij przycisk **Przeglądaj** przycisk, aby przejść do dowolnego folderu, w którym znajduje się niestandardowy składnik. Ponieważ zestawów platformy .NET i składników środowiska wykonawczego Windows zawierają informacje o typie wbudowane, możesz wyświetlić ich metod i klas, kliknij prawym przyciskiem myszy i wybierając pozycję **Pokaż w przeglądarce obiektów**. 
+W platformy uniwersalnej systemu Windows lub C++projektów w sposób niezamierzony, używanie zestawów platformy .NET lub składników środowiska wykonawczego Windows, dodając *odwołania* do zestawem lub składnikiem. W obszarze **odwołania** węzła w platformy uniwersalnej systemu Windows lub C++sposób niezamierzony projektu, zobacz odwołania do składników często używane. Kliknij prawym przyciskiem myszy **odwołania** w węźle **Eksploratora rozwiązań** aby przywołać **Menadżer odwołań** i przeglądanie dodatkowych składników, które są znane systemowi. Kliknij przycisk **Przeglądaj** przycisk, aby przejść do dowolnego folderu, w którym znajduje się niestandardowy składnik. Ponieważ zestawów platformy .NET i składników środowiska wykonawczego Windows zawierają informacje o typie wbudowane, możesz wyświetlić ich metod i klas, kliknij prawym przyciskiem myszy i wybierając pozycję **Pokaż w przeglądarce obiektów**. 
 
 ## <a name="reference-properties"></a>Właściwości odwołania
 
@@ -80,9 +80,9 @@ Właściwości odwołania ActiveX są dostępne tylko w przypadku odwołania do 
 
    Wyświetla narzędzie, które służy do tworzenia zestawu międzyoperacyjnego na podstawie przywoływanej biblioteki COM lub formantu ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Właściwości odwołania do zestawu (C + +/ CLI)
+### <a name="assembly-reference-properties-ccli"></a>Właściwości odwołania do zestawu (C++sposób niezamierzony)
 
-Właściwości odwołania do zestawu są dostępne tylko dla odwołania do zestawów .NET Framework w języku C + +/ CLI projektów. Te właściwości są wyświetlane tylko w przypadku wybrania w zestawie programu .NET Framework **odwołania** okienka. Nie można zmodyfikować właściwości.
+Właściwości odwołania do zestawu są dostępne tylko dla odwołania do zestawów .NET Framework w C++sposób niezamierzony projektów. Te właściwości są wyświetlane tylko w przypadku wybrania w zestawie programu .NET Framework **odwołania** okienka. Nie można zmodyfikować właściwości.
 
 - **Ścieżka względna**
 
@@ -96,7 +96,7 @@ Następujące właściwości są dostępne w różnych rodzajach odwołania. Umo
 
    Określa, czy ma być automatycznie kopiowany przywoływany zestaw do lokalizacji docelowej podczas kompilacji.
 
-- **Kopiuj lokalne zestawy satelickie (C + +/ CLI)**
+- **Kopiuj lokalne zestawy satelickie (C++sposób niezamierzony)**
 
    Określa, czy ma być automatycznie kopiowany zestawy satelickie przywoływanego zestawu do lokalizacji docelowej podczas kompilacji. Używany tylko, jeśli **Kopiuj lokalnie** jest **true**.
 
@@ -128,7 +128,7 @@ Następujące właściwości znajdują się na odwołania do zestawu modelu COM 
 
    Wyświetla nazwę zestawu dla przywoływanego zestawu.
 
-- **Kultura**
+- **Kultury**
 
    Wyświetla kultura wybranego odwołania.
 
@@ -167,4 +167,4 @@ Następujące właściwości znajdują się na odwołania do zestawu modelu COM 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja strony właściwości projektu C++](reference/property-pages-visual-cpp.md)<br>
-[Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji](working-with-project-properties.md)
+[Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)

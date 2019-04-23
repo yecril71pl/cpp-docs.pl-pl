@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037860"
 ---
 # <a name="sql"></a>SQL
@@ -51,7 +51,7 @@ Klasy bazy danych użyj części programu SQL Server, znane jako język manipula
 |**WHERE**|Aby zastosować filtr, który Zawęża zaznaczenie.|
 |**ORDER BY**|Aby zastosować kolejność sortowania do zestawu rekordów.|
 |**INSERT**|Aby dodać nowych rekordów do zestawu rekordów.|
-|**DELETE**|Do usuwania rekordów z zestawu rekordów.|
+|**USUŃ**|Do usuwania rekordów z zestawu rekordów.|
 |**UPDATE**|Aby zmodyfikować pola rekordu.|
 
 Oprócz klas baz danych rozpoznaje ODBC **WYWOŁANIA** instrukcji, których można użyć, aby wywołać wstępnie zdefiniowanego zapytania (lub procedura składowana) dla niektórych źródeł danych. Sterownik bazy danych ODBC interpretuje tych instrukcji i zastępuje tego polecenia odpowiednio dla każdego systemu DBMS.

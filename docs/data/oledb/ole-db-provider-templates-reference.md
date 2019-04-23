@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
 ms.openlocfilehash: e1d6be9687085361edd9141d8fb471e21b6f6376
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038680"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Szablony dostawców OLE DB — kompendium
@@ -33,7 +33,7 @@ Implementuje właściwości sesji, wywołując funkcję statyczną, zdefiniowane
 
 Zapewnia standardową implementację zestawu wierszy OLE DB bez konieczności wielokrotnego dziedziczenia wiele implementacji interfejsów. Jedyną metodą, dla którego należy podać implementacja jest `Execute`.
 
-[Csimplerow —](../../data/oledb/csimplerow-class.md)<br/>
+[CSimpleRow](../../data/oledb/csimplerow-class.md)<br/>
 Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w `IRowsetImpl` klasy. Dojście do wiersza jest logicznie unikatowych tagów na podstawie wyniku wiersza. `IRowsetImpl` Tworzy nową `CSimpleRow` dla każdego wiersza w wymagane `IRowsetImpl::GetNextRows`.
 
 [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)<br/>
@@ -96,7 +96,7 @@ Inne klasy polecenia są `IColumnsInfoImpl` i `IAccessorImpl`, które zostały o
 [IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)<br/>
 Tworzy i usuwa połączenie z konsumenta. Obowiązkowego interfejsu na obiekty źródła danych i opcjonalnie interfejsu na modułach wyliczających.
 
-[IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)<br/>
+[Idbpropertiesimpl —](../../data/oledb/idbpropertiesimpl-class.md)<br/>
 `IDBProperties` jest obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla modułów wyliczających. Jednakże jeśli moduł wyliczający udostępnia `IDBInitialize`, musi uwidaczniać `IDBProperties` (właściwości w źródle danych).
 
 [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)<br/>
@@ -113,5 +113,5 @@ Implementuje OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(
 
 ## <a name="see-also"></a>Zobacz także
 
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Szablony OLE DB](../../data/oledb/ole-db-templates.md)

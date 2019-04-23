@@ -9,10 +9,10 @@ helpviewer_keywords:
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
 ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039513"
 ---
 # <a name="idl-attributes"></a>atrybuty IDL
@@ -27,7 +27,7 @@ Teraz można zmodyfikować pliku .idl z w obrębie pliku kodu źródłowego przy
 
 Gdy nie są używane wraz z [atrybuty COM](com-attributes.md), atrybuty IDL pozwalają zdefiniować interfejsów. Podczas kompilowania kodu źródłowego atrybuty są używane do definiowania pliku .idl wygenerowany. W przypadku użycia za pomocą atrybutów COM w projekcie ATL, niektóre IDL atrybuty, takie jak `coclass`, że kod dodany do projektu.
 
-Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstrukcji MIDL, które nie są obsługiwane w bieżącej wersji programu Visual C++. Ta i inne atrybuty, takie jak [importlib](importlib.md) i [includelib —](includelib-cpp.md) ułatwiają do korzystania z istniejących plików .idl w bieżącym projekcie Visual C++.
+Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstrukcji MIDL, które nie są obsługiwane w bieżącej wersji Visual C++. Ta i inne atrybuty, takie jak [importlib](importlib.md) i [includelib —](includelib-cpp.md) ułatwiają do korzystania z istniejących plików .idl w bieżącym projekcie Visual C++.
 
 |Atrybut|Opis|
 |---------------|-----------------|
@@ -38,7 +38,7 @@ Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstr
 |[call_as](call-as.md)|Włącza funkcję nonremotable mają być mapowane na funkcję zdalną.|
 |[case](case-cpp.md)|Używane z [switch_type —](switch-type.md) atrybutu w Unii.|
 |[coclass](coclass.md)|Umieszcza klasy definicji do pliku .idl jako klasy coclass.|
-|[ — formant](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
+|[control](control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|
 |[cpp_quote](cpp-quote.md)|Generuje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|
 |[defaultbind](defaultbind.md)|Wskazuje pojedynczą, które można powiązać właściwość, która najlepiej reprezentuje obiekt.|
 |[defaultcollelem](defaultcollelem.md)|Używane do optymalizacji kodu języka Visual Basic.|
@@ -58,7 +58,7 @@ Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstr
 |[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
 |[idl_module](idl-module.md)|Określa punkt wejścia w bibliotece DLL.|
 |[idl_quote](idl-quote.md)|Pozwala na używanie atrybutów lub IDL konstrukcji, które nie są obsługiwane w bieżącej wersji programu Visual C++.|
-|[identyfikator](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
+|[id](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
 |[iid_is](iid-is.md)|Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu.|
 |[immediatebind](immediatebind.md)|Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanych z danymi.|
 |[importlib](importlib.md)|Sprawia, że typy, które już zostały skompilowane do do biblioteki typów, trwa tworzenie innej biblioteki typów.|
@@ -72,7 +72,7 @@ Należy pamiętać, że [idl_quote —](idl-quote.md) pozwalają używać konstr
 |[licensed](licensed.md)|Wskazuje, że klasa coclass, do której jest stosowany jest licencjonowana i muszą być tworzone przy użyciu `IClassFactory2`.|
 |[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
 |[max_is](max-is.md)|Określa maksymalną wartość indeksu prawidłową tablicą.|
-|[moduł](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[module](module-cpp.md)|Określa blok biblioteki w pliku .idl.|
 |[ms_union](ms-union.md)|Steruje wyrównaniem reprezentacji danych sieci nonencapsulated Unii.|
 |[no_injected_text](no-injected-text.md)|Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.|
 |[nonbrowsable](nonbrowsable.md)|Wskazuje, czy składowej interfejsu nie powinien być wyświetlany w przeglądarce właściwości.|

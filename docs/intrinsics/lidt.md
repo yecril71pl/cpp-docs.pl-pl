@@ -9,15 +9,15 @@ helpviewer_keywords:
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
 ms.openlocfilehash: 757309603af48820a17668cfe272bbeaad9239b3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038476"
 ---
 # <a name="lidt"></a>__lidt
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Ładuje deskryptora tabeli Rejestr przerwań (IDTR) z wartością w określonej lokalizacji pamięci.
 
@@ -31,7 +31,7 @@ void __lidt(void * Source);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Źródło*|[in] Wskaźnik do wartości, które mają być kopiowane do IDTR.|
+|*Element źródłowy*|[in] Wskaźnik do wartości, które mają być kopiowane do IDTR.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -45,7 +45,7 @@ void __lidt(void * Source);
 
 `__lidt` Funkcji jest odpowiednikiem `LIDT` komputera instrukcji i jest dostępna tylko w trybie jądra. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Manual deweloper oprogramowania architekturze firmy Intel, wolumin 2: Instrukcja Ustaw odwołanie,"w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

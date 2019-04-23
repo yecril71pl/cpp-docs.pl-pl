@@ -10,10 +10,10 @@ helpviewer_keywords:
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
 ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036156"
 ---
 # <a name="phases-of-translation"></a>Fazy tłumaczenia
@@ -48,13 +48,13 @@ Plik źródłowy jest dzielony na tokeny wstępnego przetwarzania i znaki odstę
 *Przetwarzanie wstępne*<br/>
 Dyrektywy przetwarzania wstępnego są wykonywane, a makra rozwijane do pliku źródłowego. Instrukcja `#include` wywołuje translację począwszy od powyższych trzech kroków translacji na dowolnym dołączonym tekście.
 
-*{1&gt;Mapowanie zestawu znaków&lt;1}*<br/>
+*Mapowanie zestawu znaków*<br/>
 Wszystkie elementy członkowskie zestawu znaków źródła i sekwencje unikowe są konwertowane na ich odpowiedniki w zestawie znaków wykonywania. Zestawy znaków źródła i wykonania są w kodowaniu ASCII w Microsoft C i C++.
 
-*{1&gt;Łączenie ciągów&lt;1}*<br/>
+*Łączenie ciągów*<br/>
 Wszystkie sąsiadujące ciągi znaków i literały szerokiego ciągu są łączone. Na przykład, `"String " "concatenation"` staje się `"String concatenation"`.
 
-*{1&gt;Translacja&lt;1}*<br/>
+*Tłumaczenie*<br/>
 Wszystkie tokeny są analizowane składniowo i semantycznie; tokeny te są przekształcane na kod obiektu.
 
 *Połączenie*<br/>

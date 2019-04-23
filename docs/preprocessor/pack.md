@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
 ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038450"
 ---
 # <a name="pack"></a>pakiet
@@ -29,13 +29,13 @@ Określa wyrównanie pakowania dla struktury, Unii i składowych klasy.
 **Pokaż**<br/>
 (Opcjonalnie) Wyświetla bieżącą wartość bajtu pakowania wyrównania. Wartość jest wyświetlana przez komunikat ostrzegawczy.
 
-**wypychania**<br/>
+**push**<br/>
 (Opcjonalnie) Wypchnięcia bieżącego wyrównania pakowania wartości na wewnętrznym stosie kompilatora i ustawia wartość bieżącej wyrównanie pakowania *n*. Jeśli *n* nie zostanie określony, bieżącą wartość wyrównania pakowania zostanie przypisany.
 
 **POP**<br/>
 (Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora. Jeśli *n* nie zostanie określony z **pop**, wartość pakowania skojarzone z wynikowego rekordu na górze stosu jest nową wartość wyrównania pakowania. Jeśli *n* jest określony, na przykład `#pragma pack(pop, 16)`, *n* staje się nowym pakowania wartością wyrównania. Jeśli pop z *identyfikator*, na przykład `#pragma pack(pop, r1)`, a następnie wszystkie rekordy na stosie są zdjęte ze stosu dopóki rekord, który ma *identyfikator* znajduje się. Że zdjęte ze stosu rekordu i wartość pakowania skojarzone z wynikowego rekordu w górnej części stosu nowe pakowania wartością wyrównania. Jeśli pop z *identyfikator* który nie znajduje się w każdy rekord w stosie, a następnie **pop** jest ignorowana.
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 (Opcjonalnie) Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.
 
 *n*<br/>

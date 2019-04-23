@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
 ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041153"
 ---
 # <a name="data-member-attributes"></a>Atrybuty elementów członkowskich danych
@@ -27,7 +27,7 @@ Następujące atrybuty dotyczą elementów członkowskich danych w klasie, klasa
 |[db_table](db-table.md)|Zostanie otwarty tabeli OLE DB.|
 |[defaultbind](defaultbind.md)|Wskazuje pojedynczą, które można powiązać właściwość, która najlepiej reprezentuje obiekt.|
 |[displaybind](displaybind.md)|Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak możliwa do powiązania.|
-|[identyfikator](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
+|[id](id.md)|Określa identyfikator DISPID dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).|
 |[range](range-cpp.md)|Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|
 |[rdx](rdx.md)|Tworzy klucz rejestru lub modyfikuje istniejący klucz rejestru.|
 |[readonly](readonly-cpp.md)|Zabrania przypisania element członkowski danych.|

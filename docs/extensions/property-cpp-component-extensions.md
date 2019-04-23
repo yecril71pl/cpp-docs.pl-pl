@@ -1,5 +1,5 @@
 ---
-title: właściwości (C + +/ CLI i C + +/ CX)
+title: właściwości (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
 ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038811"
 ---
-# <a name="property--ccli-and-ccx"></a>właściwości (C + +/ CLI i C + +/ CX)
+# <a name="property--ccli-and-ccx"></a>właściwości (C++sposób niezamierzony i C++/CX)
 
 Deklaruje *właściwość*, która jest funkcją składową, który zachowuje się i jest dostępny, takich jak element członkowski danych lub element tablicy.
 
@@ -61,7 +61,7 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parametry
 
-*— typ*<br/>
+*type*<br/>
 Typ danych wartości właściwości i samej właściwości.
 
 *property_name*<br/>
@@ -86,7 +86,7 @@ Właściwości treści metody dostępu set lub get. *Property_body* służy *ind
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Aby uzyskać więcej informacji, zobacz [właściwości (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Aby uzyskać więcej informacji, zobacz [właściwości (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -113,10 +113,10 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parametry
 
-* — modyfikator*<br/>
+*modifier*<br/>
 Modyfikatory, które mogą być używane w deklaracji właściwości lub metody dostępu get/set. Możliwe wartości to **statyczne** i **wirtualnego**.
 
-*— typ*<br/>
+*type*<br/>
 Typ wartości, który jest reprezentowany przez właściwość.
 
 *property_name*<br/>
@@ -215,4 +215,4 @@ test
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

@@ -1,16 +1,16 @@
 ---
-title: Klasa wyliczenia (C + +/ CLI i C + +/ CX)
+title: Klasa wyliczeniowa (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
 ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037031"
 ---
-# <a name="enum-class--ccli-and-ccx"></a>Klasa wyliczenia (C + +/ CLI i C + +/ CX)
+# <a name="enum-class--ccli-and-ccx"></a>Klasa wyliczeniowa (C++sposób niezamierzony i C++/CX)
 
 Deklaruje wyliczenie w zakresie przestrzeni nazw, która jest typ zdefiniowany przez użytkownika, składających się z szeregu nazwanych stałych zwanych wyliczeniami.
 
@@ -18,7 +18,7 @@ Deklaruje wyliczenie w zakresie przestrzeni nazw, która jest typ zdefiniowany p
 
 ### <a name="remarks"></a>Uwagi
 
-C + +/ CX i C + +/ interfejsu wiersza polecenia **klasy publicznym typie wyliczeniowym** i **klasa wyliczeniowa prywatnej** które są podobne do standardowego języka C++ **klasa wyliczeniowa** z dodatkową dostępność Specyfikator. W obszarze **/CLR**, C ++ 11 **klasa wyliczeniowa** typ jest dozwolone, ale spowoduje wygenerowanie ostrzeżenia C4472, który jest przeznaczony do upewnij się, że naprawdę chcesz typu wyliczeniowego ISO i nie C + +/ CX i C + +/ interfejsu wiersza polecenia typu. Aby uzyskać więcej informacji na temat ISO Standard C++ **wyliczenia** — słowo kluczowe, zobacz [wyliczenia](../cpp/enumerations-cpp.md).
+C++/CX i C++/interfejsu wiersza polecenia obsługuje **klasy publicznym typie wyliczeniowym** i **klasa wyliczeniowa prywatnej** które są podobne do standardowych C++ **klasa wyliczeniowa** , ale z dodatkiem Specyfikator ułatwień dostępu. W obszarze **/CLR**, C ++ 11 **klasa wyliczeniowa** typ jest dozwolone, ale spowoduje wygenerowanie ostrzeżenia C4472 jest zapewnienie naprawdę typu wyliczeniowego ISO i nie C++/CX i C++typu w sposób niezamierzony. Aby uzyskać więcej informacji na temat ISO Standard C++ **wyliczenia** — słowo kluczowe, zobacz [wyliczenia](../cpp/enumerations-cpp.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
@@ -34,13 +34,13 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parametry
 
-*dostęp*<br/>
+*access*<br/>
 Dostępność wyliczenia, które mogą być **publicznych** lub **prywatnej**.
 
-*Identyfikator wyliczenia*<br/>
+*enumeration-identifier*<br/>
 Nazwa wyliczenia.
 
-*Typ podstawowy*<br/>
+*underlying-type*<br/>
 (Opcjonalnie) Podstawowy typ wyliczenia.
 
 (Opcjonalnie. Tylko Windows Runtime) podstawowym typem wyliczenia, które mogą być **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, lub `uint64`.
@@ -82,16 +82,16 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parametry
 
-*dostęp*<br/>
+*access*<br/>
 Dostępność wyliczenia. Może być **publicznych** lub **prywatnej**.
 
 *enumerator-list*<br/>
 Rozdzielana przecinkami lista identyfikatorów (moduły wyliczające), która znajduje się w wyliczeniu.
 
-*nazwa*<br/>
+*Nazwa*<br/>
 Nazwa wyliczenia. Anonimowe wyliczenia zarządzane nie są dozwolone.
 
-*— typ*<br/>
+*type*<br/>
 (Opcjonalnie) Typ podstawowy elementu *identyfikatory*. Może to być dowolny typ skalarne, takie jak podpisane lub niepodpisane wersje **int**, **krótki**, lub **długie**.  **wartość logiczna** lub **char** jest również dozwolony.
 
 *var*<br/>
@@ -101,9 +101,9 @@ Nazwa wyliczenia. Anonimowe wyliczenia zarządzane nie są dozwolone.
 
 **Klasa wyliczeniowa** i **enum struct** są równoważne deklaracji.
 
-Istnieją dwa rodzaje wyliczeń: zarządzane lub C + +/ CX i standard.
+Istnieją dwa rodzaje wyliczeń: zarządzane lub C++/CX i standard.
 
-Zarządzane lub C + +/ CX wyliczenia można zdefiniować w następujący sposób,
+Zarządzany lub C++/CX wyliczenia można zdefiniować w następujący sposób,
 
 ```cpp
 public enum class day {sun, mon };
@@ -221,4 +221,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

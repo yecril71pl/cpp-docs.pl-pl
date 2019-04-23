@@ -1,18 +1,18 @@
 ---
-title: Konwersja boxing (C + +/ CLI i C + +/ CX)
+title: Konwersja boxing (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
 ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038698"
 ---
-# <a name="boxing--ccli-and-ccx"></a>Konwersja boxing (C + +/ CLI i C + +/ CX)
+# <a name="boxing--ccli-and-ccx"></a>Konwersja boxing (C++sposób niezamierzony i C++/CX)
 
 Konwersja typów wartości do obiektów jest nazywany *pakowania*, i nosi nazwę konwersji obiektów na typy wartości *Rozpakowywanie*.
 
@@ -22,7 +22,7 @@ Konwersja typów wartości do obiektów jest nazywany *pakowania*, i nosi nazwę
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-C + +/ CX obsługuje oczekiwaliśmy składni skrótu dla typów wartości opakowywanie i rozpakowywanie typy odwołań. Typ wartości jest ramce, gdy jest ona przypisana do zmiennej typu `Object`. `Object` Zmienna jest rozpakowywany, gdy jest ona przypisana do zmiennej typu wartości i typ rozpakowany jest określona w nawiasach; oznacza to, gdy zmienna obiektu jest rzutowany na typ wartości.
+C++/CX obsługuje oczekiwaliśmy składni skrótu dla typów wartości opakowywanie i rozpakowywanie typy odwołań. Typ wartości jest ramce, gdy jest ona przypisana do zmiennej typu `Object`. `Object` Zmienna jest rozpakowywany, gdy jest ona przypisana do zmiennej typu wartości i typ rozpakowany jest określona w nawiasach; oznacza to, gdy zmienna obiektu jest rzutowany na typ wartości.
 
 ```cpp
   Platform::Object^
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Aby uzyskać więcej informacji, zobacz [Boxing (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx).
+Aby uzyskać więcej informacji, zobacz [Boxing (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx).
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -82,11 +82,11 @@ Pakowania, jak i rozpakowania Włącz typy wartości powinien być traktowany ja
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Instrukcje: Jawne żądanie konwersji Boxing](../dotnet/how-to-explicitly-request-boxing.md)
+- [Instrukcje: jawne żądanie konwersji boxing](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Instrukcje: Używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Instrukcje: używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Instrukcje: Rozpakowywanie](../dotnet/how-to-unbox.md)
+- [Instrukcje: rozpakowywanie](../dotnet/how-to-unbox.md)
 
 - [Konwersje standardowe i niejawne konwersje boxing](../dotnet/standard-conversions-and-implicit-boxing.md)
 
@@ -190,4 +190,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

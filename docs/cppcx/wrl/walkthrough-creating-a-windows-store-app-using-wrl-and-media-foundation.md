@@ -4,10 +4,10 @@ ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
 ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036039"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation
@@ -19,7 +19,7 @@ Ten przykład tworzy niestandardowe przekształcenia Media Foundation ma zastoso
 > [!NOTE]
 > Zamiast C# umożliwia także JavaScript, Visual Basic lub C++ z składnika niestandardowe przekształcenia.
 
-W większości przypadków można użyć C + +/ CX, aby utworzyć środowiska wykonawczego Windows. Jednak czasami trzeba użyć biblioteki WRL. Na przykład gdy tworzysz rozszerzeniu usług media dla Microsoft Media Foundation, należy utworzyć składnik, który implementuje interfejsy modelu COM i środowiska wykonawczego Windows. Ponieważ C + +/ CX można tworzyć tylko obiekty Windows Runtime, aby utworzyć rozszerzenie nośnika należy użyć biblioteki WRL ponieważ umożliwia to implementacja interfejsy modelu COM i środowiska wykonawczego Windows.
+W większości przypadków można użyć C++/CX, aby utworzyć środowiska wykonawczego Windows. Jednak czasami trzeba użyć biblioteki WRL. Na przykład gdy tworzysz rozszerzeniu usług media dla Microsoft Media Foundation, należy utworzyć składnik, który implementuje interfejsy modelu COM i środowiska wykonawczego Windows. Ponieważ C++/CX można tworzyć tylko obiekty Windows Runtime, aby utworzyć rozszerzenie nośnika należy użyć biblioteki WRL ponieważ umożliwia to implementacja interfejsy modelu COM i środowiska wykonawczego Windows.
 
 > [!NOTE]
 > Chociaż ten przykład kodu jest długa, przedstawia minimum, które są wymagane do utworzenia przydatne przekształcenie Media Foundation. Służy jako punkt wyjścia dla własnych niestandardowych przekształcenia. W tym przykładzie są zaczerpnięte z [przykład rozszerzeń z nośnika](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), rozszerzenia nośnik używa stosowanie efektów do wideo, dekodowanie wideo i tworzenie programów do obsługi systemu, które tworzą strumienie multimediów.
@@ -121,6 +121,6 @@ W przykładzie pokazano, jak przechwycić fotografie pochodzące z kamery intern
 
 ## <a name="see-also"></a>Zobacz także
 
-[Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
 [Przykład rozszerzeń z nośnika](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

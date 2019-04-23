@@ -6,10 +6,10 @@ helpviewer_keywords:
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
 ms.openlocfilehash: 3e46e87b0d5d538a0f9fd7e231debfef3fa95210
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036117"
 ---
 # <a name="creating-an-ole-db-provider"></a>Tworzenie dostawcy OLE DB
@@ -38,5 +38,5 @@ Podstawowe kroki są następujące:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykład CatDB: Przeglądarka schematu źródła danych](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
+[Przykład CatDB: Data Source Schema Browser](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
 [Przykład DBViewer: Przeglądarka bazy danych](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)

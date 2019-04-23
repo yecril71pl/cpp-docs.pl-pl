@@ -1,5 +1,5 @@
 ---
-title: db_param — (atrybut COM C++)
+title: db_param — (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
 ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038099"
 ---
 # <a name="dbparam"></a>db_param
@@ -37,19 +37,19 @@ Numer kolumny (liczba porządkowa DBCOLUMNINFO) odpowiadający pole w zestawie w
 
 - DBPARAMIO_NOTPARAM akcesor nie ma parametrów. Ustawienie `eParamIO` tej wartości w wierszu Akcesory przypomina o tym użytkownika, parametry są ignorowane.
 
-*Atrybut DbType*<br/>
+*dbtype*<br/>
 (Opcjonalnie) OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251(v=vs.85)) wpisu kolumny.
 
-*precyzja*<br/>
+*precision*<br/>
 (Opcjonalnie) Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*skala*<br/>
+*scale*<br/>
 (Opcjonalnie) Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*stan*<br/>
+*status*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *OLE DB Podręcznik programisty*.
 
-*length*<br/>
+*Długość*<br/>
 (Opcjonalnie) Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi
@@ -108,7 +108,7 @@ struct CSalesbyYear {
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **struktury**, elementu członkowskiego, metoda, lokalne|
+|**Dotyczy**|**Klasa**, **struktury**, elementu członkowskiego, metoda, lokalne|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|

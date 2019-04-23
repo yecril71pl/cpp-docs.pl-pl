@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Deklarowanie i użycie wewnętrznych wskaźników i zarządzanych tablic (C + +/ CLI)'
+title: 'Instrukcje: Deklarowanie i użycie wewnętrznych wskaźników i zarządzanych tablic (C++sposób niezamierzony)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
 ms.openlocfilehash: 0f7ec6551b09b2125fdb21736a851dae0dadbd4a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035872"
 ---
-# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Instrukcje: Deklarowanie i użycie wewnętrznych wskaźników i zarządzanych tablic (C + +/ CLI)
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Instrukcje: Deklarowanie i użycie wewnętrznych wskaźników i zarządzanych tablic (C++sposób niezamierzony)
 
-Następujące C + +/ CLI przykład pokazuje, jak zadeklarować i użyj wnętrza wskaźnika do tablicy.
+Następujące C++/CLI przykład pokazuje, jak zadeklarować i użyj wnętrza wskaźnika do tablicy.
 
 > [!IMPORTANT]
 > Tej funkcji języka jest obsługiwana przez `/clr` — opcja kompilatora, ale nie za `/ZW` — opcja kompilatora.

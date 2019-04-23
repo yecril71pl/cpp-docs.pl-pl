@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040971"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor — Klasa
@@ -154,9 +154,9 @@ class CDynamicAccessor : public CAccessorBase
 
 |||
 |-|-|
-|[Addbindentry —](#addbindentry)|Dodaje wpis powiązanie kolumn danych wyjściowych, podczas zastępowania domyślną metodę dostępu.|
+|[AddBindEntry](#addbindentry)|Dodaje wpis powiązanie kolumn danych wyjściowych, podczas zastępowania domyślną metodę dostępu.|
 |[CDynamicAccessor](#cdynamicaccessor)|Tworzy i inicjuje `CDynamicAccessor` obiektu.|
-|[Zamknięcie](#close)|Rozpina wszystkie kolumny, zwalnia ilość przydzielonej pamięci i zwalnia [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) wskaźnik interfejsu w klasie.|
+|[Zamknij](#close)|Rozpina wszystkie kolumny, zwalnia ilość przydzielonej pamięci i zwalnia [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) wskaźnik interfejsu w klasie.|
 |[GetBlobHandling](#getblobhandling)|Pobiera obiekt BLOB, Obsługa wartości bieżącego wiersza.|
 |[GetBlobSizeLimit](#getblobsizelimit)|Pobiera maksymalny rozmiar obiektu BLOB w bajtach.|
 |[GetBookmark](#getbookmark)|Pobiera zakładki dla bieżącego wiersza.|
@@ -165,15 +165,15 @@ class CDynamicAccessor : public CAccessorBase
 |[GetColumnInfo](#getcolumninfo)|Pobiera metadane kolumn.|
 |[GetColumnName](#getcolumnname)|Pobiera nazwę określonej kolumny.|
 |[GetColumnType](#getcolumntype)|Pobiera typ danych w określonej kolumnie.|
-|[GetLength —](#getlength)|Pobiera maksymalna możliwa długość kolumny w bajtach.|
-|[Getordinal —](#getordinal)|Pobiera indeks kolumny otrzymuje nazwę kolumny.|
+|[GetLength](#getlength)|Pobiera maksymalna możliwa długość kolumny w bajtach.|
+|[GetOrdinal](#getordinal)|Pobiera indeks kolumny otrzymuje nazwę kolumny.|
 |[GetStatus](#getstatus)|Pobiera stan określonej kolumny.|
 |[GetValue](#getvalue)|Pobiera dane z buforu.|
 |[SetBlobHandling](#setblobhandling)|Ustawia obiekt BLOB, Obsługa wartości bieżącego wiersza.|
 |[SetBlobSizeLimit](#setblobsizelimit)|Ustawia maksymalny rozmiar obiektu BLOB w bajtach.|
 |[SetLength](#setlength)|Ustawia długość kolumny, w bajtach.|
 |[SetStatus —](#setstatus)|Ustawia stan określonej kolumny.|
-|[Funkcja SetValue](#setvalue)|Przechowuje dane w buforze.|
+|[SetValue](#setvalue)|Przechowuje dane w buforze.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -195,7 +195,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*Informacje o*<br/>
+*info*<br/>
 [in] A `DBCOLUMNINFO` struktury zawierającej informacje o kolumnach. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -655,7 +655,7 @@ bool SetStatus(const WCHAR* pColumnName,
 *nColumn*<br/>
 [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.
 
-*stan*<br/>
+*status*<br/>
 [in] Stan kolumny. Zobacz [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
 
 *pColumnName*<br/>
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.
 
-*dane*<br/>
+*data*<br/>
 [in] Wskaźnik do pamięci zawierający dane.
 
 *nColumn*<br/>
@@ -711,7 +711,7 @@ W przypadku wszystkich innych typów danych jest łatwiejszy w obsłudze oparte 
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Klasa CAccessor](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor — Klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[CManualAccessor — Klasa](../../data/oledb/cmanualaccessor-class.md)
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)

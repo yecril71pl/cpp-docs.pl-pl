@@ -1,5 +1,5 @@
 ---
-title: Tablice (C + +/ CLI i C + +/ CX)
+title: Tablice (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
 ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035340"
 ---
-# <a name="arrays-ccli-and-ccx"></a>Tablice (C + +/ CLI i C + +/ CX)
+# <a name="arrays-ccli-and-ccx"></a>Tablice (C++sposób niezamierzony i C++/CX)
 
-`Platform::Array<T>` Typ w języku C + +/ CX lub **tablicy** — słowo kluczowe w języku C + +/ CLI, deklaruje tablicę określonego typu i wartości początkowej.
+`Platform::Array<T>` Wpisać C++/CX, lub **tablicy** — słowo kluczowe w C++/CLI, deklaruje tablicę określonego typu i wartości początkowej.
 
 ## <a name="all-platforms"></a>Wszystkie platformy
 
@@ -32,7 +32,7 @@ W przeciwieństwie do standardowego języka C++ Tworzenie indeksów dolnych nie 
 
 Aby uzyskać więcej informacji na temat tablic zobacz:
 
-- [Instrukcje: Korzystanie z tablic w języku C + +/ CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Instrukcje: korzystanie z tablic w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [Listy zmiennych argumentów (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
@@ -55,13 +55,13 @@ W pierwszym przykładzie składni użyto **ref nowe** agregacji — słowo klucz
 *Kwalifikatory*<br/>
 (Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*Typ tablicy*<br/>
 Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy ref i struktury, klasy wartości i struktury i natywnymi wskaźnikami (`type*`).
 
-*rząd*<br/>
+*rank*<br/>
 (Opcjonalnie) Liczba wymiarów tablicy. Musi mieć wartość 1.
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 Nazwa zmiennej tablicy.
 
 *typ inicjalizacji*<br/>
@@ -111,13 +111,13 @@ W pierwszym przykładzie składni użyto **gcnew** — słowo kluczowe do przydz
 *Kwalifikatory*<br/>
 (Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*Typ tablicy*<br/>
 Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy i struktury, klasy wartości i struktury odwołania, natywnymi wskaźnikami (`type*`) i natywnych typów POD (zwykłe stare dane).
 
-*rząd*<br/>
+*rank*<br/>
 (Opcjonalnie) Liczba wymiarów tablicy. Wartość domyślna to 1; wartość maksymalna to 32. Każdy wymiar tablicy jest tablicą.
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 Nazwa zmiennej tablicy.
 
 *typ inicjalizacji*<br/>
@@ -135,13 +135,13 @@ Na przykład jeśli *ranga rozmiar listy* zostały `(3)`, która deklaruje tabli
 
 **Tablica** znajduje się w [platformy, domyślna i cli przestrzenie nazw](platform-default-and-cli-namespaces-cpp-component-extensions.md) przestrzeni nazw.
 
-Np. standard C++ indeksy tablicy zaczynają się od zera, a tablica jest indeksowanych przy użyciu nawiasy kwadratowe ([]). W przeciwieństwie do standardowego języka C++ indeksy tablicy wielowymiarowej są określone na liście indeksów dla każdego wymiaru zamiast zestawu operatorów kwadratowym ([]) dla każdego wymiaru. Na przykład *identyfikator*[*index1*, *index2*] zamiast *identyfikator*[*index1*] [ *index2*].
+Podobnie jak standardowy C++indeksy tablicy są oparte na zerze i tablicy jest indeksowanych przy użyciu nawiasy kwadratowe ([]). W przeciwieństwie do standardowego C++, indeksy tablicy wielowymiarowej są określone na liście indeksów dla każdego wymiaru zamiast zestawu operatorów kwadratowym ([]) dla każdego wymiaru. Na przykład *identyfikator*[*index1*, *index2*] zamiast *identyfikator*[*index1*] [ *index2*].
 
 Dziedzicz wszystkich zarządzanych tablic `System::Array`. Wszelkie metody lub właściwości `System::Array` mogą być stosowane bezpośrednio do zmiennej tablicowej.
 
 Podczas przydzielania tablicy którego typ elementu to wskaźnik-do zarządzanej klasy elementy są inicjowane przez 0.
 
-Podczas przydzielania tablicy którego typ elementu to typ wartości `V`, domyślnego konstruktora dla `V` jest stosowana do każdego elementu tablicy. Aby uzyskać więcej informacji, zobacz [.NET Framework odpowiedniki typów natywnych języka C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+Podczas przydzielania tablicy którego typ elementu to typ wartości `V`, domyślnego konstruktora dla `V` jest stosowana do każdego elementu tablicy. Aby uzyskać więcej informacji, zobacz [odpowiedniki programie .NET Framework C++ typach natywnych (C++sposób niezamierzony)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
 
 W czasie kompilacji może wykryć, czy typ jest wspólnej tablicy środowiska uruchomieniowego (języka wspólnego CLR) języka przy użyciu `__is_ref_array(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -170,4 +170,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

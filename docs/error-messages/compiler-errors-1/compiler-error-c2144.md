@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
 ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778289"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776109"
 ---
 # <a name="compiler-error-c2144"></a>Błąd kompilatora C2144
 
@@ -23,7 +23,7 @@ Ten błąd może być spowodowany przez brak zamykającego nawiasu klamrowego, p
 
 C2144 może również wystąpić podczas próby utworzenia makra ze słowem kluczowym CLR, która zawiera znak odstępu.
 
-C2144 może być też widoczny, jeśli próbujesz przekazywanie dalej typu. Zobacz [przekazywania dalej typów (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md) Aby uzyskać więcej informacji.
+C2144 może być też widoczny, jeśli próbujesz przekazywanie dalej typu. Zobacz [Type Forwarding (C++sposób niezamierzony)](../../extensions/type-forwarding-cpp-cli.md) Aby uzyskać więcej informacji.
 
 ## <a name="examples"></a>Przykłady
 

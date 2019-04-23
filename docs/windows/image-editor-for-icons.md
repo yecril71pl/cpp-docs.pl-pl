@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041552"
 ---
 # <a name="image-editor-for-icons-c"></a>Edytor obrazów dla ikon (C++)
@@ -80,7 +80,7 @@ Instrukcje dotyczące **edytora obrazów**, zobacz instrukcje [Tworzenie ikony l
 |**Pokaż okno kolorów**|Otwiera **kolory** okna, w którym można wybrać kolory używane dla obrazu.|
 |**Użyj zaznaczenia jako pędzla**|Umożliwia tworzenie pędzla niestandardowego na podstawie część obrazu.<br/><br/>Wybór staje się pędzla niestandardowego, który rozdziela kolorów w wyborze między obrazu. Kopiuje zaznaczenie są pozostawiane w ścieżce przeciągania. Przeciągniesz wolniej, większej liczby kopii zostały wprowadzone.|
 |**Kopiuj i wybór konspektu**|Tworzy kopię bieżącego zaznaczenia i zakreśla ją.<br/><br/>Jeśli kolor tła znajduje się w bieżącym zaznaczeniu, będzie on wykluczony, jeśli masz przezroczyste wybrane.
-|**Dostosuj kolory**|Otwiera **selektor kolorów niestandardowych**, co pozwala dostosować kolory używane dla obrazu.|
+|**Adjust Colors**|Otwiera **selektor kolorów niestandardowych**, co pozwala dostosować kolory używane dla obrazu.|
 |**Załaduj paletę**|Otwiera **Załaduj paletę kolorów** okno dialogowe, które umożliwia ładowanie kolorów palety wcześniej zapisane w pliku .pal.|
 |**Zapisz paletę**|Zapisuje w pliku .pal kolorów palety.|
 |**Rysuj nieprzezroczyste**|Po wybraniu sprawia, że bieżące zaznaczenie nieprzezroczystości.<br/><br/>Po wyczyszczeniu, sprawia, że bieżące zaznaczenie przezroczyste.|
@@ -144,7 +144,7 @@ Aby otworzyć to okno dialogowe, wybierz **czcionki** znajdujący się w **narz�
 |**Czcionka**|Wyświetla listę dostępnych czcionek.|
 |**Styl czcionki**|Wyświetla listę dostępnych stylów określonej czcionki.|
 |**Rozmiar**|Wyświetla listę dostępnych rozmiarów określonej czcionki.|
-|**Przykład**|Pokazuje przykładowy wygląd tekstu przy użyciu ustawień określonej czcionki.|
+|**Próbki**|Pokazuje przykładowy wygląd tekstu przy użyciu ustawień określonej czcionki.|
 |**Skrypt**|Wyświetla listę dostępnych skryptów językowych dla określonej czcionki.<br/><br/>Po wybraniu inny język skryptu, zestawu znaków języka i udostępnieniu do tworzenia dokumentów w wielu języków.|
 
 #### <a name="to-change-the-font-of-text-on-an-image"></a>Zmiana czcionki tekstu obrazu

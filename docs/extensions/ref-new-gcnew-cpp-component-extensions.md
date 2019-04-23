@@ -1,5 +1,5 @@
 ---
-title: REF new, gcnew (C + +/ CLI i C + +/ CX)
+title: REF new, gcnew (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
 ms.openlocfilehash: f3dd0b73e300b44cb4f35e42683725813453d7de
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039432"
 ---
-# <a name="ref-new-gcnew--ccli-and-ccx"></a>REF new, gcnew (C + +/ CLI i C + +/ CX)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>REF new, gcnew (C++sposób niezamierzony i C++/CX)
 
 **Ref nowe** agregacji — słowo kluczowe przydziela wystąpienie typu, który jest bezużyteczne, gdy obiekt staje się niedostępny, a który zwraca uchwyt ([^](handle-to-object-operator-hat-cpp-component-extensions.md)) do przydzielonego obiektu.
 
@@ -89,4 +89,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

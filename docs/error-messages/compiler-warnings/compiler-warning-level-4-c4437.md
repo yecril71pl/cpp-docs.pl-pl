@@ -3,10 +3,10 @@ title: Kompilator ostrzeżenie (poziom 4) C4437
 ms.date: 11/04/2016
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
 ms.openlocfilehash: 9ff52ae6d10f7d4ba429bbf3457a2a6b969998d4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037822"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Kompilator ostrzeżenie (poziom 4) C4437
@@ -81,4 +81,4 @@ int main()
 
 [Operator dynamic_cast](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[Kompilator ostrzeżenie (poziom 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+[Ostrzeżenie kompilatora (poziom 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

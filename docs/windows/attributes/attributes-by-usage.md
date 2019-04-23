@@ -7,10 +7,10 @@ helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
 ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038073"
 ---
 # <a name="attributes-by-usage"></a>Atrybuty w zależności od zastosowania
@@ -22,11 +22,11 @@ Jeśli atrybut poprzedza element, który nie znajduje się w zakresie ten atrybu
 |Atrybut|Opis|
 |---------------|-----------------|
 |[Atrybuty modułów](module-attributes.md)|Dotyczy [modułu](module-cpp.md) atrybutu.|
-|[Atrybuty interfejsu](interface-attributes.md)|Dotyczy [__interface](../../cpp/interface.md) słowa kluczowego języka C++.|
+|[Atrybuty interfejsu](interface-attributes.md)|Dotyczy [__interface](../../cpp/interface.md) C++ — słowo kluczowe.|
 |[Atrybuty klasy](class-attributes.md)|Ma zastosowanie do słowa kluczowego języka C++.|
 |[Atrybuty metody](method-attributes.md)|Ma zastosowanie do metody w klasie, klasa coclass lub interfejs.|
 |[Atrybuty parametru](parameter-attributes.md)|Dotyczy parametry metody w klasie lub interfejsie.|
-|[Atrybuty elementów członkowskich danych](data-member-attributes.md)|Stosuje się do elementów członkowskich danych w klasie, klasa coclass lub interfejs.|
+|[Atrybuty składowych danych](data-member-attributes.md)|Stosuje się do elementów członkowskich danych w klasie, klasa coclass lub interfejs.|
 |[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)|Ma zastosowanie do słów kluczowych języka C++.|
 |[Atrybuty tablicy](array-attributes.md)|Ma zastosowanie do tablic lub `SAFEARRAY`s.|
 |[Oddzielne atrybuty](stand-alone-attributes.md)|Działa bardziej przypominające wiersz kodu, ale nie będzie działać na słowo kluczowe języka C++. Instrukcje autonomicznego atrybutu wymagają średnik na końcu wiersza.|
@@ -41,12 +41,12 @@ Następujący atrybut będzie stosowany tylko do [modułu](module-cpp.md) atrybu
 
 ## <a name="interface-attributes"></a>Atrybuty interfejsu
 
-Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interface.md) słowa kluczowego języka C++.
+Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interface.md) C++ — słowo kluczowe.
 
 |Atrybut|Opis|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
-|[niestandardowy](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
+|[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
 |[dispinterface](dispinterface.md)|Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.|
 |[dual](dual.md)|Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.|
 |[export](export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|
@@ -79,6 +79,6 @@ Podczas określania nie [uuid](uuid-cpp-attributes.md) atrybutu i użycie tej sa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Atrybuty C++ dla modelu COM i .NET](cpp-attributes-com-net.md)<br/>
+[Atrybuty języka C++ dla modelu COM i platformy .NET](cpp-attributes-com-net.md)<br/>
 [Atrybuty według grup](attributes-by-group.md)<br/>
 [Alfabetyczny spis atrybutów](attributes-alphabetical-reference.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037675"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Kwestie projektowania architektonicznego OLE DB
@@ -33,7 +33,7 @@ Na przykład, jeśli chcesz zaktualizować dane w zestawie wierszy, ale nie pami
 
 Biorąc pod uwagę możliwe kombinacje technologii (na przykład ze składnikami OLE DB przy użyciu składników ADO i migracja kodu ODBC do OLE DB), obejmujące wszystkich sytuacjach wykracza poza zakres z dokumentacji języka Visual C++. Wiele artykułów obejmujących różne scenariusze są jednak dostępne w następujących witrynach sieci web firmy Microsoft:
 
-- [I pomocy technicznej firmy Microsoft](https://support.microsoft.com/)
+- [Pomoc i obsługa techniczna firmy Microsoft](https://support.microsoft.com/)
 
 - [Omówienie artykuły techniczne dotyczące dostępu do danych firmy Microsoft](https://msdn.microsoft.com/library/ms810811.aspx)
 

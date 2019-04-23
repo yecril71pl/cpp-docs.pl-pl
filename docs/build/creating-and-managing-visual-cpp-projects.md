@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038041"
 ---
 # <a name="visual-studio-projects---c"></a>Projektów programu Visual Studio — C++
@@ -60,16 +60,16 @@ Na liście błędów, możesz nacisnąć przycisk **F1** w przypadku wyróżnion
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji](working-with-project-properties.md)<br/>
+[Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)<br/>
 Jak używać stron właściwości i arkuszach właściwości, aby określić własne ustawienia projektu.
 
-[Dokumentacja bibliotek i składników w czasie kompilacji](adding-references-in-visual-cpp-projects.md)<br/>
+[Odwoływanie się do bibliotek i składników podczas kompilacji](adding-references-in-visual-cpp-projects.md)<br/>
 Jak dołączyć biblioteki i biblioteki dll, składniki COM i .NET w projekcie.
  
 [Porządkowanie plików wyjściowych projektu](how-to-organize-project-output-files-for-builds.md)<br/>
 Jak dostosować lokalizację plików wykonywalnych, utworzone w procesie kompilacji.
 
-[Niestandardowych krokach budowania lub zdarzeniach kompilacji](understanding-custom-build-steps-and-build-events.md)<br/>
+[Niestandardowe kroki kompilacji i zdarzenia kompilacji](understanding-custom-build-steps-and-build-events.md)<br/>
 Jak dodać dowolnego dowolnego polecenia do procesu kompilacji w wybranych punktach.
 
 [Tworzenie projektu z istniejącego kodu](how-to-create-a-cpp-project-from-existing-code.md)<br/>
@@ -77,4 +77,4 @@ Jak utworzyć nowy projekt programu Visual Studio z kolekcją luźno plików źr
 
 ## <a name="see-also"></a>Zobacz także
 
-[Projekty i systemów kompilacji](projects-and-build-systems-cpp.md)<br>
+[Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)<br>

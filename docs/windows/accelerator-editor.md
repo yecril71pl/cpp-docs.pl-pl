@@ -34,10 +34,10 @@ helpviewer_keywords:
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041127"
 ---
 # <a name="accelerator-editor-c"></a>Edytor klawiszy skrótów (C++)
@@ -72,9 +72,9 @@ Poniżej znajdują się wpisy prawne **modyfikator** właściwości w tabeli akc
    |Wartość|Opis|
    |-----------|-----------------|
    |**Brak**|Użytkownik naciśnie tylko **klucz** wartość.<br/><br/>Ta wartość jest najbardziej efektywne używana przy użyciu wartości ASCII/ANSI 001 za pośrednictwem 026, który jest interpretowany jako ^ od A do ^ Z (**Ctrl + A** za pośrednictwem **Ctrl + Z**).|
-   |**Alt**|Użytkownik musi nacisnąć klawisz **Alt** przed **klucz** wartość.|
+   |**ALT**|Użytkownik musi nacisnąć klawisz **Alt** przed **klucz** wartość.|
    |**Ctrl**|Użytkownik musi nacisnąć klawisz **Ctrl** przed **klucz** wartość nie jest prawidłowy z typem ASCII.|
-   |**Shift**|Użytkownik musi nacisnąć klawisz **Shift** przed **klucz** wartość.|
+   |**SHIFT**|Użytkownik musi nacisnąć klawisz **Shift** przed **klucz** wartość.|
    |**Ctrl+Alt**|Użytkownik musi nacisnąć klawisz **Ctrl** i **Alt** przed **klucz** wartość nie jest prawidłowy z typem ASCII.|
    |**Ctrl+Shift**|Użytkownik musi nacisnąć klawisz **Ctrl** i **Shift** przed **klucz** wartość nie jest prawidłowy z typem ASCII.|
    |**Alt+Shift**|Użytkownik musi nacisnąć klawisz **Alt** i **Shift** przed **klucz** wartość nie jest prawidłowy z typem ASCII.|

@@ -1,5 +1,5 @@
 ---
-title: Ciąg (C + +/ CLI i C + +/ CX)
+title: Ciąg (C++sposób niezamierzony i C++/CX)
 ms.date: 10/08/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
 ms.openlocfilehash: 8440ddf510f99618c28a6b6d585c8628df85f9cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038546"
 ---
-# <a name="string--ccli-and-ccx"></a>Ciąg (C + +/ CLI i C + +/ CX)
+# <a name="string--ccli-and-ccx"></a>Ciąg (C++sposób niezamierzony i C++/CX)
 
 Środowisko uruchomieniowe Windows i środowisko uruchomieniowe języka wspólnego reprezentuje ciągi jako obiekty, których ilość przydzielonej pamięci odbywa się automatycznie. Oznacza to nie należy jawnie odrzucić pamięci ciągu, po zakończeniu zacznie zmiennej ciągu poza zakres lub aplikacji. Aby wskazać, że okres istnienia obiektu ciągu ma odbywać się automatycznie, należy zadeklarować typ ciągu z [uchwytu do obiektu (^)](handle-to-object-operator-hat-cpp-component-extensions.md) modyfikator.
 
@@ -55,7 +55,7 @@ Kompilator również ma wbudowaną obsługę operatorów trzech, które można p
 Przy przekazywaniu <xref:System.String>, kompilator będzie polu, jeśli to konieczne, a następnie połącz obiekt (z ToString) na ciąg.
 
 > [!NOTE]
-> Daszek ("^") wskazuje, że Zmienna zadeklarowana dojścia do C + +/ CLI zarządzanego obiektu.
+> Daszek ("^") oznacza, że dojście do zadeklarowanej zmiennej C++sposób niezamierzony zarządzanego obiektu.
 
 Aby uzyskać więcej informacji, zobacz [literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md).
 
@@ -261,6 +261,6 @@ System.String
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
 [Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md)

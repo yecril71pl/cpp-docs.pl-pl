@@ -1,5 +1,5 @@
 ---
-title: Delegowanie (C + +/ CLI i C + +/ CX)
+title: Delegowanie (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
 ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036950"
 ---
-# <a name="delegate--ccli-and-ccx"></a>Delegowanie (C + +/ CLI i C + +/ CX)
+# <a name="delegate--ccli-and-ccx"></a>Delegowanie (C++sposób niezamierzony i C++/CX)
 
 Deklaruje typ, który reprezentuje wskaźnik funkcji.
 
@@ -31,7 +31,7 @@ Aby wykryć w czasie kompilacji, jeśli typ jest delegatem, należy użyć `__is
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-C + +/ CX obsługuje delegatów przy użyciu następującej składni.
+C++/CX obsługuje delegatów przy użyciu następującej składni.
 
 ### <a name="syntax"></a>Składnia
 
@@ -47,21 +47,21 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parametry
 
-*dostęp*<br/>
+*access*<br/>
 (opcjonalnie) Dostępność delegata, która może być **publicznych** (ustawienie domyślne) lub **prywatnej**. Prototyp funkcji również może być kwalifikowana za **const** lub **volatile** słów kluczowych.
 
 *zwracany typ*<br/>
 Zwracany typ prototypu funkcji.
 
-*Delegat typu identyfikator*<br/>
+*delegate-type-identifier*<br/>
 Nazwa typu zadeklarowana delegata.
 
-*parametry*<br/>
+*parameters*<br/>
 (Opcjonalnie) Typy i identyfikatory prototypu funkcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj *identyfikatora w przypadku typu delegata* Aby zadeklarować zdarzenia o ten sam prototyp jako pełnomocnik. Aby uzyskać więcej informacji, zobacz [obiektów delegowanych (C + +/ CX)](../cppcx/delegates-c-cx.md).
+Użyj *identyfikatora w przypadku typu delegata* Aby zadeklarować zdarzenia o ten sam prototyp jako pełnomocnik. Aby uzyskać więcej informacji, zobacz [delegatów (C++/CX)](../cppcx/delegates-c-cx.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -81,7 +81,7 @@ function_declaration
 
 ### <a name="parameters"></a>Parametry
 
-*dostęp*<br/>
+*access*<br/>
 (opcjonalnie) Dostępność delegata spoza zestawu może być publicznym lub prywatnym.  Wartość domyślna jest prywatny.  Wewnątrz klasy delegata może mieć żadnych ułatwień dostępu.
 
 *function_declaration*<br/>
@@ -119,9 +119,9 @@ Podczas tworzenia delegata funkcji statycznych lub globalnych, tylko jeden param
 
 Aby uzyskać więcej informacji na temat obiektów delegowanych zobacz
 
-- [Instrukcje: Definiowanie i korzystanie z obiektów delegowanych (C + +/ CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Instrukcje: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Delegaty ogólne (C + +/ CLI)](generic-delegates-visual-cpp.md)
+- [Delegaty ogólne (C++/CLI)](generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Wymagania
 
@@ -202,4 +202,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

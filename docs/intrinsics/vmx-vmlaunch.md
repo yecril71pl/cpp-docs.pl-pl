@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
 ms.openlocfilehash: 37f3a39ee7b0d4d24f26fab2347ac9fca020ec47
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037054"
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Umieszczanie aplikacji wywołującej stan inny niż główny operacji VMX (wprowadź maszyny Wirtualnej) przy użyciu bieżącej struktury sterowania maszyny wirtualnej (VMCS).
 
@@ -49,7 +49,7 @@ Aplikacja może wykonywać operację wprowadź maszyny Wirtualnej przy użyciu [
 
 **Plik nagłówkowy** \<intrin.h >
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

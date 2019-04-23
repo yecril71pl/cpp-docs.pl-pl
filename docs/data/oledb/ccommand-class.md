@@ -50,10 +50,10 @@ helpviewer_keywords:
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
 ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039731"
 ---
 # <a name="ccommand-class"></a>Klasa CCommand
@@ -93,21 +93,21 @@ Aby użyć polecenia OLE DB, która może zwrócić wiele wyników, należy okre
 
 |||
 |-|-|
-|[Zamknięcie](#close)|Zamyka bieżące polecenie.|
+|[Zamknij](#close)|Zamyka bieżące polecenie.|
 |[GetNextResult](#getnextresult)|Pobiera następny wynik, gdy zestawów za pomocą wielu wyników.|
-|[Otwarcie](#open)|Wykonuje i opcjonalnie powiązanie polecenia.|
+|[Otwórz](#open)|Wykonuje i opcjonalnie powiązanie polecenia.|
 
 ### <a name="inherited-methods"></a>Metody dziedziczone
 
 |||
 |-|-|
-|[Create](#create)|Tworzy nowe polecenia dla określonej sesji, a następnie ustawia tekst polecenia.|
+|[Tworzenie](#create)|Tworzy nowe polecenia dla określonej sesji, a następnie ustawia tekst polecenia.|
 |[CreateCommand](#createcommand)|Tworzy nowe polecenie.|
 |[GetParameterInfo](#getparameterinfo)|Pobiera listę parametrów poleceń, ich nazwy i ich typy.|
 |[Przygotowywanie](#prepare)|Weryfikuje i optymalizuje bieżącego polecenia.|
 |[ReleaseCommand](#releasecommand)|Zwalnia parametr metody dostępu, jeśli to konieczne, a następnie zwalnia polecenia.|
 |[SetParameterInfo](#setparameterinfo)|Określa typ macierzysty każdego parametru polecenia.|
-|[Unprepare —](#unprepare)|Odrzuca bieżący plan wykonania polecenia.|
+|[Unprepare](#unprepare)|Odrzuca bieżący plan wykonania polecenia.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -417,4 +417,4 @@ Ta metoda opakowuje metodę OLE DB [ICommandPrepare::Unprepare](/previous-versio
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

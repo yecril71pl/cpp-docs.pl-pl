@@ -9,15 +9,15 @@ helpviewer_keywords:
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
 ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037873"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Wykonuje porównanie blokowane 128-bitowego i exchange.
 
@@ -34,7 +34,7 @@ unsigned char _InterlockedCompareExchange128(
 
 #### <a name="parameters"></a>Parametry
 
-*Miejsce docelowe*<br/>
+*miejsce docelowe*<br/>
 [out w] Wskaźnik do miejsca docelowego, który jest tablicą dwóch 64-bitowych liczb całkowitych są traktowane jako pola 128-bitowego. Dane docelowego musi być 16-bajtowy wyrównane, aby uniknąć błędów ogólnej ochrony.
 
 *ExchangeHigh*<br/>
@@ -123,12 +123,12 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[Funkcje wewnętrzne _interlockedcompareexchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
+[Funkcje wewnętrzne _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -1,5 +1,5 @@
 ---
-title: idl_quote — (atrybut COM C++)
+title: idl_quote — (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
 ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037120"
 ---
 # <a name="idlquote"></a>idl_quote
@@ -25,12 +25,12 @@ Umożliwia użycie konstrukcji języka IDL, które nie są obsługiwane w bież�
 
 ### <a name="parameters"></a>Parametry
 
-*tekst*<br/>
+*Tekst*<br/>
 Nazwa atrybutu, który ma kompilator języka Visual C++ do przejścia do pliku .idl wygenerowany bez zwracania błędów kompilatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli **idl_quote —** atrybut C++ jest używany jako atrybut autonomiczny (przy użyciu średnika po zamykającym nawiasie), następnie *tekstu* zostanie umieszczony w pliku .idl scalone, ponieważ jest. Jeśli **idl_quote —** jest używana na symbol, *tekstu* znajduje się w bloku atrybutu dla tego symbolu.
+Jeśli **idl_quote —** C++ atrybut jest używany jako atrybut autonomiczny (przy użyciu średnika po zamykającym nawiasie), następnie *tekstu* zostanie umieszczony w pliku .idl scalone, ponieważ jest. Jeśli **idl_quote —** jest używana na symbol, *tekstu* znajduje się w bloku atrybutu dla tego symbolu.
 
 ## <a name="example"></a>Przykład
 
@@ -77,7 +77,7 @@ Ten kod powoduje `MYFLOT` i `MYDUB` i *tekstu* wpis do umieszczenia w pliku .idl
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Dowolne miejsce|
+|**Dotyczy**|Dowolne miejsce|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -86,5 +86,5 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)

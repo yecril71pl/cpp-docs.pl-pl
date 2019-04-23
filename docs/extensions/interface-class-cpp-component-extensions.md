@@ -1,5 +1,5 @@
 ---
-title: Klasa interfejsu (C + +/ CLI i C + +/ CX)
+title: Klasa interfejsu (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
 ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035857"
 ---
-# <a name="interface-class--ccli-and-ccx"></a>Klasa interfejsu (C + +/ CLI i C + +/ CX)
+# <a name="interface-class--ccli-and-ccx"></a>Klasa interfejsu (C++sposób niezamierzony i C++/CX)
 
 Deklaruje interfejsu.  Informacje na temat interfejsy macierzyste można zobaczyć [__interface](../cpp/interface.md).
 
@@ -34,7 +34,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 *interface_access*<br/>
 Dostępność interfejs spoza zestawu.  Możliwe wartości to **publicznych** i **prywatnej**.  **prywatne** jest ustawieniem domyślnym. Zagnieżdżone interfejsy nie mogą mieć *interface_access* specyfikator.
 
-*nazwa*<br/>
+*Nazwa*<br/>
 Nazwa interfejsu.
 
 *inherit_access*<br/>
@@ -57,7 +57,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Statyczny Konstruktor interfejsu](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
-- [Interfejsy ogólne (C + +/ CLI)](generic-interfaces-visual-cpp.md)
+- [Interfejsy ogólne (C++/CLI)](generic-interfaces-visual-cpp.md)
 
 Aby uzyskać informacji o innych typach CLR, zobacz [klas i struktur](classes-and-structs-cpp-component-extensions.md).
 
@@ -220,4 +220,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

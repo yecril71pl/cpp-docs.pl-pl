@@ -1,5 +1,5 @@
 ---
-title: event_source (atrybut COM C++)
+title: event_source (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_source
@@ -12,10 +12,10 @@ helpviewer_keywords:
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
 ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035935"
 ---
 # <a name="eventsource"></a>event_source
@@ -30,7 +30,7 @@ Tworzy źródła zdarzenia.
 
 ### <a name="parameters"></a>Parametry
 
-*— typ*<br/>
+*type*<br/>
 Wyliczenie jednego z następujących wartości:
 
 - `native` dla niezarządzanego kodu C/C++ (wartość domyślna dla klasy niezarządzane).
@@ -51,7 +51,7 @@ Gdy *typu* jest `native`, można określić `decorate=false`, aby wskazać, że 
 
 ## <a name="remarks"></a>Uwagi
 
-**Event_source** atrybut C++ Określa, że klasy lub struktury, do którego jest stosowana będzie źródła zdarzenia.
+**Event_source** C++ atrybut określa, że klasy lub struktury, do którego jest stosowana będzie źródła zdarzenia.
 
 **event_source** jest używany w połączeniu z [event_receiver](event-receiver.md) atrybutu i [__event](../../cpp/event.md) — słowo kluczowe. Użyj `event_receiver` do tworzenia odbiorcy zdarzeń. Użyj **__event** metod w źródle zdarzenia do określenia tych metod jako zdarzenia.
 
@@ -64,7 +64,7 @@ Gdy *typu* jest `native`, można określić `decorate=false`, aby wskazać, że 
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **— struktura**|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|**Klasa coclass** po `type`=`com`|
 |**Nieprawidłowe atrybuty**|Brak|

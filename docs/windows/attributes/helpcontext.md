@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
 ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038177"
 ---
 # <a name="helpcontext"></a>helpcontext
@@ -25,7 +25,7 @@ Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać inform
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator*<br/>
+*id*<br/>
 Identyfikator kontekstu tematu Pomocy. Zobacz [Pomoc HTML: Pomoc kontekstowa do programów Your](../../mfc/html-help-context-sensitive-help-for-your-programs.md) więcej informacji na temat kontekstu identyfikatorów.
 
 ## <a name="remarks"></a>Uwagi
@@ -42,7 +42,7 @@ Zobacz przykład [defaultvalue](defaultvalue.md) przykład sposobu użycia **hel
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
+|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -51,7 +51,7 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>

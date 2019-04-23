@@ -8,10 +8,10 @@ helpviewer_keywords:
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
 ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035601"
 ---
 # <a name="create-a-c-makefile-project"></a>Tworzenie projektu pliku reguł programu make w języku C++
@@ -86,8 +86,8 @@ Przy następnym otwarciu projektu pliku reguł programu make w środowisku progr
 
 ## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z IntelliSense](/visualstudio/ide/using-intellisense)<br>
-[Odwołanie NMAKE](nmake-reference.md)<br>
+[Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[NMAKE — dokumentacja](nmake-reference.md)<br>
 [Instrukcje: Tworzenie projektu C++ z istniejącego kodu](../how-to-create-a-cpp-project-from-existing-code.md)
 [znaki specjalne w pliku reguł programu make](special-characters-in-a-makefile.md)<br/>
 [Zawartość pliku reguł programu Make](contents-of-a-makefile.md)<br/>

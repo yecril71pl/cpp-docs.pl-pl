@@ -10,15 +10,15 @@ helpviewer_keywords:
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
 ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040215"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Generuje `extrq` instrukcji do wyodrębnienia określonym usługi bits z niskim 64-bitowy swój pierwszy argument.
 
@@ -38,7 +38,7 @@ __m128i _mm_extracti_si64(
 
 #### <a name="parameters"></a>Parametry
 
-*Źródło*<br/>
+*Element źródłowy*<br/>
 [in] Pole 128-bitowego z danymi wejściowymi w jej dolnej 64-bitowy.
 
 *Deskryptor*<br/>
@@ -47,7 +47,7 @@ __m128i _mm_extracti_si64(
 *Długość*<br/>
 [in] Liczba całkowita określająca długość pola do wyodrębnienia.
 
-*Indeks*<br/>
+*Index*<br/>
 [in] Liczba całkowita określająca indeks pola do wyodrębnienia
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -108,7 +108,7 @@ result2 = 0x30eca86
 result3 = 0x30eca86
 ```
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
 

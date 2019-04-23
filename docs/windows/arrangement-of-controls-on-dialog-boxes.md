@@ -81,10 +81,10 @@ helpviewer_keywords:
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037424"
 ---
 # <a name="how-to-layout-controls-c"></a>Instrukcje: Układ kontrolki (C++)
@@ -268,13 +268,13 @@ Po dodaniu do okna dialogowego, można rozmiar pola kombi. Można również okre
    |Rozmieszczenie|Opis|
    |---|---|
    |**W pionie**|Środka kontrolki w pionie w oknie dialogowym.|
-   |**Poziome**|Centrum kontrolki w poziomie w oknie dialogowym.|
+   |**Horizontal**|Centrum kontrolki w poziomie w oknie dialogowym.|
 
 - Aby zorganizować projekt przycisków, wybierz jeden lub więcej przycisków. Przejdź do menu **Format** > **Rozmieść przyciski**, a następnie wybierz jedno z następujących procedur:
 
    |Rozmieszczenie|Opis|
    |---|---|
-   |**Prawe**|Wyrównuje przycisków wzdłuż prawej krawędzi okna dialogowego.|
+   |**po prawej stronie**|Wyrównuje przycisków wzdłuż prawej krawędzi okna dialogowego.|
    |**dolny**|Wyrównuje przycisków wzdłuż dolnej krawędzi okna dialogowego.|
 
    Wybranie kontrolki niż przycisku polecenia, nie ma wpływu na jego położenie.
@@ -287,4 +287,4 @@ Win32
 
 [Zarządzanie formantów okna dialogowego](controls-in-dialog-boxes.md)<br/>
 [Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek](adding-editing-or-deleting-controls.md)<br/>
-[Instrukcje: Definiowanie wartości i kontrola dostępu](defining-mnemonics-access-keys.md)<br/>
+[Instrukcje: Definiowanie dostępu do kontrolek i ich wartości](defining-mnemonics-access-keys.md)<br/>

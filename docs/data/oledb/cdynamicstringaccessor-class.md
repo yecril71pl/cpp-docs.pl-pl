@@ -13,10 +13,10 @@ helpviewer_keywords:
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
 ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035666"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor — Klasa
@@ -40,7 +40,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 |||
 |-|-|
-|[GetString —](#getstring)|Pobiera dane określonej kolumny jako ciąg.|
+|[GetString](#getstring)|Pobiera dane określonej kolumny jako ciąg.|
 |[Setstring —](#setstring)|Ustawia dane określonej kolumny jako ciąg.|
 
 ## <a name="remarks"></a>Uwagi
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Wskaźnik do ciągu znaków, który zawiera nazwę kolumny.
 
-*dane*<br/>
+*data*<br/>
 [in] Wskaźnik do danych ciągu, są zapisywane w określonej kolumnie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -126,11 +126,11 @@ Jeśli _SECURE_ATL jest zdefiniowana ma wartość różną od zera, jeśli zosta
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — kompendium](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Klasa CAccessor](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor — Klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[CManualAccessor — Klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
-[CDynamicAccessor — Klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicStringAccessorA — Klasa](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
-[CDynamicStringAccessorW — Klasa](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
-[Klasa CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
+[CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessorA, klasa](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
+[CDynamicStringAccessorW, klasa](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
+[CXMLAccessor, klasa](../../data/oledb/cxmlaccessor-class.md)

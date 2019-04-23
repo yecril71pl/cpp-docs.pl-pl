@@ -10,10 +10,10 @@ helpviewer_keywords:
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
 ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038701"
 ---
 # <a name="generic-functions-ccli"></a>Funkcje ogólne (C++/CLI)
@@ -53,26 +53,26 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametry
 
-*atrybuty*<br/>
+*Atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
-*modyfikatory*<br/>
+*Modyfikatory*<br/>
 (Opcjonalnie) Modyfikator właściwy dla funkcji, takich jak statyczny.  **wirtualne** jest niedozwolona, ponieważ metody wirtualne nie może być ogólny.
 
 *zwracany typ*<br/>
 Typ zwracany przez metodę. Jeśli typ zwracany void, nie zwraca wartości jest wymagana.
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 Nazwa funkcji.
 
 *identyfikatory parametr typu*<br/>
 Lista identyfikatorów rozdzielonych przecinkami.
 
-*formal-parameters*<br/>
+*parametrów formalnych*<br/>
 (Opcjonalnie) Lista parametrów.
 
 *type-parameter-constraints-clauses*<br/>
-To określa ograniczenia typów, które mogą być używane jako argumenty typu i ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
+To określa ograniczenia typów, które mogą być używane jako argumenty typu i ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](constraints-on-generic-type-parameters-cpp-cli.md).
 
 *treść funkcji*<br/>
 Treść metody, która może odwoływać się do identyfikatorów parametru typu.
@@ -183,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
 [Typy ogólne](generics-cpp-component-extensions.md)

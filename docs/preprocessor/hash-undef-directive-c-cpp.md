@@ -9,10 +9,10 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
 ms.openlocfilehash: 4f4f5ce244be6d7f4e13d7a2abc5d21232c08d9d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039010"
 ---
 # <a name="undef-directive-cc"></a>#undef — dyrektywa (C/C++)
@@ -45,11 +45,11 @@ W poniższym przykładzie **#undef** dyrektywy Usuwa definicje symboliczna stał
 #undef ADD
 ```
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Makra mogą być niezdefiniowana z wiersza polecenia przy użyciu `/U` opcji, a po niej niezdefiniowanej nazwy makra. Efekt wydaniu tego polecenia jest równoważna z sekwencji `#undef` *Nazwa makra* instrukcji na początku pliku.
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

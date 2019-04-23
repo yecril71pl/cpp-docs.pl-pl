@@ -1,5 +1,5 @@
 ---
-title: literał (C + +/ CLI i C + +/ CX)
+title: literał (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
 ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037801"
 ---
-# <a name="literal-ccli-and-ccx"></a>literał (C + +/ CLI i C + +/ CX)
+# <a name="literal-ccli-and-ccx"></a>literał (C++sposób niezamierzony i C++/CX)
 
 Zmienna (element członkowski danych) jest oznaczony jako **literału** w **/CLR** kompilacji odpowiada natywnych **statyczna stała** zmiennej.
 
@@ -127,4 +127,4 @@ class B {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

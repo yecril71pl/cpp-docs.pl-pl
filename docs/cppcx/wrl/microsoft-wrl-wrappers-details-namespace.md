@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Details namespace
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
 ms.openlocfilehash: deccd4519b2ddf18725dca5af13b94ac79d6e280
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038725"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details — Przestrzeń nazw
@@ -36,14 +36,14 @@ namespace Microsoft::WRL::Wrappers::Details;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[SyncLockT — Klasa](synclockt-class.md)|Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.|
-|[SyncLockWithStatusT — Klasa](synclockwithstatust-class.md)|Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.|
+|[SyncLockT, klasa](synclockt-class.md)|Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.|
+|[SyncLockWithStatusT, klasa](synclockwithstatust-class.md)|Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.|
 
 ### <a name="methods"></a>Metody
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CompareStringOrdinal — Metoda](comparestringordinal-method.md)|Porównuje dwa określone `HSTRING` obiekty i zwraca liczbę całkowitą, która wskazuje ich względne położenie w kolejności sortowania.|
+|[CompareStringOrdinal, metoda](comparestringordinal-method.md)|Porównuje dwa określone `HSTRING` obiekty i zwraca liczbę całkowitą, która wskazuje ich względne położenie w kolejności sortowania.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -53,4 +53,4 @@ namespace Microsoft::WRL::Wrappers::Details;
 
 ## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Wrappers — Przestrzeń nazw](microsoft-wrl-wrappers-namespace.md)
+[Microsoft::WRL::Wrappers, przestrzeń nazw](microsoft-wrl-wrappers-namespace.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
 ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038424"
 ---
 # <a name="hidden"></a>hidden
@@ -37,7 +37,7 @@ Zobacz przykład [możliwej do wiązania](bindable.md) przykład sposobu użycia
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|**interfejs**, **klasy**, **struktury**, metody, właściwości|
+|**Dotyczy**|**interfejs**, **klasy**, **struktury**, metody, właściwości|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|**Klasa coclass** (po zastosowaniu do **klasy** lub **struktury**)|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -46,7 +46,7 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)

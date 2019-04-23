@@ -1,5 +1,5 @@
 ---
-title: Obsługa wyjątków (C + +/ CLI i C + +/ CX)
+title: Obsługa wyjątków (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
 ms.openlocfilehash: b477f7355ee1f4f70a0ad3df8b85c4276c07d397
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037177"
 ---
-# <a name="exception-handling--ccli-and-ccx"></a>Obsługa wyjątków (C + +/ CLI i C + +/ CX)
+# <a name="exception-handling--ccli-and-ccx"></a>Obsługa wyjątków (C++sposób niezamierzony i C++/CX)
 
-Aplikacje skompilowane z `/ZW` — opcja kompilatora lub `/clr` kompilator korzystać zarówno *wyjątki* do obsługi nieoczekiwanych błędów podczas wykonywania programu. W poniższych tematach omówiono obsługi wyjątków w dowolnym języku C + +/ CX lub C + +/ interfejsu wiersza polecenia aplikacji.
+Aplikacje skompilowane z `/ZW` — opcja kompilatora lub `/clr` kompilator korzystać zarówno *wyjątki* do obsługi nieoczekiwanych błędów podczas wykonywania programu. W poniższych tematach omówiono obsługi wyjątków w albo C++/CX lub C++aplikacji w sposób niezamierzony.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -32,13 +32,13 @@ W tym artykule omówiono różnice względem standardowe zachowanie programu obs
 [finally](../dotnet/finally.md)<br/>
 W tym artykule omówiono sposób używania finally — słowo kluczowe.
 
-[Instrukcje: Definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
+[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Pokazuje, jak nieobsłużone wyjątki mogą być przechwytywane.
 
-[Instrukcje: Przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
+[Instrukcje: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 Omawia, jak przechwytywać wyjątki środowiska CLR i C++ w kodzie natywnym.
 
-[Instrukcje: Definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
+[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Pokazuje, jak przechwytywać wszystkie nieobsłużone wyjątki.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
@@ -48,4 +48,4 @@ W tym artykule opisano obsługę wyjątków w standardowego języka C++.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

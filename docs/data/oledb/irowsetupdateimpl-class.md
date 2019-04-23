@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
 ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037721"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl — Klasa
@@ -87,7 +87,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *T*<br/>
 Klasa pochodząca z `IRowsetUpdateImpl`.
 
-*Magazyn*<br/>
+*Storage*<br/>
 Rekordzie użytkownika.
 
 *UpdateArray*<br/>
@@ -117,9 +117,9 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane p
 |-|-|
 |[GetOriginalData](#getoriginaldata)|Pobiera dane ostatnio przekazane lub uzyskany ze źródła danych, ignorowanie oczekujące zmiany.|
 |[GetPendingRows](#getpendingrows)|Zwraca listę wierszy z oczekującymi zmianami.|
-|[Getrowstatus —](#getrowstatus)|Zwraca stan określonych wierszy.|
+|[GetRowStatus](#getrowstatus)|Zwraca stan określonych wierszy.|
 |[Cofnij](#undo)|Cofa zmiany wiersza od czasu ostatniego pobrania lub aktualizacji.|
-|[Aktualizowanie](#update)|Przesyła wszelkie zmiany wprowadzone do wiersza od czasu ostatniego pobrania lub aktualizacji.|
+|[Aktualizacja](#update)|Przesyła wszelkie zmiany wprowadzone do wiersza od czasu ostatniego pobrania lub aktualizacji.|
 
 ### <a name="implementation-methods-callback"></a>Metody wdrażania (wywołanie zwrotne)
 
@@ -297,7 +297,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 #### <a name="parameters"></a>Parametry
 
-*stan*<br/>
+*status*<br/>
 [in] Stan Oczekujące operacje na wierszach.
 
 *hRowUpdate*<br/>

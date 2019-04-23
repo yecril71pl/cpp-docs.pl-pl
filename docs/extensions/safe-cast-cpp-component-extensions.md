@@ -1,5 +1,5 @@
 ---
-title: safe_cast (C + +/ CLI i C + +/ CX)
+title: safe_cast (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
 ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038879"
 ---
-# <a name="safecast-ccli-and-ccx"></a>safe_cast (C + +/ CLI i C + +/ CX)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++sposób niezamierzony i C++/CX)
 
 **Safe_cast** limit czasu operacji zwraca określone wyrażenie jako określony typ, jeśli to się powiedzie; w przeciwnym razie zgłasza `InvalidCastException`.
 
@@ -32,7 +32,7 @@ ms.locfileid: "59038879"
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-**safe_cast** pozwala na zmianę typu określonego wyrażenia. W sytuacjach, w pełni nieoczekiwany zmiennej lub parametru, aby umożliwiać konwersję do pewnego typu, można użyć **safe_cast** bez **try-catch —** bloku, aby wykryć błędy programowania podczas programowania. Aby uzyskać więcej informacji, zobacz [rzutowanie (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
+**safe_cast** pozwala na zmianę typu określonego wyrażenia. W sytuacjach, w pełni nieoczekiwany zmiennej lub parametru, aby umożliwiać konwersję do pewnego typu, można użyć **safe_cast** bez **try-catch —** bloku, aby wykryć błędy programowania podczas programowania. Aby uzyskać więcej informacji, zobacz [rzutowania (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
 
 ### <a name="syntax"></a>Składnia
 
@@ -45,7 +45,7 @@ ms.locfileid: "59038879"
 *type-id*<br/>
 Typ docelowy konwersji *wyrażenie* do. Dojście do odwołanie lub typ wartości, typem wartości lub odwołanie śledzące do typu odwołania lub wartość.
 
-*wyrażenie*<br/>
+*expression*<br/>
 Na wyrażenie obliczane do uchwytu odwołania lub typu wartości, typem wartości lub odwołanie śledzące do typu odwołania lub wartość.
 
 ### <a name="remarks"></a>Uwagi
@@ -105,14 +105,14 @@ Caught expected exception: InvalidCastException
 *type-id*<br/>
 Dojście do odwołanie lub typ wartości, typem wartości lub odwołanie śledzące do typu odwołania lub wartość.
 
-*wyrażenie*<br/>
+*expression*<br/>
 Na wyrażenie obliczane do uchwytu odwołania lub typu wartości, typem wartości lub odwołanie śledzące do typu odwołania lub wartość.
 
 ### <a name="remarks"></a>Uwagi
 
 Wyrażenie `safe_cast<` *identyfikator typu*`>(`*wyrażenie* `)` Konwertuje argument *wyrażenie* do obiektu typu *identyfikator typu*.
 
-Kompilator będzie akceptować [static_cast](../cpp/static-cast-operator.md) w większości miejsc, które go obsługują **safe_cast**.  Jednak **safe_cast** jest gwarantowane do produkcji weryfikowalny MSIL, gdzie jako **static_cast** może utworzyć nieweryfikowalnego MSIL.  Zobacz [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) i [Peverify.exe (narzędzie PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) więcej informacji na temat weryfikowalny kod.
+Kompilator będzie akceptować [static_cast](../cpp/static-cast-operator.md) w większości miejsc, które go obsługują **safe_cast**.  Jednak **safe_cast** jest gwarantowane do produkcji weryfikowalny MSIL, gdzie jako **static_cast** może utworzyć nieweryfikowalnego MSIL.  Zobacz [czystej i weryfikowalny kod (C++sposób niezamierzony)](../dotnet/pure-and-verifiable-code-cpp-cli.md) i [Peverify.exe (narzędzie PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) więcej informacji na temat weryfikowalny kod.
 
 Podobnie jak **static_cast**, **safe_cast** wywołuje konwersje zdefiniowane przez użytkownika.
 
@@ -124,9 +124,9 @@ Aby uzyskać więcej informacji na temat rzutowania zobacz [operatorów rzutowan
 
 Aby uzyskać więcej informacji na temat **safe_cast**, zobacz:
 
-- [Rzutowania w stylu C i kompilator /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
+- [Rzutowania w stylu języka C z/CLR (C++sposób niezamierzony)](c-style-casts-with-clr-cpp-cli.md)
 
-- [Instrukcje: Korzystanie z polecenia safe_cast w języku C + +/ CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
+- [Instrukcje: korzystanie z polecenia safe_cast w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Wymagania
 
@@ -166,4 +166,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

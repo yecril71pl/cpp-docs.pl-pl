@@ -1,5 +1,5 @@
 ---
-title: Atrybuty zdefiniowane przez użytkownika (C + +/ CLI i C + +/ CX)
+title: Atrybuty zdefiniowane przez użytkownika (C++sposób niezamierzony i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
 ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041301"
 ---
-# <a name="user-defined-attributes--ccli-and-ccx"></a>Atrybuty zdefiniowane przez użytkownika (C + +/ CLI i C + +/ CX)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Atrybuty zdefiniowane przez użytkownika (C++sposób niezamierzony i C++/CX)
 
-C + +/ CLI i C + +/ CX umożliwiają tworzenie atrybuty specyficzne dla platformy, które rozszerzają metadane interfejsu, klasy lub struktury, metody, parametr lub wyliczenia. Te atrybuty różnią się od [standardowe atrybuty C++](../cpp/attributes.md).
+C++/ Interfejs wiersza polecenia i C++/CX umożliwiają tworzenie atrybuty specyficzne dla platformy, które rozszerzają metadane interfejsu, klasy lub struktury, metody, parametr lub wyliczenia. Te atrybuty różnią się od [standardowe atrybuty C++](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Możesz zastosować C + +/ CX atrybuty do właściwości, ale nie do konstruktorów i metod.
+Można zastosować C++/CX atrybuty do właściwości, ale nie do konstruktorów i metod.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -37,7 +37,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Typy parametrów atrybutu](attribute-parameter-types-cpp-component-extensions.md)
 
-Instrukcje dotyczące podpisywania zestawów w programie Visual C++, zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Instrukcje dotyczące podpisywania zestawów w elemencie wizualnym C++, zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -194,4 +194,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Zobacz także
 
-[Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

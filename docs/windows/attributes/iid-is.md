@@ -1,5 +1,5 @@
 ---
-title: iid_is — (atrybut COM C++)
+title: iid_is — (C++ atrybutów COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
 ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038560"
 ---
 # <a name="iidis"></a>iid_is
@@ -25,12 +25,12 @@ Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu
 
 ### <a name="parameters"></a>Parametry
 
-*wyrażenie*<br/>
+*expression*<br/>
 Wyrażenie języka C, który określa IID interfejsu COM, wskazywana przez wskaźnik interfejsu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Iid_is —** atrybut C++ ma taką samą funkcjonalność jak [iid_is —](/windows/desktop/Midl/iid-is) atrybutów w MIDL.
+**Iid_is —** C++ atrybut ma taką samą funkcjonalność jak [iid_is —](/windows/desktop/Midl/iid-is) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -57,7 +57,7 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Parametr interfejsu, element członkowski danych|
+|**Dotyczy**|Parametr interfejsu, element członkowski danych|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
@@ -66,5 +66,5 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty IDL](idl-attributes.md)<br/>
+[Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)

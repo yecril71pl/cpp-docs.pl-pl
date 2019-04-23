@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780681"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777139"
 ---
 # <a name="compiler-error-c2440"></a>Błąd kompilatora C2440
 
@@ -143,7 +143,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2440 może również wystąpić dla niepoprawnego użycia konwersji zdefiniowanej przez użytkownika. Na przykład, gdy operator konwersji został zdefiniowany jako `explicit`, kompilator nie można go używać w niejawną konwersję. Aby uzyskać więcej informacji dotyczących konwersji zdefiniowanych przez użytkownika, zobacz [konwersje zdefiniowane przez użytkownika (C + +/ CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Ten przykład generuje C2440:
+C2440 może również wystąpić dla niepoprawnego użycia konwersji zdefiniowanej przez użytkownika. Na przykład, gdy operator konwersji został zdefiniowany jako `explicit`, kompilator nie można go używać w niejawną konwersję. Aby uzyskać więcej informacji dotyczących konwersji zdefiniowanych przez użytkownika, zobacz [konwersje zdefiniowane przez użytkownika (C++sposób niezamierzony)](../../dotnet/user-defined-conversions-cpp-cli.md)). Ten przykład generuje C2440:
 
 ```cpp
 // C2440d.cpp
@@ -194,7 +194,7 @@ C2440 może również wystąpić z powodu zmian w funkcji atrybutów.  Poniższy
 
 ## <a name="example"></a>Przykład
 
-Kompilator języka Visual C++ nie zezwala już [const_cast Operator](../../cpp/const-cast-operator.md) na spadek, gdy kod, który używa **/CLR** programowania jest kompilowany.
+Element wizualny C++ kompilatora nie zezwala już [const_cast Operator](../../cpp/const-cast-operator.md) na spadek, gdy kod, który używa **/CLR** programowania jest kompilowany.
 
 Aby rozwiązać ten C2440, użyj prawidłowego operatora rzutowania. Aby uzyskać więcej informacji, zobacz [operatorów rzutowania](../../cpp/casting-operators.md).
 

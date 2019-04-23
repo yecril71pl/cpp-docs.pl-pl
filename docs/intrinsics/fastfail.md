@@ -3,15 +3,15 @@ title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
 ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041510"
 ---
 # <a name="fastfail"></a>__fastfail
 
-**Specyficzne dla firmy Microsoft**
+**Microsoft Specific**
 
 Natychmiast kończy proces wywołujący osiąga obciążenie.
 
@@ -23,7 +23,7 @@ void __fastfail(unsigned int code);
 
 #### <a name="parameters"></a>Parametry
 
-*kod*<br/>
+*Kod*<br/>
 [in] A `FAST_FAIL_<description>` symboliczna stała z pliku winnt.h lub wdm.h, która oznacza powód zakończenia procesu.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -61,7 +61,7 @@ Obsługa mechanizmu natywnej awarii szybkie rozpoczął się w systemie Windows 
 
 **Plik nagłówkowy** \<intrin.h >
 
-**KONIEC Specyficzne dla firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

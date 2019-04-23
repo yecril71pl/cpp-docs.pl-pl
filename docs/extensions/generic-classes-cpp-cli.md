@@ -10,10 +10,10 @@ helpviewer_keywords:
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
 ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041424"
 ---
 # <a name="generic-classes-ccli"></a>Klasy ogólne [C++/CLI]
@@ -37,10 +37,10 @@ class-body
 
 W powyższej składni używane są następujące warunki:
 
-*atrybuty*<br/>
+*Atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
-*klucz klasy*<br/>
+*class-key*<br/>
 Albo **klasy** lub **typename**
 
 *Typ — parametr-identyfikatory*, rozdzielana przecinkami lista identyfikatorów określających nazwy parametrów typu.
@@ -53,19 +53,19 @@ Listy (nie rozdzielanych przecinkami) **gdzie** klauzul określania ograniczenia
 *Lista ograniczeń*<br/>
 *Klasa lub interfejs*[`,` *...* ]
 
-*modyfikatory dostępności*<br/>
+*accessibility-modifiers*<br/>
 Modyfikatory dostępności dla klasy ogólnej. Dla środowiska wykonawczego Windows, jest dozwolony tylko modyfikator **prywatnej**. Środowisko uruchomieniowe języka wspólnego, są dozwolone Modyfikatory **prywatnej** i **publicznych**.
 
-*identyfikator*<br/>
+*Identyfikator*<br/>
 Nazwa klasy ogólnej dowolnego prawidłowego identyfikatora C++.
 
-*modyfikatory*<br/>
+*Modyfikatory*<br/>
 (Opcjonalnie) Może zawierać Modyfikatory **zapieczętowanego** i **abstrakcyjne**.
 
-*Lista podstawowego*<br/>
+*base-list*<br/>
 Lista, która zawiera jedną klasę bazową i wszystkie zaimplementowane interfejsy, wszystkie rozdzielonych przecinkami.
 
-*treści klasy*<br/>
+*class-body*<br/>
 Treść tej klasy, zawierający pola, funkcje składowe itp.
 
 *deklaratory*<br/>
@@ -97,7 +97,7 @@ int main() {
 
 Oba typy wartości (albo wbudowanych typów, takich jak **int** lub **double**, lub wartości zdefiniowanej przez użytkownika typy) i typy referencyjne mogą być używane jako argument typu ogólnego. Składnia w ramach ogólnego definicji jest taka sama niezależnie od tego. Syntaktycznie nieznany typ jest traktowany tak, jakby był to typ odwołania. Jednak środowiska uruchomieniowego jest w stanie określić, jeśli typ faktycznie używany jest typ wartości i Zastąp odpowiedni kod generowany dla bezpośredniego dostępu do elementów członkowskich. Typy wartości używane jako argumenty typu generycznego nie są opakowany i dlatego nie ponieść spadek wydajności, skojarzone z pakowania. Składnią używaną w ramach organu ogólnych powinny być `T^` i `->` zamiast `.`. Jakiekolwiek wykorzystanie [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) dla typu parametru będzie odpowiednio interpretowany przez środowisko uruchomieniowe jako proste tworzenie typu wartości, jeśli argument typu jest typem wartości.
 
-Można również zadeklarować klasy ogólnej z [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](constraints-on-generic-type-parameters-cpp-cli.md) na typy, które mogą być używane dla parametru typu. W poniższym przykładzie używany dowolny typ dla `ItemType` musi implementować `IItem` interfejsu. Podjęto próbę użycia **int**, na przykład, który nie implementuje `IItem`, wywołałoby błąd w czasie kompilacji, ponieważ argument typu nie spełnia warunków ograniczenia.
+Można również zadeklarować klasy ogólnej z [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](constraints-on-generic-type-parameters-cpp-cli.md) na typy, które mogą być używane dla parametru typu. W poniższym przykładzie używany dowolny typ dla `ItemType` musi implementować `IItem` interfejsu. Podjęto próbę użycia **int**, na przykład, który nie implementuje `IItem`, wywołałoby błąd w czasie kompilacji, ponieważ argument typu nie spełnia warunków ograniczenia.
 
 ```cpp
 // generic_classes_2.cpp

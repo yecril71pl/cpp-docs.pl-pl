@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
 ms.openlocfilehash: b4f5fb6ed21fb23195af340c8de3ee7c654f7fee
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037834"
 ---
 # <a name="data-access-programming-mfcatl"></a>Programowanie (MFC/ATL) dostępu do danych
@@ -27,7 +27,7 @@ Jeśli starszych aplikacji używa mechanizmu OLE DB lub wyższego poziomu interf
 
 Składnik SQL Native Client (SNAC), które pakiety sterowników OLE DB i ODBC w pojedynczego pliku DLL jest przestarzała w przypadku aplikacji ODBC. Wersja programu SQL Server 2012 SNAC (SQLNCLI11. Biblioteka DLL) jest dostarczany z programem SQL Server 2016, ponieważ zależą od niej inne składniki programu SQL Server. Jednakże należy używać nowej aplikacji w języku C++, łączących się z programu SQL Server lub usługi Azure SQL Database za pomocą ODBC [najnowszych sterowników ODBC](/sql/connect/odbc/download-odbc-driver-for-sql-server). Aby uzyskać więcej informacji, zobacz [programu SQL Server Native klienta programowania](/sql/relational-databases/native-client/sql-server-native-client-programming)
 
-Jeśli używasz języka C + +/ CLI, będzie można kontynuować używanie ADO.NET zawsze. Aby uzyskać więcej informacji, zobacz [ADO.NET za pomocą dostępu do danych (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md), i [uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
+Jeśli używasz C++/CLI, będzie można kontynuować używanie ADO.NET zawsze. Aby uzyskać więcej informacji, zobacz [ADO.NET za pomocą dostępu do danych (C++sposób niezamierzony)](../dotnet/data-access-using-adonet-cpp-cli.md), i [uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 - Oprócz klas otoki ODBC MFC udostępnia klasy otoki obiektów dostępu do danych (DAO) do łączenia się z baz danych programu Access.  Jednak DAO jest przestarzała. Każdy kod, na podstawie CDaoDatabase lub CDaoRecordset powinny zostać uaktualnione.
 

@@ -1,5 +1,5 @@
 ---
-title: ostrzeżenie
+title: warning
 ms.date: 11/04/2016
 f1_keywords:
 - warning_CPP
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037753"
 ---
 # <a name="warning-pragma"></a>Ostrzeżenie Pragma
@@ -37,8 +37,8 @@ Dostępne są następujące parametry specyfikator ostrzeżenie.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Zastosowanie danego poziomu do określonego ostrzeżenia. Włącza to również określone ostrzeżenie, która jest domyślnie wyłączona.|
 |*default*|Resetuj zachowanie ostrzeżenie do wartości domyślnej. Włącza to również określone ostrzeżenie, która jest domyślnie wyłączona. Ostrzeżenie będzie generowane w lokalizacji domyślnej, udokumentowane, poziom.<br /><br /> Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*Wyłącz*|Generuje określony komunikaty ostrzegawcze.|
-|*error*|Należy sporządzić raport określone ostrzeżenia jako błędy.|
+|*disable*|Generuje określony komunikaty ostrzegawcze.|
+|*Błąd*|Należy sporządzić raport określone ostrzeżenia jako błędy.|
 |*once*|Wyświetl komunikaty określony tylko jeden raz.|
 |*Pomiń*|Wypycha bieżący stan pragmy w stosie, wyłącza określone ostrzeżenie następnego wiersza, a tak, aby stan pragmy jest resetowany punktów POP stosu ostrzeżenie.|
 

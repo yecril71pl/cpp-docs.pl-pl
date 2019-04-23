@@ -7,10 +7,10 @@ helpviewer_keywords:
 - record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
 ms.openlocfilehash: e25ca9cad1390dd11ab7328ffefed31badf6fc0b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036078"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Kod widoku rekordu tworzony przez Kreatora aplikacji (dostęp do danych MFC)

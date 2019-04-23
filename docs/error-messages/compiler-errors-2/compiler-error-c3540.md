@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3540
 ms.assetid: 3c0c959c-e3b7-40eb-b922-ccac44bd9d85
 ms.openlocfilehash: 57e4145557272f76a890a356c79982346cd74d7e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037172"
 ---
 # <a name="compiler-error-c3540"></a>Błąd kompilatora C3540
@@ -36,6 +36,6 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[auto — słowo kluczowe](../../cpp/auto-keyword.md)<br/>
+[Auto, słowo kluczowe](../../cpp/auto-keyword.md)<br/>
 [/Zc:auto (Dedukuj typ zmiennej)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[sizeof — operator](../../cpp/sizeof-operator.md)
+[sizeof, operator](../../cpp/sizeof-operator.md)

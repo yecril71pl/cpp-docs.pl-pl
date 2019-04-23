@@ -33,10 +33,10 @@ helpviewer_keywords:
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039822"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl — Klasa
@@ -94,8 +94,8 @@ Jednostki magazynu na potrzeby wszystkich dojść do wierszy w posiadaniu zakła
 
 |||
 |-|-|
-|[{1&gt;Compare&lt;1}](#compare)|Porównuje dwa zakładek.|
-|[Getrowsat —](#getrowsat)|Pobiera wiersze, rozpoczynając od wiersza określonego przez przesunięcie od zakładki.|
+|[Compare](#compare)|Porównuje dwa zakładek.|
+|[GetRowsAt](#getrowsat)|Pobiera wiersze, rozpoczynając od wiersza określonego przez przesunięcie od zakładki.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Pobiera wiersze, które odpowiadają określonej zakładki.|
 |[Skrót](#hash)|Zwraca wartość skrótu wartości dla określonego zakładek.|
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
 ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037063"
 ---
 # <a name="synchronize"></a>synchronize
@@ -66,7 +66,7 @@ class CMyClass {
 
 |||
 |-|-|
-|**Informacje zawarte w tym artykule dotyczą**|Metody klasy, metoda|
+|**Dotyczy**|Metody klasy, metoda|
 |**Powtarzalne**|Nie|
 |**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
 |**Nieprawidłowe atrybuty**|Brak|
