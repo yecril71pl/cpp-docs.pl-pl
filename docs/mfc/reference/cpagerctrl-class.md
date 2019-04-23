@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270725"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417608"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl Class
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parametr|Opis|
 |---------------|-----------------|
 |*dwStyle*|[in] Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [style kontroli pagera](/windows/desktop/Controls/pager-control-styles) mają być stosowane do formantu.|
-|*Rect*|[in] Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu w współrzędne klienta.|
+|*Rect*|[in] Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która zawiera położenie i rozmiar formantu w współrzędne klienta.|
 |*pParentWnd*|[in] Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może mieć wartości NULL.|
 |*nID*|[in] Identyfikator kontrolki.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Bitowa kombinacja rozszerzone style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkcji.|
 |*dwStyle*|[in] Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [style kontroli pagera](/windows/desktop/Controls/pager-control-styles) mają być stosowane do formantu.|
-|*Rect*|[in] Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu w współrzędne klienta.|
+|*Rect*|[in] Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która zawiera położenie i rozmiar formantu w współrzędne klienta.|
 |*pParentWnd*|[in] Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może mieć wartości NULL.|
 |*nID*|[in] Identyfikator kontrolki.|
 

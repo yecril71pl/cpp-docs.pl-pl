@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304560"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417661"
 ---
 # <a name="crebarctrl-class"></a>Klasa CReBarCtrl
 
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Określa kombinację style kontrolki paska pomocniczego stosowane do formantu. Zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie SDK Windows, aby uzyskać listę obsługiwanych style.
 
 *Rect*<br/>
-Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która jest położenie i rozmiar formantu paska pomocniczego.
+Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, która jest położenie i rozmiar formantu paska pomocniczego.
 
 *pParentWnd*<br/>
 Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki paska pomocniczego. Nie może być równa NULL.
@@ -303,7 +303,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Określa kombinację style kontrolki paska pomocniczego stosowane do formantu. Aby uzyskać listę obsługiwanych style, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie Windows SDK.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -389,7 +389,7 @@ void GetBandBorders(
 Liczony od zera indeks pasmo, dla którego będą pobierane obramowania.
 
 *Chińska Republika Ludowa*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który będzie otrzymywał obramowania poza pasmem. Jeśli do formantu paska pomocniczego jest styl RBS_BANDBORDERS, każdy członek tej struktury otrzyma liczbę pikseli odpowiedniego stronie poza pasmem, wchodzących w skład obramowania. Jeśli formantu paska pomocniczego nie ma stylu RBS_BANDBORDERS, po lewej stronie członkiem tej struktury odbiera prawidłowe informacje. Aby uzyskać opis style kontrolki paska pomocniczego, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie Windows SDK.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, który będzie otrzymywał obramowania poza pasmem. Jeśli do formantu paska pomocniczego jest styl RBS_BANDBORDERS, każdy członek tej struktury otrzyma liczbę pikseli odpowiedniego stronie poza pasmem, wchodzących w skład obramowania. Jeśli formantu paska pomocniczego nie ma stylu RBS_BANDBORDERS, po lewej stronie członkiem tej struktury odbiera prawidłowe informacje. Aby uzyskać opis style kontrolki paska pomocniczego, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie Windows SDK.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Liczony od zera indeks poza pasmem w formancie paska pomocniczego.
 
 *Chińska Republika Ludowa*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który będzie otrzymywał granice poza pasmem paska pomocniczego.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, który będzie otrzymywał granice poza pasmem paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 

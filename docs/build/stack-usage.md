@@ -2,12 +2,12 @@
 title: x64 stosu użycia
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: 3318a3512f83e242496454ffa2dc4aa8d26e1fc3
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627322"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425604"
 ---
 # <a name="x64-stack-usage"></a>x64 stosu użycia
 
@@ -57,8 +57,8 @@ Visual C++ pozwala na typy, które mają *rozszerzone wyrównanie*, które są r
 
 Stos, który jest przydzielony musi zawierać miejsca po nim dla parametrów funkcji następnie wywoływana, zgodnie z opisem w [alokacji stosu](#stack-allocation).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[x64 konwencje kodowania](../build/x64-software-conventions.md)<br/>
+[Konwencje kodowania x64](../build/x64-software-conventions.md)<br/>
 [align](../cpp/align-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)

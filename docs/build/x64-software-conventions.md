@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 55be8f381b39ee566b389350ff70a9b0a3fe7694
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702071"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420274"
 ---
 # <a name="x64-software-conventions"></a>x64 konwencje kodowania
 
@@ -238,6 +238,6 @@ Funkcje wewnętrzne, obsługiwane przez kompilator są opisane w [funkcje wewnę
 
 X64 format obrazu pliku wykonywalnego jest je typu PE32 +. Obrazy wykonywalne (plików dll i exe) są ograniczone do maksymalnie 2 GB, więc względne adresowanie z 32-bitowe przesunięcie może służyć do danych obraz statyczny adres. Te dane obejmują tabeli adresów importowania, stałe typu string, statycznych danych globalnych i tak dalej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwencje wywoływania](../cpp/calling-conventions.md)

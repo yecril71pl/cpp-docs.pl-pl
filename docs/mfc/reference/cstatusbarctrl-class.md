@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272844"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426137"
 ---
 # <a name="cstatusbarctrl-class"></a>Klasa CStatusBarCtrl
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Określa styl formantu paska stanu. Zastosuj dowolną kombinację stanu paska style kontrolki, na liście [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinny również obejmować styl WS_VISIBLE.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu paska stanu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Określa rozmiar i położenie formantu paska stanu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Określa stan paska okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być równa NULL.
@@ -178,7 +178,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Określa styl formantu paska stanu. Zastosuj dowolną kombinację stanu paska style kontrolki, na liście [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinny również obejmować styl WS_VISIBLE.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Liczony od zera indeks części, w których prostokąt otaczający ma zostać pobrane.
 
 *lpRect*<br/>
-Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający.
+Adres [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która odbiera prostokąt otaczający.
 
 ### <a name="return-value"></a>Wartość zwracana
 

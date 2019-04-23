@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261352"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415620"
 ---
 # <a name="cheaderctrl-class"></a>Klasa CHeaderCtrl
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Określa styl kontrolki nagłówka. Aby uzyskać opis style kontrolki nagłówka, zobacz [style kontrolki nagłówka](/windows/desktop/Controls/header-control-styles) w zestawie Windows SDK.
 
 *Rect*<br/>
-Określa rozmiar i położenie kontrolki nagłówka. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.
+Określa rozmiar i położenie kontrolki nagłówka. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki nagłówka, zwykle `CDialog`. Nie może być równa NULL.
@@ -301,7 +301,7 @@ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone st
 Styl kontrolki nagłówka. Aby uzyskać opis style kontrolki nagłówka, zobacz [style kontrolki nagłówka](/windows/desktop/Controls/header-control-styles) w zestawie Windows SDK. Zobacz [Utwórz](#create) listę dodatkowe style.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parametr|Opis|
 |---------------|-----------------|
 |*iItem*|[in] Liczony od zera indeks elementu nagłówek, którego styl jest HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|
-|*lpRect*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.|
+|*lpRect*|[out] Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury do uzyskiwania informacji prostokąt otaczający.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 Liczony od zera indeks elementu kontrolki nagłówka.
 
 *lpRect*<br/>
-Wskaźnik na adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.
+Wskaźnik na adres [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która otrzymuje informacje prostokąt otaczający.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*lpRect*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.|
+|*lpRect*|[out] Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która otrzymuje informacje prostokąt otaczający.|
 
 ### <a name="return-value"></a>Wartość zwracana
 

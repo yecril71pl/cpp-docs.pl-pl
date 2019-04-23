@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285311"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420924"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl Class
 
@@ -45,7 +45,7 @@ class CHtmlEditCtrl: public CWnd,
 |Nazwa|Opis|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|Tworzy formant WebBrowser ActiveX i dołącza je do `CHtmlEditCtrl` obiektu. Ta funkcja automatycznie umieszcza formantu WebBrowser ActiveX do trybu edycji.|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Pobiera [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfejs dokumentu załadowanych obecnie do formantu WebBrowser w nich zawarte.|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Pobiera [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfejs dokumentu załadowanych obecnie do formantu WebBrowser w nich zawarte.|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Pobiera adres URL do domyślnego dokumentu do załadowania w kontrolce WebBrowser w nich zawarte.|
 
 ## <a name="remarks"></a>Uwagi
@@ -116,7 +116,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
 
-Pobiera [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfejs dokumentu załadowanych obecnie do zamkniętego formantu WebBrowser
+Pobiera [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfejs dokumentu załadowanych obecnie do zamkniętego formantu WebBrowser
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;

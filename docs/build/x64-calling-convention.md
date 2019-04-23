@@ -3,12 +3,12 @@ title: x64 konwencji wywoływania
 description: Szczegóły konwencji wywoływania interfejsu ABI domyślne x64.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: f2a63df878d4eac727f9c697cc326bb1f2981d95
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53636049"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415789"
 ---
 # <a name="x64-calling-convention"></a>x64 konwencji wywoływania
 
@@ -205,6 +205,6 @@ Po włączeniu setjmpex.h lub setjmp.h wszystkie wywołania [setjmp](../c-runtim
 
 Wywołanie `setjmp` zachowuje bieżący wskaźnik stosu, rejestrów trwała i MxCsr rejestrów.  Wywołania `longjmp` wróć do najnowszych, ostatnio `setjmp` wywołań lokacji i resetuje wskaźnik stosu, rejestrów trwała i MxCsr rejestruje, do stanu zachowanego przez najnowszych, ostatnio `setjmp` wywołania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[x64 konwencje kodowania](../build/x64-software-conventions.md)
+[Konwencje kodowania x64](../build/x64-software-conventions.md)

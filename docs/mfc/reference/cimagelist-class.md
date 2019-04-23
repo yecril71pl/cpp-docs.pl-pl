@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298923"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416010"
 ---
 # <a name="cimagelist-class"></a>CImageList Class
 
@@ -691,13 +691,13 @@ Wskaźnik do kontekstu urządzenia docelowego. Należy usunąć ten [CDC](../../
 Liczony od zera indeks obrazu do narysowania.
 
 *(czas pacyficzny)*<br/>
-A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury zawierającej współrzędnych x i y miejsca będzie rysowania obrazu.
+A [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury zawierającej współrzędnych x i y miejsca będzie rysowania obrazu.
 
 *sz*<br/>
 A [rozmiar](/windows/desktop/api/windef/ns-windef-tagsize) wskazujący rozmiar obraz, który ma być rysowany struktury.
 
 *ptOrigin*<br/>
-A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury zawierającej współrzędnych x i y Określanie lewy górny róg operacji rysowania w odniesieniu do samego obrazu. Piksele obrazu, które są po lewej stronie współrzędnej x lub nowszym współrzędną y nie są rysowane.
+A [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury zawierającej współrzędnych x i y Określanie lewy górny róg operacji rysowania w odniesieniu do samego obrazu. Piksele obrazu, które są po lewej stronie współrzędnej x lub nowszym współrzędną y nie są rysowane.
 
 *fStyle*<br/>
 Flaga, określając styl rysowania i, opcjonalnie, obraz nakładki. Zobacz sekcję Spostrzeżenia, aby uzyskać informacje na obrazie nakładki. Domyślna implementacja MFC ILD_NORMAL, Rysuje obraz dla listy obrazów za pomocą koloru tła. Jeśli kolor tła jest wartością CLR_NONE, obraz jest rysowana sposób niewidoczny dla użytkownika za pomocą maski.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parametry
 
 *lpPoint*<br/>
-Adres [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, która odbiera bieżącego przeciągnij pozycji.
+Adres [punktu](/previous-versions/dd162805\(v=vs.85\)) struktury, która odbiera bieżącego przeciągnij pozycji.
 
 *lpPointHotSpot*<br/>
 Adres `POINT` strukturę, która odbiera przesunięcie przeciągnij obraz względem pozycji przeciągania.

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 0652801d7ad80ba53716299e3919f5b432de855a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ce3532e99dc1d0ff0151285766aa5d78c2b9e9d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293150"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421885"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interfejs IDocHostUIHandlerDispatch
 
@@ -36,21 +36,21 @@ interface IDocHostUIHandlerDispatch : IDispatch
 
 |||
 |-|-|
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). Wywołuje się również, gdy MSHTML Wyświetla modalnego interfejsu użytkownika.|
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Wywoływane na hoście przez MSHTML, aby zezwolić na hosta zastąpić obiekt danych firmy MSHTML.|
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Wywoływane przez MSHTML, gdy jest on używany jako miejsca docelowego umożliwia hosta, które umożliwiają określanie wartości zamiast [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Metoda wywoływana przez MSHTML można uzyskać interfejsu IDispatch hosta.|
-|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Pobiera funkcje interfejsu użytkownika hosta MSHTML.|
-|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Zwraca klucz rejestru, w którym są przechowywane preferencje użytkownika MSHTML.|
-|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Wywołuje się, gdy MSHTML usuwa jego menu i paski narzędzi.|
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|
-|[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|Wywoływana z MSHTML, aby wyświetlić menu kontekstowe.|
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Zezwalaj hostowi na Zastąp MSHTML menu i paski narzędzi.|
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Wywoływane przez MSHTML podczas [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) lub [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) jest wywoływana.|
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Metoda wywoływana przez MSHTML, aby zezwolić na hoście szansy sprzedaży zmodyfikować adres URL do załadowania.|
-|[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|Powiadamia hosta, że stan polecenia został zmieniony.|
+|[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). Wywołuje się również, gdy MSHTML Wyświetla modalnego interfejsu użytkownika.|
+|[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|Wywoływane na hoście przez MSHTML, aby zezwolić na hosta zastąpić obiekt danych firmy MSHTML.|
+|[GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))|Wywoływane przez MSHTML, gdy jest on używany jako miejsca docelowego umożliwia hosta, które umożliwiają określanie wartości zamiast [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
+|[GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))|Metoda wywoływana przez MSHTML można uzyskać interfejsu IDispatch hosta.|
+|[GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))|Pobiera funkcje interfejsu użytkownika hosta MSHTML.|
+|[GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))|Zwraca klucz rejestru, w którym są przechowywane preferencje użytkownika MSHTML.|
+|[HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))|Wywołuje się, gdy MSHTML usuwa jego menu i paski narzędzi.|
+|[OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|
+|[OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|
+|[ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|
+|[ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))|Wywoływana z MSHTML, aby wyświetlić menu kontekstowe.|
+|[ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))|Zezwalaj hostowi na Zastąp MSHTML menu i paski narzędzi.|
+|[TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))|Wywoływane przez MSHTML podczas [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) lub [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) jest wywoływana.|
+|[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|Metoda wywoływana przez MSHTML, aby zezwolić na hoście szansy sprzedaży zmodyfikować adres URL do załadowania.|
+|[UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|Powiadamia hosta, że stan polecenia został zmieniony.|
 
 ## <a name="remarks"></a>Uwagi
 

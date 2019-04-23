@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data conversion routines [C++]
 - converting data
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
-ms.openlocfilehash: 80acfefa7368d293b466230a26b6a609597166fe
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 37c969ea327325ea84ce22c8d993a9332f6ddc9d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331155"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416712"
 ---
 # <a name="data-conversion"></a>Konwersja danych
 
@@ -22,7 +22,7 @@ Te procedury konwersji danych z jednego formularza do innego. Zazwyczaj procedur
 
 |Procedura|Zastosowanie|
 |-------------|---------|
-|[ABS](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Znajdź wartość bezwzględną liczby całkowitej|
+|[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Znajdź wartość bezwzględną liczby całkowitej|
 |[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konwertuj ciąg na na **float**|
 |[atoi, _atoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Konwertuj ciąg na na **int**|
 |[_atoi64, _atoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Konwertuj ciąg na na **__int64** lub **długi długi**|
@@ -32,7 +32,7 @@ Te procedury konwersji danych z jednego formularza do innego. Zazwyczaj procedur
 |[_fcvt](../c-runtime-library/reference/fcvt.md), [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|Konwertuj **double** na ciąg przy użyciu określonej liczby cyfr od punktu dziesiętnego|
 |[_gcvt](../c-runtime-library/reference/gcvt.md), [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|Konwertuj **double** liczbę na ciąg; przechowywanie parametrów w buforze|
 |[_itoa, _ltoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, ultow, _i64tow, _ui64tow](../c-runtime-library/reference/itoa-itow.md), [_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s](../c-runtime-library/reference/itoa-s-itow-s.md)|Konwertowanie typów całkowitych na ciąg|
-|[Warsztaty](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Znajdź wartość bezwzględną liczby **długie** liczba całkowita|
+|[labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Znajdź wartość bezwzględną liczby **długie** liczba całkowita|
 |[llabs —](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Znajdź wartość bezwzględną liczby **long long** liczba całkowita|
 |[_mbbtombc, _mbbtombc_l](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)|Konwertuj 1-bajtowe znak wielobajtowy do odpowiedniego znaku wielobajtowego 2-bajtowych|
 |[_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)|Konwertuj znak Japan Industry Standard (JIS) na znak Japan firmy Microsoft (JMS)|
@@ -49,13 +49,13 @@ Te procedury konwersji danych z jednego formularza do innego. Zazwyczaj procedur
 |[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|Przekształć ciąg w postaci sortowany w oparciu o informacje specyficzne dla ustawień regionalnych|
 |[toascii, __toascii](../c-runtime-library/reference/toascii-toascii.md)|Konwertuj znak kodowi ASCII|
 |[tolower, _tolower —, towlower —, _tolower_l —, _towlower_l —](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md), [_mbctolower —, _mbctolower_l —, _mbctoupper —, _mbctoupper_l —](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|Testowanie znaków i przekonwertowania na małe litery, jeśli jest to obecnie wielkie litery|
-|[tolower, _tolower, towlower, _tolower_l, _towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)|Konwertuj znaków na małe litery, bezwarunkowo|[System::String::ToLower](https://msdn.microsoft.com/library/system.string.tolower.aspx)|
+|[tolower, _tolower, towlower, _tolower_l, _towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)|Konwertuj znaków na małe litery, bezwarunkowo|
 |[toupper, _toupper —, towupper —, _toupper_l —, _towupper_l —](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md), [_mbctolower —, _mbctolower_l —, _mbctoupper —, _mbctoupper_l —](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|Testowanie znaków i przekonwertowania na wielkie litery, jeśli jest to obecnie małe litery|
 |[toupper, _toupper, towupper, _toupper_l, _towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|Konwertuj znaków na wielkie litery bezwarunkowo|
 |[wcstombs —, _wcstombs_l —](../c-runtime-library/reference/wcstombs-wcstombs-l.md), [wcstombs_s —, _wcstombs_s_l —](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Konwertowanie sekwencji znaków dwubajtowych do odpowiedniej sekwencji znaków wielobajtowych|
-|[wctomb —, _wctomb_l —](../c-runtime-library/reference/wctomb-wctomb-l.md), [wctomb_s —, _wctomb_s_l —](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Konwertuj szerokich znaków do odpowiedniego znaku wielobajtowego|
+|[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md), [wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Konwertuj szerokich znaków do odpowiedniego znaku wielobajtowego|
 |[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konwertuj ciąg znaków dwubajtowych **double**|
-|[_wtoi —, _wtoi_l —](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Konwertuj ciąg znaków dwubajtowych **int**|
+|[_wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Konwertuj ciąg znaków dwubajtowych **int**|
 |[_wtoi64, _wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Konwertuj ciąg znaków dwubajtowych **__int64** lub **długi długi**|
 |[_wtol, _wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Konwertuj ciąg znaków dwubajtowych **długi**|
 

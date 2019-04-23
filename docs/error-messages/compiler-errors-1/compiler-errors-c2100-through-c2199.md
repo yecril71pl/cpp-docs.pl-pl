@@ -7,7 +7,6 @@ f1_keywords:
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,12 +23,12 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546567"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423537"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Błędy kompilatora — od C2100 do C2199
 
@@ -72,7 +71,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2128](compiler-error-c2128.md)|"*funkcja*": alloc_text/same_seg dotyczy tylko funkcji z powiązaniem C|
 |[Błąd kompilatora C2129](compiler-error-c2129.md)|Funkcja statyczna "*identyfikator*" zadeklarowana ale niezdefiniowana|
 |[Błąd kompilatora C2130](compiler-error-c2130.md)|#line oczekiwany ciąg zawierający nazwę pliku, znaleziono "*tokenu*"|
-|C2131 błąd kompilatora|Wyrażenie nie zostało obliczone do stałej|
+|[Błąd C2131 kompilatora](compiler-error-c2131.md)|Wyrażenie nie zostało obliczone do stałej|
 |[Błąd kompilatora C2132](compiler-error-c2132.md)|Błąd składniowy: nieoczekiwany identyfikator|
 |[Błąd kompilatora C2133](compiler-error-c2133.md)|"*identyfikator*": nieznany rozmiar|
 |[Błąd kompilatora C2134](compiler-error-c2134.md)|"*funkcja*": nie powoduje wywołanie w wyrażeniu stałym|
@@ -130,7 +129,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2186](compiler-error-c2186.md)|"*operator*": niedozwolony operand typu "void"|
 |C2187 błąd kompilatora|Błąd składniowy: "*tokenu*' była Nieoczekiwana w tym miejscu|
 |[Błąd kompilatora C2188](compiler-error-c2188.md)|"*numer*": zbyt duży dla znaku dwubajtowego|
-|C2189 błąd kompilatora|Nie można zastosować atrybutu "alignas" do pola bitowego, parametru funkcji, deklaracji wyjątku lub zmiennej zadeklarowanej przy użyciu klasy magazynu "register"|
+|Compiler Error C2189|Nie można zastosować atrybutu "alignas" do pola bitowego, parametru funkcji, deklaracji wyjątku lub zmiennej zadeklarowanej przy użyciu klasy magazynu "register"|
 |[Błąd kompilatora C2190](compiler-error-c2190.md)|Pierwsza lista parametrów dłuższa niż druga|
 |[Błąd kompilatora C2191](compiler-error-c2191.md)|druga lista parametrów dłuższa niż pierwsza|
 |[Błąd kompilatora C2192](compiler-error-c2192.md)|Parametr "*numer*" deklaracji różni się|

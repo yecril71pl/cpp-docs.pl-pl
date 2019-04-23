@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300963"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420846"
 ---
 # <a name="ctooltipctrl-class"></a>Ctooltipctrl — klasa
 
@@ -210,7 +210,7 @@ Wskaźnik do okna, które zawiera narzędzia.
 Identyfikator zasobu ciągu zawierający tekst dla narzędzia.
 
 *lpRectTool*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury zawierającego współrzędne narzędzie użytkownika prostokąt ograniczający. Współrzędne są podawane względem lewego górnego rogu obszaru klienckiego okna identyfikowane przez *pWnd*.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury zawierającego współrzędne narzędzie użytkownika prostokąt ograniczający. Współrzędne są podawane względem lewego górnego rogu obszaru klienckiego okna identyfikowane przez *pWnd*.
 
 *nIDTool*<br/>
 Identyfikator narzędzia.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która posiada prostokąt okna narzędzia porada lub prostokąt wyświetlania tekstu.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która posiada prostokąt okna narzędzia porada lub prostokąt wyświetlania tekstu.
 
 *bLarger*<br/>
 W przypadku opcji TRUE *lprc* służy do określania prostokąt wyświetlania tekstu i odbiera prostokąt odpowiednie okna. W przypadku wartości FAŁSZ *lprc* służy do określania prostokąt okna i odbiera odpowiedniego prostokątny obszar wyświetlania tekstu.
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Adres `RECT` struktury, który będzie otrzymywać informacje margines. Elementy członkowskie [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nie definiują prostokąt otaczający. Na potrzeby tego komunikatu elementy członkowskie struktury jest interpretowany w następujący sposób:
+Adres `RECT` struktury, który będzie otrzymywać informacje margines. Elementy członkowskie [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury nie definiują prostokąt otaczający. Na potrzeby tego komunikatu elementy członkowskie struktury jest interpretowany w następujący sposób:
 
 |Element członkowski|Reprezentacja|
 |------------|--------------------|
@@ -867,7 +867,7 @@ Wskaźnik do okna, które zawiera narzędzia.
 Identyfikator narzędzia.
 
 *lpRect*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając nowy prostokąt otaczający.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, określając nowy prostokąt otaczający.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

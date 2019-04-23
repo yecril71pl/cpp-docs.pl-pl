@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261664"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421574"
 ---
 # <a name="ccontainedwindowt-class"></a>Klasa CContainedWindowT
 
@@ -214,7 +214,7 @@ HWND Create(
 [in] Dojście do okna nadrzędnego lub właściciela.
 
 *Rect*<br/>
-[in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.
+[in] A [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.
 
 *szWindowName*<br/>
 [in] Określa nazwę okna. Wartością domyślną jest NULL.

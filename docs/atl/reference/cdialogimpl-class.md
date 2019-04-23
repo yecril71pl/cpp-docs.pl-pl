@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: f44b7df7f1e4051f3cb07445952620861965f1d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1124630d8ee15dd284893516bef8057f852b4632
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263419"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420664"
 ---
 # <a name="cdialogimpl-class"></a>Cdialogimpl — klasa
 
@@ -119,7 +119,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Dojście do okna właściciela.
 
-**Prostokąt &** *prostokąt* [in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając rozmiar i położenie okna dialogowego.
+**Prostokąt &** *prostokąt* [in] A [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, określając rozmiar i położenie okna dialogowego.
 
 *dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
