@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
 ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768748"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778738"
 ---
 # <a name="compiler-error-c3390"></a>Błąd kompilatora C3390
 
@@ -21,7 +21,7 @@ Niepoprawnie wystąpienia typu ogólnego.  Sprawdź definicję typu.  Aby uzyska
 
 ## <a name="example"></a>Przykład
 
-Pierwszy przykład używa języka C# w celu utworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane w przypadku tworzenia typów ogólnych w języku C + +/ CLR. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+W pierwszym przykładzie użyto C# tworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane w przypadku tworzenia typów ogólnych w C++/CLR. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```cs
 // C3390.cs

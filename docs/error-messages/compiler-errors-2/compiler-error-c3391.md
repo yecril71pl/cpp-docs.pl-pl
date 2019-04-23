@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
 ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58772595"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778285"
 ---
 # <a name="compiler-error-c3391"></a>Błąd kompilatora C3391
 
@@ -21,7 +21,7 @@ Niepoprawnie wystąpienia typu ogólnego. Sprawdź definicję typu. Aby uzyskać
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład używa języka C# w celu utworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane w przypadku tworzenia typów ogólnych w języku C + +/ interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Następujące przykładowe używa C# tworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane w przypadku tworzenia typów ogólnych w C++sposób niezamierzony. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```cs
 // C3391.cs

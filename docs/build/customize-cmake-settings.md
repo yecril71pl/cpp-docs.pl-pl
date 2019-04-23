@@ -3,12 +3,12 @@ title: Dostosowywanie ustawień kompilacji CMake w programie Visual Studio
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.openlocfilehash: 4864e094ab967a563b153fa79fd0bf5c375f40f7
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037526"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124892"
 ---
 # <a name="customize-cmake-build-settings"></a>Dostosowywanie ustawień kompilacji CMake
 
@@ -79,14 +79,18 @@ Można także bezpośrednio edytować `CMakeSettings.json` pokazuje Przykładowa
 "variables": [
     {
       "name": "CMAKE_CXX_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
+      "type": "FILEPATH"
     },
     {
       "name": "CMAKE_C_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
+      "type": "FILEPATH"
     }
   ]
 ```
+
+Należy pamiętać, że jeżeli nie zdefiniujesz `"type"`, zostanie przyjęta wartość domyślna typu "STRING".
 
 - **cmakeCommandArgs**: określa żadnych dodatkowych przełączników, które mają być przekazane do CMake.exe.
 
@@ -210,7 +214,9 @@ W następnym przykładzie konfiguracja debugowania x86 definiuje wartość dla *
       "environments": [
         {
           // Replace the global property entirely.
-          "BuildDir": "D:\\custom-builddir",
+          "BuildDir": "D:\\custom-builddir"
+          // This environment does not specify a namespace, hence by default "env" will be assumed.
+          // "namespace" : "name" would require that this variable be referenced with "${name.BuildDir}".
         }
       ],
 

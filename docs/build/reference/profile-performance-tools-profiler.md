@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810006"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124775"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler narzędzi do oceny wydajności)
 
@@ -56,7 +56,22 @@ PROFIL, powoduje, że konsolidator generuje sekcji relokacji w obrazie programu.
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
-## <a name="see-also"></a>Zobacz także
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Aby ustawić tę opcję konsolidatora w ramach projektu programu Visual Studio narzędzia CMake
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+**Narzędzie CMake** projekt nie ma **stron właściwości**, opcje konsolidatora można ustawić, modifing pliku CMakeLists.txt.
+
+1. Otwieranie pliku CMakeLists.txt w katalogu głównym projektu.
+
+1. Dodaj poniższy kod. Aby uzyskać więcej informacji, zobacz [odwołania do narzędzia CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+
+1. Ponownie skompiluj rozwiązanie.
+
+```
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)
+

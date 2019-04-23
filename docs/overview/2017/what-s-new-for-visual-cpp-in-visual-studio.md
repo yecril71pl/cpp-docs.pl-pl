@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899268"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779498"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Co nowego w języku C++ w programie Visual Studio 2017
 
@@ -71,7 +71,7 @@ Kompilator Microsoft C++ obsługuje rozszerzenia AVX-512 firmy Intel, w tym inst
 
 - Nowy przełącznik [/qspectre ](../../build/reference/qspectre.md) aby ułatwić uniknięcie przed atakami kanału po stronie wykonywania spekulacyjnego. Zobacz [krokami zaradczymi dla luki spectre w MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc/) Aby uzyskać więcej informacji.
 - Nowe ostrzeżenie diagnostycznych zaradcze dla luki Spectre. Zobacz [diagnostyczne w Visual Studio 2017 w wersji 15.7 w wersji zapoznawczej 4 krokami zaradczymi dla luki](https://blogs.msdn.microsoft.com/vcblog/2018/04/20/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/) Aby uzyskać więcej informacji.
-- Nową wartość dla /Zc, **użyciem**, pozwala rozwiązać raportowanie pomocy technicznej standard C++. Na przykład, gdy przełącznik jest ustawiona i kompilator jest w/STD: c ++ 17 tryb rozwija wartość **201703 L**. Zobacz [MSVC teraz poprawnie raporty __cplusplus](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/) Aby uzyskać więcej informacji.
+- Nową wartość dla /Zc, **użyciem**, pozwala rozwiązać raportowanie C++ standardową pomoc techniczną. Na przykład, gdy przełącznik jest ustawiona i kompilator jest w/STD: c ++ 17 tryb rozwija wartość **201703 L**. Zobacz [MSVC teraz poprawnie raporty __cplusplus](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/) Aby uzyskać więcej informacji.
 
 ## <a name="c-standard-library-improvements"></a>Ulepszenia standardowej biblioteki języka C++
 
@@ -392,9 +392,9 @@ Masz teraz nowe opcje zapisywania i pakowania aplikacji w języku C++ platformy 
 
 **Visual Studio 2017 w wersji 15.5**: A **projekt pakietu aplikacji Windows** szablonu projektu zostanie dodany, które znacznie upraszczają pracę pakowania aplikacji klasycznych przy użyciu Desktop Bridge. Jest on dostępny w obszarze **pliku | Nowe | Projekt | Zainstalowane | Visual C++ | Platforma Universal Windows**. Aby uzyskać więcej informacji, zobacz [pakietu aplikacji przy użyciu programu Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-Jeśli piszesz nowy kod, możesz teraz używać języka C + +/ WinRT, standardowe rzutowania języka C++ dla Windows implementowanej wyłącznie w plikach nagłówkowych. Ona umożliwia zarówno tworzenie i używanie interfejsów API środowiska wykonawczego Windows przy użyciu dowolnej zgodnych ze standardami kompilator języka C++. C + +/ WinRT ma na celu zapewnienie programistów C++ przy użyciu najwyższej klasy dostępu do nowoczesnego interfejsu Windows API. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT dostępne w serwisie GitHub](https://moderncpp.com/).
+Jeśli piszesz nowy kod, możesz teraz użyć C++/WinRT, standardowy C++ projekcji języka dla Windows implementowanej wyłącznie w plikach nagłówkowych. Ona umożliwia zarówno tworzenie i używanie interfejsów API środowiska wykonawczego Windows przy użyciu dowolnej zgodnych ze standardami kompilator języka C++. C++/ WinRT ma na celu zapewnienie C++ deweloperom najwyższej jakości dostęp do nowoczesnego interfejsu Windows API. Aby uzyskać więcej informacji, zobacz [ C++WinRT dostępne w serwisie GitHub](https://moderncpp.com/).
 
-Począwszy od tworzenia 17025 Windows SDK Insider Preview, C + +/ WinRT znajduje się w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT jest teraz dołączone do zestawu Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
+Począwszy od kompilacji 17025 Windows SDK Insider Preview C++/WinRT znajduje się w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [ C++/WinRT jest teraz dołączone do zestawu Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
 
 ## <a name="clangc2-platform-toolset"></a>Zestaw narzędzi platformy clang/C2
 

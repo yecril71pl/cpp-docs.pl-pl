@@ -1,6 +1,6 @@
 ---
-title: OpenMP — funkcje
-ms.date: 10/23/2018
+title: OpenMP — Funkcje
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP functions
 - omp_destroy_lock
@@ -50,45 +50,62 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 0435d75b69ea870db50739933245925d6860cbf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1bf0e08f3b28368d9aea5438b3036ac8a0283735
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333289"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124983"
 ---
-# <a name="openmp-functions"></a>OpenMP — funkcje
+# <a name="openmp-functions"></a>OpenMP — Funkcje
 
 Zawiera łącza do funkcji używanych w interfejsie API OpenMP.
 
-Implementacja języka Visual C++ OpenMP standardowa obejmuje następujące funkcje.
+Element wizualny C++ implementacja standardu OpenMP obejmuje następujące funkcje i dane.
+
+Do wykonania środowiska:
 
 |Funkcja|Opis|
 |--------|-----------|
-|[omp_destroy_lock](#omp-destroy-lock)|Deinicjuje blokadę.|
-|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|Deinicjuje blokadą.|
-|[omp_get_dynamic](#omp-get-dynamic)|Zwraca wartość wskazującą, jeśli liczba wątków, które są dostępne w kolejnych regionów równoległych można dostosować w czasie wykonywania.|
-|[omp_get_max_threads](#omp-get-max-threads)|Zwraca liczbę całkowitą, która jest równa lub większa niż liczba wątków, które będą dostępne w przypadku równoległego regionu bez [num_threads](openmp-clauses.md#num-threads) zostały zdefiniowane w tym momencie w kodzie.|
-|[omp_get_nested](#omp-get-nested)|Zwraca wartość wskazującą, czy włączono równoległości zagnieżdżonych.|
-|[omp_get_num_procs](#omp-get-num-procs)|Zwraca liczbę procesorów, które są dostępne, gdy wywoływana jest funkcja.|
+|[omp_set_num_threads](#omp-set-num-threads)|Ustawia liczbę wątków w kolejnych regionach równoległych, chyba że zostaną zastąpione [num_threads](openmp-clauses.md#num-threads) klauzuli.|
 |[omp_get_num_threads](#omp-get-num-threads)|Zwraca liczbę wątków w równoległego regionu.|
+|[omp_get_max_threads](#omp-get-max-threads)|Zwraca liczbę całkowitą, która jest równa lub większa niż liczba wątków, które będą dostępne w przypadku równoległego regionu bez [num_threads](openmp-clauses.md#num-threads) zostały zdefiniowane w tym momencie w kodzie.|
 |[omp_get_thread_num](#omp-get-thread-num)|Zwraca liczbę wątków wątek wykonywania w jego zespół wątku.|
-|[omp_get_wtick](#omp-get-wtick)|Zwraca liczbę sekund między taktami zegara procesora.|
-|[omp_get_wtime](#omp-get-wtime)|Zwraca wartość w sekundach czas, jaki upłynął od pewnego momentu.|
+|[omp_get_num_procs](#omp-get-num-procs)|Zwraca liczbę procesorów, które są dostępne, gdy wywoływana jest funkcja.|
 |[omp_in_parallel](#omp-in-parallel)|Zwraca wartość różną od zera, jeśli wywołano z w ramach równoległego regionu.|
+|[omp_set_dynamic](#omp-set-dynamic)|Wskazuje, że liczba wątków, które są dostępne w kolejnych regionów równoległych można dostosować w czasie wykonywania.|
+|[omp_get_dynamic](#omp-get-dynamic)|Zwraca wartość wskazującą, jeśli liczba wątków, które są dostępne w kolejnych regionów równoległych można dostosować w czasie wykonywania.|
+|[omp_set_nested](#omp-set-nested)|Włącza równoległości zagnieżdżonych.|
+|[omp_get_nested](#omp-get-nested)|Zwraca wartość wskazującą, czy włączono równoległości zagnieżdżonych.|
+
+Aby uzyskać blokady:
+
+|Funkcja|Opis|
+|--------|-----------|
 |[omp_init_lock](#omp-init-lock)|Inicjuje prostą blokadą.|
 |[omp_init_nest_lock](#omp-init-nest-lock)|Inicjuje blokadę.|
-|[omp_set_dynamic](#omp-set-dynamic)|Wskazuje, że liczba wątków, które są dostępne w kolejnych regionów równoległych można dostosować w czasie wykonywania.|
+|[omp_destroy_lock](#omp-destroy-lock)|Deinicjuje blokadę.|
+|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|Deinicjuje blokadą.|
 |[omp_set_lock](#omp-set-lock)|Wykonywanie wątku bloków, dopóki blokada jest dostępna.|
 |[omp_set_nest_lock](#omp-set-nest-lock)|Wykonywanie wątku bloków, dopóki blokada jest dostępna.|
-|[omp_set_nested](#omp-set-nested)|Włącza równoległości zagnieżdżonych.|
-|[omp_set_num_threads](#omp-set-num-threads)|Ustawia liczbę wątków w kolejnych regionach równoległych, chyba że zostaną zastąpione [num_threads](openmp-clauses.md#num-threads) klauzuli.|
-|[omp_test_lock](#omp-test-lock)|Próbuje ustawić blokadę, ale nie blokuje wykonywanie wątków.|
-|[omp_test_nest_lock](#omp-test-nest-lock)|Próbuje ustawić blokadę zagnieżdżalnych, ale nie blokuje wykonywanie wątków.|
 |[omp_unset_lock](#omp-unset-lock)|Zwalnia blokadę.|
 |[omp_unset_nest_lock](#omp-unset-nest-lock)|Zwalnia blokadę zagnieżdżalnych.|
+|[omp_test_lock](#omp-test-lock)|Próbuje ustawić blokadę, ale nie blokuje wykonywanie wątków.|
+|[omp_test_nest_lock](#omp-test-nest-lock)|Próbuje ustawić blokadę zagnieżdżalnych, ale nie blokuje wykonywanie wątków.|
 
-## <a name="omp-destroy-lock"></a>Funkcje omp_destroy_lock
+|Typ danych|Opis|
+|---------|-----------|
+|`omp_lock_t`|Typ, który zawiera stan blokady, czy blokada jest dostępny lub jeśli wątek jest właścicielem blokady.|
+|`omp_nest_lock_t`|Typ, który zawiera jedną z następujących rodzajów informacji na temat blokady: czy blokada jest dostępny i tożsamość wątku, który jest właścicielem blokady i liczba zagnieżdżenia.|
+
+Aby uzyskać procedury chronometrażu:
+
+|Funkcja|Opis|
+|--------|-----------|
+|[omp_get_wtime](#omp-get-wtime)|Zwraca wartość w sekundach czas, jaki upłynął od pewnego momentu.|
+|[omp_get_wtick](#omp-get-wtick)|Zwraca liczbę sekund między taktami zegara procesora.|
+
+## <a name="omp-destroy-lock"></a>omp_destroy_lock
 
 Deinicjuje blokadę.
 
@@ -101,7 +118,7 @@ void omp_destroy_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_lock_t](openmp-data-types.md#omp-lock-t) , została zainicjowana przy użyciu [funkcje omp_init_lock](#omp-init-lock).
+Zmienna typu `omp_lock_t` , została zainicjowana przy użyciu [funkcje omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -124,7 +141,7 @@ void omp_destroy_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) , została zainicjowana przy użyciu [omp_init_nest_lock](#omp-init-nest-lock).
+Zmienna typu `omp_nest_lock_t` , została zainicjowana przy użyciu [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -170,7 +187,7 @@ Aby uzyskać więcej informacji, zobacz [3.1.3 funkcja omp_get_max_threads](../.
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_get_max_threads.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -242,7 +259,7 @@ Aby uzyskać więcej informacji, zobacz [3.1.5 funkcja omp_get_num_procs](../../
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_get_num_procs.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -279,7 +296,7 @@ Aby uzyskać więcej informacji, zobacz [3.1.2 funkcja omp_get_num_threads](../.
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_get_num_threads.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -367,7 +384,7 @@ Aby uzyskać więcej informacji, zobacz [3.3.1 funkcja omp_get_wtime](../../../p
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_get_wtime.cpp
 // compile with: /openmp
 #include "omp.h"
@@ -410,7 +427,7 @@ Aby uzyskać więcej informacji, zobacz [3.1.6 funkcja omp_in_parallel](../../..
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_in_parallel.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -434,7 +451,7 @@ int main( )
 1
 ```
 
-## <a name="omp-init-lock"></a>Funkcje omp_init_lock
+## <a name="omp-init-lock"></a>omp_init_lock
 
 Inicjuje prostą blokadą.
 
@@ -447,7 +464,7 @@ void omp_init_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_lock_t](openmp-data-types.md#omp-lock-t).
+Zmienna typu `omp_lock_t`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -455,7 +472,7 @@ Aby uzyskać więcej informacji, zobacz [3.2.1 funkcje omp_init_lock i omp_init_
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_init_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -539,7 +556,7 @@ void omp_init_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t).
+Zmienna typu `omp_nest_lock_t`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -549,7 +566,7 @@ Aby uzyskać więcej informacji, zobacz [3.2.1 funkcje omp_init_lock i omp_init_
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_init_nest_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -624,7 +641,7 @@ void omp_set_dynamic(
 ### <a name="parameters"></a>Parametry
 
 *Val*<br/>
-Wartość, która wskazuje, jeśli liczba wątków, które są dostępne w kolejnych regionów równoległych można dostosować w czasie wykonywania.  Jeśli wartość jest niezerowa, środowisko uruchomieniowe, które można dostosować liczbę wątków, jeśli zero, środowisko wykonawcze nie będzie dynamicznie dostosowuje liczbę wątków.
+Wartość, która wskazuje, jeśli liczba wątków, które są dostępne w kolejnych regionów równoległych można dostosować w czasie wykonywania. Jeśli wartość jest niezerowa, środowisko uruchomieniowe, które można dostosować liczbę wątków, jeśli zero, środowisko wykonawcze nie będzie dynamicznie dostosowuje liczbę wątków.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -638,7 +655,7 @@ Aby uzyskać więcej informacji, zobacz [3.1.7 funkcja omp_set_dynamic](../../..
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_set_dynamic.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -675,7 +692,7 @@ void omp_set_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_lock_t](openmp-data-types.md#omp-lock-t) , została zainicjowana przy użyciu [funkcje omp_init_lock](#omp-init-lock).
+Zmienna typu `omp_lock_t` , została zainicjowana przy użyciu [funkcje omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -698,7 +715,7 @@ void omp_set_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) , została zainicjowana przy użyciu [omp_init_nest_lock](#omp-init-nest-lock).
+Zmienna typu `omp_nest_lock_t` , została zainicjowana przy użyciu [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -729,7 +746,7 @@ OMP zagnieżdżone równoległość może zostać włączona przy użyciu `omp_s
 
 Ustawienie `omp_set_nested` spowoduje przesłonięcie ustawień `OMP_NESTED` zmiennej środowiskowej.
 
-Włączanie zmiennej środowiskowej może przerwać program w przeciwnym razie operacyjnej, ponieważ wykładniczo zwiększa liczbę wątków podczas zagnieżdżania regionów równoległych.  Na przykład funkcja, która recurses sześciokrotnie o liczbie wątków OMP równa 4 wymaga 4096 (4 do potęgi równej 6) wątków. Z wyjątkiem z mogę/aplikacji, aplikacji zwykle spadku wydajności w przypadku większej liczby wątków niż procesorów.
+Włączanie zmiennej środowiskowej może przerwać program w przeciwnym razie operacyjnej, ponieważ wykładniczo zwiększa liczbę wątków podczas zagnieżdżania regionów równoległych. Na przykład funkcja, która recurses sześciokrotnie o liczbie wątków OMP równa 4 wymaga 4096 (4 do potęgi równej 6) wątków. Z wyjątkiem z mogę/aplikacji, aplikacji zwykle spadku wydajności w przypadku większej liczby wątków niż procesorów.
 
 Użyj [omp_get_nested](#omp-get-nested) do wyświetlenia bieżącego ustawienia `omp_set_nested`.
 
@@ -737,7 +754,7 @@ Aby uzyskać więcej informacji, zobacz [3.1.9 funkcja omp_set_nested](../../../
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_set_nested.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -784,7 +801,7 @@ Aby uzyskać więcej informacji, zobacz [3.1.1 funkcja omp_set_num_threads](../.
 
 Zobacz [omp_get_num_threads](#omp-get-num-threads) na przykład za pomocą `omp_set_num_threads`.
 
-## <a name="omp-test-lock"></a>Funkcje omp_test_lock
+## <a name="omp-test-lock"></a>omp_test_lock
 
 Próbuje ustawić blokadę, ale nie blokuje wykonywanie wątków.
 
@@ -797,7 +814,7 @@ int omp_test_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_lock_t](openmp-data-types.md#omp-lock-t) , została zainicjowana przy użyciu [funkcje omp_init_lock](#omp-init-lock).
+Zmienna typu `omp_lock_t` , została zainicjowana przy użyciu [funkcje omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -805,7 +822,7 @@ Aby uzyskać więcej informacji, zobacz [3.2.5 funkcje omp_test_lock i omp_test_
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_test_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -870,7 +887,7 @@ int omp_test_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) , została zainicjowana przy użyciu [omp_init_nest_lock](#omp-init-nest-lock).
+Zmienna typu `omp_nest_lock_t` , została zainicjowana przy użyciu [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -878,7 +895,7 @@ Aby uzyskać więcej informacji, zobacz [3.2.5 funkcje omp_test_lock i omp_test_
 
 ### <a name="example"></a>Przykład
 
-```
+```cpp
 // omp_test_nest_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -948,7 +965,7 @@ Thread 2 - released nestable_lock
 Thread 2 - released nestable_lock
 ```
 
-## <a name="omp-unset-lock"></a>Funkcje omp_unset_lock
+## <a name="omp-unset-lock"></a>omp_unset_lock
 
 Zwalnia blokadę.
 
@@ -961,7 +978,7 @@ void omp_unset_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_lock_t](openmp-data-types.md#omp-lock-t) , została zainicjowana przy użyciu [funkcje omp_init_lock](#omp-init-lock)własnością wątku i wykonywanie w funkcji.
+Zmienna typu `omp_lock_t` , została zainicjowana przy użyciu [funkcje omp_init_lock](#omp-init-lock)własnością wątku i wykonywanie w funkcji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -984,7 +1001,7 @@ void omp_unset_nest_lock(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Zmienna typu [omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) , została zainicjowana przy użyciu [omp_init_nest_lock](#omp-init-nest-lock)własnością wątku i wykonywanie w funkcji.
+Zmienna typu `omp_nest_lock_t` , została zainicjowana przy użyciu [omp_init_nest_lock](#omp-init-nest-lock)własnością wątku i wykonywanie w funkcji.
 
 ### <a name="remarks"></a>Uwagi
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
 ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778757"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779404"
 ---
 # <a name="compiler-error-c2065"></a>Błąd kompilatora C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Przykład: C + +/ błąd wnioskowanie typów interfejsu wiersza polecenia
+## <a name="example-ccli-type-deduction-failure"></a>Przykład: C++/ Błąd wnioskowanie typów interfejsu wiersza polecenia
 
-Ten błąd może wystąpić podczas wywoływania funkcji ogólne, jeśli argument zamierzony typu nie można wywnioskować z parametrów użytych. Aby uzyskać więcej informacji, zobacz [funkcje ogólne (C + +/ CLI)](../../extensions/generic-functions-cpp-cli.md).
+Ten błąd może wystąpić podczas wywoływania funkcji ogólne, jeśli argument zamierzony typu nie można wywnioskować z parametrów użytych. Aby uzyskać więcej informacji, zobacz [funkcje ogólne (C++sposób niezamierzony)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Przykład: C + +/ interfejsu wiersza polecenia, parametry atrybutów
+## <a name="example-ccli-attribute-parameters"></a>Przykład: C++/ Interfejs wiersza polecenia parametry atrybutów
 
 Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: Sprawdzanie parametrów dla atrybutów języka Visual C++.
 

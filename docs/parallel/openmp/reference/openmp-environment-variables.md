@@ -1,6 +1,6 @@
 ---
 title: Zmienne środowiskowe OpenMP
-ms.date: 10/23/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP environment variables
 - OMP_DYNAMIC
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 99868fec581d93f451d321af365f6c4546319077
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73fb11db14df22e5df95fdec556ccdfc16a935e5
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449689"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124970"
 ---
 # <a name="openmp-environment-variables"></a>Zmienne środowiskowe OpenMP
 
@@ -29,10 +29,10 @@ Implementacja języka Visual C++ OpenMP standardowa obejmuje następujące zmien
 
 |Zmienna środowiskowa|Opis|
 |--------------------|-----------|
+|[OMP_SCHEDULE](#omp-schedule)|Modyfikuje zachowanie [harmonogram](openmp-clauses.md#schedule) klauzuli podczas `schedule(runtime)` została określona w `for` lub `parallel for` dyrektywy.|
+|[OMP_NUM_THREADS](#omp-num-threads)|Ustawia maksymalną liczbę wątków w równoległego regionu, chyba że zostaną zastąpione [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) lub [num_threads](openmp-clauses.md#num-threads).|
 |[OMP_DYNAMIC](#omp-dynamic)|Określa, czy OpenMP, w czasie wykonywania można dostosować liczbę wątków w równoległego regionu.|
 |[OMP_NESTED](#omp-nested)|Określa, czy zagnieżdżonych równoległości jest włączona, chyba że zagnieżdżone równoległości jest włączone lub wyłączone przy użyciu `omp_set_nested`.|
-|[OMP_NUM_THREADS](#omp-num-threads)|Ustawia maksymalną liczbę wątków w równoległego regionu, chyba że zostaną zastąpione [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) lub [num_threads](openmp-clauses.md#num-threads).|
-|[OMP_SCHEDULE](#omp-schedule)|Modyfikuje zachowanie [harmonogram](openmp-clauses.md#schedule) klauzuli podczas `schedule(runtime)` została określona w `for` lub `parallel for` dyrektywy.|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
@@ -117,7 +117,7 @@ Aby uzyskać więcej informacji, zobacz [4.2 OMP_NUM_THREADS](../../../parallel/
 
 ### <a name="example"></a>Przykład
 
-Następujące polecenie ustawia `OMP_NUM_THREADS` zmiennej środowiskowej 16:
+Następujące polecenie ustawia `OMP_NUM_THREADS` zmiennej środowiskowej, aby `16`:
 
 ```
 set OMP_NUM_THREADS=16
@@ -140,15 +140,10 @@ set OMP_SCHEDULE[=type[,size]]
 ### <a name="parameters"></a>Parametry
 
 *Rozmiar*<br/>
-(Opcjonalnie) Określa rozmiar iteracji. `size` Musi być dodatnią liczbą całkowitą. Wartość domyślna to 1, chyba że `type` jest statyczna. Jeśli `type` jest `runtime`.
+(Opcjonalnie) Określa rozmiar iteracji. *rozmiar* musi być dodatnią liczbą całkowitą. Wartość domyślna to `1`, z wyjątkiem kiedy *typu* jest statyczna. Jeśli *typu* jest `runtime`.
 
-*Typ*<br/>
-Rodzaj planowania:
-
-- `dynamic`
-- `guided`
-- `runtime`
-- `static`
+*type*<br/>
+Rodzaj planowania albo `dynamic`, `guided`, `runtime`, lub `static`.
 
 ### <a name="remarks"></a>Uwagi
 

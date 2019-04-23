@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899265"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779475"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159)
 
@@ -623,7 +623,7 @@ Zgodnie ze standardem C++ klasy zadeklarowanej w anonimowej przestrzeni nazw ma 
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
-### <a name="default-initializers-for-value-class-members-ccli"></a>Elementy członkowskie klasy domyślne Inicjatory dla wartości (C + +/ CLI)
+### <a name="default-initializers-for-value-class-members-ccli"></a>Domyślne Inicjatory dla wartości elementy członkowskie klasy (C++sposób niezamierzony)
 
 W programie Visual Studio 2015 lub starszego kompilatora dozwolone (ale ignorowane) domyślny inicjator składowej dla składowej klasy wartości. Domyślna Inicjalizacja klasy wartości zawsze zero inicjuje członków; domyślny konstruktor nie jest dozwolone. W programie Visual Studio 2017 domyślny element członkowski inicjatory podnieść błąd kompilatora, jak pokazano w poniższym przykładzie:
 
@@ -635,7 +635,7 @@ value struct V
 };
 ```
 
-### <a name="default-indexers-ccli"></a>Domyślne indeksatorów (C + +/ CLI)
+### <a name="default-indexers-ccli"></a>Indeksatory domyślne (C++sposób niezamierzony)
 
 W programie Visual Studio 2015 lub starszego kompilatora w niektórych przypadkach misidentified domyślna właściwość jako indeksatora domyślne. Można obejść ten problem za pomocą identyfikatora `default` do dostępu do właściwości. Obejście się stało się problematyczne po `default` została wprowadzona jako słowo kluczowe w C ++ 11. W związku z tym, w programie Visual Studio 2017 zostały rozwiązane błędy, które wymagały obejście i kompilator teraz zgłasza błąd, gdy `default` umożliwia dostęp do właściwości domyślnej klasy.
 
@@ -1766,7 +1766,7 @@ public:
 
 [Makro offsetof](../../c-runtime-library/reference/offsetof-macro.md) tradycyjnie została zaimplementowana za pomocą makra, która wymaga [reinterpret_cast](../../cpp/reinterpret-cast-operator.md). Jest to niedozwolone w kontekstach, które wymagają stałego wyrażenia, ale kompilator Microsoft C++ tradycyjnie jest dozwolone. Makro offsetof, który jest dostarczany jako część STL poprawnie używa wewnętrzne polecenie kompilatora (**wartości __builtin_offsetof**), ale wiele osób ma lewy — makro definiować własne **offsetof**.
 
-W programie Visual Studio 2017 w wersji 15.8 kompilator ogranicza obszarów, które reinterpret_casts te mogą być wyświetlane w domyślnym trybie, aby ułatwić kodu, które są zgodne ze standardowego zachowania C++. W obszarze [/ permissive-](../../build/reference/permissive-standards-conformance.md), ograniczenia są jeszcze bardziej restrykcyjne. Za pomocą wynik makra offsetof w miejscach, które wymagają wyrażeń stałych może spowodować w kodzie, który generuje ostrzeżenie C4644 *użycia wzorca na podstawie — makro offsetof w wyrażeniach stałych jest niestandardowych; użyj makra offsetof zdefiniowane w standardzie języka C++ Biblioteka zamiast* lub C2975 *nieprawidłowy argument szablonu, oczekiwano stałego wyrażenia czasu kompilacji*.
+W programie Visual Studio 2017 w wersji 15.8 kompilator ogranicza obszarów, które reinterpret_casts te mogą być wyświetlane w domyślnym trybie, aby ułatwić kodu, które są zgodne ze standardem C++ zachowanie. W obszarze [/ permissive-](../../build/reference/permissive-standards-conformance.md), ograniczenia są jeszcze bardziej restrykcyjne. Za pomocą wynik makra offsetof w miejscach, które wymagają wyrażeń stałych może spowodować w kodzie, który generuje ostrzeżenie C4644 *użycia wzorca na podstawie — makro offsetof w wyrażeniach stałych jest niestandardowych; użyj makra offsetof zdefiniowane w standardzie języka C++ Biblioteka zamiast* lub C2975 *nieprawidłowy argument szablonu, oczekiwano stałego wyrażenia czasu kompilacji*.
 
 Poniższy kod zgłasza C4644 w **/wartość domyślna** i **/STD: c ++ 17** trybów i C2975 w **/ permissive-** trybu:
 

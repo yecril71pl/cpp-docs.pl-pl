@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898716"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124749"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
@@ -168,8 +168,8 @@ Dla wielu platform **vcpkg** narzędzie wiersza polecenia znacząco upraszcza od
 [Zgłaszanie problemu z zestawem narzędzi Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 Dowiedz się, jak utworzyć raporty o błędach efektywne wobec zestaw narzędzi Visual C++ (kompilatora, konsolidatora i inne narzędzia) i sposoby, aby przesłać raport.
 
-[Blog zespołu Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
-Dowiedz się więcej na temat nowych funkcji i najnowszych informacji od programistów języka [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].
+Microsoft [ C++ Blog zespołu](https://devblogs.microsoft.com/cppblog/)<br/>
+Dowiedz się więcej na temat nowych funkcji i najnowszych informacji od programistów języka C++ narzędzi w programie Visual Studio.
 
 [Visual Studio Developer Community](https://developercommunity.visualstudio.com/)<br/>
 Dowiedz się, jak uzyskać pomoc, zgłaszać błędy i sugestie dotyczące Visual Studio.

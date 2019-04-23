@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
 ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781903"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779443"
 ---
 # <a name="compiler-warning-c4693"></a>Ostrzeżenie kompilatora C4693
 

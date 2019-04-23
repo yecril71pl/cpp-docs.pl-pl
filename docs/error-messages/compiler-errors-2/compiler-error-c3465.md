@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
 ms.openlocfilehash: 117c9b9918950fd2e95e206c5aea457dee183b0a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781578"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779261"
 ---
 # <a name="compiler-error-c3465"></a>Błąd kompilatora C3465
 
@@ -19,7 +19,7 @@ Aby użyć typu "type" musi odwoływać się do zestawu 'Zestaw'
 
 Przekazywanie dalej typu będzie działać dla aplikacji klienckiej, dopóki nie zostanie ponownie skompilowany klienta. Gdy zostanie ponownie skompilowana, konieczne będzie odwołanie dla każdego zestawu zawierającego definicję typu używane w aplikacji klienckiej.
 
-Aby uzyskać więcej informacji, zobacz [przekazywania dalej typów (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [Type Forwarding (C++sposób niezamierzony)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

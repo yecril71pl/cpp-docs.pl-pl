@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
 ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769410"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779352"
 ---
 # <a name="compiler-warning-c4958"></a>Ostrzeżenie kompilatora C4958
 
@@ -21,7 +21,7 @@ ms.locfileid: "58769410"
 
 Za pomocą arytmetyki wskaźnika dadzą nieweryfikowalnego obrazu.
 
-Aby uzyskać więcej informacji, zobacz [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C++sposób niezamierzony)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 **/CLR: Safe** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
