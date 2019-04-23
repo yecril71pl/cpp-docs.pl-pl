@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276549"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426267"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -2685,10 +2685,10 @@ BOOL DrawAnimatedRects(
 Określa typ animacji. Jeśli określisz IDANI_CAPTION, tytuł okna będzie animować od pozycji określonej przez *lprcFrom* w położeniu wskazanym przez *lprcTo*. Efekt jest podobny do minimalizowania lub maksymalizacja okna.
 
 *lprcFrom*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając lokalizację i rozmiar ikony lub zminimalizowane okno.
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, określając lokalizację i rozmiar ikony lub zminimalizowane okno.
 
 *lprcTo*<br/>
-Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury Określanie lokalizacji i rozmiaru okna przywrócony
+Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury Określanie lokalizacji i rozmiaru okna przywrócony
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5363,7 +5363,7 @@ Zmiennej listy parametrów typów określonych w *pbParamInfo*.
 
 ### <a name="remarks"></a>Uwagi
 
-*PbParamInfo* parametr określa typy parametrów przekazanych do metody lub właściwości. Listy zmiennych argumentów jest reprezentowany przez *...*  w składni deklaracji.
+*PbParamInfo* parametr określa typy parametrów przekazanych do metody lub właściwości. Listy zmiennych argumentów jest reprezentowany przez *...* w składni deklaracji.
 
 Ta funkcja konwertuje parametry VARIANTARG wartości, a następnie wywołuje `IDispatch::Invoke` metody dla formantu ActiveX. Jeśli wywołanie `IDispatch::Invoke` zakończy się niepowodzeniem, ta funkcja spowoduje zgłoszenie wyjątku. Jeśli SCODE (kod stanu) jest zwracany przez `IDispatch::Invoke` jest DISP_E_EXCEPTION, ta funkcja zgłosi [COleException](../../mfc/reference/coleexception-class.md) obiektu, w przeciwnym razie wyniku weryfikacji zgłasza wyjątek [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
