@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
 ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272311"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Określ plik definicji modułu)
 
@@ -51,5 +51,5 @@ Aby określić plik .def z w środowisku deweloperskim, należy dodać go do pro
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

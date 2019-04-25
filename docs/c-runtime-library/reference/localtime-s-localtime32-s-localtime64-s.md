@@ -33,11 +33,11 @@ helpviewer_keywords:
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
 ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157295"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -76,8 +76,8 @@ Zero, jeśli to się powiedzie. Wartość zwracana jest kod błędu, jeśli wyst
 
 |*tmDest*|*sourceTime*|Wartość zwracana|Wartość w *tmDest*|Wywołuje program obsługi nieprawidłowych parametrów|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**NULL**|Wszystkie|**EINVAL**|Nie zmodyfikowano|Tak|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|**NULL**|**EINVAL**|Wszystkie pola ustawione na wartość -1|Tak|
+|**NULL**|Wszystkie|**EINVAL**|Nie zmodyfikowano|Yes|
+|Nie **NULL** (wskazuje prawidłowy pamięci)|**NULL**|**EINVAL**|Wszystkie pola ustawione na wartość -1|Yes|
 |Nie **NULL** (wskazuje prawidłowy pamięci)|mniejszy niż 0 lub większy niż **_MAX__TIME64_T**|**EINVAL**|Wszystkie pola ustawione na wartość -1|Nie|
 
 W przypadku pierwszego warunków błędów dwóch, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **EINVAL**.

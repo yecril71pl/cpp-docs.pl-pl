@@ -13,11 +13,11 @@ helpviewer_keywords:
 - library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
 ms.openlocfilehash: ab586c788825a854e7d3cb3760da6e4e5558de3a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269218"
 ---
 # <a name="libpath-additional-libpath"></a>/LIBPATH (Dodatkowa Libpath)
 
@@ -50,5 +50,5 @@ Opcja/libpath — umożliwia zastąpienie ścieżki biblioteki środowiska. Kons
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

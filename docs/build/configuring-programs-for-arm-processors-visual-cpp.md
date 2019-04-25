@@ -3,11 +3,11 @@ title: Konfigurowanie projektów w języku C++ dla procesorów ARM
 ms.date: 07/11/2018
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
 ms.openlocfilehash: 7e6e0c97245c0941abc49096d1693a8d152c1709
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273831"
 ---
 # <a name="configure-c-projects-for-arm-processors"></a>Konfigurowanie projektów w języku C++ dla procesorów ARM
 
@@ -21,7 +21,7 @@ W tym artykule opisano interfejsem binarnym aplikacji używane przez Windows na 
 [Przegląd konwencji ABI ARM64](arm64-windows-abi-conventions.md)<br/>
 W tym artykule opisano interfejsem binarnym aplikacji używane przez Windows dla procesorów ARM64 rejestrowanie użycia, Konwencje wywoływania oraz obsługi wyjątków.
 
-[Typowe problemy przy migracji ARM MSVC](common-visual-cpp-arm-migration-issues.md)<br/>
+[Typowe problemy z migracją procesorów ARM środowiska MSVC](common-visual-cpp-arm-migration-issues.md)<br/>
 Opisuje elementy kodu C++, które są przyjmowane powszechnie jako przenośne w ramach architektury, ale które mogą wygenerować różne wyniki dla ARM niż dla x86 i x64.
 
 [Obsługa wyjątków ARM](arm-exception-handling.md)<br/>

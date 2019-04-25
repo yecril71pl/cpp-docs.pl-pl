@@ -33,11 +33,11 @@ helpviewer_keywords:
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
 ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157353"
 ---
 # <a name="isnan-isnan-isnanf"></a>isNaN, _isnan —, _isnanf
 
@@ -98,5 +98,5 @@ Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf —](isinf.md)<br/>
-[isnormal —](isnormal.md)<br/>
+[isinf](isinf.md)<br/>
+[isnormal](isnormal.md)<br/>

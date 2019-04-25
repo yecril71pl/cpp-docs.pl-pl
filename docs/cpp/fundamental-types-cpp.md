@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153804"
 ---
 # <a name="fundamental-types--c"></a>Typy podstawowe (C++)
 
@@ -77,7 +77,7 @@ W poniższej tabeli opisano ograniczenia dla rozmiarów typu. Te ograniczenia s�
 ||**długi długi**|Większe niż typ unsigned **długie**.<br /><br /> Obiekty typu **long long** mogą być deklarowane jako **podpisany long long** lub **unsigned long long**. **long long podpisany** jest synonimem dla **long long**.|
 ||**wchar_t**, **__wchar_t**|Zmienna typu **wchar_t** Określa typ szerokich znaków lub wielobajtowych znaków. Domyślnie **wchar_t** jest typem natywnym, ale można użyć [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) się **wchar_t** element typedef dla **typ unsigned short**. **__Wchar_t** typ jest synonimem specyficzne dla firmy Microsoft dla natywnych **wchar_t** typu.<br /><br /> Użyj przedrostka L przed znakiem lub literał ciągu do wyznaczania typu znaku dwubajtowego.|
 |Liczba zmiennoprzecinkowa|**float**|Typ **float** jest wartość zmiennoprzecinkowa najmniejszą typu punktu.|
-||**double**|Typ **double** jest typ zmiennoprzecinkowy punktu, który jest większy niż lub równe wpisz **float**, ale krótszy lub równy rozmiarowi typu **typu long double**.<br /><br /> Specyficzne dla firmy Microsoft: reprezentacja **typu long double** i **double** jest taka sama. Jednak **typu long double** i **double** są oddzielnymi typami.|
+||**double**|Typ **double** jest typ zmiennoprzecinkowy punktu, który jest większy niż lub równe wpisz **float**, ale krótszy lub równy rozmiarowi typu **typu long double**.<br /><br /> Specyficzne dla firmy Microsoft: Reprezentacja **typu long double** i **double** jest taka sama. Jednak **typu long double** i **double** są oddzielnymi typami.|
 ||**Liczba typu double**|Typ **typu long double** zmiennoprzecinkowy typ punktu, który jest większy niż lub równy wpisz **double**.|
 
 **Microsoft Specific**

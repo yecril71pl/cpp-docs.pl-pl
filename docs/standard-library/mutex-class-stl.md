@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
 ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158581"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex — klasa (standardowa biblioteka C++)
 
@@ -47,8 +47,8 @@ class mutex;
 |Nazwa|Opis|
 |----------|-----------------|
 |[lock](#lock)|Blokuje wątek wywołujący, aż wątek uzyskuje własność `mutex`.|
-|[native_handle —](#native_handle)|Zwraca typ zależny od implementacji, który reprezentuje uchwyt mutex.|
-|[try_lock —](#try_lock)|Próby uzyskania własności `mutex` bez blokowania.|
+|[native_handle](#native_handle)|Zwraca typ zależny od implementacji, który reprezentuje uchwyt mutex.|
+|[try_lock](#try_lock)|Próby uzyskania własności `mutex` bez blokowania.|
 |[unlock](#unlock)|Zwalnia własność `mutex`.|
 
 ## <a name="requirements"></a>Wymagania
@@ -101,7 +101,7 @@ native_handle_type native_handle();
 
 `native_handle_type` jest zdefiniowany jako `Concurrency::critical_section *` , jest rzutowany jako `void *`.
 
-## <a name="try_lock"></a>  mutex::try_lock —
+## <a name="try_lock"></a>  mutex::try_lock
 
 Próby uzyskania własności `mutex` bez blokowania.
 

@@ -43,11 +43,11 @@ helpviewer_keywords:
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
 ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156801"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -93,8 +93,8 @@ Testowanie funkcji znaku *c* i, jeśli to możliwe, zastosuj jedną z następuj�
 
 |Procedury|Konwertuje|
 |--------------|--------------|
-|**_mbctolower —**, **_mbctolower_l —**|Wielkiej litery na małe litery, znaku.|
-|**_mbctoupper —**, **_mbctoupper_l —**|Małe znak wielkiej litery.|
+|**_mbctolower**, **_mbctolower_l**|Wielkiej litery na małe litery, znaku.|
+|**_mbctoupper**, **_mbctoupper_l**|Małe znak wielkiej litery.|
 
 Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersja tej funkcji, bez **_l** sufiks używa bieżących ustawień regionalnych dla wszelkich zachowań; wersja, która **_l** sufiks jest identyczny, z tą różnicą, że użyto parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
@@ -104,17 +104,17 @@ W poprzednich wersjach **_mbctolower —** wywołano **jtolower**, i **_mbctoupp
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower —**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper —**|**toupper**|**_mbctoupper —**|**towupper —**|
-|**_totupper_l**|**toupper_l —**|**_mbctoupper_l —**|**_towupper_l —**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper —**|
+|**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l —**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**_mbctolower —**, **_mbctolower_l —**|\<mbstring.h>|
-|**_mbctoupper —**, **_mbctoupper_l —**|\<mbstring.h>|
+|**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

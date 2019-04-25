@@ -3,11 +3,11 @@ title: Układ dynamiczny
 ms.date: 11/19/2018
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175315"
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
 
@@ -61,7 +61,7 @@ Powyższej procedury przydaje się do określania właściwości układ dynamicz
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Dla pierwszego formantu, do którego chcesz dodać dynamiczne zachowanie, użyj metod statycznych układ dynamiczny klasy do utworzenia [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) strukturę, która koduje sposób kontrolki powinien zostać dostosowany. Można to zrobić, pierwszy wybór odpowiedniej metody statycznej: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), lub [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Należy przekazać w postaci wartości procentowej poziomej lub pionowej aspektów przeniesienie. Te metody statyczne, wszystkie zwraca nowo utworzony obiekt MoveSettings, który służy do określania zachowania przenoszenia formantu.
+1. Dla pierwszego formantu, do którego chcesz dodać dynamiczne zachowanie, użyj metod statycznych układ dynamiczny klasy do utworzenia [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) strukturę, która koduje sposób kontrolki powinien zostać dostosowany. Można to zrobić, pierwszy wybór odpowiedniej metody statycznej: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), lub [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Należy przekazać w postaci wartości procentowej poziomej lub pionowej aspektów przeniesienie. Te metody statyczne, wszystkie zwraca nowo utworzony obiekt MoveSettings, który służy do określania zachowania przenoszenia formantu.
 
    Należy pamiętać, że 100 oznacza, że przenoszenie dokładnie tak jak okna dialogowego zmiany rozmiaru, co powoduje, że krawędzi kontrolki na bieżąco Stała odległość od nowej granicy.
 

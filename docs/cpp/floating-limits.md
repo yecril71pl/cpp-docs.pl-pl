@@ -10,11 +10,11 @@ helpviewer_keywords:
 - floating limits
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
 ms.openlocfilehash: cead21c9a66dbc54b46b1c9f8083022a59e80295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154408"
 ---
 # <a name="floating-limits"></a>Limity liczb zmiennoprzecinkowych
 
@@ -30,7 +30,7 @@ W poniższej tabeli wymieniono ograniczenia dotyczące wartości stałych zmienn
 |`FLT_EPSILON`<br/>`DBL_EPSILON`<br/>`LDBL_EPSILON`|Najmniejsza liczba dodatnia, x, x + 1.0 nie jest równa 1.0.|1.192092896e-07F<br/>2.2204460492503131e-016<br/>2.2204460492503131e-016|
 |`FLT_GUARD`||0|
 |`FLT_MANT_DIG`<br/>`DBL_MANT_DIG`<br/>`LDBL_MANT_DIG`|Liczba cyfr w podstawy określony przez `FLT_RADIX` w mantysę zmiennoprzecinkowych. Podstawa jest 2; Dlatego te wartości określają usługi bits.|24<br/>53<br/>53|
-|`FLT_MAX`<br/>`DBL_MAX`<br/>`LDBL_MAX`|Maksymalna liczba zmiennoprzecinkowa stałego.|3.402823466e + 38F<br/>1, 7976931348623158e + 308.<br/>1, 7976931348623158e + 308.|
+|`FLT_MAX`<br/>`DBL_MAX`<br/>`LDBL_MAX`|Maksymalna liczba zmiennoprzecinkowa stałego.|3.402823466e+38F<br/>1, 7976931348623158e + 308.<br/>1, 7976931348623158e + 308.|
 |`FLT_MAX_10_EXP`<br/>`DBL_MAX_10_EXP`<br/>`LDBL_MAX_10_EXP`|Maksymalna liczba całkowita w taki sposób, że 10 podniesioną do tego numeru jest stałego liczba zmiennoprzecinkowa.|38<br/>308<br/>308|
 |`FLT_MAX_EXP`<br/>`DBL_MAX_EXP`<br/>`LDBL_MAX_EXP`|Maksymalna liczba całkowita, `FLT_RADIX` podniesioną do, czy liczba jest liczbą stałego — liczba zmiennoprzecinkowa.|128<br/>1024<br/>1024|
 |`FLT_MIN`<br/>`DBL_MIN`<br/>`LDBL_MIN`|Minimalna wartość dodatnią.|1.175494351e-38F<br/>2.2250738585072014e-308<br/>2.2250738585072014e-308|

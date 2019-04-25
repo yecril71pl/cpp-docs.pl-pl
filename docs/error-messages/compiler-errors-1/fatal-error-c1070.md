@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1070
 ms.assetid: 1058269a-5db6-4c23-a97f-b5269eb9188b
 ms.openlocfilehash: 7e156a230ce9550b65d1b8775947fc7294c15377
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166922"
 ---
 # <a name="fatal-error-c1070"></a>Błąd krytyczny C1070
 

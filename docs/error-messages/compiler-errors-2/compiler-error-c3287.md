@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
 ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222680"
 ---
 # <a name="compiler-error-c3287"></a>Błąd kompilatora C3287
 
@@ -19,7 +19,7 @@ Typ "type" (typ zwrotny z GetEnumerator) musi mieć odpowiednie odpowiednią fun
 
 Klasy kolekcji zdefiniowanych przez użytkownika musi zawierać definicje `MoveNext` i `Current`.
 
-Zobacz [jak: kolekcja Iterate Over a User-Defined o dla każdego](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) Aby uzyskać więcej informacji.
+Zobacz [jak: Iterate Over a User-Defined kolekcji za pomocą każdego](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

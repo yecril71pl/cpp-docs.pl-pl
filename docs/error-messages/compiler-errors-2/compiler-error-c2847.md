@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C2847
+title: Compiler Error C2847
 ms.date: 11/04/2016
 f1_keywords:
 - C2847
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2847
 ms.assetid: 9ad9a0e0-8b16-49d9-a5be-f8eda2372aa9
 ms.openlocfilehash: 99c49be746cea6fb80c5e24667bcd97556a0ad04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161046"
 ---
-# <a name="compiler-error-c2847"></a>Błąd kompilatora C2847
+# <a name="compiler-error-c2847"></a>Compiler Error C2847
 
 Nie można zastosować operatora sizeof do zarządzanych lub typu WinRT "class"
 
