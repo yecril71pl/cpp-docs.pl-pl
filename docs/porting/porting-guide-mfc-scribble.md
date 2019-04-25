@@ -3,11 +3,11 @@ title: 'Przewodnik przenoszenia: Aplikacja Scribble MFC'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
 ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337462"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
 
@@ -51,7 +51,7 @@ W tym przypadku problemy zostały wszystkie ostrzeżenia, a program Visual Studi
 
 Przed kompilacją, możemy sprawdzić zestaw narzędzi platformy, aby było wiadomo, jakiej wersji kompilatora system projektu używa. W oknie dialogowym właściwości projektu w obszarze **właściwości konfiguracji**w **ogólne** kategorii przyjrzeć **zestawu narzędzi platformy** właściwości. Zawiera wersję programu Visual Studio i numeru wersji narzędzi platformy, która w tym przypadku jest w wersji 141 dla Visual Studio 2017 wersja narzędzi. Podczas konwersji projektu, który pierwotnie został skompilowany przy użyciu programu Visual C++ 2010, 2012, 2013 lub 2015 r. zestaw narzędzi nie jest automatycznie aktualizowany na zestaw narzędzi Visual Studio 2017.
 
-Aby wprowadzić przełącznika Unicode, otwórz właściwości projektu w obszarze **właściwości konfiguracji**, wybierz **ogólne** sekcji, a następnie zlokalizuj **zestaw znaków** właściwości. Zmień ten program z **zestaw znaków wielobajtowych** do **Użyj kodowania Unicode**. Ta zmiana powoduje to teraz _UNICODE UNICODE makra są zdefiniowane i _MBCS nie jest dostępna, którą można sprawdzić w oknie dialogowym właściwości, w obszarze **C/C++** kategorii przy **wiersza polecenia** właściwości.
+Aby wprowadzić przełącznika Unicode, otwórz właściwości projektu w obszarze **właściwości konfiguracji**, wybierz **ogólne** sekcji, a następnie zlokalizuj **zestaw znaków** właściwości. Zmień ten program z **zestaw znaków wielobajtowych** do **Użyj kodowania Unicode**. Ta zmiana powoduje to teraz _UNICODE UNICODE makra są zdefiniowane i _MBCS nie jest dostępna, którą można sprawdzić w oknie dialogowym właściwości, w obszarze **C /C++**  kategorii przy **wiersza polecenia** Właściwość.
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic
@@ -88,4 +88,4 @@ Bazgrołów został aplikacji pulpitu Windows małe i proste, a nie był trudny 
 ## <a name="see-also"></a>Zobacz także
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Następny przykład: Narzędzie Spy modelu COM](../porting/porting-guide-com-spy.md)
+[Następny przykład: COM Spy](../porting/porting-guide-com-spy.md)

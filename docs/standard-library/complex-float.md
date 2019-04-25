@@ -1,5 +1,5 @@
 ---
-title: złożone&lt;float&gt;
+title: complex&lt;float&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - complex/std::complex<float>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
 ms.openlocfilehash: a09b6d0306f633754cad4b12a652eac557f96634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279089"
 ---
-# <a name="complexltfloatgt"></a>złożone&lt;float&gt;
+# <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
 Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **float**, najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
 

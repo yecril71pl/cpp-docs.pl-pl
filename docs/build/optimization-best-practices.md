@@ -6,11 +6,11 @@ helpviewer_keywords:
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274173"
 ---
 # <a name="optimization-best-practices"></a>Najlepsze rozwiązania dotyczące optymalizacji
 
@@ -93,7 +93,7 @@ Inny pragma przydatne ograniczania głębokość wbudowanie jest `#pragma inline
 
 ## <a name="restrict-and-assume"></a>Element __restrict i \__assume
 
-Istnieje kilka słów kluczowych w języku Visual C++, które mogą pomóc wydajność: [element __restrict](../cpp/extension-restrict.md) i [__assume](../intrinsics/assume.md).
+Istnieje kilka słów kluczowych w elemencie wizualnym C++ które mogą pomóc wydajność: [element __restrict](../cpp/extension-restrict.md) i [__assume](../intrinsics/assume.md).
 
 Po pierwsze należy zauważyć, że `__restrict` i `__declspec(restrict)` dwie różne rzeczy. Gdy nieco są powiązane, ich semantyki różnią się. `__restrict` jak jest kwalifikator typu `const` lub `volatile`, ale wyłącznie dla typów wskaźnika.
 

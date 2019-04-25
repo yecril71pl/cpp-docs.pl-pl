@@ -22,11 +22,11 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
 ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270955"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konwencja wywoływania)
 
@@ -41,7 +41,7 @@ Te opcje określają kolejność, która funkcja argumenty są wypychane na stos
 
 ## <a name="remarks"></a>Uwagi
 
-**/GD —**, domyślne ustawienie określa [__cdecl](../../cpp/cdecl.md) konwencja wywołania dla wszystkich funkcji z wyjątkiem składowych języka C++, funkcji i funkcji, które są oznaczone [__stdcall](../../cpp/stdcall.md), [__ Fastcall](../../cpp/fastcall.md), lub [__vectorcall](../../cpp/vectorcall.md).
+**/GD —**, domyślne ustawienie określa [__cdecl](../../cpp/cdecl.md) konwencja wywołania dla wszystkich funkcji z wyjątkiem C++ funkcji Członkowskich i funkcji, które są oznaczone [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), lub [__vectorcall](../../cpp/vectorcall.md).
 
 **GR** Określa `__fastcall` Konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych języka C++, funkcji o nazwie `main`i funkcje, które są oznaczone `__cdecl`, `__stdcall`, lub `__vectorcall`. Wszystkie `__fastcall` funkcje muszą mieć prototypy. Ta konwencja wywołania jest dostępna tylko w kompilatorach, których platformą docelową x86 i jest ignorowana przez kompilatory, których celem są inne architektury.
 
@@ -54,7 +54,7 @@ Funkcje, które przyjmują zmienną liczbę argumentów, które muszą być ozna
 **/GD —**, **GR**, **GV** i **GZ** nie są zgodne z [/CLR: Safe](clr-common-language-runtime-compilation.md) lub   **/CLR: pure**. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 > [!NOTE]
-> Domyślnie x86 procesorów, funkcji składowych języka C++ użyj [__thiscall](../../cpp/thiscall.md).
+> Domyślnie x86 procesorów C++ funkcje Członkowskie korzystają [__thiscall](../../cpp/thiscall.md).
 
 Dla wszystkich procesorów funkcja członkowska, która jest jawnie oznaczona jako `__cdecl`, `__fastcall`, `__vectorcall`, lub `__stdcall` używa określonej konwencji wywoływania, jeśli nie jest ona ignorowana na danej architekturze. Funkcja elementu członkowskiego, która przyjmuje zmienną liczbę argumentów, zawsze używa `__cdecl` konwencji wywoływania.
 
@@ -111,5 +111,5 @@ Dla języka C `__vectorcall` konwencji nazewnictwa używa nazwy funkcji, a nast�
 
 ## <a name="see-also"></a>Zobacz także
 
-- [MSVC Compiler Options](compiler-options.md)
+- [Opcje kompilatora MSVC](compiler-options.md)
 - [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

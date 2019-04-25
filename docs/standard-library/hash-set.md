@@ -1,5 +1,5 @@
 ---
-title: '&lt;hash_set —&gt;'
+title: '&lt;hash_set&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <hash_set>
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
 ms.openlocfilehash: ba7716c1c84e8a74495a67f10a78eeaad2a6c3d7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159280"
 ---
-# <a name="lthashsetgt"></a>&lt;hash_set —&gt;
+# <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
 > [!NOTE]
 > Tego pliku nagłówkowego jest przestarzała. Alternatywą jest [< unordered_set >](../standard-library/unordered-set.md).

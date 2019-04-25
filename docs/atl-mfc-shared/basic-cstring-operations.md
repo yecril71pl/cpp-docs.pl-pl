@@ -10,11 +10,11 @@ helpviewer_keywords:
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
 ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216860"
 ---
 # <a name="basic-cstring-operations"></a>Operacje na obiekcie CString podstawowe
 
@@ -36,7 +36,7 @@ W tym temacie opisano następujące podstawowe [CString](../atl-mfc-shared/refer
 
 `CString`, `CStringA`, i `CStringW` uzyskać każdy zestaw metod i operatory zdefiniowane przez `CStringT` do użycia z usługą danych ciągu, które obsługują. Niektóre metody zduplikowany, a w niektórych przypadkach pozwoliło usług ciągu biblioteki wykonawczej C.
 
-Uwaga: `CString` jest klasą natywnych. Dla klasy ciągu, która jest przeznaczona do użytku w języku C + +/ CLI zarządzanego projektu, użyj `System.String`.
+Uwaga: `CString` jest klasą natywnych. Dla klasy ciągu, która jest przeznaczona do użytku w C++sposób niezamierzony zarządzanego projektu, użyj `System.String`.
 
 ##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> Tworzenie obiektów CString z ciągami tekstowymi Standard C
 

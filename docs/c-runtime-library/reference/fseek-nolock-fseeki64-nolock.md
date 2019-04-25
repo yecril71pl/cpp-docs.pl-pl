@@ -31,11 +31,11 @@ helpviewer_keywords:
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
 ms.openlocfilehash: 57e9a57223d6af620f4f9160923675b4873ab3ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287706"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -58,7 +58,7 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *offset*<br/>
@@ -79,7 +79,7 @@ Te funkcje są wersji bez blokady [fseek](fseek-fseeki64.md) i [_fseeki64 —](f
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fseek_nolock —**, **_fseeki64_nolock —**|\<stdio.h>|
+|**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285702"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -68,7 +68,7 @@ void _wmakepath(
 *Ścieżka*<br/>
 Buforu pełnej ścieżki.
 
-*Dysk*<br/>
+*drive*<br/>
 Zawiera litery (A, B i tak dalej) odpowiadający żądany dysk i opcjonalny dwukropek końcowe. **_makepath —** wstawia dwukropkiem w ścieżce złożonego przypadku jej braku. Jeśli *dysku* jest **NULL** lub punktów na pusty ciąg, litera nie zostanie wyświetlony w złożonego *ścieżki* ciągu.
 
 *dir*<br/>
@@ -90,7 +90,7 @@ Zawiera rozszerzenie nazwy pliku, z lub bez poprzedzającej go kropki (.). **_ma
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmakepath —**|**_makepath**|**_makepath**|**_wmakepath —**|
+|**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
 *Ścieżki* argumentu musi wskazywać na pusty bufor wystarczająco duży, aby pomieścić pełną ścieżkę. Złożonego *ścieżki* nie może być większa niż **_MAX_PATH** stałą, zdefiniowane w Stdlib.h.
 
@@ -101,7 +101,7 @@ Jeśli ścieżka jest **NULL**, procedura obsługi nieprawidłowego parametru zo
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_makepath**|\<stdlib.h>|
-|**_wmakepath —**|\<stdlib.h > lub \<wchar.h >|
+|**_wmakepath**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

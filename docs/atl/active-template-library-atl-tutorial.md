@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
 ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198483"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Biblioteka Active Template Library (ATL) — Samouczek
 
@@ -24,19 +24,19 @@ Korzystając z tego samouczka, dowiesz się, jak dodać kontrolki do projektu AT
 
 Samouczek jest podzielone na siedem kroków. Należy wykonać każdy krok w kolejności, ponieważ dalszych krokach zależą od poprzednio wykonanych zadań. Przed rozpoczęciem należy się upewnić, że masz uprawnienia wymagane do zarejestrowania składnik ActiveX na określonym komputerze. Zazwyczaj jest tylko problemem, jeśli używasz programu Visual Studio .NET przy użyciu połączenia usług terminalowych.
 
-- [Krok 1: Tworzenie projektu](../atl/creating-the-project-atl-tutorial-part-1.md)
+- [Krok 1. Tworzenie projektu](../atl/creating-the-project-atl-tutorial-part-1.md)
 
-- [Krok 2: Dodawanie kontrolki do projektu](../atl/adding-a-control-atl-tutorial-part-2.md)
+- [Krok 2. Dodawanie kontrolki do projektu](../atl/adding-a-control-atl-tutorial-part-2.md)
 
 - [Krok 3. Dodawanie właściwości do kontrolki](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
-- [Krok 4: Zmiana kodu rysującego kontroli nad](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+- [Krok 4. Zmiana kodu rysującego kontroli nad](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-- [Krok 5: Dodawanie zdarzenia](../atl/adding-an-event-atl-tutorial-part-5.md)
+- [Krok 5. Dodawanie zdarzenia](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-- [Krok 6: Dodawanie strony właściwości](../atl/adding-a-property-page-atl-tutorial-part-6.md)
+- [Krok 6. Dodawanie strony właściwości](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
-- [Krok 7: Umieszczanie kontrolki na stronie sieci Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
+- [Krok 7. Umieszczanie kontrolki na stronie sieci Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
 ## <a name="see-also"></a>Zobacz także
 

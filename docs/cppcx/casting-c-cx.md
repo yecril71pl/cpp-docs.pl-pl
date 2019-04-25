@@ -1,17 +1,17 @@
 ---
-title: Rzutowanie (C + +/ CX)
+title: Rzutowanie (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
 ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258216"
 ---
-# <a name="casting-ccx"></a>Rzutowanie (C + +/ CX)
+# <a name="casting-ccx"></a>Rzutowanie (C++/CX)
 
-Cztery operatory rzutowania różnych dotyczą typów środowiska wykonawczego Windows: [static_cast Operator](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **operatora safe_cast**, i [ reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md). **safe_cast** i **static_cast** zgłoszenie wyjątku, gdy nie można wykonać konwersji; [static_cast Operator](../cpp/static-cast-operator.md) wykonuje sprawdzanie typów w czasie kompilacji. **dynamic_cast** zwraca **nullptr** ich powodzenia konwersji typu. Mimo że **reinterpret_cast** zwraca wartość inną niż null, być może jest ono nieprawidłowe. Z tego powodu zaleca się, że nie używasz **reinterpret_cast** Jeśli nie masz pewności, że rzutowanie zakończy się powodzeniem. Ponadto firma Microsoft zaleca, aby nie używaj rzutowań w stylu języka C w usługi C + +/ CX kodu, ponieważ są one identyczne **reinterpret_cast**.
+Cztery operatory rzutowania różnych dotyczą typów środowiska wykonawczego Windows: [static_cast Operator](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **operatora safe_cast**, i [ reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md). **safe_cast** i **static_cast** zgłoszenie wyjątku, gdy nie można wykonać konwersji; [static_cast Operator](../cpp/static-cast-operator.md) wykonuje sprawdzanie typów w czasie kompilacji. **dynamic_cast** zwraca **nullptr** ich powodzenia konwersji typu. Mimo że **reinterpret_cast** zwraca wartość inną niż null, być może jest ono nieprawidłowe. Z tego powodu zaleca się, że nie używasz **reinterpret_cast** Jeśli nie masz pewności, że rzutowanie zakończy się powodzeniem. Ponadto zalecamy nieużywanie rzutowań w stylu języka C w swojej C++/CX kodu, ponieważ są one identyczne **reinterpret_cast**.
 
 Kompilator i środowisko uruchomieniowe również wykonywać rzutowania niejawnego — na przykład w konwersja boxing operacji, gdy typ wartości lub wbudowany typ są przekazywane jako argumenty do metody, której parametr typu jest `Object^`. Teoretycznie niejawne rzutowanie nigdy nie powinna spowodować wyjątek w czasie wykonywania. Jeśli kompilator nie można wykonać niejawnej konwersji, zgłasza błąd w czasie kompilacji.
 
@@ -123,4 +123,4 @@ Poniższa tabela zawiera podsumowanie przypadki, w których jest bezpieczny w u�
 
 - [System typów](../cppcx/type-system-c-cx.md)
 - [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
-- [Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+- [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

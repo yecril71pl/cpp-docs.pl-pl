@@ -3,19 +3,19 @@ title: Zaimplementuj czyste elementy wirtualne
 ms.date: 11/16/2016
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
 ms.openlocfilehash: 59e4519f57a1d9bd9ba1cee1ed6ae41bea785a9f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62265094"
 ---
 # <a name="implement-pure-virtuals"></a>Zaimplementuj czyste elementy wirtualne
 
-**Co:** pozwala natychmiast wygenerować kod wymagany do implementowania czystych metod wirtualnych w klasie.
+**Co:** Pozwala natychmiast wygenerować kod wymagany do implementowania czystych metod wirtualnych w klasie.
 
-**Kiedy:** ma być dziedziczona z klasy za pomocą czystych funkcji wirtualnych.
+**Kiedy:** Chcesz dziedziczyć klasy z czystych funkcji wirtualnych.
 
-**Dlaczego:** wszystkie czyste funkcje wirtualne jeden po drugim, można zaimplementować ręcznie, jednak ta funkcja będzie generowana automatycznie wszystkich podpisów metody.
+**Dlaczego:** Wszystkie czyste funkcje wirtualne jeden po drugim, można zaimplementować ręcznie, jednak tej funkcji będzie generowana automatycznie wszystkich podpisów metody.
 
 **Jak:**
 

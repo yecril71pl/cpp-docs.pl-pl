@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 ms.openlocfilehash: 92164bf297a44871897b6c6150eb54f8c5ccf3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62220458"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>Kompilator ostrzeżenie (poziom 4) C4571
 
@@ -29,7 +29,7 @@ W jednym z następujących metod można rozwiązać C4571
 
 - Nie należy włączać C4571, jeśli nie chcesz, aby Twoje bloki catch(...), aby przechwytywać wyjątki strukturalne, ale chcesz nadal używać catch(...) bloków.  Nadal może przechwycić wyjątków strukturalnych za pomocą słów kluczowych obsługi wyjątków strukturalnych (**__try**, **__except**, i **__finally**).  Jednak należy pamiętać, że podczas kompilowania **/EHS** destruktory tylko zostanie wywołana, gdy zgłoszony wyjątek języka C++, nie w przypadku, gdy wystąpi wyjątek SEH.
 
-- Zastąp blok catch(...) przy użyciu bloków catch dla określonych wyjątków C++ i opcjonalnie Dodaj obsługi wokół obsługi wyjątków C++ wyjątków strukturalnych (**__try**, **__except**, i **_ _finally**).  Zobacz [obsługi wyjątków strukturalnych, (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) Aby uzyskać więcej informacji.
+- Zastąp bloki catch dla konkretnego bloku catch(...) C++ wyjątki i opcjonalnie Dodaj obsługi wokół wyjątków strukturalnych C++ obsługi wyjątków (**__try**, **__except**, i **__finally**).  Zobacz [obsługi wyjątków strukturalnych, (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) Aby uzyskać więcej informacji.
 
 Zobacz [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md) Aby uzyskać więcej informacji.
 

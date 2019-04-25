@@ -29,11 +29,11 @@ helpviewer_keywords:
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
 ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286921"
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 
@@ -70,7 +70,7 @@ Wersja tej funkcji za pomocą **_l** sufiks jest identyczna, z tą różnicą, �
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istleadbyte —**|Zawsze zwraca wartość false|**_isleadbyte**|Zawsze zwraca wartość false|
+|**_istleadbyte**|Zawsze zwraca wartość false|**_isleadbyte**|Zawsze zwraca wartość false|
 
 ## <a name="requirements"></a>Wymagania
 

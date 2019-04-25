@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
 ms.openlocfilehash: bcadf31eda079ebb8ea7a496efe4c945e16b1ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160760"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>Kompilator ostrzeżenie (poziom 1) C4532
 

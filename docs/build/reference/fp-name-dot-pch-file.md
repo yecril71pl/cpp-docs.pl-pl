@@ -16,11 +16,11 @@ helpviewer_keywords:
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
 ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270995"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Nazwa pliku .Pch)
 
@@ -71,6 +71,6 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 ## <a name="see-also"></a>Zobacz także
 
 [Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Określanie nazwy ścieżki](specifying-the-pathname.md)

@@ -1,6 +1,6 @@
 ---
-title: Ostrzeżenia kompilatora od C4400 C4599
-ms.date: 05/30/2018
+title: Ostrzeżenia kompilatora od C4400 do C4599
+ms.date: 04/21/2019
 f1_keywords:
 - C4413
 - C4415
@@ -23,14 +23,10 @@ f1_keywords:
 - C4448
 - C4449
 - C4450
-- C4451
 - C4452
 - C4453
 - C4454
 - C4455
-- C4456
-- C4457
-- C4459
 - C4472
 - C4474
 - C4475
@@ -138,14 +134,14 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7dd09e6f31592f6d4b62b94d8d3256fe1a432010
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280317"
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>Ostrzeżenia kompilatora od C4400 C4599
+# <a name="compiler-warnings-c4400-through-c4599"></a>Ostrzeżenia kompilatora od C4400 do C4599
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawcze, które są generowane przez kompilator.
 
@@ -184,14 +180,14 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 1) C4426|flagi optymalizacji zmieniły się po dołączeniu nagłówka, może być #pragma Optimize()|
 |Ostrzeżenie kompilatora (poziom 1) C4427|"*operator*": przepełnienie w czasie dzielenia stałej, niezdefiniowane zachowanie|
 |[Ostrzeżenie kompilatora (poziom 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|możliwe niekompletne lub niepoprawnie uformowane universal-character-name|
-|[Ostrzeżenie (błąd) kompilatora C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|brak specyfikatora typu — zakładany int. Uwaga: Język C++ obsługuje domyślnie typu int|
+|[Kompilator ostrzeżenie C4430 (błąd)](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|brak specyfikatora typu — zakładany int. Uwaga: Język C++ obsługuje domyślnie typu int|
 |[Ostrzeżenie kompilatora (poziom 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnie typu int|
 |[Ostrzeżenie kompilatora (poziom 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|statyczny Konstruktor musi posiadać prywatną dostępność; Zmiana na prywatny dostęp|
 |[Ostrzeżenie kompilatora (poziom 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*derived_class*": Układ obiektu pod/vd2 zmieni się z powodu bazy wirtualnej "*element $base_class*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamiczne\_rzutowania z wirtualną klasę podstawową '*element $base_class*"to"*derived_class*"w konstruktorze lub destruktorze może zakończyć się niepowodzeniem z częściowo skonstruowanym obiektem|
 |[Ostrzeżenie kompilatora (poziom 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamiczne\_rzutowania z wirtualną klasę podstawową '*element $base_class*"to"*derived_class*"może nie działać w niektórych kontekstach|
 |C4438 ostrzeżenia kompilatora|"*funkcja*": nie można bezpiecznie wywołać / await: clrcompat trybu. Jeśli "*funkcja*" wywołuje środowisko CLR może spowodować uszkodzenie nagłówka środowiska CLR|
-|[Ostrzeżenie (błąd) kompilatora C4439](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|"*funkcja*": definicja funkcji z zarządzanym typem w sygnaturze musi mieć konwencję wywołania __clrcall|
+|[Kompilator ostrzeżenie C4439 (błąd)](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|"*funkcja*": definicja funkcji z zarządzanym typem w sygnaturze musi mieć konwencję wywołania __clrcall|
 |[Ostrzeżenie kompilatora (poziom 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|wywoływanie ponowną definicję Konwencji wywołań z "*calling_convention1*"to"*calling_convenction2*" zignorowany|
 |[Ostrzeżenie kompilatora (poziom 1) C4441](../../error-messages/compiler-warnings/compiler-warning-level-1-c4441.md)|Konwencja wywoływania '*calling_convention1*"ignorowane. "*calling_convention2*" zamiast tego użyć|
 |Ostrzeżenie kompilatora (poziom 1) C4442|osadzony terminator o wartości null w argumencie __annotation.  Wartość zostanie obcięta.|
@@ -212,7 +208,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 4) C4457](compiler-warning-level-4-c4457.md)|Deklaracja "*identyfikator*" powoduje ukrycie parametru funkcji|
 |[Ostrzeżenie kompilatora (poziom 4) C4458](compiler-warning-level-4-c4458.md)|Deklaracja "*identyfikator*" powoduje ukrycie składowej klasy|
 |[Ostrzeżenie kompilatora (poziom 4) C4459](compiler-warning-level-4-c4459.md)|Deklaracja "*identyfikator*" powoduje ukrycie deklaracji globalnej|
-|[Ostrzeżenie kompilatora (poziom 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|"WinRT&#124;zarządzane ' operator '*operator*", ma parametr przekazywany przez odwołanie. "WinRT&#124;zarządzane" operator "*operator*"ma semantykę różną od operatora C++"*cpp_operator*", czy zamierzasz przekazać przez wartość?|
+|[Ostrzeżenie kompilatora (poziom 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|"WinRT&#124;zarządzane ' operator '*operator*", ma parametr przekazywany przez odwołanie. "WinRT&#124;zarządzane" operator "*operator*" ma semantykę różną od C++ operatora "*cpp_operator*", czy zamierzasz przekazać przez wartość?|
 |[Ostrzeżenie kompilatora (poziom 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|"*classname*": Ta klasa ma finalizator "! *finalizator*"ale nie ma destruktora" ~*dtor*"|
 |[Ostrzeżenie kompilatora (poziom 1, błąd) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|"*typu*": nie można określić GUID typu. Program może ulec awarii w czasie wykonywania.|
 |[Ostrzeżenie kompilatora (poziom 4) C4463](compiler-warning-level-4-c4463.md)|przepełnienie; Przypisywanie "*wartość*"do pola bitowego, która może zawierać wartości z"*min_value*"to"*max_value*"|
@@ -230,8 +226,8 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|użyte rozszerzenie niestandardowe: specyfikator override "*— słowo kluczowe*"|
 |C4482 ostrzeżenia kompilatora|używane niestandardowe rozszerzeni: enum '*wyliczenie*"użyte w nazwie kwalifikowanej|
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4483|Błąd składniowy: Oczekiwano słowa kluczowego języka C++|
-|[Ostrzeżenie (błąd) kompilatora C4484](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|"*override_function*": pasuje metody bazowej klasy referencyjnej "*base_class_function*", ale nie jest oznaczona modyfikatorem "virtual", "new" lub "override"; przyjęto "new" (a nie "virtual")|
-|[Ostrzeżenie (błąd) kompilatora C4485](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|"*override_function*": pasuje metody bazowej klasy referencyjnej "*base_class_function*", ale nie jest oznaczona "new" ani "override"; przyjęto "new" (i "virtual")|
+|[Kompilator ostrzeżenie C4484 (błąd)](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|"*override_function*": pasuje metody bazowej klasy referencyjnej "*base_class_function*", ale nie jest oznaczona modyfikatorem "virtual", "new" lub "override"; przyjęto "new" (a nie "virtual")|
+|[Kompilator ostrzeżenie C4485 (błąd)](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|"*override_function*": pasuje metody bazowej klasy referencyjnej "*base_class_function*", ale nie jest oznaczona "new" ani "override"; przyjęto "new" (i "virtual")|
 |[Ostrzeżenie kompilatora (poziom 1) C4486](../../error-messages/compiler-warnings/compiler-warning-level-1-c4486.md)|"*funkcja*": prywatna metoda wirtualna klasy referencyjnej lub klasy wartości powinna być oznaczona jako "sealed"|
 |[Ostrzeżenie kompilatora (poziom 4) C4487](../../error-messages/compiler-warnings/compiler-warning-level-4-c4487.md)|"*derived_class_function*": pasuje dziedziczone metody niewirtualnej "*base_class_function*", ale to nie jawnie oznaczona modyfikatorem "new"|
 |[Ostrzeżenie kompilatora (poziom 1) C4488](../../error-messages/compiler-warnings/compiler-warning-level-1-c4488.md)|"*funkcja*": wymaga "*— słowo kluczowe*"słowo kluczowe, aby zaimplementować metodę interfejsu"*interface_method*"|
@@ -289,7 +285,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4551](../../error-messages/compiler-warnings/compiler-warning-level-1-c4551.md)|wywołaniu funkcji brakuje listy argumentów|
 |[Ostrzeżenie kompilatora (poziom 1) C4552](../../error-messages/compiler-warnings/compiler-warning-level-1-c4552.md)|"*operator*": operator nie przynosi efektu; oczekiwany operator, który przynosi efekt|
 |[Ostrzeżenie kompilatora (poziom 1) C4553](../../error-messages/compiler-warnings/compiler-warning-level-1-c4553.md)|"*operator*": operator nie ma wpływu; czy chodziło Ci "operator?|
-|[Kompilator ostrzeżenie (poziom 3) C4554](../../error-messages/compiler-warnings/compiler-warning-level-3-c4554.md) C4554|"*operator*": Sprawdź pierwszeństwo operatorów w poszukiwaniu możliwego błędu; Użyj nawiasów, aby ujednoznacznić pierwszeństwo|
+|[Ostrzeżenie kompilatora (poziom 3) C4554](../../error-messages/compiler-warnings/compiler-warning-level-3-c4554.md) C4554|"*operator*": Sprawdź pierwszeństwo operatorów w poszukiwaniu możliwego błędu; Użyj nawiasów, aby ujednoznacznić pierwszeństwo|
 |[Ostrzeżenie kompilatora (poziom 1) C4555](../../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md)|wyrażenie nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt|
 |[Ostrzeżenie kompilatora (poziom 1) C4556](../../error-messages/compiler-warnings/compiler-warning-level-1-c4556.md)|wartość wewnętrznego argumentu natychmiastowego "*wartość*"jest poza zakresem"*lower_bound* - *upper_bound*"|
 |[Ostrzeżenie kompilatora (poziom 3) C4557](../../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md)|"__assume" zawiera efekt '*efekt*"|
@@ -329,3 +325,8 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (błąd) C4597|Niezdefiniowane zachowanie: makro offsetof zastosowano do składowej wirtualnej klasy bazowej|
 |Ostrzeżenie kompilatora (poziom 1 i 3) C4598|"#include"*nagłówka*"": numer nagłówka *numer* WE prekompilowanym nagłówku jest niezgodna bieżącej kompilacji w tej pozycji|
 |Ostrzeżenie kompilatora (poziom 3) C4599|"*flagi* *ścieżki*": numer argumentu wiersza polecenia *numer* jest niezgodna z prekompilowanego pliku nagłówkowego|
+
+## <a name="see-also"></a>Zobacz także
+
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
+[Ostrzeżenia kompilatora od C4000 - C5999](compiler-warnings-c4000-c5999.md)

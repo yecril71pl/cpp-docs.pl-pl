@@ -41,11 +41,11 @@ helpviewer_keywords:
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286736"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,10 +93,10 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 
 |Procedura|Testowanie warunku (strona kodowa 932 tylko)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Dwubajtowych znaków Hiragana: 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Dwubajtowych znaków Hiragana: 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Znaki dwubajtowe katakana: 0x8340 < =*c*< = 0x8396.|
-|**_ismbckata_l**|Znaki dwubajtowe katakana: 0x8340 < =*c*< = 0x8396.|
+|**_ismbchira**|Znaki dwubajtowe Hiragana: 0x829F<=*c*<=0x82F1.|
+|**_ismbchira_l**|Znaki dwubajtowe Hiragana: 0x829F<=*c*<=0x82F1.|
+|**_ismbckata**|Znaki dwubajtowe katakana: 0x8340<=*c*<=0x8396.|
+|**_ismbckata_l**|Znaki dwubajtowe katakana: 0x8340<=*c*<=0x8396.|
 
 **Zakończenia dla strony kodu 932**
 
