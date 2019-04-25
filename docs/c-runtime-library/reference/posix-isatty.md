@@ -21,12 +21,12 @@ helpviewer_keywords:
 - isatty function
 ms.assetid: 610d0b09-a1db-41ef-9f45-a2c6076b4683
 ms.openlocfilehash: 658f214aa3c91d82be7f8032caea54ebe8787aa7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155670"
 ---
 # <a name="isatty"></a>isatty
 
-Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_isatty —](isatty.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_isatty —](isatty.md) zamiast tego.

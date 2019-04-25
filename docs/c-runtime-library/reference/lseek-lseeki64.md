@@ -30,11 +30,11 @@ helpviewer_keywords:
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
 ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285929"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -88,8 +88,8 @@ Możesz użyć **_lseek —** można przesunąć kursor w dowolnym miejscu w pli
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lseek —**|\<io.h>|
-|**_lseeki64 —**|\<io.h>|
+|**_lseek**|\<io.h>|
+|**_lseeki64**|\<io.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
 ms.openlocfilehash: a3495de3ec72bcac78cdee2f5f3265864e7a2932
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293072"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Korzystaj z randomizacji układu przestrzeni adresowej)
 
@@ -43,7 +43,7 @@ Domyślnie **opcja/DynamicBase** jest włączona. Aby wyłączyć tę opcję, na
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołania konsolidatora MSVC](linking.md)
+- [Dokumentacja konsolidatora MSVC](linking.md)
 - [Opcje konsolidatora MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
 - [Poziom ochrony oprogramowania niezależnego dostawcy oprogramowania Windows](https://msdn.microsoft.com/library/bb430720.aspx)

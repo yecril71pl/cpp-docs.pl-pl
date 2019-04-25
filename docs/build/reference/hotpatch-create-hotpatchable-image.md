@@ -11,11 +11,11 @@ helpviewer_keywords:
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
 ms.openlocfilehash: 8830b26b8fdfc3db2aa5fe31a52e6226fd554946
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291655"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Utwórz obraz możliwy do poprawiania w trakcie działania)
 
@@ -51,5 +51,5 @@ Ponieważ instrukcje mają zawsze dwa bajty lub większym na architekturze ARM i
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

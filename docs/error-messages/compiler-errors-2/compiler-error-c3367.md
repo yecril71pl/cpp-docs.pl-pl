@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
 ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300540"
 ---
 # <a name="compiler-error-c3367"></a>Błąd kompilatora C3367
 
@@ -19,7 +19,7 @@ ms.locfileid: "50456293"
 
 Jeśli chcesz wywołać niezwiązanego delegata, należy przekazać wystąpienia obiektu. Ponieważ funkcja statycznej składowej jest wywoływana za pośrednictwem nazwy klasy, można tylko utworzyć wystąpienie niezwiązanego delegata z funkcję składową wystąpienia.
 
-Aby uzyskać więcej informacji na temat niezwiązane obiekty delegowane, zobacz [porady: definiowanie i użycie delegatów (C + +/ interfejsu wiersza polecenia)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
+Aby uzyskać więcej informacji na temat niezwiązane obiekty delegowane zobacz [jak: Definiowanie i używanie delegatów (C++sposób niezamierzony)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

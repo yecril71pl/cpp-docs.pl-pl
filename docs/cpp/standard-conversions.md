@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267288"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 
@@ -201,7 +201,7 @@ W poniższej tabeli przedstawiono dostępność klasy podstawowej w sytuacji, pr
 |Funkcji zewnętrznych (nie klasy zakresu)|Private|Nie|
 ||Protected|Nie|
 ||Public|Tak|
-|Funkcja elementu członkowskiego B (w zakresie B)|Private|Tak|
+|Funkcja elementu członkowskiego B (w zakresie B)|Private|Yes|
 ||Protected|Tak|
 ||Public|Tak|
 |Funkcja elementu członkowskiego języka C (w zakresie języka C)|Private|Nie|

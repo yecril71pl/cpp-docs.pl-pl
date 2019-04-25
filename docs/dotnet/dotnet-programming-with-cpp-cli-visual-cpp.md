@@ -1,5 +1,5 @@
 ---
-title: Programowanie .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)
+title: Programowanie przy użyciu platformy .NET C++sposób niezamierzony (Visual C++)
 ms.date: 09/18/2018
 helpviewer_keywords:
 - programming [C++], .NET programming
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
 ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303799"
 ---
-# <a name="net-programming-with-ccli-visual-c"></a>Programowanie .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)
+# <a name="net-programming-with-ccli-visual-c"></a>Programowanie przy użyciu platformy .NET C++sposób niezamierzony (Visual C++)
 
 **Visual Studio 2015**: Domyślnie projekty CLR utworzonych za pomocą programu Visual Studio 2015 ukierunkowane na .NET Framework 4.5.2. Do obiektu docelowego .NET Framework 4.6 podczas tworzenia nowego projektu w **nowy projekt** okno dialogowe, zmienić platformę docelową z listy rozwijanej w górnej środkowej części okna dialogowego. Aby zmienić platformę docelową dla istniejącego projektu, zamknij projekt, Edytuj plik projektu (.vcxproj) i zmienić wartość docelową wersję platformy 4.6. Gdy następnym razem otworzysz projekt, ustawienia zaczęły obowiązywać.
 
-**Visual Studio 2017**: W programie Visual Studio 2017, domyślna struktura jest 4.6.1 i selektor wersji Framework znajduje się w dolnej części **okna dialogowego Nowy projekt**. C + +/ CLI, sama nie jest instalowany domyślnie. Zainstaluj składnik, otwórz Instalator programu Visual Studio, a następnie wybierz C + +/ interfejsu wiersza polecenia składnika w obszarze Visual C++.
+**Visual Studio 2017**: W programie Visual Studio 2017, domyślna struktura jest 4.6.1 i selektor wersji Framework znajduje się w dolnej części **okna dialogowego Nowy projekt**. C++/ CLI, sama nie jest instalowany domyślnie. Aby zainstalować składnik, otwórz Instalator programu Visual Studio, a następnie wybierz polecenie C++składnika w sposób niezamierzony w obszarze Visual C++.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -32,7 +32,7 @@ ms.locfileid: "57749818"
 
 [Wyrażenia regularne (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[Obsługa plików i we/wy (C + +/ CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[Obsługa plików i we/wy (C++sposób niezamierzony)](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [Operacje graficzne (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
 

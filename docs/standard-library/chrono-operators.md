@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 ms.openlocfilehash: d86fbf15313c25dd28b9220c654750ee8bc96d81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279076"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; operatorów
 
@@ -17,8 +17,8 @@ ms.locfileid: "50631858"
 |-|-|-|
 |[Operator modulo](#op_modulo)|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|
 |[Operator&gt;=](#op_gt_eq)|[Operator&lt;](#op_lt)|[Operator&lt;=](#op_lt_eq)|
-|[operator *](#op_star)|[operator +](#op_add)|[operator-](#operator-)|
-|[operator /](#op_div)|[operator==](#op_eq_eq)|
+|[operator*](#op_star)|[operator +](#op_add)|[operator-](#operator-)|
+|[operator/](#op_div)|[operator==](#op_eq_eq)|
 
 ## <a name="operator-"></a>  operator-
 

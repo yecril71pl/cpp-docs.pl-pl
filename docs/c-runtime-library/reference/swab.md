@@ -27,11 +27,11 @@ helpviewer_keywords:
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
 ms.openlocfilehash: 64753383bcb94947e6b413b5f55ac6e2d9c7dbca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245511"
 ---
 # <a name="swab"></a>_swab
 
@@ -55,7 +55,7 @@ Dane do skopiowania i zamienione.
 *dest*<br/>
 Lokalizacja magazynowa danych wymienione.
 
-*N*<br/>
+*n*<br/>
 Liczba bajtów do skopiowania i zamienione.
 
 ## <a name="return-value"></a>Wartość zwracana

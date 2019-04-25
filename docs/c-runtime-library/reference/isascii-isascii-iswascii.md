@@ -1,5 +1,5 @@
 ---
-title: isascii —, __isascii —, iswascii —
+title: isascii, __isascii, iswascii
 ms.date: 11/04/2016
 apiname:
 - iswascii
@@ -35,13 +35,13 @@ helpviewer_keywords:
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
 ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287472"
 ---
-# <a name="isascii-isascii-iswascii"></a>isascii —, __isascii —, iswascii —
+# <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
 
 Określa, czy określony znak jest znakiem ASCII.
 
@@ -77,13 +77,13 @@ W celu zapewnienia zgodności z poprzednimi wersjami **isascii —** jest implem
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istascii —**|**__isascii**|**__isascii**|**iswascii**|
+|**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isascii —**, **__isascii —**|C: \<ctype.h ><br /><br /> C++: \<cctype — > lub \<ctype.h >|
+|**isascii —**, **__isascii —**|C: \<ctype.h><br /><br /> C++: \<cctype — > lub \<ctype.h >|
 |**iswascii**|C: \<wctype.h >, \<ctype.h >, lub \<wchar.h ><br /><br /> C++: \<cwctype — >, \<cctype — >, \<wctype.h >, \<ctype.h >, lub \<wchar.h >|
 
 **Isascii —**, **__isascii —** i **iswascii —** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

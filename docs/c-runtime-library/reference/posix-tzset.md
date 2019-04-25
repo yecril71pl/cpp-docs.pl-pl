@@ -21,15 +21,15 @@ helpviewer_keywords:
 - tzset function
 ms.assetid: c3afa5d0-cb15-4163-9181-fafb962c95aa
 ms.openlocfilehash: 31656199d3ef10e11b74e221ae307db856b1ebda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304699"
 ---
 # <a name="tzset"></a>tzset
 
-Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_tzset —](tzset.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_tzset —](tzset.md) zamiast tego.
 
 > [!IMPORTANT]
 > Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

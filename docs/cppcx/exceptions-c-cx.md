@@ -1,27 +1,27 @@
 ---
-title: Wyjątki (C + +/ CX)
+title: Wyjątki (C++/CX)
 ms.date: 01/18/2018
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
 ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301529"
 ---
-# <a name="exceptions-ccx"></a>Wyjątki (C + +/ CX)
+# <a name="exceptions-ccx"></a>Wyjątki (C++/CX)
 
-Obsługa błędów w języku C + +/ CX jest oparta na wyjątkach. Na poziomie większość podstawowych składników środowiska wykonawczego Windows raportować błędy jako wartości HRESULT. W języku C + +/ CX, te wartości są konwertowane na silnie typizowaną wyjątki, które zawierają wartość HRESULT i opis ciągu, które są dostępne programowo.  Wyjątki są implementowane jako `ref class` który pochodzi od klasy `Platform::Exception`.  `Platform` Nazw definiuje różne wyjątek klasy dla najbardziej typowych wartości HRESULT; wszystkie inne wartości są raportowane za pośrednictwem `Platform::COMException` klasy. Wszystkie klasy wyjątku mają [Exception::HResult](platform-exception-class.md#hresult) pola, które można użyć do pobrania, oryginalnym HRESULT. Można również sprawdzić informacje stosu wywołań dla kodu użytkownika w debugerze, które mogą ułatwić wskazanie oryginalnego źródła wyjątku, nawet jeśli pochodzi w kodzie, który został napisany w języku innym niż C++.
+Obsługa błędów w C++/CX jest oparta na wyjątkach. Na poziomie większość podstawowych składników środowiska wykonawczego Windows raportować błędy jako wartości HRESULT. W C++/CX, te wartości są konwertowane na silnie typizowaną wyjątki, które zawierają wartość HRESULT i opis ciągu, które są dostępne programowo.  Wyjątki są implementowane jako `ref class` który pochodzi od klasy `Platform::Exception`.  `Platform` Nazw definiuje różne wyjątek klasy dla najbardziej typowych wartości HRESULT; wszystkie inne wartości są raportowane za pośrednictwem `Platform::COMException` klasy. Wszystkie klasy wyjątku mają [Exception::HResult](platform-exception-class.md#hresult) pola, które można użyć do pobrania, oryginalnym HRESULT. Można również sprawdzić informacje stosu wywołań dla kodu użytkownika w debugerze, które mogą ułatwić wskazanie oryginalnego źródła wyjątku, nawet jeśli pochodzi w kodzie, który został napisany w języku innym niż C++.
 
 ## <a name="exceptions"></a>Wyjątki
 
-W programie C++, throw i catch wyjątku, który pochodzi z operacją środowiska wykonawczego Windows, wyjątek, który jest tworzony na podstawie `std::exception`, lub typ zdefiniowany przez użytkownika. Należy zgłosić wyjątek środowiska uruchomieniowego Windows tylko wtedy, gdy jej będzie między granic interfejsem binarnym (ABI) aplikacji, na przykład, gdy kod, który przechwytuje wyjątek jest napisany w języku JavaScript. Gdy wyjątek C++ inny niż Windows Runtime osiągnie granicę interfejsu ABI, wyjątek jest tłumaczony na `Platform::FailureException` wyjątek, który reprezentuje wartość HRESULT E_FAIL. Aby uzyskać więcej informacji na temat interfejsu ABI zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+W programie C++, throw i catch wyjątku, który pochodzi z operacją środowiska wykonawczego Windows, wyjątek, który jest tworzony na podstawie `std::exception`, lub typ zdefiniowany przez użytkownika. Należy zgłosić wyjątek środowiska uruchomieniowego Windows tylko wtedy, gdy jej będzie między granic interfejsem binarnym (ABI) aplikacji, na przykład, gdy kod, który przechwytuje wyjątek jest napisany w języku JavaScript. Gdy inne niż - Windows środowisko uruchomieniowe C++ wyjątek osiągnie granicę interfejsu ABI, wyjątek jest tłumaczony na `Platform::FailureException` wyjątek, który reprezentuje wartość HRESULT E_FAIL. Aby uzyskać więcej informacji na temat interfejsu ABI zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Można zadeklarować [Platform::Exception](platform-exception-class.md) przy użyciu jednej z dwóch konstruktorów parametrem HRESULT lub parametrem HRESULT i [Platform::String](platform-string-class.md)^ parametr, który może być przekazywany przez ABI do dowolnej aplikacji Windows Runtime, która je obsługuje. Lub możesz zadeklarować wyjątek przy użyciu jednej z dwóch [metoda Exception::CreateException](platform-exception-class.md#createexception) przeciążeń, które przyjmują parametr HRESULT lub parametrem HRESULT i `Platform::String^` parametru.
 
 ## <a name="standard-exceptions"></a>Standardowych wyjątków
 
-C + +/ CX obsługuje zestaw standardowych wyjątków, które reprezentują typowe błędy HRESULT. Każdy standardowy wyjątek pochodzi od klasy [Platform::COMException](platform-comexception-class.md), który z kolei pochodzi od klasy `Platform::Exception`. Gdy zgłoszenie wyjątku przez granicę ABI należy zgłaszać jeden standardowych wyjątków.
+C++/CX obsługuje zestaw standardowych wyjątków, które reprezentują typowe błędy HRESULT. Każdy standardowy wyjątek pochodzi od klasy [Platform::COMException](platform-comexception-class.md), który z kolei pochodzi od klasy `Platform::Exception`. Gdy zgłoszenie wyjątku przez granicę ABI należy zgłaszać jeden standardowych wyjątków.
 
 Nie możesz wywodzić swój własny typ wyjątku z `Platform::Exception`. Wyjątku niestandardowych, należy używać do tworzenia HRESULT: zdefiniowane przez użytkownika `COMException` obiektu.
 
@@ -39,8 +39,8 @@ W poniższej tabeli wymieniono standardowych wyjątków.
 |InvalidCastException|E\_NOINTERFACE|Element zgłaszany, gdy nie można rzutować typu na inny typ.|
 |NotImplementedException|E\_NOTIMPL|Element zgłaszany, gdy metoda interfejsu nie została zaimplementowana w klasie.|
 |Obiektu NullReferenceException|E\_WSKAŹNIKA|Zgłaszany, gdy jest próba cofnąć odwołanie odwołanie do obiektu o wartości null.|
-|Objectdisposedexception —|RO\_E\_ZAMKNIĘTE|Element zgłaszany, gdy operacja jest wykonywana na zlikwidowanego obiektu.|
-|OperationCanceledException|E\_PRZERWANIA|Element zgłaszany, gdy operacja została przerwana.|
+|ObjectDisposedException|RO\_E\_ZAMKNIĘTE|Element zgłaszany, gdy operacja jest wykonywana na zlikwidowanego obiektu.|
+|OperationCanceledException|E\_ABORT|Element zgłaszany, gdy operacja została przerwana.|
 |OutOfBoundsException|E\_GRANICE|Element zgłaszany, gdy operacja próbuje uzyskać dostęp do danych poza prawidłowym zakresem.|
 |OutOfMemoryException|E\_ZDARZEŃ OUTOFMEMORY|Element zgłaszany, gdy ma za mało pamięci do ukończenia tej operacji.|
 |WrongThreadException|RPC\_E\_NIEWŁAŚCIWEGO\_WĄTKU|Element zgłaszany, gdy wątek wywołuje za pomocą wskaźnika interfejsu, który jest dla obiektu serwera proxy, który nie należy do komórka wątku.|
@@ -99,9 +99,9 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 ### <a name="remarks"></a>Uwagi
 
-C + +/ CX nie używa `finally` klauzuli.
+C++/CX nie używa `finally` klauzuli.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka Visual C++](visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](namespaces-reference-c-cx.md)

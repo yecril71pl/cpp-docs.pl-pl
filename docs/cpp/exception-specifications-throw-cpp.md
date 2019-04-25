@@ -9,11 +9,11 @@ helpviewer_keywords:
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 ms.openlocfilehash: 9280f3d96088d988a9d5cfe0f3d56444b865167e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154337"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specyfikacje wyjątków (throw, noexcept) (C++)
 
@@ -52,11 +52,11 @@ Jawne specyfikacje wyjątku nie są dozwolone w funkcjach c. Funkcja języka C z
 
 W poniższej tabeli podsumowano, czy funkcja C++ potencjalnie może zgłaszać w ramach różnych wyjątków kompilatora, opcje obsługi:
 
-|Funkcja|/EHsc|/ EHs|/EHa|/EHac|
+|Funkcja|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|Funkcja języka C++ bez określenia wyjątków|Tak|Tak|Tak|Tak|
-|Funkcja języka C++ z `noexcept`, `noexcept(true)`, lub `throw()` Specyfikacja wyjątku|Nie|Nie|Tak|Tak|
-|Funkcja języka C++ z `noexcept(false)`, `throw(...)`, lub `throw(type)` Specyfikacja wyjątku|Tak|Tak|Tak|Tak|
+|Funkcja języka C++ bez określenia wyjątków|Yes|Yes|Yes|Tak|
+|Funkcja języka C++ z `noexcept`, `noexcept(true)`, lub `throw()` Specyfikacja wyjątku|Nie|Nie|Yes|Tak|
+|Funkcja języka C++ z `noexcept(false)`, `throw(...)`, lub `throw(type)` Specyfikacja wyjątku|Tak|Yes|Yes|Tak|
 
 ## <a name="example"></a>Przykład
 

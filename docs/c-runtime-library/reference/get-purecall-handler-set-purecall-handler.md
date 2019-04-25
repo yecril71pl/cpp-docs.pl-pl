@@ -1,5 +1,5 @@
 ---
-title: _get_purecall_handler, _set_purecall_handler —
+title: _get_purecall_handler, _set_purecall_handler
 ms.date: 11/04/2016
 apiname:
 - _set_purecall_handler
@@ -35,13 +35,13 @@ helpviewer_keywords:
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287403"
 ---
-# <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler —
+# <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
 Pobiera lub ustawia program obsługi błędów dla wywołania czystą funkcję wirtualną.
 
@@ -66,7 +66,7 @@ Poprzedni **_purecall_handler**. Zwraca **nullptr** przypadku, gdy wystąpił ni
 
 ## <a name="remarks"></a>Uwagi
 
-**_Get_purecall_handler** i **_set_purecall_handler —** funkcje są specyficzne dla firmy Microsoft i mają zastosowanie tylko do kodu w języku C++.
+**_Get_purecall_handler** i **_set_purecall_handler —** funkcje są specyficzne dla firmy Microsoft i dotyczą tylko programu C++ kodu.
 
 Wywołanie czystej funkcji wirtualnej występuje błąd, ponieważ jej nie ma implementacji. Domyślnie kompilator generuje kod, aby wywołać funkcję obsługi błędów, gdy wywoływana jest czysta funkcja wirtualna, która kończy program. Można zainstalować własną funkcję obsługi błędu dla wywołań czystą funkcję wirtualną, wyłapuj je na potrzeby debugowania lub do celów raportowania. Aby użyć własnego procedurę obsługi błędów, należy utworzyć funkcję, która ma **_purecall_handler** podpisu, następnie za pomocą **_set_purecall_handler —** się bieżący program obsługi.
 
@@ -78,7 +78,7 @@ Aby przywrócić domyślne zachowanie, należy wywołać **_set_purecall_handler
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_purecall_handler**, **_set_purecall_handler —**|\<cstdlib — > lub \<stdlib.h >|
+|**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib — > lub \<stdlib.h >|
 
 Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

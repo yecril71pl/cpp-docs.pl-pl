@@ -1,6 +1,6 @@
 ---
-title: Błędy kompilatora od C2700 C2799
-ms.date: 11/17/2017
+title: Błędy kompilatora od C2700 do C2799
+ms.date: 04/21/2019
 f1_keywords:
 - C2716
 - C2717
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: e29f344e0e45374f85715552f9ecc19ab90a9e7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f4391008bf9b0a066ba65f27a41697c6097c2e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153220"
 ---
-# <a name="compiler-errors-c2700-through-c2799"></a>Błędy kompilatora od C2700 C2799
+# <a name="compiler-errors-c2700-through-c2799"></a>Błędy kompilatora od C2700 do C2799
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez kompilator.
 
@@ -73,8 +73,8 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2713](compiler-error-c2713.md)|tylko jeden formularz obsługi wyjątku dozwolony w pojedynczej funkcji|
 |[Błąd kompilatora C2714](compiler-error-c2714.md)|Funkcja alignof(void) nie jest dozwolone.|
 |[Błąd kompilatora C2715](compiler-error-c2715.md)|"*typu*": nie można zgłosić lub przechwycić tego typu|
-|C2716 błąd kompilatora|Nieaktualne.|
-|C2717 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2716|Nieaktualne.|
+|Błąd kompilatora C2717|Nieaktualne.|
 |[Błąd kompilatora C2718](compiler-error-c2718.md)|"*typu*": rzeczywisty parametr z żądanym wyrównaniem *numer* nie zostanie wyrównany|
 |[Błąd kompilatora C2719](compiler-error-c2719.md)|"*parametru*": formalny parametr z żądanym wyrównaniem *numer* nie zostanie wyrównany|
 |[Błąd kompilatora C2720](compiler-error-c2720.md)|"*identyfikator*": "*specyfikator*" Specyfikator klasy składującej niedozwolony dla składowych|
@@ -84,9 +84,9 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2724](compiler-error-c2724.md)|"*funkcja*": "static" nie powinna być używana w funkcji składowej zdefiniowanej w zakresie pliku|
 |[Błąd kompilatora C2725](compiler-error-c2725.md)|"*typu*": nie można zgłosić lub przechwycić obiektu zarządzanego WinRT, przez wartość lub odwołanie|
 |[Błąd kompilatora C2726](compiler-error-c2726.md)|"gcnew" można używać tylko do utworzenia obiektu z typem zarządzane/WinRT|
-|C2727 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2727|Nieaktualne.|
 |[Błąd kompilatora C2728](compiler-error-c2728.md)|"*typu*": natywna tablica nie może zawierać tego typu|
-|C2729 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2729|Nieaktualne.|
 |[Błąd kompilatora C2730](compiler-error-c2730.md)|"*klasy*": nie może być klasą bazową samego siebie|
 |[Błąd kompilatora C2731](compiler-error-c2731.md)|"*funkcja*": funkcja nie może zostać przeciążony|
 |[Błąd kompilatora C2732](compiler-error-c2732.md)|Specyfikacja powiązania jest sprzeczna wcześniejszą specyfikacją dla "*funkcja*"|
@@ -94,17 +94,17 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2734](compiler-error-c2734.md)|"*identyfikator*": "const" obiekt musi zostać zainicjowany, jeśli nie "extern"|
 |[Błąd kompilatora C2735](compiler-error-c2735.md)|"*— słowo kluczowe*" — słowo kluczowe nie jest dozwolone w specyfikatorze typu formalnego parametru|
 |[Błąd kompilatora C2736](compiler-error-c2736.md)|"*— słowo kluczowe*" — słowo kluczowe nie jest dozwolone przy rzutowaniu|
-|C2737 błąd kompilatora|"*identyfikator*": obiekt "constexpr" musi zostać zainicjowany|
+|Błąd kompilatora C2737|"*identyfikator*": obiekt "constexpr" musi zostać zainicjowany|
 |[Błąd kompilatora C2738](compiler-error-c2738.md)|"operator *typu*": jest niejednoznaczny lub nie jest członkiem "*klasy*"|
 |[Błąd kompilatora C2739](compiler-error-c2739.md)|"*numer*": jawne tablicy zarządzane/WinRT wymiary mogą być od 1 do 32|
-|C2740 błąd kompilatora|wartość operandu "*numer*"jest poza zakresem"*lower_bound* - *upper_bound*"|
-|C2741 błąd kompilatora|rozmiar ramki jest zbyt duży|
-|C2742 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2740|wartość operandu "*numer*"jest poza zakresem"*lower_bound* - *upper_bound*"|
+|Błąd kompilatora C2741|rozmiar ramki jest zbyt duży|
+|Błąd kompilatora C2742|Nieaktualne.|
 |[Błąd kompilatora C2743](compiler-error-c2743.md)|"*typu*": nie można przechwycić natywnego typu destruktorem __clrcall lub konstruktorem kopiującym|
-|C2744 błąd kompilatora|"*operator*" nie jest prawidłowym operatorem CLR/WinRT|
+|Błąd kompilatora C2744|"*operator*" nie jest prawidłowym operatorem CLR/WinRT|
 |[Błąd kompilatora C2745](compiler-error-c2745.md)|"*tokenu*": ten token nie można przekonwertować na identyfikator|
-|C2746 błąd kompilatora|Nieaktualne.|
-|C2747 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2746|Nieaktualne.|
+|Błąd kompilatora C2747|Nieaktualne.|
 |[Błąd kompilatora C2748](compiler-error-c2748.md)|do utworzenia tablicy zarządzane WinRT musi mieć rozmiar tablicy lub inicjatora tablicy|
 |[Błąd kompilatora C2749](compiler-error-c2749.md)|"*typu*": może tylko zgłosić lub przechwycić uchwyt do zarządzanej klasy z/CLR: Safe|
 |[Błąd kompilatora C2750](compiler-error-c2750.md)|"*typu*": nie można użyć "new" w odwołaniu do typu; zamiast tego użyj "gcnew"|
@@ -116,20 +116,20 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2756](compiler-error-c2756.md)|"*szablonu*": domyślne szablonowe argumenty niedozwolone w składowej specjalizacji|
 |[Błąd kompilatora C2757](compiler-error-c2757.md)|"*identyfikator*": symbol o tej nazwie już istnieje, a w związku z tym ta nazwa nie może służyć jako nazwę przestrzeni nazw|
 |[Błąd kompilatora C2758](compiler-error-c2758.md)|"*elementu członkowskiego*": składowa typu referencyjnego musi zostać zainicjowany|
-|C2759 błąd kompilatora|wbudowane raporty asemblera: *error_message*|
+|Błąd kompilatora C2759|wbudowane raporty asemblera: *error_message*|
 |[Błąd kompilatora C2760](compiler-error-c2760.md)|Błąd składniowy: oczekiwano "*token1*"not"*token2*"|
 |[Błąd kompilatora C2761](compiler-error-c2761.md)|"*funkcja*": ponowna deklaracja funkcji składowej nie jest dozwolone|
 |[Błąd kompilatora C2762](compiler-error-c2762.md)|"*szablonu*": nieprawidłowe wyrażenie jako argument szablonu dla "*parametr*"|
-|C2763 błąd kompilatora|"*szablonu*": nieprawidłowe użycie literału jako argument szablonu dla ciągu "*parametr*"|
+|Błąd kompilatora C2763|"*szablonu*": nieprawidłowe użycie literału jako argument szablonu dla ciągu "*parametr*"|
 |[Błąd kompilatora C2764](compiler-error-c2764.md)|"*parametru*": parametr szablonu nieużywany lub dający się wywieźć w składowej specjalizacji "*specjalizacji*"|
 |[Błąd kompilatora C2765](compiler-error-c2765.md)|"*funkcja*": jawna specjalizacja szablonu funkcji nie może mieć żadnych argumentów domyślnych|
 |[Błąd kompilatora C2766](compiler-error-c2766.md)|jawna specjalizacja; "*specjalizacji*" został już zdefiniowany|
 |[Błąd kompilatora C2767](compiler-error-c2767.md)|Niezgodność wymiaru tablicy zarządzane/WinRT: Oczekiwano *numer* następującej liczby argumentów: - *numer* podany|
 |[Błąd kompilatora C2768](compiler-error-c2768.md)|"*funkcja*": niedozwolone użycie argumentów jawnego szablonu|
-|C2769 błąd kompilatora|użytkownik nie może zainicjować nawias klamrowy tablica zarządzana WinRT, na liście inicjatora bazowych/składowych|
+|Błąd kompilatora C2769|użytkownik nie może zainicjować nawias klamrowy tablica zarządzana WinRT, na liście inicjatora bazowych/składowych|
 |[Błąd kompilatora C2770](compiler-error-c2770.md)|Nieprawidłowy szablon jawne/Ogólne argumenty dla "*szablonu*"|
 |[Błąd kompilatora C2771](compiler-error-c2771.md)|#import dozwolone tylko globalnie lub zakresie przestrzeni nazw|
-|C2772 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2772|Nieaktualne.|
 |[Błąd kompilatora C2773](compiler-error-c2773.md)|#import i #using dostępnych tylko w kompilatorze języka C++|
 |[Błąd kompilatora C2774](compiler-error-c2774.md)|"*identyfikator*": nie metody "put" jest skojarzony z tą właściwością|
 |[Błąd kompilatora C2775](compiler-error-c2775.md)|"*identyfikator*": Brak metody "get" jest skojarzony z tą właściwością|
@@ -146,14 +146,19 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2786](compiler-error-c2786.md)|"*typu*": nieprawidłowy operand dla __uuidof|
 |[Błąd kompilatora C2787](compiler-error-c2787.md)|"*identyfikator*": żaden identyfikator GUID został skojarzony z tym obiektem|
 |[Błąd kompilatora C2788](compiler-error-c2788.md)|"*identyfikator*": więcej niż jeden GUID skojarzony z tym obiektem|
-|C2789 błąd kompilatora|"*identyfikator*": konieczne jest zainicjowanie obiektu typu kwalifikowanego|
+|Błąd kompilatora C2789|"*identyfikator*": konieczne jest zainicjowanie obiektu typu kwalifikowanego|
 |[Błąd kompilatora C2790](compiler-error-c2790.md)|"super": to słowo kluczowe może być użyte tylko w treści funkcji składowej klasy|
 |[Błąd kompilatora C2791](compiler-error-c2791.md)|niedozwolone użycie "super": "*klasy*" nie ma żadnych klas bazowych|
 |[Błąd kompilatora C2792](compiler-error-c2792.md)|'super": musi następować to słowo kluczowe '::'|
 |[Błąd kompilatora C2793](compiler-error-c2793.md)|"*tokenu*": nieoczekiwany token następujący "::", identyfikatora lub słowa kluczowego 'operator', oczekiwano|
 |[Błąd kompilatora C2794](compiler-error-c2794.md)|"*identyfikator*": nie jest elementem Członkowskim wszelkie bezpośredniej lub pośredniej klasy bazowej "*klasy*"|
 |[Błąd kompilatora C2795](compiler-error-c2795.md)|' super::*identyfikator*"nie jest funkcją składową|
-|C2796 błąd kompilatora|"ref new" może używać tylko do utworzenia wystąpienia typu WinRT|
+|Błąd kompilatora C2796|"ref new" może używać tylko do utworzenia wystąpienia typu WinRT|
 |[Błąd kompilatora C2797](compiler-error-c2797.md)|(Przestarzałe) "*identyfikator*": Inicjowanie listy wewnątrz listy inicjatorów składowych lub inicjatora składowej danych niestatycznych nie jest zaimplementowana.|
 |[Błąd kompilatora C2798](compiler-error-c2798.md)|' super::*identyfikator*"jest niejednoznaczny|
-|C2799 błąd kompilatora|"*identyfikator*": konieczne jest zainicjowanie obiektu typu kwalifikowanego klasę bez konstruktora domyślnego podanego przez użytkownika|
+|Błąd kompilatora C2799|"*identyfikator*": konieczne jest zainicjowanie obiektu typu kwalifikowanego klasę bez konstruktora domyślnego podanego przez użytkownika|
+
+## <a name="see-also"></a>Zobacz także
+
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
+[Błędy kompilatora — od C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

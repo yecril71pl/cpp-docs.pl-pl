@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
 ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287576"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -44,7 +44,7 @@ int fsetpos(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *punktu sprzedaży*<br/>
@@ -52,7 +52,7 @@ Wskaźnik położenia magazynu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **fsetpos** zwraca wartość 0. W przypadku awarii, funkcja zwraca wartość różną od zera i ustawia **errno** do jednej z następujących manifestu stałych (zdefiniowany w numer błędu. Godz.): **EBADF**, co oznacza, że plik nie jest dostępna, albo ten obiekt, *strumienia* wskazuje nie jest prawidłowym plikiem struktury; lub **EINVAL**, co oznacza nieprawidłową wartością dla *strumienia* lub *pos* został przekazany. Jeśli podano nieprawidłowy parametr jest przekazywany w, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+W przypadku powodzenia **fsetpos** zwraca wartość 0. W przypadku awarii, funkcja zwraca wartość różną od zera i ustawia **errno** do jednej z następujących manifestu stałych (zdefiniowany w numer błędu. GODZ.): **EBADF**, co oznacza, że plik nie jest dostępny, lub obiekt, *strumienia* wskazuje nie jest prawidłowym plikiem struktury; lub **EINVAL**, co oznacza nieprawidłową wartością dla *strumienia*  lub *pos* został przekazany. Jeśli podano nieprawidłowy parametr jest przekazywany w, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
 

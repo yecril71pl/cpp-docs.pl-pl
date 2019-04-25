@@ -31,11 +31,11 @@ helpviewer_keywords:
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285989"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p —, log1pf —, log1pl
 
@@ -76,7 +76,7 @@ Jeśli się powiedzie, zwraca fizyczna (podstawowy -*e*) dziennika systemu (*x* 
 
 W przeciwnym razie może zwracać jedną z następujących wartości:
 
-|Dane wejściowe|Wynik|Wyjątek SEH|numer błędu|
+|Dane wejściowe|Wynik|Wyjątek SEH|errno|
 |-----------|------------|-------------------|-----------|
 |+ inf|+ inf|||
 |Denormals|Takie same jak dane wejściowe|NIEDOPEŁNIENIE||
@@ -85,7 +85,7 @@ W przeciwnym razie może zwracać jedną z następujących wartości:
 |< -1|NaN|NIEPRAWIDŁOWY|EDOM|
 |-inf|NaN|NIEPRAWIDŁOWY|EDOM|
 |±SNaN|Takie same jak dane wejściowe|NIEPRAWIDŁOWY||
-|±QNaN czas nieokreślony|Takie same jak dane wejściowe|||
+|±QNaN, indefinite|Takie same jak dane wejściowe|||
 
 **Errno** wartość jest równa ERANGE, jeśli *x* = -1. **Errno** wartość jest równa **EDOM** Jeśli *x* < wartość -1.
 
@@ -101,7 +101,7 @@ Jeśli *x* to numer naturalnym, ta funkcja zwraca logarytm silni (*x* - 1).
 
 |Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**log1p —**, **log1pf —**, **log1pl**|\<math.h>|\<cmath >|
+|**log1p —**, **log1pf —**, **log1pl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

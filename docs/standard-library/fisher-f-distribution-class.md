@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
 ms.openlocfilehash: cff7883c0b563e7d6a377bffcd0e48192dc01071
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159811"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution — Klasa
 
@@ -251,7 +251,7 @@ explicit fisher_f_distribution(const param_type& parm);
 *m*<br/>
 `m` Parametru dystrybucji.
 
-*N*<br/>
+*n*<br/>
 `n` Parametru dystrybucji.
 
 *parm*<br/>
@@ -286,7 +286,7 @@ struct param_type {
 *m*<br/>
 `m` Parametru dystrybucji.
 
-*N*<br/>
+*n*<br/>
 `n` Parametru dystrybucji.
 
 *right*<br/>
@@ -300,4 +300,4 @@ Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konk
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

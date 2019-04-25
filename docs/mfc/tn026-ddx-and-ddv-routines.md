@@ -1,5 +1,5 @@
 ---
-title: 'TN026: procedury DDX i DDV'
+title: 'TN026: DDX i Ddv'
 ms.date: 06/28/2018
 f1_keywords:
 - DDX
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
 ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305869"
 ---
-# <a name="tn026-ddx-and-ddv-routines"></a>TN026: procedury DDX i DDV
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX i Ddv
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -87,9 +87,9 @@ Istnieją trzy inne interesujące `CDataExchange` elementy członkowskie:
 
 - `m_pDlgWnd`: Okno (zazwyczaj okna dialogowego), który zawiera formanty. Ten parametr zapobiega obiektów wywołujących funkcje globalne funkcje DDX_ i DDV_ z konieczności "this" Przekaż do każdej procedury DDX/DDV.
 
-- `PrepareCtrl`, a `PrepareEditCtrl`: przygotowuje formantu w oknie dialogowym wymianę danych. Przechowuje dojście tej kontrolki do ustawiania fokus, jeśli weryfikacja zakończy się niepowodzeniem. `PrepareCtrl` Służy do kontrolek bez edycji i `PrepareEditCtrl` służy do kontrolki edycji.
+- `PrepareCtrl`, a `PrepareEditCtrl`: Przygotowuje formantu w oknie dialogowym wymianę danych. Przechowuje dojście tej kontrolki do ustawiania fokus, jeśli weryfikacja zakończy się niepowodzeniem. `PrepareCtrl` Służy do kontrolek bez edycji i `PrepareEditCtrl` służy do kontrolki edycji.
 
-- `Fail`: Wywoływane po wprowadzeniu okno komunikatu, alerty użytkownikowi błąd danych wejściowych. Ta procedura spowoduje przywrócenie fokus do ostatniej kontroli (ostatnie wywołanie elementu `PrepareCtrl` lub `PrepareEditCtrl`) i zgłosić wyjątek. Ta funkcja elementu członkowskiego, może być wywoływana z funkcje DDX_ i DDV_ procedury.
+- `Fail`: Wywołuje się po wprowadzeniu okno komunikatu, alerty użytkownikowi błąd danych wejściowych. Ta procedura spowoduje przywrócenie fokus do ostatniej kontroli (ostatnie wywołanie elementu `PrepareCtrl` lub `PrepareEditCtrl`) i zgłosić wyjątek. Ta funkcja elementu członkowskiego, może być wywoływana z funkcje DDX_ i DDV_ procedury.
 
 ## <a name="user-extensions"></a>Rozszerzenia dla użytkowników
 
@@ -143,11 +143,11 @@ else
 
 ClassWizard obsługuje podzbiór DDX/DDV dostosowań, umożliwiając Zintegruj swoje własne funkcje DDX_ i DDV_ procedury ClassWizard interfejsu użytkownika. W ten sposób jest jedynym kosztem korzystne, jeśli planujesz ponowne użycie określonej procedury DDX i DDV w projekcie lub w wielu projektach.
 
-W tym celu specjalnego wpisów w DDX. CLW (poprzedniej wersji programu Visual C++ przechowuje te informacje w APSTUDIO. INI) lub w twoim projekcie. Plik CLW. Specjalne wpisy mogą być wprowadzane w [ogólne informacje o] części projektu. Plik CLW lub znajduje się w sekcji [ExtraDDX] DDX. CLW plik w katalogu \Program Files\Microsoft Visual Studio\Visual C ++ \bin. Może być konieczne utworzenie DDX. Plik CLW, jeśli jeszcze nie istnieje. Jeśli planujesz niestandardowe procedury funkcje DDX_/DDV_ należy używać tylko w niektórych projektów, należy dodać wpisy do [ogólne informacje o] części projektu. Zamiast tego z pliku CLW. Jeśli planujesz użyć procedur na wiele projektów, należy dodać wpisy do sekcji [ExtraDDX] DDX. CLW.
+W tym celu specjalnego wpisów w DDX. CLW (poprzedniej wersji programu Visual C++ przechowuje te informacje w APSTUDIO. INI) lub w twoim projekcie. Plik CLW. Specjalne wpisy mogą być wprowadzane w [ogólne informacje o] części projektu. Plik CLW lub znajduje się w sekcji [ExtraDDX] DDX. Plik CLW \Program Files\Microsoft Visual Studio\Visual C++katalogu \bin. Może być konieczne utworzenie DDX. Plik CLW, jeśli jeszcze nie istnieje. Jeśli planujesz niestandardowe procedury funkcje DDX_/DDV_ należy używać tylko w niektórych projektów, należy dodać wpisy do [ogólne informacje o] części projektu. Zamiast tego z pliku CLW. Jeśli planujesz użyć procedur na wiele projektów, należy dodać wpisy do sekcji [ExtraDDX] DDX. CLW.
 
 Ogólny format te wpisy specjalne to:
 
-> ExtraDDXCount =*n*
+> ExtraDDXCount=*n*
 
 gdzie *n* jest liczba ExtraDDX? wiersze z formularza
 
@@ -157,7 +157,7 @@ gdzie? to numer 1 - *n* wskazująca, jakiego typu DDX na liście, który jest de
 
 Każde pole jest rozdzielone znakiem ";". Pola i ich celem są opisane poniżej.
 
-- *klucze*
+- *keys*
 
   Lista pojedyncze znaki wskazujące dla formantów okna dialogowego, które ten typ zmiennej jest dozwolone.
 
@@ -174,7 +174,7 @@ Każde pole jest rozdzielone znakiem ";". Pola i ich celem są opisane poniżej.
   n | Lista rozwijana posortowany
   1 | Jeśli wstawianie DDX powinny zostać dodane do głowy listy (domyślny jest dodawany do tail) to jest zazwyczaj używana do procedury DDX, związane z transferem właściwość "Control".
 
-- *klucze VB*
+- *vb-keys*
 
   To pole jest używane tylko w produkcie 16-bitowych dla formantów VBX (VBX formanty nie są obsługiwane w 32-bitowy produkt)
 
@@ -182,11 +182,11 @@ Każde pole jest rozdzielone znakiem ";". Pola i ich celem są opisane poniżej.
 
   Ciąg do umieszczenia w polu kombi właściwości (nie cudzysłowu)
 
-- *Typ*
+- *type*
 
   Pojedynczy identyfikator typu do emitowania w pliku nagłówkowym. W naszym powyższym przykładzie za pomocą DDX_Time to będzie miał ustawienie CTime.
 
-- *klucze VB*
+- *vb-keys*
 
   Nie jest używana w tej wersji i powinien zawsze być pusty
 
@@ -196,7 +196,7 @@ Każde pole jest rozdzielone znakiem ";". Pola i ich celem są opisane poniżej.
 
 - *DDX_Proc*
 
-  Pojedynczy identyfikator procedury funkcje DDX_. Nazwa funkcji języka C++, musi rozpoczynać się od "Funkcje DDX_", ale nie dołączaj "Funkcje DDX_" \<DDX_Proc > identyfikator. W powyższym przykładzie \<DDX_Proc > Identyfikator byłoby czasu. Gdy ClassWizard zapisuje wywołania funkcji w pliku implementacji w {{sekcji AFX_DATA_MAP go dołącza tę nazwę do funkcje DDX_, w związku z tym otrzymywanych DDX_Time.
+  Pojedynczy identyfikator procedury funkcje DDX_. C++ Funkcja nazwa musi rozpoczynać się od "Funkcje DDX_", ale nie dołączaj "Funkcje DDX_" \<DDX_Proc > identyfikator. W powyższym przykładzie \<DDX_Proc > Identyfikator byłoby czasu. Gdy ClassWizard zapisuje wywołania funkcji w pliku implementacji w {{sekcji AFX_DATA_MAP go dołącza tę nazwę do funkcje DDX_, w związku z tym otrzymywanych DDX_Time.
 
 - *Komentarz*
 
@@ -208,7 +208,7 @@ Każde pole jest rozdzielone znakiem ";". Pola i ich celem są opisane poniżej.
 
 - *ARG*
 
-  Pojedynczy identyfikator procedury DDV_. Nazwa funkcji języka C++ musi rozpoczynać się od "DDV_", ale nie powinno obejmować "Funkcje DDX_" \<DDX_Proc > identyfikator.
+  Pojedynczy identyfikator procedury DDV_. C++ Funkcja nazwa musi rozpoczynać się od "DDV_", ale nie powinno obejmować "Funkcje DDX_" \<DDX_Proc > identyfikator.
 
   *ARG* następuje args DDV 1 lub 2:
 

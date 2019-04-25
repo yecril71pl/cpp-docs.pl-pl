@@ -39,11 +39,11 @@ helpviewer_keywords:
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
 ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285616"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -89,8 +89,8 @@ Każda z tych funkcji zwraca znak przekonwertowany *c*, jeśli to możliwe. W pr
 
 |Procedury|Konwertuje|
 |--------------|--------------|
-|**_mbctohira —**, **_mbctohira_l —**|Katakana wielobajtowe do znaków wielobajtowych hiragana.|
-|**_mbctokata —**, **_mbctokata_l —**|Hiragana znaków wielobajtowych do wielobajtowych katakana.|
+|**_mbctohira**, **_mbctohira_l**|Multibyte katakana to multibyte hiragana.|
+|**_mbctokata**, **_mbctokata_l**|Multibyte hiragana to multibyte katakana.|
 
 Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają **_l** sufiksa używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych i te, które mają **_l** zamiast niej przyrostka Użyj parametru ustawień regionalnych, które zostały przekazane. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
@@ -101,7 +101,7 @@ We wcześniejszych wersjach **_mbctohira —** nosiła nazwę **jtohira** i **_m
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_mbctohira**|\<mbstring.h>|
-|**_mbctohira_l —**|\<mbstring.h>|
+|**_mbctohira_l**|\<mbstring.h>|
 |**_mbctokata**|\<mbstring.h>|
 |**_mbctokata_l**|\<mbstring.h>|
 

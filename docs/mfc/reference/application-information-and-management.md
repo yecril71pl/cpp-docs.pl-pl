@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151285"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 
@@ -682,7 +682,7 @@ Biblioteki klas Microsoft Foundation automatycznie rejestruje kilka klas standar
 
 Ta nazwa jest zarejestrowana dla klasy przez `AfxRegisterWndClass` zależy wyłącznie od parametrów. Jeśli wywołasz `AfxRegisterWndClass` wiele razy z identycznymi parametrami tylko rejestruje klasę przy pierwszym wywołaniu. Kolejne wywołania `AfxRegisterWndClass` z identycznymi parametrami po prostu zwrócenia classname już zarejestrowany.
 
-Jeśli wywołasz `AfxRegisterWndClass` dla wielu klas pochodnych CWnd z identycznymi parametrami zamiast klasy oddzielne okno dla każdej klasy, każda klasa udostępnia tej samej klasy okna. Może to spowodować problemy, jeśli CS_CLASSDC stylu klasy jest używany. Zamiast wielu klas okna CS_CLASSDC na końcu jedną klasę okna CS_CLASSDC i wszystkich okien języka C++ korzystających z tego udziału klasy tego samego kontrolera domeny. Aby uniknąć tego problemu, należy wywołać [afxregisterclass —](#afxregisterclass) można zarejestrować klasy.
+Jeśli wywołasz `AfxRegisterWndClass` dla wielu klas pochodnych CWnd z identycznymi parametrami zamiast klasy oddzielne okno dla każdej klasy, każda klasa udostępnia tej samej klasy okna. Może to spowodować problemy, jeśli CS_CLASSDC stylu klasy jest używany. Zamiast wielu klas okna CS_CLASSDC na końcu jedną klasę okna CS_CLASSDC i wszystkie C++ tego samego kontrolera domeny Udostępnianie systemu windows, które używają tej klasy. Aby uniknąć tego problemu, należy wywołać [afxregisterclass —](#afxregisterclass) można zarejestrować klasy.
 
 Zapoznaj się Uwaga techniczna [TN001: Rejestrowanie klasy okna](../../mfc/tn001-window-class-registration.md) więcej informacji na temat rejestrowanie klasy okna i `AfxRegisterWndClass` funkcji.
 

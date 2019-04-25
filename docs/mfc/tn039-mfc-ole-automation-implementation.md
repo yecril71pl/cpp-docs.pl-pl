@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305492"
 ---
-# <a name="tn039-mfcole-automation-implementation"></a>TN039: implementacja automatyzacji MFC/OLE
+# <a name="tn039-mfcole-automation-implementation"></a>TN039: Implementacja automatyzacji MFC/OLE
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -95,7 +95,7 @@ Biorąc pod uwagę właściwości Z **DISPID** cyfrą zero: **HIWORD** , poniewa
 > [!NOTE]
 > **LOWORD** zawsze zależy od położenia na mapie, nawet jeśli istnieje wpisy mapy za pomocą jawnego **DISPID** (zobacz następną sekcję, aby uzyskać informacje na **_identyfikator** wersje `DISP_PROPERTY` i `DISP_FUNCTION` makr).
 
-## <a name="advanced-mfc-dispatch-map-features"></a>Zaawansowane funkcje mapy wysyłania MFC
+## <a name="advanced-mfc-dispatch-map-features"></a>Advanced MFC Dispatch Map Features
 
 Istnieje szereg dodatkowych funkcji, które nie obsługuje ClassWizard w tej wersji programu Visual C++. Obsługuje ClassWizard `DISP_FUNCTION`, `DISP_PROPERTY`, i `DISP_PROPERTY_EX` który zdefiniować metodę, właściwość zmiennej elementu członkowskiego i pobierania/ustawiania właściwości funkcji składowej, odpowiednio. Te możliwości są zazwyczaj wszystko, co jest potrzebne do utworzenia większość serwerów automatyzacji.
 
@@ -156,7 +156,7 @@ Zewnętrzna nazwa właściwości.
 *memberGet*<br/>
 Nazwa funkcji składowej, używany do pobrania właściwości.
 
-*zestaw elementów członkowskich*<br/>
+*memberSet*<br/>
 Nazwa używana do ustawiania właściwości funkcji elementu członkowskiego.
 
 *vtPropType*<br/>
@@ -180,7 +180,7 @@ LPDISPATCH CMyObject::GetItem(short row, short col)
 void CMyObject::SetItem(short row, short col, LPDISPATCH newValue)
 ```
 
-## <a name="dispxxxxid--macro-descriptions"></a>DISP_XXXX_ID — Opisy makra
+## <a name="dispxxxxid--macro-descriptions"></a>DISP_XXXX_ID — Macro Descriptions
 
 ```cpp
 DISP_FUNCTION_ID(
@@ -228,7 +228,7 @@ Nazwa klasy.
 *pszName*<br/>
 Zewnętrzna nazwa właściwości.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Naprawiono DISPID dla właściwości lub metody.
 
 *pfnGet*<br/>

@@ -1,6 +1,6 @@
 ---
-title: Ostrzeżenia kompilatora od C4200 do C4399
-ms.date: 11/17/2017
+title: Ostrzeżenia kompilatora — od C4200 do C4399
+ms.date: 04/21/2019
 f1_keywords:
 - C4203
 - C4277
@@ -28,14 +28,14 @@ f1_keywords:
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 5a257fa5ac39a9b8f593062d6a670c8d1ce4187f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280584"
 ---
-# <a name="compiler-warnings-c4200-through-c4399"></a>Ostrzeżenia kompilatora od C4200 do C4399
+# <a name="compiler-warnings-c4200-through-c4399"></a>Ostrzeżenia kompilatora — od C4200 do C4399
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawcze, które są generowane przez kompilator.
 
@@ -45,7 +45,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 
 |Ostrzeżenie|Komunikat|
 |-------------|-------------|
-|[Ostrzeżenie kompilatora (poziomy 2 i 4) C4200](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)|użyto niestandardowego rozszerzenia: tablica o rozmiarze zero w struct/union|
+|[Ostrzeżenie kompilatora (poziomy 2 i 4) — od C4200](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)|użyto niestandardowego rozszerzenia: tablica o rozmiarze zero w struct/union|
 |[Ostrzeżenie kompilatora (poziom 4) C4201](../../error-messages/compiler-warnings/compiler-warning-level-4-c4201.md)|użyto niestandardowego rozszerzenia: typ struct/union|
 |[Ostrzeżenie kompilatora (poziom 4) C4202](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)|użyto niestandardowego rozszerzenia: "…": parametr prototypu w liście nazw jest niedozwolony|
 |C4203 ostrzeżenia kompilatora|użyto niestandardowego rozszerzenia: Unia ze zmienną statycznej składowej|
@@ -66,15 +66,15 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|użyto niestandardowego rozszerzenia: "*identyfikator*": nie można zainicjować przy użyciu adresu automatycznej zmiennej "*zmiennej*"|
 |[Ostrzeżenie kompilatora (poziomy 1 i 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|użyto niestandardowego rozszerzenia: tablica l-wartości przekonwertować wskaźnik|
 |[Ostrzeżenie kompilatora (poziom 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|użyto niestandardowego rozszerzenia: parametr formalny "*identyfikator*" został uprzednio zdefiniowany jako typ|
-|[Kompilator ostrzeżenie (poziom 1, błąd) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|użyto niestandardowego rozszerzenia: "*— słowo kluczowe*" jest przestarzałym słowem kluczowym|
+|[Ostrzeżenie kompilatora (poziom 1, błąd) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|użyto niestandardowego rozszerzenia: "*— słowo kluczowe*" jest przestarzałym słowem kluczowym|
 |[Ostrzeżenie kompilatora (poziom 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|użyto konstrukcji przestarzałej: kwalifikatory dla odwołania są ignorowane.|
 |[Ostrzeżenie kompilatora (poziom 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|użyto niestandardowego rozszerzenia: kwalifikatory po przecinku na liście deklaratorów są ignorowane.|
 |[Ostrzeżenie kompilatora (poziom 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|użyto konstrukcji przestarzałej: Modyfikatory dla danych są ignorowane.|
 |[Ostrzeżenie kompilatora (poziom 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|użyto konstrukcji przestarzałej: Modyfikatory/kwalifikatory przeplatane; Kwalifikator ignorowane|
 |[Ostrzeżenie kompilatora (poziom 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|użyto niestandardowego rozszerzenia: "*identyfikator*": adres importu dllimport "*dllimport*" nie jest statyczny, tożsamość nie jest gwarantowana|
-|[Kompilator ostrzeżenie (poziom 4, błąd) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|użyto niestandardowego rozszerzenia: "*— słowo kluczowe*" obsługiwane tylko w języku C++, a nie w języku C słowo kluczowe|
-|[Kompilator ostrzeżenie (poziom 4, błąd) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|użyto niestandardowego rozszerzenia: "*— słowo kluczowe*" zarezerwowane do użytku w przyszłości — słowo kluczowe|
-|[Kompilator ostrzeżenie (poziom 4, błąd) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|użyto niestandardowego rozszerzenia: "*— słowo kluczowe*" nie jest obsługiwane w tej architekturze — słowo kluczowe|
+|[Ostrzeżenie kompilatora (poziom 4, błąd) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|użyto niestandardowego rozszerzenia: "*— słowo kluczowe*" obsługiwane tylko w języku C++, a nie w języku C słowo kluczowe|
+|[Ostrzeżenie kompilatora (poziom 4, błąd) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|użyto niestandardowego rozszerzenia: "*— słowo kluczowe*" zarezerwowane do użytku w przyszłości — słowo kluczowe|
+|[Ostrzeżenie kompilatora (poziom 4, błąd) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|użyto niestandardowego rozszerzenia: "*— słowo kluczowe*" nie jest obsługiwane w tej architekturze — słowo kluczowe|
 |[Ostrzeżenie kompilatora (poziom 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|"*— słowo kluczowe*" — słowo kluczowe jest jeszcze obsługiwane, ale zarezerwowane dla przyszłego użytku|
 |[Ostrzeżenie kompilatora (poziom 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|użyto niestandardowego rozszerzenia: wartościowanie prawostronne klasy wykorzystane jako wartościowanie lewostronne|
 |[Ostrzeżenie kompilatora (poziom 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|użyto niestandardowego rozszerzenia: "*tokenu*': konwersja z"*type1*"to"*type2*"|
@@ -114,7 +114,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|"*operator*": niezgodność stałej bez znaku/ujemnej|
 |[Ostrzeżenie kompilatora (poziom 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|użyto niestandardowego rozszerzenia: "*zmiennej*": zmienna sterująca pętli zadeklarowana w pętli for jest używana poza zakresem pętli for; jest w konflikcie z deklaracją w zewnętrznym zakresie|
 |[Ostrzeżenie kompilatora (poziom 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|użyto niestandardowego rozszerzenia: "*zmiennej*": zmienna sterująca pętli zadeklarowana w pętli for jest używana poza zakresem pętli for|
-|[Ostrzeżenie kompilatora (poziom 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|Zignorowano z wyjątkiem sygnalizacji funkcji specyfikację wyjątku C++ nie jest __declspec(nothrow)|
+|[Ostrzeżenie kompilatora (poziom 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|C++Zignorowano z wyjątkiem sygnalizacji funkcji specyfikację wyjątku nie jest __declspec(nothrow)|
 |[Ostrzeżenie kompilatora (poziom 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|"*deklaracji*": znaleziono nie pasującego operatora delete; pamięć nie zostanie zwolniona, jeśli Inicjalizacja generuje wyjątek|
 |[Ostrzeżenie kompilatora (poziom 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|"*shift_operator*": licznik przesunięć ujemny lub zbyt duży, niezdefiniowane zachowanie|
 |[Ostrzeżenie kompilatora (poziom 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|"*tablicy*": tablica jest zbyt mała, aby uwzględnić znak końcowy null|
@@ -152,7 +152,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 1) C4330|atrybut "*atrybut*"w sekcji"*sekcji*" zignorowany|
 |[Ostrzeżenie kompilatora (poziom 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|"*shift_operator*": przesunięcie w prawo o zbyt dużą liczbę, utrata danych|
 |[Ostrzeżenie kompilatora (poziom 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|"*shift_operator*": wynik 32-bitowe przesunięcia niejawnie skonwertowano do 64 bitów (była 64-bitowe przesunięcie przeznaczone?)|
-|[Ostrzeżenie kompilatora C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Wykryto format pliku Mac: Skonwertuj plik źródłowy do formatu DOS lub systemu UNIX|
+|[C4335 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Wykryto format pliku Mac: Skonwertuj plik źródłowy do formatu DOS lub systemu UNIX|
 |[Ostrzeżenie kompilatora (poziom 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Importowanie biblioteki typów odsyłaczy "*library1*"przed importem"*library2*"|
 |[Ostrzeżenie kompilatora (poziom 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|Biblioteka typów odsyłaczy "*library1*"in"*library2*" jest automatycznie importowana|
 |Ostrzeżenie kompilatora (poziom 4) C4338|#pragma *dyrektywy*: standardowa sekcja "*sekcji*" jest używany|
@@ -166,7 +166,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|Zmiana zachowania: "*Członek1*"o nazwie zamiast"*członek2*"|
 |Ostrzeżenie kompilatora (poziom 1) C4352|"*identyfikator*": wewnętrzna funkcja już zdefiniowana|
 |[Ostrzeżenie kompilatora (poziom 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|użyto niestandardowego rozszerzenia: stała 0 jako wyrażenie funkcyjne.  Zamiast tego użyj funkcji wewnętrznej "__noop" wewnętrzne|
-|[Ostrzeżenie kompilatora C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)ostrzeżenie kompilatora (poziom 1 i 4) C4355|"this": używany na liście inicjatora bazowej składowej|
+|[Ostrzeżenie C4355 kompilatora](../../error-messages/compiler-warnings/compiler-warning-c4355.md)ostrzeżenie kompilatora (poziom 1 i 4) C4355|"this": używany na liście inicjatora bazowej składowej|
 |[Ostrzeżenie kompilatora (poziom 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|"*elementu członkowskiego*": nie można zainicjować statycznej składowej danych za pośrednictwem pochodnej klasy|
 |[Ostrzeżenie kompilatora (poziom 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|Znaleziono argument tablicy parametrów w liście formalnych argumentów dla delegata "*delegować*"zignorowano podczas generowania"*funkcja*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|"*operator*": zwracany typ połączonych delegatów nie jest "void"; zwrócona wartość jest niezdefiniowana|
@@ -176,7 +176,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|"*wyrażenie*': konwersja z"*type1*"to"*type2*', niezgodność ze znakiem/bez znaku|
 |[Ostrzeżenie kompilatora (poziom 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|Wynik jednoargumentowy "*operator*" operator może być niewyrównany|
 |Ostrzeżenie kompilatora (poziom 3) C4367|Konwersja z "*type1*"to"*type2*" może spowodować wyjątek niespójności typu danych|
-|[Ostrzeżenie (błąd) kompilatora C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|Nie można zdefiniować "*elementu członkowskiego*"as "zarządzane przez członkiem*typu*": mieszane typy nie są obsługiwane.|
+|[Kompilator ostrzeżenie C4368 (błąd)](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|Nie można zdefiniować "*elementu członkowskiego*"as "zarządzane przez członkiem*typu*": mieszane typy nie są obsługiwane.|
 |[Ostrzeżenie kompilatora (poziom 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|"*modułu wyliczającego*": moduł wyliczający wartość "*wartość*"nie może być reprezentowany jako"*typu*", wartość to"*nowa_wartość*"|
 |C4370 ostrzeżenia kompilatora|"*classname*": układ klasy zmienił się z poprzedniej wersji kompilatora ze względu na lepsze pakowanie|
 |[Ostrzeżenie kompilatora (poziom 3) C4371](../../error-messages/compiler-warnings/c4371.md)|"*classname*": układ klasy mógł się zmienić z poprzedniej wersji kompilatora ze względu na lepsze pakowanie składowej '*elementu członkowskiego*"|
@@ -199,9 +199,14 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|"*function_signature*": nieprawidłowy typ zwracany dla wewnętrznej funkcji, oczekiwano "*typu*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|"*function_signature*": Nieprawidłowa liczba argumentów dla wewnętrznej funkcji, oczekiwano "*argument_count*" argumentów|
 |[Ostrzeżenie kompilatora (poziom 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|"*zmiennej*": const nie ma wpływu "*literału*" element członkowski danych; ignorowany|
-|[Ostrzeżenie kompilatora C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|"*funkcja*": symbol per-appdomain nie powinien być oznaczony za pomocą __declspec('dllexport')|
+|[C4394 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|"*funkcja*": symbol per-appdomain nie powinien być oznaczony za pomocą __declspec('dllexport')|
 |[Ostrzeżenie kompilatora (poziom 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|"*funkcja*": funkcja składowa zostanie wywołana na kopii składowej danych initonly "*elementu członkowskiego*"|
 |[Ostrzeżenie kompilatora (poziom 2) C4396](compiler-warning-level-2-c4396.md)|"*funkcja*": wbudowany specyfikator nie można użyć, gdy zaprzyjaźniona deklaracja odnosi się do specjalizacji szablonu funkcji|
 |[Ostrzeżenie kompilatora (poziom 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute jest ignorowany|
 |[Ostrzeżenie kompilatora (poziom 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|"*zmiennej*": globalny obiekt dla poszczególnych procesu mogą nie działać poprawnie z wieloma domenami aplikacji; należy wziąć pod uwagę użycie __declspec(appdomain)|
 |[Ostrzeżenie kompilatora (poziom 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|"*symbol*": symbol w procesie nie powinien być oznaczony za pomocą __declspec('dllimport'), gdy skompilowano z opcją/CLR: pure|
+
+## <a name="see-also"></a>Zobacz także
+
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
+[Ostrzeżenia kompilatora od C4000 - C5999](compiler-warnings-c4000-c5999.md)

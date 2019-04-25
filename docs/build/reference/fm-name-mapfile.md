@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
 ms.openlocfilehash: eebb1bc0c553dba1934aea75e2e63edc0f222fff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292409"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Nazwa Mapfile)
 
@@ -54,6 +54,6 @@ Symbole globalne w pliku mapowania zazwyczaj mają co najmniej jeden wiodące zn
 ## <a name="see-also"></a>Zobacz także
 
 [Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Określanie nazwy ścieżki](specifying-the-pathname.md)

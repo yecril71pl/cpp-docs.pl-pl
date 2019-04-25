@@ -41,11 +41,11 @@ helpviewer_keywords:
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
 ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286015"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>Dziennik, logf —, logl, log10 log10f —, log10l
 

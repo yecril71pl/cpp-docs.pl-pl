@@ -21,15 +21,15 @@ helpviewer_keywords:
 - inpw function
 ms.assetid: c7e1eeac-77cd-47ff-b843-4095b4c31d3b
 ms.openlocfilehash: caa79ad98c0790fc8a22374e018ac4ad8d5a0b13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289458"
 ---
 # <a name="inp-inpw"></a>inp, inpw
 
-Te funkcje POSIX są przestarzałe. Użyj zgodność ISO C++ [_inp —, _inpw —, _inpd —](../c-runtime-library/inp-inpw-inpd.md) zamiast tego.
+Te funkcje POSIX są przestarzałe. Użyj ISO C++ zgodność [_inp —, _inpw —, _inpd —](../c-runtime-library/inp-inpw-inpd.md) zamiast tego.
 
 > [!IMPORTANT]
 >  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.

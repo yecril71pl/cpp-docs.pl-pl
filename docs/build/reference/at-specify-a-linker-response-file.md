@@ -11,11 +11,11 @@ helpviewer_keywords:
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
 ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295001"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Określ plik odpowiedzi konsolidatora)
 
@@ -44,5 +44,5 @@ Zobacz [@ (Określ plik odpowiedzi kompilatora)](at-specify-a-compiler-response-
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

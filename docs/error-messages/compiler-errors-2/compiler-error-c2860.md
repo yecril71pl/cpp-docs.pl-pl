@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C2860
+title: Compiler Error C2860
 ms.date: 11/04/2016
 f1_keywords:
 - C2860
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2860
 ms.assetid: ccc83553-90ed-4e94-b5e9-38b58ae38e31
 ms.openlocfilehash: 7d468fb2a71ce23bcd527cb02663dd5f7b7eecad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302868"
 ---
-# <a name="compiler-error-c2860"></a>Błąd kompilatora C2860
+# <a name="compiler-error-c2860"></a>Compiler Error C2860
 
 "void" nie może być typem argumentu, z wyjątkiem "(void)"
 

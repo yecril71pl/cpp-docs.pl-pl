@@ -26,11 +26,11 @@ helpviewer_keywords:
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
 ms.openlocfilehash: c5db59fecd84ae291e5651b1cec1be31c815e53a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155976"
 ---
 # <a name="pipe"></a>_pipe
 
@@ -51,7 +51,7 @@ int _pipe(
 
 ### <a name="parameters"></a>Parametry
 
-*dot*<br/>
+*pfds*<br/>
 Wskaźnik do tablicy dwóch **int** do przechowywania odczytu i zapisu deskryptorów plików.
 
 *psize*<br/>
@@ -94,7 +94,7 @@ W systemie operacyjnym Windows potok jest niszczony, kiedy wszystkie jego deskry
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|---------------------|
-|**_pipe**|\<io.h>|\<fcntl.h >, 1 \<errno.h > 2|
+|**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
 
 1 dla **_O_BINARY** i **_O_TEXT** definicje.
 

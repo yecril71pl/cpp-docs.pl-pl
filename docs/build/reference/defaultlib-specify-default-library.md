@@ -11,11 +11,11 @@ helpviewer_keywords:
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
 ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293865"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Określ bibliotekę domyślną)
 
@@ -50,5 +50,5 @@ Gdy jest używana bez argumentów, [/nodefaultlib (Ignoruj wszystkie domyślne b
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołania konsolidatora MSVC](linking.md)
+- [Dokumentacja konsolidatora MSVC](linking.md)
 - [Opcje konsolidatora MSVC](linker-options.md)

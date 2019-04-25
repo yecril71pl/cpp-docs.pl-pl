@@ -25,11 +25,11 @@ helpviewer_keywords:
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
 ms.openlocfilehash: 5a0024101e4f5a74f1573b271d444b27738db8e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287866"
 ---
 # <a name="freedbg"></a>_free_dbg
 
@@ -46,7 +46,7 @@ void _free_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*danych użytkownika*<br/>
+*userData*<br/>
 Wskaźnik do bloku ilość przydzielonej pamięci, który ma zostać zwolniony.
 
 *blockType*<br/>

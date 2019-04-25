@@ -21,12 +21,12 @@ helpviewer_keywords:
 - lsearch function
 ms.assetid: 130da3fc-904a-4375-b0ab-79bfea8a455f
 ms.openlocfilehash: 0c30a088eac1d8ff8b03ad54ed045e7dfa18eebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304894"
 ---
 # <a name="lsearch"></a>lsearch
 
-Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_lsearch —](lsearch.md) lub zwiększenia bezpieczeństwa [_lsearch_s —](lsearch-s.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_lsearch —](lsearch.md) lub zwiększenia bezpieczeństwa [_lsearch_s —](lsearch-s.md) zamiast tego.

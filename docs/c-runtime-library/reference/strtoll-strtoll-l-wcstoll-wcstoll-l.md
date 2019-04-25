@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
 ms.openlocfilehash: 53ae4ab1d482478c50aa257acdc974569bfc05f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269153"
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 
@@ -104,8 +104,8 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _dose
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstoll —**|**strtoll**|**strtoll**|**wcstoll**|
-|**_tcstoll_l —**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
+|**_tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
+|**_tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
 
 Ustawienia regionalne **LC_NUMERIC** ustawienie kategorii określa rozpoznawanie znaku podstawy w parametrze *strSource*; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md). Funkcje, które nie mają **_l** sufiksa używa bieżących ustawień regionalnych; **_strtoll_l —** i **_wcstoll_l —** są identyczne z odpowiednimi funkcjami, które nie mają tego sufiksu, z tą różnicą, że używają w zamian ustawień regionalnych, które zostały przekazane. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
@@ -122,7 +122,7 @@ A *odstępu* może składać się ze znaków spacji lub tabulatora, które są i
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strtoll —**, **_strtoll_l —**|\<stdlib.h>|
-|**wcstoll —**, **_wcstoll_l —**|\<stdlib.h > lub \<wchar.h >|
+|**wcstoll**, **_wcstoll_l**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

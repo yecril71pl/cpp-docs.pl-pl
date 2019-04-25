@@ -1,18 +1,18 @@
 ---
-title: Ostrzeżenie LNK4020 narzędzi konsolidatora
+title: Ostrzeżenie narzędzi konsolidatora LNK4020
 ms.date: 05/29/2018
 f1_keywords:
 - LNK4020
 helpviewer_keywords:
 - LNK4020
 ms.openlocfilehash: 7810fd9a97a8f6e22ad362819a024358a9f4b07c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298584"
 ---
-# <a name="linker-tools-warning-lnk4020"></a>Ostrzeżenie LNK4020 narzędzi konsolidatora
+# <a name="linker-tools-warning-lnk4020"></a>Ostrzeżenie narzędzi konsolidatora LNK4020
 
 > rekord typu w elemencie "*filename*" jest uszkodzony; niektóre symbole i typy mogą być niedostępne z debugera
 

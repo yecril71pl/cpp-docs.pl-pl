@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
 ms.openlocfilehash: 79c685fef8d6a4b966c53bb7d94b423d16971976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157672"
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
 
@@ -88,7 +88,7 @@ Jeśli dwie kopie środowiska (MBCS i Unicode), jednocześnie istnieją w progra
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tgetenv —**|**getenv**|**getenv**|**_wgetenv**|
+|**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
 Aby sprawdzić lub zmienić wartość **TZ** użycie zmiennej, środowisko **getenv**, **_putenv** i **_tzset —** zgodnie z potrzebami. Aby uzyskać więcej informacji na temat **TZ**, zobacz [_tzset —](tzset.md) i [_daylight, strefa czasowa i _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
@@ -97,7 +97,7 @@ Aby sprawdzić lub zmienić wartość **TZ** użycie zmiennej, środowisko **get
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**getenv**|\<stdlib.h>|
-|**_wgetenv**|\<stdlib.h > lub \<wchar.h >|
+|**_wgetenv**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
