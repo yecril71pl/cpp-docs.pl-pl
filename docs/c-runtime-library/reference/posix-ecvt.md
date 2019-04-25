@@ -21,12 +21,12 @@ helpviewer_keywords:
 - ecvt function
 ms.assetid: a24fccea-033a-4cc7-b120-4fd0f525a7e3
 ms.openlocfilehash: 655abb00251ce3fd6210c7824c9e6522b01a82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155983"
 ---
 # <a name="ecvt"></a>ecvt
 
-Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_ecvt —](ecvt.md) lub zwiększenia bezpieczeństwa [_ecvt_s —](ecvt-s.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_ecvt —](ecvt.md) lub zwiększenia bezpieczeństwa [_ecvt_s —](ecvt-s.md) zamiast tego.

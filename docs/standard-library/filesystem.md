@@ -10,11 +10,11 @@ f1_keywords:
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159850"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -31,7 +31,7 @@ using namespace std::experimental::filesystem::v1;
 > [!IMPORTANT]
 > Począwszy od wersji programu Visual Studio 2017 \<filesystem > nagłówka nie zostało jeszcze C++ standard. Visual C++ 2017 implementuje standardowe ostatecznego projektu, podczas gdy znaleziono w [JTC ISO/IEC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Ten nagłówek obsługuje systemy plików dla jednej z dwóch klas szerokiego systemów operacyjnych hosta: Windows firmy Microsoft i Posix.
+Ten nagłówek obsługuje systemy plików, dla jednego z dwóch klas szerokiego systemów operacyjnych hosta: Program Microsoft Windows i Posix.
 
 Większość funkcji jest wspólny dla obu systemów operacyjnych, w tym dokumencie określa, gdzie występują różnice. Na przykład:
 
@@ -120,7 +120,7 @@ Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu pli
 |----------|-----------------|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Wyliczenie, które jest używane z [copy_file —](../standard-library/filesystem-functions.md#copy_file) i określa zachowanie, jeśli plik docelowy już istnieje.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Wyliczenie, które jest używane z [copy_file —](../standard-library/filesystem-functions.md#copy_file) i określa zachowanie, jeśli plik docelowy już istnieje.|
-|[directory_options —](../standard-library/filesystem-enumerations.md#directory_options)|Wyliczenie, które określa opcje dla iteratorów katalogu.|
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Wyliczenie, które określa opcje dla iteratorów katalogu.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Wyliczenie dla typów plików.|
 |[PERMS](../standard-library/filesystem-enumerations.md#perms)|Typ maski bitów używany do przekazywania, uprawnień i opcje uprawnień|
 

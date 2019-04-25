@@ -1,6 +1,6 @@
 ---
-title: Ostrzeżenia kompilatora od C4800 za pośrednictwem C5999
-ms.date: 03/14/2019
+title: Ostrzeżenia kompilatora C4800 za pośrednictwem C5999
+ms.date: 04/21/2019
 f1_keywords:
 - C4808
 - C4809
@@ -153,14 +153,14 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280324"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora od C4800 za pośrednictwem C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora C4800 za pośrednictwem C5999
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawcze, które są generowane przez kompilator.
 
@@ -170,7 +170,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 
 |Ostrzeżenie|Komunikat|
 |-------------|------------|
-|[Ostrzeżenie (poziom 4) kompilatora C4800](compiler-warning-level-3-c4800.md)| Niejawna konwersja z "*typu*" na wartość logiczna. Prawdopodobieństwo utraty informacji możliwych |
+|[Ostrzeżenie kompilatora (poziom 4) C4800](compiler-warning-level-3-c4800.md)| Niejawna konwersja z "*typu*" na wartość logiczna. Prawdopodobieństwo utraty informacji możliwych |
 |[Ostrzeżenie kompilatora (poziom 1) C4803](compiler-warning-level-1-c4803.md)|"*metoda*": podniesiona metoda ma klasę magazynu inną od zdarzenia, "*zdarzeń*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4804](compiler-warning-level-1-c4804.md)|"*operacji*": niebezpieczne użycie typu "bool" w operacji|
 |[Ostrzeżenie kompilatora (poziom 1) C4805](compiler-warning-level-1-c4805.md)|"*operacji*": niebezpieczne połączenie typu "*type1*"i typie"*type2*" w operacji|
@@ -206,8 +206,8 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 | Ostrzeżenie kompilatora (poziom 4) C4847 | "\_\_declspec (nie\_init\_all)" będzie stosowany tylko do funkcji, typem klasy lub zmiennej lokalnej: ignorowane |
 | Ostrzeżenie kompilatora (poziom 1) C4848 | Obsługa atrybut standardowy "nie\_unikatowy\_adres w języku C ++ 17 i wcześniejszych wersjach to rozszerzenie dostawcy |
 |[Ostrzeżenie kompilatora (poziom 4) C4866](c4866.md)| Kompilator może nie wymusić kolejności oceny od lewej do prawej dla wywołania *operator_name*|
-|[Ostrzeżenie (błąd) kompilatora C4867](compiler-warning-c4867.md)|"*funkcja*": wywołania funkcji brakuje listy argumentów; Użyj "*wywołania*" Aby utworzyć wskaźnik do składowej|
-|[Ostrzeżenie (poziom 4) kompilatora C4868](compiler-warning-c4868.md)|"_pliku_(*line_number*)" kompilator może nie wymusić kolejności oceny od lewej do prawej w listy inicjowania w nawiasach|
+|[Kompilator ostrzeżenie C4867 (błąd)](compiler-warning-c4867.md)|"*funkcja*": wywołania funkcji brakuje listy argumentów; Użyj "*wywołania*" Aby utworzyć wskaźnik do składowej|
+|[Ostrzeżenie kompilatora (poziom 4) C4868](compiler-warning-c4868.md)|"_pliku_(*line_number*)" kompilator może nie wymusić kolejności oceny od lewej do prawej w listy inicjowania w nawiasach|
 |Ostrzeżenie kompilatora (poziom 2) C4872|dzielenie liczby zmiennoprzecinkowej przez zero wykryta podczas kompilacji wykresu wywołań dla concurrency::parallel_for_each: "*lokalizacji*"|
 |Ostrzeżenie kompilatora (poziom 1) C4880|Rzutowanie z "const *typ_1*"to"*typ_2*": stałości ze wskaźnika lub odwołania może spowodować niezdefiniowane zachowanie w zastrzeżonej funkcji amp|
 |Ostrzeżenie kompilatora (poziom 4) C4881|Konstruktor i/lub destruktor nie zostaną wywołane dla zmiennej tile_static "*zmiennej*"|
@@ -267,7 +267,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 1) C4974|"*symbol*": oznaczone jako przestarzałe|
 |Ostrzeżenie kompilatora (poziom 3) C4981|Warbird: funkcja "*funkcja*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ zawiera semantykę wyjątku|
 |Ostrzeżenie kompilatora (poziom 3) C4985|Nazwa symbolu ": Brak atrybutów w poprzedniej deklaracji.|
-|[Ostrzeżenie kompilatora C4986](compiler-warning-c4986.md)|"*deklaracji*': specyfikacja wyjątku jest niezgodna z poprzednią deklaracją|
+|[C4986 ostrzeżenia kompilatora](compiler-warning-c4986.md)|"*deklaracji*': specyfikacja wyjątku jest niezgodna z poprzednią deklaracją|
 |Ostrzeżenie kompilatora (poziom 4) C4987|użyto rozszerzenia niestandardowego: 'throw (...)'|
 |Ostrzeżenie kompilatora (poziom 4) C4988|"*zmiennej*": Zmienna zadeklarowana poza zakresem klasy/funkcji|
 |Ostrzeżenie kompilatora (poziom 4) C4989|"*typu*": Typ ma definicje powodujące konflikt.|
@@ -316,3 +316,8 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 | Ostrzeżenie kompilatora (poziom 1) C5105 | rozwinięciu makra w produkcji "defined" ma niezdefiniowane zachowanie |
 | Ostrzeżenie kompilatora (poziom 1) C5106 | ponownie zdefiniowany przy użyciu nazwy różnych parametrów — makro |
 | Ostrzeżenie kompilatora (poziom 1) C5107 | Brak przerywa "*char*" znak |
+
+## <a name="see-also"></a>Zobacz także
+
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
+[Ostrzeżenia kompilatora od C4000 - C5999](compiler-warnings-c4000-c5999.md)

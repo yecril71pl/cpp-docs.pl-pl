@@ -10,11 +10,11 @@ helpviewer_keywords:
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
 ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289874"
 ---
 # <a name="error-handling-crt"></a>Obsługa błędów (CRT)
 

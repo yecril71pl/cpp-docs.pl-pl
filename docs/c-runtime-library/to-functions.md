@@ -21,11 +21,11 @@ helpviewer_keywords:
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
 ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304400"
 ---
 # <a name="to-functions"></a>do funkcji
 

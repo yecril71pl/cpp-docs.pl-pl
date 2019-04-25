@@ -1,5 +1,5 @@
 ---
-title: 'TN030: dostosowywanie drukowania i podglądu wydruku'
+title: 'TN030: Dostosowywanie drukowania i podglądu wydruku'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.print
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305687"
 ---
-# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: dostosowywanie drukowania i podglądu wydruku
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Dostosowywanie drukowania i podglądu wydruku
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -40,13 +40,13 @@ Aby ręcznie pasmo, należy ponownie zaimplementować drukowania pętli taki spo
 
 Po drugie, często musisz wywołać `QueryAbort` podczas rysowania pasmo. W przeciwnym razie nie ma zostać wywołana procedura przerwać, a użytkownik będzie mógł anulować zadanie drukowania.
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>Podgląd wydruku: Dokumentów elektronicznych przy użyciu interfejsu użytkownika
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Podgląd wydruku: Dokument elektroniczny przy użyciu interfejsu użytkownika
 
 W zasadzie drukowania (wersja zapoznawcza), spróbuje włączyć wyświetlanie w emulację drukarki. Domyślnie obszaru klienckiego głównego okna służy do wyświetlania jednego lub dwóch stron w pełni w ramach okna. Użytkownik będzie mógł powiększać obszar strony, aby zobaczyć, jak to bardziej szczegółowo. Z dodatkową pomoc użytkownik może nawet mieć możliwość edytowania dokumentu w trybie podglądu.
 
 ## <a name="customizing-print-preview"></a>Dostosowywanie podglądu wydruku
 
-Ta uwaga dotyczy tylko jeden z aspektów modyfikowanie podglądu wydruku: dodanie interfejsu użytkownika w trybie podglądu. Możliwe są inne modyfikacje, ale zmiany te są poza zakresem tej dyskusji.
+Ta uwaga dotyczy tylko jeden z aspektów modyfikowanie podglądu wydruku: Dodawanie interfejsu użytkownika w trybie podglądu. Możliwe są inne modyfikacje, ale zmiany te są poza zakresem tej dyskusji.
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>Aby dodać interfejs użytkownika do trybu podglądu
 

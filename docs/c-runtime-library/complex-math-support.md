@@ -8,11 +8,11 @@ helpviewer_keywords:
 - math routines
 - complex numbers
 ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290017"
 ---
 # <a name="c-complex-math-support"></a>Obsługa złożonych obliczeń w języku C
 
@@ -86,7 +86,7 @@ W nagłówku math.h definiuje oddzielnego typu **_complex — struktura**, któr
 |[conj, conjf, conjl](../c-runtime-library/reference/conj-conjf-conjl.md)|Obliczenia zespolonej liczby zespolonej|
 |[cproj, cprojf, cprojl](../c-runtime-library/reference/cproj-cprojf-cprojl.md)|Obliczenia projekcji sphere Riemanna liczby zespolonej|
 |[creal, crealf, creall](../c-runtime-library/reference/creal-crealf-creall.md)|Obliczenia rzeczywistych część liczby zespolonej|
-|[norm normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)|Obliczanie kwadratów wielkości liczby zespolonej|
+|[norm, normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)|Obliczanie kwadratów wielkości liczby zespolonej|
 
 ## <a name="operation-functions"></a>Funkcje operacji
 

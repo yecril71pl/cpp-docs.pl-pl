@@ -5,11 +5,11 @@ f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224080"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -79,7 +79,7 @@ Typ obiektu mutex jest także znana jako *zamykane typu*. Jeśli nie zapewnia fu
 |Nazwa|Opis|
 |----------|-----------------|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Reprezentuje obiekt, który może być przekazywany do konstruktory `lock_guard` i `unique_lock` do wskazania, że obiekt mutex, który również jest przekazywana do konstruktora jest zablokowany.|
-|[defer_lock —](../standard-library/mutex-functions.md#defer_lock)|Reprezentuje obiekt, który może być przekazywany do konstruktora dla `unique_lock`, aby wskazać, że Konstruktor nie powinien być blokowany obiektu mutex, który również jest przekazywana do niego.|
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Reprezentuje obiekt, który może być przekazywany do konstruktora dla `unique_lock`, aby wskazać, że Konstruktor nie powinien być blokowany obiektu mutex, który również jest przekazywana do niego.|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Reprezentuje obiekt, który może być przekazywany do konstruktora dla `unique_lock` do wskazania, konstruktora powinien próbować odblokować `mutex` , również przekazywaną do niego bez blokowania.|
 
 ## <a name="see-also"></a>Zobacz także

@@ -36,11 +36,11 @@ helpviewer_keywords:
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
 ms.openlocfilehash: 197a4f690a6626edbfec27ea4abef1999b6cedaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287707"
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
 
@@ -88,7 +88,7 @@ Ciąg znaków *tryb* określa rodzaj dostępu do żądanego pliku, jak pokazano 
 |----------|----------------|
 |**"r"**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **_fsopen —** wywołanie zakończy się niepowodzeniem.|
 |**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
-|**""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie); najpierw tworzy plik, jeśli nie istnieje.|
+|**"a"**|Zostanie otwarty do zapisu na końcu pliku (dołączanie); najpierw tworzy plik, jeśli nie istnieje.|
 |**"r +"**|Otwiera Odczyt i zapis. (Plik musi istnieć).|
 |**"w +"**|Otwiera pusty plik Odczyt i zapis. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
 |**"+"**|Otwiera do odczytu i dołączania; najpierw tworzy plik, jeśli nie istnieje.|
@@ -122,7 +122,7 @@ Argument *shflag* jest wyrażeniem stałym, składający się z jednego z nastę
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tfsopen —**|**_fsopen**|**_fsopen**|**_wfsopen**|
+|**_tfsopen**|**_fsopen**|**_fsopen**|**_wfsopen**|
 
 ## <a name="requirements"></a>Wymagania
 

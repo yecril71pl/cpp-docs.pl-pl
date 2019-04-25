@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
 ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306158"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: Likwidowanie obiektów okien
 
@@ -46,7 +46,7 @@ Domyślna implementacja klasy `CWnd::PostNcDestroy` nie wykonuje żadnych dział
 Zastąpienie tych klas, które są przeznaczone do można samodzielnie przydzielony na stosie `PostNcDestroy` metodę w celu **usunąć ten**. Ta instrukcja zwolni pamięć, wszelkie skojarzone z obiektu języka C++. Mimo że domyślnie `CWnd` wywołania destruktora `DestroyWindow` Jeśli *m_hWnd* jest różna od NULL, to nie powoduje nieskończoną rekursję ponieważ uchwytu będzie odłączony i o wartości NULL podczas fazy czyszczenia.
 
 > [!NOTE]
->  System zwykle wywołuje `CWnd::PostNcDestroy` po przetwarza komunikat Windows WM_NCDESTROY i `HWND` i obiekt okna języka C++ nie jest już połączony. System będzie także wywoływać `CWnd::PostNcDestroy` w implementacji większość [CWnd::Create](../mfc/reference/cwnd-class.md#create) wywołania po wystąpieniu błędu. Reguły automatycznego oczyszczania są opisane w dalszej części tego tematu.
+>  System zwykle wywołuje `CWnd::PostNcDestroy` po przetwarza komunikat Windows WM_NCDESTROY i `HWND` i C++ obiekt okna nie jest już połączony. System będzie także wywoływać `CWnd::PostNcDestroy` w implementacji większość [CWnd::Create](../mfc/reference/cwnd-class.md#create) wywołania po wystąpieniu błędu. Reguły automatycznego oczyszczania są opisane w dalszej części tego tematu.
 
 ## <a name="auto-cleanup-classes"></a>Automatyczne oczyszczanie klas
 
@@ -91,7 +91,7 @@ Warning: calling DestroyWindow in CWnd::~CWnd
 
 W przypadku obiektów C++ Windows, które wykonują automatycznego oczyszczania, należy wywołać `DestroyWindow`. Jeśli używasz **Usuń** operator bezpośrednio alokatora pamięci diagnostycznych MFC powiadomi użytkownika, czy możesz się zwalnianie pamięci dwa razy. Dwa wystąpienia są pierwszego wywołania jawnego i pośrednie wywołanie **usunąć ten** w implementacji automatyczne oczyszczanie `PostNcDestroy`.
 
-Po wywołaniu `DestroyWindow` w obiekcie bez czyszczenia automatycznie obiektu języka C++ nadal będzie się wokół, ale *m_hWnd* będzie mieć wartość NULL. Po wywołaniu `DestroyWindow` na obiekcie automatyczne oczyszczanie obiektu języka C++ nie będą już dostępne, uwolniony przez operatora delete C++ w implementacji automatyczne oczyszczanie `PostNcDestroy`.
+Po wywołaniu `DestroyWindow` w obiekcie bez czyszczenia automatycznie C++ obiekt nadal będzie się wokół, ale *m_hWnd* będzie mieć wartość NULL. Po wywołaniu `DestroyWindow` na obiekcie automatyczne oczyszczanie obiektu języka C++ nie będą już dostępne, uwolniony przez operatora delete C++ w implementacji automatyczne oczyszczanie `PostNcDestroy`.
 
 ## <a name="see-also"></a>Zobacz także
 

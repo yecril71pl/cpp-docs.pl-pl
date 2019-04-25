@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278426"
 ---
 # <a name="compiler-options-macros"></a>Makra opcji kompilatora
 
@@ -115,7 +115,7 @@ Zdefiniuj to makro, aby wymusić użycie składni CLS standard ANSI C++ dla wska
 
 Aby dopasować udoskonalone standardowe zgodności C++ kompilator języka Visual C++ zostały zmienione biblioteki ATL i MFC. Zgodnie ze standardem ANSI w języku C++, składnia wskaźnika do funkcji składowej klasy powinna mieć `&CMyClass::MyFunc`.
 
-Gdy [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) nie zdefiniowano (przypadek domyślny) ATL/MFC wyłącza błąd C4867 w społeczności maps — makro (mapy wiadomości przede wszystkim) tak, aby kod, który został utworzony we wcześniejszych wersjach mogą w dalszym ciągu kompilacji, tak jak poprzednio. Jeśli zdefiniujesz **_ATL_ENABLE_PTM_WARNING**, kod powinien być standard C++ zgodne.
+Gdy [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) nie zdefiniowano (przypadek domyślny) ATL/MFC wyłącza błąd C4867 w społeczności maps — makro (mapy wiadomości przede wszystkim) tak, aby kod, który został utworzony we wcześniejszych wersjach mogą w dalszym ciągu kompilacji, tak jak poprzednio. Jeśli zdefiniujesz **_ATL_ENABLE_PTM_WARNING**, kod powinien być C++ standard zgodne.
 
 Jednak niestandardowych formularza jest przestarzała, więc należy przenieść istniejący kod do standardowej składni zgodny z języka C++. Na przykład poniższy kod:
 

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
 ms.openlocfilehash: 7ef28d6cafa0b74b50ee2c50ec380b8bd3aed79f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156087"
 ---
 # <a name="open-wopen"></a>_open, _wopen
 
@@ -90,7 +90,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_topen —**|**_otwórz**|**_otwórz**|**_wopen —**|
+|**_topen**|**_open**|**_open**|**_wopen**|
 
 *oflag* powstaje wyrażeniem liczby całkowitej z co najmniej jeden z następujących stałych manifestu lub kombinacji stałych, które są zdefiniowane w \<fcntl.h >.
 
@@ -99,8 +99,8 @@ Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz
 | **_O_APPEND** | Przesuwa wskaźnik myszy plików na koniec pliku przed każdej operacji zapisu. |
 | **_O_BINARY** | Otwiera plik w trybie binarnym (nieprzetłumaczonym). (Zobacz [fopen —](fopen-wfopen.md) opis trybie binarnym.) |
 | **_O_CREAT** | Tworzy plik i otwiera go do zapisu. Nie obowiązuje, jeżeli plik określony przez *filename* istnieje. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
-| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Tworzy plik jako tymczasowy, a jeśli to możliwe nie opróżnia na dysku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
-| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptor pliku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Tworzy plik jako tymczasowy, a jeśli to możliwe nie opróżnia na dysku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptor pliku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
 | **_O_CREAT**&AMP;#124; ` _O_EXCL` | Zwraca wartość błędu, jeśli w pliku określonym przez *filename* istnieje. Ma zastosowanie tylko wtedy, gdy jest używane z **_O_CREAT**. |
 | **_O_NOINHERIT** | Uniemożliwia tworzenie deskryptora udostępnionego pliku. |
 | **_O_RANDOM** | Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu losowego do dysku. |
@@ -130,7 +130,7 @@ Gdy dwa lub więcej stałych manifestu są używane do formularza *oflag* argume
 |-|-|
 | **_S_IREAD** | Dozwolone tylko odczyt. |
 | **_S_IWRITE** | Zapisywanie jest dozwolone. (W praktyce pozwala na odczyt i zapis.) |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Odczyt i zapis dozwolone. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Odczyt i zapis dozwolone. |
 
 Gdy oba stałe są podane, są połączone za pomocą operatora bitowego OR ( **&#124;** ). W Windows wszystkie pliki są do odczytu; nie ma uprawnienia tylko do zapisu. W związku z tym, tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** są równoważne.
 
@@ -140,8 +140,8 @@ Jeśli wartość inna niż kombinacji **_S_IREAD** i **_S_IWRITE** jest określo
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|---------------------|
-|**_otwórz**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
-|**_wopen —**|\<IO.h > lub \<wchar.h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
+|**_open**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
+|**_wopen**|\<IO.h > lub \<wchar.h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
 
 **_otwórz** i **_wopen —** są rozszerzeniami Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

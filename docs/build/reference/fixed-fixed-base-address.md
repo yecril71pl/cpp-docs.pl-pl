@@ -11,11 +11,11 @@ helpviewer_keywords:
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
 ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292487"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Stałe adresy podstawowe)
 
@@ -49,5 +49,5 @@ Określ/Fixed: No, aby generować sekcję relokacji w programie.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

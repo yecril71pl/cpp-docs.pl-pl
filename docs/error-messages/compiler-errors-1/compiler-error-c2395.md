@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2395
 ms.assetid: 2d9e3b28-8c2c-4f41-a57f-61ef88fc2af0
 ms.openlocfilehash: dd3bd922e2bfa61da2da87d368bb4b28237161f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303665"
 ---
 # <a name="compiler-error-c2395"></a>Błąd kompilatora C2395
 
-"your_type::operator'op": operator CLR lub WinRT nie jest prawidłowy. Co najmniej jeden parametr musi być następujących typów: t ", t %", t & ", t ^', t ^ %", t ^ & ", gdzie T ="your_type"
+"your_type::operator'op": CLR WinRT operatora lub nie jest prawidłowy. Co najmniej jeden parametr musi być następujących typów: T ", t %", t & ", t ^', t ^ %", t ^ & ", gdzie T ="your_type"
 
 Operator w Windows Runtime lub typ zarządzany nie miał co najmniej jeden parametr, którego typ jest taki sam jak typ wartości zwracanej operatora.
 

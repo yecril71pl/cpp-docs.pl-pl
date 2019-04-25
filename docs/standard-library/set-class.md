@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295490"
 ---
 # <a name="set-class"></a>set — Klasa
 
@@ -179,8 +179,8 @@ Iterator dostarczony przez klasę zestawu jest iteratorem dwukierunkowym, ale fu
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy zestawu.|
 |[Liczba](#count)|Zwraca liczbę elementów w zestawie, których klucz pasuje do klucza określonego jako parametr.|
 |[crbegin](#rbegin)|Zwraca iterator const, który dotyczy pierwszego elementu w odwróconym zestawie.|
-|[crend —](#rend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do zestawu.|
+|[crend](#rend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do zestawu.|
 |[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do zestawu, ze wskazówką położenia.|
 |[pusty](#empty)|Sprawdza, czy zestaw jest pusty.|
 |[koniec](#end)|Zwraca iterator odnoszący się do lokalizacji następującej po ostatnim elemencie w zestawie.|
@@ -188,12 +188,12 @@ Iterator dostarczony przez klasę zestawu jest iteratorem dwukierunkowym, ale fu
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w zestawie z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.|
 |[Znajdź](#find)|Zwraca iterator odnoszący się do pierwszej lokalizacji elementu w zestawie, który ma klucz równoważny z określonym kluczem.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` obiektu użytego do stworzenia zestawu.|
-|[Wstaw](#insert)|Wstawia element lub zakres elementów do zestawu.|
+|[insert](#insert)|Wstawia element lub zakres elementów do zestawu.|
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w zestawie.|
 |[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w zestawie, z kluczem, który jest równy lub większy od określonego klucza.|
 |[max_size](#max_size)|Zwraca maksymalną długość zestawu.|
 |[rbegin](#rbegin)|Zwraca iterator odnoszący się do pierwszego elementu w odwróconym zestawie.|
-|[rend —](#rend)|Zwraca iterator odnoszący się do lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|
+|[rend](#rend)|Zwraca iterator odnoszący się do lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|
 |[Rozmiar](#size)|Zwraca liczbę elementów w zestawie.|
 |[swap](#swap)|Zamienia elementy z dwóch zestawów.|
 |[upper_bound —](#upper_bound)|Zwraca iterator do pierwszego elementu w zestawie z kluczem, który jest większy od określonego klucza.|
@@ -2463,7 +2463,7 @@ The set has elements: 10 20.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustaw >](../standard-library/set.md)<br/>
+[\<set>](../standard-library/set.md)<br/>
 [Kontenery](../cpp/containers-modern-cpp.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

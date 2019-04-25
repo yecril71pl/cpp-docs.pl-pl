@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
 ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292305"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Scalaj wprowadzony kod)
 
@@ -77,5 +77,5 @@ Jeśli program obejmuje pliku nagłówka, który używa wprowadzonego kodu **/Fx
 ## <a name="see-also"></a>Zobacz także
 
 [Plik wyjściowy (/F), opcje](output-file-f-options.md)<br/>
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

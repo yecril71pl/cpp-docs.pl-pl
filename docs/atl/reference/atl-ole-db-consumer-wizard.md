@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
 ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261263"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 
@@ -36,13 +36,13 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
    - **Połączenie** kartę
 
-      Zawartość na tej karcie zależą od wybranego dostawcy. Chociaż istnieje wiele typów dostawców, w tej sekcji omówiono połączenia dwóch typowych: danych SQL i ODBC. Inne są podobne zmiany w polach opisane w tym miejscu.
+      Zawartość na tej karcie zależą od wybranego dostawcy. Chociaż istnieje wiele typów dostawców, w tej sekcji omówiono połączenia dwóch typowych: Dane SQL i ODBC. Inne są podobne zmiany w polach opisane w tym miejscu.
 
       Dla danych SQL:
 
-      1. **Wybierz lub wprowadź nazwę serwera:** kliknij menu listy rozwijanej, aby wyświetlić wszystkich danych zarejestrowanych serwerów w sieci, a następnie wybierz jedno.
+      1. **Wybierz lub wprowadź nazwę serwera:** Kliknij menu listy rozwijanej, aby wyświetlić wszystkich danych zarejestrowanych serwerów w sieci, a następnie wybierz jedno.
 
-      1. **Wprowadź informacje dotyczące logowania na serwerze:** wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
+      1. **Wprowadź informacje o logowaniu się do serwera:** Wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
 
          > [!NOTE]
          > Istnieje problem z zabezpieczeniami, za pomocą funkcji "Zezwalaj na zapisywanie hasła" okno dialogowe właściwości połączenia danych. W polu "Wprowadź informacje do logowania się do serwera" istnieją dwa przyciski radiowe:
@@ -53,26 +53,26 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
          > Jeśli wybierzesz **Użyj określonej nazwy użytkownika i hasła**, masz możliwość zapisania hasła (przy użyciu pola wyboru "Zezwalaj na zapisywanie hasła"); Jednakże, ta opcja nie jest bezpieczne. Zaleca się, że wybrano **Użyj Windows NT zintegrowane zabezpieczenia**; ta opcja jest bezpieczna, ponieważ jego szyfruje hasło.
          > Może to być sytuacje, w których chcesz wybrać "Zezwalaj na zapisywanie hasła." Na przykład jeśli są zwalnianie biblioteki za pomocą rozwiązania prywatnej bazy danych, możesz powinna nie bezpośrednio dostęp do bazy danych, ale zamiast tego użyć aplikacji warstwy środkowej do weryfikacji użytkownika (za pośrednictwem dowolnego schematu uwierzytelniania, możesz wybrać), a następnie ograniczyć sortowanie danych dostępne dla użytkownika.
 
-      1. **Wybierz bazę danych na serwerze:** kliknij menu listy rozwijanej, aby wyświetlić wszystkie zarejestrowane baz danych na serwerze danych, a następnie wybierz jedno.
+      1. **Wybierz bazę danych na serwerze:** Kliknij menu listy rozwijanej, aby wyświetlić wszystkie zarejestrowane baz danych na serwerze danych, a następnie wybierz jedno.
 
          \- lub —
 
-         **Dołącz plik bazy danych jako nazwę bazy danych:** określony plik ma być używany jako bazy danych; wprowadź jawną nazwę ścieżki.
+         **Dołącz plik bazy danych jako nazwę bazy danych:** Określ plik, który ma być używany jako bazy danych. Wprowadź jawną nazwę ścieżki.
 
       Dla danych ODBC:
 
-      1. **Określ źródło danych:** można użyć nazwy źródła danych lub parametrów połączenia.
+      1. **Określ źródło danych:** Można użyć nazwy źródła danych lub parametrów połączenia.
 
-         **Użyj nazwy źródła danych:** tej listy rozwijanej wyświetla źródła danych zarejestrowane na tym komputerze. Możesz skonfigurować źródła danych, które wcześniej przy użyciu Administratora źródła danych ODBC
+         **Użyj nazwy źródła danych:** Tej listy rozwijanej wyświetla źródła danych zarejestrowane na tym komputerze. Możesz skonfigurować źródła danych, które wcześniej przy użyciu Administratora źródła danych ODBC
 
          \- lub —
 
-         **Użyj parametrów połączenia:** albo wprowadź parametry połączenia, lub kliknij przycisk już uzyskali **kompilacji** przycisk; **wybierz źródło danych** pojawi się okno dialogowe. Wybierz źródło danych maszyny lub pliku, a następnie kliknij przycisk **OK**.
+         **Użyj parametrów połączenia:** Wprowadź parametry połączenia, już uzyskali, lub kliknij przycisk **kompilacji** przycisk; **wybierz źródło danych** pojawi się okno dialogowe. Wybierz źródło danych maszyny lub pliku, a następnie kliknij przycisk **OK**.
 
          > [!NOTE]
          > Parametry połączenia można uzyskać, wyświetlając właściwości istniejącego połączenia w **Eksploratora serwera**, lub można utworzyć połączenie przez dwukrotne kliknięcie **Dodaj połączenie** w **serwera Eksplorator**.
 
-      1. **Wprowadź informacje dotyczące logowania na serwerze:** wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
+      1. **Wprowadź informacje o logowaniu się do serwera:** Wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
 
       1. Wprowadź początkowy katalog do użycia.
 
@@ -80,9 +80,9 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
    - **Zaawansowane** kartę
 
-      **Ustawienia sieci:** określ **poziom personifikacji** (poziom personifikacji, serwer może być używany podczas personifikowania klienta; odpowiada bezpośrednio z poziomu personifikacji RPC) i  **Poziom ochrony** (odpowiedniego poziomu ochrony danych przesyłanych między klientem i serwerem; odpowiada bezpośrednio do poziomów ochrony RPC).
+      **Ustawienia sieci:** Określ **poziom personifikacji** (poziom personifikacji, serwer może być używany podczas personifikowania klienta; odpowiada bezpośrednio z poziomu personifikacji RPC) i **poziom ochrony** () poziom ochrony danych przesyłanych między klientem i serwerem; odpowiada bezpośrednio poziomów ochrony RPC).
 
-      **Inne:** w **limit czasu połączenia**, określ czas w sekundach czas bezczynności, zanim zostanie przekroczony limit czasu. W **uprawnień dostępu**, określanie uprawnień dostępu w ramach połączenia danych.
+      **Inne:** W **limit czasu połączenia**, określ czas w sekundach czas bezczynności, zanim zostanie przekroczony limit czasu. W **uprawnień dostępu**, określanie uprawnień dostępu w ramach połączenia danych.
 
       Aby uzyskać więcej informacji na temat zaawansowanych właściwości inicjujących zapoznaj się z dokumentacją dostarczoną z każdego dostawcy OLE DB.
 
@@ -90,7 +90,7 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
       Ta karta przedstawia podsumowanie właściwości inicjowania dla źródła danych i połączenia, które zostały określone. Możesz edytować te wartości.
 
-      Kliknij przycisk **OK** na zakończenie. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę, widoku lub procedury składowanej, która będzie używana przez konsumenta.
+      Kliknij przycisk **OK**, aby zakończyć. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę, widoku lub procedury składowanej, która będzie używana przez konsumenta.
 
 - **Class**
 
@@ -165,11 +165,11 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
       Wybierz tę opcję, jeśli chcesz używać `CCommand` lub `db_command` do tworzenia poleceń i polecenia akcesor deklaracji klasy. To ustawienie domyślne.
 
-- **Obsługa**
+- **Pomoc techniczna**
 
    Zaznacz pole wyboru, aby określić rodzaje aktualizacje, które są obsługiwane w konsumencie (domyślna wartość to brak). Następujące czynniki ustawi [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) i odpowiednie wpisy [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) we właściwości ustaw mapy.
 
-   - **Zmiany**
+   - **Change**
 
       Określa, że odbiorcy obsługuje aktualizacje danych wierszy w zestawie wierszy.
 

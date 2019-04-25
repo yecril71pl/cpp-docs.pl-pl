@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306028"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Komunikaty i zasoby zdefiniowane przez MFC
 
@@ -172,7 +172,7 @@ Pasek narzędzi domyślne, dostarczone przez AppWizard jest oparty na rt_toolbar
 
 Jednego formatu do prywatnego zasobu MFC jest używane do przechowywania informacji na temat inicjalizacji dodatkowe okna dialogowego. Obejmuje to ciągi początkowej, przechowywane w polu kombi. Format ten zasób nie jest przeznaczony do należy ręcznie edytować, ale są obsługiwane przez Visual C++.
 
-Visual C++ i ten zasób RT_DLGINIT nie muszą użyć powiązane funkcje MFC, ponieważ istnieją zamiast interfejsu API, korzystając z informacji w zasobie. Przy użyciu języka Visual C++ sprawia, że jest ona znacznie ułatwia pisanie, obsługa i tłumaczenie aplikację w perspektywie długoterminowej.
+Wizualne C++ i ten zasób RT_DLGINIT nie są wymagane do użycia powiązane funkcje MFC, ponieważ istnieją zamiast interfejsu API, korzystając z informacji w zasobie. Przy użyciu języka Visual C++ sprawia, że jest ona znacznie ułatwia pisanie, obsługa i tłumaczenie aplikację w perspektywie długoterminowej.
 
 Podstawowa struktura zasobów RT_DLGINIT jest następująca:
 

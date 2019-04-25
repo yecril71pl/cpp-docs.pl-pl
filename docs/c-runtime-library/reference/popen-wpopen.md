@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
 ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156164"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -94,14 +94,14 @@ Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tpopen —**|**_popen —**|**_popen —**|**_wpopen —**|
+|**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_popen —**|\<stdio.h>|
-|**_wpopen —**|\<stdio.h > lub \<wchar.h >|
+|**_popen**|\<stdio.h>|
+|**_wpopen**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

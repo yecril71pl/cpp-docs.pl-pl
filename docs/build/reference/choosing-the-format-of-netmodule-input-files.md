@@ -3,11 +3,11 @@ title: Wybieranie formatu plików wejściowych .netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
 ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294580"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Wybieranie formatu plików wejściowych .netmodule
 

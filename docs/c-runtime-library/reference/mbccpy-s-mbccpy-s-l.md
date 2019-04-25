@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
 ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156853"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -108,7 +108,7 @@ Wartość w *pCopied* jest wypełniona liczbą bajtów skopiowanych. Możliwe wa
 
 |*src*|skopiowane do *miejsca docelowego*|*pCopied*|Wartość zwracana|
 |-----------|----------------------|---------------|------------------|
-|inne niż bajt wiodący|inne niż bajt wiodący|1|0|
+|non-lead-byte|non-lead-byte|1|0|
 |0|0|1|0|
 |bajt wiodący, następnie inne niż 0|bajt wiodący, następnie inne niż 0|2|0|
 |bajt wiodący, następnie 0|0|1|**EILSEQ**|
@@ -123,7 +123,7 @@ W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania s
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tccpy_s —**|Mapy i makro lub funkcji śródwierszowej.|**_mbccpy_s**|Mapy i makro lub funkcji śródwierszowej.|
+|**_tccpy_s**|Mapy i makro lub funkcji śródwierszowej.|**_mbccpy_s**|Mapy i makro lub funkcji śródwierszowej.|
 
 ## <a name="requirements"></a>Wymagania
 

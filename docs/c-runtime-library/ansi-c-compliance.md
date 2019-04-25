@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
 ms.openlocfilehash: 7a4462e84ec01bd236849c6aed024b636b315243
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290433"
 ---
 # <a name="ansi-c-compliance"></a>Zgodność ANSI-C
 

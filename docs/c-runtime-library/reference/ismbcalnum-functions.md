@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157311"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -113,7 +113,7 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura|Testowanie warunku|Przykład strony kodu 932|
 |-------------|--------------------|---------------------------|
 |**_ismbcalnum —**, **_ismbcalnum_l —**|Alfanumeryczne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego jednobajtową litery angielskiej ASCII: Zobacz przykłady dla **_ismbcdigit —** i **_ismbcalpha —**.|
-|**_ismbcalpha —**, **_ismbcalpha_l —**|Alfabetyczne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego jednobajtową litery angielskiej ASCII: 0x41 < =*c*< = 0x5A lub 0x61 < =*c*< = 0x7A; lub literę katakana: 0xA6 < =*c*< = 0xDF.|
+|**_ismbcalpha —**, **_ismbcalpha_l —**|Alfabetyczne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego jednobajtową litery angielskiej ASCII: 0x41 < =*c*< = 0x5A lub 0x61 < =*c*< = 0x7A; lub literę katakana: 0xA6<=*c*<=0xDF.|
 |**_ismbcdigit —**, **_ismbcdigit —**|cyfra|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego cyfr ASCII: 0x30 < =*c*< = 0x39.|
 
 ## <a name="requirements"></a>Wymagania
@@ -122,7 +122,7 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |-------------|---------------------|
 |**_ismbcalnum —**, **_ismbcalnum_l —**|\<mbstring.h>|
 |**_ismbcalpha —**, **_ismbcalpha_l —**|\<mbstring.h>|
-|**_ismbcdigit —**, **_ismbcdigit_l —**|\<mbstring.h>|
+|**_ismbcdigit**, **_ismbcdigit_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

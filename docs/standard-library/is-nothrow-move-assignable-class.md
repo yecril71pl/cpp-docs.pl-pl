@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_move_assignable, klasa
+title: is_nothrow_move_assignable Class
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_nothrow_move_assignable
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
 ms.openlocfilehash: eb1ddcace7a68bf60154a15117a1c16a438d263d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148463"
 ---
-# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable, klasa
+# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable Class
 
 Sprawdza, czy typ ma **nothrow** przenoszący operator przypisania.
 

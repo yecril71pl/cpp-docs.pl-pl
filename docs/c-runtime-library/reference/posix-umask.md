@@ -21,12 +21,12 @@ helpviewer_keywords:
 - umask function
 ms.assetid: d2f697fc-08d5-4b70-9dd5-df3f5bb8b754
 ms.openlocfilehash: e939282057fee1aa39fb09a4c28cc91278989827
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304679"
 ---
 # <a name="umask"></a>umask
 
-Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_umask —](umask.md) lub zwiększenia bezpieczeństwa [_umask_s —](umask-s.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_umask —](umask.md) lub zwiększenia bezpieczeństwa [_umask_s —](umask-s.md) zamiast tego.

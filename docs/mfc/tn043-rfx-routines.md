@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305401"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: RFX Routines
 
@@ -150,7 +150,7 @@ Aby napisać własną funkcję RFX niestandardowe, zaleca się skopiowanie istni
 
 `RFX_Text` i `RFX_Binary`: Te dwie funkcje przydzielenia statycznego bufor do przechowywania informacji ciąg/dane binarne i należy zarejestrować bufory Procedura SQLBindCol ODBC zamiast wartości & rejestrowanie. W związku z tym te dwie funkcje mają wiele szczególny kodu.
 
-`RFX_Date`: ODBC zwraca informacje daty i godziny w ich własnych TIMESTAMP_STRUCT strukturę danych. Ta funkcja przydziela dynamicznie TIMESTAMP_STRUCT jako "proxy" do wysyłania i odbierania danych czasowych daty. Informacje o datę i godzinę dla różnych operacji musi być przenoszony między C++ `CTime` obiektu i TIMESTAMP_STRUCT serwera proxy. To znacznie komplikuje tej funkcji, ale jest dobrym przykładem przedstawiającym sposób użycia serwera proxy do transferu danych.
+`RFX_Date`: ODBC zwraca informacje daty i godziny w ich własnych TIMESTAMP_STRUCT strukturę danych. Ta funkcja przydziela dynamicznie TIMESTAMP_STRUCT jako "proxy" do wysyłania i odbierania danych czasowych daty. Różne operacje, trzeba przekazać dane daty i godziny między C++ `CTime` obiektu i TIMESTAMP_STRUCT serwera proxy. To znacznie komplikuje tej funkcji, ale jest dobrym przykładem przedstawiającym sposób użycia serwera proxy do transferu danych.
 
 `RFX_LongBinary`: Jest to tylko Biblioteka klasy funkcji RFX, która nie używa powiązanie kolumny w celu odbierania i wysyłania danych. Ta funkcja ignoruje operacji BindFieldToColumn zamiast tego podczas operacji naprawy, przydziela magazynu do przechowywania danych przychodzących SQL_LONGVARCHAR lub SQL_LONGVARBINARY, a następnie wykonuje wywołanie Procedura SQLGetData do pobrania wartości do przydzielenia pamięci. Podczas przygotowywania do wysłania wartości danych z powrotem do źródła danych (na przykład operacje wartości nazwy i wartości), ta funkcja korzysta z funkcji DATA_AT_EXEC ODBC firmy. Zobacz [techniczne 45 Uwaga](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) Aby uzyskać więcej informacji na temat pracy z SQL_LONGVARBINARY i SQL_LONGVARCHARs.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154143"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
@@ -196,7 +196,7 @@ Gdy funkcja zmodyfikuje argument, który jest przekazywany przez odwołanie, mod
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:** Aby jawnie obsługiwać argumenty, które są przekazywane przez odwołanie rvalue lub odwołanie lvalue, użyj double-handlowe "i" w parametrze aby wskazać uniwersalny odwołania:
+**C++ 11:**  Aby jawnie obsługiwać argumenty, które są przekazywane przez odwołanie rvalue lub odwołanie lvalue, należy użyć double-handlowe "i" w parametrze aby wskazać uniwersalny odwołania:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -363,7 +363,7 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
     }
     ```
 
-1. **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Użyj strukturalnego powiązania. Zalet powiązań strukturalnych to, że zmienne, które przechowują wartości zwracane są inicjowane w tym samym czasie, które są deklarowane, co w niektórych przypadkach może być znacznie bardziej efektywne. W niniejszych zasadach--`auto[x, y, z] = f();`--nawiasy wprowadzają i zainicjuj nazw, które znajdują się w zakresie bloku całej funkcji.
+1. **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Użyj powiązań strukturalnych. Zalet powiązań strukturalnych to, że zmienne, które przechowują wartości zwracane są inicjowane w tym samym czasie, które są deklarowane, co w niektórych przypadkach może być znacznie bardziej efektywne. W niniejszych zasadach--`auto[x, y, z] = f();`--nawiasy wprowadzają i zainicjuj nazw, które znajdują się w zakresie bloku całej funkcji.
 
     ```cpp
     #include <tuple>

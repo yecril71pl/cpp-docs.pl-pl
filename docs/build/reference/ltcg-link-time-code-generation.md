@@ -14,11 +14,11 @@ helpviewer_keywords:
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
 ms.openlocfilehash: 40fb591952180735de3a2c226a3953a303c7d90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162360"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generowanie łączonych kodów czasowych)
 
@@ -152,5 +152,5 @@ Można również zastosować **opcję/LTCG** określonej kompilacji, wybierając
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołania konsolidatora MSVC](linking.md)
+- [Dokumentacja konsolidatora MSVC](linking.md)
 - [Opcje konsolidatora MSVC](linker-options.md)

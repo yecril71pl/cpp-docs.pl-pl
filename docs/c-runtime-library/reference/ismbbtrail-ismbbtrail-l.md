@@ -29,11 +29,11 @@ helpviewer_keywords:
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
 ms.openlocfilehash: 5c09884f013e878fca516388f1ad933a2a08b35a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286865"
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 
@@ -72,7 +72,7 @@ Ustawienia regionalne do użycia.
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|---------------------|
 |**_ismbbtrail**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbbtrail_l —**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbbtrail_l**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
 \* Dla stałych manifestu do warunków badania.
 

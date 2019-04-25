@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C2669
+title: Compiler Error C2669
 ms.date: 11/04/2016
 f1_keywords:
 - C2669
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2669
 ms.assetid: f9cb8111-bcdc-484b-a863-2c42e15a0496
 ms.openlocfilehash: 7944ced947ba1d7c8b10172560ce6237a554e236
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300794"
 ---
-# <a name="compiler-error-c2669"></a>Błąd kompilatora C2669
+# <a name="compiler-error-c2669"></a>Compiler Error C2669
 
 Funkcja składowa nie jest dozwolona w anonimowej Unii
 

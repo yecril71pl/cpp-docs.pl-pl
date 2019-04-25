@@ -13,11 +13,11 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator>>
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
 ms.openlocfilehash: 378e5d7b8b36aa9b891a87662d432a451ac6bafe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159902"
 ---
 # <a name="ltfilesystemgt-operators"></a>&lt;System plików&gt; operatorów
 
@@ -116,4 +116,4 @@ return (is);
 
 [PATH — klasa (standardowa biblioteka C++)](../standard-library/path-class.md)<br/>
 [Nawigacja w systemie plików (C++)](../standard-library/file-system-navigation.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>

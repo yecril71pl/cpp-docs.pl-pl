@@ -17,11 +17,11 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218615"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Zalecenia dotyczące wybierania klasy kolekcji
 
@@ -52,7 +52,7 @@ Poniższa tabela [kolekcji elementów kształtu](#_core_collection_shape_feature
 |Kształt|Uporządkowane|Indeksowane|Wstaw element|Wyszukiwanie określonego elementu|Zduplikowane elementy|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
 |Lista|Tak|Nie|Szybka|Powolne|Tak|
-|Tablica|Tak|Przez int|Powolne|Powolne|Tak|
+|Tablica|Yes|Przez int|Powolne|Powolne|Tak|
 |Mapa|Nie|Według klucza|Szybka|Szybka|Tak (wartości) (kluczy)|
 
 Poniższa tabela [właściwości z kolekcji klas MFC](#_core_characteristics_of_mfc_collection_classes), znajduje się podsumowanie innych istotnych cech określonych klasy kolekcji MFC jako przewodnika do zaznaczenia. Wybór może zależeć od tego, czy klasa opiera się na szablonów języka C++, czy jego elementów może być Zserializowany za pośrednictwem dokumentu MCF [serializacji](../mfc/serialization-in-mfc.md) mechanizmu, czy jego elementy można utworzyć zrzutu za pomocą MFC użytkownika diagnostycznych zrzucanie mechanizmu, lub czy klasa jest bezpieczny — oznacza to, czy może zagwarantować typ elementów przechowywanych w i pobierane z kolekcji na podstawie klasy.
@@ -62,8 +62,8 @@ Poniższa tabela [właściwości z kolekcji klas MFC](#_core_characteristics_of_
 |Class|Używa języka C++<br /><br /> szablony|Może być<br /><br /> serializacji|Może być<br /><br /> Wykonano zrzutu|jest<br /><br /> bezpieczne|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
 |`CArray`|Tak|Tak 1|Tak 1|Nie|
-|`CByteArray`|Nie|Yes|Tak|Tak 3|
-|`CDWordArray`|Nie|Yes|Tak|Tak 3|
+|`CByteArray`|Nie|Yes|Yes|Tak 3|
+|`CDWordArray`|Nie|Yes|Yes|Tak 3|
 |`CList`|Tak|Tak 1|Tak 1|Nie|
 |`CMap`|Tak|Tak 1|Tak 1|Nie|
 |`CMapPtrToPtr`|Nie|Nie|Yes|Nie|
@@ -78,12 +78,12 @@ Poniższa tabela [właściwości z kolekcji klas MFC](#_core_characteristics_of_
 |`CPtrArray`|Nie|Nie|Yes|Nie|
 |`CPtrList`|Nie|Nie|Yes|Nie|
 |`CStringArray`|Nie|Yes|Tak|Tak 3|
-|`CStringList`|Nie|Yes|Tak|Tak 3|
+|`CStringList`|Nie|Yes|Yes|Tak 3|
 |`CTypedPtrArray`|Tak|Zależy od 2|Tak|Yes|
-|`CTypedPtrList`|Tak|Zależy od 2|Tak|Yes|
-|`CTypedPtrMap`|Tak|Zależy od 2|Tak|Yes|
+|`CTypedPtrList`|Tak|Zależy od 2|Yes|Yes|
+|`CTypedPtrMap`|Yes|Zależy od 2|Tak|Yes|
 |`CUIntArray`|Nie|Nie|Tak|Tak 3|
-|`CWordArray`|Nie|Yes|Tak|Tak 3|
+|`CWordArray`|Nie|Yes|Yes|Tak 3|
 
 1. Do serializacji, należy jawnie wywołać obiekt kolekcji `Serialize` funkcji; aby zrzutu, należy jawnie wywołać jej `Dump` funkcji. Nie można użyć formy `ar << collObj` do serializacji lub formularzu `dmp` `<< collObj` do zrzutu.
 

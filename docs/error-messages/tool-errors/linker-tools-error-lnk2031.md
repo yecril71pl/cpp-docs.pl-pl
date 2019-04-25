@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
 ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298922"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Błąd narzędzi konsolidatora LNK2031
 
@@ -19,7 +19,7 @@ ms.locfileid: "50484845"
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas próby zaimportowania funkcji natywnej do czystego obrazu, należy pamiętać, że niejawne konwencji wywoływania różnią się macierzystych i czystych kompilacji. Aby uzyskać więcej informacji o obrazach czystego, zobacz [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Podczas próby zaimportowania funkcji natywnej do czystego obrazu, należy pamiętać, że niejawne konwencji wywoływania różnią się macierzystych i czystych kompilacji. Aby uzyskać więcej informacji o obrazach czystego, zobacz [czystej i weryfikowalny kod (C++sposób niezamierzony)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 **/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
