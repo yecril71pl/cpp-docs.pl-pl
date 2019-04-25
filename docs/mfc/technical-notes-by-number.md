@@ -5,11 +5,11 @@ f1_keywords:
 - vc.tables.mfc.technotes
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
 ms.openlocfilehash: c5a102f36c5556af48a1b3f79e39f256bc5797ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306408"
 ---
 # <a name="technical-notes-by-number"></a>Uwagi techniczne według numerów
 
@@ -42,7 +42,7 @@ Uwagi techniczne poniżej są wymienione jako wartość liczbowa, za pomocą nie
 |46|[Konwencje komentowania dla klas MFC](../mfc/tn046-commenting-conventions-for-the-mfc-classes.md)|
 |45|[Obsługa MFC/bazy danych długich Varchar/Varbinary](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)|
 |44|[Obsługa MFC dla DBCS](../mfc/tn044-mfc-support-for-dbcs.md)|
-|43|[Procedury RFX](../mfc/tn043-rfx-routines.md)|
+|43|[RFX Routines](../mfc/tn043-rfx-routines.md)|
 |42|[Zalecenia dla deweloperów sterowników ODBC](../mfc/tn042-odbc-driver-developer-recommendations.md)|
 |41|[MFC/Ole1 do MFC/OLE2](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)|
 |40|[Praca w miejscu MFC/OLE — Zmienianie rozmiaru i powiększanie](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)|
