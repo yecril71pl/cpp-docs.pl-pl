@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
 ms.openlocfilehash: 1a0d231a066209307041681232cc3410210d4d02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293566"
 ---
 # <a name="xml-file-processing"></a>Przetwarzanie pliku .Xml
 
@@ -27,7 +27,7 @@ Kompilator stosuje następujące reguły podczas generowania ciągi identyfikato
   |---------------|-----------------|
   | N | — przestrzeń nazw<br /><br /> Nie można dodać komentarze dokumentacji do przestrzeni nazw, możliwe są cref odwołania do przestrzeni nazw. |
   | T | Typ: klasy, interfejsu, struktury, wyliczenia, delegat |
-  | D |  — klasa typedef |
+  | D | — klasa typedef |
   | F | pole |
   | P | właściwości (w tym indeksatory lub innych właściwości indeksowane) |
   | M | metody (w tym specjalnych metodami, takimi jak konstruktory, operatorów i tak dalej) |

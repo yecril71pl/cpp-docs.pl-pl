@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
 ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252730"
 ---
 # <a name="allocators"></a>Allocators
 
@@ -45,7 +45,7 @@ Minimalny alokatora wymaga znacznie mniejszym stopniu deklaratywnie i pozwalają
 Wartość C ++ 11 domyślna `construct()` elementu członkowskiego, która będzie dostępna dla Ciebie doskonała, przekazywanie i umożliwia przenoszenie semantyki; jest znacznie bardziej efektywne w wielu przypadkach niż starszej wersji.
 
 > [!WARNING]
-> W czasie kompilacji standardowej biblioteki C++ klasy allocator_traits wykrywa elementów członkowskich, które podane jawnie i udostępnia domyślną implementację interfejsu dla jakichkolwiek członków, które nie są obecne. Nie zakłóca tego mechanizmu, zapewniając specjalizacja allocator_traits dla Twojego programu przydzielania!
+> W czasie kompilacji C++ standardowej biblioteki klasy allocator_traits wykrywa elementów członkowskich, które podane jawnie i udostępnia domyślną implementację interfejsu dla jakichkolwiek członków, które nie są obecne. Nie zakłóca tego mechanizmu, zapewniając specjalizacja allocator_traits dla Twojego programu przydzielania!
 
 W poniższym przykładzie przedstawiono minimalne wykonanie alokatora, który używa `malloc` i `free`. Zwróć uwagę na użycie nowy typ wyjątku `std::bad_array_new_length` którego jest generowany, jeśli rozmiar tablicy jest mniejsza od zera lub większa niż maksymalny dozwolony rozmiar.
 

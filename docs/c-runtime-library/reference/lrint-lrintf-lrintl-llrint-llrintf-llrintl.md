@@ -43,11 +43,11 @@ helpviewer_keywords:
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
 ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285775"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -116,13 +116,13 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **lri
 
 Jeśli *x* nie reprezentuje zmiennoprzecinkową wielokrotność wartość całkowitą, te funkcje wywołują **FE_INEXACT**.
 
-**Specyficzne dla firmy Microsoft**: gdy wynik jest poza zakresem zwracany typ lub parametr jest NaN lub nieskończoność, wartość zwracana jest definiowany przez implementację. Kompilator Microsoft zwraca wartość zero (0).
+**Specyficzne dla firmy Microsoft**: Gdy wynik jest poza zakresem zwracany typ lub parametr jest NaN lub nieskończoność, wartość zwracana jest definiowany przez implementację. Kompilator Microsoft zwraca wartość zero (0).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath >|
+|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - yn function
 ms.assetid: e14215f3-53d4-4ae8-816e-4c1ec2019316
 ms.openlocfilehash: bd7dc2a1d6e4d8aa52a61ee86e6a45996d028173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258445"
 ---
 # <a name="y0-y1-yn"></a>y0, y1, yn
 
-Te funkcje POSIX są przestarzałe. Użyj zgodność ISO C++ [funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) zamiast tego.
+Te funkcje POSIX są przestarzałe. Użyj ISO C++ zgodność [funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) zamiast tego.

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288787"
 ---
 # <a name="cwait"></a>_cwait
 
@@ -55,7 +55,7 @@ Wskaźnik do buforu, w którym będą przechowywane kod wyniku określonego proc
 Dojście do procesu oczekiwania (oznacza to, że proces, który ma zostać przerwany przed **_cwait** może zwrócić).
 
 *Akcja*<br/>
-Wartość NULL: Ignorowane przez aplikacje systemu operacyjnego Windows; w przypadku innych aplikacji: kod akcji do wykonania na *procHandle*.
+WARTOŚĆ NULL: Ignorowane przez aplikacje systemu operacyjnego Windows; w przypadku innych aplikacji: kod akcji do wykonania na *procHandle*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -82,7 +82,7 @@ Chyba że *procHandle* jest wartość -1 lub -2 (obsługiwane bieżący proces l
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|---------------------|
-|**_cwait**|\<process.h >|\<errno.h>|
+|**_cwait**|\<process.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

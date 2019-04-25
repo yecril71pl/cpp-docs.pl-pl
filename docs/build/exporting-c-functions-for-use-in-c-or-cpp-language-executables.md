@@ -9,15 +9,15 @@ helpviewer_keywords:
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
 ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273576"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Eksportowanie funkcji języka C do użycia w plikach wykonywalnych języka C lub C++
 
-W przypadku funkcji w bibliotece DLL w języku C, którego chcesz uzyskać dostęp z języka C lub modułu języka C++, należy użyć **__cplusplus** makro preprocesora Aby określić język, który jest kompilowany, a następnie je zadeklarować funkcji z powiązaniem C, jeśli są używane z modułu języka C++. Jeśli korzystasz z tej techniki i udostępniają pliki nagłówka dla biblioteki DLL, te funkcje można używane przez C i C++ użytkowników bez zmian.
+W przypadku funkcji w bibliotece DLL napisane w języku C, który chcesz uzyskać dostęp z języka C lub C++ modułu języka, należy użyć **__cplusplus** makro preprocesora Aby określić język, który jest kompilowany, a następnie je zadeklarować funkcje z powiązaniem C, jeśli są używane z C++ modułu języka. Jeśli korzystasz z tej techniki i udostępniają pliki nagłówka dla biblioteki DLL, te funkcje można używane przez C i C++ użytkowników bez zmian.
 
 Poniższy kod przedstawia plik nagłówka, które mogą być używane przez aplikacje klienckie C i C++:
 

@@ -1,6 +1,6 @@
 ---
 title: Błędy kompilatora od C3000 do C3099
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C3051
 - C3061
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - C3093
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-ms.openlocfilehash: b7a01c35086fe503e39af2af60655c03301dc7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281669"
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>Błędy kompilatora od C3000 do C3099
 
@@ -55,10 +55,10 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 |Błąd|Komunikat|
 |-----------|-------------|
-|Kompilatora od C3000 do błędu|Nieaktualne.|
+|Błąd kompilatora od C3000|Nieaktualne.|
 |[Błąd kompilatora C3001](compiler-error-c3001.md)|"*komunikat*": Oczekiwano nazwy dyrektywy OpenMP|
 |[Błąd kompilatora C3002](compiler-error-c3002.md)|"*Nazwa1* *Nazwa2*": wielokrotne nazwy dyrektyw OpenMP|
-|[Błąd kompilatora C3003](compiler-error-c3003.md)|"*dyrektywy*': Nazwa dyrektywy OpenMP nie jest dozwolona po klauzulach dyrektywy|
+|[Błąd kompilatora C3003](compiler-error-c3003.md)|"*dyrektywy*": Nazwa dyrektywy OpenMP nie jest dozwolona po klauzulach dyrektywy|
 |[Błąd kompilatora C3004](compiler-error-c3004.md)|"*klauzuli*": nie jest prawidłowa w OpenMP — klauzula "*dyrektywy*" — dyrektywa|
 |[Błąd kompilatora C3005](compiler-error-c3005.md)|"*komunikat*": Napotkano nieoczekiwany token w OpenMP "*dyrektywy*" — dyrektywa|
 |[Błąd kompilatora C3006](compiler-error-c3006.md)|"*klauzuli*": klauzula w OpenMP "*dyrektywy*" dyrektywy brakuje oczekiwanego argumentu|
@@ -84,7 +84,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C3026](compiler-error-c3026.md)|"*klauzuli*": stałe wyrażenie musi być liczbą dodatnią|
 |[Błąd kompilatora C3027](compiler-error-c3027.md)|"*klauzuli*": Oczekiwano wyrażenia arytmetycznego lub wskaźnikowego|
 |[Błąd kompilatora C3028](compiler-error-c3028.md)|"*elementu członkowskiego*": tylko zmienna lub statyczna składowa danych mogą być używane w klauzuli udostępniania danych|
-|[Błąd kompilatora C3029](compiler-error-c3029.md)|"*symbol*": może wystąpić tylko raz w udostępnianie danych klauzule OpenMP — dyrektywa|
+|[Compiler error C3029](compiler-error-c3029.md)|"*symbol*": może wystąpić tylko raz w udostępnianie danych klauzule OpenMP — dyrektywa|
 |[Błąd kompilatora C3030](compiler-error-c3030.md)|"*identyfikator*": zmienna w "*dyrektywy*" klauzuli/dyrektywie nie może mieć typu referencyjnego|
 |[Błąd kompilatora C3031](compiler-error-c3031.md)|"*identyfikator*": zmienna w klauzuli "reduction" musi mieć typ arytmetyczny skalarne|
 |[Błąd kompilatora C3032](compiler-error-c3032.md)|"*identyfikator*": zmienna w "*klauzuli*"klauzula nie może posiadać niekompletnego typu"*typu*"|
@@ -104,9 +104,9 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C3046](compiler-error-c3046.md)|Brak bloku strukturalnego w regionie "#pragma omp sections" OpenMP|
 |[Błąd kompilatora C3047](compiler-error-c3047.md)|Blok strukturalny w regionie "sections" musi być poprzedzony przez "#pragma omp section" OpenMP|
 |[Błąd kompilatora C3048](compiler-error-c3048.md)|Wyrażenie po "#pragma omp niepodzielny" posiada niewłaściwy formularz|
-|[Błąd kompilatora C3049](compiler-error-c3049.md)|"*argument*": nieprawidłowy argument w klauzuli "default" OpenMP|
+|[Compiler error C3049](compiler-error-c3049.md)|"*argument*": nieprawidłowy argument w klauzuli "default" OpenMP|
 |[Błąd kompilatora C3050](compiler-error-c3050.md)|"*klasy*": klasa ref nie może dziedziczyć z "*identyfikator*"|
-|C3051 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C3051|Nieaktualne.|
 |[Błąd kompilatora C3052](compiler-error-c3052.md)|"*identyfikator*": zmienna nie pojawia się w klauzuli udostępniania danych pod klauzulą default(none)|
 |[Błąd kompilatora C3053](compiler-error-c3053.md)|"*identyfikator*": "threadprivate" jest tylko prawidłowy dla globalnych lub statycznych elementów danych|
 |[Błąd kompilatora C3054](compiler-error-c3054.md)|"#pragma omp parallel" nie jest obecnie obsługiwane w generycznej klasie lub funkcji|
@@ -116,42 +116,47 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C3058](compiler-error-c3058.md)|"*identyfikator*": symbol niezadeklarowany jako "threadprivate" przed jego użyciem w klauzuli "copyin"|
 |[Błąd kompilatora C3059](compiler-error-c3059.md)|"*identyfikator*": symbol "threadprivate" nie może zostać użyty w "*klauzuli*" — klauzula|
 |[Błąd kompilatora C3060](compiler-error-c3060.md)|"*identyfikator*": funkcja zaprzyjaźniona nie może być zdefiniowana wewnątrz klasy przy użyciu kwalifikowanej nazwy (go może być tylko zadeklarowana)|
-|C3061 błąd kompilatora|operator "*operator*": nie jest dozwolony w wyliczeniu "*typu*"z typem podstawowym"*typu*"|
+|Błąd kompilatora C3061|operator "*operator*": nie jest dozwolony w wyliczeniu "*typu*"z typem podstawowym"*typu*"|
 |[Błąd kompilatora C3062](compiler-error-c3062.md)|"*identyfikator*": moduł wyliczający wymaga wartości, ponieważ jest to typ podstawowy "*typu*"|
 |[Błąd kompilatora C3063](compiler-error-c3063.md)|operator "*operator*": wszystkie operandy muszą posiadać ten sam typ wyliczeniowy|
-|C3064 błąd kompilatora|"*identyfikator*": musi być typu prostego lub być rozpoznawanym|
+|Błąd kompilatora C3064|"*identyfikator*": musi być typu prostego lub być rozpoznawanym|
 |[Błąd kompilatora C3065](compiler-error-c3065.md)|Deklaracja właściwości w zakresie nieklasowym nie jest dozwolone.|
 |[Błąd kompilatora C3066](compiler-error-c3066.md)|istnieje wiele sposobów obiektu tego typu można wywołać z tymi argumentami|
-|C3067 błąd kompilatora|Lista inicjalizatora nie można używać z wbudowanym operatorem]|
+|Błąd kompilatora C3067|Lista inicjalizatora nie można używać z wbudowanym operatorem]|
 |[Błąd kompilatora C3068](compiler-error-c3068.md)|"*identyfikator*": funkcja "naked" nie może zawierać obiekty, które wymagałyby rozwinięcia gdy wystąpi wyjątek C++|
-|[Błąd kompilatora C3069](compiler-error-c3069.md)|operator "*operator*": niedozwolone dla typu wyliczeniowego|
+|[Compiler error C3069](compiler-error-c3069.md)|operator "*operator*": niedozwolone dla typu wyliczeniowego|
 |[Błąd kompilatora C3070](compiler-error-c3070.md)|"*identyfikator*": właściwość nie ma metody "set"|
 |[Błąd kompilatora C3071](compiler-error-c3071.md)|operator "*operator*" można stosować tylko do wystąpienia klasy ref lub typu wartościowego|
 |[Błąd kompilatora C3072](compiler-error-c3072.md)|operator "*operator*" nie można zastosować do wystąpienia klasy ref zastosowanie operatora jednoargumentowego "%" by skonwertować wystąpienie ref klasy na typ dojścia|
 |[Błąd kompilatora C3073](compiler-error-c3073.md)|"*identyfikator*": klasa ref nie ma konstruktora kopiującego zdefiniowanego przez użytkownika|
-|C3074 błąd kompilatora|Nie można zainicjować tablicy za pomocą inicjalizatora w nawiasach okrągłych|
+|Błąd kompilatora C3074|Nie można zainicjować tablicy za pomocą inicjalizatora w nawiasach okrągłych|
 |[Błąd kompilatora C3075](compiler-error-c3075.md)|"*identyfikator*": nie można osadzić wystąpienia typu referencyjnego "*typu*", utworzenie typu wartości|
 |[Błąd kompilatora C3076](compiler-error-c3076.md)|"*identyfikator*": nie można osadzić wystąpienia typu referencyjnego "*typu*", w typie natywnym|
 |[Błąd kompilatora C3077](compiler-error-c3077.md)|"*identyfikator*": finalizator może być tylko składową typu referencyjnego|
-|C3078 błąd kompilatora|w nowych wyrażeniach należy określić rozmiar tablicy|
-|C3079 błąd kompilatora|Lista inicjalizatora nie może służyć jako prawy operand operatora przypisania|
+|Błąd kompilatora C3078|w nowych wyrażeniach należy określić rozmiar tablicy|
+|Błąd kompilatora C3079|Lista inicjalizatora nie może służyć jako prawy operand operatora przypisania|
 |[Błąd kompilatora C3080](compiler-error-c3080.md)|"*finalizator*": finalizator nie może mieć storage-class-specifier|
-|C3081 błąd kompilatora|Nieaktualne.|
-|C3082 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C3081|Nieaktualne.|
+|Błąd kompilatora C3082|Nieaktualne.|
 |[Błąd kompilatora C3083](compiler-error-c3083.md)|"*identyfikator*": symbol po lewej stronie "::" musi być typem|
 |[Błąd kompilatora C3084](compiler-error-c3084.md)|"*identyfikator*": destruktor/finalizator nie może być "*— słowo kluczowe*"|
 |[Błąd kompilatora C3085](compiler-error-c3085.md)|"*identyfikator*": Konstruktor nie może być "*— słowo kluczowe*"|
-|C3086 błąd kompilatora|Nie można odnaleźć "std::initializer_list": należy #include \<initializer_list >|
+|Błąd kompilatora C3086|Nie można odnaleźć "std::initializer_list": należy #include \<initializer_list >|
 |[Błąd kompilatora C3087](compiler-error-c3087.md)|"*identyfikator*": wywołanie "*deklaracji*" już inicjuje tą składową|
-|C3088 błąd kompilatora|"*klasy*": atrybut konstruktora musi posiadać nazwane argumenty formalne|
-|C3089 błąd kompilatora|"*identyfikator*': Nazwa parametru nie jest zgodna z nazwą składowej danych|
-|C3090 błąd kompilatora|"*klasy*": atrybut klasy nie może być szablonem|
-|C3091 błąd kompilatora|"*klasy*": atrybut klasy nie może mieć klas bazowych|
-|C3092 błąd kompilatora|"*klasy*": atrybut klasy: składowa nie może być nieco pola, "static" lub "const"|
-|C3093 błąd kompilatora|"*typu*": typ nie jest dozwolony dla atrybutu klasy składowej "*elementu członkowskiego*"|
+|Błąd kompilatora C3088|"*klasy*": atrybut konstruktora musi posiadać nazwane argumenty formalne|
+|Błąd kompilatora C3089|"*identyfikator*': Nazwa parametru nie jest zgodna z nazwą składowej danych|
+|Błąd kompilatora C3090|"*klasy*": atrybut klasy nie może być szablonem|
+|Błąd kompilatora C3091|"*klasy*": atrybut klasy nie może mieć klas bazowych|
+|Błąd kompilatora C3092|"*klasy*": atrybut klasy: składowa nie może być nieco pola, "static" lub "const"|
+|Błąd kompilatora C3093|"*typu*": typ nie jest dozwolony dla atrybutu klasy składowej "*elementu członkowskiego*"|
 |[Błąd kompilatora C3094](compiler-error-c3094.md)|"*atrybut*": anonimowe użycie nie jest dozwolone|
 |[Błąd kompilatora C3095](compiler-error-c3095.md)|"*atrybut*": atrybut nie może powtarzać się|
-|[Błąd kompilatora C3096](compiler-error-c3096.md)|"*atrybut*": atrybut jest dozwolony na składowych danych klas atrybutów tylko|
+|[Compiler error C3096](compiler-error-c3096.md)|"*atrybut*": atrybut jest dozwolony na składowych danych klas atrybutów tylko|
 |[Błąd kompilatora C3097](compiler-error-c3097.md)|"*atrybut*": atrybut musi być objęty zakresem "zestawu:" lub "module:"|
-|C3098 błąd kompilatora|"*identyfikator*": atrybut nie ma konstruktorów zdefiniowanych przez użytkownika|
-|[Błąd kompilatora C3099](compiler-error-c3099.md)|"*— słowo kluczowe*": Użyj [System::AttributeUsageAttribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] dla atrybutów zarządzane/WinRT|
+|Błąd kompilatora C3098|"*identyfikator*": atrybut nie ma konstruktorów zdefiniowanych przez użytkownika|
+|[Compiler error C3099](compiler-error-c3099.md)|"*— słowo kluczowe*": Użyj [System::AttributeUsageAttribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] dla atrybutów zarządzane/WinRT|
+
+## <a name="see-also"></a>Zobacz także
+
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
+[Błędy kompilatora — od C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

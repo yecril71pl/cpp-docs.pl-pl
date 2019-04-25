@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: c0a8e42cb7ee78c399459be82e50ef37ab203816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279037"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;Wątek&gt; funkcji
 
@@ -59,7 +59,7 @@ A [czas trwania](../standard-library/duration-class.md) obiekt, który określa 
 
 Funkcja blokuje wątek wywołujący dla co najmniej czas, który jest określony przez *Rel_time*. Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="sleep_until"></a>  sleep_until —
+## <a name="sleep_until"></a>  sleep_until
 
 Blokuje wątek wywołujący, co najmniej do określonego czasu.
 

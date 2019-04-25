@@ -36,11 +36,11 @@ helpviewer_keywords:
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
 ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287511"
 ---
 # <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
 
@@ -59,7 +59,7 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Strumień wejściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -74,14 +74,14 @@ Te funkcje są takie same jak **getc —** i **getwc —** z tą różnicą, że
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_gettc_nolock —**|**getc_nolock —**|**getc_nolock —**|**getwc_nolock —**|
+|**_gettc_nolock**|**getc_nolock**|**getc_nolock**|**getwc_nolock**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**getc_nolock —**|\<stdio.h>|
-|**getwc_nolock —**|\<stdio.h > lub \<wchar.h >|
+|**getc_nolock**|\<stdio.h>|
+|**getwc_nolock**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

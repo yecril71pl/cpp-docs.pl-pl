@@ -3,11 +3,11 @@ title: /arch (x64)
 ms.date: 11/04/2016
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
 ms.openlocfilehash: c515307ee3a49ef746eea939e90d7aecbd661b95
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295288"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
@@ -50,5 +50,5 @@ Włącza używanie instrukcji Intel zaawansowany wektor rozszerzeń 2.
 ## <a name="see-also"></a>Zobacz także
 
 [/arch (Minimalna architektura procesora CPU)](arch-minimum-cpu-architecture.md)<br/>
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

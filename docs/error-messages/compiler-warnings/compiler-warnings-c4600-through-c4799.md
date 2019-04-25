@@ -1,6 +1,6 @@
 ---
 title: Ostrzeżenia kompilatora od C4600 do C4799
-ms.date: 07/03/2018
+ms.date: 04/21/2019
 f1_keywords:
 - C4609
 - C4658
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - C4767
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: d1b1e06d3a2be71d6386554c704c547c6f2a4672
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3df17b115797f4d68621854d072c41aca14a0fd8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227034"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Ostrzeżenia kompilatora od C4600 do C4799
 
@@ -131,7 +131,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|"attribute": OSTRZEŻENIE!! atrybut może powodować generowanie nieprawidłowego kodu: Używaj ostrożnie|
 |[Ostrzeżenie kompilatora (poziom 1) C4685](compiler-warning-level-1-c4685.md)|Oczekiwano znaku ">>" znaleziono ">>" podczas analizowania parametrów szablonu|
 |[Ostrzeżenie kompilatora (poziom 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'typ zdefiniowany przez użytkownika': możliwe zmiany w zachowaniu, zmiana w konwencji wywoływania zwrotu UDT|
-|[Ostrzeżenie (błąd) kompilatora C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|"class": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "interface"|
+|[Kompilator ostrzeżenie C4687 (błąd)](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|"class": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "interface"|
 |[Ostrzeżenie kompilatora (poziom 1) C4688](../../error-messages/compiler-warnings/compiler-warning-level-1-c4688.md)|"ograniczenia": Lista ograniczeń zawiera prywatny typ zestawu "type"|
 |Ostrzeżenie kompilatora (poziom 1) C4689|"%c": nieobsługiwany znak w dyrektywie #pragma detect_mismatch; #pragma ignorowane|
 |[Ostrzeżenie kompilatora (poziom 4) C4690](../../error-messages/compiler-warnings/compiler-warning-level-4-c4690.md)|\[ emitidl (pop)]: więcej zdejmowań niż włożeń|
@@ -151,7 +151,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |[Ostrzeżenie kompilatora (poziom 1) C4711](../../error-messages/compiler-warnings/compiler-warning-level-1-c4711.md)|funkcji "function" wybrane do automatycznego rozwinięcia funkcji wbudowanej|
 |[Ostrzeżenie kompilatora (poziom 4) C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)|funkcji "function" oznaczona jako __forceinline nie jest śródwierszowa|
 |[Ostrzeżenie kompilatora (poziom 1) C4715](../../error-messages/compiler-warnings/compiler-warning-level-1-c4715.md)|'Funkcja': niewszystkie ścieżki kodu zwracają wartość|
-|[Kompilator ostrzeżenie (poziom 1, błąd) C4716](../../error-messages/compiler-warnings/compiler-warning-level-1-c4716.md)|'Funkcja': musi zwracać wartość|
+|[Ostrzeżenie kompilatora (poziom 1, błąd) C4716](../../error-messages/compiler-warnings/compiler-warning-level-1-c4716.md)|'Funkcja': musi zwracać wartość|
 |[Ostrzeżenie kompilatora (poziom 1) C4717](../../error-messages/compiler-warnings/compiler-warning-level-1-c4717.md)|'Funkcja': cykliczne we wszystkich ścieżkach, funkcja spowoduje przepełnienie stosu środowiska uruchomieniowego|
 |[Ostrzeżenie kompilatora (poziom 4) C4718](compiler-warning-level-4-c4718.md)|"wywołanie funkcji": wywołanie cykliczne nie ma żadnych efektów ubocznych, usuwanie|
 |Ostrzeżenie kompilatora (poziom 1) C4719|Stała typu Double znaleziona, gdy określono parametr Qfast - użyj opcji "f" jako przyrostka, aby wskazać pojedynczą precyzję|
@@ -165,16 +165,16 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 1) C4728|/ Opcja Yl-zignorowane, ponieważ wymagane jest odwołanie do PCH|
 |Ostrzeżenie kompilatora (poziom 4) C4729|Funkcja za duża dla grafu przepływu na podstawie ostrzeżenia|
 |[Ostrzeżenie (poziom 1) C4730 kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-1-c4730.md)ostrzeżenie kompilatora (poziom 1) C4730|"main": połączenie typu _m64 i zmiennoprzecinkowa wyrażeń może spowodować niepoprawny kod|
-|[Ostrzeżenie kompilatora (poziom 1) C4731](../../error-messages/compiler-warnings/compiler-warning-level-1-c4731.md)|"wskaźnik": rejestr wskaźnika "register" zmodyfikowany przez wbudowany kod asemblera ramki|
+|[(Poziom 1) C4731 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-1-c4731.md)|"wskaźnik": rejestr wskaźnika "register" zmodyfikowany przez wbudowany kod asemblera ramki|
 |Ostrzeżenie kompilatora (poziom 1) C4732|wewnętrzne "%s" nie jest obsługiwana w ramach tej architektury|
-|[Ostrzeżenie kompilatora (poziom 1) C4733](../../error-messages/compiler-warnings/compiler-warning-level-1-c4733.md)|Przypisanie w wbudowanym do "FS:0": obsługa nie jest zarejestrowana jako bezpieczna Obsługa|
-|[Ostrzeżenie kompilatora (poziom 3) C4738](../../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)|przechowywanie 32-bitowego wyniku zmiennopozycyjnego w pamięci, możliwa utrata wydajności|
+|[(Poziom 1) C4733 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-1-c4733.md)|Przypisanie w wbudowanym do "FS:0": obsługa nie jest zarejestrowana jako bezpieczna Obsługa|
+|[(Poziom 3) C4738 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)|przechowywanie 32-bitowego wyniku zmiennopozycyjnego w pamięci, możliwa utrata wydajności|
 |[Ostrzeżenie kompilatora (poziom 1) C4739](compiler-warning-level-1-c4739.md)|Odwołanie do zmiennej "var" przekracza jego miejsce do magazynowania|
-|[Ostrzeżenie kompilatora (poziom 4) C4740](../../error-messages/compiler-warnings/compiler-warning-level-4-c4740.md)|przepływ w lub wyjścia wbudowanego kodu asemblera pomija optymalizację globalną|
-|[Ostrzeżenie kompilatora (poziom 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|"var" ma inne wyrównanie w 'plik1' i 'plik2': i numer|
-|[Ostrzeżenie kompilatora (poziom 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|"type" ma inny rozmiar w 'plik1' i 'plik2': liczbę i liczba bajtów|
-|[Ostrzeżenie kompilatora (poziom 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|"var" ma inny typ w 'plik1' i 'plik2': 'Typ1' i 'type2'|
-|[Ostrzeżenie kompilatora C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp "*wyrażenie*" podlega/volatile:\<iso&#124;ms >; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store funkcje wewnętrzne|
+|[(Poziom 4) C4740 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-4-c4740.md)|przepływ w lub wyjścia wbudowanego kodu asemblera pomija optymalizację globalną|
+|[(Poziom 1) C4742 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|"var" ma inne wyrównanie w 'plik1' i 'plik2': i numer|
+|[(Poziom 1) C4743 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|"type" ma inny rozmiar w 'plik1' i 'plik2': liczbę i liczba bajtów|
+|[(Poziom 1) C4744 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|"var" ma inny typ w 'plik1' i 'plik2': 'Typ1' i 'type2'|
+|[C4746 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp "*wyrażenie*" podlega/volatile:\<iso&#124;ms >; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store funkcje wewnętrzne|
 |[Ostrzeżenie kompilatora (poziom 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Wywołanie zarządzanego "punkt wejścia": Kod zarządzany nie mogą być uruchamiane w ramach blokady modułu ładującego, włączając w to punkt wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL|
 |Ostrzeżenie kompilatora (poziom 4) C4749|warunkowo obsługiwane: makro offsetof zastosowano do typu nienależące niestandardowym układzie "*typu*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4750](compiler-warning-level-1-c4750.md)|'Identyfikator': funkcja zawierająca _alloca() została wbudowana w pętlę|
@@ -189,15 +189,20 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 |Ostrzeżenie kompilatora (poziom 3) C4768|atrybuty __declspec przed specyfikacją konsolidacji są ignorowane.|
 |C4770 ostrzeżenia kompilatora|częściowo zweryfikowane wyliczenie "*nazwa*" używane jako indeks|
 |C4771 ostrzeżenia kompilatora|Granice muszą zostać utworzone przy użyciu wskaźnika prostego; Zignorowano funkcję wewnętrzną MPX|
-|[Kompilator ostrzeżenie (poziom 1, błąd) C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#import odwołanie do typu z brakującej biblioteki typów; "missing_type" jest używana jako symbol zastępczy|
+|[Ostrzeżenie kompilatora (poziom 1, błąd) C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#import odwołanie do typu z brakującej biblioteki typów; "missing_type" jest używana jako symbol zastępczy|
 |Ostrzeżenie kompilatora (poziom 4) C4774|"*ciąg*": ciąg oczekiwany w argumencie formatu *numer* nie jest ciągiem literału|
 |Ostrzeżenie kompilatora (poziom 3) C4775|użyto niestandardowego rozszerzenia w ciągu formatu "*ciąg*"funkcji"*funkcja*"|
 |Ostrzeżenie kompilatora (poziom 1) C4776|"%*znak*"nie jest dozwolony w ciągu formatowania lub funkcji"*funkcja*"|
 |Ostrzeżenie kompilatora (poziom 4) C4777|"*— funkcja*": ciąg formatu "*ciąg*"wymaga argumentu typu"*type1*", ale ze zmienną liczbą argumentów *numer* ma typ "*type2*"|
 |Ostrzeżenie kompilatora (poziom 3) C4778|"*funkcja*": niezakończony ciąg formatu "*ciąg*"|
-|[Ostrzeżenie kompilatora (poziom 1) C4788](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|'Identyfikator': identyfikator został obcięty do 'Liczba' znaków|
-|[Ostrzeżenie kompilatora (poziom 1) C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|Bufor identyfikator i N liczba bajtów zostanie przepełniony; M bajtów zostanie zapisane zaczynając od przesunięcia L|
+|[(Poziom 1) C4788 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|'Identyfikator': identyfikator został obcięty do 'Liczba' znaków|
+|[(Poziom 1) C4789 ostrzeżenia kompilatora](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|Bufor identyfikator i N liczba bajtów zostanie przepełniony; M bajtów zostanie zapisane zaczynając od przesunięcia L|
 |Ostrzeżenie kompilatora (poziom 2) C4792|Funkcja "%s" zadeklarowana za pomocą sysimport i odwołania z kodu natywnego; Zaimportuj bibliotekę wymaganą do połączenia|
 |[Ostrzeżenie kompilatora (poziom 1 i 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|"Funkcja': funkcja skompilowana jako natywny: \n\t'reason"|
 |[Ostrzeżenie kompilatora (poziom 1) C4794](compiler-warning-level-1-c4794.md)|segment pamięci lokalnej wątku zmiennej "%s" zmieniła się z "%s" do "%s"|
 |[Ostrzeżenie kompilatora (poziom 1) C4799](../../error-messages/compiler-warnings/compiler-warning-level-1-c4799.md)|funkcji "function" nie ma instrukcji EMMS|
+
+## <a name="see-also"></a>Zobacz także
+
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
+[Ostrzeżenia kompilatora od C4000 - C5999](compiler-warnings-c4000-c5999.md)

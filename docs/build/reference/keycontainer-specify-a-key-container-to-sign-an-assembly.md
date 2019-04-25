@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
 ms.openlocfilehash: 96d2f5fed0e450224f82ee909cea9d56082505fb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291616"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Określ klucz kontenera, aby podpisać zestaw)
 
@@ -33,7 +33,7 @@ Konsolidator tworzy zestawu podpisanego za pomocą przez wstawienie klucza publi
 
 Jeśli kompilujesz z opcją [/LN](ln-create-msil-module.md), nazwę pliku klucza jest przechowywany w module i włączyć do zestawu, który jest tworzony podczas kompilowania zestawu, który zawiera jawnego odwołania do modułu, za pośrednictwem [#using](../../preprocessor/hash-using-directive-cpp.md), lub podczas łączenia z [assemblymodule](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-Można również przekazać szyfrowania informacji do kompilatora przy użyciu [/KeyFile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Użyj [/DelaySign](delaysign-partially-sign-an-assembly.md) Jeśli chcesz, aby częściowo podpisany zestawu. Zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) więcej informacji na temat podpisywania zestawu.
+Można również przekazać szyfrowania informacji do kompilatora przy użyciu [/KeyFile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Użyj [/DelaySign](delaysign-partially-sign-an-assembly.md) Jeśli chcesz, aby częściowo podpisany zestawu. Zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) więcej informacji na temat podpisywania zestawu.
 
 Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:
 
@@ -63,5 +63,5 @@ Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

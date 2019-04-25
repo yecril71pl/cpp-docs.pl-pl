@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288826"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -67,7 +67,7 @@ Możesz wywołać **_endthread** lub **_endthreadex** jawnie, aby zakończyć w�
 Win32, takich jak **ExitThread** interfejsu API, **_endthreadex** nie zamyka dojście wątku. W związku z tym, kiedy używasz **_beginthreadex** i **_endthreadex**, należy zamknąć uchwytu wątku poprzez wywołanie Win32 **funkcja CloseHandle** interfejsu API.
 
 > [!NOTE]
-> **_endthread** i **_endthreadex** spowodować, że destruktory C++ do czasu w wątku nie ma zostać wywołana.
+> **_endthread** i **_endthreadex** spowodować C++ destruktory oczekujące w wątku nie ma zostać wywołana.
 
 ## <a name="requirements"></a>Wymagania
 

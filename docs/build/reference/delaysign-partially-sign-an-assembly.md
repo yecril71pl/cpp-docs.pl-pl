@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
 ms.openlocfilehash: 65585b856627ad9fda5a8f8bfad6ad81fef0f81c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293839"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (Częściowo podpisz zestaw)
 
@@ -37,7 +37,7 @@ W przypadku żądania całkowicie podpisanego zestawu, kompilator tworzy skrót 
 
 Na przykład za pomocą **/DelaySign** umożliwia testerowi umieszczenie zestawu w globalnej pamięci podręcznej. Po zakończeniu testowania można całkowicie podpisać zestaw, umieszczając klucza prywatnego w zestawie.
 
-Zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) i [opóźnienie podpisywania zestawu](/dotnet/framework/app-domains/delay-sign-assembly) więcej informacji na temat podpisywania zestawu.
+Zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) i [opóźnienie podpisywania zestawu](/dotnet/framework/app-domains/delay-sign-assembly) więcej informacji na temat podpisywania zestawu.
 
 Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:
 
@@ -67,5 +67,5 @@ Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

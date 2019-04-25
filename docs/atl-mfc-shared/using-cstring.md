@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
 ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199212"
 ---
 # <a name="using-cstring"></a>Użycie CString
 
@@ -27,7 +27,7 @@ A `CString` obiekt przechowuje dane znakowe w `CStringData` obiektu. `CString` a
 
 Następujący zestaw klas ciągów może być używana bez konsolidacji biblioteki MFC, z lub bez obsługi CRT: `CAtlString`, `CAtlStringA`, i `CAtlStringW`.
 
-`CString` jest używana w natywnych projektów. Dla kodu zarządzanego (C + +/ CLI) projektów, użyj `System::String`.
+`CString` jest używana w natywnych projektów. Dla kodu zarządzanego (C++sposób niezamierzony) projektów, użyj `System::String`.
 
 Aby dodać więcej funkcji niż `CString`, `CStringA`, lub `CStringW` aktualnie oferować, należy utworzyć podklasę klasy `CStringT` zawierający dodatkowe funkcje.
 

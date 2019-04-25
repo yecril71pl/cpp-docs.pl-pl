@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
 ms.openlocfilehash: 190174e1e2ac4d160140ddc54f9cc1c3a1b31709
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271297"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (Pełna ścieżka pliku kodu źródłowego w Diagnostyce)
 
@@ -62,5 +62,5 @@ Za pomocą **/FC**, diagnostyczny powinien wyglądać podobnie do tego tekście 
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

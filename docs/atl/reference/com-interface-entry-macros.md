@@ -19,11 +19,11 @@ helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
 ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245585"
 ---
 # <a name="cominterfaceentry-macros"></a>Com_interface_entry — makra
 

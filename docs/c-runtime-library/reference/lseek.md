@@ -21,12 +21,12 @@ helpviewer_keywords:
 - lseek function
 ms.assetid: 137d7741-5c2e-443e-811a-6a01417fcae7
 ms.openlocfilehash: 8559b7bfaf07302aa76b86dda0a126ebbee8a700
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285646"
 ---
 # <a name="lseek"></a>lseek
 
-Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_lseek —](lseek-lseeki64.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_lseek —](lseek-lseeki64.md) zamiast tego.

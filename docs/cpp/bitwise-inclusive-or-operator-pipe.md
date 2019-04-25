@@ -11,17 +11,17 @@ helpviewer_keywords:
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
 ms.openlocfilehash: 848bf3b2ec61084b59ab5b1ee6807f6066a4675e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184296"
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Bitowe or włączny operator OR: |
 
 ## <a name="syntax"></a>Składnia
 
-> *wyrażenie1* **|** *wyrażenie2*
+> *expression1* **|** *expression2*
 
 ## <a name="remarks"></a>Uwagi
 
@@ -29,7 +29,7 @@ Bitowe włączny operator OR (**&#124;**) porównuje każdy bit pierwszy argumen
 
 Oba operandy bitowe włączny operator OR musi być typu całkowitoliczbowego. Popularne konwersje arytmetyczne omówione w [konwersje standardowe](standard-conversions.md) są stosowane do operandów.
 
-## <a name="operator-keyword-for-124"></a>Operator — słowo kluczowe dla&#124;
+## <a name="operator-keyword-for-124"></a>Operator keyword for &#124;
 
 **Bitor** operator jest odpowiednikiem tekstu **&#124;**. Istnieją dwa sposoby dostępu do **bitor** operatora w programach: uwzględnić plik nagłówka \<iso646.h >, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
 

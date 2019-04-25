@@ -10,11 +10,11 @@ helpviewer_keywords:
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289835"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -80,7 +80,7 @@ W programie Visual Studio 2015, jeśli argument, który odpowiada specyfikatorow
 
 |Wartość|Dane wyjściowe|
 |-----------|------------|
-|nieskończoności|`inf`|
+|infinity|`inf`|
 |Ciche NaN|`nan`|
 |Sygnalizacji NaN|`nan(snan)`|
 |Nieokreślony NaN|`nan(ind)`|

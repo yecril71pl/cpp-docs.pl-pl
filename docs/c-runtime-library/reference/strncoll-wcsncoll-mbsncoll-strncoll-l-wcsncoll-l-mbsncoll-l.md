@@ -61,11 +61,11 @@ helpviewer_keywords:
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
 ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209779"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
@@ -145,7 +145,7 @@ Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsnccoll —**|**_strncoll**|**_mbsncoll —**|**_wcsncoll**|
+|**_tcsnccoll —**|**_strncoll**|**_mbsncoll**|**_wcsncoll**|
 |**_tcsncoll —**|**_strncoll**|[_mbsnbcoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsncoll**|
 
 ## <a name="requirements"></a>Wymagania
@@ -154,7 +154,7 @@ Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1
 |-------------|---------------------|
 |**_strncoll —**, **_strncoll_l —**|\<string.h>|
 |**_wcsncoll —**, **_wcsncoll_l —**|\<WChar.h > lub \<string.h >|
-|**_mbsncoll —**, **_mbsncoll_l —**|\<mbstring.h>|
+|**_mbsncoll**, **_mbsncoll_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
 ms.openlocfilehash: c2b5578e1ce1db590bdf5abbff0c91e858803ad7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273005"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Określ plik odpowiedzi kompilatora)
 
@@ -46,5 +46,5 @@ W wierszu polecenia można określić dowolną liczbę opcji pliku odpowiedzi (n
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

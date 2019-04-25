@@ -13,11 +13,11 @@ helpviewer_keywords:
 - cl.exe compiler, command-line syntax
 ms.assetid: 192533e7-86f2-48e0-a08f-b5e4e3a4e784
 ms.openlocfilehash: 6cd015211a7a8039c5a1a2db696bf2160e282cd1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270435"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (Pomoc kompilatora wiersza polecenia)
 
@@ -43,5 +43,5 @@ Wyświetla listę opcji kompilatora do wyjścia standardowego.
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -33,11 +33,11 @@ helpviewer_keywords:
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
 ms.openlocfilehash: c1da330ee0faba922f1e5b193fa095b97d3f4745
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285562"
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 
@@ -110,7 +110,7 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsncat —**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat**|[wcsncat —](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
-|**_tcsncat_l —**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
+|**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 ## <a name="requirements"></a>Wymagania
 

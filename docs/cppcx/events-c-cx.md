@@ -1,15 +1,15 @@
 ---
-title: Zdarzenia (C + +/ CX)
+title: Zdarzenia (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
 ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301542"
 ---
-# <a name="events-ccx"></a>Zdarzenia (C + +/ CX)
+# <a name="events-ccx"></a>Zdarzenia (C++/CX)
 
 Windows obsługi można zadeklarować typu (publikowanie) zdarzenia i kod klienta w jednym składniku lub inne składniki mogą subskrybować te zdarzenia, kojarząc metody o nazwie *procedury obsługi zdarzeń* ze zdarzeniem. Wiele procedur obsługi zdarzeń może być skojarzony z pojedynczego zdarzenia. Podczas publikowania obiektu wywołuje zdarzenie, powoduje wszystkich procedur obsługi zdarzeń do wywołania. W ten sposób subskrybującą klasy można wykonać dowolną akcję niestandardową jest odpowiednie w przypadku, gdy wydawca wywołuje zdarzenie. Zdarzenie ma typ delegata, który określa podpis wszystkich procedur obsługi zdarzeń musi mieć, aby subskrybować zdarzenia.
 
@@ -34,7 +34,7 @@ W poniższym przykładzie pokazano, jak korzysta z klasy subskrybującą `+=` op
 [!code-cpp[cx_events#02](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#02)]
 
 > [!WARNING]
-> Ogólnie rzecz biorąc lepiej jest do użytku o nazwie funkcji, zamiast wyrażenia lambda, program obsługi zdarzeń, chyba że Zwróć szczególną uwagę aby uniknąć odwołania cykliczne. Funkcja o nazwie przechwytuje wskaźnik "this" przez słabe odwołanie, wyrażenie lambda przechwytuje go przez silne odwołanie i tworzy odwołanie cykliczne. Aby uzyskać więcej informacji, zobacz [słabe odwołania i przerywanie cykli (C + +/ CX)](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
+> Ogólnie rzecz biorąc lepiej jest do użytku o nazwie funkcji, zamiast wyrażenia lambda, program obsługi zdarzeń, chyba że Zwróć szczególną uwagę aby uniknąć odwołania cykliczne. Funkcja o nazwie przechwytuje wskaźnik "this" przez słabe odwołanie, wyrażenie lambda przechwytuje go przez silne odwołanie i tworzy odwołanie cykliczne. Aby uzyskać więcej informacji, zobacz [słabe odwołania i przerywanie cykli (C++/CX)](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
 
 ### <a name="custom-add-and-remove-methods"></a>Niestandardowe Dodawanie i usuwanie form
 
@@ -63,4 +63,4 @@ Kolejność, w którym źródło zdarzeń wywołuje procedury obsługi zdarzeń 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Delegaty](../cppcx/delegates-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

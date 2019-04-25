@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
 ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264689"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Przewodnik: Wdrażanie Twojego programu (C++)
 

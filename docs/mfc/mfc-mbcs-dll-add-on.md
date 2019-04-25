@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MBCS
 - MFC
 ms.openlocfilehash: 2fdbb5dd862c7d1a8845813c6234fea9e902c1f9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238533"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>Dodatek MFC MBCS DLL Add-on
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
 ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293098"
 ---
 # <a name="f-set-stack-size"></a>/F (Ustaw rozmiar stosu)
 
@@ -56,5 +56,5 @@ Można również ustawić rozmiar stosu:
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

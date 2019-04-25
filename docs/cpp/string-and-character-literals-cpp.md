@@ -17,11 +17,11 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
 ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330846"
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 
@@ -112,15 +112,15 @@ Istnieją trzy typy sekwencji wyjścia: prosta, ósemkowa i szesnastkowa. Sekwen
 | Ukośnik odwrotny | \\\\ |
 | tabulator poziomy | \\t |
 | znak zapytania | ? lub \\? |
-| tabulator pionowy | \\V |
+| tabulator pionowy | \\v |
 | pojedynczy cudzysłów | \\' |
-| BACKSPACE | \\B |
+| BACKSPACE | \\b |
 | podwójny cudzysłów | \\" |
 | powrót karetki | \\r |
 | znak null | \\0 |
-| Wysuw strony | \\F |
-| ósemkowy | \\OOO |
-| alert (dzwonek) | \\ELEMENT |
+| Wysuw strony | \\f |
+| ósemkowy | \\ooo |
+| alert (dzwonek) | \\a |
 | szesnastkowo | \\xhhh |
 
 Poniższy kod przedstawia kilka przykładów znaki ucieczki przestają być za pomocą literałów zwykły znak. Tej samej składni sekwencji ucieczki jest prawidłowy dla innych typów literałów znaków.
@@ -254,7 +254,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>Surowe Literały ciągu (C ++ 11)
 
-Literał ciągu surowego jest tablicą zakończoną znakiem null — dowolnego znaku typu — zawierającą dowolny znak graficzny, w tym podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza. Surowe Literały ciągu są często używane w wyrażeniach regularnych, które używają klas znaku, a także w ciągach HTML i XML. Aby uzyskać przykłady, zapoznaj się z następującym artykułem: [Bjarne'a Stroustrupa często zadawane pytania dotyczące języka C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
+Literał ciągu surowego jest tablicą zakończoną znakiem null — dowolnego znaku typu — zawierającą dowolny znak graficzny, w tym podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza. Surowe Literały ciągu są często używane w wyrażeniach regularnych, które używają klas znaku, a także w ciągach HTML i XML. Aby uzyskać przykłady zobacz następujący artykuł: [Bjarne'a Stroustrupa często zadawane pytania dotyczące języka C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -328,7 +328,7 @@ Ponieważ literały ciągów (z wykluczeniem literały std:string) są stałe, p
 
 **Microsoft Specific**
 
-W programie Visual C++ można użyć literału ciągu do zainicjowania wskaźnika do wartości innej niż stała **char** lub **wchar_t**. Jest dozwolona w kodzie C99, ale jest przestarzała w języku C ++ 98 i usunięte w C ++ 11. Próba zmodyfikowania ciągu powoduje naruszenie zasad dostępu, jak w poniższym przykładzie:
+W elemencie wizualnym C++ literału ciągu można użyć do zainicjowania wskaźnika do wartości innej niż stała **char** lub **wchar_t**. Jest dozwolona w kodzie C99, ale jest przestarzała w języku C ++ 98 i usunięte w C ++ 11. Próba zmodyfikowania ciągu powoduje naruszenie zasad dostępu, jak w poniższym przykładzie:
 
 ```cpp
 wchar_t* str = L"hello";

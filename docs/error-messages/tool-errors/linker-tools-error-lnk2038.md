@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2038
 ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298870"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Błąd narzędzi konsolidatora LNK2038
 
@@ -26,13 +26,13 @@ Program Visual Studio definiuje następujące symbole, aby zapobiec łączeniu n
 
 - `_MSC_VER` Wskazuje numery wersji głównych i pomocniczych kompilatora języka Visual C++, który jest używany do tworzenia aplikacji lub biblioteki. Kod, który jest kompilowany przy użyciu jednej wersji kompilatora Visual C++ jest niezgodny z kodem, który jest kompilowany przy użyciu wersji zawierającej różnych głównych i pomocniczych numerów wersji. Aby uzyskać więcej informacji, zobacz `_MSC_VER` w [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).
 
-   Jeśli łączysz się do biblioteki, który nie jest zgodna z wersją kompilatora Visual C++, którego używasz, i nie można pobrać lub utworzyć zgodnej wersji biblioteki, aby skompilować projekt, można użyć starszej wersji kompilatora: Zmień **zestaw narzędzi platformy** właściwości projektu do wcześniejszych zestawu narzędzi. Aby uzyskać więcej informacji, zobacz [porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Jeśli łączysz się do biblioteki, który nie jest zgodna z wersją kompilatora Visual C++, którego używasz, i nie można pobrać lub utworzyć zgodnej wersji biblioteki, aby skompilować projekt, można użyć starszej wersji kompilatora: Zmień **zestaw narzędzi platformy** właściwości projektu do wcześniejszych zestawu narzędzi. Aby uzyskać więcej informacji, zobacz [jak: Modyfikowanie platformy docelowej i zestawu narzędzi platformy](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Wskazuje poziom zabezpieczeń i funkcje debugujące, które są włączone w standardowej biblioteki języka C++. Te funkcje mogą zmienić reprezentację niektórych obiektów standardowej biblioteki języka C++ i tym samym są zgodne z tymi, które używają różnych zabezpieczeń i funkcji do debugowania. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
 - `RuntimeLibrary` Wskazuje wersję środowiska wykonawczego standardowej biblioteki języka C++ i C, który jest używany przez aplikację lub bibliotekę. Kod, który używa jednej wersji środowiska wykonawczego standardowej biblioteki języka C++ lub C jest niezgodny z kodem, który korzysta z innej wersji. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
-- `_PPLTASKS_WITH_WINRT` Wskazuje, że kod, który używa [biblioteki wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) jest połączony z obiektami skompilowanymi przy użyciu różnych ustawienie [/ZW](../../build/reference/zw-windows-runtime-compilation.md) — opcja kompilatora. (**/ZW** obsługuje C + +/ CX.) Kod, który używa lub zależy od PPL, muszą być skompilowane, korzystając z tych samych **/ZW** ustawienia, która jest używana w pozostałej części aplikacji.
+- `_PPLTASKS_WITH_WINRT` Wskazuje, że kod, który używa [biblioteki wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) jest połączony z obiektami skompilowanymi przy użyciu różnych ustawienie [/ZW](../../build/reference/zw-windows-runtime-compilation.md) — opcja kompilatora. (**/ZW** obsługuje C++/CX.) Kod, który używa lub zależy od PPL, muszą być skompilowane, korzystając z tych samych **/ZW** ustawienia, która jest używana w pozostałej części aplikacji.
 
 Upewnij się, że wartości tych symboli są spójne dla projektów w rozwiązaniu programu Visual Studio i są one zgodne z kodem i bibliotekami, które łączą się aplikacje.
 

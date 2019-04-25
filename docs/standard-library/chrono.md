@@ -11,11 +11,11 @@ f1_keywords:
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
 ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279102"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -60,8 +60,8 @@ Począwszy od programu Visual Studio 2015, implementacja `steady_clock` został 
 |[operator-](../standard-library/chrono-operators.md#operator-)|Operator odejmowania lub negacji `duration` i `time_point` obiektów.|
 |[operator!=](../standard-library/chrono-operators.md#op_neq)|Operator nierówności, który jest używany z `duration` lub `time_point` obiektów.|
 |[Operator modulo](../standard-library/chrono-operators.md#op_modulo)|Operator modulo operacji na `duration` obiektów.|
-|[operator *](../standard-library/chrono-operators.md#op_star)|Operator mnożenia dla `duration` obiektów.|
-|[operator /](../standard-library/chrono-operators.md#op_div)|Operator dzielenia dla `duration` obiektów.|
+|[operator*](../standard-library/chrono-operators.md#op_star)|Operator mnożenia dla `duration` obiektów.|
+|[operator/](../standard-library/chrono-operators.md#op_div)|Operator dzielenia dla `duration` obiektów.|
 |[operator +](../standard-library/chrono-operators.md#op_add)|Dodaje `duration` i `time_point` obiektów.|
 |[Operator&lt;](../standard-library/chrono-operators.md#op_lt)|Określa, czy jeden `duration` lub `time_point` obiekt jest mniejszy niż inny `duration` lub `time_point` obiektu.|
 |[Operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Określa, czy jeden `duration` lub `time_point` obiekt jest mniejszy niż lub równy innemu `duration` lub `time_point` obiektu.|

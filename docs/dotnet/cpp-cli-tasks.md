@@ -3,15 +3,15 @@ title: Zadania C++/CLI
 ms.date: 11/04/2016
 ms.assetid: 5851b113-91f9-4062-9427-c0669f333636
 ms.openlocfilehash: a3cd7ef99511c3ad2dc6e14d0d5374a86ab3a85f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209157"
 ---
 # <a name="ccli-tasks"></a>Zadania C++/CLI
 
-Artykuły w tej sekcji dokumentacji pokazano, jak używać różnych funkcji języka C + +/ interfejsu wiersza polecenia.
+Artykuły w tej sekcji dokumentacji pokazano, jak używać różnych funkcji C++sposób niezamierzony.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

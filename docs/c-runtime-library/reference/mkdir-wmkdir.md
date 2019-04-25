@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
 ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285200"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -58,7 +58,7 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parametry
 
-*nazwa_kat*<br/>
+*dirname*<br/>
 Ścieżka do nowego katalogu.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -81,7 +81,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmkdir —**|**_mkdir**|**_mkdir**|**_wmkdir**|
+|**_tmkdir**|**_mkdir**|**_mkdir**|**_wmkdir**|
 
 ## <a name="requirements"></a>Wymagania
 

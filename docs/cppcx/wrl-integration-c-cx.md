@@ -1,15 +1,15 @@
 ---
-title: Integracja z WRL (C + +/ CX)
+title: Integracja z WRL (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
 ms.openlocfilehash: a3c8b824d2cd932a7d284804f3f28781654045e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304153"
 ---
-# <a name="wrl-integration-ccx"></a>Integracja z WRL (C + +/ CX)
+# <a name="wrl-integration-ccx"></a>Integracja z WRL (C++/CX)
 
 Za darmo można łączyć WRL kodu za pomocą kodu systemu Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL). W tej samej jednostce translacji, można użyć obiektów zadeklarowanych za pomocą biblioteki WRL uchwytu do obiektu (`^`) notacją i WRL inteligentnego wskaźnika (`ComPtr<T>`) notacji. Jednak ręcznie musi obsługiwać zwracane wartości i kody błędów WRL HRESULT i wyjątków biblioteki WRL.
 

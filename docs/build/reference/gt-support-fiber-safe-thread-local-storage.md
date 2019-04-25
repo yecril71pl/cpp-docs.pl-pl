@@ -13,11 +13,11 @@ helpviewer_keywords:
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
 ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291811"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Obsługa bezpieczeństwa włókien magazynu wątków lokalnych)
 
@@ -51,5 +51,5 @@ Fiber jest obiektem uproszczone, który składa się ze stosu i kontekst rejestr
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

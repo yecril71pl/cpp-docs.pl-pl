@@ -4,11 +4,11 @@ description: W tym artykule opisano, jak pobrać, zainstalować i skonfigurować
 ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
 ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262849"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 

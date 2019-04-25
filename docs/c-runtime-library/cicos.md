@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
 ms.openlocfilehash: fef9ef9e197dcd6e8a1880c3acdfa2755ccf1ae1
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290212"
 ---
 # <a name="cicos"></a>_CIcos
 
@@ -50,4 +50,4 @@ Wartość wynikowa są wypychane na górze stosu zmiennoprzecinkowego.
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[COS cosf —, cosl —](../c-runtime-library/reference/cos-cosf-cosl.md)<br/>
+[cos, cosf, cosl](../c-runtime-library/reference/cos-cosf-cosl.md)<br/>

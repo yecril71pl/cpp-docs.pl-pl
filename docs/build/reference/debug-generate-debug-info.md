@@ -17,11 +17,11 @@ helpviewer_keywords:
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
 ms.openlocfilehash: ca7ef5d1935ddea0441f49e387e35184c6fd1fc6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294021"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Generowanie informacji o debugowaniu)
 
@@ -71,5 +71,5 @@ Nie jest możliwe utworzenie .exe lub .dll, który zawiera informacje o debugowa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

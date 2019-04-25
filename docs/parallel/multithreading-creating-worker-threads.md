@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
 ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212830"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Wielowątkowość: Tworzenie wątków roboczych w MFC
 
@@ -41,7 +41,7 @@ Istnieją dwie przeciążone wersje `AfxBeginThread`: jedną, która tworzy tylk
 
 - (Opcjonalnie) Żądany rozmiar stosu dla wątku. Wartość domyślna to taki sam jak rozmiar stosu wątku tworzącego.
 
-- (Opcjonalnie) CREATE_SUSPENDED, jeśli chcesz, aby wątek był utworzony w stanie wstrzymania. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.
+- (Opcjonalnie) CREATE_SUSPENDED if you want the thread to be created in a suspended state. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.
 
 - (Optional) The desired security attributes. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.
 

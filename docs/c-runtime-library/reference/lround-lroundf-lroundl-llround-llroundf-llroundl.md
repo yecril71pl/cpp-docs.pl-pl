@@ -37,11 +37,11 @@ helpviewer_keywords:
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
 ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285848"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -93,7 +93,7 @@ Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMENY**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -151,5 +151,5 @@ lroundl(-3.500000) is -4
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
-[nearbyint —, nearbyintf —, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
+[nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
 [rint, rintf, rintl](rint-rintf-rintl.md)<br/>

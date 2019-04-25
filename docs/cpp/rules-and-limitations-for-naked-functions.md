@@ -5,11 +5,11 @@ helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267380"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Reguły i ograniczenia dotyczące używania funkcji Naked
 
@@ -33,7 +33,7 @@ Poniższe reguły i ograniczenia dotyczą funkcji "naked":
 
 - **"Naked"** — słowo kluczowe jest ignorowany podczas kompilowania za pomocą [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Aby uzyskać [__fastcall](../cpp/fastcall.md) funkcji "naked" zawsze wtedy, gdy istnieje odwołanie w kodzie języka C/C++ do jednego z argumentów rejestru, w kodzie prologu powinny być przechowywane wartości rejestru do lokalizacji stosu dla tej zmiennej. Na przykład:
+- Aby uzyskać [__fastcall](../cpp/fastcall.md) funkcji "naked" zawsze wtedy, gdy istnieje odwołanie w C /C++ kodu do jednego z argumentów rejestru kod prologu należy przechowywać wartości rejestru do lokalizacji stosu dla tej zmiennej. Na przykład:
 
 ```cpp
 // nkdfastcl.cpp

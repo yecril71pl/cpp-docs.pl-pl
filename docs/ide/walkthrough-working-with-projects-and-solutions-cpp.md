@@ -8,11 +8,11 @@ helpviewer_keywords:
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
 ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264598"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Przewodnik: Praca z projektami i rozwiązaniami (C++)
 
@@ -223,4 +223,4 @@ Gratulacje, pomyślnie skompilowane rozwiązanie i projekt aplikacji. Nadal prze
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty i systemów kompilacji](../build/projects-and-build-systems-cpp.md)<br/>
+[Projekty i systemy kompilacji](../build/projects-and-build-systems-cpp.md)<br/>

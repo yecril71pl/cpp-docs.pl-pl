@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
 ms.openlocfilehash: e31b42c1d9422d44c5f106f40c4a60a38f23425b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270851"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Kontroluj wywołania sprawdzania stosu)
 
@@ -67,5 +67,5 @@ Możesz włączyć sondy stosu lub wyłączyć za pomocą [check_stack](../../pr
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

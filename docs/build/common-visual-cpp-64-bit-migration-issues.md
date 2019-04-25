@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
 ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200080"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Typowe problemy przy migracji Visual C++ w wersji 64-bitowej
 
@@ -41,7 +41,7 @@ Korzystając z programu Visual C++ do tworzenia aplikacji do uruchomienia w 64-b
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [MSVC Compiler Options](reference/compiler-options.md)
+- [Opcje kompilatora MSVC](reference/compiler-options.md)
 
 - [Wskazówki dotyczące migracji](/windows/desktop/WinProg64/migration-tips)
 

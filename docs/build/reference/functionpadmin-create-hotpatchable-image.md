@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
 ms.openlocfilehash: 699da3cea9914b5a10bdf769015d41c33936a902
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292398"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Utwórz obraz możliwy do poprawiania w trakcie działania)
 
@@ -47,5 +47,5 @@ Gdy kompilujesz i łączysz obraz za pomocą jednego wywołanie cl.exe, **/hotpa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

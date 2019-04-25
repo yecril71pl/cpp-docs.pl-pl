@@ -10,11 +10,11 @@ helpviewer_keywords:
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
 ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244224"
 ---
 # <a name="references-c"></a>Odwołania (C++)
 
@@ -22,7 +22,7 @@ Odwołania, jak wskaźnik, przechowuje adres obiektu, który znajduje się w inn
 
 Odwołania może być zadeklarowana przy użyciu następującej składni:
 
-> \[*Specyfikatory klas magazynu*] \[ *kwalifikatory cv*] *specyfikatory typu* \[ *modyfikator ms*]  *deklarator* \[ **=** *wyrażenie*]**;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
 
 Wszystkie prawidłowe deklaratora, określając odwołanie mogą być używane. Chyba, że odwołanie jest odwołanie do typu funkcji lub tablicy, mają zastosowanie następujące uproszczoną składnię:
 

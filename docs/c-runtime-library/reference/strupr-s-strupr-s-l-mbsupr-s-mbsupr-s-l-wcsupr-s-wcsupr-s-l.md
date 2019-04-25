@@ -61,11 +61,11 @@ helpviewer_keywords:
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
 ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304634"
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
@@ -164,15 +164,15 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączy�
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsupr_s —**|**_strupr_s**|**_mbsupr_s**|**_wcsupr_s**|
-|**_tcsupr_s_l —**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
+|**_tcsupr_s**|**_strupr_s**|**_mbsupr_s**|**_wcsupr_s**|
+|**_tcsupr_s_l**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strupr_s —**, **_strupr_s_l —**|\<string.h>|
-|**_wcsupr_s —**, **_wcsupr_s_l —**, **_mbsupr_s —**, **_mbsupr_s_l —**|\<Włącz String.h > lub \<wchar.h >|
+|**_strupr_s**, **_strupr_s_l**|\<string.h>|
+|**_wcsupr_s**, **_wcsupr_s_l**, **_mbsupr_s**, **_mbsupr_s_l**|\<Włącz String.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

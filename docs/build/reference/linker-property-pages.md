@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
 ms.openlocfilehash: 1412531ae0ca9c0f5270df6df7b79ddc9be425ad
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216648"
 ---
 # <a name="linker-property-pages"></a>Strony właściwości konsolidatora
 
@@ -41,13 +41,13 @@ Rejestracja w programie Visual Studio była tradycyjnie wykonywana w kluczu HKEY
 
 Przekierowanie na użytkownika wymusza na wszelkie operacje zapisu do klucza HKCR były przekierowywane do HKEY\_bieżącego\_użytkownika (HKCU). Jeśli przekierowanie na użytkownika jest wyłączona, może to spowodować [błąd kompilacji projektu PRJ0050](../../error-messages/tool-errors/project-build-error-prj0050.md) gdy program próbuje zapisać do klucza HKCR.
 
-### <a name="link-library-dependencies"></a>Połącz zależności biblioteki
+### <a name="link-library-dependencies"></a>Zależności biblioteki konsolidacji
 
 Określa, czy łączenie plików .lib generowanych przez zależne projekty. Zazwyczaj który chcesz połączyć z plików .lib, ale to może nie być w przypadku niektórych bibliotek DLL.
 
 Plik .obj można również określić, podając nazwę pliku i ścieżki względnej, na przykład "... \\.. \MyLibProject\MyObjFile.obj". Jeśli kod źródłowy pliku .obj #includes wstępnie skompilowany nagłówek, np. pch.h, plik pch.obj znajduje się w tym samym folderze co MyObjFile.obj i pch.obj należy również dodać jako dodatkową zależność.
 
-### <a name="use-library-dependency-inputs"></a>Używaj wejść biblioteki zależności
+### <a name="use-library-dependency-inputs"></a>Używaj wejścia zależności biblioteki
 
 W dużym projekcie, gdy projekt zależny tworzy plik .lib, łączenie przyrostowe jest wyłączone. Jeśli istnieje wiele projektów zależnych generujących pliki .lib, kompilowanie aplikacji może trwać długo. Jeśli ta właściwość jest równa **tak**, system projektu łączy pliki .obj dla plików .libs tworzonych produkowane przez projekty zależne, umożliwiając w ten sposób łączenie przyrostowe.
 

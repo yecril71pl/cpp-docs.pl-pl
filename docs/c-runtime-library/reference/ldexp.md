@@ -35,11 +35,11 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
 ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286296"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp —, ldexpf —, ldexpl
 
@@ -75,7 +75,7 @@ long double ldexpl(
 *x*<br/>
 Wartość zmiennoprzecinkowa.
 
-*EXP*<br/>
+*exp*<br/>
 Wykładnik potęgi liczby całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -92,7 +92,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **lde
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**ldexp —**, **ldexpf —**, **ldexpl**|\<math.h>|\<cmath >|
+|**ldexp —**, **ldexpf —**, **ldexpl**|\<math.h>|\<cmath>|
 
 Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

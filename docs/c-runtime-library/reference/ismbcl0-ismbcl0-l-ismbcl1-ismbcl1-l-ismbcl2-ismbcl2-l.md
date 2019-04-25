@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286633"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,12 +108,12 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 
 |Procedura|Testowanie warunku (strona kodowa 932 tylko)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|Inne niż Kanji JIS: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|Inne niż Kanji JIS: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|Poziom JIS-1: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|Poziom JIS-1: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl2**|Poziomu 2 JIS: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|Poziomu 2 JIS: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|Kanji-JIS niż: 0x8140<=*c*<=0x889E.|
+|**_ismbcl0_l**|Kanji-JIS niż: 0x8140<=*c*<=0x889E.|
+|**_ismbcl1**|Poziom JIS-1: 0x889F<=*c*<=0x9872.|
+|**_ismbcl1_l**|Poziom JIS-1: 0x889F<=*c*<=0x9872.|
+|**_ismbcl2**|Poziom JIS-2: 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl2_l**|Poziom JIS-2: 0x989F<=*c*<=0xEAA4.|
 
 Sprawdza, czy określona wartość *c* pasuje do warunków badania opisanego powyżej, ale nie sprawdzają, czy *c* jest prawidłowym znakiem wielobajtowym. Jeśli niższy bajt jest w zakresach 0x00-0x3F, 0x7F lub 0xFD - 0xFF, te funkcje zwracają wartość różną od zera, wskazując, że znak spełnia warunek testu. Użyj [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) do sprawdzenia, czy zdefiniowano znaki wielobajtowe.
 

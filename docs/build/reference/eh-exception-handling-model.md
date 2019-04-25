@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
 ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271804"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Model obsługi wyjątku)
 
@@ -112,7 +112,7 @@ Jednak atrybut niezgłaszające jest gwarancję, że żadne wyjątki mogą być 
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Błędy w obsłudze wyjątków](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Specyfikacje wyjątków (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>

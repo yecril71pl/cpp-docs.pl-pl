@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
 ms.openlocfilehash: 1eac489ffd01f6bd79fc8c5bbda23adb751c9486
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295074"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Osadź zarządzany zasób)
 
@@ -74,5 +74,5 @@ Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

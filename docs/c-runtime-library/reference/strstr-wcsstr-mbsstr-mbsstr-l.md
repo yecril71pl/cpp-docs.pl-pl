@@ -45,11 +45,11 @@ helpviewer_keywords:
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223086"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -136,7 +136,7 @@ Zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*, lub wartość N
 > [!IMPORTANT]
 > Te funkcje mogą zostać naliczone zagrożenie z problemem przepełnienia buforu. Problemy z przepełnieniem buforu może służyć do ataków systemu, ponieważ umożliwiają one wykonywanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenia, które przyjmuje wskaźnik do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non - **Const**. _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu przeciążeń C++, określ symbol _CONST_RETURN.
+W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenia, które przyjmuje wskaźnik do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non - **Const**. _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu C++ przeciążeń, określ symbol _CONST_RETURN.
 
 Wartość wyjściowa jest zależna od ustawienia kategorii ustawień regionalnych LC_CTYPE; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje, które mają **_l** sufiksem są identyczne, z tą różnicą, że używają w zamian parametru ustawień regionalnych, które zostały przekazane. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 

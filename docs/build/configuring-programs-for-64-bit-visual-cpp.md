@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
 ms.openlocfilehash: c56cd34ecbc6615b0acebde6c40c658ca0c436a4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274684"
 ---
 # <a name="configure-c-projects-for-64-bit-x64-targets"></a>Konfigurowanie projektów w języku C++ x64 64-bitowy, obiektów docelowych
 
@@ -47,4 +47,4 @@ Ta sekcja zawiera tematy dotyczące określania wartości docelowej x64 64-bitow
 
 ## <a name="see-also"></a>Zobacz także
 
-[Projekty i systemów kompilacji](projects-and-build-systems-cpp.md)
+[Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)

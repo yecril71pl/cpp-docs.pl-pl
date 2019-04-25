@@ -3,11 +3,11 @@ title: /GUARD (włączenie sprawdzeń za pomocą wyrażenia Guard)
 ms.date: 11/04/2016
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
 ms.openlocfilehash: e48921e57977cc7a1ca6a580fed78a6a2a960a02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292253"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (włączenie sprawdzeń za pomocą wyrażenia Guard)
 
@@ -38,5 +38,5 @@ Opcja/GUARD: CF musi być określona kompilatora i konsolidatora do utworzenia w
 ## <a name="see-also"></a>Zobacz także
 
 [/guard (Włącz ochronę przepływu sterowania)](guard-enable-control-flow-guard.md)<br/>
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

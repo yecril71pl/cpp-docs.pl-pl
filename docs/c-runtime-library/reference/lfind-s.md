@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
 ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286430"
 ---
 # <a name="lfinds"></a>_lfind_s
 
@@ -65,7 +65,7 @@ Liczba elementów tablicy.
 *Rozmiar*<br/>
 Rozmiar elementów tablicy, w bajtach.
 
-*Porównanie*<br/>
+*compare*<br/>
 Wskaźnik do procedury porównania. Pierwszy parametr jest *kontekstu* wskaźnika. Drugi parametr jest wskaźnikiem do klucza dla wyszukiwania. Trzeci parametr jest wskaźnik do elementu tablicy, który można porównać z kluczem.
 
 *Kontekst*<br/>
@@ -79,7 +79,7 @@ Jeśli nieprawidłowe parametry są przekazywane do funkcji, procedura obsługi 
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|klawisz|base|compare|Liczba|size|numer błędu|
+|klawisz|base|compare|Liczba|size|errno|
 |---------|----------|-------------|---------|----------|-----------|
 |**NULL**|Wszystkie|Wszystkie|Wszystkie|Wszystkie|**EINVAL**|
 |Wszystkie|**NULL**|Wszystkie|!= 0|Wszystkie|**EINVAL**|

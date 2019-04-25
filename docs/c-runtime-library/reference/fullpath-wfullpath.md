@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287645"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -64,7 +64,7 @@ Wskaźnik do buforu, zawierające nazwę ścieżki bezwzględnej lub pełnego lu
 *relPath*<br/>
 Nazwa ścieżki względnej.
 
-*Element maxLength*<br/>
+*maxLength*<br/>
 Maksymalna długość buforu nazwy ścieżkę bezwzględną (*absPath*). To długość jest w bajtach dla **_fullpath —** , ale w znaków dwubajtowych (**wchar_t**) dla **_wfullpath —**.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -104,7 +104,7 @@ Jeśli *absPath* bufor jest **NULL**, **_fullpath —** wywołania [— funkcja 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**_fullpath**|\<stdlib.h>|
-|**_wfullpath**|\<stdlib.h > lub \<wchar.h >|
+|**_wfullpath**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

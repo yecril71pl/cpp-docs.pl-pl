@@ -12,11 +12,11 @@ helpviewer_keywords:
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
 ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223445"
 ---
 # <a name="atl-collection-classes"></a>Klasy kolekcji ATL
 
@@ -85,7 +85,7 @@ Każdą z klas kolekcji dostępne oferuje różną charakterystykę wydajności,
 |Kształt|Uporządkowane|Indeksowane|Wstaw<br /><br /> — element|Wyszukaj<br /><br /> określony element|Zduplikowany<br /><br /> elementy|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
 |Lista|Tak|Nie|Szybko (stały czas)|Powolne O(n)|Tak|
-|Tablica|Tak|Przez int (stały czas)|Powolne O(n), z wyjątkiem sytuacji, w przypadku wstawiania na końcu, w których wielkość stałym czasie|Powolne O(n)|Yes|
+|Tablica|Yes|Przez int (stały czas)|Powolne O(n), z wyjątkiem sytuacji, w przypadku wstawiania na końcu, w których wielkość stałym czasie|Powolne O(n)|Tak|
 |Mapa|Nie|Według klucza (stały czas)|Szybko (stały czas)|Szybko (stały czas)|Tak (wartości) (kluczy)|
 |Mapa red czarny|Tak (według kluczy)|Według klucza O (log n)|Szybkie O (log n)|Szybkie O (log n)|Nie|
 |Multimap red czarny|Tak (według kluczy)|Według klucza O(log n) (wiele wartości dla każdego klucza)|Szybkie O (log n)|Szybkie O (log n)|Tak (wiele wartości dla każdego klucza)|

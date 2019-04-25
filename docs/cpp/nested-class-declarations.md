@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301555"
 ---
 # <a name="nested-class-declarations"></a>Zagnieżdżone deklaracje klas
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` i `BufferedIO::BufferedOutput` są zadeklarowane w ramach `BufferedIO`. Nazwy klas nie są widoczne w zakresie klasy `BufferedIO`. Jednak obiekt typu `BufferedIO` nie zawiera żadnych obiektów typu `BufferedInput` lub `BufferedOutput`.
+`BufferedIO::BufferedInput` i `BufferedIO::BufferedOutput` są zadeklarowane w obrębie `BufferedIO`. Nazwy klas nie są widoczne w zakresie klasy `BufferedIO`. Jednak obiekt typu `BufferedIO` nie zawiera żadnych obiektów typu `BufferedInput` lub `BufferedOutput`.
 
 Klasy zagnieżdżone mogą bezpośrednio korzystać z nazw, nazwy typów, nazw statycznych składowych i wyliczeń tylko z otaczającej klasy. Aby używać nazw innych składowych klasy, należy użyć wskaźników, odwołań lub nazw obiektów.
 

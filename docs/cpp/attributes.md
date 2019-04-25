@@ -3,11 +3,11 @@ title: Atrybuty w języku C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284750"
 ---
 # <a name="attributes-in-c"></a>Atrybuty w języku C++
 
@@ -15,7 +15,7 @@ C++ Standard definiuje zestaw atrybutów, a także umożliwia dostawcom kompilat
 
 W niektórych przypadkach standardowe atrybuty pokrywają się z parametrami declspec specyficznych dla kompilatora. W programie Visual C++, można użyć `[[deprecated]]` atrybutu zamiast `declspec(deprecated)` i atrybut zostanie rozpoznane przez kompilator wszelkie zgodność. Wszystkie inne declspec parametrów, takich jak dllimport i dllexport nie ma jeszcze atrybut odpowiednika, należy nadal używać składni declspec. Atrybuty nie ma wpływu na system typów, a nie zmieniają znaczenie programu. Kompilatory ignorują wartości atrybutów, które ich nie rozpoznają.
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): W zakresie listę atrybutów, można określić przestrzeń nazw dla wszystkich nazw za pomocą jednego **przy użyciu** introducer:
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Przestrzeń nazw dla wszystkich nazw w zakresie listę atrybutów, można określić za pomocą jednego **przy użyciu** introducer:
 
 ```cpp
 void g() {
@@ -33,7 +33,7 @@ W języku C ++ 11 atrybuty zapewnić standardowy sposób dodawać adnotacje do k
 void Foo(int);
 ```
 
-Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozszerzeń, takich jak dyrektywy #pragma, __declspec() (Visual C++) lub &#95; &#95;atrybut&#95; &#95; (GNU). Jednakże nadal należy użyć konstrukcji specyficzne dla dostawcy w większości przypadków. Standardowa obecnie określa następujące atrybuty rozpoznających odpowiadające kompilatora:
+Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozszerzeń, takich jak dyrektywy #pragma __declspec() (Visual C++), lub &#95; &#95;atrybut&#95; &#95; (GNU). Jednakże nadal należy użyć konstrukcji specyficzne dla dostawcy w większości przypadków. Standardowa obecnie określa następujące atrybuty rozpoznających odpowiadające kompilatora:
 
 - `[[noreturn]]` Określa, że funkcja nigdy nie zwraca; innymi słowy go zawsze zgłasza wyjątek. Kompilator może dostosowywać jego zasady kompilacji `[[noreturn]]` jednostek.
 
@@ -77,10 +77,10 @@ Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozsze
 
   Przykład wywołuje te ostrzeżenia:
 
-  - 26494 (typ reguły 5: zawsze Inicjuj obiekt.)
+  - 26494 (typ reguły 5: Zawsze Inicjuj obiekt.)
 
-  - 26485 (granice zasady 3: nie zanikania tablicy do wskaźnika.)
+  - 26485 (granice reguła 3: Brak zanikania tablicy do wskaźnika.)
 
-  - 26481 (granice reguła 1: nie używaj arytmetyki wskaźnika. Użyj zakresu.)
+  - 26481 (granice reguła 1: Nie używaj arytmetyki wskaźnika. Użyj zakresu.)
 
   Pierwsze dwa ostrzeżenia uruchamiał się po skompilować ten kod za pomocą narzędzia analizy kodu CppCoreCheck zainstalowane i aktywowane. Ale trzecie ostrzeżenie nie zostanie wyzwolony, ze względu na ten atrybut. Cały profil granic można pominąć, pisząc [[gsl::suppress(bounds)]] bez uwzględniania numer określonej reguły. Podstawowych wytycznych dotyczących języka C++ mają na celu pomóc w pisaniu lepiej i bezpieczniejszego kodu. Ten atrybut Pomiń ułatwia wyłączyć ostrzeżenia, gdy nie chcieli.

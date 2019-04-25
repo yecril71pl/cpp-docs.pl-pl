@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
 ms.openlocfilehash: 1f3e6066af4b6870c5fa90f7bde373bb7be476ce
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62243981"
 ---
 # <a name="rowset-object-interfaces"></a>Interfejsy obiektu zestawu wierszy
 
@@ -23,9 +23,9 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 |---------------|---------------|--------------------------------------|
 |[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|Obowiązkowy|Tak|
 |[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obowiązkowy|Yes|
-|[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|Obowiązkowy|Tak|
-|[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|Obowiązkowy|Yes|
-|[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obowiązkowy|Yes|
+|[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|Obowiązkowy|Yes|
+|[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|Obowiązkowy|Tak|
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obowiązkowy|Tak|
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180(v=vs.85))|Optional|Nie|
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953(v=vs.85))|Optional|Nie|
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657(v=vs.85))|Optional|Nie|

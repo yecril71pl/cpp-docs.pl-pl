@@ -43,11 +43,11 @@ helpviewer_keywords:
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
 ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209725"
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
@@ -113,8 +113,8 @@ Każda z tych procedur zwraca wskaźnik do *str* po *str* została zwiększona p
 |-------------|---------------------|
 |**_mbsninc**|\<mbstring.h>|
 |**_mbsninc_l**|\<mbstring.h>|
-|**_strninc**|\<tchar.h >|
-|**_wcsninc**|\<tchar.h >|
+|**_strninc**|\<tchar.h>|
+|**_wcsninc**|\<tchar.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

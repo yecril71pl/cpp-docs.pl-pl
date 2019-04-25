@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
 ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334791"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -84,7 +84,7 @@ Określa dodatnią różnicę między *x* i *y*:
 
 |Wartość zwracana|Scenariusz|
 |------------------|--------------|
-|x i y|if x > y|
+|x-y|if x > y|
 |0|Jeśli x < = t|
 
 W przeciwnym razie może zwracać jedną z następujących błędów:
@@ -107,7 +107,7 @@ Z wyjątkiem obsługi NaN, ta funkcja jest odpowiednikiem `fmax(x - y, 0)`.
 
 |Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**fdim —**, **fdimf —**, **fdiml**|\<math.h>|\<cmath >|
+|**fdim —**, **fdimf —**, **fdiml**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
