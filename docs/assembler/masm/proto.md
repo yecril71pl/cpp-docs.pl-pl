@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210524"
 ---
 # <a name="proto"></a>PROTO
 
@@ -26,7 +26,7 @@ Prototypy funkcji lub procedury. Można wywołać funkcji prototypowej przez PRO
 *Etykieta*<br/>
 Nazwa funkcji prototypowej.
 
-*odległość*<br/>
+*distance*<br/>
 (Opcjonalnie) Używane w modelach pamięci 16-bitowych można zastąpić to ustawienie domyślne i wskazują **NEAR** lub **DALEKIEGO** wywołania.
 
 *langtype*<br/>
@@ -36,7 +36,7 @@ Nazwa funkcji prototypowej.
 
 - modele 16-bitowych: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
-*Parametr*<br/>
+*parameter*<br/>
 Opcjonalna nazwa parametru funkcji.
 
 *Tag*<br/>

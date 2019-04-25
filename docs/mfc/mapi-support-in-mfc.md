@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
 ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225531"
 ---
 # <a name="mapi-support-in-mfc"></a>Obsługa MAPI w MFC
 
@@ -32,7 +32,7 @@ MAPI musi odczytać pliku do wysłania załącznika. Jeśli aplikacja zachowuje 
 
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>Aby zaimplementować polecenie Wyślij pocztę z MFC
 
-1. Użyj Edytora menu Visual C++, aby dodać element menu, którego identyfikator polecenia jest ID_FILE_SEND_MAIL.
+1. Używanie wizualizacji C++ Edytor menu, aby dodać element menu, którego identyfikator polecenia jest ID_FILE_SEND_MAIL.
 
    Ten identyfikator polecenia są dostarczane przez platformę w AFXRES. H. Polecenia można dodać do dowolnego menu, ale zazwyczaj jest dodawany do **pliku** menu.
 

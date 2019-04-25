@@ -39,11 +39,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
 ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232496"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -77,7 +77,7 @@ int _wprintf_l(
 *Format*<br/>
 Formant formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -126,14 +126,14 @@ Line one
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tprintf —**|**printf**|**printf**|**wprintf**|
-|**_tprintf_l —**|**_printf_l**|**_printf_l**|**_wprintf_l**|
+|**_tprintf_l**|**_printf_l**|**_printf_l**|**_wprintf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**printf**, **_printf_l —**|\<stdio.h>|
-|**wprintf**, **_wprintf_l —**|\<stdio.h > lub \<wchar.h >|
+|**printf**, **_printf_l**|\<stdio.h>|
+|**wprintf**, **_wprintf_l**|\<stdio.h > lub \<wchar.h >|
 
 Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

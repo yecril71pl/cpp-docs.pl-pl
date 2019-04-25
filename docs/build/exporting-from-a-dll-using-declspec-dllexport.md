@@ -11,15 +11,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195319"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)
 
-Firma Microsoft wprowadziła **__export** w wersji 16-bitowego kompilatora Visual C++, aby umożliwić kompilatorowi automatyczne wygenerowanie nazw eksportu i umieszczenie ich w pliku. lib. Ten plik .lib następnie można tak samo jak statyczny .lib do łączenia z biblioteką DLL.
+Firma Microsoft wprowadziła **__export** w wersji 16-bitowego kompilatora Visual C++ aby umożliwić kompilatorowi automatyczne wygenerowanie nazw eksportu i umieszczenie ich w pliku. lib. Ten plik .lib następnie można tak samo jak statyczny .lib do łączenia z biblioteką DLL.
 
 W nowszych wersjach kompilatora, możesz wyeksportować dane, funkcje, klasy lub funkcje składowych klasy z biblioteki DLL za pomocą **__declspec(dllexport)** — słowo kluczowe. **__declspec(dllexport)** dodaje dyrektywy Eksport do pliku obiektu, dzięki czemu nie trzeba używać pliku .def.
 

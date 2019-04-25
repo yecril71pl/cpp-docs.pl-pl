@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
 ms.openlocfilehash: aa0440afae980e218c32ab3296bd7c6fb2b444d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62202214"
 ---
 # <a name="ml-error-messages"></a>Komunikaty o błędach ML
 
@@ -26,7 +26,7 @@ Komunikaty o błędach generowane przez składniki MASM można podzielić na trz
 
 Wszystkie komunikaty o błędach mieć następującą formę:
 
-> *Narzędzie*: *Filename* (*wiersza*): {*error_type —*} (*kodu*): *Message_text*
+> *Narzędzie*: *Nazwa pliku* (*wiersza*): {*error_type —*} (*kod*): *Message_text*
 
 gdzie:
 
@@ -39,7 +39,7 @@ Plik, który zawiera warunek generowanie błędu.
 *Wiersz*<br/>
 Przybliżony wiersza, w której istnieje warunek błędu.
 
-*Error_type —*<br/>
+*Error_type*<br/>
 Krytyczny błąd, błąd lub ostrzeżenie.
 
 *Kod*<br/>

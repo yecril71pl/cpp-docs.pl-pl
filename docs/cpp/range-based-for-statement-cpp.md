@@ -3,11 +3,11 @@ title: Range-based for — instrukcja (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244147"
 ---
 # <a name="range-based-for-statement-c"></a>Range-based for — instrukcja (C++)
 
@@ -24,7 +24,7 @@ for ( for-range-declaration : expression )
 
 Użyj bazująca na zakresie **dla** instrukcji do konstruowania pętli, które muszą być wykonywane za pomocą "wielu", która jest zdefiniowana jako wszystkich elementów, które można wykonać iterację — na przykład `std::vector`, wszelkie inne standardowej biblioteki języka C++ sekwencji, której zakres jest definicją `begin()` i `end()`. Nazwa, która jest zadeklarowana w `for-range-declaration` jest lokalną grupą część **dla** instrukcji i nie może być ponownie zadeklarowany w `expression` lub `statement`. Należy pamiętać, że [automatycznie](../cpp/auto-cpp.md) — słowo kluczowe jest preferowane w `for-range-declaration` część instrukcji.
 
-**Nowość w programie Visual Studio 2017:** opartej na zakresie dla pętli nie jest już wymagany, czy begin() i metodę end() zwracają obiektów tego samego typu. Dzięki temu metoda end() zwracać obiekt wartownik, takie jak używane przez zakresy zgodnie z definicją w propozycji zakresów V3. Aby uzyskać więcej informacji, zobacz [uogólnianie bazująca na zakresie pętli For](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) i [biblioteki zakresu v3 w serwisie GitHub](https://github.com/ericniebler/range-v3).
+**Nowość w programie Visual Studio 2017:**  Oparta na zakresie dla pętli nie jest już wymagany, czy begin() i metodę end() zwracają obiektów tego samego typu. Dzięki temu metoda end() zwracać obiekt wartownik, takie jak używane przez zakresy zgodnie z definicją w propozycji zakresów V3. Aby uzyskać więcej informacji, zobacz [uogólnianie bazująca na zakresie pętli For](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) i [biblioteki zakresu v3 w serwisie GitHub](https://github.com/ericniebler/range-v3).
 
 Ten kod przedstawia sposób użycia oparte na zakresie **dla** pętli, aby wykonać iterację tablicy i wektor:
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
 ms.openlocfilehash: 57e9556ccb7313c137c173e0f2143dc6e563d4c3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337157"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów
 

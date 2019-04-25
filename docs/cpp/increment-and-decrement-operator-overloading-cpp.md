@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183571"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Przeładowanie operatorów inkrementacji i dekrementacji (C++)
 
@@ -22,7 +22,7 @@ Operatory inkrementacji i dekrementacji dzielą się na specjalnej kategorii, po
 
 - Operacja predekrementacji i postdecrement
 
-Kiedy piszesz funkcje przeciążonego operatora, może być przydatne do zaimplementowania oddzielnych wersji dla prefiksu i przyrostkowe wersje tych operatorów. Aby rozróżnić dwa, następująca reguła zostanie wykryty: forma przedrostkowa operatora zadeklarowano dokładnie taki sam sposób jak inne operatora jednoargumentowego; przyrostkowej formy akceptuje dodatkowy argument typu **int**.
+Kiedy piszesz funkcje przeciążonego operatora, może być przydatne do zaimplementowania oddzielnych wersji dla prefiksu i przyrostkowe wersje tych operatorów. Aby rozróżnić dwa, zostanie wykryty następującą regułę: Forma przedrostkowa operatora zadeklarowano dokładnie taki sam sposób jak inne operatora jednoargumentowego; przyrostkowej formy akceptuje dodatkowy argument typu **int**.
 
 > [!NOTE]
 >  Podczas określania przeciążonego operatora formularza przyrostkowego operatora inkrementacji lub dekrementacji, dodatkowy argument musi być typu **int**; generuje błąd, określając innego typu.

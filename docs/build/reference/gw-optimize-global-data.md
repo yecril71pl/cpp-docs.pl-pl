@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
 ms.openlocfilehash: 5796f353414a021908147bdd2f296ef8e02f69ad
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270714"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (Optymalizuj dane globalne)
 
@@ -50,5 +50,5 @@ Aby uzyskać więcej informacji, zobacz [Przedstawiamy /Gw przełącznika kompil
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

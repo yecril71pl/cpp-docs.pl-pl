@@ -15,18 +15,18 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236562"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;liczbowe&gt; funkcji
 
 ||||
 |-|-|-|
 |[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|
-|[iota](#iota)|[partial_sum —](#partial_sum)|
+|[iota](#iota)|[partial_sum](#partial_sum)|
 
 ## <a name="accumulate"></a>  accumulate
 
@@ -49,7 +49,7 @@ Type accumulate(
 *pierwszy*<br/>
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie sumowane lub scalony według określonej operacji binarnej.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie ma być sumowany lub scalony według określonej operacji binarnej, który jest jedną pozycję poza ostatnim elementem faktycznie włączonym w iterowaną akumulację.
 
 *Val*<br/>
@@ -189,10 +189,10 @@ OutputIterator adjacent_difference(
 *pierwszy*<br/>
 Iterator danych wejściowych odnoszący się do pierwszego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie na parze wartości ma działać inna określona operacja binarna.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych odnoszący się do ostatniego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie na parze wartości ma działać inna określona operacja binarna.
 
-*wynik*<br/>
+*result*<br/>
 Iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg różnic lub wyniki określonej operacji.
 
 *binary_op*<br/>
@@ -300,7 +300,7 @@ Type inner_product(
 *first1*<br/>
 Iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
 
 *first2*<br/>
@@ -437,7 +437,7 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie, który ma zostać wypełniony.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie, który ma zostać wypełniony.
 
 *value*<br/>
@@ -511,10 +511,10 @@ OutputIterator partial_sum(
 *pierwszy*<br/>
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który ma być częściowo sumowany lub scalony według określonej operacji binarnej.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie, który ma być częściowo sumowany lub scalony według określonej operacji binarnej, znajdujący się o jedną pozycję poza ostatnim elementem faktycznie włączonym w iterowaną akumulację.
 
-*wynik*<br/>
+*result*<br/>
 Iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg częściowych sum lub wyniki określonej operacji.
 
 *binary_op*<br/>

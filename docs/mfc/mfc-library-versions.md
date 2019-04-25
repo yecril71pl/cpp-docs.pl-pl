@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238509"
 ---
 # <a name="mfc-library-versions"></a>Wersje biblioteki MFC
 
@@ -85,7 +85,7 @@ Projekty MFC korzystają symbol preprocesora \_UNICODE, aby wskazać, UTF-16 zna
 
 Biblioteki statyczne dla MFC, użyj następujących konwencji nazewnictwa. Nazwy bibliotek mają następującą formę
 
-> <em>u</em>AFX<em>cd</em>. LIB
+> <em>u</em>AFX<em>cd</em>.LIB
 
 gdzie litery kursywą małe litery są symbolami zastępczymi Specyfikatory, których znaczenie są wyświetlane w poniższej tabeli:
 
@@ -116,14 +116,14 @@ Biblioteki MFC DLL ma *wersji* numery, które wskazują zgodność binarną. Za 
 
 |DLL|Opis|
 |---------|-----------------|
-|MFC*wersji*. BIBLIOTEKI DLL|Wersji biblioteki MFC DLL, ANSI lub MBCS wersji|
-|MFC*wersji*U.DLL|Biblioteki MFC DLL wersji standardu Unicode|
+|MFC*version*.DLL|Wersji biblioteki MFC DLL, ANSI lub MBCS wersji|
+|MFC*version*U.DLL|Biblioteki MFC DLL wersji standardu Unicode|
 |MFC*wersji*D.DLL|Wersji biblioteki MFC DLL, ANSI lub debugować MBCS|
-|MFC*wersji*UD. BIBLIOTEKI DLL|Biblioteki MFC DLL, wersja do debugowania kodu Unicode|
-|MFCM*wersji*. BIBLIOTEKI DLL|Biblioteki MFC DLL za pomocą kontrolek Windows Forms, wersji ANSI lub MBCS wersji|
-|MFCM*wersji*U.DLL|Biblioteki MFC DLL za pomocą kontrolek Windows Forms, wersja Unicode|
+|MFC*version*UD.DLL|Biblioteki MFC DLL, wersja do debugowania kodu Unicode|
+|MFCM*version*.DLL|Biblioteki MFC DLL za pomocą kontrolek Windows Forms, wersji ANSI lub MBCS wersji|
+|MFCM*version*U.DLL|Biblioteki MFC DLL za pomocą kontrolek Windows Forms, wersja Unicode|
 |MFCM*wersji*D.DLL|Biblioteki MFC DLL za pomocą kontrolek Windows Forms, wersji ANSI lub debugować MBCS|
-|MFCM*wersji*UD. BIBLIOTEKI DLL|Biblioteki MFC DLL za pomocą kontrolek Windows Forms, wersja do debugowania kodu Unicode|
+|MFCM*version*UD.DLL|Biblioteki MFC DLL za pomocą kontrolek Windows Forms, wersja do debugowania kodu Unicode|
 
 Bibliotek importu potrzebne do tworzenia aplikacji lub biblioteki dll, korzystających z tych udostępnionych bibliotek DLL rozszerzeń MFC mają taką samą nazwę bazy jak biblioteka DLL, ale mają rozszerzenie nazwy pliku .lib. Korzystając z udostępnionych bibliotek DLL, mały biblioteki statycznej nadal muszą być połączone z kodem; Ta biblioteka ma nazwę MFCS*wersji*.lib {N} {D}.
 

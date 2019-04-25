@@ -32,11 +32,11 @@ helpviewer_keywords:
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335363"
 ---
 # <a name="cos-cosf-cosl"></a>COS cosf —, cosl —
 
@@ -66,8 +66,8 @@ Cosinus *x*. Jeśli *x* jest większe niż lub równy 263 lub mniejsze niż lub 
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, ZNAJDŹ|brak|**_DOMENY**|
-|GRANICACH INF|**NIEPRAWIDŁOWY**|**_DOMENY**|
+|GRANICACH QNAN, ZNAJDŹ|brak|**_DOMAIN**|
+|GRANICACH INF|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -77,7 +77,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cos
 
 |Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
 |-------------|---------------------|-|
-|**COS**, **cosh**, **cosf —**|\<math.h>|\<cmath > lub \<math.h >|
+|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath > lub \<math.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

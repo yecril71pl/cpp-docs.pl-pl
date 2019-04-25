@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
 ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216502"
 ---
 # <a name="lambda-expressions-in-c"></a>Wyrażenia lambda w języku C++
 
@@ -21,7 +21,7 @@ W języku C ++ 11 i nowszych wersjach Wyrażenie lambda — często nazywana *la
 
 - [Wyrażenia lambda, a obiekty funkcji](lambda-expression-syntax.md)
 - [Praca z wyrażenia lambda](examples-of-lambda-expressions.md)
-- [wyrażenia constexpr, wyrażenia lambda](lambda-expressions-constexpr.md)
+- [constexpr lambda expressions](lambda-expressions-constexpr.md)
 
 ## <a name="parts-of-a-lambda-expression"></a>Części wyrażenia Lambda
 
@@ -170,7 +170,7 @@ int main() // C4297 expected
 
 Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md).
 
-### <a name="return-type"></a>Zwracany typ
+### <a name="return-type"></a>Typ zwracany
 
 Zwracany typ wyrażenia lambda jest wyprowadzony automatycznie. Nie trzeba stosować [automatycznie](../cpp/auto-cpp.md) — słowo kluczowe, chyba że określisz *trailing-return-type*. *Trailing-return-type* przypomina część zwracanego typu zwykłej metody lub funkcji. Jednak zwracany typ musi stosować się na liście parametrów i musi zawierać słowo kluczowe trailing-return-type `->` przed zwracanym typem.
 
@@ -362,7 +362,7 @@ Jeśli wyrażenie lambda jest jawnie lub niejawnie `constexpr`, konwersja wskaź
     constexpr int(*inc)(int) = Increment;
 ```
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+## <a name="microsoft-specific"></a>Microsoft-Specific
 
 Wyrażenia lambda nie są obsługiwane w następujących jednostkach zarządzanych środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego: **klasy referencyjnej**, **ref struct**, **klasę wartości**, lub **wartość — Struktura** .
 

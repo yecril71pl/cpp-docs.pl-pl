@@ -22,11 +22,11 @@ helpviewer_keywords:
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
 ms.openlocfilehash: 51b67b375cf7a4608d3080e5922cabbf3135ddfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335889"
 ---
 # <a name="storage-of-basic-types"></a>Magazyn typów podstawowych
 

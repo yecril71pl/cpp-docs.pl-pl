@@ -6,11 +6,11 @@ helpviewer_keywords:
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
 ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52453888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245573"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues i Rvalues (Visual C++)
 

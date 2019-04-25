@@ -33,11 +33,11 @@ helpviewer_keywords:
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
 ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331873"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -56,7 +56,7 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Strumień wejściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -82,7 +82,7 @@ Wykonaj rutynowe specyficzne uwagi.
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettc —**|**getc**|**getc**|**getwc**|
+|**_gettc**|**getc**|**getc**|**getwc**|
 
 ## <a name="requirements"></a>Wymagania
 

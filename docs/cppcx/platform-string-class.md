@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330209"
 ---
 # <a name="platformstring-class"></a>Platform::String, klasa
 
@@ -85,11 +85,11 @@ Klasa String ma następujące operatory.
 
 |Element członkowski|Opis|
 |------------|-----------------|
-|[String::operator == — Operator](#operator-equality)|Wskazuje, czy dwa obiekty ciągu określonego mają taką samą wartość.|
+|[String::operator == — Operator](#operator-equality)|Wskazuje, czy dwa określone obiekty parametry mają taką samą wartość.|
 |[operator + — Operator](#operator-plus)|Łączy dwa obiekty ciąg do nowego obiektu ciągu.|
 |[String::operator > — Operator](#operator-greater-than)|Wskazuje, czy wartość jeden obiekt na ciąg znaków jest większa niż wartość drugiej obiekt ciągu.|
 |[String::operator > = — Operator](#operator-greater-than-or-equals)|Wskazuje, czy wartość jeden obiekt na ciąg znaków jest większa lub równa wartości drugiego obiektu String.|
-|[String::operator! = — Operator](#operator-inequality)|Wskazuje, czy dwa obiekty ciągu określonego mają różne wartości.|
+|[String::operator! = — Operator](#operator-inequality)|Wskazuje, czy dwa określone obiekty parametry mają różne wartości.|
 |[String::operator < — Operator](#operator-less-than)|Wskazuje, czy wartość jeden obiekt ciągu jest mniejsza niż wartość drugiego obiektu String.|
 
 ### <a name="requirements"></a>Wymagania
@@ -411,7 +411,7 @@ Drugi `String` obiektu.
 
 ## <a name="operator-inequality"></a> String::operator! =
 
-Wskazuje, czy dwa określona `String` obiekty mają różne wartości.
+Wskazuje, czy dwa określone `String` obiekty mają różne wartości.
 
 ### <a name="syntax"></a>Składnia
 

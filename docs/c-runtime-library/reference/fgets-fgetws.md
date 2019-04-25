@@ -30,11 +30,11 @@ helpviewer_keywords:
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
 ms.openlocfilehash: 16dfb7cb0401083960669a735a976fbcd4ad4081
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333865"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -63,7 +63,7 @@ Lokalizacja magazynowa danych.
 *numChars*<br/>
 Maksymalna liczba znaków do odczytania.
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -84,7 +84,7 @@ Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errn
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fgetts —**|**fgets**|**fgets**|**fgetws —**|
+|**_fgetts**|**fgets**|**fgets**|**fgetws —**|
 
 ## <a name="requirements"></a>Wymagania
 

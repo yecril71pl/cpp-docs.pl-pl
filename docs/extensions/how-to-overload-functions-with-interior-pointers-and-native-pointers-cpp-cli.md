@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
 ms.openlocfilehash: f84a7efc87985f23b62139f0547c292989537aa6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62254562"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Instrukcje: Funkcje przeładowania z wewnętrznymi i Natywnymi wskaźnikami (C++sposób niezamierzony)
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
 ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62215404"
 ---
 # <a name="compiler-error-c2603"></a>Błąd kompilatora C2603
 
-> "*funkcja*": zbyt wiele bloku statycznych obiektów w zakresie z konstruktorem/destruktorami w funkcji
+> "*funkcja*": Zbyt wiele bloku statycznych obiektów w zakresie z konstruktorem/destruktorami w funkcji
 
 W wersji kompilatora Visual C++ przed Visual Studio 2015 lub gdy [threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) — opcja kompilatora jest określony, jest ograniczona do 31 liczby obiektów statycznych, które mogą mieć w widocznego na zewnątrz wbudowanej funkcji .
 

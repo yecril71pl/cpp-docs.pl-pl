@@ -8,11 +8,11 @@ helpviewer_keywords:
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
 ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331216"
 ---
 # <a name="semantics-of-expressions"></a>Semantyka wyrażeń
 
@@ -69,10 +69,10 @@ Język C++ określa niektóre możliwości podczas określania argumentów opera
 
 |Oczekiwano typu|Dozwolone typy|
 |-------------------|-------------------|
-|*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|
+|*type*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *Typ*<br /> `volatile const` *type*&|
 |*Typ* \*|*Typ* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
-|`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|
-|`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|
+|`const` *Typ*|*type*<br /> `const` *Typ*<br />`const` *type*&|
+|`volatile` *Typ*|*type*<br /> `volatile` *Typ*<br /> `volatile` *type*&|
 
 Ponieważ powyższych zasad, można go zawsze używać w połączeniu, wskaźnika elementu const do obiektów volatile mogą być dostarczane gdy wskaźnik jest oczekiwany.
 
@@ -94,7 +94,7 @@ Wyrażenie może modyfikować wartość obiektu tylko raz między kolejnymi „p
 
 Definicja języka C++ nie określa obecnie punktów sekwencji. Microsoft C++ używa tych samych punktów sekwencji co standard ANSI C dla dowolnych wyrażeń obejmujących operatory języka C i nieobejmujących przeciążonych operatorów. Gdy operatory są przeciążone, semantyka zmienia się z sekwencjonowania operatora do sekwencjonowania wywołania funkcji. Microsoft C++ używa następujących punktów sekwencji:
 
-- Lewy operand logicznego operatora AND (&&). Lewy operand logicznego operatora AND jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora AND zostanie obliczony.
+- Lewy operand logicznego operatora AND (& &). Lewy operand logicznego operatora AND jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora AND zostanie obliczony.
 
 - Lewy operand logicznego operatora OR (&#124;&#124;). Lewy operand logicznego operatora OR jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora OR zostanie obliczony.
 

@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - isinf function
 ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331613"
 ---
 # <a name="isinf"></a>isinf —
 
@@ -47,7 +47,7 @@ Wartość zmiennoprzecinkowa do testowania.
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-|**isinf —**|\<math.h>|\<Math.h > lub \<cmath >|
+|**isinf**|\<math.h>|\<Math.h > lub \<cmath >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -58,4 +58,4 @@ Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
-[isnormal —](isnormal.md)<br/>
+[isnormal](isnormal.md)<br/>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245378"
 ---
 # <a name="nonstandard-behavior"></a>Niestandardowe zachowanie
 
@@ -75,7 +75,7 @@ Aby uzyskać więcej informacji dotyczących specyfikacji wyjątków, zobacz [sp
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-C++ standard stanowi, że [char_traits::eof](../standard-library/char-traits-struct.md#eof) może nie odpowiadać ważnej `char_type` wartość. Kompilator języka Visual C++ wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Jest to niezgodne z wymogami określonymi w tabeli 62 w sekcji 12.1.1 specyfikacji ISO C++. Prezentuje to poniższy przykład.
+C++ Standard stwierdza, że [char_traits::eof](../standard-library/char-traits-struct.md#eof) może nie odpowiadać ważnej `char_type` wartości. Element wizualny C++ kompilator wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Jest to niezgodne z wymogami określonymi w tabeli 62 w sekcji 12.1.1 specyfikacji ISO C++. Prezentuje to poniższy przykład.
 
 ```cpp
 #include <iostream>

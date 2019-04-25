@@ -3,11 +3,11 @@ title: / APPCONTAINER (aplikacja platformy uniwersalnej systemu Windows/Microsof
 ms.date: 11/04/2016
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
 ms.openlocfilehash: f7ab8cf1ce034580953fdf1403264e8ef3d3ff09
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295123"
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/ APPCONTAINER (aplikacja Microsoft Store)
 
@@ -41,5 +41,5 @@ Opcja/appcontainer została wprowadzona w systemie Windows 8.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

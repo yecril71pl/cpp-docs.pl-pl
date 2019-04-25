@@ -10,11 +10,11 @@ helpviewer_keywords:
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
 ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325822"
 ---
 # <a name="main-function-and-program-execution"></a>Funkcja main i wykonywanie programu
 
@@ -38,5 +38,5 @@ Zobacz [korzystanie z wmain](../c-language/using-wmain.md) opis wersja znaków d
 
 ## <a name="see-also"></a>Zobacz także
 
-[główne: Uruchamianie programu](../cpp/main-program-startup.md)<br/>
+[main: uruchamianie programu](../cpp/main-program-startup.md)<br/>
 [Analizowanie argumentów wiersza polecenia języka C](../c-language/parsing-c-command-line-arguments.md)

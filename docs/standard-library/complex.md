@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212095"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -72,34 +72,34 @@ Chyba że określono inaczej, funkcji, które mogą zwrócić wiele wartości s�
 
 |Funkcja|Opis|
 |-|-|
-|[ABS](../standard-library/complex-functions.md#abs)|Oblicza resztę z liczbą.|
+|[abs](../standard-library/complex-functions.md#abs)|Oblicza resztę z liczbą.|
 |[ARG](../standard-library/complex-functions.md#arg)|Wyodrębnia argumentu z liczbą.|
 |[conj](../standard-library/complex-functions.md#conj)|Zwraca zespolonej liczbą.|
-|[COS](../standard-library/complex-functions.md#cos)|Zwraca cosinus liczby zespolonej.|
-|[COSH](../standard-library/complex-functions.md#cosh)|Zwraca cosinus hiperboliczny liczby zespolonej.|
-|[EXP](../standard-library/complex-functions.md#exp)|Zwraca wartość funkcji wykładniczej liczby zespolonej.|
+|[cos](../standard-library/complex-functions.md#cos)|Zwraca cosinus liczby zespolonej.|
+|[cosh](../standard-library/complex-functions.md#cosh)|Zwraca cosinus hiperboliczny liczby zespolonej.|
+|[exp](../standard-library/complex-functions.md#exp)|Zwraca wartość funkcji wykładniczej liczby zespolonej.|
 |[imag](../standard-library/complex-functions.md#imag)|Wyodrębnia urojone części liczby zespolonej.|
 |[log](../standard-library/complex-functions.md#log)|Zwraca logarytm naturalny liczby zespolonej.|
 |[log10](../standard-library/complex-functions.md#log10)|Zwraca logarytm 10 liczbą.|
 |[norm](../standard-library/complex-functions.md#norm)|Wyodrębnia normy liczbą.|
 |[polar](../standard-library/complex-functions.md#polar)|Zwraca liczby zespolonej, odnoszące się do określonego modułu, a argument w postaci kartezjańskich wizualizacji.|
 |[Pow](../standard-library/complex-functions.md#pow)|Oblicza liczby zespolonej uzyskać, tworząc podstawowy, która jest liczbą do potęgi innej liczby zespolonej.|
-|[rzeczywiste](../standard-library/complex-functions.md#real)|Wyodrębnia rzeczywisty składnik liczby zespolonej.|
-|[SIN](../standard-library/complex-functions.md#sin)|Zwraca sinus liczby zespolonej.|
+|[real](../standard-library/complex-functions.md#real)|Wyodrębnia rzeczywisty składnik liczby zespolonej.|
+|[sin](../standard-library/complex-functions.md#sin)|Zwraca sinus liczby zespolonej.|
 |[SINH](../standard-library/complex-functions.md#sinh)|Zwraca sinus hiperboliczny liczby zespolonej.|
 |[sqrt](../standard-library/complex-functions.md#sqrt)|Zwraca pierwiastek kwadratowy liczby zespolonej.|
 |[tan](../standard-library/complex-functions.md#tan)|Zwraca tangens liczby zespolonej.|
-|[TANH](../standard-library/complex-functions.md#tanh)|Zwraca tangens hiperboliczny liczby zespolonej.|
+|[tanh](../standard-library/complex-functions.md#tanh)|Zwraca tangens hiperboliczny liczby zespolonej.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
 |[operator!=](../standard-library/complex-operators.md#op_neq)|Testuje pod kątem nierówności pomiędzy dwóch liczb zespolonych, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.|
-|[operator *](../standard-library/complex-operators.md#op_star)|Mnoży dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.|
+|[operator*](../standard-library/complex-operators.md#op_star)|Mnoży dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.|
 |[operator +](../standard-library/complex-operators.md#op_add)|Dodaje dwie liczby zespolone, jeden lub oba może należeć do podzbioru typu rzeczywiste i urojone części.|
 |[operator-](../standard-library/complex-operators.md#operator-)|Odejmuje dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.|
-|[operator /](../standard-library/complex-operators.md#op_div)|Dzieli dwie liczby zespolone, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.|
+|[operator/](../standard-library/complex-operators.md#op_div)|Dzieli dwie liczby zespolone, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.|
 |[Operator <\<](../standard-library/complex-operators.md#op_lt_lt)|Funkcja szablonu, który wstawia liczby zespolonej do strumienia wyjściowego.|
 |[operator==](../standard-library/complex-operators.md#op_eq_eq)|Testuje pod kątem równości pomiędzy dwóch liczb zespolonych, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.|
 |[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, która wyodrębnia wartość złożoną ze strumienia wejściowego.|
@@ -108,8 +108,8 @@ Chyba że określono inaczej, funkcji, które mogą zwrócić wiele wartości s�
 
 |Class|Opis|
 |-|-|
-|[złożone\<double >](../standard-library/complex-double.md)|Klasa jawnie wyspecjalizowane szablonu opisuje obiekt przechowujący uporządkowana para obiektów, oba typu **double**, gdzie pierwszy reprezentuje część rzeczywista liczby zespolonej, a druga urojone części.|
-|[złożone\<float >](../standard-library/complex-float.md)|Klasa jawnie wyspecjalizowane szablonu opisuje obiekt przechowujący uporządkowana para obiektów, oba typu **float**, gdzie pierwszy reprezentuje część rzeczywista liczby zespolonej, a druga urojone części.|
+|[complex\<double>](../standard-library/complex-double.md)|Klasa jawnie wyspecjalizowane szablonu opisuje obiekt przechowujący uporządkowana para obiektów, oba typu **double**, gdzie pierwszy reprezentuje część rzeczywista liczby zespolonej, a druga urojone części.|
+|[complex\<float>](../standard-library/complex-float.md)|Klasa jawnie wyspecjalizowane szablonu opisuje obiekt przechowujący uporządkowana para obiektów, oba typu **float**, gdzie pierwszy reprezentuje część rzeczywista liczby zespolonej, a druga urojone części.|
 |[złożone\<typu long double >](../standard-library/complex-long-double.md)|Klasa jawnie wyspecjalizowane szablonu opisuje obiekt przechowujący uporządkowana para obiektów, oba typu **typu long double**, gdzie pierwszy reprezentuje część rzeczywista liczby zespolonej, a druga urojone części.|
 |[complex](../standard-library/complex-class.md)|Klasa szablonu opisuje obiekt używany do reprezentowania liczby zespolonej systemu i wykonywać złożone operacje arytmetyczne.|
 

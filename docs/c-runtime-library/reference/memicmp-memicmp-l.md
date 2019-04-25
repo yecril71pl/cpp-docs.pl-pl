@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
 ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285277"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 
@@ -91,7 +91,7 @@ Jeśli *buffer1* lub *buffer2* jest pustym wskaźnikiem, funkcja wywoła procedu
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_memicmp —**|\<Memory.h > lub \<string.h >|
+|**_memicmp**|\<Memory.h > lub \<string.h >|
 |**_memicmp_l**|\<Memory.h > lub \<string.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

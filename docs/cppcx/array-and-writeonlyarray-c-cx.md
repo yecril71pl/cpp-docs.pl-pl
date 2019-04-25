@@ -1,17 +1,17 @@
 ---
-title: Tablica i WriteOnlyArray (C + +/ CX)
+title: Tablica i WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
 ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209419"
 ---
-# <a name="array-and-writeonlyarray-ccx"></a>Tablica i WriteOnlyArray (C + +/ CX)
+# <a name="array-and-writeonlyarray-ccx"></a>Tablica i WriteOnlyArray (C++/CX)
 
-Można bez ograniczeń wykorzystywać regularne tablice stylu C lub [std::array](../standard-library/array-class-stl.md) w języku C + +/ CX program (mimo że [std::vector](../standard-library/vector-class.md) często jest lepszym rozwiązaniem), ale w dowolnym interfejsem API, który jest publikowany w metadanych, należy przekonwertować tablicy stylu C lub vector do [Platform::Array](../cppcx/platform-array-class.md) lub [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typu, w zależności od tego, w jaki sposób jest używany. [Platform::Array](../cppcx/platform-array-class.md) typu nie jest wydajne ani jak [std::vector](../standard-library/vector-class.md), więc generalnie nie należy jej użycia w kodu wewnętrznego, który wykonuje wiele operacji na tablicy elementy.
+Można bez ograniczeń wykorzystywać regularne tablice stylu C lub [std::array](../standard-library/array-class-stl.md) w C++/CX program (mimo że [std::vector](../standard-library/vector-class.md) często jest lepszym rozwiązaniem), ale w dowolnym interfejsem API, który jest publikowany w metadanych, należy przekonwertować Tablica w stylu języka C lub vector do [Platform::Array](../cppcx/platform-array-class.md) lub [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typu, w zależności od tego, w jaki sposób jest używany. [Platform::Array](../cppcx/platform-array-class.md) typu nie jest wydajne ani jak [std::vector](../standard-library/vector-class.md), więc generalnie nie należy jej użycia w kodu wewnętrznego, który wykonuje wiele operacji na tablicy elementy.
 
 Następujące typy tablicy mogą być przekazywane między interfejsem ABI:
 
@@ -29,11 +29,11 @@ PassArray używana, gdy obiekt wywołujący przekazuje tablicę do metody. Typ p
 
 FillArray używana, gdy obiekt wywołujący przekazuje tablicę dla metody wypełnić. Typ parametru wejściowego C++ jest [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
 
-ReceiveArray używana, gdy obiekt wywołujący odbiera tablicę, która metoda przydziela. W języku C + +/ CX może zwracać tablicy wartości zwracanej jako tablica ^ lub można przywrócić go jako parametru wyjściowego pisania tablicy ^ *.
+ReceiveArray używana, gdy obiekt wywołujący odbiera tablicę, która metoda przydziela. W C++/CX może zwracać tablicy wartości zwracanej jako tablica ^ lub można przywrócić go jako parametru wyjściowego pisania tablicy ^ *.
 
 ## <a name="passarray-pattern"></a>Wzorzec PassArray
 
-Jeśli metoda nie powoduje modyfikacji go kod klienta przekazuje tablicę do metody, C++, metoda akceptuje tablicy jako const tablicy ^. Na poziomie interfejsem binarnym (ABI) aplikacji środowiska wykonawczego Windows jest to nazywane PassArray. Następny przykład pokazuje, jak przekazać tablicę, która jest przydzielany w języku JavaScript do funkcji języka C++, która odczytuje z niego.
+Gdy kod klienta przekazuje tablicę, aby C++ metody, a także metoda nie powoduje modyfikacji go, metoda akceptuje tablicy jako const tablicy ^. Na poziomie interfejsem binarnym (ABI) aplikacji środowiska wykonawczego Windows jest to nazywane PassArray. Następny przykład pokazuje, jak przekazać tablicę, która jest przydzielany w języku JavaScript do funkcji języka C++, która odczytuje z niego.
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
@@ -91,4 +91,4 @@ Ogólnie rzecz biorąc, należy unikać udostępnianie `Platform::Array` wpisać
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

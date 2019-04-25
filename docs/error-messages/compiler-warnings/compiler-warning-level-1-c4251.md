@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
 ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207360"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Kompilator ostrzeżenie (poziom 1) C4251
 
@@ -29,7 +29,7 @@ Aby ograniczyć możliwość uszkodzenia danych, podczas eksportowania do klasy 
 
 Można uniknąć, eksportowanie klas, definiując, które biblioteki DLL, która definiuje klasę z funkcjami wirtualnymi i funkcji, należy można wywołać w celu utworzenia wystąpienia i usuwania obiektów tego typu.  Następnie możesz po prostu wywołać funkcje wirtualne w typie.
 
-C4251 można zignorować, jeśli są pochodząca z typu w standardowej bibliotece języka C++, kompilacja wersji debugowania (**/mtd**) i których dotyczy _Container_base komunikat o błędzie kompilatora.
+C4251 można zignorować, jeśli są pochodząca z typu w C++ bibliotekę standardową, kompilacja wersji debugowania (**/mtd**) i których dotyczy _Container_base komunikat o błędzie kompilatora.
 
 ```cpp
 // C4251.cpp

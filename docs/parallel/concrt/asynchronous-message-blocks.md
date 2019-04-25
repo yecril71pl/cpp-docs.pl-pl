@@ -7,11 +7,11 @@ helpviewer_keywords:
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237080"
 ---
 # <a name="asynchronous-message-blocks"></a>Bloki komunikatów asynchronicznych
 
@@ -117,7 +117,7 @@ W poniższej tabeli przedstawiono, jak te cechy odnoszą się do różnych typó
 |`choice`|Oba|Uporządkowane|10|1|
 |`join`|Oba|Uporządkowane|niepowiązane|1|
 |`multitype_join`|Oba|Uporządkowane|10|1|
-|`timer`|Źródło|Nie dotyczy|Nie dotyczy|1|
+|`timer`|Source|Nie dotyczy|Nie dotyczy|1|
 
 W poniższych sekcjach opisano typy blok komunikatów, które bardziej szczegółowo.
 

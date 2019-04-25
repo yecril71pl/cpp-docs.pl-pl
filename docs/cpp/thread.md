@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330521"
 ---
 # <a name="thread"></a>wątek
 
@@ -42,7 +42,7 @@ Używając zmiennych thread-local w bibliotekach ładowane dynamicznie, musisz b
 
 1. Zmiennymi lokalnymi wątku, które są statycznie inicjowane przy użyciu stałych wartości zwykle są inicjowane poprawnie we wszystkich wątkach. Jednak grudnia 2017 r. występuje znanej zgodności problem w kompilatorze Microsoft Visual C++, według której otrzymywać zmienne constexpr dynamicznego zamiast statycznego inicjowania.
 
-   Uwaga: Oba powyższe problemy powinny rozwiązany w przyszłych aktualizacji kompilatora.
+   Uwaga: Oba te problemy mają być rozwiązany w przyszłych aktualizacji kompilatora.
 
 Ponadto musisz przestrzegać następujących wytycznych podczas deklarowania zmiennych i obiektów lokalnych wątku:
 

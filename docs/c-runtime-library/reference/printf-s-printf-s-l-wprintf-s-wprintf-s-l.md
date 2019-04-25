@@ -37,11 +37,11 @@ helpviewer_keywords:
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
 ms.openlocfilehash: 6b07fd90e0390d5c39bc8f5885f5744de20eeb79
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232004"
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
@@ -75,7 +75,7 @@ int _wprintf_s_l(
 *Format*<br/>
 Formant formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -103,8 +103,8 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_unicode zdefiniowany|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tprintf_s —**|**printf_s**|**printf_s**|**wprintf_s**|
-|**_tprintf_s_l —**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
+|**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
+|**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
 *Format* argument składa się ze znaków zwykłych, sekwencje ucieczki i (Jeśli argumenty *format*) ze specyfikacji formatu. Znaki zwykłe i sekwencje wyjścia są kopiowane do **stdout** w kolejności ich występowania. Na przykład wiersz
 
@@ -128,8 +128,8 @@ Line one
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**printf_s**, **_printf_s_l —**|\<stdio.h>|
-|**wprintf_s —**, **_wprintf_s_l —**|\<stdio.h > lub \<wchar.h >|
+|**printf_s**, **_printf_s_l**|\<stdio.h>|
+|**wprintf_s**, **_wprintf_s_l**|\<stdio.h > lub \<wchar.h >|
 
 Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

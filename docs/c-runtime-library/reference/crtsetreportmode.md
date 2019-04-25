@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335298"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -47,7 +47,7 @@ int _CrtSetReportMode(
 *reportType*<br/>
 Typ raportu: **_CRT_WARN**, **_CRT_ERROR**, i **_CRT_ASSERT**.
 
-*ReportMode.*<br/>
+*reportMode*<br/>
 Nowy tryb lub tryby raportu dla *reportType*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -83,7 +83,7 @@ Poniższa tabela zawiera listę typów raportów zdefiniowanych w pliku Crtdbg.h
 |**_CRTDBG_MODE_DEBUG**|Zapisywanie komunikatu w oknie danych wyjściowych debugera.|
 |**_CRTDBG_MODE_FILE**|Zapisywanie komunikatu w dojściu do pliku wskazanym przez użytkownika. [_CrtSetReportFile](crtsetreportfile.md) powinna być wywoływana w celu definiowania określonego pliku lub strumienia mającego służyć jako miejsce docelowe.|
 |**_CRTDBG_MODE_WNDW**|Tworzy okno komunikatu, aby wyświetlić wiadomość wraz z [przerwać](abort.md), **ponów**, i **Ignoruj** przycisków.|
-|**_CRTDBG_REPORT_MODE**|Zwraca *ReportMode* dla określonego *reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|Zwraca *ReportMode* dla określonego *reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 Każdy typ raportu może być przekazywany przy użyciu jednego, dwóch lub trzech trybów albo bez żadnego trybu. Dlatego jeden typ raportu może mieć zdefiniowane więcej niż jedno miejsce docelowe. Na przykład poniższy fragment kodu powoduje błędy potwierdzenia do wysłania do oba okna komunikatów debugowania i do **stderr**:
 

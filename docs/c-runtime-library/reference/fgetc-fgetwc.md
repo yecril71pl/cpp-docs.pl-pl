@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
 ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334011"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -54,7 +54,7 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -77,7 +77,7 @@ Aby uzyskać więcej informacji na temat przetwarzania znaków dwubajtowych i zn
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fgettc —**|**fgetc**|**fgetc**|**fgetwc**|
+|**_fgettc**|**fgetc**|**fgetc**|**fgetwc**|
 
 ## <a name="requirements"></a>Wymagania
 

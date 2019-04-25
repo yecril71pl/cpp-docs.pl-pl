@@ -21,12 +21,12 @@ helpviewer_keywords:
 - fgetchar function
 ms.assetid: 2b27a6f2-d973-4d12-a66d-7e6b01e84470
 ms.openlocfilehash: 5ca80adbb170923f725d88ac4f4e70fa7a034a0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333946"
 ---
 # <a name="fgetchar"></a>fgetchar
 
-Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_fgetchar —](fgetchar-fgetwchar.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_fgetchar —](fgetchar-fgetwchar.md) zamiast tego.

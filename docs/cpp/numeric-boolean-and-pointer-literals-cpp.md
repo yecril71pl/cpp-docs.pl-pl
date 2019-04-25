@@ -7,11 +7,11 @@ helpviewer_keywords:
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245105"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Literały numeryczne, atrybut typu wartość logiczna i wskaźnika (C++)
 
@@ -71,7 +71,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**Separatory cyfr**: znak pojedynczego cudzysłowu (apostrof) służy do oddzielania wartości miejsce w większą liczbą, aby były one bardziej czytelne dla człowieka do odczytu. Separatory nie mają wpływu na kompilację.
+**Separatory cyfr**: Znak pojedynczego cudzysłowu (apostrof) służy do oddzielania wartości miejsce w większą liczbą, aby były one bardziej czytelne dla człowieka do odczytu. Separatory nie mają wpływu na kompilację.
 
 ```cpp
 long long i = 24'847'458'121

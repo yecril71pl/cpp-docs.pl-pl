@@ -2,11 +2,11 @@
 title: Przegląd Konwencji ARM64 ABI
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195512"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd Konwencji ARM64 ABI
 
@@ -231,7 +231,7 @@ Powinny być opisane kod, który jest generowana dynamicznie przy użyciu funkcj
 
 ## <a name="cycle-counter"></a>Licznik cyklu
 
-Wszystkie procesory ARMv8 są wymagane do obsługi licznika cyklu zarejestrować rejestru 64-bitowym, który konfiguruje Windows, aby można było odczytać na dowolnym poziomie wyjątku, w tym trybie użytkownika. Jest możliwy za pośrednictwem specjalnego PMCCNTR_EL0 zarejestrować, przy użyciu MSR opcode w kodzie zestawu lub `_ReadStatusReg` wewnętrzne w kodzie języka C/C++.
+Wszystkie procesory ARMv8 są wymagane do obsługi licznika cyklu zarejestrować rejestru 64-bitowym, który konfiguruje Windows, aby można było odczytać na dowolnym poziomie wyjątku, w tym trybie użytkownika. Jest możliwy za pośrednictwem specjalnego PMCCNTR_EL0 zarejestrować, przy użyciu MSR opcode w kodzie zestawu lub `_ReadStatusReg` wewnętrzne w języku C /C++ kodu.
 
 Wartość licznika cyklu jest licznikiem true cyklu, nie zegara tablicy. Częstotliwość zliczania będą się różnić z częstotliwością procesora. Jeśli uważasz, że musisz wiedzieć, częstotliwości licznika cyklu, nie należy używać licznika cyklu. Zamiast tego chcesz zmierzyć czas zegarowy, dla którego należy używać `QueryPerformanceCounter`.
 

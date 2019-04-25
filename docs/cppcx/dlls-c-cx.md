@@ -1,15 +1,15 @@
 ---
-title: Biblioteki dll (C + +/ CX)
+title: DLLs (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
 ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183291"
 ---
-# <a name="dlls-ccx"></a>Biblioteki dll (C + +/ CX)
+# <a name="dlls-ccx"></a>DLLs (C++/CX)
 
 Visual Studio umożliwia tworzenie standardowego DLL Win32 lub składnik środowiska uruchomieniowego Windows DLL, które mogą być używane przez aplikacje platformy uniwersalnej Windows (UWP). Standardowe biblioteki DLL, który został utworzony przy użyciu wersji programu Visual Studio lub przez kompilator Visual C++, który jest wcześniejsza niż Visual Studio 2012 nie można prawidłowo załadować w aplikacji platformy uniwersalnej systemu Windows i nie może przekazać test weryfikacyjny z aplikacji Microsoft Store.
 

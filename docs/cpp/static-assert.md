@@ -10,11 +10,11 @@ helpviewer_keywords:
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
 ms.openlocfilehash: d5ef1ba45001a2b1a3ee1f2da46f66224857b070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330656"
 ---
 # <a name="staticassert"></a>static_assert
 
@@ -33,7 +33,7 @@ static_assert( constant-expression ); // Visual Studio 2017 and later
 |Parametr|Opis|
 |---------------|-----------------|
 |*constant-expression*|Wyrażenie stałe liczby całkowitej, można przekonwertować na wartość logiczną.<br /><br /> Jeśli obliczane wyrażenie jest równa zero (false), *literał ciągu* parametru jest wyświetlany, a kompilacja kończy się niepowodzeniem z powodu błędu. Jeśli wyrażenie jest niezerowe (PRAWDA), **static_assert** deklaracja nie ma wpływu.|
-|*literał ciągu*|Komunikat, który jest wyświetlany, gdy *wyrażenie_stałe* parametr ma wartość zero. Wiadomość to ciąg znaków w [podstawowy zestaw znaków](../c-language/ascii-character-set.md) z kompilatora; oznacza to, a nie [znaki wielobajtowe ani szerokie](../c-language/multibyte-and-wide-characters.md).|
+|*string-literal*|Komunikat, który jest wyświetlany, gdy *wyrażenie_stałe* parametr ma wartość zero. Wiadomość to ciąg znaków w [podstawowy zestaw znaków](../c-language/ascii-character-set.md) z kompilatora; oznacza to, a nie [znaki wielobajtowe ani szerokie](../c-language/multibyte-and-wide-characters.md).|
 
 ## <a name="remarks"></a>Uwagi
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
 ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210817"
 ---
 # <a name="masm-operators-reference"></a>Odwołanie do operatorów MASM
 
@@ -19,7 +19,7 @@ ms.locfileid: "50430462"
 ||||
 |-|-|-|
 |[* (mnożenie)](operator-multiply.md)|[+ (Dodaj)](operator-add.md)|[-(odejmowania lub odwrócić)](operator-subtract-2.md)|
-|[. (pole)](operator-dot.md)|[/ (dzielenie)](operator-subtract-1.md)|[&#91;&#93;(indeks)](operator-brackets.md)|
+|[. (pole)](operator-dot.md)|[/ (dzielenie)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[Dzielenie MODULO (reszta)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Przepływ sterowania

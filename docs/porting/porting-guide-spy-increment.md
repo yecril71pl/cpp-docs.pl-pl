@@ -3,11 +3,11 @@ title: 'Przewodnik przenoszenia: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
 ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337431"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Spy++
 
@@ -674,4 +674,4 @@ Przenoszenie programu Spy ++ od oryginalnego kodu Visual C++ 6.0 najnowszą wers
 ## <a name="see-also"></a>Zobacz także
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Poprzednie analiza przypadku: Narzędzie Spy modelu COM](../porting/porting-guide-com-spy.md)
+[Poprzednie analiza przypadku: COM Spy](../porting/porting-guide-com-spy.md)

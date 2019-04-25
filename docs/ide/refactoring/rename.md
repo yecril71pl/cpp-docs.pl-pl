@@ -3,19 +3,19 @@ title: Zmień nazwę
 ms.date: 11/16/2016
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
 ms.openlocfilehash: a747784f46341f130d1271fd0f15475b63d7b6d8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62265025"
 ---
 # <a name="rename"></a>Zmień nazwę
 
-**Co:** umożliwia zmianę nazwy identyfikatorów w celu symbole kodu, takie jak pola, zmienne lokalne, metody, przestrzenie nazw, właściwości i typów.
+**Co:** Umożliwia zmianę nazwy identyfikatorów w celu symbole kodu, takie jak pola, zmienne lokalne, metody, przestrzenie nazw, właściwości i typów.
 
-**Kiedy:** chcesz bezpiecznie zmienić coś bez konieczności Znajdź wszystkie wystąpienia i kopiowanie/wklejanie nowej nazwy.
+**Kiedy:** Chcesz coś bezpiecznie zmienić bez konieczności Znajdź wszystkie wystąpienia i kopiowanie/wklejanie nowej nazwy.
 
-**Dlaczego:** kopiowanie i wklejanie nową nazwę dla całego projektu, prawdopodobnie będą powodować błędy.  To narzędzie refaktoryzacji dokładnie wykona akcję zmiany nazwy.
+**Dlaczego:** Kopiowanie i wklejanie nową nazwę dla całego projektu, prawdopodobnie będą powodować błędy.  To narzędzie refaktoryzacji dokładnie wykona akcję zmiany nazwy.
 
 **Jak:**
 

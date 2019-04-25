@@ -9,11 +9,11 @@ helpviewer_keywords:
 - memory header
 ms.assetid: ef8e38da-7c9d-4037-9ad1-20c99febf5dc
 ms.openlocfilehash: c63421995fdabc94a7e6495df8d9937049dbba9d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217342"
 ---
 # <a name="ltmemorygt"></a>&lt;Pamięć&gt;
 
@@ -31,7 +31,7 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 
 |Funkcja|Opis|
 |-|-|
-|[AddressOf](../standard-library/memory-functions.md#addressof)|Pobiera prawdziwy adres obiektu.|
+|[addressof](../standard-library/memory-functions.md#addressof)|Pobiera prawdziwy adres obiektu.|
 |[align](../standard-library/memory-functions.md#align)|Zwraca wskaźnik do zakresu o podanej wielkości, na podstawie podanego wyrównania i adresu początkowego.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Tworzy `shared_ptr` do obiektów, które są przydzielane i zbudowane dla danego typu przy użyciu określonego alokatora.|
 |[const_pointer_cast](../standard-library/memory-functions.md#const_pointer_cast)|Rzutowanie stałe na `shared_ptr`.|
@@ -44,7 +44,7 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Przydziela tymczasową pamięć dla sekwencji elementów, która nie przekracza określonej liczby elementów.|
 |[make_shared](../standard-library/memory-functions.md#make_shared)|Tworzy i zwraca `shared_ptr` który wskazuje na przydzielony obiekt skonstruowany z zera lub więcej argumentów za pomocą domyślnego alokatora.|
 |[make_unique](../standard-library/memory-functions.md#make_unique)|Tworzy i zwraca [unique_ptr](../standard-library/unique-ptr-class.md) który wskazuje na przydzielony obiekt skonstruowany z zera lub więcej argumentów.|
-|[owner_less —](../standard-library/memory-functions.md#owner_less)|Pozwala na mieszane porównania oparte na własności współdzielonych i słabych wskaźników.|
+|[owner_less](../standard-library/memory-functions.md#owner_less)|Pozwala na mieszane porównania oparte na własności współdzielonych i słabych wskaźników.|
 |[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Wyliczenie wszystkich możliwych wartości zwracanych dla `get_pointer_safety`.|
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Zwalnia pamięć tymczasową, która została przydzielona za pomocą `get_temporary_buffer` funkcji szablonu.|
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Rzutowanie statyczne na `shared_ptr`.|

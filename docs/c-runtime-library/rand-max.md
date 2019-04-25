@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RAND_MAX constant
 ms.assetid: a2039697-8908-4911-bd2d-a2bdd19912a0
 ms.openlocfilehash: d9174198b9fff8411f20bbe309ef5900c3dcaaee
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336156"
 ---
 # <a name="randmax"></a>RAND_MAX
 

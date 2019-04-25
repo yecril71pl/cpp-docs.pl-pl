@@ -61,11 +61,11 @@ helpviewer_keywords:
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
 ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209695"
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -145,17 +145,17 @@ Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncicoll —**|**_strnicoll**|**_mbsnbicoll —**|**_wcsnicoll**|
-|**_tcsnicoll —**|**_strnicoll**|[_mbsnbicoll —](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|
-|**_tcsnicoll_l**|**_strnicoll_l**|**_mbsnbicoll_l —**|**_wcsnicoll_l —**|
+|**_tcsncicoll —**|**_strnicoll**|**_mbsnbicoll**|**_wcsnicoll**|
+|**_tcsnicoll —**|**_strnicoll**|[_mbsnbicoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|
+|**_tcsnicoll_l**|**_strnicoll_l**|**_mbsnbicoll_l**|**_wcsnicoll_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_strnicoll —**, **_strnicoll_l —**|\<string.h>|
-|**_wcsnicoll —**, **_wcsnicoll_l —**|\<WChar.h > lub \<string.h >|
-|**_mbsnicoll —**, **_mbsnicoll_l —**|\<mbstring.h>|
+|**_wcsnicoll**, **_wcsnicoll_l**|\<WChar.h > lub \<string.h >|
+|**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

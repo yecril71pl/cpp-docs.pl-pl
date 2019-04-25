@@ -63,11 +63,11 @@ helpviewer_keywords:
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
 ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331639"
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -130,7 +130,7 @@ W celu zapewnienia zgodności z poprzednimi wersjami **iscsym —** i **iscsymf 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**iscsym —**, **iscsymf —**, **__iscsym —**, **__iswcsym —**, **__iscsymf —**, **__iswcsymf —**, **_iscsym_l —**, **_iswcsym_l —**, **_iscsymf_l —**, **_iswcsymf_l —**|C: \<ctype.h ><br /><br /> C++: \<cctype — > lub \<ctype.h >|
+|**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype — > lub \<ctype.h >|
 
 **Iscsym —**, **iscsymf —**, **__iscsym —**, **__iswcsym —**, **__iscsymf —**, **__ iswcsymf**, **_iscsym_l —**, **_iswcsym_l —**, **_iscsymf_l —**, i **_iswcsymf_l —** procedur Specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -3,11 +3,11 @@ title: 'Przewodnik przenoszenia: Narzędzie Spy modelu COM'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
 ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337222"
 ---
 # <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: Narzędzie Spy modelu COM
 
@@ -167,5 +167,5 @@ To został uruchomiony bez problemów i za pomocą narzędzie Spy modelu COM pra
 ## <a name="see-also"></a>Zobacz także
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Następny przykład: Spy ++](../porting/porting-guide-spy-increment.md)<br/>
-[Poprzedni przykład: Aplikacja Scribble MFC](../porting/porting-guide-mfc-scribble.md)
+[Następny przykład: Spy++](../porting/porting-guide-spy-increment.md)<br/>
+[Poprzedni przykład: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

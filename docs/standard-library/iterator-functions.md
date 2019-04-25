@@ -33,21 +33,21 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224145"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;Iterator&gt; funkcji
 
 ||||
 |-|-|-|
 |[advance](#advance)|[back_inserter](#back_inserter)|[begin](#begin)|
-|[cbegin](#cbegin)|[cend](#cend)|[odległość](#distance)|
+|[cbegin](#cbegin)|[cend](#cend)|[distance](#distance)|
 |[koniec](#end)|[front_inserter](#front_inserter)|[inserter](#inserter)|
 |[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|
-|[next](#next)|[Poprzedni](#prev)|
+|[next](#next)|[prev](#prev)|
 
 ## <a name="advance"></a>  Zaawansowane
 
@@ -317,7 +317,7 @@ Stała `cont.begin()`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja działa z wszystkie kontenery standardowej biblioteki języka C++ i [initializer_list](../standard-library/initializer-list-class.md).
+Ta funkcja działa ze wszystkimi C++ kontenery standardowej biblioteki i [initializer_list](../standard-library/initializer-list-class.md).
 
 Można użyć tej funkcji elementu członkowskiego zamiast `begin()` funkcji szablonu, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zazwyczaj jest używana w połączeniu z [automatycznie](../cpp/auto-cpp.md) wpisz słowem kluczowym dedukcji, jak pokazano w poniższym przykładzie. W przykładzie, należy wziąć pod uwagę `Container` jako modyfikowalny (nie - **const**) kontener lub `initializer_list` dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
@@ -350,7 +350,7 @@ Stała `cont.end()`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja działa z wszystkie kontenery standardowej biblioteki języka C++ i [initializer_list](../standard-library/initializer-list-class.md).
+Ta funkcja działa ze wszystkimi C++ kontenery standardowej biblioteki i [initializer_list](../standard-library/initializer-list-class.md).
 
 Można użyć tej funkcji elementu członkowskiego zamiast [metodę end()](../standard-library/iterator-functions.md#end) funkcji szablonu, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zazwyczaj jest używana w połączeniu z [automatycznie](../cpp/auto-cpp.md) wpisz słowem kluczowym dedukcji, jak pokazano w poniższym przykładzie. W przykładzie, należy wziąć pod uwagę `Container` jako modyfikowalny (nie - **const**) kontener lub `initializer_list` dowolnego rodzaju, który obsługuje `end()` i `cend()`.
 
@@ -376,7 +376,7 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 *pierwszy*<br/>
 Pierwszym iteratorem, których odległość od drugiego zostanie określony.
 
-*ostatni*<br/>
+*last*<br/>
 Drugi iterator, których odległość od pierwszego zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*<br/>
+*Ptr*<br/>
 Wskaźnik do tablicy docelowej.
 
 *Rozmiar*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*<br/>
+*Ptr*<br/>
 Wskaźnik do tablicy docelowej.
 
 ### <a name="return-value"></a>Wartość zwracana

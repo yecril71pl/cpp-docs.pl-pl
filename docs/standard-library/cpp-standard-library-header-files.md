@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
 ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210739"
 ---
 # <a name="c-standard-library-header-files"></a>Pliki nagłówkowe standardowej biblioteki języka C++
 
@@ -35,9 +35,9 @@ Pliki nagłówkowe dla standardowej biblioteki języka C++ i rozszerzeń, wedłu
 |[Formatowanie i operacji We/Wy](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md), [\<fstream>](../standard-library/fstream.md), [\<iomanip>](../standard-library/iomanip.md), [\<ios>](../standard-library/ios.md), [\<iosfwd>](../standard-library/iosfwd.md), [\<iostream>](../standard-library/iostream.md), [\<istream>](../standard-library/istream.md), [\<ostream>](../standard-library/ostream.md), [\<sstream>](../standard-library/sstream.md), [\<streambuf>](../standard-library/streambuf.md), [\<strstream>](../standard-library/strstream.md)|
 |Iteratory|[\<iterator>](../standard-library/iterator.md)|
 |Lokalizacja|[\<codecvt — >](../standard-library/codecvt.md), [ \<cvt/wbuffer — >](../standard-library/cvt-wbuffer.md), [ \<cvt/wstring — >](../standard-library/cvt-wstring.md), [ \<ustawień regionalnych >](../standard-library/locale.md)|
-|Matematyczne i numeryczne|[\<złożone >](../standard-library/complex.md), [ \<limity >](../standard-library/limits.md), [ \<liczbowych >](../standard-library/numeric.md), [ \<losowy >](../standard-library/random.md), [ \<współczynnik >](../standard-library/ratio.md), [ \<valarray >](../standard-library/valarray.md)|
+|Matematyczne i numeryczne|[\<complex>](../standard-library/complex.md), [\<limits>](../standard-library/limits.md), [\<numeric>](../standard-library/numeric.md), [\<random>](../standard-library/random.md), [\<ratio>](../standard-library/ratio.md), [\<valarray>](../standard-library/valarray.md)|
 |[Zarządzanie pamięcią](../cpp/smart-pointers-modern-cpp.md)|[\<allocators — >](../standard-library/allocators-header.md), [ \<pamięci >](../standard-library/memory.md), [ \<nowy >](../standard-library/new.md), [< scoped_allocator >](../standard-library/scoped-allocator.md)|
-|Wielowątkowość|[\<niepodzielne >](../standard-library/atomic.md), [< condition_variable >](../standard-library/condition-variable.md), [ \<przyszłych >](../standard-library/future.md), [ \<mutex >](../standard-library/mutex.md), [< shared_ mutex >](../standard-library/shared-mutex.md), [ \<wątku >](../standard-library/thread.md)|
+|Wielowątkowość|[\<atomic>](../standard-library/atomic.md), [<condition_variable>](../standard-library/condition-variable.md), [\<future>](../standard-library/future.md), [\<mutex>](../standard-library/mutex.md), [<shared_mutex>](../standard-library/shared-mutex.md), [\<thread>](../standard-library/thread.md)|
 |Inne narzędzia|[\<bitset>](../standard-library/bitset.md), [\<chrono>](../standard-library/chrono.md), [\<functional>](../standard-library/functional.md), [<initializer_list>](../standard-library/initializer-list.md), [\<tuple>](../standard-library/tuple.md), [<type_traits>](../standard-library/type-traits.md), [\<typeinfo>](../standard-library/typeinfo.md), [\<typeindex>](../standard-library/typeindex.md), [\<utility>](../standard-library/utility.md)|
 |Ciągi i dane znakowe|[\<wyrażenie regularne >](../standard-library/regex.md), [ \<ciąg >](../standard-library/string.md)
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212389"
 ---
 # <a name="conditionvariable-class"></a>condition_variable — Klasa
 
@@ -49,7 +49,7 @@ class condition_variable;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[native_handle —](#native_handle)|Zwraca typ implementacji reprezentujący dojście condition_variable.|
+|[native_handle](#native_handle)|Zwraca typ implementacji reprezentujący dojście condition_variable.|
 |[notify_all](#notify_all)|Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiektu.|
 |[notify_one](#notify_one)|Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiektu.|
 |[Czekaj](#wait)|Blokuje wątek.|

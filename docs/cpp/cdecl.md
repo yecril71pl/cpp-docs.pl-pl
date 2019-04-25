@@ -10,17 +10,17 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232405"
 ---
 # <a name="cdecl"></a>__cdecl
 
 **Microsoft Specific**
 
-**__cdecl** jest domyślna konwencja wywołania dla programów C i C++. Ponieważ stos jest czyszczony przez obiekt wywołujący, można wykonać `vararg` funkcji. **__Cdecl** konwencji wywoływania tworzy większe pliki wykonywalne niż [__stdcall](../cpp/stdcall.md), ponieważ wymaga, aby każde wywołanie funkcji kod porządkujący stosu. Na poniższej liście przedstawiono implementację niniejszej konwencji wywoływania.
+**__cdecl** jest domyślną konwencję wywoływania dla języka C i C++ programów. Ponieważ stos jest czyszczony przez obiekt wywołujący, można wykonać `vararg` funkcji. **__Cdecl** konwencji wywoływania tworzy większe pliki wykonywalne niż [__stdcall](../cpp/stdcall.md), ponieważ wymaga, aby każde wywołanie funkcji kod porządkujący stosu. Na poniższej liście przedstawiono implementację niniejszej konwencji wywoływania.
 
 |Element|Implementacja|
 |-------------|--------------------|

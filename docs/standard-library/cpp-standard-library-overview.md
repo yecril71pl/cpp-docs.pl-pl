@@ -8,15 +8,15 @@ helpviewer_keywords:
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
 ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210804"
 ---
 # <a name="c-standard-library-overview"></a>Standardowa biblioteka C++ — Przegląd
 
-Wszystkie jednostki biblioteki języka C++ są zadeklarowane lub zdefiniowane w co najmniej jeden standardowy nagłówek. Ta implementacja zawiera dwa dodatkowe nagłówki, \<hash_map > i \<hash_set >, które nie są wymagane przez C++ Standard. Aby uzyskać pełną listę nagłówków obsługiwanych przez tę implementację, zobacz [odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md).
+Wszystkie jednostki biblioteki języka C++ są zadeklarowane lub zdefiniowane w co najmniej jeden standardowy nagłówek. Ta implementacja zawiera dwa dodatkowe nagłówki, \<hash_map > i \<hash_set >, które nie są wymagane przez C++ standardowych. Aby uzyskać pełną listę nagłówków obsługiwanych przez tę implementację, zobacz [odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md).
 
 Autonomicznej implementacji bibliotekę języka C++ udostępnia tylko podzbiór tych nagłówków:
 

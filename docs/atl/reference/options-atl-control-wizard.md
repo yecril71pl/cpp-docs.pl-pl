@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
 ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197357"
 ---
 # <a name="options-atl-control-wizard"></a>Opcje, Kreator kontrolki ATL
 
@@ -77,7 +77,7 @@ Typ interfejsu, który udostępnia tę kontrolkę, do kontenera.
 
    Ponadto jeśli wybierzesz **zgodnego z automatyzacji**, wszystkie parametry dla wszystkich metod w kontrolce musi być typ VARIANT zgodne.
 
-### <a name="support"></a>Obsługa
+### <a name="support"></a>Pomoc techniczna
 
 Ustawia różne obsługę formantu.
 

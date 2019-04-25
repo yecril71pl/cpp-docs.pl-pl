@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
 ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219902"
 ---
 # <a name="command-ids"></a>Identyfikatory poleceń
 
@@ -18,7 +18,7 @@ Polecenie opisano szczegółowo za pomocą jego Identyfikatora polecenia samodzi
 
 Na przykład, usuń zaznaczenie wszystkich elementów w menu Edycja może zostać przypisana Identyfikatora takich jak **id_edit_clear_all —**. Biblioteka klas powoduje wstępne definiowanie niektóre identyfikatory, szczególnie w przypadku poleceń w ramach obsługi przez siebie, takie jak **id_edit_clear_all —** lub **id_file_open —**. Utwórz inne identyfikatory poleceń będzie samodzielnie.
 
-Podczas tworzenia własnych menu w programie Visual C++ Edytor menu, jest dobrym rozwiązaniem postępuj zgodnie z biblioteki klas w konwencji nazewnictwa zgodnie z przedstawionymi **id_file_open —**. [Polecenia standardowe](../mfc/standard-commands.md) opisano standardowe polecenia, które są definiowane przez bibliotekę klas.
+Podczas tworzenia własnych menu wizualizacji C++ Edytor menu jest dobrym rozwiązaniem postępuj zgodnie z biblioteki klas w konwencji nazewnictwa zgodnie z przedstawionymi **id_file_open —**. [Polecenia standardowe](../mfc/standard-commands.md) opisano standardowe polecenia, które są definiowane przez bibliotekę klas.
 
 ## <a name="see-also"></a>Zobacz także
 
