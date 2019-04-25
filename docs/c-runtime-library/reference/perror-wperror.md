@@ -31,11 +31,11 @@ helpviewer_keywords:
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
 ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156109"
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 
@@ -65,7 +65,7 @@ Ciąg komunikatu do drukowania.
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tperror —**|**perror**|**perror**|**_wperror —**|
+|**_tperror —**|**perror**|**perror**|**_wperror**|
 
 *komunikat* najpierw, wydrukowaniu, a następnie dwukropek, a następnie komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało błąd, a na koniec znakiem nowego wiersza. Jeśli *komunikat* jest wskaźnikiem typu null lub wskaźnikiem do ciągu o wartości null, **perror** drukuje tylko system komunikat o błędzie.
 
@@ -80,7 +80,7 @@ W Windows system operacyjny, niektóre **errno** wartości na liście numer bł�
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**perror**|\<stdio.h > lub \<stdlib.h >|
-|**_wperror —**|\<stdio.h > lub \<wchar.h >|
+|**_wperror**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

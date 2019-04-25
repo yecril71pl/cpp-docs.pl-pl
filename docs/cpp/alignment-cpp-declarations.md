@@ -3,17 +3,17 @@ title: Wyrównanie (deklaracje języka C++)
 ms.date: 11/04/2016
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
 ms.openlocfilehash: 0709ad414af3f167a64d9c89c342690015190287
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155397"
 ---
 # <a name="alignment-c-declarations"></a>Wyrównanie (deklaracje języka C++)
 
-Jedną z niższego poziomu funkcji języka C++ jest możliwość określenia dokładne dostosowanie obiektów w pamięci, aby w maksymalnym wykorzystaniu architektury określonego sprzętu. Domyślnie kompilator wyrównywany klasy i struktury elementów członkowskich w ich wartość rozmiaru: wartość logiczna i char są wyrównane na granicach jednobajtowego krótki na dwóch bajtów int na cztery bajty long long, double a double na 8 bajtów. W większości przypadków nie trzeba być zaniepokojona wyrównanie, ponieważ domyślne wyrównanie już jest optymalna. W niektórych przypadkach jednak może osiągnąć znaczne ulepszenia wydajności i oszczędności pamięci, określając niestandardowy Wyrównanie struktury danych użytkownika. Przed Visual Studio 2015 można Użyj __alignof słowa kluczowe specyficzne dla firmy Microsoft i declspec(alignas), aby określić wyrównanie, które są większe niż domyślna. Uruchamianie programu Visual Studio 2015 należy używać języka C ++ 11 standardowe słowa kluczowe [alignof i alignas](../cpp/alignof-and-alignas-cpp.md) przenośności maksymalna kodu. Nowych słów kluczowych zachowują się w taki sam sposób kulisy jako rozszerzenia specyficzne dla firmy Microsoft i dokumentacji dotyczącej tych rozszerzeń ma również zastosowanie do nowych słów kluczowych. Zobacz [__alignof Operator](../cpp/alignof-operator.md) i [wyrównać](../cpp/align-cpp.md) Aby uzyskać więcej informacji. C++ standard nie określa zachowanie pakowania wyrównywanie w granicach mniejszy niż domyślna wartość kompilatora dla platformy docelowej, dlatego musisz nadal korzystać z usługi Microsoft #pragma [pakiet](../preprocessor/pack.md) w takiej sytuacji.
+Jedną z niższego poziomu funkcji języka C++ jest możliwość określenia dokładne dostosowanie obiektów w pamięci, aby w maksymalnym wykorzystaniu architektury określonego sprzętu. Domyślnie kompilator wyrównywany klasy i struktury elementów członkowskich w ich wartość rozmiaru: wartość logiczna i char są wyrównane na granicach jednobajtowego krótki na dwóch bajtów int na cztery bajty long long, double a double na 8 bajtów. W większości przypadków nie trzeba być zaniepokojona wyrównanie, ponieważ domyślne wyrównanie już jest optymalna. W niektórych przypadkach jednak może osiągnąć znaczne ulepszenia wydajności i oszczędności pamięci, określając niestandardowy Wyrównanie struktury danych użytkownika. Przed Visual Studio 2015 można Użyj __alignof słowa kluczowe specyficzne dla firmy Microsoft i declspec(alignas), aby określić wyrównanie, które są większe niż domyślna. Uruchamianie programu Visual Studio 2015 należy używać języka C ++ 11 standardowe słowa kluczowe [alignof i alignas](../cpp/alignof-and-alignas-cpp.md) przenośności maksymalna kodu. Nowych słów kluczowych zachowują się w taki sam sposób kulisy jako rozszerzenia specyficzne dla firmy Microsoft i dokumentacji dotyczącej tych rozszerzeń ma również zastosowanie do nowych słów kluczowych. See [__alignof Operator](../cpp/alignof-operator.md) and [align](../cpp/align-cpp.md) for more information. C++ standard nie określa zachowanie pakowania wyrównywanie w granicach mniejszy niż domyślna wartość kompilatora dla platformy docelowej, dlatego musisz nadal korzystać z usługi Microsoft #pragma [pakiet](../preprocessor/pack.md) w takiej sytuacji.
 
-Standardowej biblioteki języka C++ udostępnia [aligned_storage, klasa](../standard-library/aligned-storage-class.md) do przydzielania pamięci dla struktur danych przy użyciu niestandardowych wyrównanie i [aligned_union, klasa](../standard-library/aligned-union-class.md) do określenia wyrównania Unii z nietrywialnymi konstruktorów i destruktorów.
+C++ Standardowa biblioteka zapewnia [aligned_storage, klasa](../standard-library/aligned-storage-class.md) do przydzielania pamięci dla struktur danych przy użyciu niestandardowych wyrównanie i [aligned_union, klasa](../standard-library/aligned-union-class.md) do określania wyrównanie związki z nietrywialnymi konstruktorów i destruktorów.
 
 ## <a name="about-alignment"></a>Temat wyrównania
 
@@ -54,7 +54,7 @@ struct x_
 }
 ```
 
-1. Obie deklaracje zwrócić sizeof(struct x_) jako 12-bajtowy.
+1. Both declarations return sizeof(struct x_) as 12 bytes.
 
 1. Deklaracja drugi zawiera dwa elementy dopełnienie:
 

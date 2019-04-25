@@ -8,17 +8,17 @@ helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
 ms.openlocfilehash: 55f4e7f1d9367779d131796fdf29e6098eb6aa0f
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161630"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections:: vectoriterator, klasa
 
 Zawiera obiekty opracowane na podstawie interfejs Windows Runtime IVector iteratorów standardowej biblioteki szablonów.
 
-VectorIterator jest iteratorem serwera proxy, który przechowuje elementy typu VectorProxy\<T >. Jednak obiekt serwera proxy prawie nigdy nie jest widoczne dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcje (C + +/ CX)](../cppcx/collections-c-cx.md).
+VectorIterator jest iteratorem serwera proxy, który przechowuje elementy typu VectorProxy\<T >. Jednak obiekt serwera proxy prawie nigdy nie jest widoczne dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcji (C++/CX)](../cppcx/collections-c-cx.md).
 
 ## <a name="syntax"></a>Składnia
 

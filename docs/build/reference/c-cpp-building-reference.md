@@ -9,11 +9,11 @@ helpviewer_keywords:
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
 ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294762"
 ---
 # <a name="cc-building-reference"></a>Odwołanie kompilacji C/C++
 
@@ -21,12 +21,12 @@ Visual C++ zapewnia dwa sposoby kompilowanie programu C/C++. Najłatwiejszym (i 
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Odwołanie do MSBuild dla projektów języka C++](msbuild-visual-cpp-overview.md)
+[Dokumentacja aparatu MSBuild dla projektów w języku C++](msbuild-visual-cpp-overview.md)
 
-[Odwołanie do kompilatora MSVC](compiling-a-c-cpp-program.md)<br/>
+[Dokumentacja kompilatora MSVC](compiling-a-c-cpp-program.md)<br/>
 W tym artykule opisano kompilatora MSVC, który tworzy plik obiektu zawierającego kod maszynowy, dyrektywy konsolidatora, sekcje, odwołania zewnętrzne i nazwy funkcji/danych.
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 W tym artykule opisano konsolidatora, która łączy kod z plikami obiekt utworzony przez kompilator i statycznie łączonych bibliotek, jest rozpoznawana jako odwołania do nazwy i tworzy plik wykonywalny.
 
 [Obsługa formatu Unicode w kompilatorze i konsolidatorze](unicode-support-in-the-compiler-and-linker.md)
@@ -51,10 +51,10 @@ Zawiera łącza do tematów opisujących, tworzenie programu z wiersza polecenia
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 W tym artykule opisano ustawienia Opcje kompilatora w środowisku programistycznym lub w wierszu polecenia.
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 Zawiera łącza do tematów omawiających używanie opcji kompilatora.
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 W tym artykule opisano opcje konsolidatora ustawienie wewnątrz lub na zewnątrz zintegrowanego środowiska programistycznego.
 
 [Opcje konsolidatora MSVC](linker-options.md)<br/>

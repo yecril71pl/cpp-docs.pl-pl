@@ -61,11 +61,11 @@ helpviewer_keywords:
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
 ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269033"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
@@ -153,16 +153,16 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsupr —**|**_strupr**|**_mbsupr —**|**_wcsupr**|
-|**_tcsupr_l —**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
+|**_tcsupr —**|**_strupr**|**_mbsupr**|**_wcsupr**|
+|**_tcsupr_l**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strupr —**, **_strupr_l —**|\<string.h>|
-|**_wcsupr —**, **_wcsupr_l —**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbsupr —**, **_mbsupr_l —**|\<mbstring.h>|
+|**_strupr**, **_strupr_l**|\<string.h>|
+|**_wcsupr**, **_wcsupr_l**|\<Włącz String.h > lub \<wchar.h >|
+|**_mbsupr**, **_mbsupr_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

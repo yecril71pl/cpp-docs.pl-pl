@@ -5,11 +5,11 @@ helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59028577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179857"
 ---
 # <a name="preprocessor"></a>Preprocesor
 Preprocesor jest procesora tekstu, która manipuluje tekst pliku źródłowego w ramach pierwszej fazy tłumaczenia. Preprocesor nie analizuje tekst źródłowy, ale jej Podziel je na tokeny na potrzeby znajdowania wywołania makra. Mimo że kompilator wywołuje zazwyczaj preprocesor w jego pierwszym przebiegu, preprocesor można również wywołać oddzielnie do przetwarzania tekstu bez kompilacji.

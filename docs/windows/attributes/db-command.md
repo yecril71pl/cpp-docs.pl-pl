@@ -1,5 +1,5 @@
 ---
-title: db_command — (atrybut COM C++)
+title: db_command — (C++ atrybutów COM)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148201"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -89,7 +89,7 @@ TCHAR m_state[3] = 'CA';
 
 **db_command —** kontrole, aby upewnić się, że zmienna umożliwiający *source_name* jest poprawny, dlatego należy określona zmienna w funkcji lub zakresu globalnego.
 
-*wartość HRESULT*<br/>
+*hresult*<br/>
 (Opcjonalnie) Identyfikuje zmienna, która otrzyma wartość HRESULT dla tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.
 
 *Powiązania*<br/>
@@ -97,7 +97,7 @@ TCHAR m_state[3] = 'CA';
 
 Jeśli określono wartość dla *powiązania*, **db_command —** będzie analizować skojarzoną wartość i nie można przeanalizować \[ *bindtype*] parametru. Użycie tych umożliwia należy użyć składni dostawcy OLE DB. Aby wyłączyć analizy bez wiązania parametrów, należy określić `Bindings=""`.
 
-Jeśli nie określisz wartości *powiązania*, **db_command —** będzie analizować blok parametrów powiązania, wyszukiwanie "**(**", a następnie **\[** _bindtype_**]** w nawiasy kwadratowe, przez co najmniej jeden wcześniej zadeklarowanej C++ zmienne Członkowskie, a następnie "**)**". Cały tekst w nawiasach zostanie usunięta, a wynikowy polecenia, a te parametry, będą używane do konstruowania kolumny i parametru powiązania dla tego polecenia.
+Jeśli nie określisz wartości *powiązania*, **db_command —** będzie analizować blok parametrów powiązania, wyszukiwanie "**(**", a następnie **\[** _bindtype_**]** w nawiasy kwadratowe, następuje jeden lub więcej wcześniej zadeklarowany jako C++ zmienne Członkowskie, a następnie "**)**". Cały tekst w nawiasach zostanie usunięta, a wynikowy polecenia, a te parametry, będą używane do konstruowania kolumny i parametru powiązania dla tego polecenia.
 
 *bulk_fetch*<br/>
 (Opcjonalnie) Wartość całkowita określająca liczbę wierszy do pobrania.
@@ -122,7 +122,7 @@ Gdy dostawca atrybucie odbiorcy dotyczy ten atrybut do klasy, kompilator spowodu
 
 W tym przykładzie definiuje polecenie, które polega na wybraniu imiona i nazwiska z tabelą, jeśli kolumna stanu odpowiada "CA". **db_command —** tworzy i odczytuje zestawu wierszy, w którym może wywołać generowane przez kreatora funkcje takie jak [openall — i closeall —](../../data/oledb/consumer-wizard-generated-methods.md), a także `CRowset` takich jak funkcje Członkowskie [MoveNext](../../data/oledb/crowset-movenext.md).
 
-Należy pamiętać, że ten kod należy podać własne parametry połączenia, który nawiązuje połączenie z bazą danych pubs. Aby uzyskać informacje, jak to zrobić w środowisku programistycznym, zobacz [jak: łączenie się z bazą danych i przeglądanie istniejących obiektów](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) i [dodać nowe połączenia](/visualstudio/data-tools/add-new-connections).
+Należy pamiętać, że ten kod należy podać własne parametry połączenia, który nawiązuje połączenie z bazą danych pubs. Aby uzyskać informacje, jak to zrobić w środowisku programistycznym, zobacz [jak: Łączenie się z bazą danych i przeglądanie istniejących obiektów](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) i [dodać nowe połączenia](/visualstudio/data-tools/add-new-connections).
 
 ```cpp
 // db_command.h

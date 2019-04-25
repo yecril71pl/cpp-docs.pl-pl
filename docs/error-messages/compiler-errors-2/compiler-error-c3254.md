@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C3254
+title: Compiler Error C3254
 ms.date: 11/04/2016
 f1_keywords:
 - C3254
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C3254
 ms.assetid: 93427b10-fa72-4e43-80d1-1a6e122f9f40
 ms.openlocfilehash: 7e051c6c44d3b85f6f3faaf5380ecf54cba5d73c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173509"
 ---
-# <a name="compiler-error-c3254"></a>Błąd kompilatora C3254
+# <a name="compiler-error-c3254"></a>Compiler Error C3254
 
 "jawnego przesłaniania": klasa zawiera jawne przesłonięcie "override", ale nie pochodzi z interfejsu, który zawiera deklarację funkcji
 

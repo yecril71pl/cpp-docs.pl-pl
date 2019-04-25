@@ -3,11 +3,11 @@ title: Konfigurowanie programów pod kątem Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273805"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurowanie programów pod kątem Windows XP
 
@@ -25,7 +25,7 @@ Zestaw narzędzi platformy Windows XP, który znajduje się w programie Visual S
 
 1. W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, a następnie wybierz **właściwości**.
 
-1. W **stron właściwości** okno dialogowe dla projektu, w obszarze **właściwości konfiguracji** > **ogólne**ustaw **zestawnarzędziplatformy** właściwość żądany zestaw narzędzi Windows XP. Na przykład wybrać **Visual Studio 2017 — Windows XP (v141_xp)** do pisania kodu dla Windows XP i Windows Server 2003 za pomocą kompilatora Microsoft Visual C++ 2017.
+1. W **stron właściwości** okno dialogowe dla projektu, w obszarze **właściwości konfiguracji** > **ogólne**ustaw **zestawnarzędziplatformy** właściwość żądany zestaw narzędzi Windows XP. Na przykład wybrać **Visual Studio 2017 — Windows XP (v141_xp)** utworzyć kod dla Windows XP i Windows Server 2003 przy użyciu programu Microsoft Visual C++ kompilatora 2017 r.
 
 ### <a name="c-runtime-support"></a>Obsługa środowiska uruchomieniowego języka C++
 
@@ -43,7 +43,7 @@ Biblioteki te są obsługiwane przez zestawy narzędzi platformy, instalowane pr
 |C++ AMP|X|X||
 
 > [!NOTE]
-> Aplikacje napisane w języku C + +/ interfejsu wiersza polecenia i docelowych programu .NET Framework 4 systemem Windows XP i Windows Server 2003.
+> Aplikacje, które są zapisywane w C++/interfejs wiersza polecenia i docelowych programu .NET Framework 4 systemem Windows XP i Windows Server 2003.
 
 ### <a name="differences-between-the-toolsets"></a>Różnice między procesami
 

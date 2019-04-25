@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
 ms.openlocfilehash: 700d8fd784862c3e9f81fcde839063ff0a4696bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176658"
 ---
 # <a name="binary-operators"></a>Operatory binarne
 
@@ -26,7 +26,7 @@ W poniższej tabeli przedstawiono listę operatorów, które mogą być przecią
 |**%**|Modulo|
 |**%=**|Modulo i i przypisanie|
 |**&**|Bitowe ORAZ|
-|**&&**|AND logiczne|
+|**&&**|Logicznego AND|
 |**&=**|Bitowe AND / przydziału|
 |**&#42;**|Mnożenie|
 |**&#42;=**|Mnożenie i przypisanie|
@@ -43,7 +43,7 @@ W poniższej tabeli przedstawiono listę operatorów, które mogą być przecią
 |**<<=**|Lewy shift/przypisania|
 |**<=**|Mniejsze niż lub równe|
 |**=**|Przypisanie|
-|**==**|Równość|
+|**==**|Równości|
 |**>**|Większe niż|
 |**>=**|Większe niż lub równe|
 |**>>**|Przesunięcie w prawo|
@@ -52,7 +52,7 @@ W poniższej tabeli przedstawiono listę operatorów, które mogą być przecią
 |**^=**|Wykluczające OR / przydziału|
 |**&#124;**|Bitowe alternatywne OR|
 |**&#124;=**|Bitowe alternatywne OR / przydziału|
-|**&#124;&#124;**|OR logiczne|
+|**&#124;&#124;**|Logicznego OR|
 
 Aby zadeklarować funkcję operatora binarnego jako niestatyczny element członkowski, należy zadeklarować ją w postaci:
 

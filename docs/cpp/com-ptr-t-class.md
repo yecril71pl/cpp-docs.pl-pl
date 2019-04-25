@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
 ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154906"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t — Klasa
 
@@ -43,7 +43,7 @@ Zbiór [funkcji szablonów](../cpp/relational-function-templates.md), niebędąc
 |[Attach](../cpp/com-ptr-t-attach.md)|Hermetyzuje surowego wskaźnika interfejsu tego inteligentnego wskaźnika typu.|
 |[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Tworzy nowe wystąpienie obiektu, biorąc pod uwagę `CLSID` lub `ProgID`.|
 |[Detach](../cpp/com-ptr-t-detach.md)|Wyodrębnia i zwraca wskaźnik zhermetyzowany interfejs.|
-|[Getactiveobject —](../cpp/com-ptr-t-getactiveobject.md)|Dołącza do istniejącego wystąpienia danego obiektu `CLSID` lub `ProgID`.|
+|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Dołącza do istniejącego wystąpienia danego obiektu `CLSID` lub `ProgID`.|
 |[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Zwraca wskaźnik zhermetyzowany interfejs.|
 |[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Wywołania `QueryInterface` funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.|
 |[Wersja](../cpp/com-ptr-t-release.md)|Wywołania `Release` funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.|

@@ -1,5 +1,5 @@
 ---
-title: 'TN071: implementacja interfejsu MFC IOleCommandTarget'
+title: 'TN071: Implementacja interfejsu MFC IOleCommandTarget'
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
 ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168001"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: implementacja interfejsu MFC IOleCommandTarget
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Implementacja interfejsu MFC IOleCommandTarget
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -23,7 +23,7 @@ ms.locfileid: "50522229"
 
 `IOleCommandTarget` jest interfejsem podobne do automatyzacji, w tym, że jest używany przez klienta do wywołania metody na serwerze. Jednak przy użyciu `IOleCommandTarget` zapisuje narzut na wykonywanie wywołań za pośrednictwem interfejsów automatyzacji, ponieważ programiści nie ma potrzeby używania zazwyczaj kosztowne `Invoke` metody `IDispatch`.
 
-W MFC `IOleCommandTarget` interfejs jest używany przez serwery dokumentów aktywnych w celu umożliwienia kontenery dokumentów aktywnych wysyłanie poleceń do serwera. Klasa serwera aktywnego dokumentu, `CDocObjectServerItem`, przy użyciu map interfejsu MFC (zobacz [TN038: implementacja interfejsu MFC/OLE IUnknown](../mfc/tn038-mfc-ole-iunknown-implementation.md)) do zaimplementowania `IOleCommandTarget` interfejsu.
+W MFC `IOleCommandTarget` interfejs jest używany przez serwery dokumentów aktywnych w celu umożliwienia kontenery dokumentów aktywnych wysyłanie poleceń do serwera. Klasa serwera aktywnego dokumentu, `CDocObjectServerItem`, przy użyciu map interfejsu MFC (zobacz [TN038: Implementacja interfejsu IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) do zaimplementowania `IOleCommandTarget` interfejsu.
 
 `IOleCommandTarget` jest również implementowana w `COleFrameHook` klasy. `COleFrameHook` jest nieudokumentowane klasy MFC, który implementuje funkcje ramki okna kontenerów edycji w miejscu. `COleFrameHook` mapy interfejsów biblioteki MFC używa również zaimplementować `IOleCommandTarget` interfejsu. `COleFrameHook`w implementacji `IOleCommandTarget` przekazuje polecenia OLE, aby `COleDocObjectItem`-pochodnych kontenery dokumentów aktywnych. Dzięki temu wszystkie MFC aktywny kontener dokumentu odbierać komunikaty z serwery dokumentów aktywnych zawarte.
 

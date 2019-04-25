@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158563"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; funkcji
 
@@ -150,7 +150,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Std::string, char\*, string literał ciągu literału lub raw lub szerokie wersję któregoś z powyższych (np. std::wstring, wchar_t\*).
 
-*Ogranicznik*<br/>
+*delimiter*<br/>
 Znak określony przez użytkownika lub znak dwubajtowy, do użycia jako ogranicznika, na początku i końca ciągu.
 
 *Znak ucieczki*<br/>
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*Ch*<br/>
 Znak, który będzie używany do wypełnienia miejsca do magazynowania w wyświetlaną z prawej strony.
 
 ### <a name="return-value"></a>Wartość zwracana

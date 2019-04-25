@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
 ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180046"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Równoległość zadania (współbieżność środowiska wykonawczego)
 
@@ -108,7 +108,7 @@ Możesz użyć `create_task` funkcję, aby utworzyć operację równoważną.
 
 Jeśli wyjątek zostanie zgłoszony podczas wykonywania zadania, środowisko uruchomieniowe kieruje ten wyjątek w następnym wywołaniu do metody `task::get` lub `task::wait`, lub do kontynuacji opartego na zadaniach. Aby uzyskać więcej informacji na temat zadań mechanizmu obsługi wyjątków, zobacz [wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-Aby uzyskać przykład, który używa `task`, [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), anulowania, zobacz [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). ( `task_completion_event` Klasy jest opisane w dalszej części tego dokumentu.)
+Aby uzyskać przykład, który używa `task`, [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), anulowania, zobacz [instruktażu: Łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). ( `task_completion_event` Klasy jest opisane w dalszej części tego dokumentu.)
 
 > [!TIP]
 >  Aby uzyskać szczegółowe informacje, które są specyficzne dla zadań w aplikacjach platformy uniwersalnej systemu Windows, zobacz [asynchronicznego programowania w języku C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) i [tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
@@ -244,7 +244,7 @@ Są dwa sposoby na osiągnięcie tego celu to kontynuacja lub na uruchomienie za
 
 [Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) klasy pomaga uprościć taki skład zadań. Podobnie jak `task` klasy, parametr typu `T` to typu wyniku, który jest wytwarzany przez zadanie. Ten typ może być `void` Jeśli zadanie nie zwraca wartości. `T` Nie można użyć `const` modyfikator. Zazwyczaj `task_completion_event` obiektu jest udostępniane na wątku lub zadania, które wyda sygnał, gdy wartość dla niego stanie się dostępna. W tym samym czasie co najmniej jednego zadania są ustawiane jako detektory zdarzenia. Gdy zdarzenie jest ustawione, kończą się zadania odbiornika a ich kontynuacje są planowane do uruchomienia.
 
-Aby uzyskać przykład, który używa `task_completion_event` do zaimplementowania zadania kończonego po opóźnieniu, zobacz [jak: Tworzenie zadania takie kończy po opóźnienie](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
+Aby uzyskać przykład, który używa `task_completion_event` do zaimplementowania zadania kończonego po opóźnieniu, zobacz [jak: Tworzenie zadania kończonego po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
 
 ##  <a name="task-groups"></a> Grupy zadań
 
@@ -299,7 +299,7 @@ Message from task: 42
 
 Ponieważ `parallel_invoke` algorytm uruchamia zadania jednocześnie, kolejność komunikatów wyjściowych może być inna.
 
-Kompletne przykłady pokazujące, jak używać `parallel_invoke` algorytmu, zobacz [porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) i [porady: używanie parallel_invoke do operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Pełny przykład, który używa `task_group` klasy, aby zaimplementować funkcje asynchroniczne, zobacz [wskazówki: Wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md).
+Aby uzyskać kompletny przykład przedstawiający sposób użycia `parallel_invoke` algorytmu, zobacz [jak: Używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) i [jak: Używanie parallel_invoke do operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Aby uzyskać kompletny przykład, który używa `task_group` klasy, aby zaimplementować funkcje asynchroniczne, zobacz [instruktażu: Wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 ##  <a name="robust"></a> Skuteczne programowanie
 
@@ -310,7 +310,7 @@ Upewnij się, że rozumiesz rolę anulowania i obsługi wyjątków, kiedy używa
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Ilustruje sposób używania `parallel_invoke` algorytmu, aby zwiększyć wydajność algorytmu sortowania bitonicznego.|
-|[Instrukcje: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ilustruje sposób używania `parallel_invoke` algorytmu, aby zwiększyć wydajność programu, który wykonuje wiele operacji na udostępnione źródło danych.|
+|[Instrukcje: wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ilustruje sposób używania `parallel_invoke` algorytmu, aby zwiększyć wydajność programu, który wykonuje wiele operacji na udostępnione źródło danych.|
 |[Instrukcje: tworzenie zadania kończonego po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Ilustruje sposób używania `task`, `cancellation_token_source`, `cancellation_token`, i `task_completion_event` klasy, aby tworzenie zadania kończonego po opóźnieniu.|
 |[Przewodnik: wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md)|Pokazuje, jak połączyć istniejącą funkcje w środowisku uruchomieniowym współbieżności w coś, ma większe.|
 |[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|W tym artykule opisano PPL, która udostępnia model programowania do tworzenia aplikacji współbieżnych.|
@@ -325,8 +325,8 @@ Upewnij się, że rozumiesz rolę anulowania i obsługi wyjątków, kiedy używa
 
 [when_any — funkcja](reference/concurrency-namespace-functions.md#when_any)
 
-[task_group — klasa](reference/task-group-class.md)
+[task_group, klasa](reference/task-group-class.md)
 
-[parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)
+[parallel_invoke Function](reference/concurrency-namespace-functions.md#parallel_invoke)
 
 [structured_task_group, klasa](../../parallel/concrt/reference/structured-task-group-class.md)

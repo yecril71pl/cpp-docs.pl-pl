@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271349"
 ---
 # <a name="exports"></a>EKSPORTY
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Ponieważ kompilator MSVC używa dekorowania nazwy dla funkcji języka C++, należy użyć również nazwę uzupełnioną *internal_name* lub zdefiniować eksportowanych funkcji przy użyciu `extern "C"` w kodzie źródłowym. Kompilator również rozszerza funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) wywoływania Konwencji od znaku podkreślenia (\_) prefiks i sufiks składające się z znakiem (\@) następuje liczba bajtów (w zapisie dziesiętnym) w Lista argumentów.
+Ponieważ kompilator MSVC używa dekorację nazwy C++ funkcji, należy użyć również nazwę uzupełnioną *internal_name* lub zdefiniować eksportowanych funkcji przy użyciu `extern "C"` w kodzie źródłowym. Kompilator również rozszerza funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) wywoływania Konwencji od znaku podkreślenia (\_) prefiks i sufiks składające się z znakiem (\@) następuje liczba bajtów (w zapisie dziesiętnym) w Lista argumentów.
 
 Aby znaleźć nazwy dekoracyjne wytworzone przez kompilator, użyj [DUMPBIN](dumpbin-reference.md) narzędzia lub konsolidator [/MAP](map-generate-mapfile.md) opcji. Nazwy ozdobione są specyficzne dla kompilatora. Jeśli eksportujesz nazwy dekorowane w. Plik DEF, pliki wykonywalne, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji kompilatora. Daje to gwarancję, że nazwy dekorowane w obiekcie wywołującym odpowiadały nazwom eksportowanym w. Plik DEF.
 

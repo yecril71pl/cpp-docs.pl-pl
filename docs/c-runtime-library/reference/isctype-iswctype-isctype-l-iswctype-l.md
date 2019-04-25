@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
 ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157321"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
@@ -93,8 +93,8 @@ Zachowanie **_isctype —** i **_isctype_l —** jest niezdefiniowane, jeżeli *
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|n/d|**_isctype**|n/d|**_iswctype —**|
-|n/d|**_isctype_l**|n/d|**_iswctype_l —**|
+|n/d|**_isctype**|n/d|**_iswctype**|
+|n/d|**_isctype_l**|n/d|**_iswctype_l**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -103,7 +103,7 @@ Zachowanie **_isctype —** i **_isctype_l —** jest niezdefiniowane, jeżeli *
 |**_isctype**|\<ctype.h>|
 |**iswctype**|\<CType.h > lub \<wchar.h >|
 |**_isctype_l**|\<ctype.h>|
-|**_iswctype_l —**|\<CType.h > lub \<wchar.h >|
+|**_iswctype_l**|\<CType.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

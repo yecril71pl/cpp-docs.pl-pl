@@ -31,11 +31,11 @@ helpviewer_keywords:
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
 ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157310"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -84,7 +84,7 @@ Gdy wartość x jest Liczba wymierna, ta funkcja zwraca logarytm silnię (x - 1)
 
 |Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**lgamma —**, **lgammaf —**, **lgammal**|\<math.h>|\<cmath >|
+|**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

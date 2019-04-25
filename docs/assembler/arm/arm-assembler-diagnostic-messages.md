@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167846"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Komunikaty diagnostyczne asemblera ARM
 
@@ -60,7 +60,7 @@ Asembler może podejmować prób kodowanie gałąź w 16 bitów i zakończyć si
 label
 ```
 
-> A2202: Składnia instrukcji Pre-UAL niedozwolona w regionie THUMB
+> A2202: Składnia instrukcji Pre-UAL nie są dozwolone w regionie THUMB
 
 Kod Thumb należy użyć składni Unified języka asemblera (UAL, Distributed File System).  Stara składnia nie jest akceptowane.
 
@@ -69,7 +69,7 @@ Kod Thumb należy użyć składni Unified języka asemblera (UAL, Distributed Fi
     ADDSEQ r0, r1         ; OK
 ```
 
-> A2513: Obracanie musi być parzysta
+> A2513: Obrót musi być parzysta
 
 W trybie ARM istnieje alternatywny składnia określająca stałe.  Zamiast pisania `#<const>`, można napisać `#<byte>,#<rot>`, która reprezentuje stałą wartość, która uzyskuje się przez obracanie wartość `<byte>` bezpośrednio przez `<rot>`.  Gdy używasz tej składni, należy wartość `<rot>` nawet.
 
@@ -78,7 +78,7 @@ W trybie ARM istnieje alternatywny składnia określająca stałe.  Zamiast pisa
     MOV r0, #4, #1       ; A2513: Rotation must be even
 ```
 
-> A2557: Niepoprawna liczba bajtów do zapisania z powrotem
+> A2557: Nieprawidłowa liczba bajtów do zapisania z powrotem
 
 W strukturze NEON ładować i przechowywać instrukcje (`VLDn`, `VSTn`), istnieje alternatywny składnia określająca zapisywania zwrotnego podstawowy rejestrowania się.  Zamiast umieszczać wykrzyknika (!), po adresem, można określić natychmiastowego wartość, która wskazuje przesunięcie ma zostać dodany do rejestru podstawowej.  Jeśli używasz tej składni, należy określić dokładną liczbę bajtów, które zostały załadowane lub przechowywane przez instrukcję.
 
@@ -90,7 +90,7 @@ W strukturze NEON ładować i przechowywać instrukcje (`VLDn`, `VSTn`), istniej
 
 ## <a name="diagnostic-messages---warnings"></a>Komunikaty diagnostyczne — ostrzeżenia
 
-> A4228: Przekracza wartość wyrównania wyrównania obszaru; wyrównanie nie jest gwarantowana
+> A4228: Wartość wyrównania przekracza wyrównania obszaru; wyrównanie nie jest gwarantowana
 
 Wyrównanie, który jest określony w `ALIGN` dyrektywa jest większa niż wyrównanie otaczający `AREA`.  W rezultacie asembler nie może zagwarantować, że `ALIGN` dyrektywy będą uznawane.
 

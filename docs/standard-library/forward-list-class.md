@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159785"
 ---
 # <a name="forwardlist-class"></a>forward_list — Klasa
 
@@ -164,7 +164,7 @@ Dodatki do kontrolowanej sekwencji mogą wystąpić przez wywołania [forward_li
 |[remove](#remove)|Usuwa elementy na liście do przodu, który odpowiada określonej wartości.|
 |[remove_if](#remove_if)|Usuwa elementy z listy do przodu, dla których jest spełniony określony predykat.|
 |[Zmiana rozmiaru](#resize)|Określa nowy rozmiar dla listy do przodu.|
-|[zwrotny](#reverse)|Odwraca kolejność, w której elementy występują na liście do przodu.|
+|[reverse](#reverse)|Odwraca kolejność, w której elementy występują na liście do przodu.|
 |[sort](#sort)|Rozmieszcza elementy w kolejności rosnącej lub z kolejnością określone przez predykat.|
 |[splice_after](#splice_after)|Restitches łącza między węzłami.|
 |[swap](#swap)|Zamienia elementy z dwóch list do przodu.|
@@ -215,11 +215,11 @@ void assign(InputIterator First, InputIterator Last);
 |Parametr|Opis|
 |---------------|-----------------|
 |*pierwszy*|Początek zakresu zastępczy.|
-|*ostatni*|Koniec zakresu zastępczy.|
+|*last*|Koniec zakresu zastępczy.|
 |*Liczba*|Liczba elementów, które można przypisać.|
 |*Val*|Wartość do przypisania z każdego elementu.|
 |*Typ*|Typ wartości.|
-|* IList "|Lista initializer_list do skopiowania.|
+|* IList "| Lista initializer_list do skopiowania.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -326,7 +326,7 @@ auto i2 = Container.cend();
 
 Wartość zwrócona przez obiekt `cend` nie należy usuwać odwołania.
 
-## <a name="clear"></a>  forward_list::Clear
+## <a name="clear"></a>  forward_list::clear
 
 Usuwa wszystkie elementy listy do przodu.
 
@@ -468,7 +468,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 |---------------|-----------------|
 |*Where*|Pozycja na liście do przodu, gdzie elementu są usuwane.|
 |*pierwszy*|Początek zakresu, aby wymazać.|
-|*ostatni*|Koniec zakresu do wymazania.|
+|*last*|Koniec zakresu do wymazania.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -645,7 +645,7 @@ void merge(forward_list& right, Predicate comp);
 |Parametr|Opis|
 |---------------|-----------------|
 |*right*|Na liście do przodu, aby Scal z.|
-|*Comp*|Obiekt funkcji porównywania jest używana do sortowania elementów.|
+|*comp*|Obiekt funkcji porównywania jest używana do sortowania elementów.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -682,7 +682,7 @@ Drugi operator składowej zastępuje kontrolowanej sekwencji z obiektu klasy `in
 
 Trzeci operator składowy jest taki sam jak pierwszy, ale z [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) odwołania.
 
-## <a name="pointer"></a>  forward_list::Pointer
+## <a name="pointer"></a>  forward_list::pointer
 
 Typ, który dostarcza wskaźnik do elementu na liście do przodu.
 
@@ -735,7 +735,7 @@ typedef typename Allocator::reference reference;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="remove"></a>  forward_list::Remove
+## <a name="remove"></a>  forward_list::remove
 
 Usuwa elementy na liście do przodu, który odpowiada określonej wartości.
 
@@ -776,7 +776,7 @@ Funkcja członkowska usuwa w kontrolowanej sekwencji wszystkie elementy, wyznacz
 
 Wyjątek występuje tylko wtedy, gdy *pred* zgłasza wyjątek. W takim przypadku kontrolowanej sekwencji pozostanie w stanie nieokreślony, a wyjątek jest zgłaszany ponownie.
 
-## <a name="resize"></a>  forward_list::Resize
+## <a name="resize"></a>  forward_list::resize
 
 Określa nowy rozmiar dla listy do przodu.
 
@@ -874,7 +874,7 @@ void splice_after(
 *Where*<br/>
 Pozycja w forward_list miejsce docelowe, po upływie którego do wstawienia.
 
-*Źródło*<br/>
+*Element źródłowy*<br/>
 Forward_list — źródłowy, który ma zostać wstawiony do forward_list docelowego.
 
 *ITER*<br/>
@@ -1003,7 +1003,7 @@ void unique(BinaryPredicate comp);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Comp*|Jeśli predykat binarny jest użyty do porównania kolejne elementy.|
+|*comp*|Jeśli predykat binarny jest użyty do porównania kolejne elementy.|
 
 ### <a name="remarks"></a>Uwagi
 

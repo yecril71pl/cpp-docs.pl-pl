@@ -10,11 +10,11 @@ helpviewer_keywords:
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
 ms.openlocfilehash: d309390c1ac1a19d9d4a982908dbbbac0bd52714
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291564"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (Określ klucz lub parę kluczy, aby podpisać zestaw)
 
@@ -33,7 +33,7 @@ Konsolidator wstawia klucz publiczny w manifeście zestawu, a następnie podpisu
 
 Jeśli kompilujesz z opcją [/LN](ln-create-msil-module.md), nazwę pliku klucza jest przechowywany w module i włączyć do zestawu, który jest tworzony podczas kompilowania zestawu, który zawiera jawnego odwołania do modułu, za pośrednictwem [#using](../../preprocessor/hash-using-directive-cpp.md), lub podczas łączenia z [assemblymodule](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-Można również przekazać dane szyfrowania do konsolidatora z [/KeyContainer](keycontainer-specify-a-key-container-to-sign-an-assembly.md). Użyj [/DelaySign](delaysign-partially-sign-an-assembly.md) Jeśli chcesz, aby częściowo podpisany zestawu. Zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) więcej informacji na temat podpisywania zestawu.
+Można również przekazać dane szyfrowania do konsolidatora z [/KeyContainer](keycontainer-specify-a-key-container-to-sign-an-assembly.md). Użyj [/DelaySign](delaysign-partially-sign-an-assembly.md) Jeśli chcesz, aby częściowo podpisany zestawu. Zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) więcej informacji na temat podpisywania zestawu.
 
 W przypadku obu **/KeyFile** i **/KeyContainer** podano (przez opcję wiersza polecenia lub przez atrybut niestandardowy), konsolidator próbują używać najpierw kontenera kluczy. Jeśli się to powiedzie, zestaw zostanie podpisany przy użyciu informacji z kontenera kluczy. Konsolidator nie znajdzie kontenera kluczy, spróbuje pliku określonego przez/KeyFile. Jeśli się to powiedzie, zestaw zostanie podpisany przy użyciu informacji z pliku klucza, a informacje o kluczu zostanie zainstalowany w kontenerze kluczy (podobnie jak sn -i), aby przy następnej kompilacji będzie obowiązywać kontenera kluczy.
 
@@ -69,5 +69,5 @@ Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

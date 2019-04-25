@@ -1,32 +1,32 @@
 ---
-title: Typy podstawowe (C + +/ CX)
+title: Typy podstawowe (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
 ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301459"
 ---
-# <a name="fundamental-types-ccx"></a>Typy podstawowe (C + +/ CX)
+# <a name="fundamental-types-ccx"></a>Typy podstawowe (C++/CX)
 
-Oprócz standardowych wbudowanych typów C++, C + +/ CX obsługuje system typu, który jest definiowany przez architekturę środowiska wykonawczego Windows, zapewniając definicje typów dla środowiska uruchomieniowego Windows podstawowych typów mapowane na typy języka C++ standard... C + +/ CX implementuje wyrażenie logiczne, znaki i liczbowych typów podstawowych. Te definicje typów są zdefiniowane w `default` przestrzeń nazw, która nigdy nie musi być jawnie określony. Ponadto, C + +/ CX zapewnia otoki i konkretnych implementacji niektórych interfejsów i typów środowiska wykonawczego Windows.
+Oprócz standardowych C++ wbudowanych typów C++/CX obsługuje system typu, który jest definiowany przez architekturę środowiska wykonawczego Windows, zapewniając definicje typów dla środowiska uruchomieniowego Windows podstawowych typów mapowane na warstwę standardowa C++ typy... C++/CX implementuje wyrażenie logiczne, znaki i liczbowych typów podstawowych. Te definicje typów są zdefiniowane w `default` przestrzeń nazw, która nigdy nie musi być jawnie określony. Ponadto C++/CX zapewnia otoki i konkretnych implementacji niektórych interfejsów i typów środowiska wykonawczego Windows.
 
 ## <a name="boolean-and-character-types"></a>Typy Boolean i znaków
 
 Poniższa lista zawiera wbudowane Boolean i typy znakowe i odpowiedniki standardowego języka C++.
 
-|Przestrzeń nazw|C + +/ CX nazwy|Definicja|Nazwa czasu standardowego języka C++|Zakres wartości|
+|Przestrzeń nazw|C++Nazwa /CX|Definicja|Nazwa czasu standardowego języka C++|Zakres wartości|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |Platforma|Boolean|Wartość logiczna 8-bitowych.|bool|**wartość true,** (niezerową) i **false** (zero)|
 |default|char16|Wartość nieliczbową 16-bitową, która reprezentuje punkt kodu Unicode (UTF-16).|wchar_t<br /><br /> —lub—<br /><br /> L'c'|(Określony przez Unicode standard)|
 
 ## <a name="numeric-types"></a>Typy liczbowe
 
-Poniższa tabela zawiera listę wbudowanych typów liczbowych. Typy liczbowe są deklarowane w `default` przestrzeni nazw i czy definicje typów dla danego typu wbudowanego C++. Nie wszystkie C++ wbudowanych typów (long, na przykład) są obsługiwane w środowisku uruchomieniowym Windows. Zachowanie spójności i przejrzystości, firma Microsoft zaleca użycie C + +/ CX nazwy.
+Poniższa tabela zawiera listę wbudowanych typów liczbowych. Typy liczbowe są deklarowane w `default` przestrzeni nazw i czy definicje typów dla danego typu wbudowanego C++. Nie wszystkie C++ wbudowanych typów (long, na przykład) są obsługiwane w środowisku uruchomieniowym Windows. Spójność i przejrzystości, zaleca się używanie C++/CX nazwy.
 
-|C + +/ CX nazwy|Definicja|Nazwa czasu standardowego języka C++|Zakres wartości|
+|C++Nazwa /CX|Definicja|Nazwa czasu standardowego języka C++|Zakres wartości|
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |int8|8-bitowe podpisane wartość liczbowa.|podpisany char|od -128 do 127|
 |uint8|8-bitową wartością numeryczną bez znaku.|unsigned char|od 0 do 255|
@@ -41,7 +41,7 @@ Poniższa tabela zawiera listę wbudowanych typów liczbowych. Typy liczbowe są
 
 ## <a name="windows-runtime-types"></a>Typów środowiska wykonawczego Windows
 
-W poniższej tabeli wymieniono niektóre dodatkowe typy są definiowane przez architekturę środowiska wykonawczego Windows, które są wbudowane w języku C + +/ CX. Obiekt i parametry są typami odwołań. Inne są typami wartości. Wszystkie te typy są deklarowane w `Platform` przestrzeni nazw. Aby uzyskać pełną listę, zobacz [przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md).
+W poniższej tabeli wymieniono niektóre dodatkowe typy są definiowane przez architekturę środowiska wykonawczego Windows, które są wbudowane w C++/CX. Obiekt i parametry są typami odwołań. Inne są typami wartości. Wszystkie te typy są deklarowane w `Platform` przestrzeni nazw. Aby uzyskać pełną listę, zobacz [przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md).
 
 |Nazwa|Definicja|
 |----------|----------------|

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
 ms.openlocfilehash: 0b105cc2039e2aa50c11b796e5474a97d8c5c702
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179896"
 ---
 # <a name="preprocessor-operators"></a>Operatory preprocesora
 Cztery operatory specyficzne dla preprocesora są używane w kontekście `#define` — dyrektywa (zobacz poniżej, aby uzyskać podsumowanie). W trzech kolejnych sekcjach omówiono operatory tworzenia ciągu, charizing i wklejania tokenu. Instrukcje dotyczące `defined` operatora, zobacz [#if, #elif #else i #endif, dyrektywy](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).

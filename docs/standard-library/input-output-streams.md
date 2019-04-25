@@ -6,11 +6,11 @@ helpviewer_keywords:
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
 ms.openlocfilehash: d426baacb52095ab2d933263fdac8e312fc29558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159239"
 ---
 # <a name="inputoutput-streams"></a>Input/Output Streams
 
@@ -33,6 +33,6 @@ Szablon klasy `basic_stringstream` i jego typowe specjalizacji `stringstream`, s
 
 [stringstream](../standard-library/basic-stringstream-class.md)<br/>
 [basic_stringstream, klasa](../standard-library/basic-stringstream-class.md)<br/>
-[\<sstream — >](../standard-library/sstream.md)<br/>
+[\<sstream>](../standard-library/sstream.md)<br/>
 [iostream, programowanie](../standard-library/iostream-programming.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>

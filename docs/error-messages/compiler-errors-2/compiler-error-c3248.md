@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C3248
+title: Compiler Error C3248
 ms.date: 11/04/2016
 f1_keywords:
 - C3248
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C3248
 ms.assetid: d00b9d7d-b6be-4a5b-bb52-48174ea71fc4
 ms.openlocfilehash: 1a5a88e7623fd96aefe8d838ab17ba576320aa41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182473"
 ---
-# <a name="compiler-error-c3248"></a>Błąd kompilatora C3248
+# <a name="compiler-error-c3248"></a>Compiler Error C3248
 
 "function1": funkcja zadeklarowana jako __sealed nie może zostać przesłonięta przez "function2"
 

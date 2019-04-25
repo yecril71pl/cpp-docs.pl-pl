@@ -33,11 +33,11 @@ helpviewer_keywords:
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
 ms.openlocfilehash: fef10f2cfbcc0332741d560a41a782b70ed14798
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156541"
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 
@@ -66,7 +66,7 @@ errno_t _wmktemp_s(
 
 ### <a name="parameters"></a>Parametry
 
-*nametemplate innej*<br/>
+*nameTemplate*<br/>
 Wzorzec nazwy pliku.
 
 *sizeInChars*<br/>
@@ -78,7 +78,7 @@ Obie te funkcje zwracają zero w przypadku powodzenia; Kod błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*nametemplate innej*|*sizeInChars*|Wartość zwracana|Nowa wartość w *nametemplate innej*|
+|*nameTemplate*|*sizeInChars*|Wartość zwracana|Nowa wartość w *nametemplate innej*|
 |----------------|-------------------|----------------------|-------------------------------|
 |**NULL**|Wszystkie|**EINVAL**|**NULL**|
 |Niepoprawny format (zobacz uwagi dotyczącej poprawny format)|Wszystkie|**EINVAL**|Pusty ciąg|
@@ -94,7 +94,7 @@ Jeśli wystąpi dowolne z powyższych warunków błędu, procedura obsługi niep
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmktemp_s —**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
+|**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
 *Nametemplate innej* argument ma postać **baseXXXXXX**, gdzie *podstawowy* jest częścią nową nazwę pliku, który podasz, a każda X jest symbolem zastępczym dla znak, który został dostarczony przez **_mktemp_s —**. Dla każdego znaku zastępczego *nametemplate innej* musi być wielkie X. **_mktemp_s —** zachowuje *podstawowy* i zamienia pierwszą X końcowe litery alfabetu. **_mktemp_s —** zastępuje następujące końcowe x o wartości 5 cyfrowy; ta wartość jest unikatowy numer identyfikujący wywołania procesu, lub w przypadku programów wielowątkowych wątku wywołującego.
 

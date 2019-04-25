@@ -34,11 +34,11 @@ helpviewer_keywords:
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
 ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156515"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 
@@ -65,7 +65,7 @@ wchar_t *_wmktemp(
 
 ### <a name="parameters"></a>Parametry
 
-*nametemplate innej*<br/>
+*nameTemplate*<br/>
 Wzorzec nazwy pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -80,7 +80,7 @@ Każda z tych funkcji zwraca wskaźnik do modyfikacji nametemplate innej. Funkcj
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tmktemp —**|**_mktemp**|**_mktemp**|**_wmktemp**|
+|**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
 *Nametemplate innej* argument ma postać *podstawowy*XXXXXX, gdzie *podstawowy* jest częścią nową nazwę pliku, który podasz, a każda X jest symbolem zastępczym dla znak, który został dostarczony przez **_mktemp —**. Dla każdego znaku zastępczego *nametemplate innej* musi być wielkie X. **_mktemp —** zachowuje *podstawowy* i zamienia pierwszą X końcowe litery alfabetu. **_mktemp —** zastępuje następujące końcowe x o wartości 5 cyfrowy; ta wartość jest unikatowy numer identyfikujący wywołania procesu, lub w przypadku programów wielowątkowych wątku wywołującego.
 

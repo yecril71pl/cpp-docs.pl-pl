@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156307"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -45,7 +45,7 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*danych użytkownika*<br/>
+*userData*<br/>
 Wskaźnik do bloku pamięci, do których chcesz określić rozmiar.
 
 *blockType*<br/>
@@ -57,7 +57,7 @@ Po pomyślnym zakończeniu **_msize_dbg —** zwraca rozmiar (w bajtach) bloku p
 
 ## <a name="remarks"></a>Uwagi
 
-**_msize_dbg —** jest wersją debugowania _[msize —](msize.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_msize_dbg —** jest ograniczone do wywołania **_msize —**. Zarówno **_msize —** i **_msize_dbg —** Oblicz rozmiar bloku pamięci w stosie podstawowym, ale **_msize_dbg —** dodaje dwie funkcje debugowania: obejmuje buforów po obu stronach użytkownika część bloku pamięci, rozmiaru zwróconego i go umożliwia obliczenia rozmiaru dla typów określonego bloku.
+**_msize_dbg —** jest wersją debugowania _[msize —](msize.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_msize_dbg —** jest ograniczone do wywołania **_msize —**. Zarówno **_msize —** i **_msize_dbg —** Oblicz rozmiar bloku pamięci w stosie podstawowym, ale **_msize_dbg —** dodaje dwie funkcje debugowania: Obejmuje zwrócony rozmiar buforów po obu stronach część użytkownika bloku pamięci, a dzięki temu obliczenia rozmiaru dla typów określonego bloku.
 
 Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje dotyczące alokacji typów bloków i sposobu ich używania, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacji na temat różnic między wywołaniem funkcji sterty standard oraz jego wersję debugowania do kompilacji debugowanej aplikacji, zobacz [Debuguj wersje z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

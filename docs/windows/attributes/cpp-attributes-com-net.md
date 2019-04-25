@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148332"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atrybuty C++ dla modelu COM i .NET
 
@@ -60,7 +60,7 @@ Na poniższym rysunku pokazano relację między kompilatora i dostawcy atrybutu.
 > [!NOTE]
 > Użycie atrybutu nie zmienia zawartość pliku źródłowego. Jedyną sytuacją, w których atrybut wygenerowanego kodu jest widoczny jest podczas sesji debugowania. Ponadto dla każdego pliku źródłowego w projekcie można wygenerować plik tekstowy, który wyświetla wyniki podstawienia atrybutu. Aby uzyskać więcej informacji na temat tej procedury, zobacz [/Fx (Scal wprowadzony kod)](../../build/reference/fx-merge-injected-code.md) i [debugowania kodu wprowadzony](/visualstudio/debugger/how-to-debug-injected-code).
 
-Podobnie jak większość konstrukcji języka C++ atrybuty mają zestaw właściwości, który definiuje ich prawidłowego użycia. To jest określany jako kontekst atrybutu i został rozwiązany w tabeli kontekstu atrybutów dla każdego atrybutu odwołanie do tematu. Na przykład [coclass](coclass.md) atrybut tylko można stosować do istniejącej klasy lub struktury, w przeciwieństwie do [cpp_quote —](cpp-quote.md) atrybut, który można wstawić w dowolnym miejscu w obrębie pliku źródłowego języka C++.
+Podobnie jak większość konstrukcji języka C++ atrybuty mają zestaw właściwości, który definiuje ich prawidłowego użycia. To jest określany jako kontekst atrybutu i został rozwiązany w tabeli kontekstu atrybutów dla każdego atrybutu odwołanie do tematu. Na przykład [coclass](coclass.md) atrybut tylko można stosować do istniejącej klasy lub struktury, w przeciwieństwie do [cpp_quote —](cpp-quote.md) atrybut, który można wstawić w dowolnym miejscu w obrębie C++ pliku źródłowego.
 
 ## <a name="building-an-attributed-program"></a>Kompilowanie programu opartego na atrybutach
 

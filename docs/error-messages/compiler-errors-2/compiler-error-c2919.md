@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2919
 ms.assetid: 140a6db9-eb48-4c5e-84a7-a09d2653605b
 ms.openlocfilehash: ab11226c8cc4629a265dd182d5f882f6b3be7e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160859"
 ---
 # <a name="compiler-error-c2919"></a>Błąd kompilatora C2919
 
-"type": nie można używać operatorów na publikowanej powierzchni typu WinRT
+"type": Nie można używać operatorów na publikowanej powierzchni typu WinRT
 
 System typów środowiska wykonawczego Windows nie obsługuje operatora elementów członkowskich w publikowanej powierzchni typu. Jest to, ponieważ nie wszystkie języki mogą wykorzystywać operator elementów członkowskich. Operator prywatny lub wewnętrzny można utworzyć funkcji elementów członkowskich, które mogą być wywoływane z poziomu kodu C++ w tej samej jednostce klasy lub kompilacji.
 

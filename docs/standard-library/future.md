@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159863"
 ---
 # <a name="ltfuturegt"></a>&lt;przyszłe&gt;
 
@@ -40,7 +40,7 @@ Funkcja szablonu `async` klasy szablonu i `promise` i `packaged_task` asynchroni
 
 Każdą z klas szablonu `promise`, `future`, i `shared_future` jest specjalizacją typu **void** i częściowa specjalizacja do przechowywania i pobierania wartości przez odwołanie. Te specjalizacje różnią się od szablonu podstawowego tylko w przypadku podpisów i semantyka funkcje, które przechowują i pobierają zwracanej wartości.
 
-Klasy szablonów `future` i `shared_future` nigdy nie należy zablokować w ich destruktory, z wyjątkiem w przypadku jednego, który jest zachowywana na potrzeby utrzymywania zgodności z poprzednimi wersjami: w przeciwieństwie do innych prognoz dla `future`— lub ostatni `shared_future`— dołączona do zadania wprowadzenie `std::async`, bloki destruktor Jeśli zadanie nie zostało ukończone; oznacza to, blokuje Jeśli tego wątku nie jeszcze wywołana `.get()` lub `.wait()` i nadal jest uruchomione zadanie. Następująca uwaga użyteczność została dodana do opisu `std::async` w standardzie projekt: "[Uwaga: Jeśli stan w przyszłości uzyskany z std::async zostanie przeniesiona poza zakresem lokalnym, inny kod, który używa przyszłość musi być pamiętać, że destruktor przyszłości może blokować udostępniony stan przestanie być gotowy. — uwagi końcowej] "we wszystkich innych przypadkach `future` i `shared_future` destruktory są wymagane i gwarantują blokowania.
+Klasy szablonów `future` i `shared_future` nigdy nie należy zablokować w ich destruktory, z wyjątkiem w przypadku jednego, który jest zachowywana na potrzeby utrzymywania zgodności z poprzednimi wersjami: W przeciwieństwie do innych prognoz dla `future`— lub ostatni `shared_future`— dołączona do pracy z usługą zadania `std::async`, bloki destruktor Jeśli zadanie nie zostało ukończone; oznacza to, blokuje Jeśli tego wątku nie jeszcze wywołana `.get()` lub `.wait()`i nadal jest uruchomione zadanie. Następująca uwaga użyteczność została dodana do opisu `std::async` w standardzie projekt: "[Uwaga: Jeśli stan w przyszłości uzyskany z std::async zostanie przeniesiona poza zakresem lokalnym, inny kod, który używa przyszłość musi być pamiętać, że destruktor przyszłość mogą blokować udostępnionego stanu przestanie gotowe. — uwagi końcowej] "we wszystkich innych przypadkach `future` i `shared_future` destruktory są wymagane i gwarantują blokowania.
 
 ## <a name="members"></a>Elementy członkowskie
 

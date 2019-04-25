@@ -1,18 +1,19 @@
 ---
-ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: af8edc41f6c2036d231eb7e922a631628294645a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209076"
 ---
-Narzędzia do kompilacji i Kompilatory języka Visual Studio może zgłaszać wiele rodzajów błędów i ostrzeżeń. Po znalezieniu błędu lub ostrzeżenia narzędzia do kompilacji mogą zakładają kod i próbować kontynuować, dzięki czemu mogą być zgłaszane więcej problemów, w tym samym czasie. Jeśli narzędzia przyjmą złe założenie, późniejsze błędy lub ostrzeżenia mogą nie mieć zastosowania do projektu. Gdy poprawiasz problemy w projekcie, zawsze należy zaczynać się od pierwszego błędu lub ostrzeżenia, który jest zgłaszany i często rekompiluj. Poprawka co może spowodować wiele kolejnych błędów znika.
+> [!IMPORTANT]
+> Narzędzia do kompilacji i Kompilatory języka Visual Studio może zgłaszać wiele rodzajów błędów i ostrzeżeń. Po znalezieniu błędu lub ostrzeżenia narzędzia do kompilacji mogą zakładają kod i próbować kontynuować, dzięki czemu mogą być zgłaszane więcej problemów, w tym samym czasie. Jeśli narzędzia przyjmą złe założenie, późniejsze błędy lub ostrzeżenia mogą nie mieć zastosowania do projektu. Gdy poprawiasz problemy w projekcie, zawsze należy zaczynać się od pierwszego błędu lub ostrzeżenia, który jest zgłaszany i często rekompiluj. Poprawka co może spowodować wiele kolejnych błędów znika.
 
-Aby uzyskać pomoc dotyczącą danego komunikatu diagnostycznego w programie Visual Studio, wybierz ją w **dane wyjściowe** okna, a następnie naciśnij klawisz **F1** klawisz, aby otworzyć stronę dokumentacji dla tego błędu, jeśli taka istnieje. Można również znaleźć artykuły o błędach lub ostrzeżenia za pomocą narzędzia wyszukiwania powyżej lub przeglądając listę błędów i ostrzeżeń, narzędzia i typ w okienku nawigacji.
+Aby uzyskać pomoc dotyczącą danego komunikatu diagnostycznego w programie Visual Studio, wybierz ją w **dane wyjściowe** okna, a następnie naciśnij klawisz **F1** klucza. Visual Studio otwiera stronę dokumentacji dla tego błędu, jeśli taka istnieje. Narzędzie wyszukiwania powyżej umożliwia również znaleźć artykuły o błędach lub ostrzeżenia. Można również przeglądać listę błędów i ostrzeżeń, narzędzia i typ w okienku nawigacji na tej stronie.
 
 > [!NOTE]
-> Nie każdy błąd programu Visual Studio lub ostrzeżenie jest udokumentowany. W wielu przypadkach komunikat diagnostyczny zawiera wszystkie informacje, które są dostępne. Jeśli otwarta na tej stronie, gdy użytkownik używa **F1** i traktować błąd lub ostrzeżenie wymaga dodatkowego wyjaśnienia, Daj nam znać. Można Użyj formularza opinii na tej stronie, Dodaj komentarz w sekcji komentarze lub [zgłosić problem w serwisie GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues). Można również wysłać opinię i wprowadzić błędów w środowisku IDE. W programie Visual Studio, przejdź do paska menu, a następnie wybierz **Pomoc > Wyślij opinię > Zgłoś Problem**, lub Prześlij sugestię przy użyciu **Pomoc > Wyślij opinię > Wyślij sugestię**.
+> Nie każdy błąd programu Visual Studio lub ostrzeżenie jest udokumentowany. W wielu przypadkach komunikat diagnostyczny zawiera wszystkie informacje, które są dostępne. Jeśli otwarta na tej stronie, gdy użytkownik używa **F1** i traktować błąd lub ostrzeżenie wymaga dodatkowego wyjaśnienia, Daj nam znać. Aby zgłosić problem z dokumentacją na służy przyciski opinii na tej stronie [GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues), lub problem z produktem w [społeczności deweloperów](https://developercommunity.visualstudio.com/spaces/8/index.html) lokacji. Możesz również wysłać opinię i wprowadzić błędów w środowisku IDE. W programie Visual Studio, przejdź do paska menu, a następnie wybierz **Pomoc > Wyślij opinię > Zgłoś Problem**, lub Prześlij sugestię przy użyciu **Pomoc > Wyślij opinię > Wyślij sugestię**.
 
-Może się okazać uzyskać dodatkową pomoc błędów i ostrzeżeń na forach publicznych firmy Microsoft. Możesz wyszukać błąd lub ostrzeżenie o numerze na [społeczności deweloperów](https://developercommunity.visualstudio.com/spaces/8/index.html) lokacji. Możesz również wyszukać błędy i ostrzeżenia i zadawać pytania w [Stack Overflow](http://stackoverflow.com/) do rozwiązania.
+Może się okazać uzyskać dodatkową pomoc błędów i ostrzeżeń na forach publicznych firmy Microsoft. I wyszukaj błąd lub ostrzeżenie o numerze w programie Visual Studio C++ [społeczności deweloperów](https://developercommunity.visualstudio.com/spaces/8/index.html) lokacji. Możesz również wyszukać błędy i ostrzeżenia i zadawać pytania w [Stack Overflow](http://stackoverflow.com/) do rozwiązania.
 
 Aby uzyskać linki do zasobów społeczności i uzyskać dodatkową pomoc, zobacz [pomocy programu Visual C++ i społeczności](../../overview/visual-cpp-help-and-community.md).

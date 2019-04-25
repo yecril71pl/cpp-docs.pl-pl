@@ -9,11 +9,11 @@ helpviewer_keywords:
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
 ms.openlocfilehash: b2f28a14b4d4585575a39dd9a936a56a84eeddc4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59022428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179623"
 ---
 # <a name="setlocale"></a>setlocale
 
@@ -31,7 +31,7 @@ Ponieważ algorytm konwersji na znaki wielobajtowe do znaków dwubajtowych mogą
 
 Wartość domyślna *ciągu ustawień regionalnych* jest "".
 
-Ustawień regionalnych "C" mapuje każdy znak w ciągu na wartość jako **wchar_t** (typ unsigned short). Inne wartości, które są prawidłowe dla `setlocale` tych wpisów, które znajdują się w [Language Strings](../c-runtime-library/language-strings.md) listy. Na przykład, możesz wydać:
+The "C" locale maps each character in the string to its value as a **wchar_t** (unsigned short). Inne wartości, które są prawidłowe dla `setlocale` tych wpisów, które znajdują się w [Language Strings](../c-runtime-library/language-strings.md) listy. Na przykład, możesz wydać:
 
 ```cpp
 #pragma setlocale("dutch")

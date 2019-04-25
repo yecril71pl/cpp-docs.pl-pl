@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295464"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr — Klasa
 
@@ -99,7 +99,7 @@ A `unique_ptr`.
 *Nptr*<br/>
 `rvalue` Typu `std::nullptr_t`.
 
-*PTR*<br/>
+*Ptr*<br/>
 A `pointer`.
 
 *Deleter*<br/>

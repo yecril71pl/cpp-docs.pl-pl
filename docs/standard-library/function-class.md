@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
 ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159720"
 ---
 # <a name="function-class"></a>function — Klasa
 
@@ -121,7 +121,7 @@ Pusta `function` obiektu nie przechowuje wywoływanego obiektu lub odwołanie do
 |-|-|
 |[Przypisz](#assign)|Przypisuje wywoływanego obiektu, do tego obiektu funkcji.|
 |[swap](#swap)|Zamień dwa obiekty możliwy do wywołania.|
-|[Docelowy](#target)|Sprawdza, czy przechowywany obiekt jest możliwy do wywołania określonych.|
+|[target](#target)|Sprawdza, czy przechowywany obiekt jest możliwy do wywołania określonych.|
 |[target_type](#target_type)|Pobiera typ informacji na obiekt.|
 
 ### <a name="operators"></a>Operatory
@@ -197,7 +197,7 @@ template <class Fx, class Alloc>
 *right*<br/>
 Obiekt funkcji do skopiowania.
 
-*FX*<br/>
+*Fx*<br/>
 Typ wywoływanego obiektu.
 
 *_Func*<br/>
@@ -344,7 +344,7 @@ result_type operator()(
 *TN*<br/>
 Typ n-tej wywołać argument.
 
-*TN*<br/>
+*tN*<br/>
 Wywołanie n-ty argument.
 
 ### <a name="remarks"></a>Uwagi

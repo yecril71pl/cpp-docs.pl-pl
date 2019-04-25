@@ -454,18 +454,18 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180150"
 ---
 # <a name="reference-concurrency-runtime"></a>Odwołanie (Współbieżność środowiska wykonawczego)
 
 Ta sekcja zawiera informacje dotyczące środowiska uruchomieniowego współbieżności.
 
 > [!Note]
-> Standard języka C++ zastrzega stosowanie identyfikatorów, które zaczynają się od znaku podkreślenia (_) do implementacji takich jak biblioteki. Nie należy używać tych nazw w kodzie. Zachowanie kodu, elementy, które stosują taką konwencję nazw, których nie jest gwarantowane i mogą ulec zmianie w przyszłych wersjach. Z tego względu takie elementy kodu zostały pominięte z dokumentacji współbieżność środowiska wykonawczego.
+> C++ Standard języka c zastrzega stosowanie identyfikatorów, które zaczynają się od znaku podkreślenia (_) do implementacji takich jak biblioteki. Nie należy używać tych nazw w kodzie. Zachowanie kodu, elementy, które stosują taką konwencję nazw, których nie jest gwarantowane i mogą ulec zmianie w przyszłych wersjach. Z tego względu takie elementy kodu zostały pominięte z dokumentacji współbieżność środowiska wykonawczego.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

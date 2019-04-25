@@ -38,11 +38,11 @@ helpviewer_keywords:
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
 ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157404"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -98,7 +98,7 @@ Wersje funkcji, które mają wiodące znaki podkreślenia są zapewniane dla zgo
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**hypot —**, **hypotf —**, **hypotl —**, **_hypot —**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

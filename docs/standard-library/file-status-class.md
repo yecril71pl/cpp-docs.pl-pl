@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160020"
 ---
 # <a name="filestatus-class"></a>file_status — Klasa
 
@@ -39,8 +39,8 @@ class file_status;
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Typ](#type)|Pobiera lub ustawia `file_type`.|
-|[Uprawnienia](#permissions)|Pobiera lub ustawia uprawnienia do pliku.|
+|[type](#type)|Pobiera lub ustawia `file_type`.|
+|[uprawnienia](#permissions)|Pobiera lub ustawia uprawnienia do pliku.|
 
 ### <a name="operators"></a>Operatory
 
@@ -129,4 +129,4 @@ Określony `perms`.
 
 [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
 [path, klasa](../standard-library/path-class.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>

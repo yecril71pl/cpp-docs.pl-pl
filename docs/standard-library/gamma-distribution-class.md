@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
 ms.openlocfilehash: a5dcd2ed80a2858ac08d2d8e9cb03095ddfec5b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159681"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution — Klasa
 
@@ -251,4 +251,4 @@ Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konk
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

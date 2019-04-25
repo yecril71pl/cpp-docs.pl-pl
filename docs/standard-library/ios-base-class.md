@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158594"
 ---
 # <a name="iosbase-class"></a>ios_base — Klasa
 
@@ -170,7 +170,7 @@ Obiekt ios_base — klasa przechowuje także informacje o stanie strumienia, w o
 |[dane binarne](#openmode)|Określa, że plik powinny być odczytywane jako strumienia binarnego, a nie jako strumienia tekstu.|
 |[boolalpha](#fmtflags)|Określa wstawiania lub wyodrębniania obiektów typu **bool** jako nazwy (takie jak **true** i **false**), a nie jako wartości liczbowe.|
 |[cur](#seekdir)|Określa względem początku bieżącej pozycji w sekwencji.|
-|[Gru](#fmtflags)|Określa wstawiania lub ekstrakcji liczb całkowitych w formacie dziesiętnym.|
+|[dec](#fmtflags)|Określa wstawiania lub ekstrakcji liczb całkowitych w formacie dziesiętnym.|
 |[koniec](#seekdir)|Określa względem końca sekwencji.|
 |[eofbit](#iostate)|Rekordy koniec pliku podczas wyodrębniania ze strumienia.|
 |[failbit](#iostate)|Rejestruje błąd podczas wyodrębniania prawidłowym polem ze strumienia.|
@@ -189,7 +189,7 @@ Obiekt ios_base — klasa przechowuje także informacje o stanie strumienia, w o
 |[showpoint](#fmtflags)|Określa bezwarunkowe Wstawianie przecinka dziesiętnego w wygenerowanym pola zmiennoprzecinkowego.|
 |[showpos](#fmtflags)|Określa wstawiania znak plus w nieujemna wygenerowanego pola liczbowego.|
 |[skipws](#fmtflags)|Określa, pomijanie wiodących biały znak przed niektórych wyodrębniania.|
-|[TRUNC —](#openmode)|Określa zawartość usuwania istniejącego pliku, gdy jego kontrolowanie obiekt zostanie utworzony.|
+|[trunc](#openmode)|Określa zawartość usuwania istniejącego pliku, gdy jego kontrolowanie obiekt zostanie utworzony.|
 |[unitbuf](#fmtflags)|Powoduje, że dane wyjściowe do opróżniany po każdym wstawiania.|
 |[wielkie litery](#fmtflags)|Określa wstawiania odpowiedniki wielkie litery, małe litery, w niektórych wstawienia.|
 
@@ -203,12 +203,12 @@ Obiekt ios_base — klasa przechowuje także informacje o stanie strumienia, w o
 |[imbue](#imbue)|Zmiany ustawień regionalnych.|
 |[Init](#init)|Tworzy obiektów standardowa iostream, kiedy zostaną wykonane.|
 |[iword](#iword)|Przypisuje wartość do zapisania jako `iword`.|
-|[Precyzja](#precision)|Określa liczbę cyfr wyświetlanych w liczbę zmiennoprzecinkową.|
+|[precision](#precision)|Określa liczbę cyfr wyświetlanych w liczbę zmiennoprzecinkową.|
 |[pword —](#pword)|Przypisuje wartość do zapisania jako `pword`.|
 |[register_callback](#register_callback)|Określa funkcję wywołania zwrotnego.|
-|[SETF](#setf)|Ustawia określone flagi.|
+|[setf](#setf)|Ustawia określone flagi.|
 |[sync_with_stdio](#sync_with_stdio)|Zapewnia, że iostream i operacje biblioteki wykonawczej C wystąpić w kolejności, w jakiej występują w kodzie źródłowym.|
-|[unsetf —](#unsetf)|Powoduje, że określone flagi były wyłączone.|
+|[unsetf](#unsetf)|Powoduje, że określone flagi były wyłączone.|
 |[width](#width)|Ustawia długość strumienia wyjściowego.|
 |[xalloc](#xalloc)|Określa, że zmienna jest części strumienia.|
 

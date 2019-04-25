@@ -6,11 +6,11 @@ f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
 ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161637"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView — Klasa
 
@@ -39,7 +39,7 @@ Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości klu
 
 ### <a name="remarks"></a>Uwagi
 
-UnorderedMapView jest konkretną implementację C++ [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interfejsu, który jest przekazywany między interfejsem binarnym aplikacji (ABI). Aby uzyskać więcej informacji, zobacz [kolekcje (C + +/ CX)](../cppcx/collections-c-cx.md).
+UnorderedMapView jest konkretną implementację C++ [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interfejsu, który jest przekazywany między interfejsem binarnym aplikacji (ABI). Aby uzyskać więcej informacji, zobacz [kolekcji (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Elementy członkowskie
 

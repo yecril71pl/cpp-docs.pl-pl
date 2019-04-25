@@ -1,6 +1,6 @@
 ---
 title: index — Klasa
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180241"
 ---
 # <a name="index-class"></a>index — Klasa
 
@@ -37,14 +37,14 @@ Ranga lub liczba wymiarów.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Indeks konstruktora](#ctor)|Inicjuje nowe wystąpienie klasy `index` klasy.|
+|[Indeks konstruktora](#index_ctor)|Inicjuje nowe wystąpienie klasy `index` klasy.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[operator--](#operator--)|Zmniejsza o jeden każdy element obiektu `index` obiektu.|
-|[Operator(MOD) =](#operator_mod_eq)|Oblicza moduł (resztę) każdego elementu w `index` obiektu, gdy ten element jest dzielona przez liczbę.|
+|[operator%=](#operator_mod_eq)|Oblicza moduł (resztę) każdego elementu w `index` obiektu, gdy ten element jest dzielona przez liczbę.|
 |[operator*=](#operator_star_eq)|Mnoży każdy element obiektu `index` przez liczbę.|
 |[operator/=](#operator_div_eq)|Dzieli każdy element obiektu `index` przez liczbę.|
 |[index::operator\[\]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
@@ -139,7 +139,7 @@ index operator--(
 
 Dla operatora prefiksowego obiekt indeksu (* to). Dla operatora sufiksowego, nowy obiekt indeksu.
 
-## <a name="operator_mod_eq"></a>  Operator(MOD) =
+## <a name="operator_mod_eq"></a>  operator % =
 
 Oblicza moduł (resztę) każdego elementu w obiekcie indeksu, gdy ten element jest dzielona przez określoną liczbę.
 

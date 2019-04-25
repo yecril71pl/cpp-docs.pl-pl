@@ -32,11 +32,11 @@ helpviewer_keywords:
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
 ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156333"
 ---
 # <a name="modf-modff-modfl"></a>modf —, modff —, modfl
 
@@ -60,7 +60,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 Wartość zmiennoprzecinkowa.
 
-*pola IntPtr*<br/>
+*intptr*<br/>
 Wskaźnik do część całkowitą przechowywanych.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -79,7 +79,7 @@ Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**modf —**, **modff —**, **modfl**|C: \<math.h ><br /><br /> C++:, \<cmath > lub \<math.h >|
+|**modf —**, **modff —**, **modfl**|C: \<math.h><br /><br /> C++:, \<cmath > lub \<math.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

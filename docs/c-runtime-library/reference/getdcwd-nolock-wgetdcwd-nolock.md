@@ -35,11 +35,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
 ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157711"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -65,7 +65,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Dysk*<br/>
+*drive*<br/>
 Stacja dysków.
 
 *buffer*<br/>
@@ -76,7 +76,7 @@ Maksymalna długość ścieżki w znakach: **char** dla **_getdcwd —** i **wch
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zobacz [_getdcwd —, _wgetdcwd —](getdcwd-wgetdcwd.md).
+See [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -86,7 +86,7 @@ Zobacz [_getdcwd —, _wgetdcwd —](getdcwd-wgetdcwd.md).
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tgetdcwd_nolock —**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
+|**_tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
 
 ## <a name="requirements"></a>Wymagania
 

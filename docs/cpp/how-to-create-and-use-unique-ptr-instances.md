@@ -5,15 +5,15 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
 ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153662"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Instrukcje: Tworzenie wystąpień unique_ptr i korzystanie
 
-A [unique_ptr](../standard-library/unique-ptr-class.md) nie udostępnia swojego wskaźnika. Nie można skopiować do innego `unique_ptr`, przekazać przez wartość do funkcji lub używany w ramach dowolnego algorytmu biblioteki standardowej języka C++, który wymaga wykonania kopii. A `unique_ptr` mogą być przenoszone. Oznacza to, że własność zasobu pamięci jest przenoszona do innego `unique_ptr` a oryginalny wskaźnik `unique_ptr` już nie jest właścicielem. Zalecamy, aby ograniczyć obiekt do jednego właściciela, ponieważ wiele własności zwiększa złożoność logiki programu. W związku z tym, jeśli potrzebujesz inteligentnego wskaźnika dla zwykłego obiektu języka C++ użyj `unique_ptr`, a podczas konstruowania `unique_ptr`, użyj [make_unique](../standard-library/memory-functions.md#make_unique) funkcji pomocnika.
+A [unique_ptr](../standard-library/unique-ptr-class.md) nie udostępnia swojego wskaźnika. Nie można skopiować do innego `unique_ptr`, przekazać przez wartość do funkcji lub używany w ramach dowolnego algorytmu biblioteki standardowej języka C++, który wymaga wykonania kopii. A `unique_ptr` mogą być przenoszone. Oznacza to, że własność zasobu pamięci jest przenoszona do innego `unique_ptr` a oryginalny wskaźnik `unique_ptr` już nie jest właścicielem. Zalecamy, aby ograniczyć obiekt do jednego właściciela, ponieważ wiele własności zwiększa złożoność logiki programu. W związku z tym, gdy potrzebujesz inteligentnego wskaźnika dla zwykłego C++ obiektu, należy użyć `unique_ptr`, a podczas konstruowania `unique_ptr`, użyj [make_unique](../standard-library/memory-functions.md#make_unique) funkcji pomocnika.
 
 Poniższy diagram ilustruje przeniesienie prawa własności między dwoma `unique_ptr` wystąpień.
 

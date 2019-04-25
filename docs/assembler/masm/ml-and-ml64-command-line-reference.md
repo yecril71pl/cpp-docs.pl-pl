@@ -55,11 +55,11 @@ helpviewer_keywords:
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
 ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178114"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Informacje w wierszu polecenia programu ML i ML64
 
@@ -84,7 +84,7 @@ Opcje wymienione w poniższej tabeli.
 |**/BL** *nazwy pliku*|Wybiera alternatywne konsolidatora.|
 |**/c**|Zbierane tylko. Nie łączy się.|
 |**/coff**|Generuje common object format (COFF) typ pliku moduł obiektu. Ogólnie jest to wymagane dla rozwoju języka asembler Win32.<br /><br /> Nie jest dostępna w ml64.exe.|
-|**CP**|Zachowuje wszystkie identyfikatory użytkownika wielkość liter.|
+|**/Cp**|Zachowuje wszystkie identyfikatory użytkownika wielkość liter.|
 |**/Cu**|Wszystkie identyfikatory jest mapowany na wielkie litery (ustawienie domyślne).<br /><br /> Nie jest dostępna w ml64.exe.|
 |**/Cx**|Zachowuje wielkość liter w symbolach publicznego i extern.|
 |**/D** *symbol*[[=*wartość*]]|Definiuje makra tekstowe o podanej nazwie. Jeśli *wartość* jest Brak, jest on pusty. Wiele tokenów, rozdzielone spacjami, muszą być ujęte w znaki cudzysłowu.|
@@ -107,7 +107,7 @@ Opcje wymienione w poniższej tabeli.
 |**/nologo**|Pomija komunikaty dla zestawu pomyślnie.|
 |**/omf**|Generuje obiekt modułu plik formatu (OMF) typ obiektu modułu.  **/ omf** oznacza **/c**; ML.exe nie obsługuje łączenie obiektów OMF.<br /><br /> Nie jest dostępna w ml64.exe.|
 |**/Sa**|Włącza listę wszystkich dostępnych informacji.|
-|**Opcja/SAFESEH**|Oznacza obiekt albo brak obsługi wyjątków lub zawierające obsługi wyjątków, zadeklarowanych przy użyciu [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Nie jest dostępna w ml64.exe.|
+|**/safeseh**|Oznacza obiekt albo brak obsługi wyjątków lub zawierające obsługi wyjątków, zadeklarowanych przy użyciu [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Nie jest dostępna w ml64.exe.|
 |**/Sf**|Dodaje plik listy i listy pierwszego przebiegu.|
 |**/SL** *szerokość*|Ustawia szerokość linii źródła w znaków w każdym wierszu. Zakres jest 60 do 255 lub 0. Domyślna to 0. Taki sam jak [strony](../../assembler/masm/page.md) szerokości.|
 |**/Sn**|Wyłącza tabeli symboli podczas produkowania listę.|

@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C2868
+title: Compiler Error C2868
 ms.date: 11/04/2016
 f1_keywords:
 - C2868
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2868
 ms.assetid: 6ff5837b-e66d-44d1-9d17-80af35e08d08
 ms.openlocfilehash: 4cb259ed0f43831226fb7e1a1ccf7b28bcef7819
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165206"
 ---
-# <a name="compiler-error-c2868"></a>Błąd kompilatora C2868
+# <a name="compiler-error-c2868"></a>Compiler Error C2868
 
 > "*identyfikator*": Niedozwolona składnia dla deklaracji using; Oczekiwano kwalifikowanej nazwy
 

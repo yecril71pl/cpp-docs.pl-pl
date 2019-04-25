@@ -13,11 +13,11 @@ helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
 ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161715"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections:: mapview, klasa
 
@@ -46,7 +46,7 @@ Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości ele
 
 ### <a name="remarks"></a>Uwagi
 
-MapView jest konkretną implementację C++ [Windows::Foundation::Collections::IMapView \<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interfejsu, który jest przekazywany między interfejsem binarnym aplikacji (ABI). Aby uzyskać więcej informacji, zobacz [kolekcje (C + +/ CX)](../cppcx/collections-c-cx.md).
+MapView jest konkretną implementację C++ [Windows::Foundation::Collections::IMapView \<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interfejsu, który jest przekazywany między interfejsem binarnym aplikacji (ABI). Aby uzyskać więcej informacji, zobacz [kolekcji (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Elementy członkowskie
 

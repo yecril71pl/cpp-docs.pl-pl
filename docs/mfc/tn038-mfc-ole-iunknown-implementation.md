@@ -19,13 +19,13 @@ helpviewer_keywords:
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
 ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305479"
 ---
-# <a name="tn038-mfcole-iunknown-implementation"></a>TN038: implementacja interfejsu MFC/OLE IUnknown
+# <a name="tn038-mfcole-iunknown-implementation"></a>TN038: Implementacja interfejsu MFC/OLE IUnknown
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.

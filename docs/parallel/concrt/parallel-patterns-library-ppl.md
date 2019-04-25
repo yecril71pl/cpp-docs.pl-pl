@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301854"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Biblioteka równoległych wzorców (PLL)
 
@@ -27,7 +27,7 @@ PPL oferuje następujące funkcje:
 
 PPL zapewnia model programowania podobny standardowej biblioteki języka C++. W poniższym przykładzie pokazano wiele funkcji PPL. Oblicza kilka liczb Fibonacci szeregowo i równolegle. Zarówno obliczeń zajmującym się [std::array](../../standard-library/array-class-stl.md) obiektu. Przykład drukuje do konsoli również czas, który jest wymagany do wykonania obu obliczeń.
 
-Wersja serial używa standardowej biblioteki C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmem przechodzenia tablicy i zapisuje wyniki w [std::vector](../../standard-library/vector-class.md) obiektu. Wersja równoległa wykonuje to samo zadanie, ale używa PPL [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu i zapisuje wyniki w parametrze [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) obiektu. `concurrent_vector` Klasa umożliwia każdej iteracji pętli jednocześnie dodać elementy nie wymaga, aby zsynchronizować dostęp do zapisu do kontenera.
+Wersja serial używa C++ biblioteki standardowej [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmem przechodzenia tablicy i zapisuje wyniki w [std::vector](../../standard-library/vector-class.md) obiektu. Wersja równoległa wykonuje to samo zadanie, ale używa PPL [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu i zapisuje wyniki w parametrze [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) obiektu. `concurrent_vector` Klasa umożliwia każdej iteracji pętli jednocześnie dodać elementy nie wymaga, aby zsynchronizować dostęp do zapisu do kontenera.
 
 Ponieważ `parallel_for_each` działa jednocześnie, równoległe wersja tego przykładu należy sortować `concurrent_vector` działają tak samo jak serial wersja obiektu.
 

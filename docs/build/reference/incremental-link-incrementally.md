@@ -13,11 +13,11 @@ helpviewer_keywords:
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
 ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270015"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (Łącz stopniowo)
 
@@ -86,5 +86,5 @@ Poza tym polecenie LINK wykonuje pełne połączenie, jeżeli wystąpi którakol
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165954"
 ---
 # <a name="variantt-class"></a>_variant_t — Klasa
 
@@ -43,7 +43,7 @@ A **_variant_t** hermetyzuje `VARIANT` typu danych. Klasa zarządza alokacją i 
 
 |||
 |-|-|
-|[operator =](../cpp/variant-t-operator-equal.md)|Przypisuje nową wartość do istniejącej **_variant_t** obiektu.|
+|[Operator =](../cpp/variant-t-operator-equal.md)|Przypisuje nową wartość do istniejącej **_variant_t** obiektu.|
 |[operator ==,! =](../cpp/variant-t-relational-operators.md)|Porównanie dwóch **_variant_t** obiektów dla równości i nierówności.|
 |[Ekstraktory](../cpp/variant-t-extractors.md)|Wyodrębnianie danych z zhermetyzowany `VARIANT` obiektu.|
 

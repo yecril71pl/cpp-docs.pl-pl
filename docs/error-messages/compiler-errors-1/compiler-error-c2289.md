@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C2289
+title: Compiler Error C2289
 ms.date: 11/04/2016
 f1_keywords:
 - C2289
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2289
 ms.assetid: cb41a29e-1b06-47dc-bfce-8d73bd63a0df
 ms.openlocfilehash: 9fe9b765af72a8864e3e899cafcf648a9facb67e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182798"
 ---
-# <a name="compiler-error-c2289"></a>Błąd kompilatora C2289
+# <a name="compiler-error-c2289"></a>Compiler Error C2289
 
 tym samym kwalifikator typu użyty więcej niż raz
 

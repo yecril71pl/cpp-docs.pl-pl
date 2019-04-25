@@ -3,19 +3,19 @@ title: Zmień podpis
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
 ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
-ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62265237"
 ---
 # <a name="change-signature"></a>Zmień podpis
 
-**Co:** umożliwia modyfikowanie parametrów funkcji.
+**Co:** Umożliwia modyfikowanie parametrów funkcji.
 
-**Kiedy:** chcesz zmienić kolejność, dodać, usunąć lub zmodyfikować parametrów funkcji, które jest obecnie używana w różnych lokalizacjach.
+**Kiedy:** Chcesz zmienić kolejność, dodać, usunąć lub zmodyfikować parametrów funkcji, które jest obecnie używana w różnych lokalizacjach.
 
-**Dlaczego:** można ręcznie samodzielnie, zmienić te parametry i następnie Znajdź wszystkie wywołania tej funkcji i zmień je pojedynczo, ale która może prowadzić do błędów.  To narzędzie refaktoryzacji będzie automatycznie wykonywać zadania.
+**Dlaczego:** Można ręcznie samodzielnie, zmienić te parametry i następnie Znajdź wszystkie wywołania tej funkcji i zmień je pojedynczo, ale która może prowadzić do błędów.  To narzędzie refaktoryzacji będzie automatycznie wykonywać zadania.
 
 **Jak:**
 
