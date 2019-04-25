@@ -46,7 +46,7 @@
 ## [Strony właściwości ALT COM](atl-com-property-pages.md)
 ### [Określanie stron właściwości](specifying-property-pages.md)
 ### [Implementowanie stron właściwości](implementing-property-pages.md)
-#### [Przykład: Implementowanie strony właściwości](example-implementing-a-property-page.md)
+#### [Przykład: implementowanie strony właściwości](example-implementing-a-property-page.md)
 ## [Obsługa ATL dla kontrolek DHTML](atl-support-for-dhtml-controls.md)
 ### [Identyfikowanie elementów projektu kontrolki DHTML](identifying-the-elements-of-the-dhtml-control-project.md)
 ### [Wywoływanie kodu C++ z elementu DHTML](calling-cpp-code-from-dhtml.md)

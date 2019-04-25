@@ -203,7 +203,7 @@
 #### [Podsumowanie dotyczące instrukcji](summary-of-statements.md)
 #### [Definicje zewnętrzne](external-definitions.md)
 ## [Zachowanie zdefiniowane w implementacji](implementation-defined-behavior.md)
-### [Tłumaczenie: diagnostyka](translation-diagnostics.md)
+### [Translacja: diagnostyka](translation-diagnostics.md)
 ### [Środowisko](environment.md)
 #### [Argumenty dla metody main](arguments-to-main.md)
 #### [Urządzenia interakcyjne](interactive-devices.md)
