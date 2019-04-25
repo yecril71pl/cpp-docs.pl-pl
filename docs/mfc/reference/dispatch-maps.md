@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322517"
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 
@@ -138,7 +138,7 @@ Rozdzielonej spacjami listy co najmniej jedną stałą, określając listę para
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATA|
+|VT_DATE|DATE|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -161,7 +161,7 @@ Określa listę zawierającą krótka liczba całkowita, następuje wskaźnik do
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_CY|`const CY` lub `CY*`|
-|VTS_DATE|DATA|
+|VTS_DATE|DATE|
 |VTS_BSTR|LPCSTR|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_SCODE|SCODE|
@@ -223,7 +223,7 @@ Wartość, określając typ właściwości.
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATA|
+|VT_DATE|DATE|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -261,7 +261,7 @@ Zewnętrzna nazwa właściwości.
 *memberGet*<br/>
 Nazwa funkcji składowej, używany do pobrania właściwości.
 
-*zestaw elementów członkowskich*<br/>
+*memberSet*<br/>
 Nazwa używana do ustawiania właściwości funkcji elementu członkowskiego.
 
 *vtPropType*<br/>
@@ -320,7 +320,7 @@ W odróżnieniu od właściwości zdefiniowane za pomocą DISP_PROPERTY właści
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATA|
+|VT_DATE|DATE|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
 ms.openlocfilehash: 626461fc7a9fc6dd7b6578e836733d154a66862a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316499"
 ---
 # <a name="version-version-information"></a>/VERSION (Informacje o wersji)
 
@@ -55,5 +55,5 @@ Innym sposobem, aby wstawić numer wersji jest [wersji](version-c-cpp.md) instru
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

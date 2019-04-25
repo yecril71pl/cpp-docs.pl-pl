@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
 ms.openlocfilehash: 5d24d1d1aad8442f549dcb1aa4bd6414070c282c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316486"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (określ plik winmd)
 
@@ -36,5 +36,5 @@ Użyj wartości, który jest określony w `filename` do przesłaniania domyślne
 ## <a name="see-also"></a>Zobacz także
 
 [/WINMD (Generuj metadane systemu Windows)](winmd-generate-windows-metadata.md)<br/>
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

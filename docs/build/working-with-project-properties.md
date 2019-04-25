@@ -9,11 +9,11 @@ helpviewer_keywords:
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
 ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314119"
 ---
 # <a name="set-compiler-and-build-properties"></a>Ustaw kompilatora i właściwości kompilacji
 
@@ -41,7 +41,7 @@ Na poniższej ilustracji przedstawiono na tej samej stronie właściwości proje
 
 *Platforma docelowa* odwołuje się do typu urządzenia i/lub uruchamianego pliku wykonywalnego w systemie operacyjnym. Możesz tworzyć projekt służący do więcej niż jedną platformę. Platformy docelowe dostępne dla projektów C++ zależą od rodzaju projektu. obejmują, ale nie są ograniczone do Win32, x64, ARM, Android i iOS.     **X86** platformę docelową, które można napotkać w **programu Configuration Manager** jest taka sama jak **Win32** w natywnych projektów w języku C++. Oznacza Win32, Windows 32-bitowe i **x64** oznacza Windows 64-bitowych. Aby uzyskać więcej informacji na temat tych dwóch platform, zobacz [uruchomiona 32-bitowych aplikacji](/windows/desktop/WinProg64/running-32-bit-applications).
 
-**Dowolny Procesor** wartość platformy, które można napotkać w docelowa **programu Configuration Manager** nie ma wpływu na natywnych projektów w języku C++; dotyczy C + +/ interfejsu wiersza polecenia i .NET innych typów projektów. Aby uzyskać więcej informacji, zobacz [/clrimagetype (określenie typu z obrazu CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
+**Dowolny Procesor** wartość platformy, które można napotkać w docelowa **programu Configuration Manager** nie ma wpływu na natywny C++ projektów; są odpowiednie dla C++/interfejs wiersza polecenia i .NET innych typów projektów. Aby uzyskać więcej informacji, zobacz [/clrimagetype (określenie typu z obrazu CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
 
 Aby uzyskać więcej informacji na temat ustawiania właściwości kompilacji debugowania zobacz:

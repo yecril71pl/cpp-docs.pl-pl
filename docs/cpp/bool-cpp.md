@@ -9,17 +9,17 @@ helpviewer_keywords:
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
 ms.openlocfilehash: e481cb9de7c80d147179efceab2fda9b160f3c21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184289"
 ---
 # <a name="bool-c"></a>bool (C++)
 
 To słowo kluczowe jest typu wbudowanego. Zmienna tego typu może mieć wartości [true](../cpp/true-cpp.md) i [false](../cpp/false-cpp.md). Wyrażenia warunkowe mają typ **bool** i dlatego mają wartości typu **bool**. Na przykład `i!=0` ma teraz wartość PRAWDA lub FAŁSZ w zależności od wartości `i`.
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): argument przyrostka lub przedrostka inkrementacji lub dekrementacji operator nie może być typu **bool**. Innymi słowy, biorąc pod uwagę zmienną `b` typu **bool**, te wyrażenia nie są już dozwolone:
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Argument przyrostka lub przedrostka inkrementacji lub dekrementacji operator nie może być typu **bool**. Innymi słowy, biorąc pod uwagę zmienną `b` typu **bool**, te wyrażenia nie są już dozwolone:
 
 ```cpp
     b++;

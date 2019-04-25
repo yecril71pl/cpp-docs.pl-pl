@@ -7,15 +7,15 @@ helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
 ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62204364"
 ---
 # <a name="dosseg"></a>.DOSSEG
 
-Porządkuje segmentów zgodnie z Konwencją segmentu systemu MS-DOS: kodu po pierwsze, następnie segmenty nie znajduje się w DGROUP, a następnie segmenty w DGROUP.
+Segmenty zgodnie z Konwencją segmentu systemu MS-DOS zamówień: KODU po pierwsze, następnie segmenty nie znajduje się w DGROUP i segmentów w DGROUP.
 
 ## <a name="syntax"></a>Składnia
 

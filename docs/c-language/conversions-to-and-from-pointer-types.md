@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
 ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312419"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Konwersje do i z typów wskaźnika
 

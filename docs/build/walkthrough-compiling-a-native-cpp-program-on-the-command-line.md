@@ -9,11 +9,11 @@ helpviewer_keywords:
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
 ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313886"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie natywnego programu C++ w wierszu polecenia
 
@@ -172,5 +172,5 @@ Kompilator MSVC zawiera C Runtime Library (CRT) zgodne ze standardem ISO C99, al
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty i systemów kompilacji](projects-and-build-systems-cpp.md)<br/>
-[MSVC Compiler Options](reference/compiler-options.md)
+[Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)<br/>
+[Opcje kompilatora MSVC](reference/compiler-options.md)

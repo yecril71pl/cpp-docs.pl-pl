@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335350"
 ---
 # <a name="countof-macro"></a>_countof — Makro
 
@@ -50,7 +50,7 @@ Liczba elementów w tablicy, wyrażone jako **size_t**.
 
 **_countof** jest implementowany jako funkcyjne makro preprocesora. Wersja języka C++ ma dodatkowy szablon maszyny do wykrywania w czasie kompilacji, jeśli wskaźnik jest przekazywany zamiast statycznie zadeklarowanych tablicy.
 
-Upewnij się, że *tablicy* jest faktycznie tablicy, nie wskaźnik. W języku C **_countof** daje błędne wyniki, jeśli *tablicy* jest wskaźnikiem. W języku C++ **_countof** nie zostanie skompilowany, jeśli *tablicy* jest wskaźnikiem.  Tablica jest przekazywany jako parametr do funkcji *decays ze wskaźnikiem*, co oznacza, że w obrębie funkcji, nie można użyć **_countof** Aby określić rozmiar tablicy.
+Upewnij się, że *tablicy* jest faktycznie tablicy, nie wskaźnik. W języku C **_countof** daje błędne wyniki, jeśli *tablicy* jest wskaźnikiem. W C++, **_countof** nie zostanie skompilowany, jeśli *tablicy* jest wskaźnikiem.  Tablica jest przekazywany jako parametr do funkcji *decays ze wskaźnikiem*, co oznacza, że w obrębie funkcji, nie można użyć **_countof** Aby określić rozmiar tablicy.
 
 ## <a name="requirements"></a>Wymagania
 

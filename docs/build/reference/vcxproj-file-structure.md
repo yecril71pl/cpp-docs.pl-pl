@@ -5,11 +5,11 @@ helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
 ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317123"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura plików vcxproj i props
 
@@ -292,5 +292,5 @@ Aby utworzyć arkusz właściwości, skopiuj jeden z plikach .props w folderze V
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji](../working-with-project-properties.md)<br/>
+[Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](../working-with-project-properties.md)<br/>
 [Pliki XML strony właściwości](property-page-xml-files.md)

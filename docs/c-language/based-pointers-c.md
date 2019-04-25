@@ -8,17 +8,17 @@ helpviewer_keywords:
 - based addressing
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
 ms.openlocfilehash: e5d8c529adfb92c9db1fdcc5a38f688853606d5d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327434"
 ---
 # <a name="based-pointers-c"></a>Wskaźniki bazowe (C)
 
 **Microsoft Specific**
 
-[__based — (odwołanie w języku C++)](../cpp/based-pointers-cpp.md)
+[__based (C++ odwołania)](../cpp/based-pointers-cpp.md)
 
 Kompilatory C Microsoft 32-bitowych i 64-bitowe wskaźnik bazowy jest 32-bitową lub 64-bitowe przesunięcie z 32-bitową lub 64-bitowego wskaźnika podstawowego. Adresowanie na podstawie jest przydatne w przypadku sprawowanie kontroli nad sekcje, w których obiekty są przydzielane, a tym samym zmniejszenie rozmiaru pliku wykonywalnego i zwiększyć szybkość realizacji. Ogólnie rzecz biorąc jest formularz do określania wskaźnik bazowy
 

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334869"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -71,7 +71,7 @@ Numer ma zostać przekonwertowany.
 *Liczba*<br/>
 Liczba cyfr po punkcie dziesiętnym.
 
-*Gru*<br/>
+*dec*<br/>
 Wskaźnik do przechowywanej położenie punktu dziesiętnego.
 
 *sign*<br/>
@@ -118,7 +118,7 @@ Ta funkcja w wersji debugowania wypełnia najpierw bufor 0xfd. Aby wyłączyć t
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-**Biblioteki:** wszystkie wersje [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
+**Biblioteki:** Wszystkie wersje [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

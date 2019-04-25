@@ -21,12 +21,12 @@ helpviewer_keywords:
 - fcloseall function
 ms.assetid: 4f14acde-5bc5-43da-a709-7a3c559df3cf
 ms.openlocfilehash: f5d799160cc8a07c41b32006d8a37a025f78c234
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334895"
 ---
 # <a name="fcloseall"></a>fcloseall
 
-Ta funkcja POSIX jest niezalecana. Użyj zgodność ISO C++ [_fcloseall](fclose-fcloseall.md) zamiast tego.
+Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_fcloseall](fclose-fcloseall.md) zamiast tego.

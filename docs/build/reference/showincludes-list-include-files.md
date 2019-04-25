@@ -13,11 +13,11 @@ helpviewer_keywords:
 - showIncludes compiler option [C++]
 ms.assetid: 0b74b052-f594-45a6-a7c7-09e1a319547d
 ms.openlocfilehash: d454054c132976a899fcc4a56a63be427e79beec
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318163"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (Wymień pliki dołączane)
 
@@ -64,5 +64,5 @@ W tym przypadku `2.h` został dostarczony z w ramach `1.h`, dlatego wcięcia.
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

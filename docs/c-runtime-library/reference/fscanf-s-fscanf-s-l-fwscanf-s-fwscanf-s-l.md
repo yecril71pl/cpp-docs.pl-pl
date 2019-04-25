@@ -41,11 +41,11 @@ helpviewer_keywords:
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
 ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332926"
 ---
 # <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -80,13 +80,13 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
 Ciąg kontroli formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -113,15 +113,15 @@ Wersje tych funkcji, które mają **_l** sufiksem są identyczne, z tą różnic
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftscanf_s —**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
-|**_ftscanf_s_l —**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
+|**_ftscanf_s**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
+|**_ftscanf_s_l**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fscanf_s —**, **_fscanf_s_l —**|\<stdio.h>|
-|**fwscanf_s —**, **_fwscanf_s_l —**|\<stdio.h > lub \<wchar.h >|
+|**fscanf_s**, **_fscanf_s_l**|\<stdio.h>|
+|**fwscanf_s**, **_fwscanf_s_l**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

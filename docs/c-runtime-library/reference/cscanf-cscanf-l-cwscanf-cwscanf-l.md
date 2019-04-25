@@ -46,11 +46,11 @@ helpviewer_keywords:
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
 ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335260"
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -87,7 +87,7 @@ int _cwscanf_l(
 *Format*<br/>
 Ciąg kontroli formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Parametry opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -110,14 +110,14 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura TCHAR.H|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcscanf —**|**_cscanf**|**_cscanf**|**_cwscanf**|
-|**_tcscanf_l —**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
+|**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cscanf**, **_cscanf_l —**|\<conio.h>|
-|**_cwscanf —**, **_cwscanf_l —**|\<conio.h > lub \<wchar.h >|
+|**_cscanf**, **_cscanf_l**|\<conio.h>|
+|**_cwscanf**, **_cwscanf_l**|\<conio.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
 ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317643"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Nazywanie pliku .TLB)
 
@@ -56,7 +56,7 @@ Jeśli nie określono/tlbout, pliku .tlb otrzymają nazwy z [/idlout](idlout-nam
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)<br/>
 [/IGNOREIDL (Nie przetwarzaj atrybutów w MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/MIDL (Określ opcje wiersza polecenia MIDL)](midl-specify-midl-command-line-options.md)<br/>

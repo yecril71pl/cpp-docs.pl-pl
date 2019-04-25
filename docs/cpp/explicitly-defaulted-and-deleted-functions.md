@@ -3,11 +3,11 @@ title: Jawnie domyślne i usunięte funkcje
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184329"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Jawnie domyślne i usunięte funkcje
 

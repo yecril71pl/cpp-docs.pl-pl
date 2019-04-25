@@ -11,11 +11,11 @@ helpviewer_keywords:
 - banners, suppressing startup
 ms.assetid: 75930d8b-b11c-4db8-99e5-b52f97da0693
 ms.openlocfilehash: 1e48989a8e433296856ae58560823e601e36008f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320464"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Pomijaj transparent startowy) (C/C++)
 
@@ -45,5 +45,5 @@ Pomija wyświetlanie transparentu praw autorskich, podczas uruchamiania kompilat
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

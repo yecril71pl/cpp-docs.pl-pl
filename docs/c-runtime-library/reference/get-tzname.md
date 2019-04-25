@@ -25,11 +25,11 @@ helpviewer_keywords:
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
 ms.openlocfilehash: c173832efb866eed133a908b5f2b72266fd3798a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332043"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -62,8 +62,8 @@ Indeks jedną z nazw dwie strefy czasowej do pobrania.
 
 |*index*|Zawartość *timeZoneName*|*timeZoneName* wartość domyślna|
 |-|-|-|
-|0|Nazwa strefy czasowej|"CZASU PST."|
-|1|Nazwa strefy (czas standardowy) czasu letniego|"(PDT)"|
+|0|Nazwa strefy czasowej|"PST"|
+|1|Nazwa strefy (czas standardowy) czasu letniego|"PDT"|
 |> 1 lub < 0|**errno** równa **EINVAL**|Nie zmodyfikowano|
 
 Jeśli wartości są jawnie zmieniona w czasie wykonywania, wartości domyślne są "PST" i "(PDT)".

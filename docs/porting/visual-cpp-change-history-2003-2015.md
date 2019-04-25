@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "58898885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337014"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -2009,9 +2009,9 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Przykłady przywróconej ostrzeżeń, które znajdują się w dokumentacji.
 
-- **#include: użycie specyfikatora katalog nadrzędny ".." w pathname** (dotyczy tylko `/Wall` `/WX`)
+- **#include: użycie specyfikatora katalog nadrzędny "." w pathname** (dotyczy tylko `/Wall` `/WX`)
 
-   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny ".." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
+   Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny "." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.
 
     ```Output
     warning C4464: relative include path contains '..'
@@ -2029,7 +2029,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories
     ```
 
-   Ponadto, mimo że kompilator nie zapewnia określonych diagnostyczne, również zalecamy specyfikator katalogu nadrzędnego ".." nie powinny być używane do określania, katalogi dołączane projektu.
+   Ponadto, mimo że kompilator nie zapewnia określonych diagnostyczne, również zalecamy specyfikator katalogu nadrzędnego "." nie powinny być używane do określania, katalogi dołączane projektu.
 
 - **#pragma optimize() wykracza poza końcem pliku nagłówkowego** (dotyczy tylko `/Wall` `/WX`)
 

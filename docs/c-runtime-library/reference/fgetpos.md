@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333933"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,7 +44,7 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Strumień docelowy.
 
 *punktu sprzedaży*<br/>
@@ -52,7 +52,7 @@ Wskaźnik położenia magazynu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **fgetpos** zwraca wartość 0. W przypadku awarii, funkcja zwraca wartość różną od zera i ustawia **errno** do jednej z następujących manifestu stałych (zdefiniowany w stdio —. Godz.): **EBADF**, co oznacza, że określonego strumienia nie jest prawidłowym plikiem wskaźnikiem lub nie jest dostępny, lub **EINVAL**, co oznacza, że *strumienia* wartość lub wartość *pos* jest nieprawidłowy, np. Jeśli jest wskaźnikiem typu null. Jeśli *strumienia* lub *pos* jest **NULL** wskaźnikiem, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+W przypadku powodzenia **fgetpos** zwraca wartość 0. W przypadku awarii, funkcja zwraca wartość różną od zera i ustawia **errno** do jednej z następujących manifestu stałych (zdefiniowany w stdio —. GODZ.): **EBADF**, co oznacza, że określonego strumienia nie jest prawidłowym plikiem wskaźnikiem lub nie jest dostępny, lub **EINVAL**, co oznacza, że *strumienia* wartość lub wartość *pos*jest nieprawidłowy, np. Jeśli jest wskaźnikiem typu null. Jeśli *strumienia* lub *pos* jest **NULL** wskaźnikiem, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Uwagi
 

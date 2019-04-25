@@ -9,11 +9,11 @@ helpviewer_keywords:
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
 ms.openlocfilehash: 62784933cbecd4f312c52ae98cab7d232b893f35
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318644"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (Obraz ma bezpieczną obsługę wyjątków)
 
@@ -112,5 +112,5 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

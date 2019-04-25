@@ -32,11 +32,11 @@ helpviewer_keywords:
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335675"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -80,7 +80,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **aco
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**ACOS**, **acosf —**, **acosl —**|\<math.h>|\<errno.h>|
+|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -137,7 +137,7 @@ Arccosine of 0.000000 = 1.570796
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[COS cosf —, cosl —](cos-cosf-cosl.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [_matherr](matherr.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)

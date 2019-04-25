@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (vector)
 - std::operator== (vector)
 ms.openlocfilehash: f659f1291c4111d83cc8715fd0deb104a9685f4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185948"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;Wektor&gt; operatorów
 
@@ -340,4 +340,4 @@ Vector v1 is greater than or equal to vector v2.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Wektor >](../standard-library/vector.md)<br/>
+[\<vector>](../standard-library/vector.md)<br/>

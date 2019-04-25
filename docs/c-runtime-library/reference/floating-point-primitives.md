@@ -123,11 +123,11 @@ helpviewer_keywords:
 - _ldsin
 - _fdsin
 ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333615"
 ---
 # <a name="floating-point-primitives"></a>Zmiennoprzecinkowe elementów podstawowych
 
@@ -427,10 +427,10 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf —](isinf.md)<br/>
+[isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
-[isnormal —](isnormal.md)<br/>
-[COS cosf —, cosl —](cos-cosf-cosl.md)<br/>
+[isnormal](isnormal.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [frexp —, frexpf —, frexpl —](frexp.md)<br/>
 [ldexp — ldexpf — i ldexpl](ldexp.md)<br/>
 [Dziennik, logf —, logl, log10 log10f —, log10l](log-logf-log10-log10f.md)<br/>

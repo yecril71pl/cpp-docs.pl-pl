@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
 ms.openlocfilehash: f6984c47ef8acde462a8e92e01b72ef26a61eddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325744"
 ---
 # <a name="c-constant-expressions"></a>Wyrażenia stałe języka C
 
@@ -19,23 +19,23 @@ Wyrażenie stałe jest obliczane w czasie kompilacji w czasie wykonywania nie i 
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenie stałe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Wyrażenia warunkowego*
+*constant-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
 
-*wyrażenia warunkowego*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR* **?** *wyrażenie* **:** *wyrażenia warunkowego*
+*conditional-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression* **?** *wyrażenie* **:** *wyrażenia warunkowego*
 
-*wyrażenie*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia przypisania*<br/>
+*expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *wyrażenia przypisania*
 
-*wyrażenia przypisania*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Wyrażenia warunkowego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie jednoargumentowe* *operator przypisania* *wyrażenia przypisania*
+*assignment-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *operator przypisania*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\< \<=** **>>=** **&=** **^=** **&#124;=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
 
 Zawierać symboli nieterminalnych deklaratora struktury, modułu wyliczającego, bezpośrednie deklaratora, deklaratora abstrakcyjny bezpośrednio i instrukcja labeled *wyrażenie_stałe* nieterminalnych.
 

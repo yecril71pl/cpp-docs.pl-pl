@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
 ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329910"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakcja: Jak transakcje wpływają na aktualizacje (ODBC)
 

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
 ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333004"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 
@@ -68,7 +68,7 @@ Wskaźnik do wskaźnika pliku muszą być dostarczone przez wywołanie.
 *Tryb*<br/>
 Dozwolony typ dostępu.
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -93,7 +93,7 @@ Jeśli dowolny z *pFile*, *ścieżki*, *tryb*, lub *strumienia* są **o wartośc
 |-|-|
 | **"r"** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **freopen_s —** wywołanie zakończy się niepowodzeniem. |
 | **"w"** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
-| **""** | Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje. |
+| **"a"** | Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje. |
 | **"r +"** | Otwiera Odczyt i zapis. Plik musi istnieć. |
 | **"w +"** | Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona. |
 | **"+"** | Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF, zanim nowe dane są zapisywane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje. |

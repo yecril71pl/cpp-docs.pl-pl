@@ -16,11 +16,11 @@ helpviewer_keywords:
 - SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
 ms.openlocfilehash: bd0b3a46f52ec9b5a292e2f45671523d8c5cdf5e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317552"
 ---
 # <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (Załaduj pliki wyjściowe konsolidatora do pliku Swap)
 
@@ -54,5 +54,5 @@ Jeśli sieć jest określona, system operacyjny najpierw skopiować obraz binarn
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

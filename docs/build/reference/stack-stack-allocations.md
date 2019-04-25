@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
 ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317929"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Twórz stos z alokacji)
 
@@ -57,5 +57,5 @@ Innym sposobem Ustaw rozmiar stosu jest [STACKSIZE](stacksize.md) instrukcja w p
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
 ms.openlocfilehash: 438bd287738f121efb436857c54c5a68427d9fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331912"
 ---
 # <a name="getterminate"></a>_get_terminate
 
@@ -60,4 +60,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 [abort](abort.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [Zakończenie](terminate-crt.md)<br/>
-[Nieoczekiwany](unexpected-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

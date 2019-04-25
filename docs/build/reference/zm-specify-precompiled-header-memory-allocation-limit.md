@@ -15,11 +15,11 @@ helpviewer_keywords:
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
 ms.openlocfilehash: 09df8e1ee9a97289e29e1191e8c1585580435b79
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315277"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Określ limit alokacji pamięci prekompilowanego nagłówka)
 
@@ -72,5 +72,5 @@ W poniższej tabeli przedstawiono sposób, w jaki *współczynnik* argument wpł
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

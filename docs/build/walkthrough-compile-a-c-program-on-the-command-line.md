@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314185"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie programu C w wierszu polecenia
 
@@ -162,5 +162,5 @@ Kompilator Visual C++, C jest zgodne ze standardem ISO C99, ale nie jest ściśl
 
 [Przewodnik: tworzenie standardowego programu C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Dokumentacja języka C](../c-language/c-language-reference.md)<br/>
-[Projekty i systemów kompilacji](projects-and-build-systems-cpp.md)<br/>
+[Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)<br/>
 [Zgodność](../c-runtime-library/compatibility.md)

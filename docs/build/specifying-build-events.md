@@ -16,11 +16,11 @@ helpviewer_keywords:
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
 ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315238"
 ---
 # <a name="specifying-build-events"></a>Określanie zdarzeń kompilacji
 
@@ -55,5 +55,5 @@ Aby uzyskać ogólne informacje na temat zdarzeń kompilacji, zobacz [kroki twor
 ## <a name="see-also"></a>Zobacz także
 
 [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](understanding-custom-build-steps-and-build-events.md)<br>
-[Typowe makra dla poleceń kompilacji oraz właściwości](reference/common-macros-for-build-commands-and-properties.md)<br>
+[Typowe makra dla właściwości i poleceń kompilacji](reference/common-macros-for-build-commands-and-properties.md)<br>
 [Rozwiązywanie problemów z dostosowaniami kompilacji](troubleshooting-build-customizations.md)

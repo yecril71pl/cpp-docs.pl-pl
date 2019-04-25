@@ -12,11 +12,11 @@ helpviewer_keywords:
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
 ms.openlocfilehash: 3ed36eca727a15a3c70bc51a07cd3c143d7f66da
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320139"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (Usuń symbole prywatne)
 
@@ -67,5 +67,5 @@ Jeśli nie utworzysz plik PDB, / pdbstripped jest ignorowana.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

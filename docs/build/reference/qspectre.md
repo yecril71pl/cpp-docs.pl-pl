@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - /Qspectre
 ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319190"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -55,8 +55,8 @@ Gdy wpływ wydajności **/qspectre** został napotkany bez znaczenia w kilku bar
 **/Qspectre** kompilator generuje kod, który niejawnie łączy wersje bibliotek środowiska uruchomieniowego, które zostały skompilowane zapewnienie z krokami zaradczymi dla luki spectre. Biblioteki te są opcjonalne składniki, które muszą być zainstalowane za pomocą Instalatora programu Visual Studio:
 
 - VC ++ 2017 w wersji *version_numbers* Libs luki Spectre dla \[(x86 i x64) | (ARM) | (ARM64)]
-- Visual C++ ATL dla \[— x86/x64 64 | ARM | ARM64] z krokami zaradczymi dla luki Spectre
-- Visual C++ MFC dla \[x86/x64 | ARM | ARM64] z krokami zaradczymi dla luki Spectre
+- Wizualne C++ ATL dla \[— x86/x64 64 | ARM | ARM64] z krokami zaradczymi dla luki Spectre
+- Wizualne C++ MFC dla \[x86/x64 | ARM | ARM64] z krokami zaradczymi dla luki Spectre
 
 Jeśli tworzysz swój kod za pomocą **/qspectre** i biblioteki te nie są zainstalowane, raporty systemu kompilacji **ostrzeżenie MSB8038: Spectre jest włączona, ale nie można odnaleźć bibliotek łagodzeń Spectre**. W przypadku kodu biblioteki ATL i MFC awarii do tworzenia i konsolidator zgłasza błąd, taki jak **błąd krytyczny LNK1104: nie można otworzyć pliku "oldnames.lib"**, przyczyną może być Brak biblioteki.
 
@@ -79,5 +79,5 @@ Aby uzyskać więcej informacji można znaleźć official będzie przydatna [ADV
 ## <a name="see-also"></a>Zobacz także
 
 [/Q Opcje (Operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

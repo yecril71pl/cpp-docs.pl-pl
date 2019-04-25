@@ -36,11 +36,11 @@ helpviewer_keywords:
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
 ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333160"
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 
@@ -75,7 +75,7 @@ int _fwprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
@@ -109,7 +109,7 @@ Podobnie jak niezabezpieczone wersje (patrz [fprintf, _fprintf_l —, fwprintf �
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ftprintf_s —**|**fprintf_s**|**fprintf_s**|**fwprintf_s**|
-|**_ftprintf_s_l —**|**_fprintf_s_l**|**_fprintf_s_l**|**_fwprintf_s_l**|
+|**_ftprintf_s_l**|**_fprintf_s_l**|**_fprintf_s_l**|**_fwprintf_s_l**|
 
 Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
@@ -117,8 +117,8 @@ Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-l
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fprintf_s —**, **_fprintf_s_l —**|\<stdio.h>|
-|**fwprintf_s —**, **_fwprintf_s_l —**|\<stdio.h > lub \<wchar.h >|
+|**fprintf_s**, **_fprintf_s_l**|\<stdio.h>|
+|**fwprintf_s**, **_fwprintf_s_l**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

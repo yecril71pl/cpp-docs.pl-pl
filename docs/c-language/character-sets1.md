@@ -3,11 +3,11 @@ title: Zestawy znaków
 ms.date: 11/04/2016
 ms.assetid: ef21daa0-b4b4-4f1a-86f4-25904d83fc86
 ms.openlocfilehash: 4f8cc9f1d33a33848396dab7199b5eee65727e9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312703"
 ---
 # <a name="character-sets"></a>Zestawy znaków
 
@@ -17,7 +17,7 @@ Zestaw znaków źródła i wykonania zestawu znaków obejmują znaki ASCII, wymi
 
 ## <a name="escape-sequences"></a>Sekwencje unikowe
 
-|Sekwencja unikowa|Znak|Wartość ASCII|
+|Sekwencja unikowa|Znak|ASCII Value|
 |---------------------|---------------|-----------------|
 |&#92;a|Alert/dzwonka|7|
 |&#92;b|Backspace|8|

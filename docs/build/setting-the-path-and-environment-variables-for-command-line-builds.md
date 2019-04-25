@@ -19,11 +19,11 @@ helpviewer_keywords:
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 ms.openlocfilehash: fed3360294bec724af09b87e5abd7c6bb22fa285
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315394"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia
 
@@ -38,8 +38,8 @@ Aby zobaczyć, które zmienne środowiskowe są ustawiane przez skrót do wiersz
 
 ## <a name="see-also"></a>Zobacz także
 
-[Możesz używać zestawu narzędzi MSVC z wiersza polecenia](building-on-the-command-line.md)<br/>
-[Odwołania konsolidatora MSVC](reference/linking.md)<br/>
+[Używanie zestawu narzędzi MSVC z poziomu wiersza polecenia](building-on-the-command-line.md)<br/>
+[Dokumentacja konsolidatora MSVC](reference/linking.md)<br/>
 [Opcje konsolidatora MSVC](reference/linker-options.md)<br/>
-[Odwołanie do kompilatora MSVC](reference/compiling-a-c-cpp-program.md)<br/>
-[MSVC Compiler Options](reference/compiler-options.md)
+[Dokumentacja kompilatora MSVC](reference/compiling-a-c-cpp-program.md)<br/>
+[Opcje kompilatora MSVC](reference/compiler-options.md)

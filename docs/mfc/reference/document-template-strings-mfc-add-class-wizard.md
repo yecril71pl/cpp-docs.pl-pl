@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC Add Class Wizard, document control strings
 ms.assetid: 14e1c834-5e79-4dbd-811f-ec8f0a9cdcb2
 ms.openlocfilehash: de0b483b6b3d242ee05680c47ae29ed675d54a36
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322428"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Ciągi szablonu dokumentu, kreator dodawania klas MFC
 

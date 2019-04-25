@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319827"
 ---
 # <a name="project-files"></a>Pliki projektu
 
@@ -121,4 +121,4 @@ Poniższy przykładowy plik .vcxproj został wyprodukowany przez określenie **A
 ## <a name="see-also"></a>Zobacz także
 
 [Projekty programu Visual Studio — C++](../creating-and-managing-visual-cpp-projects.md)<br>
-[Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji](../working-with-project-properties.md)
+[Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](../working-with-project-properties.md)

@@ -3,11 +3,11 @@ title: Visual C++, przenoszenie i uaktualnianie przewodnik
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336923"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 

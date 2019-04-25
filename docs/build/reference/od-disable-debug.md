@@ -13,11 +13,11 @@ helpviewer_keywords:
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
 ms.openlocfilehash: 83ece0865eb74a4e9e292b78733df9d24602fe1d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57806769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320685"
 ---
 # <a name="od-disable-debug"></a>/Od (Wyłącz (Debuguj))
 
@@ -50,6 +50,6 @@ Ta opcja jest domyślnie. Ponieważ **/Od** pomija przepływu kodu, upraszcza pr
 ## <a name="see-also"></a>Zobacz także
 
 [/O Opcje (Optymalizuj kod)](o-options-optimize-code.md)<br/>
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [/Z7, /Zi, /ZI (Format informacji o debugowaniu)](z7-zi-zi-debug-information-format.md)

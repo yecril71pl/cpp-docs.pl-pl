@@ -5,11 +5,11 @@ helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
 ms.openlocfilehash: 4a3d6b945f3611b8e51029c0a5ec5dc77b2cbaa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326891"
 ---
 # <a name="c-integer-constants"></a>Stałe całkowite języka C
 
@@ -24,15 +24,15 @@ ms.locfileid: "50620223"
 
 *decimal-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *cyfra*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*<br/>
 
 *stałej ósemkowej*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*stałej ósemkowej* *cyfrą ósemkową*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*<br/>
 
-*stałą szesnastkową*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Prefiks szesnastkowe* *cyfry szesnastkowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*stałą szesnastkową* *cyfry szesnastkowe*<br/>
+*hexadecimal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*<br/>
 
 *Prefiks szesnastkowe*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**<br/>
@@ -49,10 +49,10 @@ ms.locfileid: "50620223"
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**<br/>
 
 *integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-long-suffix*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Long-suffix* *unsigned-suffix*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*long-long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*<br/>
 

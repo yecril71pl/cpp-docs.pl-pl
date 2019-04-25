@@ -30,11 +30,11 @@ helpviewer_keywords:
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
 ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335443"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -71,7 +71,7 @@ Wartość zmiennoprzecinkowa.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMENY**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMAIN**|
 
 **ceil —** zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
 

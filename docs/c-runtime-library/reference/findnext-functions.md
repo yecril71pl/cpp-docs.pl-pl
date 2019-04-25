@@ -93,11 +93,11 @@ helpviewer_keywords:
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
 ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333732"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -158,7 +158,7 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>Parametry
 
-*uchwyt*<br/>
+*handle*<br/>
 Dojście wyszukiwania zwrócony przez poprzednie wywołanie **_findfirst**.
 
 *fileinfo*<br/>
@@ -193,22 +193,22 @@ Chyba że masz powód, aby użyć wersji, które jawnie określ rozmiar w czasie
 |**_findnext**, **_wfindnext —**|Nie zdefiniowano|64-bitowy|32-bitowa|
 |**_findnext**, **_wfindnext —**|Definicja|32-bitowa|32-bitowa|
 |**_findnext32 —**, **_wfindnext32 —**|Nie dotyczy definicji makra|32-bitowa|32-bitowa|
-|**_findnext64 —**, **_wfindnext64 —**|Nie dotyczy definicji makra|64-bitowy|64-bitowy|
-|**_findnexti64 —**, **_wfindnexti64 —**|Nie zdefiniowano|64-bitowy|64-bitowy|
-|**_findnexti64 —**, **_wfindnexti64 —**|Definicja|32-bitowa|64-bitowy|
+|**_findnext64**, **_wfindnext64**|Nie dotyczy definicji makra|64-bitowy|64-bitowy|
+|**_findnexti64**, **_wfindnexti64**|Nie zdefiniowano|64-bitowy|64-bitowy|
+|**_findnexti64**, **_wfindnexti64**|Definicja|32-bitowa|64-bitowy|
 |**_findnext32i64 —**, **_wfindnext32i64 —**|Nie dotyczy definicji makra|32-bitowa|64-bitowy|
-|**_findnext64i32 —**, **_wfindnext64i32 —**|Nie dotyczy definicji makra|64-bitowy|32-bitowa|
+|**_findnext64i32**, **_wfindnext64i32**|Nie dotyczy definicji makra|64-bitowy|32-bitowa|
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfindnext —**|**_findnext**|**_findnext**|**_wfindnext**|
-|**_tfindnext32 —**|**_findnext32**|**_findnext32**|**_wfindnext32**|
-|**_tfindnext64 —**|**_findnext64**|**_findnext64**|**_wfindnext64**|
-|**_tfindnexti64 —**|**_findnexti64**|**_findnexti64**|**_wfindnexti64**|
-|**_tfindnext32i64 —**|**_findnext32i64**|**_findnext32i64**|**_wfindnext32i64**|
-|**_tfindnext64i32 —**|**_findnext64i32**|**_findnext64i32**|**_wfindnext64i32**|
+|**_tfindnext32**|**_findnext32**|**_findnext32**|**_wfindnext32**|
+|**_tfindnext64**|**_findnext64**|**_findnext64**|**_wfindnext64**|
+|**_tfindnexti64**|**_findnexti64**|**_findnexti64**|**_wfindnexti64**|
+|**_tfindnext32i64**|**_findnext32i64**|**_findnext32i64**|**_wfindnext32i64**|
+|**_tfindnext64i32**|**_findnext64i32**|**_findnext64i32**|**_wfindnext64i32**|
 
 ## <a name="requirements"></a>Wymagania
 

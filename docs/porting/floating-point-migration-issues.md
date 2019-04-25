@@ -3,15 +3,15 @@ title: Problemy dotyczące migracji liczb zmiennoprzecinkowych
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
 ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205208"
 ---
 # <a name="floating-point-migration-issues"></a>Problemy dotyczące migracji liczb zmiennoprzecinkowych
 
-Czasami podczas uaktualniania projektów do nowszej wersji programu Visual Studio, może się okazać, że wyniki niektórych operacji zmiennoprzecinkowych zostały zmienione. Zwykle dzieje się z jednego z dwóch powodów: generowanie kodu zmienia tego lepiej korzystać z dostępnego procesora i usterki poprawki lub zmiany algorytmów używanych w funkcje matematyczne w bibliotece środowiska uruchomieniowego języka C (CRT). Ogólnie rzecz biorąc nowe wyniki są zgodne w granicach określonego przez standard języka. Zapoznaj się z Dowiedz się, co zostało zmienione, a jeśli ważne jest, jak uzyskać te same wyniki funkcji stało się przed.
+Czasami podczas uaktualniania projektów do nowszej wersji programu Visual Studio, może się okazać, że wyniki niektórych operacji zmiennoprzecinkowych zostały zmienione. Zwykle dzieje się tak z jednego z dwóch powodów: Zmiany generowania kodu, które wykorzystują lepsze dostępnego procesora i poprawek błędów i zmiany do algorytmów używanych w funkcje matematyczne w bibliotece środowiska uruchomieniowego języka C (CRT). Ogólnie rzecz biorąc nowe wyniki są zgodne w granicach określonego przez standard języka. Zapoznaj się z Dowiedz się, co zostało zmienione, a jeśli ważne jest, jak uzyskać te same wyniki funkcji stało się przed.
 
 ## <a name="new-math-functions-and-universal-crt-changes"></a>Funkcje matematyczne nowy i zmiany Universal CRT
 

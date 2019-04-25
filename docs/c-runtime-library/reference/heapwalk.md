@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
 ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331691"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -55,12 +55,12 @@ Bufor do przechowywania informacji stosu.
 
 |Wartość zwracana|Znaczenie|
 |-|-|
-|**_HEAPBADBEGIN —**| Informacje początkowego nagłówka nieprawidłowe lub nie został odnaleziony.|
-|**_HEAPBADNODE —**| Sterty uszkodzony lub zły węzeł, do których odnaleźć.|
-|**_HEAPBADPTR —**| **_Pentry** pole **_heapinfo —** struktury nie zawiera prawidłowego wskaźnika do sterty lub *entryinfo* jest wskaźnikiem wartości null.|
-|**_HEAPEND —**| Koniec sterty osiągnięty pomyślnie.|
-|**_HEAPEMPTY —**| Nie zainicjowano stosu.|
-|**_HEAPOK —**| Brak błędów do tej pory; *entryinfo* jest aktualizowana informacjami o następnej pozycji stosu.|
+|**_HEAPBADBEGIN**| Informacje początkowego nagłówka nieprawidłowe lub nie został odnaleziony.|
+|**_HEAPBADNODE**| Sterty uszkodzony lub zły węzeł, do których odnaleźć.|
+|**_HEAPBADPTR**| **_Pentry** pole **_heapinfo —** struktury nie zawiera prawidłowego wskaźnika do sterty lub *entryinfo* jest wskaźnikiem wartości null.|
+|**_HEAPEND**| Koniec sterty osiągnięty pomyślnie.|
+|**_HEAPEMPTY**| Nie zainicjowano stosu.|
+|**_HEAPOK**| Brak błędów do tej pory; *entryinfo* jest aktualizowana informacjami o następnej pozycji stosu.|
 
 Ponadto, jeśli wystąpi błąd **_heapwalk** ustawia **errno** do **ENOSYS**.
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335388"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -68,7 +68,7 @@ Zero, jeśli kończy się pomyślnie, lub moduł **errno** kod błędu.
 
 Jeśli wartość *maski* jest równa 0, **_controlfp_s —** pobiera słowo sterujące zmiennoprzecinkowe i przechowuje pobraną wartość w *currentControl*.
 
-Jeśli *maski* jest różna od zera, ustawiono nową wartość dla słowa sterującego: dla każdego bitu, który jest ustawiony (czyli wynosi 1) w *maski*, odpowiadający mu bit w *nowe* służy do aktualizowania kontrolki Program Word. Innymi słowy *fpcntrl* = ((*fpcntrl* & ~*maski*) &#124; (*newControl* & *maski* )) gdzie *fpcntrl* jest słowem sterującym zmiennoprzecinkowym. W tym scenariuszu *currentControl* jest ustawiona na wartość po zakończeniu zmiany; nie jest stara wartość bitowa słowa kontrolnego.
+Jeśli *maski* jest różna od zera, ustawiono nową wartość dla słowa sterującego: Dla dowolnego bit, który jest ustawiony (czyli wynosi 1) w *maski*, odpowiadający mu bit w *nowe* służy do aktualizacji słowa sterującego. Innymi słowy *fpcntrl* = ((*fpcntrl* & ~*maski*) &#124; (*newControl* & *maski* )) gdzie *fpcntrl* jest słowem sterującym zmiennoprzecinkowym. W tym scenariuszu *currentControl* jest ustawiona na wartość po zakończeniu zmiany; nie jest stara wartość bitowa słowa kontrolnego.
 
 > [!NOTE]
 > Domyślnie bibliotek środowiska uruchomieniowego maskują wszystkie wyjątki zmiennoprzecinkowe.

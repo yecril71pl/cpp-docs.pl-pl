@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: a0fc4b34-2cf0-45a7-a642-b8afc4ca19f2
 ms.openlocfilehash: 92a1bfa5ec3bab2814397d51e35e617b7666c706
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315706"
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/ Zc: threadsafeinit (wątkowo lokalne statyczne Inicjowanie)
 
@@ -50,6 +50,6 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Vi
 
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC Compiler Options](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [/Zc (Zgodność)](zc-conformance.md)<br/>

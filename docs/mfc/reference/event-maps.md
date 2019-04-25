@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322244"
 ---
 # <a name="event-maps"></a>Mapy zdarzeń
 
@@ -21,7 +21,7 @@ Biblioteki klas Microsoft Foundation udostępnia model programowania, zoptymaliz
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK` — Makro wskazuje, że formant zostanie uruchomiony zasobu kliknij zdarzenie za każdym razem, gdy wykryje myszy, kliknij przycisk. Aby uzyskać bardziej szczegółowe listę innych standardowych zdarzeń, zobacz artykuł [kontrolek ActiveX: zdarzenia](../../mfc/mfc-activex-controls-events.md). Makra są również dostępne w celu wskazania zdarzenia niestandardowe.
+`EVENT_STOCK_CLICK` — Makro wskazuje, że formant zostanie uruchomiony zasobu kliknij zdarzenie za każdym razem, gdy wykryje myszy, kliknij przycisk. Aby uzyskać bardziej szczegółowe listę innych standardowych zdarzeń, zobacz artykuł [kontrolek ActiveX: Zdarzenia](../../mfc/mfc-activex-controls-events.md). Makra są również dostępne w celu wskazania zdarzenia niestandardowe.
 
 Makra mapy zdarzeń są ważne, zazwyczaj nie wstawiono je bezpośrednio. Jest to spowodowane w oknie dialogowym właściwości automatycznie tworzy wpisy mapy zdarzeń w plikach źródłowych, gdy używasz do skojarzenia inicjowanie zdarzeń funkcji ze zdarzeniami. Zawsze, gdy chcesz edytować, lub Dodaj wpis mapy zdarzeń można użyć w oknie właściwości.
 
@@ -41,7 +41,7 @@ Aby zapewnić obsługę mapy zdarzeń, biblioteka MFC zawiera następujące makr
 
 |||
 |-|-|
-|[EVENT_CUSTOM —](#event_custom)|Wskazuje, która funkcja inicjowanie zdarzeń nastąpi określonego zdarzenia.|
+|[EVENT_CUSTOM](#event_custom)|Wskazuje, która funkcja inicjowanie zdarzeń nastąpi określonego zdarzenia.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Wskazuje, funkcja inicjowanie zdarzeń, które będą uruchamiane określonych zdarzeń, z identyfikatorem wyznaczonym wysyłania.|
 
 ### <a name="message-mapping-macros"></a>Makra mapowania wiadomości
@@ -63,7 +63,7 @@ DECLARE_EVENT_MAP()
 
 Użyj DECLARE_EVENT_MAP — makro na końcu deklaracją klasy. Następnie w pliku .cpp, który definiuje funkcji elementów członkowskich klasy, użyj BEGIN_EVENT_MAP — makro, wpisy makra dla każdego zdarzenia obiektu Controls i END_EVENT_MAP — makro do deklarowania na końcu listy zdarzeń.
 
-Aby uzyskać więcej informacji na temat mapy zdarzeń, zobacz artykuł [kontrolek ActiveX: zdarzenia](../../mfc/mfc-activex-controls-events.md).
+Aby uzyskać więcej informacji na temat mapy zdarzeń, zobacz artykuł [kontrolek ActiveX: Zdarzenia](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -89,7 +89,7 @@ Określa nazwę klasy bazowej *theClass*.
 
 W pliku implementacji (.cpp), który definiuje funkcji elementów członkowskich dla swojej klasy rozpoczynać Mapa zdarzeń BEGIN_EVENT_MAP — makro, a następnie dodać wpisy makra dla każdego zdarzenia i ukończenia mapy zdarzeń za pomocą END_EVENT_MAP — makro.
 
-Aby uzyskać więcej informacji o mapy zdarzeń i BEGIN_EVENT_MAP — makro, zobacz artykuł [kontrolek ActiveX: zdarzenia](../../mfc/mfc-activex-controls-events.md).
+Aby uzyskać więcej informacji o mapy zdarzeń i BEGIN_EVENT_MAP — makro, zobacz artykuł [kontrolek ActiveX: Zdarzenia](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -144,7 +144,7 @@ Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą RG
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|WALUTY|
-|VTS_DATE|DATA|
+|VTS_DATE|DATE|
 |VTS_BSTR|**Const** __char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
@@ -190,7 +190,7 @@ EVENT_CUSTOM_ID(
 *pszName*<br/>
 Nazwa zdarzenia.
 
-*identyfikator DISPID*<br/>
+*dispid*<br/>
 Identyfikator wysyłania używany przez kontrolkę, gdy wyzwoleniem zdarzenia.
 
 *pfnFire*<br/>

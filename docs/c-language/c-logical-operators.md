@@ -12,11 +12,11 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326589"
 ---
 # <a name="c-logical-operators"></a>Operatory logiczne języka C
 
@@ -24,13 +24,13 @@ Operatory logiczne wykonać logiczny — i (**&&**) i logiczne OR (**||**) opera
 
 ## <a name="syntax"></a>Składnia
 
-*i wyrażenie logiczne*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie włączny OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*i wyrażenie logiczne***&&***włącznie wyrażenie OR* 
+*logical-AND-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
 
-*wyrażenie logiczne OR*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*i wyrażenie logiczne*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR***&#124;&#124;***-i wyrażenie logiczne* 
+*logical-OR-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
 
 ## <a name="remarks"></a>Uwagi
 

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _FCmulcc function
 - _LCmulcc function
 ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335392"
 ---
 # <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 
@@ -77,7 +77,7 @@ Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex*
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
 [_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
-[norm normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>

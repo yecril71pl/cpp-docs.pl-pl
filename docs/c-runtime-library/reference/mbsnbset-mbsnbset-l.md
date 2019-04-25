@@ -33,11 +33,11 @@ helpviewer_keywords:
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
 ms.openlocfilehash: 4c0f053cde32d71e4864c442b761606bb56c8829
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331288"
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 
@@ -96,14 +96,14 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsnset —**|**_strnset**|**_mbsnbset —**|**_wcsnset**|
-|**_tcsnset_l —**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
+|**_tcsnset —**|**_strnset**|**_mbsnbset**|**_wcsnset**|
+|**_tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbset —**|\<mbstring.h>|
+|**_mbsnbset**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

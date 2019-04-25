@@ -9,11 +9,11 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184604"
 ---
 # <a name="identifiers-c"></a>Identyfikatory (C++)
 
@@ -58,7 +58,7 @@ Następujące znaki są dozwolone jako dowolny znak w identyfikatorze oprócz pi
 
 Te Unicode kod punktu liczb są również dozwolone zakresy jako uniwersalne nazwy znaków dowolny znak w identyfikatorze oprócz pierwszego:
 
-- 0300-036F 1DC0 1DFF, 0 20D-20FF, FE20 FE2F
+- 0300-036F, 1DC0-1DFF, 20D0-20FF, FE20-FE2F
 
 **Microsoft Specific**
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-Zakres znaków dozwolonych w identyfikatorze jest mniej restrykcyjny gdy kompilacja C + +/ kodu interfejsu wiersza polecenia. Identyfikatory w kodzie skompilowanym za pomocą/CLR powinien być zgodny [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Zakres znaków dozwolonych w identyfikatorze jest mniej restrykcyjna, podczas kompilowania C++sposób niezamierzony kodu. Identyfikatory w kodzie skompilowanym za pomocą/CLR powinien być zgodny [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 **END specyficzny dla Microsoft**
 
@@ -95,7 +95,7 @@ Pierwszy znak identyfikatora musi być znakiem alfabetycznym, wielką lub małą
 
 Identyfikatory nie może być dokładnie tej samej pisowni i wielkości liter jak słowa kluczowe. Identyfikatory zawierające słowa kluczowe są dozwolone. Na przykład `Pint` jest dozwolonym identyfikatorem, mimo że zawiera on **int**, które jest słowem kluczowym.
 
-Użycie dwóch podkreślników ( **__** ) w identyfikatora lub pojedynczego wiodącego podkreślnika, a po nim wielkiej litery, jest zarezerwowane dla implementacji C++ we wszystkich zakresach. Należy unikać używania jednego wiodącego podkreślenia następuje mała litera dla nazw z zakresem pliku z powodu możliwych konfliktów z bieżącym lub przyszłymi zarezerwowanymi identyfikatorami.
+Użycie dwóch podkreślników ( **__** ) jest zarezerwowany dla identyfikatora lub pojedynczego wiodącego podkreślnika, a po nim wielkiej litery C++ implementacje we wszystkich zakresach. Należy unikać używania jednego wiodącego podkreślenia następuje mała litera dla nazw z zakresem pliku z powodu możliwych konfliktów z bieżącym lub przyszłymi zarezerwowanymi identyfikatorami.
 
 ## <a name="see-also"></a>Zobacz także
 

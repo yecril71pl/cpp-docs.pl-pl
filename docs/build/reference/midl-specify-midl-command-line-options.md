@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
 ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321075"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Określ opcje wiersza polecenia MIDL)
 
@@ -51,7 +51,7 @@ Ten plik powinien zawierać jedną opcję wiersza polecenia MIDL na wiersz.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)<br/>
 [/IDLOUT (Nazwij wyjściowe pliki MIDL)](idlout-name-midl-output-files.md)<br/>
 [/IGNOREIDL (Nie przetwarzaj atrybutów w MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>

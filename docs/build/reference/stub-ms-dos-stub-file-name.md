@@ -13,11 +13,11 @@ helpviewer_keywords:
 - -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
 ms.openlocfilehash: 7150d4ff8f35b00d96caa21fd5ea3754fec76030
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317877"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (Nazwa pliku klasy zastępczej MS-DOS)
 
@@ -62,5 +62,5 @@ Podczas kompilowania sterownik urządzenia wirtualnego, *filename* umożliwia u�
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

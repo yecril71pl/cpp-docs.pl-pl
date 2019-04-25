@@ -20,11 +20,11 @@ helpviewer_keywords:
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
 ms.openlocfilehash: 19eabc3b5a11246d5b0056bdafbb169e2a7de9f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332198"
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -58,7 +58,7 @@ Ponieważ implementacje FMA3 używać różnych algorytmów, niewielkie różnic
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_set_FMA3_enable**, **_get_FMA3_enable**| C: \<math.h ><br />C++: \<cmath > lub \<math.h >|
+|**_set_FMA3_enable**, **_get_FMA3_enable**| C: \<math.h><br />C++: \<cmath > lub \<math.h >|
 
 **_Set_FMA3_enable** i **_get_FMA3_enable** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

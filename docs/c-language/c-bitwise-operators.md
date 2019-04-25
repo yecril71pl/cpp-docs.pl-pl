@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
 ms.openlocfilehash: 2133aaa5faa0f4bef7391fb5c0e7e0eb51fd4e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325796"
 ---
 # <a name="c-bitwise-operators"></a>Operatory bitowe języka C
 
@@ -27,9 +27,9 @@ Operatory bitowe wykonać alternatywy bitowej- i (**&**), bitowe OR wyłączne (
 
 *Wyrażenia i*: &nbsp; &nbsp; *wyrażenie równości* &nbsp; &nbsp; *i wyrażenie* **&** *wyrażenie równości*
 
-*wyłączny OR wyrażenia*: &nbsp; &nbsp; *i wyrażenie* &nbsp; &nbsp; *wyłączny OR wyrażenia* **^** *Wyrażenia AND*
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*wyrażenie włączny OR*: &nbsp; &nbsp; *wyłączny OR wyrażenia* &nbsp; &nbsp; *włącznie wyrażenie OR* &#124; *wyłączny OR wyrażenia*
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 Operandy operatory bitowe muszą mieć typów całkowitych, ale ich typy mogą być różne. Te operatory wykonywać popularne konwersje arytmetyczne; Typ wyniku jest typem operandu po konwersji.
 

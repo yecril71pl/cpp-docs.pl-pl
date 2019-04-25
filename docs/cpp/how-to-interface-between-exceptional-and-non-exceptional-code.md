@@ -5,11 +5,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
 ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183703"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Instrukcje: Interfejs między kodem obsługi wyjątków a innym kodem
 
@@ -237,4 +237,4 @@ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lam
 ## <a name="see-also"></a>Zobacz także
 
 [Błędy w obsłudze wyjątków (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Instrukcje: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md)<br/>

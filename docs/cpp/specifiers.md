@@ -7,11 +7,11 @@ helpviewer_keywords:
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 ms.openlocfilehash: aef967b26321f289cb8c7bd0402d7fe8f12b77b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330989"
 ---
 # <a name="specifiers"></a>Specyfikatory
 
@@ -19,17 +19,17 @@ W tym temacie opisano *specyfikatorów decl* składnik (specyfikatory deklaracji
 
 Następujące symbole zastępcze i słowa kluczowe języka są specyfikatory deklaracji:
 
-*Specyfikator klasy magazynu*
+*storage-class-specifier*
 
-*Specyfikator typu*
+*type-specifier*
 
 *Specyfikator funkcji*
 
 [friend](friend-cpp.md)
 
-[Element TypeDef](aliases-and-typedefs-cpp.md) `(` *extended-decl modyfikator seq* `)`
+[typedef](aliases-and-typedefs-cpp.md) `(` *extended-decl-modifier-seq* `)`
 
-[__declspec](declspec.md) `(` *extended-decl modyfikator seq* `)`
+[__declspec](declspec.md) `(` *extended-decl-modifier-seq* `)`
 
 ## <a name="remarks"></a>Uwagi
 

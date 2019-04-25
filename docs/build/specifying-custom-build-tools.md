@@ -16,11 +16,11 @@ helpviewer_keywords:
 - custom build tools (C++), specifying
 - builds (C++), custom build tools
 ms.openlocfilehash: dbce226b34503a9e8e70b6f19d9aa0c68ef487f3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314757"
 ---
 # <a name="specify-custom-build-tools"></a>Określanie niestandardowych narzędzi kompilacji
 
@@ -80,5 +80,5 @@ Podczas kompilowania projektu systemu kompilacji porównuje sygnatury czasowe pa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typowe makra dla poleceń kompilacji oraz właściwości](reference/common-macros-for-build-commands-and-properties.md)<br>
+[Typowe makra dla właściwości i poleceń kompilacji](reference/common-macros-for-build-commands-and-properties.md)<br>
 [Rozwiązywanie problemów z dostosowaniami kompilacji](troubleshooting-build-customizations.md)

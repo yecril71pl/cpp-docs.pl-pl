@@ -30,11 +30,11 @@ helpviewer_keywords:
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
 ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332952"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -69,7 +69,7 @@ Wskaźnik do buforu, zawierające nazwę ścieżki bezwzględnej lub pełnego lu
 *relPath*<br/>
 Nazwa ścieżki względnej.
 
-*Element maxLength*<br/>
+*maxLength*<br/>
 Maksymalna długość buforu nazwy ścieżkę bezwzględną (*absPath*). To długość jest w bajtach dla **_fullpath —** , ale w znaków dwubajtowych (**wchar_t**) dla **_wfullpath —**.
 
 *blockType*<br/>

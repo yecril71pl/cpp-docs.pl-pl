@@ -6,15 +6,15 @@ helpviewer_keywords:
 - _WIN32_WINNT in an upgraded Visual C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
 ms.openlocfilehash: a936a54620590d4dc21f43acd50abdc49d77ffa8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337261"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modyfikowanie symboli WINVER i _WIN32_WINNT
 
-Visual C++ nie obsługuje już określania wartości docelowej Windows 95, Windows 98, Windows ME, Windows NT lub Windows 2000. Jeśli Twoje **WINVER** lub **_WIN32_WINNT** makra są przypisane do jednej z tych wersji systemu Windows, należy zmodyfikować makra. Kiedy uaktualniasz projekt, który został utworzony przy użyciu wcześniejszej wersji programu Visual C++, mogą pojawić się błędy kompilacji związane z **WINVER** lub **_WIN32_WINNT** makra, jeśli przypisano do wersji Windows, który nie jest już obsługiwana.
+Visual C++ nie obsługuje już określania wartości docelowej Windows 95, Windows 98, Windows ME, Windows NT lub Windows 2000. Jeśli Twoje **WINVER** lub **_WIN32_WINNT** makra są przypisane do jednej z tych wersji systemu Windows, należy zmodyfikować makra. Kiedy uaktualniasz projekt, który został utworzony przy użyciu wcześniejszej wersji wizualizacji C++, mogą pojawić się błędy kompilacji związane z **WINVER** lub **_WIN32_WINNT** makra, jeśli przypisano do wersji systemu Windows, który nie jest już obsługiwana.
 
 ## <a name="remarks"></a>Uwagi
 

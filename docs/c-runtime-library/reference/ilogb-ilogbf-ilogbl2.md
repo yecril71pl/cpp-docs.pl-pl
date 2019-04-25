@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
 ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331680"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -93,7 +93,7 @@ Wywołanie tej funkcji jest podobne do wywoływania odpowiednik **logb —** fun
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**ilogb —**, **ilogbf —**, **ilogbl**|\<math.h>|\<cmath >|
+|**ilogb —**, **ilogbf —**, **ilogbl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

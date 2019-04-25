@@ -31,11 +31,11 @@ helpviewer_keywords:
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
 ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335402"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -78,14 +78,14 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **con
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex >|
+|**conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
-[norm normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

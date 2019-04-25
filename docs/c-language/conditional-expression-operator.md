@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
 ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312547"
 ---
 # <a name="conditional-expression-operator"></a>Operator wyrażenia warunkowego
 

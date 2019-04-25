@@ -30,11 +30,11 @@ helpviewer_keywords:
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
 ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331743"
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 
@@ -126,7 +126,7 @@ W języku C++ korzystania z tych funkcji jest uproszczone przez przeciążania s
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tgetenv_s —**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
+|**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
 Aby sprawdzić lub zmienić wartość **TZ** użycie zmiennej, środowisko **getenv_s —**, **_putenv**, i **_tzset —**, co jest wymagane. Aby uzyskać więcej informacji na temat **TZ**, zobacz [_tzset —](tzset.md) i [_daylight, _dstbias, _timezone i _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
@@ -135,7 +135,7 @@ Aby sprawdzić lub zmienić wartość **TZ** użycie zmiennej, środowisko **get
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**getenv_s**|\<stdlib.h>|
-|**_wgetenv_s**|\<stdlib.h > lub \<wchar.h >|
+|**_wgetenv_s**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

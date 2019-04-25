@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
 ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187234"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Kompilator ostrzeżenie (poziom 1) C4789
 
@@ -42,7 +42,7 @@ Visual C++ może wygenerować tego ostrzeżenia dla ścieżki kodu, który nigdy
 #pragma warning( pop )
 ```
 
-Tego idiomu przechowuje Visual C++ z wygenerowane ostrzeżenie dla tego określonego bloku kodu. `#pragma warning(push)` Zachowuje istniejące stan przed wykonaniem `#pragma warning(disable: 4789)` ją zmieni. `#pragma warning(pop)` Przywraca stan wypychanie i usuwa skutki `#pragma warning(disable:4789)`. Aby uzyskać więcej informacji na temat dyrektywy preprocesora języka C++ `#pragma`, zobacz [ostrzeżenie](../../preprocessor/warning.md) i [dyrektywy Pragma i słowo kluczowe __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Tego idiomu przechowuje Visual C++ z wygenerowane ostrzeżenie dla tego określonego bloku kodu. `#pragma warning(push)` Zachowuje istniejące stan przed wykonaniem `#pragma warning(disable: 4789)` ją zmieni. `#pragma warning(pop)` Przywraca stan wypychanie i usuwa skutki `#pragma warning(disable:4789)`. Aby uzyskać więcej informacji na temat C++ dyrektywy preprocesora `#pragma`, zobacz [ostrzeżenie](../../preprocessor/warning.md) i [dyrektywy Pragma i słowo kluczowe __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Przykład
 

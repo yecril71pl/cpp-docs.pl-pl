@@ -30,11 +30,11 @@ helpviewer_keywords:
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
 ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332991"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
@@ -63,7 +63,7 @@ FILE *_wfreopen(
 *Tryb*<br/>
 Dozwolony typ dostępu.
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -90,7 +90,7 @@ Bardziej bezpieczne wersje tych funkcji istnieje, zobacz [freopen_s —, _wfreop
 |-|-|
 | **"r"** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **freopen —** wywołanie zakończy się niepowodzeniem. |
 | **"w"** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
-| **""** | Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje. |
+| **"a"** | Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje. |
 | **"r +"** | Otwiera Odczyt i zapis. Plik musi istnieć. |
 | **"w +"** | Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona. |
 | **"+"** | Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF, zanim nowe dane są zapisywane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje. |

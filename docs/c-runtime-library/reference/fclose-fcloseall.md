@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334882"
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -62,7 +62,7 @@ Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errn
 
 **_Fcloseall** funkcji spowoduje zamknięcie wszystkich otwartych strumieni z wyjątkiem **stdin**, **stdout**, **stderr** (i w systemie MS-DOS, **_stdaux**  i **_stdprn**). Ponadto zamyka i spowoduje usunięcie plików tymczasowych utworzonych przez **tmpfile —**. W obu tych funkcji wszystkie bufory skojarzone ze strumienia jest opróżniany przed zamknięciem. Bufory przypisane do systemu są zwalniane, gdy strumień jest zamknięty. Bufory przypisane przez użytkownika za pomocą **setbuf —** i **setvbuf —** nie są automatycznie zwalniane.
 
-**Uwaga:** stosowania tych funkcji, aby zamknąć strumień bazowego deskryptorów plików i systemu operacyjnego dojście do pliku (lub gniazda) zostały zamknięte, a także strumień. W związku z tym, jeśli pierwotnie został otworzony plik jako plik obsługi deskryptor pliku lub jest zamknięty z **fclose —**, czy nie również wywołanie **_zamknij** do zamknij deskryptora pliku; nie należy wywoływać funkcję Win32  **Funkcja CloseHandle** zamknąć dojście do pliku.
+**Uwaga:** W przypadku używania tych funkcji, aby zamknąć strumień bazowego deskryptorów plików i systemu operacyjnego dojście do pliku (lub gniazda) zostały zamknięte, a także strumień. W związku z tym, jeśli pierwotnie został otworzony plik jako plik obsługi deskryptor pliku lub jest zamknięty z **fclose —**, czy nie również wywołanie **_zamknij** do zamknij deskryptora pliku; nie należy wywoływać funkcję Win32  **Funkcja CloseHandle** zamknąć dojście do pliku.
 
 **fclose —** i **_fcloseall** obejmują kodu w celu ochrony przed zakłóceniami z innych wątków. Dla wersji bez blokady z **fclose —**, zobacz **_fclose_nolock —**.
 

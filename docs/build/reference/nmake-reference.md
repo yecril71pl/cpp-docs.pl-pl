@@ -8,11 +8,11 @@ helpviewer_keywords:
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
 ms.openlocfilehash: 47836973680fba311fe70cb1a24bb1483ba99a4b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320490"
 ---
 # <a name="nmake-reference"></a>Odwołanie NMAKE
 
@@ -40,7 +40,7 @@ Aby użyć NMAKE, możesz ją uruchomić w oknie wiersza polecenia dla deweloper
 
 ## <a name="see-also"></a>Zobacz także
 
-[Możesz używać zestawu narzędzi MSVC z wiersza polecenia](../building-on-the-command-line.md)<br/>
+[Używanie zestawu narzędzi MSVC z poziomu wiersza polecenia](../building-on-the-command-line.md)<br/>
 [MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)<br/>
 [Projekty programu Visual Studio — C++](../creating-and-managing-visual-cpp-projects.md)<br/>
 [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
 ms.openlocfilehash: 059d0781e465f6491f27fd634bbc4479104bc12f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331301"
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -100,14 +100,14 @@ Jeśli *ciąg1* lub *ciąg2* jest pustym wskaźnikiem, **_mbsnbicmp —** wywoł
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsnicmp —**|**_strnicmp**|**_mbsnbicmp —**|**_wcsnicmp**|
-|**_tcsnicmp_l —**|**_strnicmp_l**|**_mbsnbicmp_l —**|**_wcsnicmp_l**|
+|**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
+|**_tcsnicmp_l —**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbicmp —**|\<mbstring.h>|
+|**_mbsnbicmp**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

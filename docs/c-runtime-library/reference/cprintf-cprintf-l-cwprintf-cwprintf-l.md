@@ -46,11 +46,11 @@ helpviewer_keywords:
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
 ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335337"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
@@ -110,14 +110,14 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcprintf —**|**_cprintf**|**_cprintf**|**_cwprintf**|
-|**_tcprintf_l —**|**_cprintf_l**|**_cprintf_l**|**_cwprintf_l**|
+|**_tcprintf**|**_cprintf**|**_cprintf**|**_cwprintf**|
+|**_tcprintf_l**|**_cprintf_l**|**_cprintf_l**|**_cwprintf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cprintf**, **_cprintf_l —**|\<conio.h>|
+|**_cprintf**, **_cprintf_l**|\<conio.h>|
 |**_cwprintf —**, **_cwprintf_l —**|\<conio.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

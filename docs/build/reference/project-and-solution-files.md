@@ -12,11 +12,11 @@ helpviewer_keywords:
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
 ms.openlocfilehash: b4b82aa3837558b2c325fb6cba6819422c0db7ff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57823880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319580"
 ---
 # <a name="project-and-solution-files"></a>Pliki projektu i rozwiązania
 
@@ -31,7 +31,7 @@ Następujące pliki są tworzone podczas tworzenia projektu w programie Visual S
 |*Projname*.sdf|*Projname*|Nie są wyświetlane w Eksploratorze rozwiązań|*Baza danych przeglądania* pliku. Obsługuje przeglądanie i nawigacji funkcje takie jak **przejdź do definicji**, **Znajdź wszystkie odwołania**, i **Widok klas**. Są one generowane przez analizowanie plików nagłówkowych.|
 |*Projname*. vcxproj.filters|*Projname*|Nie są wyświetlane w Eksploratorze rozwiązań|*Filtry* pliku. Określa, gdzie umieścić plik, który jest dodawany do rozwiązania. Na przykład plik .h jest umieszczany w **pliki nagłówkowe** węzła.|
 |*Projname*. vcxproj.user|*Projname*|Nie są wyświetlane w Eksploratorze rozwiązań|*Użytkownika migracji* pliku. Po przeprowadzeniu migracji projektu z programu Visual Studio 2008, ten plik zawiera informacje, które została przekonwertowana z dowolnego pliku .vsprops.|
-|*Projname*.idl|*Projname*|Źródło|(Specyficzne dla projektu) Zawiera kod źródłowy języka opisu interfejsu (IDL) dla biblioteki typu formantu. Ten plik jest używany przez Visual C++ można wygenerować bibliotekę typów. Wygenerowany biblioteki udostępnia interfejs kontroli innym klientom automatyzacji. Aby uzyskać więcej informacji, zobacz [plik definicji interfejsu (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) w zestawie Windows SDK.|
+|*Projname*.idl|*Projname*|Source|(Specyficzne dla projektu) Zawiera kod źródłowy języka opisu interfejsu (IDL) dla biblioteki typu formantu. Ten plik jest używany przez Visual C++ można wygenerować bibliotekę typów. Wygenerowany biblioteki udostępnia interfejs kontroli innym klientom automatyzacji. Aby uzyskać więcej informacji, zobacz [plik definicji interfejsu (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) w zestawie Windows SDK.|
 |Plik Readme.txt|*Projname*|Projekt|*Readme* pliku. On są generowane przez Kreatora aplikacji oraz opis pliki w projekcie.|
 
 ## <a name="see-also"></a>Zobacz także

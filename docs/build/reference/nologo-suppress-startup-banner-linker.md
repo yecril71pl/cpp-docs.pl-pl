@@ -14,11 +14,11 @@ helpviewer_keywords:
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
 ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320529"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Pomiń transparent początkowy) (Konsolidator)
 
@@ -44,5 +44,5 @@ Domyślnie te informacje są wysyłane przez konsolidator, aby w oknie danych wy
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania konsolidatora MSVC](linking.md)<br/>
+[Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

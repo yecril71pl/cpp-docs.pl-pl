@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330469"
 ---
 # <a name="tilestatic-keyword"></a>tile_static — słowo kluczowe
 
@@ -149,4 +149,4 @@ for (int i = 0; i < 4; i++) {
 [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
 [Przegląd C++ AMP](../parallel/amp/cpp-amp-overview.md)<br/>
 [parallel_for_each — funkcja (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
-[Przewodnik: mnożenie macierzy](../parallel/amp/walkthrough-matrix-multiplication.md)
+[Przewodnik: Mnożenie macierzy](../parallel/amp/walkthrough-matrix-multiplication.md)

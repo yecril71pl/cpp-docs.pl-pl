@@ -14,11 +14,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322218"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 
@@ -161,7 +161,7 @@ Określa nazwę wskaźnika obiektu wyjątku, który zostanie utworzony przez mak
 Przetwarzanie wyjątków kod może interrogate obiekt wyjątku, jeśli to stosowne uzyskać więcej informacji na temat określonych Przyczyna wyjątku. Wywoływanie `THROW_LAST` makra, aby przesunąć przetwarzania następnej ramki Wyjątek zewnętrzny. Jeśli używasz **CATCH_ALL**, zakończenia **SPRÓBUJ** blok z END_CATCH_ALL — makro.
 
 > [!NOTE]
->  **CATCH_ALL** bloku jest zdefiniowany jako zakres C++ umieszczony w nawiasach klamrowych. Deklarowanie zmiennych, w tym zakresie, jest ona dostępna tylko w tym zakresie.
+>  **CATCH_ALL** bloku jest zdefiniowany jako C++ zakres umieszczony w nawiasach klamrowych. Deklarowanie zmiennych, w tym zakresie, jest ona dostępna tylko w tym zakresie.
 
 Aby uzyskać więcej informacji na temat wyjątków, zobacz artykuł [wyjątki](../../mfc/exception-handling-in-mfc.md).
 
@@ -196,7 +196,7 @@ Użyj makra CATCH do przechwytywania jeden typ wyjątku, a następnie AND_CATCH 
 Przetwarzanie wyjątków kod może interrogate obiekt wyjątku, jeśli to stosowne uzyskać więcej informacji na temat określonych Przyczyna wyjątku. Wywołaj THROW_LAST — makro w ramach **AND_CATCH** shift przetwarzania do następnej ramki Wyjątek zewnętrzny za pomocą bloku. **AND_CATCH** oznacza koniec poprzedniego **CATCH** lub **AND_CATCH** bloku.
 
 > [!NOTE]
->  **AND_CATCH** bloku jest zdefiniowany jako zakres C++ (umieszczony w nawiasy klamrowe). Deklarowanie zmiennych, w tym zakresie, należy pamiętać, że są one dostępne tylko w tym zakresie. Dotyczy to również *exception_object_pointer_name* zmiennej.
+>  **AND_CATCH** bloku jest zdefiniowany jako C++ zakresu (umieszczony w nawiasy klamrowe). Deklarowanie zmiennych, w tym zakresie, należy pamiętać, że są one dostępne tylko w tym zakresie. Dotyczy to również *exception_object_pointer_name* zmiennej.
 
 ### <a name="example"></a>Przykład
 
@@ -225,7 +225,7 @@ Użyj **CATCH** makra, aby jeden typ wyjątku, a następnie AND_CATCH_ALL — ma
 Przetwarzanie wyjątków kod może interrogate obiekt wyjątku, jeśli to stosowne uzyskać więcej informacji na temat określonych Przyczyna wyjątku. Wywołaj THROW_LAST — makro w ramach **AND_CATCH_ALL** shift przetwarzania do następnej ramki Wyjątek zewnętrzny za pomocą bloku. **AND_CATCH_ALL** oznacza koniec poprzedniego **CATCH** lub **AND_CATCH_ALL** bloku.
 
 > [!NOTE]
->  **AND_CATCH_ALL** bloku jest zdefiniowany jako zakres C++ (umieszczony w nawiasach klamrowych). Deklarowanie zmiennych, w tym zakresie, należy pamiętać, że są one dostępne tylko w tym zakresie.
+>  **AND_CATCH_ALL** bloku jest zdefiniowany jako C++ zakresu (umieszczony w nawiasach klamrowych). Deklarowanie zmiennych, w tym zakresie, należy pamiętać, że są one dostępne tylko w tym zakresie.
 
 ### <a name="requirements"></a>Wymagania
 

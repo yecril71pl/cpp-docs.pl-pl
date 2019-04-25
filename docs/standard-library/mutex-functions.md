@@ -15,20 +15,20 @@ helpviewer_keywords:
 - std::lock [C++]
 - std::try_to_lock [C++]
 ms.openlocfilehash: b375aec0bee4183563b8cd55e4e8a27f79e7cd3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326329"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; funkcje i zmienne
 
 ||||
 |-|-|-|
-|[adopt_lock](#adopt_lock)|[call_once](#call_once)|[defer_lock —](#defer_lock)|
+|[adopt_lock](#adopt_lock)|[call_once](#call_once)|[defer_lock](#defer_lock)|
 |[lock](#lock)|[try_to_lock](#try_to_lock)|
 
-## <a name="adopt_lock"></a>  adopt_lock — zmienna
+## <a name="adopt_lock"></a>  adopt_lock Variable
 
 Reprezentuje obiekt, który może być przekazywany do konstruktory [lock_guard](../standard-library/lock-guard-class.md) i [unique_lock](../standard-library/unique-lock-class.md) do wskazania, że obiekt mutex, który również jest przekazywana do konstruktora jest zablokowany.
 

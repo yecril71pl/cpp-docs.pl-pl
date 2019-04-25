@@ -1,5 +1,5 @@
 ---
-title: Obsługa plików i we / wy (C + +/ CLI)
+title: Obsługa plików i we / wy (C++sposób niezamierzony)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -25,11 +25,11 @@ helpviewer_keywords:
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
 ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325003"
 ---
 # <a name="file-handling-and-io-ccli"></a>Obsługa plików i we/wy (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 Poniższy przykład kodu pokazuje, jak odczytywać dane binarne z pliku, przy użyciu dwóch klas z <xref:System.IO?displayProperty=fullName> przestrzeni nazw: <xref:System.IO.FileStream> i <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> reprezentuje rzeczywisty plik. <xref:System.IO.BinaryReader> udostępnia interfejs do strumienia, który zezwala na dostęp binarny.
 
-Przykładowy kod odczytuje plik o nazwie data.bin i zawiera liczby całkowite w formacie binarnym. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: Wpisywanie do pliku binarnego (C + +/ CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+Przykładowy kod odczytuje plik o nazwie data.bin i zawiera liczby całkowite w formacie binarnym. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: Wpisywanie do pliku binarnego (C++sposób niezamierzony)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Przykład
 
@@ -177,7 +177,7 @@ int main()
 
 Poniższy przykład kodu pokazuje, jak otworzyć i odczytać jeden wiersz pliku tekstowego w czasie, za pomocą <xref:System.IO.StreamReader> klasy, która jest zdefiniowana w <xref:System.IO?displayProperty=fullName> przestrzeni nazw. Wystąpienie tej klasy jest używany do otwierania pliku tekstowego i następnie <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda służy do pobierania każdego wiersza.
 
-Ten przykładowy kod odczytuje plik o nazwie textfile.txt i zawiera tekst. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: Wpisywanie tekstu do pliku tekstowego (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Ten przykładowy kod odczytuje plik o nazwie textfile.txt i zawiera tekst. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: Wpisywanie tekstu do pliku (C++sposób niezamierzony)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
 
 ### <a name="example"></a>Przykład
 
@@ -261,7 +261,7 @@ int main()
 
 Poniższy przykład kodu pokazuje zapisu w pliku danych binarnych. Dwie klasy z <xref:System.IO> przestrzeni nazw są używane: <xref:System.IO.FileStream> i <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> reprezentuje rzeczywisty plik podczas <xref:System.IO.BinaryWriter> zapewnia interfejs do strumienia, który zezwala na dostęp binarny.
 
-Poniższy przykład kodu zapisuje plik zawierający liczb całkowitych w formacie binarnym. Ten plik można odczytać z kodu w [jak: Odczytywanie pliku binarnego (C + +/ CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+Poniższy przykład kodu zapisuje plik zawierający liczb całkowitych w formacie binarnym. Ten plik można odczytać z kodu w [jak: Odczytywanie pliku binarnego (C++sposób niezamierzony)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Przykład
 
