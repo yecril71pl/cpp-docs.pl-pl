@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
 ms.openlocfilehash: 34fb3e16dc7369526895a011c7e192d2f51edf14
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278556"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset — Klasa
 
@@ -194,7 +194,7 @@ class unordered_multiset;
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy.|
 |[Liczba](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
-|[emplace —](#emplace)|Dodaje element skonstruowany na miejscu.|
+|[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
 |[pusty](#empty)|Sprawdza, czy nie ma żadnych elementów.|
 |[koniec](#end)|Określa koniec kontrolowanej sekwencji.|
@@ -203,7 +203,7 @@ class unordered_multiset;
 |[Znajdź](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
-|[Wstaw](#insert)|Dodaje elementy.|
+|[insert](#insert)|Dodaje elementy.|
 |[key_eq](#key_eq)|Pobiera przechowywany obiekt funkcji porównywania.|
 |[load_factor](#load_factor)|Oblicza średnią liczbę elementów na przedział.|
 |[max_bucket_count](#max_bucket_count)|Pobiera maksymalną liczbę przedziałów.|
@@ -1254,7 +1254,7 @@ Dla trzeciego funkcja elementu członkowskiego zwraca liczbę elementów, które
 
 Dla przykładu kodu zobacz [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a>  unordered_multiset::Find
+## <a name="find"></a>  unordered_multiset::find
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -1428,7 +1428,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>  unordered_multiset::INSERT
+## <a name="insert"></a>  unordered_multiset::insert
 
 Wstawia element lub zakres elementów do unordered_multiset.
 
@@ -2440,7 +2440,7 @@ unordered_multiset(
 |*Al*|Obiekt alokatora, który ma być przechowywany.|
 |*Comp*|Obiekt funkcji porównywania, który ma być przechowywany.|
 |*Skrót*|Obiekt funkcji mieszania, który ma być przechowywany.|
-|*Bucket_count —*|Minimalna liczba przedziałów.|
+|*Bucket_count*|Minimalna liczba przedziałów.|
 |*po prawej stronie*|Kontener, który ma być skopiowany.|
 |*IList*|Lista initializer_list, z którego można skopiować.|
 
