@@ -31,11 +31,11 @@ helpviewer_keywords:
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
 ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288852"
 ---
 # <a name="csin-csinf-csinl"></a>csin csinf, csinl
 
@@ -78,7 +78,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **csi
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex >|
+|**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
