@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339484"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -71,13 +71,13 @@ Wskaźnik na nazwę pliku źródłowego, w którym wystąpił wystąpiło zapewn
 *numer wiersza*<br/>
 Numer wiersza w pliku źródłowym, gdzie wystąpiło wystąpiło zapewnienie/raport lub **NULL**.
 
-*Nazwa modułu*<br/>
+*moduleName*<br/>
 Wskaźnik na nazwę modułu (.exe lub .dll) gdzie wystąpiło zapewnienie lub raport.
 
 *Format*<br/>
 Wskaźnik na sterowania formatem ciągu używany do tworzenia wiadomości użytkownika.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne podstawiania używane przez *format*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -96,7 +96,7 @@ Dla wszystkich miejsc docelowych raportów **_CrtDbgReport** i **_crtdbgreportw 
 
 W poniższej tabeli przedstawiono dostępne opcje trybu raportu lub trybów i plików i wynikowe zachowania funkcji **_CrtDbgReport** i **_crtdbgreportw —**. Te opcje są zdefiniowane jako flaga bitowych w \<crtdbg.h >.
 
-|Tryb raportu|Plik raportu|**_CrtDbgReport**, **_crtdbgreportw —** zachowanie|
+|Tryb raportu|Plik raportu|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|Nie dotyczy|Zapisuje komunikat przy użyciu Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) interfejsu API.|
 |**_CRTDBG_MODE_WNDW**|Nie dotyczy|Wywołuje Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) interfejsu API w celu tworzenia okna komunikatu, aby wyświetlić wiadomość wraz z **przerwać**, **ponów**, i **Ignoruj** przycisków. Jeśli użytkownik kliknie **przerwać**, **_CrtDbgReport** lub **_CrtDbgReport** niezwłocznie przerywa. Jeśli użytkownik kliknie **ponów**, zwraca wartość 1. Jeśli użytkownik kliknie **Ignoruj**, wykonywanie jest kontynuowane i **_CrtDbgReport** i **_crtdbgreportw —** zwracają 0. Należy pamiętać, że kliknięcie **Ignoruj** kiedy warunek błędu istnieje często powoduje "nieokreślone zachowanie".|

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364574"
 ---
 # <a name="clrcall"></a>__clrcall
 
@@ -29,7 +29,7 @@ Gdy `/clr` (nie `/clr:pure` lub `/clr:safe`) jest używany i **__clrcall** jest 
 
 [/ CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) oznacza, że wszystkie funkcje i wskaźniki funkcji mają **__clrcall** i kompilator nie pozwoli na funkcji wewnątrz compiland — był oznaczony jako coś innego niż **__clrcall**. Gdy **/CLR: pure** jest używany, **__clrcall** można określić tylko dla wskaźników funkcji i deklaracje zewnętrzne.
 
-Można bezpośrednio wywoływać **__clrcall** funkcji z istniejącego kodu C++, który został skompilowany przy użyciu **/CLR** tak długo, jak ta funkcja zawiera implementację MSIL. **Wywołanie __clrcall** funkcji nie można wywołać bezpośrednio z funkcji, które mają wbudowanego asm i wywołać intrinisics specyficznych dla procesora CPU, na przykład, nawet jeśli te funkcje są kompilowane przy użyciu `/clr`.
+Można bezpośrednio wywoływać **__clrcall** funkcje z istniejących C++ kod, który został skompilowany przy użyciu **/CLR** tak długo, jak ta funkcja zawiera implementację MSIL. **Wywołanie __clrcall** funkcji nie można wywołać bezpośrednio z funkcji, które mają wbudowanego asm i wywołać intrinisics specyficznych dla procesora CPU, na przykład, nawet jeśli te funkcje są kompilowane przy użyciu `/clr`.
 
 **Wywołanie __clrcall** wskaźników funkcji są przeznaczone tylko do użycia w domenie aplikacji, w którym zostały utworzone.  Zamiast **__clrcall** wskaźniki funkcji w różnych domenach aplikacji, należy użyć <xref:System.CrossAppDomainDelegate>. Aby uzyskać więcej informacji, zobacz [domeny aplikacji i programu Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 

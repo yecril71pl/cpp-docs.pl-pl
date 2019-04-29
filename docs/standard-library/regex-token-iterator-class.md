@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
 ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369426"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator — Klasa
 
@@ -90,10 +90,10 @@ Wartość indeksu,-1 wskazuje sekwencję znaków, począwszy od natychmiast po z
 |Operator|Opis|
 |-|-|
 |[operator!=](#op_neq)|Porównuje Iteratory pod kątem nierówności.|
-|[operator *](#op_star)|Uzyskuje dostęp do wyznaczonej poddopasowanie.|
+|[operator*](#op_star)|Uzyskuje dostęp do wyznaczonej poddopasowanie.|
 |[operator++](#op_add_add)|Inkrementuje iterator.|
 |[operator==](#op_eq_eq)|Porównuje Iteratory pod kątem równości.|
-|[operator ->](#op_arrow)|Uzyskuje dostęp do wyznaczonej poddopasowanie.|
+|[operator->](#op_arrow)|Uzyskuje dostęp do wyznaczonej poddopasowanie.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -345,7 +345,7 @@ regex_token_iterator(BidIt first, BidIt last,
 *pierwszy*<br/>
 Początek sekwencji w celu dopasowania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji w celu dopasowania.
 
 *środowisko odzyskiwania*<br/>

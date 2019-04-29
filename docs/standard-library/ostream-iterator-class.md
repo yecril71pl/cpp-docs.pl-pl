@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
 ms.openlocfilehash: 6a065a100faf5ea40be161e980de2913add917fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370997"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator — Klasa
 
@@ -61,7 +61,7 @@ Klasa ostream_iterator musi spełniać wymagania dla iteratora wyjściowego. Alg
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x`.|
+|[operator*](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Operator inkrementacji prawidłowo, który zwraca `ostream_iterator` ten sam obiekt się odnosił przed wywołaniem operacji.|
 |[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x` do zapisywania do strumienia wyjściowego.|
 

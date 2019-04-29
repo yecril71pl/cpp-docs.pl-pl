@@ -45,11 +45,11 @@ helpviewer_keywords:
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
 ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357073"
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 
@@ -83,7 +83,7 @@ int _scwprintf_l(
 *Format*<br/>
 Ciąg kontroli formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -113,13 +113,13 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_sctprintf —**|**_scprintf**|**_scprintf**|**_scwprintf**|
-|**_sctprintf_l —**|**_scprintf_l**|**_scprintf_l**|**_scwprintf_l**|
+|**_sctprintf_l**|**_scprintf_l**|**_scprintf_l**|**_scwprintf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_scprintf**, **_scprintf_l —**|\<stdio.h>|
+|**_scprintf**, **_scprintf_l**|\<stdio.h>|
 |**_scwprintf —**, **_scwprintf_l —**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

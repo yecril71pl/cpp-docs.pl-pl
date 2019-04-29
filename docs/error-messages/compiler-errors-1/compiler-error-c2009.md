@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C2009
+title: Compiler Error C2009
 ms.date: 11/04/2016
 f1_keywords:
 - C2009
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
 ms.openlocfilehash: d2216b3fe990109828492fb2b2055e9425c1e306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361911"
 ---
-# <a name="compiler-error-c2009"></a>Błąd kompilatora C2009
+# <a name="compiler-error-c2009"></a>Compiler Error C2009
 
 ponowne użycie formalne makra 'Identyfikator'
 

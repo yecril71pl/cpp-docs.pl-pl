@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
 ms.openlocfilehash: 0a4728008130119ed9a01334efb2fea2a4ac0639
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368984"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -50,7 +50,7 @@ Aby zmodyfikować szczegóły gramatyki wyrażeń regularnych, należy napisać 
 |[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Wykonuje iterację przez poddopasowania.|
 |[sub_match](../standard-library/sub-match-class.md)|W tym artykule opisano poddopasowanie.|
 
-### <a name="type-definitions"></a>Definicje typów
+### <a name="type-definitions"></a>Definicje typu
 
 |||
 |-|-|

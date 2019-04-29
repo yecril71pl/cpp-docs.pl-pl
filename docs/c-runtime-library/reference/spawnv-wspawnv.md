@@ -31,11 +31,11 @@ helpviewer_keywords:
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
 ms.openlocfilehash: 5939b3665bef4d07a4eaca262c38d4a20b83aed5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355188"
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 
@@ -95,7 +95,7 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *ar
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_spawnv**|\<stdio.h > lub \<process.h >|
-|**_wspawnv —**|\<stdio.h > lub \<wchar.h >|
+|**_wspawnv**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

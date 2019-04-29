@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356280"
 ---
 # <a name="sinh-sinhf-sinhl"></a>SINH sinhf —, sinhl —
 
@@ -67,7 +67,7 @@ Kąt w radianach.
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
 |GRANICACH QNAN, ZNAJDŹ|Brak|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW + NIEDOKŁADNY|PRZEPEŁNIENIA|
+|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW + NIEDOKŁADNY|PRZEPEŁNIENIA|
 
 Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -79,7 +79,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **sin
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
-|**SINH**, **sinhf —**, **sinhl —**|\<math.h>|\<cmath > lub \<math.h >|
+|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath > lub \<math.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,5 @@
 ---
-title: 'TN068: wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC Driver'
+title: 'TN068: Wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.data.odbc
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
 ms.openlocfilehash: 3121587f85c4ea19cc92e39569008b597d24ea58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363794"
 ---
-# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC Driver
+# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: Wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.

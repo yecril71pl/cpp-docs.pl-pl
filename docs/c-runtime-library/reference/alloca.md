@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341603"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ Wyjątek przepełnienia stosu jest generowany, gdy nie można przydzielić miejs
 
 **_alloca** przydziela *rozmiar* bajtów ze stosu program. Ilość miejsca przydzielonego automatycznie jest zwalniana, gdy funkcja wywołująca istnieje (nie w momencie alokacji jedynie przekazuje poza zakresem). W związku z tym, nie przekazuj wartości wskaźnika zwróconej przez **_alloca** jako argument do [bezpłatne](free.md).
 
-Ma ograniczeń do jawnego wywołania **_alloca** w obsłudze wyjątków (EH). Procedury EH, działających na procesorach x86 klasy działają w ich własnych ramki pamięci: wykonują swoje zadania w obszarze pamięci, która nie jest oparty na bieżącej lokalizacji wskaźnika stosu funkcji otaczającej. Najbardziej najczęściej występujące implementacje to obsługi (SEH) wyjątków systemu Windows NT, ze strukturą i wyrażeń klauzuli catch języka C++. W związku z tym, jawne wywołanie **_alloca** we wszystkich następujących scenariuszy powoduje awarię programu podczas powrotu do wywoływania procedury EH:
+Ma ograniczeń do jawnego wywołania **_alloca** w obsłudze wyjątków (EH). Procedury EH, działających na procesorach x86 klasy działają w ich własnych ramki pamięci: Wykonują swoje zadania w obszarze pamięci, która nie jest oparty na bieżącej lokalizacji wskaźnika stosu funkcji otaczającej. Najbardziej najczęściej występujące implementacje to obsługi (SEH) wyjątków systemu Windows NT, ze strukturą i wyrażeń klauzuli catch języka C++. W związku z tym, jawne wywołanie **_alloca** we wszystkich następujących scenariuszy powoduje awarię programu podczas powrotu do wywoływania procedury EH:
 
 - Wyrażenie filtru wyjątków SEH Windows NT: `__except ( _alloca() )`
 

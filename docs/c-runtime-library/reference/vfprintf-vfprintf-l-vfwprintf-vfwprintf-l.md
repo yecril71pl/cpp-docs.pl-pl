@@ -36,11 +36,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
 ms.openlocfilehash: 889fedde263b9815597702f1e9d5b252f3998bdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364899"
 ---
 # <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 
@@ -75,7 +75,7 @@ int _vfwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
@@ -110,8 +110,8 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vftprintf —**|**vfprintf —**|**vfprintf —**|**vfwprintf**|
-|**_vftprintf_l —**|**_vfprintf_l**|**_vfprintf_l**|**_vfwprintf_l**|
+|**_vftprintf —**|**vfprintf**|**vfprintf**|**vfwprintf**|
+|**_vftprintf_l**|**_vfprintf_l**|**_vfprintf_l**|**_vfwprintf_l**|
 
 ## <a name="requirements"></a>Wymagania
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
 ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352115"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist — Klasa
 
@@ -52,7 +52,7 @@ Każdy blok pamięci przechowuje *Sz* w bajtach dostępnej pamięci i danych, **
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -109,4 +109,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
 ms.openlocfilehash: 5114a658cfde965556f4663d2ba92c9ba4d1eaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370955"
 ---
 # <a name="ostreambufiterator-class"></a>Klasa ostreambuf_iterator
 
@@ -70,7 +70,7 @@ Klasa ostreambuf_iterator musi spełniać wymagania dla iteratora wyjściowego. 
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x`.|
+|[operator*](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Operator inkrementacji prawidłowo, który zwraca `ostreambuf_iterator` ten sam obiekt się odnosił przed wywołaniem operacji.|
 |[operator=](#op_eq)|Operator wstawia znak do bufora skojarzonego strumienia.|
 

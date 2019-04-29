@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
 ms.openlocfilehash: edac8fde530752c911058acdaccccea6d0318b8c
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342253"
 ---
 # <a name="obsolete-functions"></a>Przestarzałe funkcje
 

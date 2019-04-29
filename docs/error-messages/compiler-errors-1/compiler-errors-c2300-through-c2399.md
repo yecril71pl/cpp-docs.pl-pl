@@ -1,6 +1,6 @@
 ---
-title: Błędy kompilatora od C2300 do C2399
-ms.date: 11/17/2017
+title: Błędy kompilatora — od C2300 do C2399
+ms.date: 04/21/2019
 f1_keywords:
 - C2303
 - C2304
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - C2398
 - C2399
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-ms.openlocfilehash: 6f95ec90a08b842259a383d7bfc6af2cba119e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 28ab73857b46fed29e2ba8d7bc051ffb81b54bb3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360453"
 ---
-# <a name="compiler-errors-c2300-through-c2399"></a>Błędy kompilatora od C2300 do C2399
+# <a name="compiler-errors-c2300-through-c2399"></a>Błędy kompilatora — od C2300 do C2399
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez kompilator.
 
@@ -73,13 +73,13 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 |Błąd|Komunikat|
 |-----------|-------------|
-|[Błąd kompilatora C2300](compiler-error-c2300.md)|"*klasy*": klasa nie ma wywołania destruktora "~*klasy*"|
+|[Błąd kompilatora od C2300](compiler-error-c2300.md)|"*klasy*": klasa nie ma wywołania destruktora "~*klasy*"|
 |[Błąd kompilatora C2301](compiler-error-c2301.md)|po lewej "-> ~*identyfikator*" musi wskazywać na klasy/struct/union|
 |[Błąd kompilatora C2302](compiler-error-c2302.md)|po lewej ". ~*identyfikator*" musi mieć typ klasy/struct/union|
-|C2303 błąd kompilatora|Obsługa wyjątków strukturalnych nie można używać w procedurze wspólnej|
-|C2304 błąd kompilatora|"*— słowo kluczowe*" nie można używać wewnątrz bloku catch|
-|C2305 błąd kompilatora|"*pliku*" nie zawiera informacji o debugowaniu dla tego modułu|
-|C2306 błąd kompilatora|"*pliku*" nie zawiera ostatnich informacji o debugowaniu dla tego modułu|
+|Błąd kompilatora C2303|Obsługa wyjątków strukturalnych nie można używać w procedurze wspólnej|
+|Błąd kompilatora C2304|"*— słowo kluczowe*" nie można używać wewnątrz bloku catch|
+|Błąd kompilatora C2305|"*pliku*" nie zawiera informacji o debugowaniu dla tego modułu|
+|Błąd kompilatora C2306|"*pliku*" nie zawiera ostatnich informacji o debugowaniu dla tego modułu|
 |[Błąd kompilatora C2307](compiler-error-c2307.md)|pragma *dyrektywy* należy przenieść poza funkcji, jeśli włączono kompilacji przyrostowej|
 |[Błąd kompilatora C2308](compiler-error-c2308.md)|konkatenacja niedopasowanych ciągów znaków|
 |[Błąd kompilatora C2309](compiler-error-c2309.md)|przy obsłudze catch Oczekiwano deklaracji wyjątku ujętego w nawiasy|
@@ -87,62 +87,62 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2311](compiler-error-c2311.md)|"*typu*": zostanie przechwycony przez "..." w wierszu *numer*|
 |[Błąd kompilatora C2312](compiler-error-c2312.md)|"*type1*": zostanie przechwycony przez "*type2*" w wierszu *numer*|
 |[Błąd kompilatora C2313](compiler-error-c2313.md)|"*type1*": zostanie przechwycony przez odwołanie ("*type2*") w wierszu *numer*|
-|C2314 błąd kompilatora|— słowo kluczowe "*keyword1*" jest przestarzałe: Użyj "*keyword2*" zamiast niego|
+|Błąd kompilatora C2314|— słowo kluczowe "*keyword1*" jest przestarzałe: Użyj "*keyword2*" zamiast niego|
 |[Błąd kompilatora C2315](compiler-error-c2315.md)|"*type1*": odwołanie zostało przechwycone przez "*type2*" w wierszu *numer*|
 |[Błąd kompilatora C2316](compiler-error-c2316.md)|"*typu*": nie można przechwycić elementu, ponieważ destruktor i/lub Konstruktor kopiujący są niedostępne lub zostały usunięte|
 |[Błąd kompilatora C2317](compiler-error-c2317.md)|począwszy od linii bloku "try" "*numer*" nie ma obsługi catch|
 |[Błąd kompilatora C2318](compiler-error-c2318.md)|nie try blok skojarzonych z tym obsługi catch|
 |[Błąd kompilatora C2319](compiler-error-c2319.md)|"try/catch" musi następować instrukcja złożona. Brak "{"|
 |[Błąd kompilatora C2320](compiler-error-c2320.md)|Oczekiwano ":" Aby po specyfikatorze dostępu "*specyfikator*"|
-|C2321 błąd kompilatora|"*identyfikator*" jest słowem kluczowym i nie można używać w tym kontekście|
+|Błąd kompilatora C2321|"*identyfikator*" jest słowem kluczowym i nie można używać w tym kontekście|
 |[Błąd kompilatora C2322](compiler-error-c2322.md)|"*identyfikator*": adres importu dllimport "*identyfikator*" nie jest statyczna|
-|C2323 błąd kompilatora|"*identyfikator*": operator składowej nowego ani funkcje delete nie mogą być deklarowane statyczne lub w przestrzeni nazw, innym niż globalna przestrzeń nazw|
+|Błąd kompilatora C2323|"*identyfikator*": operator składowej nowego ani funkcje delete nie mogą być deklarowane statyczne lub w przestrzeni nazw, innym niż globalna przestrzeń nazw|
 |[Błąd kompilatora C2324](compiler-error-c2324.md)|"*identyfikator*": nieoczekiwany po prawej stronie ":: ~"|
 |[Błąd kompilatora C2325](compiler-error-c2325.md)|"*type1*": nieoczekiwany typ po prawej stronie "-> ~": oczekiwano "*type2*"|
 |[Błąd kompilatora C2326](compiler-error-c2326.md)|"*deklaratora*": funkcja nie ma dostępu do "*identyfikator*"|
 |[Błąd kompilatora C2327](compiler-error-c2327.md)|"*identyfikator*": Brak nazwy typu, statycznym lub modułu wyliczającego|
-|C2328 błąd kompilatora|"*— słowo kluczowe*": słowo kluczowe nie jest jeszcze obsługiwana.|
-|C2329 błąd kompilatora|"*identyfikator*": __ptr64 nie jest dostępny dla wskaźników do funkcji|
-|C2330 błąd kompilatora|"implementation_key()" jest prawidłowy tylko w regionie poprowadzoną #pragma start_map_region/stop_map_region|
-|C2331 błąd kompilatora|dostęp do "*identyfikator*"teraz zdefiniowany jako"*accessibility1*", poprzednio został zdefiniowany jako"*accessibility2*"|
+|Błąd kompilatora C2328|"*— słowo kluczowe*": słowo kluczowe nie jest jeszcze obsługiwana.|
+|Błąd kompilatora C2329|"*identyfikator*": __ptr64 nie jest dostępny dla wskaźników do funkcji|
+|Błąd kompilatora C2330|"implementation_key()" jest prawidłowy tylko w regionie poprowadzoną #pragma start_map_region/stop_map_region|
+|Błąd kompilatora C2331|dostęp do "*identyfikator*"teraz zdefiniowany jako"*accessibility1*", poprzednio został zdefiniowany jako"*accessibility2*"|
 |[Błąd kompilatora C2332](compiler-error-c2332.md)|"*typedef*": Brak nazwy tagu|
 |[Błąd kompilatora C2333](compiler-error-c2333.md)|"*funkcja*": błąd w deklaracji funkcji; pomijanie treści funkcji|
 |[Błąd kompilatora C2334](compiler-error-c2334.md)|Nieoczekiwany(e) token(y) poprzedniego "*tokenu*"; Pomijanie treści widocznych funkcji|
-|C2335 błąd kompilatora|"*identyfikator*": typ nie może zostać wprowadzony w liście parametrów funkcji|
-|C2336 błąd kompilatora|"*typu*": niedozwolony typ|
+|Błąd kompilatora C2335|"*identyfikator*": typ nie może zostać wprowadzony w liście parametrów funkcji|
+|Błąd kompilatora C2336|"*typu*": niedozwolony typ|
 |[Błąd kompilatora C2337](compiler-error-c2337.md)|"*atrybut*": nie znaleziono atrybutu|
 |[Błąd kompilatora C2338](compiler-error-c2338.md)|*(komunikat o błędzie z zewnętrznego dostawcy)*|
-|C2339 błąd kompilatora|"*identyfikator*": niedozwolony typ w osadzonym IDL|
-|C2340 błąd kompilatora|"*identyfikator*": "static" można używać tylko wewnątrz definicji klasy|
+|Błąd kompilatora C2339|"*identyfikator*": niedozwolony typ w osadzonym IDL|
+|Błąd kompilatora C2340|"*identyfikator*": "static" można używać tylko wewnątrz definicji klasy|
 |[Błąd kompilatora C2341](compiler-error-c2341.md)|"*sekcji*': segment musi być zdefiniowany przy użyciu #pragma data_seg, code_seg lub wcześniejszej sekcji, aby użyć|
-|C2342 błąd kompilatora|Błąd składniowy: konflikt typu kwalifikatorów|
-|C2343 błąd kompilatora|"*sekcji*": konflikt atrybutów sekcji|
+|Błąd kompilatora C2342|Błąd składniowy: konflikt typu kwalifikatorów|
+|Błąd kompilatora C2343|"*sekcji*": konflikt atrybutów sekcji|
 |[Błąd kompilatora C2344](compiler-error-c2344.md)|Wyrównaj (*numer*): wyrównanie musi być potęgą liczby dwa|
 |[Błąd kompilatora C2345](compiler-error-c2345.md)|Wyrównaj (*numer*): Niedozwolona wartość wyrównania|
 |[Błąd kompilatora C2346](compiler-error-c2346.md)|"*funkcja*" nie można skompilować jako natywny: "*wyjaśnienie*"|
-|C2347 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2347|Nieaktualne.|
 |[Błąd kompilatora C2348](compiler-error-c2348.md)|"*typu*": nie jest agregacji stylu C, nie można wyeksportować w osadzonym IDL|
 |[Błąd kompilatora C2349](compiler-error-c2349.md)|"*funkcja*" nie można skompilować jako zarządzany: "*wyjaśnienie*"; Użyj #pragma niezarządzanego|
 |[Błąd kompilatora C2350](compiler-error-c2350.md)|"*identyfikator*" nie jest składową statyczną|
 |[Błąd kompilatora C2351](compiler-error-c2351.md)|przestarzała Inicjalizacja składni konstruktora C++|
 |[Błąd kompilatora C2352](compiler-error-c2352.md)|"*identyfikator*": niedozwolone wywołanie niestatycznej składowej — funkcja|
 |[Błąd kompilatora C2353](compiler-error-c2353.md)|Specyfikacja wyjątku nie jest dozwolone.|
-|C2354 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2354|Nieaktualne.|
 |[Błąd kompilatora C2355](compiler-error-c2355.md)|"this": można tworzyć odwołania wyłącznie wewnątrz niestatycznych elementów członkowskich lub danych niestatycznych inicjatorów składowych|
-|[Błąd kompilatora C2356](compiler-error-c2356.md)|segment inicjalizacyjny nie może ulec zmianie podczas tłumaczenia jednostki|
+|[Compiler error C2356](compiler-error-c2356.md)|segment inicjalizacyjny nie może ulec zmianie podczas tłumaczenia jednostki|
 |[Błąd kompilatora C2357](compiler-error-c2357.md)|"*identyfikator*": musi być funkcją typu "*typu*"|
-|C2358 błąd kompilatora|"*identyfikator*": właściwość statyczna nie może być zdefiniowana poza definicją klasy|
-|C2359 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2358|"*identyfikator*": właściwość statyczna nie może być zdefiniowana poza definicją klasy|
+|Błąd kompilatora C2359|Nieaktualne.|
 |[Błąd kompilatora C2360](compiler-error-c2360.md)|Inicjalizacja "*identyfikator*" jest pomijana przy etykiecie "case"|
 |[Błąd kompilatora C2361](compiler-error-c2361.md)|Inicjalizacja "*identyfikator*" jest pomijana przy etykiecie "default"|
 |[Błąd kompilatora C2362](compiler-error-c2362.md)|Inicjalizacja "*identyfikator*" jest pomijana przy "goto *etykiety*"|
-|C2363 błąd kompilatora|funkcja wewnętrzna numerycznego limitu kompilatora wymaga argumentu literału ciągu|
+|Błąd kompilatora C2363|funkcja wewnętrzna numerycznego limitu kompilatora wymaga argumentu literału ciągu|
 |[Błąd kompilatora C2364](compiler-error-c2364.md)|"*typu*": niedozwolony typ niestandardowegp atrybutu|
 |[Błąd kompilatora C2365](compiler-error-c2365.md)|"*Członek1*": zmiana definicji; definicja poprzedniej została "*członek2*"|
-|C2366 błąd kompilatora|"*identyfikator*": zmiana definicji; specyfikatory różnych implementation_key|
-|C2367 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2366|"*identyfikator*": zmiana definicji; specyfikatory różnych implementation_key|
+|Błąd kompilatora C2367|Nieaktualne.|
 |[Błąd kompilatora C2368](compiler-error-c2368.md)|"*identyfikator*": zmiana definicji; specyfikatory różnych alokacji|
-|[Błąd kompilatora C2369](compiler-error-c2369.md)|"*identyfikator*": zmiana definicji; różne indeksy|
+|[Compiler error C2369](compiler-error-c2369.md)|"*identyfikator*": zmiana definicji; różne indeksy|
 |[Błąd kompilatora C2370](compiler-error-c2370.md)|"*identyfikator*": zmiana definicji; różne klasy magazynu|
 |[Błąd kompilatora C2371](compiler-error-c2371.md)|"*identyfikator*": zmiana definicji; różne typy podstawowe|
 |[Błąd kompilatora C2372](compiler-error-c2372.md)|"*identyfikator*": zmiana definicji; różne typy pośredniego wywołania|
@@ -167,9 +167,14 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C2391](compiler-error-c2391.md)|"*identyfikator*": "friend" nie może zostać użyty podczas definicji typu|
 |[Błąd kompilatora C2392](compiler-error-c2392.md)|"*Członek1*": typy nie są obsługiwane w typach zarządzanych/WinRT, w przeciwnym razie zwraca kowariantne "*członek2*" może zostać przesłonięta|
 |[Błąd kompilatora C2393](compiler-error-c2393.md)|"*symbol*": symbol per-appdomain nie może zostać alokowany w segmencie "*segmentu*"|
-|[Błąd kompilatora C2394](compiler-error-c2394.md)|"*typu*:: operator *operator*": nieprawidłowy operator CLR/WinRT. Co najmniej jeden parametr musi być następujących typów: t ^', t ^ % ", t ^ &", gdzie T = "*typu*"|
-|[Błąd kompilatora C2395](compiler-error-c2395.md)|"*typu*:: operator *operator*": nieprawidłowy operator CLR/WinRT. Co najmniej jeden parametr musi być następujących typów: t ", t %", t & ", t ^', t ^ %", t ^ & ", gdzie T ="*typu*"|
-|[Błąd kompilatora C2396](compiler-error-c2396.md)|"*type1*:: operator *type2*": funkcja konwersji zdefiniowanej przez użytkownika CLR/WinRT nie jest prawidłowy. Należy konwertować z albo konwertować na: t ^', t ^ % ", t ^ &", gdzie T = "*type1*"|
+|[Błąd kompilatora C2394](compiler-error-c2394.md)|"*typu*:: operator *operator*": CLR/WinRT operator nie jest prawidłowy. Co najmniej jeden parametr musi być następujących typów:  T ^', t ^ % ", t ^ &", gdzie T = "*typu*"|
+|[Błąd kompilatora C2395](compiler-error-c2395.md)|"*typu*:: operator *operator*": CLR/WinRT operator nie jest prawidłowy. Co najmniej jeden parametr musi być następujących typów: T ", t %", t & ", t ^', t ^ %", t ^ & ", gdzie T ="*typu*"|
+|[Błąd kompilatora C2396](compiler-error-c2396.md)|"*type1*:: operator *type2*": CLR/WinRT konwersja zdefiniowana przez użytkownika funkcja nie jest prawidłowy. Należy konwertować z albo konwertować na: T ^', t ^ % ", t ^ &", gdzie T = "*type1*"|
 |[Błąd kompilatora C2397](compiler-error-c2397.md)|Konwersja z "*type1*"to"*type2*" wymaga konwersji zawężającej|
-|C2398 błąd kompilatora|Element "*numer*': konwersja z"*type1*"to"*type2*"wymaga konwersji zawężającej|
-|C2399 błąd kompilatora|Nieaktualne.|
+|Błąd kompilatora C2398|Element "*numer*': konwersja z"*type1*"to"*type2*"wymaga konwersji zawężającej|
+|Błąd kompilatora C2399|Nieaktualne.|
+
+## <a name="see-also"></a>Zobacz także
+
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
+[Błędy kompilatora — od C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

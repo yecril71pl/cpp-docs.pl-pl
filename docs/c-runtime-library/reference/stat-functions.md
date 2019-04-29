@@ -107,11 +107,11 @@ helpviewer_keywords:
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
 ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354719"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -207,22 +207,22 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżki* lub *buf
 |---------------|------------------------------------|---------------|----------------------|
 |**stałe pola_stat**, **_wstat —**|Nie zdefiniowano|64-bitowy|32-bitowa|
 |**stałe pola_stat**, **_wstat —**|Definicja|32-bitowa|32-bitowa|
-|**_stat32 —**, **_wstat32 —**|Nie dotyczy definicji makra|32-bitowa|32-bitowa|
+|**_stat32**, **_wstat32**|Nie dotyczy definicji makra|32-bitowa|32-bitowa|
 |**_stat64**, **_wstat64**|Nie dotyczy definicji makra|64-bitowy|64-bitowy|
 |**_stati64**, **_wstati64**|Nie zdefiniowano|64-bitowy|64-bitowy|
 |**_stati64**, **_wstati64**|Definicja|32-bitowa|64-bitowy|
-|**_stat32i64 —**, **_wstat32i64 —**|Nie dotyczy definicji makra|32-bitowa|64-bitowy|
-|**_stat64i32 —**, **_wstat64i32 —**|Nie dotyczy definicji makra|64-bitowy|32-bitowa|
+|**_stat32i64**, **_wstat32i64**|Nie dotyczy definicji makra|32-bitowa|64-bitowy|
+|**_stat64i32**, **_wstat64i32**|Nie dotyczy definicji makra|64-bitowy|32-bitowa|
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstat —**|**_stat**|**_stat**|**_wstat**|
-|**_tstat64 —**|**_stat64**|**_stat64**|**_wstat64**|
-|**_tstati64 —**|**_stati64**|**_stati64**|**_wstati64**|
-|**_tstat32i64 —**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
-|**_tstat64i32 —**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
+|**_tstat**|**_stat**|**_stat**|**_wstat**|
+|**_tstat64**|**_stat64**|**_stat64**|**_wstat64**|
+|**_tstati64**|**_stati64**|**_stati64**|**_wstati64**|
+|**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
+|**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
 **_Stat** struktury, zdefiniowanego w SYS\STAT. Godz., zawiera następujące pola.
 
@@ -246,8 +246,8 @@ Jeśli *ścieżki* odwołuje się do urządzenia, **st_size**, różnych pól go
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**stałe pola_stat**, **_stat32 —**, **_stat64**, **_stati64**, **_stat32i64 —**, **_stat64i32 —**|\<sys/types.h > następuje \<sys/stat.h >|\<errno.h>|
-|**_wstat —**, **_wstat32 —**, **_wstat64**, **_wstati64**, **_wstat32i64 —**, **_wstat64i32 —**|\<sys/types.h > następuje \<sys/stat.h > lub \<wchar.h >|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h > następuje \<sys/stat.h >|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h > następuje \<sys/stat.h > lub \<wchar.h >|\<errno.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

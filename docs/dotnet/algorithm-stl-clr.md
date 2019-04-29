@@ -142,11 +142,11 @@ helpviewer_keywords:
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
 ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350835"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -191,7 +191,7 @@ Definiuje funkcje szablonu kontenera STL/CLR, które wykonują algorytmy.
 |[lexicographical_compare (STL/CLR)](#lexicographical_compare)|Porównuje dwie sekwencje, element po elemencie, identyfikowanie, które sekwencja jest mniejszy z dwóch.|
 |[lower_bound (STL/CLR)](#lower_bound)|Znajduje pozycję pierwszego elementu w uporządkowanej kolejności wartości, która ma wartość większą niż lub równa określonej wartości.|
 |[make_heap (STL/CLR)](#make_heap)|Konwertuje elementy z określonego zakresu na stertę, gdzie pierwszy element na stosie jest największa.|
-|[MAX (STL/CLR)](#max))|Porównuje dwa obiekty i zwraca wartość większa niż dwa.|
+|[max (STL/CLR)](#max))|Porównuje dwa obiekty i zwraca wartość większa niż dwa.|
 |[max_element (STL/CLR)](#max_element)|Odnajduje największego elementu w określonej sekwencji wartości.|
 |[merge (STL/CLR)](#merge))|Łączy wszystkie elementy z dwóch posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy.|
 |[min (STL/CLR)](#min)|Porównuje dwa obiekty i zwraca mniejszy z dwóch.|
@@ -223,7 +223,7 @@ Definiuje funkcje szablonu kontenera STL/CLR, które wykonują algorytmy.
 |[set_difference (STL/CLR)](#set_difference)|Łączy w sobie wszystkie elementy, które należą do jednego posortowanego zakresu źródłowego, ale nie do drugiego posortowanego zakresu źródłowego, w pojedynczy, posortowany zakres docelowy, gdzie kryterium sortowania może być określone przez predykat binarny.|
 |[set_intersection (STL/CLR)](#set_intersection)|Łączy w sobie wszystkie elementy, które należą do obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[set_symmetric_difference (STL/CLR)](#set_symmetric_difference)|Łączy w sobie wszystkie elementy, które należą do jednego z, ale nie obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
-|[set_union — (STL/CLR)](#set_union))|Łączy w sobie wszystkie elementy, które należą do przynajmniej jednego z dwóch posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
+|[set_union (STL/CLR)](#set_union))|Łączy w sobie wszystkie elementy, które należą do przynajmniej jednego z dwóch posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[sort (STL/CLR)](#sort)|Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności lub według kryteriów sortowania określonych przez binarny predykat.|
 |[sort_heap (STL/CLR)](#sort_heap)|Konwertuje stertę na sortowany zakres.|
 |[stable_partition (STL/CLR)](#stable_partition)|Klasyfikuje elementy w zakresie na dwa rozłączne zestawy, z elementami spełniającymi predykat unarny poprzedzającymi te, które go nie spełniają, zachowując względną kolejność elementów równoważnych.|
@@ -372,7 +372,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 Ta funkcja działa w taki sam, jak funkcja standardowej biblioteki języka C++ `equal_range`. Aby uzyskać więcej informacji, zobacz [equal_range —](../standard-library/algorithm-functions.md#equal_range).
 
-## <a name="fill"></a> Fill (STL/CLR)
+## <a name="fill"></a> fill (STL/CLR)
 
 Przypisuje tę samą nową wartość każdemu elementowi w określonym zakresie.
 
@@ -550,7 +550,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja działa w taki sam, jak funkcja standardowej biblioteki języka C++ `inplace_merge` Aby uzyskać więcej informacji, zobacz [inplace_merge —](../standard-library/algorithm-functions.md#inplace_merge).
+Ta funkcja działa w taki sam jak C++ standardowej funkcji biblioteki `inplace_merge` Aby uzyskać więcej informacji, zobacz [inplace_merge —](../standard-library/algorithm-functions.md#inplace_merge).
 
 ## <a name="iter_swap"></a> iter_swap — (STL/CLR)
 

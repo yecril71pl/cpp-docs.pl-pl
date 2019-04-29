@@ -1,6 +1,6 @@
 ---
 title: Komunikaty wektoryzatora i paralelizatora
-ms.date: 11/04/2016
+ms.date: 04/17/2019
 f1_keywords:
 - C5011
 - C5002
@@ -8,34 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346873"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Komunikaty wektoryzatora i paralelizatora
 
-Można użyć opcji kompilatora Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) można ustawić [automatyczna Paralelizacja i Wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md) do kodów przyczyny w danych wyjściowych i komunikaty informacyjne o swojej działalności. Ten artykuł wyjaśnia kody przyczyn i komunikaty.
+Można użyć programu Microsoft C++ opcje kompilatora [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) można ustawić [automatyczna paralelizacja i wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md) na powód dane wyjściowe kody i komunikatami informacyjnymi o swojej działalności. Ten artykuł wyjaśnia kody przyczyn i komunikaty.
 
-- [Komunikaty informacyjne](#BKMK_InformationalMessages)
-
-- [5xx](#BKMK_ReasonCode50x)
-
-- [10xx](#BKMK_ReasonCode100x)
-
-- [11xx](#BKMK_ReasonCode110x)
-
-- [12xx](#BKMK_ReasonCode120x)
-
-- [13xx](#BKMK_ReasonCode130x)
-
-- [14xx](#BKMK_ReasonCode140x)
-
-- [15xx](#BKMK_ReasonCode150x)
-
-##  <a name="BKMK_InformationalMessages"></a> Komunikaty informacyjne
+## <a name="BKMK_InformationalMessages"></a> Komunikaty informacyjne
 
 W zależności od poziomu raportowania, określonego przez użytkownika, pojawi się jeden z następujących komunikatów informacyjnych dla każdej pętli.
 
@@ -43,27 +27,25 @@ Informacje na temat kodów przyczyny można znaleźć w następnej części tego
 
 |Komunikat informacyjny|Opis|
 |---------------------------|-----------------|
-|5001|Pętla wektoryzowana.|
-|5002|Pętla niewektoryzowana z powodu 'opis'.|
-|5011|Pętla zrównoleglona.|
-|5012|Pętla niezrównoleglona z powodu 'opis'.|
-|5021|Nie można skojarzyć pętli z pragmą.|
+|5001|`Loop vectorized.`|
+|5002|`Loop not vectorized due to reason '*description*'.`|
+|5011|`Loop parallelized.`|
+|5012|`Loop not parallelized due to reason '*description*'.`|
+|5021|`Unable to associate loop with pragma.`|
 
-## <a name="reason-codes"></a>Kody przyczyn
+W poniższych sekcjach wymieniono możliwe kody przyczyn wektoryzatora i paralelizatora.
 
-W poniższych sekcjach wymieniono możliwe kody przyczyn dla automatycznego zrównoleglacza i automatycznego wektoryzera.
+## <a name="BKMK_ReasonCode50x"></a> Kody przyczyn 5xx
 
-###  <a name="BKMK_ReasonCode50x"></a> 5xx
-
-5*xx* kodów przyczyny dotyczą zarówno automatycznego zrównoleglacza i automatycznego wektoryzera.
+5*xx* kodów przyczyny dotyczą wektoryzatora i paralelizatora.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
-|500|To jest ogólny komunikat, który obejmuje kilka przypadków — na przykład pętla zawiera wiele wyjść lub nagłówek pętli nie kończy się zwiększaniem zmiennej indukowanej.|
-|501|Zmienna indukowana nie jest lokalna; lub górna granica nie jest niezmiennikiem pętli.|
-|502|Zmienna indukowana jest zmieniana w sposób inny niż proste +1.|
-|503|Pętla zawiera instrukcje obsługi wyjątków lub instrukcje switch.|
-|504|Ciało pętli może generować wyjątek, który wymaga zniszczenia obiektu języka C++.|
+|500|Ogólny komunikat, który obejmuje kilka przypadków — na przykład pętla zawiera wiele wyjść lub nagłówek pętli nie kończy się zwiększaniem zmiennej indukowanej.|
+|501|`Induction variable is not local; or upper bound is not loop-invariant.`|
+|502|`Induction variable is stepped in some manner other than a simple +1.`|
+|503|`Loop includes exception-handling or switch statements.`|
+|504|`Loop body may throw an exception that requires destruction of a C++ object.`|
 
 ```cpp
 void code_500(int *A)
@@ -216,23 +198,23 @@ void code_504(int *A) {
 }
 ```
 
-###  <a name="BKMK_ReasonCode100x"></a> 10xx
+## <a name="BKMK_ReasonCode100x"></a> Kody przyczyn 10xx
 
-10*xx* kodów przyczyny dotyczą automatycznego zrównoleglacza.
+10*xx* kodów przyczyny dotyczą paralelizatora.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
-|1000|Kompilator wykrył zależność danych w ciele pętli.|
-|1001|Kompilator wykrył zapisanie do zmiennej skalarnej w ciele pętli i że skalar jest używany poza pętlą.|
-|1002|Kompilator próbował zrównoleglić pętlę, która ma pętlę wewnętrzną, która z kolei już została zrównoleglona.|
-|1003|Ciało pętli zawiera wewnętrzne wywołanie, które może odczytywać z pamięci lub zapisywać do pamięci.|
-|1004|W ciele pętli ma miejsce redukcja skalaru. Redukcja skalaru może wystąpić, jeśli pętla została zwektoryzowana.|
-|1005|**No_parallel** pragma została określona.|
-|1006|Ta funkcja zawiera **openmp**. Rozwiąż ten problem, usuwając wszelkie **openmp** w tej funkcji.|
-|1007|Zmienna indukowana pętli lub granice pętli nie są oznaczone liczby 32-bitowych (`int` lub `long`). Rozwiąż ten problem, zmieniając typ zmiennej indukcyjnej.|
-|1008|Kompilator wykrył, że ta pętla nie wykonuje wystarczająco dużo pracy, aby gwarantowało to automatyczne zrównoleglanie.|
-|1009|Kompilator wykrył próbę zrównoleglenia pętli „do-while”. Tylko elementy docelowe automatycznego zrównoleglacza `for` pętli.|
-|1010|Kompilator wykrył, że pętla za pomocą "not equals" (! =) do jego stan.|
+|1000|`The compiler detected a data dependency in the loop body.`|
+|1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
+|1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
+|1003|`The loop body contains an intrinsic call that may read or write to memory.`|
+|1004|`There is a scalar reduction in the loop body. Scalar reduction can occur if the loop has been vectorized.`|
+|1005|`The no_parallel pragma was specified.`|
+|1006|`This function contains openmp. Resolve this by removing any openmp in this function.`|
+|1007|`The loop induction variable or the loop bounds are not signed 32-bit numbers (int or long). Resolve this by changing the type of the induction variable.`|
+|1008|`The compiler detected that this loop does not perform enough work to warrant auto-parallelization.`|
+|1009|`The compiler detected an attempt to parallelize a "do-while" loop. The auto-parallelizer only targets "for" loops.`|
+|1010|`The compiler detected that the loop is using "not-equals" (!=) for its condition.`|
 
 ```cpp
 int A[1000];
@@ -425,19 +407,19 @@ void code_1010()
 }
 ```
 
-###  <a name="BKMK_ReasonCode110x"></a> 11xx
+## <a name="BKMK_ReasonCode110x"></a> Kody przyczyn 11xx
 
-11*xx* kodów przyczyny dotyczą automatycznego wektoryzera.
+11*xx* kodów przyczyny dotyczą automatycznej wektoryzacji.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
-|1100|Pętla zawiera przepływ sterowania — na przykład „if” lub „?”.|
-|1101|Pętla zawiera konwersję typu danych — być może niejawną — której nie można zwektoryzować.|
-|1102|Pętla zawiera operacje niearytmetyczne lub inne operacje nienadające się do wektoryzacji.|
-|1103|Ciało pętli obejmuje operacje przesunięcia, których rozmiar może się różnić w ramach pętli.|
-|1104|Ciało pętli zawiera zmienne skalarne.|
-|1105|Pętla zawiera nierozpoznaną operację redukcji.|
-|1106|Zewnętrzna pętla nie jest zwektoryzowana.|
+|1100|`Loop contains control flow—for example, "if" or "?".`|
+|1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
+|1102|`Loop contains non-arithmetic or other non-vectorizable operations.`|
+|1103|`Loop body includes shift operations whose size might vary within the loop.`|
+|1104|`Loop body includes scalar variables.`|
+|1105|`Loop includes a unrecognized reduction operation.`|
+|1106|`Outer loop not vectorized.`|
 
 ```cpp
 void code_1100(int *A, int x)
@@ -573,16 +555,16 @@ void code_1106(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode120x"></a> 12xx
+## <a name="BKMK_ReasonCode120x"></a> Kody przyczyn 12xx
 
-12*xx* kodów przyczyny dotyczą automatycznego wektoryzera.
+12*xx* kodów przyczyny dotyczą automatycznej wektoryzacji.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
-|1200|Pętla zawiera zależności od danych przenoszone w pętli, które uniemożliwiają wektoryzację. Różne iteracje pętli wzajemnie się zakłócają, tak że wektoryzacja pętli wywołałoby złe odpowiedzi, a automatyczny wektoryzer nie może sobie udowodnić , że nie istnieją żadne takie zależności od danych.|
-|1201|Zmiany podstawy tablicy w trakcie wykonywania pętli.|
-|1202|Pole w strukturze nie ma szerokości 32 lub 64 bitów.|
-|1203|Ciało pętli zawiera nieciągłe dostępy do tablicy.|
+|1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
+|1201|`Array base changes during the loop.`|
+|1202|`Field in a struct is not 32 or 64 bits wide.`|
+|1203|`Loop body includes non-contiguous accesses into an array.`|
 
 ```cpp
 void fn();
@@ -648,18 +630,18 @@ void code_1203(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode130x"></a> 13xx
+## <a name="BKMK_ReasonCode130x"></a> Kody przyczyn 13xx
 
-13*xx* kodów przyczyny dotyczą automatycznego wektoryzera.
+13*xx* kodów przyczyny dotyczą automatycznej wektoryzacji.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
-|1300|Treść pętli nie zawiera obliczeń lub zawiera ich bardzo mało.|
-|1301|Krok pętli to nie +1.|
-|1302|Pętla to "czy-a".|
-|1303|Zbyt mało iteracji pętli, aby wektoryzacja miała wartość.|
-|1304|Pętla zawiera przypisania o różnych rozmiarach.|
-|1305|Za mało informacji o typie.|
+|1300|`Loop body contains no—or very little—computation.`|
+|1301|`Loop stride is not +1.`|
+|1302|`Loop is a "do-while".`|
+|1303|`Too few loop iterations for vectorization to provide value.`|
+|1304|`Loop includes assignments that are of different sizes.`|
+|1305|`Not enough type information.`|
 
 ```cpp
 void code_1300(int *A, int *B)
@@ -780,18 +762,18 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-###  <a name="BKMK_ReasonCode140x"></a> 14xx
+## <a name="BKMK_ReasonCode140x"></a> Kody przyczyn 14xx
 
-14*xx* Przyczyna kody wystąpić, gdy określono opcję, która jest niezgodna z automatyczną wektoryzację.
+14*xx* Przyczyna kody wystąpić, gdy określono opcję, która jest niezgodna z wektoryzacji.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
-|1400|**#pragma loop(no_vector)** jest określony.|
-|1401|**/ Kernel** określono przełącznika, gdy x86 lub ARM.|
-|1402|**SSE2** lub wyższej przełącznik nie zostanie określony, gdy x86.|
-|1403|**/arch:Atom** określono przełącznik, a pętla zawiera operacje na typach Double.|
-|1404|**/ O1** lub **/Os** określono przełącznik.|
-|1405|Wektoryzacja jest wyłączona, aby pomóc w optymalizacji „dynamiczny inicjator do statycznego inicjatora”.|
+|1400|`#pragma loop(no_vector) is specified.`|
+|1401|`/kernel switch is specified when targeting x86 or ARM.`|
+|1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
+|1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
+|1404|`/O1 or /Os switch is specified.`|
+|1405|`Vectorization is disabled to aid in dynamic-initializer-to-static-initializer optimization.`|
 
 ```cpp
 void code_1400(int *A)
@@ -852,18 +834,18 @@ void code_1404(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode150x"></a> 15xx
+## <a name="BKMK_ReasonCode150x"></a> Kody przyczyn 15xx
 
-Blok 15*xx* kody przyczyn dotyczy tworzenia aliasów. Tworzenie aliasów występuje, gdy dwie różne nazwy mogą uzyskać dostęp do lokalizacji w pamięci.
+15*xx* kody przyczyn dotyczy tworzenia aliasów. Tworzenie aliasów występuje, gdy dwie różne nazwy mogą uzyskać dostęp do lokalizacji w pamięci.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
-|1500|Możliwe tworzenie aliasów dla wielowymiarowych tablic.|
-|1501|Możliwe tworzenie aliasów na tablicach struktur.|
-|1502|Możliwe tworzenie aliasów, a indeks tablicy jest inny niż n + K.|
-|1503|Możliwe tworzenie aliasów, a indeks tablic ma wiele przesunięć.|
-|1504|Możliwe tworzenie aliasów; wymagałoby zbyt wiele kontroli czasu wykonywania.|
-|1505|Możliwe tworzenie aliasów, ale kontrole czasu wykonywania są zbyt złożone.|
+|1500|`Possible aliasing on multi-dimensional arrays.`|
+|1501|`Possible aliasing on arrays-of-structs.`|
+|1502|`Possible aliasing and array index is other than n + K.`|
+|1503|`Possible aliasing and array index has multiple offsets.`|
+|1504|`Possible aliasing; would require too many runtime checks.`|
+|1505|`Possible aliasing, but runtime checks are too complex.`|
 
 ```cpp
 void code_1500(int A[100][100], int B[100][100])
@@ -982,9 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Automatyczna paralelizacja i wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[Programowanie równoległe w kodzie natywnym](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop()](../../preprocessor/loop.md)<br/>
-[/Q Opcje (Operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-raport (Poziom raportowania automatycznej paralelizacji)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md)
+[automatyczna paralelizacja i wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Auto-Vectorizer w programie Visual Studio 2012 — omówienie](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma loop()](../../preprocessor/loop.md) \
+[/Q opcje (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md) \
+[/ Qpar raport (raportowania automatycznej Paralelizacji poziomu)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

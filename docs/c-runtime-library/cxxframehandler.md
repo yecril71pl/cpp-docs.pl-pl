@@ -18,11 +18,11 @@ helpviewer_keywords:
 - __CxxFrameHandler
 ms.assetid: b79ac97f-425a-42ae-9b91-8beaef935333
 ms.openlocfilehash: d059df597826c68f4f51eb85f592b7eb44ac7d1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344619"
 ---
 # <a name="cxxframehandler"></a>__CxxFrameHandler
 
@@ -44,13 +44,13 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
 *pExcept*<br/>
 Rekordu wyjątku, który jest przekazywany do możliwe `catch` instrukcji.
 
-*PRN*<br/>
+*pRN*<br/>
 Dynamiczne informacje na temat ramką stosu, która jest używana do obsługi wyjątków. Aby uzyskać więcej informacji zobacz ehdata.h.
 
 *pContext*<br/>
 Kontekst. (Nie używane na procesorach Intel).
 
-*podstawowego kontrolera domeny*<br/>
+*pDC*<br/>
 Dodatkowe informacje na temat funkcji wejścia i stosu ramki.
 
 ## <a name="return-value"></a>Wartość zwracana

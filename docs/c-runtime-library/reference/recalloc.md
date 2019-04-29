@@ -24,11 +24,11 @@ helpviewer_keywords:
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
 ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357725"
 ---
 # <a name="recalloc"></a>_recalloc
 
@@ -73,7 +73,7 @@ Ponieważ nowy blok może znajdować się w nowej lokalizacji pamięci, wskaźni
 
 **_recalloc —** ustawia **errno** do **ENOMEM** Jeśli alokacja pamięci nie powiedzie się lub Jeśli żądana ilość pamięci, przekracza **_heap_maxreq —**. Aby uzyskać informacje na temat tego i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**recalloc —** wywołania **realloc** aby można było używać języka C++ [_set_new_mode](set-new-mode.md) funkcję, aby ustawić nowy tryb obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii, **realloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem [_set_new_handler](set-new-handler.md). Domyślnie **realloc** nie wywołuje nowej procedury obsługi awarii w celu przydzielenia pamięci. Można zastąpić to zachowanie domyślne, aby, gdy **_recalloc —** nie może przydzielić pamięci, **realloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** — operator Nie, gdy zakończy się niepowodzeniem z tego samego powodu. Aby zastąpić domyślne, należy wywołać
+**recalloc —** wywołania **realloc** aby można było używać C++ [_set_new_mode](set-new-mode.md) funkcję, aby ustawić nowy tryb obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii, **realloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem [_set_new_handler](set-new-handler.md). Domyślnie **realloc** nie wywołuje nowej procedury obsługi awarii w celu przydzielenia pamięci. Można zastąpić to zachowanie domyślne, aby, gdy **_recalloc —** nie może przydzielić pamięci, **realloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** — operator Nie, gdy zakończy się niepowodzeniem z tego samego powodu. Aby zastąpić domyślne, należy wywołać
 
 ```C
 _set_new_mode(1);
@@ -89,7 +89,7 @@ Gdy aplikacja jest połączona z wersji debugowania bibliotek uruchomieniowych C
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_recalloc**|\<stdlib.h > i \<malloc.h >|
+|**_recalloc**|\<stdlib.h> and \<malloc.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

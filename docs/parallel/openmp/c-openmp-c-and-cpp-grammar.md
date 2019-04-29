@@ -3,11 +3,11 @@ title: C. Gramatyka OpenMP C i C++
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
 ms.openlocfilehash: 85e18161079b49e83cc9fedb3184ee220c889e75
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362949"
 ---
 # <a name="c-openmp-c-and-c-grammar"></a>C. Gramatyka OpenMP C i C++
 
@@ -25,7 +25,7 @@ Składni wyrażenia *termin*<sub>optseq</sub> jest odpowiednikiem *termin seq*<s
 *termin seq*:  
 &nbsp;&nbsp;&nbsp;&nbsp;*Termin*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*termin seq* *termin*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*termin seq* `,` *termin* 
+&nbsp;&nbsp;&nbsp;&nbsp;*termin seq* `,` *termin*
 
 ## <a name="c2-rules"></a>C.2 Reguły
 
@@ -106,7 +106,7 @@ Notacja zostało opisane w sekcji 6.1 c standard. Ten dodatek gramatyki przedsta
 *unique-for-clause*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `ordered`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *Typ harmonogramu*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *rodzaj harmonogramu* `,` *wyrażenia*    `)`
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *rodzaj harmonogramu* `,` *wyrażenia*   `)`
 
 *rodzaj harmonogramu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `static`<br/>
@@ -207,7 +207,7 @@ Notacja zostało opisane w sekcji 6.1 c standard. Ten dodatek gramatyki przedsta
 &nbsp;&nbsp;&nbsp;&nbsp;*threadprivate-directive*
 
 *threadprivate-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (` *Lista zmiennej* `)` *nowy wiersz* 
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (` *Lista zmiennej* `)` *nowy wiersz*
 
 *data-clause*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `private (` *Lista zmiennych*   `)`<br/>
@@ -217,7 +217,7 @@ Notacja zostało opisane w sekcji 6.1 c standard. Ten dodatek gramatyki przedsta
 &nbsp;&nbsp;&nbsp;&nbsp;  `shared (` *Lista zmiennych*   `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( shared )`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( none )`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *operatorem redukcji*`:`*liście zmiennych*     `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *operatorem redukcji*`:`*liście zmiennych*    `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `copyin (`  *Lista zmiennych*    `)`
 
 *operatorem redukcji*:<br/>
@@ -227,10 +227,10 @@ Notacja zostało opisane w sekcji 6.1 c standard. Ten dodatek gramatyki przedsta
 
 *Lista zmiennej*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista zmiennej* `,` *identyfikator* 
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista zmiennej* `,` *identyfikator*
 
 **/\* w języku C++ \*/**
 
 *Lista zmiennej*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*id-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista zmiennej* `,` *identyfikator wyrażenia* 
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista zmiennej* `,` *identyfikator wyrażenia*

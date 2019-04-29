@@ -29,11 +29,11 @@ helpviewer_keywords:
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341369"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
 
@@ -59,7 +59,7 @@ void _wassert(
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*<br/>
+*expression*<br/>
 Wyrażenie skalarne (w tym wyrażenia wskaźnika) obliczane na wartość różną od zera (**true**) lub równa 0 (**false**).
 
 *komunikat*<br/>
@@ -81,7 +81,7 @@ Komunikat diagnostyczny jest drukowany w znaki dwubajtowe. W związku z tym będ
 
 Miejsce docelowe komunikat diagnostyczny zależy od typu aplikacji, która wywołana procedura. Aplikacje konsoli otrzymać komunikat za pośrednictwem **stderr**. W przypadku aplikacji z Windows **asercja** wywołuje Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) funkcji, aby utworzyć okno komunikatu, aby wyświetlić wiadomość wraz z **OK** przycisku. Kiedy użytkownik kliknie **OK**, program przerywa natychmiast.
 
-Gdy aplikacja jest połączona z wersji debugowania bibliotek wykonawczych **asercja** tworzy okno komunikatu o trzy przyciski: **przerwać**, **ponów próbę wykonania**i **Ignoruj**. Jeśli użytkownik kliknie **przerwać**, program przerywa natychmiast. Jeśli użytkownik kliknie **ponów**, wywoływana jest debugera i użytkownik mógł debugować program, jeśli włączone jest debugowanie just-in-time (JIT). Jeśli użytkownik kliknie **Ignoruj**, **asercja** kontynuuje normalne wykonywanie: tworzenie okno komunikatu z **OK** przycisku. Należy pamiętać, że kliknięcie **Ignoruj** gdy istnieje warunek błędu może spowodować niezdefiniowane zachowanie.
+Gdy aplikacja jest połączona z wersji debugowania bibliotek wykonawczych **asercja** tworzy okno komunikatu o trzy przyciski: **Przerwij**, **ponów**, i **Ignoruj**. Jeśli użytkownik kliknie **przerwać**, program przerywa natychmiast. Jeśli użytkownik kliknie **ponów**, wywoływana jest debugera i użytkownik mógł debugować program, jeśli włączone jest debugowanie just-in-time (JIT). Jeśli użytkownik kliknie **Ignoruj**, **asercja** kontynuuje normalne wykonywanie: tworzenie okno komunikatu z **OK** przycisku. Należy pamiętać, że kliknięcie **Ignoruj** gdy istnieje warunek błędu może spowodować niezdefiniowane zachowanie.
 
 Aby uzyskać więcej informacji na temat debugowania CRT, zobacz [techniki testowania CRT](/visualstudio/debugger/crt-debugging-techniques).
 

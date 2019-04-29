@@ -41,11 +41,11 @@ helpviewer_keywords:
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
 ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354712"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
@@ -86,7 +86,7 @@ Przechowywane dane
 *Format*<br/>
 Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -116,14 +116,14 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stscanf —**|**sscanf**|**sscanf**|**swscanf**|
-|**_stscanf_l —**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
+|**_stscanf_l**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**sscanf —**, **_sscanf_l —**|\<stdio.h>|
-|**swscanf —**, **_swscanf_l —**|\<stdio.h > lub \<wchar.h >|
+|**swscanf**, **_swscanf_l**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

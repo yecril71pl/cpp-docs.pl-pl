@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349910"
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 
@@ -102,7 +102,7 @@ void CppAmpMethod() {
 
 Te same elementy podstawowe są obecne, ale użyte są konstrukcje C++ AMP:
 
-- Dane: Używasz tablic C++ do konstruowania trzech C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) obiektów. Należy dostarczyć czterech wartości do konstruowania `array_view` obiektu: wartości danych, Ranking, typ elementu i długość `array_view` w każdym wymiarze. Ranga i typ są przekazywane jako parametry typu. Dane i długość są przekazywane jako parametry konstruktora. W tym przykładzie tablica C++, która jest przekazywana do konstruktora jest jednowymiarowa. Ranga i długość są używane do konstruowania prostokątnego kształtu danych w `array_view` obiektów i danych, wartości są używane do wypełnienia tablicy. Biblioteka wykonawcza obejmuje również [array, klasa](../../parallel/amp/reference/array-class.md), która posiada interfejs podobny `array_view` klasy i jest omówiona w dalszej części tego artykułu.
+- Dane: Możesz użyć C++ tablic do konstruowania trzech C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) obiektów. Należy dostarczyć czterech wartości do konstruowania `array_view` obiektu: wartości danych, Ranking, typ elementu i długość `array_view` w każdym wymiarze. Ranga i typ są przekazywane jako parametry typu. Dane i długość są przekazywane jako parametry konstruktora. W tym przykładzie tablica C++, która jest przekazywana do konstruktora jest jednowymiarowa. Ranga i długość są używane do konstruowania prostokątnego kształtu danych w `array_view` obiektów i danych, wartości są używane do wypełnienia tablicy. Biblioteka wykonawcza obejmuje również [array, klasa](../../parallel/amp/reference/array-class.md), która posiada interfejs podobny `array_view` klasy i jest omówiona w dalszej części tego artykułu.
 
 - Iteracja: [Parallel_for_each — funkcja (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) udostępnia mechanizm do iteracji na elementach danych lub *domenę obliczeniową*. W tym przykładzie domena obliczeniowa jest określona przez `sum.extent`. Kod, który chcesz wykonać, znajduje się w wyrażeniu lambda lub *funkcja jądra*. `restrict(amp)` Wskazuje, że używany jest tylko podzbiór języka C++, który C++ AMP może przyspieszyć.
 

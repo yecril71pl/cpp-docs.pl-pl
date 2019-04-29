@@ -13,11 +13,11 @@ helpviewer_keywords:
 - setjmp function, C++ programs
 ms.assetid: 96be8816-f6f4-4567-9a9c-0c3c720e37c5
 ms.openlocfilehash: 4ead12f79701899b3977993c9de3c3803023150f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364522"
 ---
 # <a name="using-setjmp-and-longjmp"></a>Przy użyciu funkcji setjmp i longjmp
 
@@ -32,7 +32,7 @@ Jeśli zdecydujesz się używać `setjmp` i `longjmp` w programie C++, również
 
 Jeśli używasz [/EH](../build/reference/eh-exception-handling-model.md) opcji do kompilowania kodu C++, destruktory obiektów lokalnych są wywoływane podczas odwijania stosu. Jednak jeśli używasz **/EHS** lub **/ehsc** kompilacji i jednej funkcji, która używa [noexcept](../cpp/noexcept-cpp.md) wywołania `longjmp`, wówczas destruktor operacji unwind dla tej funkcji może nie występować, w zależności od stanu optymalizatora.
 
-W kodzie przenośnym gdy `longjmp` wywołanie jest wykonywana, prawidłowe niszczenie obiektów opartych na klatkach jawnie nie jest gwarantowane przez standard i może nie być obsługiwana przez inne kompilatory. Cię powiadomić o poziom ostrzeżeń 4, wywołanie `setjmp` powoduje, że ostrzeżenie C4611: interakcja między "_setjmp powoduje" i zniszczeniem obiektu języka C++ nie jest przenośna.
+W kodzie przenośnym gdy `longjmp` wywołanie jest wykonywana, prawidłowe niszczenie obiektów opartych na klatkach jawnie nie jest gwarantowane przez standard i może nie być obsługiwana przez inne kompilatory. Cię powiadomić o poziom ostrzeżeń 4, wywołanie `setjmp` powoduje, że ostrzeżenie C4611: interakcja między "_setjmp"powoduje i C++ zniszczenie obiektu nie jest przenośna.
 
 **END specyficzny dla Microsoft**
 

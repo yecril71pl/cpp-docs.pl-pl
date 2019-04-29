@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
 ms.openlocfilehash: dad60b1fec4d402d340eeb4c87028975ef09e3ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340251"
 ---
 # <a name="chgsign-chgsignf-chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
@@ -68,7 +68,7 @@ Wartość zmiennoprzecinkowa, który ma zostać zmieniony.
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_chgsign**|\<float.h>|
-|**_chgsignf —**, **_chgsignl —**|\<math.h>|
+|**_chgsignf**, **_chgsignl**|\<math.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

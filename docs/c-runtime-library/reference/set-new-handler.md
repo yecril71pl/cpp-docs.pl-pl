@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356503"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -53,7 +53,7 @@ Zwraca wskaźnik do poprzedniego wyjątku, które są zarejestrowane w wyniku fu
 
 ## <a name="remarks"></a>Uwagi
 
-C++ **_set_new_handler** funkcji określa funkcję obsługi wyjątków, który przejmie kontrolę, jeśli **nowe** operator nie może przydzielić pamięci. Jeśli **nowe** zakończy się niepowodzeniem, system środowiska wykonawczego automatycznie wywołuje funkcję obsługi wyjątków, który został przekazany jako argument do **_set_new_handler**. **_PNH**, zdefiniowane w New.h, jest wskaźnikiem do funkcji, która zwraca typ **int** i przyjmuje argument typu **size_t**. Użyj **size_t** Aby określić ilość miejsca do przydzielenia.
+C++ **_Set_new_handler** funkcji określa funkcję obsługi wyjątków, który przejmie kontrolę, jeśli **nowe** operator nie może przydzielić pamięci. Jeśli **nowe** zakończy się niepowodzeniem, system środowiska wykonawczego automatycznie wywołuje funkcję obsługi wyjątków, który został przekazany jako argument do **_set_new_handler**. **_PNH**, zdefiniowane w New.h, jest wskaźnikiem do funkcji, która zwraca typ **int** i przyjmuje argument typu **size_t**. Użyj **size_t** Aby określić ilość miejsca do przydzielenia.
 
 Nie ma żadnych domyślny program obsługi.
 
@@ -88,7 +88,7 @@ Możesz zapisać adresu funkcji, który został ostatnio przekazany do **_set_ne
    // . . .
 ```
 
-C++ [_set_new_mode](set-new-mode.md) funkcja Ustawia nowy tryb obsługi dla [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii, **— funkcja malloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem **_set_new_handler**. Domyślnie **— funkcja malloc** nie wywołuje nowej procedury obsługi awarii w celu przydzielenia pamięci. Można zastąpić to zachowanie domyślne tak, aby, gdy **— funkcja malloc** nie może przydzielić pamięci, **— funkcja malloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** jest operator Jeśli jej nie powiedzie się z tego samego powodu. Aby zastąpić domyślne, wywołaj polecenie:
+C++ [_Set_new_mode](set-new-mode.md) funkcja Ustawia nowy tryb obsługi dla [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii, **— funkcja malloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem **_set_new_handler**. Domyślnie **— funkcja malloc** nie wywołuje nowej procedury obsługi awarii w celu przydzielenia pamięci. Można zastąpić to zachowanie domyślne tak, aby, gdy **— funkcja malloc** nie może przydzielić pamięci, **— funkcja malloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** jest operator Jeśli jej nie powiedzie się z tego samego powodu. Aby zastąpić domyślne, wywołaj polecenie:
 
 ```cpp
 _set_new_mode(1);

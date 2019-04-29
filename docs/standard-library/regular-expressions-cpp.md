@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369036"
 ---
 # <a name="regular-expressions-c"></a>Wyrażenia regularne (C++)
 
@@ -22,11 +22,11 @@ Standardowa biblioteka C++ obsługuje wiele gramatykach wyrażeń regularnych. W
 Gramatyka wyrażeń regularnych do użycia przez określono przy użyciu jednego z `std::regex_constants::syntax_option_type` wartości wyliczenia. Te gramatykach wyrażeń regularnych są zdefiniowane w std::regex_constants:
 
 - `ECMAScript`: To jest najbliżej gramatyki posługują się JavaScript oraz języki, platformy .NET.
-- `basic`Podstawowe wyrażeń regularnych POSIX lub BRE.
-- `extended`POSIX rozszerzonych wyrażeń regularnych lub ERE.
-- `awk`: W tym `extended`, ale ma dodatkowych wyprowadza niedrukowalne znaki.
-- `grep`: W tym `basic`, ale mogą również nowy wiersz znaków ('\n') do oddzielania alternatyw.
-- `egrep`: W tym `extended`, ale również umożliwia znakami nowego wiersza do oddzielania alternatyw.
+- `basic`: Podstawowe wyrażeń regularnych POSIX lub BRE.
+- `extended`: POSIX — rozszerzone wyrażenia regularne lub ERE.
+- `awk`: Jest to `extended`, ale ma dodatkowych wyprowadza niedrukowalne znaki.
+- `grep`: Jest to `basic`, ale mogą również nowy wiersz znaków ('\n') do oddzielania alternatyw.
+- `egrep`: Jest to `extended`, ale również umożliwia znakami nowego wiersza do oddzielania alternatyw.
 
 Domyślnie, jeśli gramatyki nie zostanie określony `ECMAScript` zakłada, że. Może być określona tylko jedna gramatyki.
 
@@ -304,7 +304,7 @@ Sekwencja unikowa dsw to skrócona nazwa klasy znaków, jak pokazano w poniższe
 |„\s”|„[[:s:]]”|„[[:space:]]”|
 |„\S”|„[^[:s:]]”|„[^[:space:]]”|
 |„\w”|„[[:w:]]”|"[a-zA-Z0-9_]"\*|
-|„\W”|„[^[:w:]]”|"[^ a-zA-Z0-9_]"\*|
+|„\W”|„[^[:w:]]”|"[^a-zA-Z0-9_]"\*|
 
 \*Zestaw znaków ASCII
 
@@ -393,7 +393,7 @@ Zwykły znak to dowolny prawidłowy znak, który nie ma specjalnego znaczenia w 
 
 W `ECMAScript`, następujące znaki mają specjalne znaczenie:
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
 
 W `basic` i `grep`, następujące znaki mają specjalne znaczenie:
 
@@ -480,7 +480,7 @@ Częściowe wystąpienie powiedzie się, jeśli dopasowanie osiąga koniec sekwe
 |"$&"|"&"|Sekwencja znaków, który odpowiada całego wyrażenia regularnego (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (znak dolara następuje odwrócony pojedynczy cudzysłów)||Sekwencja znaków poprzedzająca podsekwencję, która odpowiada wyrażeniu regularnemu (`[match.prefix().first, match.prefix().second)`)|
+|"$\`" (znak dolara następuje odwrócony pojedynczy cudzysłów) || Sekwencja znaków poprzedzająca podsekwencję, która odpowiada wyrażeniu regularnemu (`[match.prefix().first, match.prefix().second)`)|
 |„$'” (znak dolara, po którym następuje cudzysłów pojedynczy)||Sekwencja znaków, który następuje po podsekwencję, która odpowiada wyrażeniu regularnemu (`[match.suffix().first, match.suffix().second)`)|
 |„$n”|„\n”|Sekwencja znaków, który pasuje do grupy przechwytywania w pozycji `n`, gdzie `n` jest liczbą z zakresu od 0 do 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|„\n”|

@@ -3,11 +3,11 @@ title: Podsumowanie dotyczące instrukcji
 ms.date: 11/04/2016
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
 ms.openlocfilehash: 76a549de7791f8af36fbf150c19cf6ed0de2cbe6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345204"
 ---
 # <a name="summary-of-statements"></a>Podsumowanie dotyczące instrukcji
 

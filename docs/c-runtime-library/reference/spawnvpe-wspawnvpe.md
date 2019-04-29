@@ -32,11 +32,11 @@ helpviewer_keywords:
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
 ms.openlocfilehash: a98cc3c441261a92876b94e1231e66bb71e9d3d9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355084"
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -101,7 +101,7 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *ar
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_spawnvpe**|\<stdio.h > lub \<process.h >|
-|**_wspawnvpe —**|\<stdio.h > lub \<wchar.h >|
+|**_wspawnvpe**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

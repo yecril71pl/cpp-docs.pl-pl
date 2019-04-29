@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353576"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -73,7 +73,7 @@ void va_start(
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 Typ argumentu do pobrania.
 
 *arg_ptr*<br/>
@@ -94,7 +94,7 @@ Parametr, który poprzedza pierwszy argument opcjonalny.
 
 ## <a name="remarks"></a>Uwagi
 
-**Va_arg**, **va_copy**, **va_end**, i **va_start** makra umożliwiają przenośnych dostępu argumenty do funkcji po Funkcja przyjmuje zmienną liczbę argumentów. Istnieją dwie wersje makra: makra zdefiniowane w STDARG. H są zgodne z ISO C99 standard. makra zdefiniowane w VARARGS. H są przestarzałe, ale zostaną zachowane dla zgodności z poprzednimi wersjami z kodem, który został napisany przed standardowa C89 ANSI.
+**Va_arg**, **va_copy**, **va_end**, i **va_start** makra umożliwiają przenośnych dostępu argumenty do funkcji po Funkcja przyjmuje zmienną liczbę argumentów. Istnieją dwie wersje makra: Makra zdefiniowane w STDARG. H są zgodne z ISO C99 standard. makra zdefiniowane w VARARGS. H są przestarzałe, ale zostaną zachowane dla zgodności z poprzednimi wersjami z kodem, który został napisany przed standardowa C89 ANSI.
 
 Te makra przyjęto założenie, że funkcja przyjmuje stałą liczbą wymaganych argumentów, a następnie zmienną liczbę argumentów opcjonalnych. Wymagane argumenty są deklarowane jako zwykłe parametrów funkcji i jest możliwy za pośrednictwem nazw parametrów. Argumenty opcjonalne są dostępne za pośrednictwem makra w STDARG. H (lub VARARG). Godz. dla kodu, który został napisany przed standard ANSI C89), który ustawia wskaźnik do pierwszego opcjonalny argument na liście argumentów pobiera argumenty z listy i resetuje wskaźnik po ukończeniu przetwarzanie argumentów.
 

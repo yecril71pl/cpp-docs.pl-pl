@@ -83,11 +83,11 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: f3e733bced407f96414783612165984c71b63775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369570"
 ---
 # <a name="regexconstants-namespace"></a>regex_constants — przestrzeń nazw
 
@@ -109,9 +109,9 @@ Przestrzeń nazw `regex_constants` hermetyzuje kilka typów flag i ich skojarzon
 
 |||
 |-|-|
-|[error_type —](#error_type)|Flagi unikatowe dla raportowania błędów składni wyrażeń regularnych.|
-|[match_flag_type —](#match_flag_type)|Flagi unikatowe dla wyrażenia regularnego, opcje dopasowania.|
-|[syntax_option_type —](#syntax_option_type)|Flagi służąca do wybierania opcji składni.|
+|[error_type](#error_type)|Flagi unikatowe dla raportowania błędów składni wyrażeń regularnych.|
+|[match_flag_type](#match_flag_type)|Flagi unikatowe dla wyrażenia regularnego, opcje dopasowania.|
+|[syntax_option_type](#syntax_option_type)|Flagi służąca do wybierania opcji składni.|
 
 ## <a name="requirements"></a>Wymagania
 

@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362741"
 ---
 # <a name="unorderedset-class"></a>unordered_set — Klasa
 
@@ -195,7 +195,7 @@ class unordered_set;
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy.|
 |[Liczba](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
-|[emplace —](#emplace)|Dodaje element skonstruowany na miejscu.|
+|[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
 |[pusty](#empty)|Sprawdza, czy nie ma żadnych elementów.|
 |[koniec](#end)|Określa koniec kontrolowanej sekwencji.|
@@ -204,7 +204,7 @@ class unordered_set;
 |[Znajdź](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
-|[Wstaw](#insert)|Dodaje elementy.|
+|[insert](#insert)|Dodaje elementy.|
 |[key_eq](#key_eq)|Pobiera przechowywany obiekt funkcji porównywania.|
 |[load_factor](#load_factor)|Oblicza średnią liczbę elementów na przedział.|
 |[max_bucket_count](#max_bucket_count)|Pobiera maksymalną liczbę przedziałów.|

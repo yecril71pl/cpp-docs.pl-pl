@@ -24,12 +24,12 @@ helpviewer_keywords:
 - wcsicmp function
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
 ms.openlocfilehash: ff3e160af253765fbafc7c3ee0082639c231a1e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353654"
 ---
 # <a name="stricmp-wcsicmp"></a>stricmp, wcsicmp
 
-Te funkcje POSIX są przestarzałe. Użyj zgodność ISO C++ [_stricmp —, _wcsicmp —, _mbsicmp —, _stricmp_l —, _wcsicmp_l —, _mbsicmp_l —](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) zamiast tego.
+Te funkcje POSIX są przestarzałe. Użyj ISO C++ zgodność [_stricmp —, _wcsicmp —, _mbsicmp —, _stricmp_l —, _wcsicmp_l —, _mbsicmp_l —](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) zamiast tego.

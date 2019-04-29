@@ -6,11 +6,11 @@ helpviewer_keywords:
 - loop structures, iteration statements
 ms.assetid: bf6d75f7-ead2-426a-9c47-33847f59b8c7
 ms.openlocfilehash: 72f81e2fc58a31db0c4cd3f77ba182bd8b8152a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366579"
 ---
 # <a name="iteration-statements-c"></a>Instrukcje iteracji (C++)
 
@@ -24,7 +24,7 @@ C++ zapewnia cztery instrukcje iteracji — [podczas](../cpp/while-statement-cpp
 |---------------|------------------|--------------------|---------------|
 |**while**|Góry pętli|Nie|Nie|
 |**do**|Dołu pętli|Nie|Nie|
-|**for**|Góry pętli|Tak|Tak|
+|**for**|Góry pętli|Yes|Tak|
 |**for z zakresem**|Góry pętli|Tak|Tak|
 
 Część instrukcji w instrukcji iteracji nie może być deklaracji. Jednak może być instrukcji złożonej zawierającej deklaracji.

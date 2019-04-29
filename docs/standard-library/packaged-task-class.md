@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
 ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370674"
 ---
 # <a name="packagedtask-class"></a>packaged_task — Klasa
 
@@ -61,8 +61,8 @@ class packaged_task;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[packaged_task::operator =](#op_eq)|Przesyła asynchronicznego stanu stowarzyszonego z określonego obiektu.|
-|[packaged_task:: operator() —](#op_call)|Wywołuje obiekt, który znajduje się w stanie stowarzyszonym asynchroniczne niepodzielnie przechowuje zwrócona wartość i ustawia stan *gotowe*.|
+|[packaged_task::operator=](#op_eq)|Przesyła asynchronicznego stanu stowarzyszonego z określonego obiektu.|
+|[packaged_task::operator()](#op_call)|Wywołuje obiekt, który znajduje się w stanie stowarzyszonym asynchroniczne niepodzielnie przechowuje zwrócona wartość i ustawia stan *gotowe*.|
 |[packaged_task::operator bool](#op_bool)|Określa, czy obiekt posiada asynchronicznego stanu stowarzyszonego.|
 
 ## <a name="requirements"></a>Wymagania

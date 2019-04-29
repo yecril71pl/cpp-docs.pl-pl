@@ -44,11 +44,11 @@ helpviewer_keywords:
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
 ms.openlocfilehash: 7e93972ccd77d730d873177fe92f958877c83fe4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365367"
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 
@@ -83,7 +83,7 @@ int _vfwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
@@ -118,15 +118,15 @@ Jeśli *strumienia* lub *format* jest wskaźnikiem typu null lub jeżeli ciąg f
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vftprintf_p —**|**_vfprintf_p**|**_vfprintf_p**|**_vfwprintf_p**|
-|**_vftprintf_p_l —**|**_vfprintf_p_l**|**_vfprintf_p_l**|**_vfwprintf_p_l**|
+|**_vftprintf_p**|**_vfprintf_p**|**_vfprintf_p**|**_vfwprintf_p**|
+|**_vftprintf_p_l**|**_vfprintf_p_l**|**_vfprintf_p_l**|**_vfwprintf_p_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_vfprintf_p —**, **_vfprintf_p_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
-|**_vfwprintf_p —**, **_vfwprintf_p_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vfprintf_p**, **_vfprintf_p_l**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
+|**_vfwprintf_p**, **_vfwprintf_p_l**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
 \* Wymagane dla zgodności systemu UNIX V.
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339042"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicjalizacja zestawów mieszanych
 
-Programiści Windows zawsze musi być ostrożnym blokady modułu ładującego podczas uruchamiania kodu podczas `DllMain`. Istnieją jednak pewne dodatkowe kwestie, które dochodzą do głosu podczas pracy z C + +/ clr trybu mieszanego zestawów.
+Programiści Windows zawsze musi być ostrożnym blokady modułu ładującego podczas uruchamiania kodu podczas `DllMain`. Istnieją jednak pewne dodatkowe kwestie, które dochodzą do głosu podczas pracy z C++zestawy mieszane/CLR.
 
 Kod w ramach [DllMain](/windows/desktop/Dlls/dllmain) nie może uzyskać dostępu do środowiska CLR. Oznacza to, że `DllMain` powinien sprawia, że żadne wywołania do funkcji zarządzanej, bezpośrednio lub pośrednio; bez kodu zarządzanego powinny być zadeklarowane lub zaimplementowane w `DllMain`; i nie wyrzucania elementów bezużytecznych lub biblioteki automatyczne ładowanie powinno odbywać się w ramach `DllMain` .
 

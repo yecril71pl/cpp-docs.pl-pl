@@ -27,15 +27,15 @@ helpviewer_keywords:
 - pseudorandom numbers
 - numbers, generating pseudorandom
 ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357775"
 ---
 # <a name="rand"></a>rand
 
-Generuje numer pseudolosowych przy użyciu algorytmu dobrze znanych i w pełni odtworzenia. Więcej programowo bezpiecznego wersja tej funkcji jest dostępna; zobacz [rand_s —](rand-s.md). Kody generowane przez **rand** nie są kryptograficznie bezpieczne. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub funkcji zadeklarowanych w standardowej bibliotece języka C++ w [ \<losowy >](../../standard-library/random.md).
+Generuje numer pseudolosowych przy użyciu algorytmu dobrze znanych i w pełni odtworzenia. Więcej programowo bezpiecznego wersja tej funkcji jest dostępna; zobacz [rand_s —](rand-s.md). Kody generowane przez **rand** nie są kryptograficznie bezpieczne. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub funkcji zadeklarowanych w C++ biblioteki standardowej w [ \<losowy >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,7 +51,7 @@ int rand( void );
 
 **Rand** funkcja zwraca pseudolosowych liczbę całkowitą z zakresu od 0 do **RAND_MAX** (32767). Użyj [srand —](srand.md) funkcji, aby zainicjować generatora liczb pseudolosowych przed wywołaniem **rand**.
 
-**Rand** funkcja generuje sekwencję dobrze znanych i nie jest przeznaczone do użycia w funkcji kryptograficznych. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub funkcji zadeklarowanych w standardowej bibliotece języka C++ w [ \<losowy >](../../standard-library/random.md). Aby uzyskać informacje o problem z **rand** i w jaki sposób \<losowy > adresy te wad, zobacz ten film wideo, mają prawo [rand uznawane za szkodliwe](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+**Rand** funkcja generuje sekwencję dobrze znanych i nie jest przeznaczone do użycia w funkcji kryptograficznych. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub funkcji zadeklarowanych w C++ biblioteki standardowej w [ \<losowy >](../../standard-library/random.md). Aby uzyskać informacje o problem z **rand** i w jaki sposób \<losowy > adresy te wad, zobacz ten film wideo, mają prawo [rand uznawane za szkodliwe](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 ## <a name="requirements"></a>Wymagania
 

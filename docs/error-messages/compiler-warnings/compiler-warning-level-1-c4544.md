@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
 ms.openlocfilehash: f2a3f2e64a6a859add8182de4fc883c735563e92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352926"
 ---
 # <a name="compiler-warning-level-1-c4544"></a>Kompilator ostrzeżenie (poziom 1) C4544
 
-"deklaracją": domyślny argument szablonu został zignorowany dla tej deklaracji szablonu
+"deklaracją": Argument szablonu domyślnego został zignorowany dla tej deklaracji szablonu
 
 Domyślny argument szablonu został określony w nieprawidłowej lokalizacji i został zignorowany. Domyślny argument szablonu dla szablonu klasy można określić tylko w deklaracji lub definicji szablonu klasy a nie w składowej szablonu klasy.
 

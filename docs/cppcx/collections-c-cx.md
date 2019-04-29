@@ -1,19 +1,19 @@
 ---
-title: Kolekcje (C + +/ CX)
+title: Kolekcje (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
 ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347346"
 ---
-# <a name="collections-ccx"></a>Kolekcje (C + +/ CX)
+# <a name="collections-ccx"></a>Kolekcje (C++/CX)
 
-W języku C + +/ CX programu, aby włączyć bezpłatne korzystanie z kontenerów standardowy szablon biblioteki (STL) lub dowolny inny typ zdefiniowany przez użytkownika kolekcji. Jednak gdy przekazujesz kolekcji i z powrotem między interfejsem binarnym aplikacji (ABI) środowiska uruchomieniowego Windows — na przykład, kontrolki XAML lub klienta JavaScript — należy użyć typów kolekcji środowiska wykonawczego Windows.
+W C++/CX program umożliwia bezpłatne użycie kontenery biblioteki standardowych szablonów (STL) lub dowolny inny typ zdefiniowany przez użytkownika kolekcji. Jednak gdy przekazujesz kolekcji i z powrotem między interfejsem binarnym aplikacji (ABI) środowiska uruchomieniowego Windows — na przykład, kontrolki XAML lub klienta JavaScript — należy użyć typów kolekcji środowiska wykonawczego Windows.
 
-Środowisko wykonawcze Windows definiuje interfejsach dla kolekcji powiązanych typów i C + +/ CX zapewnia konkretnych implementacji C++ w pliku nagłówkowym collection.h. Ta ilustracja przedstawia relacje między tymi typami kolekcji:
+Środowisko wykonawcze Windows definiuje interfejsów kolekcji i powiązanych typów i C++/CX zapewnia betonu C++ implementacji w pliku nagłówkowym collection.h. Ta ilustracja przedstawia relacje między tymi typami kolekcji:
 
 ![C&#43;&#43;&#47;CX drzewo dziedziczenia dla typów kolekcji](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;CX drzewo dziedziczenia dla typów kolekcji")
 
@@ -28,7 +28,7 @@ W języku C + +/ CX programu, aby włączyć bezpłatne korzystanie z konteneró
    > [!IMPORTANT]
    > Serwer proxy Iteratory `VectorIterator` i `VectorViewIterator` korzystanie z obiektów pośredniczących `VectoryProxy<T>` i `ArrowProxy<T>` użycia za pomocą kontenerów STL. Aby uzyskać więcej informacji zobacz "VectorProxy elements" w dalszej części tego artykułu.
 
-- C + +/ CX kolekcji typów bezpieczeństwo wątków w tej samej gwarantuje, że obsługuje kontenery STL pomocy technicznej.
+- C++/CX kolekcji typów bezpieczeństwo wątków w tej samej gwarantuje, że obsługuje kontenery STL pomocy technicznej.
 
 - [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) i [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) zdefiniowania zdarzeń, które są wywoływane, gdy zmienia się kolekcja na różne sposoby. Wdrażając te interfejsy [platform::Collections:: map](../cppcx/platform-collections-map-class.md) i [platform::Collections:: Vector](../cppcx/platform-collections-vector-class.md) obsługuje powiązanie danych z kolekcjami XAML. Na przykład, jeśli masz `Vector` , jest powiązany z danymi `Grid`, kiedy należy dodać element do kolekcji, zmiany są widoczne w Interfejsie użytkownika siatki.
 
@@ -96,7 +96,7 @@ Elementy w [platform::Collections:: map](../cppcx/platform-collections-map-class
 
 ## <a name="collection-types"></a>Typy kolekcji
 
-Kolekcje można podzielić na cztery kategorie: wersje można modyfikować i tylko do odczytu programu sekwencji kolekcji i kolekcji asocjacyjnych. Ponadto, C + +/ CX zwiększa kolekcje, zapewniając trzy klasy iteratora, które ułatwiają uzyskiwanie dostępu do kolekcji.
+Kolekcje można podzielić na cztery kategorie: wersje można modyfikować i tylko do odczytu programu sekwencji kolekcji i kolekcji asocjacyjnych. Ponadto C++/CX zwiększa kolekcje, zapewniając trzy klasy iteratora, które ułatwiają uzyskiwanie dostępu do kolekcji.
 
 Można zmienić elementy kolekcji można modyfikować, ale elementów kolekcji tylko do odczytu, który jest znany jako *widoku*, mogą być odczytane tylko. Elementy [platform::Collections:: Vector](../cppcx/platform-collections-vector-class.md) lub[platform::Collections:: vectorview](../cppcx/platform-collections-vectorview-class.md) kolekcji jest możliwy za pomocą iteratora lub kolekcji [Vector::GetAt](../cppcx/platform-collections-vector-class.md#getat) i indeksu. Elementy kolekcji asocjacyjnych jest możliwy za pomocą kolekcji [Map::Lookup](../cppcx/platform-collections-map-class.md#lookup) , jak i klucz.
 
@@ -125,7 +125,7 @@ Iterator STL, który spełnia wymagania STL `const` iteratora dostępu swobodneg
 
 ### <a name="begin-and-end-functions"></a>Funkcje BEGIN() i metodę end()
 
-Ułatwiają korzystanie z biblioteki STL, aby przetworzyć `Vector`, `VectorView`, `Map`, `MapView`i dowolnego `Windows::Foundation::Collections` obiektów, w języku C + +/ CX obsługuje przeciążenia [begin, funkcja](../cppcx/begin-function.md) i [zakończenia Funkcja](../cppcx/end-function.md) funkcje nieczłonkowskie.
+Ułatwiają korzystanie z biblioteki STL, aby przetworzyć `Vector`, `VectorView`, `Map`, `MapView`i dowolnego `Windows::Foundation::Collections` obiektów C++/CX obsługuje przeciążenia [begin, funkcja](../cppcx/begin-function.md) i [end, funkcja](../cppcx/end-function.md) funkcje nieczłonkowskie.
 
 W poniższej tabeli wymieniono dostępne Iteratory i funkcje.
 
@@ -147,4 +147,4 @@ W poniższej tabeli wymieniono dostępne Iteratory i funkcje.
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

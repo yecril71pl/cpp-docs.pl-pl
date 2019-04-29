@@ -28,11 +28,11 @@ helpviewer_keywords:
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
 ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339104"
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 
@@ -88,7 +88,7 @@ Każda z tych funkcji ładuje i uruchamia nowy proces, przekazując tablicę wsk
 
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
 |--------------|---------------------|---------------------|
-|**_execvp —**|\<process.h >|\<errno.h>|
+|**_execvp**|\<process.h>|\<errno.h>|
 |**_wexecvp**|\<process.h > lub \<wchar.h >|\<errno.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368737"
 ---
 # <a name="platformexception-class"></a>Platform::Exception, klasa
 
@@ -131,7 +131,7 @@ Wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Większość wyjątków rozpoczyna pracę jako błędy COM, które są zwracane jako wartości HRESULT. C + +/ CX konwertuje te wartości na Platform::Exception ^ obiektów i ta właściwość zawiera wartość oryginalnego kodu błędu.
+Większość wyjątków rozpoczyna pracę jako błędy COM, które są zwracane jako wartości HRESULT. C++/CX konwertuje te wartości na Platform::Exception ^ obiektów i ta właściwość zawiera wartość oryginalnego kodu błędu.
 
 ## <a name="message"></a> Właściwość Exception::Message
 
@@ -149,7 +149,7 @@ Wyjątki, które pochodzą ze środowiska wykonawczego Windows jest dostarczany 
 
 ### <a name="remarks"></a>Uwagi
 
-W systemie Windows 8 ta właściwość jest tylko do odczytu, ponieważ wyjątki w tej wersji środowiska uruchomieniowego Windows są przenoszone przez ABI tylko jako wartości HRESULT. W Windows 8.1 bogatsze informacje o wyjątku są przesyłane między interfejsem ABI, i możesz podać niestandardowy komunikat, że inne składniki mogą uzyskiwać dostęp do programowego. Aby uzyskać więcej informacji, zobacz [wyjątki (C + +/ CX)](../cppcx/exceptions-c-cx.md).
+W systemie Windows 8 ta właściwość jest tylko do odczytu, ponieważ wyjątki w tej wersji środowiska uruchomieniowego Windows są przenoszone przez ABI tylko jako wartości HRESULT. W Windows 8.1 bogatsze informacje o wyjątku są przesyłane między interfejsem ABI, i możesz podać niestandardowy komunikat, że inne składniki mogą uzyskiwać dostęp do programowego. Aby uzyskać więcej informacji, zobacz [wyjątków (C++/CX)](../cppcx/exceptions-c-cx.md).
 
 ## <a name="see-also"></a>Zobacz także
 

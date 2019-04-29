@@ -14,11 +14,11 @@ helpviewer_keywords:
 - scalar new
 ms.assetid: 4ae51618-a4e6-4172-b324-b99d86d1bdca
 ms.openlocfilehash: bee8ae644346ca216e48994fe89617fc9ceeaf3d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342227"
 ---
 # <a name="operator-new-crt"></a>nowy operator (CRT)
 

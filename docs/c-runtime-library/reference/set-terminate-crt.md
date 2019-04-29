@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356449"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ Zwraca wskaźnik do poprzedniej funkcji zarejestrowane przez **set_terminate** t
 
 ## <a name="remarks"></a>Uwagi
 
-**Set_terminate** funkcja instaluje *termFunction* jako funkcja wywoływana przez **zakończyć**. **set_terminate** jest używana z obsługi wyjątków C++ i może być wywoływana w dowolnym momencie w swoim programie, zanim wyjątku. **Zakończenie** wywołania [przerwać](abort.md) domyślnie. Możesz zmienić to ustawienie domyślne, pisanie funkcji zakończenia i wywołanie **set_terminate** o nazwie funkcji jako argumentem. **Zakończenie** wywołuje funkcję ostatniego podawana jako argument do **set_terminate**. Po zdatną żądanego zadania oczyszczania *termFunction* powinno zakończyć program. Jeśli go nie istnieje (jeśli jest on wraca do), [przerwać](abort.md) jest wywoływana.
+**Set_terminate** funkcja instaluje *termFunction* jako funkcja wywoływana przez **zakończyć**. **set_terminate** jest używana z C++ obsługi wyjątków i może być wywoływana w dowolnym momencie w swoim programie, zanim wyjątku. **Zakończenie** wywołania [przerwać](abort.md) domyślnie. Możesz zmienić to ustawienie domyślne, pisanie funkcji zakończenia i wywołanie **set_terminate** o nazwie funkcji jako argumentem. **Zakończenie** wywołuje funkcję ostatniego podawana jako argument do **set_terminate**. Po zdatną żądanego zadania oczyszczania *termFunction* powinno zakończyć program. Jeśli go nie istnieje (jeśli jest on wraca do), [przerwać](abort.md) jest wywoływana.
 
 W środowisku wielowątkowym zakończyć funkcje są obsługiwane osobno dla każdego wątku. Każdy nowy wątek musi zainstalować jego własnej funkcji zakończenia. W związku z tym każdy wątek jest odpowiedzialne za własną obsługę przerwania.
 
@@ -85,4 +85,4 @@ Zobacz przykład [zakończyć](terminate-crt.md).
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [Zakończenie](terminate-crt.md)<br/>
-[Nieoczekiwany](unexpected-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

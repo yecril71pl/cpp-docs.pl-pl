@@ -47,11 +47,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
 ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341356"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -110,15 +110,15 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstof —**|**atof**|**atof**|**_wtof**|
-|**_ttof —**|**atof**|**atof**|**_wtof**|
+|**_tstof**|**atof**|**atof**|**_wtof**|
+|**_ttof**|**atof**|**atof**|**_wtof**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Routine(s)|Wymagany nagłówek|
 |------------------|---------------------|
-|**atof —**, **_atof_l —**|C: \<math.h > lub \<stdlib.h > C++: \<cstdlib — >, \<stdlib.h >, \<cmath > lub \<math.h >|
-|**_wtof —**, **_wtof_l —**|C: \<stdlib.h > lub \<wchar.h > C++: \<cstdlib — >, \<stdlib.h > lub \<wchar.h >|
+|**atof**, **_atof_l**|C: \<math.h> or \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> or \<math.h>|
+|**_wtof**, **_wtof_l**|C: \<stdlib.h> or \<wchar.h> C++: \<cstdlib>, \<stdlib.h> or \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 

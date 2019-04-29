@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
 ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369765"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator — Klasa
 
@@ -61,7 +61,7 @@ Ta klasa adaptera jest używana, gdy jest to konieczne oddzielać alokacji pami�
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `ii`  =  `x`.|
+|[operator*](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `ii`  =  `x`.|
 |[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora magazynu \* `i`  =  `x` do przechowywania w pamięci.|
 |[operator++](#op_add_add)|Operatory preincrement i postinkrementacyjne dla iteratorów magazynu.|
 

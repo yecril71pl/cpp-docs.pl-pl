@@ -24,12 +24,12 @@ helpviewer_keywords:
 - strdup function
 ms.assetid: c9ac0935-b525-4e95-8a64-396fc7e34ee9
 ms.openlocfilehash: 92109b06fd968009f6c05c39b6e9c45e515315aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353915"
 ---
 # <a name="strdup-wcsdup"></a>strdup, wcsdup
 
-Te funkcje POSIX są przestarzałe. Użyj zgodność ISO C++ [_strdup —, _wcsdup —, _mbsdup —](strdup-wcsdup-mbsdup.md) zamiast tego.
+Te funkcje POSIX są przestarzałe. Użyj ISO C++ zgodność [_strdup —, _wcsdup —, _mbsdup —](strdup-wcsdup-mbsdup.md) zamiast tego.

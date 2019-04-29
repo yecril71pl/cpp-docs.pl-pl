@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348370"
 ---
 # <a name="multimap-class"></a>multimap — Klasa
 
@@ -187,8 +187,8 @@ W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `s
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy `multimap`.|
 |[Liczba](#count)|Zwraca liczbę elementów w `multimap` których klucz pasuje do klucza określonego jako parametr.|
 |[crbegin](#crbegin)|Zwraca iterator stałych adresujący pierwszy element w odwróconej `multimap`.|
-|[crend —](#crend)|Zwraca iterator stałych adresujący lokalizację następującą po ostatnim elemencie w odwróconej `multimap`.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do `multimap`.|
+|[crend](#crend)|Zwraca iterator stałych adresujący lokalizację następującą po ostatnim elemencie w odwróconej `multimap`.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do `multimap`.|
 |[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `multimap`, ze wskazówką położenia|
 |[pusty](#empty)|Sprawdza, czy `multimap` jest pusty.|
 |[koniec](#end)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w `multimap`.|
@@ -196,12 +196,12 @@ W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `s
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w `multimap` z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.|
 |[Znajdź](#find)|Zwraca iterator odnoszący się do pierwszej lokalizacji elementu w `multimap` który ma klucz równoważny z określonym kluczem.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` użytego do stworzenia `multimap`.|
-|[Wstaw](#insert)|Wstawia element lub zakres elementów do `multimap`.|
+|[insert](#insert)|Wstawia element lub zakres elementów do `multimap`.|
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w `multimap`.|
 |[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w `multimap` , wraz z kluczem, który jest równy lub większy od określonego klucza.|
 |[max_size](#max_size)|Zwraca maksymalną długość `multimap`.|
 |[rbegin](#rbegin)|Zwraca iterator odnoszący się do pierwszego elementu w odwróconej `multimap`.|
-|[rend —](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w odwróconej `multimap`.|
+|[rend](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w odwróconej `multimap`.|
 |[Rozmiar](#size)|Zwraca liczbę elementów w `multimap`.|
 |[swap](#swap)|Zamienia elementy z dwóch `multimap`s.|
 |[upper_bound —](#upper_bound)|Zwraca iterator do pierwszego elementu w `multimap` , wraz z kluczem, który jest większy od określonego klucza.|

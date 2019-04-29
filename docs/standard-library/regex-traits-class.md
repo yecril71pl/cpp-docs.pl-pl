@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369127"
 ---
 # <a name="regextraits-class"></a>regex_traits — Klasa
 
@@ -92,11 +92,11 @@ Każdy `regex_traits` obiekt przechowuje obiekt typu `regex_traits::locale` któ
 |[isctype —](#isctype)|Testuje, czy klasa członkostwa.|
 |[Długość](#length)|Zwraca długość sekwencji zakończony znakiem null.|
 |[lookup_classname](#lookup_classname)|Mapuje sekwencji klasy znaku.|
-|[lookup_collatename —](#lookup_collatename)|Mapuje element sortujący sekwencji.|
+|[lookup_collatename](#lookup_collatename)|Mapuje element sortujący sekwencji.|
 |[transform](#transform)|Konwertuje odpowiednik uporządkowane sekwencji.|
-|[transform_primary —](#transform_primary)|Konwertuje odpowiednik caseless uporządkowane sekwencji.|
-|[Przetłumacz](#translate)|Konwertuje równoważne pasujący element.|
-|[translate_nocase —](#translate_nocase)|Konwertuje równoważne caseless pasujący element.|
+|[transform_primary](#transform_primary)|Konwertuje odpowiednik caseless uporządkowane sekwencji.|
+|[translate](#translate)|Konwertuje równoważne pasujący element.|
+|[translate_nocase](#translate_nocase)|Konwertuje równoważne caseless pasujący element.|
 |[value](#value)|Konwertuje element na wartość cyfrę.|
 
 ## <a name="requirements"></a>Wymagania
@@ -241,7 +241,7 @@ bool isctype(char_type ch, char_class_type cls) const;
 *ch*<br/>
 Element do przetestowania.
 
-*ze specyfikacją CLS*<br/>
+*cls*<br/>
 Klasy do testowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -292,7 +292,7 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 *pierwszy*<br/>
 Początek sekwencji do wyszukania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -317,7 +317,7 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 *pierwszy*<br/>
 Początek sekwencji do wyszukania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -376,7 +376,7 @@ string_type transform(FwdIt first, FwdIt last) const;
 *pierwszy*<br/>
 Początek sekwencji w celu przekształcania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji do przekształcenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -397,7 +397,7 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 *pierwszy*<br/>
 Początek sekwencji w celu przekształcania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji do przekształcenia.
 
 ### <a name="remarks"></a>Uwagi

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358310"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Przewodnik: Tworzenie aplikacji wstążki za pomocą MFC
 
@@ -83,9 +83,9 @@ Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **og�
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Instrukcje: dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Instrukcje: Dostosowywanie przycisku aplikacja](../mfc/how-to-customize-the-application-button.md)
+[Instrukcje: dostosowywanie przycisku Aplikacja](../mfc/how-to-customize-the-application-button.md)
 
 Aby uzyskać przykłady end-to-end, zobacz [przykłady (MFC Feature Pack)](../overview/visual-cpp-samples.md).
 

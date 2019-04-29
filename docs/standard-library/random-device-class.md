@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
 ms.openlocfilehash: 783b8f587094c6d603cc02f41b516ebd7b1e9a08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369894"
 ---
 # <a name="randomdevice-class"></a>random_device — Klasa
 
@@ -53,7 +53,7 @@ public:
 
 |||
 |-|-|
-|[random_device —](#random_device)|[entropy](#entropy)|
+|[random_device](#random_device)|[entropy](#entropy)|
 |[random_device::operator()](#op_call)||
 
 ## <a name="remarks"></a>Uwagi
@@ -146,4 +146,4 @@ Zwraca wartości równomiernie rozłożone w zamkniętym przedziale [ `min, max`
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

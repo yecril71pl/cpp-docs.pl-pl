@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
 ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349085"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
@@ -63,9 +63,9 @@ Tym wewnętrzne przechowuje obsługiwane funkcje i informacje o Procesorze zwró
 
 `__cpuid` Wewnętrzne czyści rejestru ECX przed wywołaniem `cpuid` instrukcji. `__cpuidex` Wewnętrzne ustawia wartość do rejestru ECX *subfunction_id* przed generuje `cpuid` instrukcji. Dzięki temu można zbierać dodatkowe informacje na temat procesora.
 
-Aby uzyskać więcej informacji na temat określonych parametrów i wartości zwracanych przez te funkcje wewnętrzne na procesorach Intel, zobacz dokumentację dla `cpuid` instrukcji w [Intel 64 i IA-32 architektury oprogramowania deweloperom ręczne Wolumin 2: Dokumentacja rozkazów](http://go.microsoft.com/fwlink/p/?LinkID=510021) i [Intel architektury rozkazów rozszerzenia dokumentacja programowania](http://go.microsoft.com/fwlink/p/?LinkID=506627). Dokumentacja Intel używa warunki "liścia" i "subleaf" dla *function_id* i *subfunction_id* parametry przekazywane w EAX i ECX.
+Aby uzyskać więcej informacji na temat określonych parametrów i wartości zwracanych przez te funkcje wewnętrzne na procesorach Intel, zobacz dokumentację dla `cpuid` instrukcji w [Intel 64 i IA-32 architektury oprogramowania deweloperom ręczne Wolumin 2: Instrukcja Ustaw odwołanie do](http://go.microsoft.com/fwlink/p/?LinkID=510021) i [Intel architektury rozkazów rozszerzenia dokumentacja programowania](http://go.microsoft.com/fwlink/p/?LinkID=506627). Dokumentacja Intel używa warunki "liścia" i "subleaf" dla *function_id* i *subfunction_id* parametry przekazywane w EAX i ECX.
 
-Aby uzyskać więcej informacji na temat określonych parametrów i wartości zwracanych przez te funkcje wewnętrzne na procesorach AMD, zobacz dokumentację dla `cpuid` instrukcji w AMD64 architektury programisty ręczne Volume 3: ogólnego przeznaczenia i systemu Instrukcje i przewodników poprawki dla rodziny określony procesor. Aby uzyskać łącza do tych dokumentów i innych informacji, zobacz AMD [przewodników dla deweloperów, podręczników & dokumentów ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) strony. Dokumentacja AMD używa warunki "Funkcja" i "podfunkcji numer" dla *function_id* i *subfunction_id* parametry przekazywane w EAX i ECX.
+Aby uzyskać więcej informacji na temat określonych parametrów i wartości zwracanych przez te funkcje wewnętrzne na procesorach AMD, zobacz dokumentację dla `cpuid` instrukcji w AMD64 architektury programisty ręczne Volume 3: Ogólnego przeznaczenia i systemu i w przewodnikach poprawki dla rodziny określony procesor. Aby uzyskać łącza do tych dokumentów i innych informacji, zobacz AMD [przewodników dla deweloperów, podręczników & dokumentów ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) strony. Dokumentacja AMD używa warunki "Funkcja" i "podfunkcji numer" dla *function_id* i *subfunction_id* parametry przekazywane w EAX i ECX.
 
 Gdy *function_id* argument ma wartość 0, *cpuInfo*[0] Zwraca najwyższy dostępny — rozszerzone *function_id* wartość obsługiwaną przez procesor. Producent procesora jest zakodowany w *cpuInfo*[1], *cpuInfo*[2], a *cpuInfo*[3].
 

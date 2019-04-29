@@ -1,5 +1,5 @@
 ---
-title: 'Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn'
+title: 'Bessel Functions: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
 apiname:
 - _j0
@@ -39,13 +39,13 @@ helpviewer_keywords:
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341124"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel Functions: _j0, _j1, _jn, _y0, _y1, _yn
 
 Oblicza funkcję Bessela rodzaju pierwszej lub drugiej zamówień 0, 1 lub n. Funkcje Bessela są często używane w matematyce teorii elektromagnetycznych wave.
 
@@ -79,7 +79,7 @@ double _yn(
 *x*<br/>
 Wartość zmiennoprzecinkowa.
 
-*N*<br/>
+*n*<br/>
 Liczba całkowita kolejność Bessela funkcji.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -92,15 +92,15 @@ Każda z tych procedur zwraca funkcja Bessela *x*. Jeśli *x* ma ujemną wartoś
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **ZNAJDŹ**|**NIEPRAWIDŁOWY**|**_DOMENY**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 
 **_Y0**, **_y1**, i **_yn** procedury wróć Bessela funkcji drugiego rodzaju: porządkuje 0, 1 i n, odpowiednio.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **ZNAJDŹ**|**NIEPRAWIDŁOWY**|**_DOMENY**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**NIEPRAWIDŁOWY**|**_DOMENY**|
+|&#124;x&#124; < 0.0|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Wymagania
 

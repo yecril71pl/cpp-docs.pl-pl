@@ -3,11 +3,11 @@ title: Interfejs aplikacji OpenMPC i C++
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
 ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362702"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>Interfejs aplikacji OpenMPC i C++
 
@@ -25,7 +25,7 @@ Aby skopiować bez opłaty za wszystkie lub część tego materiału uprawnienia
 
 1. [Dyrektywy](2-directives.md)
 
-1. [Funkcje biblioteki czasu wykonywania](3-run-time-library-functions.md)
+1. [Funkcje bibliotek wykonawczych](3-run-time-library-functions.md)
 
 1. [Zmienne środowiskowe](4-environment-variables.md)
 
@@ -33,13 +33,13 @@ Aby skopiować bez opłaty za wszystkie lub część tego materiału uprawnienia
 
 A. [Przykłady](a-examples.md)
 
-B. [Wycinki funkcji bibliotek wykonawczych](b-stubs-for-run-time-library-functions.md)
+B. [Klasy zastępcze dla funkcji bibliotek wykonawczych](b-stubs-for-run-time-library-functions.md)
 
-C. [Gramatyka OpenMP C i C++](c-openmp-c-and-cpp-grammar.md)
+C. [OpenMP C i gramatyka C++](c-openmp-c-and-cpp-grammar.md)
 
-D. [W klauzuli harmonogramu](d-using-the-schedule-clause.md)
+D. [Klauzula schedule](d-using-the-schedule-clause.md)
 
-E. [Zachowania zdefiniowane w implementacji programie OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+E. [Zachowania zdefiniowane w implementacji w programie OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 
 F. [Nowe funkcje i wyjaśnienia w wersji 2.0](f-new-features-and-clarifications-in-version-2-0.md)
 

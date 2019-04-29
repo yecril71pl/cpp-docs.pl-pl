@@ -41,11 +41,11 @@ helpviewer_keywords:
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
 ms.openlocfilehash: dae14fc7b66b9be4e1016c5409a93cd172691fed
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365213"
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
@@ -103,8 +103,8 @@ Jeśli *bieżącego* jest **NULL**, procedura obsługi nieprawidłowego parametr
 |-------------|---------------------|
 |**_mbsinc**|\<mbstring.h>|
 |**_mbsinc_l**|\<mbstring.h>|
-|**_strinc**|\<tchar.h >|
-|**_wcsinc**|\<tchar.h >|
+|**_strinc**|\<tchar.h>|
+|**_wcsinc**|\<tchar.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

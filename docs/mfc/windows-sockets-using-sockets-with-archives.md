@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
 ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358290"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Używanie gniazd z archiwami
 
@@ -74,9 +74,9 @@ Artykuł [Windows Sockets: Sekwencja operacji przy](../mfc/windows-sockets-seque
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Windows Sockets: Gniazda Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Zobacz także
 

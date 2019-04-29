@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356319"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -47,7 +47,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Stream*<br/>
+*stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *buffer*<br/>
@@ -57,7 +57,7 @@ Bufor przydzielony przez użytkownika.
 Tryb buforowania.
 
 *Rozmiar*<br/>
-Rozmiar buforu w bajtach. Dozwolony zakres: 2 < = *rozmiar* < = INT_MAX (2147483647). Wewnętrznie, wartość podana dla *rozmiar* jest zaokrąglana do najbliższej wielokrotności 2.
+Rozmiar buforu w bajtach. Dopuszczalny zakres: 2 < = *rozmiar* < = INT_MAX (2147483647). Wewnętrznie, wartość podana dla *rozmiar* jest zaokrąglana do najbliższej wielokrotności 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 

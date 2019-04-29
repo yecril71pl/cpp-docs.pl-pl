@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
 ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358076"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
@@ -49,7 +49,7 @@ Zwraca bieżący nowy tryb obsługi, a mianowicie 0 lub 1, **— funkcja malloc*
 
 ## <a name="remarks"></a>Uwagi
 
-C++ **_query_new_mode —** funkcji zwraca liczbę całkowitą, wskazującą nowy tryb obsługi, który jest ustawiony przez C++ [_set_new_mode](set-new-mode.md) działać w ramach [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii można przydzielić pamięci, **— funkcja malloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem [_set_new_handler](set-new-handler.md). Domyślnie **— funkcja malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia. Możesz użyć **_set_new_mode** zastąpienia tego zachowania, więc, w przypadku niepowodzenia **— funkcja malloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** operator nie, gdy nie jest on Przydzielanie pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [nowych i delete — operatory](../../cpp/new-and-delete-operators.md) w dokumentacji języka C++.
+C++ **_Query_new_mode —** funkcji zwraca liczbę całkowitą, wskazującą nowy tryb obsługi, który jest uporządkowany według C++ [_set_new_mode](set-new-mode.md) działać w ramach [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii można przydzielić pamięci, **— funkcja malloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem [_set_new_handler](set-new-handler.md). Domyślnie **— funkcja malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia. Możesz użyć **_set_new_mode** zastąpienia tego zachowania, więc, w przypadku niepowodzenia **— funkcja malloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** operator nie, gdy nie jest on Przydzielanie pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [nowych i delete — operatory](../../cpp/new-and-delete-operators.md) w dokumentacji języka C++.
 
 ## <a name="requirements"></a>Wymagania
 

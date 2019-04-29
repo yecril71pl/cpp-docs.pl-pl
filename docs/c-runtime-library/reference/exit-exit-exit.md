@@ -31,11 +31,11 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339354"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -67,7 +67,7 @@ Kod stanu zakończenia.
 
 **Wyjść**, **_Exit** i **_exit** funkcje kończą proces wywołujący. **Wyjść** funkcja wywołuje destruktory obiektów lokalnych wątków, następnie wywołuje — w ostatniej wejściu — pierwszy na wyjściu (LIFO) kolejności — funkcje, które są zarejestrowane przez **atexit** i **_onexit**, a następnie opróżnia wszystkie bufory plików przed zakończeniem procesu. **_Exit** i **_exit** funkcje zakończyć proces bez niszczenie obiektów wątków lokalnych lub przetwarzania **atexit** lub **_onexit**funkcje i bez opróżniania buforów strumieni.
 
-Mimo że **wyjść**, **_Exit** i **_exit** wywołania nie zwracają wartości, wartość w *stan* staje się dostępny dla środowiska hosta lub oczekiwania procesu wywołującego, jeśli istnieje, po zakończeniu procesu. Zwykle ustawia obiekt wywołujący *stan* wartość na 0, aby wskazać normalne wyjście lub na inną wartość do wskazania błędu. *Stan* wartość jest dostępna dla polecenia wsadowego systemu operacyjnego **ERRORLEVEL** i jest reprezentowana przez jedną z dwóch stałych: **EXIT_SUCCESS**, która reprezentuje wartość 0 lub **EXIT_FAILURE**, która reprezentuje wartość 1.
+Mimo że **wyjść**, **_Exit** i **_exit** wywołania nie zwracają wartości, wartość w *stan* staje się dostępny dla środowiska hosta lub oczekiwania procesu wywołującego, jeśli istnieje, po zakończeniu procesu. Zwykle ustawia obiekt wywołujący *stan* wartość na 0, aby wskazać normalne wyjście lub na inną wartość do wskazania błędu. *Stan* wartość jest dostępna dla polecenia wsadowego systemu operacyjnego **ERRORLEVEL** i jest reprezentowana przez jedną z dwóch stałych: **EXIT_SUCCESS**, która reprezentuje wartość 0, lub **EXIT_FAILURE**, która reprezentuje wartość 1.
 
 **Wyjść**, **_Exit**, **_exit**, **quick_exit**, **_cexit —**, i **_c_exit —** funkcje zachowują się w następujący sposób.
 

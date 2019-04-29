@@ -3,11 +3,11 @@ title: A. Przykłady
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
 ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362975"
 ---
 # <a name="a-examples"></a>A. Przykłady
 
@@ -735,7 +735,7 @@ void g(int k, int n)
 
 ## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A.25 przykłady klauzuli atrybutu danych prywatnej kopii
 
-**Przykład 1:** [Copyprivate](2-directives.md#2728-copyprivate) klauzuli może służyć do emisji wartości uzyskanych przez pojedynczy wątek bezpośrednio do wszystkich wystąpień w zmiennych prywatnych w innych wątków.
+**Przykład 1.** [Copyprivate](2-directives.md#2728-copyprivate) klauzuli może służyć do emisji wartości uzyskanych przez pojedynczy wątek bezpośrednio do wszystkich wystąpień w zmiennych prywatnych w innych wątków.
 
 ```cpp
 float x, y;
@@ -757,7 +757,7 @@ void init( )
 
 W przypadku rutynowych *init* jest wywoływana z regionu szeregowe, jego zachowanie nie ma wpływu na obecność dyrektywy. Po wywołaniu *get_values* procedury zostało wykonane przez jeden wątek, żadnego wątku pozostawia konstrukcja do prywatnego obiekty wskazywany przez *a*, *b*, *x*, i *y* w wszystkie wątki zdefiniowano stają się przy użyciu wartości do odczytu.
 
-**Przykład 2:** W przeciwieństwie do poprzedniego przykładu załóżmy, że odczytu muszą być wykonywane przez określonego wątku, załóżmy, że głównego wątku. W tym przypadku `copyprivate` nie można używać klauzuli w celu emisji bezpośrednio, ale może służyć do zapewnienia dostępu do udostępnionych obiektów tymczasowych.
+**Przykład 2.** W przeciwieństwie do poprzedniego przykładu załóżmy, że odczytu muszą być wykonywane przez określonego wątku, załóżmy, że głównego wątku. W tym przypadku `copyprivate` nie można używać klauzuli w celu emisji bezpośrednio, ale może służyć do zapewnienia dostępu do udostępnionych obiektów tymczasowych.
 
 ```cpp
 float read_next( )
@@ -917,7 +917,7 @@ int i, a;
 
 ## <a name="a31-thread-safe-lock-functions"></a>A.31 funkcje blokady wielowątkowości metodą o bezpiecznych wątkach
 
-W poniższym przykładzie C++ pokazuje, jak inicjowanie tablicy blokady w równoległego regionu za pomocą [funkcje omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
+Następujące C++ przykład pokazuje, jak można zainicjować tablicy blokady w równoległego regionu za pomocą [funkcje omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
 
 ```cpp
 // A_13_omp_init_lock.cpp

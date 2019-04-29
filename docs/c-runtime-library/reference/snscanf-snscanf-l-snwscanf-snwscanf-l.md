@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
 ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355409"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -126,13 +126,13 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_sntscanf —**|**_snscanf**|**_snscanf**|**_snwscanf**|
-|**_sntscanf_l —**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
+|**_sntscanf_l**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_snscanf —**, **_snscanf_l —**|\<stdio.h>|
+|**_snscanf**, **_snscanf_l**|\<stdio.h>|
 |**_snwscanf —**, **_snwscanf_l —**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

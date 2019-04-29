@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
 ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355006"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -68,7 +68,7 @@ void _wsplitpath(
 *Ścieżka*<br/>
 Pełna ścieżka.
 
-*Dysk*<br/>
+*drive*<br/>
 Litera, następuje dwukropek (**:**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz literę dysku.
 
 *dir*<br/>
@@ -90,7 +90,7 @@ Rozszerzenie nazwy pliku, w tym wiodące w okresie (**.**). Możesz przekazać *
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsplitpath —**|**_splitpath**|**_splitpath**|**_wsplitpath**|
+|**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
 Każdy składnik Pełna ścieżka jest przechowywany w oddzielnych buforu; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, i **_MAX_EXT** (zdefiniowany w STDLIB. H) określ maksymalny rozmiar każdego pliku składnika. Składniki pliku, które są większe niż odpowiednie stałych manifestu doprowadzić do uszkodzenia sterty.
 
@@ -116,7 +116,7 @@ Jeśli *ścieżki* jest **NULL**, procedura obsługi nieprawidłowego parametru 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_splitpath**|\<stdlib.h>|
-|**_wsplitpath**|\<stdlib.h > lub \<wchar.h >|
+|**_wsplitpath**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

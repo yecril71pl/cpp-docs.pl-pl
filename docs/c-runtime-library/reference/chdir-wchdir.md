@@ -33,11 +33,11 @@ helpviewer_keywords:
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
 ms.openlocfilehash: e4cf7a44864df0b5ecca531aab3db4546c25bb2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347668"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -56,7 +56,7 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parametry
 
-*nazwa_kat*<br/>
+*dirname*<br/>
 Ścieżka do nowego katalogu roboczego.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -79,7 +79,7 @@ Jeśli używasz opcjonalne ukośnika odwrotnego (**&#92;**) w ścieżkach, nale�
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tchdir —**|**_chdir**|**_chdir**|**_wchdir**|
+|**_tchdir**|**_chdir**|**_chdir**|**_wchdir**|
 
 ## <a name="requirements"></a>Wymagania
 

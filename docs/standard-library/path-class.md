@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
 ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370453"
 ---
 # <a name="path-class"></a>path — klasa
 
@@ -46,13 +46,13 @@ class path;
 |[begin](#begin)|Zwraca `path::iterator` wyznaczanie pierwszego elementu w ścieżce w nazwie ścieżki, jeśli jest obecny.|
 |[c_str](#c_str)|Zwraca wskaźnik do pierwszego znaku w `mypath`.|
 |[Usuń zaznaczenie](#clear)|Wykonuje `mypath.clear()`.|
-|[Porównanie](#compare)|Zwraca wartości do porównania.|
+|[compare](#compare)|Zwraca wartości do porównania.|
 |[concat](#compare)|Dołącza określony sekwencji w celu `mypath`, przekonwertować (ale nie Wstawianie separatorem) zgodnie z potrzebami.|
 |[pusty](#empty)|Zwraca `mypath.empty()`.|
 |[koniec](#end)|Zwraca iterator sekwencja kończenia typu `iterator`.|
-|[Rozszerzenie](#extension)|Zwraca sufiks `filename()`.|
+|[extension](#extension)|Zwraca sufiks `filename()`.|
 |[Nazwa pliku](#filename)|Zwraca składnik katalogu głównego mojanazwa, w szczególności `empty() path() : *--end()`. Składnik może być pusta.|
-|[generic_string —](#generic_string)|Zwraca `this->string<Elem, Traits, Alloc>(al)` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
+|[generic_string](#generic_string)|Zwraca `this->string<Elem, Traits, Alloc>(al)` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
 |[generic_u16string](#generic_u16string)|Zwraca `u16string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
 |[generic_u32string](#generic_u32string)|Zwraca `u32string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
 |[generic_u8string](#generic_u8string)|Zwraca `u8string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
@@ -68,12 +68,12 @@ class path;
 |[is_absolute](#is_absolute)|Windows, funkcja zwraca `has_root_name() && has_root_directory()`. Posix, funkcja zwraca `has_root_directory()`.|
 |[is_relative](#is_relative)|Zwraca `!is_absolute()`.|
 |[make_preferred](#make_preferred)|Konwertuje każdego separatora preferred_separator zgodnie z potrzebami.|
-|[Natywne](#native)|Zwraca `myname`.|
+|[native](#native)|Zwraca `myname`.|
 |[parent_path](#parent_path)|Zwraca element nadrzędny składnik path `myname`.|
 |[preferred_separator](#preferred_separator)|Stały obiekt zawierają znaków preferowaną oddzielenie składników ścieżki, w zależności od systemu operacyjnego hosta. |
 |[relative_path](#relative_path)|Zwraca składnik ścieżki względnej `myname`. |
-|[remove_filename —](#remove_filename)|Usuwa nazwę pliku.|
-|[replace_extension —](#replace_extension)|Zastępuje rozszerzenie `myname`. |
+|[remove_filename](#remove_filename)|Usuwa nazwę pliku.|
+|[replace_extension](#replace_extension)|Zastępuje rozszerzenie `myname`. |
 |[replace_filename](#replace_filename)|RReplaces nazwę pliku.|
 |[root_directory](#root_directory)|Zwraca składnik katalogu głównego `myname`. |
 |[root_name](#root_name)|Zwraca składnik nazwy głównej `myname`. |
@@ -93,7 +93,7 @@ class path;
 |-|-|
 |[operator=](#op_as)|Zastępuje elementy ścieżki z kopią inną ścieżkę.|
 |[operator+=](#op_add)|Różne `concat` wyrażenia.|
-|[operator / =](#op_divide)|Różne `append` wyrażenia.|
+|[operator/=](#op_divide)|Różne `append` wyrażenia.|
 |[string_type — operator](#op_string)|Zwraca `myname`.|
 
 ## <a name="requirements"></a>Wymagania
@@ -122,7 +122,7 @@ Określonej sekwencji.
 *pierwszy*<br/>
 Początek określonej sekwencji.
 
-*ostatni*<br/>
+*last*<br/>
 Zakończenie określonej sekwencji.
 
 ## <a name="assign"></a> path::ASSIGN —
@@ -145,7 +145,7 @@ Określonej sekwencji.
 *pierwszy*<br/>
 Początek określonej sekwencji.
 
-*ostatni*<br/>
+*last*<br/>
 Zakończenie określonej sekwencji.
 
 ## <a name="begin"></a> path::BEGIN —
@@ -213,7 +213,7 @@ Określonej sekwencji.
 *pierwszy*<br/>
 Początek określonej sekwencji.
 
-*ostatni*<br/>
+*last*<br/>
 Zakończenie określonej sekwencji.
 
 ## <a name="const_iterator"></a> path::const_iterator
@@ -334,7 +334,7 @@ Zwraca `!parent_path().empty()`.
 bool has_parent_path() const;
 ```
 
-## <a name="has_relative_path"></a> path::has_relative_path —
+## <a name="has_relative_path"></a> path::has_relative_path
 
 Zwraca `!relative_path().empty()`.
 
@@ -499,7 +499,7 @@ Dodano parametry.
 *ptr*<br/>
 Dodano wskaźnik.
 
-*Elem*<br/>
+*elem*<br/>
 Dodany `value_type` lub `Elem`.
 
 *source*<br/>
@@ -605,7 +605,7 @@ Określonych ustawień regionalnych.
 *pierwszy*<br/>
 Pozycja pierwszego elementu, który ma być skopiowany.
 
-*ostatni*<br/>
+*last*<br/>
 Pozycja ostatni element do skopiowania.
 
 ### <a name="remarks"></a>Uwagi

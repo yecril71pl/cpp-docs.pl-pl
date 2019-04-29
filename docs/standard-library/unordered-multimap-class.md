@@ -138,11 +138,11 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: ca080cfee9869985c322bf1311fabf8aff72383a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362936"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap — Klasa
 
@@ -200,7 +200,7 @@ class unordered_multimap;
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy.|
 |[Liczba](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
-|[emplace —](#emplace)|Dodaje element skonstruowany na miejscu.|
+|[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
 |[pusty](#empty)|Sprawdza, czy nie ma żadnych elementów.|
 |[koniec](#end)|Określa koniec kontrolowanej sekwencji.|
@@ -209,7 +209,7 @@ class unordered_multimap;
 |[Znajdź](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
-|[Wstaw](#insert)|Dodaje elementy.|
+|[insert](#insert)|Dodaje elementy.|
 |[key_eq](#key_eq)|Pobiera przechowywany obiekt funkcji porównywania.|
 |[load_factor](#load_factor)|Oblicza średnią liczbę elementów na przedział.|
 |[max_bucket_count](#max_bucket_count)|Pobiera maksymalną liczbę przedziałów.|
@@ -236,7 +236,7 @@ Obiekt przydziela i zwalnia pamięć dla sekwencji za pośrednictwem przechowywa
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<unordered_map >
+**Header:** \<unordered_map>
 
 **Namespace:** standardowe
 
@@ -2542,7 +2542,7 @@ unordered_multimap(
 |*Al*|Obiekt alokatora, który ma być przechowywany.|
 |*Comp*|Obiekt funkcji porównywania, który ma być przechowywany.|
 |*Skrót*|Obiekt funkcji mieszania, który ma być przechowywany.|
-|*Bucket_count —*|Minimalna liczba przedziałów.|
+|*Bucket_count*|Minimalna liczba przedziałów.|
 |*po prawej stronie*|Kontener, który ma być skopiowany.|
 |*IList*|Lista initializer_list, z której mają być skopiowane elementy.|
 

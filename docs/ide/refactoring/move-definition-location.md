@@ -3,19 +3,19 @@ title: Przenieś lokalizację definicji
 ms.date: 11/16/2016
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
 ms.openlocfilehash: 7957e18732dfae92b7b3ae9cf7ecea441fc3a6b4
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350045"
 ---
 # <a name="move-definition-location"></a>Przenieś lokalizację definicji
 
-**Co:** pozwala natychmiast przenoszenie definicji funkcji do odpowiedniego pliku nagłówka.
+**Co:** Umożliwia natychmiastowe przenoszenie definicji funkcji do odpowiedniego pliku nagłówka.
 
-**Kiedy:** ma funkcję, która ma zostać przeniesiony do pliku nagłówka.
+**Kiedy:** Masz funkcja, która ma zostać przeniesiony do pliku nagłówka.
 
-**Dlaczego:** można ręcznie przenieść tę funkcję, ale ta funkcja przeniesie go automatycznie, tworzenie pliku nagłówka, jeśli jest to wymagane.
+**Dlaczego:** Można ręcznie przenieść tę funkcję, ale ta funkcja przeniesie go automatycznie, tworzenie pliku nagłówka, jeśli jest to wymagane.
 
 **Jak:**
 

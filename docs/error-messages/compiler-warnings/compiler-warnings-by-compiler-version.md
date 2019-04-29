@@ -1,19 +1,19 @@
 ---
 title: Ostrzeżenia kompilatora według wersji kompilatora
-ms.date: 10/24/2018
+ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 79cf78de865f480530df89c778e9fe432b0bbf33
-ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
-ms.translationtype: MT
+ms.openlocfilehash: a84c3f14b8e6a6c877a13c3c9b1b851b0fc5ad05
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58142524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359907"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora według wersji kompilatora
 
-Kompilator może pominąć ostrzeżenia, które zostały wprowadzone po wersji, należy określić za pomocą [WV](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Ta opcja jest przydatna do zarządzania proces kompilacji, gdy wprowadzenia nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowe ostrzeżenia. Ta opcja odrzuca nowe komunikaty o błędach. Firma Microsoft nie zaleca się pominąć wszystkie nowe ostrzeżenia trwale! Firma Microsoft zaleca, zawsze Kompiluj na najwyższym poziomie ostrzeżenia regularnych, __/W4__i Usuń __WV__ opcji kompilacji tak szybko, jak to możliwe.
+Kompilator może pominąć ostrzeżenia, które zostały wprowadzone po wersji, należy określić za pomocą [WV](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Ta opcja jest przydatna do zarządzania proces kompilacji, gdy wprowadzenia nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowe ostrzeżenia. Ta opcja umożliwia pominięcie ostrzeżenia i komunikaty o błędach nie nowe. Nie pomijaj wszystkie nowe ostrzeżenia trwale! Firma Microsoft zaleca, zawsze Kompiluj na najwyższym poziomie ostrzeżenia regularnych, `/W4`i Usuń `/Wv` opcja tak szybko, jak praktyczne w kompilacji.
 
 Te wersje kompilatora wprowadzono nowe ostrzeżenia:
 
@@ -39,19 +39,19 @@ Te wersje kompilatora wprowadzono nowe ostrzeżenia:
 | Visual C++ 2017 w wersji 15.9 | 19.16.26926.0 |
 | Visual C++ 2019 RTM | 19.20.27004.0 |
 
-Można określić tylko główny numer, głównych i pomocniczych numerów lub głównych i pomocniczych i tworzyć numery __WV__ opcji. Kompilator zgłasza wszystkie ostrzeżenia, które odpowiadają wersji, które zaczynają się od podanej liczbie i wyłącza wszystkie ostrzeżenia dla wersji większy niż określoną liczbę. Na przykład __/Wv:17__ raportuje wszystkie ostrzeżenia wprowadzone w lub przed dowolnej wersji programu Visual Studio 2012 i wyłącza wszystkie ostrzeżenia wprowadzone za pomocą dowolnego kompilatora z programu Visual Studio 2013 (wersja 18) lub nowszego. Aby pominąć ostrzeżenia wprowadzone w programie Visual Studio 2015 update 2 i później, możesz użyć __/Wv:19.00.23506__. Użyj __/Wv:19.11__ zgłosić wszystkie ostrzeżenia wprowadzone w dowolnej wersji programu Visual Studio przed Visual Studio 2017 w wersji 15.5, ale pomija ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15.5 lub nowszej.
+Można określić tylko główny numer, głównych i pomocniczych numerów lub głównych i pomocniczych i tworzyć numery `/Wv` opcji. Kompilator zgłasza wszystkie ostrzeżenia, które odpowiadają wersji, które zaczynają się od podanej liczbie i wyłącza wszystkie ostrzeżenia dla wersji większy niż określoną liczbę. Na przykład `/Wv:17` raporty ostrzeżenia wprowadzone w lub przed dowolnej wersji programu Visual Studio 2012 i powoduje pominięcie ostrzeżenia wprowadzone za pomocą dowolnego kompilatora z programu Visual Studio 2013 (wersja 18) lub nowszego. Aby pominąć ostrzeżenia wprowadzone w programie Visual Studio 2015 update 2 i później, możesz użyć `/Wv:19.00.23506`. Użyj `/Wv:19.11` raportu ostrzeżenia wprowadzone w dowolnej wersji programu Visual Studio przed Visual Studio 2017 w wersji 15.5, ale Pomiń ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15.5 lub nowszej.
 
-W poniższych sekcjach wymieniono ostrzeżenia wynikające z każdą wersją programu Visual C++, który można pominąć za pomocą __WV__ — opcja kompilatora. __WV__ opcji nie można pominąć ostrzeżenia, które nie zostały wymienione, które powstały wcześniej niż określona wersji kompilatora.
+W poniższych sekcjach wymieniono ostrzeżenia wynikające z każdą wersją programu Visual C++ , można pominąć za pomocą `/Wv` — opcja kompilatora. `/Wv` Opcji nie można pominąć ostrzeżenia, które nie są wyświetlane, które powstały wcześniej niż określona wersji kompilatora.
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-c-2019-rc-compiler-version-1920270040"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2019 RC (wersja kompilatora 19.20.27004.0)
+## <a name="warnings-introduced-in-visual-c-2019-rtw-compiler-version-1920270040"></a>Ostrzeżenia wprowadzone w elemencie wizualnym C++ RTW 2019 r (wersja kompilatora 19.20.27004.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.15__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.15`.
 
 |||
 |-|-|
-C4848 | Obsługa atrybut standardowy "nie\_unikatowy\_adres w języku C ++ 17 i wcześniejszych wersjach to rozszerzenie dostawcy
+| C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
 
 ::: moniker-end
 ::: moniker range=">= vs-2017"
@@ -59,620 +59,622 @@ C4848 | Obsługa atrybut standardowy "nie\_unikatowy\_adres w języku C ++ 17 i 
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 w wersji 15.8 (wersja kompilatora 19.15.26726.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.14__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.14`.
 
 |||
 |-|-|
-C4643 | Deklarowanie do przodu "*identyfikator*" w przestrzeni nazw std nie jest dozwolona przez C++ Standard.
-C4644 | użycie wzorca na podstawie — makro offsetof w wyrażeniach stałych jest niestandardowych; Makro offsetof zdefiniowanych w standardowej biblioteki języka C++, zamiast tego użyj
-C4845 | "\_\_declspec (nie\_init\_all)" jest ignorowana, jeśli "/ d1initall\[0\|1\|2\|3]' nie została określona w wierszu polecenia
-C4846 | "*wartość*" nie jest prawidłowym argumentem dla "/ d1initall": właściwości wiersza polecenia są ignorowane
-C4847 | "\_\_declspec (nie\_init\_all)" będzie stosowany tylko do funkcji, typem klasy lub zmiennej lokalnej: ignorowane
-C4866 | Kompilator może nie wymusić kolejności oceny od lewej do prawej dla wywołania "*funkcja*"
-C5046 | "*funkcja*": Obejmujące typu z wewnętrznym powiązaniem Niezdefiniowany symbol
-C5047 | Korzystanie z niestandardowych \_ \_Jeśli\_istnieje przy użyciu modułów nie jest obsługiwane
-C5048 | Użyj makra "*makra*" może spowodować-deterministycznych danych wyjściowych
-C5049 | "*ciąg*": Pełna ścieżka do osadzania może spowodować w danych wyjściowych zależnych od maszyny
-C5050 | Możliwe niezgodne środowisko podczas importowania modułu "*nazwa_modułu*": *problem*
-C5100 | \_\_Oceny luk w zabezpieczeniach\_ARGS\_ \_ jest zarezerwowany do użytku w makra wariadyczne
-C5101 | Użycie dyrektywy preprocesora na liście argumentów funkcyjne makro jest niezdefiniowane zachowanie
-C5102 | ignorowanie nieprawidłowa wiersza polecenia definicja makra "*wartość*"
-C5103 | wklejanie "*token1*"i"*token2*" nie powoduje prawidłowy token przetwarzania wstępnego
-C5104 | znaleziono "*ciąg1*#*ciąg2*"na liście zastąpienie makra, czy chodziło Ci o"*ciąg1*" "#*ciąg2*"?
-C5105 | rozwinięciu makra w produkcji "defined" ma niezdefiniowane zachowanie
-C5106 | ponownie zdefiniowany przy użyciu nazwy różnych parametrów — makro
-C5107 | Brak przerywa "*char*" znak
+| C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
+| C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
+| C4845 | `'__declspec(no_init_all)' is ignored if '/d1initall[0|1|2|3]' was not specified on the command line` |
+| C4846 | `'value' is not a valid argument for '/d1initall': command-line flag ignored` |
+| C4847 | `'__declspec(no_init_all)' can only be applied to a function, a class type, or a local variable: ignored` |
+| C4866 | `compiler may not enforce left-to-right evaluation order for call to 'function'` |
+| C5046 | `'function': Symbol involving type with internal linkage not defined` |
+| C5047 | `use of nonstandard __if_exists with modules is not supported` |
+| C5048 | `Use of macro 'macroname' may result in non-deterministic output` |
+| C5049 | `'string': Embedding a full path may result in machine-dependent output` |
+| C5050 | `Possible incompatible environment while importing module 'module_name': issue` |
+| C5100 | `__VA_ARGS__ is reserved for use in variadic macros` |
+| C5101 | `use of preprocessor directive in function-like macro argument list is undefined behavior` |
+| C5102 | `ignoring invalid command-line macro definition 'value'` |
+| C5103 | `pasting 'token1' and 'token2' does not result in a valid preprocessing token` |
+| C5104 | `found 'string1#string2' in macro replacement list, did you mean 'string1""#string2'?` |
+| C5105 | `macro expansion producing 'defined' has undefined behavior` |
+| C5106 | `macro redefined with different parameter names` |
+| C5107 | `missing terminating 'char' character` |
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 wersji 15.7 (wersja kompilatora 19.14.26428.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.13__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.13`.
 
 |||
 |-|-|
-C4642|"*problem*": nie można zaimportować ograniczeń dla parametru ogólnego "*parametr*"
-C5045|Kompilator wstawi zaradcze dla luki Spectre dla obciążenia pamięci Jeśli przełącznik/qspectre określonych
+| C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
+| C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 w wersji 15.6 (wersja kompilatora 19.13.26128.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.12__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.12`.
 
 |||
 |-|-|
-C5044|Argument opcji wiersza polecenia *opcji* wskazuje ścieżkę "*ścieżki*' który nie istnieje
+| C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 w wersji 15.5 (wersja kompilatora 19.12.25830.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.11__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.11`.
 
 |||
 |-|-|
-C4843|"*type1*": Procedura obsługi wyjątków odwołania do typu funkcji lub tablicy jest nieosiągalna, użyj "*type2*" zamiast niego
-C4844|"Eksportuj modułu *nazwa_modułu*;" jest teraz preferowana składnia do deklarowania interfejsu modułu
-C5039|"*funkcja*": wskaźnik lub odwołanie do funkcji potencjalnie zgłaszającej wyjątek przekazano do funkcji extern języka C w ramach - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zgłosi wyjątek.
-C5040|specyfikacje wyjątków dynamicznych są prawidłowe tylko w języku C ++ 14 i starszych wersji; traktowanie jako opcja noexcept(false)
-C5041|"*definicji*": definicja końca wiersza dla składowej danych statycznych constexpr jest niepotrzebna i jest przestarzała w języku C ++ 17
-C5042|"*deklaracji*": deklaracje funkcji w zakresie bloku nie może być określone jako "inline" w standardzie języka C++; Usuń specyfikator "inline"
-C5043|"*specyfikacji*': specyfikacja wyjątku jest niezgodna z poprzednią deklaracją
+| C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
+| C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
+| C5039 | `'function': pointer or reference to potentially throwing function passed to extern C function under -EHc. Undefined behavior may occur if this function throws an exception.` |
+| C5040 | `dynamic exception specifications are valid only in C++14 and earlier; treating as noexcept(false)` |
+| C5041 | `'definition': out-of-line definition for constexpr static data member is not needed and is deprecated in C++17` |
+| C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
+| C5043 | `'specification': exception specification does not match previous declaration` |
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 w wersji 15.3 (wersja kompilatora 19.11.25506.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.10__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.10`.
 
 |||
 |-|-|
-C4597|Niezdefiniowane zachowanie: *opis*
-C4604|"*typu*": przekazywanie argumentów poprzez wartość granicę natywne i zarządzane wymaga prawidłowej kopii konstruktora. W przeciwnym razie działanie środowiska uruchomieniowego jest niezdefiniowane
-C4749|warunkowo obsługiwane: *opis*
-C4768|atrybuty __declspec przed specyfikacją konsolidacji są ignorowane.
-C4834|Odrzucanie zwracanej wartości funkcji z atrybutem "nodiscard"
-C4841|użyto niestandardowego rozszerzenia: *rozszerzenia*
-C4842|nie gwarantuje wynik makra "offsetof" zastosować do typu używającego wielu dziedziczeń będzie spójny między wydaniami kompilatora
-C4869|"nodiscard" można stosować tylko w przypadku klas, wyliczeń i funkcji z typem zwracanym niż void
-C5033|"*klasę magazynu*" nie jest już obsługiwaną klasą magazynu
-C5034|Użyj wewnętrznych "*wewnętrzne*" powoduje, że funkcja *funkcja* jest kompilowana jako kod gościa
-C5035|Użyj funkcji "*funkcji*" powoduje, że funkcja *funkcja* jest kompilowana jako kod gościa
-C5036|Konwersja wskaźnika funkcji typu varargs podczas kompilowania za pomocą /hybrid:x86arm64 "*type1*"to"*type2*"
-C5037|"*funkcja elementu członkowskiego*": definicja końca wiersza składowej szablonu klasy nie może mieć argumentów domyślnych
-C5038|element członkowski danych "*Członek1*"zostanie zainicjowany po element członkowski danych"*członek2*"
+| C4597 | `undefined behavior: description` |
+| C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
+| C4749 | `conditionally supported: description` |
+| C4768 | `__declspec attributes before linkage specification are ignored` |
+| C4834 | `discarding return value of function with 'nodiscard' attribute` |
+| C4841 | `non-standard extension used: extension` |
+| C4842 | `the result of 'offsetof' applied to a type using multiple inheritance is not guaranteed to be consistent between compiler releases` |
+| C4869 | `'nodiscard' may only be applied to classes, enumerations, and functions with non-void return type` |
+| C5033 | `'*storage-class*' is no longer a supported storage class` |
+| C5034 | `use of intrinsic 'intrinsic' causes function function to be compiled as guest code` |
+| C5035 | `use of feature 'feature' causes function function to be compiled as guest code` |
+| C5036 | `varargs function pointer conversion when compiling with /hybrid:x86arm64 'type1' to 'type2'` |
+| C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
+| C5038 | `data member 'member1' will be initialized after data member 'member2'` |
 
 ## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2017 RTM (wersja kompilatora 19.10.25017.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.00__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.00`.
 
 |||
 |-|-|
-C4468|"fallthrough": atrybut musi następować etykieta case lub default
-C4698|"*funkcji*" jest przeznaczony wyłącznie do celów oceny i może ulec zmianie, albo usunięty w przyszłych aktualizacjach.
-C4839|niestandardowe użycie klasy*klasy*"jako argumentu do funkcji ze zmienną liczbą argumentów
-C4840|nieprzenośne użycie klasy*klasy*"jako argumentu do funkcji ze zmienną liczbą argumentów
+| C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
+| C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
+| C4839 | `non-standard use of class 'class' as an argument to a variadic function` |
+| C4840 | `non-portable use of class 'class' as an argument to a variadic function` |
 
 ::: moniker-end
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 3 (wersja kompilatora 19.00.24215.1)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.00.23918__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.00.23918`.
 
 |||
 |-|-|
-C4467|Korzystanie z atrybutów ATL jest przestarzałe.
-C4596|"*nazwa*": niedozwolona kwalifikowana nazwa w deklaracji składowej
-C4598|"#include \< *nagłówka*\>": numer nagłówka *numer* w *źródła* nie odpowiada *źródła* w tym stanowisko
-C4599|"*argument*": *źródła* numerem argumentu *numer* nie odpowiada *źródła*
+| C4467 | `usage of ATL attributes is deprecated` |
+| C4596 | `'name': illegal qualified name in member declaration` |
+| C4598 | `'#include <header>': header number number in the source does not match source at that position` |
+| C4599 | `'argument': source argument number number does not match source` |
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 2 (wersja kompilatora 19.00.23918.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.00.23506__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.00.23506`.
 
 |||
 |-|-|
-C4466|Nie można wykonać sterty dla koprocedury
-C4595|"*klasy*": nowy operator składowej ani funkcje delete nie mogą być deklarowane wbudowane
-C4828|Plik zawiera znak rozpoczynający się od przesunięcia 0 x*wartość* jest niedozwolony w bieżącym zestawie znaków źródła (strona kodowa *numer*).
-C4868|Kompilator może nie wymusić kolejności oceny od lewej do prawej na liście inicjatora w nawiasach klamrowych
+| C4466 | `Could not perform coroutine heap elision` |
+| C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
+| C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
+| C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 Update 1 (wersja kompilatora 19.00.23506.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:19.00.23026__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.00.23026`.
 
 |||
 |-|-|
-C4426|flagi optymalizacji zmieniły się po dołączeniu nagłówka, może być #pragma Optimize()
-C4654|Kod umieszczony przed elementem obejmują wstępnie skompilowanego nagłówka wiersza zostaną zignorowane. Dodaj kod do wstępnie skompilowanego nagłówka.
-C5031|#pragma warning(pop): prawdopodobnie niezgodność, stan ostrzeżenia wypychany w innym pliku o wyświetlaniu
-C5032|Wykryto #pragma warning(push) nie odpowiedniego #pragma warning(pop)
+| C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
+| C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
+| C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
+| C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
 ## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2015 RTM (wersja kompilatora 19.00.23026.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/WV: 18__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:18`.
 
 |||
 |-|-|
-C4427|"*błąd*": przepełnienie w czasie dzielenia stałej, niezdefiniowane zachowanie
-C4438|"*typu*": nie można bezpiecznie wywołać / await: clrcompat trybu. Jeśli "*typu*" wywołuje środowisko CLR może spowodować uszkodzenie nagłówka środowiska CLR
-C4455|"operator *nazwa*": identyfikatory sufiksu literału, które nie rozpoczynają się od znaku podkreślenia są zarezerwowane
-C4456|Deklaracja "*nazwa*" powoduje ukrycie poprzedniej deklaracji lokalnej
-C4457|Deklaracja "*nazwa*" powoduje ukrycie parametru funkcji
-C4458|Deklaracja "*nazwa*" powoduje ukrycie składowej klasy
-C4459|Deklaracja "*nazwa*" powoduje ukrycie deklaracji globalnej
-C4462|"*typu*": nie można określić GUID typu. Program może ulec awarii w czasie wykonywania.
-C4463|przepełnienie; Przypisywanie *wartość* do pola bitowego, która może zawierać wartości z *wartość* do *wartość*
-C4473|"*funkcja*": przekazano za mało argumentów dla ciągu formatu
-C4474|"*funkcja*": przekazano zbyt wiele argumentów dla ciągu formatowania
-C4475|"*funkcja*": modyfikator długości "*modyfikator*"nie może być stosowany ze znakiem pola typu"*znak*" w specyfikatorze formatu
-C4476|"*funkcja*": nieznany znak pola typu "*znak*" w specyfikatorze formatu
-C4477|"*— funkcja*": ciąg formatu "*ciąg*"wymaga argumentu typu"*typu*", ale ze zmienną liczbą argumentów *numer* ma typ "*typu*"
-C4478|"*funkcja*": nie można łączyć pozycyjnych i niepozycyjnych symbole zastępcze w tym samym ciągu formatu
-C4494|"*typu*": Ignorowanie __declspec(allocator), ponieważ typ zwracany funkcji nie jest wskaźnikiem lub odwołaniem
-C4495|użyto niestandardowego rozszerzenia "__super": Zamień jawną nazwę klasy bazowej
-C4496|użyto niestandardowego rozszerzenia "for each": Zamień na instrukcję ranged-for
-C4497|użyto niestandardowego rozszerzenia "sealed": Zamień "final"
-C4498|użyto niestandardowego rozszerzenia: "*rozszerzenia*"
-C4499|"*specjalizacji*": jawna specjalizacja nie może zawierać klasy magazynu (zignorowany)
-C4576|Typ ujęty w nawiasy, następuje lista inicjalizatora jest składnia konwersji typu jawnego niestandardowych
-C4577|"noexcept" używane z nie trybu; obsługi wyjątków Zakończenie na wyjątek nie jest gwarantowana. Określ/ehsc
-C4578|"abs": konwersja z "*typu*"to"*typu*", możliwa utrata danych (Czy chodziło Ci o wywołanie "*nazwa*" lub #include \<cmath >?)
-C4582|"*typu*": Konstruktor nie jest wywoływany niejawnie
-C4583|"*typu*": destruktor nie jest wywoływany niejawnie
-C4587|"*typu*": Zmiana zachowania: Konstruktor nie jest już niejawnie jest wywoływany.
-C4588|"*typu*": Zmiana zachowania: destruktor jest wywoływany nie jest już niejawnie
-C4589|Konstruktor klasy abstrakcyjnej*typu*"ignoruje inicjatora w przypadku wirtualnej klasy bazowej"*typu*"
-C4591|limit głębokości wywołań wyrażeń "constexpr" *numer* przekracza (/ constexpr: DEPTH\<liczba >)
-C4592|"*typu*": symbol zostanie dynamicznie zainicjowany (ograniczenie implementacji)
-C4593|"*typu*": "constexpr" wywołanie oceny kroku limit *wartość* przekroczyła; Użyj/constexpr: Steps\<numer > Aby zwiększyć limit
-C4647|Zmiana zachowania: __is_pod (*typu*) ma inną wartość w poprzednich wersjach
-C4648|Atrybut standardowy "carries_dependency" jest ignorowany.
-C4649|atrybuty są ignorowane w tym kontekście
-C4753|Nie można odnaleźć granic wskaźnika; Zignorowano funkcję wewnętrzną MPX
-C4771|Granice muszą zostać utworzone przy użyciu wskaźnika prostego; Zignorowano funkcję wewnętrzną MPX
-C4774|"*opis*": ciąg oczekiwany w argumencie formatu *numer* nie jest ciągiem literału
-C4775|użyto niestandardowego rozszerzenia w ciągu formatu "*ciąg*"funkcji"*funkcja*"
-C4776|"%*znak*"nie jest dozwolony w ciągu formatowania lub funkcji"*funkcja*"
-C4777|"*opis*": ciąg formatu "*ciąg*"wymaga argumentu typu"*typu*", ale ze zmienną liczbą argumentów *numer* ma typ "*typu*"
-C4778|"*opis*": niezakończony ciąg formatu "*ciąg*"
-C4838|Konwersja z "*typu*"to"*typu*" wymaga konwersji zawężającej
-C5022|"*typu*": określono wiele konstruktorów przenoszenia
-C5023|"*typu*": określono wiele operatorów przypisania przenoszenia
-C5024|"*deklaracji*": Konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
-C5025|"*deklaracji*": Przenieś operator przypisania został niejawnie zdefiniowany jako usunięty
-C5026|"*typu*": Konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
-C5027|"*typu*": Przenieś operator przypisania został niejawnie zdefiniowany jako usunięty
-C5028|"*nazwa*": Wyrównanie określone we wcześniejszej deklaracji (*numer*) nie jest określona w definicji
-C5029|użyto niestandardowego rozszerzenia: atrybuty wyrównania w języku C++ dotyczą zmiennych, składowych danych i tylko dla typów tagów
-C5030|atrybut "*atrybut*" nie został rozpoznany
+| C4427 | `'error': overflow in constant division, undefined behavior` |
+| C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
+| C4455 | `'operator name': literal suffix identifiers that do not start with an underscore are reserved` |
+| C4456 | `declaration of 'name' hides previous local declaration` |
+| C4457 | `declaration of 'name' hides function parameter` |
+| C4458 | `declaration of 'name' hides class member` |
+| C4459 | `declaration of 'name' hides global declaration` |
+| C4462 | `'type' : cannot determine the GUID of the type. Program may fail at runtime.` |
+| C4463 | `overflow; assigning value to bit-field that can only hold values from value to value` |
+| C4473 | `'function' : not enough arguments passed for format string` |
+| C4474 | `'function' : too many arguments passed for format string` |
+| C4475 | `'function' : length modifier 'modifier' cannot be used with type field character 'character' in format specifier` |
+| C4476 | `'function' : unknown type field character 'character' in format specifier` |
+| C4477 | `'function' : format string 'string' requires an argument of type 'type', but variadic argument number has type 'type'` |
+| C4478 | `'function' : positional and non-positional placeholders cannot be mixed in the same format string` |
+| C4494 | `'type' : Ignoring __declspec(allocator) because the function return type is not a pointer or reference` |
+| C4495 | `nonstandard extension '__super' used: replace with explicit base class name` |
+| C4496 | `nonstandard extension 'for each' used: replace with ranged-for statement` |
+| C4497 | `nonstandard extension 'sealed' used: replace with 'final'` |
+| C4498 | `nonstandard extension used: 'extension'` |
+| C4499 | `'specialization': an explicit specialization cannot have a storage class (ignored)` |
+| C4576 | `a parenthesized type followed by an initializer list is a non-standard explicit type conversion syntax` |
+| C4577 | `'noexcept' used with no exception handling mode specified; termination on exception is not guaranteed. Specify /EHsc` |
+| C4578 | `'abs': conversion from 'type' to 'type', possible loss of data (Did you mean to call 'name' or to #include <cmath>?)` |
+| C4582 | `'type': constructor is not implicitly called` |
+| C4583 | `'type': destructor is not implicitly called` |
+| C4587 | `'type': behavior change: constructor is no longer implicitly called` |
+| C4588 | `'type': behavior change: destructor is no longer implicitly called` |
+| C4589 | `Constructor of abstract class 'type' ignores initializer for virtual base class 'type'` |
+| C4591 | `'constexpr' call-depth limit of number exceeded (/constexpr:depth<NUMBER>)` |
+| C4592 | `'type': symbol will be dynamically initialized (implementation limitation)` |
+| C4593 | `'type': 'constexpr' call evaluation step limit of value exceeded; use /constexpr:steps<NUMBER> to increase the limit` |
+| C4647 | `behavior change: __is_pod(type) has different value in previous versions` |
+| C4648 | `standard attribute 'carries_dependency' is ignored` |
+| C4649 | `attributes are ignored in this context` |
+| C4753 | `Cannot find bounds for pointer; MPX intrinsic function ignored` |
+| C4771 | `Bounds must be created using a simple pointer; MPX intrinsic function ignored` |
+| C4774 | `'description' : format string expected in argument number is not a string literal` |
+| C4775 | `nonstandard extension used in format string 'string' of function 'function'` |
+| C4776 | `'%character' is not allowed in the format string of function 'function'` |
+| C4777 | `'description' : format string 'string' requires an argument of type 'type', but variadic argument number has type 'type'` |
+| C4778 | `'description' : unterminated format string 'string'` |
+| C4838 | `conversion from 'type' to 'type' requires a narrowing conversion` |
+| C5022 | `'type': multiple move constructors specified` |
+| C5023 | `'type': multiple move assignment operators specified` |
+| C5024 | `'declaration': move constructor was implicitly defined as deleted` |
+| C5025 | `'declaration': move assignment operator was implicitly defined as deleted` |
+| C5026 | `'type': move constructor was implicitly defined as deleted` |
+| C5027 | `'type': move assignment operator was implicitly defined as deleted` |
+| C5028 | `'name': Alignment specified in prior declaration (number) not specified in definition` |
+| C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
+| C5030 | `attribute 'attribute' is not recognized` |
 
 ## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2013 (wersja kompilatora 18.00.21005.1)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:17__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:17`.
 
 |||
 |-|-|
-C4301|"*typu*": przesłanianie wirtualnej funkcji różni się tylko od "*deklaracji*" kwalifikatorem const/volatile
-C4316|"*typu*": obiekt przydzielony na stosie może nie wyrównany *numer*
-C4380|"*typu*": Domyślny konstruktor nie staną się przestarzałe
-C4388|"*tokenu*": niezgodność ze znakiem/bez znaku
-C4423|'std::bad_alloc': zostanie przechwycony przez klasę ('*typu*") w wierszu *numer*
-C4424|przechwycenie '*typu*'poprzedzone przez'*typu*"w wierszu *numer*; nieprzewidywalne zachowanie może powodować, jeśli zostanie zgłoszony 'std::bad_alloc'
-C4425|Nie można zastosować adnotacji SAL do "..."
-C4464|względna ścieżka dołączania zawiera ".."
-C4575|"__vectorcall" jest niezgodna z "/ clr" opcja: konwertowanie na "__stdcall"
-C4609|"*typu*"pochodzi z domyślnym interfejsem"*typu*"w typie"*typu*". Użyj innego interfejsu domyślnego dla "*typu*", lub przerwać relację bazową/dziedziczoną.
-C4754|Reguły konwersji dla operacji arytmetycznych w porównaniu na *opis*(*numer*) oznacza, że jedna gałąź nie może być wykonywane. Rzutowania "*typu*"to"*typu*" (lub podobny typ o *numer* bajtów).
-C4755|Reguły konwersji dla operacji arytmetycznych w porównaniu na *opis*(*numer*) oznacza, że jedna gałąź nie można wykonać w funkcji śródwierszowych. Rzutowania "*typu*"to"*typu*" (lub podobny typ o *numer* bajtów).
-C4767|Nazwa sekcji '*nazwa*"jest dłuższa niż 8 znaków i zostanie obcięta przez konsolidator
-C4770|częściowo zweryfikowane wyliczenie "*nazwa*" używane jako indeks
-C4827|Publiczne Metoda 'ToString' o 0 parametrach powinna być oznaczona jako virtual i zastąpienia
-C4882|przekazywanie funktorów z operatorami niestały wywołania do concurrency::parallel_for_each jest przestarzałe
-C4973|"*typu*": oznaczone jako przestarzałe
-C4974|"*typu*": oznaczone jako przestarzałe
-C4981|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ zawiera semantykę wyjątku
-C4990|Warbird: *message*
-C4991|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ poziom ochrony przed wstawianiem do treści jest większy niż element nadrzędny
-C4992|Warbird: funkcja "*deklaracji*" oznaczona jako __forceinline nie jest śródwierszowa, ponieważ zawiera wstawiony zestaw, który nie może być chroniony
+| C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
+| C4316 | `'type': object allocated on the heap may not be aligned number` |
+| C4380 | `'type': A default constructor cannot be deprecated` |
+| C4388 | `'token': signed/unsigned mismatch` |
+| C4423 | `'std::bad_alloc': will be caught by class ('type') on line number` |
+| C4424 | `catch for 'type' preceded by 'type' on line number; unpredictable behavior may result if 'std::bad_alloc' is thrown` |
+| C4425 | `A SAL annotation cannot be applied to '...'` |
+| C4464 | `relative include path contains '..'` |
+| C4575 | `'__vectorcall' incompatible with the '/clr' option: converting to '__stdcall'` |
+| C4609 | `'type' derives from default interface 'type' on type 'type'. Use a different default interface for 'type', or break the base/derived relationship.` |
+| C4754 | `Conversion rules for arithmetic operations in the comparison at description(number) mean that one branch cannot be executed. Cast 'type' to 'type' (or similar type of number bytes).` |
+| C4755 | `Conversion rules for arithmetic operations in the comparison at description(number) mean that one branch cannot be executed in an inlined function. Cast 'type' to 'type' (or similar type of number bytes).` |
+| C4767 | `section name 'name' is longer than 8 characters and will be truncated by the linker` |
+| C4770 | `partially validated enum 'name' used as index` |
+| C4827 | `A public 'ToString' method with 0 parameters should be marked as virtual and override` |
+| C4882 | `passing functors with non-const call operators to concurrency::parallel_for_each is deprecated` |
+| C4973 | `'type': marked as deprecated` |
+| C4974 | `'type': marked as deprecated` |
+| C4981 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains exception semantics` |
+| C4990 | `Warbird: message` |
+| C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
+| C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
 ## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2012 (wersja kompilatora 17.00.51106.1)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:16__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:16`.
 
 |||
 |-|-|
-C4330|atrybut "*atrybut*"w sekcji"*sekcji*" zignorowany
-C4415|duplicate __declspec(code_seg('*name*'))
-C4416|__declspec(code_seg(...)) zawiera pusty ciąg: ignorowane
-C4417|utworzenie wystąpienia jawnego szablonu nie może mieć __declspec(code_seg(...)): ignorowane
-C4418|__declspec(code_seg(...)) został zignorowany w wyliczeniu
-C4419|"*nazwa*"nie ma wpływu podczas zastosowane do prywatnej klasy ref"*typu*".
-C4435|"*typu*": Układ obiektu pod/vd2 zmieni się z powodu bazy wirtualnej "*typu*"
-C4436|dynamic_cast z bazy wirtualnej "*typu*"to"*typu*" w konstruktorze lub destruktorze może zakończyć się niepowodzeniem z częściowo skonstruowanym obiektem
-C4437|dynamic_cast z bazy wirtualnej "*typu*"to"*typu*" może nie działać w niektórych kontekstach
-C4443|Oczekiwano wartości parametru pragma "0", "1" lub "2"
-C4446|"*typu*": nie można mapować składowej "*nazwa*" do tego typu, ze względu na konflikt z nazwą typu. Metoda została zmieniona na "*nazwa*"
-C4447|podpis "main" bez modelu wątkowości. Rozważ użycie "int głównego (Platform::Array\<Platform::String ^ > ^ args)".
-C4448|"*typu*" nie ma domyślnego interfejsu określonego w metadanych. Pobrania: "*typu*", która może ulec awarii w czasie wykonywania.
-C4449|"*typu*" typ niezapieczętowany powinien być oznaczony jako "[WebHostHidden]"
-C4450|"*typu*"powinien być oznaczony jako "[WebHostHidden]" ponieważ dziedziczy"*typu*"
-C4451|"*typu*": Użycie klasy ref*typu*' wewnątrz tego kontekstu może doprowadzić do nieprawidłowego kierowania obiektami między kontekstami
-C4452|"*typu*": typ publiczny nie może być w zakresie globalnym. Musi być w przestrzeni nazw, który jest elementem podrzędnym nazwy wyjściowego pliku .winmd.
-C4453|"*typu*": Typ "[WebHostHidden]", nie powinien być używany na publikowanej powierzchni typu publicznego, który nie jest "[WebHostHidden]"
-C4454|"*typu*" jest przeciążony przez więcej niż liczba parametrów wejściowych bez konieczności [DefaultOverload] określony. Pobrania "*deklaracji*" jako domyślne przeciążenie
-C4471|"*nazwa*": deklaracja zapowiadająca wyliczenia nieobjętego zakresem musi mieć podstawowy typ (zakładany jest int)
-C4472|"*nazwa*" jest natywnym wyliczeniem: Dodaj specyfikator dostępu (private/public), aby zadeklarować wyliczenie zarządzane/WinRT
-C4492|"*typu*": dopasowuje metody bazowej klasy referencyjnej "*typu*", ale nie jest oznaczona modyfikatorem "override"
-C4493|Usuń wyrażenie nie przynosi efektu jako destruktor "*typu*" nie ma dostępności "public"
-C4585|"*typu*": WinRT "public ref class" musi być zapieczętowana lub dziedziczyć po istniejącej niezapieczętowane klasy
-C4586|"*typu*": Typ publiczny nie można zadeklarować w przestrzeni nazw najwyższego poziomu o nazwie "Windows"
-C4695|#pragma execution_character_set: "*argument*" jest nieobsługiwanym argumentem: obecnie tylko "UTF-8" jest obsługiwany.
-C4703|Użycie potencjalnie niezainicjowanej lokalnej zmiennej wskaźnikowej "*nazwa*" używane
-C4728|/ Opcja Yl-zignorowane, ponieważ wymagane jest odwołanie do PCH
-C4745|nietrwały dostęp "*nazwa*" nie może zostać wdrożona z powodu jego rozmiaru
-C4746|nietrwały dostęp "*nazwa*" podlega/volatile:\<iso\|ms >; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store funkcje wewnętrzne
-C4872|dzielenie liczby zmiennoprzecinkowej przez zero wykryta podczas kompilacji wykresu wywołań dla concurrency::parallel_for_each: "*opis*"
-C4880|Rzutowanie z "*typu*"to"*typu*": stałości ze wskaźnika lub odwołania może spowodować niezdefiniowane zachowanie w zastrzeżonej funkcji amp
-C4881|Konstruktor i/lub destruktor nie zostaną wywołane dla zmiennej tile_static "*typu*"
-C4966|"*opis*" ma adnotację __code_seg z nieobsługiwaną nazwą segmentu, adnotacja została zignorowana
-C4988|"*typu*": Zmienna zadeklarowana poza zakresem klasy/funkcji
-C4989|"*opis*": Typ ma definicje powodujące konflikt.
+| C4330 | `attribute 'attribute' for section 'section' ignored` |
+| C4415 | `duplicate __declspec(code_seg('name'))` |
+| C4416 | `__declspec(code_seg(...)) contains empty string: ignored` |
+| C4417 | `an explicit template instantiation cannot have __declspec(code_seg(...)): ignored` |
+| C4418 | `__declspec(code_seg(...)) ignored on an enum` |
+| C4419 | `'name' has no effect when applied to private ref class 'type'.` |
+| C4435 | `'type': Object layout under /vd2 will change due to virtual base 'type'` |
+| C4436 | `dynamic_cast from virtual base 'type' to 'type' in constructor or destructor could fail with partially-constructed object` |
+| C4437 | `dynamic_cast from virtual base 'type' to 'type' could fail in some contexts` |
+| C4443 | `expected pragma parameter to be '0', '1', or '2'` |
+| C4446 | `'type': cannot map member 'name' into this type, due to conflict with the type name. The method was renamed to 'name'` |
+| C4447 | `'main' signature found without threading model. Consider using 'int main(Platform::Array<Platform::String^>^ args)'.` |
+| C4448 | `'type' does not have a default interface specified in metadata. Picking: 'type', which may fail at runtime.` |
+| C4449 | `'type' an unsealed type should be marked as '[WebHostHidden]'` |
+| C4450 | `'type' should be marked as '[WebHostHidden]' because it derives from 'type'` |
+| C4451 | `'type': Usage of ref class 'type' inside this context can lead to invalid marshaling of object across contexts` |
+| C4452 | `'type': public type cannot be at global scope. It must be in a namespace that is a child of the name of the output .winmd file.` |
+| C4453 | `'type': A '[WebHostHidden]' type should not be used on the published surface of a public type that is not '[WebHostHidden]'` |
+| C4454 | `'type' is overloaded by more than the number of input parameters without having [DefaultOverload] specified. Picking 'declaration' as the default overload` |
+| C4471 | `'name': a forward declaration of an unscoped enumeration must have an underlying type (int assumed)` |
+| C4472 | `'name' is a native enum: add an access specifier (private/public) to declare a managed/WinRT enum` |
+| C4492 | `'type': matches base ref class method 'type', but is not marked 'override'` |
+| C4493 | `delete expression has no effect as the destructor of 'type' does not have 'public' accessibility` |
+| C4585 | `'type': A WinRT 'public ref class' must either be sealed or derive from an existing unsealed class` |
+| C4586 | `'type': A public type cannot be declared in a top-level namespace called 'Windows'` |
+| C4695 | `#pragma execution_character_set: 'argument' is not a supported argument: currently only 'UTF-8' is supported` |
+| C4703 | `potentially uninitialized local pointer variable 'name' used` |
+| C4728 | `/Yl- option ignored because PCH reference is required` |
+| C4745 | `volatile access of 'name' cannot be honored due to its size` |
+| C4746|nietrwały dostęp "name" podlega/volatile: < iso | MS > ustawienie; należy rozważyć użycie funkcji wewnętrznych __iso_volatile_load/store funkcje wewnętrzne |
+| C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
+| C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
+| C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
+| C4966 | `'description' has __code_seg annotation with unsupported segment name, annotation ignored` |
+| C4988 | `'type': variable declared outside class/function scope` |
+| C4989 | `'description': type has conflicting definitions.` |
 
 ## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2010 (wersja kompilatora 16.00.40219.01)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:15__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:15`.
 
 |||
 |-|-|
-C4352|"*nazwa*": wewnętrzna funkcja już zdefiniowana
-C4573|użycie "*typu*" wymaga kompilator do przechwytywania "this" ale nie zezwala na to domyślny tryb przechwytywania bieżącego
-C4574|"*nazwa*'jest zdefiniowane jako ' 0': czy zamierzałeś użyć ' #if *nazwa*"?
-C4689|"*znak*": nieobsługiwany znak w dyrektywie #pragma detect_mismatch; #pragma ignorowane
-C4751|flagi/arch AVX nie ma zastosowania do Intel(R) Streaming SIMD Extensions, się wewnątrz wbudowanego ASM
-C4752|Znaleziono Intel(R) Advanced Vector Extensions; należy rozważyć użycie odpowiednich flagi/arch AVX
-C4837|Wykryto trójznak: "? *znak*"zastępuje"*znak*"
-C4986|"*deklaracji*': specyfikacja wyjątku jest niezgodna z poprzednią deklaracją
-C4987|użyto rozszerzenia niestandardowego: 'throw (...)'
+| C4352 | `'name': intrinsic function already defined` |
+| C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
+| C4574 | `'name' is defined to be '0': did you mean to use '#if name'?` |
+| C4689 | `'character': unsupported character in #pragma detect_mismatch; #pragma ignored` |
+| C4751 | `/arch AVX flag does not apply to Intel(R) Streaming SIMD Extensions that are within inline ASM` |
+| C4752 | `found Intel(R) Advanced Vector Extensions; consider using the appropriate /arch AVX flag` |
+| C4837 | `trigraph detected: '??character' replaced by 'character'` |
+| C4986 | `'declaration': exception specification does not match previous declaration` |
+| C4987 | `nonstandard extension used: 'throw (...)'` |
 
 ## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2008 (wersja kompilatora 15.00.21022.08)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:14__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:14`.
 
 |||
 |-|-|
-C4396|"*typu*": wbudowany specyfikator nie można użyć, gdy zaprzyjaźniona deklaracja odnosi się do specjalizacji szablonu funkcji
-C4413|"*deklaracji*": składowa odwołania jest zainicjowana do tymczasowej, która nie jest zachowana po zakończeniu konstruktora
-C4491|"*opis*": ma niedozwolony format wersji języka IDL
-C4603|"*nazwa*": makro jest niezdefiniowane lub definicja różni się po użyciu prekompilowanego nagłówka
-C4627|"*opis*": pominięto podczas wyszukiwania użycia prekompilowanego nagłówka
-C4750|"*opis*": funkcja zawierająca _alloca() została wbudowana w pętlę
-C4910|"*typu*": deklaracje "__declspec(dllexport)" i "extern" są niezgodne z jawnym wystąpieniem
-C4985|"*deklaracji*": Brak atrybutów w poprzedniej deklaracji.
+| C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
+| C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
+| C4491 | `'description': has an illegal IDL version format` |
+| C4603 | `'name': macro is not defined or definition is different after precompiled header use` |
+| C4627 | `'description': skipped when looking for precompiled header use` |
+| C4750 | `'description': function with _alloca() inlined into a loop` |
+| C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
+| C4985 | `'declaration': attributes not present on previous declaration.` |
 
 ## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2005 (wersja kompilatora 14.00.50727.762)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:13__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:13`.
 
 |||
 |-|-|
-C4000|Nieznane ostrzeżenie, wybierz polecenie Pomoc techniczna w Visual C++ menu Pomoc lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji
-C4272|"*typu*": jest oznaczony jako __declspec(dllimport); należy określić natywną Konwencję wywoływania podczas importu funkcji.
-C4333|"*wyrażenie*": przesunięcie w prawo o zbyt dużą liczbę, utrata danych
-C4334|"*wyrażenie*": wynik 32-bitowe przesunięcia niejawnie skonwertowano do 64 bitów (była 64-bitowe przesunięcie przeznaczone?)
-C4335|Wykryto format pliku Mac: Skonwertuj plik źródłowy do formatu DOS lub systemu UNIX
-C4342|Zmiana zachowania: "*typu*" o nazwie, ale operator składowej został wywołany w poprzednich wersjach
-C4350|Zmiana zachowania: "*deklaracji*"o nazwie zamiast"*deklaracji*"
-C4357|Znaleziono argument tablicy parametrów w liście formalnych argumentów dla delegata "*deklaracji*"zignorowano podczas generowania"*typu*"
-C4358|"*wyrażenie*": zwracany typ połączonych delegatów nie jest "void"; zwrócona wartość jest niezdefiniowana
-C4359|"*typu*": Specyfikator wyrównania jest mniejszy niż rzeczywiste wyrównanie (*numer*) i zostaną zignorowane.
-C4362|"*typu*": wyrównanie większe niż 8 bajtów nie jest obsługiwana przez CLR
-C4364|#using dla zestawu '*nazwa*"poprzednio widziano w *opis*(*numer*) bez atrybutu as_friend; nie stosowane as_friend
-C4365|"*wyrażenie*': konwersja z"*typu*"to"*typu*', niezgodność ze znakiem/bez znaku
-C4366|Wynik jednoargumentowy "*operator*" operator może być niewyrównany
-C4367|Konwersja z "*typu*"to"*typu*" może spowodować wyjątek niespójności typu danych
-C4368|Nie można zdefiniować "*nazwa*"as "zarządzane przez członkiem*typu*": mieszane typy nie są obsługiwane.
-C4369|"*typu*": moduł wyliczający wartość "*numer*"nie może być reprezentowany jako"*typu*", wartość to"*numer*"
-C4374|"*deklaracji*": metoda interfejsu nie będzie zaimplementowana przez niewirtualną metodę "*deklaracji*"
-C4375|Niepubliczna metoda "*deklaracji*"nie przesłania"*deklaracji*"
-C4376|specyfikatorze dostępu "*specyfikator*:" nie jest już obsługiwany: Użyj "*specyfikator*:" zamiast niego
-C4377|typy natywne są domyślnie; prywatny -d1PrivateNativeTypes jest przestarzały
-C4378|Należy uzyskać wskaźniki do funkcji, aby uruchomić inicjatory; należy wziąć pod uwagę system::ModuleHandle:: resolvemethodhandle
-C4379|Wersja *wersji* common language runtime nie jest obsługiwana przez ten kompilator. Korzystanie z tej wersji może spowodować nieoczekiwane wyniki
-C4381|"*deklaracji*": metoda interfejsu nie będzie zaimplementowana przez niepubliczna metoda "*deklaracji*"
-C4382|Zgłaszanie "*typu*": typ z destruktorem __clrcall lub konstruktorem kopiującym można tylko przechwycić w/CLR: pure modułu
-C4383|"*typu*": znaczenie usunięcia odwołania do dojścia można zmienić, gdy zdefiniowana przez użytkownika "*operator*" operator istnieje; Zapisz operator jako funkcję statyczną aby była niejawna przy korzystaniu z operandu
-C4384|#pragma "*dyrektywy*" należy używać tylko w zakresie globalnym
-C4393|"*typu*": const nie ma wpływu *opis* element członkowski danych; ignorowany
-C4394|"*typu*": symbol per-appdomain nie powinien być oznaczony przez __declspec (*wartość*)
-C4395|"*typu*": funkcja składowa zostanie wywołana na kopii składowej danych initonly "*typu*"
-C4397|DefaultCharSetAttribute jest ignorowany
-C4398|"*typu*": globalny obiekt dla poszczególnych procesu mogą nie działać poprawnie z wieloma domenami aplikacji; należy wziąć pod uwagę użycie __declspec(appdomain)
-C4399|"*typu*": symbol w procesie nie powinien być oznaczony przez __declspec (*wartość*) gdy skompilowano z opcją/CLR: pure
-C4400|"*typu*": kwalifikatory const/volatile dla tego typu nie są obsługiwane.
-C4412|"*deklaracji*': podpis funkcji podpis zawiera typ"*typu*'; Obiekty C++ są bezpieczne przekazywanie między kodem czystym i mieszanym lub macierzystym.
-C4429|możliwe niekompletne lub niepoprawnie uformowane universal-character-name
-C4430|brak specyfikatora typu — zakładany int. Uwaga: Język C++ obsługuje domyślnie typu int
-C4431|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnie typu int
-C4434|statyczny Konstruktor musi posiadać prywatną dostępność; Zmiana na prywatny dostęp
-C4439|"*typu*": definicja funkcji z zarządzanym typem w sygnaturze musi mieć konwencję wywołania __clrcall
-C4441|Konwencja wywoływania '*Konwencji*"ignorowane. "*Konwencji*" zamiast tego użyć
-C4445|"*deklaracji*": w typie zarządzane WinRT nie może być prywatny metody wirtualnej
-C4460|CLR/WinRT operatora "*typu*", ma parametr przekazywany przez odwołanie. CLR/WinRT operatora "*operator*"ma semantykę różną od operatora C++"*operator*", czy zamierzasz przekazać przez wartość?
-C4461|"*typu*": Ta klasa ma finalizator "! *Typ*"ale nie ma destruktora" ~*typu*"
-C4470|dyrektywy pragma sterowania zmiennoprzecinkowego zignorowane z opcją/CLR
-C4480|użyte rozszerzenie niestandardowe: Określanie typu podstawowego dla wyliczenia "*typu*"
-C4481|użyte rozszerzenie niestandardowe: specyfikator override "*specyfikator*"
-C4482|używane niestandardowe rozszerzeni: enum '*typu*"użyte w nazwie kwalifikowanej
-C4483|Błąd składniowy: Oczekiwano słowa kluczowego języka C++
-C4484|"*typu*": pasuje metody bazowej klasy referencyjnej "*typu*", ale nie jest oznaczona modyfikatorem "virtual", "new" lub "override"; przyjęto "new" (a nie "virtual")
-C4485|"*typu*": dopasowania metody bazowej klasy referencyjnej "*typu*", ale nie jest oznaczona "new" ani "override"; przyjęto "new" (i "virtual")
-C4486|"*typu*": prywatna metoda wirtualna klasy referencyjnej lub klasy wartości powinna być oznaczona jako "sealed"
-C4487|"*typu*": pasuje dziedziczone metody niewirtualnej "*typu*", ale to nie jawnie oznaczona modyfikatorem "new"
-C4488|"*typu*": wymaga "*— słowo kluczowe*"słowo kluczowe, aby zaimplementować metodę interfejsu"*typu*"
-C4489|"*— słowo kluczowe*": niedozwolony dla metody interfejsu "*nazwa*"; zastąpienie specyfikatorów są dozwolone tylko dla metod klasy ref i klas wartości
-C4490|"*— słowo kluczowe*": Niepoprawne użycie specyfikatora override; "*typu*" nie odpowiada metodzie bazowej klasy referencyjnej
-C4538|"*typu*": kwalifikatory const/volatile dla tego typu nie są obsługiwane.
-C4559|"*typu*": zmiana definicji; __declspec zyski — funkcja (*wartość*)
-C4565|"*typu*": zmiana definicji; symbol został poprzednio zadeklarowany za pomocą __declspec (*wartość*)
-C4566|znaku, reprezentowane przez universal-character-name "*znak*" nie może być przedstawiony w bieżącej stronie kodowej (*numer*)
-C4568|"*typu*": żadne składowe nie odpowiadają sygnaturze jawnego przesłaniania
-C4569|"*typu*": żadne składowe nie odpowiadają sygnaturze jawnego przesłaniania
-C4570|"*typu*": nie jest jawnie zadeklarowana jako abstrakcyjna, ale ma funkcje abstrakcyjne
-C4571|Informacja: semantyka instrukcji catch(...) została zmieniona od czasu Visual C++ 7.1; Wyjątki strukturalne (SEH) nie są już przechwytywane
-C4572|Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." Zamiast tego
-C4580|[attribute] jest przestarzały; zamiast niego określ *określonego*atrybutu jako klasę bazową
-C4581|zachowanie przestarzałe: ' "*nazwa*" "zastąpione"*nazwa*"Aby przetwarzać atrybut
-C4606|Ostrzeżenie #pragma: "*numer*" ignorowane. Ostrzeżenia analizy kodu nie są skojarzone z poziomami ostrzeżeń
-C4631|Oprogramowanie MSXML lub XPath niedostępna, dokumentu XML, które nie będą przetwarzane komentarze. *description*
-C4632|Komentarz dokumentu XML: *opis* — odmowa dostępu: *opis*
-C4633|Komentarz dokumentu XML *opis*: błąd: *opis*
-C4634|Komentarz dokumentu XML *opis*: nie można zastosować: *opis*
-C4635|Komentarz dokumentu XML *opis*: niewłaściwie sformułowany kod XML: *opis*
-C4636|Komentarz dokumentu XML *opis*: tag wymaga niepustego "*opis*" atrybutu.
-C4637|Komentarz dokumentu XML *opis*: \<obejmują > tag odrzucone. *description*
-C4638|Komentarz dokumentu XML *opis*: odwołanie do nieznanego symbolu "*opis*".
-C4639|Błąd oprogramowania MSXML, dokumentu XML, które nie będą przetwarzane komentarze. *description*
-C4641|Komentarz dokumentu XML ma niejednoznaczne odwołanie:
-C4678|Klasa bazowa*deklaracji*"jest mniej dostępny niż"*nazwa*"
-C4679|"*opis*": nie można zaimportować składowej
-C4687|"*typu*": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "*typu*"
-C4688|"*nazwa*": Lista ograniczeń zawiera prywatny typ zestawu "*deklaracji*"
-C4690|\[ emitidl (pop)]: więcej zdejmowań niż włożeń
-C4691|"*typu*": oczekiwano typu odwołania w bez odwołań *modułu* "*opis*", typ zdefiniowany w bieżącej jednostce tłumaczenia, zamiast tego użyć
-C4692|"*nazwa*': podpis z nieprywatnej składowej zawiera natywny prywatny typ zestawu"*deklaracji*"
-C4693|"*typu*": zapieczętowana klasa abstrakcyjna nie może mieć żadnych składowych wystąpienia*nazwa*"
-C4694|"*typu*": zapieczętowana klasa abstrakcyjna nie może mieć klasy bazowej*typu*"
-C4720|wbudowane raporty asemblera: "*opis*"
-C4721|"*opis*": nie jest dostępna jako funkcja wewnętrzna
-C4722|"*opis*": destruktor nigdy nie powraca, Potencjalny przeciek pamięci
-C4726|ARM arch4/4T obsługuje "\<cpsr_f > lub \<spsr_f >" z adresowaniem natychmiastowym
-C4727|PCH o nazwie *nazwa* z tą samą sygnaturą czasową w *nazwa* i *nazwa*.  Za pomocą pierwszego układu PCH.
-C4729|Funkcja za duża dla grafu przepływu na podstawie ostrzeżenia
-C4730|"*opis*": połączenie typu _m64 i zmiennoprzecinkowa wyrażeń może spowodować niepoprawny kod
-C4731|"*opis*": rejestr wskaźnika ramki "*zarejestrować*" zmodyfikowany przez wbudowany kod asemblera
-C4732|wewnętrzne "*wewnętrzne*" nie jest obsługiwana w ramach tej architektury
-C4733|Przypisanie w wbudowanym do "FS:0": obsługa nie jest zarejestrowana jako bezpieczna Obsługa
-C4734|Więcej niż 64 KB numery wierszy w COFF debugowania sekcji informacji. Zatrzymaj emitowanie numerów linii debugowania formatu COFF dla modułu "*modułu*"
-C4738|przechowywanie 32-bitowego wyniku zmiennopozycyjnego w pamięci, możliwa utrata wydajności
-C4739|Odwołanie do zmiennej "*zmiennej*" przekracza jego miejsce do magazynowania
-C4740|przepływ w lub wyjścia wbudowanego kodu asemblera pomija optymalizację globalną
-C4742|"*zmiennej*"ma inne wyrównanie "*lokalizacji*"i"*lokalizacji*": *numer* i *numer*
-C4743|"*nazwa*"ma inny rozmiar "*lokalizacji*"i"*lokalizacji*": *numer* i *numer* bajtów
-C4744|"*nazwa*"ma inny typ "*lokalizacji*"i"*lokalizacji*": "*typu*"i"*typu*"
-C4747|Wywołanie zarządzanego "*typu*": Kod zarządzany nie mogą być uruchamiane w ramach blokady modułu ładującego, włączając w to punkt wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL
-C4761|Niezgodność rozmiaru całkowitego w argumencie; podano konwersję
-C4764|Nie można wyrównać obiektów przechwytywania do więcej niż 16 bajtów
-C4788|"*identyfikator*": identyfikator został obcięty do "*numer*" znaków
-C4789|bufor "*nazwa*" o rozmiarze *numer* bajtów zostanie przepełniony; *numer* bajtów zostanie zapisane zaczynając od przesunięcia *numer*
-C4801|Zwracanie przez odwołanie nie jest możliwe do zweryfikowania: *opis*
-C4819|Plik zawiera znak, który nie może być przedstawiony w bieżącej stronie kodowej (*numer*). Zapisz plik w formacie Unicode, aby zapobiec utracie danych
-C4826|Konwersja z "*typu*"to"*typu*' jest rozszerzona o znak. Może to spowodować nieoczekiwane zachowanie.
-C4829|Prawdopodobnie niepoprawne parametry funkcji głównego. Należy wziąć pod uwagę "int głównego (Platform::Array\<Platform::String ^ > ^ argv)"
-C4835|"*typu*": Inicjator dla eksportowanych danych nie będzie działać, dopóki kod zarządzany jest wykonywany jako pierwszy w zestawie hosta
-C4867|"*typu*": niestandardowa składnia; Użyj "&", aby utworzyć wskaźnik do składowej
-C4936|Ta deklaracja __declspec jest obsługiwana tylko w przypadku, gdy skompilowano z opcją/CLR lub/CLR: pure
-C4937|"*nazwa*"i"*nazwa*"są nierozróżnialne jako argumenty"*opcji*"
-C4938|"*typu*": Zmiennoprzecinkowe zmiennej redukcji punktu może spowodować niespójne wyniki w obszarze/FP: strict lub #pragma fenv_access
-C4939|#pragma vtordisp jest przestarzała i zostanie usunięta w przyszłej wersji programu Visual C++
-C4947|"*typu*": oznaczony jako przestarzały
-C4949|dyrektywy pragma "managed" i "unmanaged" mają znaczenie, tylko wtedy, gdy skompilowano z opcją "/ clr [: option]"
-C4950|"*typu*": oznaczony jako przestarzały
-C4955|"*opis*": Importowanie zostało zignorowane; zaimportowano już z "*źródła*"
-C4956|"*typu*": ten typ nie jest możliwe do zweryfikowania
-C4957|"*wyrażenie*": jawne rzutowanie z "*typu*"to"*typu*" nie jest możliwe do zweryfikowania
-C4958|"*wyrażenie*": arytmetyka wskaźnika nie jest możliwe do zweryfikowania
-C4959|Nie można zdefiniować niezarządzanego *klasy* "*typu*" w/CLR: Safe, ponieważ dostęp do jego składowych daje nieweryfikowalny kod
-C4960|"*opis*" jest zbyt duży do profilowania
-C4961|Dane profilowe nie zostały scalone z "*lokalizacji*", profilowana Optymalizacja została wyłączona
-C4962|"*opis*": Optymalizacje sterowane profilem wyłączone, ponieważ optymalizacje spowodowały niespójność danych profilu
-C4963|"*opis*": nie znaleziono danych profilowych; różne opcje kompilatora zostały użyte w kompilacji instrumentowanej
-C4964|Opcje optymalizacji nie zostały określone; informacje profilowe nie zostaną zebrane.
-C4965|niejawne rzutowanie liczby całkowitej 0; Użyj nullptr lub jawnego rzutowania
-C4970|Konstruktor delegaty: obiekt docelowy ignorowane od "*deklaracji*" jest statyczny
-C4971|Kolejność argumentów: \<obiekt docelowy >, \<docelowa funkcja > dla konstruktora delegaty jest przestarzały, użyj \<docelowa funkcja >, \<obiekt docelowy >
-C4972|Nie jest bezpośrednia modyfikacja lub traktowanie wyniku operacji odpakowywania wartościowanego lewostronnie
+| C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
+| C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
+| C4333 | `'expression': right shift by too large amount, data loss` |
+| C4334 | `'expression': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)` |
+| C4335 | `Mac file format detected: please convert the source file to either DOS or UNIX format` |
+| C4342 | `behavior change: 'type' called, but a member operator was called in previous versions` |
+| C4350 | `behavior change: 'declaration' called instead of 'declaration'` |
+| C4357 | `param array argument found in formal argument list for delegate 'declaration' ignored when generating 'type'` |
+| C4358 | `'expression': return type of combined delegates is not 'void'; returned value is undefined` |
+| C4359 | `'type': Alignment specifier is less than actual alignment (number), and will be ignored.` |
+| C4362 | `'type': alignment greater than 8 bytes is not supported by CLR` |
+| C4364 | `#using for assembly 'name' previously seen at description(number) without as_friend attribute; as_friend not applied` |
+| C4365 | `'expression': conversion from 'type' to 'type', signed/unsigned mismatch` |
+| C4366 | `The result of the unary 'operator' operator may be unaligned` |
+| C4367 | `Conversion from 'type' to 'type' may cause datatype misalignment exception` |
+| C4368 | `cannot define 'name' as a member of managed 'type': mixed types are not supported` |
+| C4369 | `'type':  enumerator value 'number' cannot be represented as 'type', value is 'number'` |
+| C4374 | `'declaration': interface method will not be implemented by non-virtual method 'declaration'` |
+| C4375 | `non-public method 'declaration' does not override 'declaration'` |
+| C4376 | `access specifier 'specifier:' is no longer supported: please use 'specifier:' instead` |
+| C4377 | `native types are private by default; -d1PrivateNativeTypes is deprecated` |
+| C4378 | `Must obtain function pointers to run initializers; consider System::ModuleHandle::ResolveMethodHandle` |
+| C4379 | `Version version of the common language runtime is not supported by this compiler. Using this version may cause unexpected results` |
+| C4381 | `'declaration': interface method will not be implemented by non-public method 'declaration'` |
+| C4382 | `throwing 'type': a type with __clrcall destructor or copy constructor can only be caught in /clr:pure module` |
+| C4383 | `'type': the meaning of dereferencing a handle can change, when a user-defined 'operator' operator exists; write the operator as a static function to be explicit about the operand` |
+| C4384 | `#pragma 'directive' should only be used at global scope` |
+| C4393 | `'type': const has no effect on description data member; ignored` |
+| C4394 | `'type': per-appdomain symbol should not be marked with __declspec(value)` |
+| C4395 | `'type': member function will be invoked on a copy of the initonly data member 'type'` |
+| C4397 | `DefaultCharSetAttribute is ignored` |
+| C4398 | `'type': per-process global object might not work correctly with multiple appdomains; consider using __declspec(appdomain)` |
+| C4399 | `'type': per-process symbol should not be marked with __declspec(value) when compiled with /clr:pure` |
+| C4400 | `'type': const/volatile qualifiers on this type are not supported` |
+| C4412 | `'declaration': function signature contains type 'type'; C++ objects are unsafe to pass between pure code and mixed or native.` |
+| C4429 | `possible incomplete or improperly formed universal-character-name` |
+| C4430 | `missing type specifier - int assumed. Note: C++ does not support default-int` |
+| C4431 | `missing type specifier - int assumed. Note: C no longer supports default-int` |
+| C4434 | `a static constructor must have private accessibility; changing to private access` |
+| C4439 | `'type': function definition with a managed type in the signature must have a __clrcall calling convention` |
+| C4441 | `calling convention of 'convention' ignored; 'convention' used instead` |
+| C4445 | `'declaration': in a managed/WinRT type a virtual method cannot be private` |
+| C4460 | `CLR/WinRT operator 'type', has parameter passed by reference. CLR/WinRT operator 'operator' has different semantics from C++ operator 'operator', did you intend to pass by value?` |
+| C4461 | `'type': this class has a finalizer '!type' but no destructor '~type'` |
+| C4470 | `floating-point control pragmas ignored under /clr` |
+| C4480 | `nonstandard extension used: specifying underlying type for enum 'type'` |
+| C4481 | `nonstandard extension used: override specifier 'specifier'` |
+| C4482 | `nonstandard extension used: enum 'type' used in qualified name` |
+| C4483 | `syntax error: expected C++ keyword` |
+| C4484 | `'type': matches base ref class method 'type', but is not marked 'virtual', 'new' or 'override'; 'new' (and not 'virtual') is assumed` |
+| C4485 | `'type': matches base ref class method 'type', but is not marked 'new' or 'override'; 'new' (and 'virtual') is assumed` |
+| C4486 | `'type': a private virtual method of a ref class or value class should be marked 'sealed'` |
+| C4487 | `'type': matches inherited non-virtual method 'type' but is not explicitly marked 'new'` |
+| C4488 | `'type': requires 'keyword' keyword to implement the interface method 'type'` |
+| C4489 | `'keyword': not allowed on interface method 'name'; override specifiers are only allowed on ref class and value class methods` |
+| C4490 | `'keyword': incorrect use of override specifier; 'type' does not match a base ref class method` |
+| C4538 | `'type': const/volatile qualifiers on this type are not supported` |
+| C4559 | `'type': redefinition; the function gains __declspec(value)` |
+| C4565 | `'type': redefinition; the symbol was previously declared with __declspec(value)` |
+| C4566 | `character represented by universal-character-name 'character' cannot be represented in the current code page (number)` |
+| C4568 | `'type': no members match the signature of the explicit override` |
+| C4569 | `'type': no members match the signature of the explicit override` |
+| C4570 | `'type': is not explicitly declared as abstract but has abstract functions` |
+| C4571 | `Informational: catch(...) semantics changed since Visual C++ 7.1; structured exceptions (SEH) are no longer caught` |
+| C4572 | `[ParamArray] attribute is deprecated under /clr, use '...' instead` |
+| C4580 | `[attribute] is deprecated; instead specify specifiedAttribute as a base class` |
+| C4581 | `deprecated behavior: '"name"' replaced with 'name' to process attribute` |
+| C4606 | `#pragma warning: 'number' ignored; Code Analysis warnings are not associated with warning levels` |
+| C4631 | `MSXML or XPath unavailable, XML document comments will not be processed. description` |
+| C4632 | `XML document comment: description - access denied: description` |
+| C4633 | `XML document comment description: error: description` |
+| C4634 | `XML document comment description: cannot be applied: description` |
+| C4635 | `XML document comment description: badly-formed XML: description` |
+| C4636 | `XML document comment description: tag requires non-empty 'description' attribute.` |
+| C4637 | `XML document comment description: <include> tag discarded. description` |
+| C4638 | `XML document comment description: reference to unknown symbol 'description'.` |
+| C4639 | `MSXML error, XML document comments will not be processed. description` |
+| C4641 | `XML document comment has an ambiguous cross reference:` |
+| C4678 | `base class 'declaration' is less accessible than 'name'` |
+| C4679 | `'description': could not import member` |
+| C4687 | `'type': a sealed abstract class cannot implement an interface 'type'` |
+| C4688 | `'name': constraint list contains assembly private type 'declaration'` |
+| C4690 | `[ emitidl( pop ) ]: more pops than pushes` |
+| C4691 | `'type': type referenced was expected in unreferenced module 'description', type defined in current translation unit used instead` |
+| C4692 | `'name': signature of non-private member contains assembly private native type 'declaration'` |
+| C4693 | `'type': a sealed abstract class cannot have any instance members 'name'` |
+| C4694 | `'type': a sealed abstract class cannot have a base-class 'type'` |
+| C4720 | `in-line assembler reports: 'description'` |
+| C4721 | `'description': not available as an intrinsic` |
+| C4722 | `'description': destructor never returns, potential memory leak` |
+| C4726 | `ARM arch4/4T supports only '<cpsr_f> or <spsr_f>' with immediate value` |
+| C4727 | `PCH named name with same timestamp found in name and name.  Using first PCH.` |
+| C4729 | `function too big for flow graph based warnings` |
+| C4730 | `'description': mixing _m64 and floating point expressions may result in incorrect code` |
+| C4731 | `'description': frame pointer register 'register' modified by inline assembly code` |
+| C4732 | `intrinsic 'intrinsic' is not supported in this architecture` |
+| C4733 | `Inline asm assigning to 'FS:0': handler not registered as safe handler` |
+| C4734 | `More than 64k line numbers in a COFF debug info section; stop emitting COFF debug line numbers for module 'module'` |
+| C4738 | `storing 32-bit float result in memory, possible loss of performance` |
+| C4739 | `reference to variable 'variable' exceeds its storage space` |
+| C4740 | `flow in or out of inline asm code suppresses global optimization` |
+| C4742 | `'variable' has different alignment in 'location' and 'location': number and number` |
+| C4743 | `'name' has different size in 'location' and 'location': number and number bytes` |
+| C4744 | `'name' has different type in 'location' and 'location': 'type' and 'type'` |
+| C4747 | `Calling managed 'type': Managed code may not be run under loader lock, including the DLL entrypoint and calls reached from the DLL entrypoint` |
+| C4761 | `integral size mismatch in argument; conversion supplied` |
+| C4764 | `Cannot align catch objects to greater than 16 bytes` |
+| C4788 | `'identifier': identifier was truncated to 'number' characters` |
+| C4789 | `buffer 'name' of size number bytes will be overrun; number bytes will be written starting at offset number` |
+| C4801 | `Return by reference is not verifiable: description` |
+| C4819 | `The file contains a character that cannot be represented in the current code page (number). Save the file in Unicode format to prevent data loss` |
+| C4826 | `Conversion from 'type' to 'type' is sign-extended. This may cause unexpected runtime behavior.` |
+| C4829 | `Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'` |
+| C4835 | `'type': the initializer for exported data will not be run until managed code is first executed in the host assembly` |
+| C4867 | `'type': non-standard syntax; use '&' to create a pointer to member` |
+| C4936 | `this __declspec is supported only when compiled with /clr or /clr:pure` |
+| C4937 | `'name' and 'name' are indistinguishable as arguments to 'option'` |
+| C4938 | `'type': Floating point reduction variable may cause inconsistent results under /fp:strict or #pragma fenv_access` |
+| C4939 | `#pragma vtordisp is deprecated and will be removed in a future release of Visual C++` |
+| C4947 | `'type': marked as obsolete` |
+| C4949 | `pragmas 'managed' and 'unmanaged' are meaningful only when compiled with '/clr[:option]'` |
+| C4950 | `'type': marked as obsolete` |
+| C4955 | `'description': import ignored; already imported from 'source'` |
+| C4956 | `'type': this type is not verifiable` |
+| C4957 | `'expression': explicit cast from 'type' to 'type' is not verifiable` |
+| C4958 | `'expression': pointer arithmetic is not verifiable` |
+| C4959 | `cannot define unmanaged class 'type' in /clr:safe because accessing its members yields unverifiable code` |
+| C4960 | `'description' is too big to be profiled` |
+| C4961 | `No profile data was merged into 'location', profile-guided optimizations disabled` |
+| C4962 | `'description': Profile-guided optimizations disabled because optimizations caused profile data to become inconsistent` |
+| C4963 | `'description': no profile data found; different compiler options were used in instrumented build` |
+| C4964 | `No optimization options were specified; profile info will not be collected` |
+| C4965 | `implicit box of integer 0; use nullptr or explicit cast` |
+| C4970 | `delegate constructor: target object ignored since 'declaration' is static` |
+| C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
+| C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
 
 ## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2003 (wersja kompilatora 13.10.3077)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:13.00.9466__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:13.00.9466`.
 
 |||
 |-|-|
-C4343|#pragma optimize (*opis*, wyłączona) przesłania opcję /Og
-C4344|Zmiana zachowania: użycie wyników argumentów niejawnego szablonu w wywołaniu elementu "*deklaracji*"
-C4346|"*typu*": zależna nazwa nie jest typem
-C4348|"*deklaracji*": ponowna definicja domyślnego parametru: parametr *numer*
-C4356|"*typu*": nie można zainicjować statycznej składowej danych za pośrednictwem pochodnej klasy
-C4408|anonimowe *struktury* nie zadeklarował żadnych składowych danych
-C4544|"*deklaracji*": domyślny argument szablonu został zignorowany dla tej deklaracji szablonu
-C4545|wyrażenie przed przecinkiem daje w wyniku funkcję, dla której brakuje listy argumentów
-C4546|wywołanie funkcji przed przecinkiem, brak listy argumentów
-C4547|"*wyrażenie*": operator przed przecinkiem nie przynosi efektu; oczekiwany operator, który przynosi efekt
-C4548|wyrażenie przed przecinkiem nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt
-C4549|"*wyrażenie*": operator przed przecinkiem nie ma wpływu; czy chodziło Ci "*wyrażenie*"?
-C4628|dwuznaki nieobsługiwane z -Ze. Znak sekwencji "*sekwencji*'nie jest interpretowana jako alternatywny token dla'*tokenu*"
-C4629|użyto dwuznaku, sekwencja znaków "*sekwencji*"zinterpretowana jako token"*tokenu*" (Wstaw spację między dwoma znakami, jeśli to nie mają)
-C4671|"*opis*": Konstruktor kopiujący jest niedostępny
-C4676|"*opis*": destruktor jest niedostępny
-C4677|"*nazwa*': podpis z nieprywatnej składowej zawiera prywatny typ zestawu"*deklaracji*"
-C4686|"*typu*': możliwe zmiany w zachowaniu, zmiana UDT zwracają konwencji wywoływania
-C4812|przestarzała deklaracja stylu: Użyj "*typu*::*nazwa*" zamiast niego
-C4813|"*typu*": funkcja zaprzyjaźniona klasy lokalnej musi musiała zostać poprzednio zadeklarowana
-C4821|Nie można określić typu kodowania Unicode, Zapisz plik z podpisem (znacznik BOM)
-C4822|"*typu*": funkcja składowa klasy lokalnej nie ma treści
-C4823|"*typu*": używa, ale operacja unwind unieruchamiania wskaźników semantyki nie są włączone. Rozważ użycie opcji/eha
-C4913|Użytkownik zdefiniowany operator binarny "," istnieje, ale żadne przeciążenie nie może konwertować wszystkich argumentów operacji, domyślnego, wbudowanego operatora binarnego "," używane
-C4948|zwracany typ "*deklaracji*" jest niezgodny z typem ostatniego parametru odpowiadającej mu metody ustawiającej
-C4951|"*opis*" został wyedytowany od profilu dane zostały zebrane, nieużywane dane profilu funkcji
-C4952|"*opis*": nie znaleziono danych profilowych w bazie danych programu "*opis*"
-C4953|Wbudowany "*opis*" został wyedytowany od profilu dane zostały zebrane, dane profilu nieużywane
-C4954|"*opis*": nieprofilowany (zawiera wyrażenie switch __int64)
+| C4343 | `#pragma optimize(description,off) overrides /Og option` |
+| C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
+| C4346 | `'type': dependent name is not a type` |
+| C4348 | `'declaration': redefinition of default parameter: parameter number` |
+| C4356 | `'type': static data member cannot be initialized via derived class` |
+| C4408 | `anonymous struct did not declare any data members` |
+| C4544 | `'declaration': default template argument ignored on this template declaration` |
+| C4545 | `expression before comma evaluates to a function which is missing an argument list` |
+| C4546 | `function call before comma missing argument list` |
+| C4547 | `'expression': operator before comma has no effect; expected operator with side-effect` |
+| C4548 | `expression before comma has no effect; expected expression with side-effect` |
+| C4549 | `'expression': operator before comma has no effect; did you intend 'expression'?` |
+| C4628 | `digraphs not supported with -Ze. Character sequence 'sequence' not interpreted as alternate token for 'token'` |
+| C4629 | `digraph used, character sequence 'sequence' interpreted as token 'token' (insert a space between the two characters if this is not what you intended)` |
+| C4671 | `'description': the copy constructor is inaccessible` |
+| C4676 | `'description': the destructor is inaccessible` |
+| C4677 | `'name': signature of non-private member contains assembly private type 'declaration'` |
+| C4686 | `'type': possible change in behavior, change in UDT return calling convention` |
+| C4812 | `obsolete declaration style: please use 'type::name' instead` |
+| C4813 | `'type': a friend function of a local class must have been previously declared` |
+| C4821 | `Unable to determine Unicode encoding type, please save the file with signature (BOM)` |
+| C4822 | `'type': local class member function does not have a body` |
+| C4823 | `'type': uses pinning pointers but unwind semantics are not enabled. Consider using /EHa` |
+| C4913 | `user defined binary operator ',' exists but no overload could convert all operands, default built-in binary operator ',' used` |
+| C4948 | `return type of 'declaration' does not match the last parameter type of the corresponding setter` |
+| C4951 | `'description' has been edited since profile data was collected, function profile data not used` |
+| C4952 | `'description': no profile data found in program database 'description'` |
+| C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
+| C4954 | `'description': not profiled (contains __int64 switch expression)` |
 
 ## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>Ostrzeżenia wprowadzone w programie Visual C++ 2002 (wersja kompilatora 13.00.9466)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora __/Wv:12__.
+Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:12`.
 
 |||
 |-|-|
-C4096|"*typu*": interfejs nie jest interfejsem COM; nie będzie emitowany do IDL
-C4097|Oczekiwano wartości parametru pragma "Restore" lub "off"
-C4165|"HRESULT" jest konwertowana na "bool"; Czy na pewno jest to, co chcesz zrobić?
-C4183|"*nazwa*": Brak typu zwracanego; założono, że jest funkcją składową zwracającą "int"
-C4199|*description*
-C4255|"*nazwa*": nie podano prototypu funkcji: konwertowanie '()"na"(void)"
-C4256|"*deklaracji*": konstruktor dla klasy z bazami wirtualnymi ma "..."; wywołania mogą nie być zgodne ze starszymi wersjami programu Visual C++
-C4258|"*nazwa*": definicja z pętli for jest zignorowana; służy definicji z otaczającego zakresu
-C4263|"*deklaracji*": funkcja składowa nie zastępuje żadnej funkcji składowej wirtualnej klasy bazowej
-C4264|"*deklaracji*': niedostępne zastąpienie dla funkcji wirtualnej składowej z podstawowej"*klasy*'; funkcja jest ukryta
-C4265|"*typu*": klasa ma funkcje wirtualne, ale destruktor nie jest wirtualny wystąpienia tej klasy może nie być prawidłowo niszczone
-C4266|"*deklaracji*': niedostępne zastąpienie dla funkcji wirtualnej składowej z podstawowej"*klasy*'; funkcja jest ukryta
-C4267|"*wyrażenie*': konwersja z"size_t"do"*typu*", możliwa utrata danych
-C4274|#ident ignorowane. zobacz dokumentację dla #pragma comment (exestr, "string")
-C4277|importowany element '*typu*::*nazwa*"istnieje zarówno jako element członkowski danych i funkcja składowa; składowa danych została zignorowana
-C4278|"*nazwa*": identyfikator w bibliotece typów "*opis*" jest już makrem; Użyj kwalifikatora "rename"
-C4279|"*nazwa*": identyfikator w bibliotece typów "*opis*" jest słowem kluczowym, użyj kwalifikatora "rename"
-C4287|"*wyrażenie*": niezgodność stałej bez znaku/ujemnej
-C4288|użyto niestandardowego rozszerzenia: "*nazwa*": zmienna sterująca pętli zadeklarowana w pętli for jest używana poza zakresem pętli for; jest w konflikcie z deklaracją w zewnętrznym zakresie
-C4289|użyto niestandardowego rozszerzenia: "*nazwa*": zmienna sterująca pętli zadeklarowana w pętli for jest używana poza zakresem pętli for
-C4293|"*wyrażenie*": licznik przesunięć ujemny lub zbyt duży, niezdefiniowane zachowanie
-C4295|"*typu*": tablica jest zbyt mała, aby uwzględnić znak końcowy null
-C4296|"*wyrażenie*": wyrażenie ma zawsze wartość *wartość*
-C4297|"*typu*": Funkcja przyjmuje się, że nie zgłasza wyjątku, ale nie
-C4298|"*nazwa*": identyfikator w bibliotece typów "*opis*" jest już makrem; zmiana nazwy na "__*nazwa*"
-C4299|"*nazwa*": identyfikator w bibliotece typów "*opis*" jest słowem kluczowym, zmiana nazwy na "__*nazwa*"
-C4302|"*wyrażenie*': obcinanie z '*typu*"to"*typu*"
-C4303|*Konwersja* z "*typu*"to"*typu*" jest przestarzały, użyj static_cast, __try_cast lub dynamic_cast
-C4314|Oczekiwano wartości parametru pragma "32" lub "64"
-C4315|"*typu*": wskaźnik "this" dla elementu członkowskiego "*typu*" może nie wyrównany *numer* zgodnie z oczekiwaniami, Konstruktor
-C4318|przekazanie stałej o wartości zero jako długość do funkcji memset
-C4319|"*wyrażenie*": zero rozszerzanie "*typu*"to"*typu*' o większym rozmiarze
-C4321|automatycznie generowane IID dla interfejsu "*typu*"
-C4322|automatycznie generowane CLSID dla klasy*typu*"
-C4323|ponowne wykorzystanie zarejestrowanego identyfikatora CLSID dla klasy*typu*"
-C4324|"*typu*": struktura została wzmocniona ze względu na specyfikator wyrównania
-C4325|atrybuty dla standardowej sekcji "*opis*" zignorowany
-C4326|zwracany typ "*nazwa*powinien być*typu*"zamiast z"*typu*"
-C4327|"*wyrażenie*": operator pośredni wyrównania LHS (*numer*) jest większy niż RHS (*numer*)
-C4328|"*opis*": operator pośredni wyrównania formalnego parametru *numer* (*numer*) jest większy niż rzeczywisty argument wyrównania (*numer*)
-C4329|Specyfikator wyrównania jest ignorowany w wyliczeniu
-C4336|Importowanie biblioteki typów odsyłaczy "*biblioteki*"przed importem"*opis*"
-C4337|Biblioteka typów odsyłaczy "*biblioteki*"in"*opis*" jest automatycznie importowana
-C4338|#pragma *opis*: standardowa sekcja "*sekcji*" jest używany
-C4339|"*typu*": użycie niezdefiniowanego typu wykryte w CLR/WinRT meta-data - użycie tego typu może prowadzić do wyjątku czasu wykonywania
-C4353|użyto niestandardowego rozszerzenia: stała 0 jako wyrażenie funkcyjne.  Zamiast tego użyj funkcji wewnętrznej "__noop" wewnętrzne
-C4370|"*deklaracji*": układ klasy zmienił się z poprzedniej wersji kompilatora ze względu na lepsze pakowanie
-C4371|"*deklaracji*": układ klasy mógł się zmienić z poprzedniej wersji kompilatora ze względu na lepsze pakowanie składowej '*elementu członkowskiego*"
-C4373|"*typu*": przesłonięcia funkcji wirtualnych*deklaracji*", poprzednie wersje kompilatora nie przesłaniały, gdy parametry różnił się tylko przez kwalifikatory const/volatile
-C4387|"*opis*': została uznana za
-C4389|"*wyrażenie*": niezgodność ze znakiem/bez znaku
-C4391|"*deklaracji*": nieprawidłowy typ zwracany dla wewnętrznej funkcji, oczekiwano "*typu*"
-C4392|"*deklaracji*": Nieprawidłowa liczba argumentów dla wewnętrznej funkcji, oczekiwano "*numer*" argumentów
-C4407|Wykonuj rzutowania między różnych reprezentacjami wskaźników do składowej, kompilator może wygenerować niepoprawny kod
-C4420|"*nazwa*": operator nie jest dostępny, za pomocą "*nazwa*" zamiast niego; kontrola czasu wykonania mogą być narażone na ataki
-C4440|wywoływanie ponowną definicję Konwencji wywołań z "*opis*"to"*opis*" zignorowany
-C4442|osadzony terminator o wartości null w argumencie __annotation.  Wartość zostanie obcięta.
-C4444|"*nazwa*": najwyższego poziomu '__unaligned' nie jest zaimplementowany w tym kontekście
-C4526|"*typu*": funkcja statycznej składowej nie można przesłonić funkcji wirtualnej '*deklaracji*"zastąpienie zignorowane, funkcja wirtualna zostanie ukryta
-C4531|Obsługa wyjątków języka C++ nie jest dostępny na Windows CE. Użyj wyjątków strukturalnych
-C4532|"*opis*": przeskoczyć poza *na koniec* bloku ma niezdefiniowane zachowanie podczas obsługi zakończenia
-C4533|Inicjalizacja "*deklaracji*" jest pomijana przy "goto *deklaracji*"
-C4534|"*deklaracji*" nie będzie konstruktorem domyślnym dla *klasy* "*typu*" z powodu argumentu domyślnego
-C4535|Wywołanie funkcji _set_se_translator() wymaga/eha
-C4536|"*opis*': Nazwa typu przekracza limit meta-data"*numer*"znaków
-C4537|"*deklaracji*": "." zastosowany do typu innego niż UDT
-C4542|Pomijanie generowania scalonego wstrzykniętego pliku tekstowego, nie można zapisać *typu* pliku: "*filename*": *błąd*
-C4543|Wprowadzony tekst pominięty przez atrybut "nie\_injected_text"
-C4555|wyrażenie nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt
-C4557|"__assume" zawiera efekt '*efekt*"
-C4558|wartość operandu "*numer*"jest poza zakresem"*numer* - *numer*"
-C4561|Wywołanie "__fastcall" niezgodne z "/ clr" opcja: konwertowanie na "__stdcall"
-C4562|w pełni prototypowane są wymagane w przypadku "/ clr" opcja: konwertowanie '()"na"(void)"
-C4564|Metoda "*nazwa*" z *klasy* "*typu*"definiuje nieobsługiwany parametr domyślny"*parametr*"
-C4584|"*typu*": klasy bazowej*deklaracji*"jest już klasą bazową dla"*deklaracji*"
-C4608|Inicjowanie wielu składowych Unii: "*typu*"i"*typu*"
-C4619|Ostrzeżenie #pragma: Brak ma numeru ostrzeżenia '*numer*"
-C4623|"*typu*": Konstruktor domyślny został niejawnie zdefiniowany jako usunięty
-C4624|"*typu*": destruktor został niejawnie zdefiniowany jako usunięty
-C4625|"*typu*": Konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C4626|"*typu*": operator przypisania został niejawnie zdefiniowany jako usunięty
-C4645|Funkcja zadeklarowana ze specyfikatorem "noreturn" zawiera instrukcję return
-C4646|Funkcja zadeklarowana ze specyfikatorem "noreturn" ma typ zwracany niż void
-C4659|#pragma "*opis*": użycie zastrzeżonego segmentu "*nazwa*" ma niezdefiniowane zachowanie, użyj #pragma komentarz (konsolidator,...)
-C4667|"*deklaracji*": nie zdefiniowanego szablonu funkcji, który pasuje do wymuszonego wystąpienia
-C4668|"*nazwa*'nie jest zdefiniowany jako makro preprocesora, zastępowanie przez '0' dla'*wartość*"
-C4669|"*wyrażenie*": niebezpieczna konwersja: "*typu*" jest obiektem typu zarządzanego WinRT
-C4674|"*nazwa*" powinien być zadeklarowany jako "static" i mieć dokładnie jeden parametr
-C4680|"*typu*": klasa coclass nie określa domyślnego interfejsu
-C4681|"*typu*": klasa coclass nie określa domyślnego interfejsu, który jest źródłem zdarzenia
-C4682|"*typu*": nie określono atrybutu kierunkowego parametru, domyślnie na [in]
-C4683|"*deklaracji*": źródło zdarzenia ma "out" — parametru; wskazana jest ostrożność podczas podłączania wielu obsług zdarzeń
-C4684|"*opis*": OSTRZEŻENIE!! atrybut może powodować generowanie nieprawidłowego kodu: Używaj ostrożnie
-C4685|Oczekiwano znaku ">>" znaleziono ">>" podczas analizowania parametrów szablonu
-C4700|niezainicjowanej zmiennej lokalnej "*nazwa*" używane
-C4701|Użycie potencjalnie niezainicjowanej zmiennej lokalnej "*nazwa*" używane
-C4702|nieosiągalny kod
-C4711|Funkcja "*nazwa*" wybrane do automatycznego rozwinięcia funkcji wbudowanej
-C4714|Funkcja "*deklaracji*" oznaczona jako __forceinline nie jest śródwierszowa
-C4715|"*funkcja*": niewszystkie ścieżki kodu zwracają wartość
-C4716|"*funkcja*": musi zwracać wartość
-C4717|"*funkcja*": cykliczne we wszystkich ścieżkach, funkcja spowoduje przepełnienie stosu środowiska uruchomieniowego
-C4718|"*funkcja*": wywołanie cykliczne nie ma żadnych efektów ubocznych, usuwanie
-C4719|Stała typu Double znaleziona, gdy określono parametr Qfast - użyj opcji "f" jako przyrostka, aby wskazać pojedynczą precyzję
-C4723|potencjalne dzielenie przez 0
-C4724|potencjalne dzielenie modulo przez 0
-C4725|Instrukcja może być niedokładna na niektórych procesorach Pentium
-C4757|Indeks dolny jest dużą wartością bez znaku, czy nie było planowane ujemną stałą?
-C4772|#import odwołanie do typu z brakującej biblioteki typów; "*opis*" używana jako symbol zastępczy
-C4792|Funkcja "*funkcja*" zadeklarowana za pomocą sysimport i odwołania z kodu natywnego; zaimportuj bibliotekę wymaganą do połączenia
-C4794|segment zmiennej lokalny magazyn wątków "*nazwa*"zmieniła się z"*segmentu*"to"*segmentu*"
-C4798|natywny kod generowany dla funkcji p-code "*nazwa*" z obsługą wyjątków lub semantyką rozwinięć
-C4799|Funkcja "*nazwa*" nie ma instrukcji EMMS
-C4803|"*deklaracji*": podniesiona metoda ma klasę magazynu inną od zdarzenia, "*deklaracji*"
-C4810|Wartość dyrektywy pragma pack(show) == *numer*
-C4811|Wartość dyrektywy pragma conform (forScope, show) == *wartość*
-C4820|"*typu*": "*numer*" bajtów dopełnienie dodane po *typu* "*typu*"
-C4905|literał ciągu dwubajtowego rzutowany na '*typu*"
-C4906|literał ciągu rzutowany na '*typu*"
-C4912|"*atrybut*": atrybut ma niezdefiniowane zachowanie w zagnieżdżonym UDT
-C4916|Aby uzyskać identyfikator dispid, "*typu*": musi zostać wprowadzony przez interfejs
-C4917|"*typu*": identyfikator GUID może być skojarzony tylko z klasą, interfejsem lub przestrzeni nazw
-C4918|"*znak*": nieprawidłowy znak na liście optymalizacji pragma
-C4920|wyliczenia *nazwa* elementu członkowskiego *nazwa*=*numer* już widoczna w typie wyliczeniowym *nazwa* jako *nazwa* = *numer*
-C4921|"*nazwa*": wartość atrybutu "*wartość*" nie powinien być określony wielokrotnie
-C4925|"*deklaracji*": metoda interfejsu dispinterface nie może być wywoływana ze skryptu
-C4926|"*deklaracji*": symbol jest już zdefiniowany: atrybuty zostały zignorowane
-C4927|Niedozwolona konwersja; więcej niż jedna konwersja zdefiniowana przez użytkownika została zastosowana niejawnie
-C4928|nieprawidłowe inicjowanie kopiowania; niejawnie zastosowano więcej niż jedną konwersję zdefiniowaną przez użytkownika
-C4929|"*opis*": Biblioteka typów zawiera Unię; ignorowanie kwalifikatora "embedded_idl"
-C4930|"*deklaracji*": prototypowana funkcja nie wywołana (czy definicja zmiennej była przeznaczona?)
-C4931|Zakładamy, biblioteka typów została skompilowana dla *numer*-bitowych wskaźników
-C4932|__identifier (*opis*) i __identifier (*opis*) są nierozróżnialne
-C4934|"__delegate(multicast)" jest przestarzały, należy użyć "__delegate" zamiast niego
-C4935|Specyfikator dostępu do zestawu zmodyfikowany z "*opis*"
-C4944|"*nazwa*": nie można zaimportować symbolu z "*źródła*": jako*deklaracji*"już istnieje w bieżącym zakresie
-C4945|"*nazwa*": nie można zaimportować symbolu z "*źródła*": jako*deklaracji*"został już zaimportowany z innego zestawu"*źródła*"
-C4946|reinterpret_cast używane między pokrewnymi klasami: '*deklaracji*"i"*deklaracji*"
-C4995|"*nazwa*': nazwa została oznaczona jako przestarzała #pragma
-C4996|"*problem*": *opis*
-C4997|"*typu*": klasa coclass nie implementuje interfejsu COM lub pseudointerfejsu
-C4998|Oczekiwanie nie powiodło się: *opis*(*numer*)
+| C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
+| C4097 | `expected pragma parameter to be 'restore' or 'off'` |
+| C4165 | `'HRESULT' is being converted to 'bool'; are you sure this is what you want?` |
+| C4183 | `'name': missing return type; assumed to be a member function returning 'int'` |
+| C4199 | `description` |
+| C4255 | `'name': no function prototype given: converting '()' to '(void)'` |
+| C4256 | `'declaration': constructor for class with virtual bases has '...'; calls may not be compatible with older versions of Visual C++` |
+| C4258 | `'name': definition from the for loop is ignored; the definition from the enclosing scope is used` |
+| C4263 | `'declaration': member function does not override any base class virtual member function` |
+| C4264 | `'declaration': no override available for virtual member function from base 'class'; function is hidden` |
+| C4265 | `'type': class has virtual functions, but destructor is not virtual instances of this class may not be destructed correctly` |
+| C4266 | `'declaration': no override available for virtual member function from base 'class'; function is hidden` |
+| C4267 | `'expression': conversion from 'size_t' to 'type', possible loss of data` |
+| C4274 | `#ident ignored; see documentation for #pragma comment(exestr, 'string')` |
+| C4277 | `imported item 'type::name' exists as both data member and function member; data member ignored` |
+| C4278 | `'name': identifier in type library 'description' is already a macro; use the 'rename' qualifier` |
+| C4279 | `'name': identifier in type library 'description' is a keyword; use the 'rename' qualifier` |
+| C4287 | `'expression': unsigned/negative constant mismatch` |
+| C4288 | `nonstandard extension used: 'name': loop control variable declared in the for-loop is used outside the for-loop scope; it conflicts with the declaration in the outer scope` |
+| C4289 | `nonstandard extension used: 'name': loop control variable declared in the for-loop is used outside the for-loop scope` |
+| C4293 | `'expression': shift count negative or too big, undefined behavior` |
+| C4295 | `'type': array is too small to include a terminating null character` |
+| C4296 | `'expression': expression is always value` |
+| C4297 | `'type': function assumed not to throw an exception but does` |
+| C4298 | `'name': identifier in type library 'description' is already a macro; renaming to '__name'` |
+| C4299 | `'name': identifier in type library 'description' is a keyword; renaming to '__name'` |
+| C4302 | `'expression': truncation from 'type' to 'type'` |
+| C4303 | `conversion from 'type' to 'type' is deprecated, use static_cast, __try_cast or dynamic_cast` |
+| C4314 | `expected pragma parameter to be '32' or '64'` |
+| C4315 | `'type': 'this' pointer for member 'type' may not be aligned number as expected by the constructor` |
+| C4318 | `passing constant zero as the length to memset` |
+| C4319 | `'expression': zero extending 'type' to 'type' of greater size` |
+| C4321 | `automatically generating an IID for interface 'type'` |
+| C4322 | `automatically generating a CLSID for class 'type'` |
+| C4323 | `re-using registered CLSID for class 'type'` |
+| C4324 | `'type': structure was padded due to alignment specifier` |
+| C4325 | `attributes for standard section 'description' ignored` |
+| C4326 | `return type of 'name' should be 'type' instead of 'type'` |
+| C4327 | `'expression': indirection alignment of LHS (number) is greater than RHS (number)` |
+| C4328 | `'description': indirection alignment of formal parameter number (number) is greater than the actual argument alignment (number)` |
+| C4329 | `alignment specifier is ignored on enum` |
+| C4336 | `import cross-referenced type library 'library' before importing 'description'` |
+| C4337 | `cross-referenced type library 'library' in 'description' is being automatically imported` |
+| C4338 | `#pragma description: standard section 'section' is used` |
+| C4339 | `'type': use of undefined type detected in CLR/WinRT meta-data - use of this type may lead to a runtime exception` |
+| C4353 | `nonstandard extension used: constant 0 as function expression.  Use '__noop' function intrinsic instead` |
+| C4370 | `'declaration': layout of class has changed from a previous version of the compiler due to better packing` |
+| C4371 | `'declaration': layout of class may have changed from a previous version of the compiler due to better packing of member 'member'` |
+| C4373 | `'type': virtual function overrides 'declaration', previous versions of the compiler did not override when parameters only differed by const/volatile qualifiers` |
+| C4387 | `'description': was considered` |
+| C4389 | `'expression': signed/unsigned mismatch` |
+| C4391 | `'declaration': incorrect return type for intrinsic function, expected 'type'` |
+| C4392 | `'declaration': incorrect number of arguments for intrinsic function, expected 'number' arguments` |
+| C4407 | `cast between different pointer to member representations, compiler may generate incorrect code` |
+| C4420 | `'name': operator not available, using 'name' instead; run-time checking may be compromised` |
+| C4440 | `calling convention redefinition from 'description' to 'description' ignored` |
+| C4442 | `embedded null terminator in __annotation argument.  Value will be truncated.` |
+| C4444 | `'name': top level '__unaligned' is not implemented in this context` |
+| C4526 | `'type': static member function cannot override virtual function 'declaration' override ignored, virtual function will be hidden` |
+| C4531 | `C++ exception handling not available on Windows CE. Use Structured Exception Handling` |
+| C4532 | `'description': jump out of finally block has undefined behavior during termination handling` |
+| C4533 | `initialization of 'declaration' is skipped by 'goto declaration'` |
+| C4534 | `'declaration' will not be a default constructor for class 'type' due to the default argument` |
+| C4535 | `calling _set_se_translator() requires /EHa` |
+| C4536 | `'description': type-name exceeds meta-data limit of 'number' characters` |
+| C4537 | `'declaration': '.' applied to non-UDT type` |
+| C4542 | `Skipping generation of merged injected text file, cannot write type file: 'filename': error` |
+| C4543 | `Injected text suppressed by attribute 'no_injected_text'` |
+| C4555 | `expression has no effect; expected expression with side-effect` |
+| C4557 | `'__assume' contains effect 'effect'` |
+| C4558 | `value of operand 'number' is out of range 'number - number'` |
+| C4561 | `'__fastcall' incompatible with the '/clr' option: converting to '__stdcall'` |
+| C4562 | `fully prototyped functions are required with the '/clr' option: converting '()' to '(void)'` |
+| C4564 | `method 'name' of class 'type' defines unsupported default parameter 'parameter'` |
+| C4584 | `'type': base-class 'declaration' is already a base-class of 'declaration'` |
+| C4608 | `Initializing multiple members of union: 'type' and 'type'` |
+| C4619 | `#pragma warning: there is no warning number 'number'` |
+| C4623 | `'type': default constructor was implicitly defined as deleted` |
+| C4624 | `'type': destructor was implicitly defined as deleted` |
+| C4625 | `'type': copy constructor was implicitly defined as deleted` |
+| C4626 | `'type': assignment operator was implicitly defined as deleted` |
+| C4645 | `function declared with 'noreturn' has a return statement` |
+| C4646 | `function declared with 'noreturn' has non-void return type` |
+| C4659 | `#pragma 'description': use of reserved segment 'name' has undefined behavior, use #pragma comment(linker, ...)` |
+| C4667 | `'declaration': no function template defined that matches forced instantiation` |
+| C4668 | `'name' is not defined as a preprocessor macro, replacing with '0' for 'value'` |
+| C4669 | `'expression': unsafe conversion: 'type' is a managed/WinRT type object` |
+| C4674 | `'name' should be declared 'static' and have exactly one parameter` |
+| C4680 | `'type': coclass does not specify a default interface` |
+| C4681 | `'type': coclass does not specify a default interface that is an event source` |
+| C4682 | `'type': no directional parameter attribute specified, defaulting to [in]` |
+| C4683 | `'declaration': event source has an 'out'-parameter; exercise caution when hooking multiple event handlers` |
+| C4684 | `'description': WARNING!! attribute may cause invalid code generation: use with caution` |
+| C4685 | `expecting '> >' found '>>' when parsing template parameters` |
+| C4700 | `uninitialized local variable 'name' used` |
+| C4701 | `potentially uninitialized local variable 'name' used` |
+| C4702 | `unreachable code` |
+| C4711 | `function 'name' selected for automatic inline expansion` |
+| C4714 | `function 'declaration' marked as __forceinline not inlined` |
+| C4715 | `'function': not all control paths return a value` |
+| C4716 | `'function': must return a value` |
+| C4717 | `'function': recursive on all control paths, function will cause runtime stack overflow` |
+| C4718 | `'function': recursive call has no side effects, deleting` |
+| C4719 | `Double constant found when Qfast specified - use 'f' as a suffix to indicate single precision` |
+| C4723 | `potential divide by 0` |
+| C4724 | `potential mod by 0` |
+| C4725 | `instruction may be inaccurate on some Pentiums` |
+| C4757 | `subscript is a large unsigned value, did you intend a negative constant?` |
+| C4772 | `#import referenced a type from a missing type library; 'description' used as a placeholder` |
+| C4792 | `function 'function' declared using sysimport and referenced from native code; import library required to link` |
+| C4794 | `segment of thread local storage variable 'name' changed from 'segment' to 'segment'` |
+| C4798 | `native code generated for p-code function 'name' with exception handler or unwind semantics` |
+| C4799 | `function 'name' has no EMMS instruction` |
+| C4803 | `'declaration': the raise method has a different storage class from that of the event, 'declaration'` |
+| C4810 | `value of pragma pack(show) == number` |
+| C4811 | `value of pragma conform(forScope, show) == value` |
+| C4820 | `'type': 'number' bytes padding added after type 'type'` |
+| C4905 | `wide string literal cast to 'type'` |
+| C4906 | `string literal cast to 'type'` |
+| C4912 | `'attribute': attribute has undefined behavior on a nested UDT` |
+| C4916 | `in order to have a dispid, 'type': must be introduced by an interface` |
+| C4917 | `'type': a GUID can only be associated with a class, interface or namespace` |
+| C4918 | `'character': invalid character in pragma optimization list` |
+| C4920 | `enum name member name=number already seen in enum name as name=number` |
+| C4921 | `'name': attribute value 'value' should not be multiply specified` |
+| C4925 | `'declaration': dispinterface method cannot be called from script` |
+| C4926 | `'declaration': symbol is already defined: attributes ignored` |
+| C4927 | `illegal conversion; more than one user-defined conversion has been implicitly applied` |
+| C4928 | `illegal copy-initialization; more than one user-defined conversion has been implicitly applied` |
+| C4929 | `'description': typelibrary contains a union; ignoring the 'embedded_idl' qualifier` |
+| C4930 | `'declaration': prototyped function not called (was a variable definition intended?)` |
+| C4931 | `we are assuming the type library was built for number-bit pointers` |
+| C4932 | `__identifier(description) and __identifier(description) are indistinguishable` |
+| C4934 | `'__delegate(multicast)' is deprecated, use '__delegate' instead` |
+| C4935 | `assembly access specifier modified from 'description'` |
+| C4944 | `'name': cannot import symbol from 'source': as 'declaration' already exists in the current scope` |
+| C4945 | `'name': cannot import symbol from 'source': as 'declaration' has already been imported from another assembly 'source'` |
+| C4946 | `reinterpret_cast used between related classes: 'declaration' and 'declaration'` |
+| C4995 | `'name': name was marked as #pragma deprecated` |
+| C4996 | `'issue': description` |
+| C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
+| C4998 | `EXPECTATION FAILED: description(number)` |
 
 ## <a name="see-also"></a>Zobacz także
 
-- [WV — opcja kompilatora](../../build/reference/compiler-option-warning-level.md)
-- [Ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
-- [ostrzeżenie](../../preprocessor/warning.md)
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
+[Ostrzeżenia kompilatora od C4000 - C5999](compiler-warnings-c4000-c5999.md) \
+[WV — opcja kompilatora](../../build/reference/compiler-option-warning-level.md) \
+[Ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
+[ostrzeżenie](../../preprocessor/warning.md)

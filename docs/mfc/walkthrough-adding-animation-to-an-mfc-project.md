@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: dodawanie animacji do projektu MFC'
+title: 'Przewodnik: Dodawanie animacji do projektu MFC'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
 ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358607"
 ---
-# <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Wskazówki: dodawanie animacji do projektu MFC
+# <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Przewodnik: Dodawanie animacji do projektu MFC
 
 Ten przewodnik omawia sposób dodawania obiekt animowany basic do Visual C++, projektu Microsoft Foundation Class Library (MFC).
 

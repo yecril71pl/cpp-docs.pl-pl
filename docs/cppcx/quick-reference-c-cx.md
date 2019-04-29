@@ -1,17 +1,17 @@
 ---
-title: Krótki przewodnik (C + +/ CX)
+title: Krótki przewodnik (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
 ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362338"
 ---
-# <a name="quick-reference-ccx"></a>Krótki przewodnik (C + +/ CX)
+# <a name="quick-reference-ccx"></a>Krótki przewodnik (C++/CX)
 
-Środowisko wykonawcze Windows obsługuje aplikacje platformy uniwersalnej Windows (UWP), wykonywanie tylko w środowisku godne zaufania systemu operacyjnego przy użyciu funkcji autoryzowanych, typów danych i urządzeń, oraz są dystrybuowane za pośrednictwem Microsoft Store. C + +/ CX uproszczają pisanie aplikacji dla środowiska wykonawczego Windows. Ten artykuł stanowi krótki; dla bardziej wyczerpujące informacje, zobacz [System typów](../cppcx/type-system-c-cx.md).
+Środowisko wykonawcze Windows obsługuje aplikacje platformy uniwersalnej Windows (UWP), wykonywanie tylko w środowisku godne zaufania systemu operacyjnego przy użyciu funkcji autoryzowanych, typów danych i urządzeń, oraz są dystrybuowane za pośrednictwem Microsoft Store. C++/CX uproszczają pisanie aplikacji dla środowiska wykonawczego Windows. Ten artykuł stanowi krótki; dla bardziej wyczerpujące informacje, zobacz [System typów](../cppcx/type-system-c-cx.md).
 
 W przypadku tworzenia w wierszu polecenia, użyj **/ZW** — opcja kompilatora do tworzenia aplikacji platformy uniwersalnej systemu Windows lub składnik środowiska wykonawczego Windows. Aby dostęp do środowiska wykonawczego Windows deklaracje, które są zdefiniowane w plikach metadanych (.winmd) środowiska wykonawczego Windows, należy określić `#using` dyrektywy lub **/FU** — opcja kompilatora. Kiedy tworzysz projekt aplikacji platformy uniwersalnej systemu Windows, Visual Studio domyślnie ustawia tych opcji i dodaje odwołania do wszystkich bibliotek środowiska wykonawczego Windows.
 
@@ -19,7 +19,7 @@ W przypadku tworzenia w wierszu polecenia, użyj **/ZW** — opcja kompilatora d
 
 |Pojęcie|Standard C++|C++/CX|Uwagi|
 |-------------|--------------------|------------------------------------------------------------------|-------------|
-|Typy podstawowe|Typów podstawowych języka C++.|C + +/ CX podstawowe typy, które implementują typów podstawowych, które są zdefiniowane w środowisku uruchomieniowym Windows.|`default` Przestrzeń nazw zawiera C + +/ CX typów wbudowanych, podstawowe. Kompilator niejawnie mapuje C + +/ CX podstawowych typów do standardowych typów C++.<br /><br /> `Platform` Rodziny przestrzenie nazw zawiera typy, które implementują podstawowych typów środowiska wykonawczego Windows.|
+|Typy podstawowe|Typów podstawowych języka C++.|C++/CX podstawowe typy, które implementują typów podstawowych, które są zdefiniowane w środowisku uruchomieniowym Windows.|`default` Przestrzeń nazw zawiera C++/CX typów wbudowanych, podstawowe. Kompilator niejawnie mapuje C++/CX podstawowych typów standardu C++ typów.<br /><br /> `Platform` Rodziny przestrzenie nazw zawiera typy, które implementują podstawowych typów środowiska wykonawczego Windows.|
 ||`bool`|`bool`|Wartość logiczna 8-bitowych.|
 ||`__wchar_t`|`char16`|16-bitową liczbą wartość reprezentuje punkt kodu Unicode (UTF-16).|
 ||`short`<br /><br /> `unsigned short`|`int16`<br /><br /> `uint16`|Całkowita 16-bitowych.<br /><br /> 16-bitowa liczba całkowita bez znaku.|

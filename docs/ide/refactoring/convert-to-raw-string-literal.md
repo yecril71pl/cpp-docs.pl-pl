@@ -3,19 +3,19 @@ title: Konwertuj na literał nieprzetworzonego ciągu
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
 ms.openlocfilehash: bf492e6796b9d2342b5952abb093bddd5ede114b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349429"
 ---
 # <a name="convert-to-raw-string-literal"></a>Konwertuj na literał nieprzetworzonego ciągu
 
-**Co:** pozwala włączyć dowolny ciąg w języku C++ nieprzetworzonego ciągu literału.
+**Co:** Umożliwia włączenie dowolnego ciągu do C++ nieprzetworzony literał ciągu.
 
-**Kiedy:** ma ciągu znakami o zmienionym znaczeniu, które nie powinny być przetwarzane jako znaki ucieczki.
+**Kiedy:** Masz ciąg zawierający znaki ucieczki, które nie powinny być przetwarzane jako znaki ucieczki.
 
-**Dlaczego:** możesz znaki ucieczki double poza tym często prowadzi do ciągów mylące i nie można go odczytać.  Za pomocą surowe Literały ciągu sprawia, że ciągi znacznie łatwiejsze do odczytania.
+**Dlaczego:** Możesz znaki ucieczki double poza tym często prowadzi do ciągów mylące i nie można go odczytać.  Za pomocą surowe Literały ciągu sprawia, że ciągi znacznie łatwiejsze do odczytania.
 
 **Jak:**
 

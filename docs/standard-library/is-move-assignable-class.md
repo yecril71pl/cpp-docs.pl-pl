@@ -1,5 +1,5 @@
 ---
-title: is_move_assignable, klasa
+title: is_move_assignable Class
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_move_assignable
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - is_move_assignable
 ms.assetid: f33137f2-0639-4912-8745-bc0f9fd18d28
 ms.openlocfilehash: da4734507bac14ecf0278117deb7668518305be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351069"
 ---
-# <a name="ismoveassignable-class"></a>is_move_assignable, klasa
+# <a name="ismoveassignable-class"></a>is_move_assignable Class
 
 Sprawdza, czy typ może być przejście przypisane.
 

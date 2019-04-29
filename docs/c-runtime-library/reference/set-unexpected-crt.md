@@ -23,11 +23,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
 ms.openlocfilehash: 6c38421e447ca7b3f263148f51f0ade5c59e2804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356406"
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -81,4 +81,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 [_get_unexpected](get-unexpected.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [Zakończenie](terminate-crt.md)<br/>
-[Nieoczekiwany](unexpected-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

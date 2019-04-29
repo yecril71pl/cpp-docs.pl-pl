@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348214"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor — klasa
 
@@ -98,7 +98,7 @@ Trzy typy są definiowane dla specyfikacji:
 |----------|-----------------|
 |[allocate](#allocate)|Przydziela pamięć przy użyciu `Outer` alokatora.|
 |[construct](#construct)|Tworzy obiekt.|
-|[Cofnij Przydział](#deallocate)|Zwalnia obiektów za pomocą zewnętrznego programu przydzielania.|
+|[deallocate](#deallocate)|Zwalnia obiektów za pomocą zewnętrznego programu przydzielania.|
 |[destroy](#destroy)|Niszczy określonego obiektu.|
 |[inner_allocator](#inner_allocator)|Pobiera odwołanie do przechowywany obiekt typu `inner_allocator_type`.|
 |[max_size](#max_size)|Określa maksymalną liczbę obiektów, które mogą zostać przydzieleni przez zewnętrzne alokatora.|
@@ -271,7 +271,7 @@ Odwołanie do przechowywany obiekt typu `outer_allocator_type`.
 
 Definiuje typ `Outer::rebind\<Other>::other` jako synonim dla `scoped_allocator_adaptor\<Other, Inner...>`.
 
-ponowne wiązanie struktury {typedef Other_traits::rebind\<innych > Other_alloc; scoped_allocator_adaptor — typedef\<Other_alloc, wewnętrzny... > inne;};
+ponowne wiązanie struktury {typedef Other_traits::rebind\<innych > Other_alloc; scoped_allocator_adaptor — typedef\<Other_alloc, wewnętrzny... > inne; };
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor — Konstruktor
 
@@ -300,7 +300,7 @@ Istniejące `scoped_allocator_adaptor`.
 *Al*<br/>
 Istniejące alokator ma być używany jako zewnętrzne alokatora.
 
-*REST*<br/>
+*rest*<br/>
 Lista buforów, które ma być używany jako wewnętrzny buforów.
 
 ### <a name="remarks"></a>Uwagi

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369946"
 ---
 # <a name="queue-class"></a>queue — Klasa
 
@@ -56,7 +56,7 @@ Dołączyć odpowiednie podstawowej klasy kontenera dla kolejki [deque](../stand
 
 Kolejki obiekty są wtedy porównywanie równości i tylko wtedy, gdy elementy klasy `Type` są porównywalne równości i mniej-niż porównywalne wtedy i tylko wtedy, gdy elementy klasy `Type` są mniejsze-niż porównywalne.
 
-Istnieją trzy typy adaptery kontenera definicją standardowej biblioteki języka C++: stosu, kolejki i priority_queue —. Każdy ogranicza funkcjonalność niektóre podstawowe klasy kontenera dokładnie kontrolowanym interfejs do struktury danych w warstwie standardowa.
+Istnieją trzy typy adaptery kontenera definicją C++ standardowej biblioteki: stosu, kolejki i priority_queue —. Każdy ogranicza funkcjonalność niektóre podstawowe klasy kontenera dokładnie kontrolowanym interfejs do struktury danych w warstwie standardowa.
 
 - [Stack — klasa](../standard-library/stack-class.md) obsługuje ostatni na wejściu, first-out (LIFO) strukturę danych. Dobre analogowy na uwadze byłoby były stosem talerzy. Elementy (talerzy) może wstawiania, inspekcji lub usunąć tylko z góry stosu, w którym jest ostatnim elementem na końcu podstawowym kontenerem. Ograniczenie do uzyskiwania dostępu do górnego elementu jest przyczyna przy użyciu klasy stosu.
 

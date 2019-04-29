@@ -39,11 +39,11 @@ helpviewer_keywords:
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340420"
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -90,7 +90,7 @@ Aby uzyskać **__control87_2**, wartość zwracana wynosi 1, co wskazuje sukces.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Control87 —** funkcja pobiera i ustawia słowo sterujące zmiennoprzecinkowe. Słowo sterowania zmiennoprzecinkowego Włącza program do zmiany precyzji, zaokrąglania oraz trybu nieskończoności w pakiecie zmiennoprzecinkowym zapisu matematycznego, w zależności od platformy. Można również użyć **_control87 —** do zamaskowania lub usunięcia wyjątki zmiennoprzecinkowe. Jeśli wartość *maski* jest równa 0, **_control87 —** pobiera słowo sterujące zmiennoprzecinkowe. Jeśli *maski* jest różna od zera, ustawiono nową wartość dla słowa sterującego: dla każdego bitu, który znajduje się na (czyli wynosi 1) w *maski*, odpowiadający mu bit w *nowe* służy do aktualizowania kontrolki Program Word. Innymi słowy **fpcntrl** = ((**fpcntrl** & ~*maski*) &#124; (*nowe* & *maski*)) gdzie **fpcntrl** jest słowem sterującym zmiennoprzecinkowym.
+**_Control87 —** funkcja pobiera i ustawia słowo sterujące zmiennoprzecinkowe. Słowo sterowania zmiennoprzecinkowego Włącza program do zmiany precyzji, zaokrąglania oraz trybu nieskończoności w pakiecie zmiennoprzecinkowym zapisu matematycznego, w zależności od platformy. Można również użyć **_control87 —** do zamaskowania lub usunięcia wyjątki zmiennoprzecinkowe. Jeśli wartość *maski* jest równa 0, **_control87 —** pobiera słowo sterujące zmiennoprzecinkowe. Jeśli *maski* jest różna od zera, ustawiono nową wartość dla słowa sterującego: Dla dowolnego bit, który znajduje się na (czyli wynosi 1) w *maski*, odpowiadający mu bit w *nowe* służy do aktualizacji słowa sterującego. Innymi słowy **fpcntrl** = ((**fpcntrl** & ~*maski*) &#124; (*nowe* & *maski*)) gdzie **fpcntrl** jest słowem sterującym zmiennoprzecinkowym.
 
 > [!NOTE]
 > Domyślnie bibliotek środowiska uruchomieniowego maskują wszystkie wyjątki zmiennoprzecinkowe.
@@ -144,7 +144,7 @@ Aby uzyskać **_MCW_EM** maska, czyszczenie maski ustawia wyjątek, który umoż
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_control87 —**, **_controlfp**, **_control87_2**|\<float.h>|
+|**_control87**, **_controlfp**, **_control87_2**|\<float.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

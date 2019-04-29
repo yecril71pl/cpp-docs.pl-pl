@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
 ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365003"
 ---
 # <a name="vectorltboolgt-class"></a>Wektor&lt;bool&gt; klasy
 
@@ -51,7 +51,7 @@ Operacje, które zajmują się **bool** typu odpowiadają wartościom w pamięci
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Przerzuć](#flip)|Odwraca wszystkie bity w `vector<bool>`.|
+|[flip](#flip)|Odwraca wszystkie bity w `vector<bool>`.|
 |[swap](#swap)|Zamienia elementy z dwóch `vector<bool>`s.|
 |[operator&#91;&#93;](#op_at)|Zwraca symulowane odwołanie do `vector<bool>` elementu na określonej pozycji.|
 |`at`|Działa tak samo, jak Niewyspecjalizowana [wektor](../standard-library/vector-class.md):: w funkcji, z wyjątkiem, że używa klasy proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operator&#91;&#93;](#op_at).|

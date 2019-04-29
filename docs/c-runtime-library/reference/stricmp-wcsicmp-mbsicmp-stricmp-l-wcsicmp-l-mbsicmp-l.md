@@ -57,11 +57,11 @@ helpviewer_keywords:
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353842"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -165,7 +165,7 @@ Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsicmp —**|**_stricmp**|**_mbsicmp —**|**_wcsicmp**|
+|**_tcsicmp —**|**_stricmp**|**_mbsicmp**|**_wcsicmp**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -173,7 +173,7 @@ Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1
 |-------------|---------------------|
 |**_stricmp —**, **_stricmp_l —**|\<string.h>|
 |**_wcsicmp —**, **_wcsicmp_l —**|\<Włącz String.h > lub \<wchar.h >|
-|**_mbsicmp —**, **_mbsicmp_l —**|\<mbstring.h>|
+|**_mbsicmp**, **_mbsicmp_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

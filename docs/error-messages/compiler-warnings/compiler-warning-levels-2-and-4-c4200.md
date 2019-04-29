@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
 ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359959"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>Ostrzeżenie (poziomy 2 i 4) kompilatora — od C4200
 
@@ -19,7 +19,7 @@ użyto niestandardowego rozszerzenia: tablica o rozmiarze zero w struct/union
 
 Wskazuje, że struktura lub Unia zawiera tablicę o rozmiarze zero.
 
-Deklaracja tablicy o rozmiarze zero jest rozszerzeniem firmy Microsoft. To powoduje, że ostrzeżenia poziomu 2, gdy plik C++ jest kompilowany i ostrzeżenia poziomu 4 podczas kompilowania pliku C. Kompilacji języka C++ udostępnia też to ostrzeżenie: "Nie można wygenerować operatora domyślnego elementu ctor kopiowania lub przypisania kopiowania po UDT zawiera zerowy rozmiar tablicy." Ten przykład generuje ostrzeżenie — od C4200:
+Deklaracja tablicy o rozmiarze zero jest rozszerzeniem firmy Microsoft. To powoduje, że ostrzeżenia poziomu 2, gdy plik C++ jest kompilowany i ostrzeżenia poziomu 4 podczas kompilowania pliku C. C++Kompilacja zapewnia również tego ostrzeżenia: "Nie można wygenerować operatora domyślnego elementu ctor kopiowania lub przypisania kopiowania po UDT zawiera zerowy rozmiar tablicy." Ten przykład generuje ostrzeżenie — od C4200:
 
 ```cpp
 // C4200.cpp

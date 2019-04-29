@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: dodawanie obiektu CTaskDialog do aplikacji'
+title: 'Przewodnik: Dodawanie obiektu CTaskDialog do aplikacji'
 ms.date: 09/19/2018
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
 ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358268"
 ---
-# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Wskazówki: dodawanie obiektu CTaskDialog do aplikacji
+# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Przewodnik: Dodawanie obiektu CTaskDialog do aplikacji
 
 Ten przewodnik stanowi wprowadzenie [klasa CTaskDialog](../mfc/reference/ctaskdialog-class.md) i dowiesz się, jak je dodać do swojej aplikacji.
 

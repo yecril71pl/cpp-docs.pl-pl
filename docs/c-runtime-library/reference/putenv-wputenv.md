@@ -35,11 +35,11 @@ helpviewer_keywords:
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
 ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357892"
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 
@@ -76,7 +76,7 @@ Zwraca 0 w przypadku powodzenia lub wartość -1 w przypadku błędu.
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tputenv —**|**_putenv**|**_putenv**|**_wputenv**|
+|**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
 *Envstring* argument musi być wskaźnikiem do ciągu w postaci *nazwa_zmiennej*=*value_string*, gdzie *nazwa_zmiennej* jest Nazwa zmiennej środowiskowej, aby być dodane lub zmodyfikowane i *value_string* jest wartość zmiennej. Jeśli *nazwa_zmiennej* jest już częścią środowiska, jej wartość jest zastępowana przez *value_string*; w przeciwnym razie nowy *nazwa_zmiennej* zmienna i jej *value_string*  wartości są dodawane do środowiska. Można usunąć zmienną ze środowiska przez określenie pustego *value_string*, lub innymi słowy, określając tylko *nazwa_zmiennej*=.
 
@@ -94,7 +94,7 @@ Nie zmieniaj bezpośrednio wpisu środowiska: Użyj **_putenv** lub **_wputenv �
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_putenv**|\<stdlib.h>|
-|**_wputenv**|\<stdlib.h > lub \<wchar.h >|
+|**_wputenv**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

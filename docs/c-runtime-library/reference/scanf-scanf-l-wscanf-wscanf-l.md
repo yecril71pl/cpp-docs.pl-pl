@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
 ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357125"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
@@ -79,7 +79,7 @@ int _wscanf_l(
 *Format*<br/>
 Ciąg formantu formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -109,7 +109,7 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tscanf —**|**scanf**|**scanf**|**wscanf**|
-|**_tscanf_l —**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
+|**_tscanf_l**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
 
 Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu — scanf funkcji i funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
@@ -117,8 +117,8 @@ Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu — scanf fun
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**scanf —**, **_scanf_l —**|\<stdio.h>|
-|**wscanf**, **_wscanf_l —**|\<stdio.h > lub \<wchar.h >|
+|**scanf**, **_scanf_l**|\<stdio.h>|
+|**wscanf**, **_wscanf_l**|\<stdio.h > lub \<wchar.h >|
 
 Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

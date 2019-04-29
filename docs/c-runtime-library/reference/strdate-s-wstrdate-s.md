@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
 ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353992"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -106,7 +106,7 @@ W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania s
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstrdate_s —**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
+|**_tstrdate_s**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
 
 ## <a name="requirements"></a>Wymagania
 
