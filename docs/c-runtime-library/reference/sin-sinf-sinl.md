@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356255"
 ---
 # <a name="sin-sinf-sinl"></a>SIN sinf —, sinl —
 
@@ -117,6 +117,6 @@ cos( 1.570796 ) = 0.000000
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[COS cosf —, cosl —](cos-cosf-cosl.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)<br/>
 [_CIsin](../../c-runtime-library/cisin.md)<br/>

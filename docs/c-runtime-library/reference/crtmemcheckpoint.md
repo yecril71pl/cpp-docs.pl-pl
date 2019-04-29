@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
 ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339874"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -65,7 +65,7 @@ Jeśli *stanu* jest **NULL**, procedura obsługi nieprawidłowego parametru zost
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-**Biblioteki:** 140_xp Biblioteka UCRT tylko wersja debugowania.
+**Biblioteki:** Debuguj wersje 140_xp Biblioteka UCRT tylko.
 
 ## <a name="see-also"></a>Zobacz także
 

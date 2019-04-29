@@ -28,11 +28,11 @@ helpviewer_keywords:
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
 ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357554"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -59,7 +59,7 @@ Licznik.
 *denom*<br/>
 Mianownik.
 
-*informacje o istniejącym*<br/>
+*quo*<br/>
 Wskaźnik na liczbę całkowitą określającą wartość, która ma znak i przybliżonej wielkości ilorazu.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -76,7 +76,7 @@ Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------|-|
-|**remquo —**, **remquof —**, **remquol —**|\<math.h>|\<cmath > lub \<math.h >|
+|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath > lub \<math.h >|
 
 Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
