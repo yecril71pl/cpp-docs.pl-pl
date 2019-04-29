@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356553"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
@@ -53,7 +53,7 @@ Zwraca wskaźnik do poprzedniego funkcję tłumacza zarejestrowane przez **_set_
 
 ## <a name="remarks"></a>Uwagi
 
-**_Set_se_translator** funkcja stanowi sposób obsługi wyjątków systemu Win32 (wyjątki strukturalne C) co kod C++ kontrolą typów wyjątków. Aby zezwolić na każdy wyjątek C może być obsługiwanych przez C++ **catch** obsługi, należy najpierw zdefiniować klasa otoki wyjątek C, które mogą być używane lub pochodzący od atrybutu typu określonej klasy do wyjątku C. Aby użyć tej klasy, należy zainstalować niestandardowe funkcję do tłumacza wyjątków C, która jest wywoływana przez wewnętrzny mechanizm obsługi wyjątków, każdorazowo, gdy wyjątek C jest inicjowany. W ramach funkcji tłumaczenia, możliwe jest zgłoszenie wyjątku dowolnego typu, który może zostać przechwycony przez C++ zgodnego **catch** programu obsługi.
+**_Set_se_translator** funkcja stanowi sposób obsługi wyjątków systemu Win32 (wyjątki strukturalne C) jako C++ kontrolą typów wyjątków. Aby zezwolić na każdy wyjątek C może być obsługiwanych przez C++ **catch** obsługi, należy najpierw zdefiniować klasa otoki wyjątek C, które mogą być używane lub pochodzący od atrybutu typu określonej klasy do wyjątku C. Aby użyć tej klasy, należy zainstalować niestandardowe funkcję do tłumacza wyjątków C, która jest wywoływana przez wewnętrzny mechanizm obsługi wyjątków, każdorazowo, gdy wyjątek C jest inicjowany. W ramach funkcji tłumaczenia, możliwe jest zgłoszenie wyjątku dowolnego typu, który może zostać przechwycony przez C++ zgodnego **catch** programu obsługi.
 
 Należy użyć [/eha](../../build/reference/eh-exception-handling-model.md) przy użyciu **_set_se_translator**.
 

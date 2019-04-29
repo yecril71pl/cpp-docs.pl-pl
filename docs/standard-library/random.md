@@ -1,5 +1,5 @@
 ---
-title: '&lt;losowe&gt;'
+title: '&lt;random&gt;'
 ms.date: 08/24/2017
 f1_keywords:
 - <random>
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369816"
 ---
-# <a name="ltrandomgt"></a>&lt;losowe&gt;
+# <a name="ltrandomgt"></a>&lt;random&gt;
 
 Definiuje urządzenia Generowanie liczby losowej, umożliwiając tworzenie równomiernie rozłożonych liczb losowych.
 
@@ -212,11 +212,11 @@ Ten kod przedstawia dwa różne randomizations — losowe Określanie wektorem l
 
 URNGs są często opisywana w kategoriach tych właściwości:
 
-1. **Długość okresu**: jak dużo iteracji zajmuje powtórzenie sekwencji numerów wygenerowany. Im dłuższy lepiej.
+1. **Długość okresu**: Jak dużo iteracji trwa powtórzenie sekwencji numerów wygenerowany. Im dłuższy lepiej.
 
-2. **Wydajność**: jak szybko można wygenerować liczb oraz ile pamięci zajmuje. Mniejszy lepiej.
+2. **Wydajność**: Jak szybko można wygenerować liczb i ilość pamięci, które zajmują. Mniejszy lepiej.
 
-3. **Jakość**: jak blisko true liczb losowych wygenerowanego sekwencji. Jest to często nazywane "*losowości*".
+3. **Jakość**: Jak blisko true liczb losowych wygenerowanego sekwencji. Jest to często nazywane "*losowości*".
 
 W poniższych sekcjach wymieniono jednolitego generatorów liczb losowych (URNGs) podany w \<losowy > nagłówka.
 
@@ -493,10 +493,10 @@ Aby uzyskać więcej informacji zobacz podtematy odwołanie niższego od podaneg
 
 Istnieją dwa URNGs bardzo przydatne w programie Visual Studio —`mt19937` i `random_device`— jak pokazano w tej tabeli porównania:
 
-|URNG|Szybka|Bezpieczne kryptograficznego|Seedable|Deterministyczna|
+|URNG|Szybka|Crypto-secure|Seedable|Deterministyczna|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|Tak|Nie|Tak|Tak<sup>*</sup>|
-|`random_device`|Nie|Tak|Nie|Nie|
+|`mt19937`|Yes|Nie|Tak|Tak<sup>*</sup>|
+|`random_device`|Nie|Yes|Nie|Nie|
 
 <sup>* Jeśli klient poda znanych inicjatora.</sup>
 

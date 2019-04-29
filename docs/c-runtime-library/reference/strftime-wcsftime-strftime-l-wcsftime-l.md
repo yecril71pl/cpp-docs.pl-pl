@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353849"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -81,7 +81,7 @@ size_t _wcsftime_l(
 *strDest*<br/>
 Ciąg wyjściowy.
 
-*Parametr MaxSize*<br/>
+*maxsize*<br/>
 Rozmiar *strDest* buforu, mierzone w znakach (**char** lub **wchar_t**).
 
 *Format*<br/>
@@ -162,9 +162,9 @@ Podobnie jak w **printf** funkcji **#** flagi może prefiks formatowania kodu. W
 
 |Formatowanie kodu|Znaczenie|
 |-----------------|-------------|
-|**% #**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X** , **%#z**, **%#Z**, **%#%**|**#** Flaga jest ignorowana.|
-|**%#c**|Długi reprezentacja daty i czasu, odpowiednie dla ustawień regionalnych. Na przykład: "Tuesday, 14 marca 1995, 12:41:29".|
-|**%#x**|Reprezentacja daty długiej odpowiednie dla ustawień regionalnych. Na przykład: "Tuesday, 14 marca 1995".|
+|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** Flaga jest ignorowana.|
+|**%#c**|Długi reprezentacja daty i czasu, odpowiednie dla ustawień regionalnych. Na przykład: "Wtorek, 14 marca 1995, 12:41:29".|
+|**%#x**|Reprezentacja daty długiej odpowiednie dla ustawień regionalnych. Na przykład: "Wtorek, 14 marca 1995".|
 |**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #I**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Usuń zer wiodących ani spacji (jeśli istnieje).|
 
 Tydzień ISO 8601 i oparte na tydzień roku produkowane przez **%V**, **%g**, i **%G**, używa tydzień, który zaczyna się w poniedziałek, gdzie 1 tydzień zawierający stycznia 4, który jest pierwszy tydzień tydzień, który zawiera co najmniej cztery dni w roku. Jeśli pierwszy poniedziałek roku jest 2, 3 lub 4, poprzednich dni są częścią ostatni tydzień roku poprzedniego. Te dni **%V** zastępuje 53, a oba **%g** i **%G** są zastępowane przez te cyfry w poprzednim roku.

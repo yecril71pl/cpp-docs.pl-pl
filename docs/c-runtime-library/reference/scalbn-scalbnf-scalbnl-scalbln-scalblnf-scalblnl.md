@@ -37,11 +37,11 @@ helpviewer_keywords:
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
 ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357164"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -97,7 +97,7 @@ long double scalblnl(
 *x*<br/>
 Wartość zmiennoprzecinkowa.
 
-*EXP*<br/>
+*exp*<br/>
 Wykładnik potęgi liczby całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -116,7 +116,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **sca
 
 |Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**scalbn —**, **scalbnf —**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath >|
+|**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

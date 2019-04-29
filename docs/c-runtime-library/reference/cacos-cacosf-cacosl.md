@@ -1,5 +1,5 @@
 ---
-title: cacos cacosf, cacosl
+title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
 apiname:
 - cacos
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
 ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348578"
 ---
-# <a name="cacos-cacosf-cacosl"></a>cacos cacosf, cacosl
+# <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
 Pobiera arcus cosinus liczby zespolonej, cenowe gałąź poza interwał [-1, + 1] na rzeczywistych osi.
 
@@ -71,7 +71,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cac
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**cacos**, **cacosf**, **cacosl**|\<complex.h>|\<ccomplex >|
+|**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

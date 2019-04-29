@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
 ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340244"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
@@ -74,14 +74,14 @@ Ta funkcja sprawdza poprawność swojego parametru. Jeśli *str* jest **NULL**, 
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_cputts**|**_cputs —**|**_cputs —**|**_cputws —**|
+|**_cputts**|**_cputs —**|**_cputs —**|**_cputws**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|---------------------|
 |**_cputs —**|\<conio.h>|\<errno.h>|
-|**_cputws —**|\<conio.h>|\<errno.h>|
+|**_cputws**|\<conio.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

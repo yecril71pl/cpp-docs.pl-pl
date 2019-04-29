@@ -5,11 +5,11 @@ f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340342"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>UCRT alfabetyczne odwołanie funkcji
 
@@ -1209,7 +1209,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [isgreaterequal](floating-point-ordering.md)
 
-[isinf —](isinf.md)
+[isinf](isinf.md)
 
 [isleadbyte](isleadbyte-isleadbyte-l.md)
 
@@ -1355,7 +1355,7 @@ Dokumentacja biblioteki uniwersalnego środowiska języka C (UCRT, często po pr
 
 [_isnanf](isnan-isnan-isnanf.md)
 
-[isnormal —](isnormal.md)
+[isnormal](isnormal.md)
 
 [isprint](isprint-iswprint-isprint-l-iswprint-l.md)
 

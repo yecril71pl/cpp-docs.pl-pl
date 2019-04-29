@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
 ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369647"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex — Klasa
 
@@ -45,7 +45,7 @@ class recursive_mutex;
 |Nazwa|Opis|
 |----------|-----------------|
 |[lock](#lock)|Blokuje wątek wywołujący, aż wątek uzyskuje własność obiektu mutex.|
-|[try_lock —](#try_lock)|Próby uzyskania własności obiektu mutex bez blokowania.|
+|[try_lock](#try_lock)|Próby uzyskania własności obiektu mutex bez blokowania.|
 |[unlock](#unlock)|Zwalnia własność obiektu mutex.|
 
 ## <a name="requirements"></a>Wymagania
@@ -74,7 +74,7 @@ Konstruuje `recursive_mutex` obiektu, który nie jest zablokowany.
 recursive_mutex();
 ```
 
-## <a name="dtorrecursive_mutex_destructor"></a>  ~ recursive_mutex
+## <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex
 
 Zwalnia wszelkie zasoby, które są używane przez obiekt.
 

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
 ms.openlocfilehash: 03e9f540a215550a698700f28e5722b33b119149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357229"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -79,7 +79,7 @@ typedef int (__cdecl * _RTC_error_fnW)(
 
 gdzie:
 
-*ErrorType*<br/>
+*errorType*<br/>
 Typ błędu, który jest określony przez [_RTC_SetErrorType](rtc-seterrortype.md).
 
 *Nazwa pliku*<br/>
@@ -88,7 +88,7 @@ Plik źródłowy, w którym wystąpił błąd, lub wartość null, jeśli są do
 *numer wiersza*<br/>
 Wiersz w *filename* moment wystąpienia awarii lub 0, jeśli są dostępne żadne informacje debugowania.
 
-*Nazwa modułu*<br/>
+*moduleName*<br/>
 Plik DLL lub nazwą pliku wykonywalnego, w którym wystąpił błąd.
 
 *Format*<br/>

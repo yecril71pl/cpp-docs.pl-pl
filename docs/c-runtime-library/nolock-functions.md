@@ -6,11 +6,11 @@ helpviewer_keywords:
 - nolock functions
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
 ms.openlocfilehash: 7bd0592fb8dc43307a902714723d1b1e43207d1c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342321"
 ---
 # <a name="nolock-functions"></a>_nolock — Funkcje
 

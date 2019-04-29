@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exception handling, routines
 ms.assetid: f60548c6-850a-4e1e-a79b-a2a6a541ab62
 ms.openlocfilehash: 8def356793906074e6fc4b8d7a139ce1915a5f9b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344307"
 ---
 # <a name="exception-handling-routines"></a>Obsługa wyjątków — Procedury
 

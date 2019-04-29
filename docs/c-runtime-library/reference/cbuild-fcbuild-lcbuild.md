@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _FCbuild function
 - _LCbuild function
 ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340469"
 ---
 # <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -50,7 +50,7 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 
 ### <a name="parameters"></a>Parametry
 
-*rzeczywiste*<br/>
+*real*<br/>
 Rzeczywiste część liczby zespolonej do utworzenia.
 
 *imaginary*<br/>
@@ -68,7 +68,7 @@ A **_Dcomplex**, **_Fcomplex**, lub **_Lcomplex** strukturę, która reprezentuj
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex >|
+|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
 Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**, i **_Lcomplex** są specyficzne dla firmy Microsoft odpowiedniki typów natywnych niezaimplementowana C99 **double _complex —** , **float _complex —**, i **_complex typu long double —**, odpowiednio. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -77,7 +77,7 @@ Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex*
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
 [_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
-[norm normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>

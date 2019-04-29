@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
 ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340719"
 ---
 # <a name="carg-cargf-cargl"></a>carg cargf, cargl
 
@@ -72,20 +72,20 @@ Argument (znanej także jako etap) *z*. Wynik jest w interwale [-π, + π].
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **carg** o **_Fcomplex** lub **_Lcomplex** wartości i zwrócenie **float** lub **długie** **double** wartości. W programie C **carg** zawsze ma **_Dcomplex** wartości i zwraca **double** wartość.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **carg** o **_Fcomplex** lub **_Lcomplex** wartości i zwrócenie **float**lub **długie** **double** wartości. W programie C **carg** zawsze ma **_Dcomplex** wartości i zwraca **double** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex >|
+|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
-[norm normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>

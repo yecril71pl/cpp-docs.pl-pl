@@ -1,5 +1,5 @@
 ---
-title: 'TN062: odbicie komunikatu dla formantów systemu Windows'
+title: 'TN062: Odbicie komunikatu dla formantów Windows'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls.messages
@@ -28,13 +28,13 @@ helpviewer_keywords:
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351851"
 ---
-# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: odbicie komunikatu dla formantów systemu Windows
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Odbicie komunikatu dla formantów Windows
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -63,7 +63,7 @@ Po wysłaniu komunikatu WM_NOTIFY formant jest dostępna w pierwszej szansy do j
 
 Makra mapy komunikatów dla komunikatów odbitych jest nieco inne niż w przypadku regularnego powiadomienia: ma *_REFLECT* dołączany do nazwy zwykle. Na przykład aby obsłużyć komunikat WM_NOTIFY w obiekcie nadrzędnym, należy użyć ON_NOTIFY — makro w mapie komunikatów elementu nadrzędnego. Do obsługi komunikatów odbitych w kontrolki podrzędnej, należy użyć makra on_notify_reflect — w mapie komunikatów kontrolki podrzędnej. W niektórych przypadkach parametry różnią się, jak również. Pamiętaj, że ClassWizard można zwykle dodać wpisy mapy komunikatów dla Ciebie dostarczać implementacje szkielet funkcji z prawidłowymi parametrami.
 
-Zobacz [TN061: komunikaty ON_NOTIFY i Wm_notify](../mfc/tn061-on-notify-and-wm-notify-messages.md) uzyskać informacji na temat nowy komunikat WM_NOTIFY.
+Zobacz [TN061: Komunikaty ON_NOTIFY i Wm_notify](../mfc/tn061-on-notify-and-wm-notify-messages.md) uzyskać informacji na temat nowy komunikat WM_NOTIFY.
 
 **Wpisy mapy komunikatów i prototypy funkcji obsługi dla komunikatów odbitych**
 
@@ -90,25 +90,25 @@ Znaczenie parametry i zwracane wartości funkcji opisano w nazwy funkcji lub naz
 |**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **();**|
 |**ON_NOTIFY_REFLECT — (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *wynik* **);**|
 |**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**afx_msg void** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT)**|**afx_msg HBRUSH CtlColor (CDC** <strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
+|**ON_WM_CTLCOLOR_REFLECT)**|**afx_msg HBRUSH CtlColor ( CDC**<strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
 |**ON_WM_DRAWITEM_REFLECT)**|**afx_msg void drawitem — (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
 |**ON_WM_MEASUREITEM_REFLECT)**|**afx_msg void measureitem — (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
 |**ON_WM_DELETEITEM_REFLECT)**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
 |**ON_WM_COMPAREITEM_REFLECT)**|**afx_msg int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
 |**ON_WM_CHARTOITEM_REFLECT)**|**afx_msg int CharToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
 |**ON_WM_VKEYTOITEM_REFLECT)**|**afx_msg int VKeyToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT)**|**afx_msg void HScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
-|**ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|
 |**ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
 
 On_notify_reflect — i ON_CONTROL_REFLECT makra mają odmiany, zezwalających na więcej niż jeden obiekt (na przykład formantem i jego element nadrzędny) do obsługi danego komunikatu.
 
 |Wpis mapy|Prototyp funkcji|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX — (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *wynik* **);**|
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *wynik* **);**|
 |**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **();**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Obsługa Reflected wiadomości: Przykład kontrolki do ponownego wykorzystania
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Obsługa komunikatów odbitych: Przykład formantu wielokrotnego użytku
 
 Ten prosty przykład tworzy formant wielokrotnego użytku, nazywany `CYellowEdit`. Kontrolka działa tak samo, jako kontrolka edycji regularnych, z tą różnicą, że wyświetla czarny tekst w żółte tło. Możesz ją łatwo dodawać funkcje Członkowskie, które pozwalałyby na `CYellowEdit` formantu, aby wyświetlić różne kolory.
 

@@ -3,11 +3,11 @@ title: Podsumowanie literałów ciągu
 ms.date: 11/04/2016
 ms.assetid: d2693900-f4e2-4820-b7de-085d51827aee
 ms.openlocfilehash: a51c66f295a04b969d46d961f43517c0d7de5f6c
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346603"
 ---
 # <a name="summary-of-string-literals"></a>Podsumowanie literałów ciągu
 

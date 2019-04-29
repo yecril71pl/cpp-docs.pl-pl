@@ -39,22 +39,22 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365187"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray —&gt; funkcji
 
 ||||
 |-|-|-|
-|[ABS](#abs)|[ACOS](#acos)|[ASIN](#asin)|
-|[atan](#atan)|[atan2](#atan2)|[COS](#cos)|
-|[COSH](#cosh)|[EXP](#exp)|[log](#log)|
-|[log10](#log10)|[Pow](#pow)|[SIN](#sin)|
+|[abs](#abs)|[ACOS](#acos)|[ASIN](#asin)|
+|[atan](#atan)|[atan2](#atan2)|[cos](#cos)|
+|[cosh](#cosh)|[exp](#exp)|[log](#log)|
+|[log10](#log10)|[Pow](#pow)|[sin](#sin)|
 |[SINH](#sinh)|[sqrt](#sqrt)|[swap](#swap)|
-|[tan](#tan)|[TANH](#tanh)|
+|[tan](#tan)|[tanh](#tanh)|
 
 ## <a name="abs"></a>  ABS
 
@@ -1273,4 +1273,4 @@ The hyperbolic tangent of the initial valarray is:
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<valarray — >](../standard-library/valarray.md)<br/>
+[\<valarray>](../standard-library/valarray.md)<br/>

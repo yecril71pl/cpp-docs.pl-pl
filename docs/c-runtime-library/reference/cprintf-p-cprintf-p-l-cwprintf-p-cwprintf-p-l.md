@@ -44,11 +44,11 @@ helpviewer_keywords:
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
 ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348293"
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
@@ -85,7 +85,7 @@ int _cwprintf_p_l(
 *Format*<br/>
 Ciąg kontroli formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Parametry opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -112,15 +112,15 @@ Ponadto, podobnie jak **_cprintf_s** i **_cwprintf_s —**, walidują one wskaź
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcprintf_p —**|**_cprintf_p**|**_cprintf_p**|**_cwprintf_p**|
-|**_tcprintf_p_l —**|**_cprintf_p_l**|**_cprintf_p_l**|**_cwprintf_p_l**|
+|**_tcprintf_p**|**_cprintf_p**|**_cprintf_p**|**_cwprintf_p**|
+|**_tcprintf_p_l**|**_cprintf_p_l**|**_cprintf_p_l**|**_cwprintf_p_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cprintf_p —**, **_cprintf_p_l —**|\<conio.h>|
-|**_cwprintf_p —**, **_cwprintf_p_l —**|\<conio.h>|
+|**_cprintf_p**, **_cprintf_p_l**|\<conio.h>|
+|**_cwprintf_p**, **_cwprintf_p_l**|\<conio.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -1,17 +1,17 @@
 ---
 title: 'Przewodnik: Testowanie projektu (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
 ms.openlocfilehash: aa1af9cd355265214827527b986b8602a25e93f3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349204"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Przewodnik: Testowanie projektu (C++)
 
@@ -63,4 +63,4 @@ W tym przewodniku oglądać wartości zmiennej po uruchomieniu programu i wywnio
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Projekty i systemów kompilacji](../build/projects-and-build-systems-cpp.md)<br/>
+[Projekty i systemy kompilacji](../build/projects-and-build-systems-cpp.md)<br/>

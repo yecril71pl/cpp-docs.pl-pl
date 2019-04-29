@@ -29,11 +29,11 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347447"
 ---
 # <a name="cosh-coshf-coshl"></a>COSH coshf —, coshl —
 
@@ -65,7 +65,7 @@ Domyślnie, jeśli wynik jest za duży w **cosh**, **coshf —**, lub **coshl �
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMENY**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMAIN**|
 |*x* ≥ 7.104760e + 002|**NIEDOKŁADNY**+**PRZEPEŁNIENIA**|**PRZEPEŁNIENIA**|
 
 ## <a name="remarks"></a>Uwagi
@@ -76,7 +76,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cos
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**coshf —**, **cosl —**, **coshl —**|\<math.h>|\<cmath > lub \<math.h >|
+|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath > lub \<math.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

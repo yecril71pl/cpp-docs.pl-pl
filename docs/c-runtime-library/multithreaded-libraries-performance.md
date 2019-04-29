@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
 ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342409"
 ---
 # <a name="multithreaded-libraries-performance"></a>Wydajność bibliotek wielowątkowych
 

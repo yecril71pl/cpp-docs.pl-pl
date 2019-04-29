@@ -7,11 +7,11 @@ helpviewer_keywords:
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
 ms.openlocfilehash: 831f21901186ed0ae010b0f332327eefcba94b51
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368633"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Zestaw rekordów: Sortowanie rekordów (ODBC)
 
@@ -62,5 +62,5 @@ Zestaw rekordów zawiera wszystkie rekordy dla uczniów, posortowane w kolejnoś
 ## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
-[Zestaw rekordów: Filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[Zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

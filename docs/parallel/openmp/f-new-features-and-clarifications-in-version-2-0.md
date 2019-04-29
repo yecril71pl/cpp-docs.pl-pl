@@ -3,11 +3,11 @@ title: F. Nowe funkcje i wyjaśnienia w wersji 2.0
 ms.date: 01/22/2019
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
 ms.openlocfilehash: 2e186bbc82f4f43e831dd05cdded2a9e946d1dd2
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362717"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. Nowe funkcje i wyjaśnienia w wersji 2.0
 
@@ -37,4 +37,4 @@ Ten dodatek zawiera podsumowanie kluczowych zmiany wprowadzone do specyfikacji O
 
   - [Zablokować inicjowania](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions) i [zablokować zniszczenie](3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) funkcji może zostać wywołany w równoległego regionu.
 
-  - Dodano nowe przykłady [dodatek a](a-examples.md).
+  - Dodano nowe przykłady [dodatek a.](a-examples.md).

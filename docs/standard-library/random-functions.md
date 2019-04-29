@@ -7,11 +7,11 @@ ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
 ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370349"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;losowe&gt; funkcji
 
@@ -20,7 +20,7 @@ ms.locfileid: "50520617"
 Zwraca wartość zmiennoprzecinkową z sekwencji losowej.
 
 > [!NOTE]
-> Standardu ISO C++ stwierdzający, że ta funkcja powinna zwrócić wartości z zakresu [ `0`, `1`). Program Visual Studio nie jest jeszcze zgodne z tym ograniczeniem. Jako obejście do generowania wartości w tym zakresie, należy użyć [uniform_real_distribution —](../standard-library/uniform-real-distribution-class.md).
+> Obraz ISO C++ Standard stwierdza, że ta funkcja powinna zwrócić wartości z zakresu [ `0`, `1`). Program Visual Studio nie jest jeszcze zgodne z tym ograniczeniem. Jako obejście do generowania wartości w tym zakresie, należy użyć [uniform_real_distribution —](../standard-library/uniform-real-distribution-class.md).
 
 ```cpp
 template <class RealType, size_t Bits, class Generator>
@@ -44,4 +44,4 @@ Wywołania funkcji szablonu `operator()` z *ogólnego* wielokrotnie pakiety wart
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

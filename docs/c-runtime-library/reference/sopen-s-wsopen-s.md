@@ -32,11 +32,11 @@ helpviewer_keywords:
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
 ms.openlocfilehash: 1d5f35615aee058b51c0b14ff9ccd38894427b20
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355637"
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 
@@ -113,8 +113,8 @@ Wyrażenia typu całkowitego *oflag* jest tworzony przez połączenie jednej lub
 | **_O_APPEND** | Przesuwa wskaźnik myszy plików na koniec pliku przed każdej operacji zapisu. |
 | **_O_BINARY** | Otwiera plik w trybie binarnym (nieprzetłumaczonym). (Zobacz [fopen —](fopen-wfopen.md) opis trybie binarnym.) |
 | **_O_CREAT** | Tworzy plik i otwiera go do zapisu. Nie obowiązuje, jeżeli plik określony przez *filename* istnieje. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
-| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Tworzy plik jako tymczasowy, a jeśli to możliwe nie opróżnia na dysku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
-| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptor pliku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Tworzy plik jako tymczasowy, a jeśli to możliwe nie opróżnia na dysku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptor pliku. *Pmode* argument jest wymagany, gdy **_O_CREAT** jest określony. |
 | **_O_CREAT**&AMP;#124; ` _O_EXCL` | Zwraca wartość błędu, jeśli w pliku określonym przez *filename* istnieje. Ma zastosowanie tylko wtedy, gdy jest używane z **_O_CREAT**. |
 | **_O_NOINHERIT** | Uniemożliwia tworzenie deskryptora udostępnionego pliku. |
 | **_O_RANDOM** | Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu losowego do dysku. |
@@ -149,7 +149,7 @@ Argument *shflag* jest wyrażeniem stałym, który składa się z jednego z nast
 |-|-|
 | **_S_IREAD** | Dozwolone tylko odczyt. |
 | **_S_IWRITE** | Zapisywanie jest dozwolone. (W praktyce pozwala na odczyt i zapis.) |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Odczyt i zapis dozwolone. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Odczyt i zapis dozwolone. |
 
 Jeśli uprawnienia do zapisu nie zostanie określony, plik jest tylko do odczytu. W systemie operacyjnym Windows wszystkie pliki są do odczytu; nie jest możliwe przyznać uprawnienia tylko do zapisu. W związku z tym, tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** są równoważne.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2384
 ms.assetid: 8145f7ad-31b1-406d-ac43-0d557feab635
 ms.openlocfilehash: 1909fb999dd0f60224029b726f773c11fa69ee40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347158"
 ---
 # <a name="compiler-error-c2384"></a>Błąd kompilatora C2384
 
@@ -21,7 +21,7 @@ ms.locfileid: "50460323"
 
 Statyczne wątku Magazyn lokalny w kodzie zarządzanym można używać tylko dla statycznie ładowanych bibliotek DLL — biblioteki DLL muszą być statycznie ładowane podczas uruchamiania procesu. Środowisko uruchomieniowe Windows nie obsługuje pamięci lokalnej wątku.
 
-Następujące polecenie generuje C2384 i pokazuje, jak go naprawić w języku C + +/ CLI, kod:
+Następujące polecenie generuje C2384 i pokazuje, jak to naprawić w C++kodu w sposób niezamierzony:
 
 ```
 // C2384.cpp

@@ -140,11 +140,11 @@ helpviewer_keywords:
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
 ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344398"
 ---
 # <a name="data-type-constants"></a>Typ danych — Stałe
 
@@ -164,7 +164,7 @@ Te stałe oferują zakresy dla typów całkowitych danych. Aby użyć tych stał
 |Stała|Wartość|Opis|
 |--------------|-----------|-------------|
 |**CHAR_BIT**|8|Liczba bitów **char**|
-|**SCHAR_MIN**|(od -128)|Co najmniej podpisany **char** wartość|
+|**SCHAR_MIN**|(-128)|Co najmniej podpisany **char** wartość|
 |**SCHAR_MAX**|127|Maksymalna podpisany **char** wartość|
 |**UCHAR_MAX**|255 (0xff)|Maksymalna **niepodpisane** **char** wartość|
 |**CHAR_MIN**|(od -128) (0, jeśli **/j.** opcja używana)|Co najmniej **char** wartość|
@@ -228,7 +228,7 @@ Nadaj następujących stałych, zakresu i inne cechy charakterystyczne **długie
 |**FLT_EPSILON**|1.192092896e-07F|Najmniejsza taki sposób, że 1.0 + **FLT_EPSILON** ! = 1,0|
 |**FLT_HAS_SUBNORM**|1|Obsługuje typ subnormal (numery zdenormalizowany)|
 |**FLT_MANT_DIG**|24|Liczba bitów mantysę (mantysy)|
-|**FLT_MAX**|3.402823466e + 38F|Wartość maksymalna|
+|**FLT_MAX**|3.402823466e+38F|Wartość maksymalna|
 |**FLT_MAX_10_EXP**|38|Maksymalna wykładnik dziesiętna|
 |**FLT_MAX_EXP**|128|Maksymalna wykładnik binarne|
 |**FLT_MIN**|1.175494351e-38F|Minimalna liczba znormalizowanych wartość dodatnią|

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370019"
 ---
 # <a name="priorityqueue-class"></a>priority_queue — Klasa
 
@@ -59,7 +59,7 @@ Odpowiednie podstawowej klasy kontenera dla priority_queue — obejmują [deque 
 
 Dodawanie elementów do i usuwanie elementów z `priority_queue` mają logarytmicznej złożoności. Uzyskiwanie dostępu do elementów w `priority_queue` ma stałą złożoność.
 
-Istnieją trzy typy adaptery kontenera definicją standardowej biblioteki języka C++: stosu, kolejki i priority_queue —. Każdy ogranicza funkcjonalność niektóre podstawowe klasy kontenera dokładnie kontrolowanym interfejs do struktury danych w warstwie standardowa.
+Istnieją trzy typy adaptery kontenera definicją C++ standardowej biblioteki: stosu, kolejki i priority_queue —. Każdy ogranicza funkcjonalność niektóre podstawowe klasy kontenera dokładnie kontrolowanym interfejs do struktury danych w warstwie standardowa.
 
 - [Stack — klasa](../standard-library/stack-class.md) obsługuje ostatni na wejściu, first-out (LIFO) strukturę danych. Dobre analogowy na uwadze byłoby były stosem talerzy. Elementy (talerzy) może wstawiania, inspekcji lub usunąć tylko z góry stosu, w którym jest ostatnim elementem na końcu podstawowym kontenerem. Ograniczenie do uzyskiwania dostępu do górnego elementu jest przyczyna przy użyciu klasy stosu.
 
@@ -107,7 +107,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `Container`. Klasy kontenerów sekwencji standardowej biblioteki języka C++ `deque` i domyślną klasę `vector` spełniają wymagania, które ma być używany jako bazowy kontener dla obiektu priority_queue —. Typy zdefiniowane przez użytkownika niespełniających wymagań można także.
+Typ jest synonimem dla parametru szablonu `Container`. C++ Klasy kontenera sekwencja standardowej biblioteki `deque` i domyślną klasę `vector` spełniają wymagania, które ma być używany jako bazowy kontener dla obiektu priority_queue —. Typy zdefiniowane przez użytkownika niespełniających wymagań można także.
 
 Aby uzyskać więcej informacji na temat `Container`, zobacz sekcję Uwagi [priority_queue — klasa](../standard-library/priority-queue-class.md) tematu.
 
@@ -254,7 +254,7 @@ Priority_queue — której zestaw zbudowany jest kopią.
 *pierwszy*<br/>
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*ostatni*<br/>
+*last*<br/>
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi

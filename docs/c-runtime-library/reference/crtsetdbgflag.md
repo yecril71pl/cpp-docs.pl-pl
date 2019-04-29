@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348188"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -71,7 +71,7 @@ int _CrtSetDbgFlag(
 
 ### <a name="parameters"></a>Parametry
 
-*NowaFlaga*<br/>
+*newFlag*<br/>
 Nowy stan dla **_crtDbgFlag**.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -86,11 +86,11 @@ Poniższa tabela zawiera listę pól bitowych dla **_crtDbgFlag** oraz opis ich 
 
 |Pole bitowe|Domyślny|Opis|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|DALEJ|Włączony: Włącz alokacji sterty debugowania i stosowanie identyfikatorów, typ bloku pamięci, takich jak **_CLIENT_BLOCK**. OFF: Dodaj nowe przydziały na połączonej liście stosu, ale ustawiony typ do bloku **_IGNORE_BLOCK**.<br /><br /> Można również łączyć z dowolnymi makra wyboru częstotliwość sterty.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|WYŁĄCZONE|Włączony: Wywołanie [_CrtCheckMemory](crtcheckmemory.md) na każde żądanie alokacji i dezalokacji. OFF: **_CrtCheckMemory** musi być wywoływana jawnie.<br /><br /> Makra Sprawdzanie sterty częstotliwość przyniosło żadnego skutku, gdy ta flaga jest ustawiona.|
-|**_CRTDBG_CHECK_CRT_DF**|WYŁĄCZONE|Włączony: Obejmują **_CRT_BLOCK** typów w stanie wykrywania i pamięci przeciek różnica operacji. WYŁĄCZONY: Pamięć używana wewnętrznie przez bibliotekę uruchomieniową jest ignorowana przez te operacje.<br /><br /> Można również łączyć z dowolnymi makra wyboru częstotliwość sterty.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|WYŁĄCZONE|Włączony: Zachowaj zwolnionej pamięci, które listy dwukierunkowej bloków w stosie, należy przypisać im **_FREE_BLOCK** wpisz i wypełniać je wartość bajtu 0xDD. WYŁĄCZONY: Nie przechowuj zwolnione bloki połączonej liście stosu.<br /><br /> Można również łączyć z dowolnymi makra wyboru częstotliwość sterty.|
-|**_CRTDBG_LEAK_CHECK_DF**|WYŁĄCZONE|Włączony: Wykonania przecieku automatyczne sprawdzanie przy zamykaniu programu poprzez wywołanie [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) i wygeneruj raport o błędzie, jeśli aplikacja nie może zwolnić całej pamięci przydzielonej przez jej. Wyłącz: Nie automatycznie wykonuj przeciek sprawdzanie przy zamykaniu programu.<br /><br /> Można również łączyć z dowolnymi makra wyboru częstotliwość sterty.|
+|**_CRTDBG_ALLOC_MEM_DF**|DALEJ|WŁĄCZONY: Włącz alokacji sterty debugowania i używania identyfikatorów typ bloku pamięci, takich jak **_CLIENT_BLOCK**. WYŁĄCZONE: Dodaj nowe przydziały na połączonej liście stosu, ale ustawiony typ do bloku **_IGNORE_BLOCK**.<br /><br /> Można również łączyć z dowolnymi makra wyboru częstotliwość sterty.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|WYŁĄCZONE|WŁĄCZONY: Wywołaj [_CrtCheckMemory](crtcheckmemory.md) na każde żądanie alokacji i dezalokacji. OFF: **_CrtCheckMemory** musi być wywoływana jawnie.<br /><br /> Makra Sprawdzanie sterty częstotliwość przyniosło żadnego skutku, gdy ta flaga jest ustawiona.|
+|**_CRTDBG_CHECK_CRT_DF**|WYŁĄCZONE|WŁĄCZONY: Obejmują **_CRT_BLOCK** typów w stanie wykrywania i pamięci przeciek różnica operacji. WYŁĄCZONE: Pamięć używana wewnętrznie przez bibliotekę uruchomieniową jest ignorowana przez te operacje.<br /><br /> Można również łączyć z dowolnymi makra wyboru częstotliwość sterty.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|WYŁĄCZONE|WŁĄCZONY: Zachować zwolnione bloki pamięci w połączonej liście stosu, należy przypisać im **_FREE_BLOCK** wpisz i wypełniać je wartość bajtu 0xDD. WYŁĄCZONE: Nie przechowuj połączonej liście stosu zwolnione bloki.<br /><br /> Można również łączyć z dowolnymi makra wyboru częstotliwość sterty.|
+|**_CRTDBG_LEAK_CHECK_DF**|WYŁĄCZONE|WŁĄCZONY: Wykonania przecieku automatyczne sprawdzanie przy zamykaniu programu poprzez wywołanie [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) i wygeneruj raport o błędzie, jeśli aplikacja nie może zwolnić całej pamięci przydzielonej przez jej. WYŁĄCZONE: Nie wykonuj automatycznie przeciek sprawdzanie przy zamykaniu programu.<br /><br /> Można również łączyć z dowolnymi makra wyboru częstotliwość sterty.|
 
 **Sprawdzanie sterty częstotliwość makra**
 

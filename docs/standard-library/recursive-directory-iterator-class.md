@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::tr2::sys::recursive_directory_iterator
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
 ms.openlocfilehash: 52e6f738aa226dba26bae0cf6e97cd18d107d677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370134"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator — klasa
 
@@ -72,8 +72,8 @@ Wywołanie odwiedzi z argumentami `path("abc/def/ghi")` i `path("abc/jkl")`. Mo�
 |[operator!=](#op_neq)|Zwraca `!(*this == right)`.|
 |[operator=](#op_as)|Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.|
 |[operator==](#op_eq)|Zwraca **true** tylko wtedy, gdy oba `*this` i *prawo* są Iteratory sekwencja kończenia i / lub czy nie end z sekwencji Iteratory.|
-|[operator *](#op_multiply)|Zwraca `myentry`.|
-|[operator ->](#op_cast)|Zwraca `&**this`.|
+|[operator*](#op_multiply)|Zwraca `myentry`.|
+|[operator->](#op_cast)|Zwraca `&**this`.|
 |[operator++](#op_increment)|Zwiększa `recursive_directory_iterator`.|
 
 ## <a name="requirements"></a>Wymagania
@@ -108,7 +108,7 @@ recursive_directory_iterator& increment(error_code& ec) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*we*<br/>
+*ec*<br/>
 Określony kod błędu.
 
 ### <a name="remarks"></a>Uwagi
@@ -243,7 +243,7 @@ recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 *pval*<br/>
 Określona ścieżka.
 
-*error_code —*<br/>
+*error_code*<br/>
 Określonego kodu błędu.
 
 *zdecyduje*<br/>
@@ -261,5 +261,5 @@ Czwarty i piąty Konstruktor działa tak samo jak drugi i trzeci, chyba że najp
 ## <a name="see-also"></a>Zobacz także
 
 [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>
 [Nawigacja w systemie plików (C++)](../standard-library/file-system-navigation.md)<br/>

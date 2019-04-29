@@ -1,5 +1,5 @@
 ---
-title: Funkcje ABS, laboratoria, llabs — _abs64 —
+title: abs, labs, llabs, _abs64
 ms.date: 04/05/2018
 apiname:
 - abs
@@ -37,13 +37,13 @@ helpviewer_keywords:
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341993"
 ---
-# <a name="abs-labs-llabs-abs64"></a>Funkcje ABS, laboratoria, llabs — _abs64 —
+# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
 Oblicza wartość bezwzględną argumentu.
 
@@ -66,7 +66,7 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Wartość liczbowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -77,7 +77,7 @@ Wartość liczbowa.
 
 Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **abs** przyjmujące i zwracające **długie**, **długie** **długie**,  **float**, **double**, i **długie** **double** wartości. Te przeciążenia są zdefiniowane w \<cmath > nagłówka. W programie C **abs** zawsze przyjmuje i zwraca **int**.
 
-**Microsoft Specific**: ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane za pomocą dowolnego typu integralnego, jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane za pomocą tego typu, jest możliwe, aby podać argument do tych Funkcje, które nie może zostać przekonwertowany. Jeśli wartość bezwzględna argumentu nie może być przedstawiona przez zwracany typ **abs** funkcje zwracają niezmienioną wartość argumentu. W szczególności `abs(INT_MIN)` zwraca `INT_MIN`, `labs(LONG_MIN)` zwraca `LONG_MIN`, `llabs(LLONG_MIN)` zwraca `LLONG_MIN`, i `_abs64(_I64_MIN)` zwraca `_I64_MIN`. Oznacza to, że **abs** funkcji nie może służyć do zagwarantowania wartości dodatniej.
+**Specyficzne dla firmy Microsoft**: Ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane za pomocą dowolnego typu integralnego, jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane za pomocą tego typu, jest możliwe, aby podać argument do tych funkcji, które nie może zostać przekonwertowany. Jeśli wartość bezwzględna argumentu nie może być przedstawiona przez zwracany typ **abs** funkcje zwracają niezmienioną wartość argumentu. W szczególności `abs(INT_MIN)` zwraca `INT_MIN`, `labs(LONG_MIN)` zwraca `LONG_MIN`, `llabs(LLONG_MIN)` zwraca `LLONG_MIN`, i `_abs64(_I64_MIN)` zwraca `_I64_MIN`. Oznacza to, że **abs** funkcji nie może służyć do zagwarantowania wartości dodatniej.
 
 ## <a name="requirements"></a>Wymagania
 

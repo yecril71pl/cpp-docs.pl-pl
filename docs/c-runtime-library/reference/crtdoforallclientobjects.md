@@ -24,11 +24,11 @@ helpviewer_keywords:
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
 ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339721"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
@@ -69,7 +69,7 @@ Jeśli *pfn* jest **NULL**, procedura obsługi nieprawidłowego parametru zostan
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-**Biblioteki:** universal C biblioteki wykonawczej tylko wersja debugowania.
+**Biblioteki:** Debuguj wersje universal C biblioteki wykonawczej tylko.
 
 ## <a name="see-also"></a>Zobacz także
 

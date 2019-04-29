@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C2199
+title: Compiler Error C2199
 ms.date: 11/04/2016
 f1_keywords:
 - C2199
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C2199
 ms.assetid: 6a92a1b7-7906-49e6-a31f-e8bffbc7706a
 ms.openlocfilehash: e5892a537cbf337b23ff2356583cec4bf5925677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368490"
 ---
-# <a name="compiler-error-c2199"></a>Błąd kompilatora C2199
+# <a name="compiler-error-c2199"></a>Compiler Error C2199
 
 Błąd składniowy: znaleziono "identyfikator (" w zakresie globalnym (była deklaracja jest zamierzona?)
 

@@ -49,11 +49,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
 ms.openlocfilehash: 202f2f12de3955a2c9b0f785c3e89280d91a4a95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355722"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -137,7 +137,7 @@ Maksymalna liczba znaków do zapisania.
 *Format*<br/>
 Ciąg kontroli formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -181,13 +181,13 @@ W C++ te funkcje mają przeciążenia szablonu, które wywołują ich nowsze, be
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_sntprintf —**|**_snprintf**|**_snprintf**|**_snwprintf**|
-|**_sntprintf_l —**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
+|**_sntprintf_l**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**snprintf —**, **_snprintf**, **_snprintf_l —**|\<stdio.h>|
+|**snprintf**, **_snprintf**,  **_snprintf_l**|\<stdio.h>|
 |**_snwprintf**, **_snwprintf_l —**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

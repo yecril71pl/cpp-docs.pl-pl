@@ -9,11 +9,11 @@ helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
 ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346848"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract (C++sposób niezamierzony i C++/CX)
 

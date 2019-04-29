@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
 ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369959"
 ---
 # <a name="promise-class"></a>promise — Klasa
 
@@ -44,7 +44,7 @@ class promise;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Promise](#promise)|Konstruuje `promise` obiektu.|
+|[promise](#promise)|Konstruuje `promise` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -61,11 +61,11 @@ class promise;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Promise::operator =](#op_eq)|Przypisanie udostępnionego stanu obiektu obietnicy.|
+|[promise::operator=](#op_eq)|Przypisanie udostępnionego stanu obiektu obietnicy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-*Promise*<br/>
+*promise*<br/>
 
 ## <a name="requirements"></a>Wymagania
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-*Wyłączne*<br/>
+*Exc*<br/>
 [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) przechowywane przez tę metodę jako wynik wyjątku.
 
 ### <a name="remarks"></a>Uwagi
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-*Wyłączne*<br/>
+*Exc*<br/>
 [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) przechowywane przez tę metodę jako wynik wyjątku.
 
 ### <a name="remarks"></a>Uwagi
@@ -209,7 +209,7 @@ Przypadku częściowej specjalizacji `promise<Ty&>`, wartość przechowywana w p
 
 Dla specjalizacji `promise<void>`, przechowywana wartość nie istnieje.
 
-## <a name="set_value_at_thread_exit"></a>  Promise::set_value_at_thread_exit —
+## <a name="set_value_at_thread_exit"></a>  promise::set_value_at_thread_exit
 
 Niepodzielne przechowuje wartość w wyniku tego `promise` obiektu.
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
 ms.openlocfilehash: d1a94f7ad0bbd525480d344fa8ac5b3ee591a1b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340446"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos, ccosf, ccosl
 
@@ -78,7 +78,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cco
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**ccos**, **ccosf**, **ccosl**|\<complex.h>|\<ccomplex >|
+|**ccos**,               **ccosf**, **ccosl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

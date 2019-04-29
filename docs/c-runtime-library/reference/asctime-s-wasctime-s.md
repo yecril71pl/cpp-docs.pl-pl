@@ -31,11 +31,11 @@ helpviewer_keywords:
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
 ms.openlocfilehash: 350d8c7b1dcf61272a3cfee884dff8a63b455f1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349478"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
@@ -85,9 +85,9 @@ Zero, jeśli to się powiedzie. Jeśli wystąpi awaria, program obsługi niepraw
 
 |*buffer*|*numberOfElements*|*tmSource*|Wróć|Wartość w *buforu*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Wszystkie|Wszystkie|**EINVAL**|Nie zmodyfikowano|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|0|Wszystkie|**EINVAL**|Nie zmodyfikowano|
-|Nie **o wartości NULL**|0 < < 26 rozmiar|Wszystkie|**EINVAL**|Pusty ciąg|
+|**NULL**|Dowolne|Dowolne|**EINVAL**|Nie zmodyfikowano|
+|Nie **NULL** (wskazuje prawidłowy pamięci)|0|Dowolne|**EINVAL**|Nie zmodyfikowano|
+|Nie **o wartości NULL**|0 < < 26 rozmiar|Dowolne|**EINVAL**|Pusty ciąg|
 |Nie **o wartości NULL**|>= 26|**NULL**|**EINVAL**|Pusty ciąg|
 |Nie **o wartości NULL**|>= 26|Nieprawidłowa godzina struktury lub wartości spoza zakresu dla składników czasu|**EINVAL**|Pusty ciąg|
 
@@ -120,7 +120,7 @@ Wynikowy ciąg utworzony przez **asctime_s —** zawiera dokładnie 26 znaków i
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tasctime_s —**|**asctime_s**|**asctime_s**|**_wasctime_s**|
+|**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
 W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 

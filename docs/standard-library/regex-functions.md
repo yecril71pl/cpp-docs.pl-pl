@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369608"
 ---
 # <a name="ltregexgt-functions"></a>&lt;wyrażenie regularne&gt; funkcji
 
@@ -111,7 +111,7 @@ Flagi dopasowania.
 *pierwszy*<br/>
 Początek sekwencji w celu dopasowania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji w celu dopasowania.
 
 *match*<br/>
@@ -241,10 +241,10 @@ Flagi dopasowania.
 *pierwszy*<br/>
 Początek sekwencji w celu dopasowania.
 
-*FMT*<br/>
+*fmt*<br/>
 Format zamiany.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji w celu dopasowania.
 
 *out*<br/>
@@ -380,7 +380,7 @@ Flagi dopasowania.
 *pierwszy*<br/>
 Początek sekwencji w celu dopasowania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec sekwencji w celu dopasowania.
 
 *match*<br/>

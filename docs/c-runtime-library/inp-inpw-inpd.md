@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
 ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62343410"
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 

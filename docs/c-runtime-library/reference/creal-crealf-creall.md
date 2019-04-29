@@ -31,11 +31,11 @@ helpviewer_keywords:
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
 ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339758"
 ---
 # <a name="creal-crealf-creall"></a>creal crealf, creall
 
@@ -65,13 +65,13 @@ Część rzeczywista *z*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **creal** o **_Fcomplex** lub **_Lcomplex** wartości i zwrócenie **float** lub **typu long double** wartości. W programie C **creal** zawsze ma **_Dcomplex** wartości i zwraca **double** wartość.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **creal** o **_Fcomplex** lub **_Lcomplex** wartości i zwrócenie **float**lub **typu long double** wartości. W programie C **creal** zawsze ma **_Dcomplex** wartości i zwraca **double** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex >|
+|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
 **_Fcomplex**, **_Dcomplex**, i **_Lcomplex** typy są specyficzne dla firmy Microsoft odpowiedników niezaimplementowana natywnych typów C99 **float _complex —** , **double _complex —**, i **_complex typu long double —**, odpowiednio. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -79,7 +79,7 @@ Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cre
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
-[norm normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

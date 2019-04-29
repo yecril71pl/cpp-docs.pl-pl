@@ -3,19 +3,19 @@ title: Wyodrębnij funkcję
 ms.date: 11/16/2016
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
 ms.openlocfilehash: ec3b9a0aeaef9e418b457bafdfb9bb1bbd2edffc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349369"
 ---
 # <a name="extract-function"></a>Wyodrębnij funkcję
 
-**Co:** pozwala włączyć fragment kodu do jego własnej funkcji.
+**Co:** Pozwala włączyć fragment kodu do jego własnej funkcji.
 
-**Kiedy:** masz fragmentu istniejącego kodu w niektórych funkcji, która musi zostać wywołana z inną funkcję.
+**Kiedy:** W niektórych funkcji, która musi zostać wywołana z innej funkcji znajduje się fragment kodu z istniejących.
 
-**Dlaczego:** można kopiujesz/wklejasz kod, ale, co może spowodować dublowania.  Lepszym rozwiązaniem jest Refaktoryzacja tego fragmentu do jego własnej funkcji, która może być wywoływany za darmo przez innych funkcji.
+**Dlaczego:** Można kopiujesz/wklejasz kod, ale, co może spowodować dublowania.  Lepszym rozwiązaniem jest Refaktoryzacja tego fragmentu do jego własnej funkcji, która może być wywoływany za darmo przez innych funkcji.
 
 **Jak:**
 

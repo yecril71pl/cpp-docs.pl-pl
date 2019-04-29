@@ -30,11 +30,11 @@ helpviewer_keywords:
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
 ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347967"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -66,9 +66,9 @@ Domyślnie jeśli *x* jest mniejsza niż -1 lub większa niż 1, **asin** zwraca
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NIEPRAWIDŁOWY**|**_DOMENY**|
-|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMENY**|
-|&#124;x&#124;>1|**NIEPRAWIDŁOWY**|**_DOMENY**|
+|± ∞|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMAIN**|
+|&#124;x&#124;>1|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -89,7 +89,7 @@ Aby uzyskać więcej informacji, zobacz [acos acosf —, acosl —](acos-acosf-a
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[COS cosf —, cosl —](cos-cosf-cosl.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [_matherr](matherr.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)<br/>

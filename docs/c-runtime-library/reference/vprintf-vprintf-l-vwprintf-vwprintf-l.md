@@ -35,11 +35,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 44549505-00a0-4fa7-9a85-f2e666f55a38
 ms.openlocfilehash: 18684484db33faffc581f30e39ef42e5356b71ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364678"
 ---
 # <a name="vprintf-vprintfl-vwprintf-vwprintfl"></a>vprintf, _vprintf_l, vwprintf, _vwprintf_l
 
@@ -102,14 +102,14 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vtprintf —**|**vprintf —**|**vprintf —**|**vwprintf**|
-|**_vtprintf_l —**|**_vprintf_l —**|**_vprintf_l —**|**_vwprintf_l**|
+|**_vtprintf —**|**vprintf**|**vprintf**|**vwprintf**|
+|**_vtprintf_l**|**_vprintf_l**|**_vprintf_l**|**_vwprintf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**vprintf —**, **_vprintf_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
+|**vprintf**, **_vprintf_l**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
 |**vwprintf —**, **_vwprintf_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
 \* Wymagane dla zgodności systemu UNIX V.
