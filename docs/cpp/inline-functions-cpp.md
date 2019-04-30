@@ -13,11 +13,11 @@ helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
 ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400594"
 ---
 # <a name="inline-functions-c"></a>Funkcje śródwierszowe (C++)
 
@@ -78,7 +78,7 @@ Za pomocą wbudowanych funkcji można szybciej program ponieważ eliminuje obci�
 
 Kompilator traktuje opcje rozszerzenia wbudowane i słów kluczowych jako sugestie. Nie ma żadnej gwarancji, funkcje będą śródwierszowych. Nie można wymusić na kompilatorze wbudowane określonej funkcji, nawet w przypadku **__forceinline** — słowo kluczowe. Podczas kompilowania za pomocą **/CLR**, kompilator będzie niewyrównane funkcji w przypadku atrybutów zabezpieczeń zastosowanych do funkcji.
 
-**Wbudowane** — słowo kluczowe jest dostępne tylko w języku C++. **__Inline** i **__forceinline** słowa kluczowe są dostępne w C i C++. W celu zgodności z poprzednimi wersjami **_inline** i **_forceinline** są synonimy **__inline**, i **__forceinline** chyba że — Opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określony.
+**Wbudowane** — słowo kluczowe jest dostępne tylko w języku C++. **__Inline** i **__forceinline** słowa kluczowe są dostępne w obu C i C++. W celu zgodności z poprzednimi wersjami **_inline** i **_forceinline** są synonimy **__inline**, i **__forceinline** chyba że — Opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określony.
 
 **Wbudowane** — słowo kluczowe informuje kompilator, że wbudowane rozwijanie jest preferowana. Jednak kompilator może utworzyć osobne wystąpienie funkcji (wystąpienia) i tworzenia standardowych powiązań wywoływania zamiast Wstawianie kod inline. Są dwa przypadki, w których taka sytuacja może wystąpić:
 

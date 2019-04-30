@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
 ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387308"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Instrukcje: Rozszerzanie biblioteki Marshalingu
 
@@ -30,7 +30,7 @@ W obu przypadkach należy najpierw utworzyć plik dla nowych konwersji organizow
 
    - marshal_windows.h dla typów danych systemu windows.
 
-   - marshal_cppstd.h dla typów danych standardowej biblioteki języka C++.
+   - marshal_cppstd.h dla C++ standardowej biblioteki typów danych.
 
    - marshal_atl.h ATL typów danych.
 
@@ -59,7 +59,7 @@ namespace msclr {
 
    - marshal_windows.h dla typów danych systemu windows.
 
-   - marshal_cppstd.h dla typów danych standardowej biblioteki języka C++.
+   - marshal_cppstd.h dla C++ standardowej biblioteki typów danych.
 
    - marshal_atl.h ATL typów danych.
 

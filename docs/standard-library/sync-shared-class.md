@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
 ms.openlocfilehash: c368e99eb9f128963e90cdc1d39bdb9d4569efe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412244"
 ---
 # <a name="syncshared-class"></a>sync_shared — Klasa
 
@@ -41,7 +41,7 @@ class sync_shared
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 |[equals](#equals)|Porównuje dwa pamięci podręczne dla równości.|
 
 ## <a name="requirements"></a>Wymagania
@@ -114,4 +114,4 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

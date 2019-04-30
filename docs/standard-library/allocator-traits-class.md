@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410976"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits — klasa
 
@@ -82,7 +82,7 @@ Następujące metody statyczne wywołać metody odpowiedniego parametru danego p
 |----------|-----------------|
 |[allocate](#allocate)|Statyczna metoda, która przydziela pamięć przy użyciu parametru danego programu przydzielania.|
 |[construct](#construct)|Metoda statyczna, który używa określonego alokatora do konstruowania obiektu.|
-|[Cofnij Przydział](#deallocate)|Metoda statyczna, która używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.|
+|[deallocate](#deallocate)|Metoda statyczna, która używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.|
 |[destroy](#destroy)|Metoda statyczna, który używa określonego programu przydzielania może wywołać destruktor obiektu bez Trwa cofanie alokacji pamięci.|
 |[max_size](#max_size)|Metoda statyczna, który używa określonego programu przydzielania, aby określić maksymalną liczbę obiektów, które mogą być przydzielone.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Statyczna metoda, która wywołuje `select_on_container_copy_construction` na określonego alokatora.|

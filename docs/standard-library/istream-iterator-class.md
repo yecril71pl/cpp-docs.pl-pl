@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 ms.openlocfilehash: f8fc1593db8ddacefb4a231be76ca6d7cbd30849
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413323"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator — Klasa
 
@@ -68,8 +68,8 @@ Po skonstruowaniu lub inkrementacji obiektu klasy istream_iterator z przechowywa
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji zwraca przechowywany obiekt typu `Type` odnoszącego `istream_iterator`.|
-|[operator ->](#op_arrow)|Zwraca wartość elementu członkowskiego, jeśli istnieje.|
+|[operator*](#op_star)|Operator dereferencji zwraca przechowywany obiekt typu `Type` odnoszącego `istream_iterator`.|
+|[operator->](#op_arrow)|Zwraca wartość elementu członkowskiego, jeśli istnieje.|
 |[operator++](#op_add_add)|Albo wyodrębnia inkrementowany obiekt ze strumienia wejściowego, albo kopiuje obiekt przed jego inkrementacją i zwraca kopię.|
 
 ## <a name="requirements"></a>Wymagania

@@ -100,11 +100,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
 ms.openlocfilehash: fb7db25785d041786f5dfc0d2c3986a76d776d5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404419"
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 
@@ -143,12 +143,12 @@ template<typename Key,
 *Key*<br/>
 Typ kluczowy składnik elementu w kontrolowanej sekwencji.
 
-*Zamapowane*<br/>
+*zamapowane*<br/>
 Typ dodatkowego składnika elementu w kontrolowanej sekwencji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext — / hash_map >
+**Header:** \<cliext/hash_map>
 
 **Namespace:** cliext —
 
@@ -862,7 +862,7 @@ Początek zakresu, aby wymazać.
 *Klucz*<br/>
 Wartość klucza do wymazania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu, aby wymazać.
 
 *gdzie*<br/>
@@ -1298,7 +1298,7 @@ Początek zakresu do wstawienia.
 *hashfn*<br/>
 Hash — funkcja klucze mapowania do zasobników.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *P.*<br/>
@@ -1564,7 +1564,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *right*<br/>

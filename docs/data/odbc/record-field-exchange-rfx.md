@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395719"
 ---
 # <a name="record-field-exchange-rfx"></a>Wymiana pól rekordów (RFX)
 
@@ -38,11 +38,11 @@ Aby uzyskać większą wiedzę RFX zobacz [wymiana pól rekordów: Jak działa R
 
 W poniższych tematach opisano szczegóły przy użyciu obiektów zestaw rekordów:
 
-- [Wymiana pól rekordów: Używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md)
+- [Wymiana pól rekordów: używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Wymiana pól rekordów: Używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Wymiana pól rekordów: używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [Wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [Wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>Zobacz także
 

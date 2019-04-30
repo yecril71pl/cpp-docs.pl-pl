@@ -25,11 +25,11 @@ helpviewer_keywords:
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
 ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412660"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;wyjątek&gt; funkcji
 
@@ -38,7 +38,7 @@ ms.locfileid: "51523666"
 |[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
 |[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
 |[set_unexpected](#set_unexpected)|[Zakończenie](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[Nieoczekiwany](#unexpected)|
+|[unexpected](#unexpected)|
 
 ## <a name="current_exception"></a>  current_exception
 
@@ -82,7 +82,7 @@ Klasa z wyjątkiem do skopiowania. Zwykle określaj [klasy wyjątku](../standard
 
 ### <a name="remarks"></a>Uwagi
 
-Wywoływanie `make_exception_ptr` funkcji jest odpowiednikiem zgłaszania wyjątku C++, przechwytywania go w bloku catch, a następnie wywoływania [current_exception](../standard-library/exception-functions.md#current_exception) funkcja zwraca `exception_ptr` obiekt, który odwołuje się do wyjątku. Implementacja firmy Microsoft `make_exception_ptr` jest bardziej efektywna niż generowanie i następnie przechwytywanie wyjątku.
+Wywoływanie `make_exception_ptr` funkcji jest odpowiednikiem zgłaszania C++ wyjątek, przechwytywania go w bloku catch, a następnie wywoływania [current_exception](../standard-library/exception-functions.md#current_exception) funkcja zwraca `exception_ptr` obiekt, który odwołuje się do wyjątku. Implementacja firmy Microsoft `make_exception_ptr` jest bardziej efektywna niż generowanie i następnie przechwytywanie wyjątku.
 
 Aplikacja zazwyczaj nie wymaga `make_exception_ptr` funkcji, a my odradzamy jej użycie.
 

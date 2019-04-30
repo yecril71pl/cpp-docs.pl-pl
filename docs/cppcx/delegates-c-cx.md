@@ -3,11 +3,11 @@ title: Delegates (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
 ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406928"
 ---
 # <a name="delegates-ccx"></a>Delegates (C++/CX)
 
@@ -110,7 +110,7 @@ Poniższy przykład przedstawia sposób tworzenia delegata z każdej z tych obie
 
 ### <a name="generic-delegates"></a>Delegaty ogólne
 
-Delegaty ogólne w języku C + +/ CX, mają ograniczenia podobnych do deklaracji klasy ogólne. One nie można zadeklarować jako publiczne. Można zadeklarować prywatnego lub wewnętrznego ogólny delegować i używanie go z poziomu języka C++, ale .NET lub klientów języka JavaScript nie można pobrać go, ponieważ nie jest emitowany do metadanych .winmd. W tym przykładzie deklaruje Delegat ogólny, które mogą być używane tylko przez C++:
+Delegaty ogólne w C++/CX ma ograniczenia podobnych do deklaracji klasy ogólne. One nie można zadeklarować jako publiczne. Można zadeklarować prywatnego lub wewnętrznego ogólny delegować i używanie go z poziomu języka C++, ale .NET lub klientów języka JavaScript nie można pobrać go, ponieważ nie jest emitowany do metadanych .winmd. W tym przykładzie deklaruje Delegat ogólny, które mogą być używane tylko przez C++:
 
 [!code-cpp[Cx_delegates#116](../cppcx/codesnippet/CPP/delegatesevents/class1.h#116)]
 
@@ -128,10 +128,10 @@ Jeśli kod, który wykonuje delegata jest uruchomiona w innym wątku — na przy
 
 Jeśli chcesz, aby Twoje utworzony delegat nastąpi wywołanie zwrotne w tym samym wątku, który został utworzony na — na przykład w przypadku przekazania składnik, który działa w komórce MTA — i można wywołać w tym samym wątku, jak twórca , następnie za pomocą przeciążenia konstruktora delegata, która przyjmuje sekundy `CallbackContext` parametru. To przeciążenie należy używać tylko w delegatów, które zostały zarejestrowane proxy/zastępczego; nie wszystkie delegatów, które są zdefiniowane w Windows.winmd są rejestrowane.
 
-Osoby zaznajomione z programami obsługi zdarzeń w programie .NET wiesz, że zalecaną praktyką jest Utwórz lokalne kopie zdarzenia przed jej środowisko. Umożliwia to uniknięcie Sytuacje wyścigu, w których program obsługi zdarzeń mogą zostać usunięte przed zdarzenie jest wywoływane. Nie trzeba to zrobić w języku C + +/ CX, ponieważ podczas dodawania lub usuwania programów obsługi zdarzeń zostanie utworzona nowa lista programu obsługi. Ponieważ obiektu języka C++ zwiększa liczbę odwołań na liście obsługi przed wywołaniem zdarzenia, jest gwarantowane, będzie obowiązywać wszystkich programów obsługi. Jednak oznacza to, że usunięcie procedury obsługi zdarzeń w zużywającym wątku tego wywołana procedura obsługi nieprawidłowego może nadal uzyskać Jeśli publikowania obiektu nadal działa na własną kopię listy, który jest obecnie przestarzałe. Obiekt publikowania nie otrzyma zaktualizowaną listę po ponownym jej generowane zdarzenie.
+Osoby zaznajomione z programami obsługi zdarzeń w programie .NET wiesz, że zalecaną praktyką jest Utwórz lokalne kopie zdarzenia przed jej środowisko. Umożliwia to uniknięcie Sytuacje wyścigu, w których program obsługi zdarzeń mogą zostać usunięte przed zdarzenie jest wywoływane. Nie trzeba to zrobić w C++/CX ponieważ podczas dodawania lub usuwania programów obsługi zdarzeń zostanie utworzona nowa lista programu obsługi. Ponieważ obiektu języka C++ zwiększa liczbę odwołań na liście obsługi przed wywołaniem zdarzenia, jest gwarantowane, będzie obowiązywać wszystkich programów obsługi. Jednak oznacza to, że usunięcie procedury obsługi zdarzeń w zużywającym wątku tego wywołana procedura obsługi nieprawidłowego może nadal uzyskać Jeśli publikowania obiektu nadal działa na własną kopię listy, który jest obecnie przestarzałe. Obiekt publikowania nie otrzyma zaktualizowaną listę po ponownym jej generowane zdarzenie.
 
 ## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

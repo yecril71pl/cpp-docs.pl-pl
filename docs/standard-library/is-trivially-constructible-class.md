@@ -1,5 +1,5 @@
 ---
-title: is_trivially_constructible, klasa
+title: is_trivially_constructible Class
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_constructible
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - is_trivially_constructible
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
 ms.openlocfilehash: c83bea8be5c88876ffa25337464caa62b998ab45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413479"
 ---
-# <a name="istriviallyconstructible-class"></a>is_trivially_constructible, klasa
+# <a name="istriviallyconstructible-class"></a>is_trivially_constructible Class
 
 Sprawdza, czy typ jest przypadku konstrukcyjną, gdy są używane określone typy argumentów.
 

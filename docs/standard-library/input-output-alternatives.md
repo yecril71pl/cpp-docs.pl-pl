@@ -5,11 +5,11 @@ helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
 ms.openlocfilehash: bc595b64c991ada8e958e71e13f8cb9d134adb8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404965"
 ---
 # <a name="inputoutput-alternatives"></a>Input/Output Alternatives
 
@@ -21,9 +21,9 @@ Visual C++ udostępnia kilka rozwiązań alternatywnych programowanie wejścia/w
 
 - Konsoli i portu bezpośrednie we/wy.
 
-- Biblioteki klas Microsoft Foundation.
+- Microsoft Foundation Class Library.
 
-- Microsoft standardowej bibliotece C++.
+- Microsoft C++ Standard Library.
 
 Iostream, które klasy są przydatne w przypadku buforowane, sformatowany tekst we/wy. Są one przydatne w przypadku operacji We/Wy Niebuforowane lub binarny również wtedy, jeśli potrzebujesz interfejs programowania C++ i nie chcesz używać biblioteki Microsoft Foundation Class (MFC). Klasy iostream — są zorientowane obiektowo operacji We/Wy alternatywa funkcje środowiska wykonawczego języka C.
 

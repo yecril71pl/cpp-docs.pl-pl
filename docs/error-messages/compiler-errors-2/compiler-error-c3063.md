@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3063
 ms.assetid: 0ecf6f1f-e4a7-487a-9fd5-79d8ac470001
 ms.openlocfilehash: 9e53d9fe273a392695212df6dbeb679822a39068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404224"
 ---
 # <a name="compiler-error-c3063"></a>Błąd kompilatora C3063
 
 operator 'operator': wszystkie operandy muszą posiadać ten sam typ wyliczeniowy
 
-Korzystając z operatorów na modułach wyliczających, oba operandy musi być typem wyliczenia. Aby uzyskać więcej informacji, zobacz [porady: Definiowanie oraz stosowanie wyliczeń w języku C + +/ CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
+Korzystając z operatorów na modułach wyliczających, oba operandy musi być typem wyliczenia. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie oraz stosowanie wyliczeń w C++sposób niezamierzony](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

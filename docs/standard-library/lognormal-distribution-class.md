@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
 ms.openlocfilehash: bd57b45ec08d044719caa60635f731276794d407
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413076"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution — Klasa
 
@@ -247,4 +247,4 @@ Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konk
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

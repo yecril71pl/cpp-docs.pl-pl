@@ -5,11 +5,11 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
 ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396668"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Funkcje wewnętrzne dostępne we wszystkich architekturach
 
@@ -93,7 +93,7 @@ Następujące funkcje UCRT mają wewnętrzne formularzy we wszystkich architektu
 
 |Wewnętrzne|nagłówek|
 |---------------|------------|
-|[ABS](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
+|[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[ACOS](../c-runtime-library/reference/acos-acosf-acosl.md)|math.h|
 |[acosf](../c-runtime-library/reference/acos-acosf-acosl.md)|math.h|
@@ -107,31 +107,31 @@ Następujące funkcje UCRT mają wewnętrzne formularzy we wszystkich architektu
 |[atan2f](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
 |[atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
 |[atanf](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
-|[atanl —](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
+|[atanl](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
 |[_byteswap_uint64](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
 |[_byteswap_ulong](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
 |[_byteswap_ushort](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
 |[Ceil —](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
 |[ceilf](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
 |[ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
-|[COS](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
+|[cos](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[cosf](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
-|[COSH](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
+|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
 |[coshf](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
 |[coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
-|[cosl —](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
-|[EXP](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
+|[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expl](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs —](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf —](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
-|[FLOOR](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
+|[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
 |[floorf](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
-|[floorl —](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
+|[floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
 |[Fmod —](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
 |[fmodf](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
 |[fmodl](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
-|[Warsztaty](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
+|[labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[llabs —](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
@@ -140,7 +140,7 @@ Następujące funkcje UCRT mają wewnętrzne formularzy we wszystkich architektu
 |[logf](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[logl](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
-|[_lrotr —](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
+|[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
 |[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|string.h|
 |[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)|string.h|
 |[memset](../c-runtime-library/reference/memset-wmemset.md)|string.h|
@@ -149,9 +149,9 @@ Następujące funkcje UCRT mają wewnętrzne formularzy we wszystkich architektu
 |[powl](../c-runtime-library/reference/pow-powf-powl.md)|math.h|
 |[_rotl](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
 |[_rotl64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
-|[_rotr —](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
-|[_rotr64 —](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
-|[SIN](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
+|[_rotr](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
+|[_rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
+|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
 |[sinf](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
 |[SINH](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|math.h|
 |[sinhf](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|math.h|
@@ -168,7 +168,7 @@ Następujące funkcje UCRT mają wewnętrzne formularzy we wszystkich architektu
 |[strset](../c-runtime-library/reference/strset-wcsset.md)|string.h|
 |[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
 |[tanf —](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
-|[TANH](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
+|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
 |[tanhf](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
 |[tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
 |[tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|

@@ -5,11 +5,11 @@ f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
 ms.openlocfilehash: 05b10c27d8e0cf4c0300bb307d8b7ceda43ddb2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413310"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operatorów
 
@@ -56,7 +56,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*Ch*<br/>
 Znak.
 
 *Istr*<br/>

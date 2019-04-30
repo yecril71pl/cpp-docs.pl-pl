@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412036"
 ---
 # <a name="timeget-class"></a>time_get — Klasa
 
@@ -220,7 +220,7 @@ iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, który wskazuje początek sekwencji do przekonwertowania.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, który wskazuje na końcu sekwencji.
 
 *iosbase*<br/>
@@ -232,7 +232,7 @@ Pole w iosbase gdzie maski bitów odpowiednie elementy są ustawione do sygnaliz
 *ptm*<br/>
 Wskaźnik do struktury czasu, gdy czas ma być przechowywany.
 
-*FMT*<br/>
+*fmt*<br/>
 Znak specyfikatora konwersji.
 
 *dzielenie modulo*<br/>
@@ -313,7 +313,7 @@ virtual iter_type do_get_date(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -364,7 +364,7 @@ virtual iter_type do_get_monthname(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -407,7 +407,7 @@ virtual iter_type do_get_time(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -458,7 +458,7 @@ virtual iter_type do_get_weekday(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -501,7 +501,7 @@ virtual iter_type do_get_year(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -556,7 +556,7 @@ iter_type get(
 *pierwszy*<br/>
 Iterator danych wejściowych, która wskazuje, gdzie rozpoczyna się sekwencja, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, który wskazuje koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -568,7 +568,7 @@ Elementy odpowiedniej maski bitów są ustawiane dla stanu strumienia do sygnali
 *ptm*<br/>
 Wskaźnik do struktury czasu, gdy czas ma być przechowywany.
 
-*FMT*<br/>
+*fmt*<br/>
 Znak specyfikatora konwersji.
 
 *dzielenie modulo*<br/>
@@ -590,7 +590,7 @@ Pierwsza funkcja elementu członkowskiego zwraca `do_get(first, last, iosbase, s
 
 Drugi wywołania funkcji elementu członkowskiego `do_get` pod kontrolą formatu rozdzielone `[fmt_first, fmt_last)`. Format traktuje jako sekwencja pól, z których każdy określa konwersji zero lub więcej elementów rozdzielonych w danych wejściowych `[first, last)`. Zwraca iterator wyznaczanie pierwszy element nieprzekonwertowane. Istnieją trzy rodzaje pola:
 
-Procent (%), w formacie, następuje opcjonalny modyfikator właściwy *mod* w zestawie EOQ #, a następnie specyfikatora konwersji *fmt*, zastępuje *pierwszy* z wartością zwróconą przez `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Błąd konwersji ustawia `ios_base::failbit` w *stanu* i zwraca.
+Procent (%) w formacie, następuje opcjonalny modyfikator właściwy *mod* w zestawie EOQ #, a następnie specyfikatora konwersji *fmt*, zastępuje *pierwszy* z wartością zwróconą przez `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Błąd konwersji ustawia `ios_base::failbit` w *stanu* i zwraca.
 
 Element białe znaki w formacie pomija zero lub więcej spacji elementów input.
 
@@ -613,7 +613,7 @@ iter_type get_date(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -707,7 +707,7 @@ iter_type get_monthname(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -799,7 +799,7 @@ iter_type get_time(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -880,7 +880,7 @@ iter_type get_weekday(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -957,7 +957,7 @@ iter_type get_year(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*<br/>
@@ -1047,11 +1047,11 @@ Wartość liczby całkowitej, można określić typ zarządzania pamięci dla ob
 
 Możliwe wartości parametru *system plików refs* parametrów i ich znaczenie są:
 
-- 0: okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
 
-- 1: okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
 
-- \> 1: nie zdefiniowano tych wartości.
+- \> 1: Te wartości nie są zdefiniowane.
 
 Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
 
@@ -1059,6 +1059,6 @@ Konstruktor inicjuje jego podstawowego obiektu z **locale::**[aspekt](../standar
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
 [time_base, klasa](../standard-library/time-base-class.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

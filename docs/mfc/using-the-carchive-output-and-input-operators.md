@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
 ms.openlocfilehash: 9b4192e79b68388e45eb9837e056bbd881de2933
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411503"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Za pomocą CArchive &lt; &lt; i &gt; &gt; operatorów
 
@@ -61,4 +61,4 @@ Definiuje bibliotekę **< \<** i **>>** operatory `CArchive` jako pierwszy argum
 
 ## <a name="see-also"></a>Zobacz także
 
-[Serializacja: Serializacja obiektu](../mfc/serialization-serializing-an-object.md)
+[Serializacja: serializowanie obiektu](../mfc/serialization-serializing-an-object.md)

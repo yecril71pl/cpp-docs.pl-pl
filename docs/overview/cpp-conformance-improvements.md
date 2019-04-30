@@ -2,11 +2,11 @@
 title: Ulepszenia zgodności języka C++
 moniker-range: '>=vs-2015'
 ms.openlocfilehash: 0c9ac441c79032a33d938bdaae5287c69cc3353a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410123"
 ---
 ::: moniker range=">=vs-2019"
 

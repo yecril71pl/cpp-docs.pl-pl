@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409762"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf — Klasa
 
@@ -379,7 +379,7 @@ Jeśli funkcja nie powiedzie się, zwraca **traits_type::**[eof](../standard-lib
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego próbuje wyodrębnić bieżącego elementu `byte` z buforu wejściowego poszerzyć bieżącą pozycję w strumieniu i zwraca element jako **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **bajtów**). Jego można to zrobić w jednym ze sposobów: pozycję odczytu jest dostępny, dopiero po `byte` elementu przechowywanego w pozycji odczytu i przesuwa wskaźnik następnej dla buforu danych wejściowych.
+Funkcja chroniony element członkowski wirtualnego próbuje wyodrębnić bieżącego elementu `byte` z buforu wejściowego poszerzyć bieżącą pozycję w strumieniu i zwraca element jako **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **bajtów**). Jego można to zrobić w jednym ze sposobów: Jeśli pozycji odczytu jest dostępny, zajmuje `byte` elementu przechowywanego w pozycji odczytu i przesuwa wskaźnik następnej dla buforu danych wejściowych.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

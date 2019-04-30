@@ -14,11 +14,11 @@ helpviewer_keywords:
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
 ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407669"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Wielowątkowość z C++ i MFC
 
@@ -40,17 +40,17 @@ Aby uzyskać więcej informacji na temat sposobu system operacyjny obsługuje pr
 
 Aby uzyskać więcej informacji dotyczących wielowątkowej obsługi MFC zobacz następujące tematy:
 
-- [Wielowątkowość: Tworzenie wątków interfejsu użytkownika](multithreading-creating-user-interface-threads.md)
+- [Wielowątkowość: tworzenie wątków interfejsu użytkownika](multithreading-creating-user-interface-threads.md)
 
-- [Wielowątkowość: Tworzenie wątków roboczych](multithreading-creating-worker-threads.md)
+- [Wielowątkowość: tworzenie wątków roboczych](multithreading-creating-worker-threads.md)
 
-- [Wielowątkowość: Jak używać klas synchronizacji](multithreading-how-to-use-the-synchronization-classes.md)
+- [Wielowątkowość: jak używać klas synchronizacji](multithreading-how-to-use-the-synchronization-classes.md)
 
-- [Wielowątkowość: Przerywanie wątków](multithreading-terminating-threads.md)
+- [Wielowątkowość: przerywanie wątków](multithreading-terminating-threads.md)
 
-- [Wielowątkowość: Porady dotyczące programowania](multithreading-programming-tips.md)
+- [Wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md)
 
-- [Wielowątkowość: Kiedy należy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md)
+- [Wielowątkowość: kiedy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>Zobacz także
 

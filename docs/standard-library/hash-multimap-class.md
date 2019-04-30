@@ -87,18 +87,18 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: 8510bbc89a22fe3eb8df6bbf8ce77db44c7a65a0
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405082"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap — Klasa
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_multimap, klasa](../standard-library/unordered-multimap-class.md).
 
-Hash_multimap — klasa kontenera jest rozszerzeniem standardowej biblioteki języka C++ i jest używany do przechowywania i szybkie pobieranie danych z kolekcji, w której każdy element jest parą, która ma klucz sortowania, którego wartość nie musi być unikatowa i skojarzone dane wartości.
+Hash_multimap — klasa kontenera jest rozszerzeniem C++ standardowej biblioteki i jest używany do przechowywania i szybkie pobieranie danych z kolekcji, w której każdy element jest parą, która ma klucz sortowania, którego wartość nie musi być unikatowa i skojarzone dane wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -190,8 +190,8 @@ Iterator dostarczony przez klasę hash_multimap jest iteratorem dwukierunkowym, 
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy `hash_multimap`.|
 |[Liczba](#count)|Zwraca liczbę elementów w `hash_multimap` których klucz pasuje do klucza określonego jako parametr.|
 |[crbegin](#crbegin)|Zwraca iterator stałych adresujący pierwszy element w odwróconej `hash_multimap`.|
-|[crend —](#crend)|Zwraca iterator stałych adresujący lokalizację następującą po ostatnim elemencie w odwróconej `hash_multimap`.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do `hash_multimap`.|
+|[crend](#crend)|Zwraca iterator stałych adresujący lokalizację następującą po ostatnim elemencie w odwróconej `hash_multimap`.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do `hash_multimap`.|
 |[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `hash_multimap`, ze wskazówką położenia.|
 |[pusty](#empty)|Sprawdza, czy `hash_multimap` jest pusty.|
 |[koniec](#end)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w `hash_multimap`.|
@@ -199,12 +199,12 @@ Iterator dostarczony przez klasę hash_multimap jest iteratorem dwukierunkowym, 
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w `hash_multimap` z określonych pozycji|
 |[Znajdź](#find)|Zwraca iterator odnoszący się lokalizację elementu w `hash_multimap` który ma klucz równoważny z określonym kluczem.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` użytego do stworzenia `hash_multimap`.|
-|[Wstaw](#insert)|Wstawia element lub zakres elementów do `hash_multimap` na określonej pozycji.|
+|[insert](#insert)|Wstawia element lub zakres elementów do `hash_multimap` na określonej pozycji.|
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w `hash_multimap`.|
 |[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w `hash_multimap` , za pomocą klucza wartość, która jest równa lub większa od określonego klucza.|
 |[max_size](#max_size)|Zwraca maksymalną długość `hash_multimap`.|
 |[rbegin](#rbegin)|Zwraca iterator odnoszący się do pierwszego elementu w odwróconej `hash_multimap`.|
-|[rend —](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w odwróconej `hash_multimap`.|
+|[rend](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w odwróconej `hash_multimap`.|
 |[Rozmiar](#size)|Określa nowy rozmiar `hash_multimap`.|
 |[swap](#swap)|Zamienia elementy z dwóch `hash_multimap`s.|
 |[upper_bound —](#upper_bound)|Zwraca iterator do pierwszego elementu w `hash_multimap` , za pomocą klucza wartość, która jest większa od określonego klucza.|
@@ -218,7 +218,7 @@ Iterator dostarczony przez klasę hash_multimap jest iteratorem dwukierunkowym, 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<hash_map >
+**Header:** \<hash_map>
 
 **Namespace:** stdext
 
@@ -1182,7 +1182,7 @@ Pozycja elementu do usunięcia z hash_multimap.
 *pierwszy*<br/>
 Pozycja pierwszego elementu są usuwane z hash_multimap.
 
-*ostatni*<br/>
+*last*<br/>
 Pozycja tuż za ostatnim elementem usunięte z hash_multimap.
 
 *Klucz*<br/>

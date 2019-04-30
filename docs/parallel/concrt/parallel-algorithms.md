@@ -5,11 +5,11 @@ helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
 ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262873"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346338"
 ---
 # <a name="parallel-algorithms"></a>Algorytmy równoległe
 
@@ -84,9 +84,9 @@ Aby uzyskać kompletny przykład, który używa `parallel_for` algorytmu, zobacz
 
 ##  <a name="parallel_for_each"></a> Funkcja parallel_for_each Algorithm
 
-[Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm wykonuje zadania w pojemniku iteracyjne, takich jak te oferowane przez standardowej biblioteki C++, równolegle. Używa ona tę samą logikę partycjonowania, `parallel_for` używa algorytmu.
+[Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm wykonuje zadania w pojemniku iteracyjną, takich jak te oferowane przez C++ bibliotekę standardową, równolegle. Używa ona tę samą logikę partycjonowania, `parallel_for` używa algorytmu.
 
-`parallel_for_each` Algorytm przypomina standardowej biblioteki C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmu, chyba że `parallel_for_each` algorytm wykonuje zadania jednocześnie. Inne algorytmy równoległe, takie jak `parallel_for_each` nie wykonuje zadania w określonej kolejności.
+`parallel_for_each` Przypomina algorytm C++ biblioteki standardowej [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmu, chyba że `parallel_for_each` algorytm wykonuje zadania jednocześnie. Inne algorytmy równoległe, takie jak `parallel_for_each` nie wykonuje zadania w określonej kolejności.
 
 Mimo że `parallel_for_each` algorytm działa zarówno na tworzyć Iteratory do przodu i iteratorami dostępu swobodnego, działa lepiej z iteratorami dostępu swobodnego.
 
@@ -134,7 +134,7 @@ Kompletne przykłady, które używają `parallel_invoke` algorytmu, zobacz [jak:
 
 ##  <a name="parallel_transform_reduce"></a> Funkcja parallel_transform and parallel_reduce Algorithms
 
-[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) i [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algorytmy są wersje równoległych algorytmów standardowej biblioteki języka C++ [std::transform](../../standard-library/algorithm-functions.md#transform)i [std::accumulate](../../standard-library/numeric-functions.md#accumulate), odpowiednio. Wersje środowiska uruchomieniowego współbieżności zachowują się jak w wersjach standardowej biblioteki języka C++, z tą różnicą, że kolejność operacji nie jest określona, ponieważ są wykonywane równolegle. Podczas pracy z zestawem, która jest wystarczająco duża, aby uzyskać korzyści wynikające z wydajności i skalowalności być przetwarzana równolegle, należy użyć tych algorytmów.
+[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) i [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) są algorytmy równoległe wersje C++ algorytmami standardowej biblioteki [std::transform](../../standard-library/algorithm-functions.md#transform) i [std::accumulate](../../standard-library/numeric-functions.md#accumulate), odpowiednio. Wersje środowiska uruchomieniowego współbieżności zachowują się jak w wersjach standardowej biblioteki języka C++, z tą różnicą, że kolejność operacji nie jest określona, ponieważ są wykonywane równolegle. Podczas pracy z zestawem, która jest wystarczająco duża, aby uzyskać korzyści wynikające z wydajności i skalowalności być przetwarzana równolegle, należy użyć tych algorytmów.
 
 > [!IMPORTANT]
 >  `parallel_transform` i `parallel_reduce` algorytmów obsługuje tylko dostępu swobodnego dwukierunkowej i do przodu Iteratory, ponieważ te Iteratory wygenerować adresy stabilnej pamięci. Ponadto te Iteratory muszą przedstawić non -`const` l wartościami.

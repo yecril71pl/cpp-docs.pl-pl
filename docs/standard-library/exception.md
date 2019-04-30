@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
 ms.openlocfilehash: e599a725feb46eaa90023fdb9c999f5b2d159637
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412634"
 ---
 # <a name="ltexceptiongt"></a>&lt;wyjątek&gt;
 
@@ -44,7 +44,7 @@ Definiuje kilka typów i funkcji związanych z obsługą wyjątków. Obsługa wy
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Ustanawia nowy `unexpected_handler` się kiedy napotkane nieoczekiwane wyjątki.|
 |[Zakończenie](../standard-library/exception-functions.md#terminate)|Wywołuje terminate_handler.|
 |[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Zwraca **true** tylko wtedy, gdy zgłoszony wyjątek jest obecnie przetwarzany.|
-|[Nieoczekiwany](../standard-library/exception-functions.md#unexpected)|Wywołuje program obsługi nieoczekiwanych wyjątków.|
+|[unexpected](../standard-library/exception-functions.md#unexpected)|Wywołuje program obsługi nieoczekiwanych wyjątków.|
 
 ### <a name="classes"></a>Klasy
 

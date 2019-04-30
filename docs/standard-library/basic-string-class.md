@@ -117,15 +117,15 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409788"
 ---
 # <a name="basicstring-class"></a>basic_string — Klasa
 
-Sekwencje kontrolowane przez obiekt klasy szablonu `basic_string` są klasą ciągów standardowego języka C++ i są zwykle określane jako ciągi, ale ich nie powinny być mylone z ciągami stylu C zakończony znakiem null, używane w całej standardowej biblioteki języka C++. Ciągów standardowego języka C++ jest kontenerem, który umożliwia korzystanie z ciągów jako normalnych typów, takich jak operacji porównywania i łączenia, iteratorów i algorytmami standardowej biblioteki C++ oraz kopiowania i przypisywania za pomocą klasy alokatora pamięci zarządzanej. Jeśli zachodzi potrzeba konwertowanie ciągu standardowego języka C++ na ciąg stylu C zakończony znakiem null, użyj [basic_string::c_str](#c_str) elementu członkowskiego.
+Sekwencje kontrolowane przez obiekt klasy szablonu `basic_string` są klasą ciągów standardowego języka C++ i są zwykle określane jako ciągi, ale ich nie powinny być mylone z ciągami stylu C zakończony znakiem null, używane w całej standardowej biblioteki języka C++. Ciągów standardowego języka C++ jest kontenerem, który umożliwia korzystanie z ciągów jako normalnych typów, takich jak operacji porównywania i łączenia, iteratorów i algorytmami standardowej biblioteki C++ oraz kopiowania i przypisywania za pomocą klasy alokatora pamięci zarządzanej. Jeśli musisz przekonwertować standardowego C++ ciągu na ciąg stylu C zakończony znakiem null, należy użyć [basic_string::c_str](#c_str) elementu członkowskiego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -137,7 +137,7 @@ class basic_string;
 ### <a name="parameters"></a>Parametry
 
 *CharType*<br/>
-Typ danych pojedynczego znaku mają być przechowywane w ciągu. Standardowa biblioteka C++ zapewnia specjalizacje tej klasy szablonu, z definicjami typu [ciąg](../standard-library/string-typedefs.md#string) dla elementów typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), dla **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) dla `char16_t`, i [u32string](../standard-library/string-typedefs.md#u32string) dla `char32_t`.
+Typ danych pojedynczego znaku mają być przechowywane w ciągu. C++ Standardowa biblioteka zapewnia specjalizacje tej klasy szablonu, z definicjami typu [ciąg](../standard-library/string-typedefs.md#string) dla elementów typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), dla **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) dla `char16_t`, i [u32string](../standard-library/string-typedefs.md#u32string) dla `char32_t`.
 
 *Cechy*<br/>
 Różne ważne właściwości `CharType` elementów w specjalizacji basic_string są opisane przez klasę `Traits`. Wartość domyślna to `char_traits` <  `CharType`>.
@@ -184,12 +184,12 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 |[cbegin](#cbegin)|Zwraca iterator stałych adresujący pierwszy element w ciągu.|
 |[cend](#cend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w ciągu.|
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy ciągu.|
-|[Porównanie](#compare)|Porównuje ciąg z ciągiem określonym w celu ustalenia, czy dwa ciągi są równe, lub jeśli jest leksykograficznie krótszy niż drugi.|
+|[compare](#compare)|Porównuje ciąg z ciągiem określonym w celu ustalenia, czy dwa ciągi są równe, lub jeśli jest leksykograficznie krótszy niż drugi.|
 |[Kopiuj](#copy)|Kopiuje co najwyżej określoną liczbę znaków z indeksowanej pozycji w ciągu źródłowym do docelowej tablicy znaków. Przestarzałe. Użyj [basic_string::_Copy_s](#copy_s) zamiast tego.|
 |[crbegin](#crbegin)|Zwraca iterator const, który dotyczy pierwszego elementu w ciągu odwróconym.|
-|[crend —](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w ciągu odwróconym.|
+|[crend](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w ciągu odwróconym.|
 |[_Copy_s](#copy_s)|Kopiuje co najwyżej określoną liczbę znaków z indeksowanej pozycji w ciągu źródłowym do docelowej tablicy znaków.|
-|[Dane](#data)|Konwertuje zawartość ciągu na tablicę znaków.|
+|[data](#data)|Konwertuje zawartość ciągu na tablicę znaków.|
 |[pusty](#empty)|Sprawdza, czy ciąg zawiera znaki.|
 |[koniec](#end)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w ciągu.|
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w ciągu od określonej pozycji.|
@@ -200,13 +200,13 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 |[find_last_of](#find_last_of)|Wyszukuje w ciągu ostatni znak, który jest elementem określonego ciągu.|
 |[Frontonu](#front)|Zwraca odwołanie do pierwszego elementu w ciągu.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` obiektu użytego do skonstruowania ciągu.|
-|[Wstaw](#insert)|Wstawia element lub szereg elementów lub szereg elementów do ciągu na określonej pozycji.|
+|[insert](#insert)|Wstawia element lub szereg elementów lub szereg elementów do ciągu na określonej pozycji.|
 |[Długość](#length)|Zwraca aktualną liczbę elementów w ciągu.|
 |[max_size](#max_size)|Zwraca maksymalną liczbę znaków, który może zawierać ciąg.|
 |[pop_back](#pop_back)|Usuwa ostatni element ciągu.|
 |[push_back](#push_back)|Dodaje element do końca ciągu.|
 |[rbegin](#rbegin)|Zwraca iterator do pierwszego elementu w ciągu odwróconym.|
-|[rend —](#rend)|Zwraca iterator odwołujący się tuż za ostatnim elementem w ciągu odwróconym.|
+|[rend](#rend)|Zwraca iterator odwołujący się tuż za ostatnim elementem w ciągu odwróconym.|
 |[Zastąp](#replace)|Zastępuje elementy w ciągu w określonym miejscu określonymi znakami lub znaków, kopiowane z innych zakresów lub ciągów lub ciągi języka C.|
 |[reserve](#reserve)|Ustawia pojemność ciągu na liczbę przynajmniej tak duży jak określoną liczbę.|
 |[Zmiana rozmiaru](#resize)|Określa nowy rozmiar ciągu, dołączając lub wymazując elementy zgodnie z wymaganiami zależnie od.|
@@ -325,7 +325,7 @@ Wartość znaku do dołączenia.
 *pierwszy*<br/>
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do dołączenia.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -483,7 +483,7 @@ Wartość znaku do przypisania.
 *pierwszy*<br/>
 Iterator danych wejściowych, const_pointer lub const_iterator adresowania pierwszego znaku w zakresie ciąg źródłowy ma być przypisane do zakresu docelowego.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, const_pointer lub const_iterator adresowania spośród poza ostatni znak w zakresie ciąg źródłowy ma być przypisane do zakresu docelowego.
 
 *Wyłączone*<br/>
@@ -768,7 +768,7 @@ Wartość znaku, który ma zostać skopiowana do ciągu podczas konstruowania.
 *pierwszy*<br/>
 Iterator danych wejściowych, const_pointer lub const_iterator adresujący pierwszy element w zakresie źródłowym, który ma zostać wstawiony.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie źródłowym, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -894,7 +894,7 @@ Wskaźnik do wersji stylu C, powinny być przekazywane wywołującemu ciągu.  P
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekty typu String należących do basic_string klasy szablonu C++\<char > nie zawsze ma wartości null są przerwane. Znak null '\0' jest używany jako znak specjalny w ciągu języka C do oznaczenia końca ciągu, ale nie ma specjalnego znaczenia w obiekcie typu ciąg i może być częścią ciąg znaków, podobnie jak jakikolwiek inny znak. Brak automatyczna konwersja **const char** <strong>\*</strong> do ciągów, ale ciąg klasy nie przewiduje automatyczna konwersja ciągi stylu C do obiektów tego typu **basic_string\<char >**.
+Obiekty typu String należących do C++ szablonu klasy basic_string\<char > nie zawsze ma wartości null są przerwane. Znak null '\0' jest używany jako znak specjalny w ciągu języka C do oznaczenia końca ciągu, ale nie ma specjalnego znaczenia w obiekcie typu ciąg i może być częścią ciąg znaków, podobnie jak jakikolwiek inny znak. Brak automatyczna konwersja **const char** <strong>\*</strong> do ciągów, ale ciąg klasy nie przewiduje automatyczna konwersja ciągi stylu C do obiektów tego typu **basic_string\<char >**.
 
 Zwracany ciąg stylu C nie powinien być modyfikowany, zgodnie z tym może unieważnić wskaźnik do ciągu lub usunięty, ponieważ ten ciąg ma ograniczony okres istnienia i jest własnością ciąg klasy.
 
@@ -1670,7 +1670,7 @@ Wskaźnik do pierwszego elementu tablicy z zawartością ciągu lub, w przypadku
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekty typu String należących do basic_string klasy szablonu C++ \<char > nie zawsze ma wartości null są przerwane. Typ zwracany dla `data` nie jest prawidłowym ciągiem C, ponieważ pobiera dołączany nie znaku null. Znak null '\0' jest używany jako znak specjalny w ciągu języka C do oznaczenia końca ciągu, ale nie ma specjalnego znaczenia w obiekcie typu String i może być częścią z obiektem ciągu, podobnie jak jakikolwiek inny znak.
+Obiekty typu String należących do C++ szablonu klasy basic_string \<char > nie zawsze ma wartości null są przerwane. Typ zwracany dla `data` nie jest prawidłowym ciągiem C, ponieważ pobiera dołączany nie znaku null. Znak null '\0' jest używany jako znak specjalny w ciągu języka C do oznaczenia końca ciągu, ale nie ma specjalnego znaczenia w obiekcie typu String i może być częścią z obiektem ciągu, podobnie jak jakikolwiek inny znak.
 
 Brak automatyczna konwersja **const char** <strong>\*</strong> do ciągów, ale ciąg klasy nie przewiduje automatyczna konwersja ciągi stylu C do obiektów tego typu **basic_string \<char >**.
 
@@ -1913,7 +1913,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 *pierwszy*<br/>
 Iterator adresowania adresuje pozycję pierwszego elementu w zakresie ma zostać wymazane.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator odnoszący się do pozycji jednym elementem w zakresie ma zostać wymazane.
 
 *_It*<br/>
@@ -3049,7 +3049,7 @@ Iterator odnoszący się do pozycji za zaporą, która ma zostać wstawiony znak
 *pierwszy*<br/>
 Iterator danych wejściowych, const_pointer lub const_iterator adresujący pierwszy element w zakresie źródłowym, który ma zostać wstawiony.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie źródłowym, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3951,7 +3951,7 @@ Iterator odnoszący się ostatni znak ma zostać usunięty w ciągu argumentu op
 *pierwszy*<br/>
 Iterator, const_pointer lub const_iterator adresowania pierwszego znaku mają być kopiowane do ciągu parametru.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator, const_pointer lub const_iterator adresowania ostatni znak ma być kopiowany do ciągu parametru.
 
 *Liczba*<br/>

@@ -95,11 +95,11 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414181"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf — Klasa
 
@@ -181,7 +181,7 @@ Obiekt klasy `basic_streambuf` <  `Elem`, `Tr`> przechowuje sześć wskaźników
 |[eback](#eback)|Funkcja chronionych, która zwraca wskaźnik do początku bufora wejściowego.|
 |[egptr](#egptr)|Funkcja chronionych, która zwraca wskaźnik po prostu poza końcem bufor wejściowy.|
 |[epptr —](#epptr)|Funkcja chronionych, która zwraca wskaźnik po prostu poza końcem bufor wyjściowy.|
-|[gbump —](#gbump)|Chronione funkcja, która dodaje `count` dalej wskaźnik do buforu wejściowego.|
+|[gbump](#gbump)|Chronione funkcja, która dodaje `count` dalej wskaźnik do buforu wejściowego.|
 |[getloc](#getloc)|Pobiera `basic_streambuf` obiektu ustawień regionalnych.|
 |[gptr](#gptr)|Funkcja chronionych, która zwraca wskaźnik do następnego elementu buforu wejściowego.|
 |[imbue](#imbue)|Chroniona, funkcja wirtualna wywoływana [pubimbue —](#pubimbue).|
@@ -189,7 +189,7 @@ Obiekt klasy `basic_streambuf` <  `Elem`, `Tr`> przechowuje sześć wskaźników
 |[overflow](#overflow)|Chronione funkcja wirtualna, która może być wywoływana po wstawieniu do buforu pełnej nowego znaku.|
 |[pbackfail](#pbackfail)|Funkcja chronionych wirtualna elementu członkowskiego, która podejmuje próbę odłożyć element do strumienia wejściowego, a następnie spraw, bieżącego elementu (wskazywany przez wskaźnik następnej).|
 |[pbase](#pbase)|Funkcja chronionych, która zwraca wskaźnik do początku bufora wyjściowego.|
-|[pbump —](#pbump)|Chronione funkcja, która dodaje `count` dalej wskaźnik dla buforu danych wyjściowych.|
+|[pbump](#pbump)|Chronione funkcja, która dodaje `count` dalej wskaźnik dla buforu danych wyjściowych.|
 |[pptr —](#pptr)|Funkcja chronionych, która zwraca wskaźnik do następnego elementu bufor wyjściowy.|
 |[pubimbue](#pubimbue)|Zestawy `basic_streambuf` obiektu ustawień regionalnych.|
 |[pubseekoff](#pubseekoff)|Wywołania [seekoff —](#seekoff), chroniona funkcja wirtualna, która została zastąpiona w klasie pochodnej.|

@@ -87,18 +87,18 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405043"
 ---
 # <a name="hashset-class"></a>hash_set — Klasa
 
 > [!NOTE]
 > Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set, klasa](../standard-library/unordered-set-class.md).
 
-Hash_set — klasa kontenera jest rozszerzeniem standardowej biblioteki języka C++ i jest używany do przechowywania i szybkiego pobierania danych z kolekcji, w której wartości zawartych elementów są unikatowe i służą jako wartości klucza.
+Hash_set — klasa kontenera jest rozszerzeniem C++ standardowej biblioteki i jest używany do przechowywania i szybkiego pobierania danych z kolekcji, w której wartości zawartych elementów są unikatowe i służą jako wartości klucza.
 
 ## <a name="syntax"></a>Składnia
 
@@ -152,7 +152,7 @@ Iterator dostarczony przez klasę hash_set jest iteratorem dwukierunkowym, ale f
 
 |Konstruktor|Opis|
 |-|-|
-|[hash_set —](#hash_set)|Konstruuje `hash_set` oznacza to pusta lub czyli kopią całości lub części innej `hash_set`.|
+|[hash_set](#hash_set)|Konstruuje `hash_set` oznacza to pusta lub czyli kopią całości lub części innej `hash_set`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -184,8 +184,8 @@ Iterator dostarczony przez klasę hash_set jest iteratorem dwukierunkowym, ale f
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy `hash_set`.|
 |[Liczba](#count)|Zwraca liczbę elementów w `hash_set` których klucz pasuje do klucza określonego jako parametr.|
 |[crbegin](#crbegin)|Zwraca iterator stałych adresujący pierwszy element w odwróconej `hash_set`.|
-|[crend —](#crend)|Zwraca iterator stałych adresujący lokalizację następującą po ostatnim elemencie w odwróconej `hash_set`.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do `hash_set`.|
+|[crend](#crend)|Zwraca iterator stałych adresujący lokalizację następującą po ostatnim elemencie w odwróconej `hash_set`.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do `hash_set`.|
 |[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `hash_set`, ze wskazówką położenia.|
 |[pusty](#empty)|Sprawdza, czy `hash_set` jest pusty.|
 |[koniec](#end)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w `hash_set`.|
@@ -193,12 +193,12 @@ Iterator dostarczony przez klasę hash_set jest iteratorem dwukierunkowym, ale f
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w `hash_set` z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.|
 |[Znajdź](#find)|Zwraca iterator odnoszący się lokalizację elementu w `hash_set` który ma klucz równoważny z określonym kluczem.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` użytego do stworzenia `hash_set`.|
-|[Wstaw](#insert)|Wstawia element lub zakres elementów do `hash_set`.|
+|[insert](#insert)|Wstawia element lub zakres elementów do `hash_set`.|
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w `hash_set`.|
 |[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w `hash_set` z kluczem, który jest równy lub większy od określonego klucza.|
 |[max_size](#max_size)|Zwraca maksymalną długość `hash_set`.|
 |[rbegin](#rbegin)|Zwraca iterator odnoszący się do pierwszego elementu w odwróconej `hash_set`.|
-|[rend —](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w odwróconej `hash_set`.|
+|[rend](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie w odwróconej `hash_set`.|
 |[Rozmiar](#size)|Zwraca liczbę elementów w `hash_set`.|
 |[swap](#swap)|Zamienia elementy z dwóch `hash_set`s.|
 |[upper_bound —](#upper_bound)|Zwraca iterator do pierwszego elementu w `hash_set` , wraz z kluczem, który jest równy lub większy od określonego klucza.|
@@ -208,7 +208,7 @@ Iterator dostarczony przez klasę hash_set jest iteratorem dwukierunkowym, ale f
 
 |Operator|Opis|
 |-|-|
-|[hash_set::operator =](#op_eq)|Zastępuje elementy `hash_set` kopią innego `hash_set`.|
+|[hash_set::operator=](#op_eq)|Zastępuje elementy `hash_set` kopią innego `hash_set`.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -1112,7 +1112,7 @@ Pozycja elementu do usunięcia z hash_set.
 *pierwszy*<br/>
 Pozycja pierwszego elementu są usuwane z hash_set.
 
-*ostatni*<br/>
+*last*<br/>
 Pozycja tuż za ostatnim elementem usunięte z hash_set.
 
 *Klucz*<br/>

@@ -1,56 +1,46 @@
 ---
-title: Błąd czasu wykonania języka C od R6002 do R6035
-ms.date: 11/17/2017
+title: Błędy czasu wykonania języka C
+ms.date: 04/16/2019
 f1_keywords:
 - c.errors
+- R6000
+- R6003
+- R6010
+- R6022
+- R6023
+- R6034
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 8fc1c5365d4c09908235336575c80b9df6892f90
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400035"
 ---
-# <a name="c-runtime-errors-r6002-through-r6035"></a>Błąd czasu wykonania języka C od R6002 do R6035
+# <a name="c-runtime-errors-rxxxx"></a>Błędy czasu wykonania języka C (Rxxxx)
 
-Ta sekcja jest odwołaniem do błędów, które mogą być generowane przez biblioteki środowiska uruchomieniowego C (CRT), gdy aplikacja jest załadowany lub nie działają. Mimo, że komunikat odwołuje się do środowiska uruchomieniowego języka Microsoft Visual C++, te błędy wskazują błędu w kodzie aplikacji lub warunek, który nie może obsługiwać Biblioteka środowiska uruchomieniowego, takich jak małej ilości pamięci. Użytkownicy końcowi aplikacji mogą zobaczyć te błędy, jeśli nie kodu aplikacji, aby zapobiec warunki powodujące je lub napisać kod, aby przechwytywać te błędy i prezentowanie przyjazny komunikat do użytkowników.
+Biblioteka środowiska uruchomieniowego języka C (CRT) może zgłaszać błąd w czasie wykonywania, gdy Twoja aplikacja jest załadowany lub nie działają. Mimo że każdy komunikat, który odwołuje się do programu Microsoft Visual C++ Biblioteka środowiska uruchomieniowego, nie znaczy, znajduje się błąd w bibliotece. Te błędy wskazują na usterkę w kodzie aplikacji lub warunek, który nie może obsługiwać Biblioteka środowiska uruchomieniowego, takich jak małej ilości pamięci. Użytkownicy końcowi aplikacji mogą zobaczyć te błędy, chyba że Twoje zapisu aplikacji zapobiegania ich, lub do przechwytywania błędów i prezentowanie przyjazna błąd komunikatu do użytkowników zamiast tego.
 
-Może się okazać uzyskać dodatkową pomoc błędów i ostrzeżeń na forach publicznych firmy Microsoft. Możesz wyszukać błąd lub ostrzeżenie o numerze na [społeczności deweloperów](https://developercommunity.visualstudio.com) lokacji. [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) forum to pytania na temat języka Visual C++, które nie są omawiane na innych forach. Możesz również wyszukać błędy i ostrzeżenia i zadawać pytania w [Stack Overflow](http://stackoverflow.com/) do rozwiązania.
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Aby uzyskać linki do zasobów społeczności i uzyskać dodatkową pomoc, zobacz [pomocy programu Visual C++ i społeczności](../../overview/visual-cpp-help-and-community.md).
+## <a name="c-runtime-errors"></a>Błędy czasu wykonania języka C
 
-## <a name="c-runtime-errors"></a>Błędy środowiska wykonawczego języka C
-
-[Błąd czasu wykonania języka C R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md)
-
-[Błąd czasu wykonania języka C R6008](../../error-messages/tool-errors/c-runtime-error-r6008.md)
-
-[Błąd czasu wykonania języka C R6009](../../error-messages/tool-errors/c-runtime-error-r6009.md)
-
-[Błąd czasu wykonania języka C R6016](../../error-messages/tool-errors/c-runtime-error-r6016.md)
-
-[Błąd czasu wykonania języka C R6017](../../error-messages/tool-errors/c-runtime-error-r6017.md)
-
-[Błąd czasu wykonania języka C R6018](../../error-messages/tool-errors/c-runtime-error-r6018.md)
-
-[Błąd czasu wykonania języka C R6019](../../error-messages/tool-errors/c-runtime-error-r6019.md)
-
-[Błąd czasu wykonania języka C R6024](../../error-messages/tool-errors/c-runtime-error-r6024.md)
-
-[Błąd czasu wykonania języka C R6025](../../error-messages/tool-errors/c-runtime-error-r6025.md)
-
-[Błąd czasu wykonania języka C R6028](../../error-messages/tool-errors/c-runtime-error-r6028.md)
-
-[Błąd czasu wykonania języka C R6030](../../error-messages/tool-errors/c-runtime-error-r6030.md)
-
-[Błąd czasu wykonania języka C R6031](../../error-messages/tool-errors/c-runtime-error-r6031.md)
-
-[Błąd czasu wykonania języka C R6032](../../error-messages/tool-errors/c-runtime-error-r6032.md)
-
-[Błąd czasu wykonania języka C R6033](../../error-messages/tool-errors/c-runtime-error-r6033.md)
-
+[Błąd środowiska uruchomieniowego języka C od R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md) \
+[R6008 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6008.md) \
+[R6009 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6009.md) \
+[R6016 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6016.md) \
+[R6017 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6017.md) \
+[R6018 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6018.md) \
+[R6019 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6019.md) \
+[R6024 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6024.md) \
+[R6025 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6025.md) \
+[R6028 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6028.md) \
+[R6030 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6030.md) \
+[R6031 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6031.md) \
+[R6032 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6032.md) \
+[R6033 błąd środowiska uruchomieniowego języka C](../../error-messages/tool-errors/c-runtime-error-r6033.md) \
 [Błąd czasu wykonania języka C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Błędy kompilacji C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md)

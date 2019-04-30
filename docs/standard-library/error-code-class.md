@@ -20,11 +20,11 @@ helpviewer_keywords:
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 ms.openlocfilehash: f4d0bc2c2922374d27bba3c0693e50f7930dbe67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413700"
 ---
 # <a name="errorcode-class"></a>error_code — Klasa
 
@@ -44,7 +44,7 @@ Obiekt typu `error_code` klasa przechowuje wartość kodu błędu i wskaźnik do
 
 |Konstruktor|Opis|
 |-|-|
-|[error_code —](#error_code)|Tworzy obiekt typu `error_code`.|
+|[error_code](#error_code)|Tworzy obiekt typu `error_code`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -59,7 +59,7 @@ Obiekt typu `error_code` klasa przechowuje wartość kodu błędu i wskaźnik do
 |[Przypisz](#assign)|Przypisuje wartość kodu błędu i kategorii kod błędu.|
 |[category](#category)|Zwraca kategoria błędu.|
 |[Usuń zaznaczenie](#clear)|Czyści wartość kodu błędu i kategorii.|
-|[default_error_condition —](#default_error_condition)|Zwraca domyślny warunek błędu.|
+|[default_error_condition](#default_error_condition)|Zwraca domyślny warunek błędu.|
 |[komunikat](#message)|Zwraca nazwę kod błędu.|
 
 ### <a name="operators"></a>Operatory
@@ -74,7 +74,7 @@ Obiekt typu `error_code` klasa przechowuje wartość kodu błędu i wskaźnik do
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<system_error >
+**Header:** \<system_error>
 
 **Namespace:** standardowe
 

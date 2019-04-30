@@ -99,11 +99,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
 ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393769"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
@@ -246,7 +246,7 @@ Liczba elementów do wstawienia.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *right*<br/>
@@ -724,7 +724,7 @@ Liczba elementów do wstawienia.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *right*<br/>
@@ -1021,7 +1021,7 @@ iterator erase(iterator first, iterator last);
 *pierwszy*<br/>
 Początek zakresu, aby wymazać.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu, aby wymazać.
 
 *gdzie*<br/>
@@ -1445,7 +1445,7 @@ Liczba elementów do wstawienia.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *right*<br/>

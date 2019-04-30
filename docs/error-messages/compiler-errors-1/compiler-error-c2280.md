@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
 ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388907"
 ---
 # <a name="compiler-error-c2280"></a>Błąd kompilatora C2280
 
@@ -19,7 +19,7 @@ ms.locfileid: "50572812"
 
 Kompilator wykrył próbę odwołania `deleted` funkcji. Ten błąd może być spowodowany przez wywołanie do funkcji składowej, która została jawnie oznaczona jako `= deleted` w kodzie źródłowym. Ten błąd, również może być spowodowany przez wywołanie niejawne specjalną funkcję członkowską struktury lub klasy, która jest zadeklarowana i automatycznie oznaczone jako `deleted` przez kompilator. Aby uzyskać więcej informacji na temat gdy kompilator automatycznie generuje `default` lub `deleted` specjalnych funkcji Członkowskich, zobacz [specjalnych funkcji Członkowskich](../../cpp/special-member-functions.md).
 
-## <a name="example-explicitly-deleted-functions"></a>Przykład: Jawnie usunięte funkcje
+## <a name="example-explicitly-deleted-functions"></a>Przykład: Funkcje jawnie usunięte
 
 Wywołania jawne `deleted` funkcji powoduje, że ten błąd. Jawnie `deleted` funkcja elementu członkowskiego oznacza, że klasy lub struktury jest celowo ustalono, aby uniemożliwić korzystanie z niego, tak aby rozwiązać ten problem, należy zmienić swój kod, aby uniknąć tego błędu.
 
@@ -79,7 +79,7 @@ void f() {
 }
 ```
 
-## <a name="example-movable-deletes-implicit-copy"></a>Przykład: Ruchome usuwa niejawne kopiowanie
+## <a name="example-movable-deletes-implicit-copy"></a>Przykład: Niejawne kopiowanie usuwa ruchome
 
 Jeśli klasa deklaruje Konstruktor przenoszący lub operator przypisania przenoszenia, ale nie deklaruje jawnie konstruktora kopiującego, kompilator niejawnie deklaruje Konstruktor kopiujący i definiuje ją jako `deleted`. Podobnie, jeśli klasa deklaruje Konstruktor przenoszący lub operator przypisania przenoszenia, ale nie jawnie deklarować operatora przypisania kopii, kompilator niejawnie deklaruje operator przypisania kopiowania i definiuje ją jako `deleted`. Aby rozwiązać ten problem, należy jawnie zadeklarować te składowe.
 
@@ -137,7 +137,7 @@ int main() {
 }
 ```
 
-## <a name="example-indirect-base-members-deleted"></a>Przykład: Pośrednich podstawowy elementy członkowskie usunięte
+## <a name="example-indirect-base-members-deleted"></a>Przykład: Pośrednie składowe bazowe usunięte
 
 Wersje kompilatora przed Visual Studio 2015 Update 2 były niezgodne i dozwolone klasy pochodnej w celu wywołania funkcji pośrednio pochodzi specjalnych elementów członkowskich `private virtual` klas bazowych. Kompilator generuje błąd kompilatora C2280 teraz, gdy takie połączenie jest nawiązywane.
 

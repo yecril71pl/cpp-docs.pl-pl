@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
 ms.openlocfilehash: 41298909b53de1c7acf3cb8ae4b999eb6260765d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413271"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator — Klasa
 
@@ -77,9 +77,9 @@ Po skonstruowaniu lub inkrementacji obiektu klasy istreambuf_iterator z przechow
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji zwraca następny znak w strumieniu.|
+|[operator*](#op_star)|Operator dereferencji zwraca następny znak w strumieniu.|
 |[operator++](#op_add_add)|Zwraca następny znak ze strumienia wejściowego lub kopiuje obiekt przed jego inkrementacją i zwraca kopię.|
-|[operator ->](#op_arrow)|Zwraca wartość elementu członkowskiego, jeśli istnieje.|
+|[operator->](#op_arrow)|Zwraca wartość elementu członkowskiego, jeśli istnieje.|
 
 ## <a name="requirements"></a>Wymagania
 

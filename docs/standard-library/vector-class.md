@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410905"
 ---
 # <a name="vector-class"></a>vector — Klasa
 
@@ -159,22 +159,22 @@ Ponowne przydzielenie wektor występuje, gdy składowa należy zwiększyć sekwe
 |[cbegin](#cbegin)|Zwraca stały iterator dostępu losowego do pierwszego elementu w wektorze.|
 |[cend](#cend)|Zwraca stały iterator dostępu swobodnego, który wskazuje tuż za koniec wektora.|
 |[crbegin](#crbegin)|Zwraca const iterator do pierwszego elementu w odwróconym wektora.|
-|[crend —](#crend)|Zwraca const iterator-to-end odwróconej wektora.|
+|[crend](#crend)|Zwraca const iterator-to-end odwróconej wektora.|
 |[Usuń zaznaczenie](#clear)|Usuwa elementów wektora.|
-|[Dane](#data)|Zwraca wskaźnik do pierwszego elementu w wektorze.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do wektora na określonej pozycji.|
+|[data](#data)|Zwraca wskaźnik do pierwszego elementu w wektorze.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do wektora na określonej pozycji.|
 |[emplace_back](#emplace_back)|Dodaje element skonstruowany w miejscu do końca wektora.|
 |[pusty](#empty)|Sprawdza, czy kontener wektora jest pusty.|
 |[koniec](#end)|Zwraca iterator dostępu swobodnego, który wskazuje na końcu elementu wektora.|
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w wektorze z określonych pozycji.|
 |[Frontonu](#front)|Zwraca odwołanie do pierwszego elementu w wektorze.|
 |[get_allocator](#get_allocator)|Zwraca obiekt, do którego `allocator` klasy używane przez wektora.|
-|[Wstaw](#insert)|Wstawia element lub szereg elementów do wektora na określonej pozycji.|
+|[insert](#insert)|Wstawia element lub szereg elementów do wektora na określonej pozycji.|
 |[max_size](#max_size)|Zwraca maksymalną długość wektora.|
 |[pop_back](#pop_back)|Usuwa element na końcu wektora.|
 |[push_back](#push_back)|Dodaj element do końca wektora.|
 |[rbegin](#rbegin)|Zwraca iterator do pierwszego elementu w odwróconym wektora.|
-|[rend —](#rend)|Zwraca iterator do końca odwróconej wektora.|
+|[rend](#rend)|Zwraca iterator do końca odwróconej wektora.|
 |[reserve](#reserve)|Rezerwuje o długości minimalnej pamięci masowej dla obiektu wektora.|
 |[Zmiana rozmiaru](#resize)|Określa nowy rozmiar wektora.|
 |[shrink_to_fit](#shrink_to_fit)|Odrzuca nadmiarowej pojemności.|
@@ -1082,7 +1082,7 @@ iterator erase(
 |-|-|
 |*_Where*|Pozycja elementu do usunięcia z wektora.|
 |*pierwszy*|Pozycja pierwszego elementu są usuwane z wektora.|
-|*ostatni*|Pozycja tuż za ostatnim elementem usunięte z wektora.|
+|*last*|Pozycja tuż za ostatnim elementem usunięte z wektora.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1251,7 +1251,7 @@ void insert(
 |*Val*|Wartość elementu jest wstawiany do wektora.|
 |*Liczba*|Liczba elementów jest wstawiany do wektora.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
-|*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
+|*last*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 
 ### <a name="return-value"></a>Wartość zwracana
 

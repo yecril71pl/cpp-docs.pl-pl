@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399775"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo — Struktura
 
@@ -47,7 +47,7 @@ Unikatowej nazwy obiektu pola. Aby uzyskać szczegółowe informacje zobacz tema
 *m_pFieldInfos*<br/>
 Wskaźnik do tablicy [cdaoindexfieldinfo —](../../mfc/reference/cdaoindexfieldinfo-structure.md) obiektów wskazujące, które pola tabledef lub zestawu rekordów pola klucza w indeksie. Każdy obiekt identyfikuje jednego pola w indeksie. Indeks domyślnej kolejności jest rosnąca. Każdy indeks obiekt może mieć co najmniej jedno pole reprezentujące kluczy indeksu dla każdego rekordu. Mogą one rosnąco, malejąco, lub połączenie.
 
-*m_nfields —*<br/>
+*m_nFields*<br/>
 Liczba pól, przechowywane w `m_pFieldInfos`.
 
 *m_bPrimary*<br/>
@@ -61,7 +61,7 @@ Po ustawieniu klucza podstawowego dla tabeli klucza podstawowego jest automatycz
 *m_bUnique*<br/>
 Wskazuje, czy obiekt indeksów reprezentuje unikatowy indeks dla tabeli. Jeśli ta właściwość ma wartość TRUE, obiekt indeksów reprezentuje indeks, który jest unikatowy. Unikatowy indeks składa się z co najmniej jednego pola, które Uporządkuj logicznie wszystkie rekordy w tabeli w kolejności unikatowy, wstępnie zdefiniowane. Jeśli indeks obejmuje jedno pole, wartości w danym polu musi być unikatowa dla całej tabeli. Jeśli indeks obejmuje więcej niż jednym polu, każde pole może zawierać zduplikowanych wartości, ale każda kombinacja wartości z pola indeksowane muszą być unikatowe.
 
-Jeśli zarówno unikatowe, jak i podstawowe właściwości obiektu indeksu są ustawione na wartość TRUE, indeks jest unikatowy i podstawowego: unikatowo identyfikuje wszystkie rekordy w tabeli w kolejności wstępnie zdefiniowane, logiczne. Jeśli właściwość podstawowego ustawiono na wartość FALSE, indeks jest indeks pomocniczy. Indeksy pomocnicze (kluczy i nonkey) logicznie organizuje rekordy w kolejności wstępnie zdefiniowanej bez służy jako identyfikator rekordy w tabeli.
+Jeśli zarówno unikatowe, jak i podstawowe właściwości obiektu indeksu są ustawione na wartość TRUE, indeks jest unikatowy i podstawowego: Jednoznacznie identyfikuje wszystkie rekordy w tabeli w kolejności wstępnie zdefiniowane, logiczne. Jeśli właściwość podstawowego ustawiono na wartość FALSE, indeks jest indeks pomocniczy. Indeksy pomocnicze (kluczy i nonkey) logicznie organizuje rekordy w kolejności wstępnie zdefiniowanej bez służy jako identyfikator rekordy w tabeli.
 
 Aby uzyskać więcej informacji zobacz tematy "Podstawowe właściwości" i "unikatowa" w Pomocy programu DAO.
 
@@ -76,9 +76,9 @@ Wskazuje, czy znajdują się wpisy indeksu dla rekordów, które mają wartości
 
 |IgnoreNulls|Wymagane|Wartość null, w polu indeksu|
 |-----------------|--------------|-------------------------|
-|True|False|Dozwolone wartości null nie dodano pozycję indeksu.|
+|Prawda|False|Dozwolone wartości null nie dodano pozycję indeksu.|
 |False|False|Dozwolone wartości null Dodano pozycję indeksu.|
-|Wartość PRAWDA lub FAŁSZ|True|Wartość null nie jest dozwolona; nie dodano pozycję indeksu.|
+|Wartość PRAWDA lub FAŁSZ|Prawda|Wartość null nie jest dozwolona; nie dodano pozycję indeksu.|
 
 Aby uzyskać więcej informacji zobacz temat "IgnoreNulls Property" w Pomocy programu DAO.
 

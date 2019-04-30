@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
 ms.openlocfilehash: 641595f663c382129a40ce503ebdb789f8042cf0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412166"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container — Klasa
 
@@ -67,4 +67,4 @@ Funkcja elementu członkowskiego zwraca zawsze **false**.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
 ms.openlocfilehash: 4c63f37c07a56144fdd18531af5e8f9fbdac656a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412257"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution — Klasa
 
@@ -174,7 +174,7 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 `n` Parametru dystrybucji.
 
 *parm*<br/>
@@ -205,7 +205,7 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 `n` Parametru dystrybucji.
 
 *right*<br/>
@@ -219,4 +219,4 @@ Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konk
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

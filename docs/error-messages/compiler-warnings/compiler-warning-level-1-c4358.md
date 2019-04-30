@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
 ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408384"
 ---
 # <a name="compiler-warning-level-1-c4358"></a>Kompilator ostrzeżenie (poziom 1) C4358
 

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412049"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;Wątek&gt; operatorów
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, Tr>& operator<<(
 *Ostr*<br/>
 A [basic_ostream](../standard-library/basic-ostream-class.md) obiektu.
 
-*Id*<br/>
+*Identyfikator*<br/>
 Element `thread::id` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana

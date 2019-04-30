@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413219"
 ---
 # <a name="list-class"></a>list — Klasa
 
@@ -168,8 +168,8 @@ Dołączyć standardowy nagłówek biblioteki standardowej języka C++ \<listy >
 |[cend](#cend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie na liście.|
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy listy.|
 |[crbegin](#crbegin)|Zwraca iterator stałych adresujący pierwszy element na liście odwróconej.|
-|[crend —](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie na liście odwróconej.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do listy na określonej pozycji.|
+|[crend](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie na liście odwróconej.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do listy na określonej pozycji.|
 |[emplace_back](#emplace_back)|Dodaje element skonstruowany w miejscu do końca listy.|
 |[emplace_front](#emplace_front)|Dodaje element skonstruowany w miejscu na początku listy.|
 |[pusty](#empty)|Sprawdza, czy lista jest pusta.|
@@ -177,7 +177,7 @@ Dołączyć standardowy nagłówek biblioteki standardowej języka C++ \<listy >
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów na liście z określonych pozycji.|
 |[Frontonu](#front)|Zwraca odwołanie do pierwszego elementu na liście.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` użytego do stworzenia listy.|
-|[Wstaw](#insert)|Wstawia element lub szereg elementów lub szereg elementów do listy na określonej pozycji.|
+|[insert](#insert)|Wstawia element lub szereg elementów lub szereg elementów do listy na określonej pozycji.|
 |[max_size](#max_size)|Zwraca maksymalną długość listy.|
 |[merge](#merge)|Usuwa elementy z listy argumentów, wstawia je do listy docelowej i porządkuje nowe, połączone zbiór elementów w kolejności rosnącej lub w określonej kolejności.|
 |[pop_back](#pop_back)|Usuwa element na końcu listy.|
@@ -187,9 +187,9 @@ Dołączyć standardowy nagłówek biblioteki standardowej języka C++ \<listy >
 |[rbegin](#rbegin)|Zwraca iterator adresujący pierwszy element na liście odwróconej.|
 |[remove](#remove)|Usuwa elementy na liście, które pasują do określonej wartości.|
 |[remove_if](#remove_if)|Usuwa elementy z listy, dla których jest spełniony określony predykat.|
-|[rend —](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie na liście odwróconej.|
+|[rend](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie na liście odwróconej.|
 |[Zmiana rozmiaru](#resize)|Określa nowy rozmiar listy.|
-|[zwrotny](#reverse)|Odwraca kolejność, w której elementy występują na liście.|
+|[reverse](#reverse)|Odwraca kolejność, w której elementy występują na liście.|
 |[Rozmiar](#size)|Zwraca liczbę elementów na liście.|
 |[sort](#sort)|Rozmieszcza elementy listy w kolejności rosnącej lub w odniesieniu do innych relacji zamówienia.|
 |[splice](#splice)|Usuwa elementy z listy argumentów i wstawia je do listy docelowej.|
@@ -200,7 +200,7 @@ Dołączyć standardowy nagłówek biblioteki standardowej języka C++ \<listy >
 
 |Operator|Opis|
 |-|-|
-|[list::operator =](#op_eq)|Zamienia elementy listy kopię innej listy.|
+|[list::operator=](#op_eq)|Zamienia elementy listy kopię innej listy.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -986,7 +986,7 @@ Pozycja elementu do usunięcia z listy.
 *pierwszy*<br/>
 Pozycja pierwszego elementu usunięty z listy.
 
-*ostatni*<br/>
+*last*<br/>
 Pozycja tuż za ostatnim elementem usunięty z listy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1440,7 +1440,7 @@ void merge(list<Type, Allocator>& right, Traits comp);
 *right*<br/>
 Lista argumentów, które ma zostać scalona z listy docelowej.
 
-*Comp*<br/>
+*comp*<br/>
 Operator porównania ustawiał elementów listy docelowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -2285,7 +2285,7 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>Parametry
 
-*Comp*<br/>
+*comp*<br/>
 Operator porównania ustawiał kolejne elementy.
 
 ### <a name="remarks"></a>Uwagi
@@ -2360,7 +2360,7 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 *Where*<br/>
 Pozycja na liście docelowy, przed którym ma zostać wstawiony.
 
-*Źródło*<br/>
+*Element źródłowy*<br/>
 Lista źródeł, który ma zostać wstawiony do listy docelowej.
 
 *ITER*<br/>

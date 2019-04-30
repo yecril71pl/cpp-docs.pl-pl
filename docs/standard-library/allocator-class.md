@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411048"
 ---
 # <a name="allocator-class"></a>allocator — Klasa
 
@@ -77,7 +77,7 @@ W efekcie alokatora definiuje następujące typy:
 
 Te `Type`s określony formularz, który wskaźników i odwołań musi mieć przydzielone elementów. ( [allocator::pointer](#pointer) niekoniecznie jest taka sama jak `Type*` dla wszystkich obiektów programu przydzielania, nawet jeśli ma to oczywiste definicję klasy `allocator`.)
 
-**C ++ 11 i nowszych:** włączyć operacji przenoszenia w swojej alokatora, przy użyciu interfejsu minimalnych i zaimplementować konstruktora kopiującego, == i! = operatory przydzielania i cofnąć jej przydział. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [buforów](../standard-library/allocators.md)
+**C ++ 11 i nowszych:**  Aby włączyć operacji przenoszenia w swojej alokatora, przy użyciu interfejsu minimalnych i zaimplementować konstruktora kopiującego, == i! = operatory przydzielania i cofnąć jej przydział. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [buforów](../standard-library/allocators.md)
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -103,10 +103,10 @@ Te `Type`s określony formularz, który wskaźników i odwołań musi mieć przy
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Adres](#address)|Wyszukuje adres obiektu, którego wartość jest określona.|
+|[address](#address)|Wyszukuje adres obiektu, którego wartość jest określona.|
 |[allocate](#allocate)|Przydziela blok pamięci jest wystarczająco duży, aby zapisać co najmniej określonej liczby elementów.|
 |[construct](#construct)|Tworzy określonego typu obiektu pod określony adres, który jest inicjowany z określoną wartością.|
-|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 |[destroy](#destroy)|Wywołuje destruktora obiektów bez Trwa cofanie alokacji pamięci, do przechowywania obiektu.|
 |[max_size](#max_size)|Zwraca liczbę elementów typu `Type` może zostać przydzielone przez obiekt klasy `allocator` przed wolnej pamięci jest używany w.|
 |[ponowne wiązanie](#rebind)|Struktura, która umożliwia alokatora dla obiektów typu jeden do przydzielania pamięci dla obiektów innego typu.|
@@ -332,7 +332,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-## <a name="const_pointer"></a>  Allocator::const_pointer
+## <a name="const_pointer"></a>  allocator::const_pointer
 
 Typ, który zapewnia stały wskaźnik do typu obiektu zarządzanego przez program przydzielania.
 

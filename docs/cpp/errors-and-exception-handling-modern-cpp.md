@@ -4,11 +4,11 @@ ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398917"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Błędy w obsłudze wyjątków (Modern C++)
 
@@ -90,7 +90,7 @@ Wyjątki i potwierdzenia to dwa odrębne mechanizmy wykrywania błędów czasu w
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Wyjątki C++ a wyjątki Windows SEH
 
-Programy C i C++ mogą wykorzystywać mechanizm (SEH), w systemie operacyjnym Windows obsługi wyjątków strukturalnych. Koncepcje w SEH przypominają te w wyjątkach C++, z tą różnicą, że używa SEH **__try**, **__except**, i **__finally** tworzy zamiast **spróbuj** i **catch**. W programie Visual C++ wyjątki C++ są implementowane dla SEH. Jednak podczas pisania kodu w języku C++, należy użyć składni wyjątków języka C++.
+Programy C i C++ mogą wykorzystywać mechanizm (SEH), w systemie operacyjnym Windows obsługi wyjątków strukturalnych. Koncepcje w SEH przypominają te w C++ wyjątki, z wyjątkiem tego SEH używa **__try**, **__except**, i **__finally** tworzy zamiast **spróbuj**  i **catch**. W programie Visual C++ wyjątki C++ są implementowane dla SEH. Jednak podczas pisania kodu w języku C++, należy użyć składni wyjątków języka C++.
 
 Aby uzyskać więcej informacji o bibliotece SEH, zobacz [obsługi wyjątków strukturalnych, (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 
@@ -100,7 +100,7 @@ Specyfikacje wyjątków zostały wprowadzone w języku C++ jako sposób określa
 
 ## <a name="see-also"></a>Zobacz także
 
-[Instrukcje: Interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[Instrukcje: interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
 [Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
 ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304824"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346111"
 ---
 # <a name="ole-background-containers-and-servers"></a>Podstawy OLE: Kontenery i serwery
 
@@ -36,8 +36,8 @@ Za pomocą oznacza, że komunikacji, kontener nie musi wiedzieć, szczegóły im
 ## <a name="see-also"></a>Zobacz także
 
 [Podstawy OLE](../mfc/ole-background.md)<br/>
-[Podstawy OLE: Implementacja interfejsu MFC](../mfc/ole-background-mfc-implementation.md)<br/>
+[Podstawy OLE: implementacja MFC](../mfc/ole-background-mfc-implementation.md)<br/>
 [Kontenery](../mfc/containers.md)<br/>
 [Serwery](../mfc/servers.md)<br/>
-[Kontenery: Elementy klienckie](../mfc/containers-client-items.md)<br/>
-[Serwery: Elementy serwera](../mfc/servers-server-items.md)
+[Kontenery: elementy klienckie](../mfc/containers-client-items.md)<br/>
+[Serwery: elementy serwera](../mfc/servers-server-items.md)

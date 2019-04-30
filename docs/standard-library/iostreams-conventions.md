@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
 ms.openlocfilehash: 52cdd06385994e49ff793e40318ca4cbbbcfcda0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404835"
 ---
 # <a name="iostreams-conventions"></a>Konwencje iostream
 
@@ -19,9 +19,9 @@ Nagłówki iostreams obsługi konwersji między tekst i zakodowany formularzy or
 |||
 |-|-|
 |[\<fstream>](../standard-library/fstream.md)|[\<iomanip >](../standard-library/iomanip.md)|
-|[\<IOS >](../standard-library/ios.md)|[\<iosfwd>](../standard-library/iosfwd.md)|
+|[\<ios>](../standard-library/ios.md)|[\<iosfwd>](../standard-library/iosfwd.md)|
 |[\<iostream>](../standard-library/iostream.md)|[\<istream>](../standard-library/istream.md)|
-|[\<ostream>](../standard-library/ostream.md)|[\<sstream — >](../standard-library/sstream.md)|
+|[\<ostream>](../standard-library/ostream.md)|[\<sstream>](../standard-library/sstream.md)|
 |[\<streambuf>](../standard-library/streambuf.md)|[\<strstream>](../standard-library/strstream.md)|
 
 Najprostsze użycie iostreams wymaga jedynie, czy dołączyć nagłówek [ \<iostream >](../standard-library/iostream.md). Następnie można wyodrębnić wartości z [cin](../standard-library/iostream.md#cin) lub [wcin](../standard-library/iostream.md#wcin) odczytać standardowe dane wejściowe. Zasady dotyczące dostarczania więc są przedstawione opis klasy [basic_istream — klasa](../standard-library/basic-istream-class.md). Można także wstawić wartości [cout](../standard-library/iostream.md#cout) lub [wcout](../standard-library/iostream.md#wcout) do zapisu do wyjścia standardowego. Zasady dotyczące dostarczania więc są przedstawione opis klasy [basic_ostream — klasa](../standard-library/basic-ostream-class.md). Format wspólnych dla ekstraktory i insertors zarządzać przez klasę [basic_ios — klasa](../standard-library/basic-ios-class.md). Manipulowanie tego formatu informacji w podszywając wyodrębniania i wstawianie obiektów jest prowincji manipulatory kilka.

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410801"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert — Klasa
 
@@ -42,7 +42,7 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametry
 
-*codecvt —*<br/>
+*Codecvt*<br/>
 [Ustawień regionalnych](../standard-library/locale-class.md) reguł, który reprezentuje obiekt konwersji.
 
 *Elem*<br/>
@@ -83,7 +83,7 @@ Przechowuje obiekt tej klasy szablonu:
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[from_bytes —](#from_bytes)|Konwertuje ciąg bajtów na ciąg znaków dwubajtowych.|
+|[from_bytes](#from_bytes)|Konwertuje ciąg bajtów na ciąg znaków dwubajtowych.|
 |[to_bytes](#to_bytes)|Konwertuje ciąg znaków dwubajtowych ciąg bajtów.|
 |[przekonwertowany](#converted)|Zwraca liczbę pomyślnych konwersji.|
 |[state](#state)|Zwraca obiekt reprezentujący stan konwersji.|
@@ -141,7 +141,7 @@ wide_string from_bytes(const char* first, const char* last);
 |*ptr*|Stylu C zakończony znakiem null sekwencji znaków, które ma zostać przekonwertowany.|
 |*BSTR*|[Byte_string](#byte_string) ma zostać przekonwertowany.|
 |*pierwszy*|Pierwszy znak w zakresie znaków, które mają zostać przekonwertowane.|
-|*ostatni*|Ostatni znak zakresu znaków, które mają zostać przekonwertowane.|
+|*last*|Ostatni znak zakresu znaków, które mają zostać przekonwertowane.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -210,7 +210,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Wptr*|Stylu C zakończony znakiem null sekwencji, rozpoczynając od `wptr`, ma zostać przekonwertowany.|
 |*WSTR*|[Wide_string](#wide_string) ma zostać przekonwertowany.|
 |*pierwszy*|Pierwszy element w zakresie elementów, które ma zostać przekonwertowany.|
-|*ostatni*|Ostatniego elementu w zakresie elementów, które ma zostać przekonwertowany.|
+|*last*|Ostatniego elementu w zakresie elementów, które ma zostać przekonwertowany.|
 
 ### <a name="remarks"></a>Uwagi
 

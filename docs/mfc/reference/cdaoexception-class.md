@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
 ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399807"
 ---
 # <a name="cdaoexception-class"></a>CDaoException Class
 
@@ -153,7 +153,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać następujące rodza
 
 - Kod błędu
 
-- Źródło
+- Source
 
 - Opis
 
@@ -194,7 +194,7 @@ Ten obiekt zawiera następujące informacje:
 |Cdaoerrorinfo — element członkowski|Informacje|Znaczenie|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Kod błędu|Kod błędu DAO|
-|`m_strSource`|Źródło|Nazwa obiektu lub aplikacji, który początkowo wygenerował błąd|
+|`m_strSource`|Source|Nazwa obiektu lub aplikacji, który początkowo wygenerował błąd|
 |`m_strDescription`|Opis|Opisowy ciąg skojarzony z błędem|
 |`m_strHelpFile`|Plik pomocy|Ścieżka do pliku Pomocy Windows, w której użytkownik może uzyskać informacji o problemie|
 |`m_lHelpContext`|Pomoc kontekstowa|Identyfikator kontekstu dla tematu w pliku pomocy DAO|

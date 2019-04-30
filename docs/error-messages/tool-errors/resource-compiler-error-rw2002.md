@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396794"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Błąd kompilatora zasobów RW2002
 
@@ -69,7 +69,7 @@ Błąd analizy
 
 1. **Nazwa klasy kontrolki oczekiwanego**
 
-   `class` Pole **kontroli** instrukcji w **okna DIALOGOWEGO** instrukcja musi być jednym z następujących typów: przycisk, COMBOBOX, Edytuj, pola listy, pasek PRZEWIJANIA, statyczna, lub zdefiniowany przez użytkownika. Upewnij się, że klasa jest poprawna.
+   `class` Pole **kontroli** instrukcji w **okna DIALOGOWEGO** instrukcja musi być jednym z następujących typów: PRZYCISK, COMBOBOX, Edytuj, pola listy, pasek PRZEWIJANIA, statyczna, lub zdefiniowany przez użytkownika. Upewnij się, że klasa jest poprawna.
 
 1. **Oczekiwano nazwy krój czcionki**
 
@@ -141,7 +141,7 @@ Błąd analizy
 
 1. **Nieprawidłowy typ formantu**
 
-   Każdej instrukcji kontroli w **okna DIALOGOWEGO** instrukcja musi być jedną z następujących: pole wyboru, COMBOBOX, KONTROLKA, CTEXT, DEFPUSHBUTTON, typu części EDITTEXT, GROUPBOX, IKONĘ, LISTBOX, LTEXT, przycisk, RADIOBUTTON, RTEXT, pasek PRZEWIJANIA. Upewnij się, tych instrukcji sterowania jest poprawna.
+   Każdej instrukcji kontroli w **okna DIALOGOWEGO** instrukcja musi mieć jedną z następujących czynności: POLE WYBORU, COMBOBOX, KONTROLKA, CTEXT, DEFPUSHBUTTON, TYPU CZĘŚCI EDITTEXT, GROUPBOX, IKONĘ, LISTBOX, LTEXT, PRZYCISK, RADIOBUTTON, RTEXT, PASEK PRZEWIJANIA. Upewnij się, tych instrukcji sterowania jest poprawna.
 
 1. **Nieprawidłowy typ**
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
 ms.openlocfilehash: 2f7206e3764df384004b78e6df2127833a784f70
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405095"
 ---
 # <a name="hash-class"></a>hash — Klasa
 
@@ -45,7 +45,7 @@ struct hash {
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt funkcji, który definiuje funkcję mieszania, odpowiednią do mapowania wartości typu *Ty* do rozłożenia wartości indeksu. Element członkowski `operator()` zwraca wartość skrótu dla *val*, odpowiedni do użytku z klas szablonów `unordered_map`, `unordered_multimap`, `unordered_set`, i `unordered_multiset`. Standardowa biblioteka zapewnia specjalizacje dla typów podstawowych: *Ty* może być dowolnego typu skalarne, w tym typy wskaźników i typów wyliczenia. Ponadto istnieją specjalizacje dla typów biblioteki `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, i `vector<bool>`.
+Obiekt funkcji, który definiuje funkcję mieszania, odpowiednią do mapowania wartości typu *Ty* do rozłożenia wartości indeksu. Element członkowski `operator()` zwraca wartość skrótu dla *val*, odpowiedni do użytku z klas szablonów `unordered_map`, `unordered_multimap`, `unordered_set`, i `unordered_multiset`. Standardowa biblioteka zawiera specjalizacje dla typów podstawowych: *Ty* może być dowolnego typu skalarne, w tym typy wskaźników i typów wyliczenia. Ponadto istnieją specjalizacje dla typów biblioteki `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, i `vector<bool>`.
 
 ## <a name="example"></a>Przykład
 

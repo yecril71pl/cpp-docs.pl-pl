@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 ms.openlocfilehash: ccc2b41aa6c008fbda29c065ad63aa9f61b6680f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413687"
 ---
 # <a name="errorcondition-class"></a>error_condition — Klasa
 
@@ -42,7 +42,7 @@ Obiekt typu `error_condition` przechowuje wartość kodu błędu i wskaźnik do 
 
 |Konstruktor|Opis|
 |-|-|
-|[error_condition —](#error_condition)|Tworzy obiekt typu `error_condition`.|
+|[error_condition](#error_condition)|Tworzy obiekt typu `error_condition`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -71,7 +71,7 @@ Obiekt typu `error_condition` przechowuje wartość kodu błędu i wskaźnik do 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<system_error >
+**Header:** \<system_error>
 
 **Namespace:** standardowe
 

@@ -5,11 +5,11 @@ f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
 ms.openlocfilehash: 43fb79ceda6de7409e6f93797ce2f4ff213c43ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411984"
 ---
 # <a name="ltthreadgt"></a>&lt;wątek&gt;
 
@@ -61,7 +61,7 @@ Dołączyć standardowy nagłówek \<wątku > w celu zdefiniowania klasy **wątk
 |[Operator < = — Operator](../standard-library/thread-operators.md#op_lt_eq)|Określa, czy jeden `thread::id` obiekt jest mniejszy niż lub równe drugiemu.|
 |[Operator < — Operator](../standard-library/thread-operators.md#op_lt)|Określa, czy jeden `thread::id` obiekt jest mniejszy niż inny.|
 |[operator! = — Operator](../standard-library/thread-operators.md#op_neq)|Porównuje dwa `thread::id` obiekty pod kątem nierówności.|
-|[operator == — Operator](../standard-library/thread-operators.md#op_eq_eq)|Porównuje dwa `thread::id` obiekty pod kątem równości.|
+|[operator== Operator](../standard-library/thread-operators.md#op_eq_eq)|Porównuje dwa `thread::id` obiekty pod kątem równości.|
 |[Operator << — Operator](../standard-library/thread-operators.md#op_lt_lt)|Wstawia tekstowa reprezentacja `thread::id` obiektu do strumienia.|
 
 ## <a name="see-also"></a>Zobacz także

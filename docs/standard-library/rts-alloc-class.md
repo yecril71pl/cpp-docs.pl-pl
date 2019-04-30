@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
 ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409749"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc — Klasa
 
@@ -45,7 +45,7 @@ Tej klasy szablonu zawiera blok wiele wystąpień programu przydzielania i okre�
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 |[equals](#equals)|Porównuje dwa pamięci podręczne dla równości.|
 
 ## <a name="requirements"></a>Wymagania
@@ -117,4 +117,4 @@ bool equals(const sync<_Cache>& _Other) const;
 ## <a name="see-also"></a>Zobacz także
 
 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

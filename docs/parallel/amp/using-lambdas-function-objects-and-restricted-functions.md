@@ -3,15 +3,15 @@ title: Używanie wyrażeń lambda, obiektów Function i funkcji z ograniczeniami
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405329"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Używanie wyrażeń lambda, obiektów Function i funkcji z ograniczeniami
 
-Kod C++ AMP, który chcesz uruchomić na akceleratorze, jest określony jako argument w wywołaniu [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody. Możesz podać w wyrażeniu lambda lub obiekt funkcyjny (funktor) w roli tego argumentu. Ponadto obiekt lambda wyrażenia lub funkcja może wywołać funkcję C++ AMP z ograniczeniami. Ten temat korzysta z algorytmu dodawania tablic do zademonstrowania wyrażeń lambda, obiektów funkcyjnych i funkcji z ograniczeniami. Poniższy przykład pokazuje jest algorytm bez kodu C++ AMP. Są tworzone dwie tablice 1-wymiarowe równej długości. Odpowiadające elementy całkowite są dodawane i przechowywane w trzeciej 1-wymiarowej tablicy. C++ AMP nie jest używana.
+C++ Kodzie AMP, który chcesz uruchomić na akceleratorze, jest określony jako argument w wywołaniu [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody. Możesz podać w wyrażeniu lambda lub obiekt funkcyjny (funktor) w roli tego argumentu. Ponadto obiekt lambda wyrażenia lub funkcja może wywołać funkcję C++ AMP z ograniczeniami. Ten temat korzysta z algorytmu dodawania tablic do zademonstrowania wyrażeń lambda, obiektów funkcyjnych i funkcji z ograniczeniami. Poniższy przykład pokazuje jest algorytm bez kodu C++ AMP. Są tworzone dwie tablice 1-wymiarowe równej długości. Odpowiadające elementy całkowite są dodawane i przechowywane w trzeciej 1-wymiarowej tablicy. C++ AMP nie jest używana.
 
 ```cpp
 void CpuMethod() {

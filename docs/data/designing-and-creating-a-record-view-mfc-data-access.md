@@ -10,11 +10,11 @@ helpviewer_keywords:
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
 ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397968"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Projektowanie i tworzenie widoku rekordu (dostęp do danych MFC)
 

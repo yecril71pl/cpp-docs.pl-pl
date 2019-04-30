@@ -1,15 +1,15 @@
 ---
-title: Biblioteki statyczne (C + +/ CX)
+title: Biblioteki statyczne (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
 ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398865"
 ---
-# <a name="static-libraries-ccx"></a>Biblioteki statyczne (C + +/ CX)
+# <a name="static-libraries-ccx"></a>Biblioteki statyczne (C++/CX)
 
 Bibliotekę statyczną, który jest używany w aplikacji platformy uniwersalnej Windows (UWP) może zawierać kod ISO standard C++, takich jak typy STL i wywołań interfejsów API systemu Win32, które nie są wykluczone z platformy aplikacji środowiska wykonawczego Windows. Biblioteka statyczna wykorzystuje składników środowiska wykonawczego Windows i mogą tworzyć składniki środowiska wykonawczego Windows pewne ograniczenia.
 
@@ -33,4 +33,4 @@ Można bezpiecznie zignorować to ostrzeżenie, tylko wtedy, gdy biblioteka stat
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wątkowość i Marshaling](../cppcx/threading-and-marshaling-c-cx.md)
+[Wątkowość i marshaling](../cppcx/threading-and-marshaling-c-cx.md)

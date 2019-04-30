@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
 ms.openlocfilehash: eba2c60e621df717f29c0b25c735df3fda285fa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412179"
 ---
 # <a name="syncnone-class"></a>sync_none — Klasa
 
@@ -41,7 +41,7 @@ class sync_none
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 |[equals](#equals)|Porównuje dwa pamięci podręczne dla równości.|
 
 ## <a name="requirements"></a>Wymagania
@@ -110,4 +110,4 @@ Funkcja elementu członkowskiego zwraca zawsze **true**.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC data sources, represented by CDatabase
 ms.assetid: b246721f-b9e1-49bd-a6c7-f348b8c3d537
 ms.openlocfilehash: b435c65bab565e109d37e1dd24e051993cbb30c8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397916"
 ---
 # <a name="data-source-odbc"></a>Źródło danych (ODBC)
 
@@ -25,9 +25,9 @@ Może mieć co najmniej jedno źródło danych aktywnych w aplikacji w tym samym
 
 W poniższych tematach opisano bardziej o źródłach danych:
 
-- [Źródło danych: Zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+- [Źródło danych: zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
 
-- [Źródło danych: Określanie schematu źródła danych (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
+- [Źródło danych: określanie schematu źródła danych (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
 
 ## <a name="see-also"></a>Zobacz także
 

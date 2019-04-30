@@ -17,11 +17,11 @@ helpviewer_keywords:
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
 ms.openlocfilehash: 20191b84e4bbad760de1035fdb027fcbe827c874
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412946"
 ---
 # <a name="maxnone-class"></a>max_none — Klasa
 
@@ -134,4 +134,4 @@ Ta funkcja elementu członkowskiego nie działa. Jest ona wywoływana przez `cac
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

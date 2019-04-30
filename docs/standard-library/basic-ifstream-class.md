@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 30ae1e6384b3861bc4324d42f095516f80dce6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400685"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream — Klasa
 
@@ -146,7 +146,7 @@ Domyślny plik otwarcie ochrony odpowiednikiem `shflag` parametru w [_fsopen —
 
 Pierwszy Konstruktor inicjuje klasę bazową, wywołując [basic_istream](../standard-library/basic-istream-class.md)( `sb`), gdzie `sb` jest przechowywany obiekt klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md) <  `Elem`, `Tr`>. Inicjuje również `sb` przez wywołanie metody `basic_filebuf` <  `Elem`, `Tr`>.
 
-Drugi i trzeci Konstruktor inicjuje klasę bazową, wywołując `basic_istream`( `sb`). Inicjuje również `sb` przez wywołanie metody [basic_filebuf —](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`>, następnie `sb`. [Otwórz](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`). Jeśli ostatnie funkcja zwraca pusty wskaźnik, wywołuje konstruktor **setstate**( `failbit`).
+Drugi i trzeci Konstruktor inicjuje klasę bazową, wywołując `basic_istream`( `sb`). Inicjuje również `sb` przez wywołanie metody [basic_filebuf —](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`>, następnie `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`). Jeśli ostatnie funkcja zwraca pusty wskaźnik, wywołuje konstruktor **setstate**( `failbit`).
 
 Czwarty Konstruktor inicjuje obiekt z zawartością `right`, traktowane jako odwołanie rvalue.
 

@@ -48,11 +48,11 @@ helpviewer_keywords:
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
 ms.openlocfilehash: a50e37b41c6e90428bed5ae113d2d9f064e042d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390870"
 ---
 # <a name="sal-annotations"></a>Adnotacje SAL
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403467"
 ---
 # <a name="raising-software-exceptions"></a>Występowanie wyjątków programowych
 
@@ -38,7 +38,7 @@ Aby użyć obsługi wyjątków strukturalnych z błędami:
 
 |Bity|Zalecane ustawienie binarne|Opis|
 |----------|--------------------------------|-----------------|
-|31-30|11|Te dwa bity opisują podstawowy stan kodu: 11 = błąd, 00 = sukces, 01 = informacyjny, 10 = ostrzeżenie.|
+|31-30|11|Te dwa bity opisują podstawowy stan kodu:  11 = błąd, 00 = sukces, 01 = informacyjny, 10 = ostrzeżenie.|
 |29|1|Bit klienta. Wartość 1 dla kodów zdefiniowanych przez użytkownika.|
 |28|0|Zarezerwowany bit. (Pozostawić ustawione na 0).|
 

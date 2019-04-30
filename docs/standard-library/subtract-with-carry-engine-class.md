@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412194"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine — Klasa
 
@@ -68,10 +68,10 @@ Argument szablonu `UIntType` musi być wystarczająco duży, aby przechowywać w
 
 Chociaż można utworzyć generatora z tego aparatu bezpośrednio, umożliwia także jeden z tych wstępnie zdefiniowanych definicje typów:
 
-`ranlux24_base`: Używany jako podstawa `ranlux24`.
+`ranlux24_base`: Używane jako podstawa `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: Używany jako podstawa `ranlux48`.
+`ranlux48_base`: Używane jako podstawa `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparatem przeniesienia, zobacz artykułu w Wikipedii [generator opóźnioną kopię Fibonacci](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
@@ -84,4 +84,4 @@ Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparatem prz
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

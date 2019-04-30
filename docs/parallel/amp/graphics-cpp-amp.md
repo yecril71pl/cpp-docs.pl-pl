@@ -3,11 +3,11 @@ title: Grafika (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405667"
 ---
 # <a name="graphics-c-amp"></a>Grafika (C++ AMP)
 
@@ -263,7 +263,7 @@ Możesz również skopiować z jednego tekstury do innego za pomocą [texture::c
 
 ## <a name="texture-view-classes"></a>Klasy widoku tekstury
 
-C++ AMP wprowadza [texture_view, klasa](../../parallel/amp/reference/texture-view-class.md) w programie Visual Studio 2013. Widoki tekstury obsługują te same typy i rangi texeli, jak [texture, klasa](../../parallel/amp/reference/texture-class.md), ale w przeciwieństwie do tekstur, zapewniają dostęp do dodatkowych funkcji sprzętowych, takich jak próbkowanie tekstur i mipmapy. Widoki tekstury obsługują dostęp tylko do odczytu, tylko do zapisu i odczytu i zapisu danych źródłowych tekstury.
+C++AMP wprowadza klasę [texture_view, klasa](../../parallel/amp/reference/texture-view-class.md) w programie Visual Studio 2013. Widoki tekstury obsługują te same typy i rangi texeli, jak [texture, klasa](../../parallel/amp/reference/texture-class.md), ale w przeciwieństwie do tekstur, zapewniają dostęp do dodatkowych funkcji sprzętowych, takich jak próbkowanie tekstur i mipmapy. Widoki tekstury obsługują dostęp tylko do odczytu, tylko do zapisu i odczytu i zapisu danych źródłowych tekstury.
 
 - Dostęp tylko do odczytu jest zapewniany przez `texture_view<const T, N>` specjalizacja szablonu, który obsługuje elementy, które mają 1, 2 lub 4 składniki, tekstury próbkowanie i dynamiczny dostęp do szeregu poziomów mipmappingu, które są określane podczas konkretyzacji widoku.
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
 ms.openlocfilehash: ba99d6ed3af34363bf88cde1a40e4bf37841cd8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412920"
 ---
 # <a name="maxunbounded-class"></a>max_unbounded — Klasa
 
@@ -127,4 +127,4 @@ Ta funkcja elementu członkowskiego nie działa. Jest ona wywoływana przez `cac
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

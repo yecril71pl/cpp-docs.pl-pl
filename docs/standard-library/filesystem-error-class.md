@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405160"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error — klasa
 
@@ -35,8 +35,8 @@ Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych zgłosić
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[ścieżka1](#path1)|Zwraca `mypval1`|
-|[ścieżka2](#path2)|Zwraca `mypval2`|
+|[path1](#path1)|Zwraca `mypval1`|
+|[path2](#path2)|Zwraca `mypval2`|
 |[Co to](#what)|Zwraca wskaźnik do `NTBS`.|
 
 ## <a name="requirements"></a>Wymagania
@@ -45,7 +45,7 @@ Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych zgłosić
 
 **Namespace:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error::filesystem_error —
+## <a name="filesystem_error"></a> filesystem_error::filesystem_error
 
 Pierwszy Konstruktor konstruuje komunikat z *what_arg* i *we*. Drugi Konstruktor tworzy komunikat z *pval1*, którą przechowuje w `mypval1`. Trzeci Konstruktor konstruuje również komunikat z *pval1*, przechowywanego w `mypval1`i z *pval2*, którą przechowuje w `mypval2`.
 
@@ -68,7 +68,7 @@ filesystem_error(const string& what_arg,
 *what_arg*<br/>
 Określony komunikat.
 
-*we*<br/>
+*ec*<br/>
 Określony kod błędu.
 
 *mypval1*<br/>
@@ -105,5 +105,5 @@ const char *what() const noexcept;
 
 [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
 [system_error, klasa](../standard-library/system-error-class.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>
 [\<wyjątku >](../standard-library/exception.md)<br/>

@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411191"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorytm&gt; funkcji
 
@@ -662,7 +662,7 @@ Zakres źródłowy musi być prawidłowy i musi być wystarczająco dużo miejsc
 
 `copy_backward` Algorytm nakłada bardziej rygorystyczne wymagania niż algorytm kopiowania. Oba iteratory, wejściowy i wyjściowy muszą być dwukierunkowe.
 
-`copy_backward` i [move_backward](../standard-library/algorithm-functions.md#move_backward) algorytmy są tylko algorytmami standardowej biblioteki języka C++ wyznaczające zakres wyjściowy z iteratora wskazujące na koniec zakresu docelowego.
+`copy_backward` i [move_backward](../standard-library/algorithm-functions.md#move_backward) algorytmy są jedynymi C++ algorytmami standardowej biblioteki wyznaczające zakres wyjściowy z iteratora wskazujące na koniec zakresu docelowego.
 
 Ponieważ algorytm kopiuje elementy źródła w kolejności od ostatniego elementu, zakres docelowy może pokrywać się z zakresem źródłowym, pod warunkiem *pierwszy* położenie zakresu źródłowego nie jest zawarta w miejscu docelowym zakres. `copy_backward` może służyć do przesunięcia elementów w prawo, ale nie w lewo, chyba że istnieje żadne nakładanie się zakresów źródłowych i docelowych. Aby przesunąć w lewo dowolną liczbę pozycji, użyj [kopiowania](../standard-library/algorithm-functions.md#copy) algorytmu.
 
@@ -2793,7 +2793,7 @@ Drugi tworzyć Iteratory do przodu, którego wartość ma zostać wymienione.
 
 ### <a name="remarks"></a>Uwagi
 
-`swap` powinien być używany preference do mogę **ter_swap**, która została uwzględniona w standardzie C++, zgodności z poprzednimi wersjami. Jeśli `Fit1` i `Fit2` mogą tworzyć Iteratory do przodu, następnie `iter_swap` ( `Fit1`, `Fit2` ), jest odpowiednikiem `swap` ( \* `Fit1`, \* `Fit2` ).
+`swap` powinien być używany preference do mogę **ter_swap**, która została uwzględniona w C++ standardem dla zgodności z poprzednimi wersjami. Jeśli `Fit1` i `Fit2` mogą tworzyć Iteratory do przodu, następnie `iter_swap` ( `Fit1`, `Fit2` ), jest odpowiednikiem `swap` ( \* `Fit1`, \* `Fit2` ).
 
 Typy wartości wejściowe tworzyć Iteratory do przodu muszą mieć taką samą wartość.
 
@@ -3252,7 +3252,7 @@ Stosy ma dwie właściwości:
 
 - Elementy może być dodane lub usunięte w czasie logarytmicznych.
 
-Stosy to idealny sposób implementacji kolejek priorytetowych i są one używane w implementacji Adapter kontenera standardowej biblioteki języka C++ [priority_queue — klasa](../standard-library/priority-queue-class.md).
+Stosy to idealny sposób implementacji kolejek priorytetowych i są one używane w implementacji C++ Adapter kontenera standardowej biblioteki [priority_queue — klasa](../standard-library/priority-queue-class.md).
 
 Złożoność jest liniowa, wymaganie 3 \* (* — najpierw ostatni *) porównania.
 
@@ -5207,7 +5207,7 @@ Stosy ma dwie właściwości:
 
 - Elementy może być dodane lub usunięte w czasie logarytmicznych.
 
-Stosy to idealny sposób implementacji kolejek priorytetowych i są one używane w implementacji Adapter kontenera standardowej biblioteki języka C++ [priority_queue — klasa](../standard-library/priority-queue-class.md).
+Stosy to idealny sposób implementacji kolejek priorytetowych i są one używane w implementacji C++ Adapter kontenera standardowej biblioteki [priority_queue — klasa](../standard-library/priority-queue-class.md).
 
 Zakres, do których odwołuje się musi być prawidłowy; wszystkie wskaźniki muszą być dereferencjalne, a w sekwencji ostatniej pozycji jest osiągalna z pierwszej dzięki inkrementacji.
 
@@ -5484,7 +5484,7 @@ Stosy ma dwie właściwości:
 
 - Elementy może być dodane lub usunięte w czasie logarytmicznych.
 
-Stosy to idealny sposób implementacji kolejek priorytetowych i są one używane w implementacji Adapter kontenera standardowej biblioteki języka C++ [priority_queue — klasa](../standard-library/priority-queue-class.md).
+Stosy to idealny sposób implementacji kolejek priorytetowych i są one używane w implementacji C++ Adapter kontenera standardowej biblioteki [priority_queue — klasa](../standard-library/priority-queue-class.md).
 
 Zakres, do których odwołuje się musi być prawidłowy; wszystkie wskaźniki muszą być dereferencjalne, a w sekwencji ostatniej pozycji jest osiągalna z pierwszej dzięki inkrementacji.
 
@@ -7771,7 +7771,7 @@ Po zastosowaniu Jeśli ten algorytm, zakres został zastosowany do nie jest już
 
 To nie jest stabilne sortowanie, ponieważ nie są zawsze zachowywane względną kolejność elementów równoważnych.
 
-Stosy to idealny sposób implementacji kolejek priorytetowych i są one używane w implementacji Adapter kontenera standardowej biblioteki języka C++ [priority_queue — klasa](../standard-library/priority-queue-class.md).
+Stosy to idealny sposób implementacji kolejek priorytetowych i są one używane w implementacji C++ Adapter kontenera standardowej biblioteki [priority_queue — klasa](../standard-library/priority-queue-class.md).
 
 Zakres, do których odwołuje się musi być prawidłowy; wszystkie wskaźniki muszą być dereferencjalne, a w sekwencji ostatniej pozycji jest osiągalna z pierwszej dzięki inkrementacji.
 

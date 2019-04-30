@@ -39,11 +39,11 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411074"
 ---
 # <a name="allocatorbase-class"></a>allocator_base — Klasa
 
@@ -87,10 +87,10 @@ class allocator_base
 |-|-|
 |[_Charalloc](#charalloc)|Przydziela pamięć dla tablicy typu **char**.|
 |[_Chardealloc](#chardealloc)|Zwalnia pamięć dla tablicę zawierającą elementy typu **char**.|
-|[Adres](#address)|Wyszukuje adres obiektu, którego wartość jest określona.|
+|[address](#address)|Wyszukuje adres obiektu, którego wartość jest określona.|
 |[allocate](#allocate)|Przydziela blok pamięci jest wystarczająco duży, aby zapisać co najmniej określonej liczby elementów.|
 |[construct](#construct)|Tworzy określonego typu obiektu pod określony adres, który jest inicjowany z określoną wartością.|
-|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 |[destroy](#destroy)|Wywołuje destruktora obiektów bez Trwa cofanie alokacji pamięci, do przechowywania obiektu.|
 |[max_size](#max_size)|Zwraca liczbę elementów typu *typu* , może zostać przydzielone przez obiekt alokatora klas, zanim zostaną użyte wolnej pamięci w.|
 
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

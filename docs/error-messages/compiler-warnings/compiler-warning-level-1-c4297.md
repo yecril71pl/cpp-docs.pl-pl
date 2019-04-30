@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4297
 ms.assetid: ba92fcdc-9f70-4f60-abe6-281f9582ca59
 ms.openlocfilehash: 07dd6c65498ddd0d377ec3e0fbc7b44e52bec96b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408631"
 ---
 # <a name="compiler-warning-level-1-c4297"></a>Kompilator ostrzeżenie (poziom 1) C4297
 
@@ -23,7 +23,7 @@ Domyślnie, kompilator generuje niejawne `noexcept(true)` specyfikatory dla zdef
 
 Aby uzyskać więcej informacji dotyczących specyfikacji wyjątków, zobacz [specyfikacje wyjątków (throw)](../../cpp/exception-specifications-throw-cpp.md). Zobacz też [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md) instrukcje dotyczące sposobu modyfikowania wyjątek w zachowaniu obsługi w czasie kompilacji.
 
-To ostrzeżenie zostanie również wygenerowany dla __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) funkcje oznaczone extern "C", nawet jeśli leżą one funkcje języka C++.
+To ostrzeżenie zostanie również wygenerowany dla __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) funkcje oznaczone extern "C", nawet jeśli leżą one C++ funkcji.
 
 Poniższy przykład spowoduje wygenerowanie C4297:
 

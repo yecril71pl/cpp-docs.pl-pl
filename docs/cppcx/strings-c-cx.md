@@ -1,17 +1,17 @@
 ---
-title: Ciągi (C + +/ CX)
+title: Ciągi (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
 ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403246"
 ---
-# <a name="strings-ccx"></a>Ciągi (C + +/ CX)
+# <a name="strings-ccx"></a>Ciągi (C++/CX)
 
-Tekst w środowisku uruchomieniowym Windows jest reprezentowana w języku C + +/ CX przez [Platform::String, klasa](../cppcx/platform-string-class.md). Użyj `Platform::String Class` Jeśli ciągi i z powrotem do metody klasy środowiska wykonawczego Windows, lub gdy użytkownik korzysta z innych składników środowiska wykonawczego Windows granicę interfejsem binarnym (ABI) aplikacji. `Platform::String Class` Udostępnia metody dla kilku typowych operacji na ciągach, ale nie mają być klasą ciągów w pełni funkcjonalne. W module języka C++, użyj standardowych typów ciągu C++ takich jak [wstring](../standard-library/basic-string-class.md) przetwarzanie znaczące tekstu i następnie przekonwertować ostatni wynik do [Platform::String ^](../cppcx/platform-string-class.md) następnie przekazać go do lub z publiczną interfejs. Jest łatwy i wydajny, aby wykonać konwersję między `wstring` lub `wchar_t*` i `Platform::String`.
+Tekst w środowisku uruchomieniowym Windows jest reprezentowana w C++/CX przez [Platform::String, klasa](../cppcx/platform-string-class.md). Użyj `Platform::String Class` Jeśli ciągi i z powrotem do metody klasy środowiska wykonawczego Windows, lub gdy użytkownik korzysta z innych składników środowiska wykonawczego Windows granicę interfejsem binarnym (ABI) aplikacji. `Platform::String Class` Udostępnia metody dla kilku typowych operacji na ciągach, ale nie mają być klasą ciągów w pełni funkcjonalne. W swojej C++ moduł, użyj standardowych C++ ciągu typy, takie jak [wstring](../standard-library/basic-string-class.md) przetwarzanie znaczące tekstu i następnie przekonwertować ostatni wynik do [Platform::String ^](../cppcx/platform-string-class.md) następnie przekazać go do lub z Interfejs publiczny. Jest łatwy i wydajny, aby wykonać konwersję między `wstring` lub `wchar_t*` i `Platform::String`.
 
 **Szybkie — dostęp próbny**
 

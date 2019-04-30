@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
 ms.openlocfilehash: 293cbbcfe134f6cb4f5e1bf924be7c03fa278833
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408540"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Kompilator ostrzeżenie (poziom 1) C4325
 
@@ -29,7 +29,7 @@ To spowodowałoby zastąpienie `.sdata` standardowa sekcja, która używa **kró
 
 Standardowa sekcje zawierają atrybuty, których nie można zmienić,
 
-- .Data
+- .data
 
 - .sdata
 
@@ -39,7 +39,7 @@ Standardowa sekcje zawierają atrybuty, których nie można zmienić,
 
 - .Text
 
-- .const —
+- .const
 
 - .sconst
 

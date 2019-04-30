@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
 ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405242"
 ---
 # <a name="codecvt-class"></a>codecvt — Klasa
 
@@ -128,7 +128,7 @@ wykonuje konwersję między `char32_t` zakodowanymi w formacie UTF-32 (UCS-4) i 
 |[do_max_length](#do_max_length)|Funkcja wirtualna, która zwraca maksymalną liczbę zewnętrznych Byte niezbędnych do wyprodukowania jednego wewnętrznego `CharType`.|
 |[do_out](#do_out)|Funkcja wirtualna wywoływana w celu konwersji sekwencji wewnętrznych `CharType`na sekwencję zewnętrznych Byte.|
 |[do_unshift](#do_unshift)|Funkcja wirtualna wywoływana w celu zapewnienia `Byte`potrzebnych podczas konwersji zależnej od stanu, aby zakończyć ostatni znak w sekwencji `Byte`s.|
-|[Kodowanie](#encoding)|Sprawdza, czy kodowanie `Byte` strumień jest zależy od stanu, czy stosunek między używanymi `Byte`używane i `CharType`produkowanymi jest stały i jeśli tak, określa wartość tego stosunku.|
+|[encoding](#encoding)|Sprawdza, czy kodowanie `Byte` strumień jest zależy od stanu, czy stosunek między używanymi `Byte`używane i `CharType`produkowanymi jest stały i jeśli tak, określa wartość tego stosunku.|
 |[in](#in)|Konwertuje zewnętrzną reprezentację sekwencji `Byte`s do wewnętrznej reprezentacji sekwencji `CharType`s.|
 |[Długość](#length)|Określa, ile `Byte`s z danej sekwencji zewnętrznych `Byte`produkuje nie więcej niż określoną liczbę wewnętrznych `CharType`s i zwraca tę liczbę `Byte`s.|
 |[MAX_LENGTH](#max_length)|Zwraca maksymalną liczbę zewnętrznych `Byte`niezbędnych do wyprodukowania jednego wewnętrznego `CharType`.|
@@ -209,11 +209,11 @@ Wartość liczby całkowitej, można określić typ zarządzania pamięci dla ob
 
 Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
-- 0: okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
 
-- 1: okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
 
-- 2: nie zdefiniowano tych wartości.
+- 2: Te wartości nie są zdefiniowane.
 
 Konstruktor inicjuje jego `locale::facet` podstawowego obiektu z **locale::**[aspekt](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -280,7 +280,7 @@ Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu cz
 *first1*<br/>
 Wskaźnik na początku sekwencji, który ma zostać przekonwertowany.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Wskaźnik końca sekwencji, który ma zostać przekonwertowany.
 
 *next1*<br/>
@@ -289,7 +289,7 @@ Wskaźnik poza końcem przekonwertowany sekwencji do pierwszego znaku nieprzekon
 *first2*<br/>
 Wskaźnik do początku przekonwertowany sekwencji.
 
-*Nazwisko2*<br/>
+*last2*<br/>
 Wskaźnik końca sekwencji przekonwertowana.
 
 *next2*<br/>
@@ -335,7 +335,7 @@ Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu cz
 *first1*<br/>
 Wskaźnik na początku sekwencji zewnętrznych.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Wskaźnik końca sekwencji zewnętrznych.
 
 *_Len2*<br/>
@@ -400,7 +400,7 @@ Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu cz
 *first1*<br/>
 Wskaźnik na początku sekwencji, który ma zostać przekonwertowany.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Wskaźnik końca sekwencji, który ma zostać przekonwertowany.
 
 *next1*<br/>
@@ -409,7 +409,7 @@ Odwołanie do wskaźnika do pierwszego nieprzekonwertowany `CharType`, po ostatn
 *first2*<br/>
 Wskaźnik do początku przekonwertowany sekwencji.
 
-*Nazwisko2*<br/>
+*last2*<br/>
 Wskaźnik końca sekwencji przekonwertowana.
 
 *next2*<br/>
@@ -455,7 +455,7 @@ Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu cz
 *first2*<br/>
 Wskaźnik do pierwszego pozycji w zakresie docelowym.
 
-*Nazwisko2*<br/>
+*last2*<br/>
 Wskaźnik do ostatniej pozycji w zakresie docelowym.
 
 *next2*<br/>
@@ -569,7 +569,7 @@ Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu cz
 *first1*<br/>
 Wskaźnik na początku sekwencji, który ma zostać przekonwertowany.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Wskaźnik końca sekwencji, który ma zostać przekonwertowany.
 
 *next1*<br/>
@@ -578,7 +578,7 @@ Wskaźnik poza końcem sekwencji przekonwertowany do pierwszego znaku nieprzekon
 *first2*<br/>
 Wskaźnik do początku przekonwertowany sekwencji.
 
-*Nazwisko2*<br/>
+*last2*<br/>
 Wskaźnik końca sekwencji przekonwertowana.
 
 *next2*<br/>
@@ -671,7 +671,7 @@ Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu cz
 *first1*<br/>
 Wskaźnik na początku sekwencji zewnętrznych.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Wskaźnik końca sekwencji zewnętrznych.
 
 *_Len2*<br/>
@@ -776,7 +776,7 @@ Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu cz
 *first1*<br/>
 Wskaźnik na początku sekwencji, który ma zostać przekonwertowany.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Wskaźnik końca sekwencji, który ma zostać przekonwertowany.
 
 *next1*<br/>
@@ -785,7 +785,7 @@ Odwołanie do wskaźnika do pierwszego nieprzekonwertowany `CharType` po ostatni
 *first2*<br/>
 Wskaźnik do początku przekonwertowany sekwencji.
 
-*Nazwisko2*<br/>
+*last2*<br/>
 Wskaźnik końca sekwencji przekonwertowana.
 
 *next2*<br/>
@@ -868,7 +868,7 @@ Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu cz
 *first2*<br/>
 Wskaźnik do pierwszego pozycji w zakresie docelowym.
 
-*Nazwisko2*<br/>
+*last2*<br/>
 Wskaźnik do ostatniej pozycji w zakresie docelowym.
 
 *next2*<br/>
@@ -896,7 +896,7 @@ Funkcja elementu członkowskiego zwraca [do_unshift —](#do_unshift)( `_State`,
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
 [Strony kodowe](../c-runtime-library/code-pages.md)<br/>
 [Nazwy lokalne, języki i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
 ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403521"
 ---
 # <a name="cc-preprocessor-reference"></a>Odwołania preprocesora języka C/C++
 *C/C++ Preprocessor Reference* wyjaśnia preprocesor w formie zaimplementowanej w Microsoft C/C++. Preprocesor wykonuje wstępne operacje na plikach C i C++ przed przekazaniem ich do kompilatora. Preprocesor można użyć, aby warunkowo skompilować kod, wstawiania plików, określ komunikaty o błędach w czasie kompilacji i stosować reguły właściwe dla komputera do fragmentów kodu.

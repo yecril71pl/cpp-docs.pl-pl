@@ -10,11 +10,11 @@ helpviewer_keywords:
 - stdext::allocator_fixed_size
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
 ms.openlocfilehash: d050a127fe3e62bf8f4eb4ce56fe25e33f88c041
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411035"
 ---
 # <a name="allocatorfixedsize-class"></a>allocator_fixed_size — Klasa
 
@@ -45,4 +45,4 @@ class allocator_fixed_size;
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: 9a8255a02c46a4ade33bd95635516e5d36fe8e64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409801"
 ---
 # <a name="basicofstream-class"></a>basic_ofstream — Klasa
 
@@ -137,7 +137,7 @@ Odwołania rvalue do `basic_ofstream` obiekt używany do zainicjowania tego `bas
 
 Pierwszy Konstruktor inicjuje klasę bazową, wywołując [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), gdzie `sb` jest przechowywany obiekt klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md) <  `Elem`, `Tr`>. Inicjuje również `sb` przez wywołanie metody `basic_filebuf` <  `Elem`, `Tr`>.
 
-Drugi i trzeci Konstruktor inicjuje klasę bazową, wywołując `basic_ostream`( **sb**). Inicjuje również `sb` przez wywołanie metody `basic_filebuf` <  `Elem`, `Tr`> a następnie `sb`. [Otwórz](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Jeśli ostatnie funkcja zwraca pusty wskaźnik, wywołuje konstruktor [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Drugi i trzeci Konstruktor inicjuje klasę bazową, wywołując `basic_ostream`( **sb**). Inicjuje również `sb` przez wywołanie metody `basic_filebuf` <  `Elem`, `Tr`> a następnie `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Jeśli ostatnie funkcja zwraca pusty wskaźnik, wywołuje konstruktor [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 Czwarty Konstruktor jest funkcją kopiowania. Inicjuje obiekt z zawartością *prawo*, traktowane jako odwołanie rvalue.
 

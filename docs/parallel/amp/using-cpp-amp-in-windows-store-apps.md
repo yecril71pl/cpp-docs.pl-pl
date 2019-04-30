@@ -3,11 +3,11 @@ title: Korzystanie z C++ AMP w aplikacjach platformy UWP
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
 ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405355"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Korzystanie z C++ AMP w aplikacjach platformy UWP
 
@@ -15,7 +15,7 @@ C++ AMP (C++ Accelerated Massive Parallelism) w aplikacji platformy uniwersalnej
 
 ## <a name="performance-considerations"></a>Zagadnienia dotyczące wydajności
 
-Jeśli używasz rozszerzeń składnik Visual C++ C + +/ CX do tworzenia aplikacji uniwersalnych platformy Windows (UWP), zalecamy użycie typów zwykły stare dane (POD) wraz z ciągłym magazynowaniem — na przykład `std::vector` lub tablice stylu C — dla danych, który ma być używane z C++ AMP. Może to pomóc Ci osiągnąć wyższą wydajność niż przy użyciu typów non-POD lub kontenerów Windows RT, ponieważ musi występować szeregowanie nie.
+Jeśli używasz Visual C++ rozszerzenia składnika C++/CX do tworzenia aplikacji uniwersalnych platformy Windows (UWP), zalecamy użycie typów zwykły stare dane (POD) wraz z ciągłym magazynowaniem — na przykład `std::vector` lub tablice stylu C — dla dane, które będą używane z C++ AMP. Może to pomóc Ci osiągnąć wyższą wydajność niż przy użyciu typów non-POD lub kontenerów Windows RT, ponieważ musi występować szeregowanie nie.
 
 W jądrze C++ AMP, dostęp do danych przechowywanych w ten sposób, należy po prostu zawinąć `std::vector` lub magazyn tablic w `concurrency::array_view` , a następnie użyć widoku tablicy w `concurrency::parallel_for_each` Pętla:
 
