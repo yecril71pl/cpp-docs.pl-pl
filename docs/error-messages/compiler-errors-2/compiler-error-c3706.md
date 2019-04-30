@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400295"
 ---
 # <a name="compiler-error-c3706"></a>Błąd kompilatora C3706
 
 'Funkcja': musi być interfejsem COM żeby wyzwalać zdarzenia COM
 
-Interfejs zdarzeń, którego używasz do wyzwalać zdarzenia COM musi być interfejsem COM. W takiej sytuacji interfejsu albo powinna być zdefiniowana za pomocą atrybutu Visual C++ lub importowane przy użyciu [#import](../../preprocessor/hash-import-directive-cpp.md) z biblioteki typów, przy użyciu atrybutu embedded_idl #import firmy.
+Interfejs zdarzeń, którego używasz do wyzwalać zdarzenia COM musi być interfejsem COM. W takiej sytuacji interfejsu powinny albo można zdefiniować przy użyciu wizualizacji C++ atrybutu lub importowane przy użyciu [#import](../../preprocessor/hash-import-directive-cpp.md) z biblioteki typów, przy użyciu atrybutu embedded_idl #import firmy.
 
 Należy pamiętać, że `#include` wierszy plików nagłówkowych ATL. pokazano w poniższym przykładzie są wymagane do używania zdarzenia COM. Aby naprawić ten błąd, należy `IEvents` (interfejsu obsługi zdarzeń) interfejsu COM, stosując jedną z następujących atrybutów do definicji interfejsu: [obiektu](../../windows/object-cpp.md), [podwójną](../../windows/dual.md), lub [ dispinterface](../../windows/dispinterface.md).
 

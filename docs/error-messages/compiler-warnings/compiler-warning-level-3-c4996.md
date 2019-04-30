@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401504"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Kompilator ostrzeżenie (poziom 3) C4996
 
@@ -19,7 +19,7 @@ Kompilator napotkał przestarzałe deklaracji. **To ostrzeżenie jest zawsze zam
 
 Oto niektóre typowe komunikaty C4996, które są generowane przez Biblioteka uruchomieniowa C i standardową bibliotekę, ale nie stanowi wyczerpującej listy. Skorzystaj z łączy lub Czytaj dalej sposobów, aby rozwiązać ten problem, lub aby wyłączyć to ostrzeżenie.
 
-- [Nazwa modelu POSIX dla tego elementu jest przestarzały. Zamiast tego należy użyć nazwy zgodność ISO C i C++: *nowa_nazwa*. Zobacz Pomoc online, aby uzyskać szczegółowe informacje.](#posix-function-names)
+- [Nazwa modelu POSIX dla tego elementu jest przestarzały. Zamiast tego należy użyć ISO C i C++ zgodność nazwy: *nowa_nazwa*. Zobacz Pomoc online, aby uzyskać szczegółowe informacje.](#posix-function-names)
 
 - [Ta funkcja lub zmienna może być niebezpieczne. Należy rozważyć użycie *safe_version* zamiast tego. Aby wyłączyć wycofywania, użyj \_CRT\_bezpiecznego\_nie\_ostrzeżenia.  Zobacz Pomoc online, aby uzyskać szczegółowe informacje.](#unsafe-crt-library-functions)
 
@@ -65,7 +65,7 @@ Poniżej przedstawiono niektóre typowe źródła C4996 ostrzeżeń i błędów.
 
 ### <a name="posix-function-names"></a>POSIX — nazwy funkcji
 
-**Nazwa modelu POSIX dla tego elementu jest przestarzały. Zamiast tego należy użyć nazwy zgodność ISO C i C++:** *nowa_nazwa*. **Zobacz Pomoc online, aby uzyskać szczegółowe informacje.**
+**Nazwa modelu POSIX dla tego elementu jest przestarzały. Zamiast tego należy użyć ISO C i C++ zgodność nazwy:** *nowa_nazwa*. **Zobacz Pomoc online, aby uzyskać szczegółowe informacje.**
 
 Microsoft zmienił niektórych funkcji CRT, aby były zgodne z C99 C ++ 03 nazw i reguł zdefiniowanych w implementacji funkcja globalna POSIX. Tylko oryginalne nazwy POSIX są przestarzałe, nie same funkcje. W większości przypadków wiodącego podkreślenia dodano nazwę funkcji POSIX, aby utworzyć nazwę standardowego zgodność. Kompilator generuje ostrzeżenie o zakończeniu obsługi w oryginalnej nazwy funkcji, a także sugeruje nazwę preferowanego.
 

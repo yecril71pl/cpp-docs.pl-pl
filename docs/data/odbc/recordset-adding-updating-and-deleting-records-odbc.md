@@ -19,11 +19,11 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
 ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395628"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)
 
@@ -202,4 +202,4 @@ Aby uzyskać więcej informacji o skutkach `AddNew`, `Edit`, i `Delete` funkcji 
 ## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: Blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Zestaw rekordów: blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

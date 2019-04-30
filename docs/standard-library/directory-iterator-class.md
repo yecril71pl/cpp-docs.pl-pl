@@ -26,11 +26,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
 ms.openlocfilehash: 6763f2a96b771fadbec311cf8740352fff53e29a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413849"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator — klasa
 
@@ -71,8 +71,8 @@ class directory_iterator;
 |[operator!=](#op_neq)|Zwraca `!(*this == right)`.|
 |[operator=](#op_as)|Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.|
 |[operator==](#op_eq)|Zwraca **true** tylko wtedy, gdy oba `*this` i *prawo* są Iteratory sekwencja kończenia i / lub czy nie end z sekwencji Iteratory.|
-|[operator *](#op_star)|Zwraca `myentry`.|
-|[operator ->](#op_cast)|Zwraca `&**this`.|
+|[operator*](#op_star)|Zwraca `myentry`.|
+|[operator->](#op_cast)|Zwraca `&**this`.|
 |[operator++](#op_increment)|Wywołania `increment()`, następnie zwraca `*this`, lub kopię obiektu wywołania `increment()`, następnie zwraca kopię.|
 
 ## <a name="requirements"></a>Wymagania
@@ -101,7 +101,7 @@ directory_iterator(directory_iterator&&) noexcept = default;
 *pval*<br/>
 Ścieżka Nazwa pliku przechowywanego.
 
-*we*<br/>
+*ec*<br/>
 Kod stanu błędu.
 
 *directory_iterator*<br/>
@@ -188,5 +188,5 @@ Liczba przyrostem.
 ## <a name="see-also"></a>Zobacz także
 
 [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>
 [Nawigacja w systemie plików (C++)](../standard-library/file-system-navigation.md)<br/>

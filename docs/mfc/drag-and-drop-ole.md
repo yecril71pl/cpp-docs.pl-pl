@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405927"
 ---
 # <a name="drag-and-drop-ole"></a>Przeciąganie i upuszczanie (OLE)
 
@@ -32,11 +32,11 @@ Jeśli nie znasz [obiekty danych i źródeł danych (OLE)](../mfc/data-objects-a
 
 Aby uzyskać więcej informacji na temat przeciągania i upuszczania zobacz:
 
-- [Przeciąganie i upuszczanie: Implementowanie miejsca źródłowego](../mfc/drag-and-drop-implementing-a-drop-source.md)
+- [Przeciąganie i upuszczanie: implementowanie miejsca źródłowego](../mfc/drag-and-drop-implementing-a-drop-source.md)
 
-- [Przeciąganie i upuszczanie: Implementowanie miejsca docelowego](../mfc/drag-and-drop-implementing-a-drop-target.md)
+- [Przeciąganie i upuszczanie: implementowanie miejsca docelowego](../mfc/drag-and-drop-implementing-a-drop-target.md)
 
-- [Przeciąganie i upuszczanie: Dostosowywanie](../mfc/drag-and-drop-customizing.md)
+- [Przeciąganie i upuszczanie: dostosowywanie](../mfc/drag-and-drop-customizing.md)
 
 ## <a name="see-also"></a>Zobacz także
 

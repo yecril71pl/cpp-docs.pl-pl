@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412972"
 ---
 # <a name="matchresults-class"></a>match_results — Klasa
 
@@ -69,7 +69,7 @@ Klasa szablonu opisuje obiekt, który kontroluje uniemożliwiającym sekwencje e
 |[Długość](#length)|Zwraca długość poddopasowanie.|
 |[max_size](#max_size)|Pobiera największą liczbę poddopasowania.|
 |[Stanowisko](#position)|Pobierz początkowe przesunięcie podgrupy.|
-|[Prefiks](#prefix)|Pobiera sekwencję przed pierwszym poddopasowanie.|
+|[prefix](#prefix)|Pobiera sekwencję przed pierwszym poddopasowanie.|
 |[Rozmiar](#size)|Zlicza poddopasowania.|
 |[str](#str)|Zwraca poddopasowanie.|
 |[suffix](#suffix)|Pobiera sekwencję po ostatnie poddopasowanie.|
@@ -304,7 +304,7 @@ Typ iteratora danych wyjściowych.
 *out*<br/>
 Strumień wyjściowy, do którego będą zapisywane dane.
 
-*FMT*<br/>
+*fmt*<br/>
 Ciąg formatu.
 
 *flagi*<br/>
@@ -418,7 +418,7 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*n*<br/>
 Indeks poddopasowanie.
 
 ### <a name="remarks"></a>Uwagi

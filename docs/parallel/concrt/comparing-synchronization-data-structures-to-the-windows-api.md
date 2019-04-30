@@ -6,11 +6,11 @@ helpviewer_keywords:
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
 ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414038"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Porównywanie struktur danych synchronizacji z Windows API
 
@@ -28,7 +28,7 @@ Postępuj zgodnie z struktury danych synchronizacji, które są dostarczane prze
 
 |Funkcja|`reader_writer_lock`|Zablokuj SRW|
 |-------------|--------------------------|--------------|
-|Inne niż obsługującą|Tak|Tak|
+|Inne niż obsługującą|Tak|Yes|
 |Podwyższyć poziom czytnika Writer (Obsługa uaktualnienia)|Nie|Nie|
 |Można obniżyć poziom Edytor do czytnika (Obsługa obniżenia poziomu)|Nie|Nie|
 |Blokady zapisu preferencji|Tak|Nie|

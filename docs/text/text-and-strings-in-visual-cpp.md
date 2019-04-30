@@ -25,11 +25,11 @@ helpviewer_keywords:
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
 ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411802"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Tekst i ciągi w programie Visual C++
 
@@ -46,10 +46,10 @@ W tym artykule opisano Unicode, specyfikacji do obsługi wszystkich zestawów zn
 [Obsługa zestawów znaków wielobajtowych (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 W tym artykule omówiono MBCS, zamiast Unicode do obsługi zestawów znaków, takich jak japońskim i chińskim, który nie może być przedstawiony w jednobajtowych.
 
-[Mapowania typ ogólny tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Mapowania typu ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Mapowania zwykłego tekstu specyficzne dla firmy Microsoft zawiera wiele typów danych, procedury i innych obiektów.
 
-[Instrukcje: Konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md)<br/>
+[Instrukcje: Konwertowanie między różnymi typami ciągów](../text/how-to-convert-between-various-string-types.md)<br/>
 Pokazuje, jak konwertować różnych typów ciągu Visual C++ na inne ciągi.
 
 ## <a name="related-sections"></a>Sekcje pokrewne

@@ -10,11 +10,11 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
 ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412153"
 ---
 # <a name="systemclock-structure"></a>system_clock — Struktura
 
@@ -57,7 +57,7 @@ Zegar jest *stały* , gdy jest *monotoniczny* i jeśli czas między taktami zega
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[system_clock::is_monotonic — stała](#is_monotonic_constant)|Określa, czy typ zegara jest monotoniczny.|
+|[system_clock::is_monotonic Constant](#is_monotonic_constant)|Określa, czy typ zegara jest monotoniczny.|
 |[system_clock::is_steady — stała](#is_steady_constant)|Określa, czy typ zegara jest stały.|
 
 ## <a name="requirements"></a>Wymagania
@@ -76,7 +76,7 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Menedżer transakcji*<br/>
+*Tm*<br/>
 A [time_t](../c-runtime-library/standard-types.md) obiektu.
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic — stała

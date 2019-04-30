@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 ms.openlocfilehash: 52a24bb2372cc7f22797ae7122b6659724c47b55
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413011"
 ---
 # <a name="map-class"></a>map — Klasa
 
@@ -195,8 +195,8 @@ Mapa Porządkuje elementy które kontroluje, przez wywołanie przechowywanego ob
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy mapy.|
 |[Liczba](#count)|Zwraca liczbę elementów w mapie, których klucz pasuje do klucza określonego w parametrze.|
 |[crbegin](#crbegin)|Zwraca iterator const, który wskazuje na pierwszy element w odwróconej mapie.|
-|[crend —](#crend)|Zwraca iterator const, który wskazuje na lokalizację po ostatnim elemencie w odwróconej mapie.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do mapy.|
+|[crend](#crend)|Zwraca iterator const, który wskazuje na lokalizację po ostatnim elemencie w odwróconej mapie.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do mapy.|
 |[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do mapy, ze wskazówką położenia.|
 |[pusty](#empty)|Zwraca **true** Jeśli mapa jest pusta.|
 |[koniec](#end)|Zwraca iterator poza końcem.|
@@ -204,12 +204,12 @@ Mapa Porządkuje elementy które kontroluje, przez wywołanie przechowywanego ob
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w mapie z określonych pozycji.|
 |[Znajdź](#find)|Zwraca iterator, który wskazuje na pierwszą lokalizację elementu w mapie, który ma klucz równy określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` użytego do skonstruowania mapy.|
-|[Wstaw](#insert)|Wstawia element lub zakres elementów do mapy na określonej pozycji.|
+|[insert](#insert)|Wstawia element lub zakres elementów do mapy na określonej pozycji.|
 |[key_comp](#key_comp)|Zwraca kopię obiektu porównania użytego do uporządkowania kluczy w mapie.|
 |[lower_bound](#lower_bound)|Zwraca iterator do pierwszego elementu w mapie, którego wartość klucza jest równa lub większa od określonego klucza.|
 |[max_size](#max_size)|Zwraca maksymalną długość mapy.|
 |[rbegin](#rbegin)|Zwraca iterator, który wskazuje na pierwszy element w odwróconej mapie.|
-|[rend —](#rend)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w odwróconej mapie.|
+|[rend](#rend)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w odwróconej mapie.|
 |[Rozmiar](#size)|Zwraca liczbę elementów w mapie.|
 |[swap](#swap)|Zamienia elementy z dwóch map.|
 |[upper_bound —](#upper_bound)|Zwraca iterator do pierwszego elementu w mapie, którego wartość klucza jest większa od określonego klucza.|

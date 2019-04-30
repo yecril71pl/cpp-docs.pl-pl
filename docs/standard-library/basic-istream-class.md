@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 5e7f6ae0728a7d28af1992cf4186d533f1a97330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414168"
 ---
 # <a name="basicistream-class"></a>basic_istream — Klasa
 
@@ -148,12 +148,12 @@ Zobacz przykład [basic_ifstream — klasa](../standard-library/basic-ifstream-c
 |[Odbierz](#peek)|Zwraca następny znak do odczytania.|
 |[putback](#putback)|Przełącza określony znak w strumieniu.|
 |[read](#read)|Odczytuje określoną liczbę znaków ze strumienia i przechowuje je w tablicy.|
-|[readsome —](#readsome)|Odczytywanie tylko buforu.|
+|[readsome](#readsome)|Odczytywanie tylko buforu.|
 |[seekg](#seekg)|Przenosi pozycję w strumieniu.|
 |[Sentry](#sentry)|Zagnieżdżona klasa opisująca obiekt, którego deklaracji struktury niesformatowany funkcje danych wejściowych i sformatowany funkcje danych wejściowych.|
 |[swap](#swap)|Wymienia to `basic_istream` obiektu dla podanych `basic_istream` obiektu parametru.|
 |[sync](#sync)|Synchronizuje urządzenie wejściowe skojarzone z usługą stream z buforu strumienia.|
-|[tellg —](#tellg)|Raporty Read bieżącej pozycji w strumieniu.|
+|[tellg](#tellg)|Raporty Read bieżącej pozycji w strumieniu.|
 |[unget](#unget)|Umieszcza ostatnio odczytują znak do strumienia.|
 
 ### <a name="operators"></a>Operatory
@@ -275,7 +275,7 @@ Znak, który powinien wygasają odczytu, jeśli zostanie osiągnięty zanim *lic
 *str*<br/>
 Ciąg, w którym mają zostać zapisane.
 
-*ch*<br/>
+*Ch*<br/>
 Znak można pobrać.
 
 *strbuf*<br/>
@@ -651,7 +651,7 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*Ch*<br/>
 Znak zostać umieszczona w strumieniu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -824,7 +824,7 @@ Położenie bezwzględne, w której chcesz przenieść wskaźnik odczytu.
 *Wyłączone*<br/>
 Przesunięcie do przesuwania wskaźnika odczytu względem *sposób*.
 
-*sposób*<br/>
+*way*<br/>
 Jedną z [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) wyliczenia.
 
 ### <a name="return-value"></a>Wartość zwracana

@@ -1,5 +1,5 @@
 ---
-title: 'TN061: komunikaty ON_NOTIFY i WM_NOTIFY'
+title: 'TN061: Komunikaty ON_NOTIFY i Wm_notify'
 ms.date: 06/28/2018
 f1_keywords:
 - ON_NOTIFY
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399580"
 ---
-# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: komunikaty ON_NOTIFY i WM_NOTIFY
+# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: Komunikaty ON_NOTIFY i Wm_notify
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -31,7 +31,7 @@ Ta uwaga techniczna podano informacje dotyczące nowy komunikat WM_NOTIFY i opis
 
 W Windows 3.x, formanty Powiadom nadrzędnych zdarzenia, takie jak kliknięcie myszą, zmian w zawartości i wyboru i rysowania tła kontrolki, wysyłając wiadomość do elementu nadrzędnego. Proste powiadomienia są wysyłane jako specjalne wm_command — komunikaty, podając mu kod powiadomienia (na przykład BN_CLICKED) i identyfikator spakowane do formantu *wParam* i uchwyt formantu w *lParam*. Należy pamiętać, że od momentu *wParam* i *lParam* są pełne, nie istnieje sposób do przekazania dodatkowych danych — te komunikaty mogą być tylko proste powiadomienia. Na przykład w powiadomieniu BN_CLICKED nie ma możliwości do wysyłania informacji o lokalizacji kursora myszy, gdy został kliknięty przycisk.
 
-Gdy kontrolek Windows 3.x, o których trzeba wysłać komunikatu powiadomienia, który zawiera dodatkowe dane, używają różnych komunikaty specjalnego przeznaczenia, w tym wm_ctlcolor — WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM WM_VKEYTOITEM i tak dalej. Te komunikaty można odzwierciedlenie do kontrolki, która wysłała je. Aby uzyskać więcej informacji, zobacz [TN062: odbicie komunikatu dla formantów Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
+Gdy kontrolek Windows 3.x, o których trzeba wysłać komunikatu powiadomienia, który zawiera dodatkowe dane, używają różnych komunikaty specjalnego przeznaczenia, w tym wm_ctlcolor — WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM WM_VKEYTOITEM i tak dalej. Te komunikaty można odzwierciedlenie do kontrolki, która wysłała je. Aby uzyskać więcej informacji, zobacz [TN062: Komunikat odbicie dla formantów Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
 
 **Komunikaty powiadomień w systemie Win32**
 
@@ -72,15 +72,15 @@ Niektóre powiadomienia są wspólne dla wszystkich nowych formantów Windows. T
 |Kod powiadomienia|Wysłana, ponieważ|
 |-----------------------|------------------|
 |NM_CLICK|Użytkownik kliknął lewym przyciskiem myszy formant|
-|NM_DBLCLK —|Użytkownik dwukrotnym kliknięciu lewym przyciskiem myszy formant|
+|NM_DBLCLK|Użytkownik dwukrotnym kliknięciu lewym przyciskiem myszy formant|
 |NM_RCLICK —|Użytkownik kliknął prawym przyciskiem myszy w kontrolce|
-|NM_RDBLCLK —|Użytkownik dwukrotnym kliknięciu prawym przyciskiem myszy w kontrolce|
-|NM_RETURN —|Użytkownik nacisnął klawisz ENTER, gdy kontrolka ma fokus wejścia|
-|NM_SETFOCUS —|Kontrolka ma fokus wprowadzania|
-|NM_KILLFOCUS —|Kontrolka utraciła fokus wprowadzania|
+|NM_RDBLCLK|Użytkownik dwukrotnym kliknięciu prawym przyciskiem myszy w kontrolce|
+|NM_RETURN|Użytkownik nacisnął klawisz ENTER, gdy kontrolka ma fokus wejścia|
+|NM_SETFOCUS|Kontrolka ma fokus wprowadzania|
+|NM_KILLFOCUS|Kontrolka utraciła fokus wprowadzania|
 |NM_OUTOFMEMORY —|Kontrolka nie mogła ukończyć operacji, ponieważ nie była dostępna wystarczająca ilość pamięci|
 
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Obsługa WM_NOTIFY komunikatów w aplikacjach MFC
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Obsługa komunikatów WM_NOTIFY w aplikacjach MFC
 
 Funkcja `CWnd::OnNotify` obsługuje komunikaty powiadomień. Jego domyślna implementacja sprawdza, czy mapę komunikatów w poszukiwaniu programy obsługi powiadomień do wywołania. Ogólnie rzecz biorąc, nie zastąpisz `OnNotify`. Zamiast tego zapewnia funkcję obsługi i Dodaj wpis mapy komunikatów dla tej obsługi na mapie komunikatów klasy okna właściciela.
 
@@ -114,7 +114,7 @@ gdzie parametrami są:
 *pNotifyStruct*<br/>
 Wskaźnik do struktury powiadomień, zgodnie z opisem w poprzedniej sekcji.
 
-*wynik*<br/>
+*result*<br/>
 Wskaźnik do kodu wyniku zostanie ustawiona przed zwróceniem.
 
 ## <a name="example"></a>Przykład
@@ -141,7 +141,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 
 Należy pamiętać, ClassWizard automatycznie dostarcza wskaźnik właściwego typu. Dostęp do struktury powiadomień przy użyciu jednej *pNMHDR* lub *pLVKeyDow*.
 
-##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE —
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE
 
 Jeśli musisz przetworzyć ten sam komunikat WM_NOTIFY zbiór kontrolek, można użyć ON_NOTIFY_RANGE zamiast ON_NOTIFY. Na przykład masz zestaw przycisków, dla której chcesz wykonać tę samą akcję dla komunikatu powiadomienia.
 
@@ -183,7 +183,7 @@ Identyfikator podrzędny formantu wysyłającego powiadomienia.
 *pNotifyStruct*<br/>
 Wskaźnik do struktury powiadomień, zgodnie z powyższym opisem.
 
-*wynik*<br/>
+*result*<br/>
 Wskaźnik do kodu wyniku zostanie ustawiona przed zwróceniem.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX —, ON_NOTIFY_EX_RANGE —

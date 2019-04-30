@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413895"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Instrukcje: Konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego
 
@@ -41,7 +41,7 @@ Aby uzyskać więcej informacji na temat `parallel_for` i innych równoległych 
 
 ## <a name="example"></a>Przykład
 
-Ten przykład modyfikuje poprzedni, aby działać na [std::array](../../standard-library/array-class-stl.md) zamiast obiektu na tablicy natywnej. OpenMP w wersji 2.0 i 2.5 jest dozwolone dla podpisanej typów całkowitych indeksu tylko w `parallel_for` konstrukcji, nie można użyć Iteratory do dostępu do elementów kontenera standardowej biblioteki języka C++ w sposób równoległy. Biblioteka równoległych wzorców (PPL) zapewnia [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu, który wykonuje zadania, w sposób równoległy, iteracyjne kontenera, takie jak te oferowane przez standardowej biblioteki języka C++. Używa ona tę samą logikę partycjonowania, `parallel_for` używa algorytmu. `parallel_for_each` Algorytm przypomina standardowej biblioteki C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmu, chyba że `parallel_for_each` algorytm wykonuje zadania jednocześnie.
+Ten przykład modyfikuje poprzedni, aby działać na [std::array](../../standard-library/array-class-stl.md) zamiast obiektu na tablicy natywnej. OpenMP w wersji 2.0 i 2.5 jest dozwolone dla podpisanej typów całkowitych indeksu tylko w `parallel_for` konstrukcji, nie można użyć Iteratory do dostępu do elementów kontenera standardowej biblioteki języka C++ w sposób równoległy. Biblioteka równoległych wzorców (PPL) zapewnia [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu, który wykonuje zadania, w sposób równoległy, iteracyjne kontenera, takie jak te oferowane przez C++ biblioteki standardowej. Używa ona tę samą logikę partycjonowania, `parallel_for` używa algorytmu. `parallel_for_each` Przypomina algorytm C++ biblioteki standardowej [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmu, chyba że `parallel_for_each` algorytm wykonuje zadania jednocześnie.
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 

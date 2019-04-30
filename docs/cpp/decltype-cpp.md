@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399086"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Wyrażenie*|Wyrażenie. Aby uzyskać więcej informacji, zobacz [wyrażenia](../cpp/expressions-cpp.md).|
+|*expression*|Wyrażenie. Aby uzyskać więcej informacji, zobacz [wyrażenia](../cpp/expressions-cpp.md).|
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>Przykład
 
-**Visual Studio 2017 i nowszym:** kompilator analizuje decltype argumentów, gdy szablony są deklarowane, a nie uruchomiony. W związku z tym jeśli specjalizacji zależne od innych znajduje się w argumencie decltype, nie zostaną przeniesione czasu wystąpienia i zostaną niezwłocznie przetworzone i wszystkie wynikowe błędy będą zdiagnozować, w tym czasie.
+**Visual Studio 2017 i nowszym:** Jeśli szablony są deklarowane, a nie wystąpienia, w którym kompilator analizuje decltype argumentów. W związku z tym jeśli specjalizacji zależne od innych znajduje się w argumencie decltype, nie zostaną przeniesione czasu wystąpienia i zostaną niezwłocznie przetworzone i wszystkie wynikowe błędy będą zdiagnozować, w tym czasie.
 
 Poniższy przykład przedstawia takich błąd kompilatora, który jest wywoływany w punkcie deklaracji:
 

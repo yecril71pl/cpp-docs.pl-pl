@@ -9,11 +9,11 @@ helpviewer_keywords:
 - startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 ms.openlocfilehash: 53873fa9340253ab5e8459eb442385641246f930
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396122"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizowanie argumentów wiersza polecenia języka C++
 
@@ -63,7 +63,7 @@ W poniższej tabeli przedstawiono przykładowe dane wejściowe i oczekiwanych da
 
 ### <a name="results-of-parsing-command-lines"></a>Wyniki analizy wiersze poleceń
 
-|Dane wejściowe wiersza polecenia|ARGV [1]|ARGV [2]|ARGV [3]|
+|Dane wejściowe wiersza polecenia|ARGV [1]|argv[2]|argv[3]|
 |-------------------------|---------------|---------------|---------------|
 |`"abc" d e`|`abc`|`d`|`e`|
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|

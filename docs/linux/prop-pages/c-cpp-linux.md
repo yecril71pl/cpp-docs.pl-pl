@@ -4,11 +4,11 @@ ms.date: 9/26/2017
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
 ms.openlocfilehash: 4719f02b1050472f35375b921fd1a6bd670c11c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393106"
 ---
 # <a name="cc-properties-linux-c"></a>Właściwości języka C/C++ (Linux C++)
 
@@ -16,7 +16,7 @@ ms.locfileid: "50498139"
 
 Właściwość | Opis | Opcje
 --- | ---| ---
-Dodatkowe katalogi dyrektywy Include | Określa jeden lub więcej katalogów do dodania do ścieżki dołączenia; Oddziel przy użyciu średnikami, jeśli istnieje więcej niż jedna. (-I[ścieżka]).
+Dodatkowe katalogi dyrektywy Include | Określa jeden lub więcej katalogów do dodania do ścieżki dołączenia; Oddziel przy użyciu średnikami, jeśli istnieje więcej niż jedna. (-I[path]).
 Format informacji o debugowaniu | Określa typ informacji o debugowaniu generowanych przez kompilator. | **Brak** — tworzy żadnych informacji debugowania, więc kompilacja może przebiegać szybciej.<br/>**Minimalne informacje debugowania** — Generuj informacje debugowania minimalny.<br/>**Pełne informacje debugowania (DWARF2)** — Generowanie debugowania dwarf2.<br/>
 Nazwa pliku obiektu | Określa nazwę do zastąpienia domyślnej nazwy pliku obiektu; może być nazwą pliku lub katalogu. (-o [nazwa]).
 Poziom ostrzeżeń | Wybierz jak ścisły kompilator o błędów kodu.  Inne flagi należy dodać bezpośrednio do dodatkowych opcji. (/ w, / weverything). | **Włącz Wyłącz wszystkie ostrzeżenia** — wyłącza wszystkie ostrzeżenia kompilatora.<br/>**EnableAllWarnings** -włącza wszystkie ostrzeżenia, w tym te domyślnie wyłączone.<br/>
@@ -24,7 +24,7 @@ Traktuj ostrzeżenia jako błędy | Traktuje wszystkie ostrzeżenia kompilatora 
 Dodatkowe ostrzeżenia języka C | Definiuje zestaw dodatkowych komunikatów ostrzegawczych.
 Dodatkowe ostrzeżenia języka C++ | Definiuje zestaw dodatkowych komunikatów ostrzegawczych.
 Włącz tryb informacji pełnej | Po włączeniu trybu informacji pełnej, to narzędzie wypisuje więcej informacji dotyczących diagnozowania kompilacji.
-Kompilator języka C | Określa program do wywołania podczas kompilacji źródłowych plików języka C lub ścieżkę do kompilatora języka C w systemie zdalnym.
+C Compiler | Określa program do wywołania podczas kompilacji źródłowych plików języka C lub ścieżkę do kompilatora języka C w systemie zdalnym.
 Kompilator C++ | Określa program do wywołania podczas kompilacji pliki źródłowe C++ lub ścieżkę do kompilatora języka C++ w systemie zdalnym.
 Limit czasu kompilacji | Limit czasu zdalnej kompilacji, w milisekundach.
 Kopiuj pliki obiektów | Określa, czy kopiować pliki skompilowanych obiektów z systemu zdalnego na maszynę lokalną.
@@ -72,7 +72,7 @@ Standard języka C++ | Określa standard języka C++. | **Default**<br/>**C ++ 0
 
 Właściwość | Opis | Opcje
 --- | ---| ---
-Kompiluj jako | Wybierz opcję języka kompilowania dla plików .c i .cpp.  "Default" wykryje na podstawie rozszerzenia c lub CPP rozszerzenie. (-x c, - x c ++) | **Domyślne** — domyślne.<br/>**Kompiluj jako kod C** — Kompiluj jako kod C.<br/>**Kompiluj jako kod C++** — Kompiluj jako kod C++.<br/>
+Kompiluj jako | Wybierz opcję języka kompilowania dla plików .c i .cpp.  "Default" wykryje na podstawie rozszerzenia c lub CPP rozszerzenie. (-x c, -x c++) | **Domyślne** — domyślne.<br/>**Kompiluj jako kod C** — Kompiluj jako kod C.<br/>**Kompiluj jako kod C++** — Kompiluj jako kod C++.<br/>
 Wymuszone pliki dołączane | Co najmniej jeden wymuszony plik dyrektywy include plików (-include [nazwa])
 
 ## <a name="additional-options"></a>Dodatkowe opcje

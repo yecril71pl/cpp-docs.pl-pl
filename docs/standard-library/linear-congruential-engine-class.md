@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413258"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine — Klasa
 
@@ -49,10 +49,10 @@ class linear_congruential_engine{
 Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 *A*<br/>
-**Mnożnik**. **Warunek wstępny**: sekcję Zobacz uwagi.
+**Mnożnik**. **Warunek wstępny**: Zobacz sekcję Uwagi.
 
 *C*<br/>
-**Inkrementacja**. **Warunek wstępny**: sekcję Zobacz uwagi.
+**Inkrementacja**. **Warunek wstępny**: Zobacz sekcję Uwagi.
 
 *M*<br/>
 **Modulo**. **Warunek wstępny**: Zobacz uwagi.
@@ -80,7 +80,7 @@ Jeśli *M* jest nie jest zerowa, wartości argumentów szablonu *A* i *C* musi b
 
 Chociaż można utworzyć generatora z tego aparatu bezpośrednio, umożliwia także jeden z tych wstępnie zdefiniowanych definicji typów.
 
-`minstd_rand0`: 1988 minimalne standardowa aparat (Lewis Goodman i Miller 1969).
+`minstd_rand0`: 1988 minimalny standardowa aparat (Lewis Goodman i Miller 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
@@ -102,4 +102,4 @@ Aby uzyskać szczegółowe informacje dotyczące algorytmu aparatu bloku liniowy
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

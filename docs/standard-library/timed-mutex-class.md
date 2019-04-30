@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
 ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411958"
 ---
 # <a name="timedmutex-class"></a>timed_mutex — Klasa
 
@@ -42,14 +42,14 @@ class timed_mutex;
 |Nazwa|Opis|
 |----------|-----------------|
 |[timed_mutex](#timed_mutex)|Konstruuje `timed_mutex` obiektu, który nie jest zablokowany.|
-|[timed_mutex:: ~ timed_mutex — destruktor](#dtortimed_mutex_destructor)|Zwalnia wszelkie zasoby, które są używane przez `timed_mutex` obiektu.|
+|[timed_mutex::~timed_mutex Destructor](#dtortimed_mutex_destructor)|Zwalnia wszelkie zasoby, które są używane przez `timed_mutex` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[lock](#lock)|Blokuje wątek wywołujący, aż wątek uzyskuje własność `mutex`.|
-|[try_lock —](#try_lock)|Próby uzyskania własności `mutex` bez blokowania.|
+|[try_lock](#try_lock)|Próby uzyskania własności `mutex` bez blokowania.|
 |[try_lock_for](#try_lock_for)|Próby uzyskania własności `mutex` określony interwał czasu.|
 |[try_lock_until](#try_lock_until)|Próby uzyskania własności `mutex` do określonego czasu.|
 |[unlock](#unlock)|Zwalnia własność `mutex`.|
@@ -60,7 +60,7 @@ class timed_mutex;
 
 **Namespace:** standardowe
 
-## <a name="lock"></a>  timed_mutex::Lock —
+## <a name="lock"></a>  timed_mutex::lock
 
 Blokuje wątek wywołujący, aż wątek uzyskuje własność `mutex`.
 
@@ -92,7 +92,7 @@ Zwalnia wszelkie zasoby, które są używane przez `mutex` obiektu.
 
 Jeśli obiekt jest zablokowany, po uruchomieniu destruktora, zachowanie jest niezdefiniowane.
 
-## <a name="try_lock"></a>  timed_mutex::try_lock —
+## <a name="try_lock"></a>  timed_mutex::try_lock
 
 Próby uzyskania własności `mutex` bez blokowania.
 
@@ -108,7 +108,7 @@ bool try_lock();
 
 Jeśli wątek wywołujący jest już właścicielem `mutex`, zachowanie jest niezdefiniowane.
 
-## <a name="try_lock_for"></a>  timed_mutex::try_lock_for —
+## <a name="try_lock_for"></a>  timed_mutex::try_lock_for
 
 Próby uzyskania własności `mutex` bez blokowania.
 
@@ -130,7 +130,7 @@ A [chrono::duration](../standard-library/duration-class.md) obiektu, który okre
 
 Jeśli wątek wywołujący jest już właścicielem `mutex`, zachowanie jest niezdefiniowane.
 
-## <a name="try_lock_until"></a>  timed_mutex::try_lock_until —
+## <a name="try_lock_until"></a>  timed_mutex::try_lock_until
 
 Próby uzyskania własności `mutex` bez blokowania.
 
@@ -154,7 +154,7 @@ Punkt w czasie, który określa próg, po upływie którego metoda nie jest już
 
 Jeśli wątek wywołujący jest już właścicielem `mutex`, zachowanie jest niezdefiniowane.
 
-## <a name="unlock"></a>  timed_mutex::Unlock —
+## <a name="unlock"></a>  timed_mutex::unlock
 
 Zwalnia własność `mutex`.
 

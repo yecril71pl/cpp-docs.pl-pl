@@ -50,11 +50,11 @@ helpviewer_keywords:
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
 ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397682"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -930,7 +930,7 @@ Typ opakowany Iteratory.
 *pierwszy*<br/>
 Pierwszy iterator do opakowania.
 
-*ostatni*<br/>
+*last*<br/>
 Drugi iterator do opakowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1109,7 +1109,7 @@ range_adapter(Iter first, Iter last);
 *pierwszy*<br/>
 Pierwszy iterator do opakowania.
 
-*ostatni*<br/>
+*last*<br/>
 Drugi iterator do opakowania.
 
 *right*<br/>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413765"
 ---
 # <a name="enableif-class"></a>enable_if — Klasa
 
@@ -80,7 +80,7 @@ your_return_type_if_present
 rest_of_function_declaration_goes_here
 ```
 
-- Scenariusz 4: Jeśli funkcji ma argument bez szablonu, można opakować typ:
+- Scenariusz 4: Jeśli funkcja ma argument szablonem, może zawijać się jej typ:
 
 ```cpp
     template <typename T>
@@ -117,7 +117,7 @@ Scenariusz 4 działa w konstruktorach, które nie mają zwracanych typów, a tym
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie opisano sposób standardowej biblioteki języka C++ funkcji szablonu [std::make_pair()](../standard-library/utility-functions.md#make_pair) wykorzystuje `enable_if`.
+W tym przykładzie opisano sposób, w jaki C++ standardowej biblioteki szablonów funkcji [std::make_pair()](../standard-library/utility-functions.md#make_pair) wykorzystuje `enable_if`.
 
 ```cpp
 void func(const pair<int, int>&);
