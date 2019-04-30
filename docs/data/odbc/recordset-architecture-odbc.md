@@ -14,11 +14,11 @@ helpviewer_keywords:
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
 ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395641"
 ---
 # <a name="recordset-architecture-odbc"></a>Zestaw rekordów: Architektura (ODBC)
 
@@ -94,5 +94,5 @@ Aby uzyskać więcej informacji i przykładów, zobacz [wymiana pól rekordów: 
 ## <a name="see-also"></a>Zobacz także
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: Deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)

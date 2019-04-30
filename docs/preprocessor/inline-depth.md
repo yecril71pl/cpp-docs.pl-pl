@@ -9,11 +9,11 @@ helpviewer_keywords:
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
 ms.openlocfilehash: 18d772c8a9f6218ed3afaa385f214445bd0fe8e6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383688"
 ---
 # <a name="inlinedepth"></a>inline_depth
 Określa algorytm heurystyczny wbudowane wyszukiwanie głębi, taki sposób, że żadna funkcja nie będzie śródwierszowych, jeśli jest na głębokości (w wykresu wywołań) większy niż *n*.

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
 ms.openlocfilehash: 1cd7abbbc43ae56861b3b83451b41933b8b0b4f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693415"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345996"
 ---
 # <a name="add-a-member-function"></a>Dodaj funkcję składową
 
@@ -73,7 +73,7 @@ Po dodaniu funkcji składowej za pomocą kreatora można edytować kod w środow
 
   Wyświetla listę parametrów, które zostały dodane do funkcji składowej. Aby dodać parametr do listy, podać typ i nazwa w **typ parametru** i **Nazwa parametru** pola, a następnie wybierz pozycję **Dodaj**. Aby usunąć parametr z listy, wybierz parametr, a następnie wybierz pozycję **Usuń**.
 
-- **Dostęp do**
+- **Dostęp**
 
   Ustawia dostęp do funkcji składowej. Modyfikatory dostępu są słowami kluczowymi, określające dostęp, innych klas, że funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat określania dostępu, zobacz [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md). Poziom dostępu do funkcji elementu członkowskiego jest równa `public` domyślnie.
 

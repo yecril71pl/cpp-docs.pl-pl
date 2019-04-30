@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377364"
 ---
 # <a name="operator-overloading"></a>Przeładowanie operatora
 
@@ -43,7 +43,7 @@ Nazwa Przeciążony operator jest **operator** *x*, gdzie *x* jest operatorem, k
 |**%=**|Modulo i przypisanie|plików binarnych|
 |**&**|Bitowe ORAZ|plików binarnych|
 |**&**|Adres|Jednoargumentowy|
-|**&&**|AND logiczne|plików binarnych|
+|**&&**|Logicznego AND|plików binarnych|
 |**&=**|Bitowe AND i przypisanie|plików binarnych|
 |**( )**|Wywołanie funkcji|—|
 |**( )**|Operator rzutowania|Jednoargumentowy|
@@ -67,7 +67,7 @@ Nazwa Przeciążony operator jest **operator** *x*, gdzie *x* jest operatorem, k
 |**<<=**|Przypisanie przesunięcia w lewo|plików binarnych|
 |**<=**|Mniejsze niż lub równe|plików binarnych|
 |**=**|Przypisanie|plików binarnych|
-|**==**|Równość|plików binarnych|
+|**==**|Równości|plików binarnych|
 |**>**|Większe niż|plików binarnych|
 |**>=**|Większe niż lub równe|plików binarnych|
 |**>>**|Przesunięcie w prawo|plików binarnych|
@@ -77,7 +77,7 @@ Nazwa Przeciążony operator jest **operator** *x*, gdzie *x* jest operatorem, k
 |**^=**|Wykluczające i przypisanie|plików binarnych|
 |**&#124;**|Bitowe alternatywne OR|plików binarnych|
 |**&#124;=**|Bitowe OR alternatywne i przypisanie|plików binarnych|
-|**&#124;&#124;**|OR logiczne|plików binarnych|
+|**&#124;&#124;**|Logicznego OR|plików binarnych|
 |**~**|Uzupełnienie jedynkowe|Jednoargumentowy|
 |**delete**|Usuwanie|—|
 |**new**|New|—|

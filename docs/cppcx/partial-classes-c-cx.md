@@ -1,15 +1,15 @@
 ---
-title: Klasy częściowe (C + +/ CX)
+title: Klasy częściowe (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
 ms.openlocfilehash: 71df19e98192a7704d4528fe730ce79977383a9b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385001"
 ---
-# <a name="partial-classes-ccx"></a>Klasy częściowe (C + +/ CX)
+# <a name="partial-classes-ccx"></a>Klasy częściowe (C++/CX)
 
 Częściowa klasa jest konstrukcja, która obsługuje scenariusze, w których w przypadku modyfikowania jednej części definicji klasy i automatyczne generowanie kodu oprogramowania — na przykład projektant XAML — jest także modyfikowanie kodu w tej samej klasy. Za pomocą klasy częściowej, można zapobiec projektanta zastępowanie kodu. W projekcie programu Visual Studio `partial` modyfikator, jest stosowane automatycznie wygenerowanego pliku.
 
@@ -99,4 +99,4 @@ W poniższym przykładzie zdefiniowano `Address` klasy przez dwa pliki kodu. Mod
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

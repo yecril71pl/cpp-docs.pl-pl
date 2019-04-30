@@ -1,5 +1,5 @@
 ---
-title: 'TN058: implementacja stanu modułu MFC'
+title: 'TN058: Implementacja stanu modułu MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.implementation
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399605"
 ---
-# <a name="tn058-mfc-module-state-implementation"></a>TN058: implementacja stanu modułu MFC
+# <a name="tn058-mfc-module-state-implementation"></a>TN058: Implementacja stanu modułu MFC
 
 > [!NOTE]
 > Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
@@ -30,7 +30,7 @@ Przed odczytaniem ta uwaga, odnoszą się do "Zarządzanie stanu danych z MFC �
 
 ## <a name="overview"></a>Omówienie
 
-Istnieją trzy rodzaje informacji o stanie MFC: stan modułu, stan procesu i stan wątku. Czasami można połączyć te typy stanu. Na przykład map uchwyt MFC są zarówno modułu lokalnych, jak i lokalnych wątku. Dzięki temu dwóch różnych modułach zapewnienie różnych mapowań w każdym z jego wątków.
+Istnieją trzy rodzaje informacji o stanie MFC: Stan modułu, stan procesu i stan wątku. Czasami można połączyć te typy stanu. Na przykład map uchwyt MFC są zarówno modułu lokalnych, jak i lokalnych wątku. Dzięki temu dwóch różnych modułach zapewnienie różnych mapowań w każdym z jego wątków.
 
 Stan procesu i stan wątku są podobne. Te elementy danych są rzeczy, które zostały tradycyjnie zmiennych globalnych, ale mają należy specyficzne dla danego procesu lub wątek do właściwego systemach Win32 pomoc techniczną lub obsługa wielowątkowości w odpowiednie. Jakiej kategorii elementu danych mieści się w zależy od tego elementu i jego żądaną semantyki w odniesieniu do granic procesu i wątku.
 

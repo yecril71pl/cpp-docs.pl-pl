@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4431
 ms.assetid: 58434ab6-dd8d-427b-953a-602fb7453ae6
 ms.openlocfilehash: 1cef70ab02148924bf6a0f29e298b34c54b28bc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391520"
 ---
 # <a name="compiler-warning-level-4-c4431"></a>Kompilator ostrzeżenie (poziom 4) C4431
 
-brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnego int
+brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnie typu int
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: Visual C++ nie tworzy już identyfikatory bez typu jako domyślnie. Typ identyfikatora musi być jawnie określone.
+Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla wizualizacji C++ 2005: Wizualne C++ jako domyślnie nie jest już tworzy identyfikatory bez typu. Typ identyfikatora musi być jawnie określone.
 
 To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
 

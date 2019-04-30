@@ -3,15 +3,15 @@ title: Enums (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
 ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752145"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345818"
 ---
 # <a name="enums-ccx"></a>Enums (C++/CX)
 
-C + +/ CX obsługuje `public enum class` — słowo kluczowe, czyli analagous do standardowego języka C++ `scoped  enum`. Kiedy używasz moduł wyliczający, który jest zadeklarowana za pomocą `public enum class` — słowo kluczowe, musi być identyfikatorem wyliczenia zakresu z każdą wartość modułu wyliczającego.
+C++Obsługuje /CX `public enum class` — słowo kluczowe, czyli analagous do standardowego C++ `scoped  enum`. Kiedy używasz moduł wyliczający, który jest zadeklarowana za pomocą `public enum class` — słowo kluczowe, musi być identyfikatorem wyliczenia zakresu z każdą wartość modułu wyliczającego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -41,4 +41,4 @@ Następny przykład pokazuje, jak Rzutowanie na odpowiedniki liczbowych i wykony
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

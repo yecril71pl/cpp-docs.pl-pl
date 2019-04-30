@@ -1,6 +1,6 @@
 ---
 title: Optymalizacja kodu
-ms.date: 12/10/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: ae60070959c683a6365992e7b6cc510fd4111b36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295222"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341117"
 ---
 # <a name="optimizing-your-code"></a>Optymalizacja kodu
 
@@ -23,13 +23,13 @@ Dzięki optymalizacji pliku wykonywalnego, można osiągnąć kompromis między 
 
 W następujących tematach opisano niektóre funkcje optymalizacji w języku C/C++.
 
-[Optymalizacja pragm i słów kluczowych](optimization-pragmas-and-keywords.md)<br/>
+[Optymalizacja Pragm i słów kluczowych](optimization-pragmas-and-keywords.md) \
 Lista słowa kluczowe i pragmy, można użyć w kodzie, aby zwiększyć wydajność.
 
-[Opcje kompilatora w rozbiciu na kategorie](reference/compiler-options-listed-by-category.md)<br/>
+[Opcje kompilatora w rozbiciu na kategorie](reference/compiler-options-listed-by-category.md) \
 Lista **/O** opcje kompilatora, które dotyczą wykonywania rozmiar szybkość lub kodu.
 
-[Deklarator odwołania do wartości R: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[Deklarator odwołania do wartości r: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
 Odwołania Rvalue wspierają implementację *semantyki przenoszenia*. Jeśli przenoszenie semantyki są używane do implementowania biblioteki szablonów, wydajność aplikacji, które używają tych szablonów może znacznie poprawić.
 
 ### <a name="the-optimize-pragma"></a>Pragma — Optymalizuj
@@ -52,10 +52,10 @@ Paradoxically optymalizacji programu dla danej szybkości spowodować wolniejsze
 
 W poniższych tematach omówiono dobrych praktyk programowania.
 
-[Wskazówki dotyczące poprawiania kodu wrażliwego na czas](tips-for-improving-time-critical-code.md)<br/>
+[Wskazówki dotyczące poprawiania kodu wrażliwego na czas](tips-for-improving-time-critical-code.md) \
 Lepiej techniki tworzenia kodu może zapewnić lepszą wydajność. W tym temacie sugeruje kodowania technik, które pomogą Ci upewnić się, czy pomyślnie wykonać czas ma istotne znaczenie fragmenty kodu.
 
-[Najlepsze rozwiązania dotyczące optymalizacji](optimization-best-practices.md)<br/>
+[Najlepsze rozwiązania dotyczące optymalizacji](optimization-best-practices.md) \
 Zawiera ogólne wytyczne dotyczące najlepszy sposób optymalizacji aplikacji.
 
 ## <a name="debugging-optimized-code"></a>Debugowanie zoptymalizowanego kodu
@@ -86,20 +86,19 @@ Poniższe tematy zawierają informacje o tym, jak zoptymalizować kompilowania, 
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Optymalizacja pragm i słów kluczowych](optimization-pragmas-and-keywords.md)<br/>
-[Poprawianie wydajności kompilatora](improving-compiler-throughput.md)<br/>
-[Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](why-floating-point-numbers-may-lose-precision.md)<br/>
-[Odwzorowanie liczby zmiennoprzecinkowej IEEE](ieee-floating-point-representation.md)<br/>
-[Wskazówki dotyczące poprawiania kodu wrażliwego na czas](tips-for-improving-time-critical-code.md)<br/>
-[Korzystanie z nazwy funkcji bez () nie tworzy kodu](using-function-name-without-parens-produces-no-code.md)<br/>
-[Najlepsze rozwiązania dotyczące optymalizacji](optimization-best-practices.md)<br/>
-[Optymalizacje sterowane profilem](profile-guided-optimizations.md)<br/>
-[Zmienne środowiskowe dla optymalizacji sterowanych profilem](environment-variables-for-profile-guided-optimizations.md)<br/>
-[PgoAutoSweep](pgoautosweep.md)<br/>
-[pgomgr](pgomgr.md)<br/>
-[pgosweep](pgosweep.md)<br/>
-[Instrukcje: Scalanie wielu profilów PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-[Dodatek Visual Studio 2013 PGO w Centrum wydajności i diagnostyki](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)<br/>
+[Optymalizacja Pragm i słów kluczowych](optimization-pragmas-and-keywords.md) \
+[Poprawianie wydajności kompilatora](improving-compiler-throughput.md) \
+[Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](why-floating-point-numbers-may-lose-precision.md) \
+[Odwzorowanie liczby zmiennoprzecinkowej IEEE](ieee-floating-point-representation.md) \
+[Wskazówki dotyczące poprawiania kodu wrażliwego na czas](tips-for-improving-time-critical-code.md) \
+[Korzystanie z nazwy funkcji bez () nie tworzy kodu](using-function-name-without-parens-produces-no-code.md) \
+[Najlepsze rozwiązania dotyczące optymalizacji](optimization-best-practices.md) \
+[Optymalizacje sterowane profilem](profile-guided-optimizations.md) \
+[Zmienne środowiskowe dla optymalizacji sterowanych profilem](environment-variables-for-profile-guided-optimizations.md) \
+[PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[Instrukcje: Scalanie wielu profilów PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Zobacz także
 

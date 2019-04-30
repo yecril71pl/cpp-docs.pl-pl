@@ -3,11 +3,11 @@ title: Ogólne właściwości (projekt języka Linux C++ Makefile) | Dokumentacj
 ms.date: 9/26/2017
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
 ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393028"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Właściwości projektu pliku reguł programu make (Linux C++)
 

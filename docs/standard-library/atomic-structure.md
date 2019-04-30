@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376672"
 ---
 # <a name="atomic-structure"></a>atomic — Struktura
 
@@ -32,9 +32,9 @@ struct atomic;
 |[Atomic::operator Ty](#op_ty)|Odczytuje i zwraca przechowywaną wartość. ([Atomic::Load —](#load))|
 |[Atomic::operator =](#op_eq)|Używa określonej wartości, aby zastąpić przechowywaną wartość. ([Atomic::store —](#store))|
 |[Atomic::operator ++](#op_inc)|Zwiększa przechowywaną wartość. Używane tylko przez liczbę całkowitą i wskaźnik specjalizacji.|
-|[Atomic::operator +=](#op_add_eq)|Dodaje określoną wartość do przechowywanej wartości. Używane tylko przez liczbę całkowitą i wskaźnik specjalizacji.|
-|[Atomic::operator--](#op_dec)|Dekrementuje przechowywaną wartość. Używane tylko przez liczbę całkowitą i wskaźnik specjalizacji.|
-|[Atomic::operator-=](#op_sub_eq)|Odejmuje określoną wartość z przechowywanej wartości. Używane tylko przez liczbę całkowitą i wskaźnik specjalizacji.|
+|[atomic::operator+=](#op_add_eq)|Dodaje określoną wartość do przechowywanej wartości. Używane tylko przez liczbę całkowitą i wskaźnik specjalizacji.|
+|[atomic::operator--](#op_dec)|Dekrementuje przechowywaną wartość. Używane tylko przez liczbę całkowitą i wskaźnik specjalizacji.|
+|[atomic::operator-=](#op_sub_eq)|Odejmuje określoną wartość z przechowywanej wartości. Używane tylko przez liczbę całkowitą i wskaźnik specjalizacji.|
 |[Atomic::operator & =](#op_and_eq)|Wykonuje bitową operację i na określoną wartość i przechowywana wartość. Używane tylko przez liczbę całkowitą specjalizacji.|
 |[Atomic::operator&#124;=](#op_or_eq)|Wykonuje bitową operację lub na określoną wartość i przechowywana wartość. Używane tylko przez liczbę całkowitą specjalizacji.|
 |[Atomic::operator ^ =](#op_xor_eq)|Wykonuje wyłączny sumy bitowej lub na określoną wartość i przechowywana wartość. Używane tylko przez liczbę całkowitą specjalizacji.|
@@ -48,7 +48,7 @@ struct atomic;
 |[fetch_xor](#fetch_xor)|Wykonuje wyłączny sumy bitowej lub na określoną wartość i przechowywana wartość.|
 |[is_lock_free](#is_lock_free)|Określa, czy niepodzielne operacje na **to** są *wolne od blokady*. Typ niepodzielny *wolne od blokady* Jeśli żadne operacje niepodzielne tego typu nie używają blokady.|
 |[Obciążenia](#load)|Odczytuje i zwraca przechowywaną wartość.|
-|[Store](#store)|Używa określonej wartości, aby zastąpić przechowywaną wartość.|
+|[store](#store)|Używa określonej wartości, aby zastąpić przechowywaną wartość.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -61,7 +61,7 @@ Istnieje specjalizacja, dla każdego integralnego typu z wyjątkiem **bool**. Ka
 ||||
 |-|-|-|
 |**Atomic\<char >**|**Atomic\<podpisany char >**|**Atomic\<unsigned char >**|
-|**Atomic\<char16_t >**|**Atomic\<char32_t >**|**Atomic\<wchar_t >**|
+|**Atomic\<char16_t >**|**atomic\<char32_t>**|**Atomic\<wchar_t >**|
 |**Atomic\<krótki >**|**Atomic\<typ unsigned short >**|**Atomic\<int >**|
 |**Atomic\<unsigned int >**|**Atomic\<długa >**|**Atomic\<unsigned long >**|
 |**Atomic\<long long >**|**Atomic\<unsigned long long >**|
@@ -660,5 +660,5 @@ Ta funkcja elementu członkowskiego niepodzielne przechowuje *wartość* w `*thi
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<niepodzielne >](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)<br/>
 [Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>

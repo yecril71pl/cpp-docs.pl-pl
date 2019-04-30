@@ -1,31 +1,31 @@
 ---
-title: System typów (C + +/ CX)
+title: System typów (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
 ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392092"
 ---
-# <a name="type-system-ccx"></a>System typów (C + +/ CX)
+# <a name="type-system-ccx"></a>System typów (C++/CX)
 
-Za pomocą architektury środowiska wykonawczego Windows, można użyć C + +/ CX, Visual Basic, Visual C# i JavaScript do pisania aplikacji i składników, które bezpośrednio dostęp do interfejsu API Windows współpracować z innymi aplikacji środowiska wykonawczego Windows i składników. Aplikacje uniwersalne platformy Windows, które zostały napisane w języku C++ kompilacji do kodu macierzystego, który jest wykonywany bezpośrednio w procesorze CPU. Aplikacje uniwersalne platformy Windows, które zostały napisane w języku C# lub Visual Basic skompiluj go do języka Microsoft intermediate language (MSIL), a następnie wykonaj w środowisku uruchomieniowym języka (wspólnego CLR). Wykonywanie aplikacji uniwersalnych platformy Windows, które zostały napisane w języku JavaScript w środowisku uruchomieniowym. Składniki systemu operacyjnego Windows w czasie wykonywania, samodzielnie są napisane w języku C++ i uruchomić jako kodu natywnego. Wszystkie te składniki i aplikacje platformy uniwersalnej Windows komunikują się bezpośrednio za pomocą interfejsem binarnym aplikacji (ABI) środowiska wykonawczego Windows.
+Za pomocą architektury środowiska wykonawczego Windows, możesz użyć C++/CX, Visual Basic, Visual C# i JavaScript do pisania aplikacji i składników, które bezpośrednio dostęp do interfejsu API Windows współpracować z innymi aplikacji środowiska wykonawczego Windows i składników. Aplikacje uniwersalne platformy Windows, które zostały napisane w języku C++ kompilacji do kodu macierzystego, który jest wykonywany bezpośrednio w procesorze CPU. Aplikacje uniwersalne platformy Windows, które zostały napisane w języku C# lub Visual Basic skompiluj go do języka Microsoft intermediate language (MSIL), a następnie wykonaj w środowisku uruchomieniowym języka (wspólnego CLR). Wykonywanie aplikacji uniwersalnych platformy Windows, które zostały napisane w języku JavaScript w środowisku uruchomieniowym. Składniki systemu operacyjnego Windows w czasie wykonywania, samodzielnie są napisane w języku C++ i uruchomić jako kodu natywnego. Wszystkie te składniki i aplikacje platformy uniwersalnej Windows komunikują się bezpośrednio za pomocą interfejsem binarnym aplikacji (ABI) środowiska wykonawczego Windows.
 
-Aby włączyć obsługę środowiska wykonawczego Windows w nowoczesnych idiom języka C++, firma Microsoft utworzyła C + +/ CX. C + +/ CX udostępnia wbudowane typy podstawowe i implementacji podstawowych typów środowiska wykonawczego Windows, które umożliwiają aplikacji C++ i składników do komunikowania się za pośrednictwem interfejsu ABI z aplikacjami, które są zapisywane w innych językach. Możesz używać dowolnego typu środowiska uruchomieniowego Windows lub tworzenie klas, struktur, interfejsów i inne typy danych zdefiniowane przez użytkownika, które mogą być wykorzystane przez inne aplikacje platformy uniwersalnej Windows i składników. aplikacji Universal Windows Platform, która jest napisana w języku C + +/ CX umożliwia również regularne C++ klasy i struktury tak długo, jak nie posiadają powszechnej dostępności.
+Aby włączyć obsługę środowiska wykonawczego Windows w nowoczesne C++ idiom, Microsoft utworzone C++/CX. C++/CX udostępnia wbudowane typy podstawowe i implementacji podstawowych Windows Runtime typów tego Włącz C++ aplikacji i składników do komunikowania się za pośrednictwem interfejsu ABI z aplikacjami, które są zapisywane w innych językach. Możesz używać dowolnego typu środowiska uruchomieniowego Windows lub tworzenie klas, struktur, interfejsów i inne typy danych zdefiniowane przez użytkownika, które mogą być wykorzystane przez inne aplikacje platformy uniwersalnej Windows i składników. aplikacji Universal Windows Platform, które są zapisywane w C++/CX umożliwia również regularne C++ klas i struktur, tak długo, jak nie posiadają powszechnej dostępności.
 
-Szczegółowe omówienie C + +/ CX języka Prognoza i jak to działa w sposób niewidoczny, zobacz te Posty na blogu:
+Aby uzyskać szczegółowe omówienie C++/CX języka projekcji i jak to działa w sposób niewidoczny, zobacz te Posty na blogu:
 
-1. [C + +/ CX część 0 \[n\]: Wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C++/CX część 0 \[n\]: Wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C + +/ CX, część 1 z \[n\]: Proste klasy](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C++/CX, część 1 z \[n\]: Proste klasy](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C + +/ CX część 2 \[n\]: Typy, które systemy Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C++/CX część 2 \[n\]: Typy, które systemy Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
-1. [C + +/ CX część 3 \[n\]: W trakcie tworzenia](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
+1. [C++/CX część 3 \[n\]: W trakcie tworzenia](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C + +/ CX część 4 \[n\]: Statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C++/CX część 4 \[n\]: Statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Pliki metadanych (.winmd) Windows
 
@@ -40,16 +40,16 @@ Czy typ lub metoda jest widoczny w metadanych zależy od tego, jakie modyfikator
 |**Publikowany w metadanych**|**Nie jest publikowany w metadanych**|
 |public|private|
 |protected|internal|
-|public, protected|prywatny chroniony|
+|public, protected|private protected|
 
-Możesz użyć **przeglądarki obiektów** do wyświetlania zawartości plików winmd. Składników środowiska wykonawczego Windows, które są dołączone do Windows znajdują się w pliku Windows.winmd. Plik default.winmd zawiera podstawowe typy, które są używane w języku C + +/ CX i platform.winmd zawiera dodatkowych typów z przestrzeni nazw Platform. Domyślnie te trzy pliki .winmd znajdują się w każdym projekcie C++ dla aplikacji Universal Windows Platform.
+Możesz użyć **przeglądarki obiektów** do wyświetlania zawartości plików winmd. Składników środowiska wykonawczego Windows, które są dołączone do Windows znajdują się w pliku Windows.winmd. Plik default.winmd zawiera podstawowe typy, które są używane w C++/CX i platform.winmd zawiera dodatkowych typów z przestrzeni nazw Platform. Domyślnie te trzy pliki .winmd znajdują się w każdym projekcie C++ dla aplikacji Universal Windows Platform.
 
 > [!TIP]
 > Typy w [Namespace Platform::Collections](../cppcx/platform-collections-namespace.md) nie pojawiają się w pliku winmd, ponieważ nie są publicznie udostępniane. Są one implementacji prywatnej specyficznych dla języka C++ interfejsów, które są zdefiniowane w `Windows::Foundation::Collections`. Aplikację Windows Runtime, która jest napisana w języku JavaScript, czy języka C# nie wie, co [platform::Collections:: Vector, klasa](../cppcx/platform-collections-vector-class.md) , ale można korzystać `Windows::Foundation::Collections::IVector`. `Platform::Collections` Typy są definiowane w collection.h.
 
-## <a name="windows-runtime-type-system-in-ccx"></a>System typów środowiska wykonawczego Windows w języku C + +/ CX
+## <a name="windows-runtime-type-system-in-ccx"></a>System typów środowiska wykonawczego Windows w C++/CX
 
-W poniższych sekcjach opisano najważniejszych funkcji systemu typów środowiska wykonawczego Windows i jak są one obsługiwane w języku C + +/ CX.
+W poniższych sekcjach opisano najważniejszych funkcji systemu typów środowiska wykonawczego Windows i jak są one obsługiwane w C++/CX.
 
 ### <a name="namespaces"></a>Namespaces
 
@@ -61,9 +61,9 @@ Aby uzyskać więcej informacji, zobacz [przestrzenie nazw i widoczność typów
 
 ### <a name="fundamental-types"></a>Typy podstawowe
 
-Środowisko wykonawcze Windows definiuje następujących typów podstawowych, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, jednego, Double, Char16, atrybut typu wartość logiczna i ciąg. C + +/ CX obsługuje podstawowe typy liczbowe w jej domyślny obszar nazw jako uint16, uint32, uint64, int16, int32, int64, float32, float64 i char16. Atrybut typu wartość logiczna i ciąg również są zdefiniowane w przestrzeni nazw platformy.
+Środowisko wykonawcze Windows definiuje następujących typów podstawowych, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, jednego, Double, Char16, atrybut typu wartość logiczna i ciąg. C++/CX obsługuje podstawowe typy liczbowe w jej domyślny obszar nazw jako uint16, uint32, uint64, int16, int32, int64, float32, float64 i char16. Atrybut typu wartość logiczna i ciąg również są zdefiniowane w przestrzeni nazw platformy.
 
-C + +/ CX definiuje również uint8 odpowiednikiem `unsigned char`, która nie jest obsługiwana w środowisku uruchomieniowym Windows i nie można używać w publicznych interfejsów API.
+C++/CX definiuje również uint8 odpowiednikiem `unsigned char`, która nie jest obsługiwana w środowisku uruchomieniowym Windows i nie można używać w publicznych interfejsów API.
 
 Typ podstawowy może być typem dopuszczającym opakowując go w [Platform::IBox, interfejs](../cppcx/platform-ibox-interface.md) interfejsu. Aby uzyskać więcej informacji, zobacz [klasy i struktury wartości](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -77,13 +77,13 @@ Aby uzyskać więcej informacji, zobacz [ciągi](../cppcx/strings-c-cx.md).
 
 ### <a name="arrays"></a>Tablice
 
-Środowisko uruchomieniowe Windows obsługuje 1-wymiarowe tablic dowolnego typu. Tablice tablic nie są obsługiwane.  W języku C + +/ CX, tablice środowiska uruchomieniowego Windows jest przekazywany jako [Platform::Array, klasa](../cppcx/platform-array-class.md).
+Środowisko uruchomieniowe Windows obsługuje 1-wymiarowe tablic dowolnego typu. Tablice tablic nie są obsługiwane.  W C++/CX Windows Runtime tablice są pokazane jako [Platform::Array, klasa](../cppcx/platform-array-class.md).
 
 Aby uzyskać więcej informacji, zobacz [tablica i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
 
 ### <a name="ref-classes-and-structs"></a>Klasy i struktury odwołania
 
-Klasy środowiska wykonawczego Windows jest przekazywany w języku C + +/ CX jako klasy referencyjnej lub ref struct, ponieważ są one kopiowane przez odwołanie. Zarządzanie pamięcią dla klasy i struktury ref odwołania jest obsługiwane w sposób niewidoczny dla użytkownika za pomocą zliczanie odwołań. Gdy ostatnie odwołanie do obiektu wykracza poza zakres, obiekt zostanie zniszczony. Struktury ref klasy lub ref wykonywać następujące czynności:
+Pokazane klasy środowiska wykonawczego Windows C++/CX jako klasy referencyjnej lub ref struct, ponieważ są one kopiowane przez odwołanie. Zarządzanie pamięcią dla klasy i struktury ref odwołania jest obsługiwane w sposób niewidoczny dla użytkownika za pomocą zliczanie odwołań. Gdy ostatnie odwołanie do obiektu wykracza poza zakres, obiekt zostanie zniszczony. Struktury ref klasy lub ref wykonywać następujące czynności:
 
 - Zawierać jako elementy członkowskie konstruktorów, metod, właściwości i zdarzeń. Członkowie ci mogą mieć publiczny, prywatny, chroniony lub wewnętrzny ułatwień dostępu.
 
@@ -115,9 +115,9 @@ Właściwość jest elementem członkowskim publicznych danych dowolnego typu ś
 
 Aby uzyskać więcej informacji, zobacz [właściwości](../cppcx/properties-c-cx.md).
 
-### <a name="windows-runtime-collections-in-ccx"></a>Kolekcje środowiska wykonawczego Windows w języku C + +/ CX
+### <a name="windows-runtime-collections-in-ccx"></a>Kolekcje środowiska wykonawczego Windows w programie C++/CX
 
-Środowisko wykonawcze Windows definiuje zestaw interfejsów dla typów kolekcji, które każdy język implementuje w inny sposób. C + +/ CX zawiera implementacje w [platform::Collections:: Vector, klasa](../cppcx/platform-collections-vector-class.md), [platform::Collections:: map, klasa](../cppcx/platform-collections-map-class.md), a innymi typami kolekcji konkretnych powiązanych, które są zgodne z ich Standardowy szablon biblioteki (STL) ich odpowiedniki.
+Środowisko wykonawcze Windows definiuje zestaw interfejsów dla typów kolekcji, które każdy język implementuje w inny sposób. C++/CX zawiera implementacje w [platform::Collections:: Vector, klasa](../cppcx/platform-collections-vector-class.md), [platform::Collections:: map, klasa](../cppcx/platform-collections-map-class.md), a innymi typami kolekcji konkretnych powiązanych, które są zgodne z ich Standardowy szablon biblioteki (STL) ich odpowiedniki.
 
 Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md).
 
@@ -147,7 +147,7 @@ Aby uzyskać więcej informacji, zobacz [delegatów](../cppcx/delegates-c-cx.md)
 
 ### <a name="exceptions"></a>Wyjątki
 
-W języku C + +/ CX może przechwycić wyjątku niestandardowych typów [std::exception](../standard-library/exception-class.md) typów i [Platform::Exception](../cppcx/platform-exception-class.md) typów.
+W C++/CX może przechwycić wyjątku niestandardowych typów [std::exception](../standard-library/exception-class.md) typów i [Platform::Exception](../cppcx/platform-exception-class.md) typów.
 
 Aby uzyskać więcej informacji, zobacz [wyjątki](../cppcx/exceptions-c-cx.md).
 
@@ -159,7 +159,7 @@ Aby uzyskać więcej informacji, zobacz [zdarzenia](../cppcx/events-c-cx.md).
 
 ### <a name="casting"></a>Rzutowanie
 
-C + +/ CX obsługuje standardowe operatorów rzutowania języka C++ [static_cast](../cpp/static-cast-operator.md), [dynamic_cast](../cpp/dynamic-cast-operator.md), i [reinterpret_cast](../cpp/reinterpret-cast-operator.md), a także **safe_cast**operator, który jest specyficzny dla języka C + +/ CX.
+C++/CX obsługuje standard C++ operatory rzutowania [static_cast](../cpp/static-cast-operator.md), [dynamic_cast](../cpp/dynamic-cast-operator.md), i [reinterpret_cast](../cpp/reinterpret-cast-operator.md), a także **safe_cast** operator, który dotyczy C++/CX.
 
 Aby uzyskać więcej informacji, zobacz [rzutowanie](../cppcx/casting-c-cx.md).
 

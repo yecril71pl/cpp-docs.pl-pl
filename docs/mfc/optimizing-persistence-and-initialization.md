@@ -8,11 +8,11 @@ helpviewer_keywords:
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
 ms.openlocfilehash: 294d9c43f5f767329c04932c574485d7dca704e9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261951"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342134"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optymalizacja stanu trwałego i inicjalizacji
 
@@ -46,4 +46,4 @@ Mimo że `Serialize` i `OnResetState` zostały nadpisane, `DoPropExchange` funkc
 
 ## <a name="see-also"></a>Zobacz także
 
-[Kontrolki ActiveX MFC: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+[Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)

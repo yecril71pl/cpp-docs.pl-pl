@@ -15,11 +15,11 @@ helpviewer_keywords:
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
 ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374197"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Klienci automatyzacji: Korzystanie z bibliotek typów
 
@@ -37,7 +37,7 @@ Jeśli wybrano automatyzacji podczas tworzenia projektu Visual C++ automatycznie
 
 1. W widoku klas lub Eksploratora rozwiązań kliknij prawym przyciskiem myszy projekt, a następnie kliknij pozycję **Dodaj** a następnie kliknij przycisk **Dodaj klasę** w menu skrótów.
 
-1. W **Dodaj klasę** okno dialogowe, wybierz opcję **Visual c + +/ MFC** folderu w okienku po lewej stronie. Wybierz **klasy MFC z biblioteki typów** ikonę w okienku po prawej stronie, a następnie kliknij **Otwórz**.
+1. W **Dodaj klasę** okno dialogowe, wybierz opcję **Visual C++/MFC** folderu w okienku po lewej stronie. Wybierz **klasy MFC z biblioteki typów** ikonę w okienku po prawej stronie, a następnie kliknij **Otwórz**.
 
 1. W **klasy z Typelib Kreatora dodawania** okna dialogowego Wybierz bibliotekę typów z **bibliotek typów dostępnych** listy rozwijanej. **Interfejsów** wyświetlone interfejsy, które są dostępne dla wybranej biblioteki typów.
 

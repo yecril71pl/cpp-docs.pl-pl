@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394146"
 ---
 # <a name="ctype-class"></a>ctype — Klasa
 
@@ -147,11 +147,11 @@ Wartość liczby całkowitej, można określić typ zarządzania pamięci dla ob
 
 Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
-- 0: okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
 
-- 1: okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
 
-- \> 1: nie zdefiniowano tych wartości.
+- \> 1: Te wartości nie są zdefiniowane.
 
 Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
 
@@ -183,7 +183,7 @@ Znak, w których atrybuty są badane.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu, w których atrybuty, które mają być klasyfikowane.
 
 *dest*<br/>
@@ -230,7 +230,7 @@ Wartość domyślna ma zostać przypisany przez funkcję elementu członkowskieg
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
 
 *dest*<br/>
@@ -269,7 +269,7 @@ Wartość maski mają być dopasowywane o znak.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -303,7 +303,7 @@ Wartość maski nie mają być dopasowywane znak.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -338,7 +338,7 @@ Znak, który ma zostać przekonwertowany na małe litery.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -373,7 +373,7 @@ Znak, który ma zostać przekonwertowany na wielkie litery.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -409,7 +409,7 @@ Znak typu **char** w macierzystym zestawie znaków do skonwertowania.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
 
 *dest*<br/>
@@ -453,7 +453,7 @@ Znak, w których atrybuty są badane.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu, w których atrybuty, które mają być klasyfikowane.
 
 *dest*<br/>
@@ -533,7 +533,7 @@ Wartość domyślna ma zostać przypisany przez funkcję elementu członkowskieg
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
 
 *dest*<br/>
@@ -594,7 +594,7 @@ Wartość maski mają być dopasowywane o znak.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -650,7 +650,7 @@ Wartość maski nie mają być dopasowywane znak.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -705,7 +705,7 @@ Znak, który ma zostać przekonwertowany na małe litery.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -760,7 +760,7 @@ Znak, który ma zostać przekonwertowany na wielkie litery.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -815,7 +815,7 @@ Ustaw znaku typu char w macierzystym znaków ma zostać przekonwertowany.
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
 
 *dest*<br/>
@@ -863,5 +863,5 @@ Hello everyone!
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

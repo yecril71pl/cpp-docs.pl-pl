@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
 ms.openlocfilehash: cf123e54c633539c8e5bf8204344c842a21183ef
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034042"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345261"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Component Extensions dla platformy .NET i platformy uniwersalnej systemu Windows
 
@@ -43,8 +43,8 @@ Poniższa tabela zawiera listę słów kluczowych w rozszerzenie języka C++.
 |**Klasa wartości**<br /><br /> **Struktura wartości**|Nie|Deklaruje klasę wartości.|[Klasy i struktury](classes-and-structs-cpp-component-extensions.md)|
 |**interface class**<br /><br /> **Struktura interfejsu**|Nie|Deklaruje interfejsu.|[interface class](interface-class-cpp-component-extensions.md)|
 |**enum class**<br /><br /> **Struktura wyliczenia**|Nie|Deklaruje wyliczenie.|[enum class](enum-class-cpp-component-extensions.md)|
-|**właściwość**|Tak|Deklaruje właściwości.|[właściwość](property-cpp-component-extensions.md)|
-|**delegate**|Tak|Deklaruje delegata.|[delegat  (C++/CLI i C++/CX)](delegate-cpp-component-extensions.md)|
+|**właściwość**|Yes|Deklaruje właściwości.|[właściwość](property-cpp-component-extensions.md)|
+|**delegate**|Yes|Deklaruje delegata.|[delegat  (C++/CLI i C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|Tak|Deklaruje zdarzenie.|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Specyfikatory zastąpienia
@@ -55,8 +55,8 @@ Następujące słowa kluczowe służy do kwalifikowania zastąpienie zachowania 
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|Yes|Wskazuje, że funkcji lub klasy abstrakcyjnej.|[abstract](abstract-cpp-component-extensions.md)|
 |**new**|Nie|Wskazuje, że funkcja nie jest przesłonięciem wersją klasy bazowej.|[new (nowe gniazdo w vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
-|**override**|Yes|Wskazuje, że metoda musi być przesłonięciem wersję klasy podstawowej.|[override](override-cpp-component-extensions.md)|
-|**sealed**|Tak|Zapobiega używana jako klay bazowe klasy.|[sealed](sealed-cpp-component-extensions.md)|
+|**override**|Tak|Wskazuje, że metoda musi być przesłonięciem wersję klasy podstawowej.|[override](override-cpp-component-extensions.md)|
+|**sealed**|Yes|Zapobiega używana jako klay bazowe klasy.|[sealed](sealed-cpp-component-extensions.md)|
 
 ## <a name="keywords-for-generics"></a>Słowa kluczowe dla typów ogólnych
 
@@ -65,7 +65,7 @@ Następujące słowa kluczowe zostały dodane do obsługi typów ogólnych. Aby 
 |Słowo kluczowe|Kontekstowa|Cel|
 |-------------|-----------------------|-------------|
 |**Ogólny**|Nie|Deklaruje typu ogólnego.|
-|**gdzie**|Tak|Określa ograniczenia, które są stosowane do parametru typu ogólnego.|
+|**gdzie**|Yes|Określa ograniczenia, które są stosowane do parametru typu ogólnego.|
 
 ## <a name="miscellaneous-keywords"></a>Różne słów kluczowych
 
@@ -76,8 +76,8 @@ Następujące słowa kluczowe zostały dodane do rozszerzeń języka C++.
 |**finally**|Tak|Określa domyślne zachowanie handlings wyjątku.|[Obsługa wyjątków](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|Nie|Wylicza elementów kolekcji.|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|Nie|Przydziela typy w stercie zebranych elementów bezużytecznych. Użyj zamiast **nowe** i **Usuń**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
-|**nowe REF**|Yes|Przydziela typów środowiska wykonawczego Windows. Użyj zamiast **nowe** i **Usuń**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
-|**initonly**|Yes|Wskazuje, że element członkowski może być inicjowane tylko w deklaracji lub w konstruktorze statycznym.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
+|**nowe REF**|Tak|Przydziela typów środowiska wykonawczego Windows. Użyj zamiast **nowe** i **Usuń**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
+|**initonly**|Tak|Wskazuje, że element członkowski może być inicjowane tylko w deklaracji lub w konstruktorze statycznym.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
 |**literal**|Tak|Tworzy zmienną literału.|[literal](literal-cpp-component-extensions.md)|
 |**nullptr**|Nie|Wskazuje, że dojście lub wskaźnik nie wskazuje na obiekt.|[nullptr](nullptr-cpp-component-extensions.md)|
 

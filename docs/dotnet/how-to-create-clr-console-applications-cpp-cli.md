@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie aplikacji konsoli środowiska CLR (C + +/ CLI)'
+title: 'Instrukcje: Tworzenie aplikacji konsoli środowiska CLR (C++sposób niezamierzony)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
 ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387483"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Instrukcje: Tworzenie aplikacji konsoli środowiska CLR (C + +/ CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Instrukcje: Tworzenie aplikacji konsoli środowiska CLR (C++sposób niezamierzony)
 
 Szablon aplikacji Konsolowej do tworzenia projektu aplikacji konsoli, który ma już odwołania do projektu podstawowych i plików.
 

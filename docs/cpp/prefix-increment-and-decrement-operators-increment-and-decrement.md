@@ -14,11 +14,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
 ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392105"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operatory prefiksów inkrementacji i dekrementacji: ++ i --
 
@@ -35,7 +35,7 @@ Operator inkrementacji prefiksu (**++**) dodaje je do swojego operandu; Ta zwię
 
 Operator dekrementacji prefiksu (**--**) jest odpowiednikiem operator inkrementacji prefiksu, z tą różnicą, że argument jest zmniejszana o jeden, a wynik jest ta zmniejszona wartość.
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand operatora inkrementacji lub dekrementacji nie może być typu **bool**.
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Operand operatora inkrementacji lub dekrementacji nie może być typu **bool**.
 
 Prefiks i przyrostka inkrementacji i dekrementacji operatory mają wpływ na ich argumentów. Główną różnicą między nimi jest kolejność, w którym inkrementacyjna lub dekrementacyjna odbywa się w wyniku obliczenia wyrażenia. (Aby uzyskać więcej informacji, zobacz [operatory przyrostka inkrementacji i dekrementacji](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) W formularzu prefiks inkrementacyjna lub dekrementacyjna odbywa się przed zostanie użyta wartość obliczania wyrażeń, więc wartość wyrażenia jest inny niż wartość operandu. W formularzu przyrostka inkrementacji lub dekrementacji odbywa się po zostanie użyta wartość obliczania wyrażeń, więc wartość wyrażenia jest taka sama jak wartość operandu. Na przykład, poniższy program odbitek "`++i = 6`":
 

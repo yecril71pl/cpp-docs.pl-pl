@@ -35,11 +35,11 @@ helpviewer_keywords:
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
 ms.openlocfilehash: f23799b43a356600f48fb0fbf32b4604966c416b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379210"
 ---
 # <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 
@@ -107,7 +107,7 @@ Jeśli *endptr* nie **NULL**, wskaźnik znaku, który zatrzymał skanowanie jest
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstoull —**|**strtoull**|**strtoull**|**wcstoull**|
-|**_tcstoull_l —**|**strtoull_l**|**_strtoull_l**|**_wcstoull_l**|
+|**_tcstoull_l**|**strtoull_l**|**_strtoull_l**|**_wcstoull_l**|
 
 **strtoull —** oczekuje *strSource* do wskaże ciąg o następującej postaci:
 
@@ -120,9 +120,9 @@ A *odstępu* może składać się ze znaków spacji lub tabulatora, które są i
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strtoull**|\<stdlib.h>|
-|**wcstoull**|\<stdlib.h > lub \<wchar.h >|
+|**wcstoull**|\<stdlib.h> or \<wchar.h>|
 |**_strtoull_l**|\<stdlib.h>|
-|**_wcstoull_l**|\<stdlib.h > lub \<wchar.h >|
+|**_wcstoull_l**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

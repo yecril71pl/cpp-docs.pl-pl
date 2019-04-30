@@ -98,11 +98,11 @@ helpviewer_keywords:
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
 ms.openlocfilehash: 09a0919cd47937960736c6cccf31343c5e12087d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384390"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -205,7 +205,7 @@ Typ elementu w kontrolowanej sekwencji.
 |<xref:System.Collections.Generic.IEnumerable%601>|Przeprowadzaj Sekwencjonowanie za pośrednictwem typizowanych elementów.|
 |<xref:System.Collections.Generic.ICollection%601>|Obsługa grupy typizowanych elementów.|
 |<xref:System.Collections.Generic.IList%601>|Obsługa uporządkowane grupy typizowanych elementów.|
-|IVector < wartość\>|Obsługa kontenerów ogólnego.|
+|IVector<Value\>|Obsługa kontenerów ogólnego.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -242,7 +242,7 @@ Liczba elementów do wstawienia.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *right*<br/>
@@ -922,7 +922,7 @@ iterator erase(iterator first, iterator last);
 *pierwszy*<br/>
 Początek zakresu, aby wymazać.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu, aby wymazać.
 
 *gdzie*<br/>
@@ -1344,7 +1344,7 @@ Liczba elementów do wstawienia.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *right*<br/>
@@ -2282,7 +2282,7 @@ Liczba elementów do wstawienia.
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *right*<br/>

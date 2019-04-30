@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394016"
 ---
 # <a name="deque-class"></a>deque — Klasa
 
@@ -167,8 +167,8 @@ W przeciwnym razie wstawiania lub wymazywanie elementu unieważnia wszystkie Ite
 |[cend](#cend)|Zwraca losową dostępu **const** iteratora, który wskazuje tuż za koniec `deque`.|
 |[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy `deque`.|
 |[crbegin](#crbegin)|Zwraca stały iterator dostępu losowego do pierwszego elementu w `deque` wyświetlane w odwrotnej kolejności.|
-|[crend —](#crend)|Zwraca stały iterator dostępu losowego do pierwszego elementu w `deque` wyświetlane w odwrotnej kolejności.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do `deque` na określonej pozycji.|
+|[crend](#crend)|Zwraca stały iterator dostępu losowego do pierwszego elementu w `deque` wyświetlane w odwrotnej kolejności.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do `deque` na określonej pozycji.|
 |[emplace_back](#emplace_back)|Dodaje element skonstruowany w miejscu do końca `deque`.|
 |[emplace_front](#emplace_front)|Dodaje element skonstruowany w miejscu z początkiem `deque`.|
 |[pusty](#empty)|Zwraca **true** Jeśli `deque` zawiera zero elementy i **false** zawiera jeden lub więcej elementów.|
@@ -176,14 +176,14 @@ W przeciwnym razie wstawiania lub wymazywanie elementu unieważnia wszystkie Ite
 |[wymazywanie](#erase)|Usuwa element lub zakres elementów w `deque` z określonych pozycji.|
 |[Frontonu](#front)|Zwraca odwołanie do pierwszego elementu w `deque`.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` obiektu, który służy do konstruowania `deque`.|
-|[Wstaw](#insert)|Wstawia element, kilka elementów lub szereg elementów do `deque` na określonej pozycji.|
+|[insert](#insert)|Wstawia element, kilka elementów lub szereg elementów do `deque` na określonej pozycji.|
 |[max_size](#max_size)|Zwraca wartość maksymalna możliwa długość `deque`.|
 |[pop_back](#pop_back)|Usuwa element na końcu `deque`.|
 |[pop_front](#pop_front)|Usuwa element na początku `deque`.|
 |[push_back](#push_back)|Dodaje element do końca `deque`.|
 |[push_front](#push_front)|Dodaje element do początku `deque`.|
 |[rbegin](#rbegin)|Zwraca iterator dostępu losowego do pierwszego elementu w odwróconej `deque`.|
-|[rend —](#rend)|Zwraca iterator dostępu swobodnego, który wskazuje tuż za ostatnim elemencie w odwróconej `deque`.|
+|[rend](#rend)|Zwraca iterator dostępu swobodnego, który wskazuje tuż za ostatnim elemencie w odwróconej `deque`.|
 |[Zmiana rozmiaru](#resize)|Określa nowy rozmiar `deque`.|
 |[shrink_to_fit](#shrink_to_fit)|Odrzuca nadmiarowej pojemności.|
 |[Rozmiar](#size)|Zwraca liczbę elementów w `deque`.|
@@ -777,7 +777,7 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*po prawej stronie*|Deque, w której stworzonego elementu deque jest kopią.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
-|* IList "|Initializer_list, który ma być skopiowany.|
+|* IList "| Initializer_list, który ma być skopiowany.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1340,7 +1340,7 @@ Pozycja elementu do usunięcia z deque.
 *pierwszy*<br/>
 Pozycja pierwszego elementu są usuwane z deque.
 
-*ostatni*<br/>
+*last*<br/>
 Pozycja tuż za ostatnim elementem usunięte z deque.
 
 ### <a name="return-value"></a>Wartość zwracana

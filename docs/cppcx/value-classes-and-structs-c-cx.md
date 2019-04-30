@@ -1,18 +1,18 @@
 ---
-title: Klasy i struktury wartości (C + +/ CX)
+title: Klasy i struktury wartości (C++/CX)
 ms.date: 12/30/2016
 helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
 ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384988"
 ---
-# <a name="value-classes-and-structs-ccx"></a>Klasy i struktury wartości (C + +/ CX)
+# <a name="value-classes-and-structs-ccx"></a>Klasy i struktury wartości (C++/CX)
 
 A *struktury wartości* lub *klasę wartości* jest Windows ZASOBNIKA zgodnego środowiska uruchomieniowego ("zwykłe stare dane strukturę"). Ma stały rozmiar i składa się z pól. w odróżnieniu od klasy ref go nie ma właściwości.
 
@@ -64,7 +64,7 @@ Poniższy fragment kodu deklaruje `Coordinates` i `City` typy jako strukturach w
 
 ## <a name="parameter-passing-for-value-types"></a>Przekazywanie dla typów wartości parametru
 
-W przypadku wartości typu jako parametru funkcji lub metody normalnie jest przekazywany przez wartość. W przypadku większych obiektów może to spowodować problemy z wydajnością. W Visual Studio2013 i starszych wartość typów w języku C + +/ CX zawsze były przekazywane przez wartość. W programie Visual Studio 2015 i nowszych możesz przekazać typów wartości przez odwołanie, lub według wartości.
+W przypadku wartości typu jako parametru funkcji lub metody normalnie jest przekazywany przez wartość. W przypadku większych obiektów może to spowodować problemy z wydajnością. W Visual Studio2013 i starszych wartość typów w C++/CX zawsze były przekazywane przez wartość. W programie Visual Studio 2015 i nowszych możesz przekazać typów wartości przez odwołanie, lub według wartości.
 
 Aby zadeklarować parametr, który przekazuje typ wartości przez wartość, należy użyć kodu, jak pokazano poniżej:
 
@@ -151,5 +151,5 @@ public:
 
 [System typów (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)<br/>
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Klasy i struktury odwołania (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

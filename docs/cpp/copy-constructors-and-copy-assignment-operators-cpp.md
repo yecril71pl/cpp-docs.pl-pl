@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392300"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Konstruktory kopiujące i kopiujące operatory przypisania (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50535047"
 >
 > Operacja przypisania i z operację zainicjowanie spowodować obiekty do skopiowania.
 
-- **Przypisanie**: kiedy wartość jeden obiekt jest przypisany do innego obiektu, pierwszy obiekt jest kopiowany do drugiego obiektu. W związku z tym,
+- **Przypisanie**: Gdy wartość jeden obiekt jest przypisany do innego obiektu, pierwszy obiekt jest kopiowany do drugiego obiektu. W związku z tym,
 
     ```cpp
     Point a, b;
@@ -76,13 +76,13 @@ int main()
 
 Konstruktory kopiujące generowanych przez kompilator, takich jak konstruktorów kopiujących zdefiniowanych przez użytkownika mają pojedynczy argument typu "odwołanie do *Nazwa klasy*." Jest wyjątek, jeśli wszystkie klasy podstawowe i element członkowski klasy konstruktorów kopiujących zadeklarowane jako pojedynczy argument typu biorąc **const** <em>Nazwa klasy</em><strong>&</strong>. W takim przypadku argument Konstruktor kopiujący wygenerowany przez kompilator jest również **const**.
 
-Gdy typ argumentu do konstruktora kopiującego nie jest **const**, inicjowanie, kopiując **const** obiektu spowoduje wygenerowanie błędu. Odwrotna sytuacja nie jest spełniony: Jeśli argument jest **const**, można zainicjować przez skopiowanie obiektu, który nie jest **const**.
+Gdy typ argumentu do konstruktora kopiującego nie jest **const**, inicjowanie, kopiując **const** obiektu spowoduje wygenerowanie błędu. Odwrotnej nie jest spełniony: Jeśli argument jest **const**, można zainicjować przez skopiowanie obiektu, który nie jest **const**.
 
 Operatory przypisania generowane przez kompilator, należy wykonać w odniesieniu do tego samego wzorca **const.** Przyjmują jeden argument typu <em>Nazwa klasy</em> <strong>&</strong> , chyba że operatory przypisania w wszystkie klasy podstawowe i składowe przyjmują argumenty typu **const** <em>Nazwa klasy</em><strong>&</strong>. W tym przypadku klasy użytkownika generowany przyjmuje operatora przypisania **const** argumentu.
 
 > [!NOTE]
 > Gdy wirtualne klasy bazowe są inicjowane przez konstruktory kopiujące, generowane przez kompilator lub zdefiniowanych przez użytkownika są inicjowanie tylko raz: w momencie, gdy zostały skonstruowane.
 
-Implikacje są podobne do występujących dla konstruktora kopiującego. Gdy typ argumentu nie jest **const**, przypisanie z **const** obiektu spowoduje wygenerowanie błędu. Odwrotna sytuacja nie jest spełniony: Jeśli **const** wartość jest przypisywana wartość, która nie jest **const**, przypisanie zakończy się pomyślnie.
+Implikacje są podobne do występujących dla konstruktora kopiującego. Gdy typ argumentu nie jest **const**, przypisanie z **const** obiektu spowoduje wygenerowanie błędu. Odwrotnej nie jest spełniony: Jeśli **const** wartość jest przypisywana wartość, która nie jest **const**, przypisanie zakończy się pomyślnie.
 
 Aby uzyskać więcej informacji na temat przypisania przeciążone operatory zobacz [przypisania](../cpp/assignment.md).

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389454"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Jak działają gniazda z archiwami
 
@@ -46,7 +46,7 @@ Jeśli `CSocket` nie zostały zaimplementowane jako obiekt dwoma stanami, może 
 
 W trybie "archiwum compatible" `CSocketFile` obiekt zapewnia lepszą wydajność i zmniejsza zagrożenie "zakleszczenie." Zakleszczenie występuje, gdy gniazd nadawczych i Oczekiwanie na siebie nawzajem lub oczekując na zasób wspólnej. Taka sytuacja może wystąpić, jeśli `CArchive` obiektu doświadczenie z `CSocketFile` sposób, jak za pomocą `CFile` obiektu. Za pomocą `CFile`, archiwum, można założyć, że jeśli odbierze mniej bajtów niż żądana go, na końcu pliku został osiągnięty. Za pomocą `CSocketFile`, jednak dane są na podstawie komunikatu; bufor może zawierać wiele komunikatów, więc odbieranie mniej niż żądana liczba bajtów nie oznacza koniec pliku. Aplikacja nie są blokowane w tym przypadku na przykład za pomocą `CFile`, i można kontynuować, odczytywanie wiadomości z buforu, dopóki rozmiar buforu jest pusty. [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) działa w programach `CArchive` przydaje się do monitorowania stanu bufora archiwum w takiej sytuacji.
 
-Aby uzyskać więcej informacji, zobacz [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
 ms.openlocfilehash: 1d91d98082a5c5d6d45bfa31e81c59e8925aa2c2
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386278"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>Dodawanie klasy z kontrolki ActiveX
 
@@ -61,7 +61,7 @@ Ten kreator umożliwia dodawanie klasy MFC z formantu ActiveX dostępne. Kreator
 
 - **Dostępne kontrolki ActiveX**
 
-  Określa formanty ActiveX w danym momencie zarejestrowany w systemie. Wybierz formant ActiveX z tej listy, aby wyświetlić swoje interfejsy w **interfejsów** listy. Zobacz [kontrolki MFC ActiveX: kontrolki ActiveX dystrybucja](../mfc/mfc-activex-controls-distributing-activex-controls.md) Aby uzyskać więcej informacji na temat rejestrowania formantów ActiveX.
+  Określa formanty ActiveX w danym momencie zarejestrowany w systemie. Wybierz formant ActiveX z tej listy, aby wyświetlić swoje interfejsy w **interfejsów** listy. Zobacz [kontrolki MFC ActiveX: Dystrybucja kontrolek ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) Aby uzyskać więcej informacji na temat rejestrowania formantów ActiveX.
 
   Jeśli wybierzesz **pliku** w obszarze **dodawania klasy z**, to pole jest niedostępna w przypadku zmiany.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389310"
 ---
 # <a name="dataseg"></a>data_seg
 
@@ -41,7 +41,7 @@ Określa segment danych, gdzie zainicjowane zmienne są przechowywane w pliku .o
 *"segment-name"*<br/>
 (Opcjonalnie) Nazwa segmentu. Gdy jest używane z **pop**, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.
 
-*"segmentu class"*<br/>
+*"segment-class"*<br/>
 (Opcjonalnie) Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.
 
 ## <a name="remarks"></a>Uwagi

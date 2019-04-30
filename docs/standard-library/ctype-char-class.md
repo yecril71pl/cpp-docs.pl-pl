@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
 ms.openlocfilehash: adaad8f76de5b712aea13794ef2d7b9a096fb8ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394159"
 ---
 # <a name="ctypeltchargt-class"></a>CType&lt;char&gt; klasy
 
@@ -130,6 +130,6 @@ Funkcje elementów członkowskich [do_narrow —](../standard-library/ctype-clas
 
 ## <a name="see-also"></a>Zobacz także
 
-[facet — klasa](locale-class.md#facet_class)<br/>
+[facet Class](locale-class.md#facet_class)<br/>
 [ctype_base, klasa](../standard-library/ctype-base-class.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -40,11 +40,11 @@ helpviewer_keywords:
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
 ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660368"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345182"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -78,7 +78,7 @@ int _wprintf_p_l(
 *Format*<br/>
 Formant formatu.
 
-*Argument*<br/>
+*argument*<br/>
 Argumenty opcjonalne.
 
 *Ustawienia regionalne*<br/>
@@ -108,14 +108,14 @@ Jeśli *format* lub *argument* są **NULL**, lub ciąg formatu zawiera nieprawid
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tprintf_p**|**_printf_p**|**_printf_p**|**_wprintf_p**|
-|**_tprintf_p_l —**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|
+|**_tprintf_p_l**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_printf_p —**, **_printf_p_l —**|\<stdio.h>|
-|**_wprintf_p —**, **_wprintf_p_l —**|\<stdio.h > lub \<wchar.h >|
+|**_printf_p**, **_printf_p_l**|\<stdio.h>|
+|**_wprintf_p**, **_wprintf_p_l**|\<stdio.h > lub \<wchar.h >|
 
 Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

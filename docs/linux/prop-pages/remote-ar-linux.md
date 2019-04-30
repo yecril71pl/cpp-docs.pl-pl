@@ -4,11 +4,11 @@ ms.date: 9/26/2017
 ms.assetid: 5ee1e44c-8337-4c3a-b2f3-35e4be954f9f
 f1_keywords: []
 ms.openlocfilehash: bcd0e0eef16addc60743000b6ed8cba12276e29c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393002"
 ---
 # <a name="remote-archive-properties-c-linux"></a>Właściwości zdalnego archiwum (C++ Linux)
 

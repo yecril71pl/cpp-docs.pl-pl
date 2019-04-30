@@ -10,17 +10,17 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441304"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345892"
 ---
 # <a name="new-and-delete-operators"></a>new i delete — operatory
 
 Język C++ obsługuje dynamicznej alokacji i dezalokacji obiektów przy użyciu [nowe](../cpp/new-operator-cpp.md) i [Usuń](../cpp/delete-operator-cpp.md) operatorów. Te operatory przydzielają pamięć dla obiektów z puli, o nazwie wolny magazyn. **Nowe** operatora wywołania funkcji specjalnej [nowy operator](../cpp/new-operator-cpp.md)i **Usuń** operatora wywołania funkcji specjalnej [operatora delete](../cpp/delete-operator-cpp.md).
 
-**Nowe** funkcji w standardowej biblioteki języka C++ obsługuje zachowanie, które określono w standardzie C++, który jest zgłosić wyjątek std::bad_alloc, jeśli Alokacja pamięci nie powiedzie się. Jeśli nadal chcesz niezgłaszające wersję **nowe**, Połącz program jest połączony z nothrownew.obj. Jednakże, jeśli łączysz się z nothrownew.obj, wartość domyślna **nowy operator** w standardowej bibliotece C++ nie będzie działać.
+**Nowe** działa w programach C++ Biblioteka standardowa obsługuje określone w zachowanie C++ standardu, co jest zgłosić wyjątek std::bad_alloc, jeśli Alokacja pamięci nie powiedzie się. Jeśli nadal chcesz niezgłaszające wersję **nowe**, Połącz program jest połączony z nothrownew.obj. Jednakże, jeśli łączysz się z nothrownew.obj, wartość domyślna **nowy operator** w standardowej bibliotece C++ nie będzie działać.
 
 Aby uzyskać listę plików bibliotek, wchodzące w skład Biblioteka uruchomieniowa C i standardową bibliotekę języka C++, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
 

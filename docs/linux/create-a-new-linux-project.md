@@ -3,11 +3,11 @@ title: Tworzenie nowego projektu systemu Linux w języku C++ w programie Visual 
 ms.date: 09/12/2018
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
 ms.openlocfilehash: bd5ab1d2bc1077f366082bf8767f8f690173ac8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393198"
 ---
 # <a name="create-a-new-linux-project"></a>Tworzenie nowego projektu systemu Linux
 

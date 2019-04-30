@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393756"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -141,10 +141,10 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parametry
 
-*arg1*<br/>
+*Arg1*<br/>
 Typ pierwszego argumentu.
 
-*argument2*<br/>
+*Arg2*<br/>
 Typ drugiego argumentu.
 
 *wynik*<br/>
@@ -216,10 +216,10 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parametry
 
-*arg1*<br/>
+*Arg1*<br/>
 Typ pierwszego argumentu.
 
-*argument2*<br/>
+*Arg2*<br/>
 Typ drugiego argumentu.
 
 ### <a name="remarks"></a>Uwagi
@@ -311,7 +311,7 @@ Typ przechowywanych funktor.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 |stored_function_type|Typ funkcję.|
 
@@ -321,7 +321,7 @@ Typ przechowywanych funktor.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |delegate_type^() — operator|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -586,7 +586,7 @@ Typ przechowywanych funktor.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 |stored_function_type|Typ funkcję.|
 
@@ -596,7 +596,7 @@ Typ przechowywanych funktor.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |delegate_type^() — operator|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -691,7 +691,7 @@ Typ przechowywanych funktor.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 |stored_function_type|Typ funkcję.|
 
@@ -701,7 +701,7 @@ Typ przechowywanych funktor.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |delegate_type^() — operator|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -796,7 +796,7 @@ Typ argumentów i wartości zwracanej.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -805,7 +805,7 @@ Typ argumentów i wartości zwracanej.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |delegate_type^() — operator|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -897,7 +897,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -906,7 +906,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |delegate_type^() — operator|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -998,7 +998,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1007,7 +1007,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1099,7 +1099,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1108,7 +1108,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1200,7 +1200,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1209,7 +1209,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1301,7 +1301,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1310,7 +1310,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1402,7 +1402,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1411,7 +1411,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1501,7 +1501,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |argument_type|Typ argumentu funktor.|
 |delegate_type|Typ delegata ogólnego.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 
 |Element członkowski|Opis|
 |------------|-----------------|
@@ -1509,7 +1509,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1593,7 +1593,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1602,7 +1602,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1694,7 +1694,7 @@ Typ argumentów i wartości zwracanej.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1703,7 +1703,7 @@ Typ argumentów i wartości zwracanej.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1795,7 +1795,7 @@ Typ argumentów i wartości zwracanej.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1804,7 +1804,7 @@ Typ argumentów i wartości zwracanej.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1896,7 +1896,7 @@ Typ argumentów i wartości zwracanej.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -1905,7 +1905,7 @@ Typ argumentów i wartości zwracanej.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -1995,7 +1995,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |argument_type|Typ argumentu funktor.|
 |delegate_type|Typ delegata ogólnego.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 
 |Element członkowski|Opis|
 |------------|-----------------|
@@ -2003,7 +2003,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -2087,7 +2087,7 @@ Typy argumentów.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -2096,7 +2096,7 @@ Typy argumentów.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -2341,7 +2341,7 @@ Typ argumentów i wartości zwracanej.
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
 |first_argument_type|Typ pierwszego argumentu funktor.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 |second_argument_type|Typ drugiego argumentu funktor.|
 
 |Element członkowski|Opis|
@@ -2350,7 +2350,7 @@ Typ argumentów i wartości zwracanej.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
+|operator()|Oblicza odpowiednią funkcję.|
 |Operator delegate_type ^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
@@ -2570,7 +2570,7 @@ Typ przechowywanych funktor.
 |---------------------|-----------------|
 |argument_type|Typ argumentu funktor.|
 |delegate_type|Typ delegata ogólnego.|
-|Element result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku funktor.|
 
 |Element członkowski|Opis|
 |------------|-----------------|
@@ -2578,8 +2578,8 @@ Typ przechowywanych funktor.
 
 |Operator|Opis|
 |--------------|-----------------|
-|Operator()|Oblicza odpowiednią funkcję.|
-|delegate_type ^|Rzutuje funktor do delegata.|
+|operator()|Oblicza odpowiednią funkcję.|
+|delegate_type^|Rzutuje funktor do delegata.|
 
 ### <a name="remarks"></a>Uwagi
 

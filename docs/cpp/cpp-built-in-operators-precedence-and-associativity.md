@@ -13,11 +13,11 @@ helpviewer_keywords:
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
 ms.openlocfilehash: 0b560913deb57393a8547f0831e0d987eed41ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392352"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++ wbudowane operatory, pierwszeństwo i kojarzenie
 
@@ -37,8 +37,8 @@ Operator *pierwszeństwo* określa kolejność operacji w wyrażeniach, które z
 |[Wywołanie funkcji](../cpp/function-call-operator-parens.md)|[()](../cpp/function-call-operator-parens.md)|
 |[Inkrementacja przyrostkowa](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Dekrementacja przyrostkowa](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
-|[Nazwa typu](../cpp/typeid-operator.md)|[TypeID](../cpp/typeid-operator.md)|
-|[Konwersja typu stałego](../cpp/const-cast-operator.md)|[Operator const_cast](../cpp/const-cast-operator.md)|
+|[Nazwa typu](../cpp/typeid-operator.md)|[typeid](../cpp/typeid-operator.md)|
+|[Konwersja typu stałego](../cpp/const-cast-operator.md)|[const_cast](../cpp/const-cast-operator.md)|
 |[Konwersja typu dynamicznego](../cpp/dynamic-cast-operator.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|
 |[Konwersja przez zamianę typu](../cpp/reinterpret-cast-operator.md)|[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|
 |[Konwersja typu statycznego](../cpp/static-cast-operator.md)|[static_cast](../cpp/static-cast-operator.md)|
@@ -60,7 +60,7 @@ Operator *pierwszeństwo* określa kolejność operacji w wyrażeniach, które z
 |**Pierwszeństwo grupy 5, od lewej do prawej łączność**|
 |[Mnożenie](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Dzielenie](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Pierwszeństwo grupy 6, od lewej do prawej łączność**|
 |[Dodanie](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Odejmowanie](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
@@ -84,7 +84,7 @@ Operator *pierwszeństwo* określa kolejność operacji w wyrażeniach, które z
 |**Pierwszeństwo grupy 13, od lewej do prawej łączność**|
 |[Operator logiczny oraz](../cpp/logical-and-operator-amp-amp.md)|[&amp;&amp;](../cpp/logical-and-operator-amp-amp.md)|
 |**Pierwszeństwo grupy 14, od lewej do prawej łączność**|
-|[Logiczne OR](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
+|[Logical OR](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
 |**Pierwszeństwo grupy 15, od prawej do lewej łączność**|
 |[warunkowe](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
 |**Pierwszeństwo grupy 16, od prawej do lewej łączność**|
@@ -102,7 +102,7 @@ Operator *pierwszeństwo* określa kolejność operacji w wyrażeniach, które z
 |**Pierwszeństwo grupy 17, od prawej do lewej łączność**|
 |[wyrażenie throw](../cpp/try-throw-and-catch-statements-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|
 |**Pierwszeństwo grupy 18, od lewej do prawej łączność**|
-|[Przecinkami](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
+|[Comma](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
 
 ## <a name="see-also"></a>Zobacz także
 

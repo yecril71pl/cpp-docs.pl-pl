@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie weryfikowalnych projektów C++ (C + +/ CLI)'
+title: 'Instrukcje: Tworzenie weryfikowalnych C++ projektów (C++sposób niezamierzony)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
 ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387464"
 ---
-# <a name="how-to-create-verifiable-c-projects-ccli"></a>Porady: tworzenie weryfikowalnych projektów C++ (C + +/ CLI)
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>Porady: tworzenie weryfikowalnych C++ projektów (C++sposób niezamierzony)
 
 Kreatory aplikacji w usłudze Visual C++ nie należy tworzyć weryfikowalnych projektów.
 

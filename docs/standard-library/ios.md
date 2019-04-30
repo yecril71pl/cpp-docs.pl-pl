@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
 ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385222"
 ---
 # <a name="ltiosgt"></a>&lt;dla systemu IOS&gt;
 
@@ -52,7 +52,7 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |||
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są traktowane jako **true** lub **false** w strumieniu.|
-|[Gru](../standard-library/ios-functions.md#dec)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 10.|
+|[dec](../standard-library/ios-functions.md#dec)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 10.|
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Określa flagi o `ios_base` obiekt ma być używany domyślny format wyświetlania dla wartości zmiennoprzecinkowych.|
 |[Stała](../standard-library/ios-functions.md#fixed)|Określa, czy liczba zmiennoprzecinkowa jest wyświetlana w notacji dziesiętnej stałej.|
 |[hex](../standard-library/ios-functions.md#hex)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 16.|
@@ -79,7 +79,7 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |Class|Opis|
 |-|-|
-|[basic_ios —](../standard-library/basic-ios-class.md)|Klasa szablonu Opisuje funkcje magazynu i elementów członkowskich, które muszą być wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni danych wyjściowych (szablonu klasy [basic_ostream](../standard-library/basic-ostream-class.md)) zależą od Parametry szablonu.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Klasa szablonu Opisuje funkcje magazynu i elementów członkowskich, które muszą być wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni danych wyjściowych (szablonu klasy [basic_ostream](../standard-library/basic-ostream-class.md)) zależą od Parametry szablonu.|
 |[fpos —](../standard-library/fpos-class.md)|Klasa szablonu opisuje obiekt, który można przechowywać wszystkie informacje niezbędne do przywrócenia wskaźnika dowolnego położenie pliku w dowolnej usłudze stream.|
 |[ios_base](../standard-library/ios-base-class.md)|Klasa opisuje magazynu i funkcje Członkowskie wspólne dla danych wejściowych i wyjściowych strumieni, które nie są zależne od parametrów szablonu.|
 

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
 ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818638"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346049"
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 
@@ -109,25 +109,25 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowane wyjątki dostarczonych 
 
 W poniższych artykułach opisano przy użyciu biblioteki MFC dla pierwszemu wyjątek:
 
-- [Wyjątki: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [Wyjątki: przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
-- [Wyjątki: Badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md)
+- [Wyjątki: badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md)
 
-- [Wyjątki: Zwalnianie obiektów w wyjątkach](../mfc/exceptions-freeing-objects-in-exceptions.md)
+- [Wyjątki: zwalnianie obiektów w wyjątkach](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
-- [Wyjątki: Zgłaszanie wyjątków z własnych funkcji](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [Wyjątki: zgłaszanie wyjątków z własnych funkcji](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
-- [Wyjątki: Wyjątki bazy danych](../mfc/exceptions-database-exceptions.md)
+- [Wyjątki: wyjątki bazy danych](../mfc/exceptions-database-exceptions.md)
 
-- [Wyjątki: Wyjątki OLE](../mfc/exceptions-ole-exceptions.md)
+- [Wyjątki: wyjątki OLE](../mfc/exceptions-ole-exceptions.md)
 
 Następujące artykuły porównać z makr wyjątków MFC przy użyciu słowa kluczowe wyjątków języka C++ i wyjaśniono, jak możesz dostosować swój kod:
 
-- [Wyjątki: Zmiany w makrach wyjątków w wersji 3.0 lub nowszej](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [Wyjątki: zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [Wyjątki: Konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
+- [Wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [Wyjątki: Używanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [Wyjątki: używanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
 ms.openlocfilehash: 23fb05e633713016b1f6289f73a916502736af10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692719"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346013"
 ---
 # <a name="add-a-method"></a>Dodaj metodę
 
@@ -69,7 +69,7 @@ Użyj tego kreatora, aby dodać metodę do interfejsu. W zależności od typu pr
   |--------------------|-----------------|
   |ATL podwójnego interfejsu, niestandardowego interfejsu i lokalne niestandardowy interfejs|Podaj nazwę metody.|
   |MFC dispinterface|Podaj własną nazwę metody lub wybierz nazwę sugerowane metody z listy. Jeśli wybierzesz nazwę z listy odpowiednią wartość pojawia się w **zwracany typ** polu, a jego nie będzie zmieniana.|
-  |Dispinterface kontrolki MFC ActiveX|Podaj własny lub wybrać jedną z metod standardowych [DoClick](../mfc/reference/colecontrol-class.md#doclick) i [Odśwież](../mfc/reference/colecontrol-class.md#refresh). Aby uzyskać więcej informacji, zobacz [kontrolki MFC ActiveX: dodawanie metod standardowych](../mfc/mfc-activex-controls-adding-stock-methods.md).|
+  |Dispinterface kontrolki MFC ActiveX|Podaj własny lub wybrać jedną z metod standardowych [DoClick](../mfc/reference/colecontrol-class.md#doclick) i [Odśwież](../mfc/reference/colecontrol-class.md#refresh). Aby uzyskać więcej informacji, zobacz [kontrolki MFC ActiveX: Dodawanie metod standardowych](../mfc/mfc-activex-controls-adding-stock-methods.md).|
 
 - **Typ metody**
 

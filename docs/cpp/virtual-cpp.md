@@ -11,11 +11,11 @@ helpviewer_keywords:
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
 ms.openlocfilehash: f68bd2e500ebe16c43ef6c3d7a5aede26421b27d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393912"
 ---
 # <a name="virtual-c"></a>wirtualne (C++)
 
@@ -33,13 +33,13 @@ virtual [access-specifier] base-class-name
 *Specyfikatory typów*<br/>
 Określa typ zwracany funkcja wirtualna elementu członkowskiego.
 
-*deklaratora w przypadku funkcji składowej*<br/>
+*member-function-declarator*<br/>
 Deklaruje funkcję członkowską.
 
-*Specyfikator dostępu*<br/>
+*access-specifier*<br/>
 Określa poziom dostępu do klasy bazowej, **publicznych**, **chronione** lub **prywatnej**. Może znajdować się przed lub po **wirtualnego** — słowo kluczowe.
 
-*Base-class-name*<br/>
+*base-class-name*<br/>
 Określa typ klasy zadeklarowanej wcześniej.
 
 ## <a name="remarks"></a>Uwagi

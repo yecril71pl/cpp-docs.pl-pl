@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278694"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346035"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Przestrzeń nazw współbieżności (C++ AMP)
 
@@ -92,7 +92,7 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Przeciążone. Ustawia wartość przechowywaną w określonej lokalizacji na różnicę tej wartości i określoną wartość jako operację niepodzielną.|
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Przeciążone. Ustawia wartość przechowywaną w określonej lokalizacji do bitowej `xor` tej wartości i określoną wartość jako operację niepodzielną.|
 |[Kopiuj](concurrency-namespace-functions-amp.md#copy)|Kopiuje obiekt C++ AMP. Spełnione są wszystkie wymagania synchronicznego transferu danych. Nie można skopiować danych, gdy kod jest kodem wykonywanym na akceleratorze. Ogólna postać tej funkcji jest `copy(src, dest)`.|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Kopiuje obiekt C++ AMP i zwraca [completion_future](completion-future-class.md) , może być oczekiwany. Nie można skopiować danych, gdy kod jest wykonywany na akceleratorze. Ogólna postać tej funkcji jest `copy(src, dest)`.|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Kopiuje C++ AMP i zwraca [completion_future](completion-future-class.md) , może być oczekiwany. Nie można skopiować danych, gdy kod jest wykonywany na akceleratorze. Ogólna postać tej funkcji jest `copy(src, dest)`.|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Przerywa wykonywanie funkcji, która ma `restrict(amp)` klauzulą ograniczenia.|
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Drukuje sformatowany ciąg do programu Visual Studio **dane wyjściowe** okna i zgłasza [runtime_exception](runtime-exception-class.md) wyjątek, który ma ten sam formatowanie ciągu.|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Drukuje sformatowany ciąg do programu Visual Studio **dane wyjściowe** okna. Jest wywoływane z funkcji, która ma `restrict(amp)` klauzulą ograniczenia.|

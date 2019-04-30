@@ -1,6 +1,6 @@
 ---
-title: Błędy krytyczne kompilatora od C999 do C1999
-ms.date: 11/17/2017
+title: Błędy krytyczne kompilatora — od C999 do C1999
+ms.date: 04/21/2019
 f1_keywords:
 - C1034
 - C1036
@@ -52,16 +52,16 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
-ms.translationtype: MT
+ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356221"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344845"
 ---
-# <a name="compiler-fatal-errors-c999-through-c1999"></a>Błędy krytyczne kompilatora od C999 do C1999
+# <a name="compiler-fatal-errors-c999-through-c1999"></a>Błędy krytyczne kompilatora — od C999 do C1999
 
-Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez kompilator.
+Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez Microsoft C /C++ kompilatora.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -214,3 +214,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd krytyczny C1903](fatal-error-c1903.md)|Nie można odzyskać od poprzedniego błędu(ów); zatrzymywanie kompilacji|
 |[Błąd krytyczny C1904](fatal-error-c1904.md)|Zły dostawca interakcji: "*pliku*"|
 |[Błąd krytyczny C1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|Frontonu i zaplecza nie jest zgodne (muszą wskazywać tego samego procesora).|
+
+## <a name="see-also"></a>Zobacz także
+
+[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md)

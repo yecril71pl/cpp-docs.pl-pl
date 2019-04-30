@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399567"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Używanie klasy CAsyncSocket
 
@@ -103,11 +103,11 @@ Pomimo tych problemów klasy `CAsycnSocket` może być właściwym wyborem dla C
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Windows Sockets: Tło](../mfc/windows-sockets-background.md)
+- [Windows Sockets: informacje dodatkowe](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Gniazda Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Zobacz także
 

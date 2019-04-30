@@ -3,11 +3,11 @@ title: Język C/C++ i standardowe biblioteki
 ms.date: 11/04/2016
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
 ms.openlocfilehash: 8642371018a1fdbba46d5dee52e8e88cd2b09ace
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781513"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345142"
 ---
 # <a name="cc-language-and-standard-libraries"></a>Język C/C++ i standardowe biblioteki
 

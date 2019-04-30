@@ -4,11 +4,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392288"
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 
@@ -90,11 +90,11 @@ PI = .75 //Error. Cannot modify const variable.
 
 **Const** kwalifikator jest szeroko stosowany w deklaracjach funkcji i zmiennych i "poprawność const" jest bardzo ważnym pojęciem języka C++; zasadniczo oznacza wykorzystanie **const** w celu zagwarantowania, w czasie kompilacji czy wartości nie zostaną zmodyfikowane przypadkowo. Aby uzyskać więcej informacji, zobacz [const](../cpp/const-cpp.md).
 
-A **const** typu różni się od jego wartości niestałej wersji; na przykład **const int** jest typem samodzielnym z **int**. Można użyć C++ **const_cast** operatora w tych rzadkich przypadkach kiedy konieczne jest usunięcie *const-ness* ze zmiennej. Aby uzyskać więcej informacji, zobacz [konwersje i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+A **const** typu różni się od jego wartości niestałej wersji; na przykład **const int** jest typem samodzielnym z **int**. Możesz użyć C++ **const_cast** operatora w tych rzadkich przypadkach kiedy konieczne jest usunięcie *const-ness* ze zmiennej. Aby uzyskać więcej informacji, zobacz [konwersje i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="string-types"></a>Typy ciągu
 
-Ściśle rzecz ujmując język C++ nie ma wbudowanych parametry typu; **char** i **wchar_t** przechowywania pojedynczych znaków — należy zadeklarować tablicy tych typów w celu uzyskania przybliżonego ciągu, dodanie końcowej wartości zerowej (na przykład ASCII `'\0'`) do pierwszego elementu tablicy poza ostatnim prawidłowym znakiem (nazywane również *ciąg stylu C*). Ciągi stylu C wymagały znacznie więcej kodu lub korzystania z funkcji zewnętrznej biblioteki obsługującej ciągi. Ale w nowoczesnym C++, mamy standardową biblioteki typów `std::string` (dla 8-bitowych **char**-typów ciągów znaków) lub `std::wstring` (dla 16-bitowych **wchar_t**-typów ciągów znaków). Te kontenery standardowej biblioteki języka C++ mogą być uważane za natywne typy ciągów, ponieważ są one częścią standardowych bibliotek, które są zawarte w zgodnym środowisku kompilacji C++. Po prostu użyć `#include <string>` dyrektywy, aby te typy były dostępe w programie. (Jeśli używasz biblioteki ATL lub MFC, klasa CString jest również dostępna, ale nie jest częścią standardowego języka C++.) Używanie tablic zakończonych znakiem zerowym (wcześniej wspomniane ciągi stylu C) jest odradzane w nowoczesnym C++.
+Ściśle rzecz ujmując C++ języka nie ma wbudowanych parametry typu; **char** i **wchar_t** przechowywania pojedynczych znaków — należy zadeklarować tablicy tych typów w celu uzyskania przybliżonego ciągu, dodanie końcowej wartości zerowej (na przykład ASCII `'\0'`) do elementu tablicy po ostatnim prawidłowym znakiem (nazywane również *ciąg stylu C*). Ciągi stylu C wymagały znacznie więcej kodu lub korzystania z funkcji zewnętrznej biblioteki obsługującej ciągi. Ale w nowoczesnym C++, mamy standardową biblioteki typów `std::string` (dla 8-bitowych **char**-typów ciągów znaków) lub `std::wstring` (dla 16-bitowych **wchar_t**-typów ciągów znaków). Te kontenery standardowej biblioteki języka C++ mogą być uważane za natywne typy ciągów, ponieważ są one częścią standardowych bibliotek, które są zawarte w zgodnym środowisku kompilacji C++. Po prostu użyć `#include <string>` dyrektywy, aby te typy były dostępe w programie. (Jeśli używasz biblioteki ATL lub MFC, klasa CString jest również dostępna, ale nie jest częścią standardowego języka C++.) Używanie tablic zakończonych znakiem zerowym (wcześniej wspomniane ciągi stylu C) jest odradzane w nowoczesnym C++.
 
 ## <a name="user-defined-types"></a>Typy definiowane przez użytkownika
 

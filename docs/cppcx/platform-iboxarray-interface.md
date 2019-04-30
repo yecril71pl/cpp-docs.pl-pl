@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
 ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392079"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray, interfejs
 
@@ -33,7 +33,7 @@ Typ wartości spakowanej w każdym elemencie tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-`IBoxArray` jest C + +/ CX nazwę `Windows::Foundation::IReferenceArray`.
+`IBoxArray` jest C++nazwę /CX `Windows::Foundation::IReferenceArray`.
 
 ### <a name="members"></a>Elementy członkowskie
 
@@ -68,4 +68,4 @@ Aby uzyskać przykład, zobacz [pakowania](../cppcx/boxing-c-cx.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Tablica i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+[Array i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
 ms.openlocfilehash: f17b2ddcc6db68f2045d9887a799555fa6ed0643
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388231"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>Zasoby służące do tworzenia gier C++ za pomocą programu DirectX
 
 Aby tworzyć najlepsze gry, używaj Visual C++ w połączeniu z DirectX.
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>Zasoby
 
 Visual C++ jest zawarty we wszystkich wersjach programu Visual Studio, ale nie jest instalowany domyślnie. Aby uzyskać informacje o sposobie instalowania programu Visual Studio i narzędzia programistyczne C++, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md).
 

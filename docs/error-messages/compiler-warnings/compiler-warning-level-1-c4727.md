@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
 ms.openlocfilehash: be1a248fc2709706e137b543344966735c19064e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386437"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Kompilator ostrzeżenie (poziom 1) C4727
 
@@ -23,13 +23,13 @@ Aby rozwiązać problem, skompiluj jeden plik źródłowy przy użyciu **/Yc /c*
 
 Jeśli więc zostały następujące i generuje C4727:
 
-**Cl/CLR /GL a.cpp b.cpp c.cpp /Ycstdafx.h**
+**cl /clr /GL a.cpp b.cpp c.cpp /Ycstdafx.h**
 
 Jak w następujących zamiast tego:
 
-**Cl/CLR /GL a.cpp /Ycstdafx.h /c**
+**cl /clr /GL a.cpp /Ycstdafx.h /c**
 
-**Cl/CLR /GL b.cpp c.cpp /Yustdafx.h/Link a.obj**
+**cl /clr /GL b.cpp c.cpp /Yustdafx.h /link a.obj**
 
 Aby uzyskać więcej informacji, zobacz artykuł
 
