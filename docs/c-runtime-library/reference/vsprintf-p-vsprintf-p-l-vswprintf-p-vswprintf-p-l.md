@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
 ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383441"
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
@@ -120,15 +120,15 @@ Jeśli *buforu* lub *format* parametry są **NULL** wskaźników, jeśli liczba 
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vstprintf_p —**|**_vsprintf_p**|**_vsprintf_p**|**_vswprintf_p**|
-|**_vstprintf_p_l —**|**_vsprintf_p_l**|**_vsprintf_p_l**|**_vswprintf_p_l**|
+|**_vstprintf_p**|**_vsprintf_p**|**_vsprintf_p**|**_vswprintf_p**|
+|**_vstprintf_p_l**|**_vsprintf_p_l**|**_vsprintf_p_l**|**_vswprintf_p_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_vsprintf_p —**, **_vsprintf_p_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
-|**_vswprintf_p —**, **_vswprintf_p_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vsprintf_p**, **_vsprintf_p_l**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
+|**_vswprintf_p**, **_vswprintf_p_l**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
 \* Wymagane dla zgodności systemu UNIX V.
 

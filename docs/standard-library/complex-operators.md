@@ -16,19 +16,19 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
 ms.openlocfilehash: 8641e2f8bcc80cd2ba9b6b68e5574a476f60312e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371623"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;złożone&gt; operatorów
 
 ||||
 |-|-|-|
 |[operator!=](#op_neq)|[Operator&gt;&gt;](#op_gt_gt)|[Operator&lt;&lt;](#op_lt_lt)|
-|[operator *](#op_star)|[operator +](#op_add)|[operator-](#operator-)|
-|[operator /](#op_div)|[operator==](#op_eq_eq)|
+|[operator*](#op_star)|[operator +](#op_add)|[operator-](#operator-)|
+|[operator/](#op_div)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  operator! =
 
@@ -935,4 +935,4 @@ Input a complex number ( try: 2.0 ): 2.0
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<złożone >](../standard-library/complex.md)<br/>
+[\<complex>](../standard-library/complex.md)<br/>

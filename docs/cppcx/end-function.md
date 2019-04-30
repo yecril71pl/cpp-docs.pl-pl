@@ -7,11 +7,11 @@ helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
 ms.openlocfilehash: c46c601be2b2ed78cf79641a7fcf5324e615a771
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375811"
 ---
 # <a name="end-function"></a>End — funkcja
 
@@ -57,7 +57,7 @@ Iterator, który wskazuje poza końcem kolekcji.
 
 Pierwsze dwie funkcje szablonów zwracają Iteratory, a trzecia funkcja szablonu zwraca iterator danych wejściowych.
 
-[Platform::Collections:: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) obiektu, który jest zwracany przez `end` jest iteratorem serwera proxy, który przechowuje elementy typu `VectorProxy<T>`. Jednak obiekt serwera proxy prawie nigdy nie jest widoczne dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcje (C + +/ CX)](../cppcx/collections-c-cx.md).
+[Platform::Collections:: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) obiektu, który jest zwracany przez `end` jest iteratorem serwera proxy, który przechowuje elementy typu `VectorProxy<T>`. Jednak obiekt serwera proxy prawie nigdy nie jest widoczne dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcji (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -67,4 +67,4 @@ Pierwsze dwie funkcje szablonów zwracają Iteratory, a trzecia funkcja szablonu
 
 ## <a name="see-also"></a>Zobacz także
 
-[Windows::Foundation:: Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows::Foundation::Collections, przestrzeń nazw](../cppcx/windows-foundation-collections-namespace-c-cx.md)

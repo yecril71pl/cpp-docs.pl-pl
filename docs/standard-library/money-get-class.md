@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383532"
 ---
 # <a name="moneyget-class"></a>money_get — Klasa
 
@@ -108,7 +108,7 @@ virtual iter_type do_get(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *Wewnętrzna*<br/>
@@ -190,7 +190,7 @@ iter_type get(iter_type first,
 *pierwszy*<br/>
 Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *Wewnętrzna*<br/>
@@ -291,11 +291,11 @@ Wartość liczby całkowitej, można określić typ zarządzania pamięci dla ob
 
 Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
-- 0: okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
 
-- 1: okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
 
-- \> 1: nie zdefiniowano tych wartości.
+- \> 1: Te wartości nie są zdefiniowane.
 
 Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
 
@@ -315,6 +315,6 @@ Typ opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basi
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
-[facet — klasa](../standard-library/locale-class.md#facet_class)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
+[facet Class](../standard-library/locale-class.md#facet_class)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

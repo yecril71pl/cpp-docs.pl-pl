@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379444"
 ---
 # <a name="chartraits-struct"></a>char_traits — Struktura
 
@@ -69,7 +69,7 @@ Struktura szablonu w tym artykule opisano różne cechy znaków dla typu `CharTy
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[Przypisz](#assign)|Przypisuje wartość jednego znaku do innego.|
-|[Porównanie](#compare)|Porównuje maksymalnie określoną liczbę znaków w dwóch ciągów.|
+|[compare](#compare)|Porównuje maksymalnie określoną liczbę znaków w dwóch ciągów.|
 |[Kopiuj](#copy)|Kopiuje określoną liczbę znaków z jednego ciągu do innego. Przestarzałe. Użyj [char_traits::_Copy_s](#copy_s) zamiast tego.|
 |[_Copy_s](#copy_s)|Kopiuje określoną liczbę znaków z jednego ciągu do innego.|
 |[eof](#eof)|Zwraca znak końca z pliku (EOF).|
@@ -384,7 +384,7 @@ Znak końca pliku.
 
 Wartość, która reprezentuje końca pliku (np. znacznik EOF lub WEOF).
 
-Ta wartość nie musi odpowiadać do prawidłowego stany standard C++ `char_type` wartość. Kompilator języka Visual C++ wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Prezentuje to poniższy przykład.
+Ta wartość nie musi odpowiadać do prawidłowego stany standard C++ `char_type` wartość. Element wizualny C++ kompilator wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Prezentuje to poniższy przykład.
 
 ### <a name="example"></a>Przykład
 

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
 ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59030027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384929"
 ---
 # <a name="accessors-and-rowsets"></a>Metody dostępu i zestawy wierszy
 
@@ -51,7 +51,7 @@ Poniższa tabela zawiera podsumowanie obsługi w typy metod dostępu szablonów 
 
 |Typ metody dostępu|Dynamiczne|Obsługuje params|Bufor|Wielu metod dostępu|
 |-------------------|-------------|--------------------|------------|------------------------|
-|`CAccessor`|Nie|Yes|Użytkownik|Yes|
+|`CAccessor`|Nie|Tak|Użytkownik|Yes|
 |`CDynamicAccessor`|Yes|Nie|Szablony OLE DB|Nie|
 |`CDynamicParameterAccessor`|Yes|Yes|Szablony OLE DB|Nie|
 |`CDynamicStringAccessor[A,W]`|Yes|Nie|Szablony OLE DB|Nie|

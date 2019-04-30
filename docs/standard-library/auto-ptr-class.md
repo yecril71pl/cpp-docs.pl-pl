@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
 ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377984"
 ---
 # <a name="autoptr-class"></a>auto_ptr — Klasa
 
@@ -95,8 +95,8 @@ Możesz przekazać `auto_ptr<Type>` obiekt przez wartość jako argument wywoła
 |Operator|Opis|
 |-|-|
 |[operator=](#op_eq)|Operator przypisania przeniesienia własności z jedną `auto_ptr` obiektu do drugiego.|
-|[operator *](#op_star)|Operator dereferencji dla obiektów typu `auto_ptr`.|
-|[operator ->](#op_arrow)|Operator umożliwiające dostęp do elementu członkowskiego.|
+|[operator*](#op_star)|Operator dereferencji dla obiektów typu `auto_ptr`.|
+|[operator->](#op_arrow)|Operator umożliwiające dostęp do elementu członkowskiego.|
 |[Operator auto_ptr\<innych >](#op_auto_ptr_lt_other_gt)|Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju elementu `auto_ptr`.|
 |[Operator auto_ptr_ref\<innych >](#op_auto_ptr_ref_lt_other_gt)|Rzutuje z `auto_ptr` do `auto_ptr_ref`.|
 

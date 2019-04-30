@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C3849
+title: Compiler Error C3849
 ms.date: 11/04/2016
 f1_keywords:
 - C3849
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62381062"
 ---
-# <a name="compiler-error-c3849"></a>Błąd kompilatora C3849
+# <a name="compiler-error-c3849"></a>Compiler Error C3849
 
 Wywołanie w stylu funkcji na wyrażeniu typu "type" spowoduje utratę kwalifikatorów const i/lub volatile dla wszystkich liczba dostępnych przeciążeń operatora
 

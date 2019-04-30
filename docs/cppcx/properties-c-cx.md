@@ -1,15 +1,15 @@
 ---
-title: Właściwości (C + +/ CX)
+title: Właściwości (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
 ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375226"
 ---
-# <a name="properties-ccx"></a>Właściwości (C + +/ CX)
+# <a name="properties-ccx"></a>Właściwości (C++/CX)
 
 Typy środowiska wykonawczego Windows ujawnić dane publiczne jako właściwości. Kod klienta uzyskuje dostęp do właściwości, takich jak datamember publicznych. Wewnętrznie właściwość jest zaimplementowana jako blok, który zawiera metody dostępu get i/lub metody dostępu set. Za pomocą metody dostępu, można wykonywać dodatkowych czynności przed lub po pobraniu wartości, na przykład można wyzwolić zdarzenie lub wykonać sprawdzanie poprawności.
 
@@ -19,7 +19,7 @@ Wartość właściwości jest zawarta w zmiennej prywatnej — znane jako *magaz
 
 A *trivial* właściwość jest właściwością odczytu/zapisu, dla których kompilator automatycznie implementuje metody dostępu i magazyn zapasowy. Nie masz dostępu do implementacji kompilatora. Jednak można zadeklarować właściwości niestandardowej i jawnie deklarować swoją metody dostępu i magazyn zapasowy. W ramach metodę dostępu możesz wykonać wszelka logika, która jest wymagana, takich jak sprawdzanie poprawności danych wejściowych do metody dostępu set, obliczania wartości z wartości właściwości, uzyskiwanie dostępu do bazy danych lub wyzwalanie zdarzeń, gdy właściwość.
 
-Gdy w języku C + +/ CX klasy referencyjnej zostanie uruchomiony, jego pamięci jest inicjowany z wartością zerową przed jego konstruktor jest wywoływana w związku z tym wszystkie właściwości są przypisywane domyślną wartość zero lub nullptr punkcie deklaracji.
+Gdy C++tworzenia wystąpienia klasy ref /CX, jego pamięci jest inicjowany z wartością zerową przed jego konstruktor jest wywoływany; w związku z tym wszystkie właściwości są przypisywane domyślną wartość zero lub nullptr punkcie deklaracji.
 
 ### <a name="examples"></a>Przykłady
 
@@ -39,4 +39,4 @@ Należy pamiętać, że na liście składowych nie można zainicjować właściw
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

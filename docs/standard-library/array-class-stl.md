@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377507"
 ---
 # <a name="array-class-c-standard-library"></a>Array — klasa (standardowa biblioteka C++)
 
@@ -147,15 +147,15 @@ class array;
 |[cbegin](#cbegin)|Zwraca stały iterator dostępu losowego do pierwszego elementu w tablicy.|
 |[cend](#cend)|Zwraca stały iterator dostępu swobodnego, który wskazuje tuż za koniec tablicy.|
 |[crbegin](#crbegin)|Zwraca const iterator do pierwszego elementu w odwróconym tablicy.|
-|[crend —](#crend)|Zwraca const iterator do końca tablicy odwróconej.|
-|[Dane](#data)|Pobiera adres pierwszego elementu.|
+|[crend](#crend)|Zwraca const iterator do końca tablicy odwróconej.|
+|[data](#data)|Pobiera adres pierwszego elementu.|
 |[pusty](#empty)|Testy, czy elementy są obecne.|
 |[koniec](#end)|Określa koniec kontrolowanej sekwencji.|
 |[Wypełnienie](#fill)|Zamienia wszystkie elementy z określoną wartością.|
 |[Frontonu](#front)|Uzyskuje dostęp do pierwszego elementu.|
 |[max_size](#max_size)|Liczy liczbę elementów.|
 |[rbegin](#rbegin)|Określa początek kontrolowanej sekwencji odwróconej.|
-|[rend —](#rend)|Określa koniec kontrolowanej sekwencji odwróconej.|
+|[rend](#rend)|Określa koniec kontrolowanej sekwencji odwróconej.|
 |[Rozmiar](#size)|Liczy liczbę elementów.|
 |[swap](#swap)|Zamienia zawartości dwóch kontenerów.|
 

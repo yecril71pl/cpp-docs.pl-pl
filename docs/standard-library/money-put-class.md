@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: b04160e9ed58f83bdc8ace218ae64b35395f6ea2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383545"
 ---
 # <a name="moneyput-class"></a>money_put — Klasa
 
@@ -161,7 +161,7 @@ Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags) & [show
 
 Jeśli narzuca bez ograniczeń grupowania **fac**. **Grupowanie** (jej pierwszego elementu z wartością CHAR_MAX), następnie żadnych wystąpień **fac**. `thousands_sep` są generowane w część wartości pola pieniężnych danych wyjściowych (gdzie element równy **money_base::value** pojawia się we wzorcu formatu). Jeśli **fac**. `frac_digits` zero, a następnie nie wystąpienie **fac**. `decimal_point` jest generowany po cyfr dziesiętnych. W przeciwnym razie pola pieniężnych danych wyjściowych wynikowego umieszcza niskiego rzędu **fac**. `frac_digits` cyfry po prawej stronie przecinka dziesiętnego.
 
-Dopełnienie występuje, jak w przypadku dowolnego pola liczbowego danych wyjściowych, chyba że **iosbase**. **flagi** & **iosbase**. [wewnętrzny](../standard-library/ios-functions.md#internal) ma wartość różną od zera, wszelkie wewnętrzny uzupełnień jest generowany gdy element równy **money_base::space** pojawia się we wzorcu formatu, jeśli są wyświetlane. W przeciwnym razie dopełnienie wewnętrzne występuje przed wygenerowanym sekwencji. Jest znak dopełnienia **wypełnienia**.
+Dopełnienie występuje, jak w przypadku dowolnego pola liczbowego danych wyjściowych, chyba że **iosbase**. **flags** & **iosbase**. [wewnętrzny](../standard-library/ios-functions.md#internal) ma wartość różną od zera, wszelkie wewnętrzny uzupełnień jest generowany gdy element równy **money_base::space** pojawia się we wzorcu formatu, jeśli są wyświetlane. W przeciwnym razie dopełnienie wewnętrzne występuje przed wygenerowanym sekwencji. Jest znak dopełnienia **wypełnienia**.
 
 Wywołania funkcji **iosbase**. **szerokość**(0), można zresetować szerokość pola na wartość zero.
 
@@ -295,6 +295,6 @@ Typ opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basi
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
-[facet — klasa](../standard-library/locale-class.md#facet_class)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
+[facet Class](../standard-library/locale-class.md#facet_class)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377155"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf — Klasa
 
@@ -257,7 +257,7 @@ Kojarzy nazwę typu z `Elem` parametru szablonu.
 typedef Elem char_type;
 ```
 
-## <a name="close"></a>  basic_filebuf::Close
+## <a name="close"></a>  basic_filebuf::close
 
 Zamyka plik.
 
@@ -433,7 +433,7 @@ Funkcja elementu członkowskiego otwiera plik o nazwie pliku *filename*, wywołu
 
 Jeśli **trybu & ios_base::binary** jest różna od zera, dołącza funkcję `b` do `strmode` można otworzyć strumienia binarnego zamiast strumieniu tekstu. Następnie przechowuje wartość zwrócona przez obiekt `fopen` we wskaźniku pliku `fp`. Jeśli **trybu & ios_base::ate** jest różna od zera, a wskaźnikiem pliku nie jest wskaźnikiem typu null, wywołania funkcji `fseek`( **fp**, 0, `SEEK_END`) do pozycji w strumieniu na końcu pliku. Jeśli ten pozycjonowania operacja zakończy się niepowodzeniem, wywołania funkcji [Zamknij](#close)( `fp`) i przechowuje wskaźnik zerowy we wskaźniku pliku.
 
-Jeśli wskaźnik pliku nie jest wskaźnikiem typu null, funkcja określa zestaw reguł konwersji plików: `use_facet` <  `codecvt` <  **Elem**, `char`, **traits_type::** [ state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc —](../standard-library/basic-streambuf-class.md#getloc)), do użytku przez [niedopełnienie](#underflow) i [przepełnienie](#overflow).
+Jeśli wskaźnik pliku nie jest wskaźnikiem typu null, funkcja określa zestaw reguł konwersji plików: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc —](../standard-library/basic-streambuf-class.md#getloc)), do użytku przez [niedopełnienie](#underflow) i [przepełnienie](#overflow).
 
 Jeśli wskaźnik pliku jest wskaźnikiem typu null, funkcja zwraca pusty wskaźnik. W przeciwnym razie zwraca **to**.
 
@@ -462,7 +462,7 @@ Zwraca * to.
 
 Operator składowy zastępuje zawartość obiektu przy użyciu zawartości *prawo*, traktowane jako odwołanie rvalue. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="overflow"></a>  basic_filebuf::Overflow
+## <a name="overflow"></a>  basic_filebuf::overflow
 
 Wywołuje się, gdy znak nowego są wstawiane do pełnego buforu.
 

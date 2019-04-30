@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371480"
 ---
 # <a name="numpunct-class"></a>numpunct — Klasa
 
@@ -352,11 +352,11 @@ Wartość liczby całkowitej, można określić typ zarządzania pamięci dla ob
 
 Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
-- 0: okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
 
-- 1: okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
 
-- \> 1: nie zdefiniowano tych wartości.
+- \> 1: Te wartości nie są zdefiniowane.
 
 Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
-[facet — klasa](../standard-library/locale-class.md#facet_class)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
+[facet Class](../standard-library/locale-class.md#facet_class)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

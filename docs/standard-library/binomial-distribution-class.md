@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
 ms.openlocfilehash: 1cbb7aff254cee848d711b22414b38deee8cfc07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380224"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution — Klasa
 
@@ -294,4 +294,4 @@ Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konk
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
 ms.openlocfilehash: 21dd4b1936eda201df8283146ba9f41fa81e11de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375889"
 ---
 # <a name="add-a-class"></a>Dodaj klasę
 
@@ -70,7 +70,7 @@ Istnieją cztery kategorie **Dodaj klasę** szablonów: .NET, ATL, MFC i ogólny
 
 |Szablon|Kreator|
 |--------------|------------|
-|Usługa sieci Web ASP.NET|Niedostępne|
+|ASP.NET Web Service|Niedostępne|
 |Klasa składników (.NET)|Niedostępne|
 |Klasa Instalatora (.NET)|Niedostępne|
 |Kontrolka użytkownika (.NET)|Niedostępne|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812125"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342159"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Możesz używać zestawu narzędzi MSVC z wiersza polecenia
 
@@ -162,10 +162,10 @@ Zapewnia przykładowi, który pokazuje, jak utworzyć i skompilować prosty prog
 W tym artykule opisano sposób kompilowania program napisany w języku programowania C.
 
 [Przewodnik: kompilowanie programu w języku C++/CLI w wierszu polecenia](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
-W tym artykule opisano sposób tworzenia i skompilować w języku C + +/ programu interfejsu wiersza polecenia, który używa programu .NET Framework.
+W tym artykule opisano sposób tworzenia i skompilować C++sposób niezamierzony program, który używa .NET Framework.
 
 [Przewodnik: kompilowanie programu w języku C++/CX w wierszu polecenia](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
-W tym artykule opisano sposób tworzenia i skompilować w języku C + +/ CX program, który używa środowiska wykonawczego Windows.
+W tym artykule opisano sposób tworzenia i skompilować C++/CX program, który używa środowiska wykonawczego Windows.
 
 [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
 W tym artykule opisano, jak uruchomić okno wiersza polecenia, który ma zmienne środowiskowe wymagane, ustaw dla kompilacji z wiersza polecenia, których platformą docelową x86, x64 i ARM platform przy użyciu 32-bitową lub 64-bitowego zestawu narzędzi.
@@ -192,4 +192,4 @@ Zawiera łącza do C/C++ kompilacji narzędzia, które znajdują się w programi
 
 ## <a name="see-also"></a>Zobacz także
 
-[Projekty i systemów kompilacji](projects-and-build-systems-cpp.md)
+[Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)

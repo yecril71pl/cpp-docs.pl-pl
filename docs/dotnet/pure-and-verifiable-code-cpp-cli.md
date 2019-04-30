@@ -18,13 +18,13 @@ helpviewer_keywords:
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
 ms.openlocfilehash: 66f3b5a33791d20297cde6e6223ba65189a99682
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384717"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>Kod czysty i weryfikowalny (C + +/ CLI)
+# <a name="pure-and-verifiable-code-ccli"></a>Kod czysty i weryfikowalny (C++sposób niezamierzony)
 
 Podczas programowania .NET, Visual C++ w programie Visual Studio 2017 obsługuje tworzenie zestawów mieszanych, za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora. **/CLR: pure** i **CLR: Safe** opcje są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Jeśli Twój kod musi być bezpieczne lub możliwe do zweryfikowania, a następnie zaleca się jej do portu C#.
 

@@ -44,11 +44,11 @@ helpviewer_keywords:
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
 ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384378"
 ---
 # <a name="windows-operations-ccli"></a>Operacje związane z systemem Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 <xref:Microsoft.Win32.Registry> Klasy jest jedynie kontenerem dla statycznych wystąpień <xref:Microsoft.Win32.RegistryKey>. Każde wystąpienie reprezentuje węzeł główny rejestru. Wystąpienia są <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, i <xref:Microsoft.Win32.Registry.Users>.
 
-Ponadto aby są statyczne, obiekty w ramach <xref:Microsoft.Win32.Registry> klasy są przeznaczone tylko do odczytu. Ponadto wystąpienia elementu <xref:Microsoft.Win32.RegistryKey> klasę, która są tworzone w celu dostępu do zawartości rejestru obiektów, również są przeznaczone tylko do odczytu. Na przykład sposób zastąpienia tego zachowania zobacz [jak: Wpisywanie danych do rejestru Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+Ponadto aby są statyczne, obiekty w ramach <xref:Microsoft.Win32.Registry> klasy są przeznaczone tylko do odczytu. Ponadto wystąpienia elementu <xref:Microsoft.Win32.RegistryKey> klasę, która są tworzone w celu dostępu do zawartości rejestru obiektów, również są przeznaczone tylko do odczytu. Na przykład sposób zastąpienia tego zachowania zobacz [jak: Wpisywanie danych do rejestru Windows (C++sposób niezamierzony)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Istnieją dwa dodatkowe obiekty w <xref:Microsoft.Win32.Registry> klasy: <xref:Microsoft.Win32.Registry.DynData> i <xref:Microsoft.Win32.Registry.PerformanceData>. Oba są wystąpieniami <xref:Microsoft.Win32.RegistryKey> klasy. <xref:Microsoft.Win32.Registry.DynData> Obiekt zawiera informacje rejestru dynamicznych, która jest obsługiwana tylko w Windows 98 i Windows Me. <xref:Microsoft.Win32.Registry.PerformanceData> Obiekt może służyć do uzyskania dostępu do aplikacji, które używają systemu monitorowania wydajności Windows, informacje o liczniku wydajności. <xref:Microsoft.Win32.Registry.PerformanceData> Węzeł reprezentuje informacje, które faktycznie nie są przechowywane w rejestrze i w związku z tym nie można wyświetlić za pomocą Regedit.exe.
 

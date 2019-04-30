@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
 ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380120"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc — Klasa
 
@@ -51,7 +51,7 @@ Każdy fragment zawiera `Sz * Nelts` w bajtach dostępnej pamięci i danych, **n
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators — >](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)<br/>

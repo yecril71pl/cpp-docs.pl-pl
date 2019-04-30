@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376604"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ Operacją niepodzielną ma dwie właściwości klucza, które ułatwiają popraw
 
 Na niektórych platformach go może nie być możliwe do wydajnego implementowania operacji niepodzielnych w przypadku niektórych typów bez użycia `mutex` blokad. Typ niepodzielny *wolne od blokady* Jeśli żadne operacje niepodzielne tego typu nie używają blokady.
 
-**C ++ 11**: W procedurach obsługi sygnału można wykonywać niepodzielne operacje na obiekcie `obj` Jeśli `obj.is_lock_free()` lub `atomic_is_lock_free(x)` mają wartość true.
+**C++11**: W procedurach obsługi sygnału można wykonywać niepodzielne operacje na obiekcie `obj` Jeśli `obj.is_lock_free()` lub `atomic_is_lock_free(x)` mają wartość true.
 
 Klasa [atomic_flag](../standard-library/atomic-flag-structure.md) zapewnia minimalne typ niepodzielny, zawierający **bool** flagi. Jej operacje są zawsze wolne od blokady.
 
@@ -191,7 +191,7 @@ Na liście poniżej, funkcje, które nie kończą się na `_explicit` ma semanty
 |[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Ustawia flagę `atomic_flag` obiekt **true**.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Ustawia wartość przechowywaną w `atomic` obiektu.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Określa, czy niepodzielne operacje na określony obiekt są wolne od blokady.|
-|[atomic_load —](../standard-library/atomic-functions.md#atomic_load)|Niepodzielnie pobiera wartość.|
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Niepodzielnie pobiera wartość.|
 |[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Niepodzielnie pobiera wartość.|
 |[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Działa jako *horyzont* który ustanawia pamięci zamawiania, wymagania dotyczące zaporami wywołującymi wywołania wątku, który ma procedurach obsługi sygnału wykonywane w tym samym wątku.|
 |[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Niepodzielne przechowuje wartość.|

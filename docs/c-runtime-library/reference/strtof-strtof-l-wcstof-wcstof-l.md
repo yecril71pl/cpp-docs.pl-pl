@@ -39,11 +39,11 @@ helpviewer_keywords:
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
 ms.openlocfilehash: 10a50a175685f3e8f7f1241683c7705fd9a9b142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376435"
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -99,8 +99,8 @@ Każda funkcja konwertuje ciąg wejściowy *strSource* do **float**. **Strtof �
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstof —**|**strtof**|**strtof**|**wcstof**|
-|**_tcstof_l —**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
+|**_tcstof**|**strtof**|**strtof**|**wcstof**|
+|**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
 **LC_NUMERIC** ustawienie kategorii bieżących ustawień regionalnych określa rozpoznawanie znaku podstawy w parametrze *strSource*; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md). Funkcje, które nie mają **_l** sufiksa używa bieżących ustawień regionalnych; mają sufiksem są identyczne, z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
@@ -118,8 +118,8 @@ UCRT wersje tych funkcji nie obsługują konwersję Fortran stylu (**d** lub **D
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strtof —**, **_strtof_l —**|C: \<stdlib.h > C++: &lt;cstdlib — > lub \<stdlib.h >|
-|**wcstof —**, **_wcstof_l —**|C: \<stdlib.h > lub \<wchar.h > C++: &lt;cstdlib — >, \<stdlib.h > lub \<wchar.h >|
+|**strtof**, **_strtof_l**|C: \<stdlib.h > C++: &lt;cstdlib — > lub \<stdlib.h >|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> or \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

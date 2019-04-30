@@ -1,15 +1,15 @@
 ---
-title: Interfejsy (C + +/ CX)
+title: Interfejsy (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
 ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375785"
 ---
-# <a name="interfaces-ccx"></a>Interfejsy (C + +/ CX)
+# <a name="interfaces-ccx"></a>Interfejsy (C++/CX)
 
 Chociaż klasa ref może dziedziczyć z co najwyżej jedną konkretną klasę bazową, on implementować dowolną liczbę klas interfejsów. Klasa interfejsu (lub struktury interfejsu) sama może być dziedziczony (lub wymagają) wielu interfejsu klasy, może doprowadzić do przeciążenia jej funkcje Członkowskie i może mieć parametrów typu.
 
@@ -63,7 +63,7 @@ Gdy klasy referencyjnej implementuje wiele interfejsów i metody mają te interf
 
 ## <a name="generic-interfaces"></a>Interfejsy ogólne
 
-W języku C + +/ CX, `generic` — słowo kluczowe jest używana do reprezentowania typów środowiska wykonawczego Windows sparametryzowanych. Typ sparametryzowany jest emitowane w metadanych i mogą być używane przez kod, który jest napisane w dowolnym języku, który obsługuje parametry typu. Środowisko wykonawcze Windows definiuje kilka interfejsów ogólnych — na przykład [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)—, ale go nie obsługuje tworzenia publicznych interfejsów ogólnych zdefiniowanych przez użytkownika w języku C + +/ CX. Można jednak utworzyć prywatnego interfejsów ogólnych.
+W C++/CX, `generic` — słowo kluczowe jest używana do reprezentowania typów środowiska wykonawczego Windows sparametryzowanych. Typ sparametryzowany jest emitowane w metadanych i mogą być używane przez kod, który jest napisane w dowolnym języku, który obsługuje parametry typu. Środowisko wykonawcze Windows definiuje kilka interfejsów ogólnych — na przykład [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)—, ale go nie obsługuje tworzenia użytkownika ogólnych interfejsów publicznych w C++/ CX. Można jednak utworzyć prywatnego interfejsów ogólnych.
 
 Poniżej przedstawiono, jak typów środowiska wykonawczego Windows może służyć do tworzenia ogólny interfejs:
 
@@ -99,4 +99,4 @@ Poniżej przedstawiono, jak typów środowiska wykonawczego Windows może służ
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

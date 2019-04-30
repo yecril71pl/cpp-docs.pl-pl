@@ -53,11 +53,11 @@ helpviewer_keywords:
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
 ms.openlocfilehash: 7c3416397d8f43963d3be2ce9bc39707ea7865db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383467"
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -188,14 +188,14 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vsntprintf —**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
-|**_vsntprintf_l —**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
+|**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
+|**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------------|-------------------------------|
-|**vsnprintf —**, **_vsnprintf —**, **_vsnprintf_l —**|\<stdio.h>|\<stdio.h > lub \<cstdio — >|
+|**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h > lub \<cstdio — >|
 |**_vsnwprintf —**, **_vsnwprintf_l —**|\<stdio.h > lub \<wchar.h >|\<stdio.h >, \<wchar.h >, \<cstdio — >, lub \<cwchar — >|
 
 **_Vsnprintf —**, **_vsnprintf_l —**, **_vsnwprintf —** i **_vsnwprintf_l —** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

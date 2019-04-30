@@ -4,11 +4,11 @@ ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
 ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380330"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>Klasa wyliczeniowa (C++sposób niezamierzony i C++/CX)
 

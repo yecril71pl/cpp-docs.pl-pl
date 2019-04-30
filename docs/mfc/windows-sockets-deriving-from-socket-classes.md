@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
 ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385261"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Wyprowadzanie z klas gniazd
 
@@ -27,15 +27,15 @@ W swojej `OnMessagePending` zastąpienia, zwracać albo **TRUE** lub powrót z w
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md)
+- [Windows Sockets: blokowanie](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Sockets: określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)
+- [Windows Sockets: konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>Zobacz także
 

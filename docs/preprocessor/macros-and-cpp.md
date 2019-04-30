@@ -6,11 +6,11 @@ helpviewer_keywords:
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
 ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371792"
 ---
 # <a name="macros-and-c"></a>Makra i język C++
 C++ zawiera nowe funkcje, niektóre z nich ograniczyć te udostępniane przez ANSI C preprocesora. Te nowe możliwości zwiększenia bezpieczeństwa i stabilności języka:

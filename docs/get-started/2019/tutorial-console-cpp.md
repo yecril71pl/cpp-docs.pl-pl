@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59430717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62382906"
 ---
 # <a name="create-a-c-console-app-project"></a>Tworzenie projektu aplikacji konsoli w języku C++
 

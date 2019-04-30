@@ -34,11 +34,11 @@ helpviewer_keywords:
 - strtoumax function
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
 ms.openlocfilehash: c9c8ca79ed68b23586d9fef979bc8d47b72ca846
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379171"
 ---
 # <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 
@@ -119,9 +119,9 @@ A *odstępu* może składać się ze znaków spacji lub tabulatora, które są i
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strtoumax**|\<stdlib.h>|
-|**wcstoumax**|\<stdlib.h > lub \<wchar.h >|
+|**wcstoumax**|\<stdlib.h> or \<wchar.h>|
 |**_strtoumax_l —**|\<stdlib.h>|
-|**_wcstoumax_l**|\<stdlib.h > lub \<wchar.h >|
+|**_wcstoumax_l**|\<stdlib.h> or \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

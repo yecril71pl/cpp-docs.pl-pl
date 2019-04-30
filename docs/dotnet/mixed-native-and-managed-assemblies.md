@@ -13,11 +13,11 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384858"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Zestawy mieszane (natywne i zarządzane)
 
@@ -27,14 +27,14 @@ Na przykład istniejącej biblioteki składające się wyłącznie z macierzyste
 
 Visual C++ obsługuje tylko generowanie zestawów mieszanych zarządzanych przy użyciu **/CLR** — opcja kompilatora. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Jeśli wymagana jest czysty i weryfikowalny zestawów zarządzanych, zalecamy tworzenie przy użyciu języka C#.
 
-Wcześniejsze wersje zestawu narzędzi kompilatora Visual C++ obsługuje generację trzech różnych typów zestawów zarządzanych: mieszanych, czystych i weryfikowalnych. Te ostatnie dwa są omówione w [czystej i możliwe do zweryfikowania kodu (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Wcześniejsze wersje zestawu narzędzi kompilatora Visual C++ obsługuje generację trzech różnych typów zestawów zarządzanych: mieszanych, czystych i weryfikowalnych. Te ostatnie dwa są omówione w [czystej i weryfikowalny kod (C++sposób niezamierzony)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Porady: Migracja do/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
+[Instrukcje: Migracja do/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
 W tym artykule opisano zalecane kroki do wprowadzenia lub uaktualnienia funkcjonalności .NET w aplikacji.
 
-[Porady: kompilowanie MFC i ATL kodu za pomocą/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[Instrukcje: Skompilować MFC i ATL kodu za pomocą/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 W tym artykule omówiono sposób kompilowania istniejących programów MFC i ATL do elementu docelowego środowiska uruchomieniowego języka wspólnego.
 
 [Inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md)<br/>

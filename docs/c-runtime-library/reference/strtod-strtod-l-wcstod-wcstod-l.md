@@ -43,11 +43,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
 ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376474"
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -102,7 +102,7 @@ Każda funkcja konwertuje ciąg wejściowy *strSource* do **double**. **Strtod**
 |Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstod —**|**strtod**|**strtod**|**wcstod**|
-|**_tcstod_l —**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
+|**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
 **LC_NUMERIC** ustawienie kategorii bieżących ustawień regionalnych określa rozpoznawanie znaku podstawy w parametrze punktu *strSource*. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez **_l** sufiksa używa bieżących ustawień regionalnych; **_strtod_l —** jest taka sama jak **_strtod_l —** z tą różnicą, że używają one *ustawień regionalnych* przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
@@ -121,7 +121,7 @@ UCRT wersje tych funkcji nie obsługują konwersję Fortran stylu (**d** lub **D
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strtod**, **_strtod_l —**|C: &lt;stdlib.h > C++: &lt;cstdlib — > lub &lt;stdlib.h > |
-|**wcstod —**, **_wcstod_l —**|C: &lt;stdlib.h > lub &lt;wchar.h > C++: &lt;cstdlib — >, &lt;stdlib.h > lub &lt;wchar.h > |
+|**wcstod —**, **_wcstod_l —**|C: &lt;stdlib.h> or &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> or &lt;wchar.h> |
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

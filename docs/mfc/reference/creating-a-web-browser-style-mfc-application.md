@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
 ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57809876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372234"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
 

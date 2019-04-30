@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377142"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Atomic&gt; funkcji
 
@@ -80,7 +80,7 @@ ms.locfileid: "50533760"
 |[atomic_fetch_sub](#atomic_fetch_sub)|[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit)|[atomic_fetch_xor](#atomic_fetch_xor)|
 |[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit)|[atomic_flag_clear](#atomic_flag_clear)|[atomic_flag_clear_explicit](#atomic_flag_clear_explicit)|
 |[atomic_flag_test_and_set](#atomic_flag_test_and_set)|[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit)|[atomic_init](#atomic_init)|
-|[atomic_is_lock_free](#atomic_is_lock_free)|[atomic_load —](#atomic_load)|[atomic_load_explicit](#atomic_load_explicit)|
+|[atomic_is_lock_free](#atomic_is_lock_free)|[atomic_load](#atomic_load)|[atomic_load_explicit](#atomic_load_explicit)|
 |[atomic_signal_fence](#atomic_signal_fence)|[atomic_store](#atomic_store)|[atomic_store_explicit](#atomic_store_explicit)|
 |[atomic_thread_fence](#atomic_thread_fence)|[kill_dependency](#kill_dependency)|
 
@@ -979,4 +979,4 @@ Wartość zwracana jest *Arg*. Ocena *Arg* nie posiadają zależności do wywoł
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<niepodzielne >](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)<br/>

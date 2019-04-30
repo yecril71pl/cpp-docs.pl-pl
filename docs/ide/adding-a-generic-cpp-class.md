@@ -11,11 +11,11 @@ helpviewer_keywords:
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
 ms.openlocfilehash: 08ebe572da605e0f6d4d712bd7e48159598ba844
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694143"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344450"
 ---
 # <a name="add-a-generic-c-class"></a>Dodawanie rodzajowej klasy C++
 
@@ -55,7 +55,7 @@ Dodaje rodzajowej klasy C++ do projektu. Klasa nie dziedziczy ATL lub MFC.
 
   Ustawia klasę bazową dla nowej klasy.
 
-- **Dostęp do**
+- **Dostęp**
 
   Ustawia dostęp do składowych klasy bazowej dla nowej klasy. Modyfikatory dostępu są słowami kluczowymi, które określają poziom dostępu, który inne klasy mają funkcji składowych klasy. Aby uzyskać więcej informacji o sposobie określania dostępu, zobacz [kontrola dostępu do składowych](../cpp/member-access-control-cpp.md). Domyślnie ustawiono poziom dostępu do klasy `public`.
 

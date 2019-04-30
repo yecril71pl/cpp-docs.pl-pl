@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
 ms.openlocfilehash: 9cc7dd32f222e68abb45fe8c518d9f378453b372
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384838"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
@@ -140,7 +140,7 @@ template<typename Key,
 *Key*<br/>
 Typ kluczowy składnik elementu w kontrolowanej sekwencji.
 
-*Zamapowane*<br/>
+*zamapowane*<br/>
 Typ dodatkowego składnika elementu w kontrolowanej sekwencji.
 
 ## <a name="requirements"></a>Wymagania
@@ -777,7 +777,7 @@ Początek zakresu, aby wymazać.
 *Klucz*<br/>
 Wartość klucza do wymazania.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu, aby wymazać.
 
 *gdzie*<br/>
@@ -1159,7 +1159,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *right*<br/>
@@ -1643,7 +1643,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *pierwszy*<br/>
 Początek zakresu do wstawienia.
 
-*ostatni*<br/>
+*last*<br/>
 Koniec zakresu do wstawienia.
 
 *P.*<br/>

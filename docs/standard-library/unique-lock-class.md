@@ -5,11 +5,11 @@ f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
 ms.openlocfilehash: 784969bea25bfff49a21c23b350afbfc8bdab59a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383519"
 ---
 # <a name="uniquelock-class"></a>unique_lock — Klasa
 
@@ -52,7 +52,7 @@ Wewnętrznie `unique_lock` przechowuje wskaźnik do skojarzonego `mutex` obiektu
 |[owns_lock](#owns_lock)|Określa, czy wątek wywołujący posiada skojarzonej `mutex`.|
 |[Wydania](#release)|Powoduje usunięcie `unique_lock` obiektu z powiązanego `mutex` obiektu.|
 |[swap](#swap)|Zamienia skojarzonego `mutex` i stan własności określonego obiektu.|
-|[try_lock —](#try_lock)|Próby uzyskania własności skojarzonego `mutex` bez blokowania.|
+|[try_lock](#try_lock)|Próby uzyskania własności skojarzonego `mutex` bez blokowania.|
 |[try_lock_for](#try_lock_for)|Próby uzyskania własności skojarzonego `mutex` bez blokowania.|
 |[try_lock_until](#try_lock_until)|Próby uzyskania własności skojarzonego `mutex` bez blokowania.|
 |[unlock](#unlock)|Zwalnia własność skojarzonego `mutex`.|

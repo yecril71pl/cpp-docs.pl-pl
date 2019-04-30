@@ -24,11 +24,11 @@ helpviewer_keywords:
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385196"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -47,7 +47,7 @@ void _tzset( void );
 
 **_Tzset —** funkcja używa bieżącego ustawienia zmiennej środowiskowej **TZ** do przypisywania wartości do trzech zmiennych globalnych: **_daylight**, **_timezone** , i **_tzname**. Te zmienne są używane przez [_ftime](ftime-ftime32-ftime64.md) i [localtime](localtime-localtime32-localtime64.md) funkcje do wprowadzania poprawek od skoordynowanego czasu uniwersalnego (UTC), do czasu lokalnego oraz [czasu](time-time32-time64.md) funkcja obliczania czasu UTC od czasu systemowego. Użyj następującej składni, aby ustawić **TZ** zmienną środowiskową:
 
-> **Ustaw TZ =**_tzn_ \[ **+** &#124; **-**]*hh* \[ **:**_mm_\[**:**_ss_]] [*dzn*]
+> **set TZ=**_tzn_ \[**+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
 
 |Parametr|Opis|
 |-|-|
@@ -62,7 +62,7 @@ void _tzset( void );
 
 Na przykład, aby ustawić **TZ** zmiennej środowiskowej, aby odpowiadać bieżącej strefy czasowej w Niemczech, wprowadź następujące polecenie w wierszu polecenia:
 
-> **Ustaw TZ = GST 1GDT**
+> **set TZ=GST-1GDT**
 
 To polecenie używa GST do wskazania niemieckiego czasu standardowego przyjęto założenie, że UTC jest jedną godzinę Niemcami (lub innymi słowy, których Niemicy są jedną godzinę wcześniej przed UTC) i zakłada się, że Niemcy przestrzegają czasu letniego.
 

@@ -1,5 +1,5 @@
 ---
-title: Błąd kompilatora C3898
+title: Compiler Error C3898
 ms.date: 11/04/2016
 f1_keywords:
 - C3898
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - C3898
 ms.assetid: d9a90df6-87e4-4fe7-ab01-c226ee86bf10
 ms.openlocfilehash: 503f295d62c598e3138b1a001d6b350c0d90ea84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385449"
 ---
-# <a name="compiler-error-c3898"></a>Błąd kompilatora C3898
+# <a name="compiler-error-c3898"></a>Compiler Error C3898
 
 "var": składowe danych typu mogą być tylko składowymi typów zarządzanych
 

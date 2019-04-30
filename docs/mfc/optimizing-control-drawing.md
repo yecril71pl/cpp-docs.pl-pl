@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
 ms.openlocfilehash: 4d0037ebdfe56690be2f18a2790b2b13967e337c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378319"
 ---
 # <a name="optimizing-control-drawing"></a>Optymalizacja rysowania formantów
 
@@ -44,9 +44,9 @@ Na koniec wyeliminowanie niepotrzebnych `SelectObject` wywołań, zmodyfikuj `On
 
 ## <a name="see-also"></a>Zobacz także
 
-[Kontrolki ActiveX MFC: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)<br/>
+[Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)<br/>
 [Klasa COleControl](../mfc/reference/colecontrol-class.md)<br/>
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Kontrolki ActiveX MFC: Malowanie kontrolki ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+[Kontrolki ActiveX MFC: debugowanie kontrolki ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)

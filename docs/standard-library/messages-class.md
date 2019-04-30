@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383584"
 ---
 # <a name="messages-class"></a>messages — Klasa
 
@@ -71,9 +71,9 @@ W zasadzie ten zestaw reguł otwiera katalog komunikatów zdefiniowany w klasie 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[close](#close)|Zamyka katalog komunikatów.|
-|[do_close —](#do_close)|Funkcja wirtualna wywoływana, aby zamknąć katalog komunikatów.|
+|[do_close](#do_close)|Funkcja wirtualna wywoływana, aby zamknąć katalog komunikatów.|
 |[do_get](#do_get)|Funkcja wirtualna wywoływana, aby pobrać katalog komunikatów.|
-|[do_open —](#do_open)|Funkcja wirtualna wywoływana, aby otworzyć katalog komunikatów.|
+|[do_open](#do_open)|Funkcja wirtualna wywoływana, aby otworzyć katalog komunikatów.|
 |[get](#get)|Pobiera katalog komunikatów.|
 |[open](#open)|Otwiera katalog komunikatów.|
 
@@ -152,7 +152,7 @@ virtual string_type do_get(
 *_Catval*<br/>
 Wartość Identyfikacja, określając katalog komunikatów, który ma być przeszukiwany.
 
-*_Ustaw*<br/>
+*_Set*<br/>
 Zidentyfikowany pierwszy używana do lokalizowania komunikat w katalog komunikatów.
 
 *_Message*<br/>
@@ -222,7 +222,7 @@ string_type get(
 *_Catval*<br/>
 Wartość Identyfikacja, określając katalog komunikatów, który ma być przeszukiwany.
 
-*_Ustaw*<br/>
+*_Set*<br/>
 Zidentyfikowany pierwszy używana do lokalizowania komunikat w katalog komunikatów.
 
 *_Message*<br/>
@@ -264,11 +264,11 @@ Nazwa ustawień regionalnych.
 
 Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
-- 0: okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
 
-- 1: okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
 
-- \> 1: nie zdefiniowano tych wartości.
+- \> 1: Te wartości nie są zdefiniowane.
 
 Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
 
@@ -314,6 +314,6 @@ Typ opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basi
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
 [messages_base, klasa](../standard-library/messages-base-class.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

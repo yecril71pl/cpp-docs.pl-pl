@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
 ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149651"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343832"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatory relacyjne i porównania języka C
 

@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 861850f192281d64ef02ec4a241315c05cd3318f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371519"
 ---
 # <a name="numericlimits-class"></a>numeric_limits — Klasa
 
@@ -106,9 +106,9 @@ Dla dowolnego specjalizacji żadnych elementów członkowskich mają znaczący w
 |[denorm_min](#denorm_min)|Zwraca wartość różną od zera najmniejszy nieznormalizowane wartość.|
 |[cyfry](#digits)|Zwraca liczbę cyfr podstawy, których typ może reprezentować bez utraty dokładności.|
 |[digits10](#digits10)|Zwraca liczbę cyfr dziesiętnych, reprezentujących przez typ bez utraty dokładności.|
-|[Epsilon](#epsilon)|Zwraca różnicę między 1 a najmniejsza wartość większa niż 1, który może reprezentować typu danych.|
-|[has_denorm —](#has_denorm)|Sprawdza, czy typ umożliwia nieznormalizowane wartości.|
-|[has_denorm_loss —](#has_denorm_loss)|Sprawdza, czy wykryto utratę dokładności utratę denormalizacja, a nie jako niedokładny wynik.|
+|[epsilon](#epsilon)|Zwraca różnicę między 1 a najmniejsza wartość większa niż 1, który może reprezentować typu danych.|
+|[has_denorm](#has_denorm)|Sprawdza, czy typ umożliwia nieznormalizowane wartości.|
+|[has_denorm_loss](#has_denorm_loss)|Sprawdza, czy wykryto utratę dokładności utratę denormalizacja, a nie jako niedokładny wynik.|
 |[has_infinity](#has_infinity)|Sprawdza, czy typ ma reprezentację nieskończoności dodatniej.|
 |[has_quiet_NaN](#has_quiet_nan)|Sprawdza, czy typ ma reprezentację quiet nie jest liczbą (NAN), czyli nonsignaling.|
 |[has_signaling_NaN](#has_signaling_nan)|Sprawdza, czy typ ma reprezentację sygnalizowania nie jest liczbą (NAN).|

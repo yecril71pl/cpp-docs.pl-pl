@@ -13,11 +13,11 @@ helpviewer_keywords:
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
 ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328964"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344339"
 ---
 # <a name="add-a-member-variable"></a>Dodaj zmienną składową
 
