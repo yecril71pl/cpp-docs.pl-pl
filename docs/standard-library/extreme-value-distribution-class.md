@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
 ms.openlocfilehash: 7eb75fb7b76399fd4bf1d3bea94dcec4b52230f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405147"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution — Klasa
 
@@ -244,4 +244,4 @@ Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konk
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

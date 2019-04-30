@@ -3,11 +3,11 @@ title: Użycie fragmentów
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405382"
 ---
 # <a name="using-tiles"></a>Użycie fragmentów
 
@@ -291,13 +291,13 @@ Istnieją dwa rodzaje dostępów do pamięci, które muszą być synchronizowane
 
 A *horyzont pamięci* gwarantuje, że dostęp do pamięci jest dostępny dla innych wątków we fragmencie wątków i uzyskuje dostęp do są wykonywane w założonej kolejności pamięci. Aby to zapewnić kompilatory oraz procesory nie zmieniają kolejności odczytów i zapisów ramach horyzontu. W bibliotece C++ AMP horyzont pamięci jest tworzony przez wywołanie jednej z następujących metod:
 
-- [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait): tworzy horyzont wokół zarówno globalnych i `tile_static` pamięci.
+- [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait): Tworzy horyzont wokół zarówno globalnych i `tile_static` pamięci.
 
-- [tile_barrier::wait_with_all_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_all_memory_fence): tworzy horyzont wokół zarówno globalnych i `tile_static` pamięci.
+- [tile_barrier::wait_with_all_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_all_memory_fence): Tworzy horyzont wokół zarówno globalnych i `tile_static` pamięci.
 
-- [tile_barrier::wait_with_global_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_global_memory_fence): tworzy horyzont tylko wokół pamięci globalnej.
+- [tile_barrier::wait_with_global_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_global_memory_fence): Tworzy horyzont tylko wokół pamięci globalnej.
 
-- [tile_barrier::wait_with_tile_static_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): tworzy horyzont tylko wokół `tile_static` pamięci.
+- [tile_barrier::wait_with_tile_static_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Tworzy horyzont tylko wokół `tile_static` pamięci.
 
 Podczas wywoływania określonych wymaganego horyzontu może zwiększyć wydajność aplikacji. Typ bariery wpływa na tym, jak kompilator i sprzęt zmiana kolejności instrukcji. Na przykład, jeśli używasz horyzontu pamięci globalnej, dotyczy tylko dostępu do pamięci globalnej i dlatego kompilator i sprzęt mogą zmieniać kolejność odczytuje i zapisuje `tile_static` zmiennych po obu stronach horyzontu.
 

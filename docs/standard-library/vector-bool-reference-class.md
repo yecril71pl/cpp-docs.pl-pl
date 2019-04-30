@@ -7,11 +7,11 @@ helpviewer_keywords:
 - vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
 ms.openlocfilehash: 7930c1cd93cd05a752d4997b9480c766ee26bd99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407721"
 ---
 # <a name="vectorltboolgtreference-class"></a>Wektor&lt;bool&gt;:: reference — klasa
 
@@ -32,7 +32,7 @@ bool& refb = vb[1];   // conversion error - do not use
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Przerzuć](../standard-library/vector-bool-reference-flip.md)|Odwraca wartość logiczną elementu wektora.|
+|[flip](../standard-library/vector-bool-reference-flip.md)|Odwraca wartość logiczną elementu wektora.|
 |[bool — operator](../standard-library/vector-bool-reference-operator-bool.md)|Dostarcza niejawną konwersję z `vector<bool>::reference` do **bool**.|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|Przypisuje do bitu wartość logiczną lub wartość przechowywaną przez odnośny element.|
 
@@ -44,6 +44,6 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Wektor >](../standard-library/vector.md)<br/>
+[\<vector>](../standard-library/vector.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

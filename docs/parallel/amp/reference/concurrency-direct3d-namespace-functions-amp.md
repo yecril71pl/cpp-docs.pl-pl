@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405589"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>CONCURRENCY::Direct3D funkcje przestrzeni nazw (AMP)
 
@@ -156,7 +156,7 @@ Ta funkcja tworzy nową `accelerator_view` obiekt z istniejącego wskaźnika do 
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock —
 
-Uzyskaj blokadę na accelerator_view w celu bezpiecznego wykonywania operacji D3D na zasobach współużytkowanych wraz z accelerator_view. Obiekt accelerator_view i wszystkie zasoby C++ AMP skojarzone z tym obiektem accelerator_view wewnętrznie nakładają tę blokadę podczas wykonywania operacji i są blokowane, gdy inny wątek nałoży blokadę dostępu D3D. Ta blokada nie jest cykliczna: Jest to niezdefiniowane zachowanie, aby wywołać tę funkcję z wątku, który już posiada blokadę. To zachowanie niezdefiniowane do wykonywania operacji na widoku akcelatora lub dowolnego kontenera danych skojarzonych z widokiem akcelatora z wątku, który posiada blokadę dostępu D3D. Zobacz też: scoped_d3d_access_lock, klasa stylu RAII na blokadę dostępu D3D zakresu.
+Uzyskaj blokadę na accelerator_view w celu bezpiecznego wykonywania operacji D3D na zasobach współużytkowanych wraz z accelerator_view. Obiekt accelerator_view i wszystkie C++ zasobów i skojarzone z tym obiektem accelerator_view wewnętrznie nakładają tę blokadę podczas wykonywania operacji i są blokowane, gdy inny wątek nałoży blokadę dostępu D3D. Ta blokada nie jest cykliczna: Jest to niezdefiniowane zachowanie, aby wywołać tę funkcję z wątku, który już posiada blokadę. To zachowanie niezdefiniowane do wykonywania operacji na widoku akcelatora lub dowolnego kontenera danych skojarzonych z widokiem akcelatora z wątku, który posiada blokadę dostępu D3D. Zobacz też: scoped_d3d_access_lock, klasa stylu RAII na blokadę dostępu D3D zakresu.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

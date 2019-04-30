@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405173"
 ---
 # <a name="collate-class"></a>collate — Klasa
 
@@ -66,11 +66,11 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Porównanie](#compare)|Porównuje dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.|
-|[do_compare —](#do_compare)|Funkcja wirtualna porównująca dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.|
+|[compare](#compare)|Porównuje dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.|
+|[do_compare](#do_compare)|Funkcja wirtualna porównująca dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.|
 |[do_hash](#do_hash)|Funkcja wirtualna wywoływana w celu określenia wartości mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.|
 |[do_transform](#do_transform)|Funkcja wirtualna wywoływana w celu konwersji sekwencji znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.|
-|[Skrót](#hash)|Określa wartość mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.|
+|[hash](#hash)|Określa wartość mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.|
 |[transform](#transform)|Konwertuje sekwencję znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.|
 
 ## <a name="requirements"></a>Wymagania
@@ -118,11 +118,11 @@ Nazwa ustawień regionalnych.
 
 Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
-- 0: okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
 
-- 1: okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
 
-- \> 1: nie zdefiniowano tych wartości.
+- \> 1: Te wartości nie są zdefiniowane.
 
 Konstruktor inicjuje jego podstawowego obiektu z **locale::**[aspekt](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -142,13 +142,13 @@ int compare(const CharType* first1,
 *first1*<br/>
 Wskaźnik do pierwszego elementu w pierwszej kolejności mają być porównane.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Wskaźnik do ostatniego elementu w pierwszej kolejności mają być porównane.
 
 *first2*<br/>
 Wskaźnik do pierwszego elementu w drugiej sekwencji, które mają być porównane.
 
-*Nazwisko2*<br/>
+*last2*<br/>
 Wskaźnik do ostatniego elementu w drugiej sekwencji, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 *first1*<br/>
 Wskaźnik do pierwszego elementu w pierwszej kolejności mają być porównane.
 
-*Nazwisko1*<br/>
+*last1*<br/>
 Wskaźnik do ostatniego elementu w pierwszej kolejności mają być porównane.
 
 *first2*<br/>
 Wskaźnik do pierwszego elementu w drugiej sekwencji, które mają być porównane.
 
-*Nazwisko2*<br/>
+*last2*<br/>
 Wskaźnik do ostatniego elementu w drugiej sekwencji, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -248,7 +248,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w sekwencji, w których ma wartość zostanie określony.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do ostatniego znaku w sekwencji, w których ma wartość zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -276,7 +276,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do ostatniego znaku w sekwencji, który ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -304,7 +304,7 @@ long hash(const CharType* first, const CharType* last) const;
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w sekwencji, w których ma wartość zostanie określony.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do ostatniego znaku w sekwencji, w których ma wartość zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -374,7 +374,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 *pierwszy*<br/>
 Wskaźnik do pierwszego znaku w sekwencji, który ma zostać przekonwertowany.
 
-*ostatni*<br/>
+*last*<br/>
 Wskaźnik do ostatniego znaku w sekwencji, który ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

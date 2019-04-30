@@ -3,11 +3,11 @@ title: Debuger właściwości (Linux C++) | Dokumentacja firmy Microsoft
 ms.date: 9/26/2017
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
 ms.openlocfilehash: ac5992ca9921a87616b9ff10e5744791510b7a7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393067"
 ---
 # <a name="c-debugging-properties-linux-c"></a>C++, debugowanie — właściwości (Linux C++)
 
@@ -20,7 +20,7 @@ Katalog roboczy | Katalog roboczy aplikacji zdalnej. Domyślnie katalogu macierz
 Dodatkowe polecenia debugera | Dodatkowe polecenia gdb dla debugera do uruchomienia przed rozpoczęciem debugowania.
 Numer portu debugera | Numer portu do komunikacji z debugerem ze zdalnym debugerem. Port nie może być używany lokalnie. Ta wartość musi być dodatnią z przedziału od 1 do 65535. Jeśli nie podano numeru wolnego portu zostanie użyta.
 Numer portu debugera zdalnego | Numer portu, na którym serwer debugera zdalnego (serwera gdbserver) nasłuchuje w systemie zdalnym. Port nie może być używany w systemie zdalnym. Ta wartość musi być dodatnią z przedziału od 1 do 65535. Jeśli nie podano numeru wolnego portu rozpoczynającego się od 4444 będą używane.
-Tryb debugowania | Określa, jak interfejsy debugera przy użyciu debugera gdb. W trybie gdb debuger dysków gdb przez powłokę w systemie zdalnym. W trybie gdbserver następuje lokalne gdb działa lokalnie i nawiązanie połączenia z serwera gdbserver działa zdalnie. | **serwera gdbserver**<br>**gdb**<br>
+Tryb debugowania | Określa, jak interfejsy debugera przy użyciu debugera gdb. W trybie gdb debuger dysków gdb przez powłokę w systemie zdalnym. W trybie gdbserver następuje lokalne gdb działa lokalnie i nawiązanie połączenia z serwera gdbserver działa zdalnie. | **gdbserver**<br>**gdb**<br>
 Dodatkowa ścieżka wyszukiwania symboli | Dodatkowa ścieżka wyszukiwania symboli debugowania (solib-search-path).
 Debuguj procesy podrzędne | Określa, czy włączyć debugowanie procesów podrzędnych.
 Włącz Python formatowanie kodu | Włącz formatowanie kodu dla wartości wyrażenia. Obsługiwane tylko w trybie debugowania gdb.

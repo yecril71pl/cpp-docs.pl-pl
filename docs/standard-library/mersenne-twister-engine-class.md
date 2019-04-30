@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410983"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine — Klasa
 
@@ -77,7 +77,7 @@ Argument szablonu `UIntType` musi być wystarczająco duży, aby przechowywać w
 
 Chociaż można utworzyć generatora z tego aparatu bezpośrednio, zalecane jest korzystanie z jednej z tych definicji wstępnie zdefiniowanych typów:
 
-`mt19937`: 32-bitowych Mersenne twister (Matsumoto i aparat Nishimura-1998).
+`mt19937`: 32-bitowe aparatu Mersenne twister (Matsumoto i Nishimura-1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -88,7 +88,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: aparatu 64-bitowych Mersenne twister (Matsumoto i Nishimura, 2000).
+`mt19937_64`: 64-bitowe aparatu Mersenne twister (Matsumoto i Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
@@ -113,4 +113,4 @@ Dla przykładu kodu zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowy >](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)<br/>

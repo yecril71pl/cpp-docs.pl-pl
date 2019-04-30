@@ -15,11 +15,11 @@ helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
 ms.openlocfilehash: 10783ffd6b4f343e4dd768a01396878c186503fa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390883"
 ---
 # <a name="scanf-type-field-characters"></a>scanf — Znaki pola typu
 

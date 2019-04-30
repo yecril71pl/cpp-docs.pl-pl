@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
 ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411152"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -94,8 +94,8 @@ Algorytmy numeryczne standardowej biblioteki języka C++, które są dostępne d
 |[nth_element](../standard-library/algorithm-functions.md#nth_element)|Dzieli zakres elementów, poprawnie lokalizując *n*Ty element sekwencji w zakresie tak, aby wszystkie elementy przed nim są mniejsze niż lub równe go oraz wszystkie elementy, które następują w sekwencji jest większa niż lub równe do niego.|
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|Rozmieszcza określoną liczbę mniejszych elementów w zakresie w niemalejącej kolejności, lub według kryteriów sortowania określonych przez binarny predykat.|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego, gdzie elementy źródłowe są uporządkowane według albo zasady mniejszy niż, albo innego określonego predykatu binarnego.|
-|[partycji](../standard-library/algorithm-functions.md#partition)|Klasyfikuje elementy w zakresie na dwa rozłączne zestawy, z elementami spełniającymi predykat unarny poprzedzającymi te, które go nie spełniają.|
-|[partition_copy —](../standard-library/algorithm-functions.md#partition_copy)|Kopiuje elementy, dla których warunek jest **true** do jednego miejsca docelowego i dla których warunek jest **false** do innego. Elementy muszą pochodzić z określonego zakresu.|
+|[partition](../standard-library/algorithm-functions.md#partition)|Klasyfikuje elementy w zakresie na dwa rozłączne zestawy, z elementami spełniającymi predykat unarny poprzedzającymi te, które go nie spełniają.|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Kopiuje elementy, dla których warunek jest **true** do jednego miejsca docelowego i dla których warunek jest **false** do innego. Elementy muszą pochodzić z określonego zakresu.|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|Zwraca pierwszy element w danym zakresie, który nie spełnia warunku. Elementy są sortowane, aby te, które spełniają warunek, występowały przed tymi, które go nie spełniają.|
 |[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|Usuwa największy element z przodu sterty do przedostatniej pozycji w zakresie, a następnie tworzy nową stertę z pozostałych elementów.|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|Zmienia kolejność elementów w zakresie, tak że oryginalna kolejność jest zastąpiona przez leksykograficznie kolejną większą permutację, o ile takowa istnieje, gdzie sens „kolejna” może być określony przez predykat binarny.|
@@ -109,14 +109,14 @@ Algorytmy numeryczne standardowej biblioteki języka C++, które są dostępne d
 |[replace_copy](../standard-library/algorithm-functions.md#replace_copy)|Sprawdza każdy element w zakresie źródłowym i zastępuje go, jeśli odpowiada określonej wartości, jednocześnie kopiując wynik do nowego zakresu docelowego.|
 |[replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)|Sprawdza każdy element w zakresie źródłowym i zastępuje go, jeśli spełnia określony predykat, jednocześnie kopiując wynik do nowego zakresu docelowego.|
 |[replace_if](../standard-library/algorithm-functions.md#replace_if)|Sprawdza każdy element w zakresie i zastępuje go, jeśli spełnia określony predykat.|
-|[zwrotny](../standard-library/algorithm-functions.md#reverse)|Odwraca kolejność elementów w obrębie zakresu.|
+|[reverse](../standard-library/algorithm-functions.md#reverse)|Odwraca kolejność elementów w obrębie zakresu.|
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Odwraca kolejność elementów w obrębie zakresu źródłowego, jednocześnie kopiując je do zakresu docelowego|
 |[Obróć](../standard-library/algorithm-functions.md#rotate)|Wymienia elementy znajdujące się w dwóch sąsiednich zakresach.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Wymienia elementy w dwóch sąsiednich zakresach w ramach zakresu źródłowego i kopiuje wynik do zakresu docelowego.|
 |[Wyszukiwanie](../standard-library/algorithm-functions.md#search)|Wyszukuje pierwsze wystąpienie sekwencji w zakresie docelowym, której elementy są równe tym w danej sekwencji elementów lub której elementy są równoważne w sensie określonym przez predykat binarny dla elementów w danej sekwencji.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Wyszukuje pierwszą podsekwencję w zakresie, w której określona liczba elementów ma określoną wartość lub relację do tej wartości określoną przez predykat binarny.|
-|[set_difference —](../standard-library/algorithm-functions.md#set_difference)|Łączy w sobie wszystkie elementy, które należą do jednego posortowanego zakresu źródłowego, ale nie do drugiego posortowanego zakresu źródłowego, w pojedynczy, posortowany zakres docelowy, gdzie kryterium sortowania może być określone przez predykat binarny.|
-|[set_intersection —](../standard-library/algorithm-functions.md#set_intersection)|Łączy w sobie wszystkie elementy, które należą do obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
+|[set_difference](../standard-library/algorithm-functions.md#set_difference)|Łączy w sobie wszystkie elementy, które należą do jednego posortowanego zakresu źródłowego, ale nie do drugiego posortowanego zakresu źródłowego, w pojedynczy, posortowany zakres docelowy, gdzie kryterium sortowania może być określone przez predykat binarny.|
+|[set_intersection](../standard-library/algorithm-functions.md#set_intersection)|Łączy w sobie wszystkie elementy, które należą do obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|Łączy w sobie wszystkie elementy, które należą do jednego z, ale nie obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[set_union](../standard-library/algorithm-functions.md#set_union)|Łączy w sobie wszystkie elementy, które należą do przynajmniej jednego z dwóch posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[sort](../standard-library/algorithm-functions.md#sort)|Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności lub według kryteriów sortowania określonych przez binarny predykat.|

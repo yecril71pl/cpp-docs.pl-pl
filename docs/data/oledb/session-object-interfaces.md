@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
 ms.openlocfilehash: 2fb91365fec0709e1bb2a26afa519e6565862681
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404589"
 ---
 # <a name="session-object-interfaces"></a>Interfejsy obiektu sesji
 
@@ -22,7 +22,7 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 |Interface|Wymagany?|Implementowany przez Szablony OLE DB?|
 |---------------|---------------|--------------------------------------|
 |[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))|Obowiązkowy|Tak|
-|[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))|Obowiązkowy|Yes|
+|[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))|Obowiązkowy|Tak|
 |[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))|Obowiązkowy|Tak|
 |[IAlterIndex](/previous-versions/windows/desktop/ms714943(v=vs.85))|Optional|Nie|
 |[IAlterTable](/previous-versions/windows/desktop/ms719764(v=vs.85))|Optional|Nie|

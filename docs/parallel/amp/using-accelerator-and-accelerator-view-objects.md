@@ -3,15 +3,15 @@ title: Używanie akceleratora i obiektów accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405394"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Używanie akceleratora i obiektów accelerator_view
 
-Możesz użyć [akceleratora](../../parallel/amp/reference/accelerator-class.md) i [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) klasy do określenia urządzenia lub emulatora do uruchamiania kodu C++ AMP. System może mieć kilka urządzeń lub emulatorów różniących się ilość pamięci, obsługę pamięci współdzielonej, obsługę debugowania lub wsparcia podwójnej precyzji. C++ Accelerated Massive Parallelism (C++ AMP) udostępnia interfejsy API, który służy do dostępnych akceleratorów, ustawienie jednego z nich jako domyślny, określenia wielu accelerator_views dla wielu wywołań parallel_for_each i wykonywania specjalnych zadań debugowania.
+Można użyć [akceleratora](../../parallel/amp/reference/accelerator-class.md) i [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) klasy do określenia urządzenia lub emulatora do uruchamiania usługi C++ kod AMP. System może mieć kilka urządzeń lub emulatorów różniących się ilość pamięci, obsługę pamięci współdzielonej, obsługę debugowania lub wsparcia podwójnej precyzji. C++Accelerated Massive Parallelism (C++ AMP) zapewnia interfejsów API, które można użyć do sprawdzenia dostępnych akceleratorów, Ustaw jako domyślny, określenia wielu accelerator_views dla wielu wywołań parallel_for_each oraz wykonywania specjalnych zadań debugowania.
 
 ## <a name="using-the-default-accelerator"></a>Używanie akceleratora domyślnego
 

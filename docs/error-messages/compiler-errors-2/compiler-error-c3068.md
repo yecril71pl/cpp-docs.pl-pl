@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
 ms.openlocfilehash: 4790c9caafd28722f3631104cfe5cfc762cf6426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406889"
 ---
 # <a name="compiler-error-c3068"></a>Błąd kompilatora C3068
 
