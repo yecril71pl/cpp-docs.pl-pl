@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392196"
 ---
 # <a name="examples-of-lambda-expressions"></a>Przykłady wyrażeń lambda
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>Przykład
 
 Można używać wyrażeń lambda w treści funkcji. Wyrażenie lambda może uzyskać dostęp do dowolny członek funkcję lub dane, które mogą uzyskiwać dostęp do funkcji otaczającej. Można jawnie lub niejawnie przechwycić **to** wskaźnik, aby zapewnić dostęp do funkcji i składowych danych otaczającej klasy.
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Przechwytywanie **to** przez wartość (`[*this]`) po lambda będzie używana w operacji asynchronicznej lub równoległego w przypadku, gdy kod może być wykonywany po oryginalny obiekt wykracza poza zakres.
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Przechwytywanie **to** przez wartość (`[*this]`) po lambda będzie używana w operacji asynchronicznej lub równoległego gdzie kod może wykonać po oryginalny obiekt wykracza poza zakres.
 
 Możesz użyć **to** wskaźnika niejawnie w funkcji, jak pokazano poniżej:
 
@@ -479,7 +479,7 @@ Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz [wyjątków
 
 [[w tym artykule](#top)]
 
-##  <a name="managedLambdaExpressions"></a> Użycie wyrażeń Lambda z typy zarządzane (C + +/ CLI)
+##  <a name="managedLambdaExpressions"></a> Użycie wyrażeń Lambda z typy zarządzane (C++sposób niezamierzony)
 
 ### <a name="example"></a>Przykład
 
