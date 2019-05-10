@@ -2,12 +2,12 @@
 title: 3. Funkcje biblioteki czasu wykonywania
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363235"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525044"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funkcje biblioteki czasu wykonywania
 
@@ -40,7 +40,7 @@ Funkcje opisane w tej sekcji mają wpływ na i monitorować wątków, procesory 
 - [omp_set_nested](#319-omp_set_nested-function)
 - [omp_get_nested](#3110-omp_get_nested-function)
 
-### <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads — funkcja
+### <a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads — funkcja
 
 `omp_set_num_threads` Funkcja ustawia domyślną liczbę wątków używanych na potrzeby później regionów równoległych, które nie określają `num_threads` klauzuli. Format jest następujący:
 
@@ -62,7 +62,7 @@ To wywołanie ma pierwszeństwo przed `OMP_NUM_THREADS` zmiennej środowiskowej.
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) zmiennej środowiskowej
 - [num_threads](2-directives.md#23-parallel-construct) — klauzula
 
-### <a name="312-ompgetnumthreads-function"></a>3.1.2 funkcja omp_get_num_threads
+### <a name="312-omp_get_num_threads-function"></a>3.1.2 funkcja omp_get_num_threads
 
 `omp_get_num_threads` Funkcja zwraca liczbę wątków obecnie w zespole wykonywania równoległego regionu, w którym jest wywoływana. Format jest następujący:
 
@@ -81,7 +81,7 @@ Jeśli liczba wątków nie została jawnie ustawiona przez użytkownika, wartoś
 - [num_threads](2-directives.md#23-parallel-construct)
 - [parallel](2-directives.md#23-parallel-construct)
 
-### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads — funkcja
+### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads — funkcja
 
 `omp_get_max_threads` Funkcji zwraca liczbę całkowitą, która ma musi być przynajmniej tak duże jak liczba wątków, które byłyby używane do utworzenia zespołu, jeśli równoległego regionu bez `num_threads` klauzuli były wyświetlane w tym momencie w kodzie. Format jest następujący:
 
@@ -109,7 +109,7 @@ Pamiętaj, że jeśli inny równoległe używa regionu `num_threads` klauzuli ż
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
 - [num_threads](2-directives.md#23-parallel-construct)
 
-### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num — funkcja
+### <a name="314-omp_get_thread_num-function"></a>3.1.4 omp_get_thread_num — funkcja
 
 `omp_get_thread_num` Funkcja zwraca liczbę wątków, w w ramach jego zespołu wątku wykonującego funkcji. Polega liczba wątków między 0 a `omp_get_num_threads()`-1 (włącznie). Główny wątek zespołu znajduje się wątek 0.
 
@@ -126,7 +126,7 @@ Jeśli wywołania będą regionowi serial `omp_get_thread_num` zwraca wartość 
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function) — funkcja
 
-### <a name="315-ompgetnumprocs-function"></a>3.1.5 omp_get_num_procs — funkcja
+### <a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs — funkcja
 
 `omp_get_num_procs` Funkcja zwraca liczbę procesorów, które są dostępne dla programu w momencie wywołania funkcji. Format jest następujący:
 
@@ -135,7 +135,7 @@ Jeśli wywołania będą regionowi serial `omp_get_thread_num` zwraca wartość 
 int omp_get_num_procs(void);
 ```
 
-### <a name="316-ompinparallel-function"></a>3.1.6 funkcja omp_in_parallel
+### <a name="316-omp_in_parallel-function"></a>3.1.6 funkcja omp_in_parallel
 
 `omp_in_parallel` Funkcja zwraca wartość różną od zera, jeśli jest to w ramach równoległego regionu wykonywanych równolegle zakres dynamiczny; w przeciwnym razie zwraca wartość 0. Format jest następujący:
 
@@ -146,7 +146,7 @@ int omp_in_parallel(void);
 
 Ta funkcja zwraca wartość różną od zera, gdy wywoływana z w obrębie regionu wykonywanych równolegle, w tym zagnieżdżone regionów, które są serializowane.
 
-### <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic — funkcja
+### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic — funkcja
 
 `omp_set_dynamic` Funkcji włącza lub wyłącza dynamiczne Dostosowywanie liczby dostępnych do wykonania regionów równoległych wątków. Format jest następujący:
 
@@ -171,7 +171,7 @@ Wartość domyślna dla dynamicznego dostosowania wątków jest zdefiniowane w i
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic — funkcja
+### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic — funkcja
 
 `omp_get_dynamic` Funkcja zwraca wartość różną od zera, jeśli dynamiczne Dostosowywanie wątków jest włączona, a w przeciwnym razie zwraca wartość 0. Format jest następujący:
 
@@ -186,7 +186,7 @@ Jeśli wdrożenia nie implementuje dynamiczne Dostosowywanie liczby wątków, ta
 
 - Opis wątku dynamicznego dostosowania, zobacz [omp_set_dynamic](#317-omp_set_dynamic-function).
 
-### <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested — funkcja
+### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested — funkcja
 
 `omp_set_nested` Funkcji włącza lub wyłącza równoległości zagnieżdżonych. Format jest następujący:
 
@@ -208,7 +208,7 @@ Po włączeniu zagnieżdżonych równoległości liczba wątków używanych do w
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="3110-ompgetnested-function"></a>3.1.10 funkcja omp_get_nested
+### <a name="3110-omp_get_nested-function"></a>3.1.10 funkcja omp_get_nested
 
 `omp_get_nested` Funkcja zwraca wartość różną od zera, jeśli włączono zagnieżdżonych równoległości i 0, jeśli jest ona wyłączona. Aby uzyskać więcej informacji na zagnieżdżonych równoległości, zobacz [omp_set_nested](#319-omp_set_nested-function). Format jest następujący:
 
@@ -241,7 +241,7 @@ Dla następujących funkcji, zmienna blokady musi mieć typ `omp_nest_lock_t`.  
 
 OpenMP — funkcje Zablokuj dostęp do zmiennej blokady w taki sposób, że mogą zawsze odczytywać i aktualizować aktualna wartość zmiennej blokady. W związku z tym, nie jest konieczne dla programu OpenMP uwzględnić jawne `flush` dyrektywy, aby upewnić się, że wartość zmiennej blokady jest spójna wśród różnych wątkach. (Może to być potrzebne `flush` dyrektywy, aby wartości innych zmiennych były spójne.)
 
-### <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 funkcje omp_init_lock i omp_init_nest_lock
+### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 funkcje omp_init_lock i omp_init_nest_lock
 
 Te funkcje zapewniają jedynym sposobem inicjowanie blokadę. Każda funkcja inicjuje blokady skojarzonych z parametrem *blokady* do użycia w kolejnych wywołaniach. Format jest następujący:
 
@@ -253,7 +253,7 @@ void omp_init_nest_lock(omp_nest_lock_t *lock);
 
 Początkowy stan jest odblokowana (oznacza to, że żaden wątek nie jest właścicielem blokady). Na blokadę zagnieżdżalnych początkowa liczba zagnieżdżenia wynosi zero. Jest niezgodna, aby wywołać jedną z tych procedur ze zmienną blokady, który został już zainicjowany.
 
-### <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 funkcje omp_destroy_lock i omp_destroy_nest_lock
+### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 funkcje omp_destroy_lock i omp_destroy_nest_lock
 
 Te funkcje, upewnij się, że wskazywany zablokować zmiennej *blokady* nie został zainicjowany. Format jest następujący:
 
@@ -265,7 +265,7 @@ void omp_destroy_nest_lock(omp_nest_lock_t *lock);
 
 Jest niezgodne do wywoływania jednej z tych procedur, za pomocą zmiennej blokady, która ma niezainicjowane lub odblokować.
 
-### <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 funkcje omp_set_lock i omp_set_nest_lock
+### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 funkcje omp_set_lock i omp_set_nest_lock
 
 Każda z tych funkcji blokuje wątek wykonywania funkcji, dopóki określona blokada jest dostępny, a następnie ustawia blokady. Prostą blokadą jest dostępna, jeśli jest odblokowane. Zagnieżdżalnych blokady jest dostępna, gdy jest odblokowana, czy jest on już własnością wątek wykonywania funkcji. Format jest następujący:
 
@@ -279,7 +279,7 @@ Dla prostą blokadą argument `omp_set_lock` funkcja musi się odnosić do zmien
 
 Dla blokadą argument `omp_set_nest_lock` funkcja musi się odnosić do zmiennej zainicjowane blokady. Zagnieżdżanie licznik jest zwiększany i wątku otrzymuje lub zachowuje własność blokadę.
 
-### <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 funkcje omp_unset_lock i omp_unset_nest_lock
+### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 funkcje omp_unset_lock i omp_unset_nest_lock
 
 Te funkcje zapewniają oznacza, że przy zwalnianiu własność blokadę. Format jest następujący:
 
@@ -295,7 +295,7 @@ Dla prostą blokadą `omp_unset_lock` funkcja zwolni wątek wykonywania funkcji 
 
 Na blokadę zagnieżdżalnych `omp_unset_nest_lock` funkcji zmniejsza liczbę zagnieżdżenia i wersji wątek wykonywania funkcji z na własność blokadę, jeśli wynikowy licznik osiągnie wartość zero.
 
-### <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 funkcje omp_test_lock i omp_test_nest_lock
+### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 funkcje omp_test_lock i omp_test_nest_lock
 
 Spróbuj ustawić blokadę tych funkcji, ale nie blokują wykonanie wątku. Format jest następujący:
 
@@ -318,7 +318,7 @@ Funkcje opisane w tej sekcji obsługują czasomierza przenośnych zgodnie z zega
 - [Omp_get_wtime](#331-omp_get_wtime-function) :: gettotalsize() zwróciło czasu upłynęło zgodnie z zegarem.
 - [Omp_get_wtick](#332-omp_get_wtick-function) funkcja zwraca sekund między taktami zegara kolejnych.
 
-### <a name="331-ompgetwtime-function"></a>3.3.1 funkcja omp_get_wtime
+### <a name="331-omp_get_wtime-function"></a>3.3.1 funkcja omp_get_wtime
 
 `omp_get_wtime` Funkcja zwraca wartość punktu zmiennoprzecinkową podwójnej precyzji równa czas zegarowy upłynęło w ciągu kilku sekund, ponieważ niektóre "godziny w przeszłości".  Rzeczywisty "czas w przeszłości" jest dowolną, ale ma gwarancję, nie należy zmieniać podczas wykonywania programu aplikacji. Format jest następujący:
 
@@ -340,7 +340,7 @@ printf_s("Work took %f sec. time.\n", end-start);
 
 Zwracane są "Patrol wątku", który składający się nie muszą być globalnie spójne we wszystkich wątkach uczestniczących w aplikacji.
 
-### <a name="332-ompgetwtick-function"></a>3.3.2 funkcja omp_get_wtick
+### <a name="332-omp_get_wtick-function"></a>3.3.2 funkcja omp_get_wtick
 
 `omp_get_wtick` Funkcja zwraca wartość punktu zmiennoprzecinkową podwójnej precyzji równa liczbie sekund między taktami zegara kolejnych. Format jest następujący:
 

@@ -6,14 +6,22 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 8999f6469e420fa86cb1267675f10dc173d45ff0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4ba69d8421a76a94e4a676cb62ee53936d77da3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250440"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524585"
 ---
 # <a name="implementing-property-pages"></a>Implementowanie stron właściwości
+
+::: moniker range="vs-2019"
+
+Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Strony właściwości są obiektów COM, które implementują `IPropertyPage` lub `IPropertyPage2` interfejsu. ATL zapewnia obsługę implementowania strony właściwości, za pośrednictwem [Kreator strony właściwości ATL](../atl/reference/atl-property-page-wizard.md) w [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md).
 
@@ -44,6 +52,8 @@ Przykładem implementacji strony właściwości, można zobaczyć [przykładu: I
 
 > [!NOTE]
 > Chcąc formantów ActiveX hosta na stronie właściwości, należy zmienić pochodnym klasy generowane przez kreatora. Zastąp **CDialogImpl\<CYourClass >** z **CAxDialogImpl\<CYourClass >** na liście klas bazowych.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

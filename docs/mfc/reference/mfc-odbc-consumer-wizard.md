@@ -1,23 +1,25 @@
 ---
 title: Kreator konsumenta MFC ODBC
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.mfc.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20357646bbb7aa4fe00db43d8e77f9bf0b95c9b5
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310315"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525365"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Kreator konsumenta MFC ODBC
 
-> [!WARNING]
-> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
+::: moniker range="vs-2019"
+
+Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezbędnych do uzyskania dostępu z określonym źródłem danych.
 
@@ -73,6 +75,8 @@ Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezb
 - **Powiąż wszystkie kolumny**
 
    Określa, czy wszystkie kolumny w tabeli są powiązane. Jeśli wybierzesz to pole (ustawienie domyślne), wszystkie kolumny są powiązane; Jeśli to pole nie jest zaznaczone, są powiązane żadne kolumny i musisz powiązać je ręcznie w klasie zestawu rekordów.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

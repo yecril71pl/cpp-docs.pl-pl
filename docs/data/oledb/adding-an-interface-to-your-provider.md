@@ -1,17 +1,20 @@
 ---
 title: Dodawanie interfejsu do dostawcy
-ms.date: 10/29/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1d219568c1787558674c47edd55436b8690a61c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384975"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524807"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Dodawanie interfejsu do dostawcy
+
+> [!NOTE]
+> Kreator ATL OLE DB Provider nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
 
 Określić obiekt, do którego chcesz dodać interfejs do (zazwyczaj danych źródła, zestawu wierszy, polecenie lub sesji obiekty utworzone przez **OLE DB Provider kreatora**). Istnieje możliwość, że obiektu, należy dodać interfejs, który ma to taki, który Twój dostawca nie obsługuje obecnie. W takiej sytuacji Uruchom **Kreator biblioteki ATL OLE DB Provider** do utworzenia obiektu. Kliknij prawym przyciskiem myszy projekt w **Widok klas**, kliknij przycisk **Dodaj** > **nowy element** menu, wybierz polecenie **zainstalowane**  >  **Visual C++** > **ATL**, a następnie kliknij przycisk **dostawcy OLE DB ATL**. Warto umieścić kod interfejsu w oddzielnym katalogu, a następnie skopiuj pliki do projektu dostawcy.
 

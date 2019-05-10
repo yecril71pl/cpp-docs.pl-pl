@@ -1,28 +1,32 @@
 ---
 title: Dodawanie funkcji za pomocą kreatorów kodu (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.classes
+ms.date: 05/09/2019
 helpviewer_keywords:
 - code wizards [C++]
-- wizards [C++], code
-- Visual Studio C++ projects, adding functionality
-- projects [C++], adding functionality
-- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 45ba745492bf652b18dc3c7f9acceeffe0870fb7
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 3050b3e2d2a188c2465cd454325e458cd8cc4047
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446883"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525479"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 
 Po utworzeniu projektu można zmienić lub dodać do funkcji tego projektu. Takie zadania obejmują tworzenie nowych klas, dodając nowe funkcje Członkowskie i zmienne i Dodawanie metody automatyzacji i właściwości. Kreatorzy kodu są przeznaczone do pozwalają korzystać z tych możliwości.
 
-> [!WARNING]
-> Kilka ATL i MFC kreatorów kodu, są one przestarzałe i zostanie usunięta w przyszłych wersjach programu Visual Studio. Te kreatory są rzadko używane. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tych kreatorów. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
+> [!NOTE]
+> Następujących kreatorów kodu rzadko używane są usuwane w Visual Studio 2019 r. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tych kreatorów. Przykładowy kod dla tych technologii jest archiwizowane w Microsoft Docs i repozytorium VCSamples GitHub.
+
+- Kreator 1.0 składnika ATL COM +
+- Kreator składników stron Active Server ATL
+- Kreator dostawcy interfejsu OLE DB ATL
+- Kreator strony właściwości ATL
+- Kreator konsumenta OLE DB ATL
+- Odbiorca MFC ODBC
+- Klasa MFC z formantu ActiveX
+- Klasa MFC z biblioteki typów.
+
 
 > [!NOTE]
 >  Teraz możesz dodać procedury obsługi komunikatów i mapowanie komunikatów do nich i zastępują funkcje wirtualne MFC przy użyciu [okno właściwości](/visualstudio/ide/reference/properties-window).

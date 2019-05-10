@@ -1,19 +1,27 @@
 ---
 title: Ciągi, Kreator strony właściwości ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.strings
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-ms.openlocfilehash: 199c6969535afdd668440ea31d004aecc507ba42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29a7129e25f7db992fec7214e66996fbbd3248ff
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276180"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524482"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Ciągi, Kreator strony właściwości ATL
+
+::: moniker range="vs-2019"
+
+Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Zawiera tekst skojarzony ze stroną właściwości.
 
@@ -28,6 +36,8 @@ Zawiera tekst skojarzony ze stroną właściwości.
 - **Plik pomocy**
 
    Określa nazwę pliku pomocy, który opisuje sposób używania na stronie właściwości. Ta nazwa nie może zawierać ścieżki. Gdy użytkownik naciśnie **pomocy**, ramki spowoduje otwarcie pliku pomocy w katalogu o nazwie w wartości klucza HelpDir we wpisach rejestru strony właściwości w ramach jego identyfikator CLSID.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323118"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525452"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Obsługa bazy danych, kreator aplikacji MFC
 
@@ -46,15 +46,15 @@ Ta strona zawiera opcje, które pozwalają na określenie poziomu bazy danych ob
 
 - **Źródło danych**
 
+   > [!NOTE]
+   > Kreator konsumenta interfejsu ODBC MFC i ATL OLE DB Kreator konsumenta nie są dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
    Kliknij przycisk **źródła danych** przycisk, aby skonfigurować źródło danych przy użyciu określonego sterownika lub dostawcą a bazą danych. W przypadku wybrania OLE DB w **typ klienta** opcja, ten przycisk, wyświetla **właściwości Linku danych** okno dialogowe. W przypadku wybrania ODBC w **typ klienta** opcji i zawiera ten przycisk **wybierz źródło danych** okno dialogowe. Ta opcja jest dostępna tylko wtedy, gdy chcesz umieścić widok bazy danych w aplikacji.
 
    |Opcja|Opis|
    |------------|-----------------|
    |**Właściwości łącza danych** (OLE DB)|Ustanawia określonym źródłem danych przy użyciu określonego dostawcy OLE DB. Należy określić dostawcę OLE DB, lokalizacja danych, źródła danych, identyfikator logowania i (opcjonalnie) hasło. Aby uzyskać szczegółowe informacje dotyczące tego okna dialogowego, zobacz **źródła danych** w [OLE DB Kreator konsumenta ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).|
    |**Wybierz źródło danych** (ODBC)|Ustanawia określonym źródłem danych przy użyciu podanego sterownika ODBC. Należy wybrać nazwę źródła danych, aby wybrać tabelę dla źródła danych. Kreator wiąże wszystkie kolumny w tabeli zmienne Członkowskie `CRecordset`-klasy pochodnej. Aby uzyskać szczegółowe informacje dotyczące tego okna dialogowego, zobacz **źródła danych** w [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).|
-
-   > [!NOTE]
-   > W poprzednich wersjach klawiszem Shift **źródła danych** przycisk otwarte okno dialogowe Otwieranie pliku pozwalają na wybór pliku połączenia danych (udl). Ta funkcja nie jest już obsługiwana.
 
 - **Wygenerowana klasa opartego na atrybutach bazy danych**
 

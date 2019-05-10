@@ -1,6 +1,6 @@
 ---
 title: Wersje biblioteki MFC
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238509"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524798"
 ---
 # <a name="mfc-library-versions"></a>Wersje biblioteki MFC
 
@@ -129,7 +129,7 @@ Bibliotek importu potrzebne do tworzenia aplikacji lub biblioteki dll, korzystaj
 
 Możesz dynamicznie łączenia z udostępnionych wersji biblioteki DLL MFC, czy jest ono z aplikacji lub z biblioteki DLL rozszerzenia MFC, musi zawierać dopasowania MFC*wersji*. Biblioteki DLL lub MFC*wersji*U.DLL po wdrożeniu swojego produktu.
 
-Aby uzyskać listę bibliotek DLL Visual C++, które mogą być dystrybuowane za pomocą aplikacji, zobacz [Kod dystrybucyjny dla programu Microsoft Visual Studio 2017 i Microsoft Visual Studio 2017 SDK (obejmuje programy narzędziowe i pliki BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098).
+Aby uzyskać listę Visual C++ bibliotek DLL, które mogą być dystrybuowane za pomocą aplikacji, zobacz temat [Kod dystrybucyjny dla programu Microsoft Visual Studio 2017 i Microsoft Visual Studio 2017 SDK (obejmuje programy narzędziowe i pliki BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) lub [ Kod dystrybucyjny dla programu Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
 Aby uzyskać więcej informacji na temat obsługi MBCS i Unicode w MFC, zobacz [Obsługa zestawu znaków wielobajtowych (MBCS) i Unicode](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 

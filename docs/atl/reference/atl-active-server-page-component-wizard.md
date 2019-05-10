@@ -1,31 +1,33 @@
 ---
 title: Kreator składników stron Active Server ATL
-ms.date: 11/04/2016
-f1_keywords:
-- vc.codewiz.class.atl.asp.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
-- ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: f020ed9b58f631bfff09fe54c70e36146eb03368
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2f47176fb25b050e4b1f72053e4cbaaf89f569e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249020"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524593"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Kreator składników stron Active Server ATL
+
+::: moniker range="vs-2019"
+
+Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Ten kreator umożliwia wstawienie do projektu składnika strony Active Server Pages (ASP). Microsoft Internet Information Services (IIS) używa składników ASP jako część jego architekturę rozwoju udoskonalone strony sieci Web.
 
 Za pomocą tego kreatora, można określić, że składnik w wielowątkowości, modelu i jego obsługa agregacji. Można również określić obsługę interfejsu informacje o błędzie, punkty połączenia i bezwątkowy szeregowanie.
 
-> [!WARNING]
-> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
-
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od programu Visual Studio 2008, skrypt rejestrowania generowane przez kreatora, będą rejestrować jego składników modelu COM, w obszarze **HKEY_CURRENT_USER** zamiast **HKEY_LOCAL_MACHINE**. Aby zmienić to zachowanie, ustaw **części rejestru dla wszystkich użytkowników** opcji kreatora ATL.
+Począwszy od programu Visual Studio 2008, skrypt rejestrowania generowane przez ten kreator rejestruje jej składników COM, w obszarze **HKEY_CURRENT_USER** zamiast **HKEY_LOCAL_MACHINE**. Aby zmienić to zachowanie, ustaw **części rejestru dla wszystkich użytkowników** opcji kreatora ATL.
 
 ## <a name="names"></a>Nazwy
 
@@ -86,6 +88,8 @@ Zawiera informacje dotyczące funkcji COM dla obiektu.
 - **ProgID**
 
    Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

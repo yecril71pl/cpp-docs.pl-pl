@@ -1,19 +1,25 @@
 ---
 title: Dodawanie konsumenta ATL OLE DB
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL projects, adding ATL OLE DB consumers
-- OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: d93bf715f8fd8a03c75b1d1bf2e44f12c1d1b9c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261380"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524639"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Dodawanie konsumenta ATL OLE DB
+
+::: moniker range="vs-2019"
+
+Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Ten kreator umożliwia dodawanie konsumenta ATL OLE DB do projektu. Konsumenta ATL OLE DB składa się z OLE DB akcesor klasy i powiązania danych konieczne dostępu do źródła danych. Projekt musi być utworzony jako aplikacji ATL COM lub aplikacji Win32 i MFC, która zawiera Obsługa biblioteki ATL, (który automatycznie dodaje OLE DB Kreator konsumenta ATL).
 
@@ -31,6 +37,8 @@ Ten kreator umożliwia dodawanie konsumenta ATL OLE DB do projektu. Konsumenta A
 1. Zdefiniuj ustawienia, zgodnie z opisem w [OLE DB Kreator konsumenta ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora. Nowo utworzony kod konsumenta OLE DB zostanie wstawiony w projekcie.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

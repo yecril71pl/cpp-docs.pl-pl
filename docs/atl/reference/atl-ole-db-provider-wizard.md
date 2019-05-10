@@ -1,25 +1,25 @@
 ---
 title: Kreator dostawcy interfejsu OLE DB ATL
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b30b9aa3956d0dbfa7ddf2fe7281484ebd2444e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248266"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524659"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Kreator dostawcy interfejsu OLE DB ATL
 
-Ten kreator tworzy klas, które tworzą dostawcy OLE DB.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
+Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,6 +84,8 @@ W poniższej tabeli opisano opcje ATL OLE DB Provider kreatora:
 - **Plik CPP zestawu wierszy**
 
    Plik implementacji dostawcy. Można zmienić nazwę tego pliku lub wybierz istniejący plik implementacji.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

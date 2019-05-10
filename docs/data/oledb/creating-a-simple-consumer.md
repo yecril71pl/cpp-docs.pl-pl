@@ -1,17 +1,25 @@
 ---
 title: Tworzenie prostego konsumenta
-ms.date: 11/06/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f72363478696baccb0473e37104427b1516b39c3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362028"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525003"
 ---
 # <a name="creating-a-simple-consumer"></a>Tworzenie prostego konsumenta
+
+::: moniker range="vs-2019"
+
+Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Użyj **Kreator projektów ATL** i **OLE DB Kreator konsumenta ATL** do generowania konsumenta szablony OLE DB.
 
@@ -41,7 +49,7 @@ Następnie użyj **OLE DB Kreator konsumenta ATL** Aby dodać obiekt konsumenta 
 
    **Dodaj nowy element** pojawi się okno dialogowe.
 
-1. W **kategorie** okienku kliknij **zainstalowane** > **Visual C++** > **ATL**, kliknij przycisk **Konsumenta OLE DB ATL** ikonę **szablony** okienku, a następnie kliknij przycisk **Dodaj**.
+1. W **kategorie** okienku kliknij **zainstalowane** > **Visual C++**  > **ATL**, kliknij przycisk  **Konsumenta OLE DB ATL** ikonę **szablony** okienku, a następnie kliknij przycisk **Dodaj**.
 
    **Kreator konsumenta OLE DB ATL** pojawia się.
 
@@ -97,6 +105,8 @@ Kreator wygeneruje klasę polecenie i klasy rekordów użytkowników, jak pokaza
 
 > [!NOTE]
 > Ten wiersz zapobiega Kompilowanie aplikacji klienta i przypomina o tym, aby sprawdzić parametry połączenia dla zakodowanych hasła. Po sprawdzeniu parametry połączenia, możesz usunąć ten wiersz kodu.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

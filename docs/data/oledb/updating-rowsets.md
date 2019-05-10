@@ -1,18 +1,18 @@
 ---
 title: Aktualizowanie zestawów wierszy
-ms.date: 10/19/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - rowsets, updating data
 - updating data, rowsets
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 7151d897469993b2f9be3575eb11a08844af3c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389063"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525301"
 ---
 # <a name="updating-rowsets"></a>Aktualizowanie zestawów wierszy
 
@@ -27,6 +27,9 @@ Klientów można wykonać następujące rodzaje aktualizacje dla zestawu wierszy
 - [Usuń](../../data/oledb/crowset-delete.md) usuwa wiersze z wierszy; bazom polecenia SQL DELETE.
 
 ## <a name="supporting-update-operations"></a>Obsługa operacje aktualizacji
+
+> [!NOTE]
+> Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](creating-a-consumer-without-using-a-wizard.md).
 
 Podczas tworzenia odbiorcy z **OLE DB Kreator konsumenta ATL**, może obsługiwać operacje aktualizacji, wybierając jeden lub więcej z trzech pól wyboru **zmiany**, **Wstaw**, i **Usuń**. Wybranie tych opcji, Kreator modyfikuje kod odpowiednio do obsługi typu zmian, które wybierzesz. Jednak jeśli nie używasz kreatora, należy ustawić następujące właściwości zestawu wierszy `VARIANT_TRUE` do obsługi aktualizacji:
 

@@ -1,17 +1,21 @@
 ---
 title: Przechowywanie ciągów w dostawcy OLE DB
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 5dce7dac84ef69da17baac135a68bd78698c4456
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344984"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525354"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Przechowywanie ciągów w dostawcy OLE DB
+
+> [!NOTE] 
+> Kreator ATL OLE DB Provider nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
 
 W *niestandardowe*RS.h, **Kreator biblioteki ATL OLE DB Provider** tworzy rekord użytkownika domyślnego o nazwie `CWindowsFile`. Aby obsługiwać dwa ciągi, zmodyfikuj `CWindowsFile` jak pokazano w poniższym kodzie:
 

@@ -1,17 +1,25 @@
 ---
 title: Implementowanie strony właściwości (ATL)
-ms.date: 11/19/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1da7a2691465162e645ae9790eecdb08d9a2ce98
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262116"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524574"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementowanie strony właściwości
+
+::: moniker range="vs-2019"
+
+Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 W tym przykładzie pokazano, jak strona właściwości, która wyświetla (i pozwala na zmianę) właściwości budowania [klasy dokumentów](../mfc/document-classes.md) interfejsu.
 
@@ -160,6 +168,8 @@ End Module
 ```
 
 Po uruchomieniu tego makra, zostanie wyświetlona strona właściwości, przedstawiający nazwę pliku i status tylko do odczytu dokumentu tekstowego aktualnie aktywny. Stanu tylko do odczytu dokumentu przedstawiają tylko możliwość zapisu do dokumentu w środowisku programistycznym; nie wpływa na atrybut tylko do odczytu pliku na dysku.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,27 +1,25 @@
 ---
 title: Metody konsumenta generowane przez kreatora
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
-- OpenAll method
-- attribute-injected classes and methods
-- wizard-generated classes and methods
 - OLE DB consumers, wizard-generated classes and methods
-- methods [C++], OLE DB Consumer Wizard-generated
-- CloseDataSource method
-- consumer wizard-generated classes and methods
-- OpenDataSource method
-- CloseAll method
-- OpenRowset method
-- GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 60ca0af25a0556c4a3d42d91ba3b0c52daa5f530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 409d339acb37bd09ae10eabba16e19d5df0aae63
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409138"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525028"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
+
+::: moniker range="vs-2019"
+
+Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 **OLE DB Kreator konsumenta ATL** i **Kreator aplikacji MFC** generować pewne funkcje, których należy wiedzieć. Niektóre metody są implementowane w inny sposób w projektach atrybutami, więc istnieje kilka zastrzeżenia; Każdy przypadek jest opisane poniżej. Aby uzyskać informacje o wyświetlaniu wprowadzonego kodu, zobacz [debugowania kodu wprowadzony](/visualstudio/debugger/how-to-debug-injected-code).
 
@@ -158,6 +156,8 @@ void CloseDataSource();
 ### <a name="remarks"></a>Uwagi
 
 Kreator definiuje metody `OpenDataSource` i `CloseDataSource`; `OpenDataSource` wywołania [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

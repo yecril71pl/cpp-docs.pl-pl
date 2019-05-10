@@ -1,19 +1,22 @@
 ---
 title: Dodawanie strony właściwości ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, adding
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: c61f666865d3e1db4cdcf2dc6d3e07c2113a79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f793fbdc6d9dda567051b8c35a96f3d3f2f470
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249102"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524628"
 ---
 # <a name="adding-an-atl-property-page"></a>Dodawanie strony właściwości ATL
+
+> [!NOTE] 
+> Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
 
 Aby dodać stronę właściwości Active Template Library (ATL) do projektu, projekt musi być utworzony jako aplikacji ATL lub aplikacji MFC, który zawiera obsługę ATL. Możesz użyć [Kreator projektów ATL](../../atl/reference/atl-project-wizard.md) do tworzenia aplikacji ATL lub [Dodaj obiekt ATL do Twojej aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.
 
@@ -36,4 +39,4 @@ Po utworzeniu strony właściwości kontrolki, należy podać [PROP_PAGE](proper
 
 [Strony właściwości](../../atl/atl-com-property-pages.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Przykład: Implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)
+[Przykład: implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)

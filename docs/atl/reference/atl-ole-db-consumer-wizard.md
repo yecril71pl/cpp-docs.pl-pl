@@ -1,21 +1,25 @@
 ---
 title: Kreator konsumenta OLE DB ATL
-ms.date: 08/31/2018
-f1_keywords:
-- vc.codewiz.class.atl.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
-- connection strings [C++], OLE DB consumers
-- ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46a13f1ac46215fc28e71c15feb9f209967b67a2
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261263"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524648"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
+
+::: moniker range="vs-2019"
+
+Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych niezbędnych do uzyskania dostępu z określonym źródłem danych przy użyciu określonego dostawcy OLE DB.
 
@@ -180,6 +184,8 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
    - **Delete**
 
       Określa, że odbiorcy obsługuje usuwania wierszy z zestawu wierszy.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

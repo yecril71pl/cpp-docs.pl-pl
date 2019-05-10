@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: b49d53836179d765a72409d28304d7166dcf51d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09af59d97ab87c66a0a7096e72cc7b92bc3a5dbf
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389173"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525270"
 ---
 # <a name="supporting-schema-rowsets"></a>Obsługa zestawów wierszy schematu
 
@@ -31,6 +31,14 @@ Zestawy wierszy schematu umożliwiają klientom uzyskiwanie informacji na temat 
 - [Getschemas —](../../data/oledb/idbschemarowsetimpl-getschemas.md) zwraca listę zestawów wierszy schematu jest dostępny za pomocą `IDBSchemaRowsetImpl::GetRowset` (dziedziczone z interfejsu).
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Obsługa kreatora dla dostawcy bazy danych ATL OLE
+
+::: moniker range="vs-2019"
+
+Kreator ATL OLE DB Provider nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 **Kreator biblioteki ATL OLE DB Provider** tworzy trzy klasy schematu w pliku nagłówkowym sesji:
 
@@ -53,6 +61,8 @@ Można dostosować te klasy do obsługi informacji o schemacie odpowiedniego dos
 - W **C**<em>ShortName</em>**SessionTRSchemaRowset**, należy wypełnić pola wykazu, tabeli i opis (`trData.m_szType`, `trData.m_szTable`i `trData.m_szDesc`). Przykład generowane przez Kreatora używa tylko jeden wiersz (tabela). Innych dostawców rozwiązań może zwrócić więcej niż jedną tabelą.
 
 - W **C**<em>ShortName</em>**SessionColSchemaRowset**, przekazać nazwę tabeli jako `DBID`.
+
+::: moniker-end
 
 ## <a name="setting-restrictions"></a>Ustawianie ograniczeń
 

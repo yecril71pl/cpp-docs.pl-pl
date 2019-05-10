@@ -1,18 +1,25 @@
 ---
 title: Implementowanie prostego konsumenta
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 592a51dd77f7a2e115ee67a481e56dc558209253
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390805"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525083"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementowanie prostego konsumenta
+
+::: moniker range="vs-2019"
+
+Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 W następujących tematach opisano, jak edytować pliki tworzone przez **Kreator aplikacji MFC** i **OLE DB Kreator konsumenta ATL** na tworzenie prostego konsumenta. W tym przykładzie ma następujące elementy:
 
@@ -195,6 +202,8 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
     ```
 
 Aby uzyskać więcej informacji na temat zakładek, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md). Przykłady zakładki są także wyświetlane w [aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

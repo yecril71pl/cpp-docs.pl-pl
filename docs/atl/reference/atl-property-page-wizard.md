@@ -1,25 +1,30 @@
 ---
 title: Kreator strony właściwości ATL
-ms.date: 10/03/2018
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
 helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47fee2291d201fca04674b07926ed88aaed0a95c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248236"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524531"
 ---
 # <a name="atl-property-page-wizard"></a>Kreator strony właściwości ATL
 
-Ten kreator [dodaje strony właściwości w projekcie ATL](../../atl/reference/adding-an-atl-property-page.md) lub do projektu MFC z obsługą ATL. Strony właściwości ATL udostępnia interfejs użytkownika do ustawiania właściwości (lub wywoływania metod) jeden lub więcej obiektów COM.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
+Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Ten kreator [dodaje strony właściwości w projekcie ATL](../../atl/reference/adding-an-atl-property-page.md) lub do projektu MFC z obsługą ATL. Strony właściwości ATL udostępnia interfejs użytkownika do ustawiania właściwości (lub wywoływania metod) jeden lub więcej obiektów COM.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -64,8 +69,10 @@ Zawiera informacje dotyczące funkcji COM dla obiektu.
 
    Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
 
+::: moniker-end
+
 ## <a name="see-also"></a>Zobacz także
 
 [Opcje, Kreator strony właściwości ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [Ciągi, Kreator strony właściwości ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[Przykład: Implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)
+[Przykład: implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)

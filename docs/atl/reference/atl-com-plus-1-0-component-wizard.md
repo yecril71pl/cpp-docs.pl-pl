@@ -1,27 +1,29 @@
 ---
 title: Kreator 1.0 składnika ATL COM +
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.mts.overview
+ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
-- ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: df13c94eb0cc2aa7e2dea49aba6901f01fce0a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8ab9238f921b3c4e5c0eb396f0b26e46ab2a244
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248830"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524675"
 ---
 # <a name="atl-com-10-component-wizard"></a>Kreator 1.0 składnika ATL COM +
+
+::: moniker range="vs-2019"
+
+Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Użyj tego kreatora, aby dodać obiekt do projektu, który obsługuje usługi COM + 1.0, w tym transakcji.
 
 Można określić, czy obiekt obsługuje podwójne interfejsy i automatyzację. Można również określić obsługę interfejsu informacje o błędzie, formantu rozszerzonego obiektu, transakcji i Kolejkowanie komunikatów asynchronicznych.
-
-> [!WARNING]
-> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -83,6 +85,8 @@ Zawiera informacje dotyczące funkcji COM dla obiektu.
 - **ProgID**
 
    Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
+   
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

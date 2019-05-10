@@ -1,25 +1,27 @@
 ---
 title: Kreator dodawania klasy z biblioteki typów
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.typelib
+ms.date: 05/09/2019
 helpviewer_keywords:
-- Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297011"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525472"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Kreator dodawania klasy z biblioteki typów
 
-Ten kreator umożliwia dodawanie klasy MFC z biblioteki typów dostępne. Kreator utworzy klasę dla każdego interfejsu, który dodasz z wybranej biblioteki typów.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> W programie Visual Studio 2017 w wersji 15.9 tego kreatora kodu jest przestarzały i zostanie usunięta w przyszłych wersjach programu Visual Studio. Ten kreator jest rzadko używana. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tego kreatora. Jeśli chcesz przekazać opinię dotyczącą tego wycofywania, wypełnij [w ramach tej ankiety](https://www.surveymonkey.com/r/QDWKKCN). Twoja opinia ma znaczenie dla nas.
+Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Ten kreator umożliwia dodawanie klasy MFC z biblioteki typów dostępne. Kreator utworzy klasę dla każdego interfejsu, który dodasz z wybranej biblioteki typów.
 
 - **Dodaj klasę**
 
@@ -67,7 +69,9 @@ Ten kreator umożliwia dodawanie klasy MFC z biblioteki typów dostępne. Kreato
 
    Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
 
+::: moniker-end
+
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa MFC z biblioteki typów](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[Klienci automatyzacji: Korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)
+[Klienci automatyzacji: korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)

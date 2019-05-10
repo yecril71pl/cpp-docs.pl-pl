@@ -2,12 +2,12 @@
 title: MFC i ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: c2cfb77f0e3885e0b315ddfe38bf942ec157375a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54498ddf8999379d93c899c05aa41fe224616ea3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239256"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525434"
 ---
 # <a name="mfc-and-atl"></a>MFC i ATL
 
@@ -17,7 +17,7 @@ Można tworzyć programy MFC lub ATL za pomocą programu Visual Studio Community
 
 W programie Visual Studio 2015 Visual C++ jest opcjonalny, a składniki MFC i ATL są opcjonalne składniki podrzędne w obszarze Visual C++. Jeśli nie wybierzesz tych składników podczas pierwszej instalacji programu Visual Studio, monit będą instalowane, gdy użytkownik podejmie próbę Utwórz lub Otwórz projekt ATL i MFC po raz pierwszy.
 
-W programie Visual Studio 2017 i nowsze, MFC i ATL są opcjonalne składniki podrzędne w ramach **programowanie aplikacji klasycznych w języku C++** obciążenia w programie Instalatora programu Visual Studio. Można zainstalować funkcję obsługi ATL bez MFC lub obsługa MFC i ATL (MFC zależy od ATL) w połączeniu. Aby uzyskać więcej informacji na temat obciążeń i składników, zobacz [Install Visual Studio 2017](/visualstudio/install/install-visual-studio).
+W programie Visual Studio 2017 i nowsze, MFC i ATL są opcjonalne składniki podrzędne w ramach **programowanie aplikacji klasycznych w języku C++** obciążenia w programie Instalatora programu Visual Studio. Można zainstalować funkcję obsługi ATL bez MFC lub obsługa MFC i ATL (MFC zależy od ATL) w połączeniu. Aby uzyskać więcej informacji na temat obciążeń i składników, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="related-articles"></a>Powiązane artykuły
 

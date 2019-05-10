@@ -1,17 +1,25 @@
 ---
 title: Tworzenie dostawcy
-ms.date: 10/15/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b3b3f56ad4bbd1940beb4159d1a78f08b47d26a
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361869"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525103"
 ---
 # <a name="creating-the-provider"></a>Tworzenie dostawcy
+
+::: moniker range="vs-2019"
+
+Kreator ATL OLE DB Provider nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 ## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Aby utworzyć dostawcę OLE DB przy użyciu biblioteki ATL OLE DB Provider Kreatora
 
@@ -19,7 +27,7 @@ ms.locfileid: "62361869"
 
 1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
 
-1. W **Dodaj klasę** dialogowego **zainstalowane** > **Visual C++** > **ATL**, wybierz **Dostawcy OLE DB ATL** ikonę, a następnie kliknij przycisk **Otwórz**.
+1. W **Dodaj klasę** dialogowego **zainstalowane** > **Visual C++**  > **ATL**, wybierz opcję **Dostawcy OLE DB ATL** ikonę, a następnie kliknij przycisk **Otwórz**.
 
 1. W **Kreator biblioteki ATL OLE DB Provider**, podaj krótką nazwę dostawcy w **krótką nazwę** pole. Poniższe tematy Użyj krótkiej nazwy *niestandardowe*, ale można użyć innej nazwy. Pozostałe pola nazw wypełnić według nazwy, które można wprowadzić.
 
@@ -32,6 +40,8 @@ ms.locfileid: "62361869"
    - **Wersja**: Używane z ProgID i Coclass, aby wygenerować identyfikator programowy zależne od wersji
 
 1. Kliknij przycisk **Zakończ**.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

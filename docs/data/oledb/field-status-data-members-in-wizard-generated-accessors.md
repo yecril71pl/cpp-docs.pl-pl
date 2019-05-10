@@ -1,18 +1,26 @@
 ---
 title: Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: dd650b7cafef78e23c23ddfef791c88b6b93727f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409008"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525068"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
+
+::: moniker range="vs-2019"
+
+Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Kiedy używasz **OLE DB Kreator konsumenta ATL** Aby utworzyć odbiorcę, Kreator generuje element członkowski danych w klasie rekordu użytkownika dla każdego pola, które określisz w mapie kolumny. Każdy element członkowski danych jest typu `DWORD` i zawiera wartość stanu, odpowiadający jej odpowiednich pól.
 
@@ -103,6 +111,8 @@ Możesz pobrać długość kolumny zmiennej długości lub stan kolumny (w celu 
     ```
 
 Kiedy używasz `CDynamicAccessor`, długość i stanu są powiązane dla Ciebie automatycznie. Aby pobrać wartości długości i stanu, użyj `GetLength` i `GetStatus` funkcji elementów członkowskich.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 
