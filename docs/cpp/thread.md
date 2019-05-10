@@ -1,6 +1,6 @@
 ---
 title: wątek
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330521"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221961"
 ---
 # <a name="thread"></a>wątek
 
@@ -40,7 +40,7 @@ Używając zmiennych thread-local w bibliotekach ładowane dynamicznie, musisz b
 
 1. Jeśli zmienna jest inicjowana za pomocą wywołania funkcji (w tym konstruktory), ta funkcja tylko będzie wywoływana w wątku, który spowodował pliku binarnego/DLL do załadowania do procesu i te wątki, które są uruchomione, gdy załadowano danych binarnych/DLL. Inicjowanie funkcji nie są wywoływane dla każdego wątku, w którym jest już uruchomiona, gdy biblioteka DLL został załadowany. Dynamiczna Inicjalizacja odbywa się na wywołanie funkcji DllMain DLL_THREAD_ATTACH, ale biblioteki DLL nigdy nie pobiera, które komunikatów Jeśli biblioteka DLL nie jest w trakcie procesu podczas uruchamiania wątku.
 
-1. Zmiennymi lokalnymi wątku, które są statycznie inicjowane przy użyciu stałych wartości zwykle są inicjowane poprawnie we wszystkich wątkach. Jednak grudnia 2017 r. występuje znanej zgodności problem w kompilatorze Microsoft Visual C++, według której otrzymywać zmienne constexpr dynamicznego zamiast statycznego inicjowania.
+1. Zmiennymi lokalnymi wątku, które są statycznie inicjowane przy użyciu stałych wartości zwykle są inicjowane poprawnie we wszystkich wątkach. Począwszy od grudnia 2017 r. istnieje jednak problem znanej zgodności w programie Microsoft C++ kompilatora zgodnie z którą zmienne constexpr odbierać dynamicznych zamiast statyczne inicjowanie.
 
    Uwaga: Oba te problemy mają być rozwiązany w przyszłych aktualizacji kompilatora.
 

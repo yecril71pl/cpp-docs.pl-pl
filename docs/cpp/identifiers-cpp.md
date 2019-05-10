@@ -1,6 +1,6 @@
 ---
 title: Identyfikatory (C++)
-ms.date: 09/12/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184604"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222429"
 ---
 # <a name="identifiers-c"></a>Identyfikatory (C++)
 
@@ -70,7 +70,7 @@ Tylko pierwsze 2048 znaków identyfikatorów Microsoft C++ są znaczące. Nazwy 
 
 - Liczba argumentów funkcji.
 
-Znak dolara `$` jest znakiem prawidłowym identyfikatorem języka Visual C++. Visual C++ pozwala również na używanie rzeczywiste znaki, które są reprezentowane przez dozwolone zakresy uniwersalne nazwy znaków w identyfikatorach. Aby korzystać z tych znaków, musisz zapisać plik przy użyciu pliku kodowania stronę kodową, która je zawiera.  Ten przykład przedstawia, jak rozszerzyć zarówno znaki i uniwersalne nazwy znaków mogą być używane zamiennie w kodzie.
+Znak dolara `$` jest znakiem prawidłowym identyfikatorem w programie Microsoft C++ kompilatora (MSVC). MSVC pozwala również na używanie rzeczywiste znaki, które są reprezentowane przez dozwolone zakresy uniwersalne nazwy znaków w identyfikatorach. Aby korzystać z tych znaków, musisz zapisać plik przy użyciu pliku kodowania stronę kodową, która je zawiera.  Ten przykład przedstawia, jak rozszerzyć zarówno znaki i uniwersalne nazwy znaków mogą być używane zamiennie w kodzie.
 
 ```cpp
 // extended_identifier.cpp

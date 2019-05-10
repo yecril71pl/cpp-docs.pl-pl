@@ -1,17 +1,17 @@
 ---
 title: auto — słowo kluczowe
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
-ms.openlocfilehash: 3477bd5033fac5b69733db5d6095c1317aac42ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a695c33ab55601bb8d81b00f963646f6a48f09d5
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284730"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222246"
 ---
 # <a name="auto-keyword"></a>auto — słowo kluczowe
 
-**Automatycznie** — słowo kluczowe jest Specyfikator deklaracji. Jednak C++ standard definiuje oryginału i poprawione znaczenie słowa kluczowego. Przed Visual C++ 2010 **automatycznie** — słowo kluczowe deklaruje zmienną w *automatyczne* klasę magazynu, czyli zmiennej, która ma lokalne okresy istnienia. Począwszy od programu Visual C++ 2010, **automatycznie** — słowo kluczowe deklaruje zmienną, którego typ jest ustalić na podstawie wyrażenia inicjowania w jego deklaracji. [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) — opcja kompilatora kontroluje znaczenie **automatycznie** — słowo kluczowe.
+**Automatycznie** — słowo kluczowe jest Specyfikator deklaracji. Jednak C++ standard definiuje oryginału i poprawione znaczenie słowa kluczowego. Przed Visual Studio 2010 **automatycznie** — słowo kluczowe deklaruje zmienną w *automatyczne* klasę magazynu, czyli zmiennej, która ma lokalne okresy istnienia. Począwszy od programu Visual Studio 2010, **automatycznie** — słowo kluczowe deklaruje zmienną, którego typ jest ustalić na podstawie wyrażenia inicjowania w jego deklaracji. [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) — opcja kompilatora kontroluje znaczenie **automatycznie** — słowo kluczowe.
 
 ## <a name="syntax"></a>Składnia
 

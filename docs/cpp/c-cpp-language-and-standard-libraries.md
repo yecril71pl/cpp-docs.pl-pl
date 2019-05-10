@@ -2,12 +2,12 @@
 title: Język C/C++ i standardowe biblioteki
 ms.date: 11/04/2016
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: 8642371018a1fdbba46d5dee52e8e88cd2b09ace
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8e7a51fc18b24475c5545fa912e376cc49645d94
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345142"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222224"
 ---
 # <a name="cc-language-and-standard-libraries"></a>Język C/C++ i standardowe biblioteki
 
@@ -23,6 +23,6 @@ Ten rozdział dokumentacji zawiera wskazówki i zawartość odniesień dla imple
 |[Dokumentacja języka C](../c-language/c-language-reference.md)|Zawartość odniesienia dla języka C implementacja firmy Microsoft.|
 |[Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)|Zawartość odniesienia do wdrożenia przez Microsoft środowiska uruchomieniowego języka C (CRT).|
 |[Biblioteka SafeInt](../safeint/safeint-library.md)|Zawartość odniesienia dla przenośnej biblioteki funkcji, które obsługują liczby całkowite, bez ryzyka przepełnienia.|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|W tym artykule opisano kluczowe funkcje programu Visual C++ w Visual Studio i łącza do pozostałej części dokumentacji języka Visual C++.|
+|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|W tym artykule opisano kluczowe funkcje C++ w programie Visual Studio i łącza do pozostałej części programu Visual Studio C++ dokumentacji.|
 |[Omówienie programowania C++ w programie Visual Studio](../overview/overview-of-cpp-development.md)|Łącza do innych artykułów, które zawierają informacje o tym, jak używać programu Visual Studio i związanych z nim narzędzi do tworzenia, kompilacji i wdrażania aplikacji C++.|
 |[Co nowego w języku Visual C++](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|W tym artykule opisano nowe funkcje i ulepszenia w tej wersji.|

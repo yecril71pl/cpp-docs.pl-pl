@@ -1,6 +1,6 @@
 ---
 title: Odwołanie BSCMAKE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - BSCMAKE, reference
 - Microsoft Browse Information Maintenance Utility
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294892"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220559"
 ---
 # <a name="bscmake-reference"></a>Odwołanie BSCMAKE
 
@@ -24,7 +24,7 @@ ms.locfileid: "62294892"
 
 Narzędzie konserwacji przeglądarki Microsoft informacji (BSCMAKE. Z rozszerzeniem EXE) tworzy pliku informacyjnego przeglądarki (.bsc) na podstawie plików SBR utworzony podczas kompilacji. Niektóre narzędzia innych firm przy użyciu .BSC — pliki do analizy kodu.
 
-Podczas tworzenia programu, można utworzyć pliku informacyjnego przeglądarki programu automatycznie, przy użyciu BSCMAKE, aby utworzyć plik. Nie musisz wiedzieć, jak uruchomić BSCMAKE, jeśli utworzysz plik informacji przeglądania w środowisku programowania Visual C++. Możesz przeczytać ten temat, aby poznać dostępne opcje.
+Podczas tworzenia programu, można utworzyć pliku informacyjnego przeglądarki programu automatycznie, przy użyciu BSCMAKE, aby utworzyć plik. Nie trzeba się dowiedzieć, jak uruchomić BSCMAKE, po utworzeniu pliku informacji przeglądania w środowisku programowania Visual Studio. Możesz przeczytać ten temat, aby poznać dostępne opcje.
 
 Jeśli kompilujesz program poza środowiskiem programowania, można utworzyć .bsc niestandardowych, które można sprawdzić, w środowisku. Uruchom BSCMAKE na pliki SBR, które utworzono podczas kompilacji.
 

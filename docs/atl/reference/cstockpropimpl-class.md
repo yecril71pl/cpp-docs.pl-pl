@@ -1,6 +1,6 @@
 ---
 title: Klasa CStockPropImpl
-ms.date: 11/06/2018
+ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 246e2a26db6adde0fec06523c1b8db09c5f552f3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277490"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221061"
 ---
 # <a name="cstockpropimpl-class"></a>Klasa CStockPropImpl
 
@@ -182,7 +182,7 @@ Klasa używana do zarządzania informacji o typie *T*. Wartość domyślna to `C
 
 `CStockPropImpl` udostępnia **umieścić** i **uzyskać** metody dla każdej właściwości podstawowych. Te metody Podaj kod ustawić lub pobrać element członkowski danych skojarzone z każdą właściwość i który będzie powiadamiany, a następnie zsynchronizować z kontenerem po zmianie dowolną właściwość.
 
-Visual C++ zapewnia obsługę właściwości podstawowe za pośrednictwem jego kreatorów. Aby uzyskać więcej informacji na temat Dodawanie właściwości standardowych do kontrolki, zobacz [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md).
+Program Visual Studio zapewnia obsługę właściwości podstawowe za pośrednictwem jego kreatorów. Aby uzyskać więcej informacji na temat Dodawanie właściwości standardowych do kontrolki, zobacz [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md).
 
 W celu zapewnienia zgodności z poprzednimi wersjami `CStockPropImpl` udostępnia również `get_Window` i `put_Window` metody odwołujące się po prostu `get_HWND` i `put_HWND`, odpowiednio. Domyślna implementacja klasy `put_HWND` zwraca E_FAIL, ponieważ HWND powinny być właściwością tylko do odczytu.
 

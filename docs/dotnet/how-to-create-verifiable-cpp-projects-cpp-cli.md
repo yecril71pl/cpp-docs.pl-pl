@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387464"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448111"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Porady: tworzenie weryfikowalnych C++ projektów (C++sposób niezamierzony)
 
@@ -20,7 +20,7 @@ Kreatory aplikacji w usłudze Visual C++ nie należy tworzyć weryfikowalnych pr
 > [!IMPORTANT]
 > Przestarzałe w programie Visual Studio 2015 i Visual Studio 2017 nie obsługuje **/CLR: pure** i **/CLR: Safe** tworzenie weryfikowalnych projektów. Jeśli potrzebujesz weryfikowalny kod, zalecamy Przetłumacz swój kod C#.
 
-Jednak jeśli używasz starszej wersji zestawu narzędzi kompilatora Visual C++, która obsługuje **/CLR: pure** i **/CLR: Safe**, projekty mogą być konwertowane na być do sprawdzenia. W tym temacie opisano sposób ustawiania właściwości projektu i zmodyfikować pliki źródłowe projektu do przekształcania projektów Visual C++, aby tworzyć aplikacje możliwe do zweryfikowania.
+Jednak jeśli używasz starszej wersji programu Microsoft C++ zestaw narzędzi kompilatora, która obsługuje **/CLR: pure** i **/CLR: Safe**, projekty mogą być konwertowane na być do sprawdzenia. W tym temacie opisano sposób ustawiania właściwości projektu i zmodyfikować pliki źródłowe projektu do przekształcania programu Visual Studio C++ projektów, aby tworzyć aplikacje możliwe do zweryfikowania.
 
 ## <a name="compiler-and-linker-settings"></a>Ustawienia kompilatora i konsolidatora
 

@@ -1,31 +1,47 @@
 ---
 title: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio
-description: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio
-ms.date: 11/01/2018
+description: Jak konfigurować, edytowanie i kompilowanie projektu CMake systemu Linux w programie Visual Studio
+ms.date: 05/03/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 22de2f7a7b5374f781a032f5152610d7a97feb16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a619625bff2cd84db63d58cdceb4d2df98613d2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389896"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222275"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
 Po otwarciu folderu zawierającego projektu narzędzia CMake, Visual Studio używa metadanych, które CMake generuje do skonfigurowania funkcji IntelliSense i automatyczne kompilacje. Lokalnej konfiguracji i ustawieniami debugowania są przechowywane w plikach w formacie JSON, które można opcjonalnie można udostępniać innym użytkownikom, którzy korzystają z programu Visual Studio. 
 
-Programu Visual Studio nie zmodyfikować pliki pliku CMakeLists.txt lub oryginalnego pamięć podręczną CMake, tak aby inne nad tym samym projekcie można nadal korzystać z dowolnych narzędzi jest już używany.  
+Programu Visual Studio nie zmodyfikować pliki pliku CMakeLists.txt lub oryginalnego pamięć podręczną CMake, tak aby inne nad tym samym projekcie można nadal korzystać z dowolnych narzędzi jest już używany.
+
+Aby uzyskać ogólne informacje o pomocy CMake w programie Visual Studio, zobacz [narzędzia CMake dla programu Visual Studio](../build/cmake-projects-in-visual-studio.md). Przeczytaj, że przed kontynuowaniem tutaj.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 Najpierw upewnij się, że masz **programowanie dla systemu Linux przy użyciu języka C++** obciążenia zainstalowany, w tym składnik narzędzia CMake. Zobacz [Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
 
+Na komputerze z systemem Linux upewnij się, że instalowane są następujące elementy: 
+
+- gcc
+- gdb
+- polecenia rsync
+- ZIP 
+
+::: moniker range="vs-2019"
+
+Pomoc techniczna Linux support w przypadku projektów CMake wymaga najnowszej wersji narzędzia CMake w celu zainstalowania na komputerze docelowym. Często wersji oferowanych przez Menedżera pakietów domyślne dystrybucji nie jest wystarczająco długi, do obsługi wszystkich IDE. Visual Studio 2019 r można automatycznie zainstalować lokalną kopię programu CMake użytkownika na komputerach zdalnych systemu Linux, które nie mają najnowszą wersję narzędzia CMake zainstalowane. Jeśli zgodnej wersji CMake nie zostanie wykryte po raz pierwszy Skompiluj projekt, zostanie wyświetlony-paska informacyjnego oferty do zainstalowania narzędzia CMake.
+
+Pliki binarne zostanie zainstalowana tak, aby `~/.vs/cmake`. Po wdrożeniu plików binarnych, projekt zostanie automatycznie ponownie wygenerować. Należy pamiętać, że jeśli narzędzia CMake, określony przez `cmakeExecutable` pole `CMakeSettings.json` jest nieprawidłowy (nie istnieje lub ma nieobsługiwaną wersję) i istnieją wstępnie utworzone pliki binarne programu Visual Studio będzie ignorować `cmakeExecutable` i korzystać ze wstępnie utworzonych plików binarnych.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
 Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu CMake dostarczonych przez firmę Microsoft, Pobierz najnowszy wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
 
-W tym temacie założono, przeczytanie [narzędzia CMake dla programu Visual Studio](../build/cmake-projects-in-visual-studio.md). 
-
-> [!NOTE]
-> Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu dostarczonych przez firmę Microsoft narzędzia CMake pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). W programie Visual Studio 2019 r można automatycznie wdrożyć wstępnie utworzone pliki binarne (zobacz [Pobierz wstępnie utworzone narzędzia CMake pliki binarne](#download-prebuilt-cmake-binaries)).
+:::moniker-end
 
 ## <a name="open-a-folder"></a>Otwieranie folderu
 
@@ -60,7 +76,6 @@ Po określeniu docelowej systemu Linux, źródło jest kopiowany do maszyną z s
 
 ![Generuj pamięć podręczną CMake w systemie Linux](media/cmake-linux-1.png "wygenerowania pamięci podręcznej narzędzia CMake w systemie Linux")
 
-**Visual Studio 2017 w wersji 15.7 lub nowszej:**<br/>
 Aby zapewnić obsługę funkcji IntelliSense dla zdalnych nagłówków, Visual Studio automatycznie kopiuje je z maszyny z systemem Linux do katalogu na komputerze lokalnym Windows. Aby uzyskać więcej informacji, zobacz [technologii IntelliSense dla zdalnych nagłówków](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Debugowanie projektu
@@ -71,7 +86,23 @@ Aby dostosować argumenty wiersza polecenia programu, kliknij prawym przyciskiem
 
 ## <a name="configure-cmake-settings-for-linux"></a>Konfiguruj ustawienia narzędzia CMake dla systemu Linux
 
-Określić wszystkie właściwości, które są wymienione w pliku CMakeSettings.json w projektu CMake systemu Linux [CMake dostosować ustawienia](../build/customize-cmake-settings.md), oraz dodatkowe właściwości, które kontrolują ustawienia kompilacji na zdalnym komputerze z systemem Linux. Aby zmienić domyślne ustawienia narzędzia CMake, wybierz **CMake | Zmień ustawienia narzędzia CMake | CMakeLists.txt** z menu głównego, lub kliknij prawym przyciskiem myszy CMakeSettings.txt w **Eksploratora rozwiązań** i wybierz polecenie **Zmień ustawienia narzędzia CMake**. Program Visual Studio utworzy nowy `CMakeSettings.json` pliku w folderze głównym projektu. Możesz otworzyć plik, używając **ustawienia narzędzia CMake** edytora lub bezpośrednio zmodyfikować plik. 
+Określić wszystkie właściwości, które są wymienione w pliku CMakeSettings.json w projektu CMake systemu Linux [CMake dostosować ustawienia](../build/customize-cmake-settings.md), oraz dodatkowe właściwości, które kontrolują ustawienia kompilacji na zdalnym komputerze z systemem Linux. 
+
+::: moniker range="vs-2019"
+
+Aby zmienić domyślne ustawienia narzędzia CMake w programie Visual Studio 2019 r, z głównym pasku narzędzi, otwórz **konfiguracji** listy rozwijanej i wybierz polecenie **Zarządzanie konfiguracjami**. 
+
+   ![Konfiguracje zarządzania CMake](../build/media/vs2019-cmake-manage-configurations.png "konfiguracji narzędzia CMake listy rozwijanej")
+
+Spowoduje to przejście **edytora ustawienia narzędzia CMake** używane do edycji `CMakeSettings.json` pliku w folderze głównym projektu. Można również otworzyć plik bezpośrednio, klikając **Edycja JSON** przycisku w edytorze. Aby uzyskać więcej informacji, zobacz [dostosować ustawienia narzędzia CMake](../build/customize-cmake-settings.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Aby zmienić domyślne ustawienia narzędzia CMake w programie Visual Studio 2017, wybierz **CMake | Zmień ustawienia narzędzia CMake | CMakeLists.txt** z menu głównego, lub kliknij prawym przyciskiem myszy CMakeSettings.txt w **Eksploratora rozwiązań** i wybierz polecenie **Zmień ustawienia narzędzia CMake**. Program Visual Studio utworzy nowy `CMakeSettings.json` pliku w folderze głównym projektu. Możesz otworzyć plik, używając **ustawienia narzędzia CMake** edytora lub bezpośrednio zmodyfikować plik. Aby uzyskać więcej informacji, zobacz [CMake dostosować ustawienia](../build/customize-cmake-settings.md).
+
+::: moniker-end
 
 Poniższy przykład pokazuje, w domyślnej konfiguracji debugowania dla systemu Linux na podstawie w poprzednim przykładzie kodu:
 
@@ -129,12 +160,11 @@ Aby uzyskać większą kontrolę, można użyć tych opcjonalnych ustawień:
 
 Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym, przed i po kompilacji, a przed generowania narzędzia CMake. Te wartości mogą być dowolnego polecenia, który jest prawidłowy w systemie zdalnym. Dane wyjściowe w potoku do programu Visual Studio.
 
-## <a name="download-prebuilt-cmake-binaries"></a>Pobierz wstępnie utworzone narzędzia CMake plików binarnych.
+::: moniker range="vs-2019"
 
-Twoje dystrybucja systemu Linux może być starszą wersję narzędzia CMake. Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu CMake dostarczonych przez firmę Microsoft, Pobierz najnowszy wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+W programie Visual Studio 2019 r można edytować tych ustawień w **edytora ustawienia narzędzia CMake**.
 
-**Visual Studio 2019**<br/>
-Jeśli prawidłowe CMake nie zostanie znaleziony na komputerze zdalnym, pasek informacyjny będą wyświetlane i udostępnić jako opcje, aby automatycznie wdrażać wstępnie utworzone pliki binarne narzędzia CMake. Pliki binarne zostanie zainstalowana tak, aby `~/.vs/cmake`. Po wdrożeniu plików binarnych, projekt zostanie automatycznie ponownie wygenerować. Należy pamiętać, że jeśli narzędzia CMake, określony przez `cmakeExecutable` pole `CMakeSettings.json` jest nieprawidłowy (nie istnieje lub ma nieobsługiwaną wersję) i istnieją wstępnie utworzone pliki binarne programu Visual Studio będzie ignorować `cmakeExecutable` i korzystać ze wstępnie utworzonych plików binarnych.
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184403"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222266"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Przekazywanie argumentów i konwencje nazewnictwa
 
 **Microsoft Specific**
 
-Kompilatory języka Visual C++ umożliwiają określanie konwencje dotyczących przekazywania argumentów i zwracanie wartości między funkcjami a obiektami wywołującymi. Nie wszystkie konwencje są dostępne na wszystkich obsługiwanych platformach, a niektóre konwencje używają implementacji specyficznych dla platformy. W większości przypadków słowa kluczowe lub przełączniki kompilatora, które określają nieobsługiwaną Konwencję na konkretnej platformie są ignorowane, a domyślna Konwencja platformy jest używana.
+Microsoft C++ kompilatory umożliwiają określanie konwencje dotyczących przekazywania argumentów i zwracanie wartości między funkcjami a obiektami wywołującymi. Nie wszystkie konwencje są dostępne na wszystkich obsługiwanych platformach, a niektóre konwencje używają implementacji specyficznych dla platformy. W większości przypadków słowa kluczowe lub przełączniki kompilatora, które określają nieobsługiwaną Konwencję na konkretnej platformie są ignorowane, a domyślna Konwencja platformy jest używana.
 
 Na x86 platformach wszystkie argumenty są rozszerzone do 32 bitów, gdy są przekazywane. Wartości zwracane są również rozszerzone do 32 bitów i zwracane w rejestrze EAX, z wyjątkiem struktur 8-bajtowych, które są zwracane w EAX. Większe struktury są zwracane w rejestrze EAX jako wskaźniki ukryte struktury zwrotu. Parametry są wypychane na stosie od prawej do lewej. Struktury, które nie są zasobników nie zostaną zwrócone w rejestrach.
 
@@ -41,7 +41,7 @@ Poniższe konwencje wywoływania są obsługiwane przez kompilator Visual C/C++.
 
 |Słowo kluczowe|Oczyszczanie stosu|Przekazywanie parametru|
 |-------------|-------------------|-----------------------|
-|[__cdecl](../cpp/cdecl.md)|Obiekt wywołujący|Przesuwa parametry w stosie, w odwrotnej kolejności (od prawej do lewej)|
+|[__cdecl](../cpp/cdecl.md)|Caller|Przesuwa parametry w stosie, w odwrotnej kolejności (od prawej do lewej)|
 |[__clrcall](../cpp/clrcall.md)|n/d|Obciążenie parametrów na stosie wyrażenia CLR w kolejności (od lewej do prawej).|
 |[__stdcall](../cpp/stdcall.md)|/ / Wywoływany|Przesuwa parametry w stosie, w odwrotnej kolejności (od prawej do lewej)|
 |[__fastcall](../cpp/fastcall.md)|/ / Wywoływany|Przechowywane w rejestrach, następnie wypychane na stos|

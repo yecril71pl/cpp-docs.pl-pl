@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69f0a19cdcd3526d8afac2e1492da806c2dffd3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412751"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448490"
 ---
 # <a name="mfc-application-wizard"></a>Kreator aplikacji MFC
 
 Kreator aplikacji MFC tworzy aplikację, która po skompilowaniu implementuje podstawowe funkcje aplikacji wykonywalnej systemu Windows (.exe). Aplikacja startowa MFC starter zawiera pliki źródłowe (.cpp) języka C++, pliki zasobów (.rc), pliki nagłówków (.h) i pliki projektu (.vcxproj). Kod generowany w tych plikach startowych jest oparty na bibliotece MFC.
 
 > [!NOTE]
->  Zależnie od wybranych opcji kreator tworzy dodatkowe pliki w projekcie. Na przykład w przypadku wybrania **pomocy kontekstowej** na [funkcje zaawansowane](../../mfc/reference/advanced-features-mfc-application-wizard.md) strony, Kreator tworzy pliki, które są niezbędne do skompilowania plików pomocy projektu. Aby uzyskać więcej informacji dotyczących plików tworzonych przez kreatora, zobacz [typy plików utworzonych dla projektów Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)i zobacz plik Readme.txt w projekcie.
+>  Zależnie od wybranych opcji kreator tworzy dodatkowe pliki w projekcie. Na przykład w przypadku wybrania **pomocy kontekstowej** na [funkcje zaawansowane](../../mfc/reference/advanced-features-mfc-application-wizard.md) strony, Kreator tworzy pliki, które są niezbędne do skompilowania plików pomocy projektu. Aby uzyskać więcej informacji dotyczących plików tworzonych przez kreatora, zobacz [typy plików utworzonych dla elementu wizualnego C++ projektów](../../build/reference/file-types-created-for-visual-cpp-projects.md)i zobacz plik Readme.txt w projekcie.
 
 ## <a name="overview"></a>Omówienie
 
@@ -35,7 +35,7 @@ Ta strona kreatora zawiera opis bieżących ustawień tworzonej aplikacji MFC. D
 
    - Projekt jest tworzony przy użyciu stylu projektu programu Visual Studio i umożliwia przełączanie stylu wizualnego.
 
-   - Projekt używa biblioteki MFC w udostępnionym pliku DLL. Aby uzyskać więcej informacji, zobacz [biblioteki dll w programie Visual C++](../../build/dlls-in-visual-cpp.md).
+   - Projekt używa biblioteki MFC w udostępnionym pliku DLL. Aby uzyskać więcej informacji, zobacz [Utwórz C /C++ bibliotek DLL w programie Visual Studio](../../build/dlls-in-visual-cpp.md).
 
 - [Obsługa dokumentów złożonych, kreator aplikacji MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)
 

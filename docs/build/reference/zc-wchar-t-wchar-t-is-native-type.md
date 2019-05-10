@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 962bb2aaa2f05ad0dc4c9c86cd5cc9694cfad98b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315641"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446160"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t jest typem natywnym)
 
@@ -31,7 +31,7 @@ Analizowanie `wchar_t` jako typu wbudowanego zgodnie ze standardem C++.
 
 Jeśli **/Zc:** jest włączona, `wchar_t` jest słowem kluczowym dla typu całkowitego wbudowanego w kodzie skompilowanym jako C++. Jeśli **/Zc:wchar_t-** (ze znakiem minus) jest określony, lub w kodzie skompilowany jako C, `wchar_t` nie jest typem wbudowanym. Zamiast tego `wchar_t` jest zdefiniowany jako `typedef` dla `unsigned short` w stddef.h canonical nagłówka. (Implementacja firmy Microsoft definiuje go w innym nagłówkiem, który znajduje się w stddef.h i innych standardowych nagłówków.)
 
-Nie zaleca się **/Zc:wchar_t-** ponieważ C++ standardowa wymaga, aby `wchar_t` był typem wbudowanym. Za pomocą `typedef` wersji może spowodować problemy z przenośnością. Jeśli uaktualniasz ze starszych wersji programu Visual C++ i występuje błąd kompilatora [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) ponieważ kod próbuje niejawnie skonwertować `wchar_t` do `unsigned short`, zaleca się zmiany kodu, aby naprawić błąd, Zamiast ustawiać **/Zc:wchar_t-**.
+Nie zaleca się **/Zc:wchar_t-** ponieważ C++ standardowa wymaga, aby `wchar_t` był typem wbudowanym. Za pomocą `typedef` wersji może spowodować problemy z przenośnością. Jeśli uaktualnienia ze starszych wersji programu Visual Studio i występuje błąd kompilatora [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) ponieważ kod próbuje niejawnie skonwertować `wchar_t` do `unsigned short`, zaleca się zmiany kodu, aby naprawić błąd, Zamiast ustawiać **/Zc:wchar_t-**.
 
 **/Zc:** opcja jest włączona domyślnie w C++ kompilacje i w kompilacjach kodu języka C jest ignorowana. [/ Permissive-](permissive-standards-conformance.md) opcji nie ma wpływu na **/Zc:**.
 

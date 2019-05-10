@@ -1,14 +1,14 @@
 ---
 title: Opcje kompilatora w porządku alfabetycznym
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272337"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221766"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -34,7 +34,7 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/E](e-preprocess-to-stdout.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego.|
 |[/EH](eh-exception-handling-model.md)|Określa model obsługi wyjątków.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Pozwala na dostarczenie informacji o błędzie (ICE) na wewnętrznych kompilatora bezpośrednio do zespołu Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Pozwala na dostarczenie wewnętrznych kompilatora-informacje o błędzie (ICE) bezpośrednio do firmy Microsoft C++ zespołu.|
 |[/ Execution-Charset](execution-charset-set-execution-character-set.md)|Ustaw zestaw znaków wykonywania.|
 |[/F](f-set-stack-size.md)|Ustawia rozmiar stosu.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Generuje kod, który jest zoptymalizowany pod kątem x64 określonej architektury lub dla określonych micro architekturach AMD64 oraz Extended Memory 64 Technology (EM64T) architektury.|
@@ -153,7 +153,7 @@ Oto kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę katego
 |[/Zc](zc-conformance.md)|Określa standardowe zachowanie dla opcji [/Ze](za-ze-disable-language-extensions.md).[ / Za, /Ze (Wyłącz rozszerzenia językowe)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Przestarzałe. Włącza rozszerzenia językowe.|
 |[/Zf](zf.md)|Poprawia PDB czas generowania w kompilacjach równoległych.|
-|[/Zg](zg-generate-function-prototypes.md)|Usunięte w programie Visual C++ 2015. Generuje prototypy funkcji.|
+|[/Zg](zg-generate-function-prototypes.md)|Usunięto w programie Visual Studio 2015. Generuje prototypy funkcji.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Zawiera informacje o debugowaniu w bazie danych programu zgodne z funkcją Edytuj i Kontynuuj.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje kompletne informacje debugowania.|
 |[/Zl](zl-omit-default-library-name.md)|Usuwa domyślną nazwę biblioteki z pliku .obj (tylko x86).|

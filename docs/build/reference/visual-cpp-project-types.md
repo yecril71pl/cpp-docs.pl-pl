@@ -8,25 +8,25 @@ helpviewer_keywords:
 - projects [C++], types
 - templates [C++], projects
 - applications [C++], projects
-- Visual C++ projects, types
+- C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316759"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217774"
 ---
 # <a name="c-project-templates"></a>Szablony projektów języka C++
 
-Szablony projektu Visual Studio generować pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, odwołania i `#include` instrukcji, które są odpowiednie dla rodzaju projektu, w której chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów szablony projektów Visual C++, a także kreatorów wiele z nich, aby dostosować swoje projekty podczas ich tworzenia. Bezpośrednio po utworzeniu projektu, można ją skompilować i uruchomić aplikację; jest dobrą praktyką, aby tworzyć sporadycznie podczas opracowywania aplikacji.
+Szablony projektu Visual Studio generować pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, odwołania i `#include` instrukcji, które są odpowiednie dla rodzaju projektu, w której chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów z C++ szablony projektów i zapewnia kreatory dla wielu z nich, dzięki czemu można dostosować swoje projekty, jak można je utworzyć. Bezpośrednio po utworzeniu projektu, można ją skompilować i uruchomić aplikację; jest dobrą praktyką, aby tworzyć sporadycznie podczas opracowywania aplikacji.
 
 > [!NOTE]
 > Można utworzyć projektu języka C przy użyciu szablonów projektów języka C++. W wygenerowanego projektu Zlokalizuj pliki .cpp, rozszerzenie nazwy pliku i zmień go na. c. Następnie na **właściwości projektu** strony dla projektu (a nie dla rozwiązania), a następnie rozwiń **właściwości konfiguracji**, **C/C++** i wybierz **zaawansowane**. Zmiana **kompilacji jako** ustawienie **skompiluj jako kod języka C (/ TC)**.
 
 ## <a name="project-templates"></a>Szablony projektów
 
-Szablony projektów zawarte w Visual Studio zależy od tego, wersja produktu i obciążeń, które zostały zainstalowane. Jeśli po zainstalowaniu programowanie aplikacji klasycznych w języku C++, Visual Studio ma te szablony projektu Visual C++.
+Szablony projektów zawarte w Visual Studio zależy od tego, wersja produktu i obciążeń, które zostały zainstalowane. Jeśli po zainstalowaniu programowanie aplikacji klasycznych w języku C++ obciążenie, program Visual Studio zawiera te C++ szablony projektów.
 
 ### <a name="windows-desktop"></a>Windows Desktop
 

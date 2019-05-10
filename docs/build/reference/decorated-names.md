@@ -6,18 +6,21 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3950f79c4c88d031e04d0d145e0a03c9ebc0a37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293904"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221795"
 ---
 # <a name="decorated-names"></a>Nazwy ozdobione
 
 Funkcje, dane i obiekty w ramach programów C i C++ są reprezentowane wewnętrznie przez ich nazwy dekoracyjne. A *nazwy ozdobionej* jest zakodowany ciąg utworzony przez kompilator podczas kompilowania obiektu, danych lub definicji funkcji. Rejestruje konwencji wywoływania, typów, parametrów funkcji i inne informacje wraz z nazwą. Ta dekorowania nazwy, nazywana również *dekorowanie nazw*pomaga konsolidatora Znajdź poprawną funkcje i obiekty, gdy łączenie pliku wykonywalnego.
 
-Ozdobione konwencji nazewnictwa zostały zmienione w różnych wersjach programu Visual C++ i mogą być także różne w różnych docelowych architektur. Aby połączyć poprawnie przy użyciu plików źródłowych, utworzony przy użyciu języka Visual C++, C i C++ bibliotek DLL i bibliotek powinna być skompilowana przy użyciu tego samego zestawu narzędzi kompilatora, flag i Architektura docelowa.
+Konwencje nazewnictwa ozdobione zostały zmienione w różnych wersjach programu Visual Studio i mogą być także różne w różnych docelowych architektur. Połączyć poprawnie przy użyciu plików źródłowych, utworzony przy użyciu programu Visual Studio C i C++ bibliotek DLL i bibliotek powinna być skompilowana przy użyciu tego samego zestawu narzędzi kompilatora, flag i Architektura docelowa. 
+
+> [!NOTE]
+> Biblioteki utworzonych za pomocą programu Visual Studio 2015, mogą być używane przez aplikacje utworzone przy użyciu programu Visual Studio 2017 lub Visual Studio 2019 r.
 
 ##  <a name="Using"></a> Za pomocą nazw ozdobionych
 
@@ -25,7 +28,7 @@ Zwykle nie trzeba znać nazwę uzupełnioną napisać kod, który kompiluje i ł
 
 Jeśli zmienisz nazwę funkcji, klasy, Konwencja wywoływania, typ zwracany lub żadnych parametrów, zmienia się również nazwę uzupełnioną W takim przypadku należy pobrać nowe nazwy dekoracyjne i użyć wszędzie tam, gdzie określono nazwę z atrybutami.
 
-Nazwij dekorację ważne jest również podczas łączenia do kodu napisanego w innych językach programowania lub za pomocą innych kompilatorów. Różne kompilatory używają różnych konwencji dekorowania nazwy. Gdy plik wykonywalny łączy do kodu napisanego w innym języku, specjalne należy uważać, aby odpowiadać nazwom wyeksportowane i zaimportowane i Konwencje wywoływania. Kod języka zestawu musi być Visual C++ dekorowane nazwy i Konwencje wywoływania link do kodu źródłowego napisanego w języku Visual C++.
+Nazwij dekorację ważne jest również podczas łączenia do kodu napisanego w innych językach programowania lub za pomocą innych kompilatorów. Różne kompilatory używają różnych konwencji dekorowania nazwy. Gdy plik wykonywalny łączy do kodu napisanego w innym języku, specjalne należy uważać, aby odpowiadać nazwom wyeksportowane i zaimportowane i Konwencje wywoływania. Kod języka zestawu musi być nazwy dekorowane MSVC i Konwencje wywoływania link do kodu źródłowego napisanego przy użyciu MSVC.
 
 ##  <a name="Format"></a> Format C++ nazwy ozdobionej
 

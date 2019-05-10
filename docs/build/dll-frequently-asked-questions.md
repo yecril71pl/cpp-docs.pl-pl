@@ -1,17 +1,17 @@
 ---
 title: Biblioteki MFC DLL — często zadawane pytania
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274121"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220935"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL — często zadawane pytania
 
@@ -41,11 +41,7 @@ Biblioteki MFC DLL, która tworzy nowy wątek MFC podczas uruchamiania przestani
 
 ## <a name="mfc_multithreaded_2"></a> Aplikacji wielowątkowych, ma dostęp do biblioteki MFC DLL w różnych wątkach?
 
-Wielowątkowe aplikacje mogą uzyskiwać dostęp do zwykłych bibliotekach MFC dll, która łączy dynamicznie MFC biblioteki DLL rozszerzeń MFC z różnych wątków. A począwszy od Visual C++ w wersji 4.2, aplikacji mogą uzyskiwać dostęp do zwykłych bibliotekach MFC dll, która statycznie łączy do MFC z wielu wątków, utworzone w aplikacji.
-
-Przed wersji 4.2 tylko jeden wątek zewnętrznych można dołączyć do zwykłej biblioteki MFC DLL, które są połączone statycznie z MFC.
-
-Pamiętaj, że termin USRDLL nie jest już używany w dokumentacji języka Visual C++. Regularne biblioteki DLL MFC, która jest połączone statycznie z MFC ma takie same charakterystyki jak dawny USRDLL.
+Wielowątkowe aplikacje mogą uzyskiwać dostęp do zwykłych bibliotekach MFC dll, która łączy dynamicznie MFC biblioteki DLL rozszerzeń MFC z różnych wątków. Aplikację można uzyskać dostęp do zwykłych bibliotekach MFC dll, która statycznie łączy do MFC z wielu wątków, utworzone w aplikacji.
 
 ## <a name="mfc_prohibited_classes"></a> Istnieją dowolnej klasy lub funkcje MFC, które nie można używać w bibliotece MFC DLL?
 
@@ -69,4 +65,4 @@ Jedną z możliwych przyczyn przeciek pamięci jest, że MFC tworzy obiekty tymc
 
 ## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

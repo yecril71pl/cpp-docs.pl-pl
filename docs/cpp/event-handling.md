@@ -1,17 +1,15 @@
 ---
 title: Obsługa zdarzeń
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- attributes [C++], event handling
-- intrinsic functions [C++], event handling
-- event handling [C++], Visual C++
+- event handling [C++]
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd74ba0b20e2058f0b04d0d0d3c22c9d526157a0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392157"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222125"
 ---
 # <a name="event-handling"></a>Obsługa zdarzeń
 
@@ -21,7 +19,7 @@ Obsługa zdarzeń jest również obsługiwana dla macierzystych klas C++ (klasy 
 
 Obsługa zdarzeń obsługuje jedno -, jak i wielowątkowe użycie i chroni dane przed jednoczesny dostęp wielowątkowych. Umożliwia również pochodzić podklasy ze źródła zdarzeń lub klasy odbiorcy i obsługę rozszerzonych określania źródła zdarzeń i odbieranie w klasie pochodnej.
 
-Visual C++ zawiera atrybuty i słowa kluczowe do deklarowania zdarzenia i procedury obsługi zdarzeń. Atrybuty zdarzeń i słów kluczowych może służyć w programach CLR i w natywnych programach języka C++.
+Microsoft C++ kompilator zawiera atrybuty i słowa kluczowe do deklarowania zdarzenia i procedury obsługi zdarzeń. Atrybuty zdarzeń i słów kluczowych może służyć w programach CLR i w natywnych programach języka C++.
 
 |Temat|Opis|
 |-----------|-----------------|

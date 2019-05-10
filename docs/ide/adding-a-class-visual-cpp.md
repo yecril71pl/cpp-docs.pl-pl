@@ -10,16 +10,16 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: 21dd4b1936eda201df8283146ba9f41fa81e11de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cd4ed4d4ec5a7093ce674c7883a77fa4e91d5ef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375889"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446936"
 ---
 # <a name="add-a-class"></a>Dodaj klasę
 
-Aby dodać klasę w projekcie w języku Visual C++ w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, wybierz pozycję **Dodaj**, a następnie wybierz **klasy**. Spowoduje to otwarcie [okno dialogowe Dodaj klasę](#add-class-dialog-box).
+Aby dodać klasę w programie Visual Studio C++ projektu w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, wybierz pozycję **Dodaj**, a następnie wybierz **klasy**. Spowoduje to otwarcie [okno dialogowe Dodaj klasę](#add-class-dialog-box).
 
 Po dodaniu klasy, należy określić nazwę, która różni się od klas, które już istnieją w MFC ani ATL. Jeśli określisz nazwę, która już istnieje w jednej bibliotece IDE Wyświetla informację o błędzie.
 

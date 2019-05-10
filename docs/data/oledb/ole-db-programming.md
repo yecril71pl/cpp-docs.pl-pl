@@ -1,21 +1,19 @@
 ---
 title: Programowanie OLE DB
-ms.date: 10/22/2018
+ms.date: 05/02/2019
 helpviewer_keywords:
 - OLE DB [C++]
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3125050dc4874890a29a4c5e54bed6b96ad44c7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361246"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222548"
 ---
 # <a name="ole-db-programming"></a>Programowanie OLE DB
-
-Microsoft OLE DB jest technologią starszą; w przypadku nowych aplikacji jest wymaganego dostępu do danych interfejsu API dla połączonych serwerów SQL. Wszystkie inne nowe aplikacje powinny używać ODBC. Bieżący dostawca OLE DB dla programu SQL Server jest SQLNCLI11. BIBLIOTEKI DLL. Dostawcy jest nadal wysyłania w programie SQL Server 2016. Ta dokumentacja jest przeznaczona dla deweloperów, którzy są utrzymywanie istniejących aplikacji, które już używają OLE DB.
 
 Szablony OLE DB są szablonów języka C++, które ułatwiają technologii baz danych OLE DB o wysokiej wydajności wpisując klas które implementują wiele powszechnie używanych interfejsów OLE DB. Ta biblioteka szablonów jest podzielony na szablony konsumentów i dostawcy.
 

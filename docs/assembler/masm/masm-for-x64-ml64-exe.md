@@ -6,28 +6,28 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 0404bff54a08988a72fcb0a0c075a4446bf90f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a92d2a22e8aa9df29c18fa36ff4508eb8eec57f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178244"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445866"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM dla wersji x64 (ml64.exe)
 
-Visual Studio zawiera zarówno 32-bitowych i 64-bitowe wersje hostowanej Microsoft Assembler (MASM) kierowania x64 kodu. Nazwane ml64.exe, to asemblera, który akceptuje x64 języka asemblera. Po wybraniu obciążenia C++ podczas instalacji programu Visual Studio, są zainstalowane narzędzia wiersza polecenia MASM. Narzędzia MASM nie są dostępne do pobrania osobno. Aby uzyskać instrukcje, jak pobrać i zainstalować kopię programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio). Jeśli nie chcesz zainstalować pełne Visual Studio IDE, ale mają tylko narzędzia wiersza polecenia, należy pobrać [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
+Visual Studio zawiera zarówno 32-bitowych i 64-bitowe wersje hostowanej Microsoft Assembler (MASM) kierowania x64 kodu. Nazwane ml64.exe, to asemblera, który akceptuje x64 języka asemblera. Po wybraniu obciążenia C++ podczas instalacji programu Visual Studio, są zainstalowane narzędzia wiersza polecenia MASM. Narzędzia MASM nie są dostępne do pobrania osobno. Aby uzyskać instrukcje, jak pobrać i zainstalować kopię programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio). Jeśli nie chcesz zainstalować pełne Visual Studio IDE, ale mają tylko narzędzia wiersza polecenia, należy pobrać [Build Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
 Za pomocą MASM tworzyć kod x64 jest przeznaczony dla w wierszu polecenia, należy użyć wiersz polecenia dla deweloperów x64 obiektów docelowych, które ustawia ścieżkę wymagane i inne zmienne środowiskowe. Aby uzyskać informacje na temat sposobu uruchamiania wiersza polecenia dla deweloperów, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md).
 
 Aby uzyskać informacje na temat opcji wiersza polecenia ml64.exe, zobacz [ML i ML64 dotyczące wiersza polecenia](../../assembler/masm/ml-and-ml64-command-line-reference.md).
 
-Asembler wbudowany lub użycie słowa kluczowego ASM nie jest obsługiwana dla x64 lub celów ARM. Do portu usługi x86 kodu tego używa wbudowanego asemblera do x64 lub ARM można przekonwertować kodu C++, użyj funkcje wewnętrzne kompilatora lub utworzyć pliki źródłowe języka asemblera. Kompilator języka Visual C++ obsługuje funkcje wewnętrzne umożliwia postępuj zgodnie z instrukcjami specjalnej funkcji, na przykład uprzywilejowany, bit skanowania i testowania, blokowane i tak dalej, w jak blisko sposób dla wielu platform, jak to możliwe. Aby uzyskać informacji na temat dostępności funkcji wewnętrznych, zobacz [funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md).
+Asembler wbudowany lub użycie słowa kluczowego ASM nie jest obsługiwana dla x64 lub celów ARM. Do portu usługi x86 kodu tego używa wbudowanego asemblera do x64 lub ARM można przekonwertować kodu C++, użyj funkcje wewnętrzne kompilatora lub utworzyć pliki źródłowe języka asemblera. Microsoft C++ kompilator obsługuje funkcje wewnętrzne umożliwia postępuj zgodnie z instrukcjami specjalnej funkcji, na przykład uprzywilejowany, bit skanowania i testowania, blokowane i tak dalej, w jak blisko sposób dla wielu platform, jak to możliwe. Aby uzyskać informacji na temat dostępności funkcji wewnętrznych, zobacz [funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md).
 
-## <a name="add-an-assembler-language-file-to-a-visual-c-project"></a>Dodaj plik języka asemblera do projektu Visual C++
+## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Dodaj plik języka asemblera do programu Visual Studio C++ projektu
 
 System projektu programu Visual Studio obsługuje pliki języka asemblera skompilowanych przy użyciu MASM w projektach C++. Można utworzyć x64 źródło języka asemblera pliki i rozbudowuj je pliki obiektów przy użyciu MASM, która w pełni obsługuje x64. Następnie można połączyć te pliki obiektów kodu C++ wbudowane x64 elementów docelowych. To jest jednym ze sposobów rozwiązywania braku x64 asemblera wbudowanego.
 
-### <a name="to-add-an-assembler-language-file-to-an-existing-visual-c-project"></a>Aby dodać plik języka asemblera do istniejącego projektu Visual C++
+### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Aby dodać plik języka asemblera do istniejącego programu Visual Studio C++ projektu
 
 1. Wybierz projekt w **Eksploratora rozwiązań**. Na pasku menu wybierz **projektu**, **dostosowania kompilacji**.
 

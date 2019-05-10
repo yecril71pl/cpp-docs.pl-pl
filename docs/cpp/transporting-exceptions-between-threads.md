@@ -1,6 +1,6 @@
 ---
 title: Transport wyjątków między wątkami
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404744"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221920"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport wyjątków między wątkami
 
-Visual C++ obsługuje *transportowanie wyjątków* z jednego wątku do innego. Transport wyjątków umożliwia przechwytywanie wyjątków w jednym wątku, a następnie powodowanie, aby były generowane w innym wątku. Na przykład, możesz użyć tej funkcji do pisania aplikacji wielowątkowych, gdzie wątek główny obsługuje wszystkie wyjątki generowane przez pomocnicze wątki. Transport wyjątków jest przydatny głównie dla deweloperów, którzy tworzą biblioteki lub systemy programowania równoległego. Aby zaimplementować transport wyjątków, Visual C++ zapewnia [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typu i [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)i [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkcji.
+Microsoft C++ kompilator (MSVC) obsługuje *transportowanie wyjątków* z jednego wątku do innego. Transport wyjątków umożliwia przechwytywanie wyjątków w jednym wątku, a następnie powodowanie, aby były generowane w innym wątku. Na przykład, możesz użyć tej funkcji do pisania aplikacji wielowątkowych, gdzie wątek główny obsługuje wszystkie wyjątki generowane przez pomocnicze wątki. Transport wyjątków jest przydatny głównie dla deweloperów, którzy tworzą biblioteki lub systemy programowania równoległego. Aby zaimplementować transport wyjątków, udostępnia MSVC [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typu i [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), i [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkcji.
 
 ## <a name="syntax"></a>Składnia
 

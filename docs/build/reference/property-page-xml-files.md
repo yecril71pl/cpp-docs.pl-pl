@@ -1,15 +1,15 @@
 ---
 title: Pliki reguł XML strony właściwości
-ms.date: 04/27/2017
+ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319477"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217720"
 ---
 # <a name="property-page-xml-rule-files"></a>Pliki reguł XML strony właściwości
 
@@ -19,7 +19,7 @@ Tylko scenariusze, w których należy zrozumieć wewnętrzne działanie tych pli
 
 Najpierw Przyjrzyjmy Otwórz strony właściwości projektu (kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierz polecenie Właściwości):
 
-![Właściwości projektu Visual C++](../media/cpp-property-page-2017.png)
+![Visual Studio C++ Project Properties](../media/cpp-property-page-2017.png)
 
 Każdy węzeł w węźle **właściwości konfiguracji** nosi nazwę reguły. Reguła reprezentuje czasami jednego narzędzia, takie jak kompilator, ale ogólnie rzecz biorąc termin odnosi się do zasobu, który ma właściwości, który wykonuje i który może generować pewne dane wyjściowe. Każda reguła jest wypełniana z pliku xml w folderze VCTargets. Na przykład reguła C/C++, która jest wyświetlana powyżej jest wypełniana przez "cl.xml".
 

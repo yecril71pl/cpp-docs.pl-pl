@@ -1,6 +1,6 @@
 ---
 title: switch — instrukcja (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267092"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221938"
 ---
 # <a name="switch-statement-c"></a>switch — instrukcja (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 W powyższym przykładzie `capa` jest zwiększana, gdy `c` jest wielką `A`. **Podziału** instrukcji znajdującej się po `capa++` kończy wykonywanie **Przełącz** treści instrukcji i przekazuje kontrolę **podczas** pętli. Bez **podziału** instrukcji, wykonanie "spadnie za pośrednictwem" do następnej instrukcji etykietą, tak aby `lettera` i `nota` również by wzrosła. Podobny cel jest obsługiwany przez **podziału** poufności informacji dotyczące `case 'a'`. Jeśli `c` jest małymi literami `a`, `lettera` jest zwiększany i **podziału** kończy się **Przełącz** treść instrukcji. Jeśli `c` nie `a` lub `A`, **domyślne** instrukcja jest wykonywana.
 
-**Visual Studio 2017 i nowszym:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut jest określony w standardzie C ++ 17. Mogą być używane w **Przełącz** instrukcji jako wskazówka do kompilatora (lub kto czyta kodu) jest przeznaczona należą do tego zachowania. Kompilator języka Visual C++ obecnie nie ostrzegaj przed witrynami dla fallthrough zachowania, więc ten atrybut nie ma wpływu na zachowanie kompilatora. Należy pamiętać, że atrybut jest stosowany do pustą instrukcję w ramach instrukcja labeled; innymi słowy średnik jest konieczne.
+**Visual Studio 2017 i nowszym:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut jest określony w standardzie C ++ 17. Mogą być używane w **Przełącz** instrukcji jako wskazówka do kompilatora (lub kto czyta kodu) jest przeznaczona należą do tego zachowania. Microsoft C++ kompilatora aktualnie nie ostrzegaj przed witrynami dla fallthrough zachowania, więc ten atrybut nie ma wpływu na zachowanie kompilatora. Należy pamiętać, że atrybut jest stosowany do pustą instrukcję w ramach instrukcja labeled; innymi słowy średnik jest konieczne.
 
 ```cpp
 int main()

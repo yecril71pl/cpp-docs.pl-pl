@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 663b639dbfecf9253547e1dd3b4e40480c27b470
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331093"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222045"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Deklarator odwołania do wartości: &amp;&amp;
 
@@ -35,7 +35,7 @@ Odwołania Rvalue wspierają implementację *semantyki przenoszenia*, co może z
 
 Aby zaimplementować semantykę przenoszenia, zazwyczaj podajesz *Konstruktor przenoszący,* i opcjonalnie operator przypisania przenoszenia (**operator =**), do swojej klasy. Kopiuj i przypisz operacje, których źródłami są r-wartości, a następnie automatycznie skorzystaj z semantyki przeniesienia. W przeciwieństwie do domyślnego konstruktora kopii kompilator nie udostępnia domyślnego konstruktora przenoszącego. Aby uzyskać więcej informacji na temat sposobu pisania konstruktora przenoszącego i jak z niej korzystać w aplikacji, zobacz [konstruktory przenoszenia i operatory przenoszenia przypisania (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-Możesz także przeciążać zwykłe funkcje i operatory, aby skorzystać z semantyki przenoszenia. Visual C++ 2010 wprowadza semantykę ruchu do standardowej biblioteki języka C++. Na przykład `string` klasa implementuje operacje wykonujące semantykę przenoszenia. Rozważmy następujący przykład, który łączy kilka ciągów i wypisuje wynik:
+Możesz także przeciążać zwykłe funkcje i operatory, aby skorzystać z semantyki przenoszenia. Program Visual Studio 2010 wprowadza semantykę ruchu do C++ biblioteki standardowej. Na przykład `string` klasa implementuje operacje wykonujące semantykę przenoszenia. Rozważmy następujący przykład, który łączy kilka ciągów i wypisuje wynik:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,15 +51,15 @@ int main()
 }
 ```
 
-Przed Visual C++ 2010, każdy wywołanie **operator +** przydzielało i zwracało nowy tymczasowy `string` obiektu (r-wartości). **operator +** nie może dołączyć jednego ciągu do drugiego, ponieważ nie wie, czy ciągi źródłowe są wartościami lvalue czy rvalue. Jeżeli ciągi źródłowe są oba l-wartością, może się odwoływać się gdzie indziej w programie i dlatego nie mogą zostać zmodyfikowane. Za pomocą odwołania rvalue **operator +** może zostać zmodyfikowany do r-wartości, której nie można odwoływać się gdzie indziej w programie. W związku z tym **operator +** mogą teraz łączyć jeden ciąg do innego. Może to znacznie zmniejszyć liczbę alokacji pamięci dynamicznej, `string` musi wykonać klasa. Aby uzyskać więcej informacji na temat `string` klasy, zobacz [basic_string — klasa](../standard-library/basic-string-class.md).
+Przed Visual Studio 2010, każdy wywołanie **operator +** przydzielało i zwracało nowy tymczasowy `string` obiektu (r-wartości). **operator +** nie może dołączyć jednego ciągu do drugiego, ponieważ nie wie, czy ciągi źródłowe są wartościami lvalue czy rvalue. Jeżeli ciągi źródłowe są oba l-wartością, może się odwoływać się gdzie indziej w programie i dlatego nie mogą zostać zmodyfikowane. Za pomocą odwołania rvalue **operator +** może zostać zmodyfikowany do r-wartości, której nie można odwoływać się gdzie indziej w programie. W związku z tym **operator +** mogą teraz łączyć jeden ciąg do innego. Może to znacznie zmniejszyć liczbę alokacji pamięci dynamicznej, `string` musi wykonać klasa. Aby uzyskać więcej informacji na temat `string` klasy, zobacz [basic_string — klasa](../standard-library/basic-string-class.md).
 
-Semantyka przenoszenia pomaga również w przypadku, gdy kompilator nie można używać optymalizacji zwracają wartość (RVO) ani o nazwie zwracają wartość optymalizacji (NRVO). W takich przypadkach kompilator wywołuje konstruktora przenoszącego, jeśli typ Określa go. Aby uzyskać więcej informacji o optymalizacji nazwanej zwracanej wartości, zobacz [optymalizacji nazwanej zwracanej wartości w programie Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
+Semantyka przenoszenia pomaga również w przypadku, gdy kompilator nie można używać optymalizacji zwracają wartość (RVO) ani o nazwie zwracają wartość optymalizacji (NRVO). W takich przypadkach kompilator wywołuje konstruktora przenoszącego, jeśli typ Określa go. Aby uzyskać więcej informacji o optymalizacji nazwanej zwracanej wartości, zobacz [optymalizacji nazwanej zwracanej wartości w programie Visual Studio 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
 Aby lepiej zrozumieć semantykę przenoszenia, rozważ przykład wstawiania elementu do `vector` obiektu. Jeśli pojemność `vector` zostanie przekroczona `vector` obiektu musi ponownie przydzielić pamięci dla swoich elementów, a następnie skopiować każdy element do innej lokalizacji pamięci, aby zwolnić miejsce dla wstawionego elementu. Gdy operacja wstawiania kopiuje element, tworzy nowy element, wywołuje konstruktor Kopiuj, aby skopiować dane z poprzedniego elementu do nowego elementu i następnie niszczy poprzedni element. Semantyka przenoszenia umożliwia przenoszenie obiektów bezpośrednio, bez konieczności wykonywania alokacji pamięci kosztowne i operacji kopiowania.
 
 Aby skorzystać z semantyki przenoszenia w `vector` przykład można napisać Konstruktor przenoszący, aby przenieść dane z jednego obiektu do drugiego.
 
-Aby uzyskać więcej informacji na temat wprowadzenia semantyki przenoszenia do biblioteki standardowej języka C++ w programie Visual C++ 2010, zobacz [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md).
+Aby uzyskać więcej informacji na temat wprowadzenia semantyki przenoszenia do C++ biblioteki standardowej w programie Visual Studio 2010, zobacz [ C++ biblioteki standardowej](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Doskonałe przekazywanie do przodu
 

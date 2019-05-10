@@ -1,18 +1,21 @@
 ---
 title: 'Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation'
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409217"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558269"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation
 
-Dowiedz się, jak używać Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL) do tworzenia aplikacji uniwersalnych platformy Windows (UWP), która używa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+> [!NOTE]
+> Nowe aplikacje platformy uniwersalnej systemu Windows i składników, zaleca się użycie [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), nowy standard C ++ 17 języka rzutowanie dla interfejsów API środowiska wykonawczego Windows. C++/ WinRT jest dostępna w Windows 10 SDK z wersji 1803 wartości. C++/ WinRT jest zaimplementowana w całości w plikach nagłówkowych i jest przeznaczony do zapewnia najwyższej jakości dostęp do nowoczesnego interfejsu Windows API.
+
+W tym samouczku nauczysz się korzystania ze środowiska wykonawczego Windows C++ szablon biblioteki (WRL) do tworzenia aplikacji uniwersalnych platformy Windows (UWP), która używa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 Ten przykład tworzy niestandardowe przekształcenia Media Foundation ma zastosowanie efektu skali szarości obrazy, które są przechwytywane z kamery internetowej. Aplikacja używa języka C++, aby zdefiniować niestandardowe przekształcenia i C# na potrzeby przekształcania obrazy przechwycone przez składnik.
 
@@ -25,6 +28,8 @@ W większości przypadków można użyć C++/CX, aby utworzyć środowiska wykon
 > Chociaż ten przykład kodu jest długa, przedstawia minimum, które są wymagane do utworzenia przydatne przekształcenie Media Foundation. Służy jako punkt wyjścia dla własnych niestandardowych przekształcenia. W tym przykładzie są zaczerpnięte z [przykład rozszerzeń z nośnika](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), rozszerzenia nośnik używa stosowanie efektów do wideo, dekodowanie wideo i tworzenie programów do obsługi systemu, które tworzą strumienie multimediów.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
+
+- W programie Visual Studio 2017 i nowsze pomocy technicznej platformy uniwersalnej systemu Windows jest opcjonalnym składnikiem. Aby go zainstalować, otwórz Instalatora programu Visual Studio w menu Windows Start i Znajdź swoją wersję programu Visual Studio. Wybierz **Modyfikuj** i upewnij się, **Universal Windows Platform Development** kafelka jest zaznaczone. W obszarze **składniki opcjonalne** Sprawdź  **C++ narzędzi dla platformy uniwersalnej systemu Windows (w wersji 141)** dla programu Visual Studio 2017 lub  **C++ narzędzi dla platformy uniwersalnej systemu Windows (v142)** dla programu Visual Studio 2019 r. Następnie sprawdź wersję zestawu Windows SDK, który chcesz użyć. 
 
 - Doświadczenie z [Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 

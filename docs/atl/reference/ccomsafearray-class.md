@@ -1,6 +1,6 @@
 ---
 title: CComSafeArray Class
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259446"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221161"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray Class
 
@@ -318,7 +318,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 ### <a name="remarks"></a>Uwagi
 
-A `CComSafeArray` obiektu można tworzyć na podstawie istniejącego `SAFEARRAYBOUND` struktury i liczbę wymiarów, lub przez określenie liczby elementów w tablicy i dolną granicę. Jeśli tablica jest były dostępne z Visual C++, dolna granica powinna być równa 0. Inne języki mogą zezwalać innych wartości dolna granica (na przykład Visual Basic obsługuje tablic przy użyciu elementów z zakresu, takie jak -10-10).
+A `CComSafeArray` obiektu można tworzyć na podstawie istniejącego `SAFEARRAYBOUND` struktury i liczbę wymiarów, lub przez określenie liczby elementów w tablicy i dolną granicę. Jeśli tablica jest były dostępne z C++, dolna granica musi mieć wartość 0. Inne języki mogą zezwalać innych wartości dolna granica (na przykład Visual Basic obsługuje tablic przy użyciu elementów z zakresu, takie jak -10-10).
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 

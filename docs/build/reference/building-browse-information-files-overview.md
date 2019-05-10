@@ -1,24 +1,28 @@
 ---
 title: 'Kompilowanie plików przeglądania informacji: Omówienie'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272887"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220545"
 ---
 # <a name="building-browse-information-files-overview"></a>Kompilowanie plików przeglądania informacji: Omówienie
 
+
+> [!WARNING]
+> Mimo że BSCMAKE jest nadal zainstalowany za pomocą programu Visual Studio, nie jest już jest używany przez środowisko IDE. Od programu Visual Studio 2008 przeglądania i symbol informacji znajduje się automatycznie w plik sdf programu SQL Server, w folderze rozwiązania.
+
 Aby utworzyć dane przeglądania do przeglądania symboli, kompilator tworzy plik SBR dla każdego pliku źródłowego w projekcie, a następnie BSCMAKE. Plik EXE łączy pliki SBR w jednym pliku .bsc.
 
-Generowanie plików SBR i .bsc trwa pewien czas, dlatego Visual C++ wyłącza funkcje te domyślnie. Jeśli chcesz przeglądać bieżące informacje, należy włączyć opcje przeglądania i ponownie skompiluj projekt.
+Generowanie plików SBR i .bsc czasochłonne, dzięki czemu program Visual Studio wyłącza funkcje te domyślnie. Jeśli chcesz przeglądać bieżące informacje, należy włączyć opcje przeglądania i ponownie skompiluj projekt.
 
 Użyj [/FR](fr-fr-create-dot-sbr-file.md) lub [/Fr](fr-fr-create-dot-sbr-file.md) aby poinformować kompilator, aby utworzyć pliki .sbr. Aby utworzyć pliki .bsc, można wywołać [BSCMAKE](bscmake-command-line.md) z wiersza polecenia. Z poziomu wiersza polecenia przy użyciu BSCMAKE zapewnia bardziej precyzyjną kontrolę nad manipulowania plików przeglądania informacji. Zobacz [odwołanie BSCMAKE](bscmake-reference.md) Aby uzyskać więcej informacji.
 

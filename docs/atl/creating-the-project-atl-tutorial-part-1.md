@@ -1,14 +1,14 @@
 ---
 title: Tworzenie projektu (ALT — Samouczek, część 1)
 ms.custom: get-started-article
-ms.date: 09/26/2018
+ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262089"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221408"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 
@@ -36,9 +36,9 @@ Ten samouczek zawiera instrukcje dotyczące nonattributed Projekt ATL, który tw
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Aby utworzyć początkową Projekt ATL za pomocą Kreatora projektu ATL
 
-1. W środowisku programowania Visual Studio, kliknij przycisk **New** na **pliku** menu, a następnie kliknij przycisk **projektu**.
+1. W programie Visual Studio 2017 i starszych wersji: **Plik** > **nowe** > **projektu**. Otwórz **Visual C++**  kartę, a następnie wybierz pozycję **MFC i ATL**. Wybierz **Projekt ATL**.
 
-1. Otwórz **Visual C++** kartę, a następnie wybierz pozycję **MFC i ATL**. Wybierz **Projekt ATL**.
+   In Visual Studio 2019: Wybierz **pliku** > **New** > **projektu**, w polu wyszukiwania wpisz "ALT" i wybierz **Projekt ATL**.
 
 1. Typ *wielokąta* jako nazwę projektu.
 

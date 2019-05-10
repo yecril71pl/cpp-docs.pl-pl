@@ -1,43 +1,76 @@
 ---
 title: Skompilować C++sposób niezamierzony Program, który jest przeznaczony dla środowiska CLR
-ms.date: 09/17/2018
+description: Użyj usługi Microsoft C++ do tworzenia programów i bibliotek, które można połączyć z natywnych C++ kodu i programy platformy .NET.
+ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
 - compiling programs [C++]
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384403"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221807"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Przewodnik: Skompilować C++Program w sposób niezamierzony, przeznaczonego dla CLR w programie Visual Studio
 
-Za pomocą C++/rozszerzenia językowe interfejsu wiersza polecenia można utworzyć C++ programów, które używają klas .NET i skompilować je przy użyciu środowiska programistycznego Visual Studio.
+Za pomocą C++/interfejsu wiersza polecenia można utworzyć C++ programów, które używają klas platformy .NET, a także native C++ typów. C++/ Interfejs wiersza polecenia jest przeznaczony do użycia w aplikacji konsoli w bibliotekach DLL, które umieszczają w otoce natywnych C++ kod i go udostępnić z programy platformy .NET. Aby utworzyć interfejs użytkownika Windows oparte na platformie .NET, należy użyć C# lub Visual Basic. 
 
 Do wykonania tej procedury możesz wpisać swój własny program C++ lub użyć jednego z przykładowych programów. Przykładowy program używanego w tej procedurze tworzy plik tekstowy o nazwie textfile.txt i zapisuje go do katalogu projektu.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Te tematy założono, że rozumiesz podstawy języka C++.
+- Po zrozumieniu podstaw języka C++.
+- W programie Visual Studio 2017 i nowszych C++/obsługę interfejsu wiersza polecenia jest opcjonalnym składnikiem. Aby go zainstalować, otwórz **Instalatora programu Visual Studio** z menu Windows Start. Upewnij się, że **programowanie aplikacji klasycznych przy użyciu C++**  kafelka jest zaznaczone, a następnie w **opcjonalne** sekcji składników, również sprawdzanie poprawności  **C++obsługę interfejsu wiersza polecenia**.
 
-### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Aby utworzyć nowy projekt w programie Visual Studio i Dodaj nowy plik źródłowy
+## <a name="create-a-new-project"></a>Tworzenie nowego projektu
+
+Poniższe kroki różnią się w zależności od tego, która wersja programu Visual Studio, którego używasz. Upewnij się, że selektor wersji, w lewym górnym rogu tej strony została prawidłowo ustawiona.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Aby utworzyć C++sposób niezamierzony projekt w programie Visual Studio 2019 r.
+
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy, u góry, aby otworzyć **Utwórz nowy projekt** okno dialogowe.
+
+1. W górnej części okna dialogowego wpisz **CLR** w wyszukiwaniu pole, a następnie wybierz **pusty projekt CLR** z listy wyników. 
+
+1. Wybierz **Utwórz** przycisk, aby utworzyć projekt.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Aby utworzyć C++sposób niezamierzony projektu w programie Visual Studio 2017
 
 1. Utwórz nowy projekt. Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.
 
 1. Typy projektów Visual C++, kliknij **CLR**, a następnie kliknij przycisk **pusty projekt CLR**.
 
-   > [!NOTE]
-   > Jeśli **pusty projekt CLR** typu brakuje (Visual Studio 2017 tylko), wybierz **Otwórz Instalator programu Visual Studio** w lewym okienku **nowy projekt** okno dialogowe. Opcję znajdujący się w folderze instalacji **programowanie aplikacji klasycznych przy użyciu C++**  w **opcjonalnie** składniki sekcji o nazwie  **C++obsługę interfejsu wiersza polecenia**.<br/>
+1. Wpisz nazwę projektu. Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.
 
-1. Wpisz nazwę projektu.
+1. Kliknij przycisk **OK** Aby utworzyć nowy projekt.
 
-   Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.
+::: moniker-end
 
-   Kliknij przycisk **OK** Aby utworzyć nowy projekt.
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Aby utworzyć C++sposób niezamierzony projektu w programie Visual Studio 2015
+
+1. Utwórz nowy projekt. Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.
+
+1. Typy projektów Visual C++, kliknij **CLR**, a następnie kliknij przycisk **pusty projekt CLR**.
+
+1. Wpisz nazwę projektu. Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.
+
+1. Kliknij przycisk **OK** Aby utworzyć nowy projekt.
+
+::: moniker-end
+
+## <a name="add-a-source-file"></a>Dodawanie pliku źródłowego
 
 1. Jeśli **Eksploratora rozwiązań** nie jest widoczny, kliknij przycisk **Eksploratora rozwiązań** na **widoku** menu.
 
@@ -57,7 +90,7 @@ Te tematy założono, że rozumiesz podstawy języka C++.
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Aby uzyskać więcej informacji na temat nowej składni języka Visual C++, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md).
+   Aby uzyskać więcej informacji na temat C++sposób niezamierzony składni, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
 

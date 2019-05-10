@@ -1,17 +1,15 @@
 ---
 title: 'Instrukcje: Korzystanie ze zdarzeń kompilacji w projektach MSBuild'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273485"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221472"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Instrukcje: Korzystanie ze zdarzeń kompilacji w projektach MSBuild
 
@@ -39,7 +37,7 @@ W poniższej tabeli wymieniono każdy *Użyj kompilacji* elementu:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład można dodać wewnątrz elementu projektu myProject.vcxproj za elementem pliku utworzonego w [instruktażu: Korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *prekompilacji* zdarzeń sprawia, że kopia main.cpp; *prekonsolidacyjnego* zdarzeń sprawia, że kopia main.obj; a co *po kompilacji* zdarzeń tworzy kopię myproject.exe. Jeśli projekt jest kompilowany przy użyciu konfiguracji wydania, wykonywane są zdarzeń kompilacji. Jeśli projekt jest kompilowany przy użyciu konfiguracji debugowania, zdarzeń kompilacji nie zostaną wykonane.
+Poniższy przykład można dodać wewnątrz elementu projektu myProject.vcxproj za elementem pliku utworzonego w [instruktażu: Korzystanie z MSBuild do tworzenia C++ projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *prekompilacji* zdarzeń sprawia, że kopia main.cpp; *prekonsolidacyjnego* zdarzeń sprawia, że kopia main.obj; a co *po kompilacji* zdarzeń tworzy kopię myproject.exe. Jeśli projekt jest kompilowany przy użyciu konfiguracji wydania, wykonywane są zdarzeń kompilacji. Jeśli projekt jest kompilowany przy użyciu konfiguracji debugowania, zdarzeń kompilacji nie zostaną wykonane.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +71,4 @@ Poniższy przykład można dodać wewnątrz elementu projektu myProject.vcxproj 
 ## <a name="see-also"></a>Zobacz także
 
 [Program MSBuild w wierszu polecenia — C++](msbuild-visual-cpp.md)<br/>
-[Przewodnik: korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Przewodnik: używanie programu MSBuild do tworzenia projektu w języku C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

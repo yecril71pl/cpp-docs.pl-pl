@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - rbegin method
 ms.assetid: c1f0d60c-93aa-4313-81b9-04e3f9c796c2
-ms.openlocfilehash: baa718e3902aeae13d169e9ac2ad19c0b5607d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 799ea3ce23f705872fb930f78bc21a1ac25bbd5b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211020"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221571"
 ---
 # <a name="container-classrbegin"></a>Kontener Class::rbegin
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
 Zwraca odwrotnej iterator, który wskazuje tuż za koniec kontrolowanej sekwencji wyznaczanie początku odwrotnej kolejności.
 

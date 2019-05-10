@@ -1,16 +1,16 @@
 ---
 title: 'Przewodnik: Dodawanie obiektu D2D do projektu MFC'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358620"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558176"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Przewodnik: Dodawanie obiektu D2D do projektu MFC
 
@@ -36,9 +36,9 @@ Do przeprowadzenia tego instruktażu, konieczne jest posiadanie zainstalowanego 
 
 ## <a name="to-create-an-mfc-application"></a>Aby utworzyć aplikację MFC
 
-1. Na **pliku** menu wskaż **New** , a następnie wybierz **projektu**.
+1. Użyj **Kreator aplikacji MFC** do tworzenia aplikacji MFC. Zobacz [instruktażu: Używanie nowych formantów powłoki MFC](walkthrough-using-the-new-mfc-shell-controls.md) w jaki sposób otworzyć kreatora dla używanej wersji programu Visual Studio.
 
-1. W **nowy projekt** okno dialogowe, w okienku po lewej stronie w obszarze **zainstalowane szablony**, rozwiń węzeł **Visual C++** , a następnie wybierz **MFC**. W środkowym okienku wybierz **aplikacji MFC**. W **nazwa** wpisz *MFCD2DWalkthrough*. Wybierz **OK**.
+1. W **nazwa** wpisz *MFCD2DWalkthrough*. Wybierz **OK**.
 
 1. W **Kreator aplikacji MFC**, wybierz **Zakończ** bez zmieniania żadnych ustawień.
 

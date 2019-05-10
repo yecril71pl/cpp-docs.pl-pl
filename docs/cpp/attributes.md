@@ -1,13 +1,13 @@
 ---
 title: Atrybuty w języku C++
-ms.date: 06/01/2018
+ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284750"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222306"
 ---
 # <a name="attributes-in-c"></a>Atrybuty w języku C++
 
@@ -41,7 +41,7 @@ Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozsze
 
 - `[[deprecated]]` **Visual Studio 2015 i nowszych:** Określa, że funkcja nie ma ma być używany i może nie istnieć w przyszłych wersjach interfejsu biblioteki. Kompilator użyć tej funkcji do generowania komunikat informacyjny, gdy kod klienta podejmuje próbę wywołania funkcji. Można zastosować do deklaracji klasy, nazwę typedef, zmienną, element członkowski danych niestatyczna, funkcji, przestrzeni nazw, wyliczenia, moduł wyliczający lub specjalizacji szablonu.
 
-- `[[fallthrough]]` **Visual Studio 2017 i nowszym:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut może być używany w kontekście [Przełącz](switch-statement-cpp.md) sprawozdań jako wskazówkę kompilator (lub kto czyta Kod:) przeznaczonej zachowanie fallthrough. Kompilator języka Visual C++ obecnie nie ostrzega owanie fallthrough, więc ten atrybut nie ma żadnych zachowanie kompilatora efekt.
+- `[[fallthrough]]` **Visual Studio 2017 i nowszym:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut może być używany w kontekście [Przełącz](switch-statement-cpp.md) sprawozdań jako wskazówkę kompilator (lub kto czyta Kod:) przeznaczonej zachowanie fallthrough. Microsoft C++ kompilatora obecnie nie ostrzegaj przed witrynami dla fallthrough zachowania, więc ten atrybut nie ma żadnych zachowanie kompilatora efekt.
 
 - `[[nodiscard]]` **Visual Studio 2017 w wersji 15.3 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że wartość zwracaną przez funkcję nie jest przeznaczony do usunięcia. Generuje ostrzeżenia C4834, jak pokazano w poniższym przykładzie:
 

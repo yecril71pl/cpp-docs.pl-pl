@@ -1,17 +1,17 @@
 ---
 title: Wyrażenia lambda w języku C++
-ms.date: 11/19/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216502"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222383"
 ---
 # <a name="lambda-expressions-in-c"></a>Wyrażenia lambda w języku C++
 
@@ -157,7 +157,7 @@ Zazwyczaj operator wywołania funkcji lambda to stała wartość, ale użytkowan
 
 ### <a name="exception-specification"></a>Specyfikacja wyjątku
 
-Możesz użyć `noexcept` Specyfikacja wyjątku, aby wskazać, że wyrażenie lambda nie generuje żadnych wyjątków. Zgodnie z zwykłe funkcje, kompilator języka Visual C++ generuje ostrzeżenie [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) jeżeli wyrażenie lambda deklaruje `noexcept` Specyfikacja wyjątku i treść lambda zgłasza wyjątek, jak pokazano poniżej:
+Możesz użyć `noexcept` Specyfikacja wyjątku, aby wskazać, że wyrażenie lambda nie generuje żadnych wyjątków. Podobnie jak w przypadku zwykłej funkcji Microsoft C++ kompilator generuje ostrzeżenie [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) jeżeli wyrażenie lambda deklaruje `noexcept` Specyfikacja wyjątku i treść lambda zgłasza wyjątek, jak pokazano poniżej:
 
 ```cpp
 // throw_lambda_expression.cpp

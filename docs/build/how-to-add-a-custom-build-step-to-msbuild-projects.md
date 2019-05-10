@@ -1,17 +1,15 @@
 ---
 title: 'Instrukcje: Dodawanie niestandardowego kroku kompilacji do projektów MSBuild'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d70f145a9d43463266a9c0bbff68e8e7f36ef2c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188928"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220729"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Instrukcje: Dodawanie niestandardowego kroku kompilacji do projektów MSBuild
 
@@ -27,7 +25,7 @@ Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udo
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Aby zdefiniować, co to jest wykonywane przez krok niestandardowej kompilacji
 
-1. Dodaj grupy właściwości do pliku projektu. W tej grupie właściwości określ polecenie, jego danych wejściowych i danych wyjściowych oraz wiadomość, jak pokazano w poniższym przykładzie. W tym przykładzie tworzy plik cab z pliku main.cpp został utworzony w [instruktażu: Korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Dodaj grupy właściwości do pliku projektu. W tej grupie właściwości określ polecenie, jego danych wejściowych i danych wyjściowych oraz wiadomość, jak pokazano w poniższym przykładzie. W tym przykładzie tworzy plik cab z pliku main.cpp został utworzony w [instruktażu: Korzystanie z MSBuild do tworzenia C++ projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +50,6 @@ Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udo
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przewodnik: korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Przewodnik: używanie programu MSBuild do tworzenia projektu w języku C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Instrukcje: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)

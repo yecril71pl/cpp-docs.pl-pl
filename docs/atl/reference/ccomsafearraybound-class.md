@@ -1,6 +1,6 @@
 ---
 title: CComSafeArrayBound Class
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArrayBound
 - ATLSAFE/ATL::CComSafeArrayBound
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d4650273661c0ce40558a37ef02bb2a3ff81809
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246143"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221147"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound Class
 
@@ -76,7 +76,7 @@ Dolna granica, z którego są ponumerowane tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli tablica jest można uzyskać dostęp z poziomu programu Visual C++, zalecane jest, że dolna granica jest zdefiniowana jako 0. Może to być lepiej jest używać różnych dolna granica wartości, jeśli tablica jest ma być używany z innymi językami, takie jak Visual Basic.
+Jeśli tablica jest były dostępne z C++ program, zalecane jest, że dolna granica jest zdefiniowana jako 0. Może to być lepiej jest używać różnych dolna granica wartości, jeśli tablica jest ma być używany z innymi językami, takie jak Visual Basic.
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 

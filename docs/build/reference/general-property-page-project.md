@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270903"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446566"
 ---
 # <a name="general-property-page-project"></a>Ogólna strona właściwości (projekt)
 
@@ -98,7 +98,7 @@ Właściwości w sekcji Ogólne mają wpływ na lokalizację plików, które są
 
 - **Zestaw narzędzi platformy**
 
-   Zezwala projektowi, aby docelowa była inna wersja bibliotek języka Visual C++ i kompilatora. Projekty języka Visual C++ można kierować albo na domyślny zestaw narzędzi instalowanych przez program Visual Studio lub jeden z zestawów narzędzi instalowane przez kilka poprzednich wersji programu Visual Studio, w tym zestawy narzędzi, które tworzyć pliki wykonywalne, które można uruchamiać na być XP. Informacje dotyczące zmiany zestawu narzędzi platformy, zobacz [jak: Modyfikowanie platformy docelowej i zestawu narzędzi platformy](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Zezwala projektowi, aby docelowa była inna wersja bibliotek języka Visual C++ i kompilatora. Program Visual Studio C++ projekty mogą ukierunkowane albo na domyślny zestaw narzędzi instalowanych przez program Visual Studio lub jeden z zestawów narzędzi instalowane przez kilka poprzednich wersji programu Visual Studio, w tym zestawy narzędzi, które tworzyć pliki wykonywalne, które można uruchamiać na być XP. Informacje dotyczące zmiany zestawu narzędzi platformy, zobacz [jak: Modyfikowanie platformy docelowej i zestawu narzędzi platformy](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Włącz zarządzane kompilacje wzrostowe**
 

@@ -1,26 +1,26 @@
 ---
 title: Najlepsze rozwiązania dotyczące optymalizacji
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, optimization
+- C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42178f8326def78f37bfcc905b96f37c7fc3affc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274173"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220270"
 ---
 # <a name="optimization-best-practices"></a>Najlepsze rozwiązania dotyczące optymalizacji
 
-W tym dokumencie opisano najlepsze rozwiązania dotyczące optymalizacji w programie Visual C++.
+W tym dokumencie opisano najlepsze rozwiązania dotyczące optymalizacji C++ programy w programie Visual Studio.
 
 ## <a name="compiler-and-linker-options"></a>Kompilator i opcje konsolidatora
 
 ### <a name="profile-guided-optimization"></a>Optymalizacja sterowana profilem
 
-Visual C++ obsługuje *optymalizacji sterowanej profilem* (PGO). Tego rodzaju optymalizacji używa danych profilu z wykonaniami szkolenia instrumentowanej wersji aplikacji do optymalizacji nowszych aplikacji. Przy użyciu PGO może zająć dużo czasu, dlatego nie może być coś, co każdy Deweloper używa, ale zaleca się używania optymalizacji PGO kompilacji ostatecznej wersji produktu. Aby uzyskać więcej informacji, zobacz [optymalizacje Profile-Guided](profile-guided-optimizations.md).
+Program Visual Studio obsługuje *optymalizacji sterowanej profilem* (PGO). Tego rodzaju optymalizacji używa danych profilu z wykonaniami szkolenia instrumentowanej wersji aplikacji do optymalizacji nowszych aplikacji. Przy użyciu PGO może zająć dużo czasu, dlatego nie może być coś, co każdy Deweloper używa, ale zaleca się używania optymalizacji PGO kompilacji ostatecznej wersji produktu. Aby uzyskać więcej informacji, zobacz [optymalizacje Profile-Guided](profile-guided-optimizations.md).
 
 Ponadto *Optymalizacja Całoprogramowa* (również wie, jak łączonych kodów czasowych) i **/O1** i **/O2** optymalizacje zostały ulepszone. Ogólnie rzecz biorąc aplikacja skompilowana przy użyciu jednego z tych opcji krócej niż tej samej aplikacji skompilowanych za pomocą kompilatora wcześniejszych.
 
@@ -93,13 +93,13 @@ Inny pragma przydatne ograniczania głębokość wbudowanie jest `#pragma inline
 
 ## <a name="restrict-and-assume"></a>Element __restrict i \__assume
 
-Istnieje kilka słów kluczowych w elemencie wizualnym C++ które mogą pomóc wydajność: [element __restrict](../cpp/extension-restrict.md) i [__assume](../intrinsics/assume.md).
+Istnieje kilka słów kluczowych w programie Visual Studio, które mogą pomóc wydajność: [element __restrict](../cpp/extension-restrict.md) i [__assume](../intrinsics/assume.md).
 
 Po pierwsze należy zauważyć, że `__restrict` i `__declspec(restrict)` dwie różne rzeczy. Gdy nieco są powiązane, ich semantyki różnią się. `__restrict` jak jest kwalifikator typu `const` lub `volatile`, ale wyłącznie dla typów wskaźnika.
 
 Wskaźnik, który jest modyfikowana za pomocą `__restrict` nazywa się *element __restrict wskaźnik*. Wskaźnik __restrict znajduje się wskaźnik, który jest możliwy tylko za pośrednictwem \__restrict wskaźnika. Innymi słowy, inny wskaźnik nie można uzyskać dostęp do danych wskazywanego przez \__restrict wskaźnika.
 
-`__restrict` może być zaawansowanego narzędzia na potrzeby optymalizatora języka Visual C++, ale pomocą szczególną uwagę. Jeśli używany nieprawidłowo, optymalizator może wykonywać optymalizację, które mogłyby spowodować przerwanie działania aplikacji.
+`__restrict` może być zaawansowanym narzędziem do firmy Microsoft C++ optimizer, ale jej używać z szczególną uwagę na. Jeśli używany nieprawidłowo, optymalizator może wykonywać optymalizację, które mogłyby spowodować przerwanie działania aplikacji.
 
 `__restrict` Zastępuje słowo kluczowe **porównuje** przełączyć się z poprzednimi wersjami.
 

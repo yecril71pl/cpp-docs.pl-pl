@@ -1,6 +1,6 @@
 ---
 title: Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195319"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220792"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)
 
-Firma Microsoft wprowadziła **__export** w wersji 16-bitowego kompilatora Visual C++ aby umożliwić kompilatorowi automatyczne wygenerowanie nazw eksportu i umieszczenie ich w pliku. lib. Ten plik .lib następnie można tak samo jak statyczny .lib do łączenia z biblioteką DLL.
-
-W nowszych wersjach kompilatora, możesz wyeksportować dane, funkcje, klasy lub funkcje składowych klasy z biblioteki DLL za pomocą **__declspec(dllexport)** — słowo kluczowe. **__declspec(dllexport)** dodaje dyrektywy Eksport do pliku obiektu, dzięki czemu nie trzeba używać pliku .def.
+Możesz wyeksportować dane, funkcje, klasy lub funkcje składowych klasy z biblioteki DLL za pomocą **__declspec(dllexport)** — słowo kluczowe. **__declspec(dllexport)** dodaje dyrektywy Eksport do pliku obiektu, dzięki czemu nie trzeba używać pliku .def.
 
 To udogodnienie jest najbardziej widoczne podczas próby wyeksportowania dekorowane nazwy funkcji języka C++. Ponieważ nie ma żadnych standardowych specyfikacji dla dekoracji nazwy, nazwa eksportowanych funkcji może ulec zmianie między wersjami kompilatora. Jeśli używasz **__declspec(dllexport)**, ponowna kompilacja biblioteki DLL i zależnych plików .exe jest konieczna tylko konta do dla dowolnych zmian konwencji nazewnictwa.
 
@@ -50,11 +48,6 @@ Kompilując DLL, zwykle tworzysz plik nagłówka, który zawiera prototypy funkc
 ```
 
 **__declspec(dllexport)** przechowuje nazwy funkcji w tabeli eksportu biblioteki DLL. Jeśli chcesz zoptymalizować rozmiar tabeli, zobacz [eksportowanie funkcji z biblioteki DLL według liczby porządkowej zamiast nazwy](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
-
-> [!NOTE]
->  Portowaniu kodu źródłowego DLL z Win16 do Win32, Zastąp każde wystąpienie **__export** z **__declspec(dllexport)**.
-
-Jako odwołanie Przeszukaj pliku nagłówkowym Win32 Winbase.h. Zawiera przykłady **__declspec(dllimport)** użycia.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 

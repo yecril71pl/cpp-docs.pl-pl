@@ -1,20 +1,18 @@
 ---
 title: Pliki prekompilowanego nagłówka
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341746"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220822"
 ---
 # <a name="precompiled-header-files"></a>Pliki prekompilowanego nagłówka
 
@@ -43,7 +41,7 @@ Można prekompilowanie programów C i C++. W programowaniu C++ jest powszechną 
 
 ## <a name="two-choices-for-precompiling-code"></a>Dwa wybory dla wstępnej kompilacji kodu
 
-Visual c++ można wstępnej kompilacji kodu języka C lub C++; nie są ograniczone do kompilacji wstępnej tylko pliki nagłówkowe.
+Można wstępnej kompilacji dowolnego języka C lub C++ kodu; nie są ograniczone do kompilacji wstępnej tylko pliki nagłówkowe.
 
 Prekompilowanie wymaga planowania, ale oferuje znacznie szybsze kompilacje, jeśli prekompilowanie kodu źródłowego w innych niż pliki nagłówkowe proste.
 
@@ -133,7 +131,7 @@ Poniższa tabela zawiera listę opcji kompilatora, który może wyzwalać ostrze
 
 Poprzednie sekcje zawierają omówienie wstępnie skompilowanych nagłówków: /Yc i /Yu z opcją/FP i [hdrstop](../preprocessor/hdrstop.md) pragmy. W tej sekcji opisano metody przy użyciu ręcznych opcji wstępnie skompilowanego nagłówka w projekcie; kończy się ona przykład pliku reguł programu make i kod, który zarządza.
 
-Dla innego podejścia do przy użyciu ręcznych opcji wstępnie skompilowanego nagłówka w projekcie badanie jeden z plików reguł programu make znajduje się w katalogu MFC\SRC, który jest tworzony podczas instalacji domyślnej w Visual c++. Te pliki reguł programu make zastosować podejście podobne do przedstawionego znajdujące się w tej sekcji, ale większe wykorzystanie makr firmy Microsoft Program obsługi narzędzia (NMAKE) i oferują większą kontrolę nad procesem kompilacji.
+Dla innego podejścia do przy użyciu ręcznych opcji wstępnie skompilowanego nagłówka w projekcie badanie jeden z plików reguł programu make znajduje się w katalogu MFC\SRC, który jest tworzony podczas instalacji domyślnej programu Visual Studio. Te pliki reguł programu make zastosować podejście podobne do przedstawionego znajdujące się w tej sekcji, ale większe wykorzystanie makr firmy Microsoft Program obsługi narzędzia (NMAKE) i oferują większą kontrolę nad procesem kompilacji.
 
 ## <a name="pch-files-in-the-build-process"></a>Pliki PCH w procesie kompilacji
 

@@ -3,12 +3,12 @@ title: System typów języka C++ (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392288"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222128"
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Podstawowe (wbudowane) typy
 
-W odróżnieniu do innych języków, C++ nie ma uniwersalnego typu bazowego, z którego wywodzą się wszystkie inne typy. Implementacja języka Visual C++ języka zawiera wiele *podstawowych typów*, znane również jako *wbudowanych typów*. Obejmuje to typy liczbowe takich jak **int**, **double**, **długie**, **bool**, plus **char** i **wchar_t** typy znaków ASCII i UNICODE, odpowiednio. Większość typów podstawowych (z wyjątkiem **bool**, **double**, **wchar_t** i pokrewne typy) mają wszystkie niepodpisane wersje co modyfikuje zakres wartości, które mogą być przechowywane w zmiennej. Na przykład **int**, która przechowuje 32-bitowe podpisane liczby całkowitej, może reprezentować wartość od -2,147,483,648 do 2 147 483 647. **Unsigned int**, który także jest przechowywany jako 32-bitowy, można przechowywać wartości od 0 do 4 294 967 295. Całkowita liczba możliwych wartości w każdym przypadku jest taka sama, zmienia się tylko zakres.
+W odróżnieniu do innych języków, C++ nie ma uniwersalnego typu bazowego, z którego wywodzą się wszystkie inne typy. Języka zawiera wiele *podstawowych typów*, znane również jako *wbudowanych typów*. Obejmuje to typy liczbowe takich jak **int**, **double**, **długie**, **bool**, plus **char** i **wchar_t** typy znaków ASCII i UNICODE, odpowiednio. Większość typów podstawowych (z wyjątkiem **bool**, **double**, **wchar_t** i pokrewne typy) mają wszystkie niepodpisane wersje co modyfikuje zakres wartości, które mogą być przechowywane w zmiennej. Na przykład **int**, która przechowuje 32-bitowe podpisane liczby całkowitej, może reprezentować wartość od -2,147,483,648 do 2 147 483 647. **Unsigned int**, który także jest przechowywany jako 32-bitowy, można przechowywać wartości od 0 do 4 294 967 295. Całkowita liczba możliwych wartości w każdym przypadku jest taka sama, zmienia się tylko zakres.
 
 Podstawowe typy są rozpoznawane przez kompilator, który posiada wbudowane reguły rządzące tym, jakie operacje można na nich wykonywać i jak mogą być konwertowane na inne typy podstawowe. Aby uzyskać pełną listę wbudowanych typów i ich wielkości i ograniczeń numerycznych, zobacz [podstawowych typów](../cpp/fundamental-types-cpp.md).
 

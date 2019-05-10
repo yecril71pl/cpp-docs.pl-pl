@@ -1,6 +1,6 @@
 ---
 title: 'Biblioteki DLL rozszerzeń: Omówienie'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - AFXDLL library
 - MFC DLLs [C++], MFC extension DLLs
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea8e950e28907ea1a4a85c1f39392d5505f08c49
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196732"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221370"
 ---
 # <a name="mfc-extension-dlls-overview"></a>Biblioteki DLL rozszerzeń MFC Omówienie
 
@@ -22,8 +22,6 @@ Rozszerzenia MFC biblioteki DLL jest biblioteki DLL, które zazwyczaj implementu
 Biblioteki DLL rozszerzeń również może służyć do przekazywania obiekty pochodzące z MFC między aplikacją a biblioteki DLL. Funkcje elementów członkowskich skojarzonych z przekazany obiekt istnieje w module, w której został utworzony obiekt. Ponieważ te funkcje są prawidłowo wyeksportowana, korzystając z udostępnionej wersja dll biblioteki MFC, można przekazać za darmo MFC lub wskaźniki obiektów klasy pochodnej MFC między aplikacją a rozszerzenia MFC biblioteki dll, ładuje.
 
 Na przykład bibliotekę DLL, która spełnia wymagania podstawowe rozszerzenia MFC biblioteki DLL, zobacz próbki MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk). W szczególności Przyjrzyj się pliki Testdll1.cpp i Testdll2.cpp.
-
-Pamiętaj, że termin AFXDLL nie jest już używany w dokumentacji języka Visual C++. Rozszerzenia MFC biblioteki DLL ma takie same charakterystyki jak wcześniejsze AFXDLL.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 

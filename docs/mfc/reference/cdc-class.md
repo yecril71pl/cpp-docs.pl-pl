@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173565"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222576"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Wskazuje ciąg znaków do zmierzenia. Można również przekazać [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu dla tego parametru.
 
 *nCount*<br/>
-Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, długość jest obliczana.
+Określa [długość ciągu](/windows/desktop/gdi/specifying-length-of-text-output-string) wskazywany przez *lpszString*.
 
 *nTabPositions*<br/>
 Określa liczbę pozycji tabulatorów w tablicy, do których prowadzą *lpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Wskazuje ciąg znaków. Można również przekazać [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu dla tego parametru.
 
 *nCount*<br/>
-Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, długość jest obliczana.
+Określa [długość ciągu](/windows/desktop/gdi/specifying-length-of-text-output-string) wskazywany przez *lpszString*.
 
 *str*<br/>
 A `CString` obiekt, który zawiera określonych znaków do zmierzenia.
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Wskazuje ciąg znaków. Można również przekazać [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu dla tego parametru.
 
 *nCount*<br/>
-Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, długość jest obliczana.
+Określa [długość ciągu](/windows/desktop/gdi/specifying-length-of-text-output-string) wskazywany przez *lpszString*.
 
 *nTabPositions*<br/>
 Określa liczbę pozycji tabulatorów w tablicy, do których prowadzą *lpnTabStopPositions*.
@@ -4087,7 +4087,7 @@ Określa adres instancję procedury, dostarczone przez aplikację funkcji wywoł
 Określa Daleki wskaźnik do danych, które mają być przekazane do funkcji danych wyjściowych. Jeśli *lpfnOutput* ma wartość NULL, *lpData* musi być wskaźnikiem długi ciąg jako dane wyjściowe.
 
 *nCount*<br/>
-Określa liczbę znaków, które mają być danych wyjściowych. Jeśli ten parametr ma wartość 0, `GrayString` oblicza długość ciągu (przy założeniu, że *lpData* jest wskaźnikiem do ciągu). Jeśli *nCount* jest wartość -1 i funkcja wskazywany przez *lpfnOutput* zwraca wartość 0, obraz, który jest wyświetlany, ale nie są wygaszone.
+Określa liczbę znaków, które mają być danych wyjściowych. Jeśli ten parametr ma wartość 0, `GrayString` oblicza długość ciągu (przy założeniu, że *lpData* jest wskaźnikiem do ciągu). Jeśli *nCount* jest 1 i funkcja wskazywany przez *lpfnOutput* zwraca wartość 0, obraz, który jest wyświetlany, ale nie są wygaszone.
 
 *x*<br/>
 Określa logiczną współrzędną x pozycji początkowej prostokąt, który zawiera ciąg.
@@ -6891,7 +6891,7 @@ Określa logiczną współrzędną y punktu początkowego ciągu.
 Wskazuje ciąg znaków do rysowania. Można przekazać albo wskaźnika do tablicy znaków lub [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu dla tego parametru.
 
 *nCount*<br/>
-Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, długość jest obliczana.
+Określa [długość ciągu](/windows/desktop/gdi/specifying-length-of-text-output-string) wskazywany przez *lpszString*.
 
 *nTabPositions*<br/>
 Określa liczbę wartości w tablicy pozycji tabulatora.

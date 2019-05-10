@@ -1,15 +1,15 @@
 ---
 title: Przykłady wyrażeń lambda
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392196"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222094"
 ---
 # <a name="examples-of-lambda-expressions"></a>Przykłady wyrażeń lambda
 
@@ -61,7 +61,7 @@ Chociaż wyrażenia lambda najczęściej są deklarowane w treści funkcji, moż
 
 ### <a name="example-2"></a>Przykład 2
 
-Kompilator języka Visual C++ wiąże wyrażenie lambda do swoich zmiennych przechwyconych, gdy wyrażenie jest zadeklarowane, a nie wtedy, gdy wyrażenie jest wywoływane. Poniższy przykład pokazuje Wyrażenie lambda, które przechwytuje zmienną lokalną `i` przez wartość i zmienną lokalną `j` przez odwołanie. Ponieważ wyrażenie lambda przechwytuje `i` według wartości, ponowne przypisanie `i` później w programie nie wpływa na wynik wyrażenia. Jednakże ponieważ wyrażenie lambda przechwytuje `j` według odwołania, ponowne przypisanie `j` wpływa na wynik wyrażenia.
+Microsoft C++ kompilatora wiąże Wyrażenie lambda do swoich zmiennych przechwyconych, gdy wyrażenie jest zadeklarowane, a gdy wyrażenie jest wywoływana. Poniższy przykład pokazuje Wyrażenie lambda, które przechwytuje zmienną lokalną `i` przez wartość i zmienną lokalną `j` przez odwołanie. Ponieważ wyrażenie lambda przechwytuje `i` według wartości, ponowne przypisanie `i` później w programie nie wpływa na wynik wyrażenia. Jednakże ponieważ wyrażenie lambda przechwytuje `j` według odwołania, ponowne przypisanie `j` wpływa na wynik wyrażenia.
 
 ### <a name="code"></a>Kod
 

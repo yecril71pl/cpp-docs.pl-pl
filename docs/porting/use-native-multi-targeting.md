@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 57e9556ccb7313c137c173e0f2143dc6e563d4c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35f6ac980a451b375d5005c20853fdd29c78d96d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337157"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448944"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów
 
@@ -44,7 +44,7 @@ Jeśli wybierzesz nie uaktualnić program Visual Studio nie wprowadza żadnych z
 
 ## <a name="instructions-for-visual-studio-2008"></a>Instructions for Visual Studio 2008
 
-Program Visual Studio 2008 ma swój własny system kompilacji dedykowane dla języka C++ o nazwie **program VCBuild**. Począwszy od programu Visual Studio 2010 projektów Visual C++ zostały zmienione, aby użyć **MSBuild**. Oznacza to, należy przejść do kroku aktualizacji do tworzenia projektów programu Visual Studio 2008 w najnowszej wersji programu Visual Studio. Zaktualizowano projekt nadal generuje pliki binarne, które są w pełni zgodne z plikami binarnymi utworzone za pomocą programu Visual Studio 2008 IDE.
+Program Visual Studio 2008 ma swój własny system kompilacji dedykowane dla języka C++ o nazwie **program VCBuild**. Począwszy od programu Visual Studio 2010, Visual Studio C++ projekty zostały zmienione, aby użyć **MSBuild**. Oznacza to, należy przejść do kroku aktualizacji do tworzenia projektów programu Visual Studio 2008 w najnowszej wersji programu Visual Studio. Zaktualizowano projekt nadal generuje pliki binarne, które są w pełni zgodne z plikami binarnymi utworzone za pomocą programu Visual Studio 2008 IDE.
 
 Najpierw oprócz bieżącej wersji programu Visual Studio, Visual Studio 2010 należy zainstalować na tym samym komputerze co program Visual Studio 2008. Instaluje tylko program Visual Studio 2010 **MSBuild** skrypty, które są wymagane do projektów docelowych programu Visual Studio 2008.
 
@@ -58,7 +58,7 @@ Po tej zmianie kompilator programu Visual Studio 2008 i biblioteki są używane 
 
 ## <a name="install-an-older-visual-studio-toolset"></a>Instalowanie starszej zestawu narzędzi Visual Studio
 
-Może być starego projektu Visual C++, który nie może lub nie chcesz uaktualnić, ale nie wersję zestawu narzędzi platformy zgodną z projektu. W takim przypadku można pobrać zestawu narzędzi, można zainstalować bezpłatnego programu Visual Studio Community i Express edition w wersji, których potrzebujesz. Każda wersja programu Visual Studio z programu Visual Studio 2008 na można zainstalować kompilator, narzędzia i biblioteki należy pod kątem tej wersji z bieżącego programu Visual Studio. Wyszukaj Microsoft Download Center, aby znaleźć i pobrać określonej wersji programu Visual Studio. Upewnij się, że wybrane opcje instalacji C++ podczas instalacji. Po zakończeniu instalacji uruchom tej wersji programu Visual Studio i zainstaluj wszystkie aktualizacje. Sprawdź także wszelkie zmiany w aktualizacji Windows, które mogą być wymagane. Ten proces sprawdzania aktualizacji może być konieczne powtórzenie więcej niż jeden raz do każdej zaktualizowania.
+Masz stare programu Visual Studio C++ projektu, który nie może lub nie chcesz go uaktualnić, ale nie wersję zestawu narzędzi platformy zgodną z projektu. W takim przypadku można pobrać zestawu narzędzi, można zainstalować bezpłatnego programu Visual Studio Community i Express edition w wersji, których potrzebujesz. Każda wersja programu Visual Studio z programu Visual Studio 2008 na można zainstalować kompilator, narzędzia i biblioteki należy pod kątem tej wersji z bieżącego programu Visual Studio. Wyszukaj Microsoft Download Center, aby znaleźć i pobrać określonej wersji programu Visual Studio. Upewnij się, że wybrane opcje instalacji C++ podczas instalacji. Po zakończeniu instalacji uruchom tej wersji programu Visual Studio i zainstaluj wszystkie aktualizacje. Sprawdź także wszelkie zmiany w aktualizacji Windows, które mogą być wymagane. Ten proces sprawdzania aktualizacji może być konieczne powtórzenie więcej niż jeden raz do każdej zaktualizowania.
 
 Aby uzyskać aktualnie dostępne pliki do pobrania, zobacz [starsze oprogramowania Visual Studio można pobrać](https://visualstudio.microsoft.com/vs/older-downloads/).
 

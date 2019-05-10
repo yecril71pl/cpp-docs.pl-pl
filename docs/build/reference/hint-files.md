@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 3d8b3be76fea454ed3b3dd3fd2a44174f34c065c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291918"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446308"
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 
-A *pliku podpowiedzi* zawiera makra, które mogłyby spowodować regiony kodu do pominięcia przez Parser bazy danych przeglądania C++. Po otwarciu projektu Visual C++, analizator analizuje kod w każdym pliku źródłowego w projekcie i tworzy bazę danych przy użyciu informacji na temat każdego identyfikatora. IDE używa, aby uzyskać informacje dotyczące obsługi przeglądania kodu funkcje, takie jak **Widok klas** przeglądarki i **pasek nawigacyjny**.
+A *pliku podpowiedzi* zawiera makra, które mogłyby spowodować regiony kodu do pominięcia przez Parser bazy danych przeglądania C++. Po otwarciu programu Visual Studio C++ projektu analizator analizuje kod w każdym pliku źródłowego w projekcie i tworzy bazę danych przy użyciu informacji na temat każdego identyfikatora. IDE używa, aby uzyskać informacje dotyczące obsługi przeglądania kodu funkcje, takie jak **Widok klas** przeglądarki i **pasek nawigacyjny**.
 
 Analiza bazy danych przeglądania C++ jest rozmyte analizatora, które można analizować duże ilości kodu w krótkim czasie. Jedną z przyczyn jest szybkie jest, ponieważ pomija zawartość bloków. Na przykład on tylko rekordy lokalizacji i parametrów funkcji i ignoruje jego zawartość. Pewne makra może spowodować problemy z algorytmów heurystycznych używany w celu określenia początku i na końcu bloku. Te problemy powodują regiony kodu ma zostać nieprawidłowo zarejestrowany.
 
@@ -118,7 +118,7 @@ Podczas analizowania system przeszukuje katalogi plików wskazówki, w następuj
 
 - Katalog, który zawiera pakiet instalacyjny dla języka Visual C++ (**vcpackages**). Ten katalog zawiera plik wbudowanych wskazówki opisujące symboli w systemie często używanych plików, takich jak **windows.h**. W związku z tym projekt automatycznie dziedziczy większość z tych wskazówek, których potrzebuje.
 
-- Ścieżka z katalogu głównego pliku źródłowego do katalogu zawierającego plik źródłowy, sam. W typowym projekcie Visual C++ katalog główny zawiera plik rozwiązania lub projektu.
+- Ścieżka z katalogu głównego pliku źródłowego do katalogu zawierającego plik źródłowy, sam. W typowym środowisku Visual Studio C++ projekt, katalog główny zawiera plik rozwiązania lub projektu.
 
    Wyjątkiem od tej reguły jest Jeśli *pliku stop* znajduje się w ścieżce do pliku źródłowego. Plik zatrzymania jest dowolny plik, który nosi nazwę **cpp.stop**. Plik zatrzymania zapewnia dodatkową kontrolę nad kolejność wyszukiwania. Zamiast począwszy od katalogu głównego, analizowania system przeszukuje z katalogu, który zawiera plik zatrzymania do katalogu, który zawiera plik źródłowy. W typowym projekcie nie jest potrzebny plik zatrzymania.
 
@@ -162,7 +162,7 @@ Wskazówki należy użyć następującej składni:
 
 Ten przykład pokazuje, jak wskazówki są zbierane z pliki wskazówki. Zatrzymaj pliki nie są używane w tym przykładzie.
 
-Na ilustracji pokazano niektóre katalogi fizyczne w projekcie Visual C++. Istnieją pliki wskazówki w `vcpackages`, `Debug`, `A1`, i `A2` katalogów.
+Na ilustracji pokazano niektóre z katalogów fizycznych w programie Visual Studio C++ projektu. Istnieją pliki wskazówki w `vcpackages`, `Debug`, `A1`, i `A2` katalogów.
 
 ### <a name="hint-file-directories"></a>Wskazówka katalogi plików
 
@@ -244,7 +244,7 @@ Te informacje dotyczą powyższej liście:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typy plików utworzonych dla projektów Visual C++](file-types-created-for-visual-cpp-projects.md)<br>
+[Plik typy utworzone dla wizualizacji C++ projektów](file-types-created-for-visual-cpp-projects.md)<br>
 [#define, dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef, dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Adnotacje SAL](../../c-runtime-library/sal-annotations.md)<br>

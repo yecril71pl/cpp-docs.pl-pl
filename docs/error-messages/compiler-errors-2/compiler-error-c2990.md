@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2990
 ms.assetid: 674e9f6a-6743-4af0-a7ed-cbe11103a2f8
-ms.openlocfilehash: f7327b7d2b0cc9fa4b617a9a6033116c43db6258
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16c111a0fb8608615abaee495680fa38920b6c77
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366332"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447345"
 ---
 # <a name="compiler-error-c2990"></a>Błąd kompilatora C2990
 
@@ -40,7 +40,7 @@ ref struct GC;
 ref struct GC {};   // C2990
 ```
 
-C2990 może również wystąpić z powodu istotnej zmiany w kompilatorze języka Visual C++ dla Visual C++ 2005; Kompilator teraz wymaga wielu deklaracji dla tego samego typu identyczne w odniesieniu do specyfikacji szablonu.
+C2990 może również wystąpić z powodu istotnej zmiany w programie Microsoft C++ kompilator programu Visual Studio 2005; Kompilator teraz wymaga wielu deklaracji dla tego samego typu identyczne w odniesieniu do specyfikacji szablonu.
 
 Poniższy przykład spowoduje wygenerowanie C2990:
 

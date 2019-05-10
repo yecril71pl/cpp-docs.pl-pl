@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5d7652b6424177191275f8f80d7b1f6cf02b261
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195147"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221132"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Kompilowanie wykonywanych jednocześnie aplikacji C/C++
 
 A [zestawów side-by-side](/windows/desktop/SbsCs/about-side-by-side-assemblies-) to zbiór zasobów — Grupa bibliotek DLL, klas okien, serwerów COM, bibliotek typów lub interfejsów — dostępne do użycia w czasie wykonywania aplikacji. Główną zaletą ponowne pakowanie bibliotek DLL w zestawach to, czy można używać wielu wersji zestawów przez aplikacje w tym samym czasie i można aktualnie jest zainstalowana usługa zestawów w przypadku wydania aktualizacji.
 
-Aplikacji Visual C++ może używać jednego lub kilku bibliotek DLL w różnych częściach aplikacji. W czasie wykonywania biblioteki DLL są ładowane do głównego procesu i wymagany kod jest wykonywany. Aplikacja zależy od systemu operacyjnego, aby zlokalizować żądany bibliotek DLL, Dowiedz się, co inne zależne biblioteki DLL muszą zostać załadowane, a następnie załadować je wraz z żądanego pliku DLL. W wersjach systemów operacyjnych Windows starszych niż Windows XP, Windows Server 2003 i Windows Vista, program ładujący systemu operacyjnego wyszukiwanie zależne biblioteki dll w lokalnym folderze aplikacji albo inny folder określony w ścieżce systemowej. Na Windows XP, Windows Server 2003 i Windows Vista, program ładujący systemu operacyjnego można również wyszukać zależne biblioteki DLL przy użyciu [manifestu](/windows/desktop/sbscs/manifests) plik i poszukaj zestawów side-by-side, które zawierają te biblioteki dll.
+A C++ aplikacji mogą używać jednego lub kilku bibliotek DLL w różnych częściach aplikacji. W czasie wykonywania biblioteki DLL są ładowane do głównego procesu i wymagany kod jest wykonywany. Aplikacja zależy od systemu operacyjnego, aby zlokalizować żądany bibliotek DLL, Dowiedz się, co inne zależne biblioteki DLL muszą zostać załadowane, a następnie załadować je wraz z żądanego pliku DLL. W wersjach systemów operacyjnych Windows starszych niż Windows XP, Windows Server 2003 i Windows Vista, program ładujący systemu operacyjnego wyszukiwanie zależne biblioteki dll w lokalnym folderze aplikacji albo inny folder określony w ścieżce systemowej. Na Windows XP, Windows Server 2003 i Windows Vista, program ładujący systemu operacyjnego można również wyszukać zależne biblioteki DLL przy użyciu [manifestu](/windows/desktop/sbscs/manifests) plik i poszukaj zestawów side-by-side, które zawierają te biblioteki dll.
 
 Domyślnie podczas kompilowania biblioteki DLL za pomocą programu Visual Studio posiada [manifest aplikacji](/windows/desktop/SbsCs/application-manifests) osadzony jako zasób RT_MANIFEST o identyfikatorze równym 2. Podobnie jak w przypadku pliku wykonywalnego tego manifestu w tym artykule opisano zależności dla tej biblioteki DLL innych zestawów. Założono, że biblioteka DLL nie jest częścią zestawu side-by-side i aplikacje, które są zależne od tej biblioteki DLL nie będą używać manifestu aplikacji, można go załadować, ale zamiast polegać na moduł ładujący systemu operacyjnego, aby znaleźć tę bibliotekę DLL na ścieżce systemowej.
 

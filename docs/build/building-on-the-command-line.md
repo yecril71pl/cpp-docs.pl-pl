@@ -2,7 +2,7 @@
 title: Możesz używać zestawu narzędzi MSVC z wiersza polecenia — Visual Studio
 description: Za pomocą łańcucha narzędzi kompilatora C++ firmy Microsoft (MSVC) z wiersza polecenia, poza Visual Studio IDE.
 ms.custom: conceptual
-ms.date: 12/10/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 5f9ac1e4753fdba412af26bcc45022dee354cacf
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342159"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877127"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Możesz używać zestawu narzędzi MSVC z wiersza polecenia
 
-Możesz tworzyć aplikacje C i C++, w wierszu polecenia, za pomocą narzędzi, które znajdują się w programie Visual Studio. Możesz również pobrać zestaw narzędzi kompilatora jako autonomiczny pakiet z [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
+Możesz tworzyć aplikacje C i C++, w wierszu polecenia, za pomocą narzędzi, które znajdują się w programie Visual Studio. Możesz również pobrać zestaw narzędzi kompilatora jako autonomiczny pakiet z [program Visual Studio pobiera](https://visualstudio.microsoft.com/downloads/) strony. Jest on częścią **Build Tools for Visual Studio** pakietu; można wybrać pobrać narzędzia niezbędne do C++ rozwoju.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Jak używać narzędzi wiersza polecenia
 
@@ -43,13 +43,11 @@ Skróty wiersza polecenia są instalowane w folderze specyficzny dla wersji prog
 - **Wiersz polecenia narzędzi x86_x64 Cross** -ustawia środowisko do korzystania z 32-bitowy, macierzysty x86 narzędzia do kompilowania kodu 64-bitowy, macierzysty x64.
 - **Wiersz polecenia narzędzi x64_x86 Cross** -ustawia środowisko do korzystania z 64-bitowych, x64 natywnych narzędzi do kompilowania kodu 32-bitowy, macierzysty x86.
 
-Rzeczywiste Start menu folderu i skrót nazwy różnią się w zależności od wersji programu Visual Studio został zainstalowany i instalacja pseudonim, jeśli zostanie ustawiona. Na przykład, jeśli masz program Visual Studio 2017, a został podany jej instalacji pseudonim *Podgląd*, nosi nazwę skrót do wiersza polecenia dla deweloperów **wiersz polecenia programisty dla programu VS 2017 (wersja zapoznawcza)**, w folderze o nazwie **programu Visual Studio 2017**.
-
-Jeśli po zainstalowaniu [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (który zawiera również zestaw narzędzi kompilatora Visual Studio 2015 Update 3), tylko natywne architektury lub dla wielu narzędzi wiersza polecenia dla deweloperów, opcje są zainstalowane , a nie ogólny **wiersz polecenia dla deweloperów** skrótów.
+Rzeczywiste Start menu folderu i skrót nazwy różnią się w zależności od wersji programu Visual Studio został zainstalowany i instalacja pseudonim, jeśli zostanie ustawiona. Aby uzyskać przykład, jeśli masz program Visual Studio 2017, a został podany go instalacji pseudonim *(wersja zapoznawcza)*, nosi nazwę skrót do wiersza polecenia dla deweloperów **wiersz polecenia programisty dla programu VS 2019**w folder o nazwie **Visual Studio 2019**.
 
 ## <a name="developer_command_prompt"></a> Aby otworzyć okno wiersza polecenia dla deweloperów
 
-1. Na pulpicie otwórz Windows **Start** menu, a następnie przewiń, aby znaleźć i otworzyć folder dla używanej wersji programu Visual Studio, na przykład **programu Visual Studio 2017**. W niektórych starszych wersjach programu Visual Studio, skróty znajdują się w podfolderze o nazwie **Visual Studio Tools**.
+1. Na pulpicie otwórz Windows **Start** menu, a następnie przewiń, aby znaleźć i otworzyć folder dla używanej wersji programu Visual Studio, na przykład **Visual Studio 2019**. W niektórych starszych wersjach programu Visual Studio, skróty znajdują się w podfolderze o nazwie **Visual Studio Tools**.
 
 1. W folderze, wybierz **wiersz polecenia dla deweloperów** dla używanej wersji programu Visual Studio. Ten skrót uruchamia okno wiersza polecenia dewelopera, który korzysta z architektury kompilacji domyślnej, 32-bitowy, x86 natywnych narzędzi do kompilowania kodu 32-bitowy, macierzysty x86. Jeśli wolisz architektury kompilacji innych niż domyślne, wybierz jedną z natywnym lub wielu narzędzi wiersz polecenia, aby określić architektury źródłowa i docelowa.
 
@@ -57,11 +55,11 @@ Szybszy sposób, aby otworzyć okno wiersza polecenia dewelopera polega na przej
 
 ## <a name="developer_command_file_locations"></a> Lokalizacje pliku polecenia dla deweloperów
 
-Jeśli wolisz skonfigurować środowisku architektury kompilacji w istniejącym oknie wiersza polecenia, można użyć jednego z poleceń (pliki wsadowe) utworzony przez Instalatora można ustawić wymagane środowisko. Zalecane tylko można to zrobić w nowym oknie wiersza polecenia i nie zalecamy nowsze Przełącz środowiska, w tym samym oknie wiersza polecenia. Lokalizacja tych plików zależy od wersji programu Visual Studio został zainstalowany oraz lokalizacji i opcji nazewnictwa, wprowadzone podczas instalacji. Dla programu Visual Studio 2017, typowej instalacji na komputerze 64-bitowym znajduje się w \Program pliki (x86) \Microsoft Visual Studio\2017\\*wersji*, gdzie *wersji* może być społeczności Professional, Enterprise, BuildTools lub innego o podanej nazwie. Dla programu Visual Studio 2015 lokalizacja typowej instalacji znajduje się w \Program Files (x86) \Microsoft Visual Studio 14.0.
+Jeśli wolisz skonfigurować środowisku architektury kompilacji w istniejącym oknie wiersza polecenia, można użyć jednego z poleceń (pliki wsadowe) utworzony przez Instalatora można ustawić wymagane środowisko. Zalecane tylko można to zrobić w nowym oknie wiersza polecenia i nie zalecamy nowsze Przełącz środowiska, w tym samym oknie wiersza polecenia. Lokalizacja tych plików zależy od wersji programu Visual Studio został zainstalowany oraz lokalizacji i opcji nazewnictwa, wprowadzone podczas instalacji. Dla programu Visual Studio 2019 r, typowej instalacji na komputerze 64-bitowym znajduje się w \Program pliki (x86) \Microsoft Visual Studio\2019\\*wersji*, gdzie *wersji* może być społeczności Professional, Enterprise, BuildTools lub innego o podanej nazwie. Lokalizacja programu Visual Studio 2017 jest podobna. Dla programu Visual Studio 2015 lokalizacja typowej instalacji znajduje się w \Program Files (x86) \Microsoft Visual Studio 14.0.
 
 Plik polecenia wiersza polecenia głównego dewelopera, VsDevCmd.bat, znajduje się w podkatalogu Common7\Tools w katalogu instalacji. Gdy nie określono żadnych parametrów, to ustawienie środowiska, a źródłowa i docelowa architektura, aby użyć narzędzia x86 natywne 32-bitowy do budowania x86 32-bitowych kompilacji kodu.
 
-Pliki dodatkowe polecenia są dostępne do skonfigurowania architektury konkretnej kompilacji, w zależności od architektury procesora i obciążeń programu Visual Studio i opcje, które zostały zainstalowane. W programie Visual Studio 2017 te znajdują się w podkatalogu VC\Auxiliary\Build katalogu instalacyjnego programu Visual Studio. W programie Visual Studio 2015, te znajdują się w VC, VC\bin lub VC\bin\\*architektury* podkatalogi katalogu instalacyjnego, gdzie *architektury* jest jednym z natywnych lub Kompilator krzyżowy opcje. Te pliki poleceń Ustawianie parametrów domyślnych i wywołuj VsDevCmd.bat, aby skonfigurować środowisko architektury określonej kompilacji. Typowej instalacji mogą zawierać te pliki poleceń:
+Pliki dodatkowe polecenia są dostępne do skonfigurowania architektury konkretnej kompilacji, w zależności od architektury procesora i obciążeń programu Visual Studio i opcje, które zostały zainstalowane. W programie Visual Studio 2017 i Visual Studio 2019 r te znajdują się w podkatalogu VC\Auxiliary\Build katalogu instalacyjnego programu Visual Studio. W programie Visual Studio 2015, te znajdują się w VC, VC\bin lub VC\bin\\*architektury* podkatalogi katalogu instalacyjnego, gdzie *architektury* jest jednym z natywnych lub Kompilator krzyżowy opcje. Te pliki poleceń Ustawianie parametrów domyślnych i wywołuj VsDevCmd.bat, aby skonfigurować środowisko architektury określonej kompilacji. Typowej instalacji mogą zawierać te pliki poleceń:
 
 |Plik polecenia|Źródłowa i docelowa architektury|
 |---|---|
@@ -107,28 +105,28 @@ Ten opcjonalny argument umożliwia określenie **przechowywania** lub **platform
 Opcjonalnie określa wersję zestawu Windows SDK do użycia. Domyślnie jest używana najnowsza wersja zainstalowanego zestawu Windows SDK. Aby określić wersję zestawu Windows SDK, można użyć pełny numer zestawu Windows 10 SDK takich jak **10.0.10240.0**, lub określ **8.1** korzystania z zestawu SDK Windows 8.1.
 
 *vcversion*<br/>
-Opcjonalnie określa zestaw narzędzi kompilatora Visual Studio do użycia. Domyślnie środowisko ustawiono użycie bieżącego zestawu narzędzi kompilatora Visual Studio 2017. Użyj **-vcvars_ver = 14.0** określić zestaw narzędzi kompilatora Visual Studio 2015.
+Opcjonalnie określa zestaw narzędzi kompilatora Visual Studio do użycia. Domyślnie środowisko ustawiono użycie bieżącego zestawu narzędzi kompilatora Visual Studio. Użyj **-vcvars_ver = 14.0** do określenia zestawu narzędzi kompilatora Visual Studio 2015 lub **-vcvars_ver = 15.0** do określenia zestawu narzędzi kompilatora Visual Studio 2017.
 
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>Aby skonfigurować środowisko kompilacji w istniejącym oknie wiersza polecenia
 
-1. W wierszu polecenia należy użyć polecenia CD, aby zmienić do katalogu instalacyjnego programu Visual Studio. Następnie należy użyć dysku CD ponownie zmienić w podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. Dla programu Visual Studio 2017 jest podkatalog VC\Auxiliary\Build. Visual Studio 2015 można użyć w podkatalogu VC.
+1. W wierszu polecenia należy użyć polecenia CD, aby zmienić do katalogu instalacyjnego programu Visual Studio. Następnie należy użyć dysku CD ponownie zmienić w podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. Visual Studio 2017 i 2019 r jest to podkatalog VC\Auxiliary\Build. Visual Studio 2015 można użyć w podkatalogu VC.
 
-1. Wprowadź polecenie w środowisku preferowanych dla deweloperów. Na przykład aby skompilować kod ARM dla platformy uniwersalnej systemu Windows na platformie 64-bitowej przy użyciu najnowszy zestaw Windows SDK i zestaw narzędzi kompilatora Visual Studio 2017 RTM, należy użyć ten wiersz polecenia:
+1. Wprowadź polecenie w środowisku preferowanych dla deweloperów. Na przykład aby skompilować kod ARM dla platformy uniwersalnej systemu Windows na platformie 64-bitowej przy użyciu najnowszy zestaw Windows SDK i zestaw narzędzi kompilatora Visual Studio 2019 r, należy użyć ten wiersz polecenia:
 
-   `vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10`
+   `vcvarsall.bat amd64_arm uwp`
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>Tworzenie własnych skrót do wiersza polecenia
 
-Jeśli możesz otworzyć okno dialogowe właściwości dla jednego z istniejących skrótów wiersza polecenia dla deweloperów, zostanie wyświetlony element docelowy polecenia używane. Na przykład, obiekt docelowy **x64 natywnych narzędzi wiersza polecenia dla programu VS 2017** skrót jest podobny do:
+Jeśli możesz otworzyć okno dialogowe właściwości dla jednego z istniejących skrótów wiersza polecenia dla deweloperów, zostanie wyświetlony element docelowy polecenia używane. Na przykład, obiekt docelowy **x64 natywnych wiersz polecenia narzędzi dla programu VS 2019** skrót jest podobny do:
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
-Ustaw pliki wsadowe architektury *architektury* vcvarsall.bat parametr i wywołania. Można przekazać te same opcje dodatkowe do tych plików usługi batch, należy wprowadzić do vcvarsall.bat lub może po prostu wywołać vcvarsall.bat bezpośrednio. Aby określić parametry skrótu polecenia, należy dodać je na końcu polecenia w podwójne cudzysłowy. Na przykład aby skonfigurować skrót do kompilowania kodu ARM dla platformy uniwersalnej systemu Windows na platformie 64-bitowej przy użyciu najnowszy zestaw Windows SDK i zestaw narzędzi kompilatora Visual Studio 2017 RTM, użyć ciągu ten element docelowy polecenia w nim:
+Ustaw pliki wsadowe architektury *architektury* vcvarsall.bat parametr i wywołania. Można przekazać te same opcje dodatkowe do tych plików usługi batch, należy wprowadzić do vcvarsall.bat lub może po prostu wywołać vcvarsall.bat bezpośrednio. Aby określić parametry skrótu polecenia, należy dodać je na końcu polecenia w podwójne cudzysłowy. Na przykład aby skonfigurować skrót do kompilowania kodu ARM dla platformy uniwersalnej systemu Windows na platformie 64-bitowej przy użyciu najnowszy zestaw Windows SDK i zestaw narzędzi kompilatora, która jest starsza niż wersja bieżąca, należy określić numer wersji. Użyj podobny do tego obiektu docelowego polecenia w nim:
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=15.0"`
 
-Należy dostosować ścieżkę, aby odzwierciedlała katalogu instalacji programu Visual Studio.
+Należy dostosować ścieżkę, aby odzwierciedlała katalogu instalacji programu Visual Studio. Plik vcvarsall.bat zawiera dodatkowe informacje na temat numery określonej wersji.
 
 ## <a name="command-line-tools"></a>Narzędzia wiersza polecenia
 

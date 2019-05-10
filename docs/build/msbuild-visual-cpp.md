@@ -1,17 +1,15 @@
 ---
 title: Program MSBuild w wierszu polecenia — C++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273316"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220574"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>Program MSBuild w wierszu polecenia — C++
 
@@ -53,7 +51,7 @@ Aby uzyskać więcej informacji na temat programu MSBuild zobacz:
 
 |Termin|Definicja|
 |----------|----------------|
-|[Przewodnik: korzystanie z MSBuild do tworzenia projektu Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Pokazuje, jak utworzyć projekt Visual C++ przy użyciu **MSBuild**.|
+|[Przewodnik: używanie programu MSBuild do tworzenia projektu w języku C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Przedstawia sposób tworzenia programu Visual Studio C++ projektu za pomocą **MSBuild**.|
 |[Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Pokazuje, jak określić akcję, która występuje na etapie particuler w kompilacji: przed rozpoczęciem kompilacji; przed uruchomieniem kroku łącze; lub po zakończeniu kompilacji.|
 |[Instrukcje: dodawanie niestandardowego kroku kompilacji do projektów MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Przedstawiono sposób dodawania użytkownika etapu sekwencji kompilacji.|
 |[Instrukcje: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Pokazuje, jak skojarzyć narzędzie kompilacji z określonego pliku.|

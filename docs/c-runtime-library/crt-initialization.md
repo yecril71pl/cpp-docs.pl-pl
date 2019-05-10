@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344612"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446687"
 ---
 # <a name="crt-initialization"></a>Inicjalizacja CRT
 
@@ -41,7 +41,7 @@ Jednym ze sposobów, aby określić, to jest, aby ustawić punkt przerwania `fun
 
 Podczas przeglądania funkcji na stosie znajdziesz, że CRT jest lista wskaźników do funkcji w pętli i wywoływania każdy z nich, po ich napotkaniu. Te funkcje są podobne do `func()` lub konstruktory wystąpień klas.
 
-CRT uzyskuje listę wskaźników do funkcji z kompilator języka Visual C++. Gdy kompilator wykryje inicjatorze globalnym, generuje dynamiczny inicjator w `.CRT$XCU` sekcji (gdzie `CRT` jest nazwy sekcji i `XCU` to nazwa grupy). Aby uzyskać listę tych inicjatory dynamicznego, uruchom polecenie **dumpbin/all main.obj**, a następnie wyszukaj `.CRT$XCU` sekcji (w przypadku main.cpp jest kompilowany jako plik C++ nie jest to plik C). Będzie podobny do następującego:
+CRT uzyskuje listę wskaźników funkcji, z Microsoft C++ kompilatora. Gdy kompilator wykryje inicjatorze globalnym, generuje dynamiczny inicjator w `.CRT$XCU` sekcji (gdzie `CRT` jest nazwy sekcji i `XCU` to nazwa grupy). Aby uzyskać listę tych inicjatory dynamicznego, uruchom polecenie **dumpbin/all main.obj**, a następnie wyszukaj `.CRT$XCU` sekcji (w przypadku main.cpp jest kompilowany jako plik C++ nie jest to plik C). Będzie podobny do następującego:
 
 ```
 SECTION HEADER #6
@@ -77,7 +77,7 @@ CRT definiuje dwa wskaźniki:
 
 Obie grupy nie mają inne symbole zdefiniowane, z wyjątkiem `__xc_a` i `__xc_z`.
 
-Teraz, gdy program łączący odczytuje różne `.CRT` grup, jego łączy je w jednej sekcji i porządkuje je w kolejności alfabetycznej. Oznacza to, że inicjatorów globalnych zdefiniowanych przez użytkownika (które kompilator języka Visual C++ zapisuje w `.CRT$XCU`) będzie zawsze mają po `.CRT$XCA` i przed `.CRT$XCZ`.
+Teraz, gdy program łączący odczytuje różne `.CRT` grup, jego łączy je w jednej sekcji i porządkuje je w kolejności alfabetycznej. Oznacza to, że inicjatorów globalnych zdefiniowanych przez użytkownika (który Microsoft C++ kompilator umieszcza w `.CRT$XCU`) będzie zawsze mają po `.CRT$XCA` i przed `.CRT$XCZ`.
 
 Sekcja będzie wyglądać w następujący sposób:
 

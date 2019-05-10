@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314119"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446186"
 ---
 # <a name="set-compiler-and-build-properties"></a>Ustaw kompilatora i właściwości kompilacji
 
@@ -23,7 +23,7 @@ W środowisku IDE, wszystkie informacje, które są potrzebne do tworzenia proje
 
 Podczas tworzenia projektu, system przypisuje wartości różnych właściwości. Wartości domyślne, różnią się nieco w zależności od typu projektu i jakie opcje należy wybrać w Kreatorze aplikacji. Na przykład Projekt ATL ma właściwości związanych z plikami MIDL, ale są nieobecne w podstawowa Aplikacja konsoli. Domyślne właściwości są wyświetlane w okienku ogólne na stronach właściwości:
 
-![Program Visual C&#43; &#43; projektu domyślne](media/visual-c---project-defaults.png "domyślne ustawienia projektu Visual C++")
+![Program Visual C&#43; &#43; domyślne wartości projektu](media/visual-c---project-defaults.png "Visual C++ wartości domyślne projektu")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Stosowanie właściwości, aby tworzyć konfiguracje i platformy docelowej
 
@@ -61,7 +61,7 @@ Opcje kompilatora i konsolidatora C++ znajdują się w obszarze **C/C++** i **ko
 
 Program MSBuild obsługuje stałe kompilacji o nazwie "makrami" dla niektórych wartości ciągu obejmują katalogi i ścieżki. Te są widoczne na stronach właściwości, w którym można znaleźć i zmodyfikuj je za pomocą [Edytor właściwości](#property_editor). 
 
-Poniższa ilustracja przedstawia strony właściwości dla projektu Visual C++. W okienku po lewej stronie **katalogi VC ++** *reguły* jest zaznaczone, a w okienku po prawej stronie zawiera listę właściwości, które są skojarzone z tą regułą. `$(...)` Wartości są nazywane *makra*. A *— makro* jest stałą czasu kompilacji, która może odnosić się do wartości, który jest zdefiniowany przez Visual Studio lub MSBuild system lub wartości zdefiniowanej przez użytkownika. Za pomocą makr zamiast jednoznacznie ustalonych wartości, takich jak ścieżki katalogów, można łatwo udostępniać ustawienia właściwości między komputerami oraz między wersjami programu Visual Studio i lepiej zagwarantować, że ustawienia projektu poprawnie w programie uczestniczyć [ dziedziczenie właściwości](project-property-inheritance.md). 
+Poniższa ilustracja przedstawia strony właściwości dla programu Visual Studio C++ projektu. W okienku po lewej stronie **katalogi VC ++** *reguły* jest zaznaczone, a w okienku po prawej stronie zawiera listę właściwości, które są skojarzone z tą regułą. `$(...)` Wartości są nazywane *makra*. A *— makro* jest stałą czasu kompilacji, która może odnosić się do wartości, który jest zdefiniowany przez Visual Studio lub MSBuild system lub wartości zdefiniowanej przez użytkownika. Za pomocą makr zamiast jednoznacznie ustalonych wartości, takich jak ścieżki katalogów, można łatwo udostępniać ustawienia właściwości między komputerami oraz między wersjami programu Visual Studio i lepiej zagwarantować, że ustawienia projektu poprawnie w programie uczestniczyć [ dziedziczenie właściwości](project-property-inheritance.md). 
 
 ![Strony właściwości projektu](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

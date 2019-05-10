@@ -1,23 +1,20 @@
 ---
 title: Materiał referencyjny na temat języka C++
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- language reference
 - C++, language reference
-- language reference, Visual C++
-- Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154662"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222482"
 ---
 # <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
 
-To źródło odniesienia wyjaśnia sposób implementacji C++ w Microsoft Visual C++. Organizacja jest oparta na [ *The Annotated C++ Reference Manual* ](http://www.stroustrup.com/arm.html) autorstwa Margaret Ellis i Bjarne'a Stroustrupa oraz na ANSI/ISO C++ Międzynarodowy Standard (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.
+To źródło odniesienia wyjaśnia C++ języka programowania, zaimplementowany w Microsoft C++ kompilatora. Organizacja jest oparta na [ *The Annotated C++ Reference Manual* ](http://www.stroustrup.com/arm.html) autorstwa Margaret Ellis i Bjarne'a Stroustrupa oraz na ANSI/ISO C++ Międzynarodowy Standard (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.
 
 Omówienie rozwiązania w zakresie programowania nowoczesnym języku C++, zobacz [powitalnej zwrotnie do C++](welcome-back-to-cpp-modern-cpp.md).
 
@@ -90,7 +87,7 @@ Odwołanie do klas specyficznych dla Microsoft i globalne funkcje używane do ob
 Rozszerzenia Microsoft do C++.
 
 [Niestandardowe zachowanie](../cpp/nonstandard-behavior.md)<br/>
-Informacje o niestandardowe zachowanie kompilatora Visual C++.
+Informacje na temat niestandardowe zachowanie Microsoft C++ kompilatora.
 
 [Witamy z powrotem w C++](welcome-back-to-cpp-modern-cpp.md)<br/>
 Omówienie nowoczesnego języka c++, programowanie wskazówki dotyczące pisania bezpiecznych, prawidłowego i efektywnego programów.
@@ -98,7 +95,7 @@ Omówienie nowoczesnego języka c++, programowanie wskazówki dotyczące pisania
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-Materiały referencyjne dotyczące do docelowej platformy .NET przy użyciu języka Visual C++.
+Odwołanie materiał na korzystanie z programu Microsoft C++ kompilatora do obiektu docelowego .NET.
 
 [Dokumentacja kompilacji w języku C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Opcje kompilatora, opcje konsolidatora i inne narzędzia kompilacji.
@@ -107,7 +104,7 @@ Opcje kompilatora, opcje konsolidatora i inne narzędzia kompilacji.
 Materiał referencyjny na temat pragm, dyrektyw preprocesora, wstępnie zdefiniowanych makr i preprocesora.
 
 [Biblioteki Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
-Lista łączy do referencyjnych stron startowych na temat różnych bibliotek Visual C++.
+Lista łączy do referencyjnych Rozpocznij strony dla różnych Microsoft C++ bibliotek.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,16 +1,16 @@
 ---
 title: 'Przewodnik: Tworzenie aplikacji wstążki za pomocą MFC'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358310"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558231"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Przewodnik: Tworzenie aplikacji wstążki za pomocą MFC
 
@@ -22,9 +22,7 @@ Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **og�
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Tworzenie aplikacji MFC zawierającej wstążkę
 
-1. Użyj **Kreator aplikacji MFC** do tworzenia aplikacji MFC zawierającej Wstążkę. Aby uruchomić kreatora w **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.
-
-1. W **nowy projekt** okna dialogowego rozwiń **Visual C++** węźle **zainstalowane szablony**, wybierz opcję **MFC**, a następnie wybierz pozycję  **Aplikacja MFC**. Wpisz nazwę projektu, na przykład *MFCRibbonApp*, a następnie kliknij przycisk **OK**.
+1. Użyj **Kreator aplikacji MFC** do tworzenia aplikacji MFC zawierającej Wstążkę. Zobacz [instruktażu: Używanie nowych formantów powłoki MFC](walkthrough-using-the-new-mfc-shell-controls.md) w jaki sposób otworzyć kreatora dla używanej wersji programu Visual Studio.
 
 1. Ustaw następujące opcje **Kreator aplikacji MFC**:
 
@@ -34,7 +32,7 @@ Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **og�
 
     1. W **właściwości szablonu dokumentu** sekcji w **rozszerzenie pliku** wpisz rozszerzenie nazwy pliku dla dokumentów, które tworzy tę aplikację, na przykład *mfcrbnapp*.
 
-    1. W **obsługi bazy danych** sekcji, upewnij się, że **Brak** jest zaznaczone.
+    1. W **obsługi bazy danych** sekcji (Visual Studio 2015 tylko), upewnij się, że **Brak** jest zaznaczone.
 
     1. W **funkcje interfejsu użytkownika** sekcji, upewnij się, że **Użyj wstążki** jest zaznaczone.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 207d99419499187715cf9088652d64b79b7ba34d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18d13fa74554e2cb37c02bc0e5a00443e7813798
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352717"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64876885"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Omówienie programowania w języku C++ w programie Visual Studio
 
@@ -23,11 +23,21 @@ Oprócz narzędzi udostępnionych w programie Visual Studio IDE MSVC ma kilka na
 
 A *projektu* zasadniczo jest to zbiór plików kodu źródłowego i zasoby, takie jak obrazy lub dane plików, które są wbudowane w plik wykonywalny.
 
-Program Visual Studio 2017 zapewnia obsługę dla dowolnego systemu kompilacji lub niestandardowych narzędzi kompilacji, które mają być używane z pełnym wsparciem dla funkcji IntelliSense, przeglądanie i debugowania:
+Program Visual Studio zapewnia obsługę dla dowolnego systemu kompilacji lub niestandardowych narzędzi kompilacji, które mają być używane z pełnym wsparciem dla funkcji IntelliSense, przeglądanie i debugowania:
 
 - **Program MSBuild** jest natywnym system kompilacji dla programu Visual Studio. Po wybraniu **pliku** > **New** > **projektu** z menu głównego, zobacz wiele rodzajów MSBuild *szablony projektów*  , rozpoczęcie pracy, szybkie tworzenie różnych rodzajów aplikacji w języku C++.
 
+::: moniker range="vs-2019"
+
+   ![Nowe szablony projektów](../build/media/mathclient-project-name-2019.png "Visual Studio 2019 nowego projektu okna dialogowego")
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
    ![Szablony projektów](media/vs2017-new-project.png "programu Visual Studio 2017 nowego projektu okna dialogowego")
+
+::: moniker-end
 
    Ogólnie rzecz biorąc należy używać tych szablonów dla nowych projektów, chyba że masz powód, aby użyć narzędzia CMake lub innego systemu projektu. Niektóre projekty zostały *kreatora* który prowadzi użytkownika krok po kroku przez proces tworzenia nowego projektu. Aby uzyskać więcej informacji, zobacz [tworzenie i zarządzanie projektami opartych na platformie MSBuild](../build/creating-and-managing-visual-cpp-projects.md).
 
@@ -38,7 +48,17 @@ Program Visual Studio 2017 zapewnia obsługę dla dowolnego systemu kompilacji l
 
 Kontrola źródła umożliwia koordynować pracę między wielu deweloperów, organizowanie pracy w toku z kodu produkcyjnego i utworzyć kopię zapasową kodu źródłowego. Program Visual Studio obsługuje Git i [Team Foundation Version Control \(TFVC\) ](/azure/devops/repos/tfvc/) za pośrednictwem jego **Team Explorer** okna.
 
+::: moniker range="vs-2019"
+
+![Team Explorer](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
 ![Team Explorer](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
+
+::: moniker-end
 
 Aby uzyskać więcej informacji na temat integracji usługi Git z repozytoriami na platformie Azure, zobacz [udostępnić swój kod za pomocą programu Visual Studio 2017 i Azure repozytoriów Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017). Aby uzyskać informacji na temat integracji usługi Git za pomocą usługi GitHub, zobacz [rozszerzeniu GitHub Extension for Visual Studio](https://visualstudio.github.com/).
 
@@ -72,7 +92,9 @@ Aby uzyskać więcej informacji na temat dodawania i edytowania zasobów w natyw
 
 Wybierz **kompilacji** > **Kompiluj rozwiązanie** menu paska lub wprowadź kombinacji klawiszy Ctrl + Shift + B, skompilować i utworzyć połączenie projektu. Błędy i ostrzeżenia kompilowania są zgłaszane na liście błędów (Ctrl +\\, E). **Dane wyjściowe** okno (Alt + 2) zawiera informacje na temat procesu kompilacji.
 
-![Dane wyjściowe okna i lista błędów](media/vs2017-output-error-list.png "okna programu Visual Studio 2017 w danych wyjściowych i lista błędów") uzyskać więcej informacji o konfiguracjach MSBuild, zobacz [Praca z właściwościami projektu](../build/working-with-project-properties.md) i [Projektów i systemów kompilacji](../build/projects-and-build-systems-cpp.md).
+![Dane wyjściowe okna i lista błędów](media/vs2017-output-error-list.png "okna programu Visual Studio 2017 w danych wyjściowych i lista błędów")
+
+Aby uzyskać więcej informacji o konfiguracjach MSBuild, zobacz [Praca z właściwościami projektu](../build/working-with-project-properties.md) i [projektów i systemów kompilacji](../build/projects-and-build-systems-cpp.md).
 
 Można również użyć kompilatora (cl.exe) i wiele innych autonomiczny dotyczące kompilacji narzędzi takich jak NMAKE i LIB bezpośrednio z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
 

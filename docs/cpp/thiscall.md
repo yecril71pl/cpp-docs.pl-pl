@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266791"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221911"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ Jednym z powodów używania **__thiscall** znajduje się w klasach funkcje Czło
 
 Podczas kompilowania za pomocą [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), wszystkie funkcje i wskaźników do funkcji są `__clrcall` chyba że określono inaczej. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-W wersjach przed Visual C++ 2005, **__thiscall** konwencji wywoływania nie można jawnie określić w programie, ponieważ **__thiscall** nie jest słowem kluczowym.
+W wersjach przed Visual Studio 2005 **__thiscall** konwencji wywoływania nie można jawnie określić w programie, ponieważ **__thiscall** nie jest słowem kluczowym.
 
 `vararg` Funkcje Członkowskie korzystają **__cdecl** konwencji wywoływania. Wszystkie argumenty funkcji są wypychane na stos, za pomocą **to** umieszczenie w stosie ostatniego wskaźnika
 

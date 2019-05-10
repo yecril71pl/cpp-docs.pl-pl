@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330573"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221945"
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
 
-Obsługa wyjątków strukturalnych (SEH) jest rozszerzeniem firmy Microsoft do C, aby bezpiecznie obsłużyć niektórych sytuacjach wyjątkowych kodu, takich jak awarie sprzętu. Mimo że Windows i Visual C++ obsługuje SEH, zalecane jest użycie ISO standard C++ obsługi wyjątków ponieważ sprawia, że Twój kod bardziej przenośny i elastyczny. Niemniej jednak aby zachować istniejący kod lub dla szczególnych typów programów, nadal może być konieczne używanie SEH.
+Obsługa wyjątków strukturalnych (SEH) jest rozszerzeniem firmy Microsoft do C, aby bezpiecznie obsłużyć niektórych sytuacjach wyjątkowych kodu, takich jak awarie sprzętu. Mimo że Windows i firmy Microsoft C++ obsługi SEH, zalecamy użycie ISO standard C++ obsługi wyjątków, ponieważ sprawia, że Twój kod bardziej przenośny i elastyczny. Niemniej jednak aby zachować istniejący kod lub dla szczególnych typów programów, nadal może być konieczne używanie SEH.
 
 **Specyficzne dla firmy Microsoft:**
 
@@ -34,7 +34,7 @@ Obsługa wyjątków strukturalnych (SEH) jest rozszerzeniem firmy Microsoft do C
 
 Z SEH można zagwarantować, że zasoby, takie jak bloki pamięci i pliki są poprawnie zwalniane, jeśli wykonanie następuje nieoczekiwane zakończenie. Może również obsługiwać konkretnych problemów — na przykład brak wystarczającej ilości pamięci — przy użyciu zwięzłe ze strukturą kodu, które nie zależą od **goto** instrukcji lub rozbudowane testowania kody powrotne.
 
-Try-except i try-finally, określone w tym artykule są rozszerzenia Microsoft do języka C. Obsługiwane są też SEH, dzięki czemu aplikacje mogą przejąć kontrolę nad programem po zdarzenia, które w przeciwnym razie zakończy się wykonywanie. Mimo że SEH działa przy użyciu plików źródłowych języka C++, go nie opracowano specjalnie dla języka C++. Jeśli używasz strukturalnej obsługi wyjątków w programie C++, który kompilujesz przy użyciu [/eha lub/ehsc](../build/reference/eh-exception-handling-model.md) opcję destruktory dla obiektów lokalnych są wywoływane, ale inne zachowanie wykonywania może nie być, czego oczekiwać. Ilustracja znajduje się w przykładzie w dalszej części tego artykułu. W większości przypadków zamiast SEH firma Microsoft zaleca użycie ISO standard [obsługi wyjątków C++](../cpp/try-throw-and-catch-statements-cpp.md), który obsługuje również Visual C++. Korzystając z obsługi wyjątków C++, można upewnić się, że Twój kod będzie bardziej przenośny i może obsługiwać wyjątki dowolnego typu.
+Try-except i try-finally, określone w tym artykule są rozszerzenia Microsoft do języka C. Obsługiwane są też SEH, dzięki czemu aplikacje mogą przejąć kontrolę nad programem po zdarzenia, które w przeciwnym razie zakończy się wykonywanie. Mimo że SEH działa przy użyciu plików źródłowych języka C++, go nie opracowano specjalnie dla języka C++. Jeśli używasz strukturalnej obsługi wyjątków w programie C++, który kompilujesz przy użyciu [/eha lub/ehsc](../build/reference/eh-exception-handling-model.md) opcję destruktory dla obiektów lokalnych są wywoływane, ale inne zachowanie wykonywania może nie być, czego oczekiwać. Ilustracja znajduje się w przykładzie w dalszej części tego artykułu. W większości przypadków zamiast SEH firma Microsoft zaleca użycie ISO standard [ C++ wyjątków](../cpp/try-throw-and-catch-statements-cpp.md), ponieważ firmy Microsoft C++ kompilator obsługuje również. Korzystając z obsługi wyjątków C++, można upewnić się, że Twój kod będzie bardziej przenośny i może obsługiwać wyjątki dowolnego typu.
 
 Jeśli masz kod C, który używa SEH, można łączyć je z kodem C++, używającej obsługi wyjątków C++. Aby uzyskać informacje, zobacz [obsługi wyjątków strukturalnych w języku C++](../cpp/exception-handling-differences.md).
 

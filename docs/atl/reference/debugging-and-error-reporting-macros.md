@@ -1,6 +1,6 @@
 ---
 title: Makra debugowania i raportowania błędów
-ms.date: 03/27/2019
+ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a243351ff337cb517f8a8231c18c495c8d2ca302
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276630"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221077"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowania błędów
 
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>Parametry
 
 *exp*<br/>
-[in] Parametry i zmienne, aby wysłać do wizualizacji C++ okno danych wyjściowych lub inna aplikacja te komunikaty pułapek.
+[in] Parametry i zmienne, aby wysłać do okna danych wyjściowych lub dowolnej aplikacji, która te komunikaty pułapek.
 
 *category*<br/>
 [in] Typ zdarzenia lub metody, na którym do raportu. Zobacz uwagi, aby uzyskać listę kategorii.
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>Parametry
 
 *exp*<br/>
-[in] Ciąg do wysłania do wizualizacji C++ okno danych wyjściowych lub inna aplikacja te komunikaty pułapek.
+[in] Ciąg do wysyłania do okna danych wyjściowych lub dowolnej aplikacji, która te komunikaty pułapek.
 
 *category*<br/>
 [in] Typ zdarzenia lub metody, na którym do raportu. Zobacz uwagi, aby uzyskać listę kategorii.

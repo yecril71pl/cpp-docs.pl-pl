@@ -1,5 +1,5 @@
 ---
-title: Błędy kompilatora od C2900 do C2999
+title: Błędy kompilatora — od C2900 do C2999
 ms.date: 04/21/2019
 f1_keywords:
 - C2900
@@ -73,13 +73,13 @@ helpviewer_keywords:
 - C2999
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
 ms.openlocfilehash: 5d443153582921775a72e5af647d65b102b80b0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281680"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857219"
 ---
-# <a name="compiler-errors-c2900-through-c2999"></a>Błędy kompilatora od C2900 do C2999
+# <a name="compiler-errors-c2900-through-c2999"></a>Błędy kompilatora — od C2900 do C2999
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez kompilator.
 
@@ -87,7 +87,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |Błąd kompilatora od C2900|"*deklaratora*": Szablony funkcji składowych w klasach WinRT musi być "private", "internal" lub "protected private"|
 |Błąd kompilatora C2901|"*identyfikator*": Ogólny interfejs lub delegat nie może być publiczny|

@@ -1,22 +1,22 @@
 ---
 title: Obsługa kompilatora COM
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: f0b1d6280dc27641287de8fe539cd3a148048245
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154841"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222207"
 ---
 # <a name="compiler-com-support"></a>Obsługa kompilatora COM
 
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
 
-Kompilator języka Visual C++ może bezpośrednio odczytywać bibliotek typów model (COM) obiektu składnika i tłumaczy zawartość do kodu źródłowego języka C++, które mogą być zawarte w kompilacji. Rozszerzenia językowe są dostępne dla ułatwienia COM programowanie po stronie klienta.
+Microsoft C++ bezpośrednio odczytywać bibliotek typów model (COM) obiektu składnika i tłumaczy zawartość do kompilatora C++ źródła kodu, które mogą być zawarte w kompilacji. Rozszerzenia językowe są dostępne dla ułatwienia COM programowanie po stronie klienta.
 
 Za pomocą [#import — dyrektywa preprocesora](../preprocessor/hash-import-directive-cpp.md), kompilator może odczytywać bibliotekę typów i przekonwertować go na plik nagłówka C++, który opisuje COM interfejsy klas. Zbiór `#import` atrybutów jest dostępna dla kontrolki użytkownika zawartości wynikowe pliki nagłówkowe biblioteki typów.
 

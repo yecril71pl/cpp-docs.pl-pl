@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266936"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221988"
 ---
 # <a name="storage-classes-c"></a>Klasy magazynu (C++)
 
@@ -24,7 +24,7 @@ A *klasę magazynu* w kontekście C++ deklaracje zmiennych jest specyfikatora ty
 
 1. [Mutable](../cpp/mutable-data-members-cpp.md) — słowo kluczowe może być uznane za Specyfikator klasy magazynowania. Jednak jest ono dostępne tylko na liście składowych definicji klasy.
 
-1. **Visual C++ 2010 i nowszych wersji:** **Automatycznie** — słowo kluczowe nie jest już specyfikatora klasy magazynowania C++ i **zarejestrować** — słowo kluczowe jest przestarzały. **Visual Studio 2017 w wersji 15.7 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zarejestrować** — słowo kluczowe zostanie usunięty z języka C++.
+1. **Visual Studio 2010 i nowszych wersji:** **Automatycznie** — słowo kluczowe nie jest już specyfikatora klasy magazynowania C++ i **zarejestrować** — słowo kluczowe jest przestarzały. **Visual Studio 2017 w wersji 15.7 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zarejestrować** — słowo kluczowe zostanie usunięty z języka C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

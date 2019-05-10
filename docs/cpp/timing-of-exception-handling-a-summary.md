@@ -1,6 +1,6 @@
 ---
 title: 'Chronometraż dla obsługi wyjątków: Podsumowanie'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: cbff7c4153646fcb3471e18d20a0e633fbd1307f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330456"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221893"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Chronometraż dla obsługi wyjątków: Podsumowanie
 
 Program obsługi przerwania jest wykonywany niezależnie od tego, jak **__try** został przerwany blok instrukcji. Przyczyny obejmują skok na zewnątrz **__try** bloku `longjmp` instrukcję, która przenosi sterowanie na zewnątrz bloku i odwinięcie stosu wskutek obsługi wyjątku.
 
 > [!NOTE]
->  Język Visual C++ obsługuje dwie postacie instrukcji `setjmp` i `longjmp`. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. Aby użyć tej wersji, Dołącz plik \<setjmp.h >. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. Aby użyć tej wersji, Dołącz plik \<setjmpex.h >. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.
+>  Microsoft C++ kompilator obsługuje dwa rodzaje `setjmp` i `longjmp` instrukcji. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. Aby użyć tej wersji, Dołącz plik \<setjmp.h >. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. Aby użyć tej wersji, Dołącz plik \<setjmpex.h >. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.
 
 System operacyjny wykonuje wszystkie programy obsługi przerwania w odpowiedniej kolejności, zanim wykonany będzie jakikolwiek inny kod, włączając w to treść programu obsługi wyjątków.
 

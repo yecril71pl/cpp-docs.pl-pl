@@ -2,12 +2,12 @@
 title: Rozpoznawanie nazwy dla typów zależnych
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 04db4b0efc5e58dbd3de6fc9979c3a3cdd44d84e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345937"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222405"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozpoznawanie nazwy dla typów zależnych
 
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>Uściślanie szablonu
 
-Program Visual Studio 2012 wymusza C ++ 98/03/11 standardowych zasad na Uściślanie za pomocą słowa kluczowego "szablon". W poniższym przykładzie Visual C++ 2010 będzie akceptować niezgodnych wierszy i zgodnych wierszy.  Program Visual Studio 2012 akceptuje tylko zgodnych wierszy.
+Program Visual Studio 2012 wymusza C ++ 98/03/11 standardowych zasad na Uściślanie za pomocą słowa kluczowego "szablon". W poniższym przykładzie Visual Studio 2010 będzie akceptować niezgodnych wierszy i zgodnych wierszy.  Program Visual Studio 2012 akceptuje tylko zgodnych wierszy.
 
 ```cpp
 #include <iostream>

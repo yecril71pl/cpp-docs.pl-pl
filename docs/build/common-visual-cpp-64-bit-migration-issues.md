@@ -1,33 +1,32 @@
 ---
 title: Typowe problemy przy migracji Visual C++ w wersji 64-bitowej
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 64-bit programming [C++], migration
 - 64-bit compiler [C++], migration
 - porting 32-bit code to 64-bit code
-- upgrading Visual C++ applications, 32-bit code
 - migration [C++], 64-bit code issues
 - 32-bit code porting [C++]
 - 64-bit applications [C++]
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b03ccc76163d79688a98ec89df241292e3eef112
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200080"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220871"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Typowe problemy przy migracji Visual C++ w wersji 64-bitowej
 
-Korzystając z programu Visual C++ do tworzenia aplikacji do uruchomienia w 64-bitowym systemie operacyjnym Windows, należy pamiętać o następujących kwestiach:
+Jeśli używasz programu Microsoft C++ kompilator (MSVC) do tworzenia aplikacji do uruchomienia w 64-bitowym systemie operacyjnym Windows, należy pamiętać o następujących kwestiach:
 
 - `int` i `long` wartości 32-bitowy na 64-bitowych systemach operacyjnych Windows. Dla programów, które mają zostać kompilacji dla platform 64-bitowych należy zachować ostrożność nie można przypisać wskaźniki do zmiennych 32-bitowych. Wskaźniki są 64-bit na platformach 64-bitowych, a obetnie wartość wskaźnika, w przypadku przypisania do zmiennej 32-bitowych.
 
 - `size_t`, `time_t`, i `ptrdiff_t` wartości 64-bitowym na 64-bitowych systemach operacyjnych Windows.
 
-- `time_t` jest wartością 32-bitowego na 32-bitowych systemach operacyjnych Windows w wersjach Visual C++ starszych niż Visual C++ 2005. `time_t` jest teraz 64-bitową liczbę całkowitą, domyślnie. Aby uzyskać więcej informacji, zobacz [zarządzanie czasem](../c-runtime-library/time-management.md).
+- `time_t` jest wartością 32-bitowego na 32-bitowych systemach operacyjnych Windows w programie Visual Studio 2005 i wcześniejszych wersjach. `time_t` jest teraz 64-bitową liczbę całkowitą, domyślnie. Aby uzyskać więcej informacji, zobacz [zarządzanie czasem](../c-runtime-library/time-management.md).
 
    Należy pamiętać o którym kod ma `int` wartość i przetwarza je jako `size_t` lub `time_t` wartość. Istnieje możliwość, że liczba można zwiększać będzie większy niż wartość liczby 32-bitowej i dane zostaną obcięte, gdy jest przekazywany do `int` magazynu.
 

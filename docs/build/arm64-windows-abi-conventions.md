@@ -1,12 +1,12 @@
 ---
 title: Przegląd Konwencji ARM64 ABI
 ms.date: 03/27/2019
-ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195512"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220992"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd Konwencji ARM64 ABI
 
@@ -50,6 +50,24 @@ Jak za pomocą ARM32 wersji systemu Windows na Windows ARM64 wykonuje w trybie l
 Uruchomione dla procesorów ARM64 Windows umożliwia sprzętu Procesora do obsługi niewyrównane dostępy do w sposób niewidoczny dla użytkownika. W poprawę AArch32 ta obsługa również działa teraz dla wszystkich dostępów całkowitą (w tym uzyskuje dostęp do wielu słów) i zmiennoprzecinkowych uzyskuje dostęp do.
 
 Jednak dostęp do pamięci bez buforowania (urządzenia) nadal muszą zawsze być wyrównane. Jeśli kodu prawdopodobnie można odczytać lub zapisać niewyrównane dane z pamięci bez buforowania, upewnij się wyrównać każdy dostęp.
+
+Wyrównanie układ domyślny dla zmiennych lokalnych:
+
+| Rozmiar w bajtach | Wyrównanie w bajtach |
+| - | - |
+| 1 | 1 |
+| 2 | 2 |
+| 3, 4 | 4 |
+| > 4 | 8 |
+
+Domyślne wyrównanie układ i elementy statyczne zmienne globalne:
+
+| Rozmiar w bajtach | Wyrównanie w bajtach |
+| - | - |
+| 1 | 1 |
+| 2 - 7 | 4 |
+| 8 - 63 | 8 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Rejestruje liczbę całkowitą
 
@@ -185,7 +203,9 @@ Skutecznie jest taka sama jak następujące reguły C.12–C.15 przydzielić arg
 
 Wartości całkowitych są zwracane w x0.
 
-Wartości zmiennoprzecinkowe są zwracane w s0/d0/v0 zgodnie z potrzebami.
+Wartości zmiennoprzecinkowe są zwracane w s0, d0 lub v0 zgodnie z potrzebami.
+
+Wartości HFA i HVA są zwracane w s0 s3, d0 d3 lub v0-v3, zgodnie z potrzebami.
 
 Typy zwracane przez wartość są obsługiwane inaczej w zależności od tego, czy mają one pewne właściwości. Typy, które mają wszystkie te właściwości
 

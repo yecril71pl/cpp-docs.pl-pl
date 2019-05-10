@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387256"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448088"
 ---
 # <a name="how-to-migrate-to-clr"></a>Instrukcje: Migracja do/CLR
 
@@ -41,13 +41,13 @@ Przed rozpoczęciem korzystania z **/CLR** w module w projekcie, należy najpier
 
 W poniższych krokach, a następnie w kolejności, przedstawiono Najłatwiejszą drogą do **/CLR** kompilacji. Jest ważne skompilować i uruchomić projekt po każdym z tych kroków.
 
-### <a name="versions-prior-to-visual-c-2003"></a>Wersje przed Visual C++ 2003
+### <a name="versions-prior-to-visual-studio-2003"></a>Wersje przed Visual Studio 2003
 
-Jeśli uaktualniasz Visual Studio 2010 w wersji wcześniejszej niż Visual C++ 2003, może zostać wyświetlony błędy kompilatora dotyczące rozszerzoną zgodność standardowego języka C++ w Visual C++ 2003
+Jeśli uaktualniasz Visual Studio 2010 w wersji wcześniejszej niż Visual Studio 2003, może zostać wyświetlony błędy kompilatora dotyczące rozszerzone C++ standardowa zgodności w programie Visual Studio 2003
 
-### <a name="upgrading-from-visual-c-2003"></a>Uaktualnianie z programu Visual C++ 2003
+### <a name="upgrading-from-visual-studio-2003"></a>Uaktualnianie z programu Visual Studio 2003
 
-Poprzednie projektów utworzonych za pomocą programu Visual C++ 2003 również najpierw powinna być skompilowana bez **/CLR** zgodnie z programu Visual Studio teraz wzrosło zgodność ANSI/ISO i niektórych ważnych zmian. Jest zmiany mogą wymagać uwagi najbardziej [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md). Kod, który używa CRT jest bardzo prawdopodobne wygenerować ostrzeżeń dotyczących zakończenia obsługi. Ostrzeżenia te mogą być pomijane, ale migracja do nowego [Security-Enhanced wersje CRT funkcji](../c-runtime-library/security-enhanced-versions-of-crt-functions.md) jest preferowane, ponieważ zapewniają większe bezpieczeństwo i może spowodować ujawnienie problemów z zabezpieczeniami w kodzie.
+Poprzednie projektów utworzonych za pomocą programu Visual Studio 2003 również najpierw powinna być skompilowana bez **/CLR** zgodnie z programu Visual Studio teraz wzrosło zgodność ANSI/ISO i niektórych ważnych zmian. Jest zmiany mogą wymagać uwagi najbardziej [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md). Kod, który używa CRT jest bardzo prawdopodobne wygenerować ostrzeżeń dotyczących zakończenia obsługi. Ostrzeżenia te mogą być pomijane, ale migracja do nowego [Security-Enhanced wersje CRT funkcji](../c-runtime-library/security-enhanced-versions-of-crt-functions.md) jest preferowane, ponieważ zapewniają większe bezpieczeństwo i może spowodować ujawnienie problemów z zabezpieczeniami w kodzie.
 
 ### <a name="upgrading-from-managed-extensions-for-c"></a>Uaktualnianie z zarządzanych rozszerzeń dla C++
 
@@ -98,7 +98,7 @@ Ten krok ma różne znaczenie dla projektów, które używają plików reguł pr
 **/ CLR** można wybrać w środowisku programistycznym, postępując zgodnie z instrukcjami w [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md). Jak wspomniano wcześniej, w tym kroku zostanie automatycznie wyłączyć sprzeczne ustawienia projektu.
 
 > [!NOTE]
->  Podczas uaktualniania zarządzanej biblioteki lub projekt usługi sieci web z Visual C++ 2003 **/Zl** kompilatora opcja zostanie dodany do **wiersza polecenia** stronę właściwości. Spowoduje to LNK2001. Usuń **/Zl** z **wiersza polecenia** strony właściwości, aby rozwiązać. Zobacz [/Zl (Pomiń domyślną nazwę biblioteki)](../build/reference/zl-omit-default-library-name.md) i [Ustaw kompilatora i właściwości kompilacji](../build/working-with-project-properties.md) Aby uzyskać więcej informacji. Lub Dodaj biblioteki msvcrt.lib i msvcmrt.lib do konsolidatora **dodatkowe zależności** właściwości.
+>  Podczas uaktualniania zarządzanej biblioteki lub projekt usługi sieci web programu Visual Studio 2003, **/Zl** kompilatora opcja zostanie dodany do **wiersza polecenia** stronę właściwości. Spowoduje to LNK2001. Usuń **/Zl** z **wiersza polecenia** strony właściwości, aby rozwiązać. Zobacz [/Zl (Pomiń domyślną nazwę biblioteki)](../build/reference/zl-omit-default-library-name.md) i [Ustaw kompilatora i właściwości kompilacji](../build/working-with-project-properties.md) Aby uzyskać więcej informacji. Lub Dodaj biblioteki msvcrt.lib i msvcmrt.lib do konsolidatora **dodatkowe zależności** właściwości.
 
 W przypadku projektów utworzonych za pomocą plików reguł programu make opcje niezgodne kompilatora musi zostać wyłączona ręcznie po **/CLR** zostanie dodany. Zobacz /[/CLR ograniczenia](../build/reference/clr-restrictions.md) informacji o opcjach kompilatora, które nie są zgodne z **/CLR**.
 

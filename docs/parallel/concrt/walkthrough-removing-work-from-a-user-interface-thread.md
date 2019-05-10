@@ -1,16 +1,16 @@
 ---
 title: 'Przewodnik: Usuwanie pracy z wątku interfejsu użytkownika'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407813"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857002"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Przewodnik: Usuwanie pracy z wątku interfejsu użytkownika
 
@@ -54,9 +54,9 @@ W tej sekcji opisano sposób tworzenia podstawowych aplikacji MFC.
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Aby utworzyć aplikację Visual C++ MFC
 
-1. Na **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.
+1. Użyj **Kreator aplikacji MFC** Aby utworzyć aplikację MFC z ustawieniami domyślnymi. Zobacz [instruktażu: Używanie nowych formantów powłoki MFC](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) w jaki sposób otworzyć kreatora dla używanej wersji programu Visual Studio.
 
-1. W **nowy projekt** dialogowym **zainstalowane szablony** okienku wybierz **Visual C++**, a następnie w **szablony** wybierz opcję **Aplikacji MFC**. Wpisz nazwę projektu, na przykład `Mandelbrot`, a następnie kliknij przycisk **OK** do wyświetlenia **Kreator aplikacji MFC**.
+1. Wpisz nazwę projektu, na przykład `Mandelbrot`, a następnie kliknij przycisk **OK** do wyświetlenia **Kreator aplikacji MFC**.
 
 1. W **typ aplikacji** okienku wybierz **pojedynczego dokumentu**. Upewnij się, że **Obsługa architektury dokument/widok** pole wyboru jest wyczyszczone.
 

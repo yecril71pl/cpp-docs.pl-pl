@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323284"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220428"
 ---
 # <a name="cwinthread-class"></a>Cwinthread — klasa
 
@@ -311,7 +311,7 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete` Element członkowski danych jest publiczną zmienną typu wartość logiczna.
 
-Wartość `m_bAutoDelete` nie wpływa na sposób podstawowy element obsługujący wątek jest zamknięty. Dojście wątku jest zawsze zamknięte, kiedy `CWinThread` niszczony jest obiekt.
+Wartość `m_bAutoDelete` nie ma wpływu na sposób podstawowy element obsługujący wątek jest zamknięty, ale ma ona wpływu na czas zamknięcia uchwytu. Dojście wątku jest zawsze zamknięte, kiedy `CWinThread` niszczony jest obiekt.
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -323,7 +323,9 @@ HANDLE m_hThread;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_hThread` Element członkowski danych jest publiczną zmienną typu UCHWYTU. Jest on prawidłowy tylko wtedy, jeśli podstawowy wątek obecnie istnieje.
+`m_hThread` Element członkowski danych jest publiczną zmienną typu UCHWYTU. Jest on prawidłowy tylko wtedy, jeśli znajduje się obiekt wątku jądra i dojście nie zostało jeszcze zamknięte.
+
+Destruktor CWinThread wzywa funkcja CloseHandle `m_hThread`. Jeśli [m_bAutoDelete](#m_bautodelete) jest wartość PRAWDA, jeśli wątek się kończy, CWinThread obiekt jest niszczony, która unieważnia wszystkie wskaźniki do obiektów CWinThread i jego zmienne Członkowskie. Może być konieczne `m_hThread` elementu członkowskiego, aby sprawdzić wartość wyjścia wątku lub oczekiwania na sygnał. Aby zachować obiektu CWinThread i jego `m_hThread` zestaw elementów członkowskich, podczas wykonywania wątku i kończy działanie, `m_bAutoDelete` na wartość FALSE, aby pozwolić na wykonanie wątku kontynuować. W przeciwnym razie wątek może zakończyć zniszczenie obiektu CWinThread i zamknąć dojścia przed podjęciem próby jej używać. Jeśli używasz tej techniki, ponosisz odpowiedzialność za usunięcie obiektu CWinThread.
 
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID
 
@@ -335,7 +337,8 @@ DWORD m_nThreadID;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_nThreadID` Element członkowski danych jest publiczną zmienną typu DWORD. Jest on prawidłowy tylko wtedy, jeśli podstawowy wątek obecnie istnieje.
+`m_nThreadID` Element członkowski danych jest publiczną zmienną typu DWORD. Jest on prawidłowy tylko wtedy, jeśli znajduje się obiekt wątku jądra.
+Ponadto zobacz uwagi [m_hThread](#m_hthread) okresu istnienia.
 
 ### <a name="example"></a>Przykład
 

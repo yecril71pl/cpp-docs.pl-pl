@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396148"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220340"
 ---
 # <a name="iterators"></a>Iteratory
 
@@ -86,7 +86,7 @@ Należy zapoznać się z ze zobowiązania i ograniczenia wystąpienia każdej ka
 > [!NOTE]
 > Możesz uniknąć używania iteratorów jawnie przy użyciu zakresu-pętli for. Aby uzyskać więcej informacji, zobacz [Range-based for, instrukcja](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ oferuje teraz Iteratory sprawdzane i Iteratory debugowania, aby upewnić się, że nie zastępuj granice kontenera. Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md) i [Debug Iterator Support](../standard-library/debug-iterator-support.md).
+Microsoft C++ oferuje teraz sprawdzane Iteratory i Iteratory debugowania, aby upewnić się, że nie zastępuj granice kontenera. Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md) i [Debug Iterator Support](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Zobacz także
 

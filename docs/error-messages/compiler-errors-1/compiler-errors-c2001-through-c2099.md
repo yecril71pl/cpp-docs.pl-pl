@@ -37,11 +37,11 @@ helpviewer_keywords:
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
 ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360492"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857135"
 ---
 # <a name="compiler-errors-c2000-through-c2099"></a>Błędy kompilatora — od C2000 do C2099
 
@@ -51,7 +51,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |Błąd kompilatora — od C2000|Nieznany błąd, wybierz polecenie Pomoc techniczna w Visual C++ menu Pomoc lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji|
 |[Błąd kompilatora C2001](compiler-error-c2001.md)|Nowy wiersz w stałej|

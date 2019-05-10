@@ -1,6 +1,6 @@
 ---
 title: Importowanie i eksportowanie
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188850"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220642"
 ---
 # <a name="importing-and-exporting"></a>Importowanie i eksportowanie
 
@@ -31,8 +31,6 @@ Możesz użyć .def — pliki do [importowanie do aplikacji](importing-using-def
 
 ## <a name="using-declspec"></a>Za pomocą __declspec
 
-Wizualne C++ używa **__declspec(dllimport)** i **__declspec(dllexport)** zastąpić **__export** wcześniej używany w 16-bitowych wersjach Visual C++.
-
 Nie trzeba używać **__declspec(dllimport)** swój kod, aby skompilować poprawnie, ale to umożliwia kompilatorowi generowanie lepszego kodu. Kompilator jest w stanie generowanie lepszego kodu, ponieważ można określić, czy funkcja istnieje w bibliotece DLL lub nie, co pozwala kompilator generuje kod, z pominięciem poziom pośrednictwa, które zwykle będą obecne w wywołaniu funkcji, która przekroczyła granicę biblioteki DLL. Jednakże, należy użyć **__declspec(dllimport)** do zaimportowania zmiennych używanych w bibliotece DLL.
 
 Za pomocą sekcji EXPORTS pliku .def odpowiednie **__declspec(dllexport)** nie jest wymagana. **__declspec(dllexport)** została dodana do umożliwiają łatwe do eksportowania funkcji z pliku .exe lub .dll, bez użycia pliku .def.
@@ -47,4 +45,4 @@ Format przenośnym plikiem wykonywalnym środowiska Win32 jest przeznaczony do z
 
 ## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

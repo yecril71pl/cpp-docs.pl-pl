@@ -1,21 +1,21 @@
 ---
 title: Niestandardowe zachowanie
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compatibility and compliance, nonstandard behavior
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245378"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222025"
 ---
 # <a name="nonstandard-behavior"></a>Niestandardowe zachowanie
 
-Poniższa sekcja wymienia niektóre z miejsc, w których implementacja C++ w języku Visual C++ jest niezgodna ze standardem C++. Numery sekcji podane poniżej odnoszą się do numerów sekcji w standardzie C++11 (ISO/IEC 14882:2011(E)).
+Poniższa sekcja wymienia niektóre z miejsc, w którym implementacja firmy Microsoft C++ nie jest zgodny z C++ standardowych. Numery sekcji podane poniżej odnoszą się do numerów sekcji w standardzie C++11 (ISO/IEC 14882:2011(E)).
 
 Wykaz limitów kompilatora, które różnią się od tych zdefiniowanych w standardzie C++ znajduje się [limity kompilatora](../cpp/compiler-limits.md).
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Powiązanie nazw niezależnych w szablonach
 
-Kompilator Visual C++ nie obsługuje obecnie wiązania nazw niezależnych podczas początkowego analizowania składni szablonu. Jest to niezgodne z sekcją 14.6.3 specyfikacji ISO C++. Może to powodować wystąpienie przeciążeń zadeklarowanych po szablonie (ale przed wystąpieniem szablonu).
+Microsoft C++ kompilator nie obsługuje obecnie wiązania nazw niezależnych podczas początkowego analizowania składni szablonu. Jest to niezgodne z sekcją 14.6.3 specyfikacji ISO C++. Może to powodować wystąpienie przeciążeń zadeklarowanych po szablonie (ale przed wystąpieniem szablonu).
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Aby uzyskać więcej informacji dotyczących specyfikacji wyjątków, zobacz [sp
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-C++ Standard stwierdza, że [char_traits::eof](../standard-library/char-traits-struct.md#eof) może nie odpowiadać ważnej `char_type` wartości. Element wizualny C++ kompilator wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Jest to niezgodne z wymogami określonymi w tabeli 62 w sekcji 12.1.1 specyfikacji ISO C++. Prezentuje to poniższy przykład.
+C++ Standard stwierdza, że [char_traits::eof](../standard-library/char-traits-struct.md#eof) może nie odpowiadać ważnej `char_type` wartości. Microsoft C++ kompilator wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Jest to niezgodne z wymogami określonymi w tabeli 62 w sekcji 12.1.1 specyfikacji ISO C++. Prezentuje to poniższy przykład.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Lokalizacja przechowywania obiektów
 
-Standard C++ (sekcja 1.8.6) wymaga, aby kompletne obiekty C++ miały unikatową lokalizację przechowywania. Jednak w Visual C++ istnieją przypadki, w których typy bez elementów członkowskich danych będą współdzieliły lokalizację przechowywania z innymi typami przez okres istnienia obiektu.
+Standard C++ (sekcja 1.8.6) wymaga, aby kompletne obiekty C++ miały unikatową lokalizację przechowywania. Jednak z firmą Microsoft C++, istnieją przypadki, w których typy bez elementów członkowskich danych będą współdzieliły lokalizację przechowywania z innymi typami przez okres istnienia obiektu.

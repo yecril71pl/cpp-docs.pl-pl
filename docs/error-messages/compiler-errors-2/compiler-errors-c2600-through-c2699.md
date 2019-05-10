@@ -53,11 +53,11 @@ helpviewer_keywords:
 - C2697
 ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
 ms.openlocfilehash: 9ac5f5724490574aecf0e5b542f6fdd42b0ae5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406512"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857058"
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>Błędy kompilatora — od C2600 do C2699
 
@@ -67,7 +67,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |[Błąd kompilatora C2600](compiler-error-c2600.md)|"*funkcja*": nie można zdefiniować generowanych przez kompilator specjalną funkcję członkowską (musi być zadeklarowana w klasie najpierw)|
 |[Błąd kompilatora C2601](compiler-error-c2601.md)|"*funkcja*": definicje funkcji lokalnych są niedozwolone|

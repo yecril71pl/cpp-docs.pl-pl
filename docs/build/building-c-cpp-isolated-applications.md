@@ -1,21 +1,21 @@
 ---
 title: Kompilowanie izolowanych kompilacji C/C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 8a2fe4fa-0489-433e-bfc6-495844d8d73a
-ms.openlocfilehash: e02fec4115d328dd8230d68ddb65b380ec743dc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42192ad9388a8e69b70947c20c6fa7ee428a2bb9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274710"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220958"
 ---
 # <a name="building-cc-isolated-applications"></a>Kompilowanie izolowanych kompilacji C/C++
 
 Aplikacja izolowana zależy tylko od zestawów side-by-side i tworzy powiązanie z jego zależności za pomocą manifestu. Nie jest wymagane dla badanej aplikacji to całkowicie odizolowane, aby można było poprawnie uruchomić na Windows; jednak zainwestować w tworzenie aplikacji w pełni izolowane, użytkownik może zaoszczędzić czas Jeśli potrzebujesz do obsługi aplikacji w przyszłości. Aby uzyskać więcej informacji o zaletach tworzenie aplikacji w pełni izolowane, zobacz [aplikacje izolowane](/windows/desktop/SbsCs/isolated-applications).
 
-W przypadku tworzenia natywnych aplikacji C/C++ za pomocą języka Visual C++, system projektu domyślnie programu Visual Studio generuje plik manifestu, opisująca zależności aplikacji na bibliotek języka Visual C++. Jeśli są one tylko zależności Twoja aplikacja ma, a następnie staje się izolowanych aplikacji tak szybko, jak zostanie odtworzony z programem Visual Studio. Jeśli Twoja aplikacja używa innych bibliotek w czasie wykonywania, a następnie może być konieczne odbudowanie tych bibliotek jako zestawów side-by-side wykonując kroki opisane w [zestawy języka C/C++ — równoczesne tworzenie](building-c-cpp-side-by-side-assemblies.md).
+Podczas kompilowania z natywnego języka C /C++ aplikacji przy użyciu programu Visual Studio domyślnie system projektu programu Visual Studio generuje plik manifestu, który opisuje zależności aplikacji w bibliotekach programu Visual Studio. Jeśli są one tylko zależności Twoja aplikacja ma, a następnie staje się izolowanych aplikacji tak szybko, jak zostanie odtworzony z programem Visual Studio. Jeśli Twoja aplikacja używa innych bibliotek w czasie wykonywania, a następnie może być konieczne odbudowanie tych bibliotek jako zestawów side-by-side wykonując kroki opisane w [zestawy języka C/C++ — równoczesne tworzenie](building-c-cpp-side-by-side-assemblies.md).
 
 ## <a name="see-also"></a>Zobacz także
 

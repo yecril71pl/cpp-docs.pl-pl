@@ -1,6 +1,6 @@
 ---
 title: Makra opcji kompilatora
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278426"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221113"
 ---
 # <a name="compiler-options-macros"></a>Makra opcji kompilatora
 
@@ -32,10 +32,10 @@ Te makra kontrolowania kompilatora określonych funkcji.
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Symbol, który umożliwia błędy w projektach konwertowany z poprzednich wersji ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Zdefiniuj użycie co najmniej jeden z obiektów wątkowości typu apartment.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Sprawia, że niektóre `CString` konstruktory jawne uniemożliwić wszystkie konwersje niezamierzone.|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Zdefiniuj to makro, aby można było używać składni języka C++ standard zgodne, który generuje błąd kompilatora C4867, gdy używana jest inny niż standardowy składnia w celu zainicjowania wskaźnika do funkcji członkowskiej.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Zdefiniuj to makro, aby można było używać C++ standardowej składni zgodne, który generuje błąd kompilatora C4867, gdy niestandardowa składnia jest używana w celu zainicjowania wskaźnika do funkcji składowej.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Zdefiniuj użycie co najmniej jeden z obiektów bezpłatnej lub neutralnym wątków.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Symbol, który wskazuje, projekt będzie miał obiektów, które są oznaczone jako zarówno w warstwie bezpłatna lub neutralna. Makro [_ATL_FREE_THREADED](#_atl_free_threaded) powinny być używane zamiast tego.|
-|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Symbol, co uniemożliwia używanie domyślnej przestrzeni nazw jako ATL.|
+|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Symbol, który uniemożliwia użycie domyślnej przestrzeni nazw jako ATL.|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Symbol, który uniemożliwia związane z COM kod kompilowany z projektem.|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Symbol, który uniemożliwia inicjowanego w Konstruktor i destruktor klasy wskaźnika vtable.|
 |[ATL_NOINLINE](#atl_noinline)|Symbol, który wskazuje funkcji nie może być śródwierszowa.|
@@ -63,7 +63,7 @@ Przed Visual C++ .NET 2002 ATL wyłączone wiele ostrzeżeń i pozostawić je wy
 
 - C4291 "deklaracją": nie pasującego operatora delete odnaleziony; pamięć nie zostanie zwolniona, jeśli Inicjalizacja generuje wyjątek
 
-- C4268 'Identyfikator': "const" statyczne/globalne dane zainicjowano przy użyciu wygenerowanego przez kompilator domyślnego konstruktora, który wypełnił obiekt zerami
+- C4268 'Identyfikator': "const" statyczne/globalne dane zainicjowano przy użyciu generowanych przez kompilator domyślnego konstruktora, który wypełnił obiekt zerami
 
 - C4702 nieosiągalnego kodu
 
@@ -113,7 +113,7 @@ Zdefiniuj to makro, aby wymusić użycie składni CLS standard ANSI C++ dla wska
 
 ### <a name="remarks"></a>Uwagi
 
-Aby dopasować udoskonalone standardowe zgodności C++ kompilator języka Visual C++ zostały zmienione biblioteki ATL i MFC. Zgodnie ze standardem ANSI w języku C++, składnia wskaźnika do funkcji składowej klasy powinna mieć `&CMyClass::MyFunc`.
+Biblioteki ATL i MFC zostały zmienione, aby dopasować Microsoft C++ kompilatora udoskonalone standardowe C++ zgodności. Zgodnie ze standardem ANSI w języku C++, składnia wskaźnika do funkcji składowej klasy powinna mieć `&CMyClass::MyFunc`.
 
 Gdy [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) nie zdefiniowano (przypadek domyślny) ATL/MFC wyłącza błąd C4867 w społeczności maps — makro (mapy wiadomości przede wszystkim) tak, aby kod, który został utworzony we wcześniejszych wersjach mogą w dalszym ciągu kompilacji, tak jak poprzednio. Jeśli zdefiniujesz **_ATL_ENABLE_PTM_WARNING**, kod powinien być C++ standard zgodne.
 
@@ -153,7 +153,7 @@ Jeśli ten symbol jest zdefiniowany, ATL będzie pobierać w kodzie, który będ
 
 ##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE
 
-Symbol, co uniemożliwia używanie domyślnej przestrzeni nazw jako ATL.
+Symbol, który uniemożliwia użycie domyślnej przestrzeni nazw jako ATL.
 
 ```
 _ATL_NO_AUTOMATIC_NAMESPACE

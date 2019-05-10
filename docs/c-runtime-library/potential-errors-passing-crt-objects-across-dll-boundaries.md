@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fbb128698b6422779d09a15fe3c1d25e8de5b5
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342526"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446658"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potencjalne przekazywanie błędów obiektów CRT w poprzek granic DLL
 
@@ -23,7 +23,7 @@ HEAP[]: Nieprawidłowy adres określony do RtlValidateHeap(#,#)
 
 ## <a name="causes"></a>Powoduje, że
 
-Każda kopia biblioteki CRT ma odrębne i niezależne Państwo przechowywane w pamięci lokalnej wątku przez Twoją aplikację lub bibliotekę DLL. W efekcie CRT obiekty, takie jak dojścia do plików, zmienne środowiskowe i ustawienia regionalne są prawidłowe dla kopii CRT w aplikacji lub biblioteki DLL, gdy te obiekty są przydzielone lub ustaw tylko. Korzystając z biblioteki DLL, a jego klientami aplikacji różnych kopii biblioteki CRT, nie można tych obiektów CRT na krzyż granic DLL i powinni zostać pobrana prawidłowo po drugiej stronie. Jest to szczególnie istotne, CRT wersji przed Universal CRT w programie Visual Studio 2015 i nowszych wersjach. Było specyficzny dla wersji biblioteki CRT dla każdej wersji programu Visual Studio skompilowane przy użyciu Visual C++ 2013 lub starszej. Szczegóły wewnętrznej implementacji CRT, na przykład jego struktur danych i konwencje nazewnictwa, różniły się w każdej wersji. Dynamiczne łączenie kodzie skompilowanym dla jednej wersji CRT na inną wersję biblioteki DLL CRT nigdy nie zostały obsługiwane, chociaż czasami działałyby, bardziej przez szczęścia niż zgodnie z projektem.
+Każda kopia biblioteki CRT ma odrębne i niezależne Państwo przechowywane w pamięci lokalnej wątku przez Twoją aplikację lub bibliotekę DLL. W efekcie CRT obiekty, takie jak dojścia do plików, zmienne środowiskowe i ustawienia regionalne są prawidłowe dla kopii CRT w aplikacji lub biblioteki DLL, gdy te obiekty są przydzielone lub ustaw tylko. Korzystając z biblioteki DLL, a jego klientami aplikacji różnych kopii biblioteki CRT, nie można tych obiektów CRT na krzyż granic DLL i powinni zostać pobrana prawidłowo po drugiej stronie. Jest to szczególnie istotne, CRT wersji przed Universal CRT w programie Visual Studio 2015 i nowszych wersjach. Było specyficzny dla wersji biblioteki CRT dla każdej wersji programu Visual Studio skompilowane przy użyciu programu Visual Studio 2013 lub starszej. Szczegóły wewnętrznej implementacji CRT, na przykład jego struktur danych i konwencje nazewnictwa, różniły się w każdej wersji. Dynamiczne łączenie kodzie skompilowanym dla jednej wersji CRT na inną wersję biblioteki DLL CRT nigdy nie zostały obsługiwane, chociaż czasami działałyby, bardziej przez szczęścia niż zgodnie z projektem.
 
 Ponadto ponieważ każda kopia biblioteki CRT ma swój własny Menedżer sterty, przydzielania pamięci w jednej bibliotece CRT i przekazywania wskaźnika granicy DLL ma zostać zwolniony przez inną kopię biblioteki CRT jest potencjalną przyczyną uszkodzenia sterty. Projektując biblioteki DLL, który przekazuje obiektów CRT przez granicę lub przydziela pamięć i musi on zostać uwolniona poza bibliotekę DLL, można ograniczyć klientów aplikacji biblioteki dll, aby użyć tej samej kopii biblioteki CRT jako biblioteki DLL. Biblioteki DLL, a jego klientami używać tej samej kopii biblioteki CRT tylko wtedy, gdy są połączone w czasie ładowania do tej samej wersji biblioteki DLL CRT. Ponieważ wersja DLL biblioteki Universal CRT, używane przez program Visual Studio 2015, a później na system Windows 10 jest teraz składnik Windows wdrożone centralnie ucrtbase.dll, jest taka sama dla aplikacji utworzonych za pomocą programu Visual Studio 2015 i nowszych wersjach. Jednak nawet wtedy, gdy kod CRT jest taka sama, nie przekazujesz przydzielonej pamięci w jednym sterty do składnika, który używa innego sterty.
 

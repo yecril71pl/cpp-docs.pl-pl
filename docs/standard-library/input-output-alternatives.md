@@ -1,19 +1,19 @@
 ---
 title: Input / Output Alternatives
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: bc595b64c991ada8e958e71e13f8cb9d134adb8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fb98714a96dedf725ea17332d7c1627e3390896
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404965"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221391"
 ---
 # <a name="inputoutput-alternatives"></a>Input/Output Alternatives
 
-Visual C++ udostępnia kilka rozwiązań alternatywnych programowanie wejścia/wyjścia:
+Microsoft C++ kompilator udostępnia kilka rozwiązań alternatywnych dla operacji We/Wy programowania:
 
 - C biblioteki wykonawczej bezpośrednie, Niebuforowane operacje We/Wy.
 

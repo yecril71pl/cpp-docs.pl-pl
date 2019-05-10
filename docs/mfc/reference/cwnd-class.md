@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323503"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220356"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -8262,7 +8262,7 @@ Zawiera współrzędne x i y kursora. Te współrzędne są zawsze współrzędn
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedną z testowania trafienia myszy wyliczyć wartości z poniższej listy.
+Jedną z testowania trafienia myszy wyliczonych wartości. Zobacz [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) listy wartości.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -8282,7 +8282,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>Parametry
 
 *nHitTest*<br/>
-Określa [testowania trafienia kodu](#onnchittest). Hit test jest test, który określa lokalizację kursora.
+Określa [testowania trafienia kodu](#onnchittest). Hit test jest test, który określa lokalizację kursora. Zobacz [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) listy wartości.
 
 *Punkt*<br/>
 Określa `CPoint` obiekt, który zawiera x i y ekran współrzędne pozycja kursora. Te współrzędne są zawsze względem lewego górnego rogu ekranu.
@@ -8307,7 +8307,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>Parametry
 
 *nHitTest*<br/>
-Określa [testowania trafienia kodu](#onnchittest). Hit test jest test, który określa lokalizację kursora.
+Określa [testowania trafienia kodu](#onnchittest). Hit test jest test, który określa lokalizację kursora. Zobacz [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) listy wartości.
 
 *Punkt*<br/>
 Określa `CPoint` obiekt, który zawiera x i y ekran współrzędne pozycja kursora. Te współrzędne są zawsze względem lewego górnego rogu ekranu.
@@ -8332,7 +8332,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>Parametry
 
 *nHitTest*<br/>
-Określa [testowania trafienia kodu](#onnchittest). Hit test jest test, który określa lokalizację kursora.
+Określa [testowania trafienia kodu](#onnchittest). Hit test jest test, który określa lokalizację kursora. Zobacz [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) listy wartości.
 
 *Punkt*<br/>
 Określa `CPoint` obiekt, który zawiera x i y ekran współrzędne pozycja kursora. Te współrzędne są zawsze względem lewego górnego rogu ekranu.

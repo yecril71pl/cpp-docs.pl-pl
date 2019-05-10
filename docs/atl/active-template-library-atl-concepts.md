@@ -1,21 +1,21 @@
 ---
 title: Pojęcia biblioteki Active Template Library (ALT)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 7eb7eb1c369f825fbb689cd476d43be538ae8d9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 785b929e935962f6461ffbc3722f573a61cb8749
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223457"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221299"
 ---
 # <a name="active-template-library-atl-concepts"></a>Pojęcia biblioteki Active Template Library (ALT)
 
 Active Template Library (ATL) to zbiór opartych na szablonach klas języka C++, które pozwalają na tworzenie małych, szybkich obiektów Component Object Model (COM). Ma specjalne Obsługa kluczy funkcji COM, w tym implementacje magazynu, dwa interfejsy, standardowe interfejsy modułu wyliczającego COM, punkty połączenia, interfejsy odrywania i formantów ActiveX.
 
-Jeśli to zrobisz, wiele programowania ATL, można dowiedzieć się więcej o atrybutach, nowa funkcja programu Visual C++ .NET, której celem jest uproszczenie programowania COM. Aby uzyskać więcej informacji, zobacz [programowania opartego na atrybutach](../windows/attributed-programming-concepts.md).
+Jeśli zrobisz mnóstwo ATL programowania, można dowiedzieć się więcej na temat atrybutów COM i .NET, który upraszcza programowanie COM. Aby uzyskać więcej informacji, zobacz [programowania opartego na atrybutach](../windows/attributed-programming-concepts.md). (Atrybuty COM i .NET, to nie należy mylić z \[ \[atrybut]] są wyposażone w C++ standardowe.)
 
 ## <a name="in-this-section"></a>W tej sekcji
 

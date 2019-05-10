@@ -1,22 +1,22 @@
 ---
 title: MSVC dodatkowe narzędzia do kompilacji
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - c.build
 helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-ms.openlocfilehash: e41a6dcb8de4a8608d065cce5bce2595cd96a84f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59c9cb4527de878b06cbb6a7b3abe921e9a60107
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272848"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220217"
 ---
 # <a name="additional-msvc-build-tools"></a>MSVC dodatkowe narzędzia do kompilacji
 
-Visual C++ zapewnia następujące narzędzia wiersza polecenia do wyświetlania lub modyfikowania dane wyjściowe kompilacji:
+Program Visual Studio oferuje następujące narzędzia wiersza polecenia do wyświetlania lub modyfikowania dane wyjściowe kompilacji:
 
 
 - [LIB. Plik EXE](lib-reference.md) służy do tworzenia i zarządzania nimi Biblioteka plików obiektów Common Object File Format (COFF). Jego można również utworzyć pliki eksportu i Importuj biblioteki do definicji odwołanie, eksportowane.

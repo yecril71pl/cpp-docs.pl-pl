@@ -1,6 +1,6 @@
 ---
 title: char_traits — Struktura
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - iosfwd/std::char_traits
 - iosfwd/std::char_traits::char_type
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 541f468071e315b205abb8f7b9c865f045c510fe
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379444"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220522"
 ---
 # <a name="chartraits-struct"></a>char_traits — Struktura
 
@@ -384,7 +384,7 @@ Znak końca pliku.
 
 Wartość, która reprezentuje końca pliku (np. znacznik EOF lub WEOF).
 
-Ta wartość nie musi odpowiadać do prawidłowego stany standard C++ `char_type` wartość. Element wizualny C++ kompilator wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Prezentuje to poniższy przykład.
+Ta wartość nie musi odpowiadać do prawidłowego stany standard C++ `char_type` wartość. Microsoft C++ kompilator wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Prezentuje to poniższy przykład.
 
 ### <a name="example"></a>Przykład
 
