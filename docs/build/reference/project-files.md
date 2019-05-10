@@ -5,16 +5,16 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319827"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217733"
 ---
 # <a name="project-files"></a>Pliki projektu
 
-Plik projektu Visual C++ jest oparty na składni XML pliku ma rozszerzenie nazwy pliku .vcxproj i zawiera informacje, które jest wymagane do skompilowania projektu Visual C++. Należy pamiętać, że plik projektu importuje różnych plików projektu, które mają rozszerzenie *.props* lub *.targets*. Te pliki zawierają informacje o dodatkowych kompilacji i może się odnosić się do innych *.props* lub *.targets* plików. Makra w ścieżce do pliku (na przykład `$(VCTargetsPath)`) są zależne od instalacji programu Visual Studio. Aby uzyskać więcej informacji na temat tych makr i *.props* i *.targets* plików, zobacz [VC ++ Directories Property Page](vcpp-directories-property-page.md), [Ustaw kompilator języka C++ i kompilacji właściwości w programie Visual Studio](../working-with-project-properties.md) i [typowe makra dla kompilacji polecenia i właściwości](common-macros-for-build-commands-and-properties.md).
+A C++ plik projektu w programie Visual Studio jest oparty na składni XML pliku ma rozszerzenie nazwy pliku .vcxproj i zawiera informacje, które jest wymagane do skompilowania C++ projektu. Należy pamiętać, że plik projektu importuje różnych plików projektu, które mają rozszerzenie *.props* lub *.targets*. Te pliki zawierają informacje o dodatkowych kompilacji i może się odnosić się do innych *.props* lub *.targets* plików. Makra w ścieżce do pliku (na przykład `$(VCTargetsPath)`) są zależne od instalacji programu Visual Studio. Aby uzyskać więcej informacji na temat tych makr i *.props* i *.targets* plików, zobacz [VC ++ Directories Property Page](vcpp-directories-property-page.md), [Ustaw kompilator języka C++ i kompilacji właściwości w programie Visual Studio](../working-with-project-properties.md) i [typowe makra dla kompilacji polecenia i właściwości](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Przykład
 

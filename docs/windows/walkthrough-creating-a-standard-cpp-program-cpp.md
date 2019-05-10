@@ -1,31 +1,26 @@
 ---
 title: 'Przewodnik: Tworzenie standardowego programu C++ (C++)'
 ms.custom: get-started-article
-ms.date: 09/18/2018
-f1_keywords:
-- vcfirstapp
-- vccreatefirst
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ed9c19dad029f8fc9495d38ab6e5c0ba8ad6d529
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387802"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877416"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Przewodnik: Tworzenie standardowego programu C++ (C++)
 
-Aby tworzyć programy standardowego C++, można użyć Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (IDE). Wykonując kroki opisane w tym instruktażu, można utworzyć projektu, Dodaj nowy plik do projektu, zmodyfikuj plik, aby dodać kod języka C++, a następnie skompilować i uruchomić program za pomocą programu Visual Studio.
+Visual Studio umożliwia tworzenie standardowego C++ programów. Wykonując kroki opisane w tym instruktażu, można utworzyć projektu, Dodaj nowy plik do projektu, zmodyfikuj plik, aby dodać kod języka C++, a następnie skompilować i uruchomić program za pomocą programu Visual Studio.
 
 Można wpisać swój własny program C++ lub użyć jednego z przykładowych programów. Przykładowy program w tym instruktażu jest aplikacją konsoli. Ta aplikacja używa `set` kontenera w standardowej biblioteki języka C++.
 
-Visual C++ następuje standardem C++ 2003, z tymi wyjątkami: dwuetapowego odnośnik do nazwy, specyfikacja wyjątku i eksport. Ponadto Visual C++ obsługuje kilka C ++ 0 x funkcji, na przykład wyrażenia lambda, auto, static_assert, odwołania rvalue i szablony extern.
-
 > [!NOTE]
-> Jeśli wymagana jest zgodność ze standardem, użyj `/Za` opcję kompilatora, aby wyłączyć rozszerzenia Microsoft do standardu. Aby uzyskać więcej informacji, zobacz [/za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md).
+> Jeśli zgodność z określoną wersję C++ wymagane jest podanie języka standard (czyli C ++ 14 i C ++ 17), należy użyć `/std:C++14` lub `/std:c++17` — opcja kompilatora. (Visual Studio 2017 i nowsze.)
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -33,21 +28,59 @@ Aby ukończyć ten instruktaż, musisz rozumieć podstawy języka C++.
 
 ### <a name="to-create-a-project-and-add-a-source-file"></a>Aby utworzyć projekt i dodać plik źródłowy
 
+Poniższe kroki różnią się w zależności od tego, która wersja programu Visual Studio, którego używasz. Upewnij się, że selektor wersji, w lewym górnym rogu tej strony została prawidłowo ustawiona.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-project-in-visual-studio-2019"></a>Aby utworzyć C++ projekt w programie Visual Studio 2019 r.
+
+1. W menu głównym wybierz **pliku** > **New** > **projektu** otworzyć **Utwórz nowy projekt** okna dialogowego pole.
+
+1. W górnej części okna dialogowego, ustaw **języka** do **C++** ustaw **platformy** do **Windows**i ustaw **Typprojektu** do **konsoli**. 
+
+1. Wybierz z listy filtrowanej typów projektów, **aplikacja Konsolowa** wybierz **dalej**. Na następnej stronie podaj nazwę dla projektu, a następnie określ lokalizację projektu, w razie potrzeby.
+
+1. Wybierz **Utwórz** przycisk, aby utworzyć projekt.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-c-project-in-visual-studio-2017"></a>Aby utworzyć C++ projektu w programie Visual Studio 2017
+
 1. Utwórz projektu wskazując **New** na **pliku** menu, a następnie klikając polecenie **projektu**.
 
 1. W **Visual C++** okienku typów projektu, kliknij przycisk **pulpitu Windows**, a następnie kliknij przycisk **aplikacji konsoli Windows**.
 
-   > [!NOTE]
-   > W przypadku wersji sprzed 2017, Visual Studio w **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **szablony**  >  **Visual C++**, a następnie wybierz pozycję **Win32**. W środkowym okienku wybierz **Aplikacja konsoli Win32**.
+1. Wpisz nazwę dla projektu. Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak projektu, ale można wpisać inną nazwę. Możesz również wpisać inną lokalizację dla projektu.
 
-   Wpisz nazwę dla projektu.
+1. Kliknij przycisk **OK** do tworzenia projektu.
 
-   Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak projektu, ale można wpisać inną nazwę. Możesz również wpisać inną lokalizację dla projektu.
+::: moniker-end
 
-   Kliknij przycisk **OK** do tworzenia projektu.
+::: moniker range="vs-2015"
 
-   > [!NOTE]
-   > W przypadku wersji sprzed 2017 Visual Studio, należy wykonać **Kreatora aplikacji Win32**. Kliknij przycisk **dalej**, upewnij się, **aplikację Konsolową** jest zaznaczone, a następnie usuń zaznaczenie pola wyboru **prekompilowanych nagłówków** pole. Kliknij przycisk **Zakończ**.
+### <a name="to-create-a-c-project-in-visual-studio-2015"></a>Aby utworzyć C++ projektu w programie Visual Studio 2015
+
+1. Utwórz projektu wskazując **New** na **pliku** menu, a następnie klikając polecenie **projektu**.
+
+1. W **Visual C++** okienku typów projektu, kliknij przycisk **pulpitu Windows**, a następnie kliknij przycisk **aplikacji konsoli Windows**.
+
+1. W **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **szablony** > **Visual C++** , i następnie wybierz pozycję **Win32**. W środkowym okienku wybierz **Aplikacja konsoli Win32**.
+
+1. Wpisz nazwę dla projektu. Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak projektu, ale można wpisać inną nazwę. Możesz również wpisać inną lokalizację dla projektu.
+
+1. Kliknij przycisk **OK** do tworzenia projektu.
+
+1. Wykonaj **Kreatora aplikacji Win32**. 
+
+1. Kliknij przycisk **dalej**, upewnij się, **aplikację Konsolową** jest zaznaczone, a następnie usuń zaznaczenie pola wyboru **prekompilowanych nagłówków** pole. 
+
+1. Kliknij przycisk **Zakończ**.
+
+::: moniker-end
+
+## <a name="add-a-new-source-file"></a>Dodaj nowy plik źródłowy
 
 1. Jeśli **Eksploratora rozwiązań** nie jest wyświetlana na **widoku** menu, kliknij przycisk **Eksploratora rozwiązań**.
 

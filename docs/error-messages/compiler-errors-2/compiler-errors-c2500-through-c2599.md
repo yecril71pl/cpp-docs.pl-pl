@@ -53,11 +53,11 @@ helpviewer_keywords:
 - C2596
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
 ms.openlocfilehash: 87728c2d7055715b7e7d986d5ab8792ceba5c450
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386593"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857081"
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>Błędy kompilatora — od C2500 do C2599
 
@@ -67,7 +67,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |[Błąd kompilatora od C2500](compiler-error-C2500.md)|"*identifier1*": "*identifier2*" jest już bezpośrednią klasą bazową|
 |Błąd kompilatora C2501|"*identyfikator*": "__declspec (*specyfikator*)" może być stosowane tylko do struktur, Unii, klas lub składowych pól bitowych unsigned|

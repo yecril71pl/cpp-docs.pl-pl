@@ -27,11 +27,11 @@ helpviewer_keywords:
 - C2497
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
 ms.openlocfilehash: 569780a0716d26406c1703fa91fe5216d92ce653
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404354"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857625"
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Błędy kompilatora — od C2400 do C2499
 
@@ -41,7 +41,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |[Błąd kompilatora C2400](compiler-error-c2400.md)|Błąd składni wbudowanego asemblera w "*kontekstu*"; znaleziono"*tokenu*"|
 |[Błąd kompilatora C2401](compiler-error-c2401.md)|"*identyfikator*": rejestr musi być podstawowy w "*kontekstu*"|

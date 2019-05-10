@@ -53,11 +53,11 @@ helpviewer_keywords:
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
 ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344845"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857394"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Błędy krytyczne kompilatora — od C999 do C1999
 
@@ -67,7 +67,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |[Błąd krytyczny C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|Nieznany komunikat, wybierz polecenie Pomoc techniczna w Visual C++ menu Pomoc lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji|
 |[Błąd krytyczny C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Wystąpił błąd wewnętrzny w kompilatorze.<br /> (plik kompilatora '*pliku*", wiersz *numer*)<br /> Aby obejść ten problem, spróbuj uprościć lub zmienić program w pobliżu miejsc wymienionych powyżej. Wybierz polecenie Pomoc techniczna w Visual C++ menu Pomoc lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji|

@@ -53,11 +53,11 @@ helpviewer_keywords:
 - C2294
 ms.assetid: 9b36d11b-9510-4390-96f1-0c9235124d14
 ms.openlocfilehash: 5af97ab46a97d3019abcc937cc0a74c5f865a9ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360518"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857103"
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>Błędy kompilatora — od C2200 do C2299
 
@@ -67,7 +67,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |[Błąd kompilatora C2200](compiler-error-c2200.md)|"*funkcja*": funkcja została już zdefiniowana|
 |[Compiler error C2201](compiler-error-c2201.md)|"*identyfikator*": musi mieć zewnętrzne połączenie w celu eksportu/importu|

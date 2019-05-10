@@ -1,5 +1,5 @@
 ---
-title: Błędy kompilatora od C3200 do C3299
+title: Błędy kompilatora — od C3200 do C3299
 ms.date: 04/21/2019
 f1_keywords:
 - C3220
@@ -35,13 +35,13 @@ helpviewer_keywords:
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
 ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281498"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856959"
 ---
-# <a name="compiler-errors-c3200-through-c3299"></a>Błędy kompilatora od C3200 do C3299
+# <a name="compiler-errors-c3200-through-c3299"></a>Błędy kompilatora — od C3200 do C3299
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez kompilator.
 
@@ -49,7 +49,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |[Błąd kompilatora C3200](compiler-error-c3200.md)|"*typu*": nieprawidłowy argument szablonu dla parametru szablonu "*parametr*", oczekiwano szablonu klasy|
 |[Compiler error C3201](compiler-error-c3201.md)|Lista parametrów szablonu dla szablonu klasy "*szablonu*"nie odpowiada liście parametrów szablonu dla parametru szablonu"*parametr*"|

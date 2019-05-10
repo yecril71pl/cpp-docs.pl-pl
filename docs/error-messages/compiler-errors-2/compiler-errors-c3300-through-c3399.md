@@ -1,5 +1,5 @@
 ---
-title: Błędy kompilatora od C3300 do C3399
+title: Błędy kompilatora — od C3300 do C3399
 ms.date: 04/21/2019
 f1_keywords:
 - C3300
@@ -101,13 +101,13 @@ helpviewer_keywords:
 - C3378
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
 ms.openlocfilehash: ca55e19534f722a7231a1d30c63e2dbb77d25ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281459"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857723"
 ---
-# <a name="compiler-errors-c3300-through-c3399"></a>Błędy kompilatora od C3300 do C3399
+# <a name="compiler-errors-c3300-through-c3399"></a>Błędy kompilatora — od C3300 do C3399
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez kompilator.
 
@@ -115,7 +115,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |Błąd kompilatora od C3300|"*symbol*": niewłaściwy format języka IDL "*wartość*"|
 |Błąd kompilatora C3301|"*coclass*": klasa coclass nie może być "*symbol*" interfejsu|

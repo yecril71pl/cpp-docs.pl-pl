@@ -1,5 +1,5 @@
 ---
-title: Błędy kompilatora od C2800 do C2899
+title: Błędy kompilatora — od C2800 do C2899
 ms.date: 04/21/2019
 f1_keywords:
 - C2816
@@ -43,13 +43,13 @@ helpviewer_keywords:
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
 ms.openlocfilehash: a0367d1d465d4460202f4d6d29468e59f6a74657
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281771"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856730"
 ---
-# <a name="compiler-errors-c2800-through-c2899"></a>Błędy kompilatora od C2800 do C2899
+# <a name="compiler-errors-c2800-through-c2899"></a>Błędy kompilatora — od C2800 do C2899
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez kompilator.
 
@@ -57,7 +57,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |[Błąd kompilatora C2800](compiler-error-c2800.md)|"operator *operator*" nie może zostać przeciążony|
 |[Błąd kompilatora C2801](compiler-error-c2801.md)|"*elementu członkowskiego*" musi być niestatycznego elementu członkowskiego|

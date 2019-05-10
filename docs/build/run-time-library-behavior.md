@@ -1,6 +1,6 @@
 ---
 title: Biblioteki dll i zachowanie biblioteki wykonawczej języka Visual C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3f3197b6b7b01e7f69767b72286d6d21470cb0e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314796"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217752"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Biblioteki dll i zachowanie biblioteki wykonawczej języka Visual C++
 
-Gdy tworzysz biblioteki dołączane dynamicznie (DLL) przy użyciu języka Visual C++ domyślnie konsolidator zawiera Biblioteka środowiska uruchomieniowego Visual C++ (VCRuntime). VCRuntime zawiera kod wymagany do rozpoczęcia i zakończenia wykonywalne języka C/C++. Jeśli połączone do biblioteki DLL, kod VCRuntime zawiera wewnętrzny funkcję punktu wejścia biblioteki DLL o nazwie `_DllMainCRTStartup` obsługująca komunikaty systemu operacyjnego Windows, plik dll, który umożliwia dołączanie do lub odłączyć od procesu i wątku. `_DllMainCRTStartup` Funkcja wykonuje podstawowe zadania, takie jak konfigurowanie C biblioteki wykonawczej (CRT) inicjowanie i kończenie działania zabezpieczeń bufora stosu i wywołuje konstruktory i destruktory dla obiektów globalnych i statycznych. `_DllMainCRTStartup` Ponadto wywołuje funkcje punktów zaczepienia dla innych bibliotek, takich jak WinRT, MFC i ATL, aby wykonać swoje własne inicjowanie i kończenie działania. Bez ten proces inicjowania, CRT i inne biblioteki, a także zmiennych statycznych pozostanie w stanie niezainicjowanym. Ten sam inicjowania wewnętrznego VCRuntime i zakończenie procedury są nazywane czy biblioteka DLL będzie używać CRT połączone statycznie lub dynamicznie połączone DLL CRT.
+Gdy tworzysz biblioteki dołączane dynamicznie (DLL) przy użyciu programu Visual Studio domyślnie konsolidator obejmuje wizualizacji C++ biblioteki wykonawczej (VCRuntime). VCRuntime zawiera kod wymagany do rozpoczęcia i zakończenia wykonywalne języka C/C++. Jeśli połączone do biblioteki DLL, kod VCRuntime zawiera wewnętrzny funkcję punktu wejścia biblioteki DLL o nazwie `_DllMainCRTStartup` obsługująca komunikaty systemu operacyjnego Windows, plik dll, który umożliwia dołączanie do lub odłączyć od procesu i wątku. `_DllMainCRTStartup` Funkcja wykonuje podstawowe zadania, takie jak konfigurowanie C biblioteki wykonawczej (CRT) inicjowanie i kończenie działania zabezpieczeń bufora stosu i wywołuje konstruktory i destruktory dla obiektów globalnych i statycznych. `_DllMainCRTStartup` Ponadto wywołuje funkcje punktów zaczepienia dla innych bibliotek, takich jak WinRT, MFC i ATL, aby wykonać swoje własne inicjowanie i kończenie działania. Bez ten proces inicjowania, CRT i inne biblioteki, a także zmiennych statycznych pozostanie w stanie niezainicjowanym. Ten sam inicjowania wewnętrznego VCRuntime i zakończenie procedury są nazywane czy biblioteka DLL będzie używać CRT połączone statycznie lub dynamicznie połączone DLL CRT.
 
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>Domyślne _DllMainCRTStartup punkt wejścia biblioteki DLL
 
@@ -32,7 +32,7 @@ W Windows, wszystkie biblioteki dll mogą zawierać funkcji opcjonalnych punktu 
 
 Biblioteka VCRuntime udostępnia funkcję punktu wejścia o nazwie `_DllMainCRTStartup` na obsługę operacji inicjowanie i kończenie działania domyślne. Na temat procesu dołączania, `_DllMainCRTStartup` funkcja konfiguruje sprawdzenia zabezpieczeń buforu, inicjuje CRT i inne biblioteki, inicjuje informacje typu run-time, inicjuje i wywołuje konstruktory danych statycznych i inną niż lokalna, inicjuje lokalny magazyn wątków , zwiększa Licznik wewnętrzny statyczny dla każdego dołączenia, a następnie wywołuje, dostarczone przez użytkownika lub biblioteki- `DllMain`. W procesie odłączania, funkcja przechodzi przez te kroki w odwrotnej kolejności. Wywołuje `DllMain`zmniejsza wewnętrznego licznika wywołuj destruktory, zakończenie wywołania CRT, funkcje i zarejestrowany `atexit` funkcje i powiadamia innych bibliotek, zakończenia. Gdy licznik załącznika zbliża się do zera, funkcja zwraca `FALSE` do wskazania Windows, czy można zwolnić bibliotekę DLL. `_DllMainCRTStartup` Funkcja jest również nazywany podczas wątku Dołączanie i odłączanie wątku. W takich przypadkach nie żadne dodatkowe inicjowania lub zakończenia na swój własny kod VCRuntime i po prostu wywołuje funkcję `DllMain` do przekazywania wiadomości wzdłuż. Jeśli `DllMain` zwraca `FALSE` z procesu dołączania, sygnalizujących niepowodzenie, `_DllMainCRTStartup` wywołania `DllMain` ponownie i przekazuje `DLL_PROCESS_DETACH` jako *Przyczyna* argumentów, następnie przechodzi przez pozostałą część Zakończenie procesu.
 
-Podczas tworzenia biblioteki dll w programie Visual C++, domyślny punkt wejścia `_DllMainCRTStartup` dostarczonych przez VCRuntime jest automatycznie konsolidowana. Nie należy określić funkcję punktu wejścia dla biblioteki DLL przy użyciu [/Entry (symbol punktu wejścia)](reference/entry-entry-point-symbol.md) — opcja konsolidatora.
+Podczas tworzenia biblioteki dll w programie Visual Studio, domyślny punkt wejścia `_DllMainCRTStartup` dostarczonych przez VCRuntime jest automatycznie konsolidowana. Nie należy określić funkcję punktu wejścia dla biblioteki DLL przy użyciu [/Entry (symbol punktu wejścia)](reference/entry-entry-point-symbol.md) — opcja konsolidatora.
 
 > [!NOTE]
 > Choć jest możliwe określić inną funkcję punktu wejścia dla biblioteki DLL przy użyciu / Entry: — opcja konsolidatora, nie jest zalecane, ponieważ funkcja punktu wejścia będzie już potrzeby duplikowania wszystko, co który `_DllMainCRTStartup` jest w tej samej kolejności. VCRuntime udostępnia funkcje, które pozwalają na zduplikowane jego zachowanie. Na przykład, można wywołać [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) natychmiast na temat procesu dołączania do obsługi [/GS (Sprawdzanie zabezpieczeń bufora)](reference/gs-buffer-security-check.md) buforu opcję sprawdzania. Możesz wywołać `_CRT_INIT` funkcję, przekazując te same parametry jako funkcję punktu wejścia do wykonania pozostałej części funkcji DLL inicjowania lub zakończenia.
@@ -41,7 +41,7 @@ Podczas tworzenia biblioteki dll w programie Visual C++, domyślny punkt wejści
 
 ## <a name="initialize-a-dll"></a>Zainicjuj bibliotekę DLL
 
-Biblioteka DLL może być kod inicjujący, który musi być wykonany kiedy DLL się ładuje. Aby wykonać swoje własne inicjowanie i kończenie działania funkcji DLL `_DllMainCRTStartup` wywołuje funkcję o nazwie `DllMain` który można udostępnić. Twoje `DllMain` musi mieć podpis wymagane dla punktu wejścia biblioteki DLL. Funkcja punktu wejścia domyślne `_DllMainCRTStartup` wywołania `DllMain` z tymi samymi parametrami przekazywane przez Windows. Domyślnie, jeśli nie podasz `DllMain` funkcja dostępna w Visual C++ i łączy je w tak, aby `_DllMainCRTStartup` zawsze ma coś do wywołania. Oznacza to, że jeśli nie musisz zainicjować bibliotekę DLL, nie ma specjalne, należy wykonać podczas kompilowania biblioteki DLL.
+Biblioteka DLL może być kod inicjujący, który musi być wykonany kiedy DLL się ładuje. Aby wykonać swoje własne inicjowanie i kończenie działania funkcji DLL `_DllMainCRTStartup` wywołuje funkcję o nazwie `DllMain` który można udostępnić. Twoje `DllMain` musi mieć podpis wymagane dla punktu wejścia biblioteki DLL. Funkcja punktu wejścia domyślne `_DllMainCRTStartup` wywołania `DllMain` z tymi samymi parametrami przekazywane przez Windows. Domyślnie, jeśli nie podasz `DllMain` funkcja, dostępna w Visual Studio i łączy je w tak, aby `_DllMainCRTStartup` zawsze ma coś do wywołania. Oznacza to, że jeśli nie musisz zainicjować bibliotekę DLL, nie ma specjalne, należy wykonać podczas kompilowania biblioteki DLL.
 
 To jest podpis używany dla `DllMain`:
 
@@ -98,7 +98,7 @@ extern "C" BOOL WINAPI DllMain (
 ```
 
 > [!NOTE]
-> Ze starszą dokumentacją. zestaw Windows SDK mówi, że rzeczywista nazwa funkcję punktu wejścia biblioteki DLL muszą określać na wiersza polecenia z opcją/Entry konsolidatora. Za pomocą języka Visual C++, nie trzeba korzystać z opcji/Entry, jeśli nazwa funkcji punktu wejścia jest `DllMain`. W rzeczywistości użycie opcji/Entry i nazwę punktu wejścia funkcji coś innego niż `DllMain`, CRT nie uzyskać prawidłowo zainicjowana, chyba że funkcję punktu wejścia dzięki tego samego wywołania inicjowania `_DllMainCRTStartup` sprawia, że.
+> Ze starszą dokumentacją. zestaw Windows SDK mówi, że rzeczywista nazwa funkcję punktu wejścia biblioteki DLL muszą określać na wiersza polecenia z opcją/Entry konsolidatora. Za pomocą programu Visual Studio, nie trzeba korzystać z opcji/Entry, jeśli nazwa funkcji punktu wejścia jest `DllMain`. W rzeczywistości użycie opcji/Entry i nazwę punktu wejścia funkcji coś innego niż `DllMain`, CRT nie uzyskać prawidłowo zainicjowana, chyba że funkcję punktu wejścia dzięki tego samego wywołania inicjowania `_DllMainCRTStartup` sprawia, że.
 
 <a name="initializing-regular-dlls"></a>
 
@@ -180,6 +180,6 @@ Funkcja inicjowania próbki, która obsługuje wielowątkowość znajduje się w
 
 ## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)<br/>
+[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)<br/>
 [Punkt wejścia funkcji DllMain](/windows/desktop/Dlls/dllmain)<br/>
 [Biblioteka dołączana dynamicznie najlepszych rozwiązań](/windows/desktop/Dlls/dynamic-link-library-best-practices)

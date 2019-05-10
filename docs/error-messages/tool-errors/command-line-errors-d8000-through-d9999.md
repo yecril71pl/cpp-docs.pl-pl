@@ -1,15 +1,15 @@
 ---
-title: Błędy wiersza polecenia i ostrzeżenia
+title: Błędy i ostrzeżenia wiersza polecenia
 ms.date: 04/17/2019
 ms.assetid: d02ec7df-26a5-4198-ac92-87b29ec9d5c8
 ms.openlocfilehash: d5cd53a23c4f043715fa7e2372fb5c256337da20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214249"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857350"
 ---
-# <a name="command-line-errors-and-warnings"></a>Błędy wiersza polecenia i ostrzeżenia
+# <a name="command-line-errors-and-warnings"></a>Błędy i ostrzeżenia wiersza polecenia
 
 Artykuły w tej sekcji Podaj odwołanie do wiersza polecenia błędy i ostrzeżenia wygenerowane przez narzędzia do kompilacji. Te komunikaty mają następującą formę `Dxxxx`, gdzie *xxxx* jest czterocyfrową liczbą.
 

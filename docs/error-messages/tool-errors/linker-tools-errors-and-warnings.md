@@ -240,13 +240,13 @@ helpviewer_keywords:
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 ms.openlocfilehash: 064f469dc7dd133c6f17f38da1bb9c2eb1907918
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298805"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857481"
 ---
-# <a name="linker-tools-errors-and-warnings-lnkxxxx"></a>Błędy i ostrzeżenia (LNKxxxx) narzędzi konsolidatora
+# <a name="linker-tools-errors-and-warnings-lnkxxxx"></a>Błędy i ostrzeżenia narzędzi konsolidatora (LNKxxxx)
 
 Narzędzi konsolidatora łącze, LIB, DUMPBIN i polecenia EDITBIN udostępniać typowe plik wykonywalny, który generuje te błędy i ostrzeżenia. Narzędzia generowanie ostrzeżenia formularza LNK*xxxx*, gdzie *xxxx* jest czterocyfrową liczbą.
 

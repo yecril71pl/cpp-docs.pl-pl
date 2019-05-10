@@ -1,5 +1,5 @@
 ---
-title: Ostrzeżenia kompilatora C4800 za pośrednictwem C5999
+title: Ostrzeżenia kompilatora — od C4800 do C5999
 ms.date: 04/21/2019
 f1_keywords:
 - C4808
@@ -154,13 +154,13 @@ helpviewer_keywords:
 - C5106
 - C5107
 ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280324"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857443"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora C4800 za pośrednictwem C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora — od C4800 do C5999
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawcze, które są generowane przez kompilator.
 
@@ -168,7 +168,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 
 ## <a name="warning-messages"></a>Komunikaty ostrzegawcze
 
-|Ostrzeżenie|Komunikat|
+|Ostrzeżenie|Message|
 |-------------|------------|
 |[Ostrzeżenie kompilatora (poziom 4) C4800](compiler-warning-level-3-c4800.md)| Niejawna konwersja z "*typu*" na wartość logiczna. Prawdopodobieństwo utraty informacji możliwych |
 |[Ostrzeżenie kompilatora (poziom 1) C4803](compiler-warning-level-1-c4803.md)|"*metoda*": podniesiona metoda ma klasę magazynu inną od zdarzenia, "*zdarzeń*"|

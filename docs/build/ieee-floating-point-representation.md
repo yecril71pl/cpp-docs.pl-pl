@@ -1,6 +1,6 @@
 ---
 title: Odwzorowanie liczby zmiennoprzecinkowej IEEE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188837"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220620"
 ---
 # <a name="ieee-floating-point-representation"></a>Odwzorowanie liczby zmiennoprzecinkowej IEEE
 
-Microsoft Visual C++ jest zgodne z normami liczbowych IEEE. Standard IEEE 754 opisano formaty zmiennoprzecinkowych, sposobem reprezentowania liczb rzeczywistych sprzętu. Istnieją co najmniej pięć wewnętrznego formaty liczb zmiennoprzecinkowych, które są reprezentowanych w sprzęcie docelowe za pomocą kompilatora MSVC, ale kompilator używa tylko dwa z nich. *Pojedynczej precyzji* (4-bajtową) i *podwójnej precyzji* formaty (8-bajtową) są używane w programie Visual C++. Pojedynczej precyzji jest zadeklarowany za pomocą słowa kluczowego **float**. Podwójnej precyzji jest zadeklarowany za pomocą słowa kluczowego **double**. Określa również standardu IEEE *połowie precyzji* (2-bajtowych) i *poczwórnej precyzji* formatów (16-bajtową), a także *podwójnej extended precyzji* (10-bajtową) Format, który niektóre kompilatory języków C i C++ zaimplementować jako **typu long double** typu danych. W kompilatora MSVC **typu long double** — typ danych jest traktowany jako typ samodzielny, ale typ magazynu mapuje **double**. Jest jednak wewnętrzne i język asemblera obsługę obliczeń przy użyciu innych formatach, w tym formacie (10-bajtową) podwójnej extended precyzji, jeśli są obsługiwane przez sprzęt.
+Microsoft C++ (MSVC) jest zgodna ze standardami liczbowych IEEE. Standard IEEE 754 opisano formaty zmiennoprzecinkowych, sposobem reprezentowania liczb rzeczywistych sprzętu. Istnieją co najmniej pięć wewnętrznego formaty liczb zmiennoprzecinkowych, które są reprezentowanych w sprzęcie docelowe za pomocą kompilatora MSVC, ale kompilator używa tylko dwa z nich. *Pojedynczej precyzji* (4-bajtową) i *podwójnej precyzji* formatów (8-bajtową) są używane w MSVC. Pojedynczej precyzji jest zadeklarowany za pomocą słowa kluczowego **float**. Podwójnej precyzji jest zadeklarowany za pomocą słowa kluczowego **double**. Określa również standardu IEEE *połowie precyzji* (2-bajtowych) i *poczwórnej precyzji* formatów (16-bajtową), a także *podwójnej extended precyzji* (10-bajtową) Format, który niektóre kompilatory języków C i C++ zaimplementować jako **typu long double** typu danych. W kompilatora MSVC **typu long double** — typ danych jest traktowany jako typ samodzielny, ale typ magazynu mapuje **double**. Jest jednak wewnętrzne i język asemblera obsługę obliczeń przy użyciu innych formatach, w tym formacie (10-bajtową) podwójnej extended precyzji, jeśli są obsługiwane przez sprzęt.
 
 Wartości są przechowywane w następujący sposób:
 

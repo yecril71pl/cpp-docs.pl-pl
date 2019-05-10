@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: b6e514a6b13aced4fcd765df091810504f948588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384ea563853906a76e2c9993cbcedb3b15c354f2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176255"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217588"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem
 
@@ -51,5 +51,5 @@ Opóźniaj ładowanie bibliotek DLL można znaleźć w następujących tematach:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](../dlls-in-visual-cpp.md)<br/>
+[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](../dlls-in-visual-cpp.md)<br/>
 [Dokumentacja konsolidatora MSVC](linking.md)

@@ -1,23 +1,23 @@
 ---
 title: Odwołanie kompilacji C/C++ — Visual Studio
 description: Zawartość informacyjna dotycząca języka C/C++ systemu projektu i narzędzia w programie Visual Studio do kompilacji.
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abe946ce516e915cd597a0f863c5949fed212bfa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294762"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221443"
 ---
 # <a name="cc-building-reference"></a>Odwołanie kompilacji C/C++
 
-Visual C++ zapewnia dwa sposoby kompilowanie programu C/C++. Najłatwiejszym (i najbardziej powszechnym) sposobem jest [kompilacji w środowisku IDE programu Visual Studio](../creating-and-managing-visual-cpp-projects.md). Drugi sposób to [kompilacji z wiersza polecenia przy użyciu narzędzia wiersza polecenia](../building-on-the-command-line.md). W obu przypadkach należy można tworzyć i edytować plików źródłowych przy użyciu programu Visual Studio lub dowolnego edytora w innych firm.
+Program Visual Studio udostępnia dwa sposoby tworzenia C /C++ program. Najłatwiejszym (i najbardziej powszechnym) sposobem jest [kompilacji w środowisku IDE programu Visual Studio](../creating-and-managing-visual-cpp-projects.md). Drugi sposób to [kompilacji z wiersza polecenia przy użyciu narzędzia wiersza polecenia](../building-on-the-command-line.md). W obu przypadkach należy można tworzyć i edytować plików źródłowych przy użyciu programu Visual Studio lub dowolnego edytora w innych firm.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

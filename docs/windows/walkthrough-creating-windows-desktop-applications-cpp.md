@@ -1,17 +1,17 @@
 ---
 title: 'Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)'
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388083"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877387"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
@@ -26,7 +26,7 @@ Interfejs API Windows (znany także jako interfejsu API systemu Win32, Windows D
 
 - Komputer z systemem Microsoft Windows 7 lub nowszy. Zalecamy systemu Windows 10 dla najlepszego komfortu programowania.
 
-- A copy of Visual Studio 2017. Aby uzyskać informacje na temat sposobu pobierania i instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora, upewnij się, że **programowanie aplikacji klasycznych w języku C++** zaznaczono obciążenia. Nie martw się, jeśli nie zainstalował tego obciążenia podczas instalowania programu Visual Studio. Można ponownie uruchom Instalatora i zainstaluj go teraz.
+- Kopię programu Visual Studio. Aby uzyskać informacje na temat sposobu pobierania i instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora, upewnij się, że **programowanie aplikacji klasycznych w języku C++** zaznaczono obciążenia. Nie martw się, jeśli nie zainstalował tego obciążenia podczas instalowania programu Visual Studio. Można ponownie uruchom Instalatora i zainstaluj go teraz.
 
    ![Programowanie aplikacji klasycznych w języku C++](../build/media/desktop-development-with-cpp.png "programowanie aplikacji klasycznych w języku C++")
 
@@ -36,9 +36,37 @@ Interfejs API Windows (znany także jako interfejsu API systemu Win32, Windows D
 
 ## <a name="create-a-windows-desktop-project"></a>Utwórz projekt Windows desktop
 
-Wykonaj następujące kroki, aby utworzyć swój pierwszy projekt pulpitu Windows, a następnie wprowadź kod dla działającej aplikacji pulpitu Windows. Jeśli używasz wersji programu Visual Studio starszych niż program Visual Studio 2017 w wersji 15.3, przejdź do sekcji [do utworzenia projektu pulpitu Windows w programie Visual Studio 2017 RTM](#create-in-vs2017-rtm).
+Wykonaj następujące kroki, aby utworzyć swój pierwszy projekt pulpitu Windows, a następnie wprowadź kod dla działającej aplikacji pulpitu Windows. Upewnij się, że selektor wersji, w lewym górnym rogu tej strony jest ustawiona na poprawną wersję programu Visual Studio, którego używasz.
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017-update-153-and-later"></a>Aby utworzyć projekt pulpitu Windows w programie Visual Studio 2017 Update 15.3 i nowszych
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Aby utworzyć projekt pulpitu Windows w programie Visual Studio 2019 r.
+
+1. W menu głównym wybierz **pliku** > **New** > **projektu** otworzyć **Utwórz nowy projekt** okna dialogowego pole.
+
+1. W górnej części okna dialogowego, ustaw **języka** do **C++** ustaw **platformy** do **Windows**i ustaw **Typprojektu** do **pulpitu**. 
+
+1. Wybierz z listy filtrowanej typów projektów, **kreatora pulpitu Windows** wybierz **dalej**. Na następnej stronie podaj nazwę dla projektu, a następnie określ lokalizację projektu, w razie potrzeby.
+
+1. Wybierz **Utwórz** przycisk, aby utworzyć projekt.
+
+1. **Projektu pulpitu Windows** pojawi się okno dialogowe. W obszarze **typ aplikacji**, wybierz opcję **aplikacja Windows (.exe)**. W obszarze **dodatkowe opcje**, wybierz opcję **pusty projekt**. Wybierz **OK** do tworzenia projektu.
+
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **DesktopApp** projektu, wybierz **Dodaj**, a następnie wybierz **nowy element**.
+
+   ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
+
+1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)**. W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
+
+   ![Dodaj plik .cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik .cpp do DesktopApp projektu")
+
+Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kontynuować, przejdź do sekcji [utworzyć kod](#create-the-code).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Aby utworzyć projekt pulpitu Windows w programie Visual Studio 2017
 
 1. Na **pliku** menu, wybierz **New** , a następnie wybierz **projektu**.
 
@@ -62,7 +90,11 @@ Wykonaj następujące kroki, aby utworzyć swój pierwszy projekt pulpitu Window
 
 Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kontynuować, przejdź do sekcji [utworzyć kod](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a> Aby utworzyć projekt pulpitu Windows w programie Visual Studio 2017 RTM
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Aby utworzyć projekt pulpitu Windows w programie Visual Studio 2015
 
 1. Na **pliku** menu, wybierz **New** , a następnie wybierz **projektu**.
 
@@ -89,6 +121,8 @@ Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kon
    ![Dodaj plik .cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "Dodaj plik .cpp do DesktopApp projektu")
 
 Projekt został utworzony i pliku źródłowego jest otwarty w edytorze.
+
+::: moniker-end
 
 ## <a name="create-the-code"></a>Tworzenie kodu
 

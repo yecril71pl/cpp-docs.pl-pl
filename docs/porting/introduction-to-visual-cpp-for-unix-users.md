@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205245"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448958"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX
 
@@ -49,7 +49,7 @@ Podczas tworzenia projektu, nazwę projektu. Domyślnie nazwa projektu jest rów
 
 ## <a name="microsoft-specific-modifiers"></a>Modyfikatory specyficzne dla firmy Microsoft
 
-Kompilator Microsoft Visual C++ implementuje kilka rozszerzeń do standardowego języka programowania C++ do obsługi programowania dla systemów operacyjnych Windows. Te rozszerzenia są używane, aby określić atrybuty klasy magazynu, funkcji, Konwencje wywoływania i adresowanie, między innymi na podstawie. Aby uzyskać pełną listę wszystkich obsługiwanych rozszerzeń języka C++, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
+Microsoft C++ kompilatora implementuje kilka rozszerzeń ze standardem C++ programowania język na potrzeby obsługi programowania dla systemów operacyjnych Windows. Te rozszerzenia są używane, aby określić atrybuty klasy magazynu, funkcji, Konwencje wywoływania i adresowanie, między innymi na podstawie. Aby uzyskać pełną listę wszystkich obsługiwanych rozszerzeń języka C++, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
 
 Wszystkie rozszerzenia charakterystyczne dla Microsoft c++ można wyłączyć za pomocą `/Za` — opcja kompilatora. Ta opcja jest zalecana, jeśli chcesz napisać kod do uruchamiania na wielu platformach. Aby uzyskać więcej informacji na temat `/Za` — opcja kompilatora, zobacz [/za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md). Aby uzyskać więcej informacji na temat zgodności kompilatora języka C++, zobacz [Visual zgodność języka C++](../overview/visual-cpp-language-conformance.md) i [niestandardowe zachowanie](../cpp/nonstandard-behavior.md).
 

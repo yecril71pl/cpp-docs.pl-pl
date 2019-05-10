@@ -6,12 +6,12 @@ ms.author: mblome
 ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dba6877c4489337625eed016c77b853f84af990
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314628"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217653"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów języka C++ dla Windows, Linux i MacOS
 
@@ -124,7 +124,7 @@ Jeśli musisz użyć określonej wersji biblioteki, która jest inna niż wersja
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integracja z usługą Visual Studio Code (Linux/MacOS)
 
-Uruchom **vcpkg integracji instalacji** skonfigurować Visual Studio Code w systemie Linux/MacOS przy użyciu lokalizacji vcpkg enlistement i włączyć funkcję IntelliSense w plikach źródłowych.
+Uruchom **vcpkg integracji instalacji** skonfigurować Visual Studio Code w systemie Linux/MacOS przy użyciu lokalizacji rejestracji vcpkg i włączyć funkcję IntelliSense w plikach źródłowych.
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Wyceluj Linux, od Windows za pośrednictwem WSL
 

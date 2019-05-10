@@ -1,5 +1,5 @@
 ---
-title: Ostrzeżenia kompilatora od C4600 do C4799
+title: Ostrzeżenia kompilatora — od C4600 do C4799
 ms.date: 04/21/2019
 f1_keywords:
 - C4609
@@ -41,13 +41,13 @@ helpviewer_keywords:
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 ms.openlocfilehash: 3df17b115797f4d68621854d072c41aca14a0fd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857564"
 ---
-# <a name="compiler-warnings-c4600-through-c4799"></a>Ostrzeżenia kompilatora od C4600 do C4799
+# <a name="compiler-warnings-c4600-through-c4799"></a>Ostrzeżenia kompilatora — od C4600 do C4799
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawcze, które są generowane przez kompilator.
 
@@ -55,7 +55,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 
 ## <a name="warning-messages"></a>Komunikaty ostrzegawcze
 
-|Ostrzeżenie|Komunikat|
+|Ostrzeżenie|Message|
 |-------------|-------------|
 |[Ostrzeżenie kompilatora (poziom 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma "makra name": oczekiwano prawidłowego ciągu niepustego|
 |[Ostrzeżenie kompilatora (poziom 1) C4602](compiler-warning-level-1-c4602.md)|#pragma pop_macro: "name — makro" nie poprzedniej dyrektywy #pragma push_macro dla tego identyfikatora|

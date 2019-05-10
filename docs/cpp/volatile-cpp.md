@@ -1,6 +1,6 @@
 ---
 title: volatile (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - volatile_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 73243841b2ad02bcc165b2910ac54283028e6cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2396b5afaed09a28fd83f22fccde0be04e3d7790
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243957"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221879"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Obiekty, które są zadeklarowane jako **volatile** nie są używane w niektóry
 
 ## <a name="iso-compliant"></a>ISO zgodne
 
-Jeśli jesteś zaznajomiony z C# nietrwałych słów kluczowych lub zapoznać się z zachowaniem **volatile** we wcześniejszych wersjach programu Visual C++, należy pamiętać, który C ++ 11 Standard ISO **volatile** — słowo kluczowe jest inny i jest obsługiwane w programie Visual Studio podczas [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) określono opcję kompilatora. (Dla ARM, określono domyślnie). **Volatile** — słowo kluczowe w C ++ 11 ISO standardowy kod ma być używany tylko w przypadku dostępu do sprzętu; nie należy jej używać do komunikacji między wątku. Do komunikacji między wątku, użyj mechanizmów takich jak [std::atomic\<T >](../standard-library/atomic.md) z [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md).
+Jeśli znasz C# volatile — słowo kluczowe lub powszechnie znane z zachowaniem **volatile** we wcześniejszych wersjach programu Microsoft C++ kompilatora (MSVC), należy pamiętać, który Standard C ++ 11 ISO **volatile** — słowo kluczowe jest inny i jest obsługiwany w MSVC podczas [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) określono opcję kompilatora. (Dla ARM, określono domyślnie). **Volatile** — słowo kluczowe w C ++ 11 ISO standardowy kod ma być używany tylko w przypadku dostępu do sprzętu; nie należy jej używać do komunikacji między wątku. Do komunikacji między wątku, użyj mechanizmów takich jak [std::atomic\<T >](../standard-library/atomic.md) z [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="end-of-iso-compliant"></a>Koniec ISO zgodne
 

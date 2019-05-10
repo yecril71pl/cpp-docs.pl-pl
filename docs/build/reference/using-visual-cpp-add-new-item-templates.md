@@ -1,24 +1,24 @@
 ---
 title: Używanie szablonów Dodaj nowy element programu Visual C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Add New Item
 - Add New Item templates
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317149"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217763"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Używanie szablonów Dodaj nowy element programu Visual C++
 
-Możesz łatwo dodawać elementy, które są wspólne dla projektów Visual C++ przy użyciu **Dodaj nowy element** polecenia. Kiedy używasz **Dodaj nowy element** polecenia `Add New Item` pojawi się okno dialogowe z listy szablonów elementów, które dodają odpowiednie pliki do projektu.
+Możesz łatwo dodawać elementy, które są wspólne dla projektów programu Visual Studio przy użyciu **Dodaj nowy element** polecenia. Kiedy używasz **Dodaj nowy element** polecenia `Add New Item` pojawi się okno dialogowe z listy szablonów elementów, które dodają odpowiednie pliki do projektu.
 
-Poniższa tabela jest alfabetyczną listę szablonów programu Visual C++ Dodaj nowy element.
+Poniższa tabela jest alfabetyczną listę szablonów programu Visual Studio Dodaj nowy element.
 
 |Szablon|Opis|
 |--------------|-----------------|
@@ -38,7 +38,7 @@ Poniższa tabela jest alfabetyczną listę szablonów programu Visual C++ Dodaj 
 |Klasa Instalatora|Dodaje klasę, która dziedziczy <xref:System.Configuration.Install.Installer> przy użyciu funkcji z aparatem CLR.|
 |Plik MIDL (.idl)|Tworzy plik języka definicji interfejsu.|
 |Plik definicji modułu (.def)|Tworzy plik definicji eksportowania biblioteki DLL.|
-|Arkusz właściwości (.props)|Tworzy plik arkusza właściwości języka Visual C++.|
+|Arkusz właściwości (.props)|Tworzy plik arkusza właściwości.|
 |Skrypt rejestrowania (.rgs)|Tworzy plik skryptu rejestrowania biblioteki ATL.|
 |Raportu (.rdlc)|Tworzy plik raportu.|
 |Plik zasobów (.rc)|Tworzy plik zasobów Win32.|

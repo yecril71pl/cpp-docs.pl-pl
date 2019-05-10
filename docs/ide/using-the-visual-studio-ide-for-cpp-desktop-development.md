@@ -1,16 +1,16 @@
 ---
 title: Projektowania aplikacji w języku C++ w środowisku Visual Studio IDE
-ms.date: 03/14/2019
+ms.date: 04/25/2019
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 7417c46097b1f0c6282e3684a7556880c21be42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e4a1fe0c8d008192d6283306c0f23eac7ae00e7a
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349241"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857671"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Projektowania aplikacji w języku C++ w środowisku Visual Studio IDE
 
@@ -22,17 +22,19 @@ Jeśli jeszcze nie zainstalowano programu Visual Studio, nadszedł czas. Łącza
 
 Te przewodniki założono zainstalowanego programu Visual Studio i języka Visual C++ i składniki wymagane do tworzenia aplikacji pulpitu Windows. Przyjęto również założenie, że rozumiesz podstawy języka C++. Jeśli potrzebujesz dowiedzieć się, C++, Brak dostępnych wiele książek i zasobów sieci web. Jeden dobrym miejscem do rozpoczęcia jest [wprowadzenie](https://isocpp.org/get-started) strony witryny sieci Web, Standard C++ Foundation.
 
-Jeśli jeszcze nie zainstalowano programu Visual Studio, nadszedł czas.
+Jeśli jeszcze nie zainstalowano programu Visual Studio, nadszedł czas. Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2019 r, nawet wtedy, gdy należy przeprowadzić kompilowanie kodu przy użyciu kompilatora Visual Studio 2017 lub Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](../porting/use-native-multi-targeting.md).
+
+**Visual Studio 2019 Installation**
+
+Aby uzyskać program Visual Studio 2019 r, możesz ją pobrać z [pobieranie Visual Studio](https://www.visualstudio.com/downloads/). Pamiętaj obejmują narzędzia deweloperskie programu Visual C++, po zainstalowaniu programu Visual Studio, ponieważ nie są zainstalowane domyślnie. Aby uzyskać więcej informacji o sposobie instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
 
 **Instalacja programu Visual Studio 2017**
 
-Aby uzyskać program Visual Studio 2017, możesz ją pobrać z [pobieranie Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Pamiętaj obejmują narzędzia deweloperskie programu Visual C++, po zainstalowaniu programu Visual Studio, ponieważ nie są zainstalowane domyślnie. Aby uzyskać więcej informacji o sposobie instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
+Aby uzyskać program Visual Studio 2017, możesz ją pobrać z [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Pamiętaj obejmują narzędzia deweloperskie programu Visual C++, po zainstalowaniu programu Visual Studio, ponieważ nie są zainstalowane domyślnie. Aby uzyskać więcej informacji o sposobie instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio) i ustaw selektora wersji na stronie, aby **programu Visual Studio 2017**.
 
 **Visual Studio 2015 Installation**
 
 Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++.
-
-Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2017, nawet wtedy, gdy należy przeprowadzić kompilowanie kodu przy użyciu kompilatora Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](../porting/use-native-multi-targeting.md).
 
 Po zakończeniu instalacji programu Visual Studio, jesteś gotowy kontynuować.
 

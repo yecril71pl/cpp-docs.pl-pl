@@ -1,14 +1,14 @@
 ---
 title: Typy wartości (Modern C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390909"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221883"
 ---
 # <a name="value-types-modern-c"></a>Typy wartości (Modern C++)
 
@@ -49,7 +49,7 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
 
 ## <a name="value-types-and-move-efficiency"></a>Typy wartości i przenieść wydajność
 
-Kopiuj alokacji obciążenie jest unikać ze względu na nowe optymalizacje kopiowania. Na przykład podczas wstawiania ciągu w środku wektor ciągi nastąpi nie kopiowania ponownej alokacji obciążenie, tylko przeniesienia — nawet wtedy, gdy powoduje zwiększania wektora, sam. Dotyczy to również inne operacje, na przykład wykonywania operacji Dodaj dwa bardzo dużych obiektów. Jak włączyć Optymalizacje te wartości operacji? W niektórych Kompilatory języka C++ kompilator umożliwi to dla Ciebie niejawnie, tak, jak konstruktory kopiujące, które mogą być automatycznie generowane przez kompilator. Jednak w programie Visual C++ klasy należy się "w" Aby przenieść przypisania i konstruktory deklarując ją w swojej definicji klasy. Jest to realizowane za pomocą podwójnego znaku ampersand (& &) odwołanie rvalue w odpowiedniej składowej funkcji deklaracje i definiowanie konstruktora przenoszącego i przenieść przypisania metody.  Należy również wpisz poprawny kod, aby "wykradać wnętrzności" z obiektem źródłowym.
+Kopiuj alokacji obciążenie jest unikać ze względu na nowe optymalizacje kopiowania. Na przykład podczas wstawiania ciągu w środku wektor ciągi nastąpi nie kopiowania ponownej alokacji obciążenie, tylko przeniesienia — nawet wtedy, gdy powoduje zwiększania wektora, sam. Dotyczy to również inne operacje, na przykład wykonywania operacji Dodaj dwa bardzo dużych obiektów. Jak włączyć Optymalizacje te wartości operacji? W niektórych Kompilatory języka C++ kompilator umożliwi to dla Ciebie niejawnie, tak, jak konstruktory kopiujące, które mogą być automatycznie generowane przez kompilator. Jednak w C++, klasa będzie konieczne "opt-in" przeniesienia przypisania i konstruktory deklarując ją w swojej definicji klasy. Jest to realizowane za pomocą podwójnego znaku ampersand (& &) odwołanie rvalue w odpowiedniej składowej funkcji deklaracje i definiowanie konstruktora przenoszącego i przenieść przypisania metody.  Należy również wpisz poprawny kod, aby "wykradać wnętrzności" z obiektem źródłowym.
 
 Jak można zdecydować, jeśli potrzebujesz przenieść włączone? Jeśli znasz już, że należy skopiować konstrukcji włączone, prawdopodobnie chcesz przenieść włączone, jeśli może być tańsze niż kopię głęboką. Jednak jeśli wiesz, że należy przenieść pomocy technicznej, go nie musi oznaczać, że kopia włączone. Ostatnim przypadku będzie nazywane "obsługujące tylko przenoszenie type". Na przykład już w bibliotece standardowej `unique_ptr`. Jako notatka boczna starego `auto_ptr` jest przestarzały i został zastąpiony przez `unique_ptr` dokładnie ze względu na brak obsługi semantyki przenoszenia w poprzedniej wersji języka C++.
 
@@ -110,7 +110,7 @@ Jeśli włączysz przydzielania konstrukcji kopii, również włączyć przenies
 
 Niektóre *-wartość* są typy obsługujące tylko przenoszenie, takie jak kiedy nie można sklonować zasobem tylko przeniesienia własności. Przykład: `unique_ptr`.
 
-## <a name="section"></a>Sekcja
+## <a name="section"></a>`Section`
 
 Zawartość
 
