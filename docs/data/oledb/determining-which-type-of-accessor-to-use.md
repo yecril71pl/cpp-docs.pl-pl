@@ -1,22 +1,22 @@
 ---
 title: Ustalanie, jakiego typu metody dostępu użyć
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: 98234852d0577e581135980d6b8e525aeead5dc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f32b3375a517c8716324a2d5b35ec16826605f8e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175372"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525089"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Ustalanie, jakiego typu metody dostępu użyć
 
 W czasie kompilacji lub w czasie wykonywania, można określić typy danych w zestawie wierszy.
 
-Jeśli potrzebujesz określić typy danych w czasie kompilacji, należy użyć statycznej metody dostępu (takich jak `CAccessor`). Typy danych można określić ręcznie lub za pomocą **OLE DB Kreator konsumenta ATL**.
+Jeśli potrzebujesz określić typy danych w czasie kompilacji, należy użyć statycznej metody dostępu (takich jak `CAccessor`). 
 
 Jeśli potrzebujesz określić typy danych w czasie wykonywania, użyj dynamiczny (`CDynamicAccessor` lub jego elementy podrzędne) lub ręczne metody dostępu (`CManualAccessor`). W takich przypadkach można wywołać `GetColumnInfo` na wierszy, aby zwrócić informacje o powiązaniu kolumny, z której można określić typy.
 
