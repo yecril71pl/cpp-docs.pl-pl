@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345269"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449059"
 ---
 # <a name="how-to-manage-resources-c"></a>Instrukcje: Zarządzanie zasobami (C++)
 
@@ -100,7 +100,7 @@ Zarządzanych zasobów (.resx) są plikami XML. Po dodaniu plik zasobu zarządza
 
 ## <a name="import-and-export-resources"></a>Importowanie i eksportowanie zasobów
 
-Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pasków narzędzi), pliki HTML i zasobów niestandardowych do użytku w programie Visual C++. Możesz wyeksportować te same typy plików z projektu języka Visual C++ w oddzielnych plikach, które mogą być używane poza środowiskiem programowania.
+Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pasków narzędzi), pliki HTML i zasobów niestandardowych do użytku w programie Visual C++. Te same typy plików można eksportować z programu Visual Studio C++ projektu do oddzielnych plików, które mogą być używane poza środowiskiem programowania.
 
 > [!NOTE]
 > Typy zasobów, takich jak akceleratorów, okna dialogowe i tabele ciągów nie można zaimportować lub wyeksportować, ponieważ nie zostało to jeszcze typów plików autonomicznych.

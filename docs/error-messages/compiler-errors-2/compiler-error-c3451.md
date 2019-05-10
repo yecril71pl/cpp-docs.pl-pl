@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 5ef4352101541391a7cda88471fbaa6aeae4ffb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07cfda76af26ddb285be4f77131aaf48a20a761f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328721"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447857"
 ---
 # <a name="compiler-error-c3451"></a>Błąd kompilatora C3451
 
@@ -21,7 +21,7 @@ Atrybut C++ nie można zastosować do typu CLR. Zobacz [dokumentacja atrybutów 
 
 Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: [uuid](../../windows/uuid-cpp-attributes.md) atrybut nie jest dozwolony dla atrybutu użytkownika przy użyciu CLR — programowanie. Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.GuidAttribute>.
+Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: [uuid](../../windows/uuid-cpp-attributes.md) atrybut nie jest dozwolony dla atrybutu użytkownika przy użyciu CLR — programowanie. Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.GuidAttribute>.
 
 ## <a name="example"></a>Przykład
 

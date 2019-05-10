@@ -1,6 +1,6 @@
 ---
 title: 'Instrukcje: Tworzenie projektu C++ z istniejącego kodu'
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189047"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221456"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Instrukcje: Tworzenie projektu C++ z istniejącego kodu
 
@@ -26,8 +26,6 @@ Przenoszenie istniejących plików kodu do projektu w języku C++ umożliwia kor
 ### <a name="to-create-a-c-project-from-existing-code"></a>Aby utworzyć projekt C++ z istniejącego kodu
 
 1. Na **pliku** menu, wybierz opcję **New** > **projekt z istniejącego kodu**.
-
-1. Na pierwszej stronie **Utwórz nowy projekt z istniejących plików kodu** kreatora wybierz **Visual C++** w **jaki rodzaj projektu chcesz utworzyć?** listy. Wybierz **dalej** aby kontynuować.
 
 1. Określanie lokalizacji projektu, katalog dla plików źródłowych i rodzajów plików, które kreator importuje do nowego projektu. Wybierz **dalej** aby kontynuować.
 
@@ -44,7 +42,7 @@ Przenoszenie istniejących plików kodu do projektu w języku C++ umożliwia kor
 
     | Ustawienie | Opis |
     | --- | --- |
-    | **Use Visual Studio** | Określa, aby użyć narzędzia do kompilacji, które znajdują się w programie Visual Studio do tworzenia nowego projektu. Ta opcja jest domyślnie wybrana.<br/><br/>Wybierz **typu projektu** do określania typu projektu, Kreator generuje. Wybierz **projekt aplikacji Windows**, **projekt aplikacji konsoli**, **projekt dynamicznie łączonych bibliotek (DLL)**, lub **biblioteka statyczna (LIB) Projekt**.<br/><br/>Sprawdź **Dodaj obsługę ATL** do Dodaj obsługę ATL do nowego projektu.<br/><br/>Sprawdź **dodać obsługę MFC** dodać obsługę MFC do nowego projektu.<br/><br/>Sprawdź **obsługę środowiska uruchomieniowego języka wspólnego** dodać CLR programowania pomocy technicznej do projektu. Wybierz **Obsługa środowiska uruchomieniowego języka wspólnego** typu zgodności, takie jak **środowiska uruchomieniowego języka wspólnego (stara składnia)** pod kątem zgodności z zarządzanych rozszerzeń dla składni języka C++, CLR programowania składnię przed Visual C++ 2005. |
+    | **Use Visual Studio** | Określa, aby użyć narzędzia do kompilacji, które znajdują się w programie Visual Studio do tworzenia nowego projektu. Ta opcja jest domyślnie wybrana.<br/><br/>Wybierz **typu projektu** do określania typu projektu, Kreator generuje. Wybierz **projekt aplikacji Windows**, **projekt aplikacji konsoli**, **projekt dynamicznie łączonych bibliotek (DLL)**, lub **biblioteka statyczna (LIB) Projekt**.<br/><br/>Sprawdź **Dodaj obsługę ATL** do Dodaj obsługę ATL do nowego projektu.<br/><br/>Sprawdź **dodać obsługę MFC** dodać obsługę MFC do nowego projektu.<br/><br/>Sprawdź **obsługę środowiska uruchomieniowego języka wspólnego** dodać CLR programowania pomocy technicznej do projektu. Wybierz **Obsługa środowiska uruchomieniowego języka wspólnego** typu zgodności, takie jak **środowiska uruchomieniowego języka wspólnego (stara składnia)** pod kątem zgodności z zarządzanych rozszerzeń dla C++ składnię, składnia programowania CLR przed Visual Studio 2005. |
     | **Użyj zewnętrznego systemu kompilacji** | Określa, aby użyć narzędzia do kompilacji, które nie są uwzględnione w programie Visual Studio do tworzenia nowego projektu. Po wybraniu tej opcji można określić wiersze poleceń kompilacji na **Określ ustawienia konfiguracji debugowania** i **Określ ustawienia konfiguracji wydania** stron. |
 
     ![Ustawienia projektu](media/settings.png)

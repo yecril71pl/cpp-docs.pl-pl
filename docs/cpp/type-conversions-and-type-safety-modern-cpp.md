@@ -1,14 +1,14 @@
 ---
 title: Konwersje i bezpieczeństwo typów (Modern C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404692"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221863"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Konwersje i bezpieczeństwo typów (Modern C++)
 
@@ -84,7 +84,7 @@ Kompilator nie ostrzega o niejawnych konwersjach między typami całkowitymi ze 
 
 ### <a name="pointer-conversions"></a>Konwersje wskaźników
 
-W wielu wyrażeniach tablica w stylu języka C jest niejawnie konwertowana na wskaźnik do pierwszego elementu w tablicy, a konwersje stałe mogą odbywać się dyskretnie. Takie rozwiązanie jest wygodne, ale powoduje ryzyko błędów. Na przykład poniższy źle zaprojektowany kod wygląda bezsensownie, a jednak zostanie skompilowany w programie Visual C++ i wygeneruje wynik w postaci litery „p”. Najpierw literał będący stałą w postaci ciągu „Help” jest konwertowany na typ `char*`, który wskazuje na pierwszy element tablicy. Następnie wskaźnik jest zwiększany o trzy elementy tak, że teraz wskazuje ostatni element „p”.
+W wielu wyrażeniach tablica w stylu języka C jest niejawnie konwertowana na wskaźnik do pierwszego elementu w tablicy, a konwersje stałe mogą odbywać się dyskretnie. Takie rozwiązanie jest wygodne, ale powoduje ryzyko błędów. Na przykład poniższy źle zaprojektowany kod bezsensownie, a jeszcze zostanie skompilowany i wygeneruje wynik w postaci "p". Najpierw literał będący stałą w postaci ciągu „Help” jest konwertowany na typ `char*`, który wskazuje na pierwszy element tablicy. Następnie wskaźnik jest zwiększany o trzy elementy tak, że teraz wskazuje ostatni element „p”.
 
 ```cpp
 char* s = "Help" + 3;

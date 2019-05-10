@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - const_reverse_iterator method
 ms.assetid: ceac84d5-a40f-4bbf-81e0-a96aa2bd8ee8
-ms.openlocfilehash: 93b1ab9da2094cbb1e653bc9d6db8c195a33da84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf6f57775e780ef1537ce2e9f664cba2087b0eea
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211481"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221685"
 ---
 # <a name="container-classconstreverseiterator"></a>Kontener Class::const_reverse_iterator
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
 Opisuje obiekt, który może służyć jako stałe odwrotnego iteratora dla kontrolowanej sekwencji.
 

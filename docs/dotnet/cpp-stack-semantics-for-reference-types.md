@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209164"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448068"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantyka stosu języka C++ dla typów odwołań
 
-Przed Visual C++ 2005, wystąpienia typu referencyjnego można można tworzyć tylko za pomocą `new` operatora, który utworzył obiekt w pamięci zbierane sterty. Teraz można jednak utworzyć wystąpienia typu referencyjnego przy użyciu tej samej składni, którego używasz do utworzenia wystąpienia typu natywnego w stosie. Dlatego nie trzeba używać [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) do utworzenia obiektu typu referencyjnego. A gdy obiekt wykracza poza zakres, kompilator wywołuje destruktor obiektu.
+Przed Visual Studio 2005, wystąpienia typu referencyjnego można można tworzyć tylko za pomocą `new` operatora, który utworzył obiekt w pamięci zbierane sterty. Teraz można jednak utworzyć wystąpienia typu referencyjnego przy użyciu tej samej składni, którego używasz do utworzenia wystąpienia typu natywnego w stosie. Dlatego nie trzeba używać [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) do utworzenia obiektu typu referencyjnego. A gdy obiekt wykracza poza zakres, kompilator wywołuje destruktor obiektu.
 
 ## <a name="remarks"></a>Uwagi
 

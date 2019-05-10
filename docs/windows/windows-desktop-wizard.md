@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387738"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448566"
 ---
 # <a name="windows-desktop-wizard"></a>Kreator aplikacji klasycznej Windows
 
@@ -25,11 +25,11 @@ Poniższa tabela wskazuje, które opcje są dostępne dla każdego typu aplikacj
 
 |Typ obsługi|Aplikacja konsolowa|Aplikacja pliku wykonywalnego (Windows)|Biblioteka dołączana dynamicznie|Biblioteka statyczna|
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
-|**Pusty projekt**|Tak|Yes|Yes|Nie|
+|**Pusty projekt**|Yes|Yes|Yes|Nie|
 |**Eksportuj symbole**|Nie|Nie|Yes|Nie|
-|**Prekompilowany plik nagłówkowy**|Nie|Nie|Nie|Tak|
+|**Prekompilowany plik nagłówkowy**|Nie|Nie|Nie|Yes|
 |**Obsługa biblioteki ATL**|Tak|Nie|Nie|Nie|
-|**Obsługa MFC**|Tak|Nie|Nie|Yes|
+|**Obsługa MFC**|Tak|Nie|Nie|Tak|
 
 ## <a name="overview"></a>Omówienie
 
@@ -83,8 +83,8 @@ Po utworzeniu aplikacji pulpitu Windows można dodać ogólne klasy C++ za pomoc
 > [!NOTE]
 > Nie można dodawać klas ALT, a klasy MFC można dodawać tylko do tych typów aplikacji klasycznych Windows, które obsługują MFC (zob. Poprzednia tabela).
 
-Można wyświetlić pliki, Kreator tworzy projekt w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach, Kreator tworzy dla projektu, zobacz plik wygenerowany przez projekt `ReadMe.txt`. Aby uzyskać więcej informacji dotyczących typów plików [typy plików utworzonych dla projektów Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md).
+Można wyświetlić pliki, Kreator tworzy projekt w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach, Kreator tworzy dla projektu, zobacz plik wygenerowany przez projekt `ReadMe.txt`. Aby uzyskać więcej informacji dotyczących typów plików [typy plików utworzonych dla elementu wizualnego C++ projektów](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typy projektów Visual C++](../build/reference/visual-cpp-project-types.md)
+[C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)

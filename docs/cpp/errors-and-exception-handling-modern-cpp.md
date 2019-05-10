@@ -1,14 +1,14 @@
 ---
 title: Błędy w obsłudze wyjątków (Modern C++)
-ms.date: 09/17/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398917"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222148"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Błędy w obsłudze wyjątków (Modern C++)
 
@@ -90,13 +90,13 @@ Wyjątki i potwierdzenia to dwa odrębne mechanizmy wykrywania błędów czasu w
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Wyjątki C++ a wyjątki Windows SEH
 
-Programy C i C++ mogą wykorzystywać mechanizm (SEH), w systemie operacyjnym Windows obsługi wyjątków strukturalnych. Koncepcje w SEH przypominają te w C++ wyjątki, z wyjątkiem tego SEH używa **__try**, **__except**, i **__finally** tworzy zamiast **spróbuj**  i **catch**. W programie Visual C++ wyjątki C++ są implementowane dla SEH. Jednak podczas pisania kodu w języku C++, należy użyć składni wyjątków języka C++.
+Programy C i C++ mogą wykorzystywać mechanizm (SEH), w systemie operacyjnym Windows obsługi wyjątków strukturalnych. Koncepcje w SEH przypominają te w C++ wyjątki, z wyjątkiem tego SEH używa **__try**, **__except**, i **__finally** tworzy zamiast **spróbuj**  i **catch**. W programie Microsoft C++ kompilatora (MSVC) C++ wyjątki są implementowane dla SEH. Jednak podczas pisania kodu w języku C++, należy użyć składni wyjątków języka C++.
 
 Aby uzyskać więcej informacji o bibliotece SEH, zobacz [obsługi wyjątków strukturalnych, (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 
 ## <a name="exception-specifications-and-noexcept"></a>Specyfikacje wyjątków i noexcept
 
-Specyfikacje wyjątków zostały wprowadzone w języku C++ jako sposób określania wyjątków, które mogą zgłosić funkcji. Jednak specyfikacje wyjątków okazały się w praktyce problematyczne i zostały zaniechane w standardzie roboczym C++ 11. Firma Microsoft zaleca, nie używaj specyfikacji wyjątków z wyjątkiem `throw()`, co oznacza, że funkcja pozwala bez wyjątków anulować. Jeśli musisz użyć specyfikacji wyjątku typu `throw(` *typu*`)`, należy pamiętać, że Visual C++ odbiega od normy w określony sposób. Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Specyfikator został wprowadzony w C ++ 11 jako preferowana alternatywa dla `throw()`.
+Specyfikacje wyjątków zostały wprowadzone w języku C++ jako sposób określania wyjątków, które mogą zgłosić funkcji. Jednak specyfikacje wyjątków okazały się w praktyce problematyczne i zostały zaniechane w standardzie roboczym C++ 11. Firma Microsoft zaleca, nie używaj specyfikacji wyjątków z wyjątkiem `throw()`, co oznacza, że funkcja pozwala bez wyjątków anulować. Jeśli musisz użyć specyfikacji wyjątku typu `throw(` *typu*`)`, należy pamiętać, że MSVC odbiega od normy w określony sposób. Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Specyfikator został wprowadzony w C ++ 11 jako preferowana alternatywa dla `throw()`.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209246"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448043"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konwertowanie projektów z trybu mieszanego na czysty język bezpośredni
 
@@ -21,7 +21,7 @@ Wszystkie projekty Visual C++ CLR łącze do biblioteki wykonawczej C domyślnie
 > [!IMPORTANT]
 > Przestarzałe w programie Visual Studio 2015 i Visual Studio 2017 już nie obsługuje tworzenia **/CLR: pure** lub **/CLR: Safe** kodu dla aplikacji do środowiska CLR. Jeśli potrzebujesz zestawy czysty lub bezpieczny, zalecamy tłumaczenie aplikacji C#.
 
-Jeśli używasz wcześniejszej wersji zestawu narzędzi kompilatora Visual C++, która obsługuje **/CLR: pure** lub **/CLR: Safe**, można użyć tej procedury, aby przekonwertować kod czysty MSIL:
+Jeśli używasz starszej wersji programu Microsoft C++ zestaw narzędzi kompilatora, która obsługuje **/CLR: pure** lub **/CLR: Safe**, można użyć tej procedury, aby przekonwertować kod czysty MSIL:
 
 ### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Aby przekonwertować aplikacji trybu mieszanego na czysty język bezpośredni
 

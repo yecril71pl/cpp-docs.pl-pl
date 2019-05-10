@@ -1,8 +1,6 @@
 ---
 title: Biblioteki DLL rozszerzeń
-ms.date: 11/04/2016
-f1_keywords:
-- afxdll
+ms.date: 05/06/2019
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 55b1e55a9c7bdf6daaff98a7fe3f1a2a55f68334
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195663"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220762"
 ---
 # <a name="mfc-extension-dlls"></a>Biblioteki DLL rozszerzeń MFC
 
@@ -52,7 +50,7 @@ Biblioteka DLL rozszerzenia MFC używa udostępnionej wersja MFC w taki sam spos
 
 Przed wersją 4.0, MFC tego rodzaju DLL została wywołana AFXDLL. AFXDLL odwołuje się do `_AFXDLL` symbol preprocesora, który jest definiowany podczas tworzenia biblioteki DLL.
 
-Bibliotek importu dla udostępnionej wersja MFC są określane według Konwencji opisanego w [konwencje nazewnictwa bibliotek MFC dll](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ dostarcza wbudowanych wersje biblioteki MFC dll, a także numer z innych niż - biblioteki MFC dll, którą można użyć i rozpowszechniać za pomocą aplikacji. Te są udokumentowane w Redist.txt, który jest zainstalowany w folderze Program Files\Microsoft Visual Studio.
+Bibliotek importu dla udostępnionej wersja MFC są określane według Konwencji opisanego w [konwencje nazewnictwa bibliotek MFC dll](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Program Visual Studio dostarcza wbudowanych wersje biblioteki MFC dll, a także numer z innych niż - biblioteki MFC dll, którą można użyć i rozpowszechniać za pomocą aplikacji. Te są udokumentowane w Redist.txt, który jest zainstalowany w folderze Program Files\Microsoft Visual Studio.
 
 Jeśli eksportujesz używając pliku .def, umieść następujący kod na początku i na końcu pliku nagłówka:
 
@@ -132,4 +130,4 @@ Jeśli biblioteka DLL rozszerzenia MFC musi obsługiwać dodatkowe dane dla każ
 
 ## <a name="see-also"></a>Zobacz także
 
-[Biblioteki DLL w programie Visual C++](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

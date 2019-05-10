@@ -1,14 +1,14 @@
 ---
 title: Umieszczanie kontrolki na stronie sieci Web (ALT — Samouczek, część 7)
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261543"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221235"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Umieszczanie kontrolki na stronie sieci Web (ALT — Samouczek, część 7)
 
@@ -74,7 +74,7 @@ Dodano kilka kod w języku VBScript, który pobiera właściwość boki z forman
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Wskazującą, czy formant jest bezpieczny dla skryptów
 
-Można wyświetlić strony sieci Web za pomocą kontrolki w programie Internet Explorer lub wygodniej, używając widoku przeglądarki sieci Web, które są wbudowane w Visual C++. Aby wyświetlić formant w widoku przeglądarki sieci Web, kliknij prawym przyciskiem myszy plik PolyCtl.htm, a następnie kliknij przycisk **Pokaż w przeglądarce**.
+Można wyświetlić strony sieci Web za pomocą kontrolki tylko w programie Internet Explorer. Inne przeglądarki nie obsługują już kontrolki ActiveX ze względu na słabe strony zabezpieczeń. 
 
 > [!NOTE]
 > Jeśli formant nie jest widoczne, wiadomo, że niektóre przeglądarki wymagać dostosowania ustawień, aby uruchomić formanty ActiveX. Zapoznaj się dokumentacją przeglądarki dotyczące włączania kontrolek ActiveX.

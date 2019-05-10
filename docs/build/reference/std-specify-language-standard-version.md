@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de3389a52781f541143268e3ede79eae375ff1d3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317890"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446226"
 ---
 # <a name="std-specify-language-standard-version"></a>/ STD (Określ wersję standardu języka)
 
@@ -48,10 +48,10 @@ Aby uzyskać dodatkowe informacje na które funkcji C ++ 14 i C ++ 17 są włąc
 
 **/STD** opcji obowiązuje podczas kompilacji C++ może zostać wykryte przy użyciu [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) makro preprocesora. Aby uzyskać więcej informacji, zobacz [makra preprocesora](../../preprocessor/predefined-macros.md).
 
-**/STD: c ++ 14** i **/STD: c ++ najnowsze** opcje są dostępne począwszy od wersji programu Visual C++ 2015 Update 3. **/STD: c ++ 17** opcja jest dostępna począwszy od wersji programu Visual C++ 2017 w wersji 15.3. Jak wspomniano powyżej, niektóre standardzie C ++ 17 zachowanie jest włączone **/STD: c ++ 14** opcja, ale wszystkie inne funkcje C ++ 17, są włączane przez **/STD: c ++ 17**.
+**/STD: c ++ 14** i **/STD: c ++ najnowsze** opcje są dostępne począwszy od wersji programu Visual Studio 2015 Update 3. **/STD: c ++ 17** opcja jest dostępna począwszy od wersji programu Visual Studio 2017 w wersji 15.3. Jak wspomniano powyżej, niektóre standardzie C ++ 17 zachowanie jest włączone **/STD: c ++ 14** opcja, ale wszystkie inne funkcje C ++ 17, są włączane przez **/STD: c ++ 17**.
 
 > [!NOTE]
-> MSVC kompilatora wersji lub aktualizacji poziom, niektórych funkcji C ++ 14 i C ++ 17 może nie być w pełni zaimplementowane lub w pełni zgodna po określeniu **/STD: c ++ 14** lub **/STD: c ++ 17** opcje. Na przykład, kompilator Visual C++ 2017 RTM nie obsługuje w pełni języka C ++ 14 zgodność `constexpr`, wyrażenie SFINAE lub wyszukiwanie nazwy fazy 2. Omówienie zgodność języka C++ w programie Visual C++ w wersji, zobacz [Visual zgodność języka C++](../../overview/visual-cpp-language-conformance.md).
+> MSVC kompilatora wersji lub aktualizacji poziom, niektórych funkcji C ++ 14 i C ++ 17 może nie być w pełni zaimplementowane lub w pełni zgodna po określeniu **/STD: c ++ 14** lub **/STD: c ++ 17** opcje. Na przykład, kompilator programu Visual Studio 2017 RTM nie obsługuje w pełni języka C ++ 14 zgodność `constexpr`, wyrażenie SFINAE lub wyszukiwanie nazwy fazy 2. Omówienie zgodność języka C++ w programie Visual C++ w wersji, zobacz [Visual zgodność języka C++](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 

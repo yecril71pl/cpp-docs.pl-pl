@@ -1,5 +1,5 @@
 ---
-title: Ostrzeżenia kompilatora od C4400 do C4599
+title: Ostrzeżenia kompilatora — od C4400 do C4599
 ms.date: 04/21/2019
 f1_keywords:
 - C4413
@@ -135,13 +135,13 @@ helpviewer_keywords:
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 ms.openlocfilehash: 7dd09e6f31592f6d4b62b94d8d3256fe1a432010
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280317"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857416"
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>Ostrzeżenia kompilatora od C4400 do C4599
+# <a name="compiler-warnings-c4400-through-c4599"></a>Ostrzeżenia kompilatora — od C4400 do C4599
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawcze, które są generowane przez kompilator.
 
@@ -149,7 +149,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty ostrzegawc
 
 ## <a name="warning-messages"></a>Komunikaty ostrzegawcze
 
-|Ostrzeżenie|Komunikat|
+|Ostrzeżenie|Message|
 |-------------|-------------|
 |[Ostrzeżenie kompilatora (poziom 1) C4600](compiler-warning-level-1-c4600.md)|#pragma "*Nazwa makra*": oczekiwano prawidłowego ciągu niepustego|
 |[Ostrzeżenie kompilatora (poziom 4) C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)|"*typu*": kwalifikatory const/volatile dla tego typu nie są obsługiwane.|

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407201"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448927"
 ---
 # <a name="uuid-c-attributes"></a>uuid (Atrybuty C++)
 
@@ -32,7 +32,7 @@ Określa unikatowy identyfikator dla klasy lub interfejsu.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli nie określono definicji klasy lub interfejsu **uuid** atrybutów języka C++, a następnie kompilator języka Visual C++ zapewni jeden. Po określeniu **uuid**, musi zawierać cudzysłowów.
+Jeśli nie określono definicji klasy lub interfejsu **uuid** C++ atrybutu, a następnie Microsoft C++ kompilatora zapewni jeden. Po określeniu **uuid**, musi zawierać cudzysłowów.
 
 Jeśli nie określisz **uuid**, a następnie kompilator wygeneruje tego samego identyfikatora GUID dla interfejsów lub klas o takiej samej nazwie w projektach innego atrybutu na maszynie.
 

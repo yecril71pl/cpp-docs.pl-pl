@@ -1,21 +1,21 @@
 ---
 title: 'Instrukcje: Osadzanie manifestu w aplikacji C/C++'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274385"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220703"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Instrukcje: Osadzanie manifestu w aplikacji C/C++
 
-Zaleca się, że aplikacji C/C++ (lub biblioteki) ma osadzony w końcowym pliku binarnym, ponieważ gwarantuje to poprawne zachowanie w większości przypadków manifest. Domyślnie program Visual Studio podejmie do osadzania manifestu, podczas tworzenia projektu z plików źródłowych. zobacz [Manifest Generation w programie Visual Studio](manifest-generation-in-visual-studio.md) Aby uzyskać więcej informacji. Jednak jeśli wniosek został utworzony przy użyciu nmake, konieczne są pewne zmiany do istniejącego pliku reguł programu make. W tej sekcji pokazano, jak zmienić istniejące pliki reguł programu make automatycznie osadzanie manifestu w końcowym pliku binarnym.
+Zaleca się osadzić manifest aplikacji lub biblioteki w końcowym pliku binarnym, ponieważ gwarantuje to poprawne zachowanie w większości scenariuszy. Domyślnie program Visual Studio podejmie do osadzania manifestu, podczas tworzenia projektu. Aby uzyskać więcej informacji, zobacz [Manifest Generation w programie Visual Studio](manifest-generation-in-visual-studio.md). Jednak jeśli tworzysz aplikację za pomocą nmake należy wprowadzić pewne zmiany w pliku reguł programu make. W tej sekcji pokazano, jak zmienić pliki reguł programu make, tak, aby automatycznie osadza manifestu w końcowym pliku binarnym.
 
 ## <a name="two-approaches"></a>Dwie metody
 
@@ -23,15 +23,19 @@ Istnieją dwa sposoby do osadzania manifestu w aplikacji lub biblioteki.
 
 - Jeśli nie wykonujesz kompilacji przyrostowej można osadzić bezpośrednio manifest jako krok po kompilacji przy użyciu wiersza polecenia podobnego do następującego:
 
-   **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    lub
 
-   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 dla pliku EXE, 2 dla biblioteki DLL).
+   Użyj wartości 1 dla pliku EXE i 2 dla biblioteki DLL.
 
-- Jeśli przeprowadzasz kompilacji przyrostowej bezpośrednią edycję zasobu, jak pokazano poniżej spowoduje wyłączyć przyrostowe kompilowanie i spowodować ponownej pełnej kompilacji; w związku z tym należy podjąć inne podejście:
+- Jeśli przeprowadzasz kompilacji przyrostowej, wykonaj następujące kroki:
 
    - Połącz dane binarne, aby wygenerować plik MyApp.exe.manifest.
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Jeżeli ten skrypt jest uruchamiany bez zmian w języku Visual C++, pomyślnie tworzy MyApp.exe. Tworzy również zewnętrznego pliku manifestu MyApp.exe.manifest, do użytku przez system operacyjny, który można załadować zestawów zależnych w czasie wykonywania.
+Jeżeli ten skrypt jest uruchamiany bez zmian w programie Visual Studio, pomyślnie tworzy MyApp.exe. Tworzy również zewnętrznego pliku manifestu MyApp.exe.manifest, do użytku przez system operacyjny, który można załadować zestawów zależnych w czasie wykonywania.
 
 Skrypt nmake MyLibrary.dll wygląda bardzo podobnie:
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Teraz Utwórz makefile.targ.inc i skopiuj następujące tę sytuację:
+Teraz Utwórz **makefile.targ.inc** i skopiuj następujące tę sytuację:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: f562a6a214cd1fb3feba2caf26831797d4b182fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e9d2edca8da128343bd14ea86a8c1c0023a244b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344684"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446667"
 ---
 # <a name="compatibility"></a>Zgodność
 
@@ -21,9 +21,9 @@ Uniwersalne biblioteki wykonawczej języka C (UCRT) obsługuje większość stan
 
 Funkcje specyficzne dla implementacji Microsoft Visual C++ znajdują się w bibliotece vcruntime.  Wiele z tych funkcji są przeznaczone do użytku wewnętrznego i nie może być wywoływany przez kod użytkownika. Niektóre opisano do użytku w zgodności debugowania i wdrażania.
 
-C++ standard zastrzega sobie nazwy rozpoczynające się od znaku podkreślenia w globalnej przestrzeni nazw do implementacji. Ponieważ funkcje POSIX znajdują się w globalnej przestrzeni nazw, ale nie są częścią standardowej biblioteki C w czasie wykonywania, implementacje specyficzne dla firmy Microsoft z tych funkcji ma wiodącego podkreślenia. Do celów przenośności UCRT obsługuje również domyślne nazwy, ale kompilator języka Visual C++ generuje ostrzeżenie o zakończeniu obsługi, gdy kod, który używa tych jest kompilowany. Nazwy POSIX domyślne są przestarzałe, nie funkcji. Aby pominąć to ostrzeżenie, należy zdefiniować `_CRT_NONSTDC_NO_WARNINGS` przed dołączeniem żadnych nagłówków w kodzie, który używa oryginalnej nazwy POSIX.
+C++ standard zastrzega sobie nazwy rozpoczynające się od znaku podkreślenia w globalnej przestrzeni nazw do implementacji. Ponieważ funkcje POSIX znajdują się w globalnej przestrzeni nazw, ale nie są częścią standardowej biblioteki C w czasie wykonywania, implementacje specyficzne dla firmy Microsoft z tych funkcji ma wiodącego podkreślenia. Do celów przenośności, UCRT obsługuje również domyślne nazwy, ale Microsoft C++ kompilator generuje ostrzeżenie wycofywania, gdy kompilowany jest kod, który używa tych. Nazwy POSIX domyślne są przestarzałe, nie funkcji. Aby pominąć to ostrzeżenie, należy zdefiniować `_CRT_NONSTDC_NO_WARNINGS` przed dołączeniem żadnych nagłówków w kodzie, który używa oryginalnej nazwy POSIX.
 
-Niektórych funkcji w standardowej biblioteki C ma historię użycia niebezpieczne, ze względu na parametry użyte i bufory niezaznaczone. Funkcje te są często źródła problemów z zabezpieczeniami w kodzie. Firma Microsoft utworzyła zbiór bezpieczniejsze wersje tych funkcji, które sprawdzają użycia parametrów i wywołać procedurę obsługi nieprawidłowego parametru, gdy problem zostanie wykryty w czasie wykonywania.  Domyślnie kompilator języka Visual C++ generuje wycofywania ostrzeżenia, gdy używana jest funkcja, zawierającej bezpieczniejsze wariant dostępne. Podczas kompilowania kodu jako języka C++, można zdefiniować `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1, aby wyeliminować ostrzeżenia większość. Ta metoda korzysta przeciążenia szablonu do wywoływania wariantów bezpieczniejsze przy zachowaniu kod przenośny źródła. Aby pominąć to ostrzeżenie, należy zdefiniować `_CRT_SECURE_NO_WARNINGS` przed dołączeniem żadnych nagłówków w kodzie, który korzysta z tych funkcji. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md).
+Niektórych funkcji w standardowej biblioteki C ma historię użycia niebezpieczne, ze względu na parametry użyte i bufory niezaznaczone. Funkcje te są często źródła problemów z zabezpieczeniami w kodzie. Firma Microsoft utworzyła zbiór bezpieczniejsze wersje tych funkcji, które sprawdzają użycia parametrów i wywołać procedurę obsługi nieprawidłowego parametru, gdy problem zostanie wykryty w czasie wykonywania.  Domyślnie program Microsoft C++ kompilator generuje ostrzeżenia wycofywania, gdy używana jest funkcja, zawierającej bezpieczniejsze wariant dostępne. Podczas kompilowania kodu jako języka C++, można zdefiniować `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1, aby wyeliminować ostrzeżenia większość. Ta metoda korzysta przeciążenia szablonu do wywoływania wariantów bezpieczniejsze przy zachowaniu kod przenośny źródła. Aby pominąć to ostrzeżenie, należy zdefiniować `_CRT_SECURE_NO_WARNINGS` przed dołączeniem żadnych nagłówków w kodzie, który korzysta z tych funkcji. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 Z wyjątkiem wymienionych w dokumentacji dla określonych funkcji UCRT jest zgodny z interfejsu API Windows.  Niektóre funkcje nie są obsługiwane w aplikacjach systemu Windows 8 Store lub w aplikacjach Windows platformy Uniwersalnej systemu Windows 10. Te funkcje są wymienione w [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md), która wylicza funkcje nie są obsługiwane przez środowisko wykonawcze Windows i [platformy uniwersalnej systemu Windows](/uwp).
 

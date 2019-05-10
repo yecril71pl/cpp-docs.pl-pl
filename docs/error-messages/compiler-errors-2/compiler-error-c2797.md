@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: 04a7b2b1d33ab7efa77563406ab3c12831cf80fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd007bf193bd6529748004a96745fafcb9f3226
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360128"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447824"
 ---
 # <a name="compiler-error-c2797"></a>Błąd kompilatora C2797
 
 (Przestarzałe) Inicjowanie listy wewnątrz listy inicjatorów składowych lub inicjatora składowej danych niestatycznych nie jest zaimplementowana.
 
-To ostrzeżenie jest przestarzała w programie Visual Studio 2015. W programie Visual Studio 2013 i wcześniejszych wersjach kompilator języka Visual C++ nie implementuje Inicjowanie listy wewnątrz listy inicjatorów składowej lub inicjatora składowej danych niestatycznych. Przed Visual Studio 2013 Update 3 to był dyskretnie konwertowane wywołanie funkcji, która może spowodować wygenerowanie złego kodu. Visual Studio 2013 Update 3 to raporty jako błąd.
+To ostrzeżenie jest przestarzała w programie Visual Studio 2015. W programie Visual Studio 2013 i wcześniejszych wersjach programu Microsoft C++ kompilatora nie implementuje Inicjowanie listy wewnątrz listy inicjatorów składowej lub inicjatora składowej danych niestatycznych. Przed Visual Studio 2013 Update 3 to był dyskretnie konwertowane wywołanie funkcji, która może spowodować wygenerowanie złego kodu. Visual Studio 2013 Update 3 to raporty jako błąd.
 
 Ten przykład generuje C2797:
 

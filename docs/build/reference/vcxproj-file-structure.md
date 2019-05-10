@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317123"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446502"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura plików vcxproj i props
 
@@ -21,13 +21,13 @@ Jeśli użytkownik chce ręcznie edytować plik .vcxproj, należy pamiętać o t
 
 1. Struktura pliku, należy wykonać realizowania formularza, który jest opisany w tym artykule.
 
-1. System projektów języka Visual C++ obecnie nie obsługuje symboli wieloznacznych w elementach projektu. Na przykład to nie jest obsługiwana:
+1. Visual Studio C++ system projektu aktualnie nie obsługuje symboli wieloznacznych w elementach projektu. Na przykład to nie jest obsługiwana:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. System projektów języka Visual C++ obecnie nie obsługuje makra w ścieżkach elementów projektu. Na przykład to nie jest obsługiwana:
+1. Visual Studio C++ system projektu aktualnie nie obsługuje makr w ścieżkach elementów projektu. Na przykład to nie jest obsługiwana:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ Metadane powinna mieć warunki konfiguracji dla każdej konfiguracji, nawet jeś
 </ItemGroup>
 ```
 
-System projektów języka Visual C++ obecnie nie obsługuje symboli wieloznacznych w elementach projektu.
+Visual Studio C++ system projektu aktualnie nie obsługuje symboli wieloznacznych w elementach projektu.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ System projektów języka Visual C++ obecnie nie obsługuje symboli wieloznaczny
 </ItemGroup>
 ```
 
-System projektów języka Visual C++ obecnie nie obsługuje makra w elementach projektu.
+Visual Studio C++ system projektu aktualnie nie obsługuje makr w elementach projektu.
 
 ```xml
 <ItemGroup>

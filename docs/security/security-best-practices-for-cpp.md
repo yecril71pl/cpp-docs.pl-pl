@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43658eda749e68c17659fcb41248b88fd843792
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411269"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448502"
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
 
@@ -21,7 +21,7 @@ Ten artykuł zawiera informacje dotyczące narzędzi zabezpieczeń i praktyki. K
 
 ## <a name="visual-c-security-features"></a>Funkcje zabezpieczeń w programie Visual C++
 
-Te funkcje zabezpieczeń są wbudowane w kompilator języka Visual C++ i konsolidatora:
+Te funkcje zabezpieczeń wbudowane Microsoft C++ kompilatora i konsolidatora:
 
 [/guard (Włącz ochronę przepływu sterowania)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 Powoduje, że kompilator analizować przepływ kontroli dla pośredniego rozmów w czasie kompilacji, a następnie Wstaw kod, aby sprawdzić elementy docelowe w czasie wykonywania.

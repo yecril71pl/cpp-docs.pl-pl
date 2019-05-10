@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - size_type typedef
 ms.assetid: e02de8af-e175-45a2-b006-835814a40e68
-ms.openlocfilehash: 4d3509f62e88e738237a45c5abadbbf79f73d837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d2bbd6f391b05053bda845022c1b12ba1e8bb80
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210903"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221531"
 ---
 # <a name="container-classsizetype"></a>Kontener Class::size_type
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
 Opisuje obiekt, który może reprezentować długość wszelkie kontrolowanej sekwencji.
 

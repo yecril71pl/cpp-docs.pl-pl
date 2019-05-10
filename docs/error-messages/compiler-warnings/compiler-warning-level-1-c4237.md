@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4237
 ms.assetid: f2e86c4b-80d8-460e-9429-83c5f3f5d7ca
-ms.openlocfilehash: 04fcb99e1dd1e348716e25affb22b54079d53aa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c68e84daa2ca1aa023123203bb851e92758f9e40
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207386"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447679"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>Kompilator ostrzeżenie (poziom 1) C4237
 
 słowo kluczowe "— słowo kluczowe" jest jeszcze obsługiwane, ale zarezerwowane dla przyszłego użytku
 
-Słowo kluczowe w specyfikacji C++ nie jest zaimplementowana w kompilator języka Visual C++, ale słowo kluczowe nie jest dostępna jako symbol zdefiniowany przez użytkownika.
+Słowo kluczowe w C++ specyfikacji nie jest zaimplementowany w Microsoft C++ kompilator, ale słowo kluczowe nie jest dostępna jako symbole zdefiniowane przez użytkownika.
 
 Poniższy przykład spowoduje wygenerowanie C4237:
 

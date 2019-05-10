@@ -1,15 +1,15 @@
 ---
 title: Składnia wyrażenia lambda
-ms.date: 03/25/2019
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216514"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222388"
 ---
 # <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda
 
@@ -83,7 +83,7 @@ W przykładzie trzeci argument **for_each** funkcji jest wyrażeniem lambda. `[&
 
 ## <a name="example-2-using-a-function-object"></a>Przykład 2: Używanie obiektu funkcyjnego
 
-Czasami wyrażenie lambda byłoby zbyt niewygodne do rozszerzenia dalszego niż w poprzednim przykładzie. W następnym przykładzie użyto obiektu funkcyjnego zamiast wyrażenia lambda, wraz z **for_each** funkcji w celu uzyskania tych samych wyników jak z przykładu 1. Oba przykłady przechowują liczbę liczb parzystych w `vector` obiektu. Aby utrzymywać stan operacji `FunctorClass` klasa przechowuje `m_evenCount` zmiennych przez odwołanie jako zmienną składową. Do wykonania tej operacji `FunctorClass` implementuje operator wywołania funkcji **operator()**. Kompilator Visual C++ generuje kod o rozmiarze i wydajności porównywalnej z kodem wyrażenia lambda z przykładu 1. Dla podstawowego problemu, takiego jak w tym artykule, prostsza konstrukcja lambda jest prawdopodobnie lepsza niż konstrukcja obiektu funkcyjnego. Jednak, jeśli istnieje możliwość, że funkcjonalność będzie wymagać znacznego rozszerzenia w przyszłości, można użyć obiektu funkcyjnego, aby ułatwić utrzymywanie kodu.
+Czasami wyrażenie lambda byłoby zbyt niewygodne do rozszerzenia dalszego niż w poprzednim przykładzie. W następnym przykładzie użyto obiektu funkcyjnego zamiast wyrażenia lambda, wraz z **for_each** funkcji w celu uzyskania tych samych wyników jak z przykładu 1. Oba przykłady przechowują liczbę liczb parzystych w `vector` obiektu. Aby utrzymywać stan operacji `FunctorClass` klasa przechowuje `m_evenCount` zmiennych przez odwołanie jako zmienną składową. Do wykonania tej operacji `FunctorClass` implementuje operator wywołania funkcji **operator()**. Microsoft C++ kompilator generuje kod, który jest porównywalny rozmiar oraz wydajność kodem wyrażenia lambda z przykładu 1. Dla podstawowego problemu, takiego jak w tym artykule, prostsza konstrukcja lambda jest prawdopodobnie lepsza niż konstrukcja obiektu funkcyjnego. Jednak, jeśli istnieje możliwość, że funkcjonalność będzie wymagać znacznego rozszerzenia w przyszłości, można użyć obiektu funkcyjnego, aby ułatwić utrzymywanie kodu.
 
 Aby uzyskać więcej informacji na temat **operator()**, zobacz [wywołania funkcji](../cpp/function-call-cpp.md). Aby uzyskać więcej informacji na temat **for_each** funkcji, zobacz [for_each](../standard-library/algorithm-functions.md#for_each).
 

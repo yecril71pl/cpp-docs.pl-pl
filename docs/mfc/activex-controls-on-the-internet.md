@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d268da8bef4facfb9259e6ce43648c8713464ec9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394848"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448188"
 ---
 # <a name="activex-controls-on-the-internet"></a>Formanty ActiveX w Internecie
 
@@ -85,7 +85,7 @@ Podczas tworzenia nowego formantu za pomocą Kreatora aplikacji, można włączy
 
 1. Kliknij przycisk **New** na **pliku** menu.
 
-1. Wybierz **Kreator kontrolek ActiveX MFC** z Visual C++ projektów i nazwij swój projekt.
+1. Wybierz **Kreator kontrolek ActiveX MFC** z programu Visual Studio C++ projektów i nazwij swój projekt.
 
 1. Na **ustawienia kontroli** wybierz opcję **ładuje asynchronicznie właściwości**. Wybranie tej opcji ustawia się właściwości stanu gotowości i zdarzenia zmieniającego stan gotowości za Ciebie.
 

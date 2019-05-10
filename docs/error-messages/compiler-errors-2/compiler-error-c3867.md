@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242882"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447190"
 ---
 # <a name="compiler-error-c3867"></a>Błąd kompilatora C3867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62242882"
 
 Próbowano pobrać adresu funkcji składowej bez kwalifikowania funkcja elementu członkowskiego przy użyciu nazwy klasy i operatora address-of.
 
-Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: rozszerzoną zgodność wskaźników do elementów członkowskich. Kod, który jest skompilowany przed Visual C++ 2005 teraz wygeneruje C3867.
+Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: rozszerzoną zgodność wskaźników do elementów członkowskich. Kod, który jest skompilowany przed Visual Studio 2005 teraz wygeneruje C3867.
 
 ## <a name="example"></a>Przykład
 

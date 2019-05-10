@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315901"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446198"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Generuj prototypy funkcji)
 
@@ -29,7 +29,7 @@ Usuwane. Tworzy prototyp funkcji, dla każdej funkcji, zdefiniowane w pliku źr�
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja kompilatora nie jest już dostępna. Została usunięta w programie Visual C++ 2015. Ta strona pozostaje dla użytkowników starsze wersje programu Visual C++.
+Ta opcja kompilatora nie jest już dostępna. Została usunięta w programie Visual Studio 2015. Ta strona pozostaje przez użytkowników starszych wersji programu Visual Studio.
 
 Prototyp funkcji zawiera typ zwracany funkcji i listy argumentów typu. Lista typów argumentu jest tworzony na podstawie typów parametrów formalnych w funkcji. Wszystkie prototypy funkcji już istnieje w pliku źródłowym są ignorowane.
 

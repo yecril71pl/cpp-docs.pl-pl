@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397279"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447101"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Kompilator ostrzeżenie (poziom 1) C4581
 
 zachowanie przestarzałe: "ciąg1" zastąpione "ciąg2", aby przetwarzać atrybut
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: Sprawdzanie parametrów dla atrybutów języka Visual C++.
+Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: Sprawdzanie parametrów dla wizualizacji C++ atrybutów.
 
 W poprzednich wersjach wartości atrybutów zostały zaakceptowane, czy zostały one ujęta w znaki cudzysłowu. Jeśli wartość jest wyliczeniem, nie muszą być ujęte w znaki cudzysłowu.
 

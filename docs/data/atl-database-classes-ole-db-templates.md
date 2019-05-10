@@ -1,21 +1,21 @@
 ---
 title: Klasy baz danych ATL (Szablony OLE DB)
-ms.date: 11/04/2016
+ms.date: 05/02/2019
 helpviewer_keywords:
 - OLE DB templates [C++], ATL database classes
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc016a5e1e1d9652f6a69f73b5760f42dec5e889
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393821"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222558"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Klasy baz danych ATL (Szablony OLE DB)
 
-Firma Microsoft udostępnia kilka implementacji OLE DB, zbiór interfejsów COM, które udostępniają jednolity dostęp do danych z różnymi źródłami informacji i formatów.  OLE DB oficjalnie jest przestarzała; Ta dokumentacja jest dla deweloperów, którzy są obsługi starszego kodu. Nowe aplikacje powinny używać ODBC do łączenia ze źródłami danych SQL.
+Firma Microsoft udostępnia kilka implementacji OLE DB, zbiór interfejsów COM, które udostępniają jednolity dostęp do danych z różnymi źródłami informacji i formatów.
 
 Szablony OLE DB są szablonami języka C++ w ATL, które ułatwiają korzystanie, zapewniając klas implementujących wiele powszechnie używanych interfejsów OLE DB technologii baz danych OLE DB.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384754"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447252"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Zagadnienia dotyczące wydajności związane z międzyoperacyjnością (C++)
 
@@ -21,7 +21,7 @@ Ten temat zawiera wskazówki w celi zmniejszenia wpływu zarządzanych/niezarzą
 
 Visual C++ obsługuje te same mechanizmy współdziałanie jako innych językach .NET, takich jak Visual Basic i C# (P/Invoke), ale udostępnia również międzyoperacyjny pomocy technicznej, które są specyficzne dla języka Visual C++ (międzyoperacyjności języka C++). Wydajność krytycznych aplikacji ważne jest zrozumienie wpływu na wydajność każdej techniki międzyoperacyjnego.
 
-Niezależnie od tego, międzyoperacyjny techniki używane sekwencje specjalne przejścia, o nazwie sekcje Thunk, wymagane jest każdej funkcji zarządzanej wywołuje niezarządzanych funkcji i odwrotnie. Te sekcje Thunk są wprowadzane automatycznie przez kompilator Visual C++, ale należy pamiętać, że łącznie, te przejścia może być kosztowna pod względem wydajności.
+Niezależnie od tego, międzyoperacyjny techniki używane sekwencje specjalne przejścia, o nazwie sekcje Thunk, wymagane jest każdej funkcji zarządzanej wywołuje niezarządzanych funkcji i odwrotnie. Te sekcje Thunk są wprowadzane automatycznie przez firmę Microsoft C++ kompilator, ale ważne jest, aby pamiętać, że łącznie, te przejścia może być kosztowna pod względem wydajności.
 
 ## <a name="reducing-transitions"></a>Zmniejszenie przejścia
 

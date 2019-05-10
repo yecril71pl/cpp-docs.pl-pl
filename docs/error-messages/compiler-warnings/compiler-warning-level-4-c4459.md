@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 0cbab7c7cca1fc88bb99210262be45c56b6be7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391429"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447758"
 ---
 # <a name="compiler-warning-level-4-c4459"></a>Kompilator ostrzeżenie (poziom 4) C4459
 
@@ -19,7 +19,7 @@ ms.locfileid: "62391429"
 
 Deklaracja *identyfikator* w zakresie lokalnym ukrywa deklarację o takiej samej nazwie *identyfikator* w zakresie globalnym. To ostrzeżenie informuje o tym, który odwołuje się do *identyfikator* w tym zakresie rozpoznać lokalnie zadeklarowanych wersji, a nie wersja globalna, która może być lub może nie być zgodne z zamiarami użytkownika. Ogólnie rzecz biorąc zalecamy zminimalizować użycie zmiennych globalnych jako dobrą praktykę. Aby zminimalizować zanieczyszczeniu globalnej przestrzeni nazw, firma Microsoft zaleca korzystanie z nazwanego przestrzeni nazw dla zmiennych globalnych.
 
-To ostrzeżenie jest nowe w programie Visual Studio 2015 w programie Visual C++ wersja kompilatora godziny 18.00. Aby pominąć ostrzeżenia z danej wersji kompilatora lub później, podczas migracji kodu, należy użyć [/WV: 18](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
+To ostrzeżenie zostało nowe w programie Visual Studio 2015 w programie Microsoft C++ wersja kompilatora godziny 18.00. Aby pominąć ostrzeżenia z danej wersji kompilatora lub później, podczas migracji kodu, należy użyć [/WV: 18](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
 
 ## <a name="example"></a>Przykład
 

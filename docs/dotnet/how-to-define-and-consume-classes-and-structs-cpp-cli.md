@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387490"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447295"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Instrukcje: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)
 
@@ -127,7 +127,7 @@ Można kontrolować widoczność typowych języka wspólnego (CLR), tak, że je�
 
 `public` Wskazuje, że typ jest widoczny dla dowolnego pliku źródłowego, który zawiera `#using` dyrektywy dla zestawu, który zawiera tekst.  `private` Wskazuje, że typ jest widoczny dla plików źródłowych, które zawierają `#using` dyrektywy dla zestawu, który zawiera tekst. Typy prywatne będą jednak widoczne w ramach tego samego zestawu. Domyślnie jest widoczność dla klasy `private`.
 
-Domyślnie przed Visual C++ 2005 typy natywne miał powszechnej dostępności spoza zestawu. Włącz [ostrzeżenie kompilatora (poziom 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) ułatwiające możesz zobaczyć, gdzie prywatnej typy natywne są używane niepoprawnie. Użyj [make_public](../preprocessor/make-public.md) pragma, aby zapewnić dostęp publiczny do typu natywnego w pliku kodu źródłowego, który nie można zmodyfikować.
+Domyślnie przed Visual Studio 2005 natywnych typów miały powszechnej dostępności spoza zestawu. Włącz [ostrzeżenie kompilatora (poziom 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) ułatwiające możesz zobaczyć, gdzie prywatnej typy natywne są używane niepoprawnie. Użyj [make_public](../preprocessor/make-public.md) pragma, aby zapewnić dostęp publiczny do typu natywnego w pliku kodu źródłowego, który nie można zmodyfikować.
 
 Aby uzyskać więcej informacji, zobacz [# dyrektywa using](../preprocessor/hash-using-directive-cpp.md).
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-Następny przykład pokazuje, że kompilator języka Visual C++ wywołuje funkcję w klasie pochodnej najbardziej — nawet jeśli konwersja jest wymagany do dopasowania jednego lub więcej parametrów — i nie wywołać funkcję w klasie bazowej, która ma lepsze dopasowanie na wywołanie funkcji.
+Następny przykład pokazuje, że Microsoft C++ kompilator wywołuje funkcję w klasie pochodnej najbardziej — nawet jeśli konwersja jest wymagany do dopasowania jednego lub więcej parametrów — i nie wywołać funkcję w klasie bazowej, która ma lepsze dopasowanie na wywołanie funkcji.
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ Moduł odśmiecania pamięci CLR spowoduje usunięcie nieużywanych zarządzanyc
 
 Finalizator Visual C++ nie jest taka sama jak <xref:System.Object.Finalize%2A> metody. (Dokumentacja CLR używa finalizator i <xref:System.Object.Finalize%2A> metoda synonimów). <xref:System.Object.Finalize%2A> Metoda jest wywoływana przez moduł odśmiecania pamięci, które wywołuje każdego finalizatora w łańcuchu dziedziczenia klasy. W przeciwieństwie do języka Visual C++ destruktory wywołanie finalizatory klasy pochodnej nie powoduje kompilator, aby wywołać finalizatora w klasach bazowych, wszystkie.
 
-Ponieważ kompilator języka Visual C++ obsługuje deterministyczne zwolnienia zasobów, nie należy próbować wdrożyć <xref:System.IDisposable.Dispose%2A> lub <xref:System.Object.Finalize%2A> metody. Jeśli jesteś zaznajomiony z tych metod, w tym miejscu jest jednak sposób mapowania finalizator Visual C++ i destruktor, który wywołuje finalizator na <xref:System.IDisposable.Dispose%2A> wzorca:
+Ponieważ Microsoft C++ kompilator obsługuje deterministycznego zwalniania zasobów, nie należy próbować wdrożyć <xref:System.IDisposable.Dispose%2A> lub <xref:System.Object.Finalize%2A> metody. Jeśli jesteś zaznajomiony z tych metod, w tym miejscu jest jednak sposób mapowania finalizator Visual C++ i destruktor, który wywołuje finalizator na <xref:System.IDisposable.Dispose%2A> wzorca:
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 Typ zarządzany może również użyć zarządzanych zasobów, które chcesz użyć do wersji w sposób deterministyczny, a nie pozostaw moduł odśmiecania pamięci, aby zwolnić niedeterministyczny w pewnym momencie po obiektu nie jest już wymagany. Deterministycznego zwalniania zasobów może znacznie poprawić wydajność.
 
-Kompilator języka Visual C++ umożliwia definicji destruktora w sposób deterministyczny czyszczenie obiektów. Użyj destruktor, aby zwolnić wszystkie zasoby, które chcesz zwolnić w sposób deterministyczny.  Jeśli ma finalizator, należy wywołać go z destruktora, aby uniknąć zduplikowania kodu.
+Microsoft C++ kompilatora umożliwia definicji destruktora w sposób deterministyczny czyszczenie obiektów. Użyj destruktor, aby zwolnić wszystkie zasoby, które chcesz zwolnić w sposób deterministyczny.  Jeśli ma finalizator, należy wywołać go z destruktora, aby uniknąć zduplikowania kodu.
 
 ```cpp
 // compile with: /clr /c

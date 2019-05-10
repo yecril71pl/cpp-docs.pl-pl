@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba2b413d40da601029f5c4e1d861576212c10494
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412673"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448427"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrowanie z OpenMP do współbieżności środowiska wykonawczego
 
 Środowisko uruchomieniowe współbieżności umożliwia różne modele programowania. Te modele mogą nakładać się na lub uzupełniają modele innych bibliotek. Dokumenty w tej sekcji porównania [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) do współbieżności środowiska wykonawczego i zawierają przykłady dotyczące migracji istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.
 
-Model programowania OpenMP jest definiowany przez otwarty standard i dobrze zdefiniowanych powiązań dla języków programowania Fortran i języka C/C++. OpenMP w wersji 2.0 i 2.5, które są obsługiwane przez kompilator języka Visual C++, są one odpowiednie dla algorytmów równoległych, które są iteracyjne; oznacza to ich wykonywanie równoległe iteracji przez tablicę danych. OpenMP 3.0 obsługuje-iteracyjne zadania i zadania iteracyjne.
+Model programowania OpenMP jest definiowany przez otwarty standard i dobrze zdefiniowanych powiązań dla języków programowania Fortran i języka C/C++. OpenMP w wersji 2.0 i 2.5, które są obsługiwane przez firmę Microsoft C++ kompilatora, są one odpowiednie dla algorytmów równoległych, które są iteracyjne; oznacza to ich wykonywanie równoległe iteracji przez tablicę danych. OpenMP 3.0 obsługuje-iteracyjne zadania i zadania iteracyjne.
 
 OpenMP jest najbardziej efektywne, gdy stopień równoległości jest wstępnie określane i dopasowuje dostępnych zasobów w systemie. OpenMP model jest szczególnie dobre dopasowanie do obliczeń o wysokiej wydajności, bardzo duże rozwiązywania problemów obliczeniowych są dystrybuowane między przetwarzania zasobów z jednego komputera. W tym scenariuszu środowisko sprzętu zazwyczaj jest stała i deweloper może spodziewać ma wyłącznego dostępu do wszystkich zasobów obliczeniowych, podczas wykonywania algorytmu.
 

@@ -1,16 +1,16 @@
 ---
 title: 'Przewodnik: Dodawanie obiektu CTaskDialog do aplikacji'
-ms.date: 09/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8cf2223b2859a2dfa6ecc7582ec2f171a056152c
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358268"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558198"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Przewodnik: Dodawanie obiektu CTaskDialog do aplikacji
 
@@ -37,7 +37,9 @@ W poniższej procedurze przedstawiono najbardziej podstawowe zastosowanie `CTask
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Aby zastąpić okno komunikatu Windows obiektu CTaskDialog
 
-1. Utwórz nowy projekt aplikacji MFC, przy użyciu ustawień domyślnych. Wywołaj go *MyProject*.
+1. Użyj **Kreator aplikacji MFC** Aby utworzyć aplikację MFC z ustawieniami domyślnymi. Zobacz [instruktażu: Używanie nowych formantów powłoki MFC](walkthrough-using-the-new-mfc-shell-controls.md) w jaki sposób otworzyć kreatora dla używanej wersji programu Visual Studio.
+
+1. Wywołaj go *MyProject*. 
 
 1. Użyj **Eksploratora rozwiązań** można otworzyć pliku MyProject.cpp.
 

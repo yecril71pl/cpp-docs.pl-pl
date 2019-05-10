@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4540180058c890a1dec9c4060f796f1f044c934
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215404"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447994"
 ---
 # <a name="compiler-error-c2603"></a>Błąd kompilatora C2603
 
 > "*funkcja*": Zbyt wiele bloku statycznych obiektów w zakresie z konstruktorem/destruktorami w funkcji
 
-W wersji kompilatora Visual C++ przed Visual Studio 2015 lub gdy [threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) — opcja kompilatora jest określony, jest ograniczona do 31 liczby obiektów statycznych, które mogą mieć w widocznego na zewnątrz wbudowanej funkcji .
+W wersjach programu Microsoft C++ kompilatora przed Visual Studio 2015, lub gdy [threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) — opcja kompilatora jest określony, jest ograniczona do 31 liczby obiektów statycznych, które mogą mieć w widocznego na zewnątrz Funkcja śródwierszowa.
 
-Aby rozwiązać ten problem, zaleca się przyjmują nowsze wersje zestawu narzędzi kompilatora Visual C++, lub jeśli jest to możliwe, Usuń threadsafeinit — opcja kompilatora. Jeśli nie jest to możliwe, należy wziąć pod uwagę łączenia obiektów statycznych. Jeśli obiekty są tego samego typu, rozważ użycie jednej tablicy statycznej tego typu, a następnie odwoływać się do poszczególnych elementów członkowskich, zgodnie z potrzebami.
+Aby rozwiązać ten problem, firma Microsoft zaleca, przyjmuje nowszą wersję programu Microsoft C++ zestaw narzędzi kompilatora, lub jeśli jest to możliwe, Usuń threadsafeinit — opcja kompilatora. Jeśli nie jest to możliwe, należy wziąć pod uwagę łączenia obiektów statycznych. Jeśli obiekty są tego samego typu, rozważ użycie jednej tablicy statycznej tego typu, a następnie odwoływać się do poszczególnych elementów członkowskich, zgodnie z potrzebami.
 
 ## <a name="example"></a>Przykład
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: 65b7e1d8f03b5e59bd21091531bc9d21472e4ae4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402739"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447801"
 ---
 # <a name="compiler-error-c3203"></a>Błąd kompilatora C3203
 
@@ -19,7 +19,7 @@ ms.locfileid: "62402739"
 
 Nieprawidłowy argument jest przekazywany do szablonu klasy lub ogólny. Szablon klasy lub typ ogólny oczekuje, że typ jako parametr.
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: nie można użyć szablonu klasy Niewyspecjalizowana jako argument szablonu na liście klas bazowych. Aby rozwiązać C3203, jawnie dodać parametry typu szablonu do nazwę klasy szablonu w przypadku używania go jako parametr szablonu na liście klas bazowych.
+Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: nie można użyć szablonu klasy Niewyspecjalizowana jako argument szablonu na liście klas bazowych. Aby rozwiązać C3203, jawnie dodać parametry typu szablonu do nazwę klasy szablonu w przypadku używania go jako parametr szablonu na liście klas bazowych.
 
 ```
 // C3203.cpp

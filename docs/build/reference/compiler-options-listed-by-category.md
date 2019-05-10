@@ -1,15 +1,15 @@
 ---
 title: Opcje kompilatora w rozbiciu na kategorie
-ms.date: 11/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d12c0f82d3595ee6b61edcd21fb01dd7f49163b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294164"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221759"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
@@ -153,7 +153,7 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Zwiększa liczbę możliwych do adresowania sekcji w pliku .obj.|
 |[/c](c-compile-without-linking.md)|Kompiluje bez konsolidacji.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Określa liczbę wątków cl.exe na potrzeby optymalizacji i generowania kodu.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Pozwala na dostarczenie informacji o błędzie (ICE) na wewnętrznych kompilatora bezpośrednio do zespołu Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Umożliwia podanie wewnętrznych kompilatora-informacje o błędzie (ICE) bezpośrednio do firmy Microsoft C++ zespołu.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Wyświetla pełną ścieżkę plików kodu źródłowego przekazanych do cl.exe w tekście diagnostycznym.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza zapisanie do pliku bazy danych (PDB) programu w celu serializowana za pośrednictwem MSPDBSRV. PLIK EXE.|
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
@@ -213,7 +213,7 @@ Ten artykuł zawiera podzieloną na kategorie listę opcji kompilatora. Aby uzys
 |[/YD](yd-place-debug-information-in-object-file.md)|Przestarzałe. Umieszcza pełne informacje debugowania we wszystkich plikach obiektu. Użyj [/zi](z7-zi-zi-debug-information-format.md) zamiast tego.|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Przestarzałe. Wyłącza zgodność w zakresie pętli for.|
 |[/Ze](za-ze-disable-language-extensions.md)|Przestarzałe. Włącza rozszerzenia językowe.|
-|[/Zg](zg-generate-function-prototypes.md)|Usunięte w programie Visual C++ 2015. Generuje prototypy funkcji.|
+|[/Zg](zg-generate-function-prototypes.md)|Usunięto w programie Visual Studio 2015. Generuje prototypy funkcji.|
 
 ## <a name="see-also"></a>Zobacz także
 

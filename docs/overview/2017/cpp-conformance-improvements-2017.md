@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f168da7440c52d1a2d5bc68a6e973d47122b7212
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410124"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65468400"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159)
 
-Dzięki obsłudze uogólnionego wyrażenia constexpr i NSDMI dla wartości zagregowanych kompilator Microsoft Visual C++ jest teraz ukończona funkcje dodane w Standard C ++ 14. Należy zauważyć, że w kompilatorze nadal brakuje kilku funkcji ze standardowych języków C++11 i C++98. Zobacz [Visual zgodność języka C++](../visual-cpp-language-conformance.md) dla tabeli, która pokazuje bieżący stan kompilatora.
+Dzięki obsłudze uogólnionego wyrażenia constexpr i NSDMI dla wartości zagregowanych, Microsoft C++ kompilator jest teraz ukończona funkcje dodane w Standard C ++ 14. Należy zauważyć, że w kompilatorze nadal brakuje kilku funkcji ze standardowych języków C++11 i C++98. Zobacz [Visual zgodność języka C++](../visual-cpp-language-conformance.md) dla tabeli, która pokazuje bieżący stan kompilatora.
 
 ## <a name="c11"></a>C++11
 
@@ -955,7 +955,7 @@ To ostrzeżenie jest wyłączone na podstawie **/WV: 18** i jest włączona domy
 
 ### <a name="stdisconvertible-for-array-types"></a>STD::is_convertible dla typów macierzy
 
-Poprzednie wersje kompilatora udostępniła niepoprawne wyniki dla [std::is_convertible](../../standard-library/is-convertible-class.md) dla typów macierzy. To wymagane biblioteki autorów, aby szczególny kompilator Microsoft Visual C++ przy użyciu `std::is_convertible<...>` cechy typu. W poniższym przykładzie statycznej potwierdza — dostęp próbny we wcześniejszych wersjach programu Visual Studio, ale się nie powieść w programie Visual Studio 2017 w wersji 15.3:
+Poprzednie wersje kompilatora udostępniła niepoprawne wyniki dla [std::is_convertible](../../standard-library/is-convertible-class.md) dla typów macierzy. Wymaga to autorów biblioteki, aby szczególny firmy Microsoft C++ kompilatora, korzystając z `std::is_convertible<...>` cechy typu. W poniższym przykładzie statycznej potwierdza — dostęp próbny we wcześniejszych wersjach programu Visual Studio, ale się nie powieść w programie Visual Studio 2017 w wersji 15.3:
 
 ```cpp
 #include <type_traits>

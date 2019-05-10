@@ -1,19 +1,19 @@
 ---
 title: 'Przewodnik: Kompilowanie programu C w wierszu polecenia'
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03876ba47270252caa21d7e2994a4f8321a6d59e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314185"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877199"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie programu C w wierszu polecenia
 
@@ -27,40 +27,65 @@ Do przeprowadzenia tego instruktażu, należy zainstalowano program Visual Studi
 
 Program Visual Studio jest zintegrowanego środowiska projektowego obsługującego edytora z w pełni funkcjonalne, menedżerów zasobów, debugery i kompilatorów dla wielu języków i platform. Aby uzyskać informacje na temat tych funkcji i jak pobrać i zainstalować program Visual Studio, w tym bezpłatnej wersji programu Visual Studio Community, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
 
-Narzędzia Build Tools dla programu Visual Studio w wersji programu Visual Studio instaluje tylko narzędzi wiersza polecenia, kompilatory, narzędzia i biblioteki wymagane do tworzenia programów C i C++. Jest doskonała do laboratoriów kompilacji lub klasą wykonuje i instaluje względnie szybko. Aby zainstalować tylko narzędzia wiersza polecenia, Pobierz [Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) i uruchom Instalatora.
+Narzędzia Build Tools dla programu Visual Studio w wersji programu Visual Studio instaluje tylko narzędzi wiersza polecenia, kompilatory, narzędzia i biblioteki wymagane do tworzenia programów C i C++. Jest doskonała do laboratoriów kompilacji lub klasą wykonuje i instaluje względnie szybko. Aby zainstalować tylko narzędzia wiersza polecenia, należy pobrać narzędzia Build Tools dla programu Visual Studio z [program Visual Studio pobiera](https://visualstudio.microsoft.com/downloads/) strony, a następnie uruchom Instalatora.
 
 Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy sprawdzić, czy narzędzia są zainstalowane i czy użytkownik może uzyskiwać do nich dostęp z poziomu wiersza polecenia. Visual C++ ma złożone wymagania dotyczące środowiska wiersza polecenia można znaleźć narzędzia, nagłówki i biblioteki, które są używane. **Nie można użyć Visual C++ w oknie wiersza polecenia zwykły** bez pewnych przygotowań. Potrzebujesz *wiersz polecenia dla deweloperów* okno jest oknem regularne wiersza polecenia, które zawiera wszystkie zmienne środowiskowe wymagane Ustaw. Na szczęście Visual C++ instaluje skróty dla Ciebie uruchomić wiersz polecenia dla deweloperów, które środowisko dla kompilacji z wiersza polecenia. Niestety nazw skróty wiersza polecenia dla deweloperów i gdzie są przechowywane różnią się w prawie każdym wersji programu Visual C++ i w innych wersjach systemu Windows. Jest pierwsze zadanie wskazówki można znaleźć odpowiednie skrótu do użycia.
 
 > [!NOTE]
 > Skrót do wiersza polecenia dla deweloperów automatycznie ustawia prawidłowe ścieżki dla kompilatora i narzędzi oraz wszelkie wymagane nagłówki i biblioteki. Niektóre z tych wartości różnią się dla każdej konfiguracji kompilacji. Należy ustawić te wartości środowiskowe samodzielnie, jeśli nie używasz skrótów klawiaturowych. Aby uzyskać więcej informacji, zobacz [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji wiersza polecenia](setting-the-path-and-environment-variables-for-command-line-builds.md). Ponieważ środowisko kompilacji jest złożone, zdecydowanie zalecamy używasz skrót do wiersza polecenia dla deweloperów, zamiast tworzyć własne.
 
-## <a name="open-a-developer-command-prompt"></a>Otwórz wiersz polecenia dla deweloperów
+Instrukcje te różnią się w zależności od tego, która wersja programu Visual Studio, którego używasz. Przed kontynuowaniem upewnij się, że selektor wersji, w lewym górnym rogu tej strony jest ustawiony poprawnie.
 
-1. Po zainstalowaniu programu Visual Studio 2017 w systemie Windows 10, otwórz Start menu, a następnie przewiń w dół i Otwórz **programu Visual Studio 2017** folder (a nie aplikacji programu Visual Studio 2017). Wybierz **wiersz polecenia programisty dla programu VS 2017** aby otworzyć okno wiersza polecenia.
+::: moniker range="vs-2019"
 
-   Jeśli zainstalowano program Microsoft Visual C++ Build Tools 2015 w systemie Windows 10, otwórz **Start** menu, a następnie przewiń w dół i Otwórz **Visual C++ Build Tools** folderu. Wybierz **natywnych wiersz polecenia narzędzi Visual C++ 2015 x86** aby otworzyć okno wiersza polecenia.
+## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>Otwórz wiersz polecenia dla deweloperów w programie Visual Studio 2019 r.
 
-   Jeśli używasz innej wersji programu Visual Studio lub działają innej wersji systemu Windows, Szukaj w Start menu lub uruchomić stronę folderu Narzędzia programu Visual Studio, który zawiera skrót do wiersza polecenia dla deweloperów. Funkcja wyszukiwania Windows umożliwia również wyszukiwanie "wiersz polecenia dla deweloperów" i wybierz jedną, która jest zgodna z zainstalowaną wersją programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
+Po zainstalowaniu programu Visual Studio 2019 w systemie Windows 10, otwórz Start menu, a następnie przewiń w dół i Otwórz **Visual Studio 2019** folder (a nie aplikacji Visual Studio 2019 r.). Wybierz **wiersz polecenia programisty dla programu VS 2019** aby otworzyć okno wiersza polecenia.
 
-1. Następnie sprawdź, czy wiersz polecenia dla deweloperów Visual C++ są prawidłowo skonfigurowane. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wyglądają następująco:
+Jeśli używasz innej wersji systemu Windows, Szukaj w Start menu lub uruchomić stronę folderu Narzędzia programu Visual Studio, który zawiera skrót do wiersza polecenia dla deweloperów. Funkcja wyszukiwania Windows umożliwia również wyszukiwanie "wiersz polecenia dla deweloperów" i wybierz jedną, która jest zgodna z zainstalowaną wersją programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
 
-   ```Output
-   C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
-   Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
-   Copyright (C) Microsoft Corporation.  All rights reserved.
+::: moniker-end
 
-   usage: cl [ option... ] filename... [ /link linkoption... ]
-   ```
+::: moniker range="vs-2017"
 
-   Może to być różnice w bieżącym katalogu lub numerów wersji, w zależności od wersji programu Visual C++ i zainstalowane jakiekolwiek aktualizacje. Jeśli powyższe dane wyjściowe będą podobne do zostanie wyświetlony, możesz przystąpić do tworzenia programów C lub C++ w wierszu polecenia.
+## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>Otwórz wiersz polecenia dla deweloperów w programie Visual Studio 2017
 
-   > [!NOTE]
-   > Jeśli wystąpi błąd, takie jak "" cl"nie jest rozpoznawana jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy" Błąd C1034 lub błąd LNK1104 po uruchomieniu **cl** polecenia, a następnie albo nie używasz wiersz polecenia dla deweloperów lub coś jest nie tak z instalacji programu Visual C++. Należy rozwiązać ten problem, zanim będzie można kontynuować.
+Po zainstalowaniu programu Visual Studio 2017 w systemie Windows 10, otwórz Start menu, a następnie przewiń w dół i Otwórz **programu Visual Studio 2017** folder (a nie aplikacji programu Visual Studio 2017). Wybierz **wiersz polecenia programisty dla programu VS 2017** aby otworzyć okno wiersza polecenia.
 
-   Jeśli nie możesz znaleźć Deweloper skrót do wiersza polecenia lub jeśli zostanie wyświetlony komunikat o błędzie po wprowadzeniu `cl`, a następnie instalację programu Visual C++ może wystąpić problem. Jeśli używasz programu Visual Studio 2017, spróbuj zainstalować ponownie **programowanie aplikacji klasycznych w języku C++** obciążenie w Instalatorze programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](vscpp-step-0-installation.md). Czy ponownie zainstalować [Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). Nie przejdź do następnej sekcji, dopóki ta funkcja działa. Aby uzyskać więcej informacji na temat instalowania i rozwiązywanie problemów z programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
+Jeśli korzystasz z innej wersji systemu Windows, Szukaj w Start menu lub uruchomić stronę folderu Narzędzia programu Visual Studio, który zawiera skrót do wiersza polecenia dla deweloperów. Funkcja wyszukiwania Windows umożliwia również wyszukiwanie "wiersz polecenia dla deweloperów" i wybierz jedną, która jest zgodna z zainstalowaną wersją programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
 
-   > [!NOTE]
-   > W zależności od wersji na komputerze oraz konfiguracji zabezpieczeń systemu Windows, może być konieczne, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla skrót do wiersza polecenia dla deweloperów, a następnie wybierz **Uruchom jako Administrator** do pomyślnie skompilować i uruchomić program, który utworzonych za pomocą tego przewodnika.
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>Otwórz wiersz polecenia dla deweloperów w programie Visual Studio 2015
+
+Jeśli zainstalowano program Microsoft Visual C++ Build Tools 2015 w systemie Windows 10, otwórz **Start** menu, a następnie przewiń w dół i Otwórz **Visual C++ Build Tools** folderu. Wybierz **natywnych wiersz polecenia narzędzi Visual C++ 2015 x86** aby otworzyć okno wiersza polecenia.
+
+Jeśli korzystasz z innej wersji systemu Windows, Szukaj w Start menu lub uruchomić stronę folderu Narzędzia programu Visual Studio, który zawiera skrót do wiersza polecenia dla deweloperów. Funkcja wyszukiwania Windows umożliwia również wyszukiwanie "wiersz polecenia dla deweloperów" i wybierz jedną, która jest zgodna z zainstalowaną wersją programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
+   
+::: moniker-end
+
+
+Następnie sprawdź, czy wiersz polecenia dla deweloperów Visual C++ są prawidłowo skonfigurowane. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wyglądają następująco:
+
+```Output
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+```
+
+Może to być różnice w bieżącym katalogu lub numerów wersji, w zależności od wersji programu Visual C++ i zainstalowane jakiekolwiek aktualizacje. Jeśli powyższe dane wyjściowe będą podobne do zostanie wyświetlony, możesz przystąpić do tworzenia programów C lub C++ w wierszu polecenia.
+
+> [!NOTE]
+> Jeśli wystąpi błąd, takie jak "" cl"nie jest rozpoznawana jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy" Błąd C1034 lub błąd LNK1104 po uruchomieniu **cl** polecenia, a następnie albo nie używasz wiersz polecenia dla deweloperów lub coś jest nie tak z instalacji programu Visual C++. Należy rozwiązać ten problem, zanim będzie można kontynuować.
+
+Jeśli nie możesz znaleźć Deweloper skrót do wiersza polecenia lub jeśli zostanie wyświetlony komunikat o błędzie po wprowadzeniu `cl`, a następnie instalację programu Visual C++ może wystąpić problem. Jeśli używasz programu Visual Studio 2017 lub później, spróbuj ponownie zainstalować **programowanie aplikacji klasycznych przy użyciu C++**  obciążenie w Instalatorze programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](vscpp-step-0-installation.md). Czy ponownie zainstalować narzędzia Build Tools z [program Visual Studio pobiera](https://visualstudio.microsoft.com/downloads/) strony. Nie przejdź do następnej sekcji, dopóki ta funkcja działa. Aby uzyskać więcej informacji na temat instalowania i rozwiązywanie problemów z programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
+
+> [!NOTE]
+> W zależności od wersji na komputerze oraz konfiguracji zabezpieczeń systemu Windows, może być konieczne, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla skrót do wiersza polecenia dla deweloperów, a następnie wybierz **Uruchom jako Administrator** do pomyślnie skompilować i uruchomić program, który utworzonych za pomocą tego przewodnika.
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Utwórz plik źródłowy C i skompilować go w wierszu polecenia
 
@@ -154,9 +179,9 @@ Kompilator cl.exe, ma wiele więcej opcji się do kompilacji, optymalizowanie, D
 
 NMAKE i pliki reguł programu make lub MSBuild i pliki projektu można użyć do konfigurowania i tworzyć bardziej złożone projekty w wierszu polecenia. Aby uzyskać więcej informacji na temat korzystania z tych narzędzi, zobacz [odwołanie NMAKE](reference/nmake-reference.md) i [MSBuild](msbuild-visual-cpp.md).
 
-W językach C i C++ są podobne, ale nie sam. Kompilator MSVC używa prostej reguły, aby określić język, który będzie używany podczas kompiluje kod. Domyślnie kompilator MSVC traktuje wszystkie pliki, które kończą się na .c, jako kod źródłowy języka C i wszystkich plików, które kończą się na .cpp, jako kod źródłowy języka C++. Aby wymusić na kompilatorze traktowanie wszystkich plików jako C nie zależne od rozszerzenia nazwy pliku, należy użyć [TP](reference/tc-tp-tc-tp-specify-source-file-type.md) — opcja kompilatora.
+W językach C i C++ są podobne, ale nie sam. Microsoft C /C++ kompilator (MSVC) używa prostej reguły, aby określić, jaki język do użycia podczas kompiluje kod. Domyślnie kompilator MSVC traktuje wszystkie pliki, które kończą się na .c, jako kod źródłowy języka C i wszystkich plików, które kończą się na .cpp, jako kod źródłowy języka C++. Aby wymusić na kompilatorze traktowanie wszystkich plików jako C nie zależne od rozszerzenia nazwy pliku, należy użyć [TP](reference/tc-tp-tc-tp-specify-source-file-type.md) — opcja kompilatora.
 
-Kompilator Visual C++, C jest zgodne ze standardem ISO C99, ale nie jest ściśle zgodna. W większości przypadków przenośny kod C skompilować i uruchomić zgodnie z oczekiwaniami. Visual C++ nie obsługuje większość zmian w ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe za pomocą kompilatora MSVC. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+MSVC jest zgodny ze standardem ISO C99, ale nie jest ściśle zgodna. W większości przypadków przenośny kod C skompilować i uruchomić zgodnie z oczekiwaniami. Visual C++ nie obsługuje większość zmian w ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe, MSVC. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Zobacz także
 

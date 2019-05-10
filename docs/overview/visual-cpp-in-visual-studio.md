@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351972"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222603"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
@@ -103,7 +103,7 @@ Informacje o sposobie tworzenia bibliotek DLL, które umożliwiają współdzia�
 [Programowanie dla systemu Linux](../linux/index.md)<br/>
 Użyj programu Visual Studio IDE do kodu i wdrożenia systemu Linux na maszynie zdalnej kompilacji za pomocą GCC.
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](../build/dlls-in-visual-cpp.md)<br/>
 Poznaj sposób używania Win32, ATL i MFC do tworzenia bibliotek DLL dla pulpitu systemu Windows, poznaj informacje o sposobach kompilowania i rejestrowania biblioteki DLL.
 
 [Programowanie równoległe](../parallel/parallel-programming-in-visual-cpp.md)<br/>

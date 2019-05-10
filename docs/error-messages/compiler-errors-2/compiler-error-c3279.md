@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3279
 ms.assetid: 639afc20-984c-4a95-be35-8bf9409f02d5
-ms.openlocfilehash: 5f39510ee9ec0e717d675aa8b396405bc33b4ea1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72646d7611163748fe7e27ea6c78cd38426eb6ad
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381954"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447812"
 ---
 # <a name="compiler-error-c3279"></a>Błąd kompilatora C3279
 
 częściowe i jawne specjalizacje jak również jawne utworzenia wystąpień szablonów klasy zadeklarowanych w przestrzeni nazw cli są niedozwolone.
 
-`cli` Przestrzeni nazw jest zdefiniowana przez firmę Microsoft i zawiera pseudo-szablony. Kompilator języka Visual C++ nie zezwala na zdefiniowanych przez użytkownika, częściowe i jawne specjalizacje i jawne utworzenia wystąpień szablonów klasy w tej przestrzeni nazw.
+`cli` Przestrzeni nazw jest zdefiniowana przez firmę Microsoft i zawiera pseudo-szablony. Microsoft C++ kompilatora nie zezwala na zdefiniowanych przez użytkownika, częściowe i jawne specjalizacje i jawne utworzenia wystąpień szablonów klasy w tej przestrzeni nazw.
 
 Poniższy przykład spowoduje wygenerowanie C3279:
 

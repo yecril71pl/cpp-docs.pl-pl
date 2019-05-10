@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363976"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448020"
 ---
 # <a name="fatal-error-c1010"></a>Błąd krytyczny C1010
 
 Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego pliku nagłówkowego. Czy zapomniano dodać "#include nazwę" do źródła?
 
-Określony za pomocą pliku dołączanego [/Yu](../../build/reference/yu-use-precompiled-header-file.md) nie znajduje się w pliku źródłowym.  Ta opcja jest włączona domyślnie w większości typów projektów Visual C++, a "w pliku stdafx.h" jest domyślnie zawierają plik określony przez tę opcję.
+Określony za pomocą pliku dołączanego [/Yu](../../build/reference/yu-use-precompiled-header-file.md) nie znajduje się w pliku źródłowym.  Ta opcja jest włączona domyślnie w programie Visual Studio w większości C++ typów projektów i "w pliku stdafx.h" jest domyślnie zawierają plik określony przez tę opcję.
 
 W środowisku Visual Studio użyj jednej z następujących metod Aby rozwiązać ten problem:
 

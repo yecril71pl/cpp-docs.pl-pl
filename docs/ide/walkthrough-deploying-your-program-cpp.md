@@ -1,6 +1,6 @@
 ---
 title: 'Przewodnik: Wdrażanie Twojego programu (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
 - setup projects [C++]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 307fa5e867b97fc05cc5419b8d51e4673284e097
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264689"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857533"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Przewodnik: Wdrażanie Twojego programu (C++)
 
@@ -30,9 +30,45 @@ Przewodnik pokazuje, jak wdrożyć aplikację przy użyciu Instalatora Windows. 
 
 - Nie można ukończyć instruktażu w wersjach Express programu Visual Studio.
 
-- Jeśli jeszcze tego nie zrobiono, pobierz rozszerzenie Microsoft projektów Instalatora programu Visual Studio, zgodnie z opisem w dalszych krokach później. Rozszerzenie jest bezpłatna dla deweloperów programu Visual Studio i dodaje funkcje instalacji i wdrażania szablonów projektu do programu Visual Studio.
+## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>Instalowanie programu Visual Studio szablonu projektu instalacji i wdrożenia
 
-### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>Aby zainstalować szablonu projektu instalacji i wdrożenia programu Visual Studio
+Kroki opisane w tej sekcji różnią się w zależności od zainstalowanej wersji programu Visual Studio. Upewnij się, że selektor wersji, w lewym górnym rogu tej strony została prawidłowo ustawiona.
+
+::: moniker range="vs-2019"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>Aby zainstalować instalacja i wdrożenie szablonu projektu dla Visual Studio 2019 r.
+
+1. Jeśli jeszcze tego nie zrobiono, pobierz rozszerzenie programu Microsoft projektów Instalatora programu Visual Studio. Rozszerzenie jest bezpłatna dla deweloperów programu Visual Studio i dodaje funkcje instalacji i wdrażania szablonów projektu do programu Visual Studio. Po połączeniu się z Internetem, w programie Visual Studio, wybierz **rozszerzenia** > **Zarządzaj rozszerzeniami**. W obszarze **rozszerzenia i aktualizacje** okno dialogowe, wybierz opcję **Online** kartę i typ *projektów Instalatora programu Visual Studio Microsoft* w polu wyszukiwania. Trafienia **Enter**, wybierz opcję **programu Microsoft Visual Studio \<wersji > Projekty Instalatora**i kliknij przycisk **Pobierz**. Możliwość uruchamiania i zainstaluj rozszerzenie, a następnie uruchom ponownie program Visual Studio.
+
+1. Na pasku menu programu Visual Studio, wybierz **pliku** > **niedawne projekty i rozwiązania**, a następnie wybierz polecenie ponownie otworzyć projekt.
+
+1. Na pasku menu wybierz **pliku** > **New** > **projektu** otworzyć **Utwórz nowy projekt** okno dialogowe. W polu wyszukiwania wpisz "Setup", a z listy wyników wybierz **projektu Instalatora**.
+
+1. Wprowadź nazwę dla projektu Instalatora w **nazwa** pole. W **rozwiązania** listy rozwijanej wybierz **Dodaj do rozwiązania**. Wybierz **OK** przycisk, aby utworzyć projekt Instalatora. A **Asystenta pliku (nazwa_projektu)** zostanie otwarta karta w oknie edytora.
+
+1. Kliknij prawym przyciskiem myszy **folderu aplikacji** a następnie wybierz węzeł **Dodaj** > **dane wyjściowe projektu** otworzyć **Dodaj grupę wyjściową projektu**okno dialogowe.
+
+1. W oknie dialogowym wybierz **podstawowe wyjście** i kliknij przycisk **OK**. Nowy element o nazwie **podstawowe dane wyjściowe z gry (aktywny)** pojawia się.
+
+1. Wybierz element, który **podstawowe dane wyjściowe z gry (aktywny)**, kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót podstawowe wyjście z gry (aktywny)**. Nowy element o nazwie **skrót do podstawowe wyjście z gry (aktywny)** pojawia się.
+
+1. Zmień nazwę elementu Skrót do *gry*, a następnie przeciągnij i upuść element do **Menu programy użytkownika** węzła w lewej części okna.
+
+1. W **Eksploratora rozwiązań**, wybierz opcję **Instalator gry** projektu, a następnie wybierz **widoku** > **okno właściwości** lub kliknij przycisk  **F4** otworzyć **właściwości** okna.
+
+1. Podaj dodatkowe szczegóły, jak mają się pojawiać w Instalatorze.  Na przykład użyć *Contoso* dla **producenta**, *Instalator gry* dla **nazwa produktu**, i *http\://www.contoso.com* dla **SupportUrl**.
+
+1. Na pasku menu wybierz **kompilacji** > **programu Configuration Manager**. W **projektu** tabeli, w obszarze **kompilacji** kolumny, zaznacz pole **Instalator gry**. Kliknij przycisk **Zamknij**.
+
+1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie** do tworzenia projektu gier i projektu Instalatora gier.
+
+1. W folderze rozwiązania zlokalizuj program setup.exe, który został zbudowany z projektu Instalatora gry, a następnie uruchom go w celu zainstalowania aplikacji gier na komputerze. Możesz skopiować ten plik (i GameInstaller.msi) do zainstalowania aplikacji i jej wymagane pliki biblioteki na innym komputerze.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>Aby zainstalować instalacja i wdrożenie szablonu projektu programu Visual Studio 2017 i jego starszych wersji
 
 1. Po połączeniu się z Internetem, w programie Visual Studio, wybierz **narzędzia** > **rozszerzenia i aktualizacje**.
 
@@ -69,6 +105,8 @@ Przewodnik pokazuje, jak wdrożyć aplikację przy użyciu Instalatora Windows. 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie** do tworzenia projektu gier i projektu Instalatora gier.
 
 1. W folderze rozwiązania zlokalizuj program setup.exe, który został zbudowany z projektu Instalatora gry, a następnie uruchom go w celu zainstalowania aplikacji gier na komputerze. Możesz skopiować ten plik (i GameInstaller.msi) do zainstalowania aplikacji i jej wymagane pliki biblioteki na innym komputerze.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Następne kroki
 

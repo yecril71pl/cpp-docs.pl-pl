@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216424"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222051"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w prawo (&gt; &gt; i &lt; &lt;)
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Jeśli przesuniesz liczbę ze znakiem w lewo, tak że bit znaku zostanie objęty zmianą, wynik będzie nieokreślony. Poniższy przykład pokazuje, co się dzieje w Visual C++, gdy 1 bit jest przesunięty w lewo do pozycji bitu znaku.
+Jeśli przesuniesz liczbę ze znakiem w lewo, tak że bit znaku zostanie objęty zmianą, wynik będzie nieokreślony. Poniższy przykład pokazuje, co się stanie, gdy 1 bit jest przesunięty w lewo do pozycji bitu znaku.
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 Operator przesunięcia w prawo powoduje, że wzorzec bitowy *shift-expression* jest przesuwany w prawo o liczbę pozycji określoną przez *additive-expression*. W przypadku liczb bez znaku, pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. W przypadku liczb ze znakiem, bit znaku jest używany do wypełniania opuszczonych pozycji bitów. Innymi słowy, jeśli liczba jest dodatnia, używane jest 0, a jeśli liczba jest ujemna, używane jest 1.
 
 > [!IMPORTANT]
-> Wynik przesunięcia w prawo liczby ujemnej ze znakiem zależy od implementacji. Mimo że Visual C++ używa bitu znaku do wypełnienia zwolnionych pozycji bitów, nie ma gwarancji, że inne implementacje działają tak samo.
+> Wynik przesunięcia w prawo liczby ujemnej ze znakiem zależy od implementacji. Mimo że Microsoft C++ kompilator używa bitu znaku do wypełniania opuszczonych pozycji bitów, nie ma żadnej gwarancji, że inne implementacje działają tak.
 
 W tym przykładzie pokazano operacje przesunięcia w prawo przy użyciu liczb bez znaku:
 

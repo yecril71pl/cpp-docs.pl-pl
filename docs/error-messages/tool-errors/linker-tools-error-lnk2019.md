@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386346"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447707"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Błąd narzędzi konsolidatora LNK2019
 
@@ -86,7 +86,7 @@ Na przykład, jeśli korzystasz AVX2 wewnętrznej, ale nie należy określać [/
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>Mieszanie kod używający natywnej wchar\_t z kodem, który nie
 
-Pracy zgodność języka C++, która została wykonana w programie Visual C++ 2005 wprowadzone `wchar_t` typu natywnego domyślnie. Należy użyć [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) — opcja kompilatora do generowania kodu zgodne z plikami biblioteki i obiektu skompilowane przy użyciu wcześniejszych wersjach Visual C++. Jeśli nie wszystkie pliki zostały skompilowane, korzystając z tych samych **/Zc:wchar\_t** ustawienia, typ odwołania nie mogą prowadzić do zgodnych typów. Upewnij się, że `wchar_t` typów we wszystkich plikach do biblioteki i obiektu są zgodne, aktualizując typy, które są używane, lub przy użyciu spójnego **/Zc:** ustawienia podczas kompilowania.
+C++język zgodność pracy, która została wykonana w programie Visual Studio 2005 wprowadzone `wchar_t` typu natywnego domyślnie. Należy użyć [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) — opcja kompilatora do generowania kodu zgodne z plikami biblioteki i obiektu skompilowane przy użyciu starszych wersji programu Visual Studio. Jeśli nie wszystkie pliki zostały skompilowane, korzystając z tych samych **/Zc:wchar\_t** ustawienia, typ odwołania nie mogą prowadzić do zgodnych typów. Upewnij się, że `wchar_t` typów we wszystkich plikach do biblioteki i obiektu są zgodne, aktualizując typy, które są używane, lub przy użyciu spójnego **/Zc:** ustawienia podczas kompilowania.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemy z biblioteki innych firm i Vcpkg
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec472e506e78a57b65186bf6a5b801419fb141fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346400"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449053"
 ---
 # <a name="deployment-concepts"></a>Pojęcia związane z wdrażaniem
 
@@ -21,7 +21,7 @@ W tej sekcji opisano najważniejsze kwestie dotyczące wdrażania aplikacji w j�
 
 ## <a name="windows-installer-deployment-in-c"></a>Wdrażanie za pomocą Instalatora Windows w języku C++
 
-Projekty języka Visual C++ zazwyczaj korzystają tradycyjnych instalacji Instalatora Windows dla wdrożenia. W celu przygotowania wdrożenia Instalatora Windows, pakietu aplikacji w pliku setup.exe i dystrybucja tego pliku, wraz z pakiet instalacyjny (.msi). Użytkownicy następnie uruchom setup.exe do zainstalowania aplikacji.
+Program Visual Studio C++ projekty zazwyczaj korzystają z tradycyjnych instalacji Instalatora Windows dla wdrożenia. W celu przygotowania wdrożenia Instalatora Windows, pakietu aplikacji w pliku setup.exe i dystrybucja tego pliku, wraz z pakiet instalacyjny (.msi). Użytkownicy następnie uruchom setup.exe do zainstalowania aplikacji.
 
 Pakiet aplikacji przez dodanie projektu Instalatora do rozwiązania; podczas kompilowania, tworzy Konfiguracja i Instalator plików pakietu, które są rozpowszechniane do użytkowników. Aby uzyskać więcej informacji, zobacz [Wybieranie metody wdrażania](choosing-a-deployment-method.md).
 

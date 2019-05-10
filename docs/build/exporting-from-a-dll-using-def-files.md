@@ -1,17 +1,17 @@
 ---
 title: Eksportowanie z biblioteki DLL przy użyciu plików DEF
-ms.date: 01/09/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92a140c6491e9e3f0d356509862dee39ebe3fae6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195484"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220787"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Eksportowanie z biblioteki DLL przy użyciu plików DEF
 
@@ -36,7 +36,10 @@ EXPORTS
 
 Jeśli używasz [kreatora MFC DLL](../mfc/reference/mfc-dll-wizard.md) do utworzenia biblioteki MFC DLL, Kreator tworzy szkielet pliku DEF i automatycznie dodaje do projektu. Dodaj nazwy funkcji, które mają zostać wyeksportowane do tego pliku. DLL bez MFC, Utwórz plik DEF, samodzielnie i dodać go do projektu. Następnie przejdź do **projektu** > **właściwości** > **konsolidatora** > **dane wejściowe**  >  **Plik definicji modułu** i wprowadź nazwę pliku rozdzielczości. Powtórz ten krok dla każdej konfiguracji i platformy lub zrobił wszystko naraz, wybierając **Configuration = wszystkie konfiguracje**, i **platformy = wszystkich platform**.
 
-Jeśli eksportujesz funkcje w pliku C++, musisz umieścić nazwy dekorowane w pliku DEF lub zdefiniować funkcje eksportowania ze standardowym sprzężeniem C za pomocą funkcji extern "C". Jeśli musisz umieścić nazwę uzupełnioną w pliku DEF, możesz je uzyskać, korzystając z [DUMPBIN](../build/reference/dumpbin-reference.md) narzędzia lub przy użyciu konsolidator [/MAP](../build/reference/map-generate-mapfile.md) opcji. Należy zauważyć, że nazwy dekoracyjne wytworzone przez kompilator są specyficzne dla kompilatora. Jeśli umieścisz nazwy dekoracyjne wytworzone przez kompilator Visual C++ do pliku DEF, aplikacje, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji programu Visual C++, nazwy dekorowane w aplikacji wywołującej odpowiadały nazwom eksportowanym w f DEF biblioteki DLL plik.
+Jeśli eksportujesz funkcje w pliku C++, musisz umieścić nazwy dekorowane w pliku DEF lub zdefiniować funkcje eksportowania ze standardowym sprzężeniem C za pomocą funkcji extern "C". Jeśli musisz umieścić nazwę uzupełnioną w pliku DEF, możesz je uzyskać, korzystając z [DUMPBIN](../build/reference/dumpbin-reference.md) narzędzia lub przy użyciu konsolidator [/MAP](../build/reference/map-generate-mapfile.md) opcji. Należy zauważyć, że nazwy dekoracyjne wytworzone przez kompilator są specyficzne dla kompilatora. Jeśli umieścisz nazwy dekoracyjne wytworzone przez firmę Microsoft C++ kompilator (MSVC) do pliku DEF, aplikacje, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji MSVC, tak aby nazwy dekorowane w aplikacji wywołującej odpowiadały nazwom eksportowanym w Plik DEF biblioteki DLL. 
+
+> [!NOTE]
+> Biblioteki DLL utworzonych za pomocą programu Visual Studio 2015, mogą być używane przez aplikacje utworzone przy użyciu programu Visual Studio 2017 lub Visual Studio 2019 r.
 
 Jeśli tworzysz [biblioteki DLL rozszerzenia](../build/extension-dlls-overview.md), i eksportujesz używając pliku DEF, umieść następujący kod na początku i końcu plików nagłówka zawierających eksportowane klasy:
 

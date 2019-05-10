@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3895cdb060d45d3f75c75f75c930e868b3654b2
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179322"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448609"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów C++ spekulacyjnego kanałów po stronie wykonywania
 
@@ -21,7 +21,7 @@ Ten artykuł zawiera wskazówki dla deweloperów, która pomaga w identyfikacji 
 
 Ze wskazówkami zawartymi w tym artykule dotyczy klasy reprezentowane przez luki w zabezpieczeniach:
 
-1. CVE-2017-5753, znany także jako luki Spectre w wariancie 1. Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu wykonywaniem spekulatywnym, który występuje w wyniku misprediction gałąź warunkowa. Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji, dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. `/Qspectre` Przełącznik jest również dostępna w programie Visual Studio 2015 Update 3 za pomocą [KB 4338871](https://support.microsoft.com/help/4338871). W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia.
+1. CVE-2017-5753, znany także jako luki Spectre w wariancie 1. Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu wykonywaniem spekulatywnym, który występuje w wyniku misprediction gałąź warunkowa. Microsoft C++ kompilatora w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji, dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. `/Qspectre` Przełącznik jest również dostępna w programie Visual Studio 2015 Update 3 za pomocą [KB 4338871](https://support.microsoft.com/help/4338871). W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia.
 
 2. CVE-2018-3639, nazywana również [spekulacyjnego obejścia Store (SSB)](https://aka.ms/sescsrdssb). Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu związanego z wykonywaniem spekulatywnym obciążenia wcześniej zależne magazynu wyniku misprediction dostępu do pamięci.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Należy zauważyć, że obu tych przykładach obejmują spekulacyjnego modyfikacji wskaźników przydzielanych ze stosów pośrednich gałęzi. Istnieje możliwość modyfikacji spekulacyjnego mógł także wystąpić dla zmiennych globalnych, pamięci przydzielony w stercie i nawet pamięci tylko do odczytu na niektórych procesorach. Dla pamięci przydzielonej przez stos kompilator języka Visual C++ ma już kroki, aby utrudnić speculatively zmodyfikować przydzielanych ze stosów pośrednich gałęzi docelowych, takich jak zmiana kolejności zmiennych lokalnych w taki sposób, że bufory są umieszczane obok plik cookie zabezpieczeń jako część [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) kompilatora funkcji zabezpieczeń.
+Należy zauważyć, że obu tych przykładach obejmują spekulacyjnego modyfikacji wskaźników przydzielanych ze stosów pośrednich gałęzi. Istnieje możliwość modyfikacji spekulacyjnego mógł także wystąpić dla zmiennych globalnych, pamięci przydzielony w stercie i nawet pamięci tylko do odczytu na niektórych procesorach. Przydzielone do stosu pamięci firmy Microsoft C++ kompilatora ma już kroki, aby utrudnić speculatively zmodyfikować przydzielanych ze stosów pośrednich gałęzi docelowych, takich jak zmiana kolejności zmiennych lokalnych w taki sposób, że bufory są umieszczane obok zabezpieczeń plik cookie jako część [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) kompilatora funkcji zabezpieczeń.
 
 ## <a name="speculative-type-confusion"></a>Błąd typu spekulacyjne
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Wstawiał barierę przewidywania za pomocą kompilatora czasu Instrumentacji
 
-Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który wstawia automatycznie wstawiał barierę dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. Należy pamiętać, że ta flaga nie obejmuje wszystkich potencjalnie zagrożone schematów kodowania i jako takie deweloperzy nie należy polegać na go jako kompleksowe środki zaradcze dla tej klasy luk w zabezpieczeniach.
+Microsoft C++ kompilatora w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który wstawia automatycznie wstawiał barierę dla ograniczonego zestawu schematów kodowania potencjalnie powiązane z CVE-2017-5753. W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. Należy pamiętać, że ta flaga nie obejmuje wszystkich potencjalnie zagrożone schematów kodowania i jako takie deweloperzy nie należy polegać na go jako kompleksowe środki zaradcze dla tej klasy luk w zabezpieczeniach.
 
 ### <a name="masking-array-indices"></a>Indeksy tablicy maskowania
 

@@ -1,6 +1,6 @@
 ---
 title: Klasa CAtlServiceModuleT
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CAtlServiceModuleT
 - ATLBASE/ATL::CAtlServiceModuleT
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d44e356d907afcb261c0b4a765f8807bb54dc19
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260204"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221186"
 ---
 # <a name="catlservicemodulet-class"></a>Klasa CAtlServiceModuleT
 
@@ -186,7 +186,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 ### <a name="remarks"></a>Uwagi
 
-W programie Visual Studio .NET 2003 ta metoda nie jest zaimplementowana w klasie bazowej. Kreator projektu programu Visual Studio zawiera tę metodę w wygenerowanym kodzie, ale występuje błąd kompilacji, jeśli projekt utworzony w starszej wersji programu Visual C++ jest skompilowana przy użyciu biblioteki ATL 7.1. Dowolną klasę pochodzącą od `CAtlServiceModuleT` należy zaimplementować tę metodę w klasie pochodnej.
+Dowolną klasę pochodzącą od `CAtlServiceModuleT` należy zaimplementować tę metodę w klasie pochodnej.
 
 Użyj PKT poziom uwierzytelniania, poziom personifikacji rpc_c_imp_level_identify i deskryptora zabezpieczeń odpowiednich inna niż null w wywołaniu `CoInitializeSecurity`.
 

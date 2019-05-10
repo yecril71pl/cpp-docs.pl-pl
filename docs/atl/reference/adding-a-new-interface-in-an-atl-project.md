@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 99f262d420cd503c6ca385ed29bcaa2647c5f556
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15283439bdcf76fea64d677ad84bee333833dc71
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249196"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221220"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Dodawanie nowego interfejsu w projekcie ATL
 
@@ -43,7 +43,7 @@ Można dodać nowy interfejs do formantu w jeden z dwóch sposobów: ręcznie lu
 ## <a name="see-also"></a>Zobacz także
 
 [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Typy projektów Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++typy projektów w programie Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)

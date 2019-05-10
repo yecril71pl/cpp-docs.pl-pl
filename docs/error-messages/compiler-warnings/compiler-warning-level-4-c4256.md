@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: b1f7534098a04c7c65a380d302999260c960f284
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400964"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447776"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Kompilator ostrzeżenie (poziom 4) C4256
 
@@ -19,7 +19,7 @@ ms.locfileid: "62400964"
 
 Możliwa niezgodność.
 
-Rozważmy następujący przykład kodu. Jeśli definicja Konstruktor S2::S2 (int i...) został skompilowany przy użyciu wersji kompilatora Visual C++ przed wersją 7, ale poniższy przykład jest kompilowany przy użyciu bieżącej wersji, wywołanie konstruktora S3 nie będzie działać poprawnie z powodu szczególny zmiana Konwencja wywoływania. Jeśli oba zostały skompilowane przy użyciu Visual C++ 6.0, połączenie nie będzie działać końca albo, chyba, że nie parametry zostały przekazane do wielokropka.
+Rozważmy następujący przykład kodu. Jeśli definicja Konstruktor S2::S2 (int i...) został skompilowany przy użyciu wersji Microsoft C++ kompilatora przed w wersji 7, ale poniższy przykład jest kompilowany przy użyciu bieżącej wersji, wywołanie konstruktora S3 nie będzie działać poprawnie ze względu na zmiany Konwencja wywoływania szczególny. Jeśli oba zostały skompilowane przy użyciu Visual C++ 6.0, połączenie nie będzie działać końca albo, chyba, że nie parametry zostały przekazane do wielokropka.
 
 Aby rozwiązać tego ostrzeżenia
 

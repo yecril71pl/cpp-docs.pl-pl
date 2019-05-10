@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294451"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221778"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Typowe makra dla poleceń programu MSBuild i właściwości
 
@@ -121,7 +121,7 @@ W tej tabeli opisano typowe podzbioru dostępnych makr; istnieje wiele więcej n
 |**$(FrameworkDir)**|Katalog, w którym został zainstalowany program .NET Framework.|
 |**$(FrameworkSDKDir)**|Katalog, w którym zainstalowany jest .NET Framework. .NET Framework można zainstalować jako część programu Visual Studio lub oddzielnie.|
 |**$(FrameworkVersion)**|Wersja .NET Framework co używany przez program Visual Studio. W połączeniu z **$(FrameworkDir)**, pełną ścieżkę do wersji programu .NET Framework korzystanie przez program Visual Studio.|
-|**$(FxCopDir)**|Ścieżka do pliku fxcop.cmd. Plik fxcop.cmd nie jest zainstalowany we wszystkich wersjach Visual C++.|
+|**$(FxCopDir)**|Ścieżka do pliku fxcop.cmd. Plik fxcop.cmd nie jest zainstalowany we wszystkich wersjach programu Visual Studio.|
 |**$(IntDir)**|Ścieżka do katalogu określonym dla plików pośrednich. Jeśli jest to ścieżka względna, pliki pośrednie przejdź do tej ścieżki do katalogu projektu. Ścieżka ta powinna mieć znaku ukośnika na końcu. To jest rozpoznawana jako wartość **katalog pośredni** właściwości. Nie używaj **$(OutDir)** do definiowania tej właściwości.|
 |**$(OutDir)**|Ścieżka do katalogu pliku wyjściowego. Jeśli jest to ścieżka względna, pliki wyjściowe przejdź do tej ścieżki do katalogu projektu. Ścieżka ta powinna mieć znaku ukośnika na końcu. To jest rozpoznawana jako wartość **katalog wyjściowy** właściwości. Nie używaj **$(IntDir)** do definiowania tej właściwości.|
 |**$(Platform)**|Nazwa bieżącego projektu platformy, na przykład "Win32".|
@@ -143,7 +143,7 @@ W tej tabeli opisano typowe podzbioru dostępnych makr; istnieje wiele więcej n
 |**$(TargetFileName)**|Nazwa pliku plik główny wynik kompilacji (zdefiniowany jako podstawowej nazwy + rozszerzenia pliku).|
 |**$(TargetName)**|Podstawowa nazwa pliku wyjściowego podstawowej dla kompilacji.|
 |**$(TargetPath)**|Nazwa ścieżki bezwzględnej plik główny wynik kompilacji (zdefiniowany jako dysku i ścieżki + nazwa podstawowa rozszerzenie pliku).|
-|**$(VCInstallDir)**|Katalog, który zawiera zawartości C++ w instalacji programu Visual Studio. Ta właściwość zawiera wersję narzędzi Visual C++ docelowej mogą się różnić, host programu Visual Studio. Na przykład podczas kompilowania przy użyciu `$(PlatformToolset) = v140`, **$(VCInstallDir)** zawiera ścieżkę do instalacji programu Visual C++ 2015.|
+|**$(VCInstallDir)**|Katalog, który zawiera zawartości C++ w instalacji programu Visual Studio. Ta właściwość zawiera wersję docelowej Microsoft C++ zestaw narzędzi (MSVC), które mogą się różnić, host programu Visual Studio. Na przykład podczas kompilowania przy użyciu `$(PlatformToolset) = v140`, **$(VCInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2015.|
 |**$(VSInstallDir)**|Katalog, w którym jest zainstalowany program Visual Studio. Ta właściwość zawiera wersję docelowego zestawu narzędzi Visual Studio, które mogą się różnić, host programu Visual Studio. Na przykład podczas kompilowania przy użyciu `$(PlatformToolset) = v110`, **$(VSInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2012.|
 |**$(WebDeployPath)**|Ścieżka względna z katalogu głównego wdrażania sieci web do której dane wyjściowe projektu należą. Zwraca taką samą wartość jak <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
 |**$(WebDeployRoot)**|Ścieżka bezwzględna do lokalizacji  **\<localhost >**. Na przykład c:\inetpub\wwwroot.|

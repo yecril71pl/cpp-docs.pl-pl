@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0a13748894880c076f8d32c9c74afde1752504c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337014"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448972"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -36,7 +36,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
 
 - [Zmiany powodujące niezgodność środowiska uruchomieniowego współbieżności](#BK_ConcRT)
 
-## <a name="VC_2015"></a> Visual C++ 2015 zgodność zmiany
+## <a name="VC_2015"></a> Visual Studio 2015 Conformance Changes
 
 ###  <a name="BK_CRT"></a> Biblioteka środowiska uruchomieniowego języka C (CRT)
 
@@ -2756,7 +2756,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
         }
     ```
 
-- C++ Standard nie zezwala na jawną specjalizacją w klasie. Mimo że kompilator Microsoft Visual C++ dopuszcza to w niektórych przypadkach, w przypadkach, takich jak poniższy przykład błąd jest generowany, ponieważ kompilator nie bierze pod uwagę drugiej funkcji jako specjalizacji pierwszej.
+- C++ Standard nie zezwala na jawną specjalizacją w klasie. Mimo że Microsoft C++ kompilatora dopuszcza to w niektórych przypadkach, w przypadkach, takich jak poniższy, błąd jest generowany, ponieważ kompilator nie bierze pod uwagę drugiej funkcji jako specjalizacji pierwszej.
 
     ```cpp
     template < int N>
@@ -2994,7 +2994,7 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 - Narzędzie śledzenia ATL/MFC jest usuwane wraz z biblioteką ATL DLL i mechanizm śledzenia jest uproszczony. `CTraceCategory` Konstruktor przyjmuje teraz jeden parametr (nazwę kategorii) a makra śledzenia wywoływać funkcje raportowania debugowania CRT.
 
-## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 Breaking Changes
+## <a name="visual-studio-2012-breaking-changes"></a>Visual Studio 2012 Breaking Changes
 
 ### <a name="compiler"></a>Kompilator
 
@@ -3042,19 +3042,19 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 - Następujące istotnej zmiany między C ++ 11 standardów i języka C ++ 98/03, za pomocą jawnych argumentów szablonów do wywołania `make_pair()` — podobnie jak w `make_pair<int, int>(x, y)` — zwykle nie kompilacji w Visual C++ w programie Visual Studio 2012. Rozwiązaniem jest zawsze wywołuj `make_pair() `bez jawnych argumentów szablonów — podobnie jak w `make_pair(x, y)`. Zapewnianie zaprzeczenie argumentów jawnego szablonu celem tej funkcji. Jeśli potrzebujesz precyzyjną kontrolę nad tym wynikowy typ, użyj `pair` zamiast `make_pair` — podobnie jak w `pair<short, short>(int1, int2)`.
 
-- Inny istotnej zmiany między C ++ 11 standardów i języka C ++ 98/03: Kiedy jest niejawnie konwertowany na B i B jest niejawnie konwertowany na C, A nie jest niejawnie konwertowane na C i C ++ 98/03 Visual C++ 2010 dozwolone `pair<A, X>` (jawnie lub niejawnie) do przekonwertowania `pair<C, X>`. (Inny typ, X, nie jest tutaj zainteresowania i nie jest specyficzne dla pierwszego typu w parze.) Kompilator języka C++ w programie Visual Studio 2012 wykrywa, A nie jest niejawnie konwertowany na C i usuwa pary konwersja przeciążeniu rozdzielczości. Ta zmiana jest dodatni umożliwia obsługę wielu scenariuszy. Na przykład przeciążenie `func(const pair<int, int>&)` i `func(const pair<string, string>&)`i wywoływać metodę `func()` z `pair<const char *, const char *>` będzie kompilowany przy użyciu tej zmiany. Jednak ta zmiana podziały wierszy kodu, który opierał się na konwersji agresywne pary. Zazwyczaj można naprawić tego kodu, wykonując jedną z części pakietu konwersji jawnie — na przykład, przekazując `make_pair(static_cast<B>(a), x)` do funkcji, która oczekuje `pair<C, X>`.
+- Inny istotnej zmiany między C ++ 11 standardów i języka C ++ 98/03: Kiedy jest niejawnie konwertowany na B i B jest niejawnie konwertowany na C, A nie jest niejawnie konwertowany na C, C ++ 98/03 i programu Visual Studio 2010 dozwolone `pair<A, X>` (jawnie lub niejawnie) do przekonwertowania `pair<C, X>`. (Inny typ, X, nie jest tutaj zainteresowania i nie jest specyficzne dla pierwszego typu w parze.) Kompilator języka C++ w programie Visual Studio 2012 wykrywa, A nie jest niejawnie konwertowany na C i usuwa pary konwersja przeciążeniu rozdzielczości. Ta zmiana jest dodatni umożliwia obsługę wielu scenariuszy. Na przykład przeciążenie `func(const pair<int, int>&)` i `func(const pair<string, string>&)`i wywoływać metodę `func()` z `pair<const char *, const char *>` będzie kompilowany przy użyciu tej zmiany. Jednak ta zmiana podziały wierszy kodu, który opierał się na konwersji agresywne pary. Zazwyczaj można naprawić tego kodu, wykonując jedną z części pakietu konwersji jawnie — na przykład, przekazując `make_pair(static_cast<B>(a), x)` do funkcji, która oczekuje `pair<C, X>`.
 
-- Visual C++ 2010 symulowane szablony wariadyczne — na przykład `make_shared<T>(arg1, arg2, argN)`— do określonego limitu 10 argumentów, przez wybijaniu przeciążenia i specjalizacje z preprocesora maszyny. W programie Visual Studio 2012 to ograniczenie jest ograniczone do pięciu argumentów, aby poprawić czasy kompilacji i zużycie pamięci kompilatora dla większości użytkowników. Jednak można ustawić poprzedniej limit przez jawne określenie _VARIADIC_MAX jako 10, całego projektu.
+- Program Visual Studio 2010 symulowane szablony wariadyczne — na przykład `make_shared<T>(arg1, arg2, argN)`— do określonego limitu 10 argumentów, przez wybijaniu przeciążenia i specjalizacje z preprocesora maszyny. W programie Visual Studio 2012 to ograniczenie jest ograniczone do pięciu argumentów, aby poprawić czasy kompilacji i zużycie pamięci kompilatora dla większości użytkowników. Jednak można ustawić poprzedniej limit przez jawne określenie _VARIADIC_MAX jako 10, całego projektu.
 
 - C ++ 11 17.6.4.3.1 [macro.names]/2 zabrania makro zastępujące słów kluczowych podczas C++ nagłówki standardowej biblioteki są uwzględniane. Nagłówki teraz emitować błędy kompilatora, jeśli wykryją zastąpione makra słów kluczowych. (Definiowanie _ALLOW_KEYWORD_MACROS umożliwia taki kod skompilować, ale firma Microsoft zdecydowanie odradza to użycie). Jako wyjątek formie — makro `new` jest dozwolona domyślnie, ponieważ nagłówki kompleksowo bronić się przy użyciu `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`. Definiowanie _ENFORCE_BAN_OF_MACRO_NEW ma dokładnie co sama nazwa wskazuje.
 
-- Aby zaimplementować różne optymalizacje i kontrole debugowania, implementacja standardowej biblioteki języka C++ celowo łamie zgodność binarną między wersjami programu Visual Studio (2005, 2008, 2010, 2012). W przypadku standardowej biblioteki C++ zabrania mieszania plików obiektów i bibliotek statycznych, które są kompilowane przy użyciu różnych wersji w jednym pliku binarnym (EXE lub DLL), a zabrania przekazywania obiektów standardowej biblioteki języka C++ między plikami binarnymi, które są kompilowane przez przy użyciu różnych wersji. Mieszanie plików obiektów i bibliotek statycznych (przy użyciu C++ biblioteki standardowej, które zostały skompilowane przy użyciu Visual C++ 2010 z tymi, które zostały skompilowane przy użyciu C++ kompilatora w programie Visual Studio 2012 powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER gdzie _MSC_VER to makro, które zawiera wersję główną kompilatora (1700 wizualizacji C++ w programie Visual Studio 2012). To sprawdzenie nie może wykryć mieszania bibliotek DLL i nie może wykryć mieszania, które obejmuje Visual C++ 2008 lub starszy.
+- Aby zaimplementować różne optymalizacje i kontrole debugowania, implementacja standardowej biblioteki języka C++ celowo łamie zgodność binarną między wersjami programu Visual Studio (2005, 2008, 2010, 2012). W przypadku standardowej biblioteki C++ zabrania mieszania plików obiektów i bibliotek statycznych, które są kompilowane przy użyciu różnych wersji w jednym pliku binarnym (EXE lub DLL), a zabrania przekazywania obiektów standardowej biblioteki języka C++ między plikami binarnymi, które są kompilowane przez przy użyciu różnych wersji. Mieszanie plików obiektów i bibliotek statycznych (przy użyciu C++ biblioteki standardowej, które zostały skompilowane przy użyciu programu Visual Studio 2010 z tymi, które zostały skompilowane przy użyciu C++ kompilatora w programie Visual Studio 2012 powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER, gdzie _MSC_VER to makro, które zawiera wersję główną kompilatora (1700 wizualizacji C++ w programie Visual Studio 2012). To sprawdzenie nie może wykryć mieszania bibliotek DLL i nie może wykryć mieszania, które obejmuje Visual Studio 2008 lub starszy.
 
-- Oprócz wykrywania niezgodności w _ITERATOR_DEBUG_LEVEL, który został wdrożony w elemencie wizualnym C++ 2010 C++ kompilatora w programie Visual Studio 2012 wykrywa niezgodności biblioteki środowiska uruchomieniowego. Występują tych niezgodności po opcji kompilatora `/MT` (wersja statyczna), `/MTd` (statyczna do debugowania), `/MD` (Oficjalna wersja dynamiczna) i `/MDd` (wersja dynamiczna do debugowania) są mieszane.
+- Oprócz wykrywania niezgodności w _ITERATOR_DEBUG_LEVEL, który został wdrożony w programie Visual Studio 2010 C++ kompilatora w programie Visual Studio 2012 wykrywa niezgodności biblioteki środowiska uruchomieniowego. Występują tych niezgodności po opcji kompilatora `/MT` (wersja statyczna), `/MTd` (statyczna do debugowania), `/MD` (Oficjalna wersja dynamiczna) i `/MDd` (wersja dynamiczna do debugowania) są mieszane.
 
 - `operator<()`, `operator>()`, `operator<=()`, i `operator>=()` wcześniej były dostępne dla `std::unordered_map` i `stdext::hash_map` rodzin kontenerów, mimo że ich implementacji nie były przydatne. Te operatory niestandardowe zostały usunięte w programie Visual C++ w programie Visual Studio 2012. Ponadto implementacji `operator==()` i `operator!=()` dla `std::unordered_map` rodziny został rozszerzony na pokrycie `stdext::hash_map` rodziny. (Zaleca się, że należy unikać użycia `stdext::hash_map` rodziny w nowym kodzie.)
 
-- C ++ 11 22.4.1.4 [locale.codecvt] Określa, że `codecvt::length()` i `codecvt::do_length()` powinno zająć można modyfikować `stateT&` parametrów, ale Visual C++ trwało 2010 `const stateT&`. Kompilator języka C++ w programie Visual Studio 2012 przyjmuje `stateT&` nieużywanie przez standard. Różnica ta jest znacząca dla każdego, kto próbuje przesłonić funkcji wirtualnej `do_length()`.
+- C ++ 11 22.4.1.4 [locale.codecvt] Określa, że `codecvt::length()` i `codecvt::do_length()` powinno zająć można modyfikować `stateT&` parametrów, ale Visual Studio 2010 miał `const stateT&`. Kompilator języka C++ w programie Visual Studio 2012 przyjmuje `stateT&` nieużywanie przez standard. Różnica ta jest znacząca dla każdego, kto próbuje przesłonić funkcji wirtualnej `do_length()`.
 
 ### <a name="crt"></a>CRT
 
@@ -3228,7 +3228,7 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 - Zmieniono nazwę `CPane::GetDockSiteRow(CDockingPanesRow *)` do `CPane::SetDockSiteRow`.
 
-## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 Breaking Changes
+## <a name="visual-studio-2010-breaking-changes"></a>Visual Studio 2010 Breaking Changes
 
 ### <a name="compiler"></a>Kompilator
 
@@ -3244,23 +3244,23 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 - Jeśli kompilujesz z opcją zarówno `/GL` (Optymalizacja Całoprogramowa) i `/clr` opcje kompilatora (kompilacja języka wspólnego środowiska uruchomieniowego), `/GL` opcja jest ignorowana. Ta zmiana została wprowadzona, ponieważ połączenie opcji kompilatora podany niewielkie korzyści. W wyniku tej zmiany lepsza wydajność kompilacji.
 
-- Domyślnie pomoc techniczna dotycząca trójznaków jest wyłączone w programie Visual C++ 2010. Użyj `/Zc:trigraphs` opcję kompilatora, aby włączyć obsługę trójznaków. Trójznak składa się z dwóch następujących po sobie znaki zapytania ("??") następuje znak trzeci unikatowy. Kompilator zastępuje trójznak odpowiedni znak interpunkcyjny. Na przykład, kompilator zamienia `??=` trójznaków za pomocą znaku "#". Używać trójznaków w plikach źródłowych języka C, które używają zestawu znaków, który nie zawiera wygodnych reprezentacji graficznych dla niektórych znaków interpunkcyjnych.
+- Domyślnie pomoc techniczna dotycząca trójznaków jest wyłączone w programie Visual Studio 2010. Użyj `/Zc:trigraphs` opcję kompilatora, aby włączyć obsługę trójznaków. Trójznak składa się z dwóch następujących po sobie znaki zapytania ("??") następuje znak trzeci unikatowy. Kompilator zastępuje trójznak odpowiedni znak interpunkcyjny. Na przykład, kompilator zamienia `??=` trójznaków za pomocą znaku "#". Używać trójznaków w plikach źródłowych języka C, które używają zestawu znaków, który nie zawiera wygodnych reprezentacji graficznych dla niektórych znaków interpunkcyjnych.
 
 - Konsolidator nie obsługuje już Optymalizacja dla Windows 98. `/OPT` (Optymalizacje) opcja generuje błąd w czasie kompilacji, jeśli określisz `/OPT:WIN98` lub `/OPT:NOWIN98`.
 
 - Domyślne opcje kompilatora, które są określone przez RuntimeLibrary i DebugInformationFormat tworzenie systemu, które właściwości zostały zmienione. Domyślnie te właściwości są określone w projektach, które są tworzone przez Visual C++ kompilacji zwalnia 7.0 za pośrednictwem 10.0. Jeśli migrujesz projekt, który został utworzony przez Visual C++ 6.0, rozważ, czy określone wartości tych właściwości.
 
-- W programie Visual C++ 2010 RuntimeLibrary = wielowątkowych (`/MD`) i DebugInformationFormat = ProgramDatabase (`/Zi`). W programie Visual C++ 9.0, RuntimeLibrary = wielowątkowych (`/MT`) i DebugInformationFormat = wyłączone.
+- W programie Visual Studio 2010 RuntimeLibrary = wielowątkowych (`/MD`) i DebugInformationFormat = ProgramDatabase (`/Zi`). W programie Visual C++ 9.0, RuntimeLibrary = wielowątkowych (`/MT`) i DebugInformationFormat = wyłączone.
 
 ### <a name="clr"></a>CLR
 
 - Kompilatory Microsoft C# i Visual Basic można teraz utworzyć nie podstawowy zestaw międzyoperacyjny (nie PIA). Zestaw PIA nie można użyć typów modelu COM bez wdrożenia odpowiednie podstawowego zestawu międzyoperacyjnego (PIA). Podczas używania zestawów nie PIA generowane przez program Visual C# lub Visual Basic, przed odwołaniem zestawu nie PIA, który korzysta z biblioteki musi odwoływać się zestawów PIA na polecenie compile.
 
-### <a name="visual-c-projects-and-msbuild"></a>Projekty języka Visual C++ i programu MSBuild
+### <a name="visual-studio-c-projects-and-msbuild"></a>Program Visual Studio C++ projektów i MSBuild
 
-- Projekty języka Visual C++ są teraz oparte na narzędziu MSBuild. W związku z tym pliki projektu użyj nowy format pliku XML i sufiks pliku .vcxproj. Visual C++ 2010 automatycznie konwertuje pliki projektu z wcześniejszych wersji programu Visual Studio na nowy format pliku. Istniejący projekt ma wpływ, jeśli zależy od poprzedniego .vcproj narzędzia, VCBUILD.exe lub sufiks pliku projektu, kompilacji.
+- Program Visual Studio C++ projekty są teraz oparte na narzędziu MSBuild. W związku z tym pliki projektu użyj nowy format pliku XML i sufiks pliku .vcxproj. Program Visual Studio 2010 automatycznie konwertuje pliki projektu z wcześniejszych wersji programu Visual Studio na nowy format pliku. Istniejący projekt ma wpływ, jeśli zależy od poprzedniego .vcproj narzędzia, VCBUILD.exe lub sufiks pliku projektu, kompilacji.
 
-- We wcześniejszych wersjach Visual C++ obsługiwane pod koniec oceny arkuszy właściwości. Na przykład arkusz właściwości nadrzędnej można importować arkusz własności podrzędny i nadrzędny można użyć zmiennej zdefiniowane w podrzędnym zdefiniować inne zmienne. Opóźnione oceny włączone nadrzędnej korzystały jeszcze zmiennej podrzędnych arkusza właściwości podrzędnych została zaimportowana. W programie Visual C++ 2010 nie można użyć zmiennej arkusza projektu, zanim zostanie on zdefiniowany, ponieważ MSBuild obsługuje tylko wczesne oceny.
+- We wcześniejszych wersjach Visual C++ obsługiwane pod koniec oceny arkuszy właściwości. Na przykład arkusz właściwości nadrzędnej można importować arkusz własności podrzędny i nadrzędny można użyć zmiennej zdefiniowane w podrzędnym zdefiniować inne zmienne. Opóźnione oceny włączone nadrzędnej korzystały jeszcze zmiennej podrzędnych arkusza właściwości podrzędnych została zaimportowana. W programie Visual Studio 2010 nie można użyć zmiennej arkusza projektu, zanim zostanie on zdefiniowany, ponieważ MSBuild obsługuje tylko wczesne oceny.
 
 ### <a name="ide"></a>IDE
 
@@ -3274,7 +3274,7 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 - Modelu wdrażania przy użyciu biblioteki nie jest już używa manifesty znaleźć określoną wersję biblioteki dołączanej dynamicznie. Zamiast tego nazwa każdej biblioteki dołączanej dynamicznie zawiera numer wersji i użyć tej nazwy do lokalizowania biblioteki.
 
-- W poprzednich wersjach programu Visual Studio można ponownie skompilować biblioteki czasu wykonywania. Visual C++ 2010 już nie obsługuje tworzenia kopii c uruchamiać pliki biblioteki czasu.
+- W poprzednich wersjach programu Visual Studio można ponownie skompilować biblioteki czasu wykonywania. Program Visual Studio 2010 już nie obsługuje tworzenia kopii c uruchamiać pliki biblioteki czasu.
 
 ### <a name="standard-library"></a>Standardowa biblioteka
 
@@ -3306,7 +3306,7 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 - Kilka dyrektyw zostały usunięte z kompilatora Microsoft Macro Assembler — odwołanie. Usunięto dyrektywy są `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087`, i `.NO87`.
 
-## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 Breaking Changes
+## <a name="visual-studio-2008-breaking-changes"></a>Visual Studio 2008 Breaking Changes
 
 ### <a name="compiler"></a>Kompilator
 
@@ -3330,7 +3330,7 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
    - tag_name
 
-### <a name="visual-c-projects"></a>Projekty Visual C++
+### <a name="visual-studio-c-projects"></a>Visual Studio C++ projects
 
 - Podczas uaktualniania projektów z poprzednich wersji programu Visual Studio, trzeba będzie zmodyfikować makra symboli WINVER i _WIN32_WINNT, aby były one większa lub równa 0x0500.
 
@@ -3386,7 +3386,7 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 ### <a name="atl"></a>ATL
 
-- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć #define ATL_MIN_CRT się Projekt ATL minimalny zestaw zależne od CRT. W elemencie wizualnym C++ 2008, wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.
+- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć #define ATL_MIN_CRT się Projekt ATL minimalny zestaw zależne od CRT. W programie Visual Studio 2008 wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.
 
 - Codebase serwera ATL zostało udostępnione jako projekt źródłowy udostępniony w witrynie CodePlex i nie jest instalowany jako część programu Visual Studio. Dane, kodowania i dekodowania klas z atlenc.h wraz z narzędziem funkcji i klas z atlutil.h i atlpath.h przebywać i są teraz częścią biblioteki ATL. Kilka plików skojarzonych z aplikacji serwera ATL. nie są już częścią Visual Studio.
 
@@ -3396,7 +3396,7 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 ### <a name="atlmfc-shared-classes"></a>Klasy współdzielone ATL/MFC
 
-- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć `#define ATL_MIN_CRT` się Projekt ATL minimalny zestaw zależne od CRT. W elemencie wizualnym C++ 2008, wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.
+- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć `#define ATL_MIN_CRT` się Projekt ATL minimalny zestaw zależne od CRT. W programie Visual Studio 2008 wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.
 
 - Codebase serwera ATL zostało udostępnione jako projekt źródłowy udostępniony w witrynie CodePlex i nie jest instalowany jako część programu Visual Studio. Dane, kodowania i dekodowania klas z atlenc.h wraz z narzędziem funkcji i klas z atlutil.h i atlpath.h przebywać i są teraz częścią biblioteki ATL. Kilka plików skojarzonych z aplikacji serwera ATL. nie są już częścią Visual Studio.
 
@@ -3420,7 +3420,7 @@ C++ Kompilatora w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR
 
 - Przestarzałe interfejsy API ANSI: Wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji standardu Unicode tych metod w Twojej aplikacji tworzonych w przyszłości. Aby uzyskać więcej informacji, zobacz **tworzenie wymagania dla Windows Vista wspólnych formantów**.
 
-## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 Breaking Changes
+## <a name="visual-studio-2005-breaking-changes"></a>Visual Studio 2005 Breaking Changes
 
 ### <a name="crt"></a>CRT
 

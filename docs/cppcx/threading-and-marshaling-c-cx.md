@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404640"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448148"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Wątkowość i Marshaling (C++/CX)
 
@@ -35,7 +35,7 @@ Podczas tworzenia aplikacji uniwersalnych platformy Windows, możesz wchodzić w
 
 ### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>Kompilator ostrzeżenie C4451 podczas używania klas agile
 
-Z różnych powodów niektóre klasy nie może być agile. Jeśli uzyskujesz dostęp do wystąpienia klas agile z wątku interfejsu użytkownika i wątku w tle, należy wykonać dodatkowe istotne do zapewnienia poprawnego zachowania w czasie wykonywania. Kompilator języka Visual C++ generuje ostrzeżenia podczas tworzenia wystąpienia-agile klasy środowiska wykonawczego w aplikacji w zakresie globalnym lub deklaracja typu agile, jako element członkowski klasy w klasie ref, który sam jest oznaczony jako agile.
+Z różnych powodów niektóre klasy nie może być agile. Jeśli uzyskujesz dostęp do wystąpienia klas agile z wątku interfejsu użytkownika i wątku w tle, należy wykonać dodatkowe istotne do zapewnienia poprawnego zachowania w czasie wykonywania. Microsoft C++ kompilator generuje ostrzeżenia podczas tworzenia wystąpienia-agile klasy środowiska wykonawczego w aplikacji w zakresie globalnym lub deklaracja typu agile, jako element członkowski klasy w klasie ref, który sam jest oznaczony jako agile.
 
 Agile klas najprostszym radzenia sobie z są te, które mają `ThreadingModel`= zarówno i `MarshallingType`= Standard.  Aby włączyć te klasy agile tylko za pomocą `Agile<T>` Klasa pomocy.   W poniższym przykładzie pokazano deklarację-agile obiektu typu `Windows::Security::Credentials::UI::CredentialPickerOptions^`i ostrzeżenia kompilatora, w wyniku wystawiony.
 

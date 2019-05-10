@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161673"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221835"
 ---
 # <a name="platformarray-class"></a>Platform::Array, klasa
 
@@ -56,8 +56,6 @@ Array — klasa jest zapieczętowany i nie może być dziedziczona.
 System typów środowiska wykonawczego Windows nie obsługuje pojęcie Tablice nieregularne i dlatego nie można przekazać IVector < Platform::Array\<T >> jako parametr zwracany wartość lub metody. Aby przekazać tablicę nieregularną lub sekwencji między interfejsem ABI, należy użyć `IVector<IVector<T>^>`.
 
 Aby uzyskać więcej informacji na temat czasu i sposobu użycia Platform::Array, zobacz [tablica i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
-
-System typów środowiska wykonawczego Windows nie obsługuje pojęcie Tablice nieregularne i dlatego nie można przekazać IVector < Platform::Array\<T >> jako parametr zwracany wartość lub metody. Aby przekazać tablicę nieregularną lub sekwencji między interfejsem ABI, należy użyć `IVector<IVector<T>^>`.
 
 Ta klasa jest zdefiniowana w nagłówku vccorlib.h, który jest automatycznie dołączany przez kompilator. Jest ona widoczna na technologii IntelliSense, ale nie w przeglądarce obiektów, ponieważ nie jest typem publicznym zdefiniowanym w platform.winmd.
 

@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298870"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446953"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Błąd narzędzi konsolidatora LNK2038
 
@@ -24,9 +24,9 @@ Ten błąd może wystąpić, gdy plik obiektu w projekcie jest nieaktualny. Zani
 
 Program Visual Studio definiuje następujące symbole, aby zapobiec łączeniu niezgodnego kodu, który może spowodować błędy czasu wykonywania lub inne nieoczekiwane zachowania.
 
-- `_MSC_VER` Wskazuje numery wersji głównych i pomocniczych kompilatora języka Visual C++, który jest używany do tworzenia aplikacji lub biblioteki. Kod, który jest kompilowany przy użyciu jednej wersji kompilatora Visual C++ jest niezgodny z kodem, który jest kompilowany przy użyciu wersji zawierającej różnych głównych i pomocniczych numerów wersji. Aby uzyskać więcej informacji, zobacz `_MSC_VER` w [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` Wskazuje numery wersji głównych i pomocniczych firmy Microsoft C++ kompilatora (MSVC), który jest używany do tworzenia aplikacji lub biblioteki. Kod, który jest kompilowany przy użyciu jednej wersji MSVC jest niezgodny z kodem, który jest kompilowany przy użyciu wersji zawierającej różnych głównych i pomocniczych numerów wersji. Aby uzyskać więcej informacji, zobacz `_MSC_VER` w [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).
 
-   Jeśli łączysz się do biblioteki, który nie jest zgodna z wersją kompilatora Visual C++, którego używasz, i nie można pobrać lub utworzyć zgodnej wersji biblioteki, aby skompilować projekt, można użyć starszej wersji kompilatora: Zmień **zestaw narzędzi platformy** właściwości projektu do wcześniejszych zestawu narzędzi. Aby uzyskać więcej informacji, zobacz [jak: Modyfikowanie platformy docelowej i zestawu narzędzi platformy](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Jeśli tworzysz łącze do biblioteki, która nie jest zgodna z wersją MSVC, który jest używany i nie możesz nabyć lub skompilować zgodnej wersji biblioteki, aby skompilować projekt, można użyć starszej wersji kompilatora: Zmień  **Zestaw narzędzi platformy** właściwości projektu wcześniejszej zestawu narzędzi. Aby uzyskać więcej informacji, zobacz [jak: Modyfikowanie platformy docelowej i zestawu narzędzi platformy](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Wskazuje poziom zabezpieczeń i funkcje debugujące, które są włączone w standardowej biblioteki języka C++. Te funkcje mogą zmienić reprezentację niektórych obiektów standardowej biblioteki języka C++ i tym samym są zgodne z tymi, które używają różnych zabezpieczeń i funkcji do debugowania. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 

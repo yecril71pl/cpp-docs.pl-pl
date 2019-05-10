@@ -1,26 +1,26 @@
 ---
 title: Zestawy znaków
-ms.date: 04/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 5282d5b227e71c0ba6f822a9534a8a31cbd86db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331236"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222520"
 ---
 # <a name="character-sets"></a>Zestawy znaków
 
-Tekst program w języku C++ są przechowywane w plikach źródłowych, korzystających z kodowaniem określonego znaku. C++ standard określa zestawu znaków podstawowgoe źródła dla plików źródłowych i podstawowym zestawie egzekucji znaków dla skompilowanych plików. Visual C++ umożliwia dodatkowego zestawu znaków specyficznych dla ustawień regionalnych, które ma być używany w plikach źródłowych i skompilowane pliki.
+Tekst program w języku C++ są przechowywane w plikach źródłowych, korzystających z kodowaniem określonego znaku. C++ standard określa zestawu znaków podstawowgoe źródła dla plików źródłowych i podstawowym zestawie egzekucji znaków dla skompilowanych plików. Microsoft C++ kompilator (MSVC) umożliwia dodatkowego zestawu znaków specyficznych dla ustawień regionalnych, które ma być używany w plikach źródłowych i skompilowane pliki.
 
 ## <a name="character-sets"></a>Zestawy znaków
 
-Określa C++ standard *zestaw znaków podstawowego źródła* , mogą być używane w plikach źródłowych. Do reprezentowania znaków spoza tego zestawu, można określić dodatkowe znaki przy użyciu *znaki uniwersalne nazwy*. Po skompilowaniu *zestaw znaków wykonania podstawowego* i *zestaw znaków dwubajtowych wykonania podstawowego* reprezentują znaków i ciągów, które mogą być wyświetlane w programie. Implementacja języka Visual C++ umożliwia dodatkowe znaki w kodzie źródłowym i skompilowanego kodu.
+Określa C++ standard *zestaw znaków podstawowego źródła* , mogą być używane w plikach źródłowych. Do reprezentowania znaków spoza tego zestawu, można określić dodatkowe znaki przy użyciu *znaki uniwersalne nazwy*. Po skompilowaniu *zestaw znaków wykonania podstawowego* i *zestaw znaków dwubajtowych wykonania podstawowego* reprezentują znaków i ciągów, które mogą być wyświetlane w programie. Implementacja MSVC umożliwia dodatkowe znaki w kodzie źródłowym i skompilowanego kodu.
 
 ### <a name="basic-source-character-set"></a>Zestaw znaków podstawowego źródła
 
@@ -36,7 +36,7 @@ Określa C++ standard *zestaw znaków podstawowego źródła* , mogą być używ
 
 **Microsoft Specific**
 
-Visual C++ dołącza `$` znaków będący członkiem zestaw znaków podstawowego źródła. Visual C++ pozwala uzyskać dodatkowy zestaw znaków do użycia w plikach źródłowych, w oparciu o kodowanie pliku. Domyślnie program Visual Studio są przechowywane pliki źródłowe przy użyciu domyślną stroną kodową. Gdy pliki źródłowe są zapisywane przy użyciu strony kodowej specyficzne dla ustawień regionalnych lub na stronę kodową Unicode, Visual C++ pozwala na używanie znaków tę stronę kodową w kodzie źródłowym z wyjątkiem kody sterujące, nie są jawnie dozwolone w znaków podstawowgoe źródła ustawiona. Na przykład można umieścić znaki japońskie komentarze, identyfikatory lub literałów ciągów, jeśli zapiszesz plik przy użyciu japoński stronę kodową. Visual C++ nie zezwala na sekwencje znaków, które nie można przetłumaczyć prawidłowych znaków wielobajtowych lub punkty kodowe Unicode. W zależności od opcji kompilatora nie wszystkie dozwolonych znaków mogą występować w identyfikatorów. Aby uzyskać więcej informacji, zobacz [identyfikatory](../cpp/identifiers-cpp.md).
+Obejmuje MSVC `$` znaków będący członkiem zestaw znaków podstawowego źródła. MSVC umożliwia także dodatkowego zestawu znaków do użycia w plikach źródłowych, w oparciu o kodowanie pliku. Domyślnie program Visual Studio są przechowywane pliki źródłowe przy użyciu domyślną stroną kodową. Gdy pliki źródłowe są zapisywane przy użyciu strony kodowej specyficzne dla ustawień regionalnych lub na stronę kodową Unicode, MSVC pozwala na używanie znaków tę stronę kodową w kodzie źródłowym z wyjątkiem kody sterujące, nie są jawnie dozwolone w znaków podstawowgoe źródła ustawiona. Na przykład można umieścić znaki japońskie komentarze, identyfikatory lub literałów ciągów, jeśli zapiszesz plik przy użyciu japoński stronę kodową. MSVC nie zezwala na sekwencje znaków, które nie można przetłumaczyć prawidłowych znaków wielobajtowych lub punkty kodowe Unicode. W zależności od opcji kompilatora nie wszystkie dozwolonych znaków mogą występować w identyfikatorów. Aby uzyskać więcej informacji, zobacz [identyfikatory](../cpp/identifiers-cpp.md).
 
 **END specyficzny dla Microsoft**
 
@@ -48,7 +48,7 @@ Uniwersalne nazwy znaków może służyć w identyfikatorach, a w literałach ci
 
 **Microsoft Specific**
 
-Kompilator języka Visual C++ traktuje znak w charakterze uniwersalnym nazwa literału w formularzach i zamiennie. Na przykład można zadeklarować identyfikatora przy użyciu formy nazwy znaki uniwersalne i używać go w postaci literału:
+Microsoft C++ kompilator traktuje znak w charakterze uniwersalnym nazwa literału w formularzach i zamiennie. Na przykład można zadeklarować identyfikatora przy użyciu formy nazwy znaki uniwersalne i używać go w postaci literału:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: 621e62379657da66d6eaec7a3ceff780fd610066
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3e51aa7e5a4346137e94191b551b0d53452e460
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205494"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449007"
 ---
 # <a name="build-system-changes"></a>Zmiany systemu kompilacji
 
-MSBuild system jest używany do tworzenia projektów Visual C++. Jednak w programie Visual Studio 2008 i jego starszych wersji systemu program VCBuild był używany. Niektóre typy plików i pojęcia, które są zależne od program VCBuild nie istnieją lub są reprezentowane w różny sposób w obecnym systemie. W tym dokumencie omówiono różnice w obecnym systemie kompilacji.
+MSBuild system jest używany do tworzenia programu Visual Studio C++ projektów. Jednak w programie Visual Studio 2008 i jego starszych wersji systemu program VCBuild był używany. Niektóre typy plików i pojęcia, które są zależne od program VCBuild nie istnieją lub są reprezentowane w różny sposób w obecnym systemie. W tym dokumencie omówiono różnice w obecnym systemie kompilacji.
 
 ## <a name="vcproj-is-now-vcxproj"></a>.VCPROJ jest teraz .vcxproj
 
@@ -37,7 +37,7 @@ W bieżącej wersji rozszerzenie nazwy pliku dla arkusza właściwości projektu
 
 ## <a name="custom-build-rules-and-rules-files"></a>Niestandardowej kompilacji, reguł i pliki Rules
 
-We wcześniejszych wersjach *pliku reguł* jest plik oparty na formacie XML, który ma rozszerzenie nazwy pliku rules. Plik reguł pozwala zdefiniować niestandardowe reguły kompilacji i dołączyć je do procesu tworzenia projektu Visual C++. Reguły niestandardowej kompilacji, która może być skojarzony z jedną lub więcej rozszerzeń nazw plików, umożliwia przekazywanie plików wejściowych do narzędzia, która tworzy jeden lub więcej plików wyjściowych.
+We wcześniejszych wersjach *pliku reguł* jest plik oparty na formacie XML, który ma rozszerzenie nazwy pliku rules. Plik reguł pozwala zdefiniować niestandardowe reguły kompilacji i dołączać je do procesu kompilacji programu Visual Studio C++ projektu. Reguły niestandardowej kompilacji, która może być skojarzony z jedną lub więcej rozszerzeń nazw plików, umożliwia przekazywanie plików wejściowych do narzędzia, która tworzy jeden lub więcej plików wyjściowych.
 
 W tej wersji niestandardowych regułach kompilacji są reprezentowane przez trzy typy plików, XML, .props i .targets, a nie plikiem rules. Gdy plik Rules, który został utworzony przy użyciu starszej wersji programu Visual C++ jest migrowana do bieżącej wersji, równoważne pliki XML, .props i .targets są tworzone i przechowywane w projekcie, wraz z oryginalnego pliku rules.
 

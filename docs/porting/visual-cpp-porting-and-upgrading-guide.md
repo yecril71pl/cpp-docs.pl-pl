@@ -2,12 +2,12 @@
 title: Visual C++, przenoszenie i uaktualnianie przewodnik
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52ba023b38c16fa276c3dabffe481aaae96215f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336923"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448853"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 
@@ -75,7 +75,7 @@ Alternatywnie być może masz teraz nowe wymagania lub przewidujesz potrzebę pr
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|W tym artykule omówiono sposób używania projekty utworzone we wcześniejszych wersjach programu Visual C++.|
+|[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|W tym artykule omówiono sposób używania projekty utworzone we wcześniejszych wersjach programu Visual Studio.|
 |[What's New for kompilator języka C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Zmiany w środowisku IDE i narzędzia do bieżącej wersji programu Visual Studio|
 |[Ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md)|Ulepszenia zgodności standardów z programu Visual Studio 2015 do programu Visual Studio|
 |[Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)|Lista wszystkich zmian bibliotek języka Visual C++ i narzędzia do kompilacji programu Visual Studio 2003 do 2015, które mogą wymagać zmian w kodzie.|

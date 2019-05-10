@@ -1,22 +1,20 @@
 ---
 title: 'Instrukcje: Modyfikowanie platformy docelowej i zestawu narzędzi platformy'
 ms.custom: conceptual
-ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: cf2078432f629a353e0c325b407db59681ffd9d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273498"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220677"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Instrukcje: Modyfikowanie platformy docelowej i zestawu narzędzi platformy
 
-Możesz zmienić ustawienia projektu Visual C++ pod kątem różnych wersji programu .NET Framework i używać różnych zestawów narzędzi platformy. Domyślnie system projektu używa wersji .NET Framework i wersji zestawu narzędzi, które odnoszą się do wersji programu Visual Studio, którego używasz do tworzenia projektu. Możesz zmienić zestaw narzędzi platformy docelowej modyfikując właściwości projektu. Możesz zmienić szablon docelowy modyfikując plik projektu (.vcxproj). Nie trzeba utrzymywać osobnego kodu podstawowego dla każdego celu kompilacji.
+Można zmienić program Visual Studio C++ ustawienia do różnych wersji programu .NET Framework i używania różnych zestawów narzędzi platformy projektu. Domyślnie system projektu używa wersji .NET Framework i wersji zestawu narzędzi, które odnoszą się do wersji programu Visual Studio, którego używasz do tworzenia projektu. Możesz zmienić zestaw narzędzi platformy docelowej modyfikując właściwości projektu. Możesz zmienić szablon docelowy modyfikując plik projektu (.vcxproj). Nie trzeba utrzymywać osobnego kodu podstawowego dla każdego celu kompilacji.
 
 > [!IMPORTANT]
 >  Niektóre wersje mogą nie obsługiwać modyfikowanych docelowych platform ani zestawów narzędzi platformy. Aby uzyskać informacje o zgodności – zobacz [Port, migrowanie i uaktualnianie projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).

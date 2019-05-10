@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - code wizards [C++]
 - wizards [C++], code
-- Visual C++ projects, adding functionality
+- Visual Studio C++ projects, adding functionality
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 45ba745492bf652b18dc3c7f9acceeffe0870fb7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344274"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446883"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 
@@ -73,5 +73,5 @@ Istnieją trzy lokalizacje, gdzie uzyskujesz dostęp kreatorów kodu Visual C++:
 
 [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Typy projektów Visual C++](../build/reference/visual-cpp-project-types.md)<br>
-[Typy plików utworzonych dla projektów Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
+[Plik typy utworzone dla wizualizacji C++ projektów](../build/reference/file-types-created-for-visual-cpp-projects.md)

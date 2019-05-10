@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 9598d7a0480ee762892d1026a1eb64dcc5c64399
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362312"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448447"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Przygotowanie maszyny testowej do uruchomienia debugowania pliku wykonywalnego
 
@@ -25,7 +25,7 @@ Istnieją trzy sposoby wdrażania wersji debugowania bibliotek DLL biblioteki Vi
 - Użyj lokalnego wdrażania, aby zainstalować wersję debugowania konkretnej wizualizacji C++ biblioteki DLL w katalogu instalacji aplikacji przy użyciu plików, które znajdują się w katalogu Program Files (x86) w \Microsoft Visual Studio lub Program Files \< w wersji > \VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Zdalne debugowanie aplikacji skompilowanych przy użyciu Visual C++ 2005 lub Visual C++ 2008 na innym komputerze, trzeba wdrażać wersje do debugowania biblioteki Visual C++ bibliotek DLL jako współużytkowanych zestawów side-by-side. Aby zainstalować odpowiednie moduły scalania, można użyć projektu instalacji lub Instalatora Windows.
+    >  Zdalne debugowanie aplikacji skompilowanych przy użyciu programu Visual Studio 2005 lub Visual Studio 2008 na innym komputerze, należy wdrożyć wersje do debugowania Visual C++ biblioteki DLL jako współużytkowanych zestawów side-by-side. Aby zainstalować odpowiednie moduły scalania, można użyć projektu instalacji lub Instalatora Windows.
 
 - Użyj the_**Wdróż** opcji **programu Configuration Manager** okno dialogowe w programie Visual Studio, aby skopiować dane wyjściowe projektu i inne pliki do komputera zdalnego.
 

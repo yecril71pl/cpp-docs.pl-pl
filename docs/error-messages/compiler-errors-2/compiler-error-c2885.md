@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388777"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447699"
 ---
 # <a name="compiler-error-c2885"></a>Błąd kompilatora C2885
 
@@ -21,7 +21,7 @@ Użyte [przy użyciu](../../cpp/using-declaration.md) deklaracji niepoprawnie.
 
 ## <a name="example"></a>Przykład
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: nie jest już może być `using` deklaracji typu zagnieżdżonego; kwalifikuj musi jawnie każde odwołanie dokonać typu zagnieżdżonego, umieść typu w nazwie miejsce, lub Utwórz element typedef.
+Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: nie jest już może być `using` deklaracji typu zagnieżdżonego; kwalifikuj musi jawnie każde odwołanie dokonać typu zagnieżdżonego, umieść typu w n amespace, lub Utwórz element typedef.
 
 Poniższy przykład spowoduje wygenerowanie C2885.
 

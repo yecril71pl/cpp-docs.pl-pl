@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338938"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448032"
 ---
 # <a name="compiler-error-c2440"></a>Błąd kompilatora C2440
 
@@ -194,7 +194,7 @@ C2440 może również wystąpić z powodu zmian w funkcji atrybutów.  Poniższy
 
 ## <a name="example"></a>Przykład
 
-Element wizualny C++ kompilatora nie zezwala już [const_cast Operator](../../cpp/const-cast-operator.md) na spadek, gdy kod, który używa **/CLR** programowania jest kompilowany.
+Microsoft C++ kompilatora nie zezwala już [const_cast Operator](../../cpp/const-cast-operator.md) na spadek, gdy kod, który używa **/CLR** programowania jest kompilowany.
 
 Aby rozwiązać ten C2440, użyj prawidłowego operatora rzutowania. Aby uzyskać więcej informacji, zobacz [operatorów rzutowania](../../cpp/casting-operators.md).
 

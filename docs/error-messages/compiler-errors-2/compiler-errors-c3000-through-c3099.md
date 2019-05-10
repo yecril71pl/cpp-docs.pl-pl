@@ -1,5 +1,5 @@
 ---
-title: Błędy kompilatora od C3000 do C3099
+title: Błędy kompilatora — od C3000 do C3099
 ms.date: 04/21/2019
 f1_keywords:
 - C3051
@@ -39,13 +39,13 @@ helpviewer_keywords:
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
 ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281669"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856924"
 ---
-# <a name="compiler-errors-c3000-through-c3099"></a>Błędy kompilatora od C3000 do C3099
+# <a name="compiler-errors-c3000-through-c3099"></a>Błędy kompilatora — od C3000 do C3099
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędach, które są generowane przez kompilator.
 
@@ -53,7 +53,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Message|
 |-----------|-------------|
 |Błąd kompilatora od C3000|Nieaktualne.|
 |[Błąd kompilatora C3001](compiler-error-c3001.md)|"*komunikat*": Oczekiwano nazwy dyrektywy OpenMP|

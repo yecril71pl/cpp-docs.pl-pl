@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388179"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448916"
 ---
 # <a name="resource-editors-c"></a>Edytory zasobów (C++)
 
@@ -39,15 +39,15 @@ Odpowiedniego edytora jest otwierany automatycznie podczas tworzenia lub otwiera
 
 |Użyj...|Aby edytować...|
 |----------------|----------------|
-|[Edytor klawiszy skrótów](../windows/accelerator-editor.md)|Tabele akceleratora w projektach języka Visual C++.|
+|[Edytor klawiszy skrótów](../windows/accelerator-editor.md)|Tabele akceleratora w programie Visual Studio C++ projektów.|
 |[Edytor plików binarnych](binary-editor.md)|Dane binarne informacje i zasoby niestandardowe w projektach języka Visual C++, Visual Basic lub Visual C#.|
-|[Edytor okien dialogowych](../windows/dialog-editor.md)|Okna dialogowe w projektach języka Visual C++.|
+|[Edytor okien dialogowych](../windows/dialog-editor.md)|Okna dialogowe w programie Visual Studio C++ projektów.|
 |[Edytor obrazów](../windows/image-editor-for-icons.md)|Mapy bitowe, ikony, kursorów i inne pliki obrazów w projektach języka Visual C++, Visual Basic lub Visual C#.|
-|[Edytor menu](../windows/menu-editor.md)|Menu zasobów w projektach języka Visual C++.|
+|[Edytor menu](../windows/menu-editor.md)|Zasobów menu programu Visual Studio C++ projektów.|
 |[Edytor Ribbon](../mfc/ribbon-designer-mfc.md)|Zasoby wstążki w projektach MFC.|
-|[Edytor ciągów](../windows/string-editor.md)|Ciąg tabel z projektów Visual C++.|
-|[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi z projektów Visual C++. **Edytor paska narzędzi** jest częścią **edytora obrazów**.|
-|[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w projektach języka Visual C++.|
+|[Edytor ciągów](../windows/string-editor.md)|Ciąg tabel w programie Visual Studio C++ projektów.|
+|[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi w programie Visual Studio C++ projektów. **Edytor paska narzędzi** jest częścią **edytora obrazów**.|
+|[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w programie Visual Studio C++ projektów.|
 
 > [!NOTE]
 > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [jak: Tworzenie zasobów](../windows/how-to-create-a-resource-script-file.md).

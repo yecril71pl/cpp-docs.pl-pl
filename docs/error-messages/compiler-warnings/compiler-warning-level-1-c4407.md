@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: 5142e3800f3ad716166a27e3b0407a40999b5746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e47e293b650f64d2a6be91a837cc4195e073e8f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408410"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447748"
 ---
 # <a name="compiler-warning-level-1-c4407"></a>Kompilator ostrzeżenie (poziom 1) C4407
 
@@ -19,7 +19,7 @@ Wykonuj rzutowania między różnych reprezentacjami wskaźników do składowej,
 
 Wykryto nieprawidłowe rzutowanie.
 
-C4407 mogą być generowane z powodu pracy zgodności kompilatora, która została wykonana w programie Visual C++ 2005. Wskaźnik do elementu członkowskiego, teraz wymaga kwalifikowana nazwa i operatora address-of (&).
+C4407 mogą być generowane z powodu pracy zgodności kompilatora, która została wykonana w programie Visual Studio 2005. Wskaźnik do elementu członkowskiego, teraz wymaga kwalifikowana nazwa i operatora address-of (&).
 
 C4407 może wystąpić, jeśli rzutowanie między wieloma dziedziczenia wskaźnika do składowej na pojedyncze dziedziczenie wskaźnika do składowej. Czasami może się powtórzy, ale czasami nie ponieważ reprezentacja wskaźnika do elementu członkowskiego pojedyncze dziedziczenie nie ma wystarczających informacji. Kompilowanie przy użyciu **/VMM** mogą pomóc (Aby uzyskać więcej informacji, zobacz [/VMM, / VMS, / vmv (ogólna reprezentacja celu)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Możesz też spróbować rozmieszczanie swojej klasy bazowej; Kompilator wykrywa utraty informacji w konwersji, ponieważ klasa bazowa jest przesunięciem od zera z pochodnej.
 

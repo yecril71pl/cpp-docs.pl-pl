@@ -2,16 +2,16 @@
 title: Visual C++ co&#39;s nowego od roku 2003 do 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 773500b32b1a80a6a7b1d1f2431b036f7ad3bd63
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371925"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448860"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
 
-Ta strona zbiera wszystkie "co nowego jest" strony dla wszystkich wersji programu Visual C++ z programu Visual Studio 2015 do 2003. Te informacje są dostarczane dla wygody w przypadku, gdy może okazać się przydatne w przypadku uaktualniania z wcześniejszych wersji programu Visual C++.
+Ta strona zbiera wszystkie "co nowego jest" strony dla wszystkich wersji programu Visual C++ z programu Visual Studio 2015 do 2003. Te informacje są dostarczane dla wygody w przypadku, gdy może okazać się przydatne w przypadku uaktualniania z wcześniejszych wersji programu Visual Studio.
 
 > [!NOTE]
 > Aby uzyskać informacje o bieżącej wersji programu Visual Studio, zobacz [co nowego w języku Visual C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodności w programie Visual C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md).
@@ -75,7 +75,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
     };
    ```
 
-   Poprzednie wersje kompilatora Visual C++ są akceptowane z tego, ale kompilator zapewnia obecnie następujący błąd:
+   Poprzednie wersje programu Microsoft C++ kompilatora zaakceptowane, to jednak kompilator zapewnia obecnie następujący błąd:
 
    ```Output
     error C2071: 'S::r': illegal storage class
@@ -1516,7 +1516,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 #### <a name="compiler"></a>Kompilator
 
-Kompilator Microsoft Visual C++ obsługuje te funkcje ISO C ++ 11 język:
+MSVC obsługuje te funkcje ISO C ++ 11 język:
 
 - Domyślne argumenty szablonu dla szablonów funkcji.
 - Konstrukty delegujące
@@ -1696,7 +1696,7 @@ Tym Ulepszona obsługa standardów ISO C/C++ może wymagać zmian w istniejącym
 ### <a name="new-in-visual-studio-2012-update-1"></a>Nowość w programie Visual Studio 2012 Update 1
 
 Celem Windows XP, podczas kompilowania kodu C++.
-Można użyć kompilatora języka Visual C++ i bibliotek target Windows XP i Windows Server 2003.
+Można użyć programu Microsoft C++ kompilator i biblioteki do obiektu docelowego Windows XP i Windows Server 2003.
 
 #### <a name="parallel-programming-support"></a>Równoległe programowanie pomocy technicznej.
 
@@ -1787,7 +1787,7 @@ Pokrycie kodu został zaktualizowany do dynamicznie instrument binarnych w czasi
 
 **static_assert Declaration.** A **static_assert** deklaracji testuje asercję oprogramowania w czasie kompilacji, w przeciwieństwie do innych mechanizmów potwierdzenia, które testują w czasie wykonywania. Jeśli potwierdzenie nie powiedzie się, kompilacja nie powiedzie się i wystawiono określony komunikat o błędzie.
 
-**nullptr i __nullptr słów kluczowych.** Kompilator języka Visual C++ pozwala na używanie **nullptr** — słowo kluczowe z kodu macierzystego lub kodu zarządzanego. **Nullptr** słowo kluczowe wskazuje, że dojście do obiektu, posługiwanie się nimi wskaźnika lub typu wskaźnik natywny nie wskazuje obiektu. Kompilator interpretuje **nullptr** jako kodu zarządzanego, gdy używasz `/clr` — opcja kompilatora i kodu natywnego, gdy nie używasz `/clr` opcji.
+**nullptr i __nullptr słów kluczowych.** MSVC umożliwia korzystanie z **nullptr** — słowo kluczowe z kodu macierzystego lub kodu zarządzanego. **Nullptr** słowo kluczowe wskazuje, że dojście do obiektu, posługiwanie się nimi wskaźnika lub typu wskaźnik natywny nie wskazuje obiektu. Kompilator interpretuje **nullptr** jako kodu zarządzanego, gdy używasz `/clr` — opcja kompilatora i kodu natywnego, gdy nie używasz `/clr` opcji.
 Specyficzne dla firmy Microsoft **__nullptr** — słowo kluczowe ma takie samo znaczenie jak **nullptr**, ale dotyczy ona tylko kodu natywnego. Jeśli kompilujesz natywnego kodu C/C++ za pomocą `/clr` — opcja kompilatora, kompilator nie może określić czy **nullptr** — słowo kluczowe jest natywny lub terminów zarządzanych. Aby zamiaru Wyczyść, aby kompilator, użyj nullptr — słowo kluczowe, aby określić termin zarządzanych i **__nullptr** Aby określić termin natywnych.
 
 **/ Zc: trigraphs — opcja kompilatora.** Domyślnie pomoc techniczna dotycząca trójznaków jest wyłączona. Użyj `/Zc:trigraphs` opcję kompilatora, aby włączyć obsługę trójznaków.
@@ -1801,9 +1801,9 @@ Trójznak składa się z dwóch następujących po sobie znaki zapytania (?) nas
 
 **Funkcje wewnętrzne XOP FMA4 funkcje wewnętrzne i LWP funkcje wewnętrzne.** Nowe funkcje wewnętrzne zostały dodane do obsługi XOP dodane funkcje wewnętrzne dla programu Visual Studio 2010 z dodatkiem SP1, dodano funkcje wewnętrzne FMA4 dla programu Visual Studio 2010 z dodatkiem SP1 i dodaje funkcje wewnętrzne LWP dla technologii programu Visual Studio 2010 SP1 procesora. Użyj __cpuid, __cpuidex, aby określić technologii procesora, które są obsługiwane na określonym komputerze.
 
-### <a name="visual-c-projects-and-the-build-system"></a>Projekty języka Visual C++ i systemu kompilacji
+### <a name="visual-studio-c-projects-and-the-build-system"></a>Program Visual Studio C++ projektów i tworzenia systemu
 
-**MSBuild.** Visual C++ rozwiązania i projekty są teraz tworzone przy użyciu MSBuild.exe, która zastępuje VCBuild.exe. Program MSBuild jest tego samego narzędzia kompilacji elastycznych funkcji, rozszerzalne, oparte na języku XML, który jest używany przez inne języki Visual Studio i typów projektów. Ze względu na tę zmianę pliki projektu Visual C++ teraz używać pliku w formacie XML i mają rozszerzenie nazwy pliku .vcxproj. Pliki projektu Visual C++ z wcześniejszych wersji programu Visual Studio automatycznie są konwertowane na nowy format pliku.
+**MSBuild.** Visual C++ rozwiązania i projekty są teraz tworzone przy użyciu MSBuild.exe, która zastępuje VCBuild.exe. Program MSBuild jest tego samego narzędzia kompilacji elastycznych funkcji, rozszerzalne, oparte na języku XML, który jest używany przez inne języki Visual Studio i typów projektów. Z powodu tej zmiany program Visual Studio C++ plików projektu, teraz używać pliku w formacie XML i mają rozszerzenie nazwy pliku .vcxproj. Program Visual Studio C++ plików projektów ze starszych wersji programu Visual Studio automatycznie są konwertowane na nowy format pliku.
 
 **Katalogi VC ++.** Katalogi VC ++ ustawienie teraz znajduje się w dwóch miejscach. Użyj strony właściwości projektu, aby ustawić wartości na projekt katalogi VC ++. Użyj **Menedżer właściwości** i arkusz właściwości do ustawienia globalne, wartości dla konfiguracji katalogi VC ++.
 
@@ -1934,7 +1934,7 @@ Dodanie ymmword — typ danych obsługuje 256-bitowego multimedialnych argumenty
 - Funkcje wewnętrzne obsługuje nowszych procesory AMD i Intel. Kilka nowych instrukcji wewnętrzne obsługuje większą funkcjonalność w nowych procesory AMD i Intel. Aby uzyskać więcej informacji na temat nowych funkcji wewnętrznych, zobacz **dodatkowe Streaming SIMD Extensions 3 instrukcje**, **Streaming SIMD Extensions 4 instrukcje**, **SSE4A i zaawansowane bitowe Funkcje wewnętrzne manipulowania**, **funkcje wewnętrzne AES**, **_mm_clmulepi64_si128**, i **__rdtscp**.
 - `__cpuid` Aktualizować funkcji. `__cpuid`, `__cpuidex` Funkcje obsługują teraz kilka nowych funkcji z najnowszej wersje procesory AMD i Intel. `__cpuidex` Wewnętrzne nowego i gromadzi informacji od najnowszych procesorów.
 - `/MP` — Opcja kompilatora skraca czas całkowity kompilacji. `/MP` Opcji mogą znacznie zmniejszyć całkowity czas do kompilowania kilku plików źródłowych, tworząc kilka procesów jednocześnie kompilowane pliki. Ta opcja jest szczególnie przydatne, na komputerach obsługujących wielowątkowość, wiele procesorów lub wiele rdzeni.
-- `/Wp64` — Opcja kompilatora i **__w64** — słowo kluczowe są przestarzałe. `/Wp64` — Opcja kompilatora i **__w64** słowo kluczowe, które wykryć problemy z przenośnością 64-bitowych, są przestarzałe i zostanie usunięta w przyszłej wersji kompilatora. Zamiast — opcja kompilatora i — słowo kluczowe należy użyć kompilator języka Visual C++ tej platformy cele 64-bitowego.
+- `/Wp64` — Opcja kompilatora i **__w64** — słowo kluczowe są przestarzałe. `/Wp64` — Opcja kompilatora i **__w64** słowo kluczowe, które wykryć problemy z przenośnością 64-bitowych, są przestarzałe i zostanie usunięta w przyszłej wersji kompilatora. Zamiast tego — opcja kompilatora i — słowo kluczowe użyć MSVC, który jest przeznaczony dla platformy 64-bitowej.
 - `/Qfast_transcendentals` generuje kod wbudowanej funkcji przestępne.
 - `/Qimprecise_fwaits` Usuwa polecenia fwait wewnętrzny, aby spróbować bloków, korzystając z `/fp:except` — opcja kompilatora.
 

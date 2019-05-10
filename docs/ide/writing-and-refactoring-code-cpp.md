@@ -1,13 +1,14 @@
 ---
 title: Pisanie i Refaktoryzacja kodu (C++)
+description: Użyj C++ edytora kodu w programie Visual Studio do formatu, nawigowanie, zrozumieć i Refaktoryzuj swój kod.
 ms.date: 04/30/2018
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ee506229584690cd4f7730011e0b5b50af0e27e0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345245"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222319"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Pisanie i Refaktoryzacja kodu (C++)
 
@@ -91,7 +92,7 @@ Umieść kursor nad zmienną lub funkcję deklaracji, kliknij prawym przyciskiem
 
 ## <a name="view-call-hierarchy"></a>Pokaż hierarchię wywołań
 
-Kliknij prawym przyciskiem myszy na każde wywołanie funkcji i wyświetlania listy resursive wszystkie funkcje, które wywołuje metodę i wszystkie funkcje, które ją wywołują. Każda funkcja na liście można rozwijać w taki sam sposób. Aby uzyskać więcej informacji, zobacz [hierarchię wywołań,](/visualstudio/ide/reference/call-hierarchy).
+Kliknij prawym przyciskiem myszy na każde wywołanie funkcji i wyświetlanie listy wszystkich funkcji wywoływanych przez niego, a wszystkie funkcje, które ją wywołują cykliczne. Każda funkcja na liście można rozwijać w taki sam sposób. Aby uzyskać więcej informacji, zobacz [hierarchię wywołań,](/visualstudio/ide/reference/call-hierarchy).
 
 ![Visual C&#43;&#43; Call Hierarchy](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 

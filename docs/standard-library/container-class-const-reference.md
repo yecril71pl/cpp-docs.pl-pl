@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - const_reference method
 ms.assetid: 7a5cfddb-3abf-4c98-b4ad-bbe4da9a5c1b
-ms.openlocfilehash: 0e4ff9c1ada05dadc7efa468073406a1313af6be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: addf2136a9a7d46931f66fed472f21fdca0bd307
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211475"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221679"
 ---
 # <a name="container-classconstreference"></a>Kontener Class::const_reference
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
 Opisuje obiekt, który może służyć jako stałe odwołanie do elementu w kontrolowanej sekwencji.
 

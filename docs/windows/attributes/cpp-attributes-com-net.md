@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148332"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448515"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atrybuty C++ dla modelu COM i .NET
 
@@ -34,7 +34,7 @@ Atrybuty rozszerzenia C++ w kierunkach nie jest obecnie możliwe bez przerywania
 
 - Zastępuje dużą ilość kodu języka IDL wymagane przez składnik COM za pomocą kilku atrybutów zwięzły.
 
-Na przykład, aby zaimplementować obiekt sink zdarzenia prostego ogólne klasy ATL, należy zastosować [event_receiver](event-receiver.md) atrybutu do określonej klasy, takie jak `CMyReceiver`. `event_receiver` Atrybutu są następnie kompilowane przez kompilator Visual C++, który wstawia prawidłowego kodu do pliku obiektu.
+Na przykład, aby zaimplementować obiekt sink zdarzenia prostego ogólne klasy ATL, należy zastosować [event_receiver](event-receiver.md) atrybutu do określonej klasy, takie jak `CMyReceiver`. `event_receiver` Atrybutu są następnie kompilowane przez firmę Microsoft C++ kompilatora, który wstawia prawidłowego kodu do pliku obiektu.
 
 ```cpp
 [event_receiver(com)]
@@ -49,7 +49,7 @@ Następnie można skonfigurować `CMyReceiver` metody `handler1` i `handler2` do
 
 ## <a name="basic-mechanics-of-attributes"></a>Podstawowa mechanika atrybutów
 
-Istnieją trzy sposoby, aby wstawić atrybuty do projektu. Po pierwsze można wstawić je ręcznie w kodzie źródłowym. Po drugie można wstawić je przy użyciu siatki właściwości obiektu w projekcie. Na koniec można wstawić je przy użyciu różnych kreatorów. Aby uzyskać więcej informacji na temat korzystania z **właściwości** okna i różne kreatory, zobacz [tworzenie i zarządzanie projekty języka Visual C++](../../build/creating-and-managing-visual-cpp-projects.md).
+Istnieją trzy sposoby, aby wstawić atrybuty do projektu. Po pierwsze można wstawić je ręcznie w kodzie źródłowym. Po drugie można wstawić je przy użyciu siatki właściwości obiektu w projekcie. Na koniec można wstawić je przy użyciu różnych kreatorów. Aby uzyskać więcej informacji na temat korzystania z **właściwości** okna i różne kreatory, zobacz [projektów programu Visual Studio — C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Jako wcześniej, gdy projekt jest kompilowany, w którym kompilator analizuje każdego pliku źródłowego języka C++, tworzenie pliku obiektu. Jednak gdy kompilator napotka atrybutu, jest analizowany i składniowo zweryfikowane. Kompilator dynamicznie wywołuje dostawcę atrybutu Wstaw kod lub wprowadzić inne zmiany w czasie kompilacji. Implementacja dostawcy różni się w zależności od typu atrybutu. Na przykład związane z ATL atrybuty są implementowane przez Atlprov.dll.
 
@@ -64,7 +64,7 @@ Podobnie jak większość konstrukcji języka C++ atrybuty mają zestaw właści
 
 ## <a name="building-an-attributed-program"></a>Kompilowanie programu opartego na atrybutach
 
-Po atrybuty Visual C++ są umieszczane w kodzie źródłowym, może być kompilator języka Visual C++, aby wygenerować plik biblioteki i .idl typu dla Ciebie. Konsolidator następujące opcje pomagają tworzyć plików .tlb i .idl:
+Po umieszczeniu wizualizacji C++ atrybuty do kodu źródłowego, może być Microsoft C++ kompilator generuje plik biblioteki i .idl typu dla Ciebie. Konsolidator następujące opcje pomagają tworzyć plików .tlb i .idl:
 
 - [/ IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 

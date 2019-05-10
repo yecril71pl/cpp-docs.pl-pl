@@ -4,12 +4,12 @@ ms.date: 10/26/2017
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388712"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447177"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>Ostrzeżenie (poziom 4) kompilatora C4868
 
@@ -17,7 +17,7 @@ ms.locfileid: "62388712"
 
 Elementy listy inicjatora w nawiasach klamrowych mają być obliczane w kolejności od lewej do prawej. Istnieją dwa przypadki, w których kompilator nie może zagwarantować to zamówienie: pierwszy to umieszczenie niektóre elementy są przekazywane przez wartość; obiekty drugi to podczas kompilowania za pomocą `/clr` i niektóre elementy są pola obiektów lub elementów tablicy. Gdy kompilator nie może zagwarantować oceny od lewej do prawej emituje ostrzeżenie C4868.
 
-To ostrzeżenie, mogą być generowane w wyniku pracy zgodności kompilatora, która została wykonana dla Visual C++ 2015 Update 2. Kod, który jest skompilowany przed Visual C++ 2015 Update 2 można teraz wygenerować C4868.
+To ostrzeżenie, mogą być generowane w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2015 Update 2. Kod, który jest skompilowany przed Visual Studio 2015 Update 2 można teraz wygenerować C4868.
 
 To ostrzeżenie jest domyślnie wyłączona. Użyj `/Wall` można aktywować tego ostrzeżenia.
 

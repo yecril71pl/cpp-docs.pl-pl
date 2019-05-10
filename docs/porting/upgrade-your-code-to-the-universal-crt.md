@@ -2,12 +2,12 @@
 title: Uaktualnienie kodu do Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337170"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448995"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Uaktualnienie kodu do Universal CRT
 
@@ -19,7 +19,7 @@ Za pomocą tej refaktoryzacji zostały zmienione nazwy lub lokalizacje, wiele pl
 
 ## <a name="where-to-find-the-universal-crt-files"></a>Gdzie można znaleźć plików Universal CRT
 
-Jako Windows składnika, UCRT pliki biblioteki i nagłówki są teraz częścią zestaw Windows software development kit (SDK). Podczas instalowania programu Visual Studio instalowane są również elementy wymagane do użycia UCRT SDK Windows. Instalator programu Visual Studio dodaje system kompilacji lokalizacje UCRT nagłówki, biblioteki i pliki DLL do ścieżek domyślnych używanych przez projekt programu Visual Studio. Po zaktualizowaniu projektów Visual C++, jeśli korzystają z domyślnego ustawienia projektu, IDE automatycznie znajdzie nowe lokalizacje dla plików nagłówkowych i konsolidator automatycznie używa nowe rozwiązanie domyślne UCRT i bibliotek vcruntime. Podobnie jeśli używasz wiersz polecenia dla deweloperów w celu kompilacje w wierszu polecenia, środowisko, zmiennych, które zawierają ścieżki nagłówki i biblioteki są aktualizowane i pracy oraz automatycznie.
+Jako Windows składnika, UCRT pliki biblioteki i nagłówki są teraz częścią zestaw Windows software development kit (SDK). Podczas instalowania programu Visual Studio instalowane są również elementy wymagane do użycia UCRT SDK Windows. Instalator programu Visual Studio dodaje system kompilacji lokalizacje UCRT nagłówki, biblioteki i pliki DLL do ścieżek domyślnych używanych przez projekt programu Visual Studio. Podczas aktualizacji programu Visual Studio C++ projektów, jeśli używają domyślne ustawienia projektu, IDE automatycznie znajdzie nowe lokalizacje dla plików nagłówkowych i konsolidator automatycznie używa nowej biblioteki UCRT i vcruntime domyślne. Podobnie jeśli używasz wiersz polecenia dla deweloperów w celu kompilacje w wierszu polecenia, środowisko, zmiennych, które zawierają ścieżki nagłówki i biblioteki są aktualizowane i pracy oraz automatycznie.
 
 Pliki nagłówkowe standardowej biblioteki C znajdują się teraz w zestawie Windows SDK w folderze dołączenia w katalogu specyficzny dla wersji zestawu SDK. Typowej lokalizacji plików nagłówka znajduje się w katalogu Program Files (x86) zestawy Windows lub Program Files\\10\\Include\\_wersja zestawu sdk_\\ucrt, gdzie _wersja zestawu sdk_ odnosi się do wersji Windows lub aktualizacja, na przykład 10.0.14393.0 10 Rocznicowej aktualizacji systemu Windows.
 
@@ -29,7 +29,7 @@ Handel detaliczny i debugowania bibliotek DLL UCRT znajdują się w różnych lo
 
 C i C++ specyficzne dla kompilatora Biblioteka środowiska uruchomieniowego pomocy technicznej, **vcruntime**, zawiera kod wymagany do uruchamiania programu obsługi i funkcje, takie jak obsługa wyjątków i funkcje wewnętrzne. Biblioteki i jej plików nagłówkowych, nadal znajdują się w folderze specyficzny dla wersji programu Microsoft Visual Studio w katalogu Program files (x86) lub Program Files. W programie Visual Studio 2017, nagłówki znajdują się w ramach programu Microsoft Visual Studio\\2017\\_wersji_\\VC\\narzędzia\\MSVC\\  _lib-version_\\obejmują i biblioteki łączone znajdują się w ramach programu Microsoft Visual Studio\\2017\\_wersji_\\VC\\narzędzia \\MSVC\\_wersji lib_\\lib\\_architektury_, gdzie _wersji_ wersja programu Visual Studio _wersji lib_ stanowi wersję biblioteki, i _architektury_ jest architektury procesora. Biblioteki DLL OneCore i Store również znajdują się w folderze bibliotek. Handel detaliczny i debugowania wersji biblioteki statycznej to libvcruntime.lib i libvcruntimed.lib. Biblioteki łączone dynamicznie handel detaliczny i debugowania wycinka są vcruntime.lib i vcruntimed.lib, odpowiednio.
 
-Gdy aktualizacja projektów Visual C++, jeśli ustawisz projekt **konsolidatora** właściwość **Ignoruj wszystkie domyślne biblioteki** do **tak** lub jeśli używasz `/NODEFAULTLIB` — Opcja konsolidatora w wierszu polecenia, następnie należy zaktualizować listy biblioteki do uwzględnienia nowej, wycofanej bibliotek. Zastąp stare biblioteki CRT, na przykład biblioteki libcmt.lib, libcmtd.lib, msvcrt.lib lub biblioteki msvcrtd.lib, równoważne wycofanej bibliotek. Aby uzyskać informacji na temat określonej biblioteki do użycia, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
+Podczas aktualizacji programu Visual Studio C++ projektów, jeśli ustawisz projekt **konsolidatora** właściwość **Ignoruj wszystkie domyślne biblioteki** do **tak** lub jeśli używasz `/NODEFAULTLIB` konsolidatora opcji w wierszu polecenia, a następnie należy zaktualizować listę biblioteki do uwzględnienia nowej, wycofanej bibliotek. Zastąp stare biblioteki CRT, na przykład biblioteki libcmt.lib, libcmtd.lib, msvcrt.lib lub biblioteki msvcrtd.lib, równoważne wycofanej bibliotek. Aby uzyskać informacji na temat określonej biblioteki do użycia, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Wdrażanie i rozpowszechniania Universal CRT
 

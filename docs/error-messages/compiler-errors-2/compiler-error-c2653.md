@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2882764e1c0a84634c500d920f327fbebc4b19a9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350783"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447941"
 ---
 # <a name="compiler-error-c2653"></a>Błąd kompilatora C2653
 
@@ -21,7 +21,7 @@ Składnia języka wymaga klasy, struktury, Unii lub nazwa przestrzeni nazw w tym
 
 Ten błąd może wystąpić, gdy używasz nazwę, która nie została zadeklarowana jako klasy, struktury, Unii lub przestrzeni nazw przed operatorem zakresu. Aby rozwiązać ten problem, należy zadeklarować nazwę lub zawierać nagłówek, który deklaruje nazwę, zanim zostaną one użyte.
 
-C2653 jest również możliwe, jeśli zostanie podjęta próba zdefiniować *złożone przestrzeni nazw*, przestrzeń nazw, który zawiera jedną lub więcej nazw zagnieżdżony zakres przestrzeni nazw. Złożone przestrzeni nazw, których definicje nie są dozwolone w języku C++ przed C ++ 17. Złożone przestrzenie nazw są obsługiwane, począwszy od programu Visual Studio 2015 Update 3 po określeniu [/STD: c ++ najnowsze](../../build/reference/std-specify-language-standard-version.md) — opcja kompilatora. Począwszy od programu Visual C++ 2017 w wersji 15.5 definicji przestrzeni nazw złożonego obsługiwanych przez kompilator podczas [/STD: c ++ 17](../../build/reference/std-specify-language-standard-version.md) określono opcję.
+C2653 jest również możliwe, jeśli zostanie podjęta próba zdefiniować *złożone przestrzeni nazw*, przestrzeń nazw, który zawiera jedną lub więcej nazw zagnieżdżony zakres przestrzeni nazw. Złożone przestrzeni nazw, których definicje nie są dozwolone w języku C++ przed C ++ 17. Złożone przestrzenie nazw są obsługiwane, począwszy od programu Visual Studio 2015 Update 3 po określeniu [/STD: c ++ najnowsze](../../build/reference/std-specify-language-standard-version.md) — opcja kompilatora. Począwszy od programu Visual Studio 2017 w wersji 15.5 definicji przestrzeni nazw złożonego obsługiwanych przez kompilator podczas [/STD: c ++ 17](../../build/reference/std-specify-language-standard-version.md) określono opcję.
 
 ## <a name="examples"></a>Przykłady
 
@@ -42,7 +42,7 @@ W kodzie, który nie jest kompilowany dla języka C ++ 17 lub nowszym zagnieżd�
 
 ```cpp
 // C2653b.cpp
-namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,
+namespace a::b {int i;}   // C2653 prior to Visual Studio 2015 Update 3,
                           // C2429 thereafter. Use /std:c++17 or /std:c++latest to fix.
 
 namespace a {             // Use this form for compliant code under /std:c++14 (the default)

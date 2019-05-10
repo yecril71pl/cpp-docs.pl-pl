@@ -9,16 +9,16 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362728"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448908"
 ---
 # <a name="thread-local-storage-tls"></a>Lokalny magazyn wątków (TLS)
 
-Lokalnego magazynu wątków (TLS) to metoda, za pomocą którego każdy wątek w danym procesie wielowątkowym można przydzielić lokalizacji do przechowywania danych specyficznych wątku. Dynamicznie danych specyficznych wątku granica (run-time) jest obsługiwana za pomocą interfejsu API protokołu TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 i kompilator języka Visual C++ obsługuje obecnie danych statycznie powiązanej (czas ładowania) na wątek, oprócz istniejącej implementacji interfejsu API.
+Lokalnego magazynu wątków (TLS) to metoda, za pomocą którego każdy wątek w danym procesie wielowątkowym można przydzielić lokalizacji do przechowywania danych specyficznych wątku. Dynamicznie danych specyficznych wątku granica (run-time) jest obsługiwana za pomocą interfejsu API protokołu TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 i Microsoft C++ kompilatora teraz obsługę statycznie powiązanych danych wątku (czas ładowania) oprócz istniejącej implementacji interfejsu API.
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implementacja kompilatora protokołu TLS
 

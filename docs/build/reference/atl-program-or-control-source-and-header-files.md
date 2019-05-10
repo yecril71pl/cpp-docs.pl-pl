@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: e315586de57ca65c60c435c436734bcdededed54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15d49cf984e45feeaad454de13c4ab37622000a4
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273030"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446583"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>Program ATL lub źródło kontroli i pliki nagłówkowe
 
@@ -27,6 +27,6 @@ Wszystkie te pliki znajdują się w *Projname* katalogu, a w folderze pliki nag�
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typy plików utworzonych dla projektów Visual C++](file-types-created-for-visual-cpp-projects.md)<br>
+[Plik typy utworzone dla wizualizacji C++ projektów](file-types-created-for-visual-cpp-projects.md)<br>
 [Program MFC lub źródło kontroli i pliki nagłówkowe](mfc-program-or-control-source-and-header-files.md)<br>
 [Projekty CLR](files-created-for-clr-projects.md)

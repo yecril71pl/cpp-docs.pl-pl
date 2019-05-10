@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: dfc4b09f4fa42b179bdef91877e0a004caa69187
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6ed2784c781b474b57a3aef796a336a8911df8fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345230"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448170"
 ---
 # <a name="create-a-com-interface"></a>Tworzenie interfejsu COM
 
@@ -74,7 +74,7 @@ W widoku klas i jego menu skrótów można pracować z interfejsów w następuj�
 
 ## <a name="edit-a-com-interface"></a>Edytowanie interfejsu COM
 
-Za pomocą poleceń menu skrótów w widoku klas, można zdefiniować nowej metody i właściwości dla interfejsów COM w projektach języka Visual C++. Z przybornika można również definiować zdarzenia dla formantów ActiveX.
+Za pomocą poleceń menu skrótów w widoku klas, można zdefiniować nowej metody i właściwości dla interfejsów COM w programu Visual Studio C++ projektów. Z przybornika można również definiować zdarzenia dla formantów ActiveX.
 
 ATL i MFC oparte na modelu COM klas obiektów można edytować implementację klasy, w tym samym czasie edytowania interfejsu.
 

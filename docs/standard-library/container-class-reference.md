@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference method
 ms.assetid: ab85a9fb-c628-4761-9a5f-a0231fad7690
-ms.openlocfilehash: 4204571dba320de6248dac2cfb10ae21dc31e72c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd58ffafb9be65067cbff5571fe9cbf9fcd0a55d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210942"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221590"
 ---
 # <a name="container-classreference"></a>Kontener Class::reference
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
 Opisuje obiekt, który może służyć jako odwołanie do elementu w kontrolowanej sekwencji.
 
