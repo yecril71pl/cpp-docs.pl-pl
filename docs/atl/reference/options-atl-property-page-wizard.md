@@ -1,19 +1,28 @@
 ---
 title: Opcje, Kreator strony właściwości ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c883b3e79bd857bb457da0a1bd540a08ddddf017
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275402"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524543"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opcje, Kreator strony właściwości ATL
+
+
+::: moniker range="vs-2019"
+
+Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Ta strona kreatora umożliwia definiowanie wątkowości modelu i agregację poziomu strony właściwości, które tworzysz.
 
@@ -37,6 +46,8 @@ Ta strona kreatora umożliwia definiowanie wątkowości modelu i agregację pozi
    |**Tak**|Utwórz stronę właściwości, który może być agregowany.|
    |**Brak**|Utwórz stronę właściwości nie można agregować.|
    |**Only**|Utwórz stronę właściwości wystąpienia można tworzyć tylko za pomocą agregacji.|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 

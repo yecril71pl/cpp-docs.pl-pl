@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 954d87b2ab325f764213f01724e542aaa134d141
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 53cde029973c14bfc5aae521946ebeadbed738ca
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217697"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611987"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)
 
@@ -271,7 +271,6 @@ Aby sprawdzić, czy wszystko działa do tej pory, kompilowanie biblioteki dołą
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
-1>stdafx.cpp
 1>MathLibrary.cpp
 1>dllmain.cpp
 1>Generating Code...

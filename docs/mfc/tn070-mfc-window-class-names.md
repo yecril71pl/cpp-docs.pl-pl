@@ -1,18 +1,16 @@
 ---
 title: 'TN070: Nazwy klas okien MFC'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.classes
 helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 8b06f7b3656284de18632185877fdbe382343f95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2818104c59a94b0e1239abc614a83dea8c3de08
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168040"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611214"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: Nazwy klas okien MFC
 
@@ -46,4 +44,4 @@ Pierwszy formularz (`Afx:%x:%x`) jest używany podczas **hCursor**, **hbrBackgro
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)<br/>
-[TN020: Konwencje identyfikator nazewnictwa i numerowania](../mfc/tn020-id-naming-and-numbering-conventions.md)
+[TN020: konwencje nazewnictwa i numerowania identyfikatorów](../mfc/tn020-id-naming-and-numbering-conventions.md)

@@ -1,13 +1,13 @@
 ---
 title: 3. Funkcje biblioteki czasu wykonywania
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525044"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611186"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funkcje biblioteki czasu wykonywania
 
@@ -55,6 +55,8 @@ Funkcja ta ma wpływ opisanych powyżej, gdy wywoływana z części programu gdz
 
 To wywołanie ma pierwszeństwo przed `OMP_NUM_THREADS` zmiennej środowiskowej. Wartość domyślna liczba wątków, które mogą być ustanowione przez wywołanie metody `omp_set_num_threads` lub poprzez skonfigurowanie `OMP_NUM_THREADS` zmiennej środowiskowej, może być jawnie przesłonięte na pojedynczym `parallel` dyrektywy, określając `num_threads` klauzuli.
 
+Aby uzyskać więcej informacji, zobacz [omp_set_dynamic](#317-omp_set_dynamic-function).
+
 #### <a name="cross-references"></a>Odsyłacze
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) — funkcja
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 `num_threads` Klauzuli `omp_set_num_threads` funkcji i `OMP_NUM_THREADS` zmiennej środowiskowej kontrolować liczbę wątków w zespole.
 
 Jeśli liczba wątków nie została jawnie ustawiona przez użytkownika, wartość domyślna to zdefiniowane w implementacji. Ta funkcja jest powiązana najbliższej otaczającej `parallel` dyrektywy. Wywoływana z serial część programu lub zagnieżdżone równoległego regionu, który jest serializowany, ta funkcja zwraca wartość 1.
+
+Aby uzyskać więcej informacji, zobacz [omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Odsyłacze
 
@@ -165,6 +169,12 @@ Wywołanie `omp_set_dynamic` ma pierwszeństwo przed `OMP_DYNAMIC` zmiennej śro
 
 Wartość domyślna dla dynamicznego dostosowania wątków jest zdefiniowane w implementacji. W rezultacie kody użytkownika, które są zależne od określonej liczby wątków do wykonania poprawne jawnie Wyłącz dynamiczne wątków. Implementacje nie są wymagane, aby zapewnić możliwość dynamicznego dostosowania liczby wątków, ale są one wymagane zapewnia interfejs do obsługi przenoszenia na wszystkich platformach.
 
+#### <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+
+Bieżąca obsługa `omp_get_dynamic` i `omp_set_dynamic` jest następująca: 
+
+Parametr wejściowy do `omp_set_dynamic` nie wpływa na zasady wątkowości i nie zmienia to liczba wątków. `omp_get_num_threads` zawsze zwraca liczbę zdefiniowanych przez użytkownika, jeśli, który jest skonfigurowany lub domyślny numer wątku. W bieżącej implementacji Microsoft `omp_set_dynamic(0)` wyłącza dynamiczne wątkowości, tak aby istniejący zestaw wątków można ponownie następujące równoległego regionu. `omp_set_dynamic(1)` Włącza funkcję dynamicznego wątków przez odrzucenie istniejącego zestawu wątków i tworzenie zestawu kolejnych równoległego regionu. Liczba wątków w nowy zestaw jest taki sam jak stary zestaw i opiera się na wartość zwracaną przez `omp_get_num_threads`. W związku z tym, aby uzyskać najlepszą wydajność, należy użyć `omp_set_dynamic(0)` do ponownego użycia istniejących wątkach.
+
 #### <a name="cross-references"></a>Odsyłacze
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ Wartość domyślna dla dynamicznego dostosowania wątków jest zdefiniowane w i
 int omp_get_dynamic(void);
 ```
 
-Jeśli wdrożenia nie implementuje dynamiczne Dostosowywanie liczby wątków, ta funkcja zawsze zwraca wartość 0.
+Jeśli wdrożenia nie implementuje dynamiczne Dostosowywanie liczby wątków, ta funkcja zawsze zwraca wartość 0. Aby uzyskać więcej informacji, zobacz [omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Odsyłacze
 
