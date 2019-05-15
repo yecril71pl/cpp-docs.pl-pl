@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446308"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707114"
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 
@@ -244,7 +244,7 @@ Te informacje dotyczą powyższej liście:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Plik typy utworzone dla wizualizacji C++ projektów](file-types-created-for-visual-cpp-projects.md)<br>
+[Plik typy utworzone dla programu Visual Studio C++ projektów](file-types-created-for-visual-cpp-projects.md)<br>
 [#define, dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef, dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Adnotacje SAL](../../c-runtime-library/sal-annotations.md)<br>

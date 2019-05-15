@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: f172da3aefb3f2440ddb4bba41dc549b0bf4a926
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525129"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707753"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Klasy konsumentów generowane przez kreatora
 
@@ -20,7 +20,7 @@ Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Kiedy używasz **OLE DB Kreator konsumenta ATL** do generowania konsumenta, masz do wyboru używania atrybutów szablony OLE DB lub OLE DB. W obu przypadkach kreator generuje klasę polecenie i klasy rekordu użytkownika. Klasa polecenia zawiera kod, aby otworzyć źródła danych i wierszy, które określiłeś w kreatorze. Klasa rekordu użytkownika zawiera mapę kolumny dla wybranej tabeli bazy danych. Jednak wygenerowanego kodu różni się w każdym przypadku:
 

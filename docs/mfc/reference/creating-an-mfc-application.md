@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: c70c82d14227687f34309f8d125e3aeab53034a5
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f16fe577f1dc02dc9a2fc0cffb5899b16ad8cca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448434"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708234"
 ---
 # <a name="creating-an-mfc-application"></a>Tworzenie aplikacji MFC
 
@@ -47,7 +47,7 @@ Kreator aplikacji MFC generuje odpowiednie klasy i pliki dla dowolnego z tych ty
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i otworzyć nowy projekt w środowisku programistycznym.
 
-Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla elementu wizualnego C++ projektów](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla programu Visual Studio C++ projektów](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Zobacz także
 

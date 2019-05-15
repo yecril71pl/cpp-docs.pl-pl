@@ -1,6 +1,6 @@
 ---
 title: Zestaw rekordów (ODBC)
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - recordsets, snapshots
 - recordsets, creating
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b043b08e13611b87bbffbe9dfb3255d5520e3359
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397747"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707832"
 ---
 # <a name="recordset-odbc"></a>Zestaw rekordów (ODBC)
 
@@ -35,10 +35,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md) obiekt reprezentuje zest
 Przykład zestawu rekordów na podstawie tabeli jest "wszyscy klienci", który uzyskuje dostęp do tabeli klientów. Przykład zapytania to "wszystkie faktury dla Jan Kowalski". Przykład zestawu rekordów, oparte na procedury składowanej (nazywane również wstępnie zdefiniowanego zapytania) jest "wszystkie konta bardzo" który wywołuje procedurę składowaną w bazie danych zaplecza. Zestaw rekordów, mogą dołączyć do co najmniej dwóch tabel, z tego samego źródła danych, ale nie tabel pochodzących z różnych źródeł danych.
 
 > [!NOTE]
->  Aby dowiedzieć się, jak wyprowadzanie klas zestawu rekordów przy użyciu kreatorów, zobacz [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) i [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md).
-
-> [!NOTE]
->  Niektóre sterowniki ODBC obsługi widoków bazy danych. Widok, w tym sensie to zapytania utworzone za pomocą języka SQL `CREATE VIEW` instrukcji. Kreatorzy aktualnie nie obsługują widoków, ale można kodu do obsługi tej samodzielnie.
+>  Niektóre sterowniki ODBC obsługi widoków bazy danych. Widok, w tym sensie to zapytania utworzone za pomocą języka SQL `CREATE VIEW` instrukcji.
 
 ##  <a name="_core_recordset_capabilities"></a> Funkcje zestawu rekordów
 

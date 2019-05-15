@@ -2,12 +2,12 @@
 title: Omówienie programowania w systemie Windows w języku C++
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: f2cdb0d0225b47391ee18c398b7789ab42ca8f40
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221322"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708206"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -116,7 +116,7 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Temat nadrzędny dla zawartości dla deweloperów Visual C++.|
+|[Język C++ w programie Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Temat nadrzędny dla zawartości dla deweloperów Visual C++.|
 [Programowanie na platformie .NET w języku C++/w interfejsie wiersza polecenia](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Tworzenie otok dla natywnych bibliotek C++, które umożliwiają go do komunikacji z aplikacji platformy .NET i składników.|
 |[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](../extensions/component-extensions-for-runtime-platforms.md)|Dokumentacja dotycząca elementy składni współużytkowane przez C++/CX i C++sposób niezamierzony.|
 |[Aplikacje uniwersalne systemu Windows (C++)](universal-windows-apps-cpp.md)|Tworzenie aplikacji platformy uniwersalnej systemu Windows przy użyciu C++/CX lub Windows Runtime szablon biblioteki (WRL).|

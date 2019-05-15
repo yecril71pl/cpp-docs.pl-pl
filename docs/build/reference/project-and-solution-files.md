@@ -9,12 +9,12 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: 153480331d3300555c78a3489ca603d854893f5b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 37bfd1a6db2087e97ab76d3d06ed6f56e59b96e3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446588"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707414"
 ---
 # <a name="project-and-solution-files"></a>Pliki projektu i rozwiązania
 
@@ -34,4 +34,4 @@ Następujące pliki są tworzone podczas tworzenia projektu w programie Visual S
 
 ## <a name="see-also"></a>Zobacz także
 
-[Plik typy utworzone dla wizualizacji C++ projektów](file-types-created-for-visual-cpp-projects.md)
+[Plik typy utworzone dla programu Visual Studio C++ projektów](file-types-created-for-visual-cpp-projects.md)

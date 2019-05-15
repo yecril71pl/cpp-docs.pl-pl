@@ -1,18 +1,16 @@
 ---
 title: Implementacja punktu połączenia
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.impl.cp.overview
+ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 7afa61246c5251936967e281f7237dc37e5be045
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344252"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708078"
 ---
 # <a name="implement-a-connection-point"></a>Implementacja punktu połączenia
 
@@ -61,7 +59,7 @@ Obiekt łączności (źródła) można wyświetlić punkt połączenia dla każd
 
 ## <a name="implement-connection-point-wizard"></a>Kreator implementacji punktu połączenia
 
-Ten kreator implementuje punkt połączenia dla obiektów COM. Obiekt łączności (źródła) można wyświetlić punkt połączenia dla swoich własnych interfejsów lub dowolnego interfejsu wychodzącego. Visual C++ Windows zarówno i zapewniają bibliotek typów, które mają wychodzących interfejsów. Każdego interfejsu wychodzącego może być implementowana przez klienta do obiektu (ujścia).
+Ten kreator implementuje punkt połączenia dla obiektów COM. Obiekt łączności (źródła) można wyświetlić punkt połączenia dla swoich własnych interfejsów lub dowolnego interfejsu wychodzącego. MSVC i Windows zapewniają bibliotek typów, które mają wychodzących interfejsów. Każdego interfejsu wychodzącego może być implementowana przez klienta do obiektu (ujścia).
 
 Aby uzyskać więcej informacji, zobacz [punkty połączenia ATL](../atl/atl-connection-points.md).
 

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7a866c0e6b772a992f5ae81dbb17646765f172e6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525472"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708340"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Kreator dodawania klasy z biblioteki typów
 
@@ -19,7 +19,7 @@ Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersj
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Ten kreator umożliwia dodawanie klasy MFC z biblioteki typów dostępne. Kreator utworzy klasę dla każdego interfejsu, który dodasz z wybranej biblioteki typów.
 

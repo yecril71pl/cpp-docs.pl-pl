@@ -1,18 +1,18 @@
 ---
 title: 'Przewodnik: Praca z projektami i rozwiązaniami (C++)'
-ms.date: 04/25/2019
+ms.date: 05/14/2019
 helpviewer_keywords:
 - solutions [C++]
 - projects [C++], about projects
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 978899e6e73d78623e37222e3248dc299ec29c69
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 6dfee695092a69252069dbfc73b6260bd65245e2
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877303"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708128"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Przewodnik: Praca z projektami i rozwiązaniami (C++)
 
@@ -22,7 +22,7 @@ W programie Visual Studio praca jest organizowana w projektach i rozwiązaniach.
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
-Do przeprowadzenia tego instruktażu, potrzebujesz programu Visual Studio 2017 r. lub nowszej. Jeśli potrzebujesz kopii, poniżej przedstawiono krótki przewodnik: [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md). Jeśli go jeszcze nie wykonano jeszcze, wykonaj następujące kroki po zakończeniu instalacji przy użyciu samouczka "Hello, World", aby upewnić się, że Visual C++ jest poprawnie zainstalowane i jego wszystkie działania.
+Do przeprowadzenia tego instruktażu, potrzebujesz programu Visual Studio 2017 r. lub nowszej. Jeśli potrzebujesz kopii, poniżej przedstawiono krótki przewodnik: [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md). Jeśli go jeszcze nie wykonano jeszcze, wykonaj następujące kroki po zakończeniu instalacji przy użyciu samouczka "Hello, World", aby upewnić się, że C++ składniki zostały zainstalowane poprawnie i to wszystko działa.
 
 Pomaga ono, jeśli można rozumieć podstawy języka C++ i ustalić, jakie kompilatora, konsolidatora i debugera są używane do. W samouczku założono, że znasz Windows i sposobu użycia menu, okna dialogowe,
 

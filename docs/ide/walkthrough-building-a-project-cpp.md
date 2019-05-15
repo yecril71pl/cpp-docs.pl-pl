@@ -6,16 +6,16 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 16f1f0bc66b9d1f1a6ece4856d213bb13b2b7dbf
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: ea477e7b2f5435e049b242e68d151cc1f2d20624
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64855953"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708135"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Przewodnik: Tworzenie projektu (C++)
 
-W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzie, aby dowiedzieć się, jak wygląda błąd kompilacji i jak go naprawić. Podczas kompilowania projektu, komunikat o błędzie wskazuje, co to jest problem i gdzie się pojawił.
+W tym instruktażu celowo wprowadzono C++ błąd składni w kodzie, aby dowiedzieć się, jak wygląda błąd kompilacji i jak go naprawić. Podczas kompilowania projektu, komunikat o błędzie wskazuje, co to jest problem i gdzie się pojawił.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 

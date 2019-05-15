@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: e8ab9238f921b3c4e5c0eb396f0b26e46ab2a244
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 24b4698ebc8dd4f61dfd88ad14e64d4f70b2ef35
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524675"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707034"
 ---
 # <a name="atl-com-10-component-wizard"></a>Kreator 1.0 składnika ATL COM +
 
@@ -19,7 +19,7 @@ Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersj
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Użyj tego kreatora, aby dodać obiekt do projektu, który obsługuje usługi COM + 1.0, w tym transakcji.
 

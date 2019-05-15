@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 47fee2291d201fca04674b07926ed88aaed0a95c
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 5808a99d376ab3640c955156688d64bc0285e67e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524531"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706977"
 ---
 # <a name="atl-property-page-wizard"></a>Kreator strony właściwości ATL
 
@@ -22,7 +22,7 @@ Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersj
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Ten kreator [dodaje strony właściwości w projekcie ATL](../../atl/reference/adding-an-atl-property-page.md) lub do projektu MFC z obsługą ATL. Strony właściwości ATL udostępnia interfejs użytkownika do ustawiania właściwości (lub wywoływania metod) jeden lub więcej obiektów COM.
 

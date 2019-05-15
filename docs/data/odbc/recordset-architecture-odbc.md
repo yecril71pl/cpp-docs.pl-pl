@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0edde640e0eebaf21216fc9ef37a8e31e2c1a210
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395641"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707978"
 ---
 # <a name="recordset-architecture-odbc"></a>Zestaw rekordów: Architektura (ODBC)
 
@@ -36,6 +36,9 @@ W tym temacie opisano elementy członkowskie danych składające się z architek
 >  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli zaimplementowano zbiorcze pobieranie z wiersza architektura jest podobna. Aby poznać różnice, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Przykładowa klasa
+
+> [!NOTE] 
+> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
 
 Kiedy używać [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **Dodaj klasę** pochodną kreatora, aby zadeklarować klasy zestawu rekordów `CRecordset`, wynikowy klasa ma ogólną strukturę pokazano w następującym prosty klasa:
 

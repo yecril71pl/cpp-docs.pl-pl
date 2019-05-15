@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 27b82fb7a688c8cc7a3df734a7e60a17f7ffa184
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446763"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708251"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Tworzenie kontrolki ActiveX MFC
 
@@ -36,7 +36,7 @@ Najprostszym sposobem utworzenia kontrolki MFC ActiveX jest użycie [Kreator kon
 
 1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i otworzyć nowy projekt w środowisku programistycznym.
 
-Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla elementu wizualnego C++ projektów](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla programu Visual Studio C++ projektów](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 Po utworzeniu projektu umożliwia kreatorów kodu Dodaj [funkcje](../../ide/add-member-function-wizard.md), [zmienne](../../ide/add-member-variable-wizard.md), [zdarzenia](../../ide/add-event-wizard.md), [właściwości](../../ide/names-add-property-wizard.md), i [metody](../../ide/add-method-wizard.md). Aby uzyskać więcej informacji na temat dostosowywania formant ActiveX, zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md).
 

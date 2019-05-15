@@ -2,12 +2,12 @@
 title: Programowanie chmury i sieci Web w programie Visual C++
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 33431a8f8660af683ed2e39e10811c22fe2f4fcc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385274"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708043"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programowanie chmury i sieci Web w programie Visual C++
 
@@ -58,5 +58,5 @@ W języku C++ masz kilka opcji do łączenia się z sieci web i w chmurze.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md) <br/>
+[Język C++ w programie Visual Studio](../overview/visual-cpp-in-visual-studio.md) <br/>
 [Sieci i usług sieci web](/windows/uwp/networking/)

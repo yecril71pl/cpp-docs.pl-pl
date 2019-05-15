@@ -1,18 +1,18 @@
 ---
 title: Pisanie i Refaktoryzacja kodu (C++)
 description: Użyj C++ edytora kodu w programie Visual Studio do formatu, nawigowanie, zrozumieć i Refaktoryzuj swój kod.
-ms.date: 04/30/2018
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: ee506229584690cd4f7730011e0b5b50af0e27e0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222319"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708302"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Pisanie i Refaktoryzacja kodu (C++)
 
-Edytor kodu Visual C++ oraz środowiska IDE i zapewniają wiele pomoce kodowania. Niektóre są unikatowe dla języka C++, a niektóre są zasadniczo takie same dla wszystkich języków Visual Studio. Aby uzyskać więcej informacji o funkcjach udostępnionych, zobacz [pisanie kodu w edytorze tekstu i kodu](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Opcje umożliwia włączenie i skonfigurowanie funkcji specyficznych dla języka C++ znajdują się w obszarze **narzędzia &#124; opcje &#124; edytora tekstów &#124; C/C++**. Po wybraniu opcji chcesz ustawić, można uzyskać pomoc, naciskając klawisz **F1** gdy okno jest w trybie koncentracji uwagi. Dla kodu ogólne opcje formatowania, wpisz `Editor C++` do **szybkiego uruchamiania**.
+C++ Edytora kodu i środowiska IDE programu Visual Studio zapewnia wiele pomoce kodowania. Niektóre są unikatowe dla języka C++, a niektóre są zasadniczo takie same dla wszystkich języków Visual Studio. Aby uzyskać więcej informacji o funkcjach udostępnionych, zobacz [pisanie kodu w edytorze tekstu i kodu](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Opcje umożliwia włączenie i skonfigurowanie funkcji specyficznych dla języka C++ znajdują się w obszarze **narzędzia &#124; opcje &#124; edytora tekstów &#124; C/C++**. Po wybraniu opcji chcesz ustawić, można uzyskać pomoc, naciskając klawisz **F1** gdy okno jest w trybie koncentracji uwagi. Dla kodu ogólne opcje formatowania, wpisz `Editor C++` do **szybkiego uruchamiania**.
 
 Funkcji eksperymentalnych, które mogą lub nie mogą zostać zawarte w przyszłych wersjach programu Visual Studio, znajdują się w [eksperymentalne C++ edytora tekstów](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) okna dialogowego. W programie Visual Studio 2017 można włączyć **Predictive IntelliSense** w tym oknie dialogowym.
 

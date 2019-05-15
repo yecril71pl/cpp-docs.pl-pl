@@ -1,21 +1,24 @@
 ---
 title: Wybieranie rekordów i operowanie nimi
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - records, selecting
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: fa8b63dab24c921804c474df73f6b6da192a4cd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329949"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707807"
 ---
 # <a name="selecting-and-manipulating-records"></a>Wybieranie rekordów i operowanie nimi
 
-Zwykle po wybraniu rekordów ze źródła danych przy użyciu języka SQL **wybierz** instrukcji, otrzymasz zestaw wyników, czyli zestaw rekordów z tabeli lub zapytanie. Z klasami bazy danych obiekt zestawu rekordów jest używany do wybierz i dostępu do zestawu wyników. To jest obiekt klasy specyficzne dla aplikacji, która pochodzi od klasy [CRecordset](../../mfc/reference/crecordset-class.md). Podczas definiowania klasy zestawu rekordów, należy określić źródło danych, aby skojarzyć ją z, tabeli, aby używać i kolumn tabeli. Kreator aplikacji MFC lub **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) tworzy klasę z połączeniem z określonego źródła danych. Kreatorzy zapisu [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funkcji składowej klasy typu `CRecordset` aby zwrócić nazwę tabeli. Aby uzyskać więcej informacji na temat za pomocą kreatorów, aby utworzyć zestaw rekordów klasy, zobacz [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md) i [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+> [!NOTE] 
+> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
+
+Zwykle po wybraniu rekordów ze źródła danych przy użyciu języka SQL **wybierz** instrukcji, otrzymasz zestaw wyników, czyli zestaw rekordów z tabeli lub zapytanie. Z klasami bazy danych obiekt zestawu rekordów jest używany do wybierz i dostępu do zestawu wyników. To jest obiekt klasy specyficzne dla aplikacji, która pochodzi od klasy [CRecordset](../../mfc/reference/crecordset-class.md). Podczas definiowania klasy zestawu rekordów, należy określić źródło danych, aby skojarzyć ją z, tabeli, aby używać i kolumn tabeli. Kreator aplikacji MFC lub **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) tworzy klasę z połączeniem z określonego źródła danych. Kreatorzy zapisu [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funkcji składowej klasy typu `CRecordset` aby zwrócić nazwę tabeli.
 
 Za pomocą [CRecordset](../../mfc/reference/crecordset-class.md) obiektu w czasie wykonywania, możesz:
 

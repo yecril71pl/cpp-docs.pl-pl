@@ -1,18 +1,18 @@
 ---
 title: Obsługa złożonych obliczeń w języku C
-ms.date: 03/30/2018
+ms.date: 05/14/2019
 f1_keywords:
 - c.complex
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290017"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707391"
 ---
 # <a name="c-complex-math-support"></a>Obsługa złożonych obliczeń w języku C
 
@@ -28,15 +28,15 @@ Implementacja firmy Microsoft w nagłówku complex.h definiuje te typy jako odpo
 
 |Standardowe|Typ firmy Microsoft|
 |-|-|
-|**złożone float** lub **float _complex —**|**_FComplex**|
-|**podwójne złożone** lub **double _complex —**|**_DComplex**|
-|**złożone typu Long double** lub **_complex typu long double —**|**_LComplex**|
+|**złożone float** lub **float _complex —**|**_Fcomplex**|
+|**podwójne złożone** lub **double _complex —**|**_Dcomplex**|
+|**złożone typu Long double** lub **_complex typu long double —**|**_Lcomplex**|
 
 W nagłówku math.h definiuje oddzielnego typu **_complex — struktura**, który jest używany dla [_cabs](../c-runtime-library/reference/cabs.md) funkcji. **_Complex — struktura** typu nie jest używany przez równoważne złożone funkcje matematyczne [pliki cab, cabsf cabsl —](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Złożone stałe i makra
 
-**Czy mogę** jest zdefiniowany jako **float** typu złożonego **_FComplex** inicjowane przez `{ 0.0f, 1.0f }`.
+**Czy mogę** jest zdefiniowany jako **float** typu złożonego **_Fcomplex** inicjowane przez `{ 0.0f, 1.0f }`.
 
 ## <a name="trigonometric-functions"></a>Funkcje trygonometryczne
 

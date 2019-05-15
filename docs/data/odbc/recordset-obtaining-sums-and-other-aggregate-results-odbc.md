@@ -10,14 +10,17 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397786"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707844"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Zestaw rekordów: Uzyskiwanie sum i innych wyników agregacji (ODBC)
+
+> [!NOTE] 
+> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
 
 Ten temat dotyczy klas MFC ODBC.
 

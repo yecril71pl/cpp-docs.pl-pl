@@ -1,15 +1,15 @@
 ---
 title: Dodawanie funkcji za pomocą kreatorów kodu (C++)
-ms.date: 05/09/2019
+ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 3050b3e2d2a188c2465cd454325e458cd8cc4047
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525479"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708127"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 
@@ -31,9 +31,9 @@ Po utworzeniu projektu można zmienić lub dodać do funkcji tego projektu. Taki
 > [!NOTE]
 >  Teraz możesz dodać procedury obsługi komunikatów i mapowanie komunikatów do nich i zastępują funkcje wirtualne MFC przy użyciu [okno właściwości](/visualstudio/ide/reference/properties-window).
 
-## <a name="accessing-visual-c-code-wizards"></a>Uzyskiwanie dostępu do kreatorów kodu Visual C++
+## <a name="accessing-c-code-wizards"></a>Uzyskiwanie dostępu do C++ kreatorów kodu
 
-Istnieją trzy lokalizacje, gdzie uzyskujesz dostęp kreatorów kodu Visual C++:
+Istnieją trzy miejsca, w którym możesz uzyskać dostęp C++ kreatorów kodu:
 
 - Na **projektu** menu **Dodaj nowy element** polecenie umożliwia wyświetlenie `Add New Item` okno dialogowe, które ułatwia dodawanie nowych plików do projektu. **Dodaj klasę** polecenie wyświetla [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe, które z kolei Otwórz kreatorów, dla każdej klasy typów, możesz dodać do projektu. **Dodaj zasób** polecenie wyświetla [Dodaj zasób](../windows/add-resource-dialog-box.md) okno dialogowe, w którym można utworzyć lub wybrać zasób, aby dodać do projektu.
 
@@ -78,4 +78,4 @@ Istnieją trzy lokalizacje, gdzie uzyskujesz dostęp kreatorów kodu Visual C++:
 [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)<br>
 [C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
-[Plik typy utworzone dla wizualizacji C++ projektów](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Plik typy utworzone dla programu Visual Studio C++ projektów](../build/reference/file-types-created-for-visual-cpp-projects.md)

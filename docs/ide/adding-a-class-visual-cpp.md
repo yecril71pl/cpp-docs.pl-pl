@@ -1,8 +1,7 @@
 ---
 title: Dodaj klasę
-ms.date: 11/08/2018
+ms.date: 05/14/2019
 f1_keywords:
-- vc.codewiz.classes.adding
 - vc.addclass
 helpviewer_keywords:
 - ATL projects, adding classes
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: 4cd4ed4d4ec5a7093ce674c7883a77fa4e91d5ef
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fa53c2af5cd3e81c2d4877ef255430eac9525aad
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446936"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708139"
 ---
 # <a name="add-a-class"></a>Dodaj klasę
 
@@ -81,13 +80,8 @@ Istnieją cztery kategorie **Dodaj klasę** szablonów: .NET, ATL, MFC i ogólny
 |Szablon|Kreator|
 |--------------|------------|
 |Dodaj obsługę ATL do MFC|Niedostępne|
-|Składnika strony Active Server ATL|[Kreator składników stron active server ATL](../atl/reference/atl-active-server-page-component-wizard.md)|
 |Kontrolka ATL|[Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md)|
 |Okno dialogowe ATL|[Kreator okna dialogowego ATL](../atl/reference/atl-dialog-wizard.md)|
-|Składnik ATL COM + 1.0|[Kreator składnika ATL COM + 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)|
-|Odbiorca ATL OLEDB|[Kreator konsumenta ATL OLE DB](../atl/reference/atl-ole-db-consumer-wizard.md)|
-|Dostawca ATL OLEDB|[Kreator dostawcy ATL OLE DB](../atl/reference/atl-ole-db-provider-wizard.md)|
-|Strony właściwości ATL|[Kreator strony właściwości ATL](../atl/reference/atl-property-page-wizard.md)|
 |Prosty obiekt ATL|[Kreator prostych obiektów ATL](../atl/reference/atl-simple-object-wizard.md)|
 |Dostawca zdarzeń WMI|Kreator dostawcy zdarzeń WMI|
 |Dostawca wystąpień WMI|Kreator dostawcy interfejsu wystąpienia usługi WMI|
@@ -97,9 +91,6 @@ Istnieją cztery kategorie **Dodaj klasę** szablonów: .NET, ATL, MFC i ogólny
 |Szablon|Kreator|
 |--------------|------------|
 |Klasa MFC|[Kreator dodawania klasy MFC](../mfc/reference/mfc-add-class-wizard.md)|
-|Klasa MFC z formantu ActiveX|[Dodawanie klasy z Kreatora kontrolek ActiveX](../ide/add-class-from-activex-control-wizard.md)|
-|Klasa MFC z biblioteki typów|[Biblioteki typów, Kreator dodawania klasy z](../mfc/reference/add-class-from-typelib-wizard.md)|
-|Odbiorca MFC ODBC|[Kreator użytkownika MFC ODBC](../mfc/reference/mfc-odbc-consumer-wizard.md)|
 
 #### <a name="generic-classes"></a>Klasy ogólne
 

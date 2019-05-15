@@ -1,6 +1,6 @@
 ---
 title: 'Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)'
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, creating
 - recordsets, creating
@@ -9,14 +9,17 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395589"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707984"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)
+
+> [!NOTE] 
+> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
 
 Ten temat dotyczy klas MFC ODBC.
 

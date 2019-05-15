@@ -1,18 +1,18 @@
 ---
 title: SQL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - database classes [C++], SQL statements
 - SQL [C++]
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68c01623ef97e89623dff3f46a952c75ea31a774
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329896"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707813"
 ---
 # <a name="sql"></a>SQL
 
@@ -38,6 +38,9 @@ W tym temacie opisano:
 Klasy bazy danych są implementowane za pomocą ODBC, która używa języka SQL w poziomie wywołań za pomocą interfejsu zamiast osadzania poleceń SQL w kodzie. ODBC używa języka SQL do komunikowania się z [źródła danych](../../data/odbc/data-source-odbc.md) za pomocą sterowników ODBC. Te sterowniki interpretacji języka SQL i tłumaczenie, jeśli to konieczne, do użycia w formacie określonej bazy danych, takich jak program Microsoft Access. Aby uzyskać więcej informacji o używaniu ODBC SQL, zobacz [ODBC](../../data/odbc/odbc-basics.md) i zestawu SDK ODBC *odwołania programisty* na dysku CD z biblioteki MSDN.
 
 ##  <a name="_core_the_database_classes"></a> Klasy bazy danych
+
+> [!NOTE] 
+> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
 
 Klasy bazy danych są przeznaczone do umożliwiają manipulowanie i aktualizowanie danych w istniejącym [źródła danych](../../data/odbc/data-source-odbc.md). [Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (dostępne za pośrednictwem **Dodaj klasę**), i klasy baz danych konstruowania większość instrukcji SQL dla Ciebie.
 
@@ -79,9 +82,9 @@ Więcej informacji na temat sposobu korzystanie z klas baz danych SQL można zna
 
 - [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL: Program SQL oraz typów danych języka C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL: typy danych SQL i C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL: Wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL: wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>Zobacz także
 

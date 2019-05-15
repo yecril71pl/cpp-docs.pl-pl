@@ -1,6 +1,6 @@
 ---
 title: Tworzenie skryptów dla Rejestrator ALT
-ms.date: 11/04/2016
+ms.date: 05/14/2014
 helpviewer_keywords:
 - scripting, registry scripting
 - ATL, registry
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-ms.openlocfilehash: e1a0b66e673fcefd0b75683ef75247a388217361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f32606701ea08736985f0b0dd2ed82712040a049
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250856"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707056"
 ---
 # <a name="creating-registrar-scripts"></a>Tworzenie skryptów rejestratora
 
@@ -25,7 +25,7 @@ Aparat skryptów Rejestrator ALT przetwarza skryptu rejestratora w czasie wykony
 
 W tym artykule omówiono następujące tematy związane z skrypty rejestratora:
 
-- [Opis składni formularza Backus Nauer (BNF)](../atl/understanding-backus-nauer-form-bnf-syntax.md)
+- [Opis składni formularza (BNF) notacji Backusa-Naura](../atl/understanding-backus-naur-form-bnf-syntax.md)
 
 - [Opis drzew analizy](../atl/understanding-parse-trees.md)
 

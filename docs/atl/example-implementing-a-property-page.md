@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1da7a2691465162e645ae9790eecdb08d9a2ce98
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524574"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707096"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementowanie strony właściwości
 
@@ -19,7 +19,7 @@ Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 W tym przykładzie pokazano, jak strona właściwości, która wyświetla (i pozwala na zmianę) właściwości budowania [klasy dokumentów](../mfc/document-classes.md) interfejsu.
 

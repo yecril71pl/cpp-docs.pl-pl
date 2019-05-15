@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: c4ba69d8421a76a94e4a676cb62ee53936d77da3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 49058fe13457c2d0050452cbc0015575371e4043
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524585"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706902"
 ---
 # <a name="implementing-property-pages"></a>Implementowanie stron właściwości
 
@@ -21,7 +21,7 @@ Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Strony właściwości są obiektów COM, które implementują `IPropertyPage` lub `IPropertyPage2` interfejsu. ATL zapewnia obsługę implementowania strony właściwości, za pośrednictwem [Kreator strony właściwości ATL](../atl/reference/atl-property-page-wizard.md) w [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md).
 

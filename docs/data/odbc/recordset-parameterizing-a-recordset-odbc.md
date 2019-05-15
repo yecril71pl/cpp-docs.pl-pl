@@ -1,18 +1,18 @@
 ---
 title: 'Zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)'
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - parameterizing recordsets
 - ODBC recordsets, parameterizing
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 499741693009fb27df58f0ed3cde046d5e6b8c2d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397760"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707794"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)
 
@@ -92,6 +92,9 @@ Aby uzyskać więcej informacji na temat filtrów, zobacz [zestaw rekordów: Fil
 Przed przystąpieniem do tworzenia klasy zestawu rekordów, należy określić parametry potrzebne, jakie są typy danych i jak zestaw rekordów są one używane.
 
 #### <a name="to-parameterize-a-recordset-class"></a>Definiowanie parametrów klasy zestawu rekordów
+
+> [!NOTE] 
+> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Tę funkcję można nadal tworzyć ręcznie.
 
 1. Uruchom [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **Dodaj klasę** Aby utworzyć klasę.
 

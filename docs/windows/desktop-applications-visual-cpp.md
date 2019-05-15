@@ -2,12 +2,12 @@
 title: Aplikacje klasyczne (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 4576f77f7806787c4ab2a16cc279107ec9af32e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6734277c97325dcef1fc72a07781352766bde817
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345360"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706857"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 
@@ -56,4 +56,4 @@ Można użyć dowolnej aplikacji klasycznych w języku C++, C Runtime (CRT) i st
 
 ## <a name="see-also"></a>Zobacz także
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[Język C++ w programie Visual Studio](../overview/visual-cpp-in-visual-studio.md)

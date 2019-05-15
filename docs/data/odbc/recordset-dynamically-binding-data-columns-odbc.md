@@ -1,6 +1,6 @@
 ---
 title: 'Zestaw rekordów: Dynamically Binding Data Columns (ODBC)'
-ms.date: 11/19/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bde61348bbfb33eef42e36bd75830c23e5b2a5f5
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397904"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707932"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Zestaw rekordów: Dynamically Binding Data Columns (ODBC)
 
@@ -29,6 +29,9 @@ Zestawy rekordów zarządzać kolumn tabeli powiązania, które określisz w cza
 >  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Techniki opisane zazwyczaj nie są zalecane, jeśli używasz zbiorcze pobieranie z wiersza. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Kiedy może powiązać kolumny dynamicznie
+
+> [!NOTE] 
+> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
 
 W czasie projektowania, Kreator aplikacji MFC lub [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (z **Dodaj klasę**) tworzy klasy zestawu rekordów na podstawie znanych tabel i kolumn w źródle danych. Bazy danych może się zmieniać między podczas projektowania je i nowsze, gdy Twoja aplikacja używa tych tabel i kolumn w czasie wykonywania. Ty lub inny użytkownik może dodać Porzuć tabelę lub dodawanie lub usuwanie kolumn z tabeli, która korzysta z aplikacji w zestawie rekordów. To prawdopodobnie nie jest wymagana dla wszystkich aplikacji dostęp do danych, ale jeśli jest dla Ciebie, jak możesz radzić sobie z zmiany w schemacie bazy danych, innych niż przeprojektowanie i ponownej kompilacji? Ten temat ma na celu odpowiedzieć na to pytanie.
 

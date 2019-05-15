@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448566"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708053"
 ---
 # <a name="windows-desktop-wizard"></a>Kreator aplikacji klasycznej Windows
 
@@ -27,7 +27,7 @@ Poniższa tabela wskazuje, które opcje są dostępne dla każdego typu aplikacj
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
 |**Pusty projekt**|Yes|Yes|Yes|Nie|
 |**Eksportuj symbole**|Nie|Nie|Yes|Nie|
-|**Prekompilowany plik nagłówkowy**|Nie|Nie|Nie|Yes|
+|**Prekompilowany plik nagłówkowy**|Nie|Nie|Nie|Tak|
 |**Obsługa biblioteki ATL**|Tak|Nie|Nie|Nie|
 |**Obsługa MFC**|Tak|Nie|Nie|Tak|
 
@@ -83,7 +83,7 @@ Po utworzeniu aplikacji pulpitu Windows można dodać ogólne klasy C++ za pomoc
 > [!NOTE]
 > Nie można dodawać klas ALT, a klasy MFC można dodawać tylko do tych typów aplikacji klasycznych Windows, które obsługują MFC (zob. Poprzednia tabela).
 
-Można wyświetlić pliki, Kreator tworzy projekt w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach, Kreator tworzy dla projektu, zobacz plik wygenerowany przez projekt `ReadMe.txt`. Aby uzyskać więcej informacji dotyczących typów plików [typy plików utworzonych dla elementu wizualnego C++ projektów](../build/reference/file-types-created-for-visual-cpp-projects.md).
+Można wyświetlić pliki, Kreator tworzy projekt w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach, Kreator tworzy dla projektu, zobacz plik wygenerowany przez projekt `ReadMe.txt`. Aby uzyskać więcej informacji dotyczących typów plików [typy plików utworzonych dla programu Visual Studio C++ projektów](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Zobacz także
 
