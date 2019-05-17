@@ -4,16 +4,16 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: f23c252604c5b69423b808b3b9f072889e38c816
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217720"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837448"
 ---
 # <a name="property-page-xml-rule-files"></a>Pliki reguł XML strony właściwości
 
-Strony właściwości projektu w IDE, są konfigurowane przez pliki XML w folderze VCTargets. Dokładnej ścieżki zależy od tego, której wersji programu Visual Studio są instalowane i język produktu. Visual Studio 2017 Enterprise Edition w języku angielskim, ścieżka jest `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Pliki XML opisują nazwy reguły, kategorie, a poszczególne właściwości, typ danych, wartości domyślne i jak są wyświetlane. Gdy właściwość jest ustawiona w IDE, nowa wartość są przechowywane w pliku projektu.
+Strony właściwości projektu w IDE, są konfigurowane przez pliki XML w folderze VCTargets. Dokładnej ścieżki zależy od tego, której wersji programu Visual Studio są instalowane i język produktu. Visual Studio 2019 Enterprise Edition w języku angielskim, ścieżka jest `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033`. Pliki XML opisują nazwy reguły, kategorie, a poszczególne właściwości, typ danych, wartości domyślne i jak są wyświetlane. Gdy właściwość jest ustawiona w IDE, nowa wartość są przechowywane w pliku projektu.
 
 Tylko scenariusze, w których należy zrozumieć wewnętrzne działanie tych plików i środowisku IDE programu Visual Studio czy () ma zostać utworzona niestandardowa strona właściwości lub (b) który chcesz dostosować właściwości projektu za pomocą środków innych niż za pomocą programu Visual Studio IDE.
 
@@ -107,7 +107,7 @@ W poniższej sekcji opisano każdej głównych elementów, a niektóre metadanyc
 
    - `ItemType="ClCompile"` mówi, że właściwości zostaną zapisane w formie ItemDefinition metadanych lub metadane elementu (ten ostatni tylko wtedy, gdy strony właściwości zostały zduplikowany z węzła pliku w Eksploratorze rozwiązań) tego typu elementu. Jeśli to pole nie jest ustawiona, właściwości są zapisywane jako wspólnej właściwości w PropertyGroup.
 
-   - `Label=""` Wskazuje, że po właściwości są zapisywane w postaci `ItemDefinition` metadane, etykieta ItemDefinitionGroup — element nadrzędny będzie pusty (każdego elementu MSBuild może mieć etykietę). Program Visual Studio 2017 korzysta z etykietami grup można przejść do pliku projektu .vcxproj. Należy zauważyć, że grup, które zawierają większość właściwości reguły pusty ciąg jako etykiety.
+   - `Label=""` Wskazuje, że po właściwości są zapisywane w postaci `ItemDefinition` metadane, etykieta ItemDefinitionGroup — element nadrzędny będzie pusty (każdego elementu MSBuild może mieć etykietę). Visual Studio 2017 i późniejszego użycia etykietę grupy, aby przejść do pliku projektu .vcxproj. Należy zauważyć, że grup, które zawierają większość właściwości reguły pusty ciąg jako etykiety.
 
    - `HasConfigurationCondition="true"` informuje system projektu, aby umieścić warunek konfiguracji na wartość tak, aby działa tylko dla bieżącej konfiguracji projektu (warunek może zostać umieszczona w grupie nadrzędnej lub samą wartość). Na przykład, otwórz strony właściwości węzła projektu i ustaw wartość właściwości **traktowanie ostrzeżeń jako błędów** w obszarze **właściwości konfiguracji > C/C++ General** "Yes". Następujące wartości są zapisywane do pliku projektu. Zwróć uwagę, warunek konfiguracji dołączony do ItemDefinitionGroup — element nadrzędny.
 
@@ -133,7 +133,7 @@ W poniższej sekcji opisano każdej głównych elementów, a niektóre metadanyc
 
    Pojedynczej właściwości można zastąpić reguł elementu nadrzędnego źródła danych. W takiej sytuacji lokalizacji dla tej właściwości wartości będzie różnić się od innych właściwości w regule.
 
-   h. Istnieją inne atrybuty reguły, takie jak opis, SupportsFileBatching itp, które nie są wyświetlane w tym miejscu. Pełny zestaw atrybutów, które są stosowane do reguły lub w innym elemencie można uzyskać, przeglądając dokumentację dla tych typów. Alternatywnie można sprawdzić właściwości publiczne dla typów w `Microsoft.Build.Framework.XamlTypes` przestrzeni nazw w `Microsoft.Build.Framework .dll` zestawu.
+   h. Istnieją inne atrybuty reguły, w tym opis i SupportsFileBatching, które nie są wyświetlane w tym miejscu. Pełny zestaw atrybutów, które są stosowane do reguły lub w innym elemencie można uzyskać, przeglądając dokumentację dla tych typów. Alternatywnie można sprawdzić właściwości publiczne dla typów w `Microsoft.Build.Framework.XamlTypes` przestrzeni nazw w `Microsoft.Build.Framework .dll` zestawu.
 
    i. **DisplayName**, **PageTemplate**, i **kolejności** względami są związane z interfejsem użytkownika właściwości, które znajdują się w tym modelu danych niezależnie od interfejsu użytkownika. Te właściwości są prawie pewne, który będzie używany przez wszystkie interfejs użytkownika, który służy do wyświetlania na stronach właściwości. **DisplayName** i **opis** są dwie właściwości, które znajdują się w przypadku niemal wszystkich elementów w pliku xml. A Oto tylko dwie właściwości, które są zlokalizowane (lokalizacja tych ciągów zostaną wyjaśnione w nowszym post).
 

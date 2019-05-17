@@ -5,12 +5,12 @@ f1_keywords:
 - /Qspectre
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e44416a44a9f772c17bc734d26c62ff87be775c8
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319190"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837419"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,7 +28,7 @@ Określa Generowanie kompilatora instrukcje eliminowanie luk w zabezpieczeniach 
 
 W wersji początkowej **/qspectre** opcji tylko prace zoptymalizowanego kodu. W programie Visual Studio 2017 wersji 15.7 lub nowszej **/qspectre** opcja jest obsługiwana na wszystkich poziomach optymalizacji.
 
-Microsoft Visual C++ bibliotek są również dostępne w wersji z krokami zaradczymi dla luki środki zaradcze. W Instalatorze programu Visual Studio można pobrać biblioteki zminimalizować luki Spectre dla programu Visual Studio 2017. Znajdują się one w **poszczególne składniki** karcie **kompilatory, narzędzia do kompilacji i środowiska uruchomieniowe**, i mieć "Libs dla luki Spectre" w nazwie. Biblioteki DLL i bibliotek statycznych środowiska uruchomieniowego za pomocą ograniczenia włączone są dostępne dla podzbioru środowiska uruchomieniowego Visual C++: Kod startowy VC ++, vcruntime140, msvcp140, concrt140 i vcamp140. Biblioteki DLL są obsługiwane w przypadku wdrożenia lokalnego aplikacji. zawartość 2017 środowiska uruchomieniowego bibliotek pakiet redystrybucyjny Visual C++ nie zostały zmodyfikowane. Można także zainstalować biblioteki zminimalizować luki Spectre dla MFC i ATL, znaleziono w **poszczególne składniki** karcie **zestawów SDK, bibliotek i struktur**.
+Microsoft Visual C++ bibliotek są również dostępne w wersji z krokami zaradczymi dla luki środki zaradcze. W Instalatorze programu Visual Studio można pobrać biblioteki zminimalizować luki Spectre dla programu Visual Studio 2017 i nowszych. Znajdują się one w **poszczególne składniki** karcie **kompilatory, narzędzia do kompilacji i środowiska uruchomieniowe**, i mieć "Libs dla luki Spectre" w nazwie. Biblioteki DLL i bibliotek statycznych środowiska uruchomieniowego za pomocą ograniczenia włączone są dostępne dla podzbioru środowiska uruchomieniowego Visual C++: Kod startowy VC ++, vcruntime140, msvcp140, concrt140 i vcamp140. Biblioteki DLL są obsługiwane w przypadku wdrożenia lokalnego aplikacji. zawartość wizualizacji C++ 2017 i nowsze środowiska uruchomieniowego bibliotek do dystrybucji nie zostały zmodyfikowane. Można także zainstalować biblioteki zminimalizować luki Spectre dla MFC i ATL, znaleziono w **poszczególne składniki** karcie **zestawów SDK, bibliotek i struktur**.
 
 ### <a name="applicability"></a>Możliwości zastosowania
 
@@ -54,7 +54,7 @@ Gdy wpływ wydajności **/qspectre** został napotkany bez znaczenia w kilku bar
 
 **/Qspectre** kompilator generuje kod, który niejawnie łączy wersje bibliotek środowiska uruchomieniowego, które zostały skompilowane zapewnienie z krokami zaradczymi dla luki spectre. Biblioteki te są opcjonalne składniki, które muszą być zainstalowane za pomocą Instalatora programu Visual Studio:
 
-- VC ++ 2017 w wersji *version_numbers* Libs luki Spectre dla \[(x86 i x64) | (ARM) | (ARM64)]
+- Wersji MSVC *version_numbers* Libs luki Spectre dla \[(x86 i x64) | (ARM) | (ARM64)]
 - Wizualne C++ ATL dla \[— x86/x64 64 | ARM | ARM64] z krokami zaradczymi dla luki Spectre
 - Wizualne C++ MFC dla \[x86/x64 | ARM | ARM64] z krokami zaradczymi dla luki Spectre
 

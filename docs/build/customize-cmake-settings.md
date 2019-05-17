@@ -1,14 +1,14 @@
 ---
 title: Dostosowywanie ustawień kompilacji CMake w programie Visual Studio
-ms.date: 04/25/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 20ed066f71a5c8c3acb00ef5923fa5c9f16ac229
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: d8102250fa59dc787cc48fc293ac740b81b4446c
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877157"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837107"
 ---
 # <a name="customize-cmake-build-settings"></a>Dostosowywanie ustawień kompilacji CMake
 
@@ -128,7 +128,7 @@ Katalog na komputerze zdalnym, w którym narzędzie CMake instaluje elementów d
 
 ### <a name="remote-copy-sources"></a>Zdalna kopia źródeł
 
-Określa, czy mają być kopiowane pliki źródłowe do maszyny zdalnej i pozwala na określenie czy yse rsync lub sftp. 
+Określa, czy mają być kopiowane pliki źródłowe do maszyny zdalnej i umożliwia określenie, czy użyć polecenia rsync, sftp. 
 
 ## <a name="directly-edit-cmakesettingsjson"></a>Directly edit CMakeSettings.json
 

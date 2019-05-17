@@ -1,17 +1,19 @@
 ---
 title: Konfigurowanie programów pod kątem Windows XP
-ms.date: 02/02/2018
+ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446372"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837134"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurowanie programów pod kątem Windows XP
 
 Ponieważ program Visual Studio obsługuje wiele zestawów narzędzi platformy, mogą kierować systemów operacyjnych i bibliotek środowiska uruchomieniowego, które nie są obsługiwane przez domyślny zestaw narzędzi. Na przykład, przełączając zestawu narzędzi platformy, służy C ++ 11, C ++ 14 i C ++ 17 języka ulepszenia obsługiwane za pomocą kompilatora MSVC w programie Visual Studio do tworzenia aplikacji przeznaczonych dla Windows XP i Windows Server 2003. Można również używać starszych zestawów narzędzi platformy do obsługi starszego kodu zgodne dane binarne i nadal korzystaj z najnowszych funkcji środowiska IDE programu Visual Studio.
+
+Visual Studio 2019 i nowszym nie obejmuje obsługę tworzenia kodu dla Windows XP przy użyciu zestawu narzędzi v142. Wsparcie dla programowania Windows XP przy użyciu narzędzi w wersji 141 dostarczane w programie Visual Studio 2017 jest dostępny jako składnik opcjonalny w Instalatorze programu Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Zainstaluj zestaw narzędzi platformy Windows XP
 

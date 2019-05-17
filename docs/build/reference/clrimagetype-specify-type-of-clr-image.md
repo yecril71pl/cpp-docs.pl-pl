@@ -1,6 +1,6 @@
 ---
 title: /CLRIMAGETYPE (Określenie typu obrazu CLR)
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 f1_keywords:
 - /CLRIMAGETYPE
 - VC.Project.VCLinkerTool.CLRImageType
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /CLRIMAGETYPE linker option
 - -CLRIMAGETYPE linker option
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
-ms.openlocfilehash: b2a6df0f778ba079bffefeeacdad22cb398a529a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee2e2ce359a4b877551adf9af71e0187b42cfd42
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272484"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837483"
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE (Określenie typu obrazu CLR)
 
@@ -25,7 +25,7 @@ Ustaw typ obrazu CLR w obraz połączony.
 
 ## <a name="remarks"></a>Uwagi
 
-Program łączący akceptuje obiekty rodzime i również instrukcje obiektów MSIL, które są kompilowane przy użyciu [/CLR](clr-common-language-runtime-compilation.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora zostały zaniechane w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017. Jeśli przekazano mieszane obiekty w samej kompilacji, możliwość weryfikacji wynikowej pliku wyjściowego jest domyślnie równa najniższego poziomu możliwość weryfikacji modułów wejściowych. Na przykład, jeśli przekażesz obraz macierzysty i obraz w trybie mieszanym (skompilowany przy użyciu **/CLR**), obraz wynikowy będzie obrazem w trybie mieszanym.
+Program łączący akceptuje obiekty rodzime i również instrukcje obiektów MSIL, które są kompilowane przy użyciu [/CLR](clr-common-language-runtime-compilation.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora zostały zaniechane w programie Visual Studio 2015 i są nieobsługiwane w programie Visual Studio 2017 i nowsze. Jeśli przekazano mieszane obiekty w samej kompilacji, możliwość weryfikacji wynikowej pliku wyjściowego jest domyślnie równa najniższego poziomu możliwość weryfikacji modułów wejściowych. Na przykład, jeśli przekażesz obraz macierzysty i obraz w trybie mieszanym (skompilowany przy użyciu **/CLR**), obraz wynikowy będzie obrazem w trybie mieszanym.
 
 Możesz użyć **/clrimagetype** do określenia niższego poziomu możliwość weryfikacji, jeśli jest to, czego potrzebujesz.
 

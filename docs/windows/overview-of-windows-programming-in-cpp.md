@@ -2,30 +2,30 @@
 title: Omówienie programowania w systemie Windows w języku C++
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f2cdb0d0225b47391ee18c398b7789ab42ca8f40
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 036da87c24eef38f3c88bb5f73808a434b9da6a1
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708206"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837564"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
-Istnieje kilka szerokie kategorie aplikacji Windows, które można utworzyć przy użyciu języka C++. Każda ma swój własny model programowania oraz zestaw biblioteki charakterystyczne dla Windows, ale standardowej biblioteki języka C++, jak również innych bibliotek C++, które mogą być używane w żadnej z nich. 
+Istnieje kilka szerokie kategorie aplikacji Windows, które można utworzyć przy użyciu języka C++. Każda ma swój własny model programowania i zestaw biblioteki charakterystyczne dla Windows, ale C++ biblioteki standardowej i innych firm C++ biblioteki mogą być używane w żadnej z nich.
 
 ## <a name="command-line-console-applications"></a>Aplikacje wiersza polecenia (Konsola)
 
 Aplikacji konsoli w języku C++ uruchomić z wiersza polecenia w oknie konsoli i wyświetlić tekst wyjściowy. Aby uzyskać więcej informacji, zobacz [aplikacji konsoli](console-applications-in-visual-cpp.md).
- 
+
 ## <a name="native-desktop-client-applications"></a>Natywne pulpitu aplikacje klienckie
 
-Termin *aplikacji macierzystych klienta stacjonarnego* odwołuje się do C lub C++ okna aplikacji, która używa oryginalnej native [interfejsów API języka C Windows i/lub interfejsów API modelu COM](/windows/desktop/apiindex/windows-api-list) dostęp do tego systemu operacyjnego. Te interfejsy API są same napisany głównie w C. Podczas tworzenia tego rodzaju aplikacji, masz do wyboru, programowanie bezpośrednio w odniesieniu do pętli komunikatów stylu C, która przetwarza zdarzenia systemu operacyjnego lub przy użyciu *Microsoft Foundation Classes* (MFC), biblioteka języka C++, który otacza Win32 w sposób, który jest nieco zorientowane obiektowo. Nie jest uznawany za "nowoczesnych typów" w porównaniu do uniwersalnej platformy Windows (patrz poniżej), ale obie są nadal obsługiwane całkowicie i dysponują milionami wierszy kodu uruchamianego w świecie już dziś. Aplikacja Win32, który działa w oknie wymaga deweloperowi jawnie pracować Windows komunikaty wewnątrz funkcji procedury Windows. Niezależnie od nazwy jest aplikacją systemu Win32 może być kompilowane jako (x86) 32-bitowy lub 64-bitowych (x64) binarny. W programie Visual Studio IDE to samo warunków x86 i Win32.
+A *aplikacja kliencka macierzystego pulpitu* jest C lub C++ okna aplikacji, która używa oryginalnej native [Windows C w interfejsach API i Component Object Model (COM) interfejsy API](/windows/desktop/apiindex/windows-api-list) dostęp do tego systemu operacyjnego. Te interfejsy API są same napisany głównie w C. Istnieje więcej niż jeden ze sposobów tworzenia natywnych aplikacji klasycznych: Można programować bezpośrednio, za pomocą interfejsów API systemu Win32 za pomocą pętli komunikatów stylu C, która przetwarza zdarzenia systemu operacyjnego. Lub można programować za pomocą *Microsoft Foundation Classes* (MFC), niezbyt często zorientowane obiektowo C++ biblioteki, która otacza Win32. Ani podejście jest uznawany za "nowoczesnych typów" w porównaniu do uniwersalnej platformy Windows (UWP), ale obie są nadal w pełni obsługiwana i mieć milionów wierszy kodu uruchamianego w świecie już dziś. Aplikacja Win32, który działa w oknie wymaga deweloperowi jawnie pracować Windows komunikaty wewnątrz funkcji procedury Windows. Niezależnie od nazwy jest aplikacją systemu Win32 może być kompilowane jako (x86) 32-bitowy lub 64-bitowych (x64) binarny. W programie Visual Studio IDE to samo warunków x86 i Win32.
 
 Aby rozpocząć pracę z tradycyjnego programowania C++ Windows, zobacz [wprowadzenie Win32 i C++](/windows/desktop/LearnWin32/learn-to-program-for-windows). Po uzyskaniu niektóre wiedzę na temat Win32, będzie można łatwiej Dowiedz się więcej o [aplikacji pulpitu MFC](../mfc/mfc-desktop-applications.md). Na przykład tradycyjnych C++ aplikacja komputerowa, która korzysta z zaawansowanych grafiki zobacz [Hilo: Projektowanie aplikacji C++ dla Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
-### <a name="c-or-net"></a>C++ lub .NET? 
+### <a name="c-or-net"></a>C++ lub .NET?
 
-Scenariusze aplikacji najbardziej pulpitu (innymi słowy, nie określania wartości docelowej platformy uniwersalnej systemu Windows), rozważ użycie C# do tworzenia interfejsu użytkownika. Jest to spowodowane programowania .NET jest zazwyczaj mniej skomplikowany, mniej podatne na błędy i ma bardziej nowoczesnego API zorientowane obiektowo niż MFC lub Win32. W większości przypadków jego wydajność jest większe niż odpowiednie. Windows Presentation Foundation (WPF) do grafiki zaawansowanych usług .NET features i będzie można korzystać, Win32, a także Windows nowoczesnego interfejsu API środowiska uruchomieniowego (zobacz poniżej platformy uniwersalnej systemu Windows). Zgodnie z ogólną zasadą zaleca się przy użyciu języka C++ dla aplikacji klasycznych, gdy potrzebujesz:
+W ogólne, programowanie .NET w programie C# jest mniej skomplikowany, mniej podatne na błędy i ma bardziej nowoczesnego API zorientowane obiektowo niż MFC lub Win32. W większości przypadków jego wydajność jest większe niż odpowiednie. Windows Presentation Foundation (WPF) do grafiki zaawansowanych usług .NET features i będzie można korzystać zarówno Win32, jak i nowoczesnych interfejsów API środowiska wykonawczego Windows. Zgodnie z ogólną zasadą zaleca się przy użyciu języka C++ dla aplikacji klasycznych, gdy potrzebujesz:
 
 - precyzyjną kontrolę nad tym użycie pamięci
 - priorytetowe gospodarki zużycie energii
@@ -33,23 +33,23 @@ Scenariusze aplikacji najbardziej pulpitu (innymi słowy, nie określania warto�
 - dostęp do technologii DirectX
 - duże użycie standardowych bibliotek języka C++
 
-Można utworzyć interfejs użytkownika w C# i użyj C++sposób niezamierzony umożliwia aplikacji korzystanie z natywnych C++ bibliotek. Aby uzyskać więcej informacji, zobacz [.NET, programowanie za pomocą C++sposób niezamierzony](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+Użytkownik może również łączyć moc i wydajność C++ programowania .NET. Można utworzyć interfejs użytkownika w C# i użyj C++sposób niezamierzony umożliwia aplikacji korzystanie z natywnych C++ bibliotek. Aby uzyskać więcej informacji, zobacz [.NET, programowanie za pomocą C++sposób niezamierzony](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 ## <a name="com-components"></a>Składniki COM
 
-[Component Object Model (COM)](/windows/desktop/com/the-component-object-model) jest specyfikacja, która umożliwia programom napisane w różnych językach, aby komunikować się ze sobą. Windows wiele składników są implementowane jako obiekty COM i postępuj zgodnie z standardowe zasady modelu COM do tworzenia obiektów interfejsu zniszczenie odnajdywania i obiektu.  Obiekty COM z aplikacji klasycznych w języku C++ jest stosunkowo prosta, ale zapisywania obiektu COM jest bardziej zaawansowane. [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) zawiera makra i funkcje pomocnicze, które upraszczają programowanie COM. Aby uzyskać więcej informacji, zobacz [ATL COM pulpitu składniki](../atl/atl-com-desktop-components.md).
+[Component Object Model (COM)](/windows/desktop/com/the-component-object-model) jest specyfikacja, która umożliwia programom napisane w różnych językach, aby komunikować się ze sobą. Wiele składników Windows są implementowane jako obiekty COM i wykonaj standardowe reguły COM do tworzenia obiektów, interfejs odnajdywania i zniszczenie obiektu.  Obiekty COM z aplikacji klasycznych w języku C++ jest stosunkowo prosta, ale zapisywania obiektu COM jest bardziej zaawansowane. [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) zawiera makra i funkcje pomocnicze, które upraszczają programowanie COM. Aby uzyskać więcej informacji, zobacz [ATL COM pulpitu składniki](../atl/atl-com-desktop-components.md).
 
-## <a name="windows-universal-apps"></a>Windows Universal Apps
+## <a name="universal-windows-platform-apps"></a>Windows Universal apps platformy
 
 Platforma Universal Windows (UWP) jest nowoczesnego interfejsu Windows API. Aplikacje platformy uniwersalnej systemu Windows uruchamianie na dowolnym urządzeniu z systemem Windows 10, użyj XAML dla interfejsu użytkownika i są w pełni dotykowej. Aby uzyskać więcej informacji na temat platformy uniwersalnej systemu Windows, zobacz [co to jest aplikacja Windows platformy Uniwersalnej?](/windows/uwp/get-started/whats-a-uwp) i [Przewodnik po aplikacjach uniwersalnych Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
-Oryginalny C++ pomoc techniczna dla platformy uniwersalnej systemu Windows składa się (1) C++/CX, dialekt C++ za pomocą składni rozszerzenia lub (2 Windows Runtime Library (WRL), który jest oparty na standardzie C++ i modelu COM. Zarówno C++/CX i WRL są nadal obsługiwane. Dla nowych projektów zaleca się [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) która jest całkowicie oparty na standardzie C++ oraz zapewnia lepszą wydajność. 
+Oryginalny C++ pomoc techniczna dla platformy uniwersalnej systemu Windows składa się (1) C++/CX, dialekt C++ za pomocą składni rozszerzenia lub (2 biblioteki środowiska uruchomieniowego Windows (WRL), która jest oparta na standardzie C++ i modelu COM. Zarówno C++/CX i WRL są nadal obsługiwane. Dla nowych projektów zaleca się [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), która jest całkowicie oparty na standardzie C++ oraz zapewnia lepszą wydajność.
 
 ## <a name="desktop-bridge"></a>Desktop Bridge
 
 W systemie Windows 10 można pakietu istniejących aplikacji pulpitu lub obiektu COM jako aplikację platformy uniwersalnej systemu Windows i Dodaj funkcje platformy uniwersalnej systemu Windows, takie jak touch lub wywoływać interfejsy API z nowoczesnych zestawu Windows API. Aplikacja platformy uniwersalnej systemu Windows można również dodać do pulpitu rozwiązania w programie Visual Studio i pakiet je razem w jednym pakietu i komunikować się między nimi za pomocą interfejsów API Windows.
 
-W Visual Studio 2017 w wersji 15.4 lub nowszy można utworzyć projekt pakietu aplikacji Windows, do znacznego uproszczenia pracy pakowania swoją istniejącą aplikację pulpitu. Kilka ograniczenia mają zastosowanie w odniesieniu do rejestru, które wywołuje lub korzysta z interfejsów API aplikacji pulpitu, ale w wielu przypadkach można utworzyć ścieżki alternatywnej kodu do osiągnięcia podobne funkcje podczas uruchamiania w pakiecie aplikacji. Aby uzyskać więcej informacji, zobacz [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
+Visual Studio 2017 w wersji 15.4 i nowszych umożliwia tworzenie projekt pakietu aplikacji Windows, do znacznego uproszczenia pracy pakowania swoją istniejącą aplikację pulpitu. Kilka ograniczenia mają zastosowanie do wywołania rejestru lub interfejsów API, można użyć swojej aplikacji klasycznej. Jednak w wielu przypadkach można utworzyć ścieżki alternatywnej kodu do osiągnięcia podobne funkcje podczas uruchamiania w pakiecie aplikacji. Aby uzyskać więcej informacji, zobacz [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
 ## <a name="games"></a>Gry
 
@@ -65,13 +65,13 @@ Sterowniki są składniki niskiego poziomu, które udostępnić dane z urządze�
 
 ## <a name="windows-services"></a>usługi systemu Windows
 
-Windows *usługi* to program, który można uruchomić w tle mało lub nie interwencji użytkownika. W systemie UNIX nazywa się *demonów*. Aby uzyskać więcej informacji, zobacz [usług](/windows/desktop/services/services).
+Windows *usługi* to program, który można uruchomić w tle mało lub nie interwencji użytkownika. Te programy są nazywane *demonów* w systemach UNIX. Aby uzyskać więcej informacji, zobacz [usług](/windows/desktop/services/services).
 
 ## <a name="sdks-libraries-and-header-files"></a>Zestawy SDK, biblioteki i pliki nagłówkowe
 
-Visual Studio zawiera bibliotekę środowiska uruchomieniowego C (CRT), standardowej biblioteki języka C++ i inne biblioteki charakterystyczne dla Microsoft. Uwzględnianie folderów, które zawierają pliki nagłówkowe dla tych bibliotek znajdują się w katalogu instalacyjnym Visual Studio, w folderze \VC\ lub w przypadku CRT, w folderze instalacji zestawu Windows SDK.
+Visual Studio zawiera bibliotekę środowiska uruchomieniowego C (CRT), standardowej biblioteki języka C++ i inne biblioteki charakterystyczne dla Microsoft. Większość foldery dołączania, które zawierają pliki nagłówkowe dla tych bibliotek znajdują się w katalogu instalacyjnym programu Visual Studio w folderze \VC\. Pliki nagłówkowe Windows i CRT znajdują się w folderze instalacji zestawu Windows SDK.
 
-Możesz użyć [Menedżera pakietów Vcpkg](../build/vcpkg.md) wygodny sposób instalowania kilkuset bibliotek typu open-source innych firm dla Windows.
+[Menedżera pakietów Vcpkg](../build/vcpkg.md) pozwala łatwo zainstalować setki bibliotek typu open-source innych firm dla Windows.
 
 Biblioteki firmy Microsoft obejmują:
 
@@ -97,9 +97,9 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Przewodnik: tworzenie standardowego programu C++](walkthrough-creating-a-standard-cpp-program-cpp.md)| Utwórz aplikację konsolową Windows.|
-|[Przewodnik: tworzenie aplikacji klasycznych systemu Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Utwórz prostą aplikację pulpitu Windows.|
+|[Przewodnik: tworzenie aplikacji klasycznych systemu Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Tworzenie natywnych aplikacji pulpitu Windows.|
 |[Kreator aplikacji klasycznej systemu Windows](windows-desktop-wizard.md)|Użyj kreatora, aby tworzyć nowe projekty Windows.|
-|[Biblioteka aktywnych szablonów (Active Template Library — ATL)](../atl/TOC.md)|Biblioteka ATL służy do tworzenia składników modelu COM w języku C++.|
+|[Biblioteka aktywnych szablonów (Active Template Library — ATL)](../atl/atl-com-desktop-components.md)|Biblioteka ATL służy do tworzenia składników modelu COM w języku C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|Używać klasy MFC do tworzenia aplikacji Windows duże lub małe za pomocą okien dialogowych i formantów|
 |[Wspólne klasy ATL i MFC](../atl-mfc-shared/TOC.md)|Użyj klas, takich jak CString, które są udostępniane w ATL i MFC.|
 |[Dostęp do danych](../data/data-access-in-cpp.md)| OLE DB i ODBC|
@@ -111,7 +111,6 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 |[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera instrukcje dotyczące konfigurowania projektu kompilować przy użyciu zestawu SDK systemu Windows 10.|
 |[Wdrażanie natywnych aplikacji klasycznych](deploying-native-desktop-applications-visual-cpp.md)|Wdrażanie aplikacji natywnych na Windows.|
 
-
 ## <a name="related-articles"></a>Powiązane artykuły
 
 |Tytuł|Opis|
@@ -121,4 +120,3 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 |[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](../extensions/component-extensions-for-runtime-platforms.md)|Dokumentacja dotycząca elementy składni współużytkowane przez C++/CX i C++sposób niezamierzony.|
 |[Aplikacje uniwersalne systemu Windows (C++)](universal-windows-apps-cpp.md)|Tworzenie aplikacji platformy uniwersalnej systemu Windows przy użyciu C++/CX lub Windows Runtime szablon biblioteki (WRL).|
 |[Atrybuty języka C++ dla modelu COM i platformy .NET](attributes/cpp-attributes-com-net.md)|Niestandardowe atrybuty tylko do Windows programowania przy użyciu platformy .NET lub model COM.|
-

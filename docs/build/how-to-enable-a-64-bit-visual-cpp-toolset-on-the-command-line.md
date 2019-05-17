@@ -1,6 +1,6 @@
 ---
 title: 'Instrukcje: Włączanie MSVC 64-bitowego zestawu narzędzi w wierszu polecenia'
-ms.date: 03/29/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - x64 [C++]
 - 64-bit compiler [C++], command line usage
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24dd6355578e8e9e00064ccfdf31bc51b7fd12ec
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188915"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836986"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Instrukcje: Włączanie 64-bitowego, x64 hostowany zestaw narzędzi MSVC w wierszu polecenia
 
@@ -32,7 +32,7 @@ Po zainstalowaniu obciążenia języka C++ w Instalatorze programu Visual Studio
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Użyj skrót do wiersza polecenia dewelopera hostowanej 64-bitowych
 
-Po zainstalowaniu programu Visual Studio na 64-bitowym systemie operacyjnym Windows dostępne są skróty wiersza polecenia dewelopera dodatkowe natywnych 64-bitowe, obsługiwane x64 i kompilatorów skrośnych. Dostęp do tych wierszy poleceń w systemie Windows 10 w **Start** menu, otwórz folder dla używanej wersji programu Visual Studio, na przykład **programu Visual Studio 2017**, a następnie wybierz jedno z x64 natywnej lub cross-tool Wiersz polecenia dla deweloperów. Dostęp do tych wierszy poleceń w systemie Windows 8 w **Start** otwartym ekranem **wszystkie aplikacje**. Pod nagłówkiem dla zainstalowanej wersji programu Visual Studio, otwórz **programu Visual Studio** folder (w starszych wersjach programu Visual Studio może nosić **Visual Studio Tools**). We wcześniejszych wersjach systemu Windows, wybierz **Start**, rozwiń węzeł **wszystkie programy**, folder dla używanej wersji programu **programu Visual Studio** (i starszych wersji programu Visual Studio  **Narzędzia programu Visual Studio**). Aby uzyskać więcej informacji, zobacz [skróty wiersza polecenia dla deweloperów](building-on-the-command-line.md#developer_command_prompt_shortcuts).
+Po zainstalowaniu programu Visual Studio na 64-bitowym systemie operacyjnym Windows dostępne są skróty wiersza polecenia dewelopera dodatkowe natywnych 64-bitowe, obsługiwane x64 i kompilatorów skrośnych. Dostęp do tych wierszy poleceń w systemie Windows 10 w **Start** menu, otwórz folder dla używanej wersji programu Visual Studio, na przykład **Visual Studio 2019**, a następnie wybierz jedno z x64 natywnej lub cross-tool Wiersz polecenia dla deweloperów. Dostęp do tych wierszy poleceń w systemie Windows 8 w **Start** otwartym ekranem **wszystkie aplikacje**. Pod nagłówkiem dla zainstalowanej wersji programu Visual Studio, otwórz **programu Visual Studio** folder (w starszych wersjach programu Visual Studio może nosić **Visual Studio Tools**). We wcześniejszych wersjach systemu Windows, wybierz **Start**, rozwiń węzeł **wszystkie programy**, folder dla używanej wersji programu **programu Visual Studio** (i starszych wersji programu Visual Studio  **Narzędzia programu Visual Studio**). Aby uzyskać więcej informacji, zobacz [skróty wiersza polecenia dla deweloperów](building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 ## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Vcvarsall.bat umożliwia ustawianie architekturę 64-bitowych hostowanej kompilacji
 

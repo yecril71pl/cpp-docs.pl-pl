@@ -1,6 +1,6 @@
 ---
 title: /DEBUG (Generowanie informacji o debugowaniu)
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateDebugInformation
 - /debug
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: ca7ef5d1935ddea0441f49e387e35184c6fd1fc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ec466a6356ace437d32eb517bf2da291938f5db
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294021"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837144"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Generowanie informacji o debugowaniu)
 
@@ -61,7 +61,7 @@ Nie jest możliwe utworzenie .exe lub .dll, który zawiera informacje o debugowa
 
 1. Kliknij przycisk **debugowanie** stronę właściwości.
 
-1. Modyfikowanie **Generuj informacje o debugowaniu** właściwością pozwalającą włączyć Generowanie pliku PDB. Dzięki temu fastlink domyślnie w programie Visual Studio 2017.
+1. Modyfikowanie **Generuj informacje o debugowaniu** właściwością pozwalającą włączyć Generowanie pliku PDB. Dzięki temu fastlink domyślnie w programie Visual Studio 2017 i nowszych wersjach.
 
 1. Modyfikowanie **Generuj pełny plik bazy danych programu** właściwością pozwalającą włączyć/Debug: Full, aby uzyskać pełne generowanie pliku PDB dla każdej kompilacji przyrostowej.
 

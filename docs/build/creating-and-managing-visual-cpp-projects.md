@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 15adae6cb9908f74d62709622ca3302fd35faa46
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446363"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837044"
 ---
 # <a name="visual-studio-projects---c"></a>Projektów programu Visual Studio — C++
 
@@ -21,9 +21,21 @@ A *projektu programu Visual Studio* projekt zależy od systemu kompilacji MSBuil
 
 ## <a name="create-a-project"></a>Tworzenie projektu
 
-Utworzenia projektów w języku C++, należy wybrać **pliku &#124; nowy &#124; projektu**, a następnie wybierając Visual C++ w okienku po lewej stronie. W środkowym okienku można wyświetlić listę szablonów projektu: 
+::: moniker range="vs-2019"
+
+Możesz utworzyć C++ projektów, wybierając **pliku** > **nowy** > **projektu**, następnie ustawiając **języka** do C++. Na liście wyników możesz wyświetlić listę szablonów projektów, które można filtrować, ustawiając **platformy** lub **typu projektu** i wpisując słowa kluczowe w polu wyszukiwania. 
+
+   ![Szablony projektu 2019 r w usłudze Visual Studio](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 nowego projektu okna dialogowego")
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Możesz utworzyć C++ projektów, wybierając **pliku** > **New** > **projektu**, wybierając Visual C++ w okienku po lewej stronie. W środkowym okienku można wyświetlić listę szablonów projektu:
 
    ![Szablony projektów](../overview/media/vs2017-new-project.png "programu Visual Studio 2017 nowego projektu okna dialogowego")
+
+::: moniker-end
 
 Aby uzyskać więcej informacji na temat wszystkie domyślne szablony projektów, które są zawarte w programie Visual Studio, zobacz [szablonów projektów języka C++ w programie Visual Studio](reference/visual-cpp-project-types.md). Można tworzyć własne szablony projektu. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie szablonów projektów](/visualstudio/ide/how-to-create-project-templates).
 

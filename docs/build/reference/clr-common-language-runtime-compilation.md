@@ -1,6 +1,6 @@
 ---
 title: /clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: ea4a878afea4453796277486da88b85e7f74883c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fa2be3d3ce17df104cda121e4869c975ec6dd440
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446523"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837306"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
 
@@ -39,11 +39,11 @@ Co najmniej jeden z następujących przełączników rozdzielaną przecinkami.
 
 - **pure**
 
-   **/ CLR: pure jest przestarzała**. Opcja zostanie usunięta w programie Visual Studio 2017. Zaleca się, że przeniesiesz kod, który musi być czysty MSIL dla języka C#.
+   **/ CLR: pure jest przestarzała**. Opcja zostanie usunięta w programie Visual Studio 2017 i nowszych wersjach. Zaleca się, że przeniesiesz kod, który musi być czysty MSIL dla języka C#.
 
 - **Bezpieczne**
 
-   **/ CLR: Safe jest przestarzała**. Opcja zostanie usunięta w programie Visual Studio 2017. Zaleca się, że przeniesiesz kod, który musi być bezpieczne MSIL dla języka C#.
+   **/ CLR: Safe jest przestarzała**. Opcja zostanie usunięta w programie Visual Studio 2017 i nowszych wersjach. Zaleca się, że przeniesiesz kod, który musi być bezpieczne MSIL dla języka C#.
 
 - **noAssembly**
 

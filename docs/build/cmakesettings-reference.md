@@ -1,19 +1,19 @@
 ---
 title: Odwołanie do schematu pliku CMakeSettings.json
-ms.date: 04/25/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 80392eedd5ef50ddd9c9bcb81c1605a534088133
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877103"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837255"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Odwołanie do schematu pliku CMakeSettings.json
 
-**Cmakesettings.json**"plik zawiera informacje określające, jak Visual Studio powinny wchodzić w interakcje za pomocą narzędzia CMake w celu utworzenia projektu dla określonej platformy. Plik przechowuje informacje takie jak zmienne środowiskowe lub argumentów dla środowiska cmake.exe. Można edytować bezpośrednio lub użyć **edytora ustawienia narzędzia CMake**. Zobacz [ustawień w programie Visual Studio kompilacji CMake dostosować](customize-cmake-settings.md) Aby uzyskać więcej informacji na temat edytora.
+**Cmakesettings.json**"plik zawiera informacje określające, jak Visual Studio powinny wchodzić w interakcje za pomocą narzędzia CMake w celu utworzenia projektu dla określonej platformy. Plik przechowuje informacje takie jak zmienne środowiskowe lub argumentów dla środowiska cmake.exe. Można edytować bezpośrednio lub użyć **edytora ustawienia narzędzia CMake** (Visual Studio 2019 i nowsze). Zobacz [ustawień w programie Visual Studio kompilacji CMake dostosować](customize-cmake-settings.md) Aby uzyskać więcej informacji na temat edytora.
 
 ## <a name="environments"></a>Środowiska
 
@@ -28,7 +28,7 @@ ms.locfileid: "64877103"
    "inheritEnvironments": [ "msvc_x64_x64" ]
    ```
 
-   W powyższym przykładzie jest taka sama jak działa **wiersz polecenia programisty dla programu VS 2017** z **-arch = amd64-host_arch = amd64** argumentów. Można użyć dowolnego środowiska niestandardowego lub następujących wstępnie zdefiniowanych środowisk:
+   W powyższym przykładzie jest taka sama jak działa **wiersz polecenia programisty dla programu VS 2017** lub **wiersz polecenia programisty dla programu VS 2019** z **-arch = amd64-host_arch = amd64** argumenty. Można użyć dowolnego środowiska niestandardowego lub następujących wstępnie zdefiniowanych środowisk:
  
   - linux_arm: Celem ARM Linux zdalnie.
   - linux_x64: Wyceluj x64 Linux zdalnie.
@@ -50,7 +50,13 @@ Element `configuration` ma następujące właściwości:
 - `name`: nazwy konfiguracji.
 - `description`: opis tej konfiguracji, który będzie wyświetlany w menu.
 - `generator`: Określa generatora CMake do użycia dla tej konfiguracji. Może to być jeden z:
+  
+  **Visual Studio 2019 r tylko:**
+  - Visual Studio 16 2019
+  - Visual Studio 16 2019 Win64
+  - Visual Studio 16 2019 ARM
 
+  **Visual Studio 2017 i nowszym:**
   - Visual Studio 15 2017
   - Visual Studio 15 2017 Win64
   - Visual Studio 15 2017 ARM
@@ -62,7 +68,9 @@ Element `configuration` ma następujące właściwości:
 
 Ponieważ Ninja jest przeznaczona dla szybkości szybkie kompilacji zamiast elastyczności i funkcji, jest ustawiona jako domyślna. Jednak niektóre projekty narzędzia CMake, może być nie można poprawnie tworzyć zawartość przy użyciu Ninja. W takiej sytuacji można nakazać narzędzia CMake w celu wygenerowania projektu programu Visual Studio, zamiast tego.
 
-Aby określić generator programu Visual Studio, otwórz `CMakeSettings.json` z menu głównego, wybierając **CMake | Zmień ustawienia narzędzia CMake**. Usuń "Ninja", a następnie wpisz "V". Aktywuje funkcję IntelliSense, która pozwala na dokonanie wyboru generator, który ma.
+Aby określić generator programu Visual Studio w programie Visual Studio 2017, otwórz `CMakeSettings.json` z menu głównego, wybierając **CMake | Zmień ustawienia narzędzia CMake**. Usuń "Ninja", a następnie wpisz "V". Aktywuje funkcję IntelliSense, która pozwala na dokonanie wyboru generator, który ma.
+
+Aby określić generator programu Visual Studio w Visual Studio 2019 r, kliknij prawym przyciskiem myszy pliku CMakeLists.txt w **Eksploratora rozwiązań** i wybierz polecenie **ustawienia narzędzia CMake dla projektu** > **Pokaż Zaawansowane ustawienia** > **generatora CMake**.
 
 Podczas aktywnej konfiguracji określa generator programu Visual Studio, domyślnie MSBuild.exe jest wywoływana z `-m -v:minimal` argumentów. Dostosowywanie kompilacji, wewnątrz `CMakeSettings.json` plików, można określić dodatkowe [argumenty wiersza polecenia programu MSBuild](../build/reference/msbuild-visual-cpp-overview.md) mają być przekazane do systemu kompilacji, za pośrednictwem `buildCommandArgs` właściwości:
 

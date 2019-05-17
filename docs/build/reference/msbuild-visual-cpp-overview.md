@@ -1,15 +1,15 @@
 ---
 title: Elementy programu MSBuild wewnętrzne dla języka C++ projektów w programie Visual Studio
-ms.date: 12/08/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3348320a1468fea03f39e43cc847f1085f3d319
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320894"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837234"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Wewnętrzne MSBuild dla projektów języka C++
 
@@ -25,7 +25,7 @@ Domyślnie podstawowe pliki obsługi programu Visual Studio znajdują się w nas
 |---------------|-----------------|
 |*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |Zawiera podstawowe pliki docelowe (.targets) i pliki właściwości (.props), które są używane przez elementy docelowe. Domyślnie makro $(VCTargetsPath) odwołuje się do tego katalogu.|
 |*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platform\\*platformy*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |Zawiera pliki docelowych i właściwości specyficzne dla platformy, które zastępują cele i właściwości w katalogu nadrzędnym. Ten katalog zawiera również biblioteki DLL, który określa zadania, które są używane przez cele w tym katalogu.<br /><br /> *Platformy* symbol zastępczy reprezentuje ARM, Win32 lub x64 podkatalogu.|
-|*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platform\\*platformy*\PlatformToolsets\\*zestawu narzędzi*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |Zawiera katalogi, które umożliwiają kompilacji wygenerowanie aplikacji w języku C++ przy użyciu określonego *narzędzi*.<br /><br /> *Roku* i *wersji* symbole zastępcze są używane przez program Visual Studio 2017 i nowsze wersje. *Wersji* symbol zastępczy jest V110 dla programu Visual Studio 2012, V120 dla programu Visual Studio 2013 lub Visual Studio 2015 w wersji 140. *Platformy* symbol zastępczy reprezentuje ARM, Win32 lub x64 podkatalogu. *Narzędzi* symbol zastępczy reprezentuje podkatalog zestawu narzędzi, na przykład w wersji 140 do tworzenia aplikacji Windows przy użyciu zestawu narzędzi programu Visual Studio 2015 v120_xp tworzenie dla Windows XP przy użyciu zestawu narzędzi Visual Studio 2013 lub v110_wp80 do Twórz aplikacje Windows Phone 8.0 przy użyciu zestawu narzędzi programu Visual Studio 2012.<br /><br />Nie zawiera ścieżkę, która zawiera katalogi, które umożliwiają kompilacji wygenerowanie aplikacji Visual Studio 2008 lub Visual Studio 2010 *wersji*i *platformy* symbolu zastępczego reprezentuje Itanium, Win32 lub x64 podkatalogu. *Narzędzi* symbol zastępczy reprezentuje podkatalog zestawu narzędzi v90 lub v100.|
+|*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platform\\*platformy*\PlatformToolsets\\*zestawu narzędzi*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |Zawiera katalogi, które umożliwiają kompilacji wygenerowanie aplikacji w języku C++ przy użyciu określonego *narzędzi*.<br /><br /> *Roku* i *wersji* symbole zastępcze są używane przez program Visual Studio 2017 i nowsze wersje. *Wersji* symbol zastępczy jest V110 dla programu Visual Studio 2012, V120 dla programu Visual Studio 2013 w wersji 140 dla programu Visual Studio 2015 wersji 141 dla programu Visual Studio 2017 i v142 dla programu Visual Studio 2019 r. *Platformy* symbol zastępczy reprezentuje ARM, Win32 lub x64 podkatalogu. *Narzędzi* symbol zastępczy reprezentuje podkatalog zestawu narzędzi, na przykład w wersji 140 do tworzenia aplikacji Windows przy użyciu zestawu narzędzi programu Visual Studio 2015 v120_xp tworzenie dla Windows XP przy użyciu zestawu narzędzi Visual Studio 2013.<br /><br />Nie zawiera ścieżkę, która zawiera katalogi, które umożliwiają kompilacji wygenerowanie aplikacji Visual Studio 2008 lub Visual Studio 2010 *wersji*i *platformy* symbolu zastępczego reprezentuje Itanium, Win32 lub x64 podkatalogu. *Narzędzi* symbol zastępczy reprezentuje podkatalog zestawu narzędzi v90 lub v100.|
 
 ## <a name="support-files"></a>Pliki pomocy technicznej
 
@@ -86,7 +86,7 @@ W poniższej tabeli wymieniono kilka przydatne celów ukierunkowanych na użytko
 |Xsd|Uruchamia narzędzie definicji schematu XML xsd.exe. *Zobacz uwagi poniżej.*|
 
 > [!NOTE]
-> Projekt w programie Visual Studio 2017, obsługa C++ **xsd** plików jest przestarzała. Można nadal używać **Microsoft.VisualC.CppCodeProvider** , dodając **CppCodeProvider.dll** ręcznie do pamięci podręcznej GAC.
+> W programie Visual Studio 2017 i nowszych C++ projektu obsługę **xsd** plików jest przestarzała. Można nadal używać **Microsoft.VisualC.CppCodeProvider** , dodając **CppCodeProvider.dll** ręcznie do pamięci podręcznej GAC.
 
 ## <a name="see-also"></a>Zobacz także
 

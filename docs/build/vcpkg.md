@@ -3,19 +3,19 @@ title: vcpkg — C++ Menedżer pakietów dla Windows, Linux i MacOS
 description: vcpkg to Menedżer pakietów wiersza polecenia, które znacząco upraszcza pozyskiwanie i Instalacja bibliotek C++ typu open source na Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 03/18/2019
+ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 5dba6877c4489337625eed016c77b853f84af990
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217653"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837018"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów języka C++ dla Windows, Linux i MacOS
 
-vcpkg to Menedżer pakietów wiersza polecenia, które znacząco upraszcza pozyskiwanie i instalacji na Windows, Linux i MacOS przy użyciu biblioteki innej firmy. Jeśli projekt używa bibliotek innych firm, zaleca się używać vcpkg je zainstalować. vcpkg obsługuje bibliotek typu open source i własnościowych. Wszystkie biblioteki w katalogu Windows vcpkg zostały przetestowane na zgodność z programu Visual Studio 2015 i Visual Studio 2017. Począwszy od maja 2018 roku istnieją ponad 900 bibliotek w katalogu Windows i za pośrednictwem 350 w wykazie systemu Linux/MacOS. Społeczność C++ dodaje do obu katalogów w sposób ciągły nad dodatkowymi bibliotekami.
+vcpkg to Menedżer pakietów wiersza polecenia, które znacząco upraszcza pozyskiwanie i instalacji na Windows, Linux i MacOS przy użyciu biblioteki innej firmy. Jeśli projekt używa bibliotek innych firm, zaleca się używać vcpkg je zainstalować. vcpkg obsługuje bibliotek typu open source i własnościowych. Wszystkie biblioteki w katalogu Windows vcpkg zostały przetestowane na zgodność z programu Visual Studio 2015, Visual Studio 2017 i Visual Studio 2019 r. Począwszy od maja 2018 roku istnieją ponad 900 bibliotek w katalogu Windows i za pośrednictwem 350 w wykazie systemu Linux/MacOS. Społeczność C++ dodaje do obu katalogów w sposób ciągły nad dodatkowymi bibliotekami.
 
 ## <a name="simple-yet-flexible"></a>Proste, a elastyczne
 
@@ -23,7 +23,7 @@ Za pomocą jednego polecenia możesz pobrać źródeł i tworzenie biblioteki. v
 
 ## <a name="sources-not-binaries"></a>Źródła nie dane binarne
 
-W przypadku bibliotek w katalogu Windows vcpkg pobiera źródeł zamiast plików binarnych [1]. Kompiluje tych źródeł przy użyciu programu Visual Studio 2017 lub Visual Studio 2015, jeśli nie zainstalowano 2017. W języku C++, bardzo ważne jest zgodności przy użyciu tego samego środowiska kompilatora, a wersja kompilatora wszystkie biblioteki, którego używasz jako aplikacji kodu, który stanowi łącze do niego. Za pomocą vcpkg, wyeliminuj lub co najmniej znacznie zmniejszyć ryzyko niedopasowanych danych binarnych oraz problemy, które może spowodować, że. W zespołach, które są standaryzowane do określonej wersji kompilatora jednego członka zespołu umożliwia vcpkg pobieranie źródeł i Skompiluj zestaw plików binarnych, a następnie zip pliki binarne i nagłówki dla innych członków zespołu za pomocą polecenia eksportu. Aby uzyskać więcej informacji, zobacz [eksportu skompilowane pliki binarne i nagłówki](#export_binaries_per_project) poniżej.
+W przypadku bibliotek w katalogu Windows vcpkg pobiera źródeł zamiast plików binarnych [1]. Kompiluje tych źródeł przy użyciu najnowszej wersji programu Visual Studio, który można znaleźć. W języku C++, bardzo ważne jest zgodności przy użyciu tego samego środowiska kompilatora, a wersja kompilatora wszystkie biblioteki, którego używasz jako aplikacji kodu, który stanowi łącze do niego. Za pomocą vcpkg, wyeliminuj lub co najmniej znacznie zmniejszyć ryzyko niedopasowanych danych binarnych oraz problemy, które może spowodować, że. W zespołach, które są standaryzowane do określonej wersji kompilatora jednego członka zespołu umożliwia vcpkg pobieranie źródeł i Skompiluj zestaw plików binarnych, a następnie zip pliki binarne i nagłówki dla innych członków zespołu za pomocą polecenia eksportu. Aby uzyskać więcej informacji, zobacz [eksportu skompilowane pliki binarne i nagłówki](#export_binaries_per_project) poniżej.
 
 Jeśli tworzysz klonowania vcpkg prywatne biblioteki w kolekcji portów można dodać portu, która pobiera wstępnie utworzone pliki binarne i nagłówki i zapisać pliku portfile.cmake, który po prostu kopiuje pliki do żądanej lokalizacji.
 
@@ -178,7 +178,7 @@ Typ **Usuń vcpkg** Aby usunąć bibliotekę zainstalowane. Jeśli od niej zale�
 
 ## <a name="customize-vcpkg"></a>Customize vcpkg
 
-Można zmodyfikować klonie vcpkg w jakikolwiek sposób, który chcesz. Można tworzyć wielu klonach vcpkg i modyfikować portfiles w każdej z nich do uzyskania określonych wersji biblioteki lub określić parametry wiersza polecenia. Na przykład w przedsiębiorstwie, być może pracujesz jedna grupa deweloperów oprogramowania, który ma jeden zestaw zależności, a inna grupa może mieć inny zestaw. Można skonfigurować dwa klony vcpkg i zmodyfikować każdy z nich można pobrać wersji bibliotek i przełączników kompilacji, itd., zgodnie z potrzebami.
+Można zmodyfikować klonie vcpkg w jakikolwiek sposób, który chcesz. Można tworzyć wielu klonach vcpkg i modyfikować portfiles w każdej z nich do uzyskania określonych wersji biblioteki lub określić parametry wiersza polecenia. Na przykład w przedsiębiorstwie, być może pracujesz jedna grupa deweloperów oprogramowania, który ma jeden zestaw zależności, a inna grupa może mieć inny zestaw. Można skonfigurować dwa klony vcpkg i zmodyfikować każdy z nich można pobrać wersji bibliotek i kompilacji, przełączniki i tak dalej, zgodnie z potrzebami.
 
 ## <a name="uninstall-vcpkg"></a>Odinstaluj vcpkg
 

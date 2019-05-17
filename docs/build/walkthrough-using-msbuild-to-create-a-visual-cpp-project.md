@@ -1,15 +1,15 @@
 ---
 title: 'Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++'
-ms.date: 05/06/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: 8fb985cbf4e471589946e730e8bb09b43f0a5d84
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446214"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837605"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++
 
@@ -79,7 +79,7 @@ Plik projektu programu MSBuild jest plikiem XML, który zawiera element główny
 
 ### <a name="to-create-the-msbuild-project-file"></a>Aby utworzyć plik projektu MSBuild
 
-1. Użyj edytora tekstu, aby utworzyć plik projektu, który nosi nazwę `myproject.vcxproj`, a następnie dodaj poniższe głównego `<Project>` elementu. Wstaw elementy w poniższych krokach procedury między głównym `<Project>` tagów. (Użyj ToolsVersion = "15,0", jeśli używasz programu Visual Studio 2017.)
+1. Użyj edytora tekstu, aby utworzyć plik projektu, który nosi nazwę `myproject.vcxproj`, a następnie dodaj poniższe głównego `<Project>` elementu. Wstaw elementy w poniższych krokach procedury między głównym `<Project>` tagów. (Użyj ToolsVersion = "15,0", jeśli używasz programu Visual Studio 2017 lub ToolsVersion = "16,0", jeśli używasz programu Visual Studio 2019 r.)
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -107,7 +107,7 @@ Plik projektu programu MSBuild jest plikiem XML, który zawiera element główny
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-1. Dodaj poniższy element grupy właściwości (`<PropertyGroup>`), który określa dwie właściwości projektu. (Użyj wersji 141, jeśli używasz programu Visual Studio 2017).
+1. Dodaj poniższy element grupy właściwości (`<PropertyGroup>`), który określa dwie właściwości projektu. (Użyj wersji 141, jeśli używasz programu Visual Studio 2017 lub v142 korzystania z programu Visual Studio 2019 r.)
 
     ```xml
     <PropertyGroup>

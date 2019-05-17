@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294463"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837372"
 ---
 # <a name="clr-restrictions"></a>/clr Ograniczenia
 
@@ -70,7 +70,7 @@ Należy zauważyć następujące ograniczenia na użycie **/CLR**:
 
 - Funkcje, które przyjmują zmienną liczbę argumentów (VARARG) zostanie wygenerowany jako funkcje natywne. Wszystkie typy zarządzanych danych w miejscu zmiennych argumentów będzie można zorganizować typy natywne. Należy pamiętać, że <xref:System.String?displayProperty=fullName> typy są ciągami faktycznie znaków dwubajtowych, ale są one przekazywane do ciągów znaków jednobajtowych. Więc jeśli specyfikatora printf %S (wchar_t *), go będzie kierować ciąg %s zamiast tego.
 
-- Korzystając z va_arg — makro, może uzyskać nieoczekiwane wyniki podczas kompilowania za pomocą **/CLR: pure**. Aby uzyskać więcej informacji, zobacz [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Kod, który musi być "czysta" lub "bezpieczne" powinny być przenoszone do C#.
+- Korzystając z va_arg — makro, może uzyskać nieoczekiwane wyniki podczas kompilowania za pomocą **/CLR: pure**. Aby uzyskać więcej informacji, zobacz [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach. Kod, który musi być "czysta" lub "bezpieczne" powinny być przenoszone do C#.
 
 - Nie należy wywołać, z kodu zarządzanego, wszystkie funkcje, które pomagają stosu, aby uzyskać informacje o parametrach (argumenty funkcji); Warstwa P/Invoke powoduje, że te informacje jako dalej na dół stosu.  Na przykład nie można skompilować proxy/zastępczego za pomocą **/CLR**.
 

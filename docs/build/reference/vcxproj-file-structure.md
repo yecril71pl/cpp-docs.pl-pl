@@ -1,15 +1,15 @@
 ---
 title: Struktura plików vcxproj i props
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446502"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837515"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura plików vcxproj i props
 
@@ -268,11 +268,11 @@ Ta grupa zawiera import dla pliki docelowe dostosowania kompilacji.
 
 Jeśli plik .vcxproj nie jest zgodna z ten układ, wyniki kompilacji może nie być, czego oczekiwać. Na przykład jeśli przez pomyłkę importujesz systemowym arkuszem właściwości po arkuszach właściwości zdefiniowane przez użytkownika, ustawienia użytkownika zostaną zastąpione przez arkusze właściwości systemu.
 
-Nawet środowiska czasu projektowania IDE zależy do pewnego stopnia poprawne kolejność elementów. Na przykład, jeśli nie ma pliku .vcxproj `PropertySheets` Importuj grupę IDE może nie być możliwe ustalenie, gdzie umieścić nowy arkusz właściwości utworzony w **Menedżer właściwości**. Może to spowodować, że arkusz użytkownika on zastąpiony przez arkusz systemu. Mimo, że Algorytm heurystyczny używany przez środowisko IDE może tolerować niewielkie niespójności w układzie plik .vcxproj, zdecydowanie zalecane jest aby nie różni się od struktury przedstawiony we wcześniejszej części tego artykułu.
+Nawet środowiska czasu projektowania IDE zależy do pewnego stopnia poprawne kolejność elementów. Na przykład, jeśli nie ma pliku .vcxproj `PropertySheets` Importuj grupę IDE może nie być możliwe ustalenie, gdzie umieścić nowy arkusz właściwości utworzony w **Menedżer właściwości**. Może to spowodować, że arkusz użytkownika przesłaniana przez arkusz systemu. Mimo, że Algorytm heurystyczny używany przez środowisko IDE może tolerować niewielkie niespójności w układzie plik .vcxproj, zdecydowanie zalecane jest aby nie różni się od struktury przedstawiony we wcześniejszej części tego artykułu.
 
 ## <a name="how-the-ide-uses-element-labels"></a>Jak IDE używa etykiety elementu
 
-W środowisku IDE, po ustawieniu **UseOfAtl** właściwości na stronie właściwości ogólnych, jest ona zapisywana w grupy właściwości konfiguracji w pliku projektu, podczas gdy **TargetName** właściwości w tej samej stronie właściwości są zapisywane do grupy właściwości bez etykiety na konfiguracji. Program Visual Studio wygląda informacji o tym, gdzie do zapisania każdej właściwości w pliku xml na stronie właściwości. Aby uzyskać **ogólne** strony właściwości (przy założeniu, masz angielską wersję programu Visual Studio Enterprise Edition), ten plik jest `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Plik reguł XML strony właściwości definiuje statyczne informacje dotyczące reguły i jego właściwości. Jeden zestaw takich informacji jest preferowany pozycji właściwości reguły w pliku docelowym (plik, w którym zostanie zapisany jego wartość). Pozycja preferowane jest określony przez atrybut etykiety elementów pliku projektu.
+W środowisku IDE, po ustawieniu **UseOfAtl** właściwości na stronie właściwości ogólnych, jest ona zapisywana w grupy właściwości konfiguracji w pliku projektu, podczas gdy **TargetName** właściwości w tej samej stronie właściwości są zapisywane do grupy właściwości bez etykiety na konfiguracji. Program Visual Studio wygląda informacji o tym, gdzie do zapisania każdej właściwości w pliku xml na stronie właściwości. Aby uzyskać **ogólne** strony właściwości (przy założeniu, masz angielską wersję programu Visual Studio 2019 Enterprise Edition), ten plik jest `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Plik reguł XML strony właściwości definiuje statyczne informacje dotyczące reguły i jego właściwości. Jeden zestaw takich informacji jest preferowany pozycji właściwości reguły w pliku docelowym (plik, w którym zostanie zapisany jego wartość). Pozycja preferowane jest określony przez atrybut etykiety elementów pliku projektu.
 
 ## <a name="property-sheet-layout"></a>Układ arkusza właściwości
 
@@ -288,7 +288,7 @@ Poniższy fragment kodu XML jest minimalny układ pliku (.props) arkusza właśc
 </Project>
 ```
 
-Aby utworzyć arkusz właściwości, skopiuj jeden z plikach .props w folderze VCTargets i zmodyfikuj go do własnych celów. Dla programu Visual Studio 2017 Enterprise edition, jest domyślna ścieżka VCTargets `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`.
+Aby utworzyć arkusz właściwości, skopiuj jeden z plikach .props w folderze VCTargets i zmodyfikuj go do własnych celów. Dla programu Visual Studio 2019 r Enterprise edition, jest domyślna ścieżka VCTargets `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
 
 ## <a name="see-also"></a>Zobacz także
 

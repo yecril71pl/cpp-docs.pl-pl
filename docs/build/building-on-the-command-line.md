@@ -2,7 +2,7 @@
 title: Możesz używać zestawu narzędzi MSVC z wiersza polecenia — Visual Studio
 description: Za pomocą łańcucha narzędzi kompilatora C++ firmy Microsoft (MSVC) z wiersza polecenia, poza Visual Studio IDE.
 ms.custom: conceptual
-ms.date: 04/25/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 5f9ac1e4753fdba412af26bcc45022dee354cacf
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 97626455ace0d3ad47b9011594e82c144d7ea27d
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877127"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837115"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Możesz używać zestawu narzędzi MSVC z wiersza polecenia
 
@@ -43,7 +43,7 @@ Skróty wiersza polecenia są instalowane w folderze specyficzny dla wersji prog
 - **Wiersz polecenia narzędzi x86_x64 Cross** -ustawia środowisko do korzystania z 32-bitowy, macierzysty x86 narzędzia do kompilowania kodu 64-bitowy, macierzysty x64.
 - **Wiersz polecenia narzędzi x64_x86 Cross** -ustawia środowisko do korzystania z 64-bitowych, x64 natywnych narzędzi do kompilowania kodu 32-bitowy, macierzysty x86.
 
-Rzeczywiste Start menu folderu i skrót nazwy różnią się w zależności od wersji programu Visual Studio został zainstalowany i instalacja pseudonim, jeśli zostanie ustawiona. Aby uzyskać przykład, jeśli masz program Visual Studio 2017, a został podany go instalacji pseudonim *(wersja zapoznawcza)*, nosi nazwę skrót do wiersza polecenia dla deweloperów **wiersz polecenia programisty dla programu VS 2019**w folder o nazwie **Visual Studio 2019**.
+Rzeczywiste Start menu folderu i skrót nazwy różnią się w zależności od wersji programu Visual Studio został zainstalowany i instalacja pseudonim, jeśli zostanie ustawiona. Na przykład, jeśli masz program Visual Studio 2019 r zainstalowany, a został podany jej instalacji pseudonim *(wersja zapoznawcza)*, nosi nazwę skrót do wiersza polecenia dla deweloperów **wiersz polecenia programisty dla programu VS 2019**w folder o nazwie **Visual Studio 2019**.
 
 ## <a name="developer_command_prompt"></a> Aby otworzyć okno wiersza polecenia dla deweloperów
 
@@ -55,7 +55,7 @@ Szybszy sposób, aby otworzyć okno wiersza polecenia dewelopera polega na przej
 
 ## <a name="developer_command_file_locations"></a> Lokalizacje pliku polecenia dla deweloperów
 
-Jeśli wolisz skonfigurować środowisku architektury kompilacji w istniejącym oknie wiersza polecenia, można użyć jednego z poleceń (pliki wsadowe) utworzony przez Instalatora można ustawić wymagane środowisko. Zalecane tylko można to zrobić w nowym oknie wiersza polecenia i nie zalecamy nowsze Przełącz środowiska, w tym samym oknie wiersza polecenia. Lokalizacja tych plików zależy od wersji programu Visual Studio został zainstalowany oraz lokalizacji i opcji nazewnictwa, wprowadzone podczas instalacji. Dla programu Visual Studio 2019 r, typowej instalacji na komputerze 64-bitowym znajduje się w \Program pliki (x86) \Microsoft Visual Studio\2019\\*wersji*, gdzie *wersji* może być społeczności Professional, Enterprise, BuildTools lub innego o podanej nazwie. Lokalizacja programu Visual Studio 2017 jest podobna. Dla programu Visual Studio 2015 lokalizacja typowej instalacji znajduje się w \Program Files (x86) \Microsoft Visual Studio 14.0.
+Jeśli wolisz skonfigurować środowisku architektury kompilacji w istniejącym oknie wiersza polecenia, można użyć jednego z poleceń (pliki wsadowe) utworzony przez Instalatora można ustawić wymagane środowisko. Zalecane tylko można to zrobić w nowym oknie wiersza polecenia i nie zalecamy nowsze Przełącz środowiska, w tym samym oknie wiersza polecenia. Lokalizacja tych plików zależy od wersji programu Visual Studio został zainstalowany oraz lokalizacji i opcji nazewnictwa, wprowadzone podczas instalacji. Dla programu Visual Studio 2019 r, typowej instalacji na komputerze 64-bitowym znajduje się w \Program pliki (x86) \Microsoft Visual Studio\2019\*edition *, gdzie *wersji* może być Community, Professional, Enterprise, BuildTools lub innego o podanej nazwie. Lokalizacja programu Visual Studio 2017 jest podobna. Dla programu Visual Studio 2015 lokalizacja typowej instalacji znajduje się w \Program Files (x86) \Microsoft Visual Studio 14.0.
 
 Plik polecenia wiersza polecenia głównego dewelopera, VsDevCmd.bat, znajduje się w podkatalogu Common7\Tools w katalogu instalacji. Gdy nie określono żadnych parametrów, to ustawienie środowiska, a źródłowa i docelowa architektura, aby użyć narzędzia x86 natywne 32-bitowy do budowania x86 32-bitowych kompilacji kodu.
 
@@ -110,7 +110,7 @@ Opcjonalnie określa zestaw narzędzi kompilatora Visual Studio do użycia. Domy
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>Aby skonfigurować środowisko kompilacji w istniejącym oknie wiersza polecenia
 
-1. W wierszu polecenia należy użyć polecenia CD, aby zmienić do katalogu instalacyjnego programu Visual Studio. Następnie należy użyć dysku CD ponownie zmienić w podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. Visual Studio 2017 i 2019 r jest to podkatalog VC\Auxiliary\Build. Visual Studio 2015 można użyć w podkatalogu VC.
+1. W wierszu polecenia należy użyć polecenia CD, aby zmienić do katalogu instalacyjnego programu Visual Studio. Następnie należy użyć dysku CD ponownie zmienić w podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. Visual Studio 2017 i Visual Studio 2019 r jest to podkatalog VC\Auxiliary\Build. Visual Studio 2015 można użyć w podkatalogu VC.
 
 1. Wprowadź polecenie w środowisku preferowanych dla deweloperów. Na przykład aby skompilować kod ARM dla platformy uniwersalnej systemu Windows na platformie 64-bitowej przy użyciu najnowszy zestaw Windows SDK i zestaw narzędzi kompilatora Visual Studio 2019 r, należy użyć ten wiersz polecenia:
 

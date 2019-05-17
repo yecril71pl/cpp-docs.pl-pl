@@ -1,6 +1,6 @@
 ---
 title: /CLRHEADER
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 f1_keywords:
 - /CLRHEADER
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-ms.openlocfilehash: 6a1240e2d3ad2ac3a454c610a6f49d07e50951e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5974606448dad103c8f12a126b8d17c688927c88
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272575"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837164"
 ---
 # <a name="clrheader"></a>/CLRHEADER
 
@@ -40,7 +40,7 @@ Gdy **/CLRHEADER** jest używany w pliku, który został skompilowany z/CLR, nas
 
 Można także programowo sprawdzać, jeśli obraz został zbudowany dla środowiska uruchomieniowego języka wspólnego.  Aby uzyskać więcej informacji, zobacz [jak: Określić, czy obraz jest obrazem natywnym, czy CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Kod, który musi być "czysta" lub "bezpieczne" powinny być przenoszone do C#.
+**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach. Kod, który musi być "czysta" lub "bezpieczne" powinny być przenoszone do C#.
 
 ## <a name="see-also"></a>Zobacz także
 

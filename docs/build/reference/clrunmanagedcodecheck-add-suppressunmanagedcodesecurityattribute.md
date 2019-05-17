@@ -1,6 +1,6 @@
 ---
 title: / CLRUNMANAGEDCODECHECK (Usuń atrybut SuppressUnmanagedCodeSecurityAttribute)
-ms.date: 09/27/2018
+ms.date: 05/16/2019
 ms.topic: reference
 f1_keywords:
 - /CLRUNMANAGEDCODECHECK
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecc560673a8e98752289ef0e0f89d3abfc1938e4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294424"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837242"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/ CLRUNMANAGEDCODECHECK (Usuń atrybut SuppressUnmanagedCodeSecurityAttribute)
 
@@ -29,7 +29,7 @@ ms.locfileid: "62294424"
 
 Domyślnie konsolidator stosuje **SuppressUnmanagedCodeSecurityAttribute** do wygenerowanych przez konsolidator `PInvoke` wywołania. Gdy **opcji/clrunmanagedcodecheck** – **SuppressUnmanagedCodeSecurityAttribute** zostanie usunięty. Aby zastosować jawnie **SuppressUnmanagedCodeSecurityAttribute** do wygenerowanych przez konsolidator `PInvoke` wywołania, można użyć **/CLRUNMANAGEDCODECHECK:NO**.
 
-Konsolidator dodaje atrybut tylko do obiektów, które są kompilowane przy użyciu **/CLR** lub **/CLR: pure**. Jednak **/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Konsolidator dodaje atrybut tylko do obiektów, które są kompilowane przy użyciu **/CLR** lub **/CLR: pure**. Jednak **/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach.
 
 A `PInvoke` wywołanie jest generowany przez konsolidator, gdy konsolidator nie może odnaleźć symboli zarządzanych do zaspokojenia odwołanie z zarządzanego obiektu wywołującego, ale można znaleźć natywnych symboli do spełnienia tego odwołania. Aby uzyskać więcej informacji na temat `PInvoke`, zobacz [podczas wywoływania funkcji natywnych z kodu zarządzanego](../../dotnet/calling-native-functions-from-managed-code.md).
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270955"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837278"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konwencja wywoływania)
 
@@ -51,7 +51,7 @@ Te opcje określają kolejność, która funkcja argumenty są wypychane na stos
 
 Funkcje, które przyjmują zmienną liczbę argumentów, które muszą być oznaczone `__cdecl`.
 
-**/GD —**, **GR**, **GV** i **GZ** nie są zgodne z [/CLR: Safe](clr-common-language-runtime-compilation.md) lub   **/CLR: pure**. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/GD —**, **GR**, **GV** i **GZ** nie są zgodne z [/CLR: Safe](clr-common-language-runtime-compilation.md) lub   **/CLR: pure**. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach.
 
 > [!NOTE]
 > Domyślnie x86 procesorów C++ funkcje Członkowskie korzystają [__thiscall](../../cpp/thiscall.md).

@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351479"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837616"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Co nowego w języku C++ w programie Visual Studio 2017
 

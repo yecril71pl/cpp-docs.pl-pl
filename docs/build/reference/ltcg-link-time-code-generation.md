@@ -1,6 +1,6 @@
 ---
 title: /LTCG (Generowanie łączonych kodów czasowych)
-ms.date: 03/14/2018
+ms.date: 05/16/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.LinkTimeCodeGeneration
 - VC.Project.VCConfiguration.WholeProgramOptimization
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: 40fb591952180735de3a2c226a3953a303c7d90f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8f13c32593d1cfef690d63d506faf14490de02d
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162360"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837270"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generowanie łączonych kodów czasowych)
 
@@ -132,7 +132,7 @@ Jeśli funkcja jest wywoływana za pomocą wskaźnika funkcji lub jeśli funkcja
 
 Moduły, które są kompilowane przy użyciu [/GL](gl-whole-program-optimization.md) i [/CLR](clr-common-language-runtime-compilation.md) może służyć jako dane wejściowe do konsolidatora podczas **opcję/LTCG** jest określony.
 
-- **/ LTCG** je zaakceptować, obiekt natywny, a mieszane natywnego/zarządzanego obiektu plików (skompilowany przy użyciu **/CLR**). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+- **/ LTCG** je zaakceptować, obiekt natywny, a mieszane natywnego/zarządzanego obiektu plików (skompilowany przy użyciu **/CLR**). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach.
 
 - **/LTCG:PGI** nie akceptuje skompilowane przy użyciu modułów macierzystych **/GL** i   **/CLR**
 

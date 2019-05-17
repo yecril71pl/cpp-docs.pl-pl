@@ -1,14 +1,14 @@
 ---
 title: Dziedziczenie właściwości w projektach programu Visual Studio — C++
-ms.date: 12/10/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 7e6e2ec4e4f1999639a1b0a0d7ce35873736e5e3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 472700226ffc1f265f6fab84dbd44fca651b3c87
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220438"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837404"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Dziedziczenie właściwości w projektach programu Visual Studio
 
@@ -16,7 +16,7 @@ System projektu programu Visual Studio zależy od platformy MSBuild definiuje fo
 
 ## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Plik .vcxproj, .props pliki i pliki .targets
 
-Właściwości projektu są przechowywane bezpośrednio w pliku projektu (*.vcxproj) lub w innych plikach .targets lub .props, że import pliku projektu, które dostarczają wartości domyślne. Dla programu Visual Studio 2015, te pliki znajdują się w **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Dla programu Visual Studio 2017, te pliki znajdują się w  **\\Program Files (x86)\\programu Microsoft Visual Studio\\2017\\_wersji_\\Common7\\ IDE\\VC\\VCTargets**, gdzie _wersji_ jest zainstalowanej wersji programu Visual Studio. Właściwości są także przechowywane w plikach .props niestandardowych, które można dodać do własnego projektu. Zdecydowanie zalecamy czy nie ręcznie edytować tych plików, a zamiast tego użyć strony właściwości w środowisku IDE, aby zmodyfikować wszystkie właściwości, zwłaszcza tych, które uczestniczą w dziedziczeniu, chyba że masz bardzo dobre Omówienie programu MSBuild.
+Właściwości projektu są przechowywane bezpośrednio w pliku projektu (*.vcxproj) lub w innych plikach .targets lub .props, że import pliku projektu, które dostarczają wartości domyślne. Dla programu Visual Studio 2015, te pliki znajdują się w **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Dla programu Visual Studio 2017 lub Visual Studio 2019 r, te pliki znajdują się w  **\\Program Files (x86)\\programu Microsoft Visual Studio\\&lt;2017 lub 2019 >\\_edition_  \\Common7\\IDE\\VC\\VCTargets**, gdzie _wersji_ jest zainstalowanej wersji programu Visual Studio. Właściwości są także przechowywane w plikach .props niestandardowych, które można dodać do własnego projektu. Zdecydowanie zalecamy czy nie ręcznie edytować tych plików, a zamiast tego użyć strony właściwości w środowisku IDE, aby zmodyfikować wszystkie właściwości, zwłaszcza tych, które uczestniczą w dziedziczeniu, chyba że masz bardzo dobre Omówienie programu MSBuild.
 
 Jak pokazano wcześniej, tę samą właściwość dla taką samą konfigurację można przypisać inną wartość w tych różnych plikach. Podczas tworzenia projektu, aparat MSBuild oblicza plik projektu i wszystkie zaimportowane pliki w dobrze zdefiniowanej kolejności (opisanych poniżej). Zgodnie z każdego pliku jest oceniany, wszystkie wartości właściwości zdefiniowane w tym pliku spowoduje zastąpienie istniejących wartości. Wszelkie wartości, które nie zostały określone są dziedziczone z plików, które zostały ocenione wcześniej. W związku z tym podczas ustawiania właściwości na stronach właściwości warto również zwrócić uwagę na gdzie ustawić. Jeśli właściwość jest ustawiona na "X" w pliku .props, ale właściwości jest równa "Y" w pliku projektu, projekt zostanie skompilowany z właściwością "Y". Jeśli w tej samej właściwości jest równa "Z" dla elementu projektu, np. plik .cpp, aparat MSBuild będzie używać wartości "Z". 
 
@@ -67,7 +67,7 @@ Aby lepiej zrozumieć, konfiguracje kompilacji, otwórz **Menedżer właściwoś
 
 Jeśli przejdź do okienka ogólne na stronach właściwości i ustaw właściwość zestawu znaków na "Nieustawione" zamiast "Użyj Unicode" i kliknij **OK**, wyświetli się Menedżer właściwości nie **obsługi standardu Unicode** arkusz właściwości bieżącej konfiguracji, ale nadal będą dostępne dla innych konfiguracji.
 
-Aby uzyskać więcej informacji o Menedżerze właściwości i arkuszach właściwości, zobacz [udziału lub resuse ustawienia projektu Visual Studio C++](create-reusable-property-configurations.md).
+Aby uzyskać więcej informacji o Menedżerze właściwości i arkuszach właściwości, zobacz [udziału lub ponownego użycia w programie Visual Studio C++ ustawienia projektu](create-reusable-property-configurations.md).
 
 > [!TIP]
 > Plik .user, odnoszący jest funkcją starszej wersji, a firma Microsoft zaleca, Usuń Aby zachować właściwości poprawnie pogrupowane według konfiguracji i platformy.

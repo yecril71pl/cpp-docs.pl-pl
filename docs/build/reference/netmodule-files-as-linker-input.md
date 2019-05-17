@@ -1,18 +1,18 @@
 ---
 title: Pliki .netmodule — Wejście konsolidatora
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50a0f0a1ff5f65a7512e8372de2fe5296c866dca
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320672"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837426"
 ---
 # <a name="netmodule-files-as-linker-input"></a>Pliki .netmodule — Wejście konsolidatora
 
@@ -20,7 +20,7 @@ Link.exe akceptuje teraz obj MSIL i modułów .netmodule jako dane wejściowe. P
 
 modułów .netmodule są tworzone za pomocą kompilatora MSVC z [/LN (Utwórz moduł MSIL)](ln-create-msil-module.md) lub przez narzędzie konsolidacji z [/noassembly (Utwórz moduł MSIL)](noassembly-create-a-msil-module.md). .objs są zawsze tworzone w kompilacji Visual C++. W przypadku innych kompilatorów programu Visual Studio użyj **/target: module** — opcja kompilatora.
 
-Trzeba przekazać do konsolidatora pliku .obj z kompilacji Visual C++, który utworzony .netmodule. Przekazywanie w .netmodule już nie jest obsługiwana, ponieważ **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Trzeba przekazać do konsolidatora pliku .obj z kompilacji Visual C++, który utworzony .netmodule. Przekazywanie w .netmodule już nie jest obsługiwana, ponieważ **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach.
 
 Aby uzyskać informacje na temat sposobu wywoływanie konsolidatora z wiersza polecenia, zobacz [składnia wiersza polecenia konsolidatora](linking.md), [możesz używać zestawu narzędzi MSVC z wiersza polecenia](../building-on-the-command-line.md), i [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 

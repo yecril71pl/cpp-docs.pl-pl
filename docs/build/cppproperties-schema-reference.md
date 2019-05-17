@@ -1,14 +1,14 @@
 ---
 title: Plik CppProperties.json — dokumentacja schematu
-ms.date: 03/21/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 05bb92b0fe791ad8b0037665c2db32a08fa52d7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220843"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837062"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Plik CppProperties.json — dokumentacja schematu
 
@@ -122,7 +122,7 @@ Uwaga: Wartości `msvc-x86` i `msvc-x64` są obsługiwane tylko dla starszych po
 ## <a name="custom-configurations"></a>Konfiguracje niestandardowe
 
 
-Możliwość dostosowania configuations domyślne w `CppProperties.json`, lub Utwórz nowe konfiguracje. Każdy będą wyświetlane na liście rozwijanej konfiguracji:
+Można dostosować dowolne konfiguracje domyślne `CppProperties.json`, lub Utwórz nowe konfiguracje. Każdy będą wyświetlane na liście rozwijanej konfiguracji:
 
 ```json
 {
@@ -264,7 +264,7 @@ Masz dostęp do następujących wbudowanych makr wewnątrz `CppProperties.json`:
 |-|-|
 |`${workspaceRoot}`| Pełna ścieżka do folderu obszaru roboczego|
 |`${projectRoot}`| Pełna ścieżka do folderu, w którym `CppProperties.json` znajduje się|
-|`${vsInstallDir}`| Pełna ścieżka do folderu, w którym zainstalowano uruchomione wystąpienie programu VS 2017|
+|`${vsInstallDir}`| Pełna ścieżka do folderu, w którym zainstalowano uruchomionego wystąpienia programu Visual Studio|
 
 Na przykład, jeśli projektu folderem include i obejmują również windows.h oraz inne typowe nagłówki z zestawu Windows SDK, możesz zaktualizować swoje `CppProperties.json` zawiera plik konfiguracji z nimi:
 
@@ -289,7 +289,7 @@ Na przykład, jeśli projektu folderem include i obejmują również windows.h o
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` i `%VCToolsInstallDir%` nie są ustawione jako zmienne środowiskowe globalnego dlatego upewnij się, uruchom devenv.exe z "Developer wiersza polecenia dla programu VS 2017" definiujący tych zmiennych.
+> `%WindowsSdkDir%` i `%VCToolsInstallDir%` nie są ustawione jako zmienne środowiskowe globalnego dlatego upewnij się, uruchom devenv.exe z wiersz polecenia dewelopera definiujący tych zmiennych. (Wpisz "dewelopera" w Windows Start Menu).
 
 ## <a name="troubleshoot-intellisense-errors"></a>Rozwiązywanie problemów IntelliSense
 
