@@ -1,25 +1,21 @@
 ---
 title: Programowanie chmury i sieci Web w programie Visual C++
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708043"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790359"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programowanie chmury i sieci Web w programie Visual C++
 
 W języku C++ masz kilka opcji do łączenia się z sieci web i w chmurze.
 
-## <a name="cloud-programming-options"></a>Opcje programowania w chmurze
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Usługi Microsoft Azure SDK i REST
 
-- [Windows Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
-
-  Zapewnia macierzyste interfejsy API, który można użyć w aplikacji platformy uniwersalnej Windows (UWP) lub aplikacje komputerowe Windows, do łączenia z usługą Windows Azure Mobile Services. Chociaż większość przykładów w witrynie internetowej w języku C#, można również użyć C++. Aby uzyskać więcej informacji, zobacz [Szybki Start: Dodawanie usługi mobilnej w języku C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
-
-- [Biblioteki klienta usługi Microsoft Azure Storage dla języka C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [Biblioteki klienta usługi Microsoft Azure Storage dla języka C++](https://azure.github.io/azure-storage-cpp/)
 
   Biblioteki klienta usługi Azure Storage dla języka C++ zapewnia kompleksowe interfejsu API do pracy z usługą Azure storage, w tym między innymi następujące możliwości:
 
@@ -29,18 +25,22 @@ W języku C++ masz kilka opcji do łączenia się z sieci web i w chmurze.
   - Umieścić w kolejce i pobierać komunikaty w kolejce platformy Azure.
   - Opóźnieniem listy kontenerów, obiektów blob, tabel i kolejek, a opóźnieniem wykonywać zapytania dla jednostek
 
-- [Interfejs API w usłudze OneDrive](https://dev.onedrive.com/README.htm)
+- ANSI C99 [zestawami SDK Azure IoT Hub](/azure/iot-hub/iot-hub-devguide-sdks) dla Internetu rzeczy umożliwiają aplikacjom IoT są uruchomione na urządzeniu lub wewnętrznej bazy danych.
+
+- [OneDrive i programem SharePoint w programie Microsoft Graph](https://dev.onedrive.com/README.htm)
 
   Interfejs API usługi OneDrive zapewnia zestaw usług HTTP do łączenia aplikacji z plików i folderów w usłudze Office 365 i SharePoint Server 2016.
 
-- [C++ REST SDK (nazwa kodowa "Casablanca")](https://github.com/Microsoft/cpprestsdk)
+## <a name="windows-and-cross-platform-networking-apis"></a>Windows i sieci dla wielu platform interfejsów API
+
+- [C++REST SDK (nazwa kodowa "Casablanca")](https://github.com/Microsoft/cpprestsdk)
 
   Udostępnia nowoczesnych dla wielu platform, asynchronicznego interfejsu API do interakcji z usług REST.
 
   - Wykonania wywołania REST względem dowolnego serwera HTTP z wbudowaną obsługą dokumentów JSON, analizowania i serializacja
   - Obsługuje OAuth 1 i 2, w tym odbiornik przekierowanie lokalnych
-  - Nawiązuj kontakty Websockets względem usługi zdalnej
-  - W pełni asynchroniczne zadanie interfejsu API oparte na PPL, łącznie z wbudowanej puli wątków
+  - Nawiązuj kontakty WebSockets względem usługi zdalnej
+  - W pełni asynchroniczne zadanie interfejsu API oparte na PPL, łącznie z puli wątków wbudowane
 
   Obsługuje Windows Desktop (7 i nowsze), Windows Server (2012 i nowsze), Universal Windows Platform, systemu Linux, OSX, Android i iOS.
 
@@ -59,4 +59,5 @@ W języku C++ masz kilka opcji do łączenia się z sieci web i w chmurze.
 ## <a name="see-also"></a>Zobacz także
 
 [Język C++ w programie Visual Studio](../overview/visual-cpp-in-visual-studio.md) <br/>
-[Sieci i usług sieci web](/windows/uwp/networking/)
+[Centrum deweloperów języka C++ i C platformy Microsoft Azure](https://azure.microsoft.com/develop/cpp/) <br/>
+[Sieci i usług sieci web (systemu Windows UWP)](/windows/uwp/networking/)
