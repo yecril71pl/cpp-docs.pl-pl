@@ -2,16 +2,16 @@
 title: Prosta, standardowego układu, ZASOBNIKÓW i typy literałów
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: c742f4c84a1b2ba558b790d7eea7760902da7818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266767"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934217"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Prosta, standardowego układu, ZASOBNIKÓW i typy literałów
 
-Termin *układ* odwołuje się do sposób rozmieszczenia elementów członkowskich obiektu klasy, struktury lub Unii w pamięci. W niektórych przypadkach układ jest dobrze zdefiniowany przez specyfikację języka. Ale jeśli klasa lub struktura zawiera niektórych funkcji języka C++, takich jak wirtualne klasy bazowe, funkcji wirtualnych elementów członkowskich przy użyciu kontroli dostępu w różnych, następnie kompilator swobodę wyboru układu. Taki układ mogą się różnić w zależności od tego, jakie optymalizacje wykonywane i w wielu przypadkach obiektu może nie nawet zajmować ciągły obszar pamięci. Na przykład jeśli klasa ma funkcje wirtualne, wszystkie wystąpienia tej klasy może udostępniać tabeli jednej funkcji wirtualnej. Typy takie oczywiście są bardzo przydatne, ale mają ograniczenia. Ponieważ układ jest niezdefiniowana nie mogą być przekazywane do programów napisanych w innych językach, takich jak C, a ponieważ mogą one być nieciągłych one nie można niezawodnie skopiować przy użyciu funkcji szybkiego niskiego poziomu takich jak `memcopy` lub serializowana za pośrednictwem sieci.
+Termin *układ* odwołuje się do sposób rozmieszczenia elementów członkowskich obiektu klasy, struktury lub Unii w pamięci. W niektórych przypadkach układ jest dobrze zdefiniowany przez specyfikację języka. Ale jeśli klasa lub struktura zawiera niektórych funkcji języka C++, takich jak wirtualne klasy bazowe, funkcji wirtualnych elementów członkowskich przy użyciu kontroli dostępu w różnych, następnie kompilator swobodę wyboru układu. Taki układ mogą się różnić w zależności od tego, jakie optymalizacje wykonywane i w wielu przypadkach obiekt może nie nawet zajmować ciągły obszar pamięci. Na przykład jeśli klasa ma funkcje wirtualne, wszystkie wystąpienia tej klasy może udostępniać tabeli jednej funkcji wirtualnej. Typy takie są bardzo przydatne, ale mają ograniczenia. Ponieważ układ jest niezdefiniowana nie mogą być przekazywane do programów napisanych w innych językach, takich jak C, a ponieważ mogą one być nieciągłych one nie można niezawodnie skopiować przy użyciu funkcji szybkiego niskiego poziomu takich jak `memcopy`, lub szeregowanych za pośrednictwem sieci.
 
 Aby włączyć programy w języku C++, a także metaprograms przeglądanie informacji o gotowości każdego typu operacji, które są zależne od układu pamięci i Kompilatory języka, C ++ 14 wprowadzone trzy kategorie proste klasy i struktury: *prosta*, *standardowego układu*, i *ZASOBNIKA* lub zwykłe stare dane. Standardowa biblioteka zawiera szablony funkcji `is_trivial<T>`, `is_standard_layout<T>` i `is_pod<T>` określające, czy dany typ należy do danej kategorii.
 

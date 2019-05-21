@@ -1,34 +1,30 @@
 ---
 title: Co nowego w języku C++ w Visual Studio 2019 r.
-ms.date: 04/02/2019
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 493b96a8ce3359cc18287adbae8cbd6c374671ec
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 19eaa9d4ed1cf12e721825f998fa674363eda488
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837625"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934142"
 ---
-<!--NOTE all https:// links to docs.microsoft.com need to be converted to site-relative links prior to publishing-->
-
 # <a name="whats-new-for-c-in-visual-studio-2019"></a>Co nowego w języku C++ w Visual Studio 2019 r.
 
-Visual Studio 2019 obejmuje wiele aktualizacji i poprawek dotyczących środowiska Microsoft C++. Firma Microsoft już usunięto wiele usterek i zgłoszonych problemów w kompilatorze i narzędziach, wiele przesłanych przez klientów za pośrednictwem witryny [Zgłoś Problem](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) i [sugestię](https://developercommunity.visualstudio.com/spaces/62/index.html) opcji w obszarze **Prześlijopinię**. Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji na temat what's new in całego programu Visual Studio, odwiedź stronę [What's new in Visual Studio](/visualstudio/ide/whats-new-visual-studio-2019).
+Visual Studio 2019 obejmuje wiele aktualizacji i poprawek dotyczących środowiska Microsoft C++. Usunięto wiele usterek i problemów w kompilatorze i narzędziach, wiele przesłanych przez klientów za pośrednictwem [Zgłoś Problem](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) i [sugestię](https://developercommunity.visualstudio.com/spaces/62/index.html) opcji w obszarze **Wyślij opinię**. Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji na temat what's new in całego programu Visual Studio, odwiedź stronę [What's new in Visual Studio](/visualstudio/ide/whats-new-visual-studio-2019).
 
 ## <a name="c-compiler"></a>kompilator C++
 
-- `/std:c++latest` Teraz opcja powoduje dołączenie funkcji C ++ 20, które nie są zawsze kompletne, łącznie z obsługą początkowej dla języka C ++ 20 operatora <> = ("pojazdu kosmicznego") dla trzykierunkowe porównywanie.
+- Rozszerzona obsługa funkcji C ++ 17 i poprawki do poprawności, a także obsługę eksperymentalną funkcji C ++ 20 takich jak moduły i procedur wspólnych. Aby uzyskać szczegółowe informacje, zobacz [ulepszenia zgodności języka C++ w Visual Studio 2019](../cpp-conformance-improvements.md).
 
-- [P0941R2 — makra feature-test](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0941r2.html) zostanie zakończone, z obsługą `__has_cpp_attribute`. Makra Feature-test są obsługiwane we wszystkich trybach pracy standardowych.
-
-- [C ++ 20 P1008R1 - zabronienia agregacji za pomocą zgłoszonych przez użytkownika konstruktorów](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf) jest również zakończona.
-
-- Rozszerzona obsługa funkcji C ++ 17, a także obsługę eksperymentalną funkcji C ++ 20 takich jak moduły i procedur wspólnych. Aby uzyskać szczegółowe informacje, zobacz [ulepszenia zgodności języka C++ w Visual Studio 2019](../cpp-conformance-improvements.md).
+- `/std:c++latest` Teraz opcja powoduje dołączenie funkcji C ++ 20, które nie są zawsze kompletne, łącznie z obsługą początkowej dla operatora 20 C ++ \<= > pojazdu ("kosmicznego") dla trzykierunkowe porównywanie.
 
 - Przełącznik kompilatora C++ `/Gm` jest już przestarzały. Rozważ wyłączenie `/Gm` przełącznika w skrypcie kompilacji, jeśli jest jawnie zdefiniowany. Jednakże można także zignorować ostrzeżenie o zakończeniu obsługi dla `/Gm`, ponieważ nie są traktowane jako błąd, gdy za pomocą "Traktuj ostrzeżenia jako błędy" (`/WX`).
+
+- Po rozpoczęciu MSVC implementowania funkcji z języka C ++ 20 standardowy projekt w obszarze `/std:c++latest` flagi `/std:c++latest` jest teraz niezgodna z `/clr` (wszystkie odmian) `/ZW`, i `/Gm`. W programie Visual Studio 2019 r, użyj `/std:c++17` lub `/std:c++14` tryby podczas kompilowania za pomocą `/clr`, `/ZW` lub `/Gm` (ale zobacz poprzedni punkt).
 
 - Prekompilowane nagłówki nie są już generowane domyślnie dla konsoli C++ i aplikacji klasycznych.
 
@@ -38,25 +34,17 @@ Lepsza analiza przy użyciu `/Qspectre` do udzielania pomocy środki zaradcze dl
 
 ## <a name="c-standard-library-improvements"></a>Ulepszenia standardowej biblioteki języka C++
 
-- [C++ 20 P0550R2 \(remove_cvref)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) zostało zakończone.
+- Implementacja dodatkowe funkcje języka C ++ 17 i C ++ biblioteki 20 i poprawność poprawki. Aby uzyskać szczegółowe informacje, zobacz [ulepszenia zgodności języka C++ w Visual Studio 2019](../cpp-conformance-improvements.md).
 
-- C ++ 17 \<charconv > została ulepszona to_chars() zmiennoprzecinkowe: najkrótszej chars_format::fixed jest 60 80% szybsze procesory, a chars_format::hex najkrótszej/dokładności zostało zakończone.
+- Clang-Format została zastosowana do C++ nagłówki standardowej biblioteki w celu zapewnienia lepszej czytelności.
 
-- Algorytmy więcej mieć zrównoleglona implementacje: is_sorted() is_sorted_until(), is_partitioned(), set_difference(), set_intersection(), is_heap(), is_heap_until().
+- Ponieważ program Visual Studio teraz obsługuje tylko mój kod dla C++, standardowej biblioteki nie musi już podać niestandardowy mechanizm `std::function` i `std::visit` aby osiągnąć ten sam efekt. Usunięcie tej maszyny w dużym stopniu nie ma żadnych efektów widoczny dla użytkownika, z tą różnicą, że kompilator nie generuje diagnostyki, które wskazują na problemy w wierszu 15732480 lub 16707566 z \<type_traits > lub \<wariantu >.
 
-- Ulepszenia `std::variant` się bardziej Optymalizator przyjazne, co lepiej wygenerowanego kodu. Wbudowanie kodu jest teraz znacznie lepiej korzystać z `std::visit`.
-
-- Zastosowaliśmy clang-format do nagłówków standardowej biblioteki języka C++ w celu zapewnienia lepszej czytelności.
-
-- Ulepszoną przepływność, gdy niektóre funkcje biblioteki standardowej są kompilowane przy użyciu `if constexpr`.
-
-- Zoptymalizowane pod kątem fizycznego projektu biblioteki standardowej w celu uniknięcia kompilowanie części biblioteki standardowej nie # dyrektywy #include Wycinanie w wysokości równej połowie czas kompilacji pusty plik, który zawiera tylko \<wektor >.
-
-## <a name="performancethroughput-fixes"></a>Wydajność/przepływności poprawki
+## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>Ulepszenia wydajności lub przepływności kompilator i standardową bibliotekę
 
 - Ulepszenia przepływności, w tym sposób konsolidator obsługi We/Wy, kompilacji i połącz czas tworzenia i scalanie typu PDB.
 
-- Dodano wsparcie podstawowe dla OpenMP SIMD wektoryzacji. Można je włączyć za pomocą nowego przełącznika CL `-openmp:experimental`. Ta opcja umożliwia oznaczony za pomocą pętli `#pragma omp simd` do potencjalnie zwektoryzowana. Nie jest gwarantowana wektoryzacji i pętli z adnotacjami, ale nie jest zwektoryzowana zostanie wyświetlone ostrzeżenie, zgłaszane. Klauzule SIMD, nie są obsługiwane, są one po prostu ignorowane zgłosił ostrzeżenie.
+- Dodano wsparcie podstawowe dla OpenMP SIMD wektoryzacji. Można je włączyć za pomocą nowego przełącznika kompilatora `-openmp:experimental`. Ta opcja umożliwia oznaczony za pomocą pętli `#pragma omp simd` do potencjalnie zwektoryzowana. Nie jest gwarantowana wektoryzacji i pętli z adnotacjami, ale nie jest zwektoryzowana zostanie wyświetlone ostrzeżenie, zgłaszane. Klauzule SIMD, nie są obsługiwane, są one po prostu ignorowane zgłosił ostrzeżenie.
 
 - Dodano nowy przełącznik wiersza polecenia wbudowanie `-Ob3`, która jest nieco bardziej agresywnego `-Ob2`. `-O2` (Optymalizuj dane binarne dla szybkości) nadal oznacza `-Ob2` domyślnie. Jeśli okaże się, kompilator wystarczająco agresywnie nie wbudowanych, należy wziąć pod uwagę przekazywanie `-O2 -Ob3`.
 
@@ -74,6 +62,32 @@ Lepsza analiza przy użyciu `/Qspectre` do udzielania pomocy środki zaradcze dl
 
   - Ulepszona Optymalizacja kodu za pomocą `memmove`, takich jak `std::copy` lub `std::vector` i `std::string` konstrukcji.
 
+- Zoptymalizowane pod kątem fizycznego projektu biblioteki standardowej w celu uniknięcia kompilowanie części biblioteki standardowej nie # dyrektywy #include Wycinanie w wysokości równej połowie czas kompilacji pusty plik, który zawiera tylko \<wektor >. W wyniku tej zmiany możesz może być konieczne dodanie # dyrektywy dla nagłówków, które zostały wcześniej pośrednio zawarte include. Na przykład, kod, który używa `std::out_of_range` teraz może być konieczne #include \<stdexcept >. Kod, który używa operatora wstawiania strumień może być konieczne #include \<ostream >. Korzyścią jest translacja tylko jednostek, które faktycznie przy użyciu \<stdexcept > lub \<ostream > składniki płacić przepływności kosztów do kompilowania ich.
+
+- `if constexpr` została zastosowana w większej liczbie miejsc w standardowej bibliotece ulepszoną przepływność i rozmiar zmniejszenie kodu podczas operacji kopiowania, permutacji, takich jak wstecznego i Obróć i biblioteki algorytmów równoległych. 
+
+- Standardowa biblioteka teraz używa wewnętrznie `if constexpr` zmniejszyć czasy kompilacji, nawet w tryb C ++ 14.
+
+- Dynamiczne łączenie wykrywania dla biblioteki algorytmów równoległych już środowisko uruchomieniowe przechowuje całą stronę tablicy wskaźników funkcji. Oznaczenie tej pamięci tylko do odczytu został uznany za nie są już odpowiednie ze względów bezpieczeństwa.
+
+- `std::thread`jego Konstruktor nie jest już oczekuje na uruchomienie wątku, a nie jest już wstawienia, wywołuje wiele warstw w funkcji, od podstawowej biblioteki języka C `_beginthreadex` i dostarczony obiekt możliwy do wywołania. Wcześniej `std::thread` 6 funkcje między put `_beginthreadex` i dostarczony obiekt możliwy do wywołania została zmniejszona do 3 tylko (2, które są po prostu `std::invoke`). To również rozwiązuje usterki zasłoniętej chronometrażu gdzie `std::thread`firmy powodujący zawieszanie konstruktora, jeśli zegar systemowy zmienione dokładnie w momencie `std::thread` został on utworzony.
+
+- Naprawiono regresję wydajności w `std::hash` , wprowadziliśmy podczas implementowania `std::hash<std::filesystem::path>`.
+
+- W kilku miejscach, w których korzysta teraz z biblioteki standardowej destruktory zamiast efektywnej bloków, aby osiągnąć poprawności. Skutkuje to lepszej interakcji debuger; wyjątki, które throw za pomocą biblioteki standardowej, w których to dotyczy lokalizacji będą teraz wyświetlane jako zgłaszane z ich oryginalnego lokalizacją throw, a nie naszych Zgłoś ponownie. Nie wszystkie bloki catch standardowej biblioteki zostały wyeliminowane; Oczekujemy, że liczba bloków catch obniżenie w kolejnych wersjach MSVC.
+
+- Suboptymalny generowanie kodu w `std::bitset` spowodowane przez warunkowe throw wewnątrz noexcept funkcji został naprawiony, uwzględniając zgłaszanie ścieżkę.
+
+- `std::list` i `std::unordered_*` rodziny korzystanie z Iteratory debugowanie w wielu miejscach.
+
+- Kilka `std::list` elementy członkowskie zostały zmienione na ponowne użycie listy węzłów, jeśli jest to możliwe, zamiast cofanie przydziału i zmienianie ich alokacji. Na przykład, biorąc pod uwagę `list<int>` już o rozmiarze 3, wywołanie `assign(4, 1729)` teraz zastąpić liczby całkowite w pierwszym węzłów listy 3 i przydzielić jeden nowy węzeł listy z wartością 1729, zamiast dealokowanie wszystkie listy 3 węzły, a następnie przydzielanie 4 nowe listy węzłów s wartością 1729.
+
+- Wszystkie wywołania biblioteki standardowej `erase(begin(), end())` zostały zmienione na `clear()`.
+
+- `std::vector` teraz jest inicjowany i usuwa elementy efektywniej w niektórych przypadkach.
+
+- Ulepszenia `std::variant` się bardziej Optymalizator przyjazne, co lepiej wygenerowanego kodu. Wbudowanie kodu jest teraz znacznie lepiej korzystać z `std::visit`.
+
 ## <a name="c-ide"></a>Środowisko IDE języka C++
 
 ### <a name="live-share-c-support"></a>Na żywo obsługi języka C++ udziału
@@ -82,7 +96,7 @@ Lepsza analiza przy użyciu `/Qspectre` do udzielania pomocy środki zaradcze dl
 
 ### <a name="intellicode-for-c"></a>Rozszerzenie IntelliCode dla języka C++
 
-Rozszerzenie IntelliCode to opcjonalne rozszerzenie korzystającą z własną rozbudowane szkolenia i kontekst kodu put, co to są najbardziej prawdopodobne do użycia na początku listy uzupełnianej. Często można to wyeliminować potrzebę przewiń listę w dół. Dla języka C++ IntelliCode zawiera większość pomocy w przypadku przy użyciu popularnych bibliotek, takich jak biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [AI-Assisted kod zakończenia sugestie osiągnięcie C++ za pomocą IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/).
+Rozszerzenie IntelliCode to opcjonalna rozszerzenia (dodany jako składnik obciążenia 16.1), korzystającą z własną rozbudowane szkolenia i kontekst kodu put, co to są najbardziej prawdopodobne do użycia na początku listy uzupełnianej. Często można to wyeliminować potrzebę przewiń listę w dół. Dla języka C++ IntelliCode zawiera większość pomocy w przypadku przy użyciu popularnych bibliotek, takich jak biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [AI-Assisted kod zakończenia sugestie osiągnięcie C++ za pomocą IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/).
 
 ### <a name="template-intellisense"></a>Szablon funkcji IntelliSense
 
@@ -112,7 +126,19 @@ Visual Studio 2019 obejmuje następujące funkcje, które ułatwi kodowania łat
 
 Aby uzyskać więcej informacji, zobacz [udoskonalenia dotyczące produktywności języka C++ w programie Visual Studio 2019 r w wersji zapoznawczej 2](https://devblogs.microsoft.com/cppblog/c-productivity-improvements-in-visual-studio-2019-preview-2/).
 
+**Visual Studio 2019 version 16.1**
+
+### <a name="quickinfo-improvements"></a>Ulepszenia skrócone informacje
+
+Etykietki narzędzia Szybkie informacje uwzględnia teraz kolorowanie semantyczne edytora. Ponadto wprowadzono nową **Wyszukaj Online** łącze, które umożliwia wyszukiwanie dokumentów online dowiedzieć się więcej na temat konstrukcji kodu aktywowanego. Dla kodu graficzni red linku udostępnionego przez szybkie informacje wyszuka błąd w trybie online. Dzięki temu nie trzeba ponownie wpisz komunikat w przeglądarce. Aby uzyskać więcej informacji, zobacz [szybkie ulepszenia informacji w programie Visual Studio 2019 r.: Kolorowanie i wyszukaj w trybie Online](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/).
+
+### <a name="intellicode-available-in-c-workload"></a>Rozszerzenie IntelliCode dostępne w C++ obciążenia
+
+Rozszerzenie IntelliCode obecnie dostarczany jako opcjonalny składnik **programowanie aplikacji klasycznych przy użyciu C++**  obciążenia. Aby uzyskać więcej informacji, zobacz [Improved C++ IntelliCode jest teraz dostarczany z Visual Studio 2019](https://devblogs.microsoft.com/cppblog/).
+
 ## <a name="cmake-support"></a>Obsługa CMake
+
+- Obsługa CMake 3,14
 
 - Program Visual Studio teraz otworzyć istniejące narzędzia CMake pamięci podręcznych generowane przez zewnętrznych narzędzi, takich jak CMakeGUI, niestandardowej kompilacji meta systemów lub skrypty kompilacji, które wywołują cmake.exe samodzielnie.
 
@@ -136,9 +162,27 @@ Aby uzyskać więcej informacji, zobacz [udoskonalenia dotyczące produktywnośc
 
 - Nowy **kompilacji wszystkie** skrótu w menu **Ctrl + Shift + B**.
 
+**Visual Studio 2019 version 16.1**
+
+- Zintegrowana obsługa edycji, kompilowania i debugowania projektów CMake z wewnątrz platformy Clang/maszyny wirtualnej niskiego poziomu. Aby uzyskać więcej informacji, zobacz [Clang/LLVM obsługi w programie Visual Studio](https://devblogs.microsoft.com/cppblog/clang-llvm-support-in-visual-studio/).
+
+## <a name="linux-and-wsl"></a>Linux i WSL
+
+**Visual Studio 2019 version 16.1**
+
+- Obsługa [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) w projektach dla wielu platform Linux i narzędzia CMake. Aby uzyskać więcej informacji, zobacz [AddressSanitizer (ASan) w przypadku obciążeń systemu Linux w programie Visual Studio 2019](https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-the-linux-workload-in-visual-studio-2019/).
+
+- Zintegrowana obsługa programu Visual Studio przy użyciu C++ z podsystemu Windows dla systemu Linux (WSL). Aby uzyskać więcej informacji, zobacz [ C++ za pomocą programu Visual Studio 2019 r i podsystemu Windows dla systemu Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
+
+## <a name="incredibuild-integration"></a>IncrediBuild integracji
+
+IncrediBuild jest dołączone jako składnik opcjonalny w **programowanie aplikacji klasycznych przy użyciu C++**  obciążenia. Monitor kompilacji IncrediBuild jest w pełni zintegrowana w środowisku IDE programu Visual Studio. Aby uzyskać więcej informacji, zobacz [wizualizować kompilacji za pomocą monitora kompilacji i Visual Studio 2019 r firmy IncrediBuild](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
+ 
 ## <a name="debugging"></a>Debugowanie
 
 - Dla aplikacji C++ z systemem Windows pliki PDB teraz załadować w oddzielnym procesie 64-bitowych. Ta zmiana dotyczy szeroką gamę awarie spowodowane przez debuger brakować pamięci podczas debugowania aplikacji, które zawierają dużą liczbę moduły i pliki PDB.
+
+- Wyszukiwanie jest włączone w **Obejrzyj**, **Autos**, i **lokalne** systemu windows.
 
 ## <a name="windows-desktop-development-with-c"></a>Programowanie aplikacji klasycznych Windows w języku C++
 
@@ -178,6 +222,10 @@ Składnik eksperymentalne Clang/C2 zostało usunięte. Zestaw narzędzi MSVC na 
 - Zaktualizowany częściową implementację programu [sprawdzania profilu okres istnienia](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/), który wykrywa delegujące wskaźników i odwołań. Aby uzyskać więcej informacji, zobacz [okres istnienia Profile Update w wersji 2 (wersja zapoznawcza) 2019 r w usłudze Visual Studio](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/).
 
 - Powiązane w koprocedury sprawdzeń, m.in. C26138 C26810, C26811 i reguły eksperymentalne C26800. Aby uzyskać więcej informacji, zobacz [nowy kod analizy sprawdza, czy w programie Visual Studio 2019: Użyj po przenoszenia i wspólną](https://devblogs.microsoft.com/cppblog/new-code-analysis-checks-in-visual-studio-2019-use-after-move-and-coroutine/).
+
+**Visual Studio 2019 version 16.1**
+
+Nowe szybkich poprawek dla niezainicjowanej zmiennej. Aby uzyskać więcej informacji, zobacz [nowy kod analizy szybkich poprawek dla niezainicjowanej pamięci (C6001) i użyj przed ostrzeżenia init (C26494)](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/).
 
 ## <a name="unit-testing"></a>Testowanie jednostek
 

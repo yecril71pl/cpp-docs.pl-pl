@@ -1,18 +1,18 @@
 ---
 title: '/ Zc: alignednew (c ++ 17 nadmiernie wyrównana alokacja)'
-ms.date: 02/28/2018
+ms.date: 05/18/2019
 f1_keywords:
 - /Zc:alignedNew
 helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: e0d850d54611579288b81a334af4abdfab6e411c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfcc4982e1b5f67b5a01d5a0d09d4fd9279deacf
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315803"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934182"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/ Zc: alignednew (c ++ 17 nadmiernie wyrównana alokacja)
 
@@ -20,13 +20,15 @@ Włącz obsługę standardu C ++ 17 nadmiernie wyrównanych **nowe**, dynamiczne
 
 ## <a name="syntax"></a>Składnia
 
-> **/ Zc: alignednew**[-]
+> **/ Zc:alignedNew**\[-]
 
 ## <a name="remarks"></a>Uwagi
 
-Program Visual Studio w wersji 15.5 umożliwia kompilatora i obsługa bibliotek dla języka C ++ 17 standardowa nadmiernie wyrównanych dynamicznej alokacji pamięci. Gdy **/Zc: alignednew** opcja jest określona, dynamicznej alokacji, takie jak `new Example;` szanuje wyrównanie *przykład* nawet jeśli jest większa niż `max_align_t`, największemu wyrównaniu wymagane dla wszystkich typów podstawowych. Po nie więcej niż gwarantowane przez operatora, oryginalnym wyrównanie typu przydzielonego **nowe**, która jest dostępna jako wartość wstępnie zdefiniowane makro  **\_ \_STDCPP\_domyślne \_NEW\_WYRÓWNANIE\_\_**, instrukcja `new Example;` powoduje wywołanie `::operator new(size_t)` tak jak w języku C ++ 14. Gdy wyrównania jest większa niż  **\_ \_STDCPP\_domyślne\_nowy\_WYRÓWNANIE\_\_**, implementacja zamiast tego uzyskuje pamięć przy użyciu `::operator new(size_t, align_val_t)`. Podobnie, wywołuje usuwania typów nadmiernie wyrównanych `::operator delete(void*, align_val_t)` lub wielkości Usuń podpis `::operator delete(void*, size_t, align_val_t)`.
+Kompilator MSVC i bibliotekę obsługuje C ++ 17 standardowa nadmiernie wyrównanych dynamicznej alokacji pamięci. Gdy **/Zc: alignednew** opcja jest określona, dynamicznej alokacji, takie jak `new Example;` szanuje wyrównanie *przykład* nawet jeśli jest większa niż `max_align_t`, największemu wyrównaniu wymagane dla wszystkich typów podstawowych. Gdy wyrównanie przydzielonego typu nie jest większy niż wyrównanie gwarantowane przez operatora, oryginalnym **nowe**, która jest dostępna jako wartość wstępnie zdefiniowane makro  **\_ \_STDCPP\_ DOMYŚLNE\_NEW\_WYRÓWNANIE\_\_**, instrukcja `new Example;` powoduje wywołanie `::operator new(size_t)` tak jak w języku C ++ 14. Gdy wyrównania jest większa niż  **\_ \_STDCPP\_domyślne\_nowy\_WYRÓWNANIE\_\_**, implementacja zamiast tego uzyskuje pamięć przy użyciu `::operator new(size_t, align_val_t)`. Podobnie, wywołuje usuwania typów nadmiernie wyrównanych `::operator delete(void*, align_val_t)` lub wielkości Usuń podpis `::operator delete(void*, size_t, align_val_t)`.
 
-**/Zc: alignednew** opcja jest dostępna tylko podczas [/STD: c ++ 17](std-specify-language-standard-version.md) lub [/STD: c ++ najnowsze](std-specify-language-standard-version.md) jest włączona. W obszarze **/STD: c ++ 17** lub **/STD: c ++ najnowsze**, **/Zc: alignednew** jest domyślnie włączona, aby były zgodne z normą ISO w standardzie C ++ 17. Jeśli tylko przyczyny implementuje operatora **nowe** i **Usuń** służy do obsługi alokacje nadmiernie wyrównanych, już nie potrzebujesz tego kodu w trybie C ++ 17. Aby wyłączyć tę opcję i powrócić do języka C ++ 14 zachowanie **nowe** i **Usuń** podczas **/std::c ++ 17** lub **/STD: c ++ najnowsze** jest określony, Określ **/Zc:alignedNew-**. W przypadku zastosowania operatora **nowe** i **Usuń** , ale nie jest jeszcze gotowa do zaimplementowania nadmiernie wyrównanych operator **nowe** i **Usuń** przeciążenia, które mają `align_val_t` parametru, użyj **/Zc:alignedNew-** opcję, aby uniemożliwić wygenerowanie przez kompilator i standardową bibliotekę wywołania przeciążenia nadmiernie wyrównana. [/ Permissive-](permissive-standards-conformance.md) opcja nie powoduje zmiany domyślne ustawienie **/Zc: alignednew**.
+**/Zc: alignednew** opcja jest dostępna tylko podczas [/STD: c ++ 17](std-specify-language-standard-version.md) lub [/STD: c ++ najnowsze](std-specify-language-standard-version.md) jest włączona. W obszarze **/STD: c ++ 17** lub **/STD: c ++ najnowsze**, **/Zc: alignednew** jest domyślnie włączona, aby były zgodne z normą ISO w standardzie C ++ 17. Jeśli tylko przyczyny implementuje operatora **nowe** i **Usuń** służy do obsługi alokacje nadmiernie wyrównanych, już nie potrzebujesz tego kodu w trybie C ++ 17. Aby wyłączyć tę opcję i powrócić do języka C ++ 14 zachowanie **nowe** i **Usuń** zastosowania **/std::c ++ 17** lub **/STD: c ++ najnowsze**, Określ **/Zc:alignedNew-**. W przypadku zastosowania operatora **nowe** i **Usuń** , ale których nie jesteś gotowy do zaimplementowania nadmiernie wyrównanych operator **nowe** i **Usuń** przeciążenia, które mają `align_val_t` parametru, użyj **/Zc:alignedNew-** opcję, aby uniemożliwić wygenerowanie przez kompilator i standardową bibliotekę wywołania przeciążenia nadmiernie wyrównana. [/ Permissive-](permissive-standards-conformance.md) opcji nie zmienia domyślne ustawienie **/Zc: alignednew**.
+
+Obsługa **/Zc: alignednew** jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.5.
 
 ## <a name="example"></a>Przykład
 
