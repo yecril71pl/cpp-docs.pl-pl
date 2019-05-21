@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89e6d972fbecb2674e6343bf6d11f9972c25c63d
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351511"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975035"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier — Klasa
 
@@ -82,7 +82,7 @@ Powoduje, że wszystkie wątki w grupie wątku (fragment), aby zatrzymać wykony
 void wait() const restrict(amp);
 ```
 
-## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence —
+## <a name="wait_with_all_memory_fence"></a> wait_with_all_memory_fence —
 
 Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Zapewnia to, że wszystkie dostępy do pamięci są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.
 
@@ -92,7 +92,7 @@ Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki 
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence
+## <a name="a-namewaitwithglobalmemoryfence-waitwithglobalmemoryfence"></a><a name="wait_with_global_memory_fence"> wait_with_global_memory_fence —
 
 Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Zapewnia to, że wszystkie dostępy do pamięci globalnej są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.
 
@@ -102,7 +102,7 @@ Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki 
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
+## <a name="a-namewaitwithtilestaticmemoryfence-waitwithtilestaticmemoryfence"></a><a name="wait_with_tile_static_memory_fence"> wait_with_tile_static_memory_fence —
 
 Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Gwarantuje to, że `tile_static` pamięci uzyskuje dostęp do są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.
 
