@@ -1,14 +1,14 @@
 ---
 title: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio
 description: Jak konfigurować, edytowanie i kompilowanie projektu CMake systemu Linux w programie Visual Studio
-ms.date: 05/03/2019
+ms.date: 05/21/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: a619625bff2cd84db63d58cdceb4d2df98613d2a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e2cda5e9b942342cca035c48054aadb5425b69cf
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222275"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174774"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
@@ -152,9 +152,9 @@ Aby uzyskać większą kontrolę, można użyć tych opcjonalnych ustawień:
 
 ```json
 {
-      "remotePreBuildCommand": "",
+      "remotePrebuildCommand": "",
       "remotePreGenerateCommand": "",
-      "remotePostBuildCommand": "",
+      "remotePostbuildCommand": "",
 }
 ```
 

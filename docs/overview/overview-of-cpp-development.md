@@ -6,47 +6,48 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 18d13fa74554e2cb37c02bc0e5a00443e7813798
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 54ed590122f1eb914ff039378914a1fd4adc5f10
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64876885"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174771"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Omówienie programowania w języku C++ w programie Visual Studio
 
-W ramach programu zintegrowanego rozwoju środowiska (IDE) Visual Studio C++ firmy Microsoft (MSVC) udostępnia wiele systemu windows i narzędzia wspólnych innych języków. Wiele z nich w tym **Eksploratora rozwiązań**, Edytor kodu i debugera, opisano w [środowiska IDE programu Visual Studio](/visualstudio/get-started/visual-studio-ide). Często udostępnione narzędzia lub okno ma nieco inny zestaw funkcji dla języka C++ niż dla języków .NET lub JavaScript. Kilka systemu windows lub narzędzi są dostępne tylko w wersjach programu Visual Studio Professional lub Visual Studio Enterprise.
+W ramach programu zintegrowanego rozwoju środowiska (IDE) Visual Studio C++ firmy Microsoft (MSVC) udostępnia wiele systemu windows i narzędzia wspólnych innych języków. Wiele z nich w tym **Eksploratora rozwiązań**, Edytor kodu i debugera, opisano w [środowiska IDE programu Visual Studio](/visualstudio/get-started/visual-studio-ide). Często udostępnionych narzędzi lub okna jest nieco inny zestaw funkcji dla C++ niż w przypadku innych języków. Kilka systemu windows lub narzędzi są dostępne tylko w wersjach programu Visual Studio Professional lub Visual Studio Enterprise.
 
 Oprócz narzędzi udostępnionych w programie Visual Studio IDE MSVC ma kilka narzędzi specjalnie do tworzenie kodu natywnego. Te narzędzia są również wyszczególnione w tym artykule. Aby uzyskać listę narzędzi są dostępne w każdej wersji programu Visual Studio, zobacz [C++ narzędzia i funkcje w wersji programu Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md).
 
 ## <a name="create-projects"></a>Tworzenie projektów
 
-A *projektu* zasadniczo jest to zbiór plików kodu źródłowego i zasoby, takie jak obrazy lub dane plików, które są wbudowane w plik wykonywalny.
+A *projektu* zasadniczo jest to zbiór plików kodu źródłowego i zasoby, takie jak obrazy lub dane plików, które są wbudowane w program wykonywalny lub biblioteka.
 
-Program Visual Studio zapewnia obsługę dla dowolnego systemu kompilacji lub niestandardowych narzędzi kompilacji, które mają być używane z pełnym wsparciem dla funkcji IntelliSense, przeglądanie i debugowania:
+Program Visual Studio zapewnia obsługę dla dowolnego systemu projektu lub niestandardowych narzędzi kompilacji, które mają być używane z pełnym wsparciem dla funkcji IntelliSense, przeglądanie i debugowania:
 
-- **Program MSBuild** jest natywnym system kompilacji dla programu Visual Studio. Po wybraniu **pliku** > **New** > **projektu** z menu głównego, zobacz wiele rodzajów MSBuild *szablony projektów*  , rozpoczęcie pracy, szybkie tworzenie różnych rodzajów aplikacji w języku C++.
+- **Program MSBuild** to system natywnego projektu dla programu Visual Studio. Po wybraniu **pliku** > **New** > **projektu** z menu głównego, zobacz wiele rodzajów MSBuild *szablony projektów*  , rozpoczęcie pracy, szybkie tworzenie różnych rodzajów aplikacji w języku C++.
 
-::: moniker range="vs-2019"
+   ::: moniker range="vs-2019"
 
    ![Nowe szablony projektów](../build/media/mathclient-project-name-2019.png "Visual Studio 2019 nowego projektu okna dialogowego")
 
-::: moniker-end
+   ::: moniker-end
 
-::: moniker range="<=vs-2017"
+   ::: moniker range="<=vs-2017"
 
    ![Szablony projektów](media/vs2017-new-project.png "programu Visual Studio 2017 nowego projektu okna dialogowego")
 
-::: moniker-end
+   ::: moniker-end
 
-   Ogólnie rzecz biorąc należy używać tych szablonów dla nowych projektów, chyba że masz powód, aby użyć narzędzia CMake lub innego systemu projektu. Niektóre projekty zostały *kreatora* który prowadzi użytkownika krok po kroku przez proces tworzenia nowego projektu. Aby uzyskać więcej informacji, zobacz [tworzenie i zarządzanie projektami opartych na platformie MSBuild](../build/creating-and-managing-visual-cpp-projects.md).
+   Ogólnie rzecz biorąc należy używać tych szablonów dla nowych projektów, chyba że w przypadku korzystania z istniejących projektów CMake lub korzystasz z innego projektu systemu. Aby uzyskać więcej informacji, zobacz [tworzenie i zarządzanie projektami opartych na platformie MSBuild](../build/creating-and-managing-visual-cpp-projects.md).
 
-- **Narzędzie CMake** to międzyplatformowa kompilacji system, który jest zintegrowana w środowisku IDE programu Visual Studio, po zainstalowaniu programowanie aplikacji klasycznych w języku C++. Aby uzyskać więcej informacji, zobacz [projektów CMake w programie Visual Studio](../build/cmake-projects-in-visual-studio.md).
+- **Narzędzie CMake** to międzyplatformowa kompilacji system, który jest zintegrowana w środowisku IDE programu Visual Studio, po zainstalowaniu programowanie aplikacji klasycznych w języku C++. Możesz użyć szablonu projektu narzędzia CMake dla nowych projektów lub po prostu otwórz folder z plikiem CMakeLists.txt. Aby uzyskać więcej informacji, zobacz [projektów CMake w programie Visual Studio](../build/cmake-projects-in-visual-studio.md).
+
 - Wszystkie inne C++ kompilacji systemu, w tym luźne zbiór plików, jest świadczona za pośrednictwem **Otwórz Folder** funkcji. Możesz utworzyć proste pliki w formacie JSON do wywołania programu kompilacji i konfigurowania sesji debugowania. Aby uzyskać więcej informacji, zobacz [Otwórz Folder projektów w języku C++](../build/open-folder-projects-cpp.md).
 
 ## <a name="add-to-source-control"></a>Dodaj do kontroli źródła
 
-Kontrola źródła umożliwia koordynować pracę między wielu deweloperów, organizowanie pracy w toku z kodu produkcyjnego i utworzyć kopię zapasową kodu źródłowego. Program Visual Studio obsługuje Git i [Team Foundation Version Control \(TFVC\) ](/azure/devops/repos/tfvc/) za pośrednictwem jego **Team Explorer** okna.
+Kontrola źródła umożliwia koordynować pracę między wielu deweloperów, organizowanie pracy w toku z kodu produkcyjnego i utworzyć kopię zapasową kodu źródłowego. Program Visual Studio obsługuje Git i [Team Foundation Version Control \(TFVC\) ](/azure/devops/repos/tfvc/) za pośrednictwem jego **Team Explorer** okna. 
 
 ::: moniker range="vs-2019"
 
@@ -61,6 +62,10 @@ Kontrola źródła umożliwia koordynować pracę między wielu deweloperów, or
 ::: moniker-end
 
 Aby uzyskać więcej informacji na temat integracji usługi Git z repozytoriami na platformie Azure, zobacz [udostępnić swój kod za pomocą programu Visual Studio 2017 i Azure repozytoriów Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017). Aby uzyskać informacji na temat integracji usługi Git za pomocą usługi GitHub, zobacz [rozszerzeniu GitHub Extension for Visual Studio](https://visualstudio.github.com/).
+
+## <a name="obtain-libraries"></a>Uzyskiwanie bibliotek
+
+Użyj [vcpkg](../build/vcpkg.md) Menedżera pakietów do zainstalowania bibliotek innych firm. Ponad 900 typu open-source biblioteki są obecnie dostępne w wykazie.
 
 ## <a name="create-user-interfaces-with-designers"></a>Tworzenie interfejsów użytkownika za pomocą projektantów
 
@@ -78,9 +83,7 @@ Po utworzeniu projektu, wszystkie pliki projektu są wyświetlane w **Eksplorato
 
 ![Eksplorator rozwiązań i Edytor kodu](media/vs2017-solution-explorer-code-editor.png "edytora Visual Studio 2017 oknie Solution Explorer i kodu")
 
-Edytor kodu jest wyspecjalizowane edytora tekstu do kodu źródłowego języka C++. Jego color-codes słowa kluczowe języka, metody i nazw zmiennych i innych elementów kodu, aby kod bardziej czytelne i łatwiejsze do zrozumienia.
-
-Aby uzyskać więcej informacji, zobacz [pisanie i Refaktoryzacja kodu](../ide/writing-and-refactoring-code-cpp.md).
+Edytor kodu jest wyspecjalizowane edytora tekstu do kodu źródłowego języka C++. Jego color-codes słowa kluczowe języka, metody i nazw zmiennych i innych elementów kodu, aby kod bardziej czytelne i łatwiejsze do zrozumienia. Zapewnia również narzędzia refaktoryzacji kodu, nawigowanie między różnych plików i zrozumienie struktury kodu. Aby uzyskać więcej informacji, zobacz [pisanie i Refaktoryzacja kodu](../ide/writing-and-refactoring-code-cpp.md).
 
 ## <a name="add-and-edit-resources"></a>Dodawanie i edytowanie zasobów
 
@@ -94,7 +97,7 @@ Wybierz **kompilacji** > **Kompiluj rozwiązanie** menu paska lub wprowadź komb
 
 ![Dane wyjściowe okna i lista błędów](media/vs2017-output-error-list.png "okna programu Visual Studio 2017 w danych wyjściowych i lista błędów")
 
-Aby uzyskać więcej informacji o konfiguracjach MSBuild, zobacz [Praca z właściwościami projektu](../build/working-with-project-properties.md) i [projektów i systemów kompilacji](../build/projects-and-build-systems-cpp.md).
+Aby uzyskać więcej informacji o konfigurowaniu kompilacji, zobacz [Praca z właściwościami projektu](../build/working-with-project-properties.md) i [projektów i systemów kompilacji](../build/projects-and-build-systems-cpp.md).
 
 Można również użyć kompilatora (cl.exe) i wiele innych autonomiczny dotyczące kompilacji narzędzi takich jak NMAKE i LIB bezpośrednio z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
 
@@ -108,7 +111,7 @@ Aby uzyskać więcej informacji, zobacz [debugowania w programie Visual Studio](
 
 ## <a name="test"></a>Test
 
-Program Visual Studio obejmuje struktur testów jednostek dla obu native C++ i C++sposób niezamierzony. Boost.Test platformy Google Test i narzędzia CTest są również obsługiwane. Uruchom testy z **Eksplorator testów** okna:
+Program Visual Studio obejmuje środowisko testów jednostkowych Microsoft dla C++, a także obsługę Boost.Test, platformy Google Test i narzędzia CTest. Uruchom testy z **Eksplorator testów** okna:
 
 ![Test Explorer](media/cpp-test-explorer-passed.png "Visual Studio 2017 Test Explorer")
 

@@ -3,7 +3,7 @@
 # [Przewodnik: tworzenie aplikacji klasycznych systemu Windows](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Kreator aplikacji klasycznej systemu Windows](win32-application-wizard.md)
 # [Biblioteka aktywnych szablonów (Active Template Library — ATL)](../atl/atl-com-desktop-components.md)
-# [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
+# [Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)
 # [Wspólne klasy ATL i MFC](../atl-mfc-shared/TOC.md)
 # [Dostęp do danych](../data/data-access-in-cpp.md)
 # [Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)

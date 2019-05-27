@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156110"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174803"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -69,7 +69,7 @@ Te stałe manifestu są zdefiniowane w \<fcntl.h >:
 | **\_O\_TEXT** | Otwiera plik w trybie tekstowym (tłumaczonym). |
 | **\_O\_WTEXT** | Otwiera plik w trybie Unicode (przetłumaczone UTF-16). |
 
-**_Open_osfhandle —** wywołanie tym przenosi własność dojście do pliku systemu Win32 do deskryptora pliku. Aby zamknąć pliku otwartego przy użyciu **_open_osfhandle —**, wywołaj [ \_Zamknij](close.md). Dojście do pliku podstawowego systemu operacyjnego jest również zamknięty przez wywołanie **_zamknij**, więc nie jest konieczne wywołać funkcję Win32 **funkcja CloseHandle** w dojściu do oryginalnego. Jeżeli deskryptor pliku jest własnością **pliku &#42;**  strumienia, następnie wywoływania [fclose —](fclose-fcloseall.md) na tym **pliku &#42;**  strumień zostanie zamknięty deskryptor pliku i podstawowego dojścia. W tym przypadku nie wywołuj **_zamknij** na deskryptor pliku.
+**_Open_osfhandle —** wywołanie tym przenosi własność dojście do pliku systemu Win32 do deskryptora pliku. Aby zamknąć pliku otwartego przy użyciu **_open_osfhandle —**, wywołaj [ \_Zamknij](close.md). Dojście do pliku podstawowego systemu operacyjnego jest również zamknięty przez wywołanie **_zamknij**. Nie wywołuj funkcję Win32 **funkcja CloseHandle** w dojściu do oryginalnego. Jeżeli deskryptor pliku jest własnością **pliku &#42;**  strumienia, a następnie wywołania [fclose —](fclose-fcloseall.md) na tym **pliku &#42;**  strumień zostanie zamknięty, deskryptor pliku i podstawowych dojście. W tym przypadku nie wywołuj **_zamknij** na deskryptor pliku lub **funkcja CloseHandle** w dojściu do oryginalnego.
 
 ## <a name="requirements"></a>Wymagania
 

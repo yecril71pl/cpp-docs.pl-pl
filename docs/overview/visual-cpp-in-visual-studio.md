@@ -1,18 +1,18 @@
 ---
 title: Język C++ w programie Visual Studio
 description: Visual C++ jest to nazwa dla kompilatora Microsoft C++, Edytor kodu i pokrewnych narzędzi w programie Visual Studio IDE. Visual C++ umożliwia opracowywanie programów dla Windows, Linux, Android i iOS.
-ms.date: 05/13/2019
+ms.date: 05/14/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: e9327f74f46590f4d4a71e56340dcadf6527fabb
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934151"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174783"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
@@ -45,10 +45,10 @@ Dowiedz się więcej o przełomowych zmianach w poprzednich wersjach.
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Zainstaluj program Visual Studio oraz uaktualnienia ze starszych wersji
 
 [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md)<br/>
-Pobierz program Visual Studio 2015 lub Visual Studio 2017 i zainstaluj zestaw narzędzi Visual C++.
+Pobierz program Visual Studio 2017 lub Visual Studio 2019 r i zainstaluj wizualizację C++ zestawu narzędzi.
 
 [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-Wskazówki dotyczące przenoszenia kodu i uaktualnianie projektów programu Visual Studio 2015 lub Visual Studio 2017, m.in. przenoszenie kodu C++ do systemu Windows 10 i uniwersalnych platformy Windows.
+Wskazówki dotyczące przenoszenia kodu i uaktualnianie projektów programu Visual Studio 2015 lub nowszym z zalet większą zgodność kompilatora C++ standardowa, a także czasy kompilacji znacznie lepsze i funkcje zabezpieczeń, takie jak zaradcze dla luki Spectre.
 
 [Narzędzia i funkcje programu Visual C++ w wydaniach programu Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Poznaj różne wersje Visual Studio.
@@ -59,7 +59,7 @@ Dowiedz się, które platformy są obsługiwane.
 ## <a name="learn-c"></a>Dowiedz się, języka C++
 
 [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-Dowiedz się więcej o nowoczesnym języku C++, programowanie technik opartych na C ++ 11 i C ++ 14, które umożliwiają szybkie, pisanie bezpiecznego kodu i uniknąć wiele problemów programowania stylu C.
+Dowiedz się więcej o nowoczesnych C++ technikach oparty na C ++ 11 i nowszych, które pozwalają na szybkie, pisanie bezpiecznego kodu i uniknąć wiele problemów programowania stylu C programowania.
 
 [Standard C++](http://isocpp.org/)<br/>
 Dowiedz się o języku C++, uzyskaj omówienie nowoczesnego języka C++, znajdź łącza do książek, artykułów, rozmów i imprez
@@ -79,7 +79,7 @@ Jak używać programu Visual Studio IDE do tworzenia projektów, edytowania kodu
 Jak tworzyć i konfigurować projekty Visual Studio C++, projektów CMake i innych rodzajów projektów przy użyciu opcji kompilatora i konsolidatora MSVC.
 
 [Pisanie i Refaktoryzacja kodu w języku C++](../ide/writing-and-refactoring-code-cpp.md)<br/>
-W jaki sposób używać wydajność funkcji w edytorze języka C++, Refaktoryzacja, przejdź i pisanie kodu.
+Jak używać produktywność funkcje w C++ refaktoryzacji, przejście, zrozumieć i pisanie kodu w edytorze.
 
 [Debugowanie kodu natywnego](/visualstudio/debugger/debugging-native-code)<br/>
 Debuger programu Visual Studio za pomocą projektów w języku C++.
@@ -117,7 +117,7 @@ Dowiedz się, jak chronić aplikacje przed złośliwym kodem i bezprawnym użyci
 W języku C++ masz kilka opcji do łączenia się z sieci web i w chmurze.
 
 [Dostęp do danych](../data/data-access-in-cpp.md)<br/>
-Połączenie z bazami danych przy użyciu ODBC i innych technologii dostępu do bazy danych.
+Połączenie z bazami danych przy użyciu ODBC i OLE DB.
 
 [Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)<br/>
 Dowiedz się więcej na temat pracy z innym tekstem i formaty ciągu i kodowanie dla rozwoju lokalnych i międzynarodowych.

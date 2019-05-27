@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 2dccb1c2081996ce7336652b207f3a68b20a3f9e
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 3e9c3dcc02cb4307787f3e0baf5e99ac31b3d183
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975116"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174837"
 ---
 # <a name="run-time-object-model-services"></a>Usługi modelu obiektów czasu wykonywania
 
@@ -60,7 +60,7 @@ Określa, czy biblioteki formantów wspólnych implementuje określony interfejs
 
 ### <a name="syntax"></a>Składnia
 
-  ```
+```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
 
@@ -165,7 +165,7 @@ Zobacz przykład [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **Nagłówek:** afx.h
 
-## <a name="declare_olectltype"></a> declare_olectltype
+## <a name="declare_olectltype"></a> DECLARE_OLECTLTYPE
 
 Deklaruje `GetUserTypeNameID` i `GetMiscStatus` funkcji składowych klasy kontrolki.
 
@@ -188,7 +188,7 @@ Nazwa klasy kontrolki.
 
 **Nagłówek:** afxctl.h
 
-## <a name="a-namedeclareproppageids-declareproppageids"></a><a name="declare_proppageids"> declare_proppageids
+## <a name="declare_proppageids"></a> DECLARE_PROPPAGEIDS
 
 Deklaruje, że formant OLE zawiera listę stron właściwości, aby wyświetlić jego właściwości.
 
@@ -361,7 +361,7 @@ Identyfikator klasy OLE jest unikatowym identyfikatorem 128-bitowego dla obiektu
 
 **Nagłówek:** afxdisp.h
 
-## <a name="a-nameimplementolectltype-implementolectltype"></a><a name="implement_olectltype"> implement_olectltype
+## <a name="implement_olectltype"></a> IMPLEMENT_OLECTLTYPE
 
 Implementuje `GetUserTypeNameID` i `GetMiscStatus` funkcji składowych klasy kontrolki.
 
