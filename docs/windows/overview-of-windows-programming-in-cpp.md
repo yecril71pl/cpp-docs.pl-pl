@@ -2,12 +2,12 @@
 title: Omówienie programowania w systemie Windows w języku C++
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
-ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
+ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
+ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197739"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355567"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -101,7 +101,7 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 |[Kreator aplikacji klasycznej systemu Windows](windows-desktop-wizard.md)|Użyj kreatora, aby tworzyć nowe projekty Windows.|
 |[Biblioteka aktywnych szablonów (Active Template Library — ATL)](../atl/atl-com-desktop-components.md)|Biblioteka ATL służy do tworzenia składników modelu COM w języku C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|Używać klasy MFC do tworzenia aplikacji Windows duże lub małe za pomocą okien dialogowych i formantów|
-|[Wspólne klasy ATL i MFC](../atl-mfc-shared/TOC.md)|Użyj klas, takich jak CString, które są udostępniane w ATL i MFC.|
+|[Wspólne klasy ATL i MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Użyj klas, takich jak CString, które są udostępniane w ATL i MFC.|
 |[Dostęp do danych](../data/data-access-in-cpp.md)| OLE DB i ODBC|
 |[Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)|Różne typy parametrów na Windows.|
 |[Zasoby służące do tworzenia gier za pomocą programu DirectX](resources-for-creating-a-game-using-directx.md)
