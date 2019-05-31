@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348695"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450835"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -153,7 +153,7 @@ Jeśli chcesz obsługiwać komunikaty powiadomień Windows wysyłany przez kontr
 
 Każdy wpis mapy komunikatów ma następującą postać:
 
-**ON\_**_powiadomień_ **(** _identyfikator_, _memberFxn_ **)**
+**ON\_** _powiadomień_ **(** _identyfikator_, _memberFxn_ **)**
 
 gdzie *identyfikator* Określa identyfikator okna elementu podrzędnego kontrolki wysyłania powiadomienia i *memberFxn* nazywa się nadrzędny element członkowski funkcji zostały napisane do obsługi powiadomień.
 
@@ -808,7 +808,7 @@ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razi
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli formant łącza przycisk lub polecenie wymaga uprawnień zabezpieczeń z podwyższonym poziomem uprawnień do wykonania akcji, ustaw kontrolkę `elevation required` stanu. Następnie Windows wyświetla ikona tarczy kontroli konta użytkownika (UAC) w kontrolce. Aby uzyskać więcej informacji, zobacz "Kontrola konta użytkownika" w [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).
+Jeśli formant łącza przycisk lub polecenie wymaga uprawnień zabezpieczeń z podwyższonym poziomem uprawnień do wykonania akcji, ustaw kontrolkę `elevation required` stanu. Następnie Windows wyświetla ikona tarczy kontroli konta użytkownika (UAC) w kontrolce. Aby uzyskać więcej informacji, zobacz "Kontrola konta użytkownika" w [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
 Ta metoda wysyła [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) komunikat, który jest opisany w zestawie Windows SDK.
 

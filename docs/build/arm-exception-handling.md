@@ -2,12 +2,12 @@
 title: Obsługa wyjątków ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195358"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450482"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -21,7 +21,7 @@ EABI ARM (interfejsem binarnym aplikacji osadzonej) określa kodów odwinięcia 
 
 ### <a name="assumptions"></a>Założenia
 
-Obrazy wykonywalne dla Windows na ARM formatu przenośnego pliku wykonywalnego (PE). Aby uzyskać więcej informacji, zobacz [Microsoft PE i COFF specyfikacji](http://go.microsoft.com/fwlink/p/?linkid=84140). Wyjątek obsługi informacji znajduje się w sekcjach .pdata i .xdata obrazu.
+Obrazy wykonywalne dla Windows na ARM formatu przenośnego pliku wykonywalnego (PE). Aby uzyskać więcej informacji, zobacz [Microsoft PE i COFF specyfikacji](https://go.microsoft.com/fwlink/p/?linkid=84140). Wyjątek obsługi informacji znajduje się w sekcjach .pdata i .xdata obrazu.
 
 Mechanizm obsługi wyjątków sprawia, że niektóre założenia dotyczące kodu, który następuje dla interfejsu ABI Windows na ARM:
 

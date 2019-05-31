@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447707"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449616"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Błąd narzędzi konsolidatora LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-Aby naprawić ten błąd, zmień `unsigned short` do `wchar_t` lub `WCHAR`, lub Kompiluj LNK2019g.cpp przy użyciu **/Zc:wchar_t-**.
+Aby naprawić ten błąd, zmień `unsigned short` do `wchar_t` lub `WCHAR`, lub Kompiluj LNK2019g.cpp przy użyciu **/Zc:wchar_t-** .
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-Aby uzyskać więcej informacji na temat możliwych przyczyn i rozwiązań dla LNK2001 zobacz pytanie dotyczące przepełnienia stosu [co to jest błąd zewnętrzny symbol Niezdefiniowany odwołania/nierozpoznanych i jak go naprawić?](http://stackoverflow.com/q/12573816/2002113).
+Aby uzyskać więcej informacji na temat możliwych przyczyn i rozwiązań dla LNK2001 zobacz pytanie dotyczące przepełnienia stosu [co to jest błąd zewnętrzny symbol Niezdefiniowany odwołania/nierozpoznanych i jak go naprawić?](https://stackoverflow.com/q/12573816/2002113).
 

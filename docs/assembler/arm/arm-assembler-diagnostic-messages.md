@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167846"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449215"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Komunikaty diagnostyczne asemblera ARM
 
@@ -33,13 +33,13 @@ Asemblera ARM firmy Microsoft (*armasm*) emituje diagnostycznych ostrzeżenia i 
 
 ## <a name="syntax"></a>Składnia
 
-> <em>Nazwa pliku</em>**(**<em>numer wiersza</em>**):** \[ **błąd**|**ostrzeżenie** ] **A**<em>numer</em>**:** *wiadomości*
+> <em>Nazwa pliku</em> **(** <em>numer wiersza</em> **):** \[ **błąd**|**ostrzeżenie** ] **A**<em>numer</em> **:** *wiadomości*
 
 ## <a name="diagnostic-messages---errors"></a>Komunikaty diagnostyczne — błędy
 
 > A2193: Ta instrukcja generuje nieprzewidywalne zachowanie
 
-Architektura ARM nie może zagwarantować, co się dzieje podczas wykonywania tej instrukcji.  Aby uzyskać szczegółowe informacje o dobrze zdefiniowanych formularzy tej instrukcji, zapoznaj się [ARM architektury Reference Manual](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Architektura ARM nie może zagwarantować, co się dzieje podczas wykonywania tej instrukcji.  Aby uzyskać szczegółowe informacje o dobrze zdefiniowanych formularzy tej instrukcji, zapoznaj się [ARM architektury Reference Manual](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ W trybie ARM istnieje alternatywny składnia określająca stałe.  Zamiast pisa
 
 > A4509: Ta forma instrukcji warunkowych jest przestarzały.
 
-Ta forma instrukcji warunkowych została zastąpiona przez ARM w architekturze ARMv8. Firma Microsoft zaleca zmianę kod, aby użyć rozgałęzień warunkowych. Aby zobaczyć, które instrukcje warunkowe są nadal obsługiwane, zapoznaj się z [ARM architektury Reference Manual](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Ta forma instrukcji warunkowych została zastąpiona przez ARM w architekturze ARMv8. Firma Microsoft zaleca zmianę kod, aby użyć rozgałęzień warunkowych. Aby zobaczyć, które instrukcje warunkowe są nadal obsługiwane, zapoznaj się z [ARM architektury Reference Manual](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 To ostrzeżenie nie jest emitowane, kiedy **- oldit** przełącznik wiersza polecenia jest używany.
 

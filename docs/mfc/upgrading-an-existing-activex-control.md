@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57d94a51d9dfb78dfaf3a690c43c74a2d6ab6db3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180762"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450601"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego formantu ActiveX
 
@@ -181,7 +181,7 @@ Aby użyć licencjonowany formant ActiveX w programie Internet Explorer, należy
 
 - Użycie parametru bazy kodu
 
-Aby użyć licencjonowany formant na stronie HTML na maszynie nonlicensed, należy wygenerować plik pakiet licencji (LPK). Plik LPK zawiera licencji czasu wykonywania dla licencjonowane formanty na stronie HTML. Ten plik został wygenerowany za pomocą LPK_TOOL. Plik EXE, który jest dostarczany z zestawem SDK ActiveX. Aby uzyskać więcej informacji, zobacz witrynę sieci Web MSDN pod [ http://msdn.microsoft.com ](http://msdn.microsoft.com).
+Aby użyć licencjonowany formant na stronie HTML na maszynie nonlicensed, należy wygenerować plik pakiet licencji (LPK). Plik LPK zawiera licencji czasu wykonywania dla licencjonowane formanty na stronie HTML. Ten plik został wygenerowany za pomocą LPK_TOOL. Plik EXE, który jest dostarczany z zestawem SDK ActiveX. Aby uzyskać więcej informacji, zobacz witrynę sieci Web MSDN pod [ https://msdn.microsoft.com ](https://msdn.microsoft.com).
 
 #### <a name="to-create-an-lpk-file"></a>Aby utworzyć plik LPK
 
@@ -274,4 +274,4 @@ Przeglądarka ma opcji poziom bezpieczeństwa, które można konfigurować przez
 
 [MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)<br/>
-[Kontrolki ActiveX MFC: Licencjonowanie kontrolki ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
+[Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AdditionalOptionsPage
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
-ms.openlocfilehash: f42d99b5f1fab06c5de0b8e794009a4ac4291e0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62111141e40862f630b11e4f87f912497ab265b9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270171"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450901"
 ---
 # <a name="hlsl-property-pages"></a>Strony właściwości HLSL
 
@@ -27,10 +27,10 @@ Strony właściwości HLSL kompilatora (fxc.exe) umożliwiają skonfigurowanie i
 
    Udostępnia właściwości, aby określić, jak pliki są danymi wyjściowymi kompilatora HLSL.
 
-Należy określić argumenty wiersza polecenia kompilatora HLSL za pomocą **dodatkowe opcje** właściwość **wiersza polecenia** strona właściwości; obejmuje to argumenty, których nie można skonfigurować przy użyciu innych Właściwości strony właściwości HLSL. Aby dowiedzieć się, kompilator HLSL, zobacz [narzędzie kompilatora efektów.](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)
+Należy określić argumenty wiersza polecenia kompilatora HLSL za pomocą **dodatkowe opcje** właściwość **wiersza polecenia** strona właściwości; obejmuje to argumenty, których nie można skonfigurować przy użyciu innych Właściwości strony właściwości HLSL. Aby dowiedzieć się, kompilator HLSL, zobacz [narzędzie kompilatora efektów.](https://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja strony właściwości projektu C++](property-pages-visual-cpp.md)<br>
 [Strony właściwości wiersza polecenia](command-line-property-pages.md)<br>
-[Kompilowanie programów do cieniowania](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+[Kompilowanie programów do cieniowania](https://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

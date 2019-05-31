@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92226d8db9fa87ce829ae96b4802ad2f45bc3e54
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413992"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450187"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
 
@@ -126,7 +126,7 @@ Poniższa ilustracja przedstawia `Primes` aplikacji po każdej opcji została wy
 
 ![Środowisko uruchomieniowe Windows zapór aplikacji](../../parallel/concrt/media/concrt_windows_primes.png "Windows Runtime blokad aplikacji")
 
-Przykłady, które używają `create_async` do tworzenia zadań asynchronicznych, które mogą być wykorzystane przez innych języków, zobacz [przy użyciu języka C++ w przykładzie optymalizatora podróży w mapach Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) i [systemu Windows 8 operacji asynchronicznych w języku C++ z PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Przykłady, które używają `create_async` do tworzenia zadań asynchronicznych, które mogą być wykorzystane przez innych języków, zobacz [przy użyciu języka C++ w przykładzie optymalizatora podróży w mapach Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) i [systemu Windows 8 operacji asynchronicznych w języku C++ z PPL](https://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Kontrolowanie wątku wykonania
 

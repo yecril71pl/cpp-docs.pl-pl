@@ -1,18 +1,19 @@
 ---
-title: Ciągów i we / wy formatowanie (Modern C++)
-ms.date: 11/04/2016
+title: Formatowanie ciągów i we/wy (Modern C++)
+description: Opcje dla sformatowany ciąg dostępnych operacji We/Wy w nowoczesnym C++.
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22c745798109a2dbef82297c45256593823f806
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266923"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450502"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formatowanie ciągów i we/wy (Modern C++)
 
-C++ [iostreams](../standard-library/iostream.md) są w stanie sformatować ciąg we/wy. Na przykład poniższy kod przedstawia sposób ustawiania cout do formatowania liczby całkowitej w danych wyjściowych w formacie szesnastkowym, najpierw zapisując stan bieżący, a następnie później, ponieważ gdy stan formatowania zostanie przekazany do cout, pozostaje on w ten sposób, dopóki zmianie, nie tylko dla jednej linii kodu.
+C++[ \<iostream >](../standard-library/iostream.md) klasy, funkcje i operatory obsługuje sformatowany ciąg we/wy. Na przykład, poniższy kod przedstawia sposób ustawiania `cout` do formatowania liczby całkowitej w danych wyjściowych w formacie szesnastkowym. Po pierwsze, zapisuje bieżący stan zresetowanie go później, ponieważ po format stan jest przekazywany do `cout`, pozostaje on w ten sposób, dopóki nie zmieniony. Go nie dotyczy tylko jeden wiersz kodu.
 
 ```cpp
 #include <iostream>
@@ -38,17 +39,21 @@ int main()
 }
 ```
 
-Może to być zbyt kłopotliwe w wielu przypadkach. Jako alternatywę można użyć Boost.Format z biblioteki Boost C++, nawet jeśli nie jest to standardowe. Możesz pobrać każdą bibliotekę Boost z [Boost](http://www.boost.org/) witryny sieci Web.
+To podejście jest bezpieczne i rozszerzalne, ale również jest złożona i pełne.
 
-Niektóre zalety Boost.Format są:
+## <a name="alternative-format-options"></a>Opcje formatowania alternatywne
 
-- Bezpieczny: Bezpieczny i zgłasza wyjątek dla błędów — na przykład Specyfikacja zbyt małej lub zbyt wiele elementów.
+Alternatywnie, można użyć `Boost.Format` od zwiększenia wydajności C++ bibliotek, nawet jeśli nie jest to standardowe. Możesz pobrać każdą bibliotekę Boost z [Boost](https://www.boost.org/) witryny sieci Web.
+
+Niektóre zalety `Boost.Format` są:
+
+- Bezpieczny: Bezpieczny i zgłasza wyjątek dla błędów, na przykład Specyfikacja zbyt małej lub zbyt wiele elementów.
 
 - Rozszerzalne: Działa w przypadku dowolnego typu, który może być przesyłany strumieniowo.
 
 - Wygodne: Standard Posix i podobne ciągi formatów.
 
-Chociaż Boost.Format jest zbudowany na C++ [iostreams](../standard-library/iostream-programming.md), które są bezpieczne i rozszerzalne, nie są zoptymalizowane pod kątem wydajności. Jeśli potrzebujesz, aby zoptymalizować wydajność, należy wziąć pod uwagę C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), które są szybkie i łatwe w użyciu. Jednak nie są one rozszerzalne ani pozbawione luk w zabezpieczeniach. (Istnieją wersje bezpieczne, ale mogą spowodować zmniejszenie wydajności niewielkie. Aby uzyskać więcej informacji, zobacz [printf_s, _printf_s_l —, wprintf_s —, _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) i [sprintf_s —, _sprintf_s_l —, swprintf_s —, _swprintf_s_l —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
+Mimo że `Boost.Format` jest oparta na C++ [ \<iostream >](../standard-library/iostream-programming.md) urządzeń, które są bezpieczne i rozszerzalne, nie są zoptymalizowane pod kątem wydajności. Jeśli potrzebujesz, aby zoptymalizować wydajność, należy wziąć pod uwagę C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), które są szybkie i łatwe w użyciu. Jednak nie są one rozszerzalne ani pozbawione luk w zabezpieczeniach. (Istnieją wersje bezpieczne, ale mogą spowodować zmniejszenie wydajności niewielkie. Aby uzyskać więcej informacji, zobacz [printf_s, _printf_s_l —, wprintf_s —, _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) i [sprintf_s —, _sprintf_s_l —, swprintf_s —, _swprintf_s_l —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
 Poniższy kod ilustruje część zwiększenia funkcji formatowania.
 

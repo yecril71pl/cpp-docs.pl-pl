@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: a45cee1abd9351a8fef56769706fe8944a7965b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b68fe08fd77dfacd485ea61df7ab7af08e2f08
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154740"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450883"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-Jest to przykład problemu najbardziej irytującej interpretacji składni (Most Vexing Parse). Ponieważ wyrażenie przykładowe może być interpretowane jako deklaracja funkcji lub wywołanie konstruktora domyślnego i ponieważ analizatory składni języka C++ promują deklaracje w stosunku do innych obiektów, wyrażenie jest traktowane jako deklaracja funkcji. Aby uzyskać więcej informacji, zobacz [najbardziej irytująca Most vexing Parse](http://en.wikipedia.org/wiki/Most_vexing_parse).
+Jest to przykład problemu najbardziej irytującej interpretacji składni (Most Vexing Parse). Ponieważ wyrażenie przykładowe może być interpretowane jako deklaracja funkcji lub wywołanie konstruktora domyślnego i ponieważ analizatory składni języka C++ promują deklaracje w stosunku do innych obiektów, wyrażenie jest traktowane jako deklaracja funkcji. Aby uzyskać więcej informacji, zobacz [najbardziej irytująca Most vexing Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
 
 Jeśli zadeklarowano jakiekolwiek konstruktory inne niż domyślne, kompilator nie udostępnia domyślnego konstruktora:
 

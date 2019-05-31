@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: b5ddbadea4d16d7a76df332074ec5c80fae57eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414129"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450867"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution — Klasa
 
@@ -90,7 +90,7 @@ Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type
 
 Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat funkcji dyskretnych prawdopodobieństwo ROZKŁAD Bernoulli'ego, zobacz artykuł Wolfram MathWorld [rozkład Bernoulli'ego](http://go.microsoft.com/fwlink/p/?linkid=398467).
+Aby uzyskać szczegółowe informacje na temat funkcji dyskretnych prawdopodobieństwo ROZKŁAD Bernoulli'ego, zobacz artykuł Wolfram MathWorld [rozkład Bernoulli'ego](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
 ## <a name="example"></a>Przykład
 

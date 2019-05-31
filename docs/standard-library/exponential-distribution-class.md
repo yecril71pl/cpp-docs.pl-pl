@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: b419869785e9b6c2086ec6614363af3a3e12cb50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371572"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451245"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution — Klasa
 
@@ -88,7 +88,7 @@ Funkcja elementu członkowskiego właściwość `param()` Ustawia lub zwraca `pa
 
 Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat rozkład wykładniczy, zobacz artykuł Wolfram MathWorld [rozkład wykładniczy](http://go.microsoft.com/fwlink/p/?linkid=401098).
+Aby uzyskać szczegółowe informacje na temat rozkład wykładniczy, zobacz artykuł Wolfram MathWorld [rozkład wykładniczy](https://go.microsoft.com/fwlink/p/?linkid=401098).
 
 ## <a name="example"></a>Przykład
 

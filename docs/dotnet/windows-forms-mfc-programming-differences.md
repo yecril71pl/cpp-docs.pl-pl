@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 998485a3384512f57cf35fc264e2321fa0996728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 165c72b4f91073947d3914ae773e277cce192564
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384455"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449997"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Różnice w programowaniu Windows Forms/MFC
 
@@ -22,7 +22,7 @@ Jednak jeśli użytkownik jest przyzwyczajony do MFC, użytkownik może służy�
 
 Aby uzyskać więcej informacji o aplikacjach Windows Forms, zobacz [wprowadzenie do formularzy Windows Forms](/dotnet/framework/winforms/windows-forms-overview).
 
-Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
 Następujące widoku MFC lub dokumentu i funkcji routing poleceń ma odpowiedników w formularzach Windows:
 

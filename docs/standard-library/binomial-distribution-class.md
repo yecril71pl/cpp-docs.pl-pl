@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: 1cbb7aff254cee848d711b22414b38deee8cfc07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee61b79848a5649d44cf02384f32ad8e0226feb0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380224"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451108"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution — Klasa
 
@@ -98,7 +98,7 @@ Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type
 
 Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat funkcji dyskretnych prawdopodobieństwa rozkładu dwumianowego, zobacz artykuł Wolfram MathWorld [rozkład dwumianowy](http://go.microsoft.com/fwlink/p/?linkid=398469).
+Aby uzyskać szczegółowe informacje na temat funkcji dyskretnych prawdopodobieństwa rozkładu dwumianowego, zobacz artykuł Wolfram MathWorld [rozkład dwumianowy](https://go.microsoft.com/fwlink/p/?linkid=398469).
 
 ## <a name="example"></a>Przykład
 

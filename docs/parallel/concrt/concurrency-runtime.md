@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414012"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449685"
 ---
 # <a name="concurrency-runtime"></a>Współbieżność środowiska wykonawczego
 
@@ -63,7 +63,7 @@ Aby uzyskać dokumentację referencyjną, zobacz [odwołania](../../parallel/con
 |-|-|
 |[Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Opisano niektóre kluczowe punkty, których należy pamiętać, korzystając ze współbieżności środowiska wykonawczego do wygenerowania operacji asynchronicznych w aplikacji platformy uniwersalnej systemu Windows.|
 |[Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Pokazuje, jak łączyć zadania PPL z `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback` interfejsy do wysyłania żądań HTTP GET i POST do usługi sieci web w aplikacji platformy uniwersalnej systemu Windows.|
-|[Przykłady aplikacji Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Zawiera przykłady kodu do pobrania i wersji demonstracyjnej aplikacji dla Windows 8.x. Przykłady języka C++ Użyj funkcji środowiska uruchomieniowego współbieżności, takich jak zadania PPL do przetwarzania danych w tle, aby zachować środowiska użytkownika dynamiczne.|
+|[Przykłady aplikacji Windows Runtime](https://code.msdn.microsoft.com/windowsapps)|Zawiera przykłady kodu do pobrania i wersji demonstracyjnej aplikacji dla Windows 8.x. Przykłady języka C++ Użyj funkcji środowiska uruchomieniowego współbieżności, takich jak zadania PPL do przetwarzania danych w tle, aby zachować środowiska użytkownika dynamiczne.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programowanie przepływu danych w bibliotece agentów asynchronicznych
 
@@ -99,8 +99,8 @@ Aby uzyskać dokumentację referencyjną, zobacz [odwołania](../../parallel/con
 |||
 |-|-|
 |[Programowanie asynchroniczne wzorców i porady w Hilo (aplikacje Windows Store przy użyciu języków C++ i XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Dowiedz się, jak firma Microsoft umożliwia środowisku uruchomieniowym współbieżności: implementowania asynchronicznych operacji w Hilo, aplikacji środowiska wykonawczego Windows, korzystając z C++ i XAML.|
-|[Programowanie równoległe w kodzie macierzystym bloga](http://go.microsoft.com/fwlink/p/?linkid=183873)|Udostępnia dodatkowe szczegółowy blog artykuły dotyczące programowania równoległego w środowisku uruchomieniowym współbieżności.|
-|[Przetwarzania równoległego na forum C++ i kodu natywnego](http://go.microsoft.com/fwlink/p/?linkid=183874)|Można uczestniczyć w dyskusjach społeczności o środowisku uruchomieniowym współbieżności.|
+|[Programowanie równoległe w kodzie macierzystym bloga](https://go.microsoft.com/fwlink/p/?linkid=183873)|Udostępnia dodatkowe szczegółowy blog artykuły dotyczące programowania równoległego w środowisku uruchomieniowym współbieżności.|
+|[Przetwarzania równoległego na forum C++ i kodu natywnego](https://go.microsoft.com/fwlink/p/?linkid=183874)|Można uczestniczyć w dyskusjach społeczności o środowisku uruchomieniowym współbieżności.|
 |[Programowanie równoległe](/dotnet/standard/parallel-programming/index)|Zawiera informacje na temat równoległych model programowania, który jest dostępny w programie .NET Framework.|
 
 ## <a name="see-also"></a>Zobacz także

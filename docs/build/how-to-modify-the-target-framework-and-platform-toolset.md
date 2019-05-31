@@ -5,12 +5,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: b2cf5ac5c6a339917b87a25001be568a7caa2247
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220677"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450736"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Instrukcje: Modyfikowanie platformy docelowej i zestawu narzędzi platformy
 
@@ -22,7 +22,7 @@ Można zmienić program Visual Studio C++ ustawienia do różnych wersji program
 Kiedy zmieniasz szablon docelowy, należy również zmienić zestaw narzędzi platformy na wersję obsługującą ten szablon. Na przykład pod kątem programu .NET Framework 4.5, należy użyć kompatybilnego zestawu narzędzi platformy takie jak Visual Studio 2015 (wersja 140), Visual Studio 2013 (v120) lub programu Visual Studio 2012 (v110). Możesz użyć **Windows7.1SDK** zestawu narzędzi platformy docelowej .NET Framework 2.0, 3.0, 3.5 i 4 i x86, Itanium i x64 platform.
 
 > [!NOTE]
->  Aby zmienić zestaw narzędzi platformy docelowej, musi mieć odpowiednie wersje programu Visual Studio lub zestawu SDK platformy Windows, które zostały zainstalowane. Na przykład, aby Docelowa platforma Itanium z **Windows7.1SDK** zestawu narzędzi platformy, konieczne jest posiadanie [Microsoft Windows SDK for Windows 7 i platformy .NET Framework 4 z dodatkiem SP1](http://www.microsoft.com/download/details.aspx?id=8279) zainstalowany; Jednakże, można użyć innej zgodnej wersji programu Visual Studio do pracy programowania, pod warunkiem, że platformą docelową jest program poprawne Framework w wersji i zestawu narzędzi platformy.
+>  Aby zmienić zestaw narzędzi platformy docelowej, musi mieć odpowiednie wersje programu Visual Studio lub zestawu SDK platformy Windows, które zostały zainstalowane. Na przykład, aby Docelowa platforma Itanium z **Windows7.1SDK** zestawu narzędzi platformy, konieczne jest posiadanie [Microsoft Windows SDK for Windows 7 i platformy .NET Framework 4 z dodatkiem SP1](https://www.microsoft.com/download/details.aspx?id=8279) zainstalowany; Jednakże, można użyć innej zgodnej wersji programu Visual Studio do pracy programowania, pod warunkiem, że platformą docelową jest program poprawne Framework w wersji i zestawu narzędzi platformy.
 
 Możesz rozszerzyć platformę docelową dalej tworząc niestandardowy zestaw narzędzi platformy. Aby uzyskać więcej informacji, zobacz [C++ natywna Wielowersyjność](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) na blogu Visual C++.
 

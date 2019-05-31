@@ -1931,22 +1931,22 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f63112f04da317371c15e1fd6ba22fc7e2bd6e1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447721"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450786"
 ---
 # <a name="arm-intrinsics"></a>Funkcje wewnętrzne ARM
 
-Microsoft C++ kompilatora (MSVC) udostępnia następujące funkcje wewnętrzne na architekturze ARM. Aby uzyskać więcej informacji na temat ARM, zobacz [instrukcji obsługi architektury ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) i [podręcznik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) w witrynie Centrum informacyjne ARM.
+Microsoft C++ kompilatora (MSVC) udostępnia następujące funkcje wewnętrzne na architekturze ARM. Aby uzyskać więcej informacji na temat ARM, zobacz [instrukcji obsługi architektury ARM](https://go.microsoft.com/fwlink/p/?LinkId=522049) i [podręcznik narzędzia asemblera ARM](https://go.microsoft.com/fwlink/p/?LinkId=246102) w witrynie Centrum informacyjne ARM.
 
 ##  <a name="top"></a> NEON
 
 NEON wektor instrukcji zestawu rozszerzeń dla ARM oferują możliwości pojedynczej instrukcji wielu danych (SIMD), które przypominają wyjątki w zestawy instrukcji wektor MMX i SSE, które są wspólne dla x86 i x64 procesorów architektury.
 
-Funkcje wewnętrzne NEON są obsługiwane zgodnie z postanowieniami w pliku nagłówkowym `arm_neon.h`. MSVC obsługę funkcji wewnętrznych NEON jest podobny, kompilator ARM, co opisano w dodatku G [łańcuch narzędzi kompilatora ARM, odwołanie do wersji 4.1 kompilatora](http://go.microsoft.com/fwlink/p/?LinkId=251083) w witrynie Centrum informacyjne ARM.
+Funkcje wewnętrzne NEON są obsługiwane zgodnie z postanowieniami w pliku nagłówkowym `arm_neon.h`. MSVC obsługę funkcji wewnętrznych NEON jest podobny, kompilator ARM, co opisano w dodatku G [łańcuch narzędzi kompilatora ARM, odwołanie do wersji 4.1 kompilatora](https://go.microsoft.com/fwlink/p/?LinkId=251083) w witrynie Centrum informacyjne ARM.
 
 Główną różnicą między MSVC i kompilatora ARM jest, że MSVC dodaje `_ex` warianty `vldX` i `vstX` vector obciążenia i przechowywać instrukcje. `_ex` Wariantów zająć dodatkowy parametr, który określa wyrównanie argumentu będącego wskaźnikiem, ale są identycznymi do ich non -`_ex` odpowiedniki.
 

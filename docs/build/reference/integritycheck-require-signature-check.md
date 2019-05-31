@@ -2,12 +2,12 @@
 title: /INTEGRITYCHECK (Wymagaj sprawdzania podpisu)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-ms.openlocfilehash: 446ebe3afc06b8db8cc9f36b289c1e5c3ef5f117
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a46f31140c01753fdaa6e72fd0f741f569a5ad94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269755"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450445"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Wymagaj sprawdzania podpisu)
 
@@ -21,7 +21,7 @@ Określa, czy podpis cyfrowy obrazu binarnego musi być zaznaczone w czasie ład
 
 Domyślnie **/INTEGRITYCHECK** jest wyłączona.
 
-**/INTEGRITYCHECK** zestawy opcji — w nagłówku PE pliku DLL lub pliku wykonywalnego — Flaga, dla Menedżera pamięci sprawdzić podpis cyfrowy w celu załadowania obrazu w Windows. Ta opcja musi być ustawiona dla 32-bitowych i 64-bitowych bibliotek DLL, które implementują kod trybu jądra ładowany przez niektóre funkcje Windows i jest zalecana dla wszystkich sterowników urządzeń w Windows Vista, Windows 7, Windows 8, Windows Server 2008 i Windows Server 2012. Wersje Windows przed Windows Vista, ignorują tę flagę. Aby uzyskać więcej informacji, zobacz [wymuszone podpisywanie integralności z przenośny plik wykonywalny () plików PE](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).
+**/INTEGRITYCHECK** zestawy opcji — w nagłówku PE pliku DLL lub pliku wykonywalnego — Flaga, dla Menedżera pamięci sprawdzić podpis cyfrowy w celu załadowania obrazu w Windows. Ta opcja musi być ustawiona dla 32-bitowych i 64-bitowych bibliotek DLL, które implementują kod trybu jądra ładowany przez niektóre funkcje Windows i jest zalecana dla wszystkich sterowników urządzeń w Windows Vista, Windows 7, Windows 8, Windows Server 2008 i Windows Server 2012. Wersje Windows przed Windows Vista, ignorują tę flagę. Aby uzyskać więcej informacji, zobacz [wymuszone podpisywanie integralności z przenośny plik wykonywalny () plików PE](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
@@ -39,6 +39,6 @@ Domyślnie **/INTEGRITYCHECK** jest wyłączona.
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)<br/>
-[Wymuszone podpisywanie integralności z przenośny plik wykonywalny () plików PE](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
+[Wymuszone podpisywanie integralności z przenośny plik wykonywalny () plików PE](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
 [Podpisywanie instruktażu kodu trybu jądra](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
 [AppInit dll w Windows 7 i Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

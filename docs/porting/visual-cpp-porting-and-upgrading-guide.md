@@ -2,12 +2,12 @@
 title: Visual C++, przenoszenie i uaktualnianie przewodnik
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 058972ec4ad44fd4ec9fa2dad926916846d47adf
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708048"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450379"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 
@@ -53,7 +53,7 @@ Aby rozpocząć uaktualnianie projektu lub rozwiązania, po prostu otwórz rozwi
 
 8. Błędy w czasie wykonywania lub nieoczekiwane wyniki z powodu zmian zachowania
 
-9. Błędy z powodu błędów, które zostały wprowadzone w narzędziach. Jeśli wystąpi problem, zgłoś go do zespołu Visual C++, za pośrednictwem kanałów normalne pomocy technicznej lub za pomocą [Centrum opinii programu Visual Studio](http://connect.microsoft.com/VisualStudio/Feedback).
+9. Błędy z powodu błędów, które zostały wprowadzone w narzędziach. Jeśli wystąpi problem, zgłoś go do wizualizacji C++ zespołu za pośrednictwem kanałów normalne pomocy technicznej lub za pomocą [programu Visual Studio C++ społeczności deweloperów](https://developercommunity.visualstudio.com/spaces/62/index.html) strony.
 
 Oprócz zmian, których nie można uniknąć z powodu błędów kompilatora niektóre zmiany są opcjonalne w procesie uaktualniania, takich jak:
 

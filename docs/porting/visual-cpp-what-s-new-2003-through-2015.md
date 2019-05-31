@@ -2,12 +2,12 @@
 title: Visual C++ co&#39;s nowego od roku 2003 do 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 773500b32b1a80a6a7b1d1f2431b036f7ad3bd63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448860"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449810"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
 
@@ -20,7 +20,7 @@ Ta strona zbiera wszystkie "co nowego jest" strony dla wszystkich wersji program
 
 W programie Visual Studio 2015 i nowszych najnowsze ulepszenia do zgodności kompilatora czasami można zmienić sposób kompilator rozpoznaje istniejącego kodu źródłowego. W takim przypadku mogą wystąpić błędy innym, podczas kompilacji lub różnice w zachowaniu nawet w kodzie, który wcześniej utworzone i sprawiał by działała poprawnie.
 
-Na szczęście tych różnic mają niewielkiego lub żadnego wpływu na większość kodu źródłowego i gdy kodu źródłowego lub inne zmiany są potrzebne, aby rozwiązać te różnice, poprawki są zwykle małe i proste. Uwzględniliśmy wiele przykładów kodu źródłowego wcześniej dopuszczalne, który może być konieczne, można zmienić *(przed)* i poprawki, aby je rozwiązać *(po)*.
+Na szczęście tych różnic mają niewielkiego lub żadnego wpływu na większość kodu źródłowego i gdy kodu źródłowego lub inne zmiany są potrzebne, aby rozwiązać te różnice, poprawki są zwykle małe i proste. Uwzględniliśmy wiele przykładów kodu źródłowego wcześniej dopuszczalne, który może być konieczne, można zmienić *(przed)* i poprawki, aby je rozwiązać *(po)* .
 
 Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty kompilacji, nie wpływają na zgodność binarną między aktualizacjami do wersji Visual C++. Inne poważne rodzaju zmiany, *zmiana powodująca niezgodność* mogą wpływać na zgodność binarną, ale miejsce tylko tego rodzaju podziały zgodność binarną między wersje główne środowiska Visual C++. Na przykład między Visual C++ 2013 i Visual C++ 2015. Aby uzyskać informacje na temat przełomowych zmian, między programem Visual C++ 2013 i Visual C++ 2015, zobacz [Visual C++ — Historia latach 2003 – 2015 zmian](../porting/visual-cpp-change-history-2003-2015.md).
 
@@ -253,7 +253,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Położenie nowych i delete**
 
-   Zmiana została wprowadzona do **Usuń** operatora, aby zapewnić zgodność z C ++ 14 standardowych. Szczegółowe informacje o zmianie standardów znajduje się w temacie [cofania alokacji o rozmiarze w języku C++](http://isocpp.org/files/papers/n3778.html). Zmiany dodać formularz globalnego **Usuń** operator, który przyjmuje parametr rozmiaru. Istotną zmianę jest to, że jeśli wcześniej używano operator **Usuń** z tym samym podpisie (z **umieszczania nowych** operator), otrzymasz błąd kompilatora (C2956, który ma miejsce w punkcie gdzie **umieszczania nowych** jest używany, ponieważ jest pozycja w kodzie, gdzie kompilator próbuje zidentyfikować odpowiednie dopasowania **Usuń** operator).
+   Zmiana została wprowadzona do **Usuń** operatora, aby zapewnić zgodność z C ++ 14 standardowych. Szczegółowe informacje o zmianie standardów znajduje się w temacie [cofania alokacji o rozmiarze w języku C++](https://isocpp.org/files/papers/n3778.html). Zmiany dodać formularz globalnego **Usuń** operator, który przyjmuje parametr rozmiaru. Istotną zmianę jest to, że jeśli wcześniej używano operator **Usuń** z tym samym podpisie (z **umieszczania nowych** operator), otrzymasz błąd kompilatora (C2956, który ma miejsce w punkcie gdzie **umieszczania nowych** jest używany, ponieważ jest pozycja w kodzie, gdzie kompilator próbuje zidentyfikować odpowiednie dopasowania **Usuń** operator).
 
    Funkcja `void operator delete(void *, size_t)` został **delete umieszczania** operator odpowiadający **umieszczania nowych** funkcji `void * operator new(size_t, size_t)` w C ++ 11. Za pomocą języka C ++ 14 wielkości dezalokacji, to **Usuń** funkcja jest obecnie *funkcji dezalokacji zwykle* (globalne **Usuń** operator). Standardowe wymaga tego przypadku użycia **umieszczania nowych** wyszukuje odpowiednie **Usuń** funkcji i znajduje funkcję zwykle dezalokacji program jest nieprawidłowo sformułowany.
 
@@ -1640,7 +1640,7 @@ Tym Ulepszona obsługa standardów ISO C/C++ może wymagać zmian w istniejącym
 
 **Znajdź wszystkie odwołania** teraz automatycznie rozpoznaje i filtruje odniesienia w tle po wyświetleniu listy trafień tekstowych.
 
-**Członek oparty na kontekście filtrowanie listy.** Członkowie niedostępni są odfiltrowani z listy elementów członkowskich IntelliSense. Na przykład prywatne składowe nie są wyświetlane na liście elementów członkowskich, chyba że zmodyfikujesz kod, który implementuje ten typ. Gdy listę elementów członkowskich jest otwarta, możesz nacisnąć przycisk **Ctrl**+**"j"** usunąć jeden poziom filtrowania (dotyczy tylko bieżącego elementu członkowskiego okna listy). Możesz nacisnąć przycisk **Ctrl**+**"j"** ponownie, aby usunąć filtrowanie tekstowe i pokazać każdy element członkowski.
+**Członek oparty na kontekście filtrowanie listy.** Członkowie niedostępni są odfiltrowani z listy elementów członkowskich IntelliSense. Na przykład prywatne składowe nie są wyświetlane na liście elementów członkowskich, chyba że zmodyfikujesz kod, który implementuje ten typ. Gdy listę elementów członkowskich jest otwarta, możesz nacisnąć przycisk **Ctrl**+ **"j"** usunąć jeden poziom filtrowania (dotyczy tylko bieżącego elementu członkowskiego okna listy). Możesz nacisnąć przycisk **Ctrl**+ **"j"** ponownie, aby usunąć filtrowanie tekstowe i pokazać każdy element członkowski.
 
 **Parametr pomocy przewijania.** Sygnatura funkcji wyświetlana w etykietce narzędzia parametru pomocy teraz zmienia się na podstawie liczby parametrów, które rzeczywiście zostały wpisane, a nie po prostu pokazując dowolną sygnaturę i nie aktualizując jej na podstawie bieżącego kontekstu. Parametr pomocy również funkcjonuje poprawnie, kiedy jest wyświetlany na funkcjach zagnieżdżonych.
 
@@ -1741,7 +1741,7 @@ Oprócz **zadań równoległych** okna i **stosów równoległych** okna program
 
 **Związane z kolorystyką.** Typy, wyliczenia, makr i innymi tokenami C++ powstał kolorowanie domyślnie.
 
-**Wyróżnianie odwołań.** Teraz wybranie symbolu wyróżnia wszystkie wystąpienia znaku w bieżącym pliku. Naciśnij klawisz **Ctrl**+**Shift**+**Strzałka w górę** lub **Ctrl**+**Shift**  + **Strzałkę w dół** Aby poruszać się między do wyróżnionych odwołań. Możesz wyłączyć tę funkcję **opcje** dialogowego **edytora tekstów** > **C/C++** > **zaawansowane**.
+**Wyróżnianie odwołań.** Teraz wybranie symbolu wyróżnia wszystkie wystąpienia znaku w bieżącym pliku. Naciśnij klawisz **Ctrl**+**Shift**+**Strzałka w górę** lub **Ctrl**+**Shift**  + **Strzałkę w dół** Aby poruszać się między do wyróżnionych odwołań. Możesz wyłączyć tę funkcję **opcje** dialogowego **edytora tekstów** > **C/C++**  > **zaawansowane**.
 
 ### <a name="application-lifecycle-management-tools"></a>Narzędzia do zarządzania cyklem życia aplikacji
 

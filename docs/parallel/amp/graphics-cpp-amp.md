@@ -2,12 +2,12 @@
 title: Grafika (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405667"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449871"
 ---
 # <a name="graphics-c-amp"></a>Grafika (C++ AMP)
 
@@ -25,7 +25,7 @@ C++ AMP zawiera kilka interfejsów API w [Concurrency::graphics](../../parallel/
 
 ## <a name="short-vector-library"></a>Biblioteka krótkich wektorów
 
-Biblioteka krótkich wektorów zawiera niektóre funkcje [typ wektora](http://go.microsoft.com/fwlink/p/?linkid=248500) który jest zdefiniowany w języku HLSL i jest zazwyczaj używany do definiowania tekseli. Krótki wektor jest strukturą danych, która przechowuje jednej do czterech wartości tego samego typu. Obsługiwane typy to **double**, **float**, **int**, `norm`, `uint`, i `unorm`. Nazwy typów przedstawiono w poniższej tabeli. Dla każdego typu, jest również odpowiadające **typedef** , która nie ma znaku podkreślenia w nazwie. Typy, które mają podkreślenia znajdują się w [Namespace Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, które nie mają podkreślenia znajdują się w [Namespace CONCURRENCY::Graphics:: Direct3D](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , dzięki czemu są wyraźnie rozdzielone od podobnie nazwanych typów podstawowych takich jak **__int8** i **__int16**.
+Biblioteka krótkich wektorów zawiera niektóre funkcje [typ wektora](https://go.microsoft.com/fwlink/p/?linkid=248500) który jest zdefiniowany w języku HLSL i jest zazwyczaj używany do definiowania tekseli. Krótki wektor jest strukturą danych, która przechowuje jednej do czterech wartości tego samego typu. Obsługiwane typy to **double**, **float**, **int**, `norm`, `uint`, i `unorm`. Nazwy typów przedstawiono w poniższej tabeli. Dla każdego typu, jest również odpowiadające **typedef** , która nie ma znaku podkreślenia w nazwie. Typy, które mają podkreślenia znajdują się w [Namespace Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, które nie mają podkreślenia znajdują się w [Namespace CONCURRENCY::Graphics:: Direct3D](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , dzięki czemu są wyraźnie rozdzielone od podobnie nazwanych typów podstawowych takich jak **__int8** i **__int16**.
 
 ||Długość 2|Długość 3|Długość 4|
 |-|--------------|--------------|--------------|
@@ -67,7 +67,7 @@ Wiele procesorów GPU ma sprzęt i pamięci podręczne, które są zoptymalizowa
 
 - Krótki wektor, który ma dwa lub cztery składniki. Jedynym wyjątkiem jest `double_4`, co jest niedozwolone.
 
-`texture` Obiekt może mieć rangę 1, 2 lub 3. `texture` Obiektów mogą być przechwytywane jedynie poprzez odwołanie w wyrażeniu lambda wywołania `parallel_for_each`. Tekstury są przechowywane w procesorze GPU jako obiekty tekstury Direct3D. Aby uzyskać więcej informacji na temat tekstur i tekseli w Direct3D, zobacz [wprowadzenie do tekstur w Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).
+`texture` Obiekt może mieć rangę 1, 2 lub 3. `texture` Obiektów mogą być przechwytywane jedynie poprzez odwołanie w wyrażeniu lambda wywołania `parallel_for_each`. Tekstury są przechowywane w procesorze GPU jako obiekty tekstury Direct3D. Aby uzyskać więcej informacji na temat tekstur i tekseli w Direct3D, zobacz [wprowadzenie do tekstur w Direct3D 11](https://go.microsoft.com/fwlink/p/?linkid=248502).
 
 Użyty typ teksela może być jednym z wielu formatów tekstury, które są używane w programowaniu grafiki. Na przykład RGBA format może za pomocą 32-bitowy, 8 bitów dla języka R "," G "," B "i" element skalarny. Sprzęt teksturujący karty graficznej może uzyskać dostęp do poszczególnych elementów na podstawie formatu. Na przykład jeśli używasz formatu RGBA, sprzęt teksturujący może wyodrębnić każdy element 8-bitowy do formy 32-bitowej. W bibliotece C++ AMP można ustawić bity dla elementu skalarnego w tekselu, dzięki czemu mogą automatycznie uzyskiwać dostęp poszczególnych elementów skalarnych w kodzie, bez używania bitowych.
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 Jak widać, dwa przykłady kodu są niemal identyczne, podczas zapisywania wszystko, co robisz podstawowego poziomu mipmapowania. Jeśli użyto `writeonly_texture_view` w istniejącym kodzie, a nie planujesz zwiększyć, że kod, nie trzeba go zmienić. Jednak jeśli myślisz o kodem, zalecamy przepiszesz użyj `texture_view` ponieważ jego ulepszenia obsługują nowe funkcje tekstur sprzętowych. Czytaj dalej, aby uzyskać więcej informacji o tych nowych funkcjach.
 
-Aby uzyskać więcej informacji na temat wycofania `writeonly_texture_view`, zobacz [Omówienie projektu widoku tekstury w bibliotece C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) na programowania równoległego w kodzie macierzystym blogu.
+Aby uzyskać więcej informacji na temat wycofania `writeonly_texture_view`, zobacz [Omówienie projektu widoku tekstury w bibliotece C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) na programowania równoległego w kodzie macierzystym blogu.
 
 ### <a name="instantiating-texture-view-objects"></a>Tworzenie wystąpień obiektów widoku tekstury
 
@@ -345,7 +345,7 @@ Typ elementu `texture_view`— jego stałość, a także liczba składników —
 |Typ|Składniki|Odczyt|Write|Próbkowania|Dostęp do mipmappingu|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N >|1, 2, 4|Tak|Nie (1)|Tak|Tak, można indeksować. Zakres jest określany w konkretyzacji.|
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Tak<br /><br /> Nie (2)|Tak<br /><br /> Tak|Nie (1)<br /><br /> Nie (1)|Tak, jeden poziom. Poziom jest określany w konkretyzacji.<br /><br /> Tak, jeden poziom. Poziom jest określany w konkretyzacji.|
+|Texture_view\<T, N >|1<br /><br /> 2, 4|Tak<br /><br /> Nie (2)|Tak<br /><br /> Yes|Nie (1)<br /><br /> Nie (1)|Tak, jeden poziom. Poziom jest określany w konkretyzacji.<br /><br /> Tak, jeden poziom. Poziom jest określany w konkretyzacji.|
 
 Z tej tabeli widać, że widoki tekstury tylko do odczytu w pełni obsługują nowe możliwości w zamian za brak możliwości do zapisu do widoku. Zapisywalne widoki tekstury są ograniczone, w tym, że mają dostęp tylko jednego poziomu mipmappingu. Widoki tekstury do odczytu i zapisu są jeszcze bardziej wyspecjalizowane niż te zapisywalne, ponieważ dodają wymóg, że typ elementu widoku tekstury miał tylko jeden składnik. Należy zauważyć, że próbkowanie nie jest obsługiwane dla widoków tekstury do zapisu, ponieważ jest to operacja zorientowana na odczyt.
 
@@ -379,9 +379,9 @@ void write2ComponentTexture() {
 
 Tekstury widoków, w której elementy są oparte na typach zmiennopozycyjnych — na przykład, float, float_2 lub float_4 — można również odczytywać za pomocą pobierania próbek tekstury, aby wykorzystać zalety obsługi sprzętowej różnych trybów filtrowania i adresowania. C++ AMP obsługuje dwa tryby filtrowania, które są najbardziej rozpowszechnione w scenariuszach obliczeniowych — (najbliższego sąsiada) filtrowanie punktowe i filtrowanie liniowe (wg średniej ważonej) — i cztery tryby adresowania — zawinięty, dublowane, powiązany i obramowanie. Aby uzyskać więcej informacji na temat trybów adresowania, zobacz [address_mode — wyliczenie](reference/concurrency-graphics-namespace-enums.md#address_mode).
 
-Oprócz trybów, które C++ AMP obsługuje bezpośrednio są dostępne inne tryby filtrowania i tryby adresowania bazowej platformy za pomocą międzyoperacyjnych interfejsów API do przyjęcia próbnika tekstur, który został utworzony bezpośrednio za pomocą interfejsów API platformy. Na przykład Direct3D obsługuje inne tryby filtrowania, takie jak filtrowanie anizotropowe i można zastosować inny tryb adresowania do każdego wymiaru tekstury. Można utworzyć próbnik tekstury, którego współrzędne są owinięte pionowo, odbite poziomo i próbkowane tak, z filtrowaniem anizotropowymo przy użyciu interfejsów API Direct3D, a następnie wykorzystać próbnik w kodzie języka C++ AMP za pomocą `make_sampler` interoperacyjnego API. Aby uzyskać więcej informacji, zobacz [pobierania próbek tekstury w bibliotece C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) na programowania równoległego w kodzie macierzystym blogu.
+Oprócz trybów, które C++ AMP obsługuje bezpośrednio są dostępne inne tryby filtrowania i tryby adresowania bazowej platformy za pomocą międzyoperacyjnych interfejsów API do przyjęcia próbnika tekstur, który został utworzony bezpośrednio za pomocą interfejsów API platformy. Na przykład Direct3D obsługuje inne tryby filtrowania, takie jak filtrowanie anizotropowe i można zastosować inny tryb adresowania do każdego wymiaru tekstury. Można utworzyć próbnik tekstury, którego współrzędne są owinięte pionowo, odbite poziomo i próbkowane tak, z filtrowaniem anizotropowymo przy użyciu interfejsów API Direct3D, a następnie wykorzystać próbnik w kodzie języka C++ AMP za pomocą `make_sampler` interoperacyjnego API. Aby uzyskać więcej informacji, zobacz [pobierania próbek tekstury w bibliotece C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) na programowania równoległego w kodzie macierzystym blogu.
 
-Widoki tekstury obsługują także odczyt mipmap. Widoki tekstury tylko do odczytu (te, które mają stały typ elementu) oferują największą elastyczność, ponieważ zakres poziomów mipmappingu, ustalony przy konkretyzacji, może być dynamicznie próbkowany, a elementy, które mają 1, 2 lub 4 składniki są obsługiwane. Widoki tekstury do odczytu i zapisu, które mają elementy, które mają jeden składnik, również obsługują mipmapy, ale tylko z poziomu, który jest określany w konkretyzacji. Aby uzyskać więcej informacji, zobacz [Tekstura z Mipmappingiem](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) na programowania równoległego w kodzie macierzystym blogu.
+Widoki tekstury obsługują także odczyt mipmap. Widoki tekstury tylko do odczytu (te, które mają stały typ elementu) oferują największą elastyczność, ponieważ zakres poziomów mipmappingu, ustalony przy konkretyzacji, może być dynamicznie próbkowany, a elementy, które mają 1, 2 lub 4 składniki są obsługiwane. Widoki tekstury do odczytu i zapisu, które mają elementy, które mają jeden składnik, również obsługują mipmapy, ale tylko z poziomu, który jest określany w konkretyzacji. Aby uzyskać więcej informacji, zobacz [Tekstura z Mipmappingiem](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) na programowania równoległego w kodzie macierzystym blogu.
 
 ### <a name="writing-to-texture-view-objects"></a>Zapisywanie do obiektów widoku tekstury
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>Współdziałanie
 
-Środowisko wykonawcze C++ AMP wspiera współdziałanie między `texture<T,1>` i [interfejsem ID3D11Texture1D](http://go.microsoft.com/fwlink/p/?linkId=248503), między `texture<T,2>` i [interfejsem ID3D11Texture2D](http://go.microsoft.com/fwlink/p/?linkId=255317)oraz między `texture<T,3>`i [interfejsem ID3D11Texture3D](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metoda przyjmuje `texture` obiektu i zwraca `IUnknown` interfejsu. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metoda przyjmuje `IUnknown` interfejsu i `accelerator_view` obiektu i zwraca `texture` obiektu.
+Środowisko wykonawcze C++ AMP wspiera współdziałanie między `texture<T,1>` i [interfejsem ID3D11Texture1D](https://go.microsoft.com/fwlink/p/?linkId=248503), między `texture<T,2>` i [interfejsem ID3D11Texture2D](https://go.microsoft.com/fwlink/p/?linkId=255317)oraz między `texture<T,3>`i [interfejsem ID3D11Texture3D](https://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metoda przyjmuje `texture` obiektu i zwraca `IUnknown` interfejsu. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metoda przyjmuje `IUnknown` interfejsu i `accelerator_view` obiektu i zwraca `texture` obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 

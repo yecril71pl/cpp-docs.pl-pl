@@ -5,12 +5,12 @@ description: Microsoft C++ w programie Visual Studio 2019 r jest postępować w 
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e9bc86683ec89858d0b6cb39dcc6a65cf4eb05b2
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 02b778f10ad94342c922a4e79a856cc2a7d53076
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934129"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451221"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2019-rtw-and-version-161improvements161"></a>C++ulepszenia zgodności w programie Visual Studio RTW 2019 r i wersji [16.1](#improvements_161)
 
@@ -26,7 +26,7 @@ Moduły są teraz oficjalnie w języku C ++ 20 standardowych. Ulepszona obsługa
 
 ### <a name="modified-specification-of-aggregate-type"></a>Zmodyfikowane Specyfikacja typu agregacji
 
-Specyfikacja typu agregacji został zmieniony w języku C ++ 20 (zobacz [ze Stanów Zjednoczonych zabraniają agregacji za pomocą zgłoszonych przez użytkownika konstruktorów](http://wg21.link/p1008r1)). W programie Visual Studio 2019 r w obszarze `/std:c++latest`, klasy za pomocą konstruktora wszystkie zgłoszone przez użytkownika (np. w tym konstruktorze zadeklarowana `= default` lub `= delete`) nie jest agregacją. Wcześniej tylko dostarczone przez użytkownika konstruktorów spowoduje zdyskwalifikowany klasy miałyby agregacji. Ta zmiana powoduje umieszczenie dodatkowe ograniczenia dotyczące jak typy takie mogą być zainicjowane.
+Specyfikacja typu agregacji został zmieniony w języku C ++ 20 (zobacz [ze Stanów Zjednoczonych zabraniają agregacji za pomocą zgłoszonych przez użytkownika konstruktorów](https://wg21.link/p1008r1)). W programie Visual Studio 2019 r w obszarze `/std:c++latest`, klasy za pomocą konstruktora wszystkie zgłoszone przez użytkownika (np. w tym konstruktorze zadeklarowana `= default` lub `= delete`) nie jest agregacją. Wcześniej tylko dostarczone przez użytkownika konstruktorów spowoduje zdyskwalifikowany klasy miałyby agregacji. Ta zmiana powoduje umieszczenie dodatkowe ograniczenia dotyczące jak typy takie mogą być zainicjowane.
 
 Poniższy kod kompiluje bez błędów w programie Visual Studio 2017, ale zgłasza błędy C2280 i C2440 w Visual Studio 2019 r, w obszarze `/std:c++latest`:
 
@@ -89,7 +89,7 @@ int main()
 ```
 ### <a name="reinterpretcast-from-an-overloaded-function"></a>`reinterpret_cast` z przeciążonej funkcji
 
-Argument `reinterpret_cast` nie jest jednym z kontekstów, w których adres przeciążonej funkcji jest dozwolone. Poniższy kod kompiluje się bez błędów w programie Visual Studio 2017, ale w programie Visual Studio 2019 zgłasza *C2440: nie można konwertować z "przeciążonych funkcji" do "fp"*:
+Argument `reinterpret_cast` nie jest jednym z kontekstów, w których adres przeciążonej funkcji jest dozwolone. Poniższy kod kompiluje się bez błędów w programie Visual Studio 2017, ale w programie Visual Studio 2019 zgłasza *C2440: nie można konwertować z "przeciążonych funkcji" do "fp"* :
 
 ```cpp
 int f(int) { return 1; }
@@ -160,7 +160,7 @@ Zaimplementowane `remove_cvref` i `remove_cvref_t` typ cechy z [P0550](http://ww
 
 ### <a name="char8t"></a>char8_t
 
-[P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). C ++ 20 dodaje nowy typ znaku, który jest używany do reprezentowania jednostek kodu UTF-8. literał ciągu U8 w języku C ++ 20 mają typ `const char8_t[N]` zamiast `const char[N]`, które miało miejsce wcześniej. Podobne zmiany zostały zaproponowane dla przez Standard C w [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm). Sugestie dotyczące korygowania zgodności z poprzednimi wersjami char8_t są podane w [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html). Microsoft C++ kompilatora alokowanej char8_t w Visual Studio 2019 wersji 16.1 po określeniu **/Zc:char8_t** — opcja kompilatora. W przyszłości, będzie ono obsługiwane za pomocą [/STD: c ++ najnowsze](../../build/reference/std-specify-language-standard-version.md), której można przywrócić C ++ 17 zachowanie za pośrednictwem **/Zc:char8_t-**. Agenci EDG kompilatora, który obsługuje funkcję IntelliSense nie obsługuje jeszcze, więc zostanie wyświetlony fałszywe błędy tylko do funkcji IntelliSense, które nie wpływają one na rzeczywistych kompilacji.
+[P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). C ++ 20 dodaje nowy typ znaku, który jest używany do reprezentowania jednostek kodu UTF-8. literał ciągu U8 w języku C ++ 20 mają typ `const char8_t[N]` zamiast `const char[N]`, które miało miejsce wcześniej. Podobne zmiany zostały zaproponowane dla przez Standard C w [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm). Sugestie dotyczące korygowania zgodności z poprzednimi wersjami char8_t są podane w [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html). Microsoft C++ kompilatora alokowanej char8_t w Visual Studio 2019 wersji 16.1 po określeniu **/Zc:char8_t** — opcja kompilatora. W przyszłości, będzie ono obsługiwane za pomocą [/STD: c ++ najnowsze](../../build/reference/std-specify-language-standard-version.md), której można przywrócić C ++ 17 zachowanie za pośrednictwem **/Zc:char8_t-** . Agenci EDG kompilatora, który obsługuje funkcję IntelliSense nie obsługuje jeszcze, więc zostanie wyświetlony fałszywe błędy tylko do funkcji IntelliSense, które nie wpływają one na rzeczywistych kompilacji.
 
 #### <a name="example"></a>Przykład
 
@@ -200,7 +200,7 @@ long j = static_cast<long>(i);
 
 Nowy procesor lambda Włącza tryb zgodności niektóre składni zaewidencjonuje ogólnych wyrażeń lambda, w obszarze [/STD: c ++ najnowsze](../../build/reference/std-specify-language-standard-version.md) lub inny tryb języka przy użyciu **/ eksperymentalne: newLambdaProcessor**. 
 
-W programie Visual Studio 2017, ten kod kompiluje się bez ostrzeżeń, ale w programie Visual Studio 2019 generuje błąd *C2760 błąd składniowy: nieoczekiwany token "\<identyfikator expr >", oczekiwano "identyfikator wyrażenia"*:
+W programie Visual Studio 2017, ten kod kompiluje się bez ostrzeżeń, ale w programie Visual Studio 2019 generuje błąd *C2760 błąd składniowy: nieoczekiwany token "\<identyfikator expr >", oczekiwano "identyfikator wyrażenia"* :
 
 ```cpp
 void f() {
@@ -274,7 +274,7 @@ Aby uniknąć tego błędu, w tym przykładzie, należy użyć operatora przy u�
 
 ### <a name="initializers-for-inline-static-data-members"></a>Inicjatory dla elementów członkowskich danych statycznych w tekście
 
-Nieprawidłowy element członkowski, który uzyskuje dostęp w ramach `inline` i `static constexpr` inicjatory teraz są poprawnie wykrywane. Poniższy przykład skompiluje się bez błędów w programie Visual Studio 2017, ale w Visual Studio 2019 r, w obszarze `/std:c++17` tryb zgłasza *C2248 błąd: nie dostępu prywatnego elementu członkowskiego jest zadeklarowana w klasie "X"*.
+Nieprawidłowy element członkowski, który uzyskuje dostęp w ramach `inline` i `static constexpr` inicjatory teraz są poprawnie wykrywane. Poniższy przykład skompiluje się bez błędów w programie Visual Studio 2017, ale w Visual Studio 2019 r, w obszarze `/std:c++17` tryb zgłasza *C2248 błąd: nie dostępu prywatnego elementu członkowskiego jest zadeklarowana w klasie "X"* .
 
 ```cpp
 struct X

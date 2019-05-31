@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1168
 ms.assetid: 97ead151-fd99-46fe-9a1d-7e84dc0b8cc8
-ms.openlocfilehash: d18aacd23a7ce9ed49f12a62f8358bb6d668c778
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0eb63c124162dbb515782bbd014c556c12de153
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254939"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450886"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Błąd narzędzi konsolidatora LNK1168
 
@@ -21,10 +21,10 @@ Nie można zapisać konsolidator `filename`. Plik może być używany i jego uch
 
 Aby rozwiązać ten problem, upewnij się, że `filename` dojście do pliku nie jest zablokowany i czy masz uprawnienia do zapisu dla pliku. Jeśli jest to plik wykonywalny, sprawdź, czy nie jest uruchomiony.
 
-Można użyć narzędzi Windows SysInternals [obsługi](http://technet.microsoft.com/sysinternals/bb896655.aspx) lub [Eksplorator procesów](http://technet.microsoft.com/sysinternals/bb896653) ustalenie, który proces nałożył blokadę na uchwyt pliku `filename`. Przy użyciu Eksploratora procesów możesz zwalniać blokady uchwytów otwartego pliku. Aby uzyskać informacje dotyczące sposobu korzystania z tych narzędzi, przeczytaj pliki pomocy, które są z nimi dostarczane.
+Można użyć narzędzi Windows SysInternals [obsługi](/sysinternals/downloads/handle) lub [Eksplorator procesów](/sysinternals/downloads/process-explorer) ustalenie, który proces nałożył blokadę na uchwyt pliku `filename`. Przy użyciu Eksploratora procesów możesz zwalniać blokady uchwytów otwartego pliku. Aby uzyskać informacje dotyczące sposobu korzystania z tych narzędzi, przeczytaj pliki pomocy, które są z nimi dostarczane.
 
 Jeśli plik jest zablokowany przez program antywirusowy, można naprawić ten problem poprzez wykluczenie katalogów danych wyjściowych kompilacji z funkcji automatycznego skanowania przez program antywirusowy. Tworzenie nowych plików w systemie plików często wyzwala skanery antywirusowe, które w trakcie skanowania nakładają blokady na pliki. Szczegółowe informacje na temat wykluczania określonych katalogów ze skanowania można znaleźć w dokumentacji programu antywirusowego.
 
-Jeśli plik jest zablokowany przez usługę indeksowania wyszukiwania, można naprawić ten problem poprzez wykluczenie katalogów danych wyjściowych kompilacji z automatycznego indeksowania. Aby uzyskać więcej informacji, zobacz dokumentację dotyczącą usługi indeksowania. Aby zmienić usługę indeksowania wyszukiwania Windows, użyj **opcje indeksowania** w Windows **Panelu sterowania**. Aby uzyskać więcej informacji, zobacz [poprawić Windows wyszukuje przy użyciu indeksu: często zadawane pytania dotyczące](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
+Jeśli plik jest zablokowany przez usługę indeksowania wyszukiwania, można naprawić ten problem poprzez wykluczenie katalogów danych wyjściowych kompilacji z automatycznego indeksowania. Aby uzyskać więcej informacji, zobacz dokumentację dotyczącą usługi indeksowania. Aby zmienić usługę indeksowania wyszukiwania Windows, użyj **opcje indeksowania** w Windows **Panelu sterowania**. Aby uzyskać więcej informacji, zobacz [wyszukiwania, indeksowania w systemie Windows 10: CZĘSTO ZADAWANE PYTANIA DOTYCZĄCE](https://support.microsoft.com/help/4098843/windows-10-search-indexing-faq).
 
 Jeśli plik wykonywalny nie może zostać zastąpiony przez proces kompilacji, może być zablokowany przez Eksplorator plików. Jeśli **doświadczenie z aplikacji** usługa została wyłączona, Eksplorator plików może nałożyć do blokady dojście do pliku wykonywalnego przez dłuższy czas. Aby rozwiązać ten problem, uruchom **services.msc** , a następnie otwórz **właściwości** okno dialogowe **doświadczenie z aplikacji** usługi. Zmiana **uruchamiana** z **wyłączone** do **ręczne**.

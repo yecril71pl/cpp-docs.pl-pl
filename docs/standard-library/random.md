@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369816"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450792"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -49,7 +49,7 @@ Poniżej przedstawiono kilka wskazówek, o których należy pamiętać, korzysta
 
 - Parowanie najbardziej przydatne w przypadku większości aplikacji jest `mt19937` aparatu z `uniform_int_distribution`, jak pokazano na [przykładowy kod](#code) w dalszej części tego artykułu.
 
-Istnieje wiele opcji do wyboru w \<losowy > Nagłówek i dowolny z nich jest przestarzałe funkcji środowiska uruchomieniowego C `rand()`. Aby uzyskać informacje o problem z `rand()` i w jaki sposób \<losowy > adresy te wad zobacz [ten film wideo](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Istnieje wiele opcji do wyboru w \<losowy > Nagłówek i dowolny z nich jest przestarzałe funkcji środowiska uruchomieniowego C `rand()`. Aby uzyskać informacje o problem z `rand()` i w jaki sposób \<losowy > adresy te wad zobacz [ten film wideo](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Przykłady
 
@@ -495,12 +495,12 @@ Istnieją dwa URNGs bardzo przydatne w programie Visual Studio —`mt19937` i `r
 
 |URNG|Szybka|Crypto-secure|Seedable|Deterministyczna|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|Yes|Nie|Tak|Tak<sup>*</sup>|
+|`mt19937`|Tak|Nie|Yes|Tak<sup>*</sup>|
 |`random_device`|Nie|Yes|Nie|Nie|
 
 <sup>* Jeśli klient poda znanych inicjatora.</sup>
 
-Mimo że standardu ISO C++ nie wymaga `random_device` jako kryptograficznie bezpieczny, w programie Visual Studio jest implementowany jako kryptograficznie bezpieczny. (Termin "kryptograficznie bezpieczne" oznacza gwarancje, ale odwołuje się do minimalnego poziomu entropii — i w związku z tym, poziom przewidywalność — algorytm danego losowe. Aby uzyskać więcej informacji, zobacz artykułu w Wikipedii [kryptograficznie bezpieczne generator liczb pseudolosowych](http://go.microsoft.com/fwlink/p/?linkid=398017).) Ponieważ standardu ISO C++ nie wymaga to, innych platform może wdrożyć `random_device` jako prosty numer generatora pseudolosowego (nie kryptograficznie bezpieczne), a następnie tylko może być nieodpowiedni w następujących jako źródło inicjatora dla innego generatora. Zapoznaj się z dokumentacją dla tych platform przy użyciu `random_device` w kodzie dla wielu platform.
+Mimo że standardu ISO C++ nie wymaga `random_device` jako kryptograficznie bezpieczny, w programie Visual Studio jest implementowany jako kryptograficznie bezpieczny. (Termin "kryptograficznie bezpieczne" oznacza gwarancje, ale odwołuje się do minimalnego poziomu entropii — i w związku z tym, poziom przewidywalność — algorytm danego losowe. Aby uzyskać więcej informacji, zobacz artykułu w Wikipedii [kryptograficznie bezpieczne generator liczb pseudolosowych](https://go.microsoft.com/fwlink/p/?linkid=398017).) Ponieważ standardu ISO C++ nie wymaga to, innych platform może wdrożyć `random_device` jako prosty numer generatora pseudolosowego (nie kryptograficznie bezpieczne), a następnie tylko może być nieodpowiedni w następujących jako źródło inicjatora dla innego generatora. Zapoznaj się z dokumentacją dla tych platform przy użyciu `random_device` w kodzie dla wielu platform.
 
 Zgodnie z definicją `random_device` wyniki nie są powtarzalne i efekt uboczny jest, że może znacznie wolniejsze niż inne URNGs Uruchom. Większość aplikacji, które nie są wymagane jako kryptograficznie bezpieczny użyj `mt19937` lub podobne aparatu, chociaż może zajść potrzeba umieszczenia go z wywołaniem `random_device`, jak pokazano na [przykładowy kod](#code).
 

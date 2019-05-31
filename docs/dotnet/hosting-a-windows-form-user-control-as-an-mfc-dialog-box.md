@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 4c4ee8c8b4570b598ba20b3bd5e1cf4c706ee885
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b216580f4965e0814b8a100f968a322641a3398
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222952"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450721"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC
 
@@ -19,7 +19,7 @@ Biblioteka MFC zawiera klasę szablonu [CWinFormsDialog](../mfc/reference/cwinfo
 
 Ten proces, `CWinFormsDialog` używa do hostowania formantu użytkownika jest podobny do tego opisanego w [hostowanie kontrolki użytkownika formularzy Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Jednak `CWinFormsDialog` zarządza inicjowaniem i hostingiem kontroli użytkownika, tak aby nie musi być programowana ręcznie.
 
-Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
 ### <a name="to-create-the-mfc-host-application"></a>Aby utworzyć aplikację hosta MFC
 
@@ -35,7 +35,7 @@ Dla przykładowej aplikacji, który pokazuje formularze Windows używane z bibli
 
    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **MFC03** węzła projektu, a następnie wybierz **właściwości**. **Stron właściwości** pojawi się okno dialogowe.
 
-   W **stron właściwości** dialogowym **właściwości konfiguracji** formantu drzewa, wybierz opcję **ogólne**, a następnie w obszarze **domyślnewartościprojektu**sekcji, ustaw **Obsługa środowiska uruchomieniowego języka wspólnego** do **wsparcie (/ clr)**. Kliknij przycisk **OK**.
+   W **stron właściwości** dialogowym **właściwości konfiguracji** formantu drzewa, wybierz opcję **ogólne**, a następnie w obszarze **domyślnewartościprojektu**sekcji, ustaw **Obsługa środowiska uruchomieniowego języka wspólnego** do **wsparcie (/ clr)** . Kliknij przycisk **OK**.
 
 1. Dodaj odwołanie do formantu .NET.
 

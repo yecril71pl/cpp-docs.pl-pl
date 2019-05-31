@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 3822a3c751ac06154e4b13a12f449e7f0ff2cc07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316878"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450717"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC ++ Directories Property Page (Windows)
 
@@ -30,7 +30,7 @@ Aby uzyskać dostęp do **katalogi VC ++** strona właściwości:
 
 1. Jeśli **Eksploratora rozwiązań** okno nie jest widoczne, następnie w menu głównym wybierz **widoku** > **Eksploratora rozwiązań**.
 1. Kliknij prawym przyciskiem myszy węzeł projektu (nie rozwiązanie najwyższego poziomu) i wybierz polecenie **właściwości**.
-1. W okienku po lewej stronie **stron właściwości** okno dialogowe, wybierz opcję **właściwości konfiguracji** > **katalogi VC ++**.
+1. W okienku po lewej stronie **stron właściwości** okno dialogowe, wybierz opcję **właściwości konfiguracji** > **katalogi VC ++** .
 
 Katalogi VC ++ właściwości mają zastosowanie do projektu, nie węzła najwyższego poziomu rozwiązania. Jeśli nie widzisz **katalogi VC ++** w obszarze **właściwości konfiguracji**, wybierz węzeł projektu C++ w **Eksploratora rozwiązań** okna:
 
@@ -74,7 +74,7 @@ Można zdefiniować własne makra na dwa sposoby:
 
 - Definiowanie makr użytkownika w pliku .props. Aby uzyskać więcej informacji, zobacz [makra strony właściwości](../working-with-project-properties.md).
 
-Aby uzyskać więcej informacji zobacz te Posty na blogu: [Katalogi VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [dziedziczone właściwości i arkusze właściwości](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), i [Visual Studio 2010 C++ projektu Podręczniku uaktualniania programu](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
+Aby uzyskać więcej informacji zobacz te Posty na blogu: [Katalogi VC ++](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [dziedziczone właściwości i arkusze właściwości](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), i [Visual Studio 2010 C++ projektu Podręczniku uaktualniania programu](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Typy katalogów
 

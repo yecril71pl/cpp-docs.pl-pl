@@ -2,12 +2,12 @@
 title: 'Przewodnik przenoszenia: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337431"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451123"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Spy++
 
@@ -51,7 +51,7 @@ MSBuild narzeka, **Link.OutputFile** właściwość jest niezgodna **TargetPath*
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** znajdują się dane wyjściowe kompilacji (EXE, DLL, na przykład) i zwykle jest zbudowany z `$(TargetDir)$(TargetName)$(TargetExt)`, podając ścieżkę, nazwa_pliku i rozszerzenia. To jest typowym błędem podczas migrowania projektów ze starego Visual C++ kompilacji narzędzia (vcbuild.exe) nowe narzędzia do kompilowania (MSBuild.exe). Ponieważ zmiana narzędzia kompilacji została wprowadzona w programie Visual Studio 2010, może wystąpić ten problem, zawsze wtedy, gdy migracja projektu pre-2010 do 2010 lub nowszej wersji. Podstawowego problemu jest, że Kreator migracji projektu nie jest aktualizowany **Link.OutputFile** wartości, ponieważ nie zawsze jest możliwe ustalenie, co jej wartość powinna być zgodnie z ustawieniami projektu. W związku z tym zazwyczaj należy ręcznie ustawić. Aby uzyskać więcej informacji, zobacz ten [wpis](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) na blogu Visual C++.
+**Link.OutputFile** znajdują się dane wyjściowe kompilacji (EXE, DLL, na przykład) i zwykle jest zbudowany z `$(TargetDir)$(TargetName)$(TargetExt)`, podając ścieżkę, nazwa_pliku i rozszerzenia. To jest typowym błędem podczas migrowania projektów ze starego Visual C++ kompilacji narzędzia (vcbuild.exe) nowe narzędzia do kompilowania (MSBuild.exe). Ponieważ zmiana narzędzia kompilacji została wprowadzona w programie Visual Studio 2010, może wystąpić ten problem, zawsze wtedy, gdy migracja projektu pre-2010 do 2010 lub nowszej wersji. Podstawowego problemu jest, że Kreator migracji projektu nie jest aktualizowany **Link.OutputFile** wartości, ponieważ nie zawsze jest możliwe ustalenie, co jej wartość powinna być zgodnie z ustawieniami projektu. W związku z tym zazwyczaj należy ręcznie ustawić. Aby uzyskać więcej informacji, zobacz ten [wpis](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) na blogu Visual C++.
 
 W tym przypadku **Link.OutputFile** ustawiono właściwość w projekcie przekonwertowanego.\Debug\Spyxx.exe i.\Release\Spyxx.exe dla Spy ++ projektu, w zależności od konfiguracji. Najlepiej pasujących, jest po prostu zastąpić te wartości zapisane na stałe za pomocą `$(TargetDir)$(TargetName)$(TargetExt)` dla **wszystkie konfiguracje**. Jeśli to nie zadziała, można dostosować w tym miejscu lub zmienić właściwości w **ogólne** sekcji, w którym te wartości są ustawiane (właściwości są **katalog wyjściowy**, **Nazwa docelowego**, i **docelowe rozszerzenie**. Należy pamiętać, że jeśli właściwość wyświetlasz używa makra, możesz wybrać **Edytuj** na liście rozwijanej, aby wyświetlić okno dialogowe, które wyświetla ostatni ciąg podstawienia — makro wprowadzone. Wszystkich dostępnych makr oraz ich bieżących wartości można wyświetlić, wybierając **makra** przycisku.
 

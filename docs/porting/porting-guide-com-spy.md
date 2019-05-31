@@ -2,12 +2,12 @@
 title: 'Przewodnik przenoszenia: Narzędzie Spy modelu COM'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: ec928768307a38cbb6ea00d985d60e6c2311b563
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449086"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451172"
 ---
 # <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: Narzędzie Spy modelu COM
 
@@ -24,7 +24,7 @@ Plik projektu konwertuje łatwo i generuje raport z migracji. Istnieje kilka wpi
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-Jedną z częstych problemów w Uaktualnianie projektów jest to, że **Plik_wyjściowy konsolidatora** ustawienie w oknie dialogowym właściwości projektu może być konieczne do przeglądu. Dla projektów przed Visual Studio 2010 Plik_wyjściowy jest jedno ustawienie, który Kreator konwersji automatycznej ma problemy z, jeśli jest ustawiona na wartość niestandardową. W tym przypadku ścieżki dla plików wyjściowych zostały ustawione w folderze niestandardowych XP32_DEBUG. Aby dowiedzieć się więcej na temat tego błędu, możemy konsultacji [wpis w blogu](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) związane z uaktualnienia projektu programu Visual Studio 2010, które zostało uaktualnienia z udziałem zmiana program vcbuild msbuild, istotną zmianę. Zgodnie z tych informacji, wartość domyślna **plik wyjściowy** ustawienie podczas tworzenia nowego projektu jest `$(OutDir)$(TargetName)$(TargetExt)`, ale to nie została ustawiona podczas konwersji, ponieważ nie jest możliwe w przypadku projektów przekonwertowany do sprawdzenia, czy wszystko jest poprawna. Jednak Załóżmy spróbuj umieścić w plik_wyjściowy i sprawdzić, czy działa.  Robi, więc możesz teraz przystąpić. Nie ma konkretnego powodu dotyczące korzystania z folderu danych wyjściowych niestandardowych, firma Microsoft zaleca użycie standardowego lokalizacji. W tym przypadku Wybraliśmy pozostaw lokalizację wyjściową jako niestandardowego typu w procesie przenoszenia i uaktualniania; `$(OutDir)` jest rozpoznawana jako folder XP32_DEBUG w **debugowania** konfiguracji i ReleaseU folder **wersji** konfiguracji.
+Jedną z częstych problemów w Uaktualnianie projektów jest to, że **Plik_wyjściowy konsolidatora** ustawienie w oknie dialogowym właściwości projektu może być konieczne do przeglądu. Dla projektów przed Visual Studio 2010 Plik_wyjściowy jest jedno ustawienie, który Kreator konwersji automatycznej ma problemy z, jeśli jest ustawiona na wartość niestandardową. W tym przypadku ścieżki dla plików wyjściowych zostały ustawione w folderze niestandardowych XP32_DEBUG. Aby dowiedzieć się więcej na temat tego błędu, możemy konsultacji [wpis w blogu](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) związane z uaktualnienia projektu programu Visual Studio 2010, które zostało uaktualnienia z udziałem zmiana program vcbuild msbuild, istotną zmianę. Zgodnie z tych informacji, wartość domyślna **plik wyjściowy** ustawienie podczas tworzenia nowego projektu jest `$(OutDir)$(TargetName)$(TargetExt)`, ale to nie została ustawiona podczas konwersji, ponieważ nie jest możliwe w przypadku projektów przekonwertowany do sprawdzenia, czy wszystko jest poprawna. Jednak Załóżmy spróbuj umieścić w plik_wyjściowy i sprawdzić, czy działa.  Robi, więc możesz teraz przystąpić. Nie ma konkretnego powodu dotyczące korzystania z folderu danych wyjściowych niestandardowych, firma Microsoft zaleca użycie standardowego lokalizacji. W tym przypadku Wybraliśmy pozostaw lokalizację wyjściową jako niestandardowego typu w procesie przenoszenia i uaktualniania; `$(OutDir)` jest rozpoznawana jako folder XP32_DEBUG w **debugowania** konfiguracji i ReleaseU folder **wersji** konfiguracji.
 
 ### <a name="step-2-getting-it-to-build"></a>Krok 2. Wprowadzenie do kompilacji
 Liczba błędy i ostrzeżenia kompilowania projektu przenieść, wystąpić.

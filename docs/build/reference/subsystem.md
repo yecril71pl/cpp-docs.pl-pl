@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317721"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450731"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Tryb znakowy aplikacji Windows. System operacyjny zapewnia konsolę dla aplikacj
 **EFI_RUNTIME_DRIVER**<br/>
 Extensible Firmware Interface (EFI) obrazu
 
-Opcje podsystemu EFI opisują wykonywalne obrazów, które działają w środowisku rozszerzalnego interfejsu oprogramowania układowego. To środowisko jest typowo wyposażone sprzęt i jest wykonywany przed załadowaniem systemu operacyjnego. Najważniejsze różnice między typami obrazów EFI są lokalizacji w pamięci, który obraz, który jest ładowany i akcję, która zostanie podjęta, gdy zwraca wywołanie do obrazu. Obraz EFI_APPLICATION jest zwolniony, gdy zwraca formant. EFI_BOOT_SERVICE_DRIVER lub EFI_RUNTIME_DRIVER jest zwalniany tylko wtedy, gdy formant zwraca kod błędu. Obraz EFI_ROM jest wykonywany z ROM. Aby uzyskać więcej informacji, zobacz specyfikację w witrynie [Unified EFI Forum](http://www.uefi.org/) witryny sieci Web.
+Opcje podsystemu EFI opisują wykonywalne obrazów, które działają w środowisku rozszerzalnego interfejsu oprogramowania układowego. To środowisko jest typowo wyposażone sprzęt i jest wykonywany przed załadowaniem systemu operacyjnego. Najważniejsze różnice między typami obrazów EFI są lokalizacji w pamięci, który obraz, który jest ładowany i akcję, która zostanie podjęta, gdy zwraca wywołanie do obrazu. Obraz EFI_APPLICATION jest zwolniony, gdy zwraca formant. EFI_BOOT_SERVICE_DRIVER lub EFI_RUNTIME_DRIVER jest zwalniany tylko wtedy, gdy formant zwraca kod błędu. Obraz EFI_ROM jest wykonywany z ROM. Aby uzyskać więcej informacji, zobacz specyfikację w witrynie [Unified EFI Forum](https://www.uefi.org/) witryny sieci Web.
 
 **NATYWNE**<br/>
 Kod, który jest uruchamiany bez środowiska podsystemu — na przykład sterowniki urządzeń trybu jądra i procesów systemu macierzystego. Ta opcja jest zazwyczaj zarezerwowana dla funkcji systemu Windows.

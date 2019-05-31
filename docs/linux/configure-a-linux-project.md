@@ -2,12 +2,12 @@
 title: Konfigurowanie projektu systemu Linux w języku C++ w programie Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e8bf2b12462a18c8a0e6c1c4d6677f18e2f0f34
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389854"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451150"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -31,7 +31,7 @@ Aby zmienić ustawienia odnoszących się do komputera zdalnego systemu Linux, n
 
 - **Katalog główny kompilacji zdalnej** Określa lokalizację katalogu głównego, z której projekt jest kompilowany na zdalnym komputerze z systemem Linux.  To domyślnie zostanie **~/projects** chyba że zmieniony.
 
-- **Zdalny katalog projektu kompilacji** jest, gdzie tego określonego projektu zostanie utworzona na zdalnym komputerze z systemem Linux.  To domyślnie zostanie **$(RemoteRootDir)/$(ProjectName)**, które rozszerzy się do katalogu o nazwie po bieżącym projekcie, w katalogu głównym powyżej.
+- **Zdalny katalog projektu kompilacji** jest, gdzie tego określonego projektu zostanie utworzona na zdalnym komputerze z systemem Linux.  To domyślnie zostanie **$(RemoteRootDir)/$(ProjectName)** , które rozszerzy się do katalogu o nazwie po bieżącym projekcie, w katalogu głównym powyżej.
 
 > [!NOTE]
 > Aby zmienić domyślne C i Kompilatory języka C++ lub konsolidatora i programu archiwizującego, używany do tworzenia projektu, należy użyć odpowiednie wpisy w **C/C++ > Ogólne** sekcji i **Konsolidator > Ogólne** sekcji.  Te opcje można można ustawić, aby użyć określonej wersji kompilatora GCC lub nawet kompilatora Clang, na przykład. Aby uzyskać więcej informacji, zobacz [właściwości języka C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) i [właściwości konsolidatora (Linux C++)](prop-pages/linker-linux.md).
@@ -40,7 +40,7 @@ Aby zmienić ustawienia odnoszących się do komputera zdalnego systemu Linux, n
 
 **Visual Studio 2017 w wersji 15.6 i starszych:**<br/>
 Domyślnie program Visual Studio nie zawiera wszystkie pliki dołączane w poziomie systemu, z komputera z systemem Linux.  Na przykład, elementy w **/usr/obejmują** katalogu nie są obecne w programie Visual Studio.
-Aby uzyskać pełne [IntelliSense](/visualstudio/ide/using-intellisense) pomocy technicznej, należy skopiować te pliki do lokalizacji na komputerze deweloperskim i wskaż programu Visual Studio do tej lokalizacji.  Jedną z opcji jest kopiowanie plików za pomocą punktu połączenia usługi (Secure Copy).  W systemie Windows 10, możesz użyć [Bash on Windows](https://msdn.microsoft.com/commandline/wsl/about) do uruchomienia punktu połączenia usługi.  Dla starszych wersji systemu Windows, można użyć ciągu [narzędzia PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+Aby uzyskać pełne [IntelliSense](/visualstudio/ide/using-intellisense) pomocy technicznej, należy skopiować te pliki do lokalizacji na komputerze deweloperskim i wskaż programu Visual Studio do tej lokalizacji.  Jedną z opcji jest kopiowanie plików za pomocą punktu połączenia usługi (Secure Copy).  W systemie Windows 10, możesz użyć [Bash on Windows](https://msdn.microsoft.com/commandline/wsl/about) do uruchomienia punktu połączenia usługi.  Dla starszych wersji systemu Windows, można użyć ciągu [narzędzia PSCP (PuTTY Secure Copy)](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Aby skopiować pliki, używając polecenia podobnego do następującego:
 

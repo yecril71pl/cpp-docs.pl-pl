@@ -2,12 +2,12 @@
 title: Automatyczna paralelizacja i wektoryzacja
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ff908d1c7d45c8f757b8efe29f4f392102dc61d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236702"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450239"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatyczna paralelizacja i wektoryzacja
 
@@ -107,12 +107,12 @@ Podobnie jak przy użyciu automatycznego Zrównoleglacza, można określić [/Qv
 
 Aby uzyskać więcej informacji na temat kodów przyczyn i komunikaty, zobacz [komunikaty Wektoryzatora i Paralelizatora](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Aby uzyskać przykład pokazujący, jak działa Diagnostyka wektoryzowania automatycznego w praktyce, zobacz [projektu Austin część 2 z 6: Strona Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+Aby uzyskać przykład pokazujący, jak działa Diagnostyka wektoryzowania automatycznego w praktyce, zobacz [projektu Austin część 2 z 6: Strona Curling](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
 ## <a name="see-also"></a>Zobacz także
 
 [pętla](../preprocessor/loop.md)<br/>
-[Programowanie równoległe w kodzie natywnym](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[Programowanie równoległe w kodzie natywnym](https://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [/Qpar (Automatyczny paralelizator)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qpar-raport (Poziom raportowania automatycznej paralelizacji)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>

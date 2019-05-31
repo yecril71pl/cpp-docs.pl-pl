@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346313"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449246"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego)
 
@@ -27,7 +27,7 @@ Narzędzia profilowania zapewniają trzy widoki danych, które wyświetlają gra
 
 Środowisko uruchomieniowe współbieżności używa [Event Tracing for Windows](/windows/desktop/ETW/event-tracing-portal) (ETW), aby powiadomić narzędzia instrumentacji, takie jak profilerów, po wystąpieniu różnych zdarzeń. Te zdarzenia obejmują podczas harmonogramu jest aktywowane lub dezaktywowane, kontekst zaczyna się, kończy się, blokuje, odblokowuje lub daje i gdy algorytmu równoległego, rozpoczyna się lub kończy.
 
-Narzędzia takie jak [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) korzystanie z tej funkcji; w związku z tym, zwykle nie trzeba pracować z tych zdarzeń bezpośrednio. Jednak te zdarzenia są przydatne, gdy tworzysz niestandardowy program profilujący lub jeśli używasz narzędzia śledzenia zdarzeń takich jak [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).
+Narzędzia takie jak [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) korzystanie z tej funkcji; w związku z tym, zwykle nie trzeba pracować z tych zdarzeń bezpośrednio. Jednak te zdarzenia są przydatne, gdy tworzysz niestandardowy program profilujący lub jeśli używasz narzędzia śledzenia zdarzeń takich jak [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
 Środowisko uruchomieniowe współbieżności wywołuje te zdarzenia, tylko wtedy, gdy śledzenie jest włączone. Wywołaj [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) funkcję, aby włączyć śledzenie zdarzeń i [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) funkcję, aby wyłączyć śledzenie.
 

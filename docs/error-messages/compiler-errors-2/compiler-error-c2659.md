@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2659
 ms.assetid: b0883600-4d27-4ca7-a931-8ca6bd48654d
-ms.openlocfilehash: b8b6493b01ac2b88ea50ba50157328f59fdbedf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b44ef825626f60e9ae6c6e8600953959fcd7b3a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360388"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449229"
 ---
 # <a name="compiler-error-c2659"></a>Błąd kompilatora C2659
 
 'operator' : działa jako lewy operand
 
-Funkcja była po lewej stronie określonego operatora. Najczęstszą przyczyną tego błędu jest to, że kompilator przeanalizował identyfikator po lewej stronie operatora jako funkcję, podczas gdy programista chciał, aby była to zmienna. Aby uzyskać więcej informacji, zobacz Wikipedia artykułu [najbardziej uciążliwych analizy](http://en.wikipedia.org/wiki/Most_vexing_parse). Ten przykład przedstawia deklarację funkcji i definicję zmiennej, które łatwo pomylić:
+Funkcja była po lewej stronie określonego operatora. Najczęstszą przyczyną tego błędu jest to, że kompilator przeanalizował identyfikator po lewej stronie operatora jako funkcję, podczas gdy programista chciał, aby była to zmienna. Aby uzyskać więcej informacji, zobacz Wikipedia artykułu [najbardziej uciążliwych analizy](https://en.wikipedia.org/wiki/Most_vexing_parse). Ten przykład przedstawia deklarację funkcji i definicję zmiennej, które łatwo pomylić:
 
 ```
 // C2659a.cpp

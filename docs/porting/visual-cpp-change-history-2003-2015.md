@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: a0a13748894880c076f8d32c9c74afde1752504c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448972"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451286"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -409,7 +409,7 @@ Podczas uaktualniania kod z poprzednich wersji, może również wystąpić błę
 
 W programie Visual Studio 2015 najnowsze ulepszenia do zgodności kompilatora czasami można zmienić sposób kompilator rozpoznaje istniejącego kodu źródłowego. W rezultacie mogą wystąpić błędy innym podczas kompilacji lub różnice w zachowaniu nawet w kodzie, który wcześniej utworzone i sprawiał by działała poprawnie.
 
-Na szczęście te różnice mieć niewielkiego lub żadnego wpływu na większość kodu źródłowego. W przypadku kodu źródłowego lub inne zmiany są potrzebne, aby rozwiązać te różnice, poprawki zwykle być mały i proste. Uwzględniliśmy wiele przykładów kodu źródłowego wcześniej dopuszczalne, który może być konieczne, można zmienić *(przed)* i poprawki, aby je rozwiązać *(po)*.
+Na szczęście te różnice mieć niewielkiego lub żadnego wpływu na większość kodu źródłowego. W przypadku kodu źródłowego lub inne zmiany są potrzebne, aby rozwiązać te różnice, poprawki zwykle być mały i proste. Uwzględniliśmy wiele przykładów kodu źródłowego wcześniej dopuszczalne, który może być konieczne, można zmienić *(przed)* i poprawki, aby je rozwiązać *(po)* .
 
 Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty kompilacji, nie wpływają na zgodność binarną między aktualizacji do wersji programu Visual Studio. A *zmiana powodująca niezgodność* jest przeprowadzanie bardziej dotkliwych i może mieć wpływ na zgodność binarną, ale te rodzaje zgodność binarną podziały tylko występują między głównej wersji programu Visual Studio, na przykład między Visual Studio 2013 i Visual Studio 2015. Aby uzyskać informacje na temat przełomowych zmian, między programem Visual Studio 2013 i Visual Studio 2015, zobacz [Visual Studio 2015 zgodność zmiany](#VC_2015).
 
@@ -641,7 +641,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Położenie nowych i delete**
 
-   Zmiana została wprowadzona do **Usuń** operatora, aby zapewnić zgodność z C ++ 14 standardowych. Szczegółowe informacje o zmianie standardów znajduje się w temacie [cofania alokacji o rozmiarze w języku C++](http://isocpp.org/files/papers/n3778.html). Zmiany dodać formularz globalnego **Usuń** operator, który przyjmuje parametr rozmiaru. Istotną zmianę jest to, że jeśli wcześniej używano operator **Usuń** z tym samym podpisie (z **umieszczania nowych** operator), otrzymasz błąd kompilatora (C2956, który ma miejsce w momencie, gdy nowe położenie jest używana, ponieważ jest pozycja w kodzie, gdzie kompilator próbuje zidentyfikować odpowiednie dopasowania **Usuń** operator).
+   Zmiana została wprowadzona do **Usuń** operatora, aby zapewnić zgodność z C ++ 14 standardowych. Szczegółowe informacje o zmianie standardów znajduje się w temacie [cofania alokacji o rozmiarze w języku C++](https://isocpp.org/files/papers/n3778.html). Zmiany dodać formularz globalnego **Usuń** operator, który przyjmuje parametr rozmiaru. Istotną zmianę jest to, że jeśli wcześniej używano operator **Usuń** z tym samym podpisie (z **umieszczania nowych** operator), otrzymasz błąd kompilatora (C2956, który ma miejsce w momencie, gdy nowe położenie jest używana, ponieważ jest pozycja w kodzie, gdzie kompilator próbuje zidentyfikować odpowiednie dopasowania **Usuń** operator).
 
    Funkcja `void operator delete(void *, size_t)` został **delete umieszczania** operator odpowiadający **umieszczania nowych** funkcji `void * operator new(size_t, size_t)` w C ++ 11. Za pomocą języka C ++ 14 dezalokacji wielkości, ta funkcja usuwania jest obecnie *funkcji dezalokacji zwykle* (globalne **Usuń** operator). Standardowa wymaga użycia nowego miejsca odwołuje się do odpowiednich funkcji usuwania, funkcja dezalokacji zwykle znajduje program źle sformułowane.
 
@@ -1106,7 +1106,7 @@ Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Literał ciągu jest tablicą stałej**
 
-   Następujący kod teraz generuje C2664: "void f (void *)": nie można przekonwertować argumentu 1 z "const char (*) [2]" na "void *"
+   Następujący kod teraz generuje C2664: "void f (void *)": nie można przekonwertować argumentu 1 z "const char (* ) [2]" na "void *"
 
     ```cpp
     void f(void *);

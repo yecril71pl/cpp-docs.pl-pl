@@ -6,18 +6,18 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 56cf00da71fe6c47e39de2a8fc06df572a301a61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22f2c5c6c162e459470f9babab66c61c096540ec
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222991"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450691"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
 
 Obsługuje formant programu Windows Forms jako specjalny rodzaj kontrolki ActiveX MFC i komunikuje się za pomocą kontrolki przy użyciu interfejsów ActiveX i właściwości i metod <xref:System.Windows.Forms.Control> klasy. Zalecamy użycie systemu .NET Framework, właściwości i metod do działania na formancie.
 
-Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
 > [!NOTE]
 >  W bieżącej wersji `CDialogBar` obiektu nie może obsługiwać kontrolek formularzy Windows Forms.

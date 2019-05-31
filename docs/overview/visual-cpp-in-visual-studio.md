@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e9327f74f46590f4d4a71e56340dcadf6527fabb
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174783"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451204"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
 > [!NOTE]
 > Ta dokumentacja dla deweloperów dotyczy programu Visual Studio 2015 lub nowszego. Selektor wersji w lewym górnym rogu strony być dopasowane do wersji programu Visual Studio.
 >
-> Jeśli szukasz pakietu redystrybucyjnego Visual C++, aby uruchomić program, przejdź do strony [Microsoft Download Center](http://www.microsoft.com/download/) i wprowadź **Visual C++** w polu wyszukiwania.
+> Jeśli szukasz pakietu redystrybucyjnego Visual C++, aby uruchomić program, przejdź do strony [Microsoft Download Center](https://www.microsoft.com/download/) i wprowadź **Visual C++** w polu wyszukiwania.
 
 Microsoft Visual C++, zazwyczaj skrócony do Visual C++ lub MSVC, to nazwa dla narzędzi programistycznych języka C++, C i język asemblera i bibliotek dostępne jako część programu Visual Studio w Windows. Tych narzędzi i bibliotek umożliwiają tworzenie aplikacji uniwersalnych platformy Windows (UWP), Windows desktop i serwerów aplikacji natywnych, bibliotek i platform i aplikacji działających w Windows, Linux, Android i z systemem iOS, a także zarządzanych aplikacji i bibliotek, które przy użyciu zestawu .NET Struktura. Visual C++ można użyć do zapisywania nic z aplikacji konsoli proste najbardziej zaawansowanych i złożonych aplikacji dla Windows desktop z sterowników urządzeń i składników systemu operacyjnego do gry dla wielu platform dla urządzeń przenośnych, a z najmniejszą urządzeń IoT w celu wielu serwerów o wysokiej wydajności obliczeniowej w chmurze platformy Azure.
 
@@ -61,7 +61,7 @@ Dowiedz się, które platformy są obsługiwane.
 [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 Dowiedz się więcej o nowoczesnych C++ technikach oparty na C ++ 11 i nowszych, które pozwalają na szybkie, pisanie bezpiecznego kodu i uniknąć wiele problemów programowania stylu C programowania.
 
-[Standard C++](http://isocpp.org/)<br/>
+[Standard C++](https://isocpp.org/)<br/>
 Dowiedz się o języku C++, uzyskaj omówienie nowoczesnego języka C++, znajdź łącza do książek, artykułów, rozmów i imprez
 
 [Naucz się Visual C++](../build/vscpp-step-1-create.md)<br/>

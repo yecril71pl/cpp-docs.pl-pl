@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e3e44e99e6f3a53a930ed5b3ac1f7cd5ae23063
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247867"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449558"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkcje kodowania tekstu ATL
 
@@ -295,7 +295,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Schemat kodowania "B" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Schemat kodowania "B" jest opisana w dokumencie RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
 
@@ -319,7 +319,7 @@ Liczbę znaków wymaganą dla buforu, który może przechowywać dane zakodowane
 
 ### <a name="remarks"></a>Uwagi
 
-Schemat kodowania "B" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Schemat kodowania "B" jest opisana w dokumencie RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="escapexml"></a> EscapeXML
 
@@ -447,7 +447,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Schemat kodowania "Q" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Schemat kodowania "Q" jest opisana w dokumencie RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
 
@@ -471,7 +471,7 @@ Liczbę znaków wymaganą dla buforu, który może przechowywać dane zakodowane
 
 ### <a name="remarks"></a>Uwagi
 
-Schemat kodowania "Q" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Schemat kodowania "Q" jest opisana w dokumencie RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="qpdecode"></a> QPDecode
 
@@ -509,7 +509,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 
@@ -530,7 +530,7 @@ Liczba bajtów potrzebnych dla buforu, który może przechowywać Dekodowany ci�
 
 ### <a name="remarks"></a>Uwagi
 
-Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencode"></a> QPEncode
 
@@ -566,7 +566,7 @@ Flagi ATLSMTP_QPENCODE opisujące, jak ma być wykonywane konwersji.
 
 - Dołącza ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` ciąg zakodowany.
 
-Opisano w quoted-printable schemat kodowania [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
+Opisano w quoted-printable schemat kodowania [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -574,7 +574,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 ### <a name="remarks"></a>Uwagi
 
-Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 
@@ -595,7 +595,7 @@ Liczbę znaków wymaganą dla buforu, który może przechowywać dane zakodowane
 
 ### <a name="remarks"></a>Uwagi
 
-Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="uudecode"></a> UUDecode
 

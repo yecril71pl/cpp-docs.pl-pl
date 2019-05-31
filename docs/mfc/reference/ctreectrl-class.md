@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323638"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449575"
 ---
 # <a name="ctreectrl-class"></a>Klasa CTreeCtrl
 
@@ -375,7 +375,7 @@ Wartość różną od zera, jeśli to się powiedzie, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.
+Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
 
@@ -935,7 +935,7 @@ Jeśli ten parametr ma wartość różną od zera, prostokąt otaczający zawier
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli element jest widoczny, za pomocą prostokąt otaczający zawarte w *lprect —*. W przeciwnym razie 0 przy użyciu *lprect —* niezainicjowany.
+Wartość różną od zera, jeśli element jest widoczny, za pomocą prostokąt otaczający zawarte w *lprect —* . W przeciwnym razie 0 przy użyciu *lprect —* niezainicjowany.
 
 ### <a name="example"></a>Przykład
 
@@ -1505,7 +1505,7 @@ Dojście do elementu widoku drzewa ( `HTREEITEM`), który odpowiada *uAccId* par
 
 ### <a name="remarks"></a>Uwagi
 
-Narzędzi ułatwień dostępu są to aplikacje, które pomagają osobom niepełnosprawnym używają komputerów. Identyfikator ułatwień dostępu jest używana przez `IAccessible` interfejsu, aby jednoznacznie określić element w oknie. Aby uzyskać więcej informacji na temat identyfikatorów ułatwień dostępu, wyszukaj temat "O Active Accessibility Support" w [sieci Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Narzędzi ułatwień dostępu są to aplikacje, które pomagają osobom niepełnosprawnym używają komputerów. Identyfikator ułatwień dostępu jest używana przez `IAccessible` interfejsu, aby jednoznacznie określić element w oknie. Aby uzyskać więcej informacji na temat identyfikatorów ułatwień dostępu, wyszukaj temat "O Active Accessibility Support" w [sieci Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Ta metoda wysyła [TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem) komunikat, który jest opisany w zestawie Windows SDK.
 
@@ -1541,7 +1541,7 @@ Identyfikator ułatwień dostępu, który odpowiada *hItem* parametru.
 
 ### <a name="remarks"></a>Uwagi
 
-Narzędzi ułatwień dostępu są to aplikacje, które pomagają osobom niepełnosprawnym używają komputerów. Identyfikator ułatwień dostępu jest używana przez `IAccessible` interfejsu, aby jednoznacznie określić element w oknie. Aby uzyskać więcej informacji na temat identyfikatorów ułatwień dostępu, wyszukaj temat "O Active Accessibility Support" w [sieci Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Narzędzi ułatwień dostępu są to aplikacje, które pomagają osobom niepełnosprawnym używają komputerów. Identyfikator ułatwień dostępu jest używana przez `IAccessible` interfejsu, aby jednoznacznie określić element w oknie. Aby uzyskać więcej informacji na temat identyfikatorów ułatwień dostępu, wyszukaj temat "O Active Accessibility Support" w [sieci Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Ta metoda wysyła [TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid) komunikat, który jest opisany w zestawie Windows SDK.
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat różnic między etykietki narzędzi i infotips wyszukiwania dla tematu "Etykietki narzędzi i Infotips" w [sieci Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Aby uzyskać więcej informacji na temat różnic między etykietki narzędzi i infotips wyszukiwania dla tematu "Etykietki narzędzi i Infotips" w [sieci Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Ta metoda wysyła [TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip) komunikat, który jest opisany w zestawie Windows SDK.
 

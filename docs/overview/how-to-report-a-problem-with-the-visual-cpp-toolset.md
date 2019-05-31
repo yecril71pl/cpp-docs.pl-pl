@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: da703d6649cb430b572d4d0db44adcfdef8ed8c4
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446772"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451165"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak zgłosić problem za pomocą zestawu narzędzi Visual C++ lub dokumentacji
 
@@ -112,7 +112,7 @@ Jest dobrą odtwarzania:
 
 - **Sprawdza, czy inne kompilatory** w razie potrzeby. Reprodukcje obejmujące przenośnego kodu C++ należy sprawdzić zachowanie względem innych kompilatorów, jeśli jest to możliwe. Standardowe określa poprawność program i żadnego kompilatora jest doskonałym rozwiązaniem, ale jeśli MSVC nie Clang i kompilatora GCC zaakceptować kodzie bez diagnostyki, prawdopodobnie patrzysz na usterkę w naszym kompilatora. (Inne możliwości obejmują różnice w systemach Unix i Windows zachowanie lub różnych poziomach implementacji standardów C++ i tak dalej). Z drugiej strony Jeśli wszystkie kompilatory odrzucić kodu, następnie jest prawdopodobne, że Twój kod jest nieprawidłowy. Oglądanie komunikatów o błędach różnych może pomóc zdiagnozować problem samodzielnie.
 
-   Możesz znaleźć listy kompilatory online, aby przetestować kod w [Kompilatory języka C++ w trybie Online](https://isocpp.org/blog/2013/01/online-c-compilers) w witrynie sieci Web ISO C++ lub to nadzorowana [listy kompilatory C++ Online](https://arnemertz.github.io/online-compilers/) w witrynie GitHub. Niektóre szczególne przykłady [Wandbox](https://wandbox.org/), [Explorer kompilatora](https://godbolt.org/), i [Coliru](http://coliru.stacked-crooked.com/).
+   Możesz znaleźć listy kompilatory online, aby przetestować kod w [Kompilatory języka C++ w trybie Online](https://isocpp.org/blog/2013/01/online-c-compilers) w witrynie sieci Web ISO C++ lub to nadzorowana [listy kompilatory C++ Online](https://arnemertz.github.io/online-compilers/) w witrynie GitHub. Niektóre szczególne przykłady [Wandbox](https://wandbox.org/), [Explorer kompilatora](https://godbolt.org/), i [Coliru](https://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Kompilatora online witryn sieci Web nie są powiązane z firmą Microsoft. Wiele witryn internetowych z kompilatora online są uruchamiane jako projektów osobistych, a niektóre z tych witrynach mogą być niedostępne po to odczytu, ale wyszukiwania powinien znajdować się inne osoby, których można użyć.

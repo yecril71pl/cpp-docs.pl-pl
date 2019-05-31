@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df30ddb910cf2fa266a603a3ab285379ea45ec7c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223613"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449855"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution — Klasa
 
@@ -95,7 +95,7 @@ Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type
 
 Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat rozkład normalny, zobacz artykuł Wolfram MathWorld [rozkładu normalnego](http://go.microsoft.com/fwlink/p/?linkid=400924).
+Aby uzyskać szczegółowe informacje na temat rozkład normalny, zobacz artykuł Wolfram MathWorld [rozkładu normalnego](https://go.microsoft.com/fwlink/p/?linkid=400924).
 
 ## <a name="example"></a>Przykład
 

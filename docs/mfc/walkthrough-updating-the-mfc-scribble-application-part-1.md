@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558213"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450513"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 
@@ -24,7 +24,7 @@ W tym przewodniku modyfikuje klasyczny przykład klasa Scribble MFC 1.0, który 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-[Próbki Bazgroły MFC 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017 lub nowszego, zobacz [przewodnik przenoszenia: Aplikacja Scribble MFC](../porting/porting-guide-mfc-scribble.md).
+[Próbki Bazgroły MFC 1.0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017 lub nowszego, zobacz [przewodnik przenoszenia: Aplikacja Scribble MFC](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Sekcje
 
@@ -171,7 +171,7 @@ Wstążka składa się z **aplikacji** przycisku, który jest duży przycisk w l
 
 1. W widoku Projekt, kliknij przycisk **aplikacji** przycisk, aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **Obraz** do `IDB_RIBBON_MAIN`, **monitu** do `File`, **klucze** do `f`, **duże obrazy** do `IDB_RIBBON_FILELARGE`i **Małe obrazy** do `IDB_RIBBON_FILESMALL`.
 
-1. Wprowadzenie następujących modyfikacji utworzyć menu, który jest wyświetlany, gdy użytkownik kliknie **aplikacji** przycisku. Kliknij przycisk wielokropka (**...** ) obok pozycji **elementy główne** otworzyć **Edytor elementów**.
+1. Wprowadzenie następujących modyfikacji utworzyć menu, który jest wyświetlany, gdy użytkownik kliknie **aplikacji** przycisku. Kliknij przycisk wielokropka ( **...** ) obok pozycji **elementy główne** otworzyć **Edytor elementów**.
 
    1. Za pomocą **elementu** typu **przycisk** zaznaczone, kliknij przycisk **Dodaj** w celu dodania przycisku. Zmiana **podpis** do `&New`, **identyfikator** do `ID_FILE_NEW`, **obraz** do `0`, **duży obraz** do `0`.
 
@@ -199,7 +199,7 @@ Wstążka składa się z **aplikacji** przycisku, który jest duży przycisk w l
 
 1. Po dokonaniu zmiany tworzy przycisk Zakończ, który pojawia się w dolnej części **aplikacji** przycisku menu.
 
-   1. W **właściwości** okna, kliknij przycisk wielokropka (**...** ) obok pozycji **przycisk** otworzyć **Edytor elementów**.
+   1. W **właściwości** okna, kliknij przycisk wielokropka ( **...** ) obok pozycji **przycisk** otworzyć **Edytor elementów**.
 
    1. Za pomocą **elementu** typu **przycisk** zaznaczone, kliknij przycisk **Dodaj** w celu dodania przycisku. Zmiana **podpis** do `E&xit`, **identyfikator** do `ID_APP_EXIT`, **obraz** do `8`.
 

@@ -3,12 +3,12 @@ title: 'Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558269"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450144"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation
 
@@ -25,7 +25,7 @@ Ten przykład tworzy niestandardowe przekształcenia Media Foundation ma zastoso
 W większości przypadków można użyć C++/CX, aby utworzyć środowiska wykonawczego Windows. Jednak czasami trzeba użyć biblioteki WRL. Na przykład gdy tworzysz rozszerzeniu usług media dla Microsoft Media Foundation, należy utworzyć składnik, który implementuje interfejsy modelu COM i środowiska wykonawczego Windows. Ponieważ C++/CX można tworzyć tylko obiekty Windows Runtime, aby utworzyć rozszerzenie nośnika należy użyć biblioteki WRL ponieważ umożliwia to implementacja interfejsy modelu COM i środowiska wykonawczego Windows.
 
 > [!NOTE]
-> Chociaż ten przykład kodu jest długa, przedstawia minimum, które są wymagane do utworzenia przydatne przekształcenie Media Foundation. Służy jako punkt wyjścia dla własnych niestandardowych przekształcenia. W tym przykładzie są zaczerpnięte z [przykład rozszerzeń z nośnika](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), rozszerzenia nośnik używa stosowanie efektów do wideo, dekodowanie wideo i tworzenie programów do obsługi systemu, które tworzą strumienie multimediów.
+> Chociaż ten przykład kodu jest długa, przedstawia minimum, które są wymagane do utworzenia przydatne przekształcenie Media Foundation. Służy jako punkt wyjścia dla własnych niestandardowych przekształcenia. W tym przykładzie są zaczerpnięte z [przykład rozszerzeń z nośnika](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), rozszerzenia nośnik używa stosowanie efektów do wideo, dekodowanie wideo i tworzenie programów do obsługi systemu, które tworzą strumienie multimediów.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -98,7 +98,7 @@ W większości przypadków można użyć C++/CX, aby utworzyć środowiska wykon
 
    1. Również w **dane wejściowe**, Dodaj `runtimeobject.lib`, `mfuuid.lib`, i `mfplat.lib` do **dodatkowe zależności** właściwości.
 
-   1. W obszarze **metadanych Windows**ustaw **Generowanie metadanych Windows** do **tak (/ WINMD)**.
+   1. W obszarze **metadanych Windows**ustaw **Generowanie metadanych Windows** do **tak (/ WINMD)** .
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Aby użyć biblioteki WRL niestandardowych składników platformy Media Foundation z aplikacją C#
 
@@ -122,10 +122,10 @@ Poniższa ilustracja przedstawia `MediaCapture app`.
 
 ## <a name="next-steps"></a>Następne kroki
 
-W przykładzie pokazano, jak przechwycić fotografie pochodzące z kamery internetowej domyślne, jeden na raz. [Przykład rozszerzeń z nośnika](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) ma większe. Pokazuje, jak wyliczyć urządzeń kamery internetowej i pracować z lokalnego systemu obsługi i przedstawia skutki dodatkowego nośnika, które działają zarówno w przypadku poszczególnych fotografii, jak i strumieni wideo.
+W przykładzie pokazano, jak przechwycić fotografie pochodzące z kamery internetowej domyślne, jeden na raz. [Przykład rozszerzeń z nośnika](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) ma większe. Pokazuje, jak wyliczyć urządzeń kamery internetowej i pracować z lokalnego systemu obsługi i przedstawia skutki dodatkowego nośnika, które działają zarówno w przypadku poszczególnych fotografii, jak i strumieni wideo.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[Przykład rozszerzeń z nośnika](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[Przykład rozszerzeń z nośnika](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
