@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373287"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450558"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Ustawienia kontrolki, kreator kontrolek ActiveX MFC
 
@@ -57,7 +57,7 @@ Aby uzyskać więcej informacji o tym, jak wybrać opcje na tej stronie, aby zma
    Określa, że kontrolka ma Standardowy Windows **o** okno dialogowe, które wyświetla numer wersji i informacje o prawach autorskich.
 
    > [!NOTE]
-   > Jak użytkownik uzyskuje dostęp do pomocy dla formantu zależy od tego, jak zostały zaimplementowane pomocy i czy zintegrowano pomoc do kontrolek za pomocą kontenerów. Aby uzyskać więcej informacji na temat sposobu integrowania pomocy, na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukiwanie "Dodawanie Context-Sensitive pomoc do kontrolki ActiveX MFC".
+   > Jak użytkownik uzyskuje dostęp do pomocy dla formantu zależy od tego, jak zostały zaimplementowane pomocy i czy zintegrowano pomoc do kontrolek za pomocą kontenerów. Aby uzyskać więcej informacji na temat sposobu integrowania pomocy, na [biblioteki MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukiwanie "Dodawanie Context-Sensitive pomoc do kontrolki ActiveX MFC".
 
    Po wybraniu tej opcji, wstawia `AboutBox` kontrolować metody w klasie kontrolki projektu (C*ProjName*Ctrl.cpp) i dodaje AboutBox do mapy wysyłania projektu. Domyślnie ta opcja jest zaznaczona.
 
@@ -87,7 +87,7 @@ Aby uzyskać więcej informacji o tym, jak wybrać opcje na tej stronie, aby zma
 
 - **Działa jako kontrolka proste ramki**
 
-   Określa, czy kontrolka jest kontenerem dla innych kontrolek, ustawiając OLEMISC_SIMPLEFRAME bitów formantu. Aby uzyskać więcej informacji na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukiwanie "Proste ramki lokacji zawierania".
+   Określa, czy kontrolka jest kontenerem dla innych kontrolek, ustawiając OLEMISC_SIMPLEFRAME bitów formantu. Aby uzyskać więcej informacji na [biblioteki MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukiwanie "Proste ramki lokacji zawierania".
 
 - **Ładuje właściwości asynchronicznie**
 

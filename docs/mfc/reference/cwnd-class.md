@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220356"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451235"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 Ponadto `BringWindowToTop` aktywuje okno podręczne, najwyższego poziomu i podrzędne MDI. `BringWindowToTop` Składowa powinna być używana do odkryć dowolne okno, która jest całkowicie lub częściowo zasłonięte przez inne nakładające się okna.
 
-Ta funkcja po prostu wywołuje funkcję Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) funkcji. Wywołaj [SetWindowPos](#setwindowpos) funkcję, aby zmienić położenie okna w porządku osi Z. `BringWindowToTop` Funkcji nie zmienia stylu okna aby stał się oknem najwyższego poziomu. Aby uzyskać więcej informacji, zobacz [jaka jest różnica między HWND_TOP a HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Ta funkcja po prostu wywołuje funkcję Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) funkcji. Wywołaj [SetWindowPos](#setwindowpos) funkcję, aby zmienić położenie okna w porządku osi Z. `BringWindowToTop` Funkcji nie zmienia stylu okna aby stał się oknem najwyższego poziomu. Aby uzyskać więcej informacji, zobacz [jaka jest różnica między HWND_TOP a HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Przykład
 
@@ -2455,7 +2455,7 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-W tym przykładzie *dysku* to litera dysku, *katalogu* jest prawidłową nazwą folderu, a *filename* jest prawidłowa nazwa pliku, który musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znak zapytania (**?**), co oznacza, że dopasować dowolny znak, a znak gwiazdki (<strong>\*</strong>), co oznacza dopasować dowolny ciąg znaków.
+W tym przykładzie *dysku* to litera dysku, *katalogu* jest prawidłową nazwą folderu, a *filename* jest prawidłowa nazwa pliku, który musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znak zapytania ( **?** ), co oznacza, że dopasować dowolny znak, a znak gwiazdki (<strong>\*</strong>), co oznacza dopasować dowolny ciąg znaków.
 
 Jeśli określisz ciąg o długości 0 *lpPathSpec*, lub jeśli określono nazwę katalogu, ale nie dołączaj żadnych specyfikacji pliku, ciągu zostanie zmieniony na "\*.\*".
 
@@ -2523,7 +2523,7 @@ Określa wynik funkcji. Jest różny od zera, jeśli listę dokonano jeszcze pus
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-W tym przykładzie *dysku* to litera dysku, *katalogu* jest prawidłową nazwą folderu, a *filename* jest prawidłowa nazwa pliku, który musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znak zapytania (**?**), co oznacza, że dopasować dowolny znak, a znak gwiazdki (<strong>\*</strong>), co oznacza, że dopasować dowolny ciąg znaków.
+W tym przykładzie *dysku* to litera dysku, *katalogu* jest prawidłową nazwą folderu, a *filename* jest prawidłowa nazwa pliku, który musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znak zapytania ( **?** ), co oznacza, że dopasować dowolny znak, a znak gwiazdki (<strong>\*</strong>), co oznacza, że dopasować dowolny ciąg znaków.
 
 Jeśli określisz ciąg o zerowej długości *lpPathSpec*, zostanie użyty bieżący katalog i *lpPathSpec* nie zostaną zmodyfikowane. Jeśli określono nazwę katalogu, ale nie dołączaj żadnych specyfikacji pliku, ciągu zostanie zmieniony na "\*".
 
@@ -3701,7 +3701,7 @@ Identyfikator przycisku radiowego zaznaczony lub 0, jeśli nie wybrano żadnego.
 
 ##  <a name="getclientrect"></a>  CWnd::GetClientRect
 
-Kopiuje współrzędne klienta `CWnd` obszaru klienta do struktury wskazywany przez *lprect —*.
+Kopiuje współrzędne klienta `CWnd` obszaru klienta do struktury wskazywany przez *lprect —* .
 
 ```
 void GetClientRect(LPRECT lpRect) const;
@@ -5054,7 +5054,7 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
-Kopiuje wymiary prostokąt otaczający `CWnd` obiekt do struktury wskazywany przez *lprect —*.
+Kopiuje wymiary prostokąt otaczający `CWnd` obiekt do struktury wskazywany przez *lprect —* .
 
 ```
 void GetWindowRect(LPRECT lpRect) const;
@@ -5652,7 +5652,7 @@ Określa prostokąt, w których punkty są ma zostać przekonwertowany. Pierwsza
 Wskaźnik do tablicy [struktura POINT](/windows/desktop/api/windef/ns-windef-tagpoint) zawierające zestaw punktów, które ma zostać przekonwertowany.
 
 *nCount*<br/>
-Określa liczbę `POINT` struktur w tablicy, wskazywana przez *lppoint —*.
+Określa liczbę `POINT` struktur w tablicy, wskazywana przez *lppoint —* .
 
 ##  <a name="messagebox"></a>  CWnd::MessageBox
 
@@ -7208,7 +7208,7 @@ Określa jedno z poniższych kodów pasek przewijania w programie word niskiego 
 
 - Przewiń SB_PAGEUP jedną stronę w górę.
 
-- Przewiń SB_THUMBPOSITION położenie bezwzględne. Bieżące położenie jest podawany jako *npos —*.
+- Przewiń SB_THUMBPOSITION położenie bezwzględne. Bieżące położenie jest podawany jako *npos —* .
 
 - Przewiń SB_TOP w lewym górnym rogu.
 
@@ -9756,7 +9756,7 @@ Dla rozszerzonego IBM 101 i 102 klawisze klawiatury i rozszerzone klucze są odp
 
 Aby uzyskać spoza USA Rozszerzone 102 klawisze klawiatury, prawym klawiszem ALT klucza są obsługiwane jako kombinacji klawiszy CTRL + ALT. Poniżej przedstawiono kolejność komunikatów i wywołania, które powodują, gdy użytkownik naciśnie i zwalnia tego klucza:
 
-|Sekwencja|Dostęp do funkcji|Komunikat przekazany|
+|Sequence|Dostęp do funkcji|Komunikat przekazany|
 |--------------|-----------------------|--------------------|
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
@@ -10104,9 +10104,9 @@ Określa, że kod paska przewijania, który wskazuje użytkownika przewijanym ż
 
 - Przewiń SB_PAGEUP jedną stronę w górę.
 
-- Przewiń SB_THUMBPOSITION położenie bezwzględne. Bieżące położenie jest podawany jako *npos —*.
+- Przewiń SB_THUMBPOSITION położenie bezwzględne. Bieżące położenie jest podawany jako *npos —* .
 
-- Przeciągnij SB_THUMBTRACK pole przewijania do określonej pozycji. Bieżące położenie jest podawany jako *npos —*.
+- Przeciągnij SB_THUMBTRACK pole przewijania do określonej pozycji. Bieżące położenie jest podawany jako *npos —* .
 
 - SB_TOP przewiń do góry.
 
@@ -10156,7 +10156,7 @@ Określa jedno z następujących wartości pasek przewijania:
 
 - Przewiń SB_PAGEUP jedną stronę w górę.
 
-- Przewiń SB_THUMBPOSITION położenie bezwzględne. Bieżące położenie jest podawany jako *npos —*.
+- Przewiń SB_THUMBPOSITION położenie bezwzględne. Bieżące położenie jest podawany jako *npos —* .
 
 - SB_TOP przewiń do góry.
 
@@ -11949,7 +11949,7 @@ Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zer
 
 Współrzędne obszaru okna okna są względem lewego górnego rogu okna nie obszaru klienckiego okna.
 
-Po pomyślnym wywołaniem `SetWindowRgn`, system operacyjny jest właścicielem określonego przez dojście regionu regionu *hrgn —*. Systemu operacyjnego nie kopię region, więc nie należy wprowadzać kolejne wywołania funkcji przy użyciu tego uchwytu regionu i nie zamykaj tego dojścia do regionu.
+Po pomyślnym wywołaniem `SetWindowRgn`, system operacyjny jest właścicielem określonego przez dojście regionu regionu *hrgn —* . Systemu operacyjnego nie kopię region, więc nie należy wprowadzać kolejne wywołania funkcji przy użyciu tego uchwytu regionu i nie zamykaj tego dojścia do regionu.
 
 ##  <a name="setwindowtext"></a>  CWnd::SetWindowText
 

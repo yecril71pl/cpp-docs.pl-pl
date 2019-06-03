@@ -2,12 +2,12 @@
 title: Konfigurowanie programów pod kątem Windows XP
 ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837134"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450705"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurowanie programów pod kątem Windows XP
 
@@ -17,7 +17,7 @@ Visual Studio 2019 i nowszym nie obejmuje obsługę tworzenia kodu dla Windows X
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Zainstaluj zestaw narzędzi platformy Windows XP
 
-Aby uzyskać zestaw narzędzi platformy i składników do obiektu docelowego Windows XP i Windows Server 2003 w programie Visual Studio 2017, uruchom Instalatora programu Visual Studio. Podczas pierwszej instalacji programu Visual Studio lub w przypadku wybrania **Modyfikuj** modyfikowania istniejącej instalacji, upewnij się, że **programowanie aplikacji klasycznych w języku C++** obciążenie jest zaznaczone. Na liście opcjonalnych składników dla tego obciążenia, wybierz opcję **podporu Windows XP Pro C++**, a następnie wybierz **zainstalować** lub **Modyfikuj**.
+Aby uzyskać zestaw narzędzi platformy i składników do obiektu docelowego Windows XP i Windows Server 2003 w programie Visual Studio 2017, uruchom Instalatora programu Visual Studio. Podczas pierwszej instalacji programu Visual Studio lub w przypadku wybrania **Modyfikuj** modyfikowania istniejącej instalacji, upewnij się, że **programowanie aplikacji klasycznych w języku C++** obciążenie jest zaznaczone. Na liście opcjonalnych składników dla tego obciążenia, wybierz opcję **podporu Windows XP Pro C++** , a następnie wybierz **zainstalować** lub **Modyfikuj**.
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP kierowania
 
@@ -69,4 +69,4 @@ Ze względu na różnice w obsłudze platformy i biblioteki środowisko programi
 
 - **Tworzenie HLSL**
 
-   Domyślnie zestaw narzędzi Windows XP nie kompiluje pliki kodu źródłowego języka HLSL. Aby skompilować plikach HLSL, Pobierz i zainstaluj czerwca 2010 zestawu SDK programu DirectX, a następnie ustaw projekt zachowania VC katalogi w celu dołączenia go. Aby uzyskać więcej informacji, zobacz "DirectX SDK nie rejestruje ścieżki Include/biblioteki za pomocą programu Visual Studio 2010" sekcji [czerwca 2010 strona pobierania zestawu SDK programu DirectX](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   Domyślnie zestaw narzędzi Windows XP nie kompiluje pliki kodu źródłowego języka HLSL. Aby skompilować plikach HLSL, Pobierz i zainstaluj czerwca 2010 zestawu SDK programu DirectX, a następnie ustaw projekt zachowania VC katalogi w celu dołączenia go. Aby uzyskać więcej informacji, zobacz "DirectX SDK nie rejestruje ścieżki Include/biblioteki za pomocą programu Visual Studio 2010" sekcji [czerwca 2010 strona pobierania zestawu SDK programu DirectX](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

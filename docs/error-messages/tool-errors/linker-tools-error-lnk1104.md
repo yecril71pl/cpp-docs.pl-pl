@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fcd3c06ae2db5c43aacbf781800870a83d2d77c1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446970"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451132"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Błąd narzędzi konsolidatora LNK1104
 
@@ -81,7 +81,7 @@ Po określeniu poszczególnych bibliotekach w **dodatkowe zależności** właśc
 
 Może zostać wyświetlony ten błąd podczas ścieżkę dla *filename* rozwija się do więcej niż 260 znaków. Zmień nazwy lub zmień ich rozmieszczenie struktury katalogów, w razie potrzeby skrócenie czasu ścieżki do wymaganych plików.
 
-Ten błąd może wystąpić, ponieważ plik jest zbyt duży. Biblioteki lub obiekt pliki więcej niż gigabajta rozmiarze mogą powodować problemy dla konsolidator 32-bitowy. Możliwych poprawkę rozwiązującą ten problem polega na użyciu 64-bitowego zestawu narzędzi. Aby uzyskać więcej informacji na temat w tym celu w wierszu polecenia, zobacz [jak: Włączanie 64-bitowego zestawu narzędzi Visual C++ w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Aby uzyskać informacje, jak to zrobić w środowisku IDE, zobacz [przy użyciu programu MSBuild z 64-bitowym kompilatorem i narzędziami](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) i ten wpis w witrynie Stack Overflow: [Jak Visual Studio ma używać łańcucha narzędzi natywnych amd64](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+Ten błąd może wystąpić, ponieważ plik jest zbyt duży. Biblioteki lub obiekt pliki więcej niż gigabajta rozmiarze mogą powodować problemy dla konsolidator 32-bitowy. Możliwych poprawkę rozwiązującą ten problem polega na użyciu 64-bitowego zestawu narzędzi. Aby uzyskać więcej informacji na temat w tym celu w wierszu polecenia, zobacz [jak: Włączanie 64-bitowego zestawu narzędzi Visual C++ w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Aby uzyskać informacje, jak to zrobić w środowisku IDE, zobacz [przy użyciu programu MSBuild z 64-bitowym kompilatorem i narzędziami](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) i ten wpis w witrynie Stack Overflow: [Jak Visual Studio ma używać łańcucha narzędzi natywnych amd64](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
 
 Ten błąd może wystąpić, jeśli masz plik niewystarczające uprawnienia dostępu do *filename*. Może się to zdarzyć, jeśli możesz użyć konta zwykłego użytkownika i próba dostępu do plików biblioteki w katalogach chronionych systemu lub użyć plików skopiowanych z innym użytkownikom z uprawnieniami oryginalnego zestawu. Aby rozwiązać ten problem, należy przenieść plik do katalogu projektu zapisywalny. Jeśli plik znajduje się w katalogu zapisywalny, ale ma uprawnienia niedostępny, można użyć wiersza polecenia z uprawnieniami administratora i uruchom polecenie takeown.exe przejęcie na własność pliku.
 

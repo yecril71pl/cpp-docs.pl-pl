@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161020"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449617"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Błąd narzędzi konsolidatora LNK2001
 
@@ -71,7 +71,7 @@ Ten błąd może wystąpić, jeśli kod odwołuje się do określonego symbolu z
 
 Obecnie nie istnieje standard dla [nazewnictwa C++](../../error-messages/tool-errors/name-decoration.md) między dostawcami kompilatora lub nawet między różnymi wersjami kompilatora. W związku z tym konsolidacji plików obiektu skompilowany za pomocą innych kompilatorów może nie generuje ten sam schemat nazewnictwa, powodując błąd LNK2001.
 
-[Mieszanie wbudowane i innych niż inline opcji kompilacji](../../error-messages/tool-errors/function-inlining-problems.md) różnych modułów mogą powodować LNK2001. Jeśli biblioteka języka C++ jest tworzony za pomocą funkcji wbudowanie włączona (**/Ob1** lub **/ob2**), ale odpowiedni plik nagłówkowy opisujących funkcje wbudowanie wyłączone (nie `inline` — słowo kluczowe), ten błąd występuje. Aby rozwiązać ten problem, należy zdefiniować funkcje `inline` w pliku nagłówkowym, należy uwzględnić w innych plikach źródłowych.
+[Mieszanie wbudowane i innych niż inline opcji kompilacji](../../error-messages/tool-errors/function-inlining-problems.md) różnych modułów mogą powodować LNK2001. Jeśli biblioteka języka C++ jest tworzony za pomocą funkcji wbudowanie włączona ( **/Ob1** lub **/ob2**), ale odpowiedni plik nagłówkowy opisujących funkcje wbudowanie wyłączone (nie `inline` — słowo kluczowe), ten błąd występuje. Aby rozwiązać ten problem, należy zdefiniować funkcje `inline` w pliku nagłówkowym, należy uwzględnić w innych plikach źródłowych.
 
 Jeśli używasz `#pragma inline_depth` kompilatora dyrektywy, upewnij się, że masz [wartości 2 lub nowszy zestaw](../../error-messages/tool-errors/function-inlining-problems.md)i upewnij się, możesz także użyć [/Ob1](../../build/reference/ob-inline-function-expansion.md) lub [/ob2](../../build/reference/ob-inline-function-expansion.md) — opcja kompilatora.
 
@@ -101,5 +101,5 @@ W niektórych przypadkach konsolidator może zgłaszać tylko nazwę z atrybutam
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-Aby uzyskać więcej informacji na temat możliwych przyczyn i rozwiązań dla LNK2001 zobacz pytanie dotyczące przepełnienia stosu [co to jest błąd zewnętrzny symbol Niezdefiniowany odwołania/nierozpoznanych i jak go naprawić?](http://stackoverflow.com/q/12573816/2002113).
+Aby uzyskać więcej informacji na temat możliwych przyczyn i rozwiązań dla LNK2001 zobacz pytanie dotyczące przepełnienia stosu [co to jest błąd zewnętrzny symbol Niezdefiniowany odwołania/nierozpoznanych i jak go naprawić?](https://stackoverflow.com/q/12573816/2002113).
 
