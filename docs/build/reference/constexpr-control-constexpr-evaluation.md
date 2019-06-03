@@ -22,9 +22,9 @@ Użyj **/constexpr** opcje kompilatora sterowania parametrami dla **constexpr** 
 
 ## <a name="syntax"></a>Składnia
 
-> **/ constexpr: DEPTH**<em>N</em>
+> **/constexpr: DEPTH**<em>N</em>
 >  **/constexpr: backtrace**<em>N</em>
-> ** /constexpr: Steps**<em>N</em>
+>  **/constexpr: Steps**<em>N</em>
 
 ## <a name="arguments"></a>Argumenty
 
