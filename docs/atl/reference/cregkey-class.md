@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58b7b180f5b4925f64078f8c799036252003549e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278088"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503241"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 
@@ -195,7 +195,7 @@ Opcje dla klucza. Wartość domyślna to REG_OPTION_NON_VOLATILE. Aby uzyskać l
 Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_READ &#124; KEY_WRITE. Aby uzyskać listę możliwych wartości i opisy, zobacz `RegCreateKeyEx`.
 
 *lpSecAttr*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która wskazuje, czy uchwyt klucza może być dziedziczona przez proces podrzędny. Domyślnie ten parametr ma wartość NULL (znaczenie, który nie może być dziedziczona uchwyt).
+Wskaźnik do [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) strukturę, która wskazuje, czy uchwyt klucza może być dziedziczona przez proces podrzędny. Domyślnie ten parametr ma wartość NULL (znaczenie, który nie może być dziedziczona uchwyt).
 
 *lpdwDisposition*<br/>
 [out] Jeśli innych niż NULL, pobiera REG_CREATED_NEW_KEY (Jeśli klucz nie istnieje i został utworzony) lub REG_OPENED_EXISTING_KEY (Jeśli klucz istniał i został otwarty).

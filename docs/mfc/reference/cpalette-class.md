@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373183"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504766"
 ---
 # <a name="cpalette-class"></a>Klasa CPalette
 
@@ -111,7 +111,7 @@ Określa pierwszy wpis w palety aby być animowane.
 Określa liczbę wpisów w palety aby być animowane.
 
 *lpPaletteColors*<br/>
-Wskazuje pierwszego elementu członkowskiego tablicy [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) struktur, aby zastąpić wpisy palety identyfikowane przez *nStartIndex* i *nNumEntries*.
+Wskazuje pierwszego elementu członkowskiego tablicy [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) struktur, aby zastąpić wpisy palety identyfikowane przez *nStartIndex* i *nNumEntries*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -245,7 +245,7 @@ Określa pierwszy wpis w logiczną paletę do pobrania.
 Określa liczbę wpisów w logiczną paletę do pobrania.
 
 *lpPaletteColors*<br/>
-Wskazuje na tablicę [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) struktur danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.
+Wskazuje na tablicę [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) struktur danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -312,7 +312,7 @@ Określa pierwszy wpis w logiczną paletę do ustawienia.
 Określa liczbę wpisów w logiczną paletę do ustawienia.
 
 *lpPaletteColors*<br/>
-Wskazuje na tablicę [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) struktur danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.
+Wskazuje na tablicę [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) struktur danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -322,7 +322,7 @@ Liczba wpisów w logiczną paletę; 0, jeśli funkcja nie powiodło się.
 
 Jeśli logiczną paletę zostanie wybrany do kontekstu urządzenia, gdy aplikacja wywołuje `SetPaletteEntries`, zmiany nie zostały zastosowane do czasu wywołania aplikacji [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).
 
-Aby uzyskać więcej informacji na temat struktury Windows `PALETTEENTRY`, zobacz [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) w zestawie Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

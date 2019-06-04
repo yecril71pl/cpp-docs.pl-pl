@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0faa93cd4ea1fdc2fad90a5d4d47f2feeef65e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387907"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504232"
 ---
 # <a name="toolbar-editor-c"></a>Edytor paska narzędzi (C++)
 
@@ -107,7 +107,7 @@ Przycisk paska narzędzi ma następujące właściwości:
 
 1. W **Dodaj zasób** okno dialogowe, wybierz opcję **narzędzi** w **typ zasobu** , a następnie wybierz **New**.
 
-   Jeśli znak plus (**+**) pojawia się obok **narzędzi** typ zasobu oznacza że narzędzi szablony są dostępne. Wybierz znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie wybierz **New**.
+   Jeśli znak plus ( **+** ) pojawia się obok **narzędzi** typ zasobu oznacza że narzędzi szablony są dostępne. Wybierz znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie wybierz **New**.
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Aby przekonwertować mapy bitowe zasoby paska narzędzi
 
@@ -204,6 +204,5 @@ ATL i MFC
 ## <a name="see-also"></a>Zobacz także
 
 [Edytory zasobów](../windows/resource-editors.md)
-<!--
-[Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->
+[menu i inne zasoby](/windows/desktop/menurc/resources)<br/>
+[Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)<br/>

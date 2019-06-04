@@ -1,29 +1,29 @@
 ---
 title: Błąd kompilatora C2362
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 f1_keywords:
 - C2362
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: 17656b2a48a3680a9269d3ca300fd4188eda6b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364327"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503210"
 ---
 # <a name="compiler-error-c2362"></a>Błąd kompilatora C2362
 
-Inicjalizacja 'Identyfikator' jest pomijana przy "Przejdź do etykiety"
+> Inicjalizacja "*identyfikator*" jest pomijana przy "goto *etykiety*"
 
-Podczas kompilowania za pomocą [/Za](../../build/reference/za-ze-disable-language-extensions.md), przeskakiwanie do etykiety zapobiega inicjowany przez identyfikator.
+Gdy kompilowany przy użyciu [/Za](../../build/reference/za-ze-disable-language-extensions.md), skok do etykiety zapobiega inicjowany przez identyfikator.
 
-Nie można przeskoczyć poza deklaracją za pomocą inicjatora, chyba że deklaracja jest ujęty w bloku, który nie jest wprowadzone lub zmiennej został już zainicjowany.
+Użytkownik może wykonać skok tylko ostatnie zgłoszenie za pomocą inicjatora czy deklaracja jest ujęty w bloku, który nie jest wprowadzone, czy zmienna został już zainicjowany.
 
-Poniższy przykład spowoduje wygenerowanie C2326:
+Poniższy przykład spowoduje wygenerowanie C2362:
 
-```
+```cpp
 // C2362.cpp
 // compile with: /Za
 int main() {
@@ -35,7 +35,7 @@ label1:;
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2362b.cpp
 // compile with: /Za
 int main() {

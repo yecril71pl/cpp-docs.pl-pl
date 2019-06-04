@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337898"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503562"
 ---
 # <a name="chtmlview-class"></a>Klasa CHtmlView
 
@@ -493,7 +493,7 @@ Wariant, używany do określania argumentów danych wyjściowych polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) w Windows SDK.
+Zobacz [IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) w Windows SDK.
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -759,7 +759,7 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) wartość zgodnie z opisem w zestawie Windows SDK.
+A [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) wartość zgodnie z opisem w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1307,7 +1307,7 @@ Zastąp `OnFrameWindowActivate` pozwala reagować na `OnFrameWindowActivate` pow
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
-Ta funkcja członkowska jest wywoływana przez platformę, gdy [pełny ekran](https://msdn.microsoft.com/library/aa752119.aspx) właściwości została zmieniona.
+Ta funkcja członkowska jest wywoływana przez platformę, gdy [pełny ekran](/previous-versions/aa752119\(v=vs.85\)) właściwości została zmieniona.
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1430,7 +1430,7 @@ Zastąp `OnHideUI` pozwala reagować na `HideUI` powiadomienie z formantu przegl
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
-Ta funkcja członkowska jest wywoływana przez platformę, gdy [MenuBar](https://msdn.microsoft.com/library/aa752131.aspx) właściwości została zmieniona.
+Ta funkcja członkowska jest wywoływana przez platformę, gdy [MenuBar](/previous-versions/aa752131\(v=vs.85\)) właściwości została zmieniona.
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1481,7 +1481,7 @@ Adres URL, dla którego nawigacja nie powiodła się.
 Nazwa ramki, w którym zasób jest wyświetlane, lub wartość NULL, jeśli nie nazwane ramki był przeznaczony dla zasobu.
 
 *dwError*<br/>
-Kod stanu błędu, jeśli jest dostępny. Aby uzyskać listę możliwych kodów stanu HRESULT i HTTP, zobacz [kodów stanu zdarzenia NavigateError.](https://msdn.microsoft.com/library/aa768365.aspx)
+Kod stanu błędu, jeśli jest dostępny. Aby uzyskać listę możliwych kodów stanu HRESULT i HTTP, zobacz [kodów stanu zdarzenia NavigateError.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\)).
 
 *pbCancel*<br/>
 Określa, czy można anulować nawigacji strony błąd lub wszelkie dalsze Automat. Jeśli wartość TRUE (ustawienie domyślne), będzie kontynuować nawigacji strony błędu lub Automat; w przypadku wartości FAŁSZ anulować nawigacji strony błędu lub Automat.
@@ -1490,7 +1490,7 @@ Określa, czy można anulować nawigacji strony błąd lub wszelkie dalsze Autom
 
 Zastępuje tę metodę w celu zapewnienia obsługi błędów niestandardowych nawigacji.
 
-Aby uzyskać więcej informacji, zobacz [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)
+Aby uzyskać więcej informacji, zobacz [DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1661,7 +1661,7 @@ Zastąp `OnShowUI` pozwala reagować na `ShowUI` powiadomienie z formantu przegl
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
-Ta funkcja członkowska jest wywoływana przez platformę, gdy [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) właściwości została zmieniona.
+Ta funkcja członkowska jest wywoływana przez platformę, gdy [StatusBar](/previous-versions//aa768270\(v=vs.85\)) właściwości została zmieniona.
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1687,7 +1687,7 @@ Ciąg, który zawiera nowy tekst paska stanu.
 
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
 
-Ta funkcja członkowska jest wywoływana przez platformę, gdy [TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx) właściwości została zmieniona.
+Ta funkcja członkowska jest wywoływana przez platformę, gdy [TheaterMode](/previous-versions/aa768273\(v=vs.85\)) właściwości została zmieniona.
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1717,7 +1717,7 @@ Dla kodu HTML nazwy mogą ulec zmianie; Chociaż nadal pobiera zawartość HTML,
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
-Ta funkcja członkowska jest wywoływana przez platformę, gdy [narzędzi](https://msdn.microsoft.com/library/aa768274.aspx) właściwości została zmieniona.
+Ta funkcja członkowska jest wywoływana przez platformę, gdy [narzędzi](/previous-versions/aa768274\(v=vs.85\)) właściwości została zmieniona.
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1956,7 +1956,7 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>Parametry
 
 *nLevel*<br/>
-Adres zmiennej, określając poziom odświeżania. Możliwe zmienne są zdefiniowane w [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), w zestawie Windows SDK.
+Adres zmiennej, określając poziom odświeżania. Możliwe zmienne są zdefiniowane w [RefreshConstants](/previous-versions/aa768363\(v=vs.85\)), w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 

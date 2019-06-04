@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245585"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503343"
 ---
 # <a name="cominterfaceentry-macros"></a>Com_interface_entry — makra
 
@@ -39,7 +39,7 @@ Te makra wejść interfejsy obiektu w jego mapy interfejsu COM tak, aby może zo
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Taki sam jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), z tą różnicą, że wykonywanie zapytań dotyczących dowolnej IID skutkuje przekazywania zapytanie, aby *punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Taki sam jak [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), chyba że *punk* ma wartość NULL, automatycznie tworzy agregacji opisanego przez *clsid*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Taki sam jak [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), z tą różnicą, że wykonywanie zapytań dotyczących dowolnej IID skutkuje przekazywania zapytanie, aby *punk*i jeśli *punk* ma wartość NULL, automatycznie tworząc Agregacja opisanego przez *clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Powoduje, że program do wywołania [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) podczas określonego interfejsu zostaje przesłane zapytanie.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Powoduje, że program do wywołania [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) podczas określonego interfejsu zostaje przesłane zapytanie.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Zapisuje dane specyficzne dla interfejsu dla każdego wystąpienia.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Udostępnia interfejsy odrywania.|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Przetwarza mapę COM klasy bazowej, gdy przetwarzanie osiągnie ten wpis w mapie com.|
@@ -243,7 +243,7 @@ Jeśli zapytanie interfejsu nie powiedzie się, przetwarzanie mapy interfejsu CO
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-Powoduje, że program do wywołania [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) podczas określonego interfejsu zostaje przesłane zapytanie.
+Powoduje, że program do wywołania [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) podczas określonego interfejsu zostaje przesłane zapytanie.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ Na przykład w poniższym kodzie:
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-Należy pamiętać, że pierwszy wpis mapy interfejsu COM musi być interfejsem w obiekcie, zawierająca mapy interfejsu COM. W związku z tym, nie można uruchomić wpisy mapy modelu COM z COM_INTERFACE_ENTRY_CHAIN, co powoduje, że mapa COM innego obiektu do wyszukania w punkcie, w którym **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** pojawia się w mapie com. obiektu. Jeśli chcesz najpierw wyszukać mapy COM innego obiektu, Dodaj wpis interfejsu dla `IUnknown` do mapy COM następnie połączyć w łańcuch mapy interfejsu COM innego obiektu. Na przykład:
+Należy pamiętać, że pierwszy wpis mapy interfejsu COM musi być interfejsem w obiekcie, zawierająca mapy interfejsu COM. W związku z tym, nie można uruchomić wpisy mapy modelu COM z COM_INTERFACE_ENTRY_CHAIN, co powoduje, że mapa COM innego obiektu do wyszukania w punkcie, w którym **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** pojawia się w mapie com. obiektu. Jeśli chcesz najpierw wyszukać mapy COM innego obiektu, Dodaj wpis interfejsu dla `IUnknown` do mapy COM następnie połączyć w łańcuch mapy interfejsu COM innego obiektu. Na przykład:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

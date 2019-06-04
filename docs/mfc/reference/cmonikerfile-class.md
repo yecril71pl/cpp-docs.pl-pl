@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338041"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503827"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile Class
 
@@ -117,7 +117,7 @@ Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawio
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do kontekstu powiązania [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) do powiązania z, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL. Jeśli wystąpienie zostało otwarte z `IBindHost` interfejsu, kontekst powiązania jest pobierana z `IBindHost`. Jeśli ma nie `IBindHost` interfejsu lub interfejs nie zwraca kontekst powiązania, tworzenia kontekstu powiązania. Aby uzyskać opis [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) interfejsu, zobacz zestaw Windows SDK.
+Wskaźnik do kontekstu powiązania [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) do powiązania z, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL. Jeśli wystąpienie zostało otwarte z `IBindHost` interfejsu, kontekst powiązania jest pobierana z `IBindHost`. Jeśli ma nie `IBindHost` interfejsu lub interfejs nie zwraca kontekst powiązania, tworzenia kontekstu powiązania. Aby uzyskać opis [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) interfejsu, zobacz zestaw Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 

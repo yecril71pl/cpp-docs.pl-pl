@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349267"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504539"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -83,7 +83,7 @@ Rozmiar stosu dla nowego wątku lub 0.
 Lista argumentów do przekazania do nowego wątku lub **NULL**.
 
 *Zabezpieczenia*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Jeśli *zabezpieczeń* jest **NULL**, uchwyt nie może być dziedziczona. Musi być **NULL** dla aplikacji Windows 95.
+Wskaźnik do [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) strukturę, która określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Jeśli *zabezpieczeń* jest **NULL**, uchwyt nie może być dziedziczona. Musi być **NULL** dla aplikacji Windows 95.
 
 *initflag*<br/>
 Flagi określające początkowy stan nowego wątku. Ustaw *initflag* do 0, aby natychmiast uruchomić lub **CREATE_SUSPENDED** można utworzyć wątku w stanie wstrzymania; użyj [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) realizować wątek. Ustaw *initflag* do **STACK_SIZE_PARAM_IS_A_RESERVATION** flagi używania *stack_size* zgodnie z pierwszym zarezerwować rozmiar stosu w bajtach; Jeśli ta flaga jest nieokreślona, *stack_size* Określa rozmiar zatwierdzenia.
@@ -99,7 +99,7 @@ Jeśli *start_address* jest **NULL**, procedura obsługi nieprawidłowego parame
 
 Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Aby uzyskać więcej informacji na temat **uintptr_t —**, zobacz [standardowych typów](../../c-runtime-library/standard-types.md).
+Aby uzyskać więcej informacji na temat **uintptr_t —** , zobacz [standardowych typów](../../c-runtime-library/standard-types.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -128,7 +128,7 @@ Możesz wywołać [_endthread](endthread-endthreadex.md) lub **_endthreadex** ja
 
 System operacyjny obsługuje alokację stosu przy albo **_beginthread** lub **_beginthreadex** nosi nazwę; nie trzeba przekazywać adresu stosu wątku do żadnej z tych funkcji. Ponadto *stack_size* argument może przyjąć wartość 0, w którym przypadku system operacyjny używa tej samej wartości co stos, który jest określony wątku głównego.
 
-*lista_argumentów* jest parametrem, który zostanie przekazany do nowo utworzonego wątku. Zazwyczaj jest adres elementu danych, takich jak ciąg znaków. *lista_argumentów* może być **NULL** Jeśli nie jest wymagana, ale **_beginthread** i **_beginthreadex** muszą mieć jakąś wartość do przekazania do nowego wątku. Wszystkie wątki są kończone, jeżeli dowolny wątek jest wywołany [przerwać](abort.md), **wyjść**, **_exit**, lub **exitprocess —**.
+*lista_argumentów* jest parametrem, który zostanie przekazany do nowo utworzonego wątku. Zazwyczaj jest adres elementu danych, takich jak ciąg znaków. *lista_argumentów* może być **NULL** Jeśli nie jest wymagana, ale **_beginthread** i **_beginthreadex** muszą mieć jakąś wartość do przekazania do nowego wątku. Wszystkie wątki są kończone, jeżeli dowolny wątek jest wywołany [przerwać](abort.md), **wyjść**, **_exit**, lub **exitprocess —** .
 
 Ustawienia regionalne nowego wątku jest inicjowana przy użyciu każdego procesu globalnego bieżące informacje o ustawieniach regionalnych. Jeśli ustawienia regionalne na wątek jest włączony przez wywołanie [_configthreadlocale](configthreadlocale.md) (globalnie albo dla nowych wątków tylko), wątek może zmieniać jego ustawienia regionalne niezależnie od innych wątków przez wywołanie metody **setlocale** lub **_wsetlocale**. Wątki, które nie mają Ustaw flagę ustawień regionalnych na wątek może mieć wpływ na informacje o ustawieniach regionalnych w wszystkie wątki, które nie mają również ustawić flagę ustawień regionalnych na wątek, a także wszystkie nowo utworzone wątki. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: da4b8b3d5a41ab16dc2027fd632c56158afd3b97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cae5faea7938918da2656e21648282c1a2e1a66d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275941"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503766"
 ---
 # <a name="win32threadtraits-class"></a>Klasa Win32ThreadTraits
 
@@ -90,7 +90,7 @@ Tworzenie flagi (0 lub CREATE_SUSPENDED).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt do nowo utworzonego wątku lub wartość NULL w przypadku niepowodzenia. Wywołaj [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) Aby uzyskać rozszerzone informacje o błędzie.
+Zwraca uchwyt do nowo utworzonego wątku lub wartość NULL w przypadku niepowodzenia. Wywołaj [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) Aby uzyskać rozszerzone informacje o błędzie.
 
 ### <a name="remarks"></a>Uwagi
 

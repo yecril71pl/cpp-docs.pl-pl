@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260730"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503380"
 ---
 # <a name="caccesstoken-class"></a>Klasa CAccessToken
 
@@ -246,7 +246,7 @@ Wskaźnik do nowego `CAccessToken` obiektu.
 Określa prawa dostępu do żądanego dla nowego tokenu. Domyślnie MAXIMUM_ALLOWED, żąda wszystkie prawa dostępu, które są prawidłowe dla obiektu wywołującego. Zobacz [prawa dostępu i maski dostępu](/windows/desktop/SecAuthZ/access-rights-and-access-masks) więcej włączone prawa dostępu.
 
 *pTokenAttributes*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, która określa deskryptora zabezpieczeń dla nowego tokenu i określa, czy procesy podrzędne mogą dziedziczyć token. Jeśli *pTokenAttributes* ma wartość NULL, token pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
+Wskaźnik do [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, która określa deskryptora zabezpieczeń dla nowego tokenu i określa, czy procesy podrzędne mogą dziedziczyć token. Jeśli *pTokenAttributes* ma wartość NULL, token pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -295,10 +295,10 @@ Określa dodatkowe flagi, priorytet i utworzenia procesu. Zobacz opis funkcji Wi
 W przypadku opcji TRUE profil użytkownika jest ładowany z [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
 *pProcessAttributes*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, która określa deskryptora zabezpieczeń dla nowego procesu i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pProcessAttributes* ma wartość NULL, proces pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
+Wskaźnik do [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, która określa deskryptora zabezpieczeń dla nowego procesu i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pProcessAttributes* ma wartość NULL, proces pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
 
 *pThreadAttributes*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, która określa deskryptora zabezpieczeń dla nowego wątku i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pThreadAttributes* ma wartość NULL, wątek pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
+Wskaźnik do [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, która określa deskryptora zabezpieczeń dla nowego wątku i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pThreadAttributes* ma wartość NULL, wątek pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
 
 *bInherit*<br/>
 Wskazuje, czy nowy proces dziedziczy dojść procesu wywołującego. W przypadku opcji TRUE każdy dziedziczne otwarte dojście w proces wywołujący jest dziedziczona przez nowy proces. Uchwyty odziedziczone mają takie same uprawnienia wartość i dostępem jako oryginalnego obsługuje.

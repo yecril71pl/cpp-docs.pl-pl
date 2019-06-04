@@ -41,19 +41,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 58ecf680d64f39ab61589a0ad668c15d1a9cd68c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3058bc5793a7766b0a6849ba77f0533f0bbbcef6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359069"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503804"
 ---
 # <a name="graphic-objects"></a>Obiekty graficzne
 
 Windows oferuje szereg narzędzi do użycia w kontekstach urządzenia do rysowania. Zawiera pióra, aby rysować linie, pędzle do wypełnienia wnętrza i czcionek, aby rysować tekst. Biblioteka MFC zawiera klasy obiektów grafiki jest równoważne z narzędzi do rysowania w Windows. W poniższej tabeli przedstawiono dostępne klasy i równoważne grafiki Windows typ dojścia interface (GDI) urządzenia.
 
 > [!NOTE]
->  Aby uzyskać więcej informacji, zobacz dokumentację zestawu SDK interfejsu GDI + w: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Aby uzyskać więcej informacji, zobacz [dokumentacji zestawu SDK interfejsu GDI +](/windows/desktop/gdiplus/-gdiplus-gdi-start).
 
 W tym artykule opisano korzystanie z tych klas obiektów grafiki:
 

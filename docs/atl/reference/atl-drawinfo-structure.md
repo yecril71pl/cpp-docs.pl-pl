@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261068"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503416"
 ---
 # <a name="atldrawinfo-structure"></a>Struktura ATL_DRAWINFO
 
@@ -60,7 +60,7 @@ Informacje kontekstu dla urządzeń docelowych, wskazywana przez `ptd` z któreg
 Kontekst urządzenia, na którym do rysowania. Dla obiektu bez okien `hdcDraw` element członkowski znajduje się w `MM_TEXT` tryb mapowania przy użyciu współrzędnych logiczne dopasowanie współrzędne klienta okna nadrzędnego. Ponadto, kontekst urządzenia powinna być w tym samym stanie, co zwykle przekazywane przez `WM_PAINT` wiadomości.
 
 `prcBounds`<br/>
-Wskaźnik do [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) struktury, określając prostokąta `hdcDraw` , w którym ma być rysowany obiektu. Ten element kontroluje pozycjonowanie i rozciąganie obiektu. Ten element członkowski powinna być równa NULL, aby narysować niepowiązanej z oknami aktywnego obiektu w miejscu. W każdej sytuacji o wartości NULL nie jest dozwoloną wartością i powinna być rozwiązywana we `E_INVALIDARG` kod błędu. Jeśli kontener przekazuje wartość inną niż NULL do obiektu bez okien, obiekt ma być renderowany żądany aspekt w kontekście określonego urządzenia i prostokąt. Kontener poprosić to obiekt bez okien do renderowania widoku w drugim, nieaktywnej obiektu lub drukowanie obiektu.
+Wskaźnik do [RECTL](/previous-versions//dd162907\(v=vs.85\)) struktury, określając prostokąta `hdcDraw` , w którym ma być rysowany obiektu. Ten element kontroluje pozycjonowanie i rozciąganie obiektu. Ten element członkowski powinna być równa NULL, aby narysować niepowiązanej z oknami aktywnego obiektu w miejscu. W każdej sytuacji o wartości NULL nie jest dozwoloną wartością i powinna być rozwiązywana we `E_INVALIDARG` kod błędu. Jeśli kontener przekazuje wartość inną niż NULL do obiektu bez okien, obiekt ma być renderowany żądany aspekt w kontekście określonego urządzenia i prostokąt. Kontener poprosić to obiekt bez okien do renderowania widoku w drugim, nieaktywnej obiektu lub drukowanie obiektu.
 
 `prcWBounds`<br/>
 Jeśli `hdcDraw` jest kontekście urządzenia metaplików (zobacz [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) w zestawie Windows SDK), jest to wskaźnik do `RECTL` struktury, określając prostokąt otaczający w podstawowej metaplik. Struktura prostokąt zawiera rozmiaru okna i okna źródła. Wartości te są przydatne do rysowania metapliki. Prostokąt wskazywanym przez `prcBounds` zagnieździć to `prcWBounds` prostokąt; znajdują się w tej samej przestrzeni współrzędnych.

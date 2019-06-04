@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222576"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504397"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 
@@ -1947,7 +1947,7 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Środek elipsy jest środek prostokąt otaczający określony przez *x1*, *y1*, *x2*, i *y2*, lub  *lprect —*. Elipsy jest rysowany przy użyciu bieżącego pióra, a jego wewnętrznych jest wypełniany aktualny pędzel.
+Środek elipsy jest środek prostokąt otaczający określony przez *x1*, *y1*, *x2*, i *y2*, lub  *lprect —* . Elipsy jest rysowany przy użyciu bieżącego pióra, a jego wewnętrznych jest wypełniany aktualny pędzel.
 
 Rysunek rysowane przez tę funkcję rozciąga się do, ale nie zawiera współrzędne po prawej stronie i u dołu. Oznacza, że wysokość rysunku *y2* - *y1* i szerokość rysunku jest *x2* - *x1*.
 
@@ -2490,7 +2490,7 @@ Tylko konteksty urządzenia pamięci i urządzeń, które obsługują wyświetla
 
 ##  <a name="framerect"></a>  CDC::FrameRect
 
-Rysuje obramowanie wokół prostokąt określony przez *lprect —*.
+Rysuje obramowanie wokół prostokąt określony przez *lprect —* .
 
 ```
 void FrameRect(
@@ -2927,7 +2927,7 @@ Typ obszaru przycinania. Może być dowolną z następujących wartości:
 
 ### <a name="remarks"></a>Uwagi
 
-Wymiary są kopiowane do bufor wskazywany przez *lprect —*.
+Wymiary są kopiowane do bufor wskazywany przez *lprect —* .
 
 ##  <a name="getcoloradjustment"></a>  CDC::GetColorAdjustment
 
@@ -3220,7 +3220,7 @@ Zwraca bieżący tryb grafiki w przypadku powodzenia. Aby uzyskać listę warto�
 
 Zwraca wartość 0 w przypadku niepowodzenia.
 
-Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, układ flagi dla bieżącego kontekstu urządzenia. W przeciwnym razie GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Aby uzyskać listę flag, układ, zobacz [CDC::SetLayout](#setlayout).
+Jeśli to się powiedzie, układ flagi dla bieżącego kontekstu urządzenia. W przeciwnym razie GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Aby uzyskać listę flag, układ, zobacz [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4012,7 +4012,7 @@ Zwraca wartość różną od zera w przypadku powodzenia.
 
 Zwraca wartość 0 w przypadku niepowodzenia.
 
-Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4459,7 +4459,7 @@ Zwraca wartość różną od zera w przypadku powodzenia.
 
 Zwraca wartość 0 w przypadku niepowodzenia.
 
-Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -6003,7 +6003,7 @@ Określa tryb grafiki. Aby uzyskać listę wartości, które można wykonać teg
 
 Zwraca tryb stare grafiki w przypadku powodzenia.
 
-Zwraca wartość 0 w przypadku niepowodzenia. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Zwraca wartość 0 w przypadku niepowodzenia. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -6032,7 +6032,7 @@ Flagi kontrolne układ kontekstu urządzenia i mapy bitowej. Może być kombinac
 
 W przypadku powodzenia poprzedniej układ kontekstu urządzenia.
 
-W przypadku niepowodzenia GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+W przypadku niepowodzenia GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -6657,7 +6657,7 @@ Zwraca wartość różną od zera w przypadku powodzenia.
 
 Zwraca wartość 0 w przypadku niepowodzenia.
 
-Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 

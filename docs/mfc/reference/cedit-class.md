@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164075"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503746"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 
@@ -181,7 +181,7 @@ Jeśli chcesz obsługiwać Windows powiadomienia wysyłane przez formant edycji 
 
 Każdy wpis mapy komunikatów ma następującą postać:
 
-  **ON_**_POWIADOMIEŃ_**(** _identyfikator_**,** _memberFxn_ **)**
+  **ON_** _POWIADOMIEŃ_ **(** _identyfikator_ **,** _memberFxn_ **)**
 
 gdzie `id` Określa identyfikator okna elementu podrzędnego kontrolki edycji wysyłania powiadomienia, a `memberFxn` nazywa się nadrzędny element członkowski funkcji zostały napisane do obsługi powiadomień.
 
@@ -708,7 +708,7 @@ Określa znak, który ma być wyświetlany zamiast znaku, który wpisany przez u
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli utworzysz formant edycji stylu ES_PASSWORD biblioteki DLL, która obsługuje formant określa domyślny znak hasła. Manifest lub [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) Metoda określa, który obsługuje biblioteki DLL kontrolki edycji. Jeśli user32.dll obsługuje formant edycji, domyślny znak hasła jest GWIAZDKI ("*", U + 002A). Jeśli comctl32.dll w wersji 6 obsługuje formant edycji, domyślny znak jest czarne KÓŁKO ("●", U + 25CF). Aby uzyskać więcej informacji na temat obsługujący biblioteki DLL i wersji wspólnych formantów, zobacz [powłoki i wspólnej kontroli wersji](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+Jeśli utworzysz formant edycji stylu ES_PASSWORD biblioteki DLL, która obsługuje formant określa domyślny znak hasła. Manifest lub [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) Metoda określa, który obsługuje biblioteki DLL kontrolki edycji. Jeśli user32.dll obsługuje formant edycji, domyślny znak hasła jest GWIAZDKI ("*", U + 002A). Jeśli comctl32.dll w wersji 6 obsługuje formant edycji, domyślny znak jest czarne KÓŁKO ("●", U + 25CF). Aby uzyskać więcej informacji na temat obsługujący biblioteki DLL i wersji wspólnych formantów, zobacz [powłoki i wspólnej kontroli wersji](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
 Ta metoda wysyła [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) komunikat, który jest opisany w zestawie Windows SDK.
 
@@ -867,7 +867,7 @@ Indeks znaków jest liczbę znaków od początku kontrolki edycji do określoneg
 
 Ta funkcja członkowska jest przetwarzany tylko przez formanty edycji wielu linii.
 
-Aby uzyskać więcej informacji, zobacz [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 

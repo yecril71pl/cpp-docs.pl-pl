@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5268a5ae336b0f96dfd6c0bd348a883e85ac32e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160201"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503552"
 ---
 # <a name="cheaderctrl-class"></a>Klasa CHeaderCtrl
 
@@ -315,7 +315,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast `Create` do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.
+Użyj `CreateEx` zamiast `Create` do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
@@ -761,7 +761,7 @@ Indeks elementu, w oparciu o ich kolejność w formancie nagłówka. Indeks jest
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego implementuje zachowanie makra Win32 [HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355), zgodnie z opisem w zestawie Windows SDK. Jest ona udostępniana do obsługi porządkowanie elementu nagłówka.
+Ta funkcja elementu członkowskiego implementuje zachowanie makra Win32 [HDM_ORDERTOINDEX](/windows/desktop/controls/hdm-ordertoindex), zgodnie z opisem w zestawie Windows SDK. Jest ona udostępniana do obsługi porządkowanie elementu nagłówka.
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 

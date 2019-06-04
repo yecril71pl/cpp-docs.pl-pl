@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ANSI [MFC]
 - MFC [C++], ANSI support
 ms.assetid: f98440ad-90fc-42f5-bf74-975cd793c49c
-ms.openlocfilehash: e32d35b814fb0114835261002221ad952fd14b03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18c869cf9e7aeca909ac7ad52cb9a0efdb915a0f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410580"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504212"
 ---
 # <a name="support-for-ansi"></a>Obsługa standardu ANSI
 
@@ -21,4 +21,4 @@ Większość metod i klas MFC obsługuje zestawu znaków ANSI, mimo że struktur
 
 [Obsługa formatu Unicode](../text/support-for-unicode.md)<br/>
 [Przestarzałe interfejsy API ANSI](../mfc/deprecated-ansi-apis.md)<br/>
-[Powłoka i wspólnej kontroli wersji](https://msdn.microsoft.com/library/windows/desktop/bb776779)
+[Powłoka i wspólnej kontroli wersji](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))

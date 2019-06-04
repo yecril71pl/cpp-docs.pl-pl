@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: beca804fae8d6e82b4664102b39d76a23e66ca59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbd859018210d3c972ae9d4b0e9f659d96d95aab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409411"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504215"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -30,7 +30,7 @@ Identyfikator kategorii zaimplementowane.
 
 ## <a name="remarks"></a>Uwagi
 
-**Implements_category —** C++ atrybut określa kategorii składników implementowane przez klasy docelowej. Odbywa się przez utworzenie mapy kategorii i dodawanie oddzielne wpisy określone przez **implements_category —** atrybutu. Aby uzyskać więcej informacji, zobacz [co to są kategorii składników i jak są one działają?](https://msdn.microsoft.com/library/windows/desktop/ms694322).
+**Implements_category —** C++ atrybut określa kategorii składników implementowane przez klasy docelowej. Odbywa się przez utworzenie mapy kategorii i dodawanie oddzielne wpisy określone przez **implements_category —** atrybutu. Aby uzyskać więcej informacji, zobacz [kategorii składników i jak one działają](/windows/desktop/com/component-categories-and-how-they-work).
 
 Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
 

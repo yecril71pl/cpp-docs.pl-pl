@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323303"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504661"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl Class
 
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>Parametry
 
 *pType*<br/>
-Typ danych formantu, który ma zostać utworzony. Musi być [typu](https://msdn.microsoft.com/library/system.type) typu danych.
+Typ danych formantu, który ma zostać utworzony. Musi być [typu](/dotnet/api/system.type) typu danych.
 
 *dwStyle*<br/>
 Styl okna, które dotyczą kontrolki. Określ kombinację [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles). Obecnie obsługiwane są tylko następujące style: WS_TABSTOP, WS_VISIBLE, WS_DISABLED i WS_GROUP.
@@ -136,7 +136,7 @@ Jeśli to się powiedzie, zwraca wartość różną od zera. W przypadku niepowo
 
 Ta metoda tworzy wystąpienie formantu .NET Framework Windows Forms w pojemniku MFC.
 
-Pierwsze przeciążenie metody akceptuje typ danych .NET Framework *pType* tak, aby MFC można utworzyć wystąpienia nowego obiektu tego typu. *pType* musi być [typu](https://msdn.microsoft.com/library/system.type) typu danych.
+Pierwsze przeciążenie metody akceptuje typ danych .NET Framework *pType* tak, aby MFC można utworzyć wystąpienia nowego obiektu tego typu. *pType* musi być [typu](/dotnet/api/system.type) typu danych.
 
 Drugie przeciążenie metody tworzy formantu Windows Forms na podstawie `TManagedControl` parametru szablonu `CWinFormsControl` klasy. Rozmiar i położenie formantu opiera się na `RECT` struktury przekazany do metody. Tylko *dwStyle* ma znaczenie dla stylów.
 

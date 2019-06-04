@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612287"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504493"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 
@@ -98,7 +98,7 @@ Określa dodatkowy znacznik, który steruje tworzeniem wątku. Ta flaga może za
 - **0** uruchomić wątku od razu po utworzeniu.
 
 *lpSecurityAttrs*<br/>
-Wskazuje [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która określa atrybuty zabezpieczeń dla wątku. Jeśli ma wartość NULL, będą używane te same atrybuty zabezpieczeń jako wątku tworzącego. Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.
+Wskazuje [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) strukturę, która określa atrybuty zabezpieczeń dla wątku. Jeśli ma wartość NULL, będą używane te same atrybuty zabezpieczeń jako wątku tworzącego. Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -110,7 +110,7 @@ Pierwszy formularz `AfxBeginThread` tworzy wątek roboczy. Druga forma tworzy w�
 
 `AfxBeginThread` Tworzy nową `CWinThread` obiektu, wywołuje jego [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) funkcji, aby rozpocząć wykonywanie wątku i zwraca wskaźnik do wątku. Kontrole są wprowadzane w trakcie trwania procedury upewnij się, że wszystkie obiekty są zdelokowane poprawnie w przypadku dowolnej części tworzenia nie. Aby zakończyć wątek, wywołaj [AfxEndThread](#afxendthread) z w ramach wątku lub zwróć z funkcji kontroli wątku roboczego.
 
-Wielowątkowość musi być włączona przez aplikację; w przeciwnym wypadku funkcja zakończy się niepowodzeniem. Aby uzyskać więcej informacji na temat włączania wielowątkowości, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md) w obszarze *opcjach kompilatora Visual C++*.
+Wielowątkowość musi być włączona przez aplikację; w przeciwnym wypadku funkcja zakończy się niepowodzeniem. Aby uzyskać więcej informacji na temat włączania wielowątkowości, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md) w obszarze *opcjach kompilatora Visual C++* .
 
 Aby uzyskać więcej informacji na temat `AfxBeginThread`, zobacz artykuły [wielowątkowość: Tworzenie wątków roboczych](../../parallel/multithreading-creating-worker-threads.md) i [wielowątkowość: Tworzenie wątków interfejsu użytkownika](../../parallel/multithreading-creating-user-interface-threads.md).
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parametry
 
 *nClassStyle*<br/>
-Określa styl klasy Windows lub kombinacji style, utworzone za pomocą bitowej OR ( **&#124;**) — operator dla klasy okna. Aby uzyskać listę style klasy, zobacz [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktury w zestawie Windows SDK. Jeśli ma wartość NULL, wartości domyślne będzie można ustawić w następujący sposób:
+Określa styl klasy Windows lub kombinacji style, utworzone za pomocą bitowej OR ( **&#124;** ) — operator dla klasy okna. Aby uzyskać listę style klasy, zobacz [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktury w zestawie Windows SDK. Jeśli ma wartość NULL, wartości domyślne będzie można ustawić w następujący sposób:
 
 - Ustawia styl myszy CS_DBLCLKS, które wysyła kliknij dwukrotnie wiadomości do procedury okna, gdy użytkownik kliknie dwukrotnie myszy.
 

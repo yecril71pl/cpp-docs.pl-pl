@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 885005cc04da94ff4339a5f538956b1bfc96b4c3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182137"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503677"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind Class
 
@@ -129,7 +129,7 @@ Flagi opisujące sposób obsługi tej sesji. Te flagi można łączyć przy uży
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -149,7 +149,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli istnieje więcej plików; zero, jeśli znaleziono pliku jest ostatni z nich w katalogu lub jeśli wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Jeśli znaleziono pliku ostatniego pliku w katalogu lub jeśli nie pasujących plików można znaleźć `GetLastError` :: gettotalsize() zwróciło ERROR_NO_MORE_FILES.
+Wartość różną od zera, jeśli istnieje więcej plików; zero, jeśli znaleziono pliku jest ostatni z nich w katalogu lub jeśli wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Jeśli znaleziono pliku ostatniego pliku w katalogu lub jeśli nie pasujących plików można znaleźć `GetLastError` :: gettotalsize() zwróciło ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Uwagi
 

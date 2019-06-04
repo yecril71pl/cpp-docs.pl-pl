@@ -1,24 +1,24 @@
 ---
 title: Alokowanie zasobów GDI
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 helpviewer_keywords:
 - resources [MFC], printing
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: adfd8b19f683b82eec213890c8e1345e070ff3ec
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305006"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504630"
 ---
 # <a name="allocating-gdi-resources"></a>Alokowanie zasobów GDI
 
 W tym artykule opisano sposób przydzielania i cofnąć jej przydział obiektów interface (GDI) urządzenia grafiki Windows niezbędnych do drukowania.
 
 > [!NOTE]
->  Aby uzyskać więcej informacji, zobacz dokumentację zestawu SDK interfejsu GDI + w: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Aby uzyskać więcej informacji, zobacz [dokumentacji zestawu SDK interfejsu GDI +](/windows/desktop/gdiplus/-gdiplus-gdi-start).
 
 Załóżmy, że należy użyć niektórych czcionek, pióra lub inne obiekty GDI związane z drukowaniem, ale nie do wyświetlania na ekranie. Ze względu na ilość pamięci, których potrzebują jest nieefektywne przydzielić tych obiektów, podczas uruchamiania aplikacji. Gdy aplikacja nie jest drukowanie dokumentu, że pamięć może być pożądane do innych celów. Zaleca się przydzielać je, po rozpoczęciu drukowania, a następnie usuń je, podczas drukowania kończy się.
 

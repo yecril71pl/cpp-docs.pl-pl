@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8348a56171836642db5c44cd5d075ba9d2c33769
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409190"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503850"
 ---
 # <a name="module-c"></a>moduł (C++)
 
@@ -36,14 +36,14 @@ Określa blok biblioteki w pliku .idl.
 
 - `unspecified` Wyłącza iniekcji kodu biblioteki ATL, powiązany z atrybutem modułu: iniekcji modułu ATL klas, _AtlModule globalnego wystąpienia i wpis punktu funkcji. Nie wyłącza iniekcji kodu biblioteki ATL z powodu innych atrybutów w projekcie.
 
-*Nazwa*<br/>
+*name*<br/>
 (Opcjonalnie) Nazwa bloku biblioteki.
 
 *version*<br/>
 (Opcjonalnie) Numer wersji, którą chcesz przypisać do bloku biblioteki. Wartość domyślna to 1.0.
 
 *uuid*<br/>
-Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie automatycznie wygenerowany identyfikator biblioteki. Musisz pobrać *uuid* bloku Biblioteka można wykonać przy użyciu identyfikatora **__uuidof (** *libraryname* **)**.
+Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie automatycznie wygenerowany identyfikator biblioteki. Musisz pobrać *uuid* bloku Biblioteka można wykonać przy użyciu identyfikatora **__uuidof (** *libraryname* **)** .
 
 *lcid*<br/>
 Parametr lokalizacji. Zobacz [lcid](/windows/desktop/Midl/lcid) Aby uzyskać więcej informacji.
@@ -97,7 +97,7 @@ Jeśli ten atrybut jest używany w projekcie, który korzysta z biblioteki ATL, 
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) służy jako klasa podstawowa i standardowa wejścia biblioteki DLL punktów wymaganych dla serwera COM. Te punkty wejścia są [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), i [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) służy jako klasa podstawowa i standardowa wejścia biblioteki DLL punktów wymaganych dla serwera COM. Te punkty wejścia są [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), i [ DllGetClassObject](/previous-versions//dd797891\(v=vs.85\)).
 
 - `type` = **exe**
 

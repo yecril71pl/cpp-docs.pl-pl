@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372104"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504738"
 ---
 # <a name="cricheditctrl-class"></a>Klasa CRichEditCtrl
 
@@ -503,7 +503,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast `Create` do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.
+Użyj `CreateEx` zamiast `Create` do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_** .
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ Zależy od postaci:
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli używasz pierwszego formularza **GetSelText (** `lpBuf` **)**, należy upewnić się, że bufor jest wystarczająco duży dla tekstu, będzie ona otrzymywać. Wywołaj [GetSel](#getsel) Aby określić liczbę znaków w bieżącym zaznaczeniu.
+Jeśli używasz pierwszego formularza **GetSelText (** `lpBuf` **)** , należy upewnić się, że bufor jest wystarczająco duży dla tekstu, będzie ona otrzymywać. Wywołaj [GetSel](#getsel) Aby określić liczbę znaków w bieżącym zaznaczeniu.
 
 Aby uzyskać więcej informacji, zobacz [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) w zestawie Windows SDK.
 
@@ -1354,7 +1354,7 @@ Indeks znaków wiersza określonego w *nLine* lub -1, jeśli określony numer wi
 
 Indeks znaków jest liczbę znaków od początku kontrolki edycji wzbogaconej do określonego wiersza.
 
-Aby uzyskać więcej informacji, zobacz [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 

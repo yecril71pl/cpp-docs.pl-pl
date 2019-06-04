@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225256"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503439"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -681,7 +681,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.
+Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_** .
 
 `CreateEx` Tworzy formant z rozszerzone style Windows określonego przez *dwExStyle*. Aby ustawić rozszerzone style określonej kontrolki, należy wywołać [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` Ustaw takie style jako WS_EX_CONTEXTHELP, ale korzystać z `SetExtendedStyle` do ustawiania tych stylów jako LVS_EX_FULLROWSELECT. Aby uzyskać więcej informacji, zobacz opisane w temacie style [rozszerzone style widoku listy](/windows/desktop/Controls/extended-list-view-styles) w zestawie Windows SDK.
 
@@ -1367,7 +1367,7 @@ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razi
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wysyła [LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) --> komunikat, który jest opisany w zestawie Windows SDK.
+Ta metoda wysyła [LVM_GETGROUPINFOBYINDEX](/windows/desktop/controls/lvm-getgroupinfobyindex) --> komunikat, który jest opisany w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -1787,7 +1787,7 @@ BOOL GetItemIndexRect(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*pItemIndex*|[in] Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę dla nadrzędnego elementu podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Ten parametr nie może mieć wartości NULL.|
+|*pItemIndex*|[in] Wskaźnik do [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) strukturę dla nadrzędnego elementu podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) struktury. Ten parametr nie może mieć wartości NULL.|
 |*iColumn*|[in] Liczony od zera indeks kolumny w kontrolce.|
 |*rectType*|[in] Część podelement widoku listy, dla której jest pobierana prostokąt otaczający. Określ jedną z następujących wartości:<br /><br /> LVIR_BOUNDS — zwraca prostokąt otaczający podelement całego, w tym ikony oraz etykiety.<br /><br /> LVIR_ICON — zwraca prostokąt otaczający ikony lub małą ikonę podelement.<br /><br /> LVIR_LABEL — zwraca prostokąt otaczający podelement tekstu.|
 |*pRect*|[out] Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która otrzymuje informacje na temat prostokąt otaczający podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury. Ten parametr nie może mieć wartości NULL.|
@@ -2093,8 +2093,8 @@ BOOL GetNextItemIndex(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*pItemIndex*|[out w] Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu, gdzie rozpoczyna się wyszukiwanie lub -1 do znalezienia pierwszego elementu, który odpowiada flagi w *nFlags* parametru.<br /><br /> Jeśli ta metoda zakończy się pomyślnie, `LVITEMINDEX` struktury w tym artykule opisano element znalezione przez wyszukiwanie.|
-|*nFlags*|[in] Bitowa kombinacja (lub) flagi określające, jak wykonać wyszukiwanie.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wygląd elementu docelowego lub element docelowy fizyczny pozycji względem elementu określonego przez *pItemIndex* parametru. Aby uzyskać więcej informacji, zobacz *flagi* parametru w [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) wiadomości.|
+|*pItemIndex*|[out w] Wskaźnik do [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) strukturę, która zawiera opis elementu, gdzie rozpoczyna się wyszukiwanie lub -1 do znalezienia pierwszego elementu, który odpowiada flagi w *nFlags* parametru.<br /><br /> Jeśli ta metoda zakończy się pomyślnie, `LVITEMINDEX` struktury w tym artykule opisano element znalezione przez wyszukiwanie.|
+|*nFlags*|[in] Bitowa kombinacja (lub) flagi określające, jak wykonać wyszukiwanie.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wygląd elementu docelowego lub element docelowy fizyczny pozycji względem elementu określonego przez *pItemIndex* parametru. Aby uzyskać więcej informacji, zobacz *flagi* parametru w [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) wiadomości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2104,7 +2104,7 @@ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razi
 
 Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich `LVITEMINDEX` wskazywanej przez *pItemIndex* parametru.
 
-Ta metoda wysyła [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) komunikat, który jest opisany w zestawie Windows SDK.
+Ta metoda wysyła [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) komunikat, który jest opisany w zestawie Windows SDK.
 
 ## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
@@ -2909,7 +2909,7 @@ Kontrolka widoku listy wewnętrznie śledzi elementów według indeksu. Może po
 
 Należy pamiętać, że w środowisku wielowątkowym indeks jest gwarantowane tylko w wątku, który obsługuje kontrolki widoku listy, nie na wątkach w tle.
 
-Ta metoda wysyła [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137) komunikat, który jest opisany w zestawie Windows SDK.
+Ta metoda wysyła [LVM_MAPIDTOINDEX](/windows/desktop/controls/lvm-mapidtoindex) komunikat, który jest opisany w zestawie Windows SDK.
 
 ## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
@@ -3822,7 +3822,7 @@ BOOL SetItemIndexState(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*pItemIndex*|[in] Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu. Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury i ustawienie jej członków.|
+|*pItemIndex*|[in] Wskaźnik do [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) strukturę, która zawiera opis elementu. Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury i ustawienie jej członków.|
 |*dwState*|[in] Stan, aby ustawić element, który jest bitową kombinacją [stanów elementu widoku listy](/windows/desktop/Controls/list-view-item-states). Określ zero do resetowania lub jeden do ustawiania stanu.|
 |*dwMask*|[in] Maska prawidłowe liczby bitów stanu określonego przez *dwState* parametru. Bitowa kombinacja (lub) określ [stanów elementu widoku listy](/windows/desktop/Controls/list-view-item-states).|
 
@@ -4164,7 +4164,7 @@ void SetWorkAreas(
 ### <a name="parameters"></a>Parametry
 
 *nWorkAreas*<br/>
-Liczba `RECT` struktur (lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekty) w tablicy, do których prowadzą *lprect —*.
+Liczba `RECT` struktur (lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekty) w tablicy, do których prowadzą *lprect —* .
 
 *lpRect*<br/>
 Adres tablicę `RECT` struktur (lub `CRect` obiektów) określające nowych obszarów roboczych kontrolka widoku listy. Te obszary, musi być określona w współrzędne klienta. Jeśli ten parametr ma wartość NULL, obszar roboczy zostanie ustawiona do obszaru klienckiego kontrolki.

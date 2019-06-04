@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324210"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504709"
 ---
 # <a name="csemaphore-class"></a>Klasa CSemaphore
 
@@ -83,14 +83,14 @@ Liczba maksymalne wykorzystanie semaforów. Musi być większa niż 0.
 Nazwa semafora. Należy podać w przypadku semafora będzie dostępna przez granice procesu. Jeśli `NULL`, obiekt zostanie bez nazwy. Jeśli nazwa pasuje do istniejącego semafor, Konstruktor tworzy nową `CSemaphore` obiektu, który odwołuje się semafora o takiej nazwie. Jeśli nazwa pasuje do istniejącego obiektu synchronizacji, który nie jest semafor, konstrukcja nie powiedzie się.
 
 *lpsaAttributes*<br/>
-Atrybuty zabezpieczeń dla obiektu semafora. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.
+Atrybuty zabezpieczeń dla obiektu semafora. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
 Dostęp i zwalniania `CSemaphore` obiektu, Utwórz [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) obiektu, a następnie wywołać jej [blokady](../../mfc/reference/csinglelock-class.md#lock) i [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Funkcje Członkowskie.
 
 > [!IMPORTANT]
->  Po utworzeniu `CSemaphore` obiektu, należy użyć [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że element mutex już nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.
+>  Po utworzeniu `CSemaphore` obiektu, należy użyć [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aby upewnić się, że element mutex już nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 

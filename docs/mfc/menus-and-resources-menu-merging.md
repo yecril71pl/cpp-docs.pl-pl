@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225542"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504825"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menu i zasoby: Scalanie menu
 
@@ -29,9 +29,7 @@ Tematy omówione w tym artykule obejmują:
 
 ##  <a name="_core_menu_layouts"></a> Układów menu
 
-Pierwszym krokiem jest koordynowanie układów menu. Aby uzyskać więcej informacji, zobacz **tworzenie Menu** sekcji [zagadnienia programowania Menu](https://msdn.microsoft.com/library/ms647557.aspx) w zestawie Windows SDK.
-
-Aplikacje kontenera należy utworzyć nowe menu ma być używany tylko wtedy, gdy elementy osadzone są aktywowane w miejscu. Jako minimum to menu powinna składać się z następujących czynności w podanej kolejności:
+Pierwszym krokiem jest koordynowanie układów menu. Aplikacje kontenera należy utworzyć nowe menu ma być używany tylko wtedy, gdy elementy osadzone są aktywowane w miejscu. Jako minimum to menu powinna składać się z następujących czynności w podanej kolejności:
 
 1. Menu Plik jest taka sama jak używana, gdy pliki są otwarte. (Zazwyczaj inne elementy menu są umieszczane przed następną.)
 

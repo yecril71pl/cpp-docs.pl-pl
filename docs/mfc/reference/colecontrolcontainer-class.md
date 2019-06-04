@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310441"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504564"
 ---
 # <a name="colecontrolcontainer-class"></a>Klasa COleControlContainer
 
@@ -473,7 +473,7 @@ Identyfikator kontrolki.
 Wskaźnik do zmiennej typu Boolean, który otrzymuje wartość Powodzenie/niepowodzenie — funkcja (wartość TRUE oznacza sukces, wartość FALSE wskazuje niepowodzenie).
 
 *bSigned*<br/>
-Określa, czy funkcja należy zbadać tekst znak minus na początku i zwraca wartość liczby całkowitej ze znakiem, jeśli zostanie znaleziony. Jeśli *bSigned* parametr ma wartość PRAWDA, określając, że wartości do pobrania jest wartością liczby całkowitej ze znakiem, wykonaj rzutowanie zwracanej wartości **int** typu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Określa, czy funkcja należy zbadać tekst znak minus na początku i zwraca wartość liczby całkowitej ze znakiem, jeśli zostanie znaleziony. Jeśli *bSigned* parametr ma wartość PRAWDA, określając, że wartości do pobrania jest wartością liczby całkowitej ze znakiem, wykonaj rzutowanie zwracanej wartości **int** typu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -515,7 +515,7 @@ Określa maksymalną długość w znakach ciągu, które mają być kopiowane do
 
 Jeśli funkcja się powiedzie, wartość zwracana określa liczbę znaków skopiowane do buforu, nie wliczając kończącego znaku null.
 
-Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

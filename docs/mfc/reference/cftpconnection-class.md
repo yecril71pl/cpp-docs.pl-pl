@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8940b1d028edc76383470f913ccbe16cb8c0e9f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181980"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503699"
 ---
 # <a name="cftpconnection-class"></a>Klasa CFtpConnection
 
@@ -208,7 +208,7 @@ Wskaźnik do ciągu zawierającego nazwę katalogu do utworzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Jeśli wywołanie zakończy się niepowodzeniem, funkcja Windows [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Jeśli wywołanie zakończy się niepowodzeniem, funkcja Windows [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -246,7 +246,7 @@ Wskaźnik do typu DWORD, który zawiera następujące informacje:
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -284,7 +284,7 @@ Wskaźnik do typu DWORD, który zawiera następujące informacje:
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -344,7 +344,7 @@ Identyfikator kontekstu do pobierania plików. Zobacz **uwagi** Aby uzyskać wi�
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -434,7 +434,7 @@ Identyfikator kontekstu umieszczenie pliku. Zobacz **uwagi** Aby uzyskać więce
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -457,7 +457,7 @@ Wskaźnik do ciągu zawierającego nazwę pliku do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -478,7 +478,7 @@ Wskaźnik do ciągu zawierającego katalogu, który ma zostać usunięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -506,7 +506,7 @@ Wskaźnik do ciągu zawierającego nazwę nowego pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -527,7 +527,7 @@ Wskaźnik do ciągu zawierającego nazwę katalogu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ### <a name="remarks"></a>Uwagi
 

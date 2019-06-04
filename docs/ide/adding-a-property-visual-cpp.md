@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 06940bb72f9113e0a8148e15418504b35fc95099
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226271"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504473"
 ---
 # <a name="add-a-property"></a>Dodaj właściwość
 
@@ -191,5 +191,5 @@ Jeśli dodajesz właściwości dispinterface MFC za pomocą [Kreator dodawania w
 |`Font`|Zwraca lub ustawia czcionkę otoczenia formantu. Wartość null, jeśli kontrolka ma nie czcionki.|
 |`ForeColor`|Zwraca lub ustawia formantu otoczenia `ForeColor` właściwości.|
 |`hWnd`|Zwraca lub ustawia formantu `hWnd` właściwości. `hWnd` nie ma przypisanego **zmiennej składowej** typ implementacji.|
-|`ReadyState`|Zwraca lub ustawia formantu `ReadyState` właściwości. Formant może być niezainicjowanej, zainicjowane, ładowanie, interakcyjnego lub pełne. Aby uzyskać więcej informacji, zobacz [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) w *Internet SDK*.|
+|`ReadyState`|Zwraca lub ustawia formantu `ReadyState` właściwości. Formant może być niezainicjowanej, zainicjowane, ładowanie, interakcyjnego lub pełne. Aby uzyskać więcej informacji, zobacz [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) w *Internet SDK*.|
 |`Text`|Zwraca lub ustawia tekst zawarty w kontrolce. `Text` nie ma przypisanego **zmiennej składowej** typ implementacji.|

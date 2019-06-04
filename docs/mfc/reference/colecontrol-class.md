@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160318"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503867"
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
 
@@ -1184,7 +1184,7 @@ Deskryptor dla typów parametrów zdarzenia.
 
 Zazwyczaj ta funkcja nie należy wywoływać bezpośrednio. Zamiast tego będzie wywoływać funkcje inicjowanie zdarzeń w sekcji mapy zdarzeń kontroli nad deklaracją klasy.
 
-*PbParams* argument jest listę rozdzielonych spacjami **VTS_**. Co najmniej jeden z tych wartości, rozdzielone spacjami (nie przecinki) określa listę parametrów funkcji. Dopuszczalne są następujące wartości:
+*PbParams* argument jest listę rozdzielonych spacjami **VTS_** . Co najmniej jeden z tych wartości, rozdzielone spacjami (nie przecinki) określa listę parametrów funkcji. Dopuszczalne są następujące wartości:
 
 |Symbol|Typ parametru|
 |------------|--------------------|
@@ -2811,7 +2811,7 @@ DWORD opisujący, które tworzą lub aspekcie obiektu ma być wyświetlana. Praw
 - Prostokąt DVASPECT_TRANSPARENT obejmujące wszystkie części przezroczyste lub nieprawidłowo.
 
 *pRect*<br/>
-Wskazuje [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) struktury, określając prostokąt, w którym ma być rysowany obiektu. Ten parametr określa pozycjonowanie i rozciąganie obiektu.
+Wskazuje [RECTL](/previous-versions/dd162907\(v=vs.85\)) struktury, określając prostokąt, w którym ma być rysowany obiektu. Ten parametr określa pozycjonowanie i rozciąganie obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 

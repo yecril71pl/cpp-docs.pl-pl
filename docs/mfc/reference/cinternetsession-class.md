@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345594"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503457"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession Class
 
@@ -156,7 +156,7 @@ Określa różne opcje pamięci podręcznej. Wartość domyślna jest równa 0. 
 
 - INTERNET_FLAG_DONT_CACHE nie buforują dane, lokalnie lub w dowolne serwery bramy.
 
-- Pobierz INTERNET_FLAG_OFFLINE operacje są spełnione przez trwałej pamięci podręcznej tylko. Jeśli element nie istnieje w pamięci podręcznej, zwracany jest kod odpowiedni komunikat o błędzie. Ta flaga mogą być łączone za pomocą operatora testu koniunkcji **lub** ( **&#124;**) — operator.
+- Pobierz INTERNET_FLAG_OFFLINE operacje są spełnione przez trwałej pamięci podręcznej tylko. Jeśli element nie istnieje w pamięci podręcznej, zwracany jest kod odpowiedni komunikat o błędzie. Ta flaga mogą być łączone za pomocą operatora testu koniunkcji **lub** ( **&#124;** ) — operator.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -258,7 +258,7 @@ Zmienna określania rozmiaru *pstrCookieData* buforu. Jeśli funkcja się powied
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W przeciwnym razie zwraca wartość TRUE, jeśli kończy się pomyślnie, lub FAŁSZ. Jeśli wywołanie zakończy się niepowodzeniem, należy wywołać funkcję Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) w celu ustalenia przyczyny błędu. Stosuje się następujące wartości błędów:
+W przeciwnym razie zwraca wartość TRUE, jeśli kończy się pomyślnie, lub FAŁSZ. Jeśli wywołanie zakończy się niepowodzeniem, należy wywołać funkcję Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) w celu ustalenia przyczyny błędu. Stosuje się następujące wartości błędów:
 
 - ERROR_NO_MORE_ITEMS istnieje pliki cookie, nie dla określonego adresu URL i wszystkich jego elementów nadrzędnych.
 
@@ -536,7 +536,7 @@ Wskaźnik, `OpenURL` zależy od zwraca *pstrURL*przez typ usługi. W poniższej 
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *Flagidw* musi zawierać INTERNET_FLAG_TRANSFER_ASCII lub INTERNET_FLAG_TRANSFER_BINARY, ale nie oba. Pozostałe flagi można łączyć za pomocą operatora testu koniunkcji **lub** — operator ( **&#124;**).
+Parametr *Flagidw* musi zawierać INTERNET_FLAG_TRANSFER_ASCII lub INTERNET_FLAG_TRANSFER_BINARY, ale nie oba. Pozostałe flagi można łączyć za pomocą operatora testu koniunkcji **lub** — operator ( **&#124;** ).
 
 `OpenURL`, który opakowuje funkcję Win32 `InternetOpenURL`, umożliwia tylko pobieranie, pobieranie i odczytywanie danych z serwera internetowego. `OpenURL` Umożliwia nie manipulowania plików w lokalizacji zdalnej, dzięki czemu wymaga nie [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) obiektu.
 
@@ -616,11 +616,11 @@ Określa różne opcje pamięci podręcznej. Wartość domyślna jest równa 0. 
 
 - INTERNET_FLAG_DONT_CACHE nie buforują dane, lokalnie lub w dowolne serwery bramy.
 
-- Pobierz INTERNET_FLAG_OFFLINE operacje są spełnione przez trwałej pamięci podręcznej tylko. Jeśli element nie istnieje w pamięci podręcznej, zwracany jest kod odpowiedni komunikat o błędzie. Ta flaga mogą być łączone za pomocą operatora testu koniunkcji **lub** ( **&#124;**) — operator.
+- Pobierz INTERNET_FLAG_OFFLINE operacje są spełnione przez trwałej pamięci podręcznej tylko. Jeśli element nie istnieje w pamięci podręcznej, zwracany jest kod odpowiedni komunikat o błędzie. Ta flaga mogą być łączone za pomocą operatora testu koniunkcji **lub** ( **&#124;** ) — operator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli operacja zakończyła się pomyślnie, zwracana jest wartość TRUE. Jeśli wystąpi błąd, jest zwracana wartość FAŁSZ. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.
+Jeśli operacja zakończyła się pomyślnie, zwracana jest wartość TRUE. Jeśli wystąpi błąd, jest zwracana wartość FAŁSZ. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) może zostać wywołana w celu ustalenia przyczyny błędu.
 
 ## <a name="see-also"></a>Zobacz także
 

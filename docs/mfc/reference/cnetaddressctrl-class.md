@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373821"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504231"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 
@@ -74,7 +74,7 @@ Poniższy przykład kodu jest częścią okno dialogowe, które sprawdza poprawn
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu z okna dialogowego pliku nagłówka definiuje [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) i [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) zmiennych, które są wymagane przez [CNetAddressCtrl::GetAddress](#getaddress)metody.
+Poniższy przykład kodu z okna dialogowego pliku nagłówka definiuje [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) i [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) zmiennych, które są wymagane przez [CNetAddressCtrl::GetAddress](#getaddress)metody.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>Parametry
 
 *pAddress*<br/>
-[out w] Wskaźnik do [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Ustaw *pAddrInfo* członkiem tej struktury adres [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struktury przed wywołaniem getaddress — metoda.
+[out w] Wskaźnik do [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Ustaw *pAddrInfo* członkiem tej struktury adres [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) struktury przed wywołaniem getaddress — metoda.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -199,7 +199,7 @@ Wartość S_OK, jeśli ta metoda się powiedzie; w przeciwnym razie kod błędu 
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ta metoda zakończy się pomyślnie, [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struktura zawiera dodatkowe informacje na temat adresu sieciowego.
+Jeśli ta metoda zakończy się pomyślnie, [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) struktura zawiera dodatkowe informacje na temat adresu sieciowego.
 
 Użyj [CNetAddressCtrl::SetAllowType](#setallowtype) metodę, aby określić typy adresów może obsługiwać bieżące formant adresu sieciowego. Użyj [CNetAddressCtrl::GetAddress](#getaddress) metody sprawdzania poprawności i przeanalizować adresu sieciowego, wprowadzonych przez użytkownika. Użyj [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodę w celu wyświetlenia poradę komunikat o błędzie, jeśli [CNetAddressCtrl::GetAddress](#getaddress) metoda zakończy się niepowodzeniem.
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).
+Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](/windows/desktop/shell/net-string).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*dwAddrMask*|[in] Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|
+|*dwAddrMask*|[in] Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](/windows/desktop/shell/net-string).|
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 44b744ec18ef46df366547bf03e980b3e7032b09
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 09a85231f871ef1a21b2f2adb309d94bb4a29e1a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707346"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504507"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 
@@ -58,4 +58,4 @@ Zawiera łącza do informacji na temat używania zestawu dokumentacji, kontaktuj
 ## <a name="see-also"></a>Zobacz także
 
 [Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)<br/>
-[Menu i inne zasoby](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menu i inne zasoby](/windows/desktop/menurc/resources)

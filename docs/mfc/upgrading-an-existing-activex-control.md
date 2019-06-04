@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 57d94a51d9dfb78dfaf3a690c43c74a2d6ab6db3
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 22cbeaa5ac0f92e2b7bcc9dcbd06df9ab4ccaff5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450601"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503832"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego formantu ActiveX
 
@@ -181,7 +181,7 @@ Aby użyć licencjonowany formant ActiveX w programie Internet Explorer, należy
 
 - Użycie parametru bazy kodu
 
-Aby użyć licencjonowany formant na stronie HTML na maszynie nonlicensed, należy wygenerować plik pakiet licencji (LPK). Plik LPK zawiera licencji czasu wykonywania dla licencjonowane formanty na stronie HTML. Ten plik został wygenerowany za pomocą LPK_TOOL. Plik EXE, który jest dostarczany z zestawem SDK ActiveX. Aby uzyskać więcej informacji, zobacz witrynę sieci Web MSDN pod [ https://msdn.microsoft.com ](https://msdn.microsoft.com).
+Aby użyć licencjonowany formant na stronie HTML na maszynie nonlicensed, należy wygenerować plik pakiet licencji (LPK). Plik LPK zawiera licencji czasu wykonywania dla licencjonowane formanty na stronie HTML. Ten plik został wygenerowany za pomocą LPK_TOOL. Plik EXE, który jest dostarczany z zestawem SDK ActiveX.
 
 #### <a name="to-create-an-lpk-file"></a>Aby utworzyć plik LPK
 

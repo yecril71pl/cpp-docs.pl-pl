@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4994b91813e2965972b47c838ddaf5333cc5f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385368"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503777"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog Class
 
@@ -512,7 +512,7 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>Uwagi
 
-W wersjach systemu Windows przed Windows Vista, elementu członkowskiego [LPSTRFILE](https://msdn.microsoft.com/library/ms911906.aspx) struktury danych stale była synchronizowana ze stanem `CFileDialog`. Wszelkie zmiany [m_ofn](#m_ofn) zmiennej składowej były natychmiast odzwierciedlane w stanie okno dialogowe. Ponadto wszelkie zmiany stanu okna dialogowego natychmiast zaktualizować `m_ofn` zmiennej składowej.
+W wersjach systemu Windows przed Windows Vista, elementu członkowskiego [LPSTRFILE](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) struktury danych stale była synchronizowana ze stanem `CFileDialog`. Wszelkie zmiany [m_ofn](#m_ofn) zmiennej składowej były natychmiast odzwierciedlane w stanie okno dialogowe. Ponadto wszelkie zmiany stanu okna dialogowego natychmiast zaktualizować `m_ofn` zmiennej składowej.
 
 Windows Vista lub nowszym wartości w `m_ofn` zmiennej elementu członkowskiego i stan `CFileDialog` nie musi być synchronizowane. Ta funkcja wymusza stan `CFileDialog` do zaktualizowane w celu dopasowania `m_ofn` struktury. Windows wywołuje tę funkcję, automatycznie podczas [CFileDialog::DoModal](#domodal).
 
@@ -1626,7 +1626,7 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>Uwagi
 
-W wersjach systemu Windows przed Windows Vista, elementu członkowskiego [LPSTRFILE](https://msdn.microsoft.com/library/ms911906.aspx) struktury danych stale była synchronizowana ze stanem `CFileDialog`. Wszelkie zmiany [m_ofn](#m_ofn) zmiennej składowej dotyczą go bezpośrednio stanu okna dialogowego. Ponadto wszelkie zmiany stanu okna dialogowego natychmiast aktualizowany m_ofn zmiennej składowej.
+W wersjach systemu Windows przed Windows Vista, elementu członkowskiego [LPSTRFILE](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) struktury danych stale była synchronizowana ze stanem `CFileDialog`. Wszelkie zmiany [m_ofn](#m_ofn) zmiennej składowej dotyczą go bezpośrednio stanu okna dialogowego. Ponadto wszelkie zmiany stanu okna dialogowego natychmiast aktualizowany m_ofn zmiennej składowej.
 
 Windows Vista lub nowszym `m_ofn` strukturę danych nie jest automatycznie aktualizowany. Aby zagwarantować dokładności danych w `m_ofn` zmiennej składowej, należy wywołać `UpdateOFNFromShellDialog` funkcji przed uzyskaniem dostępu do danych. Windows wywołuje tę funkcję, automatycznie podczas przetwarzania [IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 

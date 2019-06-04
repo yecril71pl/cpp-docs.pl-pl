@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fb23bd502de87aefe01d91e2b0640ee3137b00
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212912"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504585"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Wielowątkowość: Tworzenie wątków interfejsu użytkownika MFC
 
@@ -43,17 +43,17 @@ Biblioteka MFC zawiera dwie wersje `AfxBeginThread` za pomocą parametru przeci�
 
 - (Opcjonalnie) Żądany rozmiar stosu dla wątku. Wartość domyślna to taki sam jak rozmiar stosu wątku tworzącego.
 
-- (Opcjonalnie) CREATE_SUSPENDED if you want the thread to be created in a suspended state. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.
+- (Opcjonalnie) CREATE_SUSPENDED, jeśli chcesz, aby wątek był utworzony w stanie wstrzymania. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.
 
-- (Optional) The desired security attributes. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.
+- (Optional) The desired security attributes. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) w zestawie Windows SDK.
 
 `AfxBeginThread` wykonuje większość pracy za Ciebie. Tworzy nowy obiekt klasy, inicjuje go przy użyciu informacji podasz i wywołania [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) można rozpocząć wykonywanie wątku. Kontrole są wprowadzane w trakcie trwania procedury upewnij się, że wszystkie obiekty są zdelokowane poprawnie w przypadku dowolnej części tworzenia nie.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Wielowątkowość: Przerywanie wątków](multithreading-terminating-threads.md)
+- [Wielowątkowość: przerywanie wątków](multithreading-terminating-threads.md)
 
-- [Wielowątkowość: Tworzenie wątków roboczych](multithreading-creating-worker-threads.md)
+- [Wielowątkowość: tworzenie wątków roboczych](multithreading-creating-worker-threads.md)
 
 - [Procesy i wątki](/windows/desktop/ProcThread/processes-and-threads)
 

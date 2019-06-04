@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373651"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504188"
 ---
 # <a name="cmutex-class"></a>Klasa CMutex
 
@@ -77,14 +77,14 @@ Określa, jeśli tworzenia wątku `CMutex` obiektu początkowo ma dostęp do zas
 Nazwa `CMutex` obiektu. Jeśli istnieje inny element mutex o takiej samej nazwie, *lpszName* musi zostać dostarczony, jeśli obiekt ma być używany przez granice procesu. Jeśli **NULL**, element mutex nie będą mieć nazwy. Jeśli nazwa pasuje do istniejącego obiektu mutex, Konstruktor tworzy nową `CMutex` obiektu, który odwołuje się element mutex o takiej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji nie jest mutex, konstrukcja nie powiedzie się.
 
 *lpsaAttribute*<br/>
-Atrybuty zabezpieczeń dla obiektu mutex. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.
+Atrybuty zabezpieczeń dla obiektu mutex. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
 Dostęp i zwalniania `CMutex` obiektu, Utwórz [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) obiektu, a następnie wywołać jej [blokady](../../mfc/reference/csinglelock-class.md#lock) i [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Funkcje Członkowskie. Jeśli `CMutex` obiekt jest używany autonomiczny, wywoływanie jej `Unlock` funkcja elementu członkowskiego do jego zwolnienia.
 
 > [!IMPORTANT]
->  Po utworzeniu `CMutex` obiektu, należy użyć [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że element mutex już nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.
+>  Po utworzeniu `CMutex` obiektu, należy użyć [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aby upewnić się, że element mutex już nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: c1157b3583e266a09840f710b46766ffc4f31b5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bced5a95f65713915a1f06094bfe059db79aab2d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345763"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503639"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind Class
 
@@ -161,7 +161,7 @@ Flagi opisujące sposób obsługi tej sesji. Prawidłowe flagi są:
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -177,7 +177,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli istnieje więcej plików; zero, jeśli znaleziono pliku jest ostatni z nich w katalogu lub jeśli wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Jeśli znaleziono pliku ostatniego pliku w katalogu lub jeśli nie pasujących plików można znaleźć `GetLastError` :: gettotalsize() zwróciło ERROR_NO_MORE_FILES.
+Wartość różną od zera, jeśli istnieje więcej plików; zero, jeśli znaleziono pliku jest ostatni z nich w katalogu lub jeśli wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Jeśli znaleziono pliku ostatniego pliku w katalogu lub jeśli nie pasujących plików można znaleźć `GetLastError` :: gettotalsize() zwróciło ERROR_NO_MORE_FILES.
 
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime
 

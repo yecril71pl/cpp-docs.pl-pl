@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-ms.openlocfilehash: efc82edf00a9bb2f2facbd883ef88f1d093e0133
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b88dffe2874d29918315af65c6ea093c24695f97
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261328"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503412"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Kreator składników stron Active Server ATL
 
@@ -23,7 +23,7 @@ Ta strona ATL Active Server strona kreatora składników umożliwia określić o
 
 - **OnStartPage/OnEndPage**
 
-   [Metoda OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) jest wywoływana po raz pierwszy skrypt próbuje uzyskać dostęp do obiektu. **OnEndPage** jest wywoływana po zakończeniu operacji obiektu przetwarzania skryptu.
+   [Metoda OnStartPage](/previous-versions//ms691624\(v=vs.85\)) jest wywoływana po raz pierwszy skrypt próbuje uzyskać dostęp do obiektu. **OnEndPage** jest wywoływana po zakończeniu operacji obiektu przetwarzania skryptu.
 
 - **Obiekt wewnętrzny**
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 4d3582493489faf44afece9338b1491620ca798a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220428"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504653"
 ---
 # <a name="cwinthread-class"></a>Cwinthread — klasa
 
@@ -164,7 +164,7 @@ Określa dodatkowy znacznik, który steruje tworzeniem wątku. Ta flaga może za
 Określa rozmiar w bajtach stosu dla nowego wątku. Jeśli **0**, rozmiar stosu jest domyślnie taki sam rozmiar jak z wątku głównego procesu.
 
 *lpSecurityAttrs*<br/>
-Wskazuje [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która określa atrybuty zabezpieczeń dla wątku.
+Wskazuje [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) strukturę, która określa atrybuty zabezpieczeń dla wątku.
 
 ### <a name="return-value"></a>Wartość zwracana
 

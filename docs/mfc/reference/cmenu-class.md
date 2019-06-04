@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375798"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504843"
 ---
 # <a name="cmenu-class"></a>Cmenu — klasa
 
@@ -726,7 +726,7 @@ Liczba elementów w menu, jeśli funkcja się powiedzie; w przeciwnym razie wart
 
 ##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID
 
-Uzyskuje identyfikator elementu menu dla elementu menu, znajdujący się w pozycji zdefiniowane przez *npos —*.
+Uzyskuje identyfikator elementu menu dla elementu menu, znajdujący się w pozycji zdefiniowane przez *npos —* .
 
 ```
 UINT GetMenuItemID(int nPos) const;
@@ -769,7 +769,7 @@ Wartość określająca znaczenie `nIDItem`. Domyślnie `ByPos` ma wartość FA�
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy użyć funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), zgodnie z opisem w zestawie Windows SDK.
+Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy użyć funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), zgodnie z opisem w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1267,7 +1267,7 @@ Wartość określająca znaczenie *uItem*. Jeśli ten parametr ma wartość FALS
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy użyć funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), zgodnie z opisem w zestawie Windows SDK.
+Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy użyć funkcji Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), zgodnie z opisem w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1476,7 +1476,7 @@ Wskaźnik do [TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams) s
 
 Jeśli określisz TPM_RETURNCMD w *fuFlags* parametr, wartość zwracana jest identyfikator elementu menu elementu, który użytkownik zaznaczył. Jeśli użytkownik anuluje menu bez dokonywania wyboru lub jeśli wystąpi błąd, wartość zwracana to 0.
 
-Jeśli nie określisz TPM_RETURNCMD w *fuFlags* parametr, wartość zwracana jest wartość różną od zera, jeśli funkcja się powiedzie, a 0 Jeśli zakończy się niepowodzeniem. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Jeśli nie określisz TPM_RETURNCMD w *fuFlags* parametr, wartość zwracana jest wartość różną od zera, jeśli funkcja się powiedzie, a 0 Jeśli zakończy się niepowodzeniem. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Uwagi
 

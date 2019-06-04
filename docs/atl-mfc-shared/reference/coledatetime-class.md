@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63c2971f5d55cb5198925650bcf90b2f1a8b0958
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252704"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503228"
 ---
 # <a name="coledatetime-class"></a>COleDateTime, klasa
 
@@ -169,7 +169,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="example"></a>Przykład
 
-Operatory **>=**, **\< =**, **>**, i **<**, będzie potwierdzenia, jeśli `COleDateTime` obiekt jest ustawiony na wartość null.
+Operatory **>=** , **\< =** , **>** , i **<** , będzie potwierdzenia, jeśli `COleDateTime` obiekt jest ustawiony na wartość null.
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 
@@ -225,7 +225,7 @@ Wskazuje wartości daty i godziny do skopiowania w nowe `COleDateTime` obiektu.
 Wartości daty i godziny może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego systemu MS-DOS `COleDateTime` obiektu.
 
 *timeStamp*<br/>
-Odwołanie do [Odcisk czasowy](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury zawierającej bieżący czas lokalny.
+Odwołanie do [Odcisk czasowy](/dotnet/api/system.data.oledb.oledbtype) struktury zawierającej bieżący czas lokalny.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -347,7 +347,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ### <a name="parameters"></a>Parametry
 
 *timeStamp*<br/>
-Odwołanie do [Odcisk czasowy](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury.
+Odwołanie do [Odcisk czasowy](/dotnet/api/system.data.oledb.oledbtype) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 

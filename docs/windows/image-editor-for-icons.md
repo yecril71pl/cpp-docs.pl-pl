@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c411c4b95fcd3866c897f04b70da7cbb2b48ba28
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351624"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504319"
 ---
 # <a name="image-editor-for-icons-c"></a>Edytor obrazów dla ikon (C++)
 
@@ -220,5 +220,4 @@ Brak
 ## <a name="see-also"></a>Zobacz także
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
-
-<!--[Icons](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)-->
+[Ikony](/windows/desktop/menurc/icons)

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451235"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504260"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -5607,7 +5607,7 @@ Różna od zera, jeśli funkcja się powiedzie. To 0, jeśli wystąpi błąd lub
 
 Nie można przenieść okno zablokowane. Jednocześnie można zablokować tylko jednego okna. Aby odblokować zablokowany za pomocą okna `LockWindowUpdate`, wywołaj [UnlockWindowUpdate](#unlockwindowupdate).
 
-Jeśli wywołań aplikacji z oknem zablokowane (lub dowolnego okna podrzędne zablokowane) [getdc —,](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx,](https://msdn.microsoft.com/library/windows/desktop/dd144873) lub [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) funkcji Windows wywołana funkcja przywraca na urządzeniu kontekst, w której widoczne regionu jest pusta. Będzie to miało miejsce do momentu aplikacji odblokowuje okna, wywołując `UnlockWindowUpdate` funkcja elementu członkowskiego.
+Jeśli wywołań aplikacji z oknem zablokowane (lub dowolnego okna podrzędne zablokowane) [getdc —,](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx,](/windows/desktop/api/winuser/nf-winuser-getdcex) lub [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) funkcji Windows wywołana funkcja przywraca na urządzeniu kontekst, w której widoczne regionu jest pusta. Będzie to miało miejsce do momentu aplikacji odblokowuje okna, wywołując `UnlockWindowUpdate` funkcja elementu członkowskiego.
 
 Zablokowaniu aktualizacje okna system przechowuje informacje o prostokąt otaczający operacji rysowania do konteksty urządzenia skojarzony z oknem zablokowane. Gdy rysunek jest reenabled, to prostokąt otaczający zostaje unieważniony w oknie zablokowane i jego okien podrzędnych, aby wymusić ostatecznej [WM_PAINT](/windows/desktop/gdi/wm-paint) komunikat, aby zaktualizować ekran. W przypadku nie rysowania zablokowaniu aktualizacje okna, zostaje unieważniony bez obszaru.
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda otrzymuje [WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651) komunikat powiadomienia, który jest opisany w zestawie Windows SDK. Gdy użytkownik loguje się lub wylogowuje, system operacyjny aktualizuje ustawienia specyficzne dla użytkownika. System wysyła tę wiadomość, bezpośrednio po zaktualizowaniu ustawień.
+Ta metoda otrzymuje [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged) komunikat powiadomienia, który jest opisany w zestawie Windows SDK. Gdy użytkownik loguje się lub wylogowuje, system operacyjny aktualizuje ustawienia specyficzne dla użytkownika. System wysyła tę wiadomość, bezpośrednio po zaktualizowaniu ustawień.
 
 > [!NOTE]
 > Ta funkcja członkowska jest wywoływana przez platformę, by umożliwić aplikacji w taki sposób, by obsłużyć komunikat Windows. Parametry przekazane do funkcji odzwierciedlają parametry odebrane przez platformę, gdy wiadomość została odebrana. Jeśli chcesz wywołać implementacji klasy podstawowej w tej funkcji, tę implementację użyje parametry pierwotnie przekazana z komunikatem i nie parametry, których dostarczenie funkcji.
