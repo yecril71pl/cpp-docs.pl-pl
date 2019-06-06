@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708127"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741639"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 
@@ -18,7 +18,7 @@ Po utworzeniu projektu można zmienić lub dodać do funkcji tego projektu. Taki
 > [!NOTE]
 > Następujących kreatorów kodu rzadko używane są usuwane w Visual Studio 2019 r. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tych kreatorów. Przykładowy kod dla tych technologii jest archiwizowane w Microsoft Docs i repozytorium VCSamples GitHub.
 
-- Kreator 1.0 składnika ATL COM +
+- Kreator składników ATL COM+ 1.0
 - Kreator składników stron Active Server ATL
 - Kreator dostawcy interfejsu OLE DB ATL
 - Kreator strony właściwości ATL
@@ -76,6 +76,6 @@ Istnieją trzy miejsca, w którym możesz uzyskać dostęp C++ kreatorów kodu:
 ## <a name="see-also"></a>Zobacz także
 
 [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)<br>
+[Przejdź z C++ kodu bazowego w programie Visual Studio](../ide/navigate-code-cpp.md)<br>
 [C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
 [Plik typy utworzone dla programu Visual Studio C++ projektów](../build/reference/file-types-created-for-visual-cpp-projects.md)
