@@ -4246,6 +4246,8 @@
           href: compiler-warnings/c5046.md
 - name: Ostrzeżenia kompilatora według wersji kompilatora
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
+- name: Domyślnie wyłączone ostrzeżenia kompilatora
+  href: ../preprocessor/compiler-warnings-that-are-off-by-default.md
 - name: Błędy czasu wykonania języka C
   expanded: false
   items:

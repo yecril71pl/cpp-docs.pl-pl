@@ -41,25 +41,25 @@ ms.locfileid: "62409892"
 &nbsp;&nbsp;&nbsp;&nbsp;*tekst z wierszem z operatorem IF*
 
 *wiersz z operatorem IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***wyrażenia stałego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identyfikator*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *wyrażenia stałego*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identyfikator*
 
 *części elif* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*tekst linii elif*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*tekst linii elif części elif*
 
 *Linia elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***wyrażenia stałego*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *wyrażenia stałego*
 
 *część else* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*tekst linii else*
 
 *else linii* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
 *Linia ENDIF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
 Każdy **#if** dyrektywy w pliku źródłowym musi towarzyszyć zamykający **#endif** dyrektywy. Dowolną liczbę **#elif** dyrektyw może pojawić się między **#if** i **#endif** dyrektyw, ale co najwyżej jeden **#else** dyrektywa jest dozwolone. **#Else** dyrektywy, jeśli jest obecna, musi być ostatnią dyrektywą przed **#endif**.
 
@@ -73,7 +73,7 @@ Preprocesor wybiera jedno z wystąpień danego *tekst* do dalszego przetwarzania
 
 Preprocesor przetwarza wybrany *tekst* i przekazuje go do kompilatora. Jeśli *tekstu* zawiera dyrektywy preprocesora, preprocesor wykonuje te dyrektywy. Tylko bloki tekstu wybrane przez preprocesor są kompilowane.
 
-Preprocesor wybiera pojedynczy *tekstu* element oceniając wyrażenie stałej następujące po każdym **#if** lub **#elif** dyrektywy do momentu znalezienia prawdziwe (niezerowe) — stała wyrażenie. Go powoduje zaznaczenie całego tekstu (włączając inne dyrektywy preprocesora, począwszy od **#**) do związanych z nią **#elif**, **#else**, lub **#endif** .
+Preprocesor wybiera pojedynczy *tekstu* element oceniając wyrażenie stałej następujące po każdym **#if** lub **#elif** dyrektywy do momentu znalezienia prawdziwe (niezerowe) — stała wyrażenie. Go powoduje zaznaczenie całego tekstu (włączając inne dyrektywy preprocesora, począwszy od **#** ) do związanych z nią **#elif**, **#else**, lub **#endif** .
 
 Jeśli wszystkie wystąpienia *wyrażenie_stałe* są fałszywe lub jeśli nie **#elif** dyrektywy pojawia się, preprocesor wybiera blok tekstu po **#else** klauzuli. Jeśli **#else** pominięcia klauzuli i wszystkie wystąpienia *wyrażenie_stałe* w **#if** bloku są fałszywe, jest zaznaczony żaden blok tekstu.
 
