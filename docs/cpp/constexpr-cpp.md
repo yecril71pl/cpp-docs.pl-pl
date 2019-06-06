@@ -21,8 +21,8 @@ Aby ograniczyć złożoność obliczeń stałą czasu kompilacji oraz ich potenc
 
 ## <a name="syntax"></a>Składnia
 
-> **wyrażenia constexpr** *typem literału* *identyfikator* ** = ** *wyrażenie_stałe* **;** 
->  **constexpr** *typem literału* *identyfikator* **{** *wyrażenia stałego * **}** **;** 
+> **wyrażenia constexpr** *typem literału* *identyfikator* **=** *wyrażenie_stałe* **;** 
+>  **constexpr** *typem literału* *identyfikator* **{** *wyrażenia stałego* **}** **;** 
 >  **constexpr** *typem literału* *identyfikator* **(** *params* **)** **;** 
 >  **constexpr** *ctor* **(** *params* **)** **;**
 
