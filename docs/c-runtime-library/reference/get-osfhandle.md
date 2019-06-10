@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: beab4e4308bc7bcde287366b78671f61a89f8827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc3b50e3d3f65bee83b8df83aa0adb5c8694e35a
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332211"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821659"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -51,11 +51,16 @@ Istniejące deskryptor pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt pliku systemu operacyjnego, jeśli *fd* jest prawidłowy. W przeciwnym razie program obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **INVALID_HANDLE_VALUE** (-1) i ustawia **errno** do **EBADF**, wskazując nieprawidłowe dojście do pliku. Aby uniknąć ostrzeżenia kompilatora, gdy zostanie użyty wynik w procedur, które oczekują dojście do pliku systemu Win32, należy rzutować go na **obsługi** typu.
+Zwraca uchwyt pliku systemu operacyjnego, jeśli *fd* jest prawidłowy. W przeciwnym razie program obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **INVALID_HANDLE_VALUE** (-1). Ustawia również **errno** do **EBADF**, wskazując nieprawidłowe dojście do pliku. Aby uniknąć ostrzeżenia, gdy zostanie użyty wynik jako uchwyt pliku systemu Win32, należy rzutować go na **obsługi** typu.
+
+> [!NOTE]
+> Gdy **stdin**, **stdout**, i **stderr** nie są skojarzone z usługą stream (na przykład w aplikacji Windows bez okna konsoli), wartości deskryptora pliku te strumienie są zwracane z [_fileno](fileno.md) jako specjalnych wartości -2. Podobnie jeśli używasz parametru deskryptora pliku zamiast wyniku wywołania wartość 0, 1 lub 2 **_fileno**, **_get_osfhandle —** również zwraca specjalna wartość -2, jeśli deskryptor pliku nie jest skojarzony za pomocą strumienia, a nie ustawia **errno**. Jednak nie jest to wartość uchwyt prawidłowego pliku, a kolejne wywołania, które próbują używać go będzie prawdopodobnie nie powiedzie się.
+
+Aby uzyskać więcej informacji na temat **EBADF** i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Można zamknąć pliku, w których uchwyt pliku systemu operacyjnego (OS) można uzyskać przez **_get_osfhandle —**, wywołaj [_zamknij](close.md) na deskryptor pliku *fd*. Nie wywołuj **funkcja CloseHandle** na wartość zwracana przez tę funkcję. Dojście do pliku podstawowego systemu operacyjnego jest własnością *fd* deskryptor pliku i jest zamknięte, kiedy [_zamknij](close.md) jest wywoływana w *fd*. Jeżeli deskryptor pliku jest własnością `FILE *` strumienia, następnie wywoływania [fclose —](fclose-fcloseall.md) na tym `FILE *` strumień zostanie zamknięty, deskryptor pliku i dojście do pliku podstawowego systemu operacyjnego. W tym przypadku nie wywołuj [_zamknij](close.md) na deskryptor pliku.
+Można zamknąć pliku, w których uchwyt pliku systemu operacyjnego (OS) można uzyskać przez **_get_osfhandle —** , wywołaj [_zamknij](close.md) na deskryptor pliku *fd*. Nigdy nie wywołują metody **funkcja CloseHandle** na wartość zwracana przez tę funkcję. Dojście do pliku podstawowego systemu operacyjnego jest własnością *fd* deskryptor pliku i jest zamknięte, kiedy [_zamknij](close.md) jest wywoływana w *fd*. Jeżeli deskryptor pliku jest własnością `FILE *` strumienia, następnie wywoływania [fclose —](fclose-fcloseall.md) na tym `FILE *` strumień zostanie zamknięty, deskryptor pliku i dojście do pliku podstawowego systemu operacyjnego. W tym przypadku nie wywołuj [_zamknij](close.md) na deskryptor pliku.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,3 +77,4 @@ Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_dup, _dup2](dup-dup2.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
+[\_open_osfhandle](open-osfhandle.md)

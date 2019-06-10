@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174813"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821682"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Instrukcje: Tworzenie wystąpień shared_ptr i korzystanie
 
@@ -108,7 +108,7 @@ Wskaźnik `shared_ptr` można przekazać do innej funkcji w następujące sposob
 
 - Jeśli musisz przyznać dostęp do funkcji pomocnika do bazowego wskaźnika, a wiadomo, funkcja pomocnika będzie po prostu użyj wskaźnika i zwróci wartość przed zwróceniem wywoływania zwraca funkcję, a następnie tej funkcji nie ma być współwłaścicielem bazowego wskaźnika. Potrzebuje tylko dostępu do wskaźnika w trakcie okresu istnienia obiektu wywołującego wskaźnika `shared_ptr`. W tym przypadku są bezpiecznie przekazać `shared_ptr` wg odwołania albo przekazać surowego wskaźnika lub odwołania do bazowego obiektu. Taki sposób przekazania jest nieco korzystniejszy pod względem obciążenia systemu, a dodatkowo może pomóc lepiej wyrazić cele programistyczne.
 
-- Czasami, na przykład w konstrukcji `std:vector<shared_ptr<T>>`, może być konieczne przekazanie każdego wskaźnika `shared_ptr` do treści wyrażenia lambda lub do nazwanego obiektu funkcji. Jeśli wyrażenie lambda lub funkcja nie przechowuje wskaźnika, należy przekazać `shared_ptr` przez odwołanie, aby uniknąć wywoływania konstruktora kopiującego dla każdego elementu.
+- Czasami, na przykład w konstrukcji `std::vector<shared_ptr<T>>`, może być konieczne przekazanie każdego wskaźnika `shared_ptr` do treści wyrażenia lambda lub do nazwanego obiektu funkcji. Jeśli wyrażenie lambda lub funkcja nie przechowuje wskaźnika, należy przekazać `shared_ptr` przez odwołanie, aby uniknąć wywoływania konstruktora kopiującego dla każdego elementu.
 
 ## <a name="example-6"></a>Przykład 6
 

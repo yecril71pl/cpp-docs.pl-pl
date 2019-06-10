@@ -1,32 +1,59 @@
 ---
 title: Wdrażanie, uruchamianie i debugowanie projektu systemu Linux w języku C++ w programie Visual Studio
 description: Opisuje sposób kompilowania, wykonywania i debugowania kodu zdalnego docelową z wewnątrz projektu języka Linux C++ w programie Visual Studio.
-ms.date: 09/12/2018
+ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393394"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821620"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Wdrażanie, uruchamianie i debugowanie projektu systemu Linux
 
+::: moniker range="vs-2015"
+
+Pomoc techniczna Linux support jest dostępne w programie Visual Studio 2017 i nowszych wersjach.
+
+::: moniker-end
+
 Po utworzeniu projektu języka Linux C++ w programie Visual Studio i łączysz się przy użyciu projektu [Menedżera połączeń systemu Linux](connect-to-your-remote-linux-computer.md), można uruchamiać i debugować projektu. Skompilować, wykonywanie i możliwe jest debugowanie kodu w zdalnym elemencie docelowym.
+
+::: moniker range="vs-2019"
+
+**Visual Studio 2019 wersji 16.1** można wskazać różnych systemów Linux, debugowania i tworzenia. Określ maszynę kompilacji na **ogólne** stronę właściwości i debugowania maszyny na **debugowanie** stronę właściwości.
+
+::: moniker-end
 
 Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
 - Debugowanie przy użyciu tradycyjnych funkcje programu Visual Studio, takich jak punkty przerwania, okna czujki i przenosząc kursor myszy nad zmienną. Przy użyciu tych metod, może debugować tak jak zwykle dla innych typów projektów.
 
-- Widok danych wyjściowych z komputera docelowego w specjalnym oknie Konsola systemu Linux. Umożliwia także konsolę do wysyłania danych wejściowych do komputera docelowego.
+- Widok danych wyjściowych z komputera docelowego, w oknie konsoli systemu Linux. Umożliwia także konsolę do wysyłania danych wejściowych do komputera docelowego.
 
 ## <a name="debug-your-linux-project"></a>Debugowanie projektu systemu Linux
 
 1. Wybierz tryb debugowania w **debugowanie** stronę właściwości.
 
+   
+   
+   ::: moniker range="vs-2019"
+
+   GDB jest używana do debugowania aplikacji działającej w systemie Linux. Podczas debugowania w systemie zdalnym (nie WSL) GDB można uruchomić w dwóch różnych trybach, które można wybierać z **tryb debugowania** opcja w projekcie **debugowanie** strona właściwości:
+
+   ![Opcje GDB](media/vs2019-debugger-settings.png)
+
+   ::: moniker-end
+
+   ::: moniker range="vs-2017"
+
    GDB jest używana do debugowania aplikacji działającej w systemie Linux. GDB można uruchomić w dwóch różnych trybach, które można wybierać z **tryb debugowania** opcja w projekcie **debugowanie** strona właściwości:
 
-   ![Opcje GDB](media/settings_debugger.png)
+   ![Opcje GDB](media/vs2017-debugger-settings.png)
+
+   ::: moniker-end
+
 
    - W **serwera gdbserver** trybie GDB jest uruchamiany lokalnie, która łączy się serwera gdbserver w systemie zdalnym.  Należy zauważyć, że to tylko tryb, który obsługuje okno konsoli systemu Linux.
 
@@ -77,11 +104,30 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
    `handle SIGILL nostop noprint`
 
+## <a name="debug-with-attach-to-process"></a>Debugowanie z Dołącz do procesu
+
+[Debugowanie](prop-pages/debugging-linux.md) stronę właściwości dla projektów programu Visual Studio i **Launch.vs.json** ustawienia dla projektów CMake ma ustawienia, które umożliwiają dołączanie do uruchomionego procesu. Jeśli potrzebujesz dodatkowej kontroli jest informacje podane w tych ustawień, możesz umieścić plik o nazwie `Microsoft.MIEngine.Options.xml` w katalogu głównym rozwiązania lub obszaru roboczego. Poniżej przedstawiono prosty przykład:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<SupplementalLaunchOptions>
+    <AttachOptions>
+      <AttachOptionsForConnection AdditionalSOLibSearchPath="/home/user/solibs">
+        <ServerOptions MIDebuggerPath="C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\VC\Linux\bin\gdb\7.9\x86_64-linux-gnu-gdb.exe"
+ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\ConsoleApplication17.out"/>
+        <SetupCommands>
+          <Command IgnoreFailures="true">-enable-pretty-printing</Command>
+        </SetupCommands>
+      </AttachOptionsForConnection>
+    </AttachOptions>
+</SupplementalLaunchOptions>
+```
+
+**AttachOptionsForConnection** ma większość atrybutów może być konieczne. W powyższym przykładzie pokazuje, jak określić lokalizację do szukania bibliotek SO dodatkowe. Element podrzędny **ServerOptions** umożliwia dołączanie do procesu zdalnego za pomocą serwera gdbserver zamiast tego. Aby to zrobić, należy określić klienta lokalnego gdb (dostarczany w programie Visual Studio 2017 jest pokazany powyżej), jak i lokalną kopię pliku binarnego z symbolami. **SetupCommands** element umożliwia przekazywanie poleceń, bezpośrednio do gdb. Możesz znaleźć wszystkie opcje dostępne w [schematu LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) w witrynie GitHub.
+
 ## <a name="next-steps"></a>Następne kroki
 
 - Aby debugować urządzeń ARM w systemie Linux, zobacz ten wpis w blogu: [Debugowanie urządzenia osadzonego ARM w programie Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
-
-- Aby debugować za pomocą **dołączyć do procesu** polecenia, zobacz ten wpis w blogu: [Ulepszenia obciążeniu C++ dla systemu Linux w systemie projektu, w oknie konsoli systemu Linux, polecenia rsync i Dołącz do procesu](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>Zobacz także
 

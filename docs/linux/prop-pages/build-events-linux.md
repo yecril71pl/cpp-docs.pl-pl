@@ -1,15 +1,23 @@
 ---
 title: Zdarzenia kompilacji zdalnej (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
-ms.openlocfilehash: 87647948b641fff7370003a59775a5680c176fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e5c453da05fe65871fa7f6b0d4ca6528a96d4dd
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393093"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821478"
 ---
 # <a name="build-event-properties-linux-c"></a>Tworzenie właściwości zdarzenia (Linux C++)
+
+::: moniker range="vs-2015"
+
+Pomoc techniczna Linux support jest dostępne w programie Visual Studio 2017 i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="pre-build-event"></a>Zdarzenie sprzed kompilacji
 
@@ -64,3 +72,7 @@ Wiersz polecenia | Określa wiersz poleceń dla narzędzia zdarzenia postkompila
 Opis | Określa opis narzędzia zdarzenia postkompilacyjnego do wyświetlenia.
 Użyj w kompilacji | Określa, czy to zdarzenie kompilacji jest wyłączone z kompilacji w bieżącej konfiguracji.
 Dodatkowe pliki do skopiowania | Określa dodatkowe pliki do skopiowania z systemu zdalnego. Opcjonalnie listę można przekazać jako zdalną do lokalnych par mapowania przy użyciu składni: pełna_ścieżka_zdalna_1: = pełna_ścieżka_lokalna_1; pełna_ścieżka_zdalna_2: = pełna_ścieżka_lokalna_2, gdzie plik zdalny można skopiować do określonej lokalizacji na komputerze lokalnym.
+
+::: moniker-end
+
+

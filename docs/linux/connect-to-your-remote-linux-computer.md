@@ -1,18 +1,30 @@
 ---
 title: Nawiązywanie zdalnego komputer z systemem Linux w programie Visual Studio
 description: Jak połączyć się z komputera zdalnego systemu Linux z wewnątrz projektu Visual Studio C++.
-ms.date: 07/20/2018
+ms.date: 06/07/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6348681ecc8e6f7863b2119810db24879526a1c6
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389767"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821611"
 ---
-# <a name="connect-to-your-remote-linux-computer"></a>Podłącz do komputera zdalnego systemu Linux
+# <a name="connect-to-your-remote-linux-computer"></a>Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux
 
-Podczas kompilowania projektu systemu Linux w języku C++ w programie Visual Studio, Linux, kod jest kopiowany do komputera zdalnego systemu Linux, a następnie kompilowane zgodnie z ustawieniami programu Visual Studio. Aby skonfigurować tego połączenia zdalnego:
+::: moniker range="vs-2015"
+
+Pomoc techniczna Linux support jest dostępne w programie Visual Studio 2017 i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Gdy docelowego podsystemu Windows dla systemu Linux (WSL) programu Visual Studio korzysta z Twojego dystrybucja systemu Linux bezpośrednio za pomocą systemu plików; niezbędne jest nie połączenia zdalnego.
+
+::: moniker-end
+
+Podczas kompilowania C++ projektu systemu Linux dla systemu Linux systemu zdalnego (maszyny Wirtualnej lub komputera fizycznego), Linux, kod jest kopiowany do komputera zdalnego systemu Linux, a następnie kompilowane zgodnie z ustawieniami programu Visual Studio. Aby skonfigurować tego połączenia zdalnego:
 
 1. Skompiluj projekt po raz pierwszy, albo ręcznie utworzyć nowy wpis, wybierając **Narzędzia > Opcje** , a następnie otwórz **wiele Platform > Menedżer połączeń** węzła i kliknij przycisk **Dodaj** przycisku.
 

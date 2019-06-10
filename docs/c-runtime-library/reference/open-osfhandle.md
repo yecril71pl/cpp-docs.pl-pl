@@ -24,16 +24,16 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 9e940844eb5e37755c10999feb294981afc8683a
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174803"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821599"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
-Kojarzy deskryptor pliku środowiska wykonawczego języka C z istniejących uchwyt pliku systemu operacyjnego.
+Kojarzy deskryptor pliku środowiska wykonawczego języka C z istniejących dojście do pliku systemu operacyjnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,7 +47,7 @@ int _open_osfhandle (
 ### <a name="parameters"></a>Parametry
 
 *osfhandle*<br/>
-Dojście do pliku systemu operacyjnego.
+Uchwyt pliku systemu operacyjnego.
 
 *flagi*<br/>
 Typy dozwolone operacje.
@@ -58,7 +58,7 @@ W przypadku powodzenia **_open_osfhandle —** zwraca deskryptor pliku środowis
 
 ## <a name="remarks"></a>Uwagi
 
-**_Open_osfhandle —** funkcja przydziela deskryptor pliku środowiska wykonawczego języka C i kojarzy ją z określonego przez dojście do pliku systemu operacyjnego *osfhandle*. Aby uniknąć ostrzeżenia kompilatora, należy rzutować *osfhandle* argumentu od **obsługi** do **intptr_t**. *Flagi* argument jest wyrażeniem liczby całkowitej z jedną lub więcej stałych manifestu zdefiniowane w \<fcntl.h >. Gdy dwa lub więcej stałych manifestu są używane do formularza *flagi* argument, stałe są łączone za pomocą operatora bitowego OR ( **&#124;** ).
+**_Open_osfhandle —** funkcja przydziela deskryptor pliku środowiska wykonawczego języka C. Kojarzy ten deskryptor pliku z uchwyt pliku systemu operacyjnego, które są określone przez *osfhandle*. Aby uniknąć ostrzeżenia kompilatora, należy rzutować *osfhandle* argumentu od **obsługi** do **intptr_t**. *Flagi* argument jest wyrażeniem liczby całkowitej z jedną lub więcej stałych manifestu zdefiniowane w \<fcntl.h >. Możesz użyć operatora bitowego OR ( **&#124;** ) do łączenia dwóch lub więcej stałych manifestu do formularza *flagi* argumentu.
 
 Te stałe manifestu są zdefiniowane w \<fcntl.h >:
 
@@ -69,7 +69,7 @@ Te stałe manifestu są zdefiniowane w \<fcntl.h >:
 | **\_O\_TEXT** | Otwiera plik w trybie tekstowym (tłumaczonym). |
 | **\_O\_WTEXT** | Otwiera plik w trybie Unicode (przetłumaczone UTF-16). |
 
-**_Open_osfhandle —** wywołanie tym przenosi własność dojście do pliku systemu Win32 do deskryptora pliku. Aby zamknąć pliku otwartego przy użyciu **_open_osfhandle —**, wywołaj [ \_Zamknij](close.md). Dojście do pliku podstawowego systemu operacyjnego jest również zamknięty przez wywołanie **_zamknij**. Nie wywołuj funkcję Win32 **funkcja CloseHandle** w dojściu do oryginalnego. Jeżeli deskryptor pliku jest własnością **pliku &#42;**  strumienia, a następnie wywołania [fclose —](fclose-fcloseall.md) na tym **pliku &#42;**  strumień zostanie zamknięty, deskryptor pliku i podstawowych dojście. W tym przypadku nie wywołuj **_zamknij** na deskryptor pliku lub **funkcja CloseHandle** w dojściu do oryginalnego.
+**_Open_osfhandle —** wywołanie tym przenosi własność dojście do pliku systemu Win32 do deskryptora pliku. Aby zamknąć pliku otwartego przy użyciu **_open_osfhandle —** , wywołaj [ \_Zamknij](close.md). Dojście do pliku podstawowego systemu operacyjnego jest również zamknięty przez wywołanie **_zamknij**. Nie wywołuj funkcję Win32 **funkcja CloseHandle** w dojściu do oryginalnego. Jeżeli deskryptor pliku jest własnością **pliku &#42;**  strumienia, a następnie wywołania [fclose —](fclose-fcloseall.md) zamyka deskryptor pliku i podstawowego dojścia. W tym przypadku nie wywołuj **_zamknij** na deskryptor pliku lub **funkcja CloseHandle** w dojściu do oryginalnego.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -82,3 +82,4 @@ Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
+[\_get_osfhandle](get-osfhandle.md)

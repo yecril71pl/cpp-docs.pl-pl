@@ -1,15 +1,23 @@
 ---
 title: Właściwości konsolidatora (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393041"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821293"
 ---
 # <a name="linker-properties-linux-c"></a>Właściwości konsolidatora (Linux C++)
+
+::: moniker range="vs-2015"
+
+Pomoc techniczna Linux support jest dostępne w programie Visual Studio 2017 i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="general"></a>Ogólne
 
@@ -55,3 +63,5 @@ Oznacz zmienne tylko do odczytu po relokacji | Ta opcja oznacza zmienne jako tyl
 Włącz natychmiastowe powiązanie funkcji | Ta opcja oznacza obiekt do natychmiastowego powiązania funkcji.
 Nie wymagaj stosu wykonywalnego | Ta opcja oznacza dane wyjściowe jako niewymagające stosu wykonywalnego.
 Całe archiwum | Całe archiwum używa całego kodu ze źródeł i zależności dodatkowych.
+
+::: moniker-end

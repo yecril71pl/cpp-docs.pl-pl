@@ -1,15 +1,23 @@
 ---
 title: Ogólne właściwości (projekt języka Linux C++ Makefile) | Dokumentacja firmy Microsoft
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a64066ad3c8d7e6ca8bfa9d3d82670ff1da4b527
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393028"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821455"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Właściwości projektu pliku reguł programu make (Linux C++)
+
+::: moniker range="vs-2015"
+
+Pomoc techniczna Linux support jest dostępne w programie Visual Studio 2017 i nowszych wersjach.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 To jest częściowa lista właściwości dostępnych w module Projekt pliku reguł programu make w systemie Linux. Wiele właściwości projektu pliku reguł programu make są identyczne z właściwości projektu aplikacji konsoli języka C++ dla systemu Linux.
 
@@ -101,3 +109,5 @@ Wiersz polecenia kompilacji | Określa wiersz polecenia umożliwiający uruchomi
 Wiersz poleceń rekompilacji wszystkiego | Określa wiersz polecenia umożliwiający uruchomienie polecenia "Kompiluj wszystko ponownie". Jest ono wykonywane w systemie zdalnym.
 Wiersz polecenia Wyczyść | Określa wiersz polecenia umożliwiający uruchomienie polecenia "Wyczyść". Jest ono wykonywane w systemie zdalnym.
 Dane wyjściowe | Określa pliki wynikowe, generowane przez kompilację zdalną w systemie zdalnym.
+
+::: moniker-end

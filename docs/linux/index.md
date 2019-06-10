@@ -2,16 +2,16 @@
 layout: LandingPage
 title: Programowanie dla systemu Linux z dokumentacji języka C++
 description: Twórz i Debuguj aplikacje działające w systemie Linux.
-ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393145"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821635"
 ---
 # <a name="linux-development-with-c-documentation"></a>Programowanie dla systemu Linux z dokumentacji języka C++
 
-Użyj programu Visual Studio 2017 do tworzenia i debugowania aplikacji działających w systemie Linux.
+Do tworzenia i debugowania aplikacji uruchamianych na komputerach zdalnych z systemem Linux lub podsystemu Windows dla systemu Linux, należy użyć programu Visual Studio 2017 i nowsze.
 
 <ul class="panelContent cardsF">
     <li>
@@ -64,8 +64,8 @@ Użyj programu Visual Studio 2017 do tworzenia i debugowania aplikacji działaj�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">Zintegrowane środowisko projektowe i narzędzia projektowe Visual C++</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Język C++ w programie Visual Studio</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">Omówienie programowania w języku C++ w programie Visual Studio</a></p>
                     </div>
                 </div>
             </div>
