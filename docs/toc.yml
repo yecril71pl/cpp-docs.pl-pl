@@ -1531,14 +1531,20 @@
               href: build/reference/dot-xml-file-processing.md
             - name: Ograniczniki tagów dokumentacji języka C++
               href: build/reference/delimiters-for-visual-cpp-documentation-tags.md
-- name: Pisanie i refaktoryzacja kodu
+- name: Czytanie i pisanie kodu
   expanded: false
   items:
-    - name: Pisanie i refaktoryzacja kodu
+    - name: Czytanie i pisanie kodu
       expanded: false
       items:
-        - name: Pisanie i refaktoryzacja kodu
+        - name: Czytanie i interpretacja kodu w języku C++
+          href: ide/read-and-understand-code-cpp.md
+        - name: Edycja i refaktoryzacja kodu w języku C++
           href: ide/writing-and-refactoring-code-cpp.md
+        - name: Nawigowanie po kodzie w języku C++
+          href: ide/navigate-code-cpp.md
+        - name: Współpraca przy użyciu rozszerzenia Live Share dla języka C++
+          href: ide/live-share-cpp.md
         - name: Zmienianie podpisu
           href: ide/refactoring/change-signature.md
         - name: Konwertowanie na literał nieprzetworzonego ciągu
@@ -1597,8 +1603,6 @@
           href: ide/implementing-a-connection-point-visual-cpp.md
         - name: Implementowanie interfejsu
           href: ide/implementing-an-interface-visual-cpp.md
-        - name: Nawigowanie po strukturze klas
-          href: ide/navigating-the-class-structure-visual-cpp.md
         - name: Przesłanianie funkcji wirtualnej
           href: ide/overriding-a-virtual-function-visual-cpp.md
 - name: Tworzenie aplikacji klasycznych systemu Windows
