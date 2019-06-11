@@ -31,7 +31,7 @@ ms.locfileid: "62157743"
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator***=***inicjatora*  / \* inicjowania skalarne \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjatora*  / \* inicjowania skalarne \*/
 
 *storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
@@ -39,17 +39,17 @@ ms.locfileid: "62157743"
 &nbsp;&nbsp;&nbsp;&nbsp;**Statyczne**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Element TypeDef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl modyfikator seq* **)**  / \* Specific firmy Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl modyfikator seq* **)**  / \* Specific firmy Microsoft \*/
 
 *Specyfikator typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8**  / \* specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16**  / \* specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32**  / \* specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64**  / \* specyficzne dla firmy Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8**  / \* specyficzne dla firmy Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16**  / \* specyficzne dla firmy Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32**  / \* specyficzne dla firmy Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64**  / \* specyficzne dla firmy Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**długi**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -68,7 +68,7 @@ ms.locfileid: "62157743"
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *deklaratora* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *deklaratora* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **[** *wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy parametrów typu* **)**  / \* deklaratora nowy styl \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
@@ -143,14 +143,14 @@ ms.locfileid: "62157743"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
 
 *direct-abstract-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *abstract-declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *abstract-declarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*bezpośrednie abstrakcyjny declarator*<sub>zoptymalizowany pod kątem</sub> **[** *wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **(** *parameter-type-list*<sub>opt</sub> **)**
 
 *initializer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *listy inicjatorów* **}**  / \* dla inicjowania agregacji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *initializer-list* **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *listy inicjatorów* **}**  / \* dla inicjowania agregacji \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inicjator*<br/>

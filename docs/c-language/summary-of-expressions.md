@@ -15,18 +15,18 @@ ms.locfileid: "62157821"
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Stałe*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(***wyrażenie***)**
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *wyrażenie* **)**
 
 *expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie***,***wyrażenia przypisania*
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *wyrażenia przypisania*
 
 *constant-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
 
 *conditional-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR***?**  *wyrażenie* **:** *wyrażenia warunkowego*
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR* **?**  *wyrażenie* **:** *wyrażenia warunkowego*
 
 *assignment-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
@@ -43,55 +43,55 @@ ms.locfileid: "62157821"
 
 *argument-expression-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list***,***wyrażenia przypisania*
+&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *wyrażenia przypisania*
 
 *wyrażenie jednoargumentowe*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**++**  *wyrażenie jednoargumentowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**--**  *wyrażenie jednoargumentowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **++**  *wyrażenie jednoargumentowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **--**  *wyrażenie jednoargumentowe*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*operator jednoargumentowy*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Operator sizeof***jednoargumentowe wyrażenie*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Operator sizeof (***nazwy typu***)**
+&nbsp;&nbsp;&nbsp;&nbsp;**Operator sizeof** *jednoargumentowe wyrażenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Operator sizeof (** *nazwy typu* **)**
 
 *operator jednoargumentowy*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&** **&#42;** **+** **-** **~** **!**
+&nbsp;&nbsp;&nbsp;&nbsp; **&** **&#42;** **+** **-** **~** **!**
 
 *cast-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie jednoargumentowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *nazwy typu* **)** *wyrażenie cast* 
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *nazwy typu* **)** *wyrażenie cast*
 
 *multiplicative-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **&#42;**  *cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia***/***wyrażenie cast*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia***%***wyrażenie cast*
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia* **/** *wyrażenie cast*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie mnożenia* **%** *wyrażenie cast*
 
 *additive-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression***+***wyrażenia mnożenia*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression***-***wyrażenia mnożenia*
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression* **+** *wyrażenia mnożenia*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression* **-** *wyrażenia mnożenia*
 
 *shift-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression***\<\<***additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression***>>***additive-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **\<\<** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **>>** *additive-expression*
 
 *relational-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne***\<***shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne***>***shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne***\<=***shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne***>=***shift-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **\<** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **\<=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne* **>=** *shift-expression*
 
 *wyrażenie równości*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości***==***wyrażenie relacyjne*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości***! =***wyrażenie relacyjne*
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości* **==** *wyrażenie relacyjne*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości* **! =** *wyrażenie relacyjne*
 
 *AND-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Wyrażenia i***&***wyrażenie równości*
+&nbsp;&nbsp;&nbsp;&nbsp;*Wyrażenia i* **&** *wyrażenie równości*
 
 *exclusive-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*AND-expression*<br/>
