@@ -2,12 +2,12 @@
 layout: LandingPage
 title: Programowanie dla systemu Linux z dokumentacji języka C++
 description: Twórz i Debuguj aplikacje działające w systemie Linux.
-ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821635"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042733"
 ---
 # <a name="linux-development-with-c-documentation"></a>Programowanie dla systemu Linux z dokumentacji języka C++
 
@@ -34,7 +34,7 @@ Do tworzenia i debugowania aplikacji uruchamianych na komputerach zdalnych z sys
         </a>
     </li>
     <li>
-        <a href="https://blogs.msdn.microsoft.com/vcblog/2016/03/30/visual-c-for-linux-development/">
+        <a href="https://devblogs.microsoft.com/cppblog/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -44,8 +44,8 @@ Do tworzenia i debugowania aplikacji uruchamianych na komputerach zdalnych z sys
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Blog systemu Linux w języku Visual C++</h3>
-                        <p>Na bieżąco z nowych funkcji dodanych do programu Visual C++ dla obciążeń systemu Linux.</p>
+                        <h3>C++Blog zespołu ds.</h3>
+                        <p>Bądź na bieżąco z wszystkie najnowsze C++ funkcji w programie Visual Studio.</p>
                     </div>
                 </div>
             </div>
@@ -64,8 +64,7 @@ Do tworzenia i debugowania aplikacji uruchamianych na komputerach zdalnych z sys
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Język C++ w programie Visual Studio</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">Omówienie programowania w języku C++ w programie Visual Studio</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio">Język C++ w programie Visual Studio</a></h3>
                     </div>
                 </div>
             </div>

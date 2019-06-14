@@ -4,24 +4,24 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 4f59781833a303ad2db837549eddca2f2ce291b1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8856a5b1782c75c5a59dfdc93a8203627059ea12
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220494"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042724"
 ---
-# <a name="open-folder-projects-for-c"></a>Otwórz Folder projektów w języku C++
+# <a name="open-folder-projects-for-c"></a>Projekty z obsługa funkcji Otwórz folder dla języka C++
 
 W programie Visual Studio 2017 i nowszych funkcji "Otwórz Folder" umożliwia otwieranie folderu plików źródłowych i od razu Rozpocznij kodowanie dzięki obsłudze technologii IntelliSense, przeglądanie, refaktoryzację, debugowanie i tak dalej. Nie pliku SLN lub .vcxproj pliki są ładowane; Jeśli to konieczne, niestandardowe zadania można określić także twórz i uruchamiaj parametrów za pomocą plików prostych JSON. Aby uzyskać ogólne informacje dotyczące otwierania folderu, zobacz [tworzenie kodu w programie Visual Studio bez projektów ani rozwiązań](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
-Narzędzie CMake jest zintegrowana w środowisku IDE programu Visual Studio jako narzędzia CMake dla programu Visual Studio, składnik obciążeniu C++ dla komputerów stacjonarnych. Aby uzyskać więcej informacji, zobacz [projektów CMake w programie Visual Studio](cmake-projects-in-visual-studio.md). Dla drugiego systemu kompilacji można użyć funkcji Otwórz Folder. Otwórz Folder efektywnie oddziela Edytor kodu, debuger i analizatorów — system kompilacji i zestawu narzędzi kompilatora. Za pomocą edytora kodu C++ z jego rozbudowane funkcje IntelliSense, analizatory kodu i debuger programu Visual Studio z praktycznie dowolnego systemu kompilacji, w tym CMake, Ninja, QMake (dla projektów Qt), gyp, SCons, Gradle, Buck, markę i nie tylko. Nawet w programach pojedynczy plik lub zbiór luźno plików bez systemu kompilacji.
+Narzędzie CMake jest zintegrowana w środowisku IDE programu Visual Studio jako składnik C++ obciążeniu dla komputerów stacjonarnych. Aby uzyskać więcej informacji, zobacz [projektów CMake w programie Visual Studio](cmake-projects-in-visual-studio.md). Dla drugiego systemu kompilacji można użyć funkcji Otwórz Folder. Otwórz Folder efektywnie oddziela Edytor kodu, debuger i analizatorów — system kompilacji i zestawu narzędzi kompilatora. Za pomocą edytora kodu C++ z jego rozbudowane funkcje IntelliSense, analizatory kodu i debuger programu Visual Studio z praktycznie dowolnego systemu kompilacji, w tym CMake, Ninja, QMake (dla projektów Qt), gyp, SCons, Gradle, Buck, markę i nie tylko. Nawet w programach pojedynczy plik lub zbiór luźno plików bez systemu kompilacji.
 
 Aby użyć Otwórz Folder, w menu głównym wybierz **pliku | Otwórz | Folder** lub naciśnij **Ctrl + Shift + Alt + O**. Eksplorator rozwiązań natychmiast wyświetla wszystkie pliki w folderze. Możesz kliknąć dowolny plik, aby rozpocząć jego edycji. W tle programu Visual Studio uruchamia indeksowanie plików, aby włączyć funkcję IntelliSense, nawigowanie i funkcje refaktoryzacji. Jak edytowanie, tworzenie, przenieść lub usunąć pliki programu Visual Studio automatycznie śledzi zmiany i stale aktualizuje jego indeksu funkcji IntelliSense. 
 
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Projekty QMake, których platformą docelową platformę Qt
 
-Można użyć narzędzia CMake dla programu Visual Studio pod kątem Qt do tworzenia projektów Qt lub można użyć [rozszerzenie programu Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) dla programu Visual Studio 2015 lub Visual Studio 2017.
+Można użyć narzędzia CMake w projektach Qt kompilacji, możesz też [rozszerzenie programu Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) dla programu Visual Studio 2015 lub Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck, etc
 

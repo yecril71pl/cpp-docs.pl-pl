@@ -1,13 +1,13 @@
 ---
 title: Konfigurowanie projektu systemu Linux w języku C++ w programie Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821570"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042636"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -37,7 +37,7 @@ Aby wyświetlić opcje konfiguracji, wybierz **projektu > właściwości** menu 
 
 ![Konfiguracja ogólna](media/settings_general.png)
 
-Domyślnie plik wykonywalny (.out) została stworzona za pomocą narzędzia. Do tworzenia biblioteki statycznej lub dynamicznej lub użyć istniejącego pliku reguł programu make, użyj **typu konfiguracji** ustawienie.
+Domyślnie plik wykonywalny (.out) jest wbudowana. Do tworzenia biblioteki statycznej lub dynamicznej lub użyć istniejącego pliku reguł programu make, użyj **typu konfiguracji** ustawienie.
 
 Aby uzyskać więcej informacji na temat ustawień na stronach właściwości, zobacz [dokumentacja strony właściwości projektu systemu Linux](prop-pages-linux.md).
 
@@ -105,7 +105,7 @@ Po dodaniu nowego połączenia **Menedżera połączeń**, Visual Studio automat
 Tej funkcji zależy od konieczności zip zainstalowane maszyny z systemem Linux. Za pomocą tego polecenia apt-get, można zainstalować pliku zip:
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 Do zarządzania pamięcią podręczną usługi nagłówka, przejdź do **Narzędzia > Opcje, wiele Platform > Menedżer połączeń > Menedżer IntelliSense nagłówki zdalnego**. Aby zaktualizować pamięci podręcznych nagłówków po wprowadzeniu zmian na maszynie z systemem Linux, wybierz połączenia zdalnego, a następnie wybierz **aktualizacji**. Wybierz **Usuń** usunąć nagłówki bez usuwania samo połączenie. Wybierz **Eksploruj** można otworzyć lokalnego katalogu w **Eksploratora plików**. Ten folder należy traktować jako tylko do odczytu. Aby pobrać nagłówki dla istniejącego połączenia, który został utworzony przed Visual Studio 2017 w wersji 15.3, wybierz połączenie a następnie wybierz pozycję **Pobierz**.

@@ -1,17 +1,22 @@
 ---
 title: Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio
 description: W tym artykule opisano, jak pobrać, zainstalować i skonfigurować obciążenia systemu Linux dla języka C++ w programie Visual Studio.
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821580"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042745"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążeń systemu Linux
 
+::: moniker range="vs-2015"
+
+Projektów systemu Linux są obsługiwane w programie Visual Studio 2017 i nowszych wersjach.
+
+::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
@@ -35,7 +40,10 @@ Obsługa [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/Add
 
 ## <a name="visual-studio-setup"></a>Instalator programu Visual Studio
 
-1. Wpisz "Instalator programu Visual Studio" w polu wyszukiwania Windows: ![Pole wyszukiwania Windows](media/visual-studio-installer-search.png)
+1. Wpisz "Instalator programu Visual Studio" w polu wyszukiwania Windows:
+
+   ![Pole wyszukiwania Windows](media/visual-studio-installer-search.png)
+
 2. Wyszukaj Instalatora w obszarze **aplikacje** wyniki, a następnie kliknij go dwukrotnie. Po otwarciu Instalatora wybierz **Modyfikuj**, a następnie kliknij polecenie **obciążeń** kartę. Przewiń w dół do **inne zestawy narzędzi** i wybierz **programowanie dla systemu Linux przy użyciu języka C++** obciążenia.
 
    ![Visual C++ dla obciążenia programowanie dla systemu Linux](media/linuxworkload.png)
@@ -56,10 +64,10 @@ W systemie Windows 10 można zainstalować i docelowa swoje ulubione dystrybucja
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Konfiguracja w systemie Linux: Ubuntu na WSL
 
-Na WSL nie połączenia zdalnego jest wymagany. **ZIP** i **rsync** są wymagane do automatycznej synchronizacji nagłówków systemu Linux przy użyciu programu Visual Studio do obsługi technologii Intellisense. Jeśli wymagane aplikacje nie są już obecne, możesz zainstalować je w następujący sposób:
+Gdy są one ukierunkowane WSL, nie ma potrzeby dodać połączenie zdalne lub skonfiguruj protokół SSH, aby można było kompilowanie i debugowanie. **ZIP** i **rsync** są wymagane do automatycznej synchronizacji nagłówków systemu Linux przy użyciu programu Visual Studio do obsługi technologii Intellisense. Jeśli wymagane aplikacje nie są już obecne, możesz zainstalować je w następujący sposób:
 
 ```bash
-sudo g++ gdb make rsync zip
+sudo apt-get install g++ gdb make rsync zip
 ```
 ::: moniker-end
 

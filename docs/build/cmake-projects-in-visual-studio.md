@@ -1,15 +1,15 @@
 ---
 title: Projekty CMake w programie Visual Studio
-ms.date: 03/27/2019
+ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: ae686383d82453f291bbf81428748524160082f7
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: f2bafb75aae2eabb4e8f289435ddaeb61e6aabf4
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877184"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042658"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake w programie Visual Studio
 
@@ -20,13 +20,13 @@ Narzędzie CMake to narzędzie dla wielu platform, typu open-source Definiowanie
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 wprowadza **edytora ustawienia narzędzia CMake** i innych ulepszeń w programie Visual Studio 2017. **Visual C++ Tools for CMake** składnik używa **Otwórz Folder** funkcję, aby włączyć środowisko IDE będzie korzystają z plików projektu narzędzia CMake (na przykład pliku CMakeLists.txt) bezpośrednio na potrzeby funkcji IntelliSense i przeglądania. Generatory Ninja i programu Visual Studio są obsługiwane. Jeśli używasz generator programu Visual Studio, tymczasowy plik projektu zostanie wygenerowany i przekazane do msbuild.exe, ale nigdy nie jest załadowany do celów przeglądaniu lub IntelliSense. Można także zaimportować istniejący pamięć podręczną CMake. 
+Visual Studio 2019 wprowadza **edytora ustawienia narzędzia CMake** i innych ulepszeń w programie Visual Studio 2017. **C++ Narzędzia CMake dla Windows** składnik używa **Otwórz Folder** funkcję, aby włączyć środowisko IDE będzie korzystają z plików projektu narzędzia CMake (na przykład pliku CMakeLists.txt) bezpośrednio na potrzeby funkcji IntelliSense i Przeglądanie. Generatory Ninja i programu Visual Studio są obsługiwane. Jeśli używasz generator programu Visual Studio, tymczasowy plik projektu zostanie wygenerowany i przekazane do msbuild.exe, ale nigdy nie jest załadowany do celów przeglądaniu lub IntelliSense. Można także zaimportować istniejący pamięć podręczną CMake. 
 
 ## <a name="installation"></a>Instalacja
 
-**Visual C++ Tools for CMake** jest instalowany domyślnie w jako część **programowanie aplikacji klasycznych w języku C++** obciążenia i w ramach **programowanie dla systemu Linux przy użyciu języka C++** obciążenia. Zobacz [projektów CMake dla wielu platform](../linux/cmake-linux-project.md) Aby uzyskać więcej informacji.
+**C++Narzędzia CMake dla Windows** jest instalowany domyślnie w jako część **programowanie aplikacji klasycznych przy użyciu C++**  obciążenia i w ramach **Linux Development przy użyciu C++**  obciążenia. Zobacz [projektów CMake dla wielu platform](../linux/cmake-linux-project.md) Aby uzyskać więcej informacji.
 
-![Składnik narzędzia CMake w obciążeniu C++ na komputerach](media/cmake-install.png)
+![Składnik narzędzia CMake w obciążeniu C++ na komputerach](media/cmake-install-2019.png)
 
 Aby uzyskać więcej informacji, zobacz [Zainstaluj obciążenie systemu Linux w języku C++ w programie Visual Studio](../linux/download-install-and-setup-the-linux-development-workload.md).
 

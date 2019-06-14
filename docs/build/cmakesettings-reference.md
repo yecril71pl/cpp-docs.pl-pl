@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837255"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042587"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Odwołanie do schematu pliku CMakeSettings.json
 
@@ -121,7 +121,7 @@ Podczas aktywnej konfiguracji określa generator programu Visual Studio, domyśl
 
 - `remoteMachineName`: Określa nazwę komputera zdalnego systemu Linux, który hostuje narzędzie CMake, kompilacje i debugera. Korzystanie z Menedżera połączeń, aby dodać nowe maszyny z systemem Linux. Obsługiwane makra to: `${defaultRemoteMachineName}`.
 - `remoteCopySourcesOutputVerbosity`: Określa poziom szczegółowości dla operacji kopiowania komputera zdalnego źródła. Może być jedną z "" Normal","Pełne"lub"Diagnostyczne".
-- `remoteCopySourcesConcurrentCopies`: Określa liczbę równoczesnych operacji kopiowania używanych podczas synchronizowania źródeł na maszynie zdalnej.
+- `remoteCopySourcesConcurrentCopies`: Określa liczbę równoczesnych operacji kopiowania używanych podczas synchronizowania źródeł do maszyny zdalnej (protokołu sftp tylko).
 - `remoteCopySourcesMethod`: Określa metodę, aby skopiować pliki do maszyny zdalnej. Może to być "rsync" lub "sftp".
 - `remoteCMakeListsRoot`: Określa katalog na maszynie zdalnej zawierający projekt narzędzia CMake. Obsługiwane makra to: `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteBuildRoot`: Określa katalog na komputerze zdalnym, w którym narzędzie CMake generuje skrypty kompilacji dla wybranego generatora. Obsługiwane makra to: `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.

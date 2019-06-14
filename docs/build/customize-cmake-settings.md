@@ -3,14 +3,14 @@ title: Dostosowywanie ustawień kompilacji CMake w programie Visual Studio
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: d8102250fa59dc787cc48fc293ac740b81b4446c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a00b18f163758be0238a05c4d2af3195014d79b0
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837107"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042536"
 ---
-# <a name="customize-cmake-build-settings"></a>Dostosowywanie ustawień kompilacji CMake
+# <a name="customize-cmake-build-settings"></a>Dostosowywanie ustawień kompilacji narzędzia CMake
 
 ::: moniker range="vs-2019"
 
@@ -94,7 +94,7 @@ Odnosi się do **generator**: mapuje do narzędzia CMake **- G** przełącznika 
   - "Unix pliki reguł programu make"
   - "Visual Studio 16 2019"
   - "Visual Studio 16 2019 Win64"
-  - - "Visual Studio 16 2019 ARM"
+  - "Visual Studio 16 2019 ARM"
   - "Visual Studio 15 2017"
   - "Visual Studio 15 2017 Win64"
   - "Visual Studio 15 2017 ARM"
