@@ -2,14 +2,14 @@
   href: index.md
 - name: 'Pobieranie, instalowanie i konfigurowanie obciążenia Projektowanie systemu Linux'
   href: download-install-and-setup-the-linux-development-workload.md
-- name: Konfigurowanie projektu systemu Linux
-  href: configure-a-linux-project.md
-- name: Konfigurowanie projektu CMake systemu Linux
-  href: cmake-linux-project.md
-- name: Tworzenie nowego projektu systemu Linux
-  href: create-a-new-linux-project.md
 - name: Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux
   href: connect-to-your-remote-linux-computer.md
+- name: Tworzenie nowego projektu systemu Linux
+  href: create-a-new-linux-project.md
+- name: Konfigurowanie projektu systemu Linux
+  href: configure-a-linux-project.md
+- name: Tworzenie i konfigurowanie projektu CMake systemu Linux
+  href: cmake-linux-project.md
 - name: Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
   href: linux-asan-configuration.md
 - name: 'Wdrażanie, uruchamianie i debugowanie projektu systemu Linux'

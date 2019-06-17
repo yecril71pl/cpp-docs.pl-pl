@@ -1,13 +1,13 @@
 ---
 title: Tworzenie nowego projektu systemu Linux w języku C++ w programie Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: e39e60c906901420a4809c22b4f4e71d3b621da1
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 0377e21177b29d998fc3e66bb1863dbc127c1fbe
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821634"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042708"
 ---
 # <a name="create-a-new-linux-project"></a>Tworzenie nowego projektu systemu Linux
 
@@ -19,7 +19,7 @@ Projektów systemu Linux są dostępne w programie Visual Studio 2017 i nowszych
 
 Najpierw upewnij się, że masz **obciążenia projektowanie systemu Linux** dla zainstalowanego programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pobieranie, instalowanie i konfigurowanie obciążenia Linux](download-install-and-setup-the-linux-development-workload.md).
 
-Podczas tworzenia nowego C++ projektu dla systemu Linux w programie Visual Studio, można wybrać utworzyć projekt programu Visual Studio lub projektu narzędzia CMake. W tym artykule opisano sposób tworzenia projektu programu Visual Studio. Aby uzyskać informacje o sposobie tworzenia i pracy z istniejących projektów CMake, zobacz [Konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
+Podczas tworzenia nowego C++ projektu dla systemu Linux w programie Visual Studio, można wybrać utworzyć projekt programu Visual Studio lub projektu narzędzia CMake. W tym artykule opisano sposób tworzenia projektu programu Visual Studio. Aby uzyskać informacje o sposobie tworzenia i pracy z istniejących projektów CMake, zobacz [tworzenie i konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
 
 ## <a name="to-create-a-new-linux-project"></a>Aby utworzyć nowy projekt systemu Linux
 
@@ -49,6 +49,12 @@ Aby utworzyć nowego projektu systemu Linux w programie Visual Studio, wykonaj n
    | **Aplikacja konsoli (Linux)** | Projekt przeznaczony dla dowolnego komputera z systemem Linux, przykładowy kod, który wyświetla tekst do konsoli |
    | **Pusty projekt (Linux)**       | Projekt przeznaczony dla dowolnego komputera z systemem Linux, nie przykładowy kod |
    | **Projekt pliku reguł programu make (Linux)**    | Projekt przeznaczony dla dowolnego komputera z systemem Linux utworzone przy użyciu standardowego pliku reguł programu make systemu kompilacji |
+
+   ::: moniker range="vs-2019"
+
+   Visual Studio 2019 umożliwia utworzenie nowego projektu narzędzia CMake. Aby uzyskać więcej informacji, zobacz [tworzenie i konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
+   
+   ::: moniker-end
 
 ## <a name="next-steps"></a>Następne kroki
 

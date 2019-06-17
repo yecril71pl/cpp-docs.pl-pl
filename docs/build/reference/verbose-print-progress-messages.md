@@ -1,6 +1,6 @@
 ---
 title: /VERBOSE (Drukuj komunikaty o postępie)
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - /verbose
 - VC.Project.VCLinkerTool.ShowProgress
@@ -13,40 +13,42 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbf7b5966c741535f26202979cbfd71f839cc537
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317305"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141668"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (Drukuj komunikaty o postępie)
 
-```
-/VERBOSE[:{ICF|INCR|LIB|REF|SAFESEH|UNUSEDLIBS}]
-```
+Dane wyjściowe komunikaty o postępie podczas procesu łączenia.
+
+## <a name="syntax"></a>Składnia
+
+> **/ VERBOSE**\[ **:** {**CLR**|**ICF**|**INCR** | **LIB**|**REF**|**SAFESEH**|**UNUSEDDELAYLOAD** | **UNUSEDLIBS**}\]
 
 ## <a name="remarks"></a>Uwagi
 
 Program łączący wysyła informacje o postępie łączenia sesji, do **dane wyjściowe** okna. W wierszu polecenia informacje są wysyłane do wyjścia standardowego i mogą zostać przekierowane do pliku.
 
-|Opcja|Opis|
-|------------|-----------------|
-|/VERBOSE|Wyświetla szczegóły dotyczące proces łączenia.|
-|/VERBOSE:ICF|Wyświetlanie informacji na temat aktywności konsolidatora, które powstały na skutek stosowania [/OPT: ICF](opt-optimizations.md).|
-|/VERBOSE:INCR|Wyświetla informacje na temat przyrostowego procesu łączenia.|
-|/ VERBOSE: LIB|Wyświetla wiadomości postępu, które wskazują wyłącznie biblioteki przeszukiwane.<br /><br /> Wyświetlane informacje obejmują proces wyszukiwania biblioteki i listy każdej nazwy biblioteki i obiektu (z pełną ścieżką), symbolu zamieniana z biblioteki i listy obiektów, które odwołują się symbol.|
-|/ VERBOSE: REF|Przedstawia informacje na temat aktywności konsolidatora, które powstały na skutek stosowania [/OPT: REF](opt-optimizations.md).|
-|/ VERBOSE: SAFESEH|Wyświetla informacje dotyczące modułów, które nie są zgodne z wyjątkiem bezpiecznej obsługi, kiedy [opcja/SAFESEH](safeseh-image-has-safe-exception-handlers.md) nie zostanie określony.|
-|/ VERBOSE: UNUSEDLIBS|Wyświetla informacje o dowolnych plikach bibliotek, które nie są używane podczas tworzenia obrazu.|
+| Opcja | Opis |
+| ------------ | ----------------- |
+| /VERBOSE | Wyświetla szczegóły dotyczące proces łączenia. |
+| /VERBOSE:CLR | Wyświetla informacje na temat aktywności konsolidatora określonych obiektów i kompilowany przy użyciu metadanych [/CLR](clr-common-language-runtime-compilation.md). |
+| /VERBOSE:ICF | Przedstawia informacje na temat aktywności konsolidatora, które powstały na skutek stosowania [/OPT: ICF](opt-optimizations.md). |
+| /VERBOSE:INCR | Wyświetla informacje na temat przyrostowego procesu łączenia. |
+| / VERBOSE: LIB | Wyświetla wiadomości postępu, które wskazują wyłącznie biblioteki przeszukiwane.<br/> Wyświetlane informacje obejmują proces wyszukiwania biblioteki. Wyświetla listę każdej nazwy biblioteki i obiektu (z pełną ścieżką), symbolu zamieniana z biblioteki i listy obiektów, które odwołują się symbol. |
+| / VERBOSE: REF | Przedstawia informacje na temat aktywności konsolidatora, które powstały na skutek stosowania [/OPT: REF](opt-optimizations.md). |
+| / VERBOSE: SAFESEH | Wyświetla informacje dotyczące modułów, które są niezgodne z podczas obsługi bezpiecznych wyjątków strukturalnych [opcja/SAFESEH](safeseh-image-has-safe-exception-handlers.md) nie został określony. |
+| / VERBOSE: UNUSEDDELAYLOAD | Wyświetla informacje o wszelkich opóźnień załadować biblioteki dll, które mają nie symbole używane podczas tworzenia obrazu. |
+| / VERBOSE: UNUSEDLIBS | Wyświetla informacje o dowolnych plikach bibliotek, które nie są używane podczas tworzenia obrazu. |
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
 1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **konsolidatora** folderu.
-
-1. Wybierz **wiersza polecenia** stronę właściwości.
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
 1. Dodaj opcję **dodatkowe opcje** pole.
 
