@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
+ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290686"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155775"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Przepuść opcje do konsolidatora)
 
@@ -33,7 +33,7 @@ Przekazuje co najmniej jedną opcję konsolidatora do konsolidatora.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Link** opcji wraz z opcjami konsolidatora muszą występować po dowolnej nazwy plików i opcji CL. Obszar jest wymagany między **/link** i `linkeroptions`. Aby uzyskać więcej informacji, zobacz [odwołania konsolidatora MSVC](linking.md).
+**/Link** opcji wraz z opcjami konsolidatora muszą występować po dowolnej nazwy plików i opcji CL. Obszar jest wymagany między **/link** i wszystkie opcje konsolidatora. Aby uzyskać więcej informacji, zobacz [odwołania konsolidatora MSVC](linking.md).
 
 ## <a name="example"></a>Przykład
 
