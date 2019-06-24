@@ -1,16 +1,16 @@
 ---
-title: Plik CppProperties.json — dokumentacja schematu
+title: Dokumentacja schematu pliku CppProperties.json
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837062"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344402"
 ---
-# <a name="cpppropertiesjson-schema-reference"></a>Plik CppProperties.json — dokumentacja schematu
+# <a name="cpppropertiesjson-schema-reference"></a>Dokumentacja schematu pliku CppProperties.json
 
 Otwórz projekty Folder, których nie należy używać narzędzia CMake mogą przechowywać ustawienia konfiguracji projektu w `CppProperties.json` pliku. (CMake projektów użyj [CMakeSettings.json](customize-cmake-settings.md) pliku.) Korzysta z programu Visual Studio IDE `CppProperties.json` dla technologii IntelliSense i nawigowanie po kodzie. Konfiguracja składa się z pary nazwa/wartość i definiuje #include ścieżki, przełączniki kompilatora i inne parametry. 
 
@@ -19,7 +19,7 @@ Otwórz projekty Folder, których nie należy używać narzędzia CMake mogą pr
 
 Program Visual Studio udostępnia wstępnie zdefiniowane konfiguracje dla x86 x64 Debug i Release. Domyślnie projekt ma konfigurację debugowania x86 `CppProperties.json`. Aby dodać nową konfigurację, kliknij prawym przyciskiem myszy `CppProperties.json` w pliku **Eksploratora rozwiązań** i wybierz polecenie **Dodawanie konfiguracji**:
 
-![Otwórz Folder Dodaj konfigurację](media/open-folder-add-config.png "Otwórz Folder Dodawanie nowej konfiguracji")
+![Otwórz Folder — Dodawanie nowej konfiguracji](media/open-folder-add-config.png "Otwórz Folder Dodawanie nowej konfiguracji")
 
 Domyślne konfiguracje przedstawiono poniżej:
 
@@ -115,9 +115,9 @@ Konfiguracja może mieć jedną z następujących właściwości:
 |`compilerSwitches`|jeden lub więcej dodatkowych przełączników, które mogą mieć wpływ na zachowanie funkcji IntelliSense|
 |`forcedInclude`|Nagłówek, aby automatycznie dołączone każda jednostka kompilacji (mapuje /FI dla MSVC lub - zawierają clang)|
 |`undefines`|Lista makr, być niezdefiniowana (mapuje do /U dla MSVC)|
-|`intelliSenseMode`|Aparat IntelliSense, która ma być używany. Warianty określonej architektury można określić dla MSVC i kompilatora gcc, Clang:<br/><br/>-windows msvc x86 (ustawienie domyślne)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>-windows-clang-x86<br/>- windows-clang-x64<br/>-windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>Linux-arm<br/>-gccarm|
+|`intelliSenseMode`|Aparat IntelliSense, która ma być używany. Warianty architektury można określić dla MSVC i kompilatora gcc, Clang:<br/><br/>-windows msvc x86 (ustawienie domyślne)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>-windows-clang-x86<br/>- windows-clang-x64<br/>-windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>Linux-arm<br/>-gccarm|
 
-Uwaga: Wartości `msvc-x86` i `msvc-x64` są obsługiwane tylko dla starszych powodów. Użyj `windows-msvc*` wariantów.
+Uwaga: Wartości `msvc-x86` i `msvc-x64` są obsługiwane tylko dla starszych powodów. Użyj `windows-msvc-*` wariantów zamiast tego.
 
 ## <a name="custom-configurations"></a>Konfiguracje niestandardowe
 
@@ -208,7 +208,7 @@ Można zdefiniować niestandardowe zmienne środowiskowe w `CppProperties.json` 
 ```
 ## <a name="per-configuration-environment-variables"></a>Zmienne środowiskowe — Konfiguracja
 
-Można również definiować **środowisk** właściwości w konfiguracji, tak że ma zastosowanie tylko do konfiguracji i zastępuje wszystkie zmienne globalne o takiej samej nazwie. W poniższym przykładzie x64 Konfiguracja definiuje lokalnym **INCLUDE** zmiennej, która zastępuje wartości globalnej:
+Można również definiować **środowisk** właściwości w konfiguracji. Ma zastosowanie tylko do konfiguracji i zastępuje wszystkie zmienne globalne o takiej samej nazwie. W poniższym przykładzie x64 Konfiguracja definiuje lokalnym **INCLUDE** zmiennej, która zastępuje wartości globalnej:
 
 ```json
 {
@@ -266,7 +266,7 @@ Masz dostęp do następujących wbudowanych makr wewnątrz `CppProperties.json`:
 |`${projectRoot}`| Pełna ścieżka do folderu, w którym `CppProperties.json` znajduje się|
 |`${vsInstallDir}`| Pełna ścieżka do folderu, w którym zainstalowano uruchomionego wystąpienia programu Visual Studio|
 
-Na przykład, jeśli projektu folderem include i obejmują również windows.h oraz inne typowe nagłówki z zestawu Windows SDK, możesz zaktualizować swoje `CppProperties.json` zawiera plik konfiguracji z nimi:
+Na przykład, jeśli projektu folderem include i obejmują również windows.h oraz inne typowe nagłówki z zestawu Windows SDK, możesz zaktualizować swoje `CppProperties.json` zawiera plik konfiguracji na następującym kodem:
 
 ```json
 {
@@ -294,6 +294,3 @@ Na przykład, jeśli projektu folderem include i obejmują również windows.h o
 ## <a name="troubleshoot-intellisense-errors"></a>Rozwiązywanie problemów IntelliSense
 
 Rozwiązywania problemów z technologii IntelliSense błędy spowodowane przez brak ścieżki dołączanych plików, otwórz **lista błędów** E1696. kod błędu "nie można otworzyć pliku źródłowego..." i filtrować dane wyjściowe do lokalizacji "Tylko IntelliSense".
-
-
-

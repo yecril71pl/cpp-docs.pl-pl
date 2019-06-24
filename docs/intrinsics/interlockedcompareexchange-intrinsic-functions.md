@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _interlockedcompareexchange
+title: _InterlockedCompareExchange, funkcje wewnętrzne
 ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
@@ -48,14 +48,14 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263740"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344441"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedcompareexchange
+# <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange, funkcje wewnętrzne
 
 **Microsoft Specific**
 
@@ -202,11 +202,11 @@ Wartość zwracana jest wartość początkowa `Destination` wskaźnika.
 
 ## <a name="remarks"></a>Uwagi
 
-`_InterlockedCompareExchange` Wykonuje porównanie atomowe `Destination` wartością `Comparand` wartości. Jeśli `Destination` wartość jest równa `Comparand` wartość `Exchange` wartość jest przechowywana w adresem określonym przez `Destination`. W przeciwnym razie odbywa się żadna operacja.
+`_InterlockedCompareExchange` jest porównanie atomowe `Destination` wartością `Comparand` wartości. Jeśli `Destination` wartość jest równa `Comparand` wartość `Exchange` wartość jest przechowywana w adresem określonym przez `Destination`. W przeciwnym razie nie żadna operacja.
 
 `_InterlockedCompareExchange` zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) funkcji.
 
-Istnieje kilka zmian w `_InterlockedCompareExchange` różnią się zależnie od typów danych, wymagają one oraz tego, czy uzyskać specyficznych dla procesora lub semantyka wydania jest używany.
+Istnieje kilka zmian w `_InterlockedCompareExchange` różnią się zależnie od typów danych, wymagają one oraz tego, czy uzyskać specyficznych dla procesora lub semantyka wydania są używane.
 
 Gdy `_InterlockedCompareExchange` funkcja działa na wartościach liczba całkowita typu long `_InterlockedCompareExchange8` operuje na 8-bitowych wartości całkowitych, `_InterlockedCompareExchange16` działa na wartościach krótka liczba całkowita i `_InterlockedCompareExchange64` działa w 64-bitowych wartości całkowitych.
 
@@ -220,7 +220,7 @@ Te procedury są dostępne tylko jako funkcje wewnętrzne.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie `_InterlockedCompareExchange` służy do synchronizacji prostych wątków niskiego poziomu. To podejście ma swoje ograniczenia, jako podstawy dla programowania wielowątkowe. on dostępny ilustrują typowym zastosowaniem blokowane funkcje wewnętrzne. Aby uzyskać najlepsze wyniki należy użyć interfejsu API Windows. Aby uzyskać dodatkowe informacje na temat programowania wielowątkowe, zobacz [pisanie wielowątkowego programu Win32](../parallel/writing-a-multithreaded-win32-program.md).
+W poniższym przykładzie `_InterlockedCompareExchange` służy do synchronizacji prostych wątków niskiego poziomu. To podejście ma swoje ograniczenia, jako podstawy dla programowania wielowątkowe. on dostępny ilustrują typowym zastosowaniem blokowane funkcje wewnętrzne. Aby uzyskać najlepsze wyniki należy użyć interfejsu API Windows. Aby uzyskać więcej informacji na temat programowania wielowątkowe, zobacz [pisanie wielowątkowego programu Win32](../parallel/writing-a-multithreaded-win32-program.md).
 
 ```
 // intrinExample.cpp
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want

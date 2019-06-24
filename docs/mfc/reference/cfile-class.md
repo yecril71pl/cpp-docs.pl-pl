@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcfe2fb30269f3f3a4c14664d9f57f5b937c8c6d
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385313"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344434"
 ---
 # <a name="cfile-class"></a>Klasa CFile
 
@@ -138,7 +138,7 @@ Bezpośrednio zapewnia usługi wejścia/wyjścia dysku Niebuforowane, binarne, p
 
 Hierarchiczna relacja między tej klasy i jej klasy pochodne umożliwia program, aby działać na wszystkich obiektach pliku za pośrednictwem polimorficznych `CFile` interfejsu. Plik pamięci, na przykład, zachowuje się jak pliku na dysku.
 
-Użyj `CFile` i jej klasy pochodne dla ogólnego zastosowania we/wy dysku. Użyj `ofstream` lub innych klasach iostream firmy Microsoft dla tekstu sformatowanego wysyłane do pliku na dysku.
+Użyj `CFile` i jej klasy pochodne dla ogólnego zastosowania we/wy dysku. Użyj `ofstream` lub innych firmy Microsoft `iostream` klasy dla tekstu sformatowanego wysyłane do pliku na dysku.
 
 Zwykle pliku na dysku jest otwierany automatycznie na `CFile` konstruowaniem i niszczeniem zamknięty na. Statyczne funkcje Członkowskie pozwalają na potrzeby analizowania pliku stanu bez otwierania pliku.
 
@@ -166,7 +166,7 @@ virtual void Abort();
 
 Jeśli plik nie został zamknięty przed zniszczenia obiektu, destruktor zamyka go dla Ciebie.
 
-Podczas obsługi wyjątków, `CFile::Abort` różni się od `CFile::Close` na dwa istotne sposoby. Po pierwsze, `Abort` funkcji nie spowoduje zgłoszenie wyjątku na błędy, ponieważ błędy są ignorowane przez `Abort`. Drugi `Abort` nie będzie **ASERCJA** Jeśli plik nie został otwarty lub została wcześniej zamknięta.
+Podczas obsługi wyjątków, `CFile::Abort` różni się od `CFile::Close` na dwa istotne sposoby. Po pierwsze, `Abort` funkcja nie będzie zgłosić wyjątek na awarie, ponieważ błędy są ignorowane przez `Abort`. Drugi `Abort` nie **ASERCJA** Jeśli plik nie został otwarty lub została wcześniej zamknięta.
 
 Jeśli użyto **nowe** przydzielić `CFile` obiektów na stosie, należy je usunąć po zamknięciu pliku. `Abort` Ustawia `m_hFile` do `CFile::hFileNull`.
 
@@ -240,16 +240,16 @@ Wybierz pierwszy lub oba z następujących opcji tryb tworzenia pliku. Jest to d
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`CFile::modeCreate`|Tworzy nowy plik, jeśli plik nie istnieje. Jeśli plik już istnieje, jest zastąpione i początkowo ustawiona zerowej długości.|
+|`CFile::modeCreate`|Tworzy nowy plik, jeśli plik nie istnieje. Jeśli plik już istnieje, ma zastąpione i początkowo ustawiona zerowej długości.|
 |`CFile::modeNoTruncate`|Tworzy nowy plik, jeśli plik nie istnieje; w przeciwnym razie, jeśli plik już istnieje, jest on dołączony do `CFile` obiektu.|
 
-Wybierz plik następujące opcje buforowania, zgodnie z opisem. Domyślnie system używa ogólnego przeznaczenia, w pamięci podręcznej schematu, która nie jest dostępna jako opcja.
+Wybierz plik następujące opcje buforowania, zgodnie z opisem. Domyślnie system używa schemat buforowania ogólnego przeznaczenia, który nie jest dostępna jako opcja.
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`CFile::osNoBuffer`|System nie używa pliku pośredniego pamięci podręcznej. Ta opcja spowoduje anulowanie następujących opcji 2.|
-|`CFile::osRandomAccess`|Pamięć podręczna plików jest zoptymalizowany pod kątem dostępu losowego. Nie należy używać tej opcji i opcji sekwencyjne skanowanie.|
-|`CFile::osSequentialScan`|Pamięć podręczna plików jest zoptymalizowany pod kątem dostępu sekwencyjnego. Nie należy używać tej opcji i opcji dostępu swobodnego.|
+|`CFile::osNoBuffer`|System nie używa pośrednich pamięci podręcznej dla pliku. Ta opcja spowoduje anulowanie następujących opcji 2.|
+|`CFile::osRandomAccess`|Pamięć podręczna plików jest zoptymalizowany pod kątem dostępu losowego. Nie należy używać zarówno w przypadku tej opcji, jak i opcja sekwencyjne skanowanie.|
+|`CFile::osSequentialScan`|Pamięć podręczna plików jest zoptymalizowany pod kątem dostępu sekwencyjnego. Nie należy używać tej opcji i opcji swobodnego dostępu.|
 |`CFile::osWriteThrough`|Operacje są wykonywane bez opóźnień zapisu.|
 
 Wybierz następującą opcję zabezpieczeń, aby uniemożliwić są dziedziczone przez dojście do pliku. Domyślnie wszystkie nowe procesy podrzędne służy dojście do pliku.
@@ -258,7 +258,7 @@ Wybierz następującą opcję zabezpieczeń, aby uniemożliwić są dziedziczone
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Wszystkie procesy podrzędne zapobiega używaniu dojście do pliku.|
 
-Konstruktor domyślny inicjuje elementy członkowskie, ale nie dołączyć plik do `CFile` obiektu. Po zakończeniu korzystania z tego konstruktora, należy użyć [CFile::Open](#open) metodę, aby otworzyć plik i dołączyć go do `CFile` obiektu.
+Konstruktor domyślny inicjuje elementy członkowskie, ale nie dołączony plik `CFile` obiektu. Po zakończeniu korzystania z tego konstruktora, należy użyć [CFile::Open](#open) metodę, aby otworzyć plik i dołączyć go do `CFile` obiektu.
 
 Konstruktor z jednym parametrem inicjuje elementy członkowskie i dołącza do istniejącego pliku `CFile` obiektu.
 
@@ -304,7 +304,7 @@ Wskaźnik do duplikat `CFile` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-To jest odpowiednikiem funkcji wykonawczej C `_dup`.
+Ta funkcja jest odpowiednikiem funkcji wykonawczej C `_dup`.
 
 ##  <a name="flush"></a>  CFile::Flush
 
@@ -382,7 +382,7 @@ Tytuł pliku podstawowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) można pobrać nazwy pliku. Jeśli to się powiedzie, metoda zwraca ciąg, który będzie używane w systemie aby wyświetlić nazwę pliku do użytkownika. W przeciwnym razie metoda wywołuje [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) pobrać nazwy pliku (łącznie z rozszerzeniem pliku) pliku podstawowego. Dlatego rozszerzenie pliku nie zawsze uwzględniane w pliku zwracany ciąg tytułu. Aby uzyskać więcej informacji, zobacz [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) i [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) w zestawie Windows SDK.
+Ta metoda wywołuje [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) można pobrać nazwy pliku. Jeśli to się powiedzie, metoda zwraca ciąg, który będzie używane w systemie aby wyświetlić nazwę pliku do użytkownika. W przeciwnym razie metoda wywołuje [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) pobrać nazwy pliku (łącznie z rozszerzeniem pliku) pliku podstawowego. Oznacza to, że rozszerzenie pliku nie jest zawsze zawarty w pliku zwracany ciąg tytułu. Aby uzyskać więcej informacji, zobacz [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) i [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) w zestawie Windows SDK.
 
 Aby przywrócić pełną ścieżkę pliku, łącznie z nazwą wywołać [GetFilePath](#getfilepath). Aby zwracać tylko nazwę pliku, należy wywołać [GetFileName](#getfilename).
 
@@ -408,7 +408,7 @@ Długość pliku.
 
 ##  <a name="getposition"></a>  CFile::GetPosition
 
-Uzyskuje bieżącą wartość wskaźnika pliku, którego można użyć w kolejnych wywołaniach `Seek`.
+Uzyskuje bieżącą wartość wskaźnika pliku, którego można użyć w późniejszym wywołania `Seek`.
 
 ```
 virtual ULONGLONG GetPosition() const;
@@ -464,7 +464,7 @@ Wartość TRUE, jeśli pomyślnie uzyskano informacje o stanie dla określonego 
 
 ### <a name="remarks"></a>Uwagi
 
-Niestatyczna wersję `GetStatus` pobiera informacje o stanie z otwartego pliku, które są skojarzone z danym `CFile` obiektu.  Wersji statycznej `GetStatus` uzyskuje informacje o stanie pliku ze ścieżki plików danego bez konieczności otwierania pliku. Jest to przydatne w przypadku testowania praw istnienie i dostępu do pliku.
+Niestatyczna wersję `GetStatus` pobiera informacje o stanie z otwartego pliku, które są skojarzone z danym `CFile` obiektu.  Wersji statycznej `GetStatus` uzyskuje informacje o stanie pliku ze ścieżki plików danego bez konieczności otwierania pliku. Ta wersja jest przydatna przy testowaniu praw istnienie i dostępu do pliku.
 
 `m_attribute` Członkiem `CFileStatus` struktury odwołuje się do zestawu atrybutów pliku. `CFile` Klasa udostępnia **atrybut** typ wyliczania, dzięki czemu można określić symbolicznie atrybutów pliku:
 
@@ -522,10 +522,10 @@ Liczba bajtów w zakresie do zablokowania.
 
 Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Możesz zablokować więcej niż jeden region pliku, ale nie nakładających się regiony są dozwolone.
 
-Po odblokowaniu regionie przy użyciu `UnlockRange` funkcji członkowskiej, zakres bajtów musi dokładnie odpowiadać elementowi region, który wcześniej został zablokowany. `LockRange` Funkcja Scalaj sąsiadujących regionów; Jeśli sąsiadujących ze sobą dwa regiony zablokowane każdego regionu, musisz odblokować oddzielnie.
+Gdy odblokujesz regionów, przy użyciu `UnlockRange` funkcji członkowskiej, zakres bajtów musi dokładnie odpowiadać elementowi region, który wcześniej został zablokowany. `LockRange` Funkcji nie scalania sąsiadujących regionów. Jeśli sąsiadujących ze sobą dwa regiony zablokowane każdego regionu, musisz odblokować oddzielnie.
 
 > [!NOTE]
->  Ta funkcja nie jest dostępna dla `CMemFile`-klasy pochodnej.
+>  Ta funkcja jest niedostępna dla `CMemFile`-klasy pochodnej.
 
 ### <a name="example"></a>Przykład
 
@@ -541,7 +541,7 @@ HANDLE m_hFile;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_hFile` jest publiczną zmienną typu UINT. Zawiera on `CFile::hFileNull` (pusty plik operacyjnych systemu-niezależny od wskaźnika) Jeśli uchwyt nie został przypisany.
+`m_hFile` jest publiczną zmienną typu UINT. Zawiera on `CFile::hFileNull`, wskaźnik operacyjnych systemu-niezależny od pustego pliku, jeśli uchwyt nie została przypisana.
 
 Korzystanie z `m_hFile` nie jest zalecane, ponieważ znaczenie elementu członkowskiego zależy od klasy pochodnej. `m_hFile` Wykonano publicznej składowej dla wygody w obsłudze niepolimorficznych, użyj klasy.
 
@@ -575,7 +575,7 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Parametry
 
 *lpszFileName*<br/>
-Ciąg, który jest ścieżka do żądanego pliku. Ścieżka może być względny, bezwzględne lub nazwę sieciową (UNC).
+Ciąg, który zawiera ścieżkę do pliku. Ścieżka może być względny, bezwzględne lub nazwę sieciową (UNC).
 
 *nOpenFlags*<br/>
 UINT, który definiuje tryb udostępniania i dostępu do tego pliku. Określa akcję wykonywaną podczas otwierania pliku. Opcje można połączyć za pomocą bitowej OR ( **&#124;** ) — operator. Uprawnienie dostępu jednego i jeden udział opcji są wymagane; `modeCreate` i `modeNoInherit` tryby są opcjonalne. Zobacz [CFile](#cfile) konstruktora, aby uzyskać listę opcji w trybie.
@@ -592,9 +592,9 @@ Wartość różną od zera, jeśli Otwórz powiodła się. w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Te dwie funkcje tworzą "bezpieczne" metody do otwierania pliku, gdzie błędu jest to normalne, oczekiwane.
+Dwa `Open` funkcje są "bezpieczne" metod do otwierania pliku, gdzie błędu jest to normalne, oczekiwane.
 
-Gdy `CFile` Konstruktor spowoduje zgłoszenie wyjątku w warunek błędu `Open` zwróci wartość FALSE dla warunków błędu. `Open` nadal można zainicjować [CFileException](../../mfc/reference/cfileexception-class.md) obiektu w celu opisania błędu, jednak. Jeśli nie podasz *pError* parametr, lub jeśli przekazujesz o wartości NULL dla *pError*, `Open` zwróci wartość FALSE i zgłasza `CFileException`. W przypadku przekazania wskaźnika do istniejącego `CFileException`, i `Open` napotka błąd, funkcja zostanie wypełnione przy użyciu informacji opisujących tego błędu. W ani sprawy będą `Open` zgłoszenie wyjątku.
+Gdy `CFile` Konstruktor zgłasza wyjątek w warunek błędu `Open` zwraca wartość FALSE dla warunków błędu. `Open` nadal można zainicjować [CFileException](../../mfc/reference/cfileexception-class.md) obiektu w celu opisania błędu, jednak. Jeśli nie podasz *pError* parametr, lub jeśli przekazujesz o wartości NULL dla *pError*, `Open` zwraca wartość FALSE, a nie wyrzuca `CFileException`. W przypadku przekazania wskaźnika do istniejącego `CFileException`, i `Open` napotka błąd, funkcja wypełnia go przy użyciu informacji opisujących tego błędu. `Open` nie zgłasza wyjątku w obu przypadkach.
 
 W poniższej tabeli opisano możliwe wyniki `Open`.
 
@@ -602,7 +602,7 @@ W poniższej tabeli opisano możliwe wyniki `Open`.
 |--------------|------------------------|------------------|----------------------------|
 |NULL|Nie|WARTOŚĆ TRUE|n/d|
 |wskaźnika `CFileException`|Nie|WARTOŚĆ TRUE|bez zmian|
-|NULL|Yes|FAŁSZ|n/d|
+|NULL|Tak|FAŁSZ|n/d|
 |wskaźnika `CFileException`|Tak|FAŁSZ|zainicjowana w celu opisania błędu|
 
 ### <a name="example"></a>Przykład
@@ -639,13 +639,13 @@ Maksymalna liczba bajtów do odczytu z pliku. Pliki trybu tekstowego pary wysuwu
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba bajtów przesłanych w buforze. Należy pamiętać, że dla wszystkich `CFile` klas, zwracana wartość może być mniejsza niż *nCount* jeśli osiągnięto koniec pliku.
+Liczba bajtów przesłanych w buforze. Dla wszystkich `CFile` klas, zwracana wartość może być mniejsza niż *nCount* jeśli osiągnięto koniec pliku.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]
 
-Inny przykład zobacz [CFile::Open](#open).
+Inny przykład, zobacz [CFile::Open](#open).
 
 ##  <a name="remove"></a>  CFile::Remove
 
@@ -667,9 +667,9 @@ Wskaźnik do obiektu CAtlTransactionManager
 
 ### <a name="remarks"></a>Uwagi
 
-Nie spowoduje to usunięcie katalogu.
+`Remove` nie usunąć katalog.
 
-`Remove` Funkcja elementu członkowskiego zgłasza wyjątek, jeśli połączone plik jest otwarty lub jeśli nie można usunąć pliku. Jest to równoważne polecenia DEL.
+`Remove` Funkcja elementu członkowskiego zgłasza wyjątek, jeśli połączone plik jest otwarty lub jeśli nie można usunąć pliku. Ta funkcja jest odpowiednikiem polecenia DEL.
 
 ### <a name="example"></a>Przykład
 
@@ -699,7 +699,7 @@ Wskaźnik do obiektu CAtlTransactionManager
 
 ### <a name="remarks"></a>Uwagi
 
-Nie można zmienić nazwy katalogów. Jest to równoważne polecenia REN.
+Nie można zmienić nazwy katalogów. Ta funkcja jest odpowiednikiem polecenia REN.
 
 ### <a name="example"></a>Przykład
 
@@ -739,7 +739,7 @@ Poniższa tabela zawiera listę możliwych wartości dla *nZe* parametru.
 
 Po otwarciu pliku wskaźnika pliku znajduje się w lokalizacji 0, na początku pliku.
 
-Wskaźnik pliku można ustawić na pozycji poza końcem pliku. Jeśli to zrobisz, rozmiar pliku nie zwiększa, dopóki nie można zapisać do pliku.
+Wskaźnik pliku można ustawić na pozycji poza końcem pliku. Jeśli to zrobisz, rozmiar pliku nie zwiększyć, dopóki nie można zapisać do pliku.
 
 Po przetworzeniu wyjątek, program obsługi wyjątków dla tej metody należy usunąć obiekt wyjątku.
 
@@ -785,7 +785,7 @@ Długość pliku w bajtach.
 
 ##  <a name="setfilepath"></a>  CFile::SetFilePath
 
-Wywołaj tę funkcję, aby określić ścieżkę pliku. na przykład, jeśli ścieżka pliku nie jest dostępna podczas [CFile](../../mfc/reference/cfile-class.md) obiekt jest konstruowany, wywołaj `SetFilePath` do tego celu.
+Wywołaj tę funkcję, aby określić ścieżkę pliku. Na przykład, jeśli ścieżka pliku jest niedostępna, gdy [CFile](../../mfc/reference/cfile-class.md) obiekt jest konstruowany, wywołaj `SetFilePath` do tego celu.
 
 ```
 virtual void SetFilePath(LPCTSTR lpszNewName);
@@ -844,7 +844,7 @@ static void PASCAL SetStatus(
 Ciąg, który jest ścieżka do żądanego pliku. Ścieżka może być względna lub bezwzględna i może zawierać nazwę sieci.
 
 *status*<br/>
-Bufor zawierającego nowe informacje o stanie. Wywołaj `GetStatus` funkcja elementu członkowskiego, aby wstępnie `CFileStatus` struktury z bieżących wartości, a następnie wprowadzić zmiany, zgodnie z potrzebami. Jeśli wartość wynosi 0, odpowiadający mu element stanu nie jest aktualizowana. Zobacz [GetStatus](#getstatus) funkcja elementu członkowskiego, aby uzyskać opis `CFileStatus` struktury.
+Bufor zawierającego nowe informacje o stanie. Wywołaj `GetStatus` funkcja elementu członkowskiego, aby wstępnie `CFileStatus` struktury z bieżących wartości, a następnie wprowadzić zmiany, zgodnie z potrzebami. Jeśli wartość wynosi 0, odpowiadający mu element stanu nie są aktualizowane. Zobacz [GetStatus](#getstatus) funkcja elementu członkowskiego, aby uzyskać opis `CFileStatus` struktury.
 
 *pTM*<br/>
 Wskaźnik do obiektu CAtlTransactionManager
@@ -853,7 +853,7 @@ Wskaźnik do obiektu CAtlTransactionManager
 
 Aby ustawić czas, należy zmodyfikować `m_mtime` pole *stan*.
 
-Należy pamiętać, że po wprowadzeniu wywołanie `SetStatus` w celu podjęcia próby zmiany atrybutów pliku, a `m_mtime` elementu członkowskiego struktury stanu plików jest różna od zera, atrybuty mogą dotyczyć także (zmiana godziny sygnatury może mieć efekty uboczne w atrybuty). Jeśli chcesz zmienić tylko atrybuty pliku, najpierw ustawić `m_mtime` członka struktury stanu plików do zera, a następnie wywołania `SetStatus`.
+Po ustawieniu wywołania `SetStatus` w celu podjęcia próby zmiany atrybutów pliku, a `m_mtime` elementu członkowskiego struktury stanu plików jest różna od zera, atrybuty mogą dotyczyć także (zmiana czasu sygnatury może mieć efekty uboczne atrybutów). Jeśli chcesz zmienić tylko atrybuty pliku, najpierw ustawić `m_mtime` członka struktury stanu plików do zera, a następnie wywołania `SetStatus`.
 
 ### <a name="example"></a>Przykład
 
@@ -914,7 +914,7 @@ Liczba bajtów, które mają zostać przeniesione z buforu. Pliki trybu tekstowe
 
 [!code-cpp[NVC_MFCFiles#16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]
 
-Co więcej, zapoznaj się z przykładami dla [CFile::CFile](#cfile) i [CFile::Open](#open).
+Zobacz też z przykładami [CFile::CFile](#cfile) i [CFile::Open](#open).
 
 ## <a name="see-also"></a>Zobacz także
 

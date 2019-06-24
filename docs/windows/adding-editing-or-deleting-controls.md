@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01116116ad6bb455d3b0fd8966e65b2fec4c5a35
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390987"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344367"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek (C++)
 
@@ -69,9 +69,9 @@ Za pomocą **Edytor okien dialogowych**, możesz dodać, zmienić rozmiar, edyto
 
    - Wybierz okno dialogowe, w lokalizacji, w którym chcesz umieścić kontrolkę, a ten formant jest widoczny, gdy wybrano.
 
-   - Przeciąganie i upuszczanie formantu z **przybornika** okna do lokalizacji na Twoje okno dialogowe, można przenosić kontrolki lub zmieniać ich rozmiar i kształt.
+   - Przeciąganie i upuszczanie formantu z **przybornika** okna do lokalizacji na Twoje okno dialogowe. Można następnie przenieś formant wokół lub zmienianie jej rozmiaru i kształtu.
 
-   - Kliknij dwukrotnie formant w **przybornika** okna i pojawia się na Twoje okno dialogowe, następnie zmienić położenie formantu do lokalizacji, użytkownik sobie tego życzy.
+   - Kliknij dwukrotnie formant w **przybornika** okna i pojawia się na Twoje okno dialogowe. Zmienianie położenia kontrolki do lokalizacji, w której użytkownik sobie tego życzy.
 
 ### <a name="to-add-multiple-controls"></a>Aby dodać wiele kontrolek
 
@@ -87,7 +87,7 @@ Za pomocą **Edytor okien dialogowych**, możesz dodać, zmienić rozmiar, edyto
 
 1. Umieść kursor wyświetlany na ekranie, którego lewego górnego rogu nowej kontrolki na Twoje okno dialogowe.
 
-1. Wybierz i przytrzymaj naciśnięty przycisk myszy, aby móc zakotwiczyć w lewym górnym rogu formantu w oknie dialogowym, a następnie przeciągnij kursor w prawo i w dół, aż do uzyskania odpowiedni rozmiar kontrolki.
+1. Wybierz i przytrzymaj naciśnięty przycisk myszy, aby móc zakotwiczyć w lewym górnym rogu formantu w oknie dialogowym. Następnie przeciągnij kursor w prawo i w dół, aż do odpowiedni rozmiar kontrolki.
 
    > [!NOTE]
    > Można zakotwiczyć dowolne dowiedzą o formant, który rysowania. Jako przykład tej procedurze użyto lewego górnego rogu.
@@ -99,7 +99,7 @@ Za pomocą **Edytor okien dialogowych**, możesz dodać, zmienić rozmiar, edyto
 
 ### <a name="to-add-a-custom-control"></a>Aby dodać formant niestandardowy
 
-Można dodać niestandardowe formanty do okna dialogowego wybierając **kontrolki niestandardowej** ikonę **przybornika** i przeciągając je do swojej okna dialogowego. Aby dodać **Syslink** , Dodaj formant niestandardowy, a następnie zmienić formant **klasy** właściwości **Syslink**. Ta akcja spowoduje, że właściwości, aby odświeżyć i Pokaż **Syslink** właściwości formantu. Aby uzyskać informacji na temat klasy otoki MFC, zobacz [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Można dodać niestandardowe formanty do okna dialogowego. Wybierz **kontrolkę niestandardową** ikonę **przybornika** i przeciągnij go do Twojego okno dialogowe. Aby dodać `Syslink` , Dodaj formant niestandardowy, a następnie zmienić formant **klasy** właściwość `Syslink`. Ta akcja spowoduje, że właściwości, aby odświeżyć i Pokaż `Syslink` właściwości formantu. Aby uzyskać informacji na temat klasy otoki MFC, zobacz [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Formanty edycji
 
@@ -139,7 +139,7 @@ Można dodać niestandardowe formanty do okna dialogowego wybierając **kontrolk
 > [!TIP]
 > Aby przejść z dowolnego formantu pola okna dialogowego do jego istniejącej procedury obsługi, kliknij dwukrotnie formant.
 
-Można również użyć **zmienne Członkowskie** karcie [Kreator klas MFC](../mfc/reference/mfc-class-wizard.md) do dodawania nowych zmiennych Członkowskich dla określonej klasy i wyświetlanie zmiennych składowych, które zostały już zdefiniowane.
+Można również użyć **zmienne Członkowskie** karcie [Kreator klas MFC](../mfc/reference/mfc-class-wizard.md) Aby dodać nowe zmienne elementu członkowskiego dla określonej klasy i wyświetlić zmienne Członkowskie już zdefiniowane.
 
 ## <a name="delete-controls"></a>Usuwanie kontrolek
 
@@ -149,7 +149,7 @@ W oknie dialogowym wybierz kontrolkę, naciśnij klawisz **Usuń** klucza lub pr
 
 ### <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Po dodaniu wspólne kontrolki lub kontrolki edycji wzbogaconej w oknie dialogowym, nie będzie on widoczny podczas testowania okna dialogowego lub się nie pojawi się okno dialogowe, na przykład:
+Po dodaniu do okna dialogowego wspólne kontrolki lub kontrolki edycji wzbogaconej, nie będzie on widoczny podczas testowania okna dialogowego. Lub nie będzie wyświetlane okno dialogowe, sam. Na przykład:
 
 1. Utwórz projekt systemu Win32, modyfikując ustawienia aplikacji, dzięki czemu można utworzyć aplikację Windows (nie Aplikacja konsoli).
 
@@ -196,7 +196,7 @@ Program Visual Studio umożliwia wstawianie kontrolki ActiveX z okna dialogowego
 |**Path**|Wyświetla plik, w którym znajduje się Kontrolka ActiveX.|
 
 > [!CAUTION]
-> Może nie być prawne rozpowszechnianie wszystkich kontrolek ActiveX w Twoim systemie. Zapoznaj się z umową licencyjną dotyczącą oprogramowania, zainstalowanego kontrolki lub skontaktuj się z firmą oprogramowania.
+> Może nie być prawne rozpowszechnianie wszystkich kontrolek ActiveX w Twoim systemie. Zapoznaj się z umową licencyjną dotyczącą oprogramowania, zainstalowanego kontrolki lub skontaktuj się z producenta oprogramowania.
 
 #### <a name="to-add-an-activex-control"></a>Aby dodać formant ActiveX
 
@@ -215,7 +215,7 @@ Program Visual Studio umożliwia wstawianie kontrolki ActiveX z okna dialogowego
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>Aby edytować właściwości kontrolki ActiveX
 
-Kontrolki ActiveX, dostarczone przez niezależnych dostawców może są wyposażone w ich własnych właściwości i właściwości. Te właściwości są wyświetlane w **właściwości** okna, włącznie z dowolnej właściwości strony utworzone przez autorów formantu ActiveX są wyświetlane w **strony właściwości** okno dialogowe (w celu wyświetlania  **Strona właściwości** określonej kontrolki ActiveX, wybierz **strona właściwości** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window)).
+Kontrolki ActiveX, dostarczone przez niezależnych dostawców może są wyposażone w ich własnych właściwości i właściwości. Te właściwości są wyświetlane w **właściwości** okna. Strony właściwości, wszelkie utworzone przez autorów formantu ActiveX są wyświetlane w **strony właściwości** okno dialogowe. (Aby wyświetlić **strona właściwości** określonej kontrolki ActiveX, wybierz **strona właściwości** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window)).
 
 - Wybierz **ActiveX** kontroli i przejdź do menu **widoku** > **strona właściwości** Aby wyświetlić właściwości. W razie potrzeby na stronie właściwości, należy wprowadzić zmiany.
 
