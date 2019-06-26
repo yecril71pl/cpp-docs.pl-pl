@@ -1,17 +1,17 @@
 ---
-title: C++Narzędzia i funkcje w wersji programu Visual Studio
+title: Narzędzia i funkcje języka C++ w wersjach programu Visual Studio
 ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: c5c0459888f8787fd8abba495395130d64a193e0
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174778"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400637"
 ---
-# <a name="c-tools-and-features-in-visual-studio-editions"></a>C++Narzędzia i funkcje w wersji programu Visual Studio
+# <a name="c-tools-and-features-in-visual-studio-editions"></a>Narzędzia i funkcje języka C++ w wersjach programu Visual Studio
 
 
 ::: moniker range=">=vs-2019"
@@ -295,7 +295,7 @@ W systemie Linux:
 
 [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co nowego w programie Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)<br/>
+[C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end
 
@@ -463,6 +463,6 @@ W poniższych tabelach przedstawiono Visual C++ funkcje, które są dostępne w 
 
 [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co nowego w programie Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)<br/>
+[C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end

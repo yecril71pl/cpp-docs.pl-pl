@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: ed9c19dad029f8fc9495d38ab6e5c0ba8ad6d529
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: b3172dd6ed4c438bacedd6760da5ab65228396f3
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877416"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400906"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Przewodnik: Tworzenie standardowego programu C++ (C++)
 
@@ -88,7 +88,7 @@ Poniższe kroki różnią się w zależności od tego, która wersja programu Vi
 
    1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pliki źródłowe** folderu, wskaż **Dodaj**, a następnie kliknij przycisk **nowy element**.
 
-   1. W **kodu** węzła, kliknij przycisk **plik C++ (.cpp)**, wpisz nazwę pliku, a następnie kliknij **Dodaj**.
+   1. W **kodu** węzła, kliknij przycisk **plik C++ (.cpp)** , wpisz nazwę pliku, a następnie kliknij **Dodaj**.
 
    Plik CPP pojawia się w **pliki źródłowe** folderu w **Solution Explorer**, a plik jest otwarty w edytorze programu Visual Studio.
 
@@ -107,9 +107,9 @@ Poniższe kroki różnią się w zależności od tego, która wersja programu Vi
 ## <a name="next-steps"></a>Następne kroki
 
 **Poprzednie:** [Aplikacje konsoli w programie Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
-**Dalej:** [Przewodnik: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Dalej:** [Przewodnik: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

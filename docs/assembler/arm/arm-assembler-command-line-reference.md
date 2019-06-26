@@ -26,7 +26,7 @@ Kombinacja zero lub więcej z następujących czynności:
 - **-błędy** *nazwy pliku*<br/>
    Przekierowywanie błędach i komunikaty ostrzegawcze do *filename*.
 
-- **-i** *dir*[**;**<em>dir</em>]<br/>
+- **-i** *dir*[ **;** <em>dir</em>]<br/>
    Dodaj określonych katalogach na ścieżkę wyszukiwania dołączenia.
 
 - **-wstępnie** *— dyrektywa*<br/>

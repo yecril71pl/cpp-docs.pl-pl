@@ -6,21 +6,21 @@ helpviewer_keywords:
 - strings [C++], string literals
 - literal strings, C
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
-ms.openlocfilehash: 31028b51b8010dd7e598ca5e635a35562379bf40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df7126efe5a5b2caa3a4fee51465d0dbe892e89
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313256"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400583"
 ---
 # <a name="c-string-literals"></a>Literały ciągu języka C
 
-"Literału ciągu" to sekwencja znaków z zestawu ujęty w podwójny cudzysłów znaków źródła (**""**). Literały ciągów są używane do reprezentowania sekwencji znaków, które, razem tworzą ciąg zakończony znakiem null. Należy zawsze prefiks literałów ciągów dwubajtowych literą **L**.
+"Literału ciągu" to sekwencja znaków z zestawu ujęty w podwójny cudzysłów znaków źródła ( **""** ). Literały ciągów są używane do reprezentowania sekwencji znaków, które, razem tworzą ciąg zakończony znakiem null. Należy zawsze prefiks literałów ciągów dwubajtowych literą **L**.
 
 ## <a name="syntax"></a>Składnia
 
 *literał ciągu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**L"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**
 
 *s-char-sequence*:<br/>
@@ -29,7 +29,7 @@ ms.locfileid: "62313256"
 &nbsp;&nbsp;&nbsp;&nbsp;*s char sekwencji* *s-char*
 
 *s-char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Każdy członek znak źródłowy zestawu z wyjątkiem podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Każdy członek znak źródłowy zestawu z wyjątkiem podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza
 
 &nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
 
@@ -41,7 +41,7 @@ W poniższym przykładzie przedstawiono prosty literał ciągu:
 char *amessage = "This is a string literal.";
 ```
 
-Escape, wszystkie kody w [sekwencje ucieczki](../c-language/escape-sequences.md) tabeli są prawidłowe w literałach ciągu. Do reprezentowania podwójny cudzysłów w literale ciągu, użyj sekwencji unikowej  **\\"**. Pojedynczy cudzysłów (**"**) może być przedstawiany bez sekwencji unikowej. Ukośnik odwrotny (**\\**) musi występować ukośnik odwrotny, po drugim (**\\\\**), gdy pojawia się wewnątrz ciągu. Ukośnik odwrotny znajduje się na końcu wiersza i zawsze jest interpretowany jako znak kontynuacji wiersza.
+Escape, wszystkie kody w [sekwencje ucieczki](../c-language/escape-sequences.md) tabeli są prawidłowe w literałach ciągu. Do reprezentowania podwójny cudzysłów w literale ciągu, użyj sekwencji unikowej  **\\"** . Pojedynczy cudzysłów ( **"** ) może być przedstawiany bez sekwencji unikowej. Ukośnik odwrotny ( **\\** ) musi występować ukośnik odwrotny, po drugim ( **\\\\** ), gdy pojawia się wewnątrz ciągu. Ukośnik odwrotny znajduje się na końcu wiersza i zawsze jest interpretowany jako znak kontynuacji wiersza.
 
 ## <a name="see-also"></a>Zobacz także
 

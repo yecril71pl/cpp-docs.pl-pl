@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 4232edd10b71c70097002511ef4ee663e67d6598
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 5cc4ead7aaef2ffa56870a374b0b73d16eb31521
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708133"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400960"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Przewodnik: Wdrażanie Twojego programu (C++)
 
@@ -50,7 +50,7 @@ Kroki opisane w tej sekcji różnią się w zależności od zainstalowanej wersj
 
 1. W oknie dialogowym wybierz **podstawowe wyjście** i kliknij przycisk **OK**. Nowy element o nazwie **podstawowe dane wyjściowe z gry (aktywny)** pojawia się.
 
-1. Wybierz element, który **podstawowe dane wyjściowe z gry (aktywny)**, kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót podstawowe wyjście z gry (aktywny)**. Nowy element o nazwie **skrót do podstawowe wyjście z gry (aktywny)** pojawia się.
+1. Wybierz element, który **podstawowe dane wyjściowe z gry (aktywny)** , kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót podstawowe wyjście z gry (aktywny)** . Nowy element o nazwie **skrót do podstawowe wyjście z gry (aktywny)** pojawia się.
 
 1. Zmień nazwę elementu Skrót do *gry*, a następnie przeciągnij i upuść element do **Menu programy użytkownika** węzła w lewej części okna.
 
@@ -92,7 +92,7 @@ Kroki opisane w tej sekcji różnią się w zależności od zainstalowanej wersj
 
 1. W oknie dialogowym wybierz **podstawowe wyjście** i kliknij przycisk **OK**. Nowy element o nazwie **podstawowe dane wyjściowe z gry (aktywny)** pojawia się.
 
-1. Wybierz element, który **podstawowe dane wyjściowe z gry (aktywny)**, kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót podstawowe wyjście z gry (aktywny)**. Nowy element o nazwie **skrót do podstawowe wyjście z gry (aktywny)** pojawia się.
+1. Wybierz element, który **podstawowe dane wyjściowe z gry (aktywny)** , kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót podstawowe wyjście z gry (aktywny)** . Nowy element o nazwie **skrót do podstawowe wyjście z gry (aktywny)** pojawia się.
 
 1. Zmień nazwę elementu Skrót do *gry*, a następnie przeciągnij i upuść element do **Menu programy użytkownika** węzła w lewej części okna.
 
@@ -110,7 +110,7 @@ Kroki opisane w tej sekcji różnią się w zależności od zainstalowanej wersj
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzednie:** [Przewodnik: Debugowanie projektu (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
+**Poprzednie:** [Przewodnik: Debugowanie projektu (C++)](walkthrough-debugging-a-project-cpp.md)
 
 ## <a name="see-also"></a>Zobacz także
 

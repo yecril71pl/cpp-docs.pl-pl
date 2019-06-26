@@ -5,14 +5,14 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236573"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400923"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Ostrzeżenia kompilatora, które są domyślnie wyłączone
+# <a name="compiler-warnings-that-are-off-by-default"></a>Domyślnie wyłączone ostrzeżenia kompilatora
 
 Kompilator obsługuje ostrzeżeń, które są domyślnie wyłączone, ponieważ większość programistów nie przydatne je. W niektórych przypadkach ich ostrzec o wybór stylistyczne lub o wspólnej idiomy w starszego kodu. Inne ostrzeżenia to dotyczących używania rozszerzeniem firmy Microsoft dla języka. W innych przypadkach wskazują obszar, w którym programistów często wprowadzać nieprawidłowe wartości domyślne, które mogą prowadzić do nieoczekiwanych lub niezdefiniowane zachowanie. Jeśli włączone, niektóre ostrzeżenia mogą występować wielokrotnie w nagłówków biblioteki. Biblioteki środowiska uruchomieniowego C i C++ standardowych bibliotek, które są przeznaczone do emitować nie ostrzeżeń tylko na poziomie ostrzeżenia [/W4](../build/reference/compiler-option-warning-level.md).
 
@@ -113,7 +113,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C4767 (poziom 4)|Nazwa sekcji '*symbol*"jest dłuższa niż 8 znaków i zostanie obcięta przez konsolidator|
 |C4768 (poziom 3)|atrybuty __declspec przed specyfikacją konsolidacji są ignorowane.|
 |C4774 (poziom 4)|"*ciąg*": ciąg oczekiwany w argumencie formatu *numer* nie jest ciągiem literału|
-|C4777 (poziom 4)|"*— funkcja*": ciąg formatu "*ciąg*"wymaga argumentu typu"*type1*", ale ze zmienną liczbą argumentów *numer* ma typ "*type2*"|
+|C4777 (poziom 4)|" *— funkcja*": ciąg formatu "*ciąg*"wymaga argumentu typu"*type1*", ale ze zmienną liczbą argumentów *numer* ma typ "*type2*"|
 |C4786 (poziom 3)|"*symbol*': Nazwa obiektu została obcięta do '*numer*' znaków w informacjach debugowania|
 | [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (poziom 4) | Niejawna konwersja z "*typu*" na wartość logiczna. Prawdopodobieństwo utraty informacji możliwych <sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (poziom 4)|"*bajtów*"bajtów dopełnienie dodane po konstrukcji"*member_name*"|
@@ -159,7 +159,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup> to ostrzeżenie jest dostępna, począwszy od programu Visual Studio 2019 RTM.<br/>
 ::: moniker-end
-<sup>Jako trwałą</sup> to ostrzeżenie jest wyłączone, chyba że [/ permissive-](../build/reference/permissive-standards-conformance.md) ustawiono opcję kompilatora.<br/>
+<sup>Jako trwałą</sup> to ostrzeżenie jest wyłączone, chyba że [/ permissive-](../build/reference/permissive-standards-conformance.md) ustawiono opcję kompilatora.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Ostrzeżenia wyłączone domyślnie we wcześniejszych wersjach
 

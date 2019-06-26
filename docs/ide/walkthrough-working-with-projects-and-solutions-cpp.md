@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 6dfee695092a69252069dbfc73b6260bd65245e2
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708128"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400953"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Przewodnik: Praca z projektami i rozwiązaniami (C++)
 
@@ -56,7 +56,7 @@ Aby utworzyć projekt, należy najpierw wybrać szablon typu projektu. Dla każd
 
 1. Na pasku menu wybierz **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** i wybierz **Visual C++**, jeśli nie jest otwarty.
+1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** i wybierz **Visual C++** , jeśli nie jest otwarty.
 
 1. Na liście zainstalowanych szablonów w środkowym okienku wybierz **aplikacji konsoli Windows**.
 
@@ -78,7 +78,7 @@ Aby utworzyć projekt, należy najpierw wybrać szablon typu projektu. Dla każd
 
 1. Na pasku menu wybierz **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** i wybierz **Visual C++**, jeśli nie jest otwarty.
+1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** i wybierz **Visual C++** , jeśli nie jest otwarty.
 
 1. Na liście zainstalowanych szablonów w środkowym okienku wybierz **Aplikacja konsoli Win32**.
 
@@ -261,7 +261,7 @@ Gratulacje, pomyślnie skompilowane rozwiązanie i projekt aplikacji. Nadal prze
 ## <a name="next-steps"></a>Następne kroki
 
 **Poprzednie:** [Projektowanie aplikacji w języku C++ w środowisku Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Dalej:** [Przewodnik: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Dalej:** [Przewodnik: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
 ## <a name="see-also"></a>Zobacz także
 
