@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bbdda07eacdb003515a40a93a232c0f8626ca89
+ms.sourcegitcommit: aed09c9c05e6b031c8a9f87a8d6bbdaf253485e8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320178"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412241"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Preferuj mały kod, Preferuj szybki kod)
 
@@ -39,7 +39,7 @@ Minimalizuje lub maksymalizuje rozmiar plików exe i dll.
 
 **/OS** (Preferuj mały kod) minimalizuje rozmiar plików exe i dll przez poinstruowanie kompilatora, aby preferował rozmiar nad szybkość. Kompilator może zmniejszyć liczbę konstrukcji języka C i C++ podobne sekwencji z kodu maszynowego. Czasami te różnice oferują wady rozmiar w zależności od szybkości. **/Os** i **/Ot** opcje pozwalają na określenie preferencji dla jednego z nich:
 
-**/OT** (Preferuj szybko kod) maksymalizuje szybkość plików exe i dll przez poinstruowanie kompilatora, aby preferował szybkość nad rozmiar. (Jest to wartość domyślna). Kompilator może zmniejszyć liczbę konstrukcji języka C i C++ podobne sekwencji z kodu maszynowego. Czasami te różnice oferują wady rozmiar w zależności od szybkości. Opcja /Ot jest implikowane, Maksymalizuj szybkość ([/O2](o1-o2-minimize-size-maximize-speed.md)) opcji. **/O2** opcja łączy kilka opcji, aby utworzyć bardzo szybki kod.
+**/OT** (Preferuj szybko kod) maksymalizuje szybkość plików exe i dll przez poinstruowanie kompilatora, aby preferował szybkość nad rozmiar. (Jest to wartość domyślna). Kompilator może zmniejszyć liczbę konstrukcji języka C i C++ podobne sekwencji z kodu maszynowego. Czasami te różnice oferują wady rozmiar w zależności od szybkości. **/Ot** opcji jest implikowane, Maksymalizuj szybkość ([/O2](o1-o2-minimize-size-maximize-speed.md)) opcji. **/O2** opcja łączy kilka opcji, aby utworzyć bardzo szybki kod.
 
 Jeśli używasz **/Os** lub **/Ot**, a następnie należy także określić [/Og](og-global-optimizations.md) do optymalizacji kodu.
 
@@ -48,7 +48,7 @@ Jeśli używasz **/Os** lub **/Ot**, a następnie należy także określić [/Og
 
 **x86 Specific**
 
-Poniższy przykład kodu ilustruje różnicę między Preferuj mały kod (**/Os**) opcje i Preferuj szybko kod (**/Ot**) opcja:
+Poniższy przykład kodu ilustruje różnicę między Preferuj mały kod ( **/Os**) opcje i Preferuj szybko kod ( **/Ot**) opcja:
 
 > [!NOTE]
 >  Poniżej opisano oczekiwane zachowanie w przypadku korzystania z **/Os** lub **/Ot**. Jednak zachowanie kompilatora wersji może spowodować różne optymalizacje dla poniższy kod.
@@ -65,14 +65,14 @@ int differ(int x)
 }
 ```
 
-Jak pokazano we fragmencie kodu maszynowego poniżej, gdy DIFFER.c jest kompilowany dla rozmiaru (**/Os**), implementuje kompilatora mnożenia wyrażenie w instrukcji return jawnie jako wielokrotnie w celu wygenerowania krótką, ale wolniej sekwencji kodu:
+Jak pokazano we fragmencie kodu maszynowego poniżej, gdy DIFFER.c jest kompilowany dla rozmiaru ( **/Os**), implementuje kompilatora mnożenia wyrażenie w instrukcji return jawnie jako wielokrotnie w celu wygenerowania krótką, ale wolniej sekwencji kodu:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-Alternatywnie, gdy DIFFER.c jest kompilowany dla danej szybkości (**/Ot**), implementuje kompilatora mnożenia wyrażenie w instrukcji return w postaci serii obiektów shift i `LEA` instrukcje dotyczące tworzenia szybkich, ale dłużej sekwencji kodu:
+Alternatywnie, gdy DIFFER.c jest kompilowany dla danej szybkości ( **/Ot**), implementuje kompilatora mnożenia wyrażenie w instrukcji return w postaci serii obiektów shift i `LEA` instrukcje dotyczące tworzenia szybkich, ale dłużej sekwencji kodu:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
