@@ -34,11 +34,11 @@ Instrukcja języka C.
 
 Można również użyć **cpp_quote —** i Wygeneruj plik .h jako część kompilacji MIDL. Na przykład jeśli masz plik nagłówka C++, który używa atrybuty C++ IDL, ale nie można użyć tego pliku dla niektórych zadań, następnie będzie można kompilować go, aby utworzyć plik MIDL generowane .h, powinno być możliwe do użycia.
 
-The **cpp_quote** attribute has the same functionality as the [cpp_quote](/windows/desktop/Midl/cpp-quote) MIDL attribute.
+**Cpp_quote —** atrybut ma taką samą funkcjonalność jak [cpp_quote —](/windows/desktop/Midl/cpp-quote) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [podwójną](dual.md) na przykład użyć sposób używania **cpp_quote —**.
+Zobacz przykład [podwójną](dual.md) na przykład użyć sposób używania **cpp_quote —** .
 
 ## <a name="requirements"></a>Wymagania
 
