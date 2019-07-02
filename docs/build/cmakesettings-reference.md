@@ -4,16 +4,16 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: cc9b9a788f17e9257bed628024e3f65dfc89fb23
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042587"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516385"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Odwołanie do schematu pliku CMakeSettings.json
 
-**Cmakesettings.json**"plik zawiera informacje określające, jak Visual Studio powinny wchodzić w interakcje za pomocą narzędzia CMake w celu utworzenia projektu dla określonej platformy. Plik przechowuje informacje takie jak zmienne środowiskowe lub argumentów dla środowiska cmake.exe. Można edytować bezpośrednio lub użyć **edytora ustawienia narzędzia CMake** (Visual Studio 2019 i nowsze). Zobacz [ustawień w programie Visual Studio kompilacji CMake dostosować](customize-cmake-settings.md) Aby uzyskać więcej informacji na temat edytora.
+**Cmakesettings.json** plik zawiera informacje określające, jak Visual Studio powinny wchodzić w interakcje za pomocą narzędzia CMake w celu utworzenia projektu dla określonej platformy. Plik przechowuje informacje takie jak zmienne środowiskowe lub argumentów dla środowiska cmake.exe. Można edytować bezpośrednio lub użyć **edytora ustawienia narzędzia CMake** (Visual Studio 2019 i nowsze). Zobacz [ustawień w programie Visual Studio kompilacji CMake dostosować](customize-cmake-settings.md) Aby uzyskać więcej informacji na temat edytora.
 
 ## <a name="environments"></a>Środowiska
 

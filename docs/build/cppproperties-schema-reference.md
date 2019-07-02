@@ -3,12 +3,12 @@ title: Dokumentacja schematu pliku CppProperties.json
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344402"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516363"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Dokumentacja schematu pliku CppProperties.json
 
@@ -264,7 +264,7 @@ Masz dostęp do następujących wbudowanych makr wewnątrz `CppProperties.json`:
 |-|-|
 |`${workspaceRoot}`| Pełna ścieżka do folderu obszaru roboczego|
 |`${projectRoot}`| Pełna ścieżka do folderu, w którym `CppProperties.json` znajduje się|
-|`${vsInstallDir}`| Pełna ścieżka do folderu, w którym zainstalowano uruchomionego wystąpienia programu Visual Studio|
+|`${env.vsInstallDir}`| Pełna ścieżka do folderu, w którym zainstalowano uruchomionego wystąpienia programu Visual Studio|
 
 Na przykład, jeśli projektu folderem include i obejmują również windows.h oraz inne typowe nagłówki z zestawu Windows SDK, możesz zaktualizować swoje `CppProperties.json` zawiera plik konfiguracji na następującym kodem:
 
