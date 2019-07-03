@@ -1,15 +1,15 @@
 ---
 title: Kreator konsumenta OLE DB ATL
-ms.date: 05/09/2019
+ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 7195d712474765258ac0319539697b3517cb91b3
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706990"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552228"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 
@@ -30,7 +30,7 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
 - **Źródło danych**
 
-   **Źródła danych** przycisk umożliwia konfigurowanie określonym źródłem danych przy użyciu określonego dostawcy OLE DB. Po kliknięciu tego przycisku **właściwości Linku danych** pojawi się okno dialogowe. Aby uzyskać więcej informacji na temat tworzenia parametrów połączenia i **właściwości Linku danych** okno dialogowe, zobacz [omówienie interfejsu API łącza danych](/previous-versions/windows/desktop/ms718102) w dokumentacji zestawu Windows SDK.
+   **Źródła danych** przycisk umożliwia konfigurowanie określonym źródłem danych przy użyciu określonego dostawcy OLE DB. Po kliknięciu tego przycisku **właściwości Linku danych** pojawi się okno dialogowe. Aby uzyskać więcej informacji na temat tworzenia parametrów połączenia i **właściwości Linku danych** okno dialogowe, zobacz [omówienie interfejsu API łącza danych](/previous-versions/windows/desktop/ms718102(v=vs.85)) w dokumentacji zestawu Windows SDK.
 
    Następujące dodatkowe informacje w tym artykule opisano ustawienia na kartach **właściwości Linku danych** okno dialogowe.
 
@@ -171,7 +171,7 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
 - **Pomoc techniczna**
 
-   Zaznacz pole wyboru, aby określić rodzaje aktualizacje, które są obsługiwane w konsumencie (domyślna wartość to brak). Następujące czynniki ustawi [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) i odpowiednie wpisy [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) we właściwości ustaw mapy.
+   Zaznacz pole wyboru, aby określić rodzaje aktualizacje, które są obsługiwane w konsumencie (domyślna wartość to brak). Następujące czynniki ustawi [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) i odpowiednie wpisy [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) we właściwości ustaw mapy.
 
    - **Change**
 
@@ -191,4 +191,4 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
 [Konsumenta ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Parametry połączenia i połączeń między danymi (OLE DB)](/previous-versions/windows/desktop/ms718376)
+[Parametry połączenia i połączeń między danymi (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85))

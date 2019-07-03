@@ -1,20 +1,20 @@
 ---
 title: PgoAutoSweep
-ms.date: 03/14/2018
+ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295338"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552242"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` Zapisuje bieżące informacje o liczniku profilu do pliku, a następnie resetuje liczniki. Użyj funkcji podczas optymalizacji sterowanej profilem, szkolenia zapisać wszystkie dane profilu z uruchomionego programu pliku .pgc do późniejszego użytku w kompilacji o optymalizacji.
+`PgoAutoSweep` Zapisuje bieżące informacje o liczniku profilu do pliku, a następnie resetuje liczniki. Użyj funkcji podczas optymalizacji sterowanej profilem, szkolenia zapisać wszystkie dane profilu z uruchomionego programu do `.pgc` pliku do późniejszego użytku w kompilacji o optymalizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,8 +25,8 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa*<br/>
-Ciąg identyfikujący plik .pgc zapisane.
+*name*<br/>
+Ciąg identyfikacyjny dla zapisanego `.pgc` pliku.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -34,11 +34,11 @@ Możesz wywołać `PgoAutoSweep` z aplikacji w taki sposób, aby zapisać i przy
 
 Dane licznika zapisywanego profilu jest umieszczany w pliku o nazwie *base_name*-*nazwa*! *wartość*.pgc, gdzie *base_name* jest nazwa podstawowa pliku wykonywalnego, *nazwa* jest parametr przekazany do `PgoAutoSweep`, i *wartość* jest wartością unikatową, zwykle monotonicznie rosnący numer, aby zapobiec kolizjom nazw plików.
 
-Utworzone przez pliki .pgc `PgoAutoSweep` muszą zostać scalone plik .pgd ma być używany do utworzenia zoptymalizowanego pliku wykonywalnego. Możesz użyć [pgomgr](pgomgr.md) polecenie, aby wykonać scalanie.
+`.pgc` Pliki tworzone przez `PgoAutoSweep` muszą zostać scalone `.pgd` plik ma być używany do utworzenia zoptymalizowanego pliku wykonywalnego. Możesz użyć [pgomgr](pgomgr.md) polecenie, aby wykonać scalanie.
 
-Można przekazać nazwę pliku .pgd scalone do konsolidatora podczas kompilacji o optymalizacji przy użyciu **PGD =**_filename_ argument [/USEPROFILE](reference/useprofile.md) — opcja konsolidatora, lub za pomocą przestarzałego **/PGD** — opcja konsolidatora. Jeśli Scal pliki .pgc w pliku o nazwie *base_name*.pgd, nie należy określić nazwę pliku w wierszu polecenia, ponieważ konsolidator przejmuje ta nazwa pliku domyślnie.
+Można przekazać nazwę scalonych `.pgd` pliku do konsolidatora podczas kompilacji o optymalizacji przy użyciu **PGD =** _filename_ argument [/USEPROFILE](reference/useprofile.md) konsolidatora Opcja lub za pomocą przestarzałego **/PGD** — opcja konsolidatora. W przypadku scalania `.pgc` plików do pliku o nazwie *base_name*.pgd, nie należy określić nazwę pliku w wierszu polecenia, ponieważ konsolidator przejmuje ta nazwa pliku domyślnie.
 
-`PgoAutoSweep` Funkcja obsługuje ustawienie bezpieczeństwo wątków określone, po utworzeniu kompilację instrumentowaną. Jeśli ustawienie domyślne lub określ **NOEXACT** argument [przełączników/genprofile i/fastgenprofile]() — opcja konsolidatora, wywołania `PgoAutoSweep` nie są wątkowo. **EXACT** argument tworzy ale metodą o bezpiecznych wątkach i bardziej precyzyjne wolniejsze, instrumentowanego pliku wykonywalnego.
+`PgoAutoSweep` Funkcja obsługuje ustawienie bezpieczeństwo wątków określone, po utworzeniu kompilację instrumentowaną. Jeśli ustawienie domyślne lub określ **NOEXACT** argument [przełączników/genprofile i/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) — opcja konsolidatora, wywołania `PgoAutoSweep` nie są wątkowo. **EXACT** argument tworzy ale metodą o bezpiecznych wątkach i bardziej precyzyjne wolniejsze, instrumentowanego pliku wykonywalnego.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -50,7 +50,7 @@ Plik wykonywalny musi zawierać plik pgobootrun.lib łączonych bibliotek. Ten p
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto `PgoAutoSweep` utworzyć dwa. Pliki PGC w różnych momentach podczas wykonywania. Pierwszy zawiera dane, które określa zachowanie środowiska uruchomieniowego aż do `count` jest równa 3, a drugi zawiera dane zebrane po tym punkcie, dopóki nie tylko przed zakończeniem działania aplikacji.
+W poniższym przykładzie użyto `PgoAutoSweep` utworzyć dwa `.pgc` plików w różnych momentach podczas wykonywania. Pierwszy zawiera dane, które określa zachowanie środowiska uruchomieniowego aż do `count` jest równa 3, a drugi zawiera dane zebrane po tym punkcie, dopóki nie tylko przed zakończeniem działania aplikacji.
 
 ```cpp
 // pgoautosweep.cpp

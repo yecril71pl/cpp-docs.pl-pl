@@ -1,13 +1,13 @@
 ---
 title: Visual C++ co&#39;s nowego od roku 2003 do 2015
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449810"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552203"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowego od roku 2003 do 2015
 
@@ -1682,7 +1682,7 @@ Tym Ulepszona obsługa standardów ISO C/C++ może wymagać zmian w istniejącym
 ### <a name="windows-runtime-app-development-support"></a>Obsługa projektowania aplikacji środowiska wykonawczego Windows
 
 - **Natywny model interfejsu użytkownika opartego na XAML**. W przypadku aplikacji środowiska wykonawczego Windows można użyć nowego modelu natywnego interfejsu użytkownika opartego na XAML.
-- **Visual C++ Component Extensions**. Te rozszerzenia upraszczają zużycia obiektów środowiska wykonawczego Windows, które są niezbędne część aplikacji środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [plan for Windows Runtime używających C++ ](../windows/universal-windows-apps-cpp.md) i [Visual C++ Skorowidz języka (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Visual C++ Component Extensions**. Te rozszerzenia upraszczają zużycia obiektów środowiska wykonawczego Windows, które są niezbędne część aplikacji środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [plan for Windows Runtime używających C++ ](../cppcx/universal-windows-apps-cpp.md) i [Visual C++ Skorowidz języka (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **Gry DirectX**. Możesz tworzyć atrakcyjne gry przy użyciu nowej funkcji obsługi DirectX dla aplikacji środowiska wykonawczego Windows.
 - **Współdziałanie XAML/DirectX**. Środowisko uruchomieniowe Windows aplikacje korzystające z technologii DirectX i XAML teraz współdziałać wydajnie.
 - **Tworzenie biblioteki DLL składnika środowiska wykonawczego Windows**. Tworzenie biblioteki DLL składnika sprawia, że środowisko wykonawcze Windows extensible.

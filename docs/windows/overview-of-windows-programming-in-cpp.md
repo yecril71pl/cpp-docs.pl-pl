@@ -1,13 +1,13 @@
 ---
 title: Omówienie programowania w systemie Windows w języku C++
-ms.date: 05/06/2019
+ms.date: 07/02/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: 1f49c9f8f78f83d6ae991b7427b28f7f5cbf7f0c
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355567"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552306"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -118,5 +118,5 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 |[Język C++ w programie Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Temat nadrzędny dla zawartości dla deweloperów Visual C++.|
 [Programowanie na platformie .NET w języku C++/w interfejsie wiersza polecenia](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Tworzenie otok dla natywnych bibliotek C++, które umożliwiają go do komunikacji z aplikacji platformy .NET i składników.|
 |[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](../extensions/component-extensions-for-runtime-platforms.md)|Dokumentacja dotycząca elementy składni współużytkowane przez C++/CX i C++sposób niezamierzony.|
-|[Aplikacje uniwersalne systemu Windows (C++)](universal-windows-apps-cpp.md)|Tworzenie aplikacji platformy uniwersalnej systemu Windows przy użyciu C++/CX lub Windows Runtime szablon biblioteki (WRL).|
+|[Aplikacje uniwersalne systemu Windows (C++)](../cppcx/universal-windows-apps-cpp.md)|Tworzenie aplikacji platformy uniwersalnej systemu Windows przy użyciu C++/CX lub Windows Runtime szablon biblioteki (WRL).|
 |[Atrybuty języka C++ dla modelu COM i platformy .NET](attributes/cpp-attributes-com-net.md)|Niestandardowe atrybuty tylko do Windows programowania przy użyciu platformy .NET lub model COM.|

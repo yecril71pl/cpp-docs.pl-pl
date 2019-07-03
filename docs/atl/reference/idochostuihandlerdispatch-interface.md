@@ -1,18 +1,18 @@
 ---
 title: Interfejs IDocHostUIHandlerDispatch
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - IDocHostUIHandlerDispatch
 - atlbase/ATL::IDocHostUIHandlerDispatch
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: f4f5024e282885797858c800640bc5651819ca20
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: a60c178eff1e02c3032e792f9a0420dfeab82388
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503070"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552169"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interfejs IDocHostUIHandlerDispatch
 
@@ -32,7 +32,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>Metody publiczne
 
 > [!NOTE]
->  Łącza w tabeli poniżej dotyczą tematy referencyjne INet zestawu SDK dla uczestników programu [IDocUIHostHandler](/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\)) interfejsu. `IDocHostUIHandlerDispatch` ma taką samą funkcjonalność jak `IDocUIHostHandler`, z tą różnicą, że `IDocHostUIHandlerDispatch` jest dispinterface, natomiast `IDocUIHostHandler` jest niestandardowy interfejs.
+>  Łącza w tabeli poniżej dotyczą tematy referencyjne INet zestawu SDK dla uczestników programu [IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\)) interfejsu. `IDocHostUIHandlerDispatch` ma taką samą funkcjonalność jak `IDocUIHostHandler`, z tą różnicą, że `IDocHostUIHandlerDispatch` jest dispinterface, natomiast `IDocUIHostHandler` jest niestandardowy interfejs.
 
 |||
 |-|-|
@@ -67,4 +67,4 @@ Definicja tego interfejsu jest dostępna jako IDL lub C++, jak pokazano poniżej
 
 ## <a name="see-also"></a>Zobacz także
 
-[IDocUIHostHandler](/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))
+[IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))

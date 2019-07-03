@@ -1,6 +1,6 @@
 ---
 title: Typy projektów Visual C++
-ms.date: 11/29/2018
+ms.date: 07/02/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217774"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552216"
 ---
-# <a name="c-project-templates"></a>Szablony projektów języka C++
+# <a name="c-project-templates"></a>Szablony projektów w języku C++
 
 Szablony projektu Visual Studio generować pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, odwołania i `#include` instrukcji, które są odpowiednie dla rodzaju projektu, w której chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów z C++ szablony projektów i zapewnia kreatory dla wielu z nich, dzięki czemu można dostosować swoje projekty, jak można je utworzyć. Bezpośrednio po utworzeniu projektu, można ją skompilować i uruchomić aplikację; jest dobrą praktyką, aby tworzyć sporadycznie podczas opracowywania aplikacji.
 
 > [!NOTE]
-> Można utworzyć projektu języka C przy użyciu szablonów projektów języka C++. W wygenerowanego projektu Zlokalizuj pliki .cpp, rozszerzenie nazwy pliku i zmień go na. c. Następnie na **właściwości projektu** strony dla projektu (a nie dla rozwiązania), a następnie rozwiń **właściwości konfiguracji**, **C/C++** i wybierz **zaawansowane**. Zmiana **kompilacji jako** ustawienie **skompiluj jako kod języka C (/ TC)**.
+> Można utworzyć projektu języka C przy użyciu szablonów projektów języka C++. W wygenerowanego projektu Zlokalizuj pliki .cpp, rozszerzenie nazwy pliku i zmień go na. c. Następnie na **właściwości projektu** strony dla projektu (a nie dla rozwiązania), a następnie rozwiń **właściwości konfiguracji**, **C/C++** i wybierz **zaawansowane**. Zmiana **kompilacji jako** ustawienie **skompiluj jako kod języka C (/ TC)** .
 
 ## <a name="project-templates"></a>Szablony projektów
 
@@ -72,7 +72,7 @@ Jeśli dodasz obsługę MFC i ATL składników do instalacji programu Visual Stu
 
 Jeśli dodasz składnik narzędzia platformy uniwersalnej dla Windows C++ do instalacji programu Visual Studio tych szablonów projektu zostaną dodane do programu Visual Studio.
 
-Omówienie Windows Universal apps w języku C++, zobacz [Universal Windows Apps (C++)](../../windows/universal-windows-apps-cpp.md).
+Omówienie Windows Universal apps w języku C++, zobacz [Universal Windows Apps (C++)](../../cppcx/universal-windows-apps-cpp.md).
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|

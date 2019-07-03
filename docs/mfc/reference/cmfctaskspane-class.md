@@ -1,6 +1,6 @@
 ---
 title: Klasa CMFCTasksPane
-ms.date: 11/19/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeb24a0a02d1a084c83e280705344a9e5c505724
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218673"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552281"
 ---
 # <a name="cmfctaskspane-class"></a>Klasa CMFCTasksPane
 
@@ -294,7 +294,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemovePage](#removepage)|Usuwa określoną stronę z okienka zadań.|
 |[CMFCTasksPane::RemoveTask](#removetask)|Usuwa zadania z grupy zadań.|
 |[CMFCTasksPane::SaveState](#savestate)|(Przesłania [CDockablePane::SaveState](cdockablepane-class.md).)|
-|[CMFCTasksPane::Serialize](#serialize)|(Przesłania [CDockablePane::Serialize]().)|
+|[CMFCTasksPane::Serialize](#serialize)|(Przesłania [CDockablePane::Serialize](cdockablepane-class.md).)|
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Aktywuje określonej stronie w okienku zadań.|
 |[CMFCTasksPane::SetCaption](#setcaption)|Określa nazwę podpisu okienka zadań.|
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Określa wysokość podpis grupy.|

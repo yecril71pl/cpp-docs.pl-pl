@@ -1,17 +1,17 @@
 ---
 title: Konstruktory (C++)
-ms.date: 04/06/2018
+ms.date: 07/02/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 79b68fe08fd77dfacd485ea61df7ab7af08e2f08
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 98e4a35a362b659307d92e57d826e7ac85b9bd09
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450883"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552299"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -636,7 +636,11 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
+::: moniker range=">=vs-2017"
+
 **Visual Studio 2017 w wersji 15.7 lub nowszej**: **Przy użyciu** instrukcji w **/STD: c ++ 17** tryb sprowadza się do zakresu wszystkie konstruktory z klasy bazowej, z wyjątkiem tych, które mają identyczne podpisu konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc najlepiej jest używać dziedziczącej konstruktorów, gdy klasa pochodna nie deklaruje żadnych nowych elementów członkowskich danych lub konstruktory. Zobacz też [ulepszeń w programie Visual Studio 2017 wersji 15.7](../overview/cpp-conformance-improvements.md#improvements_157).
+
+::: moniker-end
 
 Szablon klasy mogą dziedziczyć wszystkie konstruktory argument typu Jeśli ten typ Określa klasę bazową:
 

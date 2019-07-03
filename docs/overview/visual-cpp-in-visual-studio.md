@@ -1,18 +1,18 @@
 ---
 title: Język C++ w programie Visual Studio
 description: Visual C++ jest to nazwa dla kompilatora Microsoft C++, Edytor kodu i pokrewnych narzędzi w programie Visual Studio IDE. Visual C++ umożliwia opracowywanie programów dla Windows, Linux, Android i iOS.
-ms.date: 05/14/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451204"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552373"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
@@ -92,7 +92,7 @@ Tworzenie testów jednostkowych przy użyciu Frameworka testów jednostkowych fi
 
 ## <a name="write-applications-in-c"></a>Pisać aplikacje w języku C++
 
-[Universal Windows Apps](../windows/universal-windows-apps-cpp.md)<br/>
+[Aplikacje uniwersalne systemu Windows (C++)](../cppcx/universal-windows-apps-cpp.md)<br/>
 Znajdź przewodniki i treści referencyjne w Centrum deweloperów systemu Windows. Aby uzyskać informacji na temat tworzenia aplikacji platformy uniwersalnej systemu Windows, zobacz [wprowadzenie do platformy uniwersalnej Windows](/windows/uwp/get-started/universal-application-platform-guide) i [Utwórz swoją pierwszą aplikację platformy uniwersalnej systemu Windows przy użyciu języka C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Aplikacje klasyczne (C++)](../windows/desktop-applications-visual-cpp.md)<br/>

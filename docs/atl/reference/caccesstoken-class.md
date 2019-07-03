@@ -1,6 +1,6 @@
 ---
 title: Klasa CAccessToken
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - CAccessToken
 - ATLSECURITY/ATL::CAccessToken
@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d66b126ce5fd6c3da80d2bb4e6322f8180f0b8cf
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503380"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552194"
 ---
 # <a name="caccesstoken-class"></a>Klasa CAccessToken
 
@@ -283,7 +283,7 @@ Wskaźnik na ciąg zakończony znakiem null Określa moduł do wykonania. Ten pa
 Wskaźnik na ciąg zakończony znakiem null, który określa wiersz poleceń do wykonania.
 
 *pProcessInformation*<br/>
-Wskaźnik do [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information) strukturę, która otrzymuje informacje identyfikacyjne dotyczące nowego procesu.
+Wskaźnik do [struktury PROCESS_INFORMATION](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) , która otrzymuje informacje identyfikacyjne dotyczące nowego procesu.
 
 *pStartupInfo*<br/>
 Wskaźnik do [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) strukturę, która określa, jak powinno pojawić się główne okno nowy proces.

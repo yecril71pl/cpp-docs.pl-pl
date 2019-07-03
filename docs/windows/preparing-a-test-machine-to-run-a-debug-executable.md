@@ -1,15 +1,15 @@
 ---
 title: Przygotowanie maszyny testowej do uruchomienia debugowania pliku wykonywalnego
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448447"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552338"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Przygotowanie maszyny testowej do uruchomienia debugowania pliku wykonywalnego
 
@@ -29,11 +29,11 @@ Istnieją trzy sposoby wdrażania wersji debugowania bibliotek DLL biblioteki Vi
 
 - Użyj the_**Wdróż** opcji **programu Configuration Manager** okno dialogowe w programie Visual Studio, aby skopiować dane wyjściowe projektu i inne pliki do komputera zdalnego.
 
-Po zainstalowaniu bibliotek DLL Visual C++, można uruchomić zdalnego debugera w udziale sieciowym. Aby uzyskać więcej informacji na temat debugowania zdalnego, zobacz [zdalne debugowanie](/visualstudio/debugger/remote-debugging.md).
+Po zainstalowaniu bibliotek DLL Visual C++, można uruchomić zdalnego debugera w udziale sieciowym. Aby uzyskać więcej informacji na temat debugowania zdalnego, zobacz [zdalne debugowanie](/visualstudio/debugger/remote-debugging).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Wdrażanie w Visual C++](deployment-in-visual-cpp.md)<br>
 [Opcje wiersza polecenia Instalatora Windows](/windows/desktop/Msi/command-line-options)<br>
 [Przykłady wdrożeń](deployment-examples.md)<br>
-[Debugowanie zdalne](/visualstudio/debugger/remote-debugging.md)
+[Debugowanie zdalne](/visualstudio/debugger/remote-debugging)

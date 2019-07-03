@@ -1,6 +1,6 @@
 ---
 title: 'Składnia specyfikacji formatu: funkcje printf i wprintf'
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289835"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552253"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -22,7 +22,7 @@ Różne `printf` i `wprintf` funkcje ciągu formatu i argumentów opcjonalnych i
 
 Specyfikacja konwersji składa się z pól opcjonalnych i wymaganych w tym formularzu:
 
-**%**[[*flagi*](#flags)] [[*szerokość*](#width)] [.[ *dokładności*](#precision)] [[*rozmiar*](#size)][*typu*](#type)
+**%** [[*flagi*](#flags)] [[*szerokość*](#width)] [.[ *dokładności*](#precision)] [[*rozmiar*](#size)][*typu*](#type)
 
 Każde pole specyfikacji konwersji jest znakiem lub liczbą, która oznacza specyfikator opcji lub konwersja określonego formatu. Wymagane *typu* pola określa rodzaj konwersji, która ma być stosowana do argumentu. Opcjonalny *flagi*, *szerokość*, i *dokładności* pól kontrolują dodatkowe aspekty formatu takie jak spacje lub zer, uzasadnienie i wyświetlane dokładności. *Rozmiar* pola określa rozmiar argumentu używane i przekonwertowane.
 
@@ -64,7 +64,7 @@ Liczba całkowita typów, takich jak `short`, `int`, `long`, `long long`i ich `u
 |**X**|Liczba całkowita|Szesnastkowa liczba całkowita bez znaku; zastosowań "ABCDEF".|
 |**e**|Zmiennoprzecinkowe|Wartość, która ma postać [-] podpisane*d.dddd*__e±__*dd*[*d*] gdzie *d* jedną cyfrę dziesiętną, jest *dddd* jest jeden lub więcej cyfr dziesiętnych w zależności od określonej dokładności lub sześć domyślnie i *dd*[*d*] jest dwa lub trzy cyfry dziesiętne, w zależności od [format danych wyjściowych](../c-runtime-library/set-output-format.md) i rozmiar wykładnik potęgi.|
 |**E**|Zmiennoprzecinkowe|Taka sama jak **e** formatowania, chyba że **E** zamiast **e** wprowadza wykładnik potęgi.|
-|**f**|Zmiennoprzecinkowe|Wartość, która ma postać [-] podpisane*dddd*__.__ *dddd*, gdzie *dddd* jest jedna lub więcej cyfr dziesiętnych. Liczba cyfr przed przecinkiem dziesiętnym zależy od wielkości liczbę oraz liczbę cyfr po punkcie dziesiętnym zależy od żądanej dokładności lub sześć domyślnie.|
+|**f**|Zmiennoprzecinkowe|Wartość, która ma postać [-] podpisane*dddd* __.__ *dddd*, gdzie *dddd* jest jedna lub więcej cyfr dziesiętnych. Liczba cyfr przed przecinkiem dziesiętnym zależy od wielkości liczbę oraz liczbę cyfr po punkcie dziesiętnym zależy od żądanej dokładności lub sześć domyślnie.|
 |**F**|Zmiennoprzecinkowe|Taka sama jak **f** formatowania, poza tym, że dane wyjściowe nieskończoności i nan jest wielką literą.|
 |**g**|Zmiennoprzecinkowe|Podpisany wartości są wyświetlane w **f** lub **e** formatowania, która kwota jest bardziej zwarty dla danej wartości i dokładność. **e** format jest używany tylko wtedy, gdy wykładnik wartość jest mniejsza niż -4 lub większa niż lub równa *dokładności* argumentu. Zera końcowe są obcinane i punktu dziesiętnego, jest wyświetlana tylko wtedy, gdy jeden lub więcej cyfr po nim.|
 |**G**|Zmiennoprzecinkowe|Taka sama jak **g** formatowania, chyba że **E**, zamiast **e**, wprowadza wykładnik (tam, gdzie jest odpowiedni).|
@@ -74,7 +74,7 @@ Liczba całkowita typów, takich jak `short`, `int`, `long`, `long long`i ich `u
 |**p**|Typ wskaźnika|Wyświetla argument jako adresu cyfr szesnastkowych.|
 |**s**|String|Gdy jest używane z `printf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowych; w przypadku korzystania z `wprintf` funkcje, określa ciąg znaków dwubajtowych. Znaki są wyświetlane do pierwszego znaku null, lub do momentu *dokładności* osiągnięta wartość.|
 |**S**|String|Gdy jest używane z `printf` funkcje, określa ciąg znaków dwubajtowych; w przypadku korzystania z `wprintf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego. Znaki są wyświetlane do pierwszego znaku null, lub do momentu *dokładności* osiągnięta wartość.|
-|**Z**|`ANSI_STRING` lub `UNICODE_STRING` struktury|Jeśli adres [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) lub [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string) struktury jest przekazywany jako argument, wyświetla ciąg znajdujący się w buforze wskazywany przez `Buffer` pola struktury. Użyj *rozmiar* prefiks modyfikator **w** do określenia `UNICODE_STRING` argument — na przykład `%wZ`. `Length` Pola struktury musi być równa długości w bajtach, ciąg. `MaximumLength` Pola struktury musi być równa długości w bajtach rozmiar buforu.<br /><br /> Zazwyczaj **Z** znaku typu jest używany tylko w debugowanie funkcji używających specyfikacja konwersji, takie jak sterownik `dbgPrint` i `kdPrint`.|
+|**Z**|`ANSI_STRING` lub `UNICODE_STRING` struktury|Jeśli adres [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) lub [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) struktury jest przekazywany jako argument, wyświetla ciąg znajdujący się w buforze wskazywany przez `Buffer` pola struktury. Użyj *rozmiar* prefiks modyfikator **w** do określenia `UNICODE_STRING` argument — na przykład `%wZ`. `Length` Pola struktury musi być równa długości w bajtach, ciąg. `MaximumLength` Pola struktury musi być równa długości w bajtach rozmiar buforu.<br /><br /> Zazwyczaj **Z** znaku typu jest używany tylko w debugowanie funkcji używających specyfikacja konwersji, takie jak sterownik `dbgPrint` i `kdPrint`.|
 
 W programie Visual Studio 2015, jeśli argument, który odpowiada specyfikatorowi konwersji liczb zmiennoprzecinkowych (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) jest nieskończone nieokreślony, lub NaN, sformatowane wyniki zgodne ze standardem C99. Poniższa tabela zawiera listę sformatowane wyniki:
 
@@ -129,7 +129,7 @@ Pierwsze pole opcjonalne w specyfikacji konwersji zawiera *Flaga dyrektywy*, zer
 
 ## <a name="width-specification"></a>Specyfikacje szerokości
 
-W specyfikacji konwersji, pole specyfikacji szerokości opcjonalne pojawia się po każdym *flagi* znaków. *Szerokość* argument jest ujemna dziesiętna liczba całkowita, która określa minimalną liczbę znaków, które są danymi wyjściowymi. Liczba znaków w wartości danych wyjściowych jest mniejsza niż określona szerokość, spacje są dodawane do lewej lub prawej wartości — w zależności od tego, czy Flaga wyrównania po lewej stronie (**-**) jest określony, aż do minimum Szerokość zostanie osiągnięty. Jeśli *szerokość* jest poprzedzony przez 0, zera wiodące są dodawane do liczby całkowitej lub zmiennoprzecinkowej konwersje aż do osiągnięcia minimalnej szerokości, z wyjątkiem sytuacji, gdy konwersja jest infinity lub NaN.
+W specyfikacji konwersji, pole specyfikacji szerokości opcjonalne pojawia się po każdym *flagi* znaków. *Szerokość* argument jest ujemna dziesiętna liczba całkowita, która określa minimalną liczbę znaków, które są danymi wyjściowymi. Liczba znaków w wartości danych wyjściowych jest mniejsza niż określona szerokość, spacje są dodawane do lewej lub prawej wartości — w zależności od tego, czy Flaga wyrównania po lewej stronie ( **-** ) jest określony, aż do minimum Szerokość zostanie osiągnięty. Jeśli *szerokość* jest poprzedzony przez 0, zera wiodące są dodawane do liczby całkowitej lub zmiennoprzecinkowej konwersje aż do osiągnięcia minimalnej szerokości, z wyjątkiem sytuacji, gdy konwersja jest infinity lub NaN.
 
 Specyfikacje szerokości nigdy nie powoduje, że wartość do skrócenia. Jeśli liczba znaków w wartości danych wyjściowych jest większy niż określona szerokość lub *szerokość* jest nie jest podany, wszystkie znaki wartości są dane wyjściowe, podlegają *dokładności* specyfikacji.
 
@@ -171,9 +171,9 @@ Jeśli specyfikacja dokładności jest znak gwiazdki (\*), `int` argumentu z lis
 
 ## <a name="argument-size-specification"></a>Specyfikacja rozmiaru argumentu
 
-W specyfikacji konwersji *rozmiar* pole jest modyfikatorem długości argumentu dla *typu* specyfikatora konwersji. *Rozmiar* prefiksy pola do *typu* pola —**hh**, **h**, **"j"**, **l** (mała litera L) **L**, **ll**, **t**, **w**, **z**, **I**(wielkie litery i), **I32**, i **I64**— określ "rozmiar" odpowiedni argument — długi lub krótki, 32-bitowych i 64-bitowy, znaków jednobajtowych lub znaków dwubajtowych — w zależności od specyfikatora konwersji, który modyfikuje. Te prefiksy rozmiarów są używane wraz z *typu* znaki w `printf` i `wprintf` rodzin i funkcji do określenia interpretacji rozmiarów argumentu, jak pokazano w poniższej tabeli. *Rozmiar* pole jest opcjonalne w przypadku niektórych typów argumentów. Gdy żaden prefiks rozmiaru jest określony, program formatujący używa argumenty liczby całkowitej — na przykład podpisane lub niepodpisane `char`, `short`, `int`, `long`oraz typy wyliczeniowe — jako 32-bitowa `int` typów i `float`, `double`, i `long double` argumenty zmiennoprzecinkowe są używane jako 64-bitowa `double` typów. To jest zgodny z regułami podwyższania poziomu argument domyślny, do listy zmiennych argumentów. Aby uzyskać więcej informacji na temat podwyższania poziomu argumentu Zobacz wielokropki i argumenty domyślne w [wyrażenia przyrostków](../cpp/postfix-expressions.md). W systemach 32-bitowych i 64-bitowych, specyfikacja konwersji argumentu 64-bitowa liczba całkowita musi zawierać prefiks rozmiaru **ll** lub **I64**. W przeciwnym razie program formatujący zachowanie jest niezdefiniowane.
+W specyfikacji konwersji *rozmiar* pole jest modyfikatorem długości argumentu dla *typu* specyfikatora konwersji. *Rozmiar* prefiksy pola do *typu* pola —**hh**, **h**, **"j"** , **l** (mała litera L) **L**, **ll**, **t**, **w**, **z**, **I**(wielkie litery i), **I32**, i **I64**— określ "rozmiar" odpowiedni argument — długi lub krótki, 32-bitowych i 64-bitowy, znaków jednobajtowych lub znaków dwubajtowych — w zależności od specyfikatora konwersji, który modyfikuje. Te prefiksy rozmiarów są używane wraz z *typu* znaki w `printf` i `wprintf` rodzin i funkcji do określenia interpretacji rozmiarów argumentu, jak pokazano w poniższej tabeli. *Rozmiar* pole jest opcjonalne w przypadku niektórych typów argumentów. Gdy żaden prefiks rozmiaru jest określony, program formatujący używa argumenty liczby całkowitej — na przykład podpisane lub niepodpisane `char`, `short`, `int`, `long`oraz typy wyliczeniowe — jako 32-bitowa `int` typów i `float`, `double`, i `long double` argumenty zmiennoprzecinkowe są używane jako 64-bitowa `double` typów. To jest zgodny z regułami podwyższania poziomu argument domyślny, do listy zmiennych argumentów. Aby uzyskać więcej informacji na temat podwyższania poziomu argumentu Zobacz wielokropki i argumenty domyślne w [wyrażenia przyrostków](../cpp/postfix-expressions.md). W systemach 32-bitowych i 64-bitowych, specyfikacja konwersji argumentu 64-bitowa liczba całkowita musi zawierać prefiks rozmiaru **ll** lub **I64**. W przeciwnym razie program formatujący zachowanie jest niezdefiniowane.
 
-Niektóre typy są różne rozmiary w 32-bitowych i 64-bitowego kodu. Na przykład `size_t` jest 32-bitowy długo w kodzie skompilowanym x86 i 64-bitowy w kodzie skompilowanym x64. Aby utworzyć kod formatowania niezależne od platformy, dla typów o zmiennej szerokości, można użyć modyfikatora rozmiar argumentów o zmiennej szerokości. Alternatywnie użyj modyfikatora rozmiar 64-bitowy argument i jawnie podwyższanie poziomu typ argumentu zmiennej szerokości na 64-bitowy. Specyficzne dla firmy Microsoft **I** (wielkie litery i) rozmiar argumentów, modyfikator obsługuje argumenty liczby całkowitej zmiennej szerokości, ale zalecamy określonego typu **"j"**, **t**i **z** Modyfikatory przenośności.
+Niektóre typy są różne rozmiary w 32-bitowych i 64-bitowego kodu. Na przykład `size_t` jest 32-bitowy długo w kodzie skompilowanym x86 i 64-bitowy w kodzie skompilowanym x64. Aby utworzyć kod formatowania niezależne od platformy, dla typów o zmiennej szerokości, można użyć modyfikatora rozmiar argumentów o zmiennej szerokości. Alternatywnie użyj modyfikatora rozmiar 64-bitowy argument i jawnie podwyższanie poziomu typ argumentu zmiennej szerokości na 64-bitowy. Specyficzne dla firmy Microsoft **I** (wielkie litery i) rozmiar argumentów, modyfikator obsługuje argumenty liczby całkowitej zmiennej szerokości, ale zalecamy określonego typu **"j"** , **t**i **z** Modyfikatory przenośności.
 
 ### <a name="size-prefixes-for-printf-and-wprintf-format-type-specifiers"></a>Rozmiar prefiksów dla printf i wprintf specyfikatorów typ formatu
 
@@ -194,7 +194,7 @@ Niektóre typy są różne rozmiary w 32-bitowych i 64-bitowego kodu. Na przykł
 |Ciąg znaków jednobajtowych|**h**|**s**, **S**, lub **Z**|
 |Ciąg znaków dwubajtowych|**l** (mała litera L) lub **w**|**s**, **S**, lub **Z**|
 
-`ptrdiff_t` i `size_t` typy są `__int32` lub `unsigned __int32` na platformach 32-bitowych i `__int64` lub `unsigned __int64` na platformach 64-bitowych. **I** (wielkie litery i), **"j"**, **t**, i **z** prefiksy rozmiarów zająć szerokość poprawny argument dla platformy.
+`ptrdiff_t` i `size_t` typy są `__int32` lub `unsigned __int32` na platformach 32-bitowych i `__int64` lub `unsigned __int64` na platformach 64-bitowych. **I** (wielkie litery i), **"j"** , **t**, i **z** prefiksy rozmiarów zająć szerokość poprawny argument dla platformy.
 
 W programie Visual C++ mimo że `long double` jest typ samodzielnym, ma taką samą reprezentację wewnętrzną jak `double`.
 
