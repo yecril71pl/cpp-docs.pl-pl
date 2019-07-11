@@ -16,7 +16,7 @@ W tym artykule omówiono wiersza polecenia asemblera ARM firmy Microsoft, *armas
 ## <a name="syntax"></a>Składnia
 
 > **armasm** [*opcje*] *sourcefile* *objectfile*
-> **armasm** [*opcje *] **-o** *objectfile* *sourcefile*
+> **armasm** [*opcje*] **-o** *objectfile* *sourcefile*
 
 ### <a name="parameters"></a>Parametry
 
