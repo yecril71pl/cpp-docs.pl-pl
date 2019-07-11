@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179909"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787367"
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -381,6 +381,9 @@ MSVC obsługuje te dodatkowe wstępnie zdefiniowanych makr.
    |Visual Studio 2017 w wersji 15.8|1915|
    |Visual Studio 2017 w wersji 15.9|1916|
    |Visual Studio 2019 RTW (16.0)|1920|
+   |Visual Studio 2019 wersji 16.1|1921|
+   |Visual Studio 2019 wersji 16.2|1922|
+   |Visual Studio 2019 wersji 16.3|1923|
 
    Aby sprawdzić wersje kompilatora lub w danej wersji programu Visual Studio lub po aktualizacji, użyj **>=** operatora. W dyrektywie warunkowy służy do porównywania  **&#95;MSC&#95;VER** względem tego znaną wersją. Jeśli masz kilka wersji wzajemnie wykluczających się do porównywania, kolejności porównywania malejąco według numeru wersji. Na przykład ten kod wyszukuje kompilatory ogólnie dostępnych w programie Visual Studio 2017 i nowszych wersjach. Następnie sprawdza kompilatory wydane w lub po programu Visual Studio 2015. Następnie sprawdza wszystkie kompilatory wydanych przed Visual Studio 2015:
 
