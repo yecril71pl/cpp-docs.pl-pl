@@ -20,12 +20,12 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: 552fcdcee99f1bfe78a28c6ea41a89557f1682f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e6b4c3298c063038e7365496f26f50d3789be86
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390707"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861100"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl — Klasa
 
@@ -142,7 +142,6 @@ Ta metoda opakowuje [IRowsetNotify::OnRowsetChange](/previous-versions/windows/d
 
 ## <a name="see-also"></a>Zobacz także
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))
 [irowsetnotifycp — klasa](../../data/oledb/irowsetnotifycp-class.md)

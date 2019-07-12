@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450717"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861043"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC ++ Directories Property Page (Windows)
 
-Użyj tej strony właściwości stwierdzić programu Visual Studio, które katalogi do użycia podczas tworzenia projektu aktualnie wybrany. Aby ustawić katalogi dla wielu projektów w rozwiązaniu, użyj arkusza właściwości niestandardowej, zgodnie z opisem w [udziału lub resuse ustawienia projektu Visual Studio C++](../create-reusable-property-configurations.md).
+Użyj tej strony właściwości stwierdzić programu Visual Studio, które katalogi do użycia podczas tworzenia projektu aktualnie wybrany. Aby ustawić katalogi dla wielu projektów w rozwiązaniu, użyj arkusza właściwości niestandardowej, zgodnie z opisem w [udziału lub ponownego użycia w programie Visual Studio C++ ustawienia projektu](../create-reusable-property-configurations.md).
 
 Wersja systemu Linux na tej stronie, zobacz [katalogi VC ++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
@@ -54,7 +54,7 @@ Teraz pojawi się okno dialogowe następująco:
 
 ![Pokaż katalogi bibliotek](../media/vcppdir_libdir.png "okno dialogowe Dodawanie lub usuwanie ścieżki biblioteki")
 
-Użyj tego okna dialogowego, aby wyświetlić bieżący katalog. Jednakże, jeśli chcesz zmienić lub dodać katalog go lepiej jest używać **Menedżer właściwości** utworzyć arkusz właściwości lub zmodyfikować domyślny arkusz właściwości użytkownika. Aby uzyskać więcej informacji, zobacz [udziału lub resuse ustawienia projektu Visual Studio C++](../create-reusable-property-configurations.md).
+Użyj tego okna dialogowego, aby wyświetlić bieżący katalog. Jednakże, jeśli chcesz zmienić lub dodać katalog go lepiej jest używać **Menedżer właściwości** utworzyć arkusz właściwości lub zmodyfikować domyślny arkusz właściwości użytkownika. Aby uzyskać więcej informacji, zobacz [udziału lub ponownego użycia w programie Visual Studio C++ ustawienia projektu](../create-reusable-property-configurations.md).
 
 Jak wspomniano powyżej, jest wiele ścieżek dziedziczone wyrażonych za pomocą makra.  Aby zbadać bieżącą wartość makra, wybierz opcję **makra** przycisk w prawym dolnym rogu okna dialogowego. Należy pamiętać, że wiele makra są zależne od typu konfiguracji. Makra w kompilacji debugowania może zwrócić z inną ścieżką niż sam makra w kompilacji wydania.
 

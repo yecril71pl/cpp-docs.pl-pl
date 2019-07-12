@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 2cf9928d56c564edc0e3bda1935eb11004000985
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877387"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861116"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
@@ -50,13 +50,13 @@ Wykonaj następujące kroki, aby utworzyć swój pierwszy projekt pulpitu Window
 
 1. Wybierz **Utwórz** przycisk, aby utworzyć projekt.
 
-1. **Projektu pulpitu Windows** pojawi się okno dialogowe. W obszarze **typ aplikacji**, wybierz opcję **aplikacja Windows (.exe)**. W obszarze **dodatkowe opcje**, wybierz opcję **pusty projekt**. Wybierz **OK** do tworzenia projektu.
+1. **Projektu pulpitu Windows** pojawi się okno dialogowe. W obszarze **typ aplikacji**, wybierz opcję **aplikacja Windows (.exe)** . W obszarze **dodatkowe opcje**, wybierz opcję **pusty projekt**. Wybierz **OK** do tworzenia projektu.
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **DesktopApp** projektu, wybierz **Dodaj**, a następnie wybierz **nowy element**.
 
    ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
 
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)**. W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
+1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)** . W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
 
    ![Dodaj plik .cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik .cpp do DesktopApp projektu")
 
@@ -70,13 +70,13 @@ Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kon
 
 1. Na **pliku** menu, wybierz **New** , a następnie wybierz **projektu**.
 
-1. W **nowy projekt** rozwiń w lewym okienku w oknie dialogowym **zainstalowane** > **Visual C++**, a następnie wybierz **pulpitu Windows**. W środkowym okienku wybierz **kreatora pulpitu Windows**.
+1. W **nowy projekt** rozwiń w lewym okienku w oknie dialogowym **zainstalowane** > **Visual C++** , a następnie wybierz **pulpitu Windows**. W środkowym okienku wybierz **kreatora pulpitu Windows**.
 
    W **nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **OK**.
 
    ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-153.png "nazwij projekt DesktopApp")
 
-1. W **projektu pulpitu Windows** okna dialogowego, w obszarze **typ aplikacji**, wybierz opcję **aplikacja Windows (.exe)**. W obszarze **dodatkowe opcje**, wybierz opcję **pusty projekt**. Wybierz **OK** do tworzenia projektu.
+1. W **projektu pulpitu Windows** okna dialogowego, w obszarze **typ aplikacji**, wybierz opcję **aplikacja Windows (.exe)** . W obszarze **dodatkowe opcje**, wybierz opcję **pusty projekt**. Wybierz **OK** do tworzenia projektu.
 
    ![Utwórz DesktopApp w Kreatorze projektu pulpitu Windows](../build/media/desktop-app-new-project-wizard-153.png "tworzenie DesktopApp w Kreatorze projektu pulpitu Windows")
 
@@ -84,7 +84,7 @@ Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kon
 
    ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
 
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)**. W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
+1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)** . W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
 
    ![Dodaj plik .cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik .cpp do DesktopApp projektu")
 
@@ -98,7 +98,7 @@ Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kon
 
 1. Na **pliku** menu, wybierz **New** , a następnie wybierz **projektu**.
 
-1. W **nowy projekt** rozwiń w lewym okienku w oknie dialogowym **zainstalowane** > **szablony** > **Visual C++**, a następnie wybierz pozycję **Win32**. W środkowym okienku wybierz **projekt systemu Win32**.
+1. W **nowy projekt** rozwiń w lewym okienku w oknie dialogowym **zainstalowane** > **szablony** > **Visual C++** , a następnie wybierz pozycję **Win32**. W środkowym okienku wybierz **projekt systemu Win32**.
 
    W **nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **OK**.
 
@@ -116,7 +116,7 @@ Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kon
 
    ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "Dodaj nowy element do projektu DesktopApp")
 
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)**. W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
+1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)** . W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
 
    ![Dodaj plik .cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "Dodaj plik .cpp do DesktopApp projektu")
 
@@ -589,7 +589,7 @@ Rzeczywiście, Oto kompletny kod dla działającą aplikację.
 
 1. Aby uruchomić aplikację, naciśnij klawisz **F5**. Okno zawierające tekst "Hello, pulpitu Windows!" powinien pojawić się w lewym górnym rogu ekranu.
 
-   ![Uruchom projekt DesktopApp](../build/media/desktop-app-project-run-157.png "Uruchom projekt DesktopApp")
+   ![Uruchom projekt DesktopApp](../build/media/desktop-app-project-run-157.PNG "Uruchom projekt DesktopApp")
 
 Gratulacje! W tym przewodniku zakończeniu i wbudowane tradycyjnych aplikacji pulpitu Windows.
 

@@ -3,12 +3,12 @@ title: Tworzenie projektu (ALT — Samouczek, część 1)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221408"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861019"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 
@@ -44,15 +44,10 @@ Ten samouczek zawiera instrukcje dotyczące nonattributed Projekt ATL, który tw
 
     Lokalizację kodu źródłowego zwykle będą domyślnie \Users\\\<username > \source\repos i nowego folderu zostaną utworzone automatycznie.
 
-1. Kliknij przycisk **OK** i **Projekt ATL** zostanie otwarty Kreator.
+1. W programie Visual Studio 2019 r, zaakceptuj wartości domyślne, a następnie kliknij pozycję **OK**. 
+   W programie Visual Studio 2017, kliknij przycisk **OK** otworzyć **Projekt ATL** kreatora. Kliknij przycisk **ustawienia aplikacji** Aby wyświetlić dostępne opcje. Ponieważ ten projekt utworzy formant, a formantu musi być wewnątrz procesowego, pozostaw **typ aplikacji** jako biblioteki DLL. Kliknij przycisk **OK**.
 
-1. Kliknij przycisk **ustawienia aplikacji** Aby wyświetlić dostępne opcje.
-
-1. Podczas tworzenia kontrolki i formantu musi być wewnątrz procesowego, pozostaw **typ aplikacji** jako biblioteki DLL.
-
-1. Dla pozostałych opcji zostaw wartości domyślne, a następnie kliknij przycisk **OK**.
-
-**Kreator projektów ATL** utworzy projekt przez wygenerowanie kilku plików. Można wyświetlić te pliki w **Eksploratora rozwiązań** , rozwijając `Polygon` obiektu. Pliki są wymienione poniżej.
+Visual Studio utworzy projekt przez wygenerowanie kilku plików. Można wyświetlić te pliki w **Eksploratora rozwiązań** , rozwijając `Polygon` obiektu. Pliki są wymienione poniżej.
 
 |Plik|Opis|
 |----------|-----------------|

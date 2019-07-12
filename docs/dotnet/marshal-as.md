@@ -1,6 +1,6 @@
 ---
 title: marshal_as
-ms.date: 11/04/2016
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshal_as
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-ms.openlocfilehash: 2294d8fe94a32f281332c963b21a542366ae3207
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ab4962f18368f0d896f8b7343baf54e8f59ac52
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386086"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861096"
 ---
 # <a name="marshalas"></a>marshal_as
 
@@ -44,6 +44,8 @@ Ta metoda jest uproszczony sposób konwertowania danych między typami macierzys
 Jeśli zostanie podjęta próba kierować dwa typy danych, które nie są obsługiwane, `marshal_as` spowoduje wygenerowanie błędu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj wiadomości podano dotyczącą tego błędu, aby uzyskać więcej informacji. `C4996` Błędu mogą być generowane dla więcej niż tylko przestarzałych funkcji. Przykładem takiej próby kierować dwa typy danych, które nie są obsługiwane.
 
 Biblioteka dotycząca organizowania składa się z kilku plików nagłówkowych. Każda konwersja wymaga tylko jednego pliku, ale może zawierać dodatkowe pliki, jeśli potrzebujesz, w przypadku innych konwersji. Aby zobaczyć, jakie konwersje są skojarzone z plików, Szukaj w tabeli w `Marshaling Overview`. Niezależnie od tego konwersji, jakie chcesz zrobić, wymaganie przestrzeni nazw jest zawsze w obiekcie.
+
+Zgłasza `System::ArgumentNullException(_EXCEPTION_NULLPTR)` Jeśli parametr wejściowy ma wartość null.
 
 ## <a name="example"></a>Przykład
 

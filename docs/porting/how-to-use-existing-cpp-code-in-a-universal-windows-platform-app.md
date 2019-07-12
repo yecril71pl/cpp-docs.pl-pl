@@ -2,12 +2,12 @@
 title: 'Instrukcje: Używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205195"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861133"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Instrukcje: Używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej Windows
 
@@ -135,7 +135,7 @@ Poniższa procedura ma zastosowanie w przypadku których masz natywnej bibliotek
 
 2. Otwórz **właściwości projektu** projekt DLL i zestaw **konfiguracji** do **wszystkie konfiguracje**.
 
-3. W **właściwości projektu**w obszarze **C/C++** > **ogólne** kartę, należy ustawić **używanie rozszerzenia środowiska uruchomieniowego Windows** do  **Tak (/ZW)**. Dzięki temu rozszerzenia składnika (C++/CX).
+3. W **właściwości projektu**w obszarze **C/C++**  > **ogólne** kartę, należy ustawić **używanie rozszerzenia środowiska uruchomieniowego Windows** do  **Tak (/ZW)** . Dzięki temu rozszerzenia składnika (C++/CX).
 
 4. W **Eksploratora rozwiązań**, wybierz węzeł projektu, otwórz menu skrótów i wybierz **Zwolnij projekt**. Następnie otwórz menu skrótów w węźle zwolnionego projektu, a następnie wybrać opcję Edytuj plik projektu. Znajdź `WindowsTargetPlatformVersion` elementu i Zastąp następujące elementy.
 
@@ -193,9 +193,9 @@ Jednak można użyć biblioteki statycznej w platformy uniwersalnej systemu Wind
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Aby użyć natywną bibliotekę statyczną C++ w projektach platformy uniwersalnej systemu Windows
 
-1. We właściwościach projektu dla projektu platformy UWP w **konsolidatora** sekcji, Dodaj ścieżkę do biblioteki w **dane wejściowe** właściwości. Na przykład dla biblioteki w projekcie, która umieszcza dane wyjściowe w *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, Dodaj ścieżkę względną `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
+1. We właściwościach projektu dla projektu platformy uniwersalnej systemu Windows wybierz **właściwości konfiguracji** > **konsolidatora** > **dane wejściowe** w okienku po lewej stronie. W okienku po prawej stronie, Dodaj ścieżkę do biblioteki w **dodatkowe zależności** właściwości. Na przykład dla biblioteki w projekcie, która umieszcza dane wyjściowe w *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, Dodaj ścieżkę względną `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Dodaj instrukcję include, aby odwoływać się do pliku nagłówka do Twojej pch.h w projekcie platformy uniwersalnej systemu Windows i zacznij dodawać kod, który korzysta z biblioteki.
+2. Dodaj instrukcję include, aby odwoływać się do pliku nagłówka w pliku pch.h (jeśli istnieje) lub pliku .cpp zgodnie z potrzebami i zacznij dodawać kod, który korzysta z biblioteki.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -221,7 +221,7 @@ Jeśli chcesz korzystać z natywnych interfejsów API w bibliotece statycznej w 
 
 6. Może teraz niektóre zduplikowano kodu. Jeśli masz więcej niż jeden prekompilowanego nagłówka (np. stdafx.h i pch.h), wybierz jedną do zachowania. Skopiuj cały wymagany kod, takich jak dołączyć instrukcje do tego, który jest zachowywana. Następnie można usunąć właściwości inne, a w projekcie, w obszarze **prekompilowanych nagłówków**, upewnij się, że nazwa pliku nagłówkowego jest poprawna.
 
-   Jeśli zmienisz plik do użycia jako prekompilowanego pliku nagłówkowego, upewnij się, że opcje prekompilowanego nagłówka są poprawne dla każdego pliku. Wybierz kolejno każdy plik .cpp, Otwórz okno właściwości i upewnij się, że wszystkie są ustawione na **użycia (/Yu)**, z wyjątkiem żądaną prekompilowanego pliku nagłówkowego, która powinna być równa **Utwórz (/Yc)**.
+   Jeśli zmienisz plik do użycia jako prekompilowanego pliku nagłówkowego, upewnij się, że opcje prekompilowanego nagłówka są poprawne dla każdego pliku. Wybierz kolejno każdy plik .cpp, Otwórz okno właściwości i upewnij się, że wszystkie są ustawione na **użycia (/Yu)** , z wyjątkiem żądaną prekompilowanego pliku nagłówkowego, która powinna być równa **Utwórz (/Yc)** .
 
 7. Skompilować projekt i usuń wszelkie błędy. Te błędy może być spowodowane użyciem `/ZW` opcji lub może być spowodowane przez nową wersję zestawu Windows SDK lub może być odzwierciedlają zależności, np. pliki nagłówkowe, które zależy od biblioteki lub różnice w ustawieniach projektu między starego Projekt i nowy.
 

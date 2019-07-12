@@ -1,6 +1,6 @@
 ---
 title: Omówienie marshalingu w języku C++
-ms.date: 06/28/2018
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 937fbdf4b3ed09344e69a8f1eb731565c36794ae
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384741"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861170"
 ---
-# <a name="overview-of-marshaling-in-c"></a>Omówienie marshalingu w języku C++
+# <a name="overview-of-marshaling-in-ccli"></a>Omówienie Marshalingu w C++sposób niezamierzony
 
-W trybie mieszanym czasami musisz zarządzać dane między typami macierzystym i zarządzanym. Program Visual Studio 2008 wprowadzono *Biblioteka dotycząca organizowania* ułatwiające kierować i przekonwertować danych w prosty sposób.  Biblioteka dotycząca organizowania zawiera zestaw funkcji i `marshal_context` klasy służące do przeprowadzania marshaling dla popularnych typów. Biblioteka jest zdefiniowany w tych nagłówków w **obejmują msclr** katalog dla posiadanej wersji programu Visual Studio:
+W trybie mieszanym czasami musisz zarządzać dane między typami macierzystym i zarządzanym. *Biblioteka dotycząca organizowania* pomaga kierować i przekonwertować danych w prosty sposób.  Biblioteka dotycząca organizowania zawiera zestaw funkcji i `marshal_context` klasy służące do przeprowadzania marshaling dla popularnych typów. Biblioteka jest zdefiniowany w tych nagłówków w **obejmują msclr** katalog dla posiadanej wersji programu Visual Studio:
 
 |nagłówek|Opis|
 |---------------|-----------------|
@@ -71,8 +71,6 @@ W tym przykładzie pokazano jak dołączyć katalogu msclr w deklaracji nagłów
 `#include "msclr\marshal_cppstd.h"`
 
 Biblioteka organizatora jest rozszerzalny, tak, aby można było dodać organizowania typów. Aby uzyskać więcej informacji na temat rozszerzania Biblioteka dotycząca organizowania, zobacz [jak: Rozszerzanie biblioteki Marshalingu](../dotnet/how-to-extend-the-marshaling-library.md).
-
-We wcześniejszych wersjach, można kierować dane za pomocą [wywołania platformy](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Aby uzyskać więcej informacji na temat `PInvoke`, zobacz [podczas wywoływania funkcji natywnych z kodu zarządzanego](../dotnet/calling-native-functions-from-managed-code.md).
 
 ## <a name="see-also"></a>Zobacz także
 

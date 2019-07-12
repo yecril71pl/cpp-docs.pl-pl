@@ -1,16 +1,16 @@
 ---
-title: x64 konwencji wywoływania
+title: Konwencja wywoływania x64
 description: Szczegóły konwencji wywoływania interfejsu ABI domyślne x64.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313626"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861162"
 ---
-# <a name="x64-calling-convention"></a>x64 konwencji wywoływania
+# <a name="x64-calling-convention"></a>Konwencja wywoływania x64
 
 W tej sekcji opisano standardowe procesy i Konwencji jednej funkcji (wywołujący) używa do nawiązywania połączeń do innej funkcji (wywoływany) w x64 kodu.
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>Zapisane rejestrowania wywołującego/wywoływanego
 
-Rejestry RAX RCX, RDX, R8, R9, R10, R11 są traktowane jako nietrwałe oraz muszą być rozważone zniszczona na wywołania funkcji (chyba że inaczej bezpieczeństwa sprawdzalnych podczas analizy, takie jak optymalizacja całego programu).
+Rejestry RAX RCX, RDX, R8, R9, R10, R11, XMM0 5 i górnej części 15 z YMM0 do ZMM0-15 są traktowane jako nietrwałe oraz muszą być rozważone zniszczona na wywołania funkcji (chyba że inaczej bezpieczeństwa sprawdzalnych podczas analizy, takie jak optymalizacja całego programu). Na AVX512VL rejestrów XMM, ZMM i YMM 16-31 są nietrwałe.
 
-Rejestrów RBX RBP, RDI, RSI, RSP, R12, R13, R14 i R15 są traktowane jako trwałej i muszą zostać zapisane i przywrócone przez funkcję używającą je.
+Rejestrów RBX RBP, RDI, RSI, RSP, R12, R13, R14, R15 i XMM6-15 są traktowane jako trwałej i muszą zostać zapisane i przywrócone przez funkcję używającą je.
 
 ## <a name="function-pointers"></a>Wskaźniki funkcji
-
+ 
 Wskaźniki funkcji są po prostu wskaźnikami do etykiety odpowiednich funkcji. Nie ma żadnych spis treści (TOC) wymagania dotyczące wskaźników do funkcji.
 
 ## <a name="floating-point-support-for-older-code"></a>Obsługa modelu zmiennoprzecinkowego w przypadku starszego kodu
