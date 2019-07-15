@@ -1,6 +1,6 @@
 ---
 title: Klasa CWinApp
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894495"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -899,7 +899,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
 Ta funkcja elementu członkowskiego nie jest wielkość liter, dlatego ciągów w *lpszSection* i *lpszEntry* parametry mogą się różnić w przypadku.
 
 > [!NOTE]
-> `GetProfileBinary` przydziela bufor i zwraca jego adres w \* *ppData*. Obiekt wywołujący jest odpowiedzialny za zwalniania bufora, za pomocą **delete []**.
+> `GetProfileBinary` przydziela bufor i zwraca jego adres w \* *ppData*. Obiekt wywołujący jest odpowiedzialny za zwalniania bufora, za pomocą **delete []** .
 
 > [!IMPORTANT]
 > Dane zwracane przez tę funkcję, nie jest zawsze wartość NULL zakończone i obiekt wywołujący musi wykonać sprawdzanie poprawności. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>Parametry
 
 *dwData*<br/>
-Określa dodatkowe dane. Wartość zależy od wartości *nCmd* parametru.
+Określa dodatkowe dane. Wartość zależy od wartości *nCmd* parametru. Wartość domyślna to `0x000F` co oznacza, że [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz *uCommand* parametru opisanego w o HTMLHelp funkcji interfejsu API w zestawie Windows SDK.
+Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz *uCommand* parametru opisanego w [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) lub [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) Funkcje interfejsu API w zestawie Windows SDK.  
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1492,7 +1492,7 @@ LPCTSTR m_pszProfileName;
 `m_pszProfileName` jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Jeśli przypisujesz wartość do `m_pszProfileName`, muszą być dynamicznie przydzielane na stosie. `CWinApp` Wywołania destruktora **bezpłatne**() za pomocą tego wskaźnika. Wiele chcesz użyć `_tcsdup`wykonać przydzielanie funkcja biblioteki wykonawczej (). Ponadto zwolnić pamięć, o których skojarzone z bieżącym wskaźnika przed przypisaniem nowych wartości. Na przykład:
+> Jeśli przypisujesz wartość do `m_pszProfileName`, muszą być dynamicznie przydzielane na stosie. `CWinApp` Wywołania destruktora **bezpłatne**() za pomocą tego wskaźnika. Wiele chcesz użyć `_tcsdup`wykonać przydzielanie funkcja biblioteki wykonawczej (). Ponadto zwolnić pamięć, o których skojarzone z bieżącym wskaźnika przed przypisaniem nowych wartości. Przykład:
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
@@ -2395,4 +2395,4 @@ Określa identyfikator modelu użytkownika aplikacji.
 
 [Klasa CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Instrukcje: Dodawanie obsługi Menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)
+[Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](../../mfc/how-to-add-restart-manager-support.md)

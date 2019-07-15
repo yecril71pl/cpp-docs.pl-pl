@@ -7,14 +7,17 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894467"
 ---
 # <a name="unions"></a>Unie
+
+> [!NOTE]
+> W języku C ++ 17 i nowszych **std::variant** klasy jest alternatywą bezpiecznegop typu Unii.
 
 A **Unii** jest typ zdefiniowany przez użytkownika, w którym wszystkie elementy członkowskie udostępnianie tej samej lokalizacji pamięci. Oznacza to, że w danym momencie Unia może zawierać nie więcej niż jeden obiekt z listy jej składowych. Oznacza to również, że niezależnie od tego, jak wiele elementów członkowskich Unii ma, zawsze używa tylko wystarczającej ilości pamięci do przechowywania zajmuje największy element członkowski.
 

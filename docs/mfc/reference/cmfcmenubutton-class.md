@@ -1,6 +1,6 @@
 ---
 title: Klasa CMFCMenuButton
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
 - AFXMENUBUTTON/CMFCMenuButton
@@ -12,6 +12,7 @@ f1_keywords:
 - AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
 - AFXMENUBUTTON/CMFCMenuButton::m_hMenu
 - AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
+- AFXMENUBUTTON/CMFCMenuButton::m_bDefaultClick
 helpviewer_keywords:
 - CMFCMenuButton [MFC], CMFCMenuButton
 - CMFCMenuButton [MFC], PreTranslateMessage
@@ -21,13 +22,14 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_bStayPressed
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
+- CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71d239c9d1084c69ab2e159a479e66f0cbe66d7a
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894433"
 ---
 # <a name="cmfcmenubutton-class"></a>Klasa CMFCMenuButton
 
@@ -63,6 +65,7 @@ class CMFCMenuButton : public CMFCButton
 |[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Określa, czy przycisk menu zmienia jego stan po użytkownik zwolni przycisk.|
 |[CMFCMenuButton::m_hMenu](#m_hmenu)|Dojście do menu dołączonego Windows.|
 |[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Identyfikator, który wskazuje element, który użytkownik zaznaczył w menu podręcznym.|
+|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| Zezwalaj na przetwarzanie domyślne (na przycisku tekst/obraz).|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -164,6 +167,28 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Uwagi
 
 Wartość tej zmiennej elementu członkowskiego wynosi zero, jeśli użytkownik anuluje menu bez dokonywania wyboru lub w przypadku wystąpienia błędu.
+
+##  <a name="m_bdefaultclick"></a>  CMFCMenuButton::m_bDefaultClick
+
+Pozwala na przetwarzanie domyślny tekst lub obrazy na przycisku.
+
+```
+BOOL  m_bDefaultClick;
+```
+
+### <a name="remarks"></a>Uwagi
+
+M_bDefaultClick ustawienie na wartość false powoduje, że przycisk aby wyświetlić menu, po kliknięciu dowolnego miejsca na przycisku.
+
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+
+Liczba całkowita, która wskazuje, który element użytkownik wybiera z menu podręcznego.
+
+```
+int m_nMenuResult;
+```
+
+### <a name="remarks"></a>Uwagi
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
 

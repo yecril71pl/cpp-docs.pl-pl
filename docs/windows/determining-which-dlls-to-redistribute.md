@@ -1,6 +1,6 @@
 ---
 title: Ustalanie, które biblioteki DLL są przeznaczone do ponownej dystrybucji
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894481"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Ustalanie, które biblioteki DLL są przeznaczone do ponownej dystrybucji
 
 Podczas kompilowania aplikacji korzystającej z biblioteki dll, dostarczone przez program Visual Studio użytkownicy twojej aplikacji musi mieć również tych bibliotek DLL na swoich komputerach do uruchomienia aplikacji. Ponieważ większość użytkowników prawdopodobnie nie masz zainstalowanego programu Visual Studio, musisz podać te biblioteki DLL dla nich. Program Visual Studio udostępnia te biblioteki DLL jako *pliki redystrybucyjne* zawierających w Instalatorem aplikacji.
 
-Aby ułatwić obejmują redystrybucyjnych bibliotek DLL z Instalatorem są dostępne jako autonomiczny *pakietów redystrybucyjnych*. Są to pliki wykonywalne architektury, które używają centralnego wdrożenia, aby zainstalować pakiet redystrybucyjny pliki na komputerze użytkownika. Vcredist na przykład\_x86.exe instaluje biblioteki 32-bitowych dla x86 komputerów, vcredist\_x64.exe instaluje biblioteki 64-bitowych x64 komputerów i vcredist\_ARM.exe instaluje biblioteki, na komputerach ARM. Zaleca się wdrożenie centralne, ponieważ firma Microsoft mogła używać Windows aktualizacji usługi można niezależnie zaktualizować tych bibliotek. Oprócz kopiowania w instalacji programu Visual Studio bieżące pakiety redystrybucyjne są dostępne do pobrania. Aby uzyskać łącza do najnowszej obsługiwane pakiety redystrybucyjne dla zarówno bieżących jak starsze zestawy narzędzi, zobacz [r obsługiwane pliki do pobrania Visual C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Określone wcześniejsze wersje pakietów redystrybucyjnych można znaleźć, przeszukując [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=158431) dla "Visual C++ Redistributable Packages".
+Aby ułatwić obejmują redystrybucyjnych bibliotek DLL z Instalatorem są dostępne jako autonomiczny *pakietów redystrybucyjnych*. Są to pliki wykonywalne architektury, które używają centralnego wdrożenia, aby zainstalować pakiet redystrybucyjny pliki na komputerze użytkownika. Na przykład vcredist\_x86.exe instaluje biblioteki 32-bitowe, w przypadku komputerów x86 i x64 vcredist\_x64.exe instaluje biblioteki 64-bitowych x64 komputerów i vcredist\_ARM.exe instaluje biblioteki dla ARM komputery. Zaleca się wdrożenie centralne, ponieważ firma Microsoft mogła używać Windows aktualizacji usługi można niezależnie zaktualizować tych bibliotek. Oprócz kopiowania w instalacji programu Visual Studio bieżące pakiety redystrybucyjne są dostępne do pobrania. Aby uzyskać łącza do najnowszej obsługiwane pakiety redystrybucyjne dla zarówno bieżących jak starsze zestawy narzędzi, zobacz [r obsługiwane pliki do pobrania Visual C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Określone wcześniejsze wersje pakietów redystrybucyjnych można znaleźć, przeszukując [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=158431) dla "Visual C++ Redistributable Packages".
 
 Główny numer wersji pakietu redystrybucyjnego wdrażania musi odpowiadać wersji zestawu narzędzi Visual Studio umożliwia tworzenie aplikacji, a podrzędny numer wersji musi być taka sama lub nowszej. Visual Studio 2017 i Visual Studio 2015 mają numery wersji zestawu narzędzi zgodne, co oznacza, że program Visual Studio 2017 do redystrybucji pliki mogą być używane przez aplikacje zbudowane przy użyciu zestawu narzędzi 2015. Może być zgodne, nie jest obsługiwana przy użyciu pliki redystrybucyjne 2015 w aplikacje zbudowane przy użyciu zestawu narzędzi 2017 r. Obsługiwany jest tylko przy użyciu pakietu redystrybucyjnego, jest taka sama jak lub nowszej niż ta wersja zestawu narzędzi.
 

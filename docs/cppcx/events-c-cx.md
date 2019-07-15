@@ -1,13 +1,13 @@
 ---
 title: Zdarzenia (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894458"
 ---
 # <a name="events-ccx"></a>Zdarzenia (C++/CX)
 
@@ -15,7 +15,7 @@ Windows obsługi można zadeklarować typu (publikowanie) zdarzenia i kod klient
 
 ## <a name="consuming-events-in-windows-components"></a>Używanie zdarzeń w składnikach Windows
 
-Wiele składników środowiska wykonawczego Windows uwidocznić zdarzenia. Na przykład obiekt LightSensor wyzwala zdarzenie ReadingChanged, gdy czujnik zgłasza nową wartość jaskrawość. Korzystając z obiektu LightSensor w swoim programie, można zdefiniować metodę, która zostanie wywołana, gdy jest wyzwalane zdarzenie ReadingChanged. Metoda można wykonać dowolne mu; Jedynym wymaganiem jest, że jeho signatura musi odpowiadać podpisowi delegata, który jest, aby uzyskać więcej informacji o sposobie tworzenia delegata obsługi zdarzeń i subskrybować zdarzenie, zobacz [delegatów](../cppcx/delegates-c-cx.md).
+Wiele składników środowiska wykonawczego Windows uwidocznić zdarzenia. Na przykład obiekt LightSensor wyzwala zdarzenie ReadingChanged, gdy czujnik zgłasza nową wartość jaskrawość. Korzystając z obiektu LightSensor w swoim programie, można zdefiniować metodę, która zostanie wywołana, gdy jest wyzwalane zdarzenie ReadingChanged. Metoda można wykonać dowolne mu; Jedynym wymaganiem jest, że jeho signatura musi odpowiadać podpisowi delegata, która jest wywoływana. Aby uzyskać więcej informacji o sposobie tworzenia delegata obsługi zdarzeń i subskrybować dane zdarzenie, zobacz [delegatów](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Tworzenie zdarzeń niestandardowych
 

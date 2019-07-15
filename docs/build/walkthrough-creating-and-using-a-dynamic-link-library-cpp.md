@@ -2,17 +2,17 @@
 title: 'Przewodnik: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)'
 description: Użyj C++ do tworzenia biblioteki dołączanej (dynamicznie DLL) Windows w programie Visual Studio.
 ms.custom: conceptual
-ms.date: 04/22/2019
+ms.date: 07/14/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 53cde029973c14bfc5aae521946ebeadbed738ca
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 5db16c834f3e42aee0cc558ab1ea18bcb2a35063
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894375"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)
 
@@ -34,7 +34,7 @@ Statycznie połączone biblioteki DLL, takie jak _eksportuje_ zmienne, funkcje i
 
 Ten poradnik tworzy dwa rozwiązań programu Visual Studio. taki, który tworzy bibliotekę DLL, a taki, który kompiluje aplikację kliencką. Biblioteki DLL używa konwencji wywoływania C, dzięki czemu można wywołać z aplikacji skompilowanych przy użyciu innych języków, tak długo, jak platformy i wywoływania i łączenie konwencje są zgodne. Ta aplikacja używa klienta _niejawna Konsolidacja_, gdzie Windows łączy aplikację z biblioteki DLL w czasie ładowania. To połączenie umożliwia aplikacji wywoływać funkcje dostarczone przez bibliotekę DLL, podobnie jak funkcje statycznie połączone biblioteki.
 
-Ten przewodnik nie obejmuje niektóre typowe problemy. Korzystanie z bibliotek DLL języka C++ w innych językach programowania nie była widoczna. Go nie pokazuje jak utworzyć bibliotekę DLL tylko do zasobów. Również nie pokazuje użycie jawnego łączenia można załadować biblioteki dll w czasie wykonywania, a nie w czasie ładowania. Zachowaj spokój ducha i Visual C++ można użyć, aby korzystać z tych możliwości. Aby uzyskać linki do szczegółowych informacji o bibliotece dll, zobacz [Utwórz C /C++ bibliotek DLL w programie Visual Studio](dlls-in-visual-cpp.md). Aby uzyskać więcej informacji na temat łączenia niejawne i jawne tworzenie łączy, zobacz [określająca, które łączenie metody użyć](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Aby uzyskać informacji o tworzeniu bibliotek DLL języka C++ do użycia z usługą języki programowania, które używać konwencji powiązania języka C, zobacz [eksportowanie funkcji C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md). Aby uzyskać informacji na temat sposobu tworzenia bibliotek DLL dla języków .NET, zobacz [wywoływanie funkcji DLL z aplikacji Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
+Ten przewodnik nie obejmuje niektóre typowe problemy. Korzystanie z bibliotek DLL języka C++ w innych językach programowania nie była widoczna. Go nie pokazuje jak utworzyć bibliotekę DLL tylko do zasobów. Również nie pokazuje użycie jawnego łączenia można załadować biblioteki dll w czasie wykonywania, a nie w czasie ładowania. Zachowaj spokój ducha i można korzystać z tych możliwości programu Visual Studio. Aby uzyskać linki do szczegółowych informacji o bibliotece dll, zobacz [Utwórz C /C++ bibliotek DLL w programie Visual Studio](dlls-in-visual-cpp.md). Aby uzyskać więcej informacji na temat łączenia niejawne i jawne tworzenie łączy, zobacz [określająca, które łączenie metody użyć](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Aby uzyskać informacji o tworzeniu bibliotek DLL języka C++ do użycia z usługą języki programowania, które używać konwencji powiązania języka C, zobacz [eksportowanie funkcji C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md). Aby uzyskać informacji na temat sposobu tworzenia bibliotek DLL dla języków .NET, zobacz [wywoływanie funkcji DLL z aplikacji Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -80,7 +80,7 @@ W tym zestawie zadania Tworzenie projektu dla biblioteki DLL, Dodaj kod i skompi
 
 1. Wybierz **OK** przycisk, aby odrzucić **nowy projekt** okna dialogowego i uruchom **projektu pulpitu Windows** kreatora.
 
-1. W **projektu pulpitu Windows** kreatora w obszarze **typ aplikacji**, wybierz opcję **Biblioteka dołączana dynamicznie (dll)**.
+1. W **projektu pulpitu Windows** kreatora w obszarze **typ aplikacji**, wybierz opcję **Biblioteka dołączana dynamicznie (dll)** .
 
    ![Tworzenie biblioteki DLL w Kreatorze projektu pulpitu Windows](media/mathlibrary-desktop-project-wizard-dll.png "tworzy bibliotekę DLL w Kreatorze projektu pulpitu Windows")
 
@@ -89,11 +89,11 @@ W tym zestawie zadania Tworzenie projektu dla biblioteki DLL, Dodaj kod i skompi
 > [!NOTE]
 > Dodatkowe kroki są wymagane w celu rozwiązania problemu w programie Visual Studio 2017 w wersji 15.3. Wykonaj te instrukcje, aby zobaczyć, jeśli musisz wprowadzić tę zmianę.
 >
->1. W **Eksploratora rozwiązań**, jeśli nie został jeszcze wybrany, wybierz opcję **MathLibrary** projekt **rozwiązania "MathLibrary"**.
+>1. W **Eksploratora rozwiązań**, jeśli nie został jeszcze wybrany, wybierz opcję **MathLibrary** projekt **rozwiązania "MathLibrary"** .
 >
 >1. Na pasku menu wybierz **projektu** > **właściwości**.
 >
->1. W okienku po lewej stronie **stron właściwości** okno dialogowe, wybierz opcję **preprocesora** w obszarze **właściwości konfiguracji** > **C/C++**. Sprawdź zawartość **definicje preprocesora** właściwości.<br/><br/>![Sprawdź właściwość definicje preprocesora](media/mathlibrary-153bug-preprocessor-definitions-check.png "Sprawdź właściwość definicje preprocesora")<br/><br/>Jeśli widzisz **MATHLIBRARY&#95;EKSPORTÓW** w **definicje preprocesora** listy, a następnie nie trzeba wprowadzić zmiany. Jeśli widzisz **MathLibrary&#95;EKSPORTÓW** zamiast niego, a następnie kontynuować wykonaj następujące kroki.
+>1. W okienku po lewej stronie **stron właściwości** okno dialogowe, wybierz opcję **preprocesora** w obszarze **właściwości konfiguracji** > **C/C++** . Sprawdź zawartość **definicje preprocesora** właściwości.<br/><br/>![Sprawdź właściwość definicje preprocesora](media/mathlibrary-153bug-preprocessor-definitions-check.png "Sprawdź właściwość definicje preprocesora")<br/><br/>Jeśli widzisz **MATHLIBRARY&#95;EKSPORTÓW** w **definicje preprocesora** listy, a następnie nie trzeba wprowadzić zmiany. Jeśli widzisz **MathLibrary&#95;EKSPORTÓW** zamiast niego, a następnie kontynuować wykonaj następujące kroki.
 >
 >1. W górnej części **stron właściwości** okno dialogowe, zmiana **konfiguracji** menu rozwijane **wszystkie konfiguracje**.
 >
@@ -111,7 +111,7 @@ W tym zestawie zadania Tworzenie projektu dla biblioteki DLL, Dodaj kod i skompi
 
 1. Na pasku menu wybierz **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **szablony**i wybierz **Visual C++**, i następnie w środkowym okienku wybierz **Aplikacja konsoli Win32**. Wprowadź `MathLibrary` w **nazwa** Edytuj pole, aby określić nazwę dla projektu.
+1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** > **szablony**i wybierz **Visual C++** , i następnie w środkowym okienku wybierz **Aplikacja konsoli Win32**. Wprowadź `MathLibrary` w **nazwa** Edytuj pole, aby określić nazwę dla projektu.
 
    ![Nazwij projekt MathLibrary](media/mathlibrary-project-name.png "nazwij projekt MathLibrary")
 
@@ -137,7 +137,7 @@ Po prawej stronie teraz tę bibliotekę DLL nie robi zbyt wielu. Następnie moż
 
 1. Aby utworzyć plik nagłówka dla funkcji, na pasku menu, wybierz opcję **projektu** > **Dodaj nowy element**.
 
-1. W **Dodaj nowy element** w okienku po lewej stronie, wybierz w oknie dialogowym **Visual C++**. W środkowym okienku wybierz **plik nagłówka (.h)**. Określ `MathLibrary.h` jako nazwę pliku nagłówka.
+1. W **Dodaj nowy element** w okienku po lewej stronie, wybierz w oknie dialogowym **Visual C++** . W środkowym okienku wybierz **plik nagłówka (.h)** . Określ `MathLibrary.h` jako nazwę pliku nagłówka.
 
    ![Dodaj nagłówek w oknie dialogowym Dodaj nowy element](media/mathlibrary-add-new-item-header-file.png "Dodaj nagłówek pliku w oknie dialogowym Dodaj nowy element")
 
@@ -280,7 +280,7 @@ Aby sprawdzić, czy wszystko działa do tej pory, kompilowanie biblioteki dołą
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-Gratulacje, utworzono biblioteki DLL przy użyciu języka Visual C++! Następnie utworzysz aplikację kliencką, która używa funkcji eksportowanych przez DLL.
+Gratulacje, utworzono biblioteki DLL przy użyciu programu Visual Studio! Następnie utworzysz aplikację kliencką, która używa funkcji eksportowanych przez DLL.
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>Utwórz aplikację kliencką, która używa biblioteki DLL
 
@@ -310,7 +310,7 @@ Do korzystania z biblioteki dll, czy Twoje właścicielem lub biblioteki DLL inn
 
 1. Aby utworzyć C++ aplikację, która używa biblioteki DLL, który został utworzony, na pasku menu wybierz **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okno dialogowe, wybierz opcję **pulpitu Windows** w obszarze **zainstalowane** > **Visual C++**. W środkowym okienku wybierz **kreatora pulpitu Windows**. Określ nazwę dla projektu, `MathClient`w **nazwa** pole edycji.
+1. W okienku po lewej stronie **nowy projekt** okno dialogowe, wybierz opcję **pulpitu Windows** w obszarze **zainstalowane** > **Visual C++** . W środkowym okienku wybierz **kreatora pulpitu Windows**. Określ nazwę dla projektu, `MathClient`w **nazwa** pole edycji.
 
    ![Nazwij projekt klienta](media/mathclient-new-project-name-153.png "nazwij projekt klienta")
 
@@ -324,7 +324,7 @@ Do korzystania z biblioteki dll, czy Twoje właścicielem lub biblioteki DLL inn
 
 1. Aby utworzyć C++ aplikację, która używa biblioteki DLL, który został utworzony, na pasku menu wybierz **pliku** > **New** > **projektu**.
 
-1. W okienku po lewej stronie **nowy projekt** okno dialogowe, wybierz opcję **Win32** w obszarze **zainstalowane** > **szablony**  >  **Visual C++**. W środkowym okienku wybierz **Aplikacja konsoli Win32**. Określ nazwę dla projektu, `MathClient`w **nazwa** pole edycji.
+1. W okienku po lewej stronie **nowy projekt** okno dialogowe, wybierz opcję **Win32** w obszarze **zainstalowane** > **szablony**  >  **Visual C++** . W środkowym okienku wybierz **Aplikacja konsoli Win32**. Określ nazwę dla projektu, `MathClient`w **nazwa** pole edycji.
 
    ![Nazwij projekt klienta](media/mathclient-project-name.png "nazwij projekt klienta")
 
@@ -346,7 +346,7 @@ Następnie można wywołać funkcji MathLibrary w kodzie źródłowym, projekt m
 
 1. W **konfiguracji** listy rozwijanej wybierz pozycję **wszystkie konfiguracje** Jeśli nie została jeszcze wybrana.
 
-1. W okienku po lewej stronie wybierz **ogólne** w obszarze **właściwości konfiguracji** > **C/C++**.
+1. W okienku po lewej stronie wybierz **ogólne** w obszarze **właściwości konfiguracji** > **C/C++** .
 
 1. W okienku właściwości wybierz kontrolkę listy rozwijanej obok **dodatkowe katalogi dołączenia** pole edycji, a następnie wybierz **Edytuj**.
 
@@ -354,15 +354,17 @@ Następnie można wywołać funkcji MathLibrary w kodzie źródłowym, projekt m
 
 1. W górnym okienku kliknij dwukrotnie ikonę **dodatkowe katalogi dołączenia** okno dialogowe, aby włączyć formant edycji.
 
-1. W formancie edycji, wpisz ścieżkę do lokalizacji **MathLibrary.h** pliku nagłówka. W takim przypadku można użyć ścieżki względnej z folderu, który zawiera pliki .cpp w projekcie klienta do folderu, który zawiera plik .h klasy w projekcie biblioteki DLL. Jeśli projekt klienta znajduje się w oddzielnym rozwiązaniu, w tym samym folderze, jako rozwiązanie do biblioteki DLL, ścieżka względna powinien wyglądać następująco:
+1. W formancie edycji, wpisz ścieżkę do lokalizacji **MathLibrary.h** pliku nagłówka. Kliknij strzałkę w dół, a następnie wybierz  **\<Edytuj >** . Możesz kliknąć ikonę folderu, a następnie przycisk wielokropka ( **...** ) aby przejść do poprawnego folderu.
+ 
+   Możesz również takim, można wpisać ścieżkę względną z folderu, który zawiera pliki .cpp w projekcie klienta do folderu, który zawiera plik .h klasy w projekcie biblioteki DLL. Jeśli projekt klienta znajduje się w oddzielnym rozwiązaniu, w tym samym folderze, jako rozwiązanie do biblioteki DLL, ścieżka względna powinien wyglądać następująco:
 
-   `..\..\MathLibrary\MathLibrary`
+   `..\MathLibrary\MathLibrary`
 
-   Projekty biblioteki DLL i klienta znajdują się w tym samym rozwiązaniu, czy te rozwiązania są w różnych folderach, następnie należy dostosować ścieżki względnej odpowiednio.
+   Projekty biblioteki DLL i klienta znajdują się w tym samym rozwiązaniu, czy te rozwiązania są w różnych folderach, następnie musisz odpowiednio dostosować ścieżki względnej, czyli przeglądanie w poszukiwaniu folderu przy użyciu metody opisane wcześniej.
 
    ![Dodaj nagłówek lokalizacji do właściwości dodatkowe katalogi dołączenia](media/mathclient-additional-include-directories.png "Dodaj lokalizację nagłówka do właściwości dodatkowe katalogi dołączenia")
 
-1. Po wprowadzeniu ścieżkę do pliku nagłówka w **dodatkowe katalogi dołączenia** okna dialogowego wybierz **OK** przycisk, aby przejść z powrotem do **stron właściwości** okno dialogowe i następnie wybierz **OK** przycisk, aby zapisać zmiany.
+1. Po wprowadzeniu ścieżkę do pliku nagłówka w **dodatkowe katalogi dołączenia** okna dialogowego wybierz **OK** przycisk, aby przejść z powrotem do **stron właściwości** okno dialogowe a następnie wybierz **OK** przycisk, aby zapisać zmiany.
 
 Teraz możesz uwzględnić **MathLibrary.h** pliku i korzystanie z funkcji deklaruje w aplikacji klienckiej. Zastąp zawartość **MathClient.cpp** przy użyciu tego kodu:
 
@@ -412,8 +414,14 @@ Ten kod można skompilowany, ale nie jest to połączony, ponieważ konsolidator
 
 1. W górnym okienku kliknij dwukrotnie ikonę **dodatkowe katalogi bibliotek** okno dialogowe, aby włączyć formant edycji. W formancie edycji, wpisz ścieżkę do lokalizacji **MathLibrary.lib** pliku. Wprowadź tę wartość, aby użyć makra, który działa w przypadku zarówno Debug i Release kompiluje:
 
-   `..\..\MathLibrary\$(IntDir)`
+   **Visual Studio 2019:**
 
+   `..\MathLibrary\$(IntDir)`
+
+   **Visual Studio 2017 and earlier:**
+
+   `..\..\MathLibrary\$(IntDir)`
+ 
    ![Dodaj katalog biblioteki](media/mathclient-additional-library-directories.png "Dodaj katalog biblioteki")
 
 1. Po wprowadzeniu ścieżkę do pliku biblioteki w **dodatkowe katalogi bibliotek** okna dialogowego wybierz **OK** przycisk, aby przejść z powrotem do **stron właściwości** okno dialogowe.
@@ -430,13 +438,19 @@ Aplikację kliencką teraz kompilowanie i łączenie pomyślnie, ale nadal nie m
 
 1. W okienku właściwości, wybierz formant edycji w **wiersza polecenia** pola, a następnie wprowadź następujące polecenie:
 
+   **Visual Studio 2019:**
+
+   `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
+
+    **Visual Studio 2017 and earlier:**
+
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
    ![Dodaj polecenie postkompilacyjnego](media/mathclient-post-build-command-line.png "Dodaj polecenie po kompilacji")
 
 1. Wybierz **OK** przycisk, aby zapisać zmiany we właściwościach projektu.
 
-Teraz aplikację kliencką ma wszystko, co jest potrzebne do kompilowania i uruchamiania. Kompiluj aplikację, wybierając **kompilacji** > **Kompiluj rozwiązanie** na pasku menu. **Dane wyjściowe** okna w programie Visual Studio powinny mieć mniej więcej tak:
+Teraz aplikację kliencką ma wszystko, co jest potrzebne do kompilowania i uruchamiania. Kompiluj aplikację, wybierając **kompilacji** > **Kompiluj rozwiązanie** na pasku menu. **Dane wyjściowe** okna w programie Visual Studio powinny mieć podobny do poniższego w zależności od używanej wersji programu Visual Studio:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------

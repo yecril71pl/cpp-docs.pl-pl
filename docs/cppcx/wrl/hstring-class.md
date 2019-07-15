@@ -1,6 +1,6 @@
 ---
 title: HString — Klasa
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894402"
 ---
 # <a name="hstring-class"></a>HString — Klasa
 
@@ -76,6 +77,7 @@ Nazwa                                     | Opis
 [HString::Detach](#detach)               | Powoduje usunięcie określonego `HString` obiekt z jego podstawową wartość.
 [HString::Get](#get)                     | Pobiera wartość podstawowego dojścia HSTRING.
 [HString::GetAddressOf](#getaddressof)   | Pobiera wskaźnik do podstawowego dojścia HSTRING.
+[HString::GetRawBuffer](#getrawbuffer)   | Pobiera wskaźnik do danych bazowych ciągu.
 [HString::IsValid](#isvalid)             | Wskazuje, czy bieżący `HString` obiekt jest prawidłowy.
 [HString::MakeReference](#makereference) | Tworzy `HStringReference` obiekt z określonego parametru ciągu.
 [HString::Release](#release)             | Usuwa wartość ciągu i aktywuje bieżący `HString` obiektu na wartość pustą.
@@ -181,6 +183,22 @@ Wskaźnik do podstawowego dojścia HSTRING.
 ### <a name="remarks"></a>Uwagi
 
 Po tej operacji jest niszczony, wartość ciągu podstawowego dojścia HSTRING.
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+Pobiera wskaźnik do danych bazowych ciągu.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parametry
+
+*długość* wskaźnik do **int** zmienna, która odbiera długość danych.
+
+### <a name="return-value"></a>Wartość zwracana
+
+A **const** wskaźnik do danych bazowych ciągu.
+
 
 ## <a name="hstring"></a>HString::HString
 
