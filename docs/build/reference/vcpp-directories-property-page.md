@@ -1,6 +1,6 @@
 ---
 title: Strona właściwości katalogów VC++
-ms.date: 10/09/2018
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
 - VC.Project.VCDirectories.ReferencePath
@@ -13,94 +13,94 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9b005a89156db48615ec6ea8dfc4f07a7414fc3b
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861043"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299788"
 ---
-# <a name="vc-directories-property-page-windows"></a>VC ++ Directories Property Page (Windows)
+# <a name="vc-directories-property-page-windows"></a>Strona właściwości katalogów VC + + (system Windows)
 
-Użyj tej strony właściwości stwierdzić programu Visual Studio, które katalogi do użycia podczas tworzenia projektu aktualnie wybrany. Aby ustawić katalogi dla wielu projektów w rozwiązaniu, użyj arkusza właściwości niestandardowej, zgodnie z opisem w [udziału lub ponownego użycia w programie Visual Studio C++ ustawienia projektu](../create-reusable-property-configurations.md).
+Ta strona właściwości służy do informowania programu Visual Studio o katalogach, które będą używane podczas kompilowania aktualnie wybranego projektu. Aby ustawić katalogi dla wielu projektów w rozwiązaniu, Użyj niestandardowego arkusza właściwości, zgodnie z opisem w temacie [udostępnianie lub ponowne C++ Używanie ustawień projektu programu Visual Studio](../create-reusable-property-configurations.md).
 
-Wersja systemu Linux na tej stronie, zobacz [katalogi VC ++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
+Aby uzyskać wersję systemu Linux na tej stronie, zobacz [Katalogi VC + + ( C++Linux)](../../linux/prop-pages/directories-linux.md).
 
-Aby uzyskać dostęp do **katalogi VC ++** strona właściwości:
+Aby uzyskać dostęp do strony właściwości **katalogów VC + +** :
 
-1. Jeśli **Eksploratora rozwiązań** okno nie jest widoczne, następnie w menu głównym wybierz **widoku** > **Eksploratora rozwiązań**.
-1. Kliknij prawym przyciskiem myszy węzeł projektu (nie rozwiązanie najwyższego poziomu) i wybierz polecenie **właściwości**.
-1. W okienku po lewej stronie **stron właściwości** okno dialogowe, wybierz opcję **właściwości konfiguracji** > **katalogi VC ++** .
+1. Jeśli okno **Eksplorator rozwiązań** nie jest widoczne, w menu głównym wybierz polecenie **Wyświetl** > **Eksplorator rozwiązań**.
+1. Kliknij prawym przyciskiem myszy węzeł projektu (nie rozwiązanie najwyższego poziomu) i wybierz polecenie **Właściwości**.
+1. W lewym okienku okna dialogowego **strony właściwości** wybierz kolejno pozycje **Właściwości** > konfiguracji**Katalogi VC + +** .
 
-Katalogi VC ++ właściwości mają zastosowanie do projektu, nie węzła najwyższego poziomu rozwiązania. Jeśli nie widzisz **katalogi VC ++** w obszarze **właściwości konfiguracji**, wybierz węzeł projektu C++ w **Eksploratora rozwiązań** okna:
+Właściwości katalogów VC + + dotyczą projektu, a nie węzła rozwiązania najwyższego poziomu. Jeśli nie widzisz **katalogów VC + +** w obszarze **Właściwości konfiguracji**, wybierz węzeł C++ projektu w oknie **Eksplorator rozwiązań** :
 
-![Wybierz węzeł projektu](../media/vcppdir.png "wybierz węzeł projektu, aby wyświetlić właściwości katalogów VC ++")
+![Wybierz węzeł projektu](../media/vcppdir.png "Wybierz węzeł projektu, aby wyświetlić właściwości katalogów VC + +")
 
-Należy pamiętać, że **katalogi VC ++** strony właściwości dla projektów dla wielu platform wygląda inaczej. Aby uzyskać informacje specyficzne dla projektów języka Linux C++, zobacz [katalogi VC ++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
+Należy pamiętać, że strona właściwości **katalogów VC + +** dla projektów międzyplatformowych wygląda inaczej. Aby uzyskać informacje specyficzne dla C++ projektów systemu Linux, zobacz [Katalogi VC + + C++(Linux)](../../linux/prop-pages/directories-linux.md).
 
-Jeśli nie jesteś zaznajomiony z *właściwości projektu* w programie Visual Studio, może okazać się przydatne do odczytu pierwszy [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+Jeśli nie znasz *właściwości projektu* w programie Visual Studio, może okazać się pomocne w pierwszym odczytywaniu [zestawu C++ właściwości kompilatora i kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-Domyślne ustawienia dla **katalogi VC ++** właściwości zależą od typu projektu. Projekty pulpitu zawierają lokalizacje narzędzi języka C++ dla określonego zestawu narzędzi platformy i lokalizacji zestawu Windows SDK. Możesz zmienić **zestawu narzędzi platformy** i **wersja zestawu Windows SDK** na **właściwości konfiguracji** > **ogólne** Strona.
+Ustawienia domyślne właściwości **katalogów VC + +** zależą od typu projektu. W przypadku projektów klasycznych znajdują się C++ lokalizacje narzędzi dla określonego zestawu danych platformy i lokalizacji Windows SDK. Zestaw **narzędzi platformy** i **wersję Windows SDK** można zmienić na stronie**Ogólne** **Właściwości** > konfiguracji.
 
-Aby wyświetlić wartości na żadnym z katalogów:
+Aby wyświetlić wartości dla dowolnego katalogu:
 
-1. Wybierz jedną z właściwości w **katalogi VC ++** strony. Na przykład wybrać **katalogi bibliotek**.
-1. Wybierz przycisk strzałki w dół na końcu pola wartości właściwości.
-1. W menu rozwijanym wybierz **Edytuj**.
+1. Wybierz jedną z właściwości na stronie **katalogów VC + +** . Na przykład wybierz pozycję **katalogi bibliotek**.
+1. Wybierz przycisk strzałki w dół na końcu pola wartość właściwości.
+1. Z menu rozwijanego wybierz polecenie **Edytuj**.
 
-![Edytuj katalogi bibliotek](../media/vcppdir_libdir_edit.png "okno dialogowe Edytowanie ścieżki biblioteki")
+![Edytuj katalogi biblioteki](../media/vcppdir_libdir_edit.png "Okno dialogowe edycji ścieżek biblioteki")
 
-Teraz pojawi się okno dialogowe następująco:
+Zobaczysz teraz okno dialogowe podobne do tego:
 
-![Pokaż katalogi bibliotek](../media/vcppdir_libdir.png "okno dialogowe Dodawanie lub usuwanie ścieżki biblioteki")
+![Pokaż katalogi bibliotek](../media/vcppdir_libdir.png "Okno dialogowe umożliwiające dodawanie lub usuwanie ścieżek biblioteki")
 
-Użyj tego okna dialogowego, aby wyświetlić bieżący katalog. Jednakże, jeśli chcesz zmienić lub dodać katalog go lepiej jest używać **Menedżer właściwości** utworzyć arkusz właściwości lub zmodyfikować domyślny arkusz właściwości użytkownika. Aby uzyskać więcej informacji, zobacz [udziału lub ponownego użycia w programie Visual Studio C++ ustawienia projektu](../create-reusable-property-configurations.md).
+To okno dialogowe służy do wyświetlania bieżących katalogów. Jeśli jednak chcesz zmienić lub dodać katalog, lepiej jest użyć **Menedżer właściwości** , aby utworzyć arkusz właściwości, lub zmodyfikować domyślny arkusz właściwości użytkownika. Aby uzyskać więcej informacji, zobacz [udostępnianie lub ponowne używanie C++ ustawień projektu programu Visual Studio](../create-reusable-property-configurations.md).
 
-Jak wspomniano powyżej, jest wiele ścieżek dziedziczone wyrażonych za pomocą makra.  Aby zbadać bieżącą wartość makra, wybierz opcję **makra** przycisk w prawym dolnym rogu okna dialogowego. Należy pamiętać, że wiele makra są zależne od typu konfiguracji. Makra w kompilacji debugowania może zwrócić z inną ścieżką niż sam makra w kompilacji wydania.
+Jak pokazano powyżej, wiele dziedziczonych ścieżek jest podawanych jako makra.  Aby przejrzeć bieżącą wartość makra, wybierz przycisk **makra** w prawym dolnym rogu okna dialogowego. Należy zauważyć, że wiele makr zależy od typu konfiguracji. Makro w kompilacji debugowania może oszacować inną ścieżkę niż to samo makro w kompilacji wydania.
 
-Możesz wyszukać częściowe lub całkowite dopasowań w polu edycji. Na poniższej ilustracji przedstawiono wszystkie makra, które zawierają ciąg "WindowsSDK" i zawiera również bieżącą ścieżkę, która daje w wyniku makra:
+Możesz wyszukać częściowe lub kompletne dopasowania w polu edycji. Na poniższej ilustracji przedstawiono wszystkie makra, które zawierają ciąg "WindowsSDK", a także ścieżkę bieżącą, którą to makro daje:
 
-![Zobacz makra wartości](../media/vcppdir_libdir_macros.png "okno dialogowe, aby edytować makra")
+![Wyświetlanie wartości makr](../media/vcppdir_libdir_macros.png "Okno dialogowe edytowania makr")
 
-Uwaga: Lista jest wypełniana podczas wpisywania. Nie naciśnij **Enter**.
+Uwaga: Lista jest wypełniana podczas pisania. Nie naciskaj klawisza **Enter**.
 
-Aby uzyskać więcej informacji na temat makr i dlaczego należy ich używać zamiast zakodowanych ścieżek, jeśli to możliwe, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+Aby uzyskać więcej informacji na temat makr i przyczyn ich używania zamiast ścieżek zakodowanych w miarę możliwości, zobacz [Ustawianie C++ kompilatora i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-Aby uzyskać listę często używanych makr, zobacz [typowe makra dla kompilacji polecenia i właściwości](common-macros-for-build-commands-and-properties.md).
+Listę często używanych makr można znaleźć [w temacie Common MACROS for Build Commands and Properties](common-macros-for-build-commands-and-properties.md).
 
-Można zdefiniować własne makra na dwa sposoby:
+Własne makra można definiować na dwa sposoby:
 
-- Ustawianie zmiennych środowiskowych w wierszu polecenia dla deweloperów. Wszystkie zmienne środowiskowe są traktowane jako makra i właściwości programu MSBuild.
+- Ustaw zmienne środowiskowe w wierszu polecenia dewelopera. Wszystkie zmienne środowiskowe są traktowane jako właściwości i makra programu MSBuild.
 
-- Definiowanie makr użytkownika w pliku .props. Aby uzyskać więcej informacji, zobacz [makra strony właściwości](../working-with-project-properties.md).
+- Zdefiniuj makra użytkownika w pliku. props. Aby uzyskać więcej informacji, zobacz [makra strony właściwości](../working-with-project-properties.md).
 
-Aby uzyskać więcej informacji zobacz te Posty na blogu: [Katalogi VC ++](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [dziedziczone właściwości i arkusze właściwości](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), i [Visual Studio 2010 C++ projektu Podręczniku uaktualniania programu](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
+Aby uzyskać więcej informacji, zobacz następujące wpisy w blogu: [Katalogi VC + +](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [dziedziczone właściwości i arkusze właściwości](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)oraz [Podręcznik uaktualniania projektu programu C++ Visual Studio 2010](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Typy katalogów
 
 Można również określić inne katalogi, jak poniżej.
 
-**Katalogi plików wykonywalnych**<br/>
-Katalogi, w których należy szukać plików wykonywalnych. Odnosi się do **ścieżki** zmiennej środowiskowej.
+**Katalogi wykonywalne**<br/>
+Katalogi, w których należy szukać plików wykonywalnych. Odpowiada zmiennej środowiskowej **Path** .
 
 **Katalogi plików nagłówkowych**<br/>
-Katalogi, w których należy szukać dołączanych plików, do których istnieją odwołania w kodzie źródłowym. Odnosi się do **INCLUDE** zmiennej środowiskowej.
+Katalogi, w których należy szukać dołączanych plików, do których istnieją odwołania w kodzie źródłowym. Odnosi się do zmiennej środowiskowej **include** .
 
 **Katalogi odwołań**<br/>
-Katalogi, w których należy szukać zestawów i pliki modułów (metadane), które są określone w kodzie źródłowym, [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy. Odnosi się do **LIBPATH** zmiennej środowiskowej.
+Katalogi, w których mają być wyszukiwane pliki zestawów i modułów (metadane), które są przywoływane w kodzie źródłowym przez dyrektywę [#using](../../preprocessor/hash-using-directive-cpp.md) . Odnosi się do zmiennej środowiskowej **LIBPATH** .
 
 **Katalogi bibliotek**<br/>
-Katalogi, w których należy szukać plików biblioteki (.lib); obejmują biblioteki wykonywalne. Odnosi się do **LIB** zmiennej środowiskowej. To ustawienie nie ma zastosowania do plików .obj; Aby utworzyć łącze do pliku .obj, na **właściwości konfiguracji** > **konsolidatora** > **ogólne** strony właściwości, wybierz opcję  **Dodatkowe zależności biblioteki** , a następnie określ względną ścieżkę pliku. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](linker-property-pages.md).
+Katalogi, w których należy szukać plików biblioteki (.lib); obejmują biblioteki wykonywalne. Odpowiada zmiennej środowiskowej **lib** . To ustawienie nie ma zastosowania do plików. obj; Aby utworzyć link do pliku. obj, na stronie właściwości**Ogólne** **konsolidatora** >  **Właściwości** > konfiguracji wybierz pozycję **dodatkowe zależności biblioteki** , a następnie określ ścieżkę względną pliku. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](linker-property-pages.md).
 
-**Katalogi WinRT biblioteki**<br/>
-Katalogi do wyszukiwania plików bibliotek WinRT do wykorzystania w aplikacjach platformy uniwersalnej Windows (UWP).
+**Katalogi WinRT**<br/>
+Katalogi do wyszukiwania plików biblioteki WinRT do użycia w aplikacjach platforma uniwersalna systemu Windows (platformy UWP).
 
 **Katalogi źródłowe**<br/>
 Katalogi, w których należy szukać plików źródłowych dla technologii IntelliSense.
 
 **Wyklucz katalogi**<br/>
-Przed każdym kompilacji programu Visual Studio wysyła zapytanie do sygnatury czasowej na wszystkie pliki w celu określenia, czy dowolne zostały zmienione od poprzedniej kompilacji. Jeżeli projekt zawiera duże biblioteki stabilny, możesz potencjalnie przyspieszyć czasy kompilacji poprzez wykluczenie tych katalogów z wyboru sygnatury czasowej.
+Przed każdą kompilacją program Visual Studio wysyła zapytanie do sygnatury czasowej dla wszystkich plików, aby określić, czy którykolwiek z nich został zmodyfikowany od czasu poprzedniej kompilacji. Jeśli projekt ma duże stabilne biblioteki, można skrócić czas kompilacji, wykluczając te katalogi ze sprawdzenia sygnatury czasowej.
 
 ## <a name="sharing-the-settings"></a>Współdzielenie ustawień
 
-Właściwości projektu można udostępniać innym użytkownikom lub na wielu komputerach. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+Właściwości projektu można udostępniać innym użytkownikom lub na wielu komputerach. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).

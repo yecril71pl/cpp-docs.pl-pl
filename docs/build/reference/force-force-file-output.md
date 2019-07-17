@@ -1,6 +1,6 @@
 ---
 title: /FORCE (Wymuszaj produkt wyjściowy pliku)
-ms.date: 11/04/2016
+ms.date: 07/19/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.ForceLink
 - /force
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: af7962a4b3b5805e7e0c4d59752254c8ade17f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292474"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299720"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Wymuszaj produkt wyjściowy pliku)
 
@@ -25,29 +25,31 @@ ms.locfileid: "62292474"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/Force informuje konsolidator, aby utworzył plik .exe prawidłowe lub biblioteki DLL nawet wtedy, gdy symbolu występują odwołania, ale nie zdefiniowane lub mnożenia zdefiniowane.
+Opcja/FORCE nakazuje konsolidatorowi utworzenie prawidłowego pliku. exe lub DLL, nawet jeśli istnieje odwołanie do symbolu, ale nie zdefiniowano go lub jest on wielokrotnie zdefiniowany.
 
-Opcja/Force można wykonać opcjonalny argument:
+Opcja/FORCE może przyjmować opcjonalny argument:
 
-- Użyj /FORCE:MULTIPLE, aby utworzyć plik wyjściowy, czy Konsolidacja znajduje więcej niż jedną definicję symbolu.
+- Użyj/FORCE: MULTIPLE, aby utworzyć plik wyjściowy, niezależnie od tego, czy LINK znajduje więcej niż jedną definicję symbolu.
 
-- Użyj opcji/Force: UNRESOLVED, aby utworzyć plik wyjściowy, czy Konsolidacja znajdzie Niezdefiniowany symbol. / FORCE: NIEROZPOZNANY jest ignorowana, jeśli symbol punktu wejścia nie został rozwiązany.
+- Użyj/FORCE: unrozwiązało, aby utworzyć plik wyjściowy niezależnie od tego, czy LINK odnajdzie niezdefiniowany symbol. /FORCE: nierozpoznany jest ignorowany, jeśli symbol punktu wejścia nie został rozpoznany.
 
-/ FORCE bez argumentów oznacza zarówno wielokrotne, nierozwiązany.
+/FORCE bez argumentów oznacza zarówno wielokrotne, jak i nierozwiązane.
 
-Plik utworzony przy użyciu tej opcji może nie działać zgodnie z oczekiwaniami. Konsolidator nie będzie łączyć przyrostowo, jeśli nie określono opcji/Force.
+Plik utworzony przy użyciu tej opcji może nie działać zgodnie z oczekiwaniami. Konsolidator nie będzie łączyć przyrostowo, gdy zostanie określona opcja/FORCE.
 
-Jeśli moduł został skompilowany z **/CLR**, **/FORCE** nie utworzy obraz.
+Jeśli moduł jest kompilowany z **/CLR**, **/Force** nie utworzy obrazu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. 
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+1. Kliknij stronę właściwości **wiersza polecenia** .
 
-1. Wpisz opcje w **dodatkowe opcje** pole.
+1. Wpisz opcję w polu **dodatkowe opcje** .
+
+Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

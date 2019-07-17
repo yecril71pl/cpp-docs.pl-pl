@@ -1,6 +1,6 @@
 ---
-title: Dokumentacja strony właściwości projektu C++ — Visual Studio
-ms.date: 05/06/2019
+title: C++odwołanie do strony właściwości projektu — Visual Studio
+ms.date: 07/16/2019
 f1_keywords:
 - VC.Project.NotAProp.Edit
 helpviewer_keywords:
@@ -14,22 +14,30 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217789"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299731"
 ---
-# <a name="c-project-property-page-reference"></a>Dokumentacja strony właściwości projektu C++
+# <a name="c-project-property-page-reference"></a>C++odwołanie do strony właściwości projektu
 
-Za pomocą stron właściwości, można określić ustawienia dla projektów programu Visual Studio. Aby otworzyć **stron właściwości** okno dialogowe dla programu Visual Studio projektu na **projektu** menu, wybierz **właściwości**. Aby uzyskać więcej informacji na temat właściwości projektu, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+W programie Visual Studio można określić opcje kompilatora i konsolidatora, ścieżki plików i inne ustawienia kompilacji za pomocą stron właściwości projektu. Aby otworzyć **strony właściwości**, wybierz**Właściwości** **projektu** > z menu głównego lub kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. Aby uzyskać więcej informacji na temat właściwości projektu, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-Strony właściwości w projektach innego niż Windows, można zobaczyć [dokumentacja strony właściwości C++ Linux](../../linux/prop-pages-linux.md).
+W przypadku stron właściwości w projektach systemu Linux zapoznaj się z informacjami na [stronie właściwości systemu Linux C++ ](../../linux/prop-pages-linux.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Zaawansowane, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](advanced-manifest-tool.md)
+[Strona właściwości ogólnych (projekt)](general-property-page-project.md)
+
+[Strona właściwości katalogów VC++](vcpp-directories-property-page.md)
+
+[Narzędzie manifestu, ogólne](general-manifest-tool-configuration-properties.md)
+[narzędzie manifestu, wejściowe i wyjściowe](input-and-output-manifest-tool.md)
+[narzędzie manifestu, izolowane](isolated-com-manifest-tool.md)
+[narzędzie manifestu](advanced-manifest-tool.md) com, zaawansowane
+
 
 [Strony właściwości wiersza polecenia](command-line-property-pages.md)
 
@@ -39,9 +47,9 @@ Strony właściwości w projektach innego niż Windows, można zobaczyć [dokume
 
 [Strona właściwości ogólnych (plik)](general-property-page-file.md)
 
-[Strona właściwości ogólnych (projekt)](general-property-page-project.md)
 
-[Ogólne, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](general-manifest-tool-configuration-properties.md)
+
+
 
 [Strony właściwości HLSL](hlsl-property-pages.md)
 
@@ -51,9 +59,9 @@ Strony właściwości w projektach innego niż Windows, można zobaczyć [dokume
 
 [Strony właściwości HLSL: Pliki wyjściowe](hlsl-property-pages-output-files.md)
 
-[Wejście i wyjście, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](input-and-output-manifest-tool.md)
 
-[COM izolowany, narzędzie manifestu, właściwości konfiguracji, \<nazwa_projektu > okno dialogowe strony właściwości](isolated-com-manifest-tool.md)
+
+
 
 [Strony właściwości konsolidatora](linker-property-pages.md)
 
@@ -73,7 +81,7 @@ Strony właściwości w projektach innego niż Windows, można zobaczyć [dokume
 
 [Strony właściwości zasobów](resources-property-pages.md)
 
-[Strona właściwości katalogów VC++](vcpp-directories-property-page.md)
+
 
 [Strona właściwości Odwołania sieci Web](web-references-property-page.md)
 
