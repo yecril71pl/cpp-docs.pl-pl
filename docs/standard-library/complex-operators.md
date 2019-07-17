@@ -15,27 +15,20 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 8641e2f8bcc80cd2ba9b6b68e5574a476f60312e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8f8b623ad53b84b8e614a1831d1a060df890931
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371623"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244706"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;złożone&gt; operatorów
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[Operator&gt;&gt;](#op_gt_gt)|[Operator&lt;&lt;](#op_lt_lt)|
-|[operator*](#op_star)|[operator +](#op_add)|[operator-](#operator-)|
-|[operator/](#op_div)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator! =
+## <a name="op_neq"></a> operator! =
 
 Testuje pod kątem nierówności pomiędzy dwóch liczb zespolonych, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.
 
 ```
-
 template <class Type>
 bool operator!=(
     const complex<Type>& left,
@@ -54,10 +47,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
-*right*<br/>
+*po prawej stronie*\
 Liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -170,7 +163,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  Operator\*
+## <a name="op_star"></a> Operator\*
 
 Mnoży dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.
 
@@ -194,10 +187,10 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez \* operacji.
 
-*right*<br/>
+*po prawej stronie*\
 Druga dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez \* operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -268,7 +261,7 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a>  operator +
+## <a name="op_add"></a> operator +
 
 Dodaje dwie liczby zespolone, jeden lub oba może należeć do podzbioru typu rzeczywiste i urojone części.
 
@@ -295,10 +288,10 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać dodany przez + operacji.
 
-*right*<br/>
+*po prawej stronie*\
 Druga dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać dodany przez + operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -409,7 +402,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a> operator-
 
 Odejmuje dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.
 
@@ -435,10 +428,10 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej do odjęcia — operacja.
 
-*right*<br/>
+*po prawej stronie*\
 Drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej do odjęcia — operacja.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -551,7 +544,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a>  operator /
+## <a name="op_div"></a> operator /
 
 Dzieli dwie liczby zespolone, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.
 
@@ -574,10 +567,10 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Liczbą lub liczbą, która jest typu parametru dla liczby zespolonej, który jest licznikiem podzielenia przez dzielnik z / operacji.
 
-*right*<br/>
+*po prawej stronie*\
 Liczbą lub liczbą, która jest typu parametru dla numeru złożone, który jest mianownikiem ma być używany do dzielenia licznik z / operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -671,7 +664,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a>  Operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operator&lt;&lt;
 
 Wstawia liczby zespolonej określony do strumienia wyjściowego.
 
@@ -684,10 +677,10 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostr*<br/>
+*OSTR*\
 Strumień wyjściowy, w którym jest wprowadzana liczby zespolonej.
 
-*right*<br/>
+*po prawej stronie*\
 Liczby zespolonej wprowadzonych do strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -733,7 +726,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a>  operator ==
+## <a name="op_eq_eq"></a> operator ==
 
 Testuje pod kątem równości pomiędzy dwóch liczb zespolonych, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.
 
@@ -757,10 +750,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
-*right*<br/>
+*po prawej stronie*\
 Liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -873,7 +866,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a>  Operator&gt;&gt;
+## <a name="op_gt_gt"></a> Operator&gt;&gt;
 
 Wyodrębnia wartość złożoną ze strumienia wejściowego.
 
@@ -887,10 +880,10 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*Istr*<br/>
+*Istr*\
 Strumień wejściowy, z której jest wyodrębniany liczby zespolonej.
 
-*right*<br/>
+*po prawej stronie*\
 Liczby zespolonej wyodrębniona ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -932,7 +925,3 @@ int main( )
 Input a complex number ( try: 2.0 ): 2.0
 2.0
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[\<complex>](../standard-library/complex.md)<br/>

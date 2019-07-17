@@ -1,27 +1,30 @@
 ---
-title: '&lt;random&gt;'
+title: '&lt;losowe&gt;'
 ms.date: 08/24/2017
 f1_keywords:
 - <random>
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450792"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240419"
 ---
-# <a name="ltrandomgt"></a>&lt;random&gt;
+# <a name="ltrandomgt"></a>&lt;losowe&gt;
 
 Definiuje urządzenia Generowanie liczby losowej, umożliwiając tworzenie równomiernie rozłożonych liczb losowych.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <random>
-```
+**Nagłówek**: \<losowy >
+
+**Namespace:** standardowe
+
+> [!NOTE]
+> \<Losowy > korzysta z biblioteki "#include < initializer_list >" instrukcji.
 
 ## <a name="summary"></a>Podsumowanie
 
@@ -493,9 +496,9 @@ Aby uzyskać więcej informacji zobacz podtematy odwołanie niższego od podaneg
 
 Istnieją dwa URNGs bardzo przydatne w programie Visual Studio —`mt19937` i `random_device`— jak pokazano w tej tabeli porównania:
 
-|URNG|Szybka|Crypto-secure|Seedable|Deterministyczna|
+|URNG|Szybka|Bezpieczne kryptograficznego|Seedable|Deterministyczna|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|Tak|Nie|Yes|Tak<sup>*</sup>|
+|`mt19937`|Yes|Nie|Yes|Tak<sup>*</sup>|
 |`random_device`|Nie|Yes|Nie|Nie|
 
 <sup>* Jeśli klient poda znanych inicjatora.</sup>

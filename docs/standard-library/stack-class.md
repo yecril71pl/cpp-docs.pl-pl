@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412439"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241065"
 ---
 # <a name="stack-class"></a>stack — Klasa
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*Typ*\
 Typ danych elementu mają być przechowywane w stosie.
 
-*Kontener*<br/>
-Typ podstawowy kontener używany do implementowania stosu. Wartość domyślna to klasa `deque`  *\<typ >*.
+*Kontener*\
+Typ podstawowy kontener używany do implementowania stosu. Wartość domyślna to klasa `deque`  *\<typ >* .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -60,23 +60,25 @@ Stosu obiektów są wtedy porównywanie równości i tylko wtedy, gdy elementy k
 
 - [Priority_queue — klasa](../standard-library/priority-queue-class.md) porządkuje jego elementy, dzięki czemu największy element jest zawsze u góry. Obsługuje ona Wstawianie elementu i inspekcji i usuwania górnego elementu. Dobre analogowy na uwadze byłoby osób wyrównywanie gdzie one są uporządkowane według wiek, wysokości lub innego kryterium.
 
+## <a name="members"></a>Elementy członkowskie
+
 ### <a name="constructors"></a>Konstruktorów
 
-|Konstruktor|Opis|
+|||
 |-|-|
 |[stack](#stack)|Konstruuje `stack` pusty lub jest kopię obiektu podstawowego kontenera.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[container_type](#container_type)|Typ, który zapewnia podstawowy kontener, aby zostać dostosowane przez `stack`.|
 |[size_type](#size_type)|Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w `stack`.|
 |[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `stack`.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="functions"></a>Funkcje
 
-|Funkcja elementu członkowskiego|Opis|
+|||
 |-|-|
 |[pusty](#empty)|Sprawdza, czy `stack` jest pusty.|
 |[POP](#pop)|Usuwa element z góry `stack`.|
@@ -84,13 +86,7 @@ Stosu obiektów są wtedy porównywanie równości i tylko wtedy, gdy elementy k
 |[Rozmiar](#size)|Zwraca liczbę elementów w `stack`.|
 |[Do góry](#top)|Zwraca odwołanie do elementu w górnej części `stack`.|
 
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<stosu >
-
-**Namespace:** standardowe
-
-## <a name="container_type"></a>  Stack::container_type
+## <a name="container_type"></a> container_type —
 
 Typ, który dostarcza podstawowy kontener, aby dostosować.
 
@@ -108,7 +104,7 @@ Aby uzyskać więcej informacji na temat `Container`, zobacz sekcję Uwagi [stac
 
 Zobacz przykład [stack::stack](#stack) przykładowy sposób deklarowania i użyj `container_type`.
 
-## <a name="empty"></a>  Stack::Empty
+## <a name="empty"></a> pusty
 
 Sprawdza, czy stos jest pusty.
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>  Stack::POP
+## <a name="pop"></a> POP
 
 Usuwa element z góry stosu.
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>  Stack::push
+## <a name="push"></a> wypychania
 
 Dodaje element do góry stosu.
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Element dodany na górze stosu.
 
 ### <a name="remarks"></a>Uwagi
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>  Stack::size
+## <a name="size"></a> Rozmiar
 
 Zwraca liczbę elementów w stosie.
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>  Stack::size_type
+## <a name="size_type"></a> size_type
 
 Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w stosie.
 
@@ -315,7 +311,7 @@ Typ jest synonimem dla `size_type` podstawowy kontenera dostosowane przez stos.
 
 Zobacz przykład [rozmiar](#size) przykładowy sposób deklarowania i użyj `size_type`.
 
-## <a name="stack"></a>  Stack::Stack
+## <a name="stack"></a> Stos
 
 Tworzy stosu, który jest pusty lub jest kopią klasy bazowej kontenera.
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Kontener, w której skonstruowany stosu jest kopią.
 
 ### <a name="example"></a>Przykład
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>  Stack::Top
+## <a name="top"></a> Do góry
 
 Zwraca odwołanie do elementu w górnej części stosu.
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>  Stack::value_type
+## <a name="value_type"></a> value_type
 
 Typ, który reprezentuje typ obiektu przechowywanego jako element w stosie.
 

@@ -6,26 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: e599a725feb46eaa90023fdb9c999f5b2d159637
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5036f2efc782c3b2f385960cd9cbf6935212f720
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412634"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240763"
 ---
 # <a name="ltexceptiongt"></a>&lt;wyjątek&gt;
 
 Definiuje kilka typów i funkcji związanych z obsługą wyjątków. Obsługa wyjątków jest używana w sytuacjach, w których system może odzyskać sprawność po błędzie. Zapewnia środek kontroli, który ma być zwracany z funkcji do programu. Celem włączenia obsługi wyjątków jest zwiększenie niezawodności programu przy jednoczesnym zapewnieniu sposobu odzyskania sprawności po błędzie w sposób uporządkowany.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <exception>
-```
+**Nagłówek:** \<wyjątku >
+
+**Namespace:** standardowe
+
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|Typ, który opisuje wskaźnik do wyjątku.|
 |[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|Typ, który opisuje wskaźnik do funkcji odpowiedni do użytku jako `terminate_handler`.|
@@ -33,25 +35,28 @@ Definiuje kilka typów i funkcji związanych z obsługą wyjątków. Obsługa wy
 
 ### <a name="functions"></a>Funkcje
 
-|Funkcja|Opis|
+|||
 |-|-|
 |[current_exception](../standard-library/exception-functions.md#current_exception)|Uzyskuje wskaźnik do bieżącego wyjątku.|
 |[get_terminate](../standard-library/exception-functions.md#get_terminate)|Uzyskuje bieżącą `terminate_handler` funkcji.|
 |[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|Uzyskuje bieżącą `unexpected_handler` funkcji.|
 |[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|Tworzy `exception_ptr` obiekt, który przechowuje kopię wyjątku.|
 |[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|Zgłasza wyjątek przekazany jako parametr.|
+|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|Rzutuje i zgłasza wyjątek, jeśli jest zagnieżdżony.|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|Ustanawia nowy `terminate_handler` wywoływany przy zakończeniu programu.|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Ustanawia nowy `unexpected_handler` się kiedy napotkane nieoczekiwane wyjątki.|
 |[Zakończenie](../standard-library/exception-functions.md#terminate)|Wywołuje terminate_handler.|
+|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|Zgłasza wyjątek, jeśli jest zagnieżdżony.|
 |[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Zwraca **true** tylko wtedy, gdy zgłoszony wyjątek jest obecnie przetwarzany.|
-|[unexpected](../standard-library/exception-functions.md#unexpected)|Wywołuje program obsługi nieoczekiwanych wyjątków.|
+|[Nieoczekiwany](../standard-library/exception-functions.md#unexpected)|Wywołuje program obsługi nieoczekiwanych wyjątków.|
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
 |[bad_exception, klasa](../standard-library/bad-exception-class.md)|Klasa opisuje wyjątek, który może zostać wygenerowany z `unexpected_handler`.|
 |[exception, klasa](../standard-library/exception-class.md)|Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych przez niektóre wyrażenia i standardowej biblioteki języka C++.|
+|[nested_exception klasy](../standard-library/nested-exception-class.md)|Klasa opisuje wyjątek, który może być przechwytywane i przechowywane do późniejszego użycia.|
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159421"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243758"
 ---
 # <a name="ltfunctionalgt"></a>&lt;funkcjonalności&gt;
 
 Definiuje funkcje standardowej biblioteki języka C++, które pomagają tworzyć *funkcji obiektów*, znane również jako *funktory*i ich wiążących. Obiekt funkcji jest obiektem typu, który definiuje `operator()`. Obiekt funkcyjny mogą być wskaźnik funkcji, ale zazwyczaj obiekt jest używany do przechowywania dodatkowych informacji, które może uzyskać dostęp podczas wywołania funkcji.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <functional>
-```
+**Nagłówek:** \<funkcjonalności >
+
+**Namespace:** standardowe
 
 ## <a name="remarks"></a>Uwagi
 
@@ -72,20 +72,25 @@ Jeśli wywołanie otoką *typ wyniku słabe*, typ jego typ elementu członkowski
 
 Otoka co wywołanie ma Konstruktor przenoszący i Konstruktor kopiujący. A *prostego wywołania otoki* jest otoką wywołania mającego przypisania operatora i której Konstruktor kopiujący, Konstruktor przenoszący i operator przypisania nie zgłaszają wyjątki. A *przekazywania wywołanie otoką* jest otoką wywołań, który można wywoływać za pomocą listy argumentów dowolnego, i który dostarcza argumentów na obiekt opakowany jako odwołania. Wszystkie argumenty r-wartości są dostarczane jako odwołania rvalue, a argumenty lvalue są dostarczane jako odwołania lvalue.
 
-## <a name="classes"></a>Klasy
+## <a name="members"></a>Elementy członkowskie
 
-|Class|Opis|
+### <a name="classes"></a>Klasy
+
+|||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Klasa, która opisuje wyjątek generowany w celu wskazania, że wywołanie `operator()` na [funkcja](../standard-library/function-class.md) obiektu nie powiodło się, ponieważ obiekt był pusty.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną określoną funkcję binarny.<br/> (Przestarzałe w języku C ++ 17). |
 |[binder1st](../standard-library/binder1st-class.md)|Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie pierwszy argument funkcji binarnego na określoną wartość.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[binder2nd](../standard-library/binder2nd-class.md)|Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie drugi argument funkcji binarnego na określoną wartość.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
+|[binder2nd —](../standard-library/binder2nd-class.md)|Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie drugi argument funkcji binarnego na określoną wartość.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
+|[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
+|[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Klasa adaptera, która umożliwia const funkcja elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiekt funkcji jednoargumentowe podczas inicjowania przy użyciu argument odwołania.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
 |[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Klasa adaptera, która umożliwia stałą funkcję elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiektu funkcyjnego jednoargumentowe podczas inicjowania przy użyciu argumentu będącego wskaźnikiem.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
 |[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Klasa adaptera, która umożliwia const funkcja elementu członkowskiego, która przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argument odwołania.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
 |[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Klasa adaptera, która umożliwia stałą funkcję elementu członkowskiego, która przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argumentu będącego wskaźnikiem.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
+|[default_searcher](../standard-library/default-searcher-class.md)||
 |[— Funkcja](../standard-library/function-class.md)|Klasa, która otacza obiekt możliwy do wywołania.|
-|[hash](../standard-library/hash-class.md)|Klasa, która oblicza wartość skrótu dla wartości.|
+|[Skrót](../standard-library/hash-class.md)|Klasa, która oblicza wartość skrótu dla wartości.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Klasa, która sprawdza, czy określony typ jest generowany przez wywołanie metody `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Klasa, która sprawdza, czy określony typ jest symbolem zastępczym.|
 |[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Klasa adaptera, który umożliwia `non_const` funkcja elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiekt funkcji jednoargumentowe po zainicjowaniu z argumentem odwołania.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
@@ -97,9 +102,9 @@ Otoka co wywołanie ma Konstruktor przenoszący i Konstruktor kopiujący. A *pro
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Klasa, która otacza odwołania.|
 |[unary_negate](../standard-library/unary-negate-class.md)|Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną funkcję jednoargumentową określony.<br/> (Przestarzałe w języku C ++ 17).  |
 
-## <a name="functions"></a>Funkcje
+### <a name="functions"></a>Funkcje
 
-|Funkcja|Opis|
+|||
 |-|-|
 |[powiązania](../standard-library/functional-functions.md#bind)|Wiąże argumenty wywoływanego obiektu.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|Funkcja szablonu pomocnika, która tworzy adapter do skonwertowania obiektu binarnego funkcja do obiektu funkcyjnego jednoargumentowe przez powiązanie pierwszy argument funkcji binarnego na określoną wartość.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
@@ -109,6 +114,7 @@ Otoka co wywołanie ma Konstruktor przenoszący i Konstruktor kopiujący. A *pro
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Zwraca wartość logiczną logiczne OR (operator&#124;) z dwóch parametrów.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Zwraca wartość iloczynu bitowego XOR logiczne (operator ^) z dwóch parametrów.|
 |[cref](../standard-library/functional-functions.md#cref)|Konstruuje stałą `reference_wrapper` z argumentem.|
+|[wywołania](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Generuje otoki prostemu wywołaniu.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Pomocnik funkcje szablonu użytego do stworzenia funkcji adapterów obiektu dla funkcji składowych po zainicjowaniu wskaźnika argumentów.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Funkcji pomocnika, która szablonu użytego do stworzenia funkcji adapterów obiektu dla funkcji składowych po zainicjowaniu z argumentami odwołania.|
@@ -119,9 +125,9 @@ Otoka co wywołanie ma Konstruktor przenoszący i Konstruktor kopiujący. A *pro
 |[ref](../standard-library/functional-functions.md#ref)|Konstruuje `reference_wrapper` z argumentem.|
 |[swap](../standard-library/functional-functions.md#swap)|Zamień dwa `function` obiektów.|
 
-## <a name="structs"></a>Struktury
+### <a name="structs"></a>Struktury
 
-|Struct|Opis|
+|||
 |-|-|
 |[binary_function —](../standard-library/binary-function-struct.md)|Pusta klasa podstawowa definiująca typy, które mogą być dziedziczone przez klasy pochodnej, który dostarcza obiekt funkcji binarnego.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
 |[dzieli](../standard-library/divides-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje operacji arytmetycznej dzielenia elementów typu określoną wartość.|
@@ -139,17 +145,17 @@ Otoka co wywołanie ma Konstruktor przenoszący i Konstruktor kopiujący. A *pro
 |[negate](../standard-library/negate-struct.md)|Klasa oferuje obiektu wstępnie zdefiniowana funkcja, która zwraca ujemne wartości element.|
 |[not_equal_to](../standard-library/not-equal-to-struct.md)|Predykat binarny, który umożliwia sprawdzenie, czy wartość o określonym typie nie jest równa z inną wartością tego typu.|
 |[plus](../standard-library/plus-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje arytmetyczne operacji dodawania elementów typu określoną wartość.|
-|[unary_function](../standard-library/unary-function-struct.md)|Pusta klasa podstawowa definiująca typy, które mogą być dziedziczone przez klasy pochodnej, który dostarcza obiekt funkcji jednoargumentowy.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
+|[unary_function —](../standard-library/unary-function-struct.md)|Pusta klasa podstawowa definiująca typy, które mogą być dziedziczone przez klasy pochodnej, który dostarcza obiekt funkcji jednoargumentowy.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
 
-## <a name="objects"></a>Obiekty
+### <a name="objects"></a>Obiekty
 
-|Obiekt|Opis|
+|||
 |-|-|
 |[_1.._M](../standard-library/1-object.md)|Symbole zastępcze dla wymiennych argumentów.|
 
-## <a name="operators"></a>Operatory
+### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|Nie zezwala na porównanie równości obiektów możliwy do wywołania.|
 |[operator!=](../standard-library/functional-operators.md#op_neq)|Nie zezwala na porównanie nierówności wywoływalnej obiektów.|

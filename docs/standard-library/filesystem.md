@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220376"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240697"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -89,10 +89,12 @@ Na koniec ważną funkcją obiekty ścieżki jest, że można ich używać w dow
 
 Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="classes"></a>Klasy
+## <a name="members"></a>Elementy członkowskie
 
-|Nazwa|Opis|
-|----------|-----------------|
+### <a name="classes"></a>Klasy
+
+|||
+|-|-|
 |[directory_entry, klasa](../standard-library/directory-entry-class.md)|Opisuje obiekt, który jest zwracany przez `directory_iterator` lub `recursive_directory_iterator` i zawiera ścieżkę.|
 |[directory_iterator, klasa](../standard-library/directory-iterator-class.md)|Opisuje iterator danych wejściowych, które sekwencji za pomocą nazwy plików w katalogu systemu plików.|
 |[filesystem_error, klasa](../standard-library/filesystem-error-class.md)|Klasa bazowa dla wyjątków, które są generowane do zgłaszania przepełnienie niskiego poziomu systemu.|
@@ -100,10 +102,10 @@ Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu pli
 |[recursive_directory_iterator, klasa](../standard-library/recursive-directory-iterator-class.md)|Opisuje iterator danych wejściowych, które sekwencji za pomocą nazwy plików w katalogu systemu plików. Iterator który można również jest elementem podrzędnym elementu do podkatalogów.|
 |[file_status, klasa](../standard-library/file-status-class.md)|Opakowuje `file_type`.|
 
-## <a name="structs"></a>Struktury
+### <a name="structs"></a>Struktury
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info, struktura](../standard-library/space-info-structure.md)|Przechowuje informacje o woluminie.|
 
 ## <a name="functions"></a>Funkcje
@@ -116,12 +118,13 @@ Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu pli
 
 ## <a name="enumerations"></a>Wyliczenia
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Wyliczenie, które jest używane z [copy_file —](../standard-library/filesystem-functions.md#copy_file) i określa zachowanie, jeśli plik docelowy już istnieje.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Wyliczenie, które jest używane z [copy_file —](../standard-library/filesystem-functions.md#copy_file) i określa zachowanie, jeśli plik docelowy już istnieje.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Wyliczenie, które określa opcje dla iteratorów katalogu.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Wyliczenie dla typów plików.|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[PERMS](../standard-library/filesystem-enumerations.md#perms)|Typ maski bitów używany do przekazywania, uprawnień i opcje uprawnień|
 
 ## <a name="see-also"></a>Zobacz także

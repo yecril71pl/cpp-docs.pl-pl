@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca427bd364a5ab66112f23e0a920598ad8ba190b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412556"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246375"
 ---
 # <a name="sharedptr-class"></a>shared_ptr — Klasa
 
@@ -46,7 +46,7 @@ Otacza inteligentny wskaźnik zliczonych odwołań wokół obiektu przydzielaneg
 
 ```cpp
 template <class T>
-class shared_ptr;
+    class shared_ptr;
 ```
 
 ## <a name="remarks"></a>Uwagi
@@ -129,44 +129,67 @@ Wiele wątków może odczytywać i zapisywać różne `shared_ptr` obiektów w t
 
 ### <a name="constructors"></a>Konstruktorów
 
-|Konstruktor|Opis|
+|||
 |-|-|
 |[shared_ptr](#shared_ptr)|Konstruuje `shared_ptr`.|
-|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Niszczy `shared_ptr`.|
+|[~ shared_ptr](#dtorshared_ptr)|Niszczy `shared_ptr`.|
 
-### <a name="types"></a>Types
+### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[element_type](#element_type)|Typ elementu.|
 
 ### <a name="functions"></a>Funkcje
 
-|Funkcja|Opis|
+|||
 |-|-|
+|[allocate_shared](#allocate_shared)||
+|[const_pointer_cast](#const_pointer_cast)||
+|[dynamic_pointer_cast](#dynamic_pointer_cast)||
 |[get](#get)|Pobiera adres stanowiących własność zasobów.|
+|[get_deleter](#get_deleter)||
+|[make_shared](#make_shared)||
 |[owner_before](#owner_before)|Zwraca wartość PRAWDA, jeśli `shared_ptr` był zamówiony przed (lub mniej niż) podany wskaźnik.|
+|[reinterpret_pointer_cast](#reinterpret_pointer_cast)||
 |[Resetuj](#reset)|Zamień posiadane zasoby.|
+|[static_pointer_cast](#static_pointer_cast)||
 |[swap](#swap)|Zamień dwa `shared_ptr` obiektów.|
 |[unique](#unique)|Sprawdza, czy posiadane zasoby są unikatowe.|
 |[use_count](#use_count)|Zlicza liczby właścicieli zasobu.|
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
-|[shared_ptr::operator bool](#op_bool)|Sprawdza, czy istnieją własne zasoby.|
-|[shared_ptr::operator*](#op_star)|Pobiera wartość wyznaczoną.|
-|[shared_ptr::operator=](#op_eq)|Zamienia posiadane zasoby.|
-|[shared_ptr::operator-&gt;](#op_arrow)|Pobiera wskaźnik do wyznaczonej wartości.|
+|[bool — operator](#op_bool)|Sprawdza, czy istnieją własne zasoby.|
+|[operator *](#op_star)|Pobiera wartość wyznaczoną.|
+|[operator=](#op_eq)|Zamienia posiadane zasoby.|
+|[operator-&gt;](#op_arrow)|Pobiera wskaźnik do wyznaczonej wartości.|
+|[Operator&lt;&lt;](#op_arrowarrow)||
 
-## <a name="requirements"></a>Wymagania
+### <a name="allocate_shared"></a> allocate_shared
 
-**Nagłówek:** \<pamięci >
+```cpp
+template<class T, class A, class... Args>
+    shared_ptr<T> allocate_shared(const A& a, Args&&... args);
+```
 
-**Namespace:** standardowe
+### <a name="const_pointer_cast"></a> const_pointer_cast —
 
-## <a name="element_type"></a>  shared_ptr::ELEMENT_TYPE
+```cpp
+template<class T, class U>
+    shared_ptr<T> const_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast —
+
+```cpp
+template<class T, class U>
+    shared_ptr<T> dynamic_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Typ elementu.
 
@@ -174,11 +197,11 @@ Typ elementu.
 typedef T element_type;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ jest synonimem dla parametru szablonu `T`.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_element_type.cpp
@@ -201,7 +224,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a>  shared_ptr::Get
+### <a name="get"></a> Pobierz
 
 Pobiera adres stanowiących własność zasobów.
 
@@ -209,11 +232,11 @@ Pobiera adres stanowiących własność zasobów.
 T *get() const;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Funkcja elementu członkowskiego zwraca adres stanowiących własność zasobów. Jeśli obiekt nie jest właścicielem zasobu zwraca 0.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_get.cpp
@@ -239,7 +262,21 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr::operator bool
+### <a name="get_deleter"></a> get_deleter —
+
+```cpp
+template<class D, class T>
+    D* get_deleter(const shared_ptr<T>& p) noexcept;
+```
+
+### <a name="make_shared"></a> make_shared
+
+```cpp
+template<class T, class... Args>
+    shared_ptr<T> make_shared(Args&&... args);
+```
+
+### <a name="op_bool"></a> bool — operator
 
 Sprawdza, czy istnieją własne zasoby.
 
@@ -247,11 +284,11 @@ Sprawdza, czy istnieją własne zasoby.
 explicit operator bool() const noexcept;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Operator zwraca wartość **true** podczas `get() != nullptr`, w przeciwnym razie **false**.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_operator_bool.cpp
@@ -278,7 +315,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="op_star"></a>  shared_ptr::operator *
+### <a name="op_star"></a> operator *
 
 Pobiera wartość wyznaczoną.
 
@@ -286,11 +323,11 @@ Pobiera wartość wyznaczoną.
 T& operator*() const;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Zwraca operatora pośredniego `*get()`. Dzięki temu przechowywany wskaźnik nie może być zerowy.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_operator_st.cpp
@@ -312,7 +349,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="op_eq"></a>  shared_ptr::operator =
+### <a name="op_eq"></a> operator =
 
 Zamienia posiadane zasoby.
 
@@ -320,34 +357,34 @@ Zamienia posiadane zasoby.
 shared_ptr& operator=(const shared_ptr& sp);
 
 template <class Other>
-shared_ptr& operator=(const shared_ptr<Other>& sp);
+    shared_ptr& operator=(const shared_ptr<Other>& sp);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>& ap);
+    shared_ptr& operator=(auto_ptr<Other>& ap);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>& ap);
+    shared_ptr& operator=(auto_ptr<Other>& ap);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>&& ap);
+    shared_ptr& operator=(auto_ptr<Other>&& ap);
 
 template <class Other, class Deletor>
-shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
+    shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*SP*<br/>
+*SP*\
 Wspólny wskaźnik do skopiowania.
 
-*wschodni Region Azji i*<br/>
+*wschodni Region Azji i*\
 Wskaźnik auto do skopiowania.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Wszystkie operatory dekrementacji licznikiem odwołań do zasobów należących do aktualnie `*this` i Przypisz własność zasobu o nazwie określonej przez sekwencję operandów na `*this`. Jeśli licznik odwołań mieści się na zero, zasób jest zwalniany. Jeśli operator nie pozostawia `*this` bez zmian.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_operator_as.cpp
@@ -376,7 +413,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="op_arrow"></a>  shared_ptr::operator-&gt;
+### <a name="op_arrow"></a> operator-&gt;
 
 Pobiera wskaźnik do wyznaczonej wartości.
 
@@ -384,11 +421,11 @@ Pobiera wskaźnik do wyznaczonej wartości.
 T * operator->() const;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Zwraca operatora wyboru `get()`, tak aby wyrażenie `sp->member` działa tak samo jak `(sp.get())->member` gdzie `sp` jest obiektem klasy `shared_ptr<T>`. Dzięki temu przechowywany wskaźnik nie może być null, i `T` musi być klasy, struktury lub Unii typu z członka `member`.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_operator_ar.cpp
@@ -413,28 +450,42 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a>  shared_ptr::owner_before
+### <a name="op_arrowarrow"></a> Operator&lt;&lt;
+
+```cpp
+template<class E, class T, class Y>
+    basic_ostream<E, T>& operator<< (basic_ostream<E, T>& os, const shared_ptr<Y>& p);
+```
+
+### <a name="owner_before"></a> owner_before —
 
 Zwraca wartość PRAWDA, jeśli `shared_ptr` był zamówiony przed (lub mniej niż) podany wskaźnik.
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 `lvalue` Odwołanie do albo `shared_ptr` lub `weak_ptr`.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Szablon funkcji elementu członkowskiego zwraca wartość PRAWDA, jeśli `*this` jest `ordered before` `ptr`.
 
-## <a name="reset"></a>  shared_ptr::reset
+### <a name="reinterpret_pointer_cast"></a> reinterpret_pointer_cast
+
+```cpp
+template<class T, class U>
+    shared_ptr<T> reinterpret_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="reset"></a> Resetuj
 
 Zamień posiadane zasoby.
 
@@ -442,40 +493,40 @@ Zamień posiadane zasoby.
 void reset();
 
 template <class Other>
-void reset(Other *ptr;);
+    void reset(Other *ptr;);
 
 template <class Other, class D>
-void reset(Other *ptr, D dtor);
+    void reset(Other *ptr, D dtor);
 
 template <class Other, class D, class A>
-void reset(Other *ptr, D dtor, A alloc);
+    void reset(Other *ptr, D dtor, A alloc);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*Inne*<br/>
+*Inne*\
 Typ kontrolowany przez wskaźnik argumentu.
 
-*D*<br/>
+*D*\
 Typ deletera.
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik do skopiowania.
 
-*dtor*<br/>
+*dtor*\
 Deleter do skopiowania.
 
-*A*<br/>
+*ELEMENT*\
 Typ alokatora.
 
-*Alokacji*<br/>
+*Alokacji*\
 Alokator do skopiowania.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Wszystkie operatory dekrementacji licznikiem odwołań do zasobów należących do aktualnie `*this` i Przypisz własność zasobu o nazwie określonej przez sekwencję operandów na `*this`. Jeśli licznik odwołań mieści się na zero, zasób jest zwalniany. Jeśli operator nie pozostawia `*this` bez zmian.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_reset.cpp
@@ -521,7 +572,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a>  shared_ptr::shared_ptr
+### <a name="shared_ptr"></a> shared_ptr
 
 Konstruuje `shared_ptr`.
 
@@ -535,76 +586,76 @@ shared_ptr(const shared_ptr& sp);
 shared_ptr(shared_ptr&& sp);
 
 template <class Other>
-explicit shared_ptr(Other* ptr);
+    explicit shared_ptr(Other* ptr);
 
 template <class Other, class D>
-shared_ptr(Other* ptr, D dtor);
+    shared_ptr(Other* ptr, D dtor);
 
 template <class D>
-shared_ptr(nullptr_t ptr, D dtor);
+    shared_ptr(nullptr_t ptr, D dtor);
 
 template <class Other, class D, class A>
-shared_ptr(Other* ptr, D dtor, A  alloc);
+    shared_ptr(Other* ptr, D dtor, A  alloc);
 
 template <class D, class A>
-shared_ptr(nullptr_t ptr, D dtor, A alloc);
+    shared_ptr(nullptr_t ptr, D dtor, A alloc);
 
 template <class Other>
-shared_ptr(const shared_ptr<Other>& sp);
+    shared_ptr(const shared_ptr<Other>& sp);
 
 template <class Other>
-shared_ptr(const weak_ptr<Other>& wp);
+    shared_ptr(const weak_ptr<Other>& wp);
 
 template <class &>
-shared_ptr(std::auto_ptr<Other>& ap);
+    shared_ptr(std::auto_ptr<Other>& ap);
 
 template <class &>
-shared_ptr(std::auto_ptr<Other>&& ap);
+    shared_ptr(std::auto_ptr<Other>&& ap);
 
 template <class Other, class D>
-shared_ptr(unique_ptr<Other, D>&& up);
+    shared_ptr(unique_ptr<Other, D>&& up);
 
 template <class Other>
-shared_ptr(const shared_ptr<Other>& sp, T* ptr);
+    shared_ptr(const shared_ptr<Other>& sp, T* ptr);
 
 template <class Other, class D>
-shared_ptr(const unique_ptr<Other, D>& up) = delete;
+    shared_ptr(const unique_ptr<Other, D>& up) = delete;
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*Inne*<br/>
+*Inne*\
 Typ kontrolowany przez wskaźnik argumentu.
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik do skopiowania.
 
-*D*<br/>
+*D*\
 Typ deletera.
 
-*A*<br/>
+*ELEMENT*\
 Typ alokatora.
 
-*dtor*<br/>
+*dtor*\
 Deleter.
 
-*aż operator*<br/>
+*aż operator*\
 Alokator.
 
-*SP*<br/>
+*SP*\
 Inteligentny wskaźnik do skopiowania.
 
-*WP*<br/>
+*WP*\
 Słaby wskaźnik.
 
-*wschodni Region Azji i*<br/>
+*wschodni Region Azji i*\
 Wskaźnik auto do skopiowania.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Konstruktory każdego skonstruować obiekt, który jest właścicielem zasobu o nazwie określonej przez sekwencję operandów. Konstruktor `shared_ptr(const weak_ptr<Other>& wp)` zgłasza wyjątek obiektu typu [bad_weak_ptr, klasa](../standard-library/bad-weak-ptr-class.md) Jeśli `wp.expired()`.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_construct.cpp
@@ -656,7 +707,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="dtorshared_ptr"></a>  shared_ptr:: ~ shared_ptr
+### <a name="dtorshared_ptr"></a> ~ shared_ptr
 
 Niszczy `shared_ptr`.
 
@@ -664,11 +715,11 @@ Niszczy `shared_ptr`.
 ~shared_ptr();
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Dekrementuje destruktor licznik odwołań dla zasobu będącymi własnością `*this`. Jeśli licznik odwołań mieści się na zero, zasób jest zwalniany.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_destroy.cpp
@@ -711,7 +762,14 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a>  shared_ptr::swap
+### <a name="static_pointer_cast"></a> static_pointer_cast —
+
+```cpp
+template<class T, class U>
+shared_ptr<T> static_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="swap"></a> swap
 
 Zamień dwa `shared_ptr` obiektów.
 
@@ -719,16 +777,16 @@ Zamień dwa `shared_ptr` obiektów.
 void swap(shared_ptr& sp);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*SP*<br/>
+*SP*\
 Wspólny wskaźnik do wymiany.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Funkcja elementu członkowskiego pozostawia zasobów należących do pierwotnie `*this` później własnością *sp*i zasobów należących do pierwotnie *sp* później własnością `*this`. Funkcja nie zmienia zliczanie odwołań, zasobów i nie generuje żadnych wyjątków.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_swap.cpp
@@ -781,7 +839,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a>  shared_ptr::UNIQUE
+### <a name="unique"></a> unikatowe
 
 Sprawdza, czy posiadane zasoby są unikatowe.
 
@@ -789,11 +847,11 @@ Sprawdza, czy posiadane zasoby są unikatowe.
 bool unique() const;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Funkcja elementu członkowskiego zwraca **true** Jeśli żadne inne `shared_ptr` obiekt posiada zasób, który jest własnością `*this`, w przeciwnym razie **false**.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_unique.cpp
@@ -828,7 +886,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a>  shared_ptr::use_count
+### <a name="use_count"></a> use_count —
 
 Zlicza liczby właścicieli zasobu.
 
@@ -836,11 +894,11 @@ Zlicza liczby właścicieli zasobu.
 long use_count() const;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Element członkowski funkcji zwraca liczbę `shared_ptr` obiekty, które są właścicielami zasobu, który jest własnością `*this`.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // std__memory__shared_ptr_use_count.cpp
@@ -866,8 +924,3 @@ int main()
 sp1.use_count() == 1
 sp1.use_count() == 2
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[weak_ptr, klasa](../standard-library/weak-ptr-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

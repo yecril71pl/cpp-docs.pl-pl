@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5101f5c7b6ae1a032df94b912252c24f2c2853bf
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348214"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245592"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor — klasa
 
@@ -98,12 +98,20 @@ Trzy typy są definiowane dla specyfikacji:
 |----------|-----------------|
 |[allocate](#allocate)|Przydziela pamięć przy użyciu `Outer` alokatora.|
 |[construct](#construct)|Tworzy obiekt.|
-|[deallocate](#deallocate)|Zwalnia obiektów za pomocą zewnętrznego programu przydzielania.|
+|[Cofnij Przydział](#deallocate)|Zwalnia obiektów za pomocą zewnętrznego programu przydzielania.|
 |[destroy](#destroy)|Niszczy określonego obiektu.|
 |[inner_allocator](#inner_allocator)|Pobiera odwołanie do przechowywany obiekt typu `inner_allocator_type`.|
 |[max_size](#max_size)|Określa maksymalną liczbę obiektów, które mogą zostać przydzieleni przez zewnętrzne alokatora.|
 |[outer_allocator](#outer_allocator)|Pobiera odwołanie do przechowywany obiekt typu `outer_allocator_type`.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Tworzy nową `scoped_allocator_adaptor` obiektu z każdego przechowywany obiekt alokatora inicjowany przez wywołanie `select_on_container_copy_construction` dla każdego odpowiedniego programu przydzielania.|
+
+### <a name="operators"></a>Operatory
+
+|Operator|Opis|
+|-|-|
+|[operator=](#op_as)||
+|[operator==](#op_eq_eq)||
+|[operator!=](#op_noeq)||
 
 ## <a name="requirements"></a>Wymagania
 
@@ -254,6 +262,29 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
+## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">  scoped_allocator_adaptor::operator =
+
+```cpp
+scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
+scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
+```
+
+## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">  scoped_allocator_adaptor::operator ==
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
+## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">  scoped_allocator_adaptor::operator! =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
 ## <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator —
 
 Pobiera odwołanie do przechowywany obiekt typu `outer_allocator_type`.
@@ -275,7 +306,7 @@ ponowne wiązanie struktury {typedef Other_traits::rebind\<innych > Other_alloc;
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor — Konstruktor
 
-Konstruuje `scoped_allocator_adaptor` obiektu.
+Konstruuje `scoped_allocator_adaptor` obiektu. Zawiera także destruktora.
 
 ```cpp
 scoped_allocator_adaptor();
@@ -290,6 +321,8 @@ scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
+
+~scoped_allocator_adaptor();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -300,7 +333,7 @@ Istniejące `scoped_allocator_adaptor`.
 *Al*<br/>
 Istniejące alokator ma być używany jako zewnętrzne alokatora.
 
-*rest*<br/>
+*REST*<br/>
 Lista buforów, które ma być używany jako wewnętrzny buforów.
 
 ### <a name="remarks"></a>Uwagi

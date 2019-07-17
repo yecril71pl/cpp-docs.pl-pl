@@ -6,26 +6,51 @@ f1_keywords:
 helpviewer_keywords:
 - clocale header
 ms.assetid: 5bde3e01-cf67-4f1f-a383-447ec814d00e
-ms.openlocfilehash: 5ca899282891f26221ca5b786debfcaee114d0b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 624a1afdbe0e73c81a324273836eff6b89705236
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386216"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244759"
 ---
 # <a name="ltclocalegt"></a>&lt;clocale —&gt;
 
 Dołącza nagłówek biblioteki standardowej C \<locale.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <clocale>
-```
+**Nagłówek:** \<clocale — >
+
+**Namespace:** standardowe
 
 ## <a name="remarks"></a>Uwagi
 
 Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
+
+## <a name="constants"></a>Stałe
+
+```cpp
+#define NULL see below
+#define LC_ALL see below
+#define LC_COLLATE see below
+#define LC_CTYPE see below
+#define LC_MONETARY see below
+#define LC_NUMERIC see below
+#define LC_TIME see below
+```
+
+## <a name="structures"></a>Struktury
+
+```cpp
+struct lconv;
+```
+
+## <a name="functions"></a>Funkcje
+
+```cpp
+char* setlocale(int category, const char* locale);
+lconv* localeconv();
+```
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,21 +9,16 @@ f1_keywords:
 - tuple/std::operator<=
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: e60de54a78f3a206ef77776761c3419bf8a2f3b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411880"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241663"
 ---
 # <a name="lttuplegt-operators"></a>&lt;Krotka&gt; operatorów
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[Operator&gt;=](#op_gt_eq)|
-|[Operator&lt;](#op_lt)|[Operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator! =
+## <a name="op_neq"></a> operator! =
 
 Porównaj `tuple` obiekty pod kątem nierówności.
 
@@ -36,7 +31,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
@@ -88,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  Operator&lt;
+## <a name="op_lt"></a> Operator&lt;
 
 Porównaj `tuple` obiekty za niższą cenę.
 
@@ -101,7 +96,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
@@ -153,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  Operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 Porównaj `tuple` obiektów na mniejsze lub równe.
 
@@ -166,7 +161,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
@@ -218,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator ==
+## <a name="op_eq_eq"></a> operator ==
 
 Porównaj `tuple` obiekty pod kątem równości.
 
@@ -231,7 +226,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
@@ -283,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  Operator&gt;
+## <a name="op_gt"></a> Operator&gt;
 
 Porównaj `tuple` obiektów, aby uzyskać większą.
 
@@ -296,7 +291,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
@@ -348,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  Operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 Porównaj `tuple` obiektów większe lub równe.
 
@@ -361,7 +356,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
@@ -412,7 +407,3 @@ int main() {
 true
 false
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[\<tuple>](../standard-library/tuple.md)<br/>

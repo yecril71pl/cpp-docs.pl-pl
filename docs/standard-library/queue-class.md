@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369946"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240399"
 ---
 # <a name="queue-class"></a>queue — Klasa
 
@@ -42,10 +42,10 @@ class queue
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*Typ*\
 Typ danych elementu mają być przechowywane w kolejce
 
-*Kontener*<br/>
+*Kontener*\
 Typ podstawowy kontener używany do implementowania kolejki.
 
 ## <a name="remarks"></a>Uwagi
@@ -64,23 +64,25 @@ Istnieją trzy typy adaptery kontenera definicją C++ standardowej biblioteki: s
 
 - [Priority_queue — klasa](../standard-library/priority-queue-class.md) porządkuje jego elementy, dzięki czemu największy element jest zawsze u góry. Obsługuje ona Wstawianie elementu i inspekcji i usuwania górnego elementu. Dobre analogowy na uwadze byłoby osób wyrównywanie gdzie one są uporządkowane według wiek, wysokości lub innego kryterium.
 
+## <a name="members"></a>Elementy członkowskie
+
 ### <a name="constructors"></a>Konstruktorów
 
-|Konstruktor|Opis|
+|||
 |-|-|
 |[kolejki](#queue)|Konstruuje `queue` pusty lub jest kopię obiektu podstawowego kontenera.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[container_type](#container_type)|Typ, który zapewnia podstawowy kontener, aby zostać dostosowane przez `queue`.|
 |[size_type](#size_type)|Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w `queue`.|
 |[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `queue`.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="functions"></a>Funkcje
 
-|Funkcja elementu członkowskiego|Opis|
+|||
 |-|-|
 |[back](#back)|Zwraca odwołanie do ostatniego i ostatnio dodane elementu na tworzenie kopii zapasowych `queue`.|
 |[pusty](#empty)|Sprawdza, czy `queue` jest pusty.|
@@ -89,13 +91,7 @@ Istnieją trzy typy adaptery kontenera definicją C++ standardowej biblioteki: s
 |[push](#push)|Dodaje element do tyłu `queue`.|
 |[Rozmiar](#size)|Zwraca liczbę elementów w `queue`.|
 
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<kolejki >
-
-**Namespace:** standardowe
-
-## <a name="back"></a>  Queue::back
+## <a name="back"></a> Wstecz
 
 Zwraca odwołanie do ostatniego i ostatnio dodane element tyłu kolejki.
 
@@ -141,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>  Queue::container_type
+## <a name="container_type"></a> container_type —
 
 Typ, który dostarcza podstawowy kontener, aby dostosować.
 
@@ -159,7 +155,7 @@ Aby uzyskać więcej informacji na temat `Container`, zobacz sekcję Uwagi [kole
 
 Zobacz przykład [kolejki](#queue) przykładowy sposób deklarowania i użyj `container_type`.
 
-## <a name="empty"></a>  Queue::Empty
+## <a name="empty"></a> pusty
 
 Sprawdza, czy kolejka jest pusta.
 
@@ -205,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>  Queue::front
+## <a name="front"></a> Frontonu
 
 Zwraca odwołanie do pierwszego elementu na wierzchu kolejki.
 
@@ -257,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>  Queue::POP
+## <a name="pop"></a> POP
 
 Usuwa element z przodu kolejki.
 
@@ -313,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>  Queue::push
+## <a name="push"></a> wypychania
 
 Dodaje element do tyłu kolejki.
 
@@ -323,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Element dodany do tyłu kolejki.
 
 ### <a name="remarks"></a>Uwagi
@@ -362,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>  Queue::Queue
+## <a name="queue"></a> kolejki
 
 Tworzy kolejki, który jest pusty lub jest kopią obiektu podstawowego kontenera.
 
@@ -374,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 **Const** kontenera, w której skonstruowany kolejki jest kopią.
 
 ### <a name="remarks"></a>Uwagi
@@ -429,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>  Queue::size
+## <a name="size"></a> Rozmiar
 
 Zwraca liczbę elementów w kolejce.
 
@@ -470,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>  Queue::size_type
+## <a name="size_type"></a> size_type
 
 Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w kolejce.
 
@@ -486,7 +482,7 @@ Typ jest synonimem dla `size_type` podstawowy kontenera dostosowane przez kolejk
 
 Zobacz przykład [queue::front](#front) przykładowy sposób deklarowania i użyj `size_type`.
 
-## <a name="value_type"></a>  Queue::value_type
+## <a name="value_type"></a> value_type
 
 Typ, który reprezentuje typ obiektu przechowywanego jako element w kolejce.
 

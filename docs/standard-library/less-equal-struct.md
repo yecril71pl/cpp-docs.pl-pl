@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-ms.openlocfilehash: e1949477cc130bbbc8cdfeea082ec73f14bf4aad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67a686b139ae4abbf25a42a994cceaba008decf5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223946"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245383"
 ---
 # <a name="lessequal-struct"></a>less_equal — Struktura
 
@@ -39,12 +39,13 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator<=` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+*Typ*, *T*, *U*\
+Dowolny typ, który obsługuje `operator<=` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*po lewej stronie*<br/>
+*po lewej stronie*\
 Lewy operand operacji mniej niż lub równe to. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*po prawej stronie*<br/>
+*po prawej stronie*\
 Prawy operand operacji mniej niż lub równe to. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -53,7 +54,7 @@ Wynik `Left <= Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku,
 
 ## <a name="remarks"></a>Uwagi
 
-Predykat dwuelementowy `less_equal` <  `Type`> udostępnia ścisłe słabe porządkowanie zestaw wartości elementów typu *typu* na klasy równoważności, tylko wtedy, gdy ten typ spełnia standard matematyczne wymagania dotyczące więc szeregowane. Specjalizacje dla dowolnego typu wskaźnika yield, łączna liczba kolejność elementów, w tym, że wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
+Predykat dwuelementowy `less_equal` < `Type`> udostępnia ścisłe słabe porządkowanie zestaw wartości elementów typu *typu* na klasy równoważności, tylko wtedy, gdy ten typ spełnia standard matematyczne wymagania dotyczące więc szeregowane. Specjalizacje dla dowolnego typu wskaźnika yield, łączna liczba kolejność elementów, w tym, że wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
 
 ## <a name="example"></a>Przykład
 
@@ -109,19 +110,7 @@ int main( )
 }
 ```
 
-## <a name="sample-output"></a>Przykładowe dane wyjściowe
-
 ```Output
 Original vector v1 = (31247 37154 48755 15251 6205 2836 2836 2836)
 Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
 ```
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

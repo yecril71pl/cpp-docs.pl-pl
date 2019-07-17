@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 0a8d8c0fba8b1ad621e80fb96336eefe2aec5dd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413115"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243274"
 ---
 # <a name="logicaland-struct"></a>logical_and — Struktura
 
@@ -39,12 +39,13 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator&&` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+*Typ*, *T*, *U*\
+Dowolny typ, który obsługuje `operator&&` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*po lewej stronie*<br/>
+*po lewej stronie*\
 Lewy operand operacja logiczna Koniunkcja. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*po prawej stronie*<br/>
+*po prawej stronie*\
 Prawy operand operacja logiczna Koniunkcja. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -116,24 +117,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
 The deque which is the conjuction of d1 & d2 is:
 d3 = ( true false true true false false false )
-*/
 ```
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

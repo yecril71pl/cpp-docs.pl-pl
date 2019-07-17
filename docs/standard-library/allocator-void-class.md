@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: 5591570527946895d1e0456b23327d7fabc4bef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ac7fbaa8c50eb13457271cf96ddc3412733c833
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377923"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245880"
 ---
 # <a name="allocatorltvoidgt-class"></a>Allocator&lt;void&gt; klasy
 
@@ -50,13 +50,3 @@ Klasa jawnie specjalizuje się klasy szablonu [alokatora](../standard-library/al
 - [value_type](../standard-library/allocator-class.md#value_type).
 
 - [ponownie powiązać](../standard-library/allocator-class.md#rebind), szablon klasy zagnieżdżonej.
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<pamięci >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

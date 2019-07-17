@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370349"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240389"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;losowe&gt; funkcji
 
-## <a name="generate_canonical"></a>  generate_canonical
+## <a name="generate_canonical"></a> generate_canonical
 
 Zwraca wartość zmiennoprzecinkową z sekwencji losowej.
 
@@ -29,19 +29,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parametry
 
-*RealType*<br/>
+*RealType*\
 Zmiennoprzecinkowy typu całkowitego. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*Usługa BITS*<br/>
+*Usługa BITS*\
 Generator liczb losowych.
 
-*Gen*<br/>
+*Gen*\
 Generator liczb losowych.
 
 ### <a name="remarks"></a>Uwagi
 
 Wywołania funkcji szablonu `operator()` z *ogólnego* wielokrotnie pakiety wartości zwracane wartości zmiennoprzecinkowe i `x` typu *RealType* aż zebrane określoną liczbę mantysy bitów w `x`. Określony numer jest mniejszy od *bitów* (może być różna od zera) i Pełna liczba bitów mantysy *RealType*. Pierwsze wywołanie dostarcza bitów najniższego rzędu. Funkcja zwraca `x`.
-
-## <a name="see-also"></a>Zobacz także
-
-[\<random>](../standard-library/random.md)<br/>

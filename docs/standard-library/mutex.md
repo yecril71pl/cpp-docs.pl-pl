@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 377ec995f4e61c957e8e620749f96523b60fed3e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224080"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240594"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -18,11 +18,11 @@ Dołączyć standardowy nagłówek \<mutex > do definiowania klas `mutex`, `recu
 > [!WARNING]
 > Począwszy od programu Visual Studio 2015 standardowej biblioteki języka C++ typów synchronizacji opierają się na podstawowych synchronizacji Windows i nie są już używane ConcRT (z wyjątkiem sytuacji, gdy platformą docelową jest Windows XP). Typy zdefiniowane w \<mutex > nie należy używać z dowolnym ConcRT typów lub funkcji.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <mutex>
-```
+**Nagłówek:** \<mutex >
+
+**Namespace:** standardowe
 
 ## <a name="remarks"></a>Uwagi
 
@@ -47,28 +47,33 @@ A *upłynął limit czasu typu obiektu mutex* spełnia wymagania dotyczące typu
 
 Typ obiektu mutex jest także znana jako *zamykane typu*. Jeśli nie zapewnia funkcji elementu członkowskiego `try_lock`, jest *podstawowy typ zamykane*. Typ obiektu mutex Przekroczono limit czasu jest także znana jako *upłynął limit czasu zamykane typu*.
 
+## <a name="members"></a>Elementy członkowskie
+
 ### <a name="classes"></a>Klasy
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[lock_guard, klasa](../standard-library/lock-guard-class.md)|Reprezentuje szablon, który można utworzyć wystąpienia, aby utworzyć obiekt, którego destruktor odblokowuje `mutex`.|
 |[mutex, klasa (Standardowa biblioteka C++)](../standard-library/mutex-class-stl.md)|Reprezentuje typ obiektu mutex. Używanie obiektów tego typu w celu wymuszenia wzajemnego wykluczenia w ramach programu.|
 |[recursive_mutex, klasa](../standard-library/recursive-mutex-class.md)|Reprezentuje typ obiektu mutex. W constrast do `mutex` klasy, zachowanie wywoływania metod blokowania dla obiektów, które są już zablokowane jest dobrze zdefiniowany.|
 |[recursive_timed_mutex, klasa](../standard-library/recursive-timed-mutex-class.md)|Reprezentuje typ obiektu mutex Przekroczono limit czasu. Używanie obiektów tego typu w celu wymuszenia wzajemnego wykluczenia, który ma czas blokowania w programie. W przeciwieństwie do obiektów tego typu `timed_mutex`, efekt podczas wywoływania metody blokowania `recursive_timed_mutex` obiektów jest dobrze zdefiniowany.|
+|[scoped_lock klasy](../standard-library/scoped-lock-class.md)||
 |[timed_mutex, klasa](../standard-library/timed-mutex-class.md)|Reprezentuje typ obiektu mutex Przekroczono limit czasu. Używanie obiektów tego typu w celu wymuszenia wzajemnego wykluczenia, który ma czas blokowania w programie.|
 |[unique_lock, klasa](../standard-library/unique-lock-class.md)|Reprezentuje szablon, który można utworzyć wystąpienia do tworzenia obiektów, które zarządzają blokowanie i odblokowywanie `mutex`.|
 
 ### <a name="functions"></a>Funkcje
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Udostępnia mechanizm do wywoływania określonego wywoływanego obiektu tylko raz podczas wykonywania.|
 |[lock](../standard-library/mutex-functions.md#lock)|Próbuje zablokować wszystkie argumenty bez zakleszczenia.|
+|[swap](../standard-library/mutex-functions.md#swap)||
+|[try_lock](../standard-library/mutex-functions.md#try_lock)||
 
 ### <a name="structs"></a>Struktury
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[adopt_lock_t, struktura](../standard-library/adopt-lock-t-structure.md)|Reprezentuje typ, który jest używany do definiowania `adopt_lock`.|
 |[defer_lock_t, struktura](../standard-library/defer-lock-t-structure.md)|Reprezentuje typ, który definiuje `defer_lock` obiekt, który jest używany do wybierania jednego z przeciążenia konstruktorów z `unique_lock`.|
 |[once_flag, struktura](../standard-library/once-flag-structure.md)|Reprezentuje **struktury** używany za pomocą funkcji szablonu `call_once` aby upewnić się, że inicjowanie kodu jest wywoływana tylko raz, nawet w obecności wielu wątków wykonania.|
@@ -76,8 +81,8 @@ Typ obiektu mutex jest także znana jako *zamykane typu*. Jeśli nie zapewnia fu
 
 ### <a name="variables"></a>Zmienne
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Reprezentuje obiekt, który może być przekazywany do konstruktory `lock_guard` i `unique_lock` do wskazania, że obiekt mutex, który również jest przekazywana do konstruktora jest zablokowany.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Reprezentuje obiekt, który może być przekazywany do konstruktora dla `unique_lock`, aby wskazać, że Konstruktor nie powinien być blokowany obiektu mutex, który również jest przekazywana do niego.|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Reprezentuje obiekt, który może być przekazywany do konstruktora dla `unique_lock` do wskazania, konstruktora powinien próbować odblokować `mutex` , również przekazywaną do niego bez blokowania.|

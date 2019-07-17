@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 10a39d4b7871e08a5bf3ec56f6d11df5ad8b646c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bdfdbac7a23a4b0e3b830b05990bf028c7bb316
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212030"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244546"
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t — Klasa
 
@@ -30,10 +30,10 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parametry
 
-*PM*<br/>
+*PM*\
 Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
-*Pleft*<br/>
+*Pleft*\
 Obiekt, *Pm* wywoływana jest funkcja elementu członkowskiego.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -42,19 +42,8 @@ Funkcję jednoargumentową dostosowywalne.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię *Pm*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu ( `Pleft` -> \* `Pm`) () **const**.
+Klasa szablonu przechowuje kopię *Pm*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu (`Pleft` -> \* `Pm`) () **const**.
 
 ## <a name="example"></a>Przykład
 
 Konstruktor obiektu `const_mem_fun_t` nie jest zazwyczaj używana bezpośrednio; funkcja Pomocnika `mem_fun` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun —](../standard-library/functional-functions.md#mem_fun) przykład sposobu użycia adapterów funkcja elementu członkowskiego.
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

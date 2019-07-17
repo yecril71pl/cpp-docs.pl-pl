@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less struct
 - less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
-ms.openlocfilehash: e24c7fb238c9c05d91cbdba7fab277878e6f5e24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13aef35856066f9c1897c3d8855c5ff537aa3567
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224054"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245338"
 ---
 # <a name="less-struct"></a>less — Struktura
 
@@ -39,12 +39,13 @@ struct less<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator<` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+*Typ*, *T*, *U*\
+Dowolny typ, który obsługuje `operator<` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*po lewej stronie*<br/>
+*po lewej stronie*\
 Lewy operand mniej-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*po prawej stronie*<br/>
+*po prawej stronie*\
 Prawy operand mniej-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -53,7 +54,7 @@ Wynik `Left < Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, 
 
 ## <a name="remarks"></a>Uwagi
 
-Predykat dwuelementowy `less` <  `Type`> udostępnia ścisłe słabe porządkowanie zestaw wartości elementów typu *typu* na klasy równoważności, tylko wtedy, gdy ten typ spełnia standard matematyczne wymagania dotyczące więc szeregowane. Specjalizacje dla dowolnego typu wskaźnika yield, łączna liczba kolejność elementów, w tym, że wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
+Predykat dwuelementowy `less` < `Type`> udostępnia ścisłe słabe porządkowanie zestaw wartości elementów typu *typu* na klasy równoważności, tylko wtedy, gdy ten typ spełnia standard matematyczne wymagania dotyczące więc szeregowane. Specjalizacje dla dowolnego typu wskaźnika yield, łączna liczba kolejność elementów, w tym, że wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
 
 ## <a name="example"></a>Przykład
 
@@ -100,19 +101,7 @@ cout << Iter1->m_i << " ";
 }
 ```
 
-## <a name="output"></a>Dane wyjściowe
-
 ```Output
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

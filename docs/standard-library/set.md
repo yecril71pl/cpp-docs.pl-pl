@@ -6,29 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412582"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246380"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
 Definiuje zestaw klas szablonów kontenera i multiset i ich szablonów pomocniczych.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <set>
-```
+**Nagłówek:** \<Ustaw >
+
+**Namespace:** standardowe
+
+> [!NOTE]
+> \<Ustaw > używa również biblioteki `#include <initializer_list>` instrukcji.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="operators"></a>Operatory
 
 |Ustaw wersję|Multiset — wersja|Opis|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[Operator! = (set)](../standard-library/set-operators.md#op_neq)|[Operator! = (multiset)](../standard-library/set-operators.md#op_neq)|Sprawdza, czy set lub multiset — obiekt po lewej stronie operatora nie jest równa set lub multiset — obiekt po prawej stronie.|
 |[Operator < (ustawiona)](../standard-library/set-operators.md#op_lt)|[Operator < (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Sprawdza, czy set lub multiset — obiekt po lewej stronie operatora jest mniejszy niż set lub multiset — obiekt po prawej stronie.|
 |[Operator < = (set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Sprawdza, czy set lub multiset — obiekt po lewej stronie operatora jest mniejszy niż lub równe set lub multiset — obiekt po prawej stronie.|
@@ -39,12 +42,12 @@ Definiuje zestaw klas szablonów kontenera i multiset i ich szablonów pomocnicz
 ### <a name="specialized-template-functions"></a>Specialized Template — Funkcje
 
 |Ustaw wersję|Multiset — wersja|Opis|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Zamienia elementy z dwóch zestawów lub multisets.|
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
 |[set, klasa](../standard-library/set-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w której wartości zawartych elementów są unikatowe i służą jako wartości klucza, zgodnie z którymi dane są automatycznie porządkowane.|
 |[multiset, klasa](../standard-library/multiset-class.md)|Używane do przechowywania i pobierania danych z kolekcji, w której wartości zawartych elementów nie muszą być unikatowe, i które służą jako wartości klucza, zgodnie z którymi dane są automatycznie porządkowane.|

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: b8b50e04e530e2d21b7a4e042d9feb2984e639db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411867"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241818"
 ---
 # <a name="tupleelement-class"></a>tuple_element — Klasa
 
@@ -56,22 +56,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parametry
 
-*Index*<br/>
+*Indeks*\
 Indeks elementu wyznaczonym.
 
-*Krotki*<br/>
+*Krotki*\
 Typ spójnej kolekcji.
 
-*Elem*<br/>
+*Elem*\
 Typ elementu tablicy.
 
-*Rozmiar*<br/>
+*Rozmiar*\
 Rozmiar tablicy.
 
-*T1*<br/>
+*T1*\
 Typ pierwszego elementu w parę.
 
-*T2*<br/>
+*T2*\
 Typ drugiego elementu w parze.
 
 ## <a name="remarks"></a>Uwagi
@@ -181,7 +181,3 @@ int main() {
 **Nagłówek:** \<Narzędzia > (dla pary specjalizacje)
 
 **Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Krotki ](../standard-library/tuple-class.md)<br/>

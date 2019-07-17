@@ -7,27 +7,28 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: d90e49190ef2f22ce7ba2dfe30c2c68c6275f5b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0a5a01ca04d01d9535291e3c4a254143bc09e5a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380133"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243297"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset —&gt;
 
 Definiuje bitset — klasa szablonu i dwie funkcje szablonu pomocnicze do reprezentujący i manipulowania sekwencje o stałym rozmiarze bitów.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```
+**Nagłówek:** \<bitset — >
 
-#include <bitset>
-```
+**Namespace:** standardowe
+
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
 |[Operator &](../standard-library/bitset-operators.md#op_amp)|Wykonuje iloczynu bitowego AND między dwoma bitsets.|
 |[Operator <\<](../standard-library/bitset-operators.md#op_lt_lt)|Wstawia tekst reprezentujący sekwencji bit do standardowego strumienia wyjściowego.|
@@ -37,9 +38,9 @@ Definiuje bitset — klasa szablonu i dwie funkcje szablonu pomocnicze do reprez
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
-|[bitset, klasa](../standard-library/bitset-class.md)|Klasa szablonu opisuje typ obiektu, który przechowuje sekwencji składającej się z stałą liczbą bitów, które zapewniają zwarty sposób zachowania flagi dla zestawu elementów lub warunki.|
+|[bitset —](../standard-library/bitset-class.md)|Klasa szablonu opisuje typ obiektu, który przechowuje sekwencji składającej się z stałą liczbą bitów, które zapewniają zwarty sposób zachowania flagi dla zestawu elementów lub warunki.|
 
 ## <a name="see-also"></a>Zobacz także
 

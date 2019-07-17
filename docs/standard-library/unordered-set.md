@@ -6,33 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: 8e79d05512a53b8fc2d4cb305cecf8d9095a9728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5065d1f2d0ea710dbaaaa09ec9079dbf502065af
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362858"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243400"
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
 
 Definiuje klasy szablonów kontenera [unordered_multiset](../standard-library/unordered-multiset-class.md) i [unordered_set](../standard-library/unordered-set-class.md) i ich szablonów pomocniczych.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <unordered_set>
-```
+**Nagłówek:** \<unordered_set >
+
+**Namespace:** standardowe
+
+> [!NOTE]
+> \<Unordered_set > używa również biblioteki `#include <initializer_list>` instrukcji.
+
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
 |[unordered_multiset, klasa](../standard-library/unordered-multiset-class.md)|Magazyny skrótu tabela kluczy.|
 |[unordered_set, klasa](../standard-library/unordered-set-class.md)|Magazyny skrótu tabela kluczy.|
 
 ### <a name="functions"></a>Funkcje
 
-|Funkcja|Opis|
+|||
 |-|-|
 |[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Sprawdza, czy obiekt unordered_multiset po lewej stronie operatora nie jest równy obiektowi unordered_multiset po prawej stronie.|
 |[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Sprawdza, czy obiekt unordered_multiset po lewej stronie operatora jest równy obiektowi unordered_multiset po prawej stronie.|

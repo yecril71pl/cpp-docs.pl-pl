@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb32d1846c4e94fbd275dcc416de4f37d9bb53f1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369765"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240378"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator — Klasa
 
@@ -25,15 +25,15 @@ Klasa adaptera, która jest dostarczana, aby umożliwić algorytmom zapisywanie 
 
 ```cpp
 template <class OutputIterator, class Type>
-class raw_storage_iterator
+    class raw_storage_iterator
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Określa iterator danych wyjściowych dla obiektu są przechowywane.
 
-*Typ*<br/>
+*Typ*\
 Typ obiektu, dla którego Magazyn jest przydzielany.
 
 ## <a name="remarks"></a>Uwagi
@@ -46,32 +46,26 @@ Ta klasa adaptera jest używana, gdy jest to konieczne oddzielać alokacji pami�
 
 ### <a name="constructors"></a>Konstruktorów
 
-|Konstruktor|Opis|
+|||
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Tworzy iterator magazynu przy użyciu określonego podstawowy iterator danych wyjściowych.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[element_type](#element_type)|Zapewnia, że typ, który opisuje element ma być przechowywany iterator magazynu.|
 |[iter_type](#iter_type)|Zawiera typ, który opisuje iterator, która jest podporządkowana narzędziu iteratora magazynu.|
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
-|[operator*](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `ii`  =  `x`.|
+|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `ii`  =  `x`.|
 |[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora magazynu \* `i`  =  `x` do przechowywania w pamięci.|
 |[operator++](#op_add_add)|Operatory preincrement i postinkrementacyjne dla iteratorów magazynu.|
 
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<pamięci >
-
-**Namespace:** standardowe
-
-## <a name="element_type"></a>  raw_storage_iterator::ELEMENT_TYPE
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Zapewnia, że typ, który opisuje element ma być przechowywany iterator magazynu.
 
@@ -79,11 +73,11 @@ Zapewnia, że typ, który opisuje element ma być przechowywany iterator magazyn
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ jest synonimem dla parametru szablonu raw_storage_iterator — klasa `Type`.
 
-## <a name="iter_type"></a>  raw_storage_iterator::iter_type
+### <a name="iter_type"></a> iter_type
 
 Zawiera typ, który opisuje iterator, która jest podporządkowana narzędziu iteratora magazynu.
 
@@ -91,11 +85,11 @@ Zawiera typ, który opisuje iterator, która jest podporządkowana narzędziu it
 typedef ForwardIterator iter_type;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ jest synonimem dla parametru szablonu `ForwardIterator`.
 
-## <a name="op_star"></a>  raw_storage_iterator::operator\*
+### <a name="op_star"></a> Operator\*
 
 Operator dereferencji używany do implementowania wyrażenia iteratora magazynu \* *ii* = *x*.
 
@@ -103,15 +97,15 @@ Operator dereferencji używany do implementowania wyrażenia iteratora magazynu 
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do iteratora magazynu
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Wymagania dotyczące `ForwardIterator` są który nieprzetworzonych magazynu iteratora musi spełniać wymagają tylko wyrażenia \* *ii* = *t* ważność i mówi nic o **operator** lub `operator=` własnych. Zwraca operatory elementów członkowskich w tej implementacji  **\*to**, dzięki czemu [operator =](#op_eq)(**constType**&) można wykonywać rzeczywisty magazyn w wyrażeniu takie jak \* *ptr* = `val`.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // raw_storage_iterator_op_deref.cpp
@@ -155,14 +149,15 @@ int main( void)
    raw_storage_iterator< Int*, Int > it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_eq"></a>  raw_storage_iterator::operator =
+### <a name="op_eq"></a> operator =
 
 Operator przypisania używany do implementowania wyrażenia iteratora magazynu \* *i* = *x* do przechowywania w pamięci.
 
@@ -171,22 +166,22 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Wartość obiektu typu `Type` ma zostać wstawiony do pamięci.
 
-### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwracana
 
 Wstawia operator `val` do pamięci, a następnie zwraca odwołanie do iteratora magazynu.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Wymagania dotyczące `ForwardIterator` stan, który musi spełniać iteratora magazynu wymaga tylko wyrażenia \* *ii* = *t* był prawidłowy, i mówi nic o **operator** lub `operator=` własnych. Te operatory elementu członkowskiego zwraca  **\*to**.
 
 Operator przypisania tworzy następny obiekt w sekwencji wyjścia, przy użyciu wartości przechowywanego iteratora, a po pierwsze, w wyniku obliczenia wyrażenia nowego położenia **nowe** (( `void` \*) &\* **pierwszy**) **typu**( `val`).
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // raw_storage_iterator_op_assign.cpp
@@ -228,14 +223,15 @@ int main( void )
    raw_storage_iterator<Int*, Int> it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_add_add"></a>  raw_storage_iterator::operator ++
+### <a name="op_add_add"></a> operator ++
 
 Operatory preincrement i postinkrementacyjne dla iteratorów magazynu.
 
@@ -245,11 +241,11 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwracana
 
 Iterator magazynu lub odwołanie do iteratora magazynu.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Pierwszy operator ostatecznie próbuje wyodrębnić i przechowywać obiekt typu `CharType` ze skojarzonego strumienia wejściowego. Drugi operator tworzy kopię obiektu, zwiększa obiektu, a następnie zwraca kopię.
 
@@ -259,7 +255,7 @@ Drugi operator postinkrementacyjne tworzy kopię  **\*to**, zwiększa obiekt ite
 
 Magazyny Konstruktor `first` jako obiekt iteratora wyjściowego.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // raw_storage_iterator_op_incr.cpp
@@ -282,16 +278,17 @@ int main( void )
 
    delete[] pInt;
 }
-/* Output:
+```
+
+```Output
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*/
 ```
 
-## <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator
+### <a name="raw_storage_iterator"></a> raw_storage_iterator —
 
 Tworzy iterator magazynu przy użyciu określonego podstawowy iterator danych wyjściowych.
 
@@ -299,12 +296,12 @@ Tworzy iterator magazynu przy użyciu określonego podstawowy iterator danych wy
 explicit raw_storage_iterator(ForwardIterator first);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszy*\
 Iterator do przodu, który jest podstawą `raw_storage_iterator` obiekt jest konstruowany.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // raw_storage_iterator_ctor.cpp
@@ -360,7 +357,9 @@ int main( void )
 
    free(pInt);
 }
-/* Output:
+```
+
+```Output
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -381,9 +380,4 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*/
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

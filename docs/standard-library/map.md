@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 0ea47a28599df543987831ee13a2c645f72a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412998"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243314"
 ---
 # <a name="ltmapgt"></a>&lt;Mapy&gt;
 
 Definiuje mapę klasy szablonu kontenera i multimap i ich szablonów pomocniczych.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <map>
-```
+**Nagłówek:** \<mapy >
+
+**Namespace:** standardowe
+
+> [!NOTE]
+> \<Mapy > używa również biblioteki `#include <initializer_list>` instrukcji.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -44,7 +47,7 @@ Definiuje mapę klasy szablonu kontenera i multimap i ich szablonów pomocniczyc
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
 |[value_compare, klasa](../standard-library/value-compare-class-map.md)|Dostarcza obiekt funkcji, która może porównać elementy mapy przez porównanie wartości ich kluczy, aby określić ich względną kolejność w mapie.|
 |[map, klasa](../standard-library/map-class.md)|Używany do przechowywania i pobierania danych z kolekcji, w którym każdy z elementów ma unikatowy klucz za pomocą którego dane są automatycznie porządkowane.|

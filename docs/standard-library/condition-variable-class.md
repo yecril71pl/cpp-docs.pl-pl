@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212389"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244625"
 ---
 # <a name="conditionvariable-class"></a>condition_variable — Klasa
 
@@ -39,16 +39,16 @@ class condition_variable;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-constructors"></a>Konstruktory publiczne
+### <a name="constructors"></a>Konstruktorów
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable](#condition_variable)|Konstruuje `condition_variable` obiektu.|
 
-### <a name="public-methods"></a>Metody publiczne
+### <a name="functions"></a>Funkcje
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[native_handle](#native_handle)|Zwraca typ implementacji reprezentujący dojście condition_variable.|
 |[notify_all](#notify_all)|Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiektu.|
 |[notify_one](#notify_one)|Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiektu.|
@@ -56,13 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Blokuje wątek i ustawia przedział czasu, po którym odblokowuje wątek.|
 |[wait_until](#wait_until)|Blokuje wątek i ustawia maksymalny punkt w czasie, w którym odblokowuje wątek.|
 
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<condition_variable >
-
-**Namespace:** standardowe
-
-## <a name="condition_variable"></a>  condition_variable::condition_variable — Konstruktor
+## <a name="condition_variable"></a> condition_variable
 
 Konstruuje `condition_variable` obiektu.
 
@@ -74,7 +68,7 @@ condition_variable();
 
 Jeśli nie ma wystarczającej ilości pamięci jest dostępny, Konstruktor wyrzuca [system_error](../standard-library/system-error-class.md) obiekt, który ma `not_enough_memory` kod błędu. Jeśli nie można utworzyć obiektu, ponieważ niektóre inne zasoby nie są dostępne, Konstruktor wyrzuca `system_error` obiekt, który ma `resource_unavailable_try_again` kod błędu.
 
-## <a name="native_handle"></a>  condition_variable::native_handle —
+## <a name="native_handle"></a> native_handle —
 
 Zwraca typ implementacji reprezentujący dojście condition_variable.
 
@@ -86,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` jest zdefiniowany jako wskaźnik do współbieżności środowiska wykonawczego wewnętrznych struktur danych.
 
-## <a name="notify_all"></a>  condition_variable::notify_all —
+## <a name="notify_all"></a> notify_all
 
 Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiektu.
 
@@ -94,7 +88,7 @@ Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiektu.
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable::notify_one —
+## <a name="notify_one"></a> notify_one
 
 Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiektu.
 
@@ -102,7 +96,7 @@ Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiektu.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable::wait —
+## <a name="wait"></a> Czekaj
 
 Blokuje wątek.
 
@@ -115,10 +109,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametry
 
-*Lck*<br/>
+*Lck*\
 A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
 
-*P.*<br/>
+*P.* \
 Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="remarks"></a>Uwagi
@@ -132,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable::wait_for —
+## <a name="wait_for"></a> wait_for
 
 Blokuje wątek i ustawia przedział czasu, po którym odblokowuje wątek.
 
@@ -151,13 +145,13 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parametry
 
-*Lck*<br/>
+*Lck*\
 A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
 
-*Rel_time*<br/>
+*Rel_time*\
 Element `chrono::duration` obiektu, który określa ilość czasu przed wątek zostanie wznowiona.
 
-*P.*<br/>
+*P.* \
 Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -180,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable::wait_until —
+## <a name="wait_until"></a> wait_until
 
 Blokuje wątek i ustawia maksymalny punkt w czasie, w którym odblokowuje wątek.
 
@@ -209,13 +203,13 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*Lck*<br/>
+*Lck*\
 A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
 
-*Abs_time*<br/>
+*Abs_time*\
 A [chrono::time_point](../standard-library/time-point-class.md) obiektu.
 
-*P.*<br/>
+*P.* \
 Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana

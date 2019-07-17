@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413180"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245408"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -154,8 +154,8 @@ Reguły formatowania numerycznego dla kolejnych wstawień do `cout` pozostaje ta
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[combine](#combine)|Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.|
-|[Nazwa](#name)|Zwraca przechowywaną nazwę ustawień regionalnych.|
+|[Łączenie](#combine)|Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.|
+|[name](#name)|Zwraca przechowywaną nazwę ustawień regionalnych.|
 
 ### <a name="static-functions"></a>Funkcje statyczne
 
@@ -168,6 +168,7 @@ Reguły formatowania numerycznego dla kolejnych wstawień do `cout` pozostaje ta
 
 |Operator|Opis|
 |-|-|
+|[operator=](#op_eq)|Przypisuje ustawień regionalnych.|
 |[operator!=](#op_neq)|Testuje dwa ustawienia lokalne pod kątem nierówności.|
 |[operator( )](#op_call)|Porównuje dwa `basic_string` obiektów.|
 |[operator==](#op_eq_eq)|Testuje dwa ustawienia lokalne pod kątem równości.|
@@ -417,7 +418,7 @@ Klasa elementu członkowskiego opisuje wymagany przez każdy reguł ustawień re
 
 ## <a name="locale"></a>  Locale::Locale
 
-Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych.
+Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych. Zawiera także destruktora.
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -548,6 +551,14 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
+## <a name="op_eq"></a>  Locale::operator =
+
+Przypisuje ustawień regionalnych.
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
+```
+
 ## <a name="op_neq"></a>  Locale::operator! =
 
 Testuje dwa ustawienia lokalne pod kątem nierówności.
@@ -634,7 +645,7 @@ Funkcja elementu członkowskiego zwraca:
 
 - -1, jeśli pierwszej sekwencji porównuje mniejsza od drugiej sekwencji.
 
-- + 1, jeśli drugiej sekwencji porównuje mniejszą od pierwszej sekwencji.
+- \+ 1, jeśli drugiej sekwencji porównuje mniejszą od pierwszej sekwencji.
 
 - 0, jeśli sekwencji, które są równoważne.
 
@@ -748,7 +759,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale>](../standard-library/locale.md)<br/>
+[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
 [Strony kodowe](../c-runtime-library/code-pages.md)<br/>
 [Nazwy lokalne, języki i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

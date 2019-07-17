@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a0c8a04dda6c396b4f56d0939838fb6cb8e7455
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411048"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245926"
 ---
 # <a name="allocator-class"></a>allocator — Klasa
 
@@ -83,13 +83,13 @@ Te `Type`s określony formularz, który wskaźników i odwołań musi mieć przy
 
 ### <a name="constructors"></a>Konstruktorów
 
-|Konstruktor|Opis|
+|||
 |-|-|
 |[allocator](#allocator)|Konstruktory użyty do utworzenia `allocator` obiektów.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[const_pointer](#const_pointer)|Typ, który zapewnia stały wskaźnik do typu obiektu zarządzanego przez program przydzielania.|
 |[const_reference](#const_reference)|Typ, który zawiera stałe odwołanie do typu obiektu zarządzanego przez program przydzielania.|
@@ -99,31 +99,25 @@ Te `Type`s określony formularz, który wskaźników i odwołań musi mieć przy
 |[size_type](#size_type)|Sekwencja nieoznaczoną liczbę całkowitą reprezentujące długość każdego obiekt klasy szablonu `allocator` można przydzielić.|
 |[value_type](#value_type)|Typ, który jest zarządzany przez program przydzielania.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="functions"></a>Funkcje
 
-|Funkcja elementu członkowskiego|Opis|
+|||
 |-|-|
 |[address](#address)|Wyszukuje adres obiektu, którego wartość jest określona.|
 |[allocate](#allocate)|Przydziela blok pamięci jest wystarczająco duży, aby zapisać co najmniej określonej liczby elementów.|
 |[construct](#construct)|Tworzy określonego typu obiektu pod określony adres, który jest inicjowany z określoną wartością.|
-|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 |[destroy](#destroy)|Wywołuje destruktora obiektów bez Trwa cofanie alokacji pamięci, do przechowywania obiektu.|
 |[max_size](#max_size)|Zwraca liczbę elementów typu `Type` może zostać przydzielone przez obiekt klasy `allocator` przed wolnej pamięci jest używany w.|
 |[ponowne wiązanie](#rebind)|Struktura, która umożliwia alokatora dla obiektów typu jeden do przydzielania pamięci dla obiektów innego typu.|
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
 |[operator=](#op_eq)|Przypisuje jeden `allocator` obiektu do drugiego `allocator` obiektu.|
 
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<pamięci >
-
-**Namespace:** standardowe
-
-## <a name="address"></a>  Allocator::Address
+### <a name="address"></a> Adres
 
 Wyszukuje adres obiektu, którego wartość jest określona.
 
@@ -132,20 +126,20 @@ pointer address(reference val) const;
 const_pointer address(const_reference val) const;
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Const lub nonconst wartość obiektu, którego adres są wyszukiwane.
 
-### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwracana
 
 "Const" lub nonconst wskaźnik do obiektu znaleźć wartości, odpowiednio, const lub nonconst.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Funkcje Członkowskie zwracają adres *val*na formularz, który wskaźniki należy wykonać dla przydzielone elementów.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_address.cpp
@@ -189,7 +183,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
-## <a name="allocate"></a>  Allocator::allocate
+### <a name="allocate"></a> Przydziel
 
 Przydziela blok pamięci jest wystarczająco duży, aby zapisać co najmniej określonej liczby elementów.
 
@@ -197,23 +191,23 @@ Przydziela blok pamięci jest wystarczająco duży, aby zapisać co najmniej okr
 pointer allocate(size_type count, const void* _Hint);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*Liczba*<br/>
+*Liczba*\
 Liczba elementów, dla których ma można przydzielić wystarczającej ilości miejsca.
 
-*_Hint*<br/>
+*_Hint*\
 Wskaźnika elementu const, które mogą być pomocne obiekt alokatora który spełnia żądanie dla magazynu, znajdując adres obiektu, przydzielany przed żądania.
 
-### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do przydzielonego obiektu lub wartość null, jeśli nie została przydzielona pamięć.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Funkcja elementu członkowskiego przydziela pamięć dla tablic, liczba elementów typu `Type`, przez nowy operator wywołania (*liczba*). Zwraca wskaźnik do przydzielonego obiektu. Argument wskazówka pomaga niektóre puli buforów w ulepszaniu miejscowość odwołanie; prawidłowy wybór jest adres obiektu wcześniej przydzielonej przez ten sam obiekt programu przydzielania i nie została jeszcze z cofniętą alokacją. Aby przekazać bez wskazówki, zamiast tego użyj argumentów wskaźnika o wartości null.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_allocate.cpp
@@ -249,7 +243,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9
 ```
 
-## <a name="allocator"></a>  Allocator::Allocator
+### <a name="allocator"></a> Allocator
 
 Konstruktory używany do tworzenia obiektów programu przydzielania.
 
@@ -257,19 +251,19 @@ Konstruktory używany do tworzenia obiektów programu przydzielania.
 allocator();
 allocator(const allocator<Type>& right);
 template <class Other>
-allocator(const allocator<Other>& right);
+    allocator(const allocator<Other>& right);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt alokatora, który ma być skopiowany.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Konstruktor nie działa. Ogólnie rzecz biorąc jednak obiekt programu przydzielania skonstruowany z innego obiektu programu przydzielania powinien porównywane do niego i umożliwić intermixing alokacji obiektów i zwalnianie pomiędzy dwoma obiektami alokatora.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_allocator.cpp
@@ -332,7 +326,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-## <a name="const_pointer"></a>  allocator::const_pointer
+### <a name="const_pointer"></a> const_pointer
 
 Typ, który zapewnia stały wskaźnik do typu obiektu zarządzanego przez program przydzielania.
 
@@ -340,11 +334,11 @@ Typ, który zapewnia stały wskaźnik do typu obiektu zarządzanego przez progra
 typedef const value_type *const_pointer;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ wskaźnika opisuje obiekt `ptr` , wyznaczyć, za pomocą wyrażenia `*ptr`, obiekt const, który można przydzielić obiektu alokatora klasy szablonu.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_const_ptr.cpp
@@ -387,7 +381,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.
 ```
 
-## <a name="const_reference"></a>  Allocator::const_reference
+### <a name="const_reference"></a> const_reference —
 
 Typ, który zawiera stałe odwołanie do typu obiektu zarządzanego przez program przydzielania.
 
@@ -395,11 +389,11 @@ Typ, który zawiera stałe odwołanie do typu obiektu zarządzanego przez progra
 typedef const value_type& const_reference;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ odwołania, opisująca obiekt, który można określić obiekt const, który można przydzielić obiektu alokatora klasy szablonu.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_const_ref.cpp
@@ -453,7 +447,7 @@ The value of the element referred to by vcref,
 after nofication through its nonconst iterator, is: 175.
 ```
 
-## <a name="construct"></a>  Allocator::Construct
+### <a name="construct"></a> Konstrukcja
 
 Tworzy określonego typu obiektu pod określony adres, który jest inicjowany z określoną wartością.
 
@@ -461,22 +455,22 @@ Tworzy określonego typu obiektu pod określony adres, który jest inicjowany z 
 void construct(pointer ptr, const Type& val);
 void construct(pointer ptr, Type&& val);
 template <class _Other>
-void construct(pointer ptr, _Other&&...   val);
+    void construct(pointer ptr, _Other&&... val);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik do lokalizacji, w której obiekt ma zostać skonstruowane.
 
-*Val*<br/>
+*Val*\
 Wartość za pomocą którego generowana jest zainicjowane.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska jest odpowiednikiem **nowe** (( `void` \*) `ptr` ) **typu** ( `val` ).
+Pierwsza funkcja członkowska jest odpowiednikiem **nowe** ((`void` \*) `ptr`) **typu** (`val`).
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_construct.cpp
@@ -525,7 +519,7 @@ The modified vector v1 is:
 ( 3 7 9 12 15 18 21 ).
 ```
 
-## <a name="deallocate"></a>  Allocator::deallocate
+### <a name="deallocate"></a> Cofnij Przydział
 
 Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
 
@@ -533,23 +527,23 @@ Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od
 void deallocate(pointer ptr, size_type count);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.
 
-*Liczba*<br/>
+*Liczba*\
 Liczba obiektów, które można cofnąć przydziału z magazynu.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Funkcja elementu członkowskiego zwalnia pamięć dla tablicy obiektów typu Liczba `Type` począwszy od *ptr*, wywołując `operator delete(ptr)`. Wskaźnik *ptr* musi zostały zwrócone wcześniej przez wywołanie [przydzielić](#allocate) dla obiekt alokatora, który porównuje równa  **\*to**, przydzielania tablicy obiekt tego samego rozmiaru i typu. `deallocate` nigdy nie zgłasza wyjątek.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 Na przykład za pomocą funkcji elementu członkowskiego, zobacz [allocator::allocate](#allocate).
 
-## <a name="destroy"></a>  Allocator::Destroy
+### <a name="destroy"></a> Zniszcz
 
 Wywołuje destruktora obiektów bez Trwa cofanie alokacji pamięci, do przechowywania obiektu.
 
@@ -557,16 +551,16 @@ Wywołuje destruktora obiektów bez Trwa cofanie alokacji pamięci, do przechowy
 void destroy(pointer ptr);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik, wyznaczanie adres obiektu, które mają zostać zniszczone.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcji niszczy obiekcie wyznaczonym przez *ptr*, przez wywołanie destruktora `ptr->` **typu**::**~ typu**.
+Element członkowski funkcji niszczy obiekcie wyznaczonym przez *ptr*, przez wywołanie destruktora `ptr->` **typu**:: **~ typu**.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_destroy.cpp
@@ -615,7 +609,7 @@ The modified vector v1 is:
 ( 2 4 6 8 10 -99 14 ).
 ```
 
-## <a name="difference_type"></a>  Allocator::difference_type
+### <a name="difference_type"></a> difference_type
 
 Podpisany typ całkowity, który może reprezentować różnicy między wartościami wskaźniki do typu obiektu zarządzanego przez program przydzielania.
 
@@ -623,11 +617,11 @@ Podpisany typ całkowity, który może reprezentować różnicy między wartośc
 typedef ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ liczby całkowitej ze znakiem opisuje obiekt, który może reprezentować różnica między adresami dowolne dwa elementy w sekwencji, który można przydzielić obiektu alokatora klasy szablonu.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_diff_type.cpp
@@ -676,7 +670,7 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.
 ```
 
-## <a name="max_size"></a>  Allocator::max_size
+### <a name="max_size"></a> max_size —
 
 Zwraca liczbę elementów typu `Type` , może zostać przydzielone przez obiekt alokatora klas, zanim zostaną użyte wolnej pamięci w.
 
@@ -684,11 +678,11 @@ Zwraca liczbę elementów typu `Type` , może zostać przydzielone przez obiekt 
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwracana
 
 Liczba elementów, które może zostać przydzielone.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_max_size.cpp
@@ -745,29 +739,29 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  Allocator::operator =
+### <a name="op_eq"></a> operator =
 
 Przypisuje jeden obiekt alokatora do innego obiektu programu przydzielania.
 
 ```cpp
 template <class Other>
-allocator<Type>& operator=(const allocator<Other>& right);
+    allocator<Type>& operator=(const allocator<Other>& right);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt alokatora, który można przypisać do innego takiego obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do obiektu programu przydzielania
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Operator przypisania szablonu nic nie robi. Ogólnie rzecz biorąc jednak obiekt programu przydzielania przypisane do innego obiektu programu przydzielania powinien porównywane do niego i umożliwić intermixing alokacji obiektów i zwalnianie pomiędzy dwoma obiektami alokatora.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_op_assign.cpp
@@ -808,7 +802,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  Allocator::Pointer
+### <a name="pointer"></a> Wskaźnik
 
 Typ, który dostarcza wskaźnik do typu obiektu zarządzanego przez program przydzielania.
 
@@ -816,11 +810,11 @@ Typ, który dostarcza wskaźnik do typu obiektu zarządzanego przez program przy
 typedef value_type *pointer;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ wskaźnika opisuje obiekt `ptr` , wyznaczyć, za pomocą wyrażenia  **\*ptr**, dowolnego obiektu, który można przydzielić obiektu alokatora klasy szablonu.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_ptr.cpp
@@ -863,19 +857,20 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
-## <a name="rebind"></a>  Allocator::rebind
+### <a name="rebind"></a> ponowne wiązanie
 
 Struktura, która umożliwia alokatora dla obiektów typu jeden do przydzielania pamięci dla obiektów innego typu.
+
 ```cpp
-struct rebind {    typedef allocator<_Other> other ;    };
+struct rebind { typedef allocator<_Other> other; };
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*other*<br/>
+*Inne*\
 Typ elementu, dla którego pamięć została przydzielona.
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Ta struktura jest przydatne w przypadku przydzielania pamięci dla typu, który różni się od typu elementu kontenera wdrażane.
 
@@ -893,7 +888,7 @@ Alternatywnie możesz nazwać jego typ wskaźnika, pisząc typu:
 A::rebind<Other>::other::pointer
 ```
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_rebind.cpp
@@ -918,7 +913,7 @@ int main( )
 }
 ```
 
-## <a name="reference"></a>  Allocator::Reference
+### <a name="reference"></a> Odwołanie
 
 Typ, który zawiera odwołanie do typu obiektu zarządzanego przez program przydzielania.
 
@@ -926,11 +921,11 @@ Typ, który zawiera odwołanie do typu obiektu zarządzanego przez program przyd
 typedef value_type& reference;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ odwołania, opisująca obiekt, który można wyznaczyć dowolnego obiektu, który można przydzielić obiektu alokatora klasy szablonu.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_reference.cpp
@@ -978,7 +973,7 @@ the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
-## <a name="size_type"></a>  Allocator::size_type
+### <a name="size_type"></a> size_type
 
 Niepodpisane integralny typ, który może reprezentować długość dowolnej sekwencji, który można przydzielić obiektu alokatora klasy szablonu.
 
@@ -986,7 +981,7 @@ Niepodpisane integralny typ, który może reprezentować długość dowolnej sek
 typedef size_t size_type;
 ```
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_size_type.cpp
@@ -1023,7 +1018,7 @@ int main( )
 }
 ```
 
-## <a name="value_type"></a>  Allocator::value_type
+### <a name="value_type"></a> value_type
 
 Typ, który jest zarządzany przez program przydzielania.
 
@@ -1031,11 +1026,11 @@ Typ, który jest zarządzany przez program przydzielania.
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>Uwagi
+#### <a name="remarks"></a>Uwagi
 
 Typ jest synonimem dla parametru szablonu `Type`.
 
-### <a name="example"></a>Przykład
+#### <a name="example"></a>Przykład
 
 ```cpp
 // allocator_value_type.cpp
@@ -1084,6 +1079,17 @@ The modified vector v is:
 ( 150 200 300 400 500 600 700 ).
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="helpers"></a>Pomocnicy
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+### <a name="allocator_arg_t"></a> allocator_arg_t
+
+```cpp
+struct allocator_arg_t { explicit allocator_arg_t() = default; };
+inline constexpr allocator_arg_t allocator_arg{};
+```
+
+### <a name="uses_allocator"></a> uses_allocator
+
+```cpp
+template <class T, class Alloc> struct uses_allocator;
+```

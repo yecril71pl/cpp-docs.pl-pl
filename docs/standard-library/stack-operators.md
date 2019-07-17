@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: f6ec0855179e41c78f32fe45429ec0bea1ae2e59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412452"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243654"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stos&gt; operatorów
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[Operator&gt;=](#op_gt_eq)|
-|[Operator&lt;](#op_lt)|[Operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator! =
+## <a name="op_neq"></a> operator! =
 
 Sprawdza, czy obiekt stack po lewej stronie operatora nie jest równa stosu obiekt po prawej stronie.
 
@@ -40,10 +35,10 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `stack`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -95,7 +90,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a>  Operator&lt;
+## <a name="op_lt"></a> Operator&lt;
 
 Sprawdza, czy obiekt stack po lewej stronie operatora jest mniejszy niż obiekt stosu po prawej stronie.
 
@@ -105,10 +100,10 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `stack`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -179,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>  Operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 Sprawdza, czy stosu obiektów po lewej stronie operatora jest mniejszy niż lub równy obiektowi stosu po prawej stronie.
 
@@ -189,10 +184,10 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `stack`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -246,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>  operator ==
+## <a name="op_eq_eq"></a> operator ==
 
 Sprawdza, czy obiekt stack po lewej stronie operatora jest równy obiektowi stosu po prawej stronie.
 
@@ -256,10 +251,10 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `stack`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -311,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a>  Operator&gt;
+## <a name="op_gt"></a> Operator&gt;
 
 Sprawdza, czy obiekt stack po lewej stronie operatora jest większy niż obiekt stosu po prawej stronie.
 
@@ -321,10 +316,10 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `stack`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -380,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>  Operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 Sprawdza, czy obiekt stack po lewej stronie operatora jest większy lub równy obiektowi stosu po prawej stronie.
 
@@ -390,10 +385,10 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `stack`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -447,7 +442,3 @@ int main( )
 The stack s1 is less than the stack s2.
 The stack s1 is greater than or equal to the stack s3.
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[\<stack>](../standard-library/stack.md)<br/>

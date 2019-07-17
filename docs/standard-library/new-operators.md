@@ -1,41 +1,38 @@
 ---
-title: '&lt;nowe&gt; operatorów'
+title: '&lt;nowe&gt; operatory i wyliczenia'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223691"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243678"
 ---
-# <a name="ltnewgt-operators"></a>&lt;nowe&gt; operatorów
+# <a name="ltnewgt-operators-and-enums"></a>&lt;nowe&gt; operatory i wyliczenia
 
-||||
-|-|-|-|
-|[Usuwanie operatora](#op_delete)|[usuwanie operatora[]](#op_delete_arr)|[nowy operator](#op_new)|
-|[nowy operator[]](#op_new_arr)|
+## <a name="op_align_val_t"></a> align_val_t wyliczenia
 
-## <a name="op_delete"></a>  Usuwanie operatora
+```cpp
+enum class align_val_t : size_t {};
+```
 
-Funkcja wywoływana przez wyrażenie delete, aby cofnięcie przydziału magazynu dla poszczególnych obiektów.
+## <a name="op_delete"></a> Usuwanie operatora
+
+Funkcja wywoływana przez wyrażenie delete, aby usunąć przydział pamięci masowej dla poszczególnych obiektów.
 
 ```cpp
 void operator delete(void* ptr) throw();
-
-void operator delete(void *,
-    void*) throw();
-
-void operator delete(void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete(void *, void*) throw();
+void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik, którego wartość ma być renderowany przez usunięcie nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
@@ -46,29 +43,25 @@ Domyślne zachowanie dla wartości null *ptr* się nic nie rób. Każda inna war
 
 Druga funkcja jest wywoływana przez wyrażenie usunięcia położenia odpowiadający nowe wyrażenie w formie **nowe**( **std::size_t**). Nic nie robi.
 
-Trzecia funkcja jest wywoływana przez wyrażenie usunięcia położenia odpowiadający nowe wyrażenie w formie **nowe**( **std::size_t**, **conststd::nothrow_t &**). Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie ma akceptować wartości `ptr` oznacza to wartość null lub który został zwrócony przez wcześniejsze wywołanie `operator new`( **size_t**). Domyślne zachowanie to można obliczyć **Usuń**(`ptr`).
+Trzecia funkcja jest wywoływana przez wyrażenie usunięcia położenia odpowiadający nowe wyrażenie w formie **nowe**( **std::size_t**, **conststd::nothrow_t &** ). Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie ma akceptować wartości `ptr` oznacza to wartość null lub który został zwrócony przez wcześniejsze wywołanie `operator new`( **size_t**). Domyślne zachowanie to można obliczyć **Usuń**(`ptr`).
 
 ### <a name="example"></a>Przykład
 
 Zobacz [nowy operator](../standard-library/new-operators.md#op_new) przykład używanego przez **operatora delete**.
 
-## <a name="op_delete_arr"></a>  Usuwanie operatora]
+## <a name="op_delete_arr"></a> Usuwanie operatora]
 
 Funkcja wywoływana przez wyrażenie usunięcia można cofnąć alokacji pamięci masowej na tablicę obiektów.
 
 ```cpp
 void operator delete[](void* ptr) throw();
-
-void operator delete[](void *,
-    void*) throw();
-
-void operator delete[](void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete[](void *, void*) throw();
+void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik, którego wartość ma być renderowany przez usunięcie nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
@@ -77,32 +70,28 @@ Pierwsza funkcja jest wywoływana przez `delete[]` wyrażenia do renderowania wa
 
 Druga funkcja jest wywoływana przez umieszczania `delete[]` wyrażenie odpowiadające `new[]` wyrażenie w formie `new[]`(**std::size_t**). Nic nie robi.
 
-Trzecia funkcja jest wywoływana przez umieszczania Usuń wyrażenie odpowiadające `new[]` wyrażenie w formie `new[]`( **std::size_t**, **const std::nothrow_t &**). Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie ma akceptować wartości *ptr* oznacza to wartość null lub który zwrócił podczas wcześniejszego wywołania do operatora `new[]`(**size_t**). Domyślne zachowanie to można obliczyć `delete[]`( `ptr`).
+Trzecia funkcja jest wywoływana przez umieszczania Usuń wyrażenie odpowiadające `new[]` wyrażenie w formie `new[]`( **std::size_t**, **const std::nothrow_t &** ). Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie ma akceptować wartości *ptr* oznacza to wartość null lub który zwrócił podczas wcześniejszego wywołania do operatora `new[]`(**size_t**). Domyślne zachowanie to można obliczyć `delete[]`( `ptr`).
 
 ### <a name="example"></a>Przykład
 
 Zobacz [nowy operator&#91; &#93; ](../standard-library/new-operators.md#op_new_arr) przykłady stosowania `operator delete[]`.
 
-## <a name="op_new"></a>  nowy operator
+## <a name="op_new"></a> nowy operator
 
 Funkcja wywoływana przez nowe wyrażenie do przydzielania pamięci dla poszczególnych obiektów.
 
 ```cpp
 void* operator new(std::size_t count) throw(bad_alloc);
-
-void* operator new(std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new(std::size_t count,
-    void* ptr) throw();
+void* operator new(std::size_t count, const std::nothrow_t&) throw();
+void* operator new(std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*<br/>
+*Liczba*\
 Liczba bajtów magazynu do przydzielenia.
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik, który ma zostać zwrócona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -137,7 +126,7 @@ Trzecia funkcja jest wywoływana przez umieszczania **nowe** wyrażenie w formie
 
 Aby zwolnić Magazyn przydzielony przez **nowy operator**, wywołaj [operatora delete](../standard-library/new-operators.md#op_delete).
 
-Aby uzyskać informacje o zgłaszaniu lub nonthrowing zachowaniem nowe, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md).
+Aby uzyskać informacje o zgłaszaniu lub niezgłaszające zachowaniem nowe, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md).
 
 ### <a name="example"></a>Przykład
 
@@ -182,26 +171,22 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a>  nowy operator]
+## <a name="op_new_arr"></a> nowy operator]
 
 Funkcja alokacji, wywoływana przez nowe wyrażenie do przydzielania pamięci dla tablicy obiektów.
 
 ```cpp
 void* operator new[](std::size_t count) throw(std::bad_alloc);
-
-void* operator new[](std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new[](std::size_t count,
-    void* ptr) throw();
+void* operator new[](std::size_t count, const std::nothrow_t&) throw();
+void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*<br/>
+*Liczba*\
 Liczba bajtów magazynu do przydzielenia dla obiektu array.
 
-*ptr*<br/>
+*PTR*\
 Wskaźnik, który ma zostać zwrócona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -260,7 +245,3 @@ int main() {
    delete[ ] fPtr3;
 }
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[\<new>](../standard-library/new.md)<br/>

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159720"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243794"
 ---
 # <a name="function-class"></a>function — Klasa
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Fty*<br/>
+*Fty*\
 Typ funkcji do opakowania.
 
-*AX*<br/>
+*AX*\
 Funkcja programu przydzielania.
 
 ## <a name="remarks"></a>Uwagi
@@ -103,42 +103,38 @@ We wszystkich przypadkach `INVOKE(f, t1, t2, ..., tN)`, gdzie `f` jest wywoływa
 
 Pusta `function` obiektu nie przechowuje wywoływanego obiektu lub odwołanie do wywoływanego obiektu.
 
+## <a name="members"></a>Elementy członkowskie
+
 ### <a name="constructors"></a>Konstruktorów
 
-|Konstruktor|Opis|
+|||
 |-|-|
 |[— Funkcja](#function)|Tworzy otokę, która jest pusta lub przechowuje obiekt możliwy do wywołania dowolnego typu z ustaloną sygnaturę.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[result_type](#result_type)|Zwracany typ przechowywany obiekt możliwy do wywołania.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="functions"></a>Funkcje
 
-|Funkcja elementu członkowskiego|Opis|
+|||
 |-|-|
 |[Przypisz](#assign)|Przypisuje wywoływanego obiektu, do tego obiektu funkcji.|
 |[swap](#swap)|Zamień dwa obiekty możliwy do wywołania.|
-|[target](#target)|Sprawdza, czy przechowywany obiekt jest możliwy do wywołania określonych.|
+|[Docelowy](#target)|Sprawdza, czy przechowywany obiekt jest możliwy do wywołania określonych.|
 |[target_type](#target_type)|Pobiera typ informacji na obiekt.|
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
-|[nie określono tego parametru Function::operator](#op_unspecified)|Sprawdza, czy istnieje przechowywany obiekt możliwy do wywołania.|
-|[Funkcja:: operator()](#op_call)|Wywołuje wywoływanego obiektu.|
-|[Function::operator =](#op_eq)|Zastępuje przechowywany obiekt możliwy do wywołania.|
+|[Operator unspecified](#op_unspecified)|Sprawdza, czy istnieje przechowywany obiekt możliwy do wywołania.|
+|[operator()](#op_call)|Wywołuje wywoływanego obiektu.|
+|[operator=](#op_eq)|Zastępuje przechowywany obiekt możliwy do wywołania.|
 
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="assign"></a>  funkcji
+## <a name="assign"></a> Przypisz
 
 Przypisuje wywoływanego obiektu, do tego obiektu funkcji.
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*_Func*<br/>
+*_Func*\
 Obiekt możliwy do wywołania.
 
-*_Fnref*<br/>
+*_Fnref*\
 Otok odwołania, który zawiera obiekt możliwy do wywołania.
 
-*AX*<br/>
+*AX*\
 Obiekt programu przydzielania.
 
 ### <a name="remarks"></a>Uwagi
 
 Element członkowski funkcji każdego Zastąp `callable object` posiadaniu `*this` z obiekt przekazany jako `operand`. Zarówno przydzielanie magazynu za pomocą obiektu programu przydzielania *Ax*.
 
-## <a name="function"></a>  Function::Function
+## <a name="function"></a> — Funkcja
 
 Tworzy otokę, która jest pusta lub przechowuje obiekt możliwy do wywołania dowolnego typu z ustaloną sygnaturę.
 
@@ -194,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt funkcji do skopiowania.
 
-*Fx*<br/>
+*FX*\
 Typ wywoływanego obiektu.
 
-*_Func*<br/>
+*_Func*\
 Obiekt do opakowania.
 
-*Alokacji*<br/>
+*Alokacji*\
 Typ programu przydzielania.
 
-*AX*<br/>
+*AX*\
 Alokator.
 
-*_Fnref*<br/>
+*_Fnref*\
 Odwołanie obiekt do opakowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  nie określono tego parametru Function::operator
+## <a name="op_unspecified"></a> Operator unspecified
 
 Sprawdza, czy istnieje przechowywany obiekt możliwy do wywołania.
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  Funkcja:: operator()
+## <a name="op_call"></a> Operator()
 
 Wywołuje wywoływanego obiektu.
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ n-tej wywołać argument.
 
-*tN*<br/>
+*TN*\
 Wywołanie n-ty argument.
 
 ### <a name="remarks"></a>Uwagi
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>  Function::operator =
+## <a name="op_eq"></a> operator =
 
 Zastępuje przechowywany obiekt możliwy do wywołania.
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametry
 
-*npc*<br/>
+*npc*\
 Stała wskaźnika o wartości null.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt funkcji do skopiowania.
 
-*FN*<br/>
+*FN*\
 Obiekt do opakowania.
 
-*fnref*<br/>
+*fnref*\
 Odwołanie obiekt do opakowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>  Function::result_type
+## <a name="result_type"></a> Element result_type
 
 Zwracany typ przechowywany obiekt możliwy do wywołania.
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>  Function::swap
+## <a name="swap"></a> swap
 
 Zamień dwa obiekty możliwy do wywołania.
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt funkcji, która ma być Zamień.
 
 ### <a name="remarks"></a>Uwagi
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>  Function::target
+## <a name="target"></a> Docelowy
 
 Sprawdza, czy przechowywany obiekt jest możliwy do wywołania określonych.
 
@@ -575,7 +571,7 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametry
 
-*Fty2*<br/>
+*Fty2*\
 Obiekt docelowy typ do przetestowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  Function::target_type
+## <a name="target_type"></a> target_type —
 
 Pobiera typ informacji na obiekt.
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[reference_wrapper, klasa](../standard-library/reference-wrapper-class.md)<br/>

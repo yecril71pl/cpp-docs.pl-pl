@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 18d6a8517d71cfa9c7e17a45c97f77977ec778f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa90a861194275d8c82a407e2ca8db6e757aab35
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385144"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245228"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
-Deklaruje obiekty, które kontrolują odczytywanie z oraz zapisywanie do standardowych strumieni. Często jest tylko nagłówek, które trzeba uwzględnić wykonać wejście i wyjście z programu C++.
+Deklaruje obiekty, które kontrolują odczytywanie z oraz zapisywanie do standardowych strumieni. To między innymi często jest tylko nagłówek, musisz wejścia i wyjścia z C++ program.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,19 +31,22 @@ Deklaruje obiekty, które kontrolują odczytywanie z oraz zapisywanie do standar
 #include <iostream>
 ```
 
+> [!NOTE]
+> \<Iostream > używa biblioteki `#include <ios>`, `#include <streambuf>`, `#include <istream>`, i `#include <ostream>` instrukcji.
+
 ## <a name="remarks"></a>Uwagi
 
 Obiekty można podzielić na dwie grupy:
 
-- [CIN](#cin), [cout](#cout), [cerr](#cerr), i [clog —](#clog) są bajt obiektowo, konwencjonalne transferu bajtów w czasie wykonywania.
+- [CIN](#cin), [cout](#cout), [cerr](#cerr), i [clog —](#clog) są bajt obiektowo, konwencjonalne transferów bajtów w czasie.
 
 - [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr), i [wclog](#wclog) są szerokie ukierunkowane, tłumaczenia ze znaków dwubajtowych, które program manipuluje wewnętrznie.
 
-Po wykonaniu pewnych operacji na strumieniu, takich jak standardowe dane wejściowe nie można wykonać operacji o innej orientacji tego samego strumienia. W związku z tym, program nie może działać zamiennie zarówno [cin](#cin) i [wcin](#wcin), na przykład.
+Po wykonaniu pewnych operacji na strumieniu, takich jak standardowe dane wejściowe, nie można wykonać operacji o innej orientacji, w tym samym strumieniu. W związku z tym, program nie może działać zamiennie zarówno [cin](#cin) i [wcin](#wcin), na przykład.
 
-Wszystkie obiekty zadeklarowanych w tym udziale nagłówka wspólnych właściwości, można założyć, które są zbudowane przed wszystkie obiekty statyczne można zdefiniować w jednostce translacji, która zawiera \<iostream >. Tak samo można założyć, że te obiekty nie są niszczone, przed destruktory dla takich statycznych obiektów, jaką zdefiniujesz. (Strumienie wyjściowe jednak opróżnione podczas Kończenie działania programu). W związku z tym można bezpiecznie odczytać lub zapisać do standardowych strumieni przed uruchomieniem programu i po zakończeniu programu.
+Wszystkie obiekty zadeklarowanych w tym udziale nagłówka wspólnych właściwości — można założyć, są one zbudowane przed wszystkie obiekty statyczne można zdefiniować w jednostce translacji, która zawiera \<iostream >. Tak samo można założyć, że te obiekty nie są niszczone, przed destruktory dla takich statycznych obiektów, jaką zdefiniujesz. (Strumienie wyjściowe jednak opróżnione podczas Kończenie działania programu). W związku z tym można bezpiecznie odczytać lub zapisać do standardowych strumieni przed uruchomieniem programu i po zakończeniu programu.
 
-Gwarancja nie jest uniwersalny, jednak. Statyczny Konstruktor może wywołać funkcję w innej jednostce translacji. Wywołana funkcja nie można zakładać, że obiekty zadeklarowane w tym nagłówku mają został skonstruowany, podane w nieokreślonej kolejności, w której tłumaczenia jednostki uczestniczyć w konstrukcji statyczne. W takiej sytuacji należy używać tych obiektów, należy najpierw utworzyć obiekt klasy [ios_base::Init](../standard-library/ios-base-class.md#init).
+Jednak jest uniwersalny, gwarancji. Statyczny Konstruktor może wywołać funkcję w innej jednostce translacji. Wywołana funkcja nie można zakładać, że obiekty zadeklarowane w tym nagłówku mają został skonstruowany, podane w nieokreślonej kolejności, w której tłumaczenia jednostki uczestniczyć w konstrukcji statyczne. W takiej sytuacji należy używać tych obiektów, należy najpierw utworzyć obiekt klasy [ios_base::Init](../standard-library/ios-base-class.md#init).
 
 ### <a name="global-stream-objects"></a>Obiekty globalne Stream
 
@@ -58,7 +61,7 @@ Gwarancja nie jest uniwersalny, jednak. Statyczny Konstruktor może wywołać fu
 |[wclog](#wclog)|Określa `wclog` globalnego strumienia.|
 |[wcout](#wcout)|Określa `wcout` globalnego strumienia.|
 
-###  <a name="cerr"></a>  cerr
+###  <a name="cerr"></a> cerr
 
 Obiekt `cerr` kontroluje dane wyjściowe do bufora strumienia, skojarzony z obiektem `stderr`, zadeklarowanych w \<cstdio — >.
 
@@ -104,7 +107,7 @@ int main( )
 }
 ```
 
-###  <a name="cin"></a>  CIN
+###  <a name="cin"></a> CIN
 
 Określa `cin` globalnego strumienia.
 
@@ -122,7 +125,7 @@ Obiekt kontroluje wyodrębniania ze standardowego wejścia jako strumień bajtó
 
 #### <a name="example"></a>Przykład
 
-W tym przykładzie `cin` ustawia kończyć się niepowodzeniem, bit w strumieniu po napotkaniu znaków nienumerycznych. Program czyści kończyć się niepowodzeniem i paski nieprawidłowy znak ze strumienia, aby kontynuować.
+W tym przykładzie `cin` ustawia kończyć się niepowodzeniem, bit w strumieniu, gdy napotka znaków nienumerycznych. Program czyści kończyć się niepowodzeniem i paski nieprawidłowy znak ze strumienia, aby kontynuować.
 
 ```cpp
 // iostream_cin.cpp
@@ -152,11 +155,10 @@ int main()
 ```
 
 ```Output
-
 2
 ```
 
-###  <a name="clog"></a>  clog
+###  <a name="clog"></a> clog
 
 Określa `clog` globalnego strumienia.
 
@@ -176,7 +178,7 @@ Formanty obiektu buforowana wstawiania do danych wyjściowych błędu standardow
 
 Zobacz [cerr](#cerr) na przykład za pomocą `clog`.
 
-###  <a name="cout"></a>  Cout
+###  <a name="cout"></a> Cout
 
 Określa `cout` globalnego strumienia.
 
@@ -196,7 +198,7 @@ Obiekt kontroluje wstawień do wyjścia standardowego jako strumień bajtów.
 
 Zobacz [cerr](#cerr) na przykład za pomocą `cout`.
 
-###  <a name="wcerr"></a>  wcerr
+### <a name="wcerr"></a> wcerr
 
 Określa `wcerr` globalnego strumienia.
 
@@ -216,7 +218,7 @@ Obiekt kontroluje Niebuforowane wstawiania do danych wyjściowych błędu standa
 
 Zobacz [cerr](#cerr) na przykład za pomocą `wcerr`.
 
-###  <a name="wcin"></a>  wcin
+### <a name="wcin"></a> wcin
 
 Określa `wcin` globalnego strumienia.
 
@@ -236,7 +238,7 @@ Obiekt kontroluje wyodrębniania ze standardowego wejścia jako strumień szerok
 
 Zobacz [cerr](#cerr) na przykład za pomocą `wcin`.
 
-###  <a name="wclog"></a>  wclog
+### <a name="wclog"></a> wclog
 
 Określa `wclog` globalnego strumienia.
 
@@ -256,7 +258,7 @@ Formanty obiektu buforowana wstawiania do danych wyjściowych błędu standardow
 
 Zobacz [cerr](#cerr) na przykład za pomocą `wclog`.
 
-###  <a name="wcout"></a>  wcout
+### <a name="wcout"></a> wcout
 
 Określa `wcout` globalnego strumienia.
 
@@ -279,10 +281,9 @@ Zobacz [cerr](#cerr) na przykład za pomocą `wcout`.
 `CString` wystąpienia w `wcout` instrukcji należy zrzutować do `const wchar_t*`, jak pokazano w poniższym przykładzie.
 
 ```
+CString cs("meow");
 
-    CString cs("meow");
-
-    wcout <<(const wchar_t*) cs <<endl;
+wcout <<(const wchar_t*) cs <<endl;
 ```
 
 Aby uzyskać więcej informacji, zobacz [podstawowe operacje na obiekcie CString](../atl-mfc-shared/basic-cstring-operations.md).

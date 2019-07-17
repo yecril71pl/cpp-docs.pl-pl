@@ -7,22 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385222"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245235"
 ---
 # <a name="ltiosgt"></a>&lt;dla systemu IOS&gt;
 
 Definiuje kilka typów i funkcji podstawowych operacji iostream. Ten nagłówek będzie zazwyczaj uwzględniony dla Ciebie innego nagłówków iostream; rzadko uwzględniania go bezpośrednio.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <ios>
-```
+**Nagłówek**: \<dla systemu ios >
+
+**Namespace:** standardowe
+
+> [!NOTE]
+> \<Dla systemu ios > używa biblioteki `#include <iosfwd>` instrukcji.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -36,9 +39,11 @@ istr>> noskipws;
 
 wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
+## <a name="members"></a>Elementy członkowskie
+
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[dla systemu IOS](../standard-library/ios-typedefs.md#ios)|Obsługuje klasy dla systemu ios ze starego biblioteką iostream.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Obsługuje operacje wewnętrznego.|
@@ -52,10 +57,11 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |||
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są traktowane jako **true** lub **false** w strumieniu.|
-|[dec](../standard-library/ios-functions.md#dec)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 10.|
+|[Gru](../standard-library/ios-functions.md#dec)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 10.|
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Określa flagi o `ios_base` obiekt ma być używany domyślny format wyświetlania dla wartości zmiennoprzecinkowych.|
 |[Stała](../standard-library/ios-functions.md#fixed)|Określa, czy liczba zmiennoprzecinkowa jest wyświetlana w notacji dziesiętnej stałej.|
 |[hex](../standard-library/ios-functions.md#hex)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 16.|
+|[typu hexfloat](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|Powoduje, że znak numeru, aby być wyrównane do lewej i numer do prawej.|
 |[left](../standard-library/ios-functions.md#left)|Powoduje, że tekst, który nie jest szerokie, jak szerokość dane wyjściowe pojawią się w opróżniania strumienia do lewego marginesu.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są traktowane jako 1 lub 0 w strumieniu.|
@@ -75,11 +81,21 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[unitbuf](../standard-library/ios-functions.md#unitbuf)|Powoduje, że dane wyjściowe mają być przetwarzane, gdy ten bufor nie jest pusty.|
 |[wielkie litery](../standard-library/ios-functions.md#uppercase)|Określa, że cyfry szesnastkowe i wykładnika w notacji naukowej są pisane wielkimi literami.|
 
+### <a name="error-reporting"></a>Raportowanie błędów
+
+|||
+|-|-|
+|[io_errc](../standard-library/ios-functions.md#io_errc)||
+|[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
+|[iostream_category](../standard-library/ios-functions.md#iostream_category)||
+|[make_error_code](../standard-library/ios-functions.md#make_error_code)||
+|[make_error_condition](../standard-library/ios-functions.md#make_error_condition)||
+
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|Klasa szablonu Opisuje funkcje magazynu i elementów członkowskich, które muszą być wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni danych wyjściowych (szablonu klasy [basic_ostream](../standard-library/basic-ostream-class.md)) zależą od Parametry szablonu.|
+|[basic_ios —](../standard-library/basic-ios-class.md)|Klasa szablonu Opisuje funkcje magazynu i elementów członkowskich, które muszą być wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni danych wyjściowych (szablonu klasy [basic_ostream](../standard-library/basic-ostream-class.md)) zależą od Parametry szablonu.|
 |[fpos —](../standard-library/fpos-class.md)|Klasa szablonu opisuje obiekt, który można przechowywać wszystkie informacje niezbędne do przywrócenia wskaźnika dowolnego położenie pliku w dowolnej usłudze stream.|
 |[ios_base](../standard-library/ios-base-class.md)|Klasa opisuje magazynu i funkcje Członkowskie wspólne dla danych wejściowych i wyjściowych strumieni, które nie są zależne od parametrów szablonu.|
 

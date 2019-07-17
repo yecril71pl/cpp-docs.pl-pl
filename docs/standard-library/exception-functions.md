@@ -24,23 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412660"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246062"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;wyjątek&gt; funkcji
 
-||||
-|-|-|-|
-|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
-|[set_unexpected](#set_unexpected)|[Zakończenie](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[unexpected](#unexpected)|
-
-## <a name="current_exception"></a>  current_exception
+## <a name="current_exception"></a> current_exception
 
 Uzyskuje inteligentny wskaźnik na bieżący wyjątek.
 
@@ -62,18 +55,18 @@ Destruktor dla bieżącego wyjątku jest wywoływany pod koniec **catch** zablok
 
 Kolejne wywołania `current_exception` funkcji powrotu `exception_ptr` obiekty, które odwołują się do różnych kopii bieżącego wyjątku. W związku z tym obiekty są porównane jako nierówne, ponieważ odnoszą się one do poszczególnych kopii, mimo że kopie mają tę samą wartość binarną.
 
-## <a name="make_exception_ptr"></a>  make_exception_ptr
+## <a name="make_exception_ptr"></a> make_exception_ptr
 
 Tworzy [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) obiekt, który przechowuje kopię wyjątku.
 
 ```cpp
 template <class E>
-exception_ptr make_exception_ptr(E Except);
+    exception_ptr make_exception_ptr(E Except);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Z wyjątkiem*<br/>
+*Z wyjątkiem*\
 Klasa z wyjątkiem do skopiowania. Zwykle określaj [klasy wyjątku](../standard-library/exception-class.md) obiekt jako argument `make_exception_ptr` funkcji, mimo że dowolny obiekt klasy może być argumentem.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -86,7 +79,7 @@ Wywoływanie `make_exception_ptr` funkcji jest odpowiednikiem zgłaszania C++ wy
 
 Aplikacja zazwyczaj nie wymaga `make_exception_ptr` funkcji, a my odradzamy jej użycie.
 
-## <a name="rethrow_exception"></a>  rethrow_exception
+## <a name="rethrow_exception"></a> rethrow_exception
 
 Zgłasza wyjątek przekazany jako parametr.
 
@@ -96,14 +89,14 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Parametry
 
-*P*<br/>
+*P*\
 Przechwycony wyjątek do ponownego zgłoszenia. Jeśli *P* ma wartość null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), funkcja zgłasza [std::bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Uwagi
 
 Po zapisaniu przechwyconego wyjątku w `exception_ptr` obiektu, wątek główny może przetworzyć obiekt. W podstawowym wątku, wywołaj `rethrow_exception` działać razem z `exception_ptr` obiekt jako argumentu. `rethrow_exception` Funkcja wyodrębnia wyjątek z `exception_ptr` obiektu i następnie zgłasza wyjątek w kontekście wątku głównego.
 
-## <a name="get_terminate"></a>  get_terminate —
+## <a name="get_terminate"></a> get_terminate —
 
 Uzyskuje bieżącą `terminate_handler` funkcji.
 
@@ -111,7 +104,7 @@ Uzyskuje bieżącą `terminate_handler` funkcji.
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>  set_terminate
+## <a name="set_terminate"></a> set_terminate
 
 Ustanawia nowy `terminate_handler` wywoływany przy zakończeniu programu.
 
@@ -121,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*fnew*<br/>
+*fnew*\
 Funkcja wywoływana po zakończeniu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -160,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>  get_unexpected —
+## <a name="get_unexpected"></a> get_unexpected —
 
 Uzyskuje bieżącą `unexpected_handler` funkcji.
 
@@ -168,7 +161,18 @@ Uzyskuje bieżącą `unexpected_handler` funkcji.
 unexpected_handler get_unexpected();
 ```
 
-## <a name="set_unexpected"></a>  set_unexpected
+## <a name="rethrow_if_nested"></a> rethrow_if_nested
+
+```cpp
+template <class E> 
+    void rethrow_if_nested(const E& e);
+```
+
+### <a name="remarks"></a>Uwagi
+
+Jeśli nie jest typem polimorficznym klasy lub `nested_exception` jest niedostępny lub niejednoznaczny, nie ma żadnego efektu. W przeciwnym razie wykonuje rzutowania dynamicznego.
+
+## <a name="set_unexpected"></a> set_unexpected
 
 Ustanawia nowy `unexpected_handler` się kiedy napotkane nieoczekiwane wyjątki.
 
@@ -178,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*fnew*<br/>
+*fnew*\
 Funkcja wywoływana, gdy Napotkano nieoczekiwany wyjątek.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -216,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>  Zakończenie
+## <a name="terminate"></a> Zakończenie
 
 Wywołuje terminate_handler.
 
@@ -234,7 +238,18 @@ Program obsługi zakończenia nie może zwrócić do obiektu wywołującego. W m
 
 Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) przykładem użycia `terminate`.
 
-## <a name="uncaught_exception"></a>  uncaught_exception
+## <a name="throw_with_nested"></a> throw_with_nested
+
+```cpp
+template <class T> [[noreturn]]
+    void throw_with_nested(T&& t);
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zgłasza wyjątek wyjątków zagnieżdżonych.
+
+## <a name="uncaught_exception"></a> uncaught_exception
 
 Zwraca **true** tylko wtedy, gdy zgłoszony wyjątek jest obecnie przetwarzany.
 
@@ -299,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>  Nieoczekiwany
+## <a name="unexpected"></a> Nieoczekiwany
 
 Wywołuje program obsługi nieoczekiwanych wyjątków.
 
@@ -326,7 +341,3 @@ W momencie uruchamiania programu, program obsługi nieoczekiwanych wyjątków je
 ### <a name="example"></a>Przykład
 
 Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) przykładem użycia `unexpected`.
-
-## <a name="see-also"></a>Zobacz także
-
-[\<wyjątku >](../standard-library/exception.md)<br/>

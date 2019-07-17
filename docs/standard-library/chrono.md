@@ -10,58 +10,61 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 44620b6ea6c970027a8e9a023c0972c6dec43ee0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 72d16b068f337fe935d07e1eb2d0e2b74de6268f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220247"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244862"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 Dołączyć standardowy nagłówek \<chrono > do zdefiniowania klasy i funkcje, które reprezentują i manipulować czasów i czasie czasu.
 
-Począwszy od programu Visual Studio 2015, implementacja `steady_clock` został zmieniony, aby spełniać wymagania C++ Standard opanowanie i monotonicity. `steady_clock` teraz jest oparty na QueryPerformanceCounter() i `high_resolution_clock` jest teraz element typedef dla `steady_clock`. W rezultacie w programie Microsoft C++ kompilatora `steady_clock::time_point` jest teraz element typedef dla `chrono::time_point<steady_clock>`; jednak nie jest w przypadku innych implementacji.
+Począwszy od programu Visual Studio 2015, implementacja `steady_clock` został zmieniony, aby spełniać wymagania C++ Standard opanowanie i monotonicity. `steady_clock` teraz jest oparty na QueryPerformanceCounter() i `high_resolution_clock` jest teraz element typedef dla `steady_clock`. W rezultacie w programie Microsoft C++ kompilatora `steady_clock::time_point` jest teraz element typedef dla `chrono::time_point<steady_clock>`; Jednakże, ta zasada nie jest zawsze w przypadku innych implementacji.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <chrono>
-```
+**Nagłówek:** \<chrono >
+
+**Namespace:** standardowe
+
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="classes"></a>Klasy
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[duration, klasa](../standard-library/duration-class.md)|Opisuje typ, który zawiera interwał czasu.|
 |[time_point, klasa](../standard-library/time-point-class.md)|Opisuje typ, który reprezentuje punkt w czasie.|
 
 ### <a name="structs"></a>Struktury
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[common_type, struktura](../standard-library/common-type-structure.md)|Opisuje specjalizacje szablonu klasy [common_type](../standard-library/common-type-class.md) dla instancji `duration` i `time_point`.|
 |[duration_values, struktura](../standard-library/duration-values-structure.md)|Zawiera określone wartości dla `duration` parametru szablonu `Rep`.|
+|[Poprawiono elementy high_resolution_clock — struktura](../standard-library/high-resolution-clock-struct.md)||
 |[steady_clock, struktura](../standard-library/steady-clock-struct.md)|Reprezentuje `steady` zegara.|
 |[system_clock, struktura](../standard-library/system-clock-structure.md)|Reprezentuje *typ zegara* jest oparty na zegarze w czasie rzeczywistym systemu.|
 |[treat_as_floating_point, struktura](../standard-library/treat-as-floating-point-structure.md)|Określa, czy typ może być traktowana jako typ zmiennoprzecinkowy.|
 
 ### <a name="functions"></a>Funkcje
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Rzutowania `duration` obiektu określonego typu.|
 |[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Rzutowania `time_point` obiektu określonego typu.|
 
 ### <a name="operators"></a>Operatory
 
-|Nazwa|Opis|
-|----------|-----------------|
+|||
+|-|-|
 |[operator-](../standard-library/chrono-operators.md#operator-)|Operator odejmowania lub negacji `duration` i `time_point` obiektów.|
 |[operator!=](../standard-library/chrono-operators.md#op_neq)|Operator nierówności, który jest używany z `duration` lub `time_point` obiektów.|
 |[Operator modulo](../standard-library/chrono-operators.md#op_modulo)|Operator modulo operacji na `duration` obiektów.|
-|[operator*](../standard-library/chrono-operators.md#op_star)|Operator mnożenia dla `duration` obiektów.|
-|[operator/](../standard-library/chrono-operators.md#op_div)|Operator dzielenia dla `duration` obiektów.|
+|[operator *](../standard-library/chrono-operators.md#op_star)|Operator mnożenia dla `duration` obiektów.|
+|[operator /](../standard-library/chrono-operators.md#op_div)|Operator dzielenia dla `duration` obiektów.|
 |[operator +](../standard-library/chrono-operators.md#op_add)|Dodaje `duration` i `time_point` obiektów.|
 |[Operator&lt;](../standard-library/chrono-operators.md#op_lt)|Określa, czy jeden `duration` lub `time_point` obiekt jest mniejszy niż inny `duration` lub `time_point` obiektu.|
 |[Operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Określa, czy jeden `duration` lub `time_point` obiekt jest mniejszy niż lub równy innemu `duration` lub `time_point` obiektu.|
@@ -69,38 +72,30 @@ Począwszy od programu Visual Studio 2015, implementacja `steady_clock` został 
 |[Operator&gt;](../standard-library/chrono-operators.md#op_gt)|Określa, czy jeden `duration` lub `time_point` obiekt jest większy niż inny `duration` lub `time_point` obiektu.|
 |[Operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Określa, czy jeden `duration` lub `time_point` obiekt jest większy niż lub równy innemu `duration` lub `time_point` obiektu.|
 
-### <a name="predefined-duration-types"></a>Czas trwania wstępnie zdefiniowanych typów
+### <a name="typedefs-predefined-duration-types"></a>Definicje typów (czas trwania wstępnie zdefiniowanych typów)
 
 Aby uzyskać więcej informacji na temat typów współczynnik, które są używane następujące definicje typów, zobacz [ \<współczynnik >](../standard-library/ratio.md).
 
-|Element TypeDef|Opis|
-|-------------|-----------------|
-|`typedef duration<long long, nano> nanoseconds;`|Synonim dla `duration` typ, który ma okres znaczników nanosekundowych jeden.|
-|`typedef duration<long long, micro> microseconds;`|Synonim dla `duration` typ, który ma okres znaczników jeden mikrosekund.|
-|`typedef duration<long long, milli> milliseconds;`|Synonim dla `duration` typ, który ma okres znaczników jeden milisekund.|
-|`typedef duration<long long> seconds;`|Synonim dla `duration` typ, który ma okresu taktu w jednej sekundy.|
-|`typedef duration<int, ratio<60> > minutes;`|Synonim dla `duration` typ, który ma okresu taktu w jednej minuty.|
-|`typedef duration<int, ratio<3600> > hours;`|Synonim dla `duration` typ, który ma okresu taktu w jednej godziny.|
+||| ||| | `typedef duration<long long, nano> nanoseconds;`| Synonim dla `duration` typ, który ma okres znaczników nanosekundowych 1. | |`typedef duration<long long, micro> microseconds;`| Synonim dla `duration` typ, który ma okres znaczników 1 mikrosekund. | |`typedef duration<long long, milli> milliseconds;`| Synonim dla `duration` typ, który ma okres znaczników 1 milisekundy. | |`typedef duration<long long> seconds;`| Synonim dla `duration` typ, który ma okresu taktu w 1 sekundę. | |`typedef duration<int, ratio<60> > minutes;`| Synonim dla `duration` typ, który ma okresu taktu, wynoszącym 1 minutę. | |`typedef duration<int, ratio<3600> > hours;`| Synonim dla `duration` typ, który ma okresu taktu w równej 1 godz. |
 
 ### <a name="literals"></a>Literały
 
-**(C ++ 11)**  \<Chrono > nagłówka definiuje następujące [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) umożliwia większą wygodę, bezpieczeństwo typów i łatwości utrzymania kodu. Literały te są definiowane w `literals::chrono_literals` wbudowanego w przestrzeni nazw i są zakresu, kiedy std::chrono znajduje się w zakresie.
+**(C ++ 11)**  \<Chrono > nagłówka definiuje następujące [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) użyć dla wygody większy, bezpieczeństwo typów i łatwości utrzymania kodu. Literały te są definiowane w `literals::chrono_literals` wbudowanego w przestrzeni nazw i są zakresu, kiedy std::chrono znajduje się w zakresie.
 
-|literał|Opis|
-|-------------|-----------------|
-|chrono::hours operator "" h (unsigned long long Val)|Określa godziny jako wartość całkowitą.|
-|chrono::duration\<double, współczynnik\<3600 >> operator "" h (Val typu long double)|Określa godziny jako wartość zmiennoprzecinkowa.|
-|chrono::minutes (operator "" min) (unsigned long long Val)|Określa minuty jako wartość całkowitą.|
-|chrono::duration\<double, współczynnik\<60 >> (operator "" min) (liczba typu double Val)|Określa minuty jako wartość zmiennoprzecinkowa.|
-|chrono::seconds operator "" s (unsigned long long Val)|Określa minuty jako wartość całkowitą.|
-|chrono::duration\<double > — operator "" s (Val typu long double)|Określa w sekundach, jako wartość zmiennoprzecinkowa.|
-|chrono::milliseconds operator "" ms (unsigned long long Val)|Określa milisekund, jako wartość całkowitą.|
-|chrono::duration\<milli Podwójna precyzja > — operator "" ms (Val typu long double)|Określa milisekund, jako wartość zmiennoprzecinkowa.|
-|chrono::microseconds operator "" us (unsigned long long Val)|Określa mikrosekund jako wartość całkowitą.|
-|chrono::duration\<micro Podwójna precyzja > — operator "" us (Val typu long double)|Określa mikrosekund jako wartość zmiennoprzecinkowa.|
-|chrono::nanoseconds operator "" ns (unsigned long long Val)|Określa nanosekundach jako wartość całkowitą.|
-|chrono::duration\<nano Podwójna precyzja > — operator "" ns (Val typu long double)|Określa nanosekundach jako wartość zmiennoprzecinkowa.|
 |||
+|-|-|
+|operator godzin "" h (unsigned long long Val)|Określa godziny jako wartość całkowitą.|
+|czas trwania\<double, współczynnik\<3600 >> operator "" h (Val typu long double)|Określa godziny jako wartość zmiennoprzecinkowa.|
+|min (operator "" min) (unsigned long long Val)|Określa minuty jako wartość całkowitą.|
+|czas trwania\<double, współczynnik\<60 >> (operator "" min) (liczba typu double Val)|Określa minuty jako wartość zmiennoprzecinkowa.|
+|operator sekund "" s (unsigned long long Val)|Określa minuty jako wartość całkowitą.|
+|czas trwania\<double > — operator "" s (Val typu long double)|Określa w sekundach, jako wartość zmiennoprzecinkowa.|
+|operator milisekund "" ms (unsigned long long Val)|Określa milisekund, jako wartość całkowitą.|
+|czas trwania\<milli Podwójna precyzja > — operator "" ms (Val typu long double)|Określa milisekund, jako wartość zmiennoprzecinkowa.|
+|operator mikrosekund "" us (unsigned long long Val)|Określa mikrosekund jako wartość całkowitą.|
+|czas trwania\<micro Podwójna precyzja > — operator "" us (typu long double Val)|Określa mikrosekund jako wartość zmiennoprzecinkowa.|
+|operator nanosekundach "" ns (unsigned long long Val)|Określa nanosekundach jako wartość całkowitą.|
+|czas trwania\<nano Podwójna precyzja > — operator "" ns (Val typu long double)|Określa nanosekundach jako wartość zmiennoprzecinkowa.|
 
 Poniższe przykłady pokazują, jak używać literały chrono.
 
@@ -109,8 +104,6 @@ constexpr auto day = 24h;
 constexpr auto week = 24h* 7;
 constexpr auto my_duration_unit = 108ms;
 ```
-
-## <a name="remarks"></a>Uwagi
 
 ## <a name="see-also"></a>Zobacz także
 

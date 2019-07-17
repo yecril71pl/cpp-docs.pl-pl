@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211978"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244527"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t — Klasa
 
@@ -30,13 +30,13 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>Parametry
 
-*member_ptr*<br/>
+*member_ptr*\
 Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
-*left*<br/>
+*po lewej stronie*\
 **Const** obiekt *member_ptr* wywoływana jest funkcja elementu członkowskiego.
 
-*right*<br/>
+*po prawej stronie*\
 Argument, który jest umożliwiającej *member_ptr*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -50,14 +50,3 @@ Klasa szablonu przechowuje kopię *member_ptr*, który musi być wskaźnikiem do
 ## <a name="example"></a>Przykład
 
 Konstruktor obiektu `const_mem_fun1_t` jest rzadko używana bezpośrednio. `mem_fn` Umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fn —](../standard-library/functional-functions.md#mem_fn) przykład sposobu użycia adapterów funkcja elementu członkowskiego.
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

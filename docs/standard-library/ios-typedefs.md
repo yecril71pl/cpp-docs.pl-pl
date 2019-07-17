@@ -9,21 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 1f0ff93c22263ca4b35377b5d9af089816e8895a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0fd73cc53c5d538469cb957b7b4c4ec56783ade
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159265"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245277"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;IOS&gt; definicje typów
 
-||||
-|-|-|-|
-|[dla systemu IOS](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|
-|[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|
-
-## <a name="ios"></a>  dla systemu IOS
+## <a name="ios"></a> dla systemu IOS
 
 Obsługuje klasy dla systemu ios ze starego biblioteką iostream.
 
@@ -35,7 +30,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 Typ jest synonimem dla szablonu klasy [basic_ios —](../standard-library/basic-ios-class.md), wyspecjalizowany dla elementów typu **char** przy użyciu domyślnego cech.
 
-## <a name="streamoff"></a>  streamoff
+## <a name="streamoff"></a> streamoff
 
 Obsługuje operacje wewnętrznego.
 
@@ -51,7 +46,7 @@ Obsługuje operacje wewnętrznego.
 
 Typ jest liczba całkowita opisująca obiekt, które mogą być przechowywane w strumieniu różnych operacji pozycjonowania liczbę bajtów względem zaangażowane. Jej reprezentacji ma co najmniej 32 bity wartości. Nie jest musi być wystarczająco duży, aby reprezentować pozycji dowolnego bajtów w strumieniu. Wartość `streamoff(-1)` na ogół wskazuje przesunięcie błędne.
 
-## <a name="streampos"></a>  streampos
+## <a name="streampos"></a> streampos
 
 Zawiera bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.
 
@@ -134,7 +129,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 Typ jest synonimem dla szablonu klasy [basic_ios —](../standard-library/basic-ios-class.md), wyspecjalizowany dla elementów typu **wchar_t** przy użyciu domyślnego cech.
 
-## <a name="wstreampos"></a>  wstreampos
+## <a name="wstreampos"></a> wstreampos
 
 Zawiera bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.
 
@@ -167,7 +162,3 @@ int main( )
 ```Output
 7
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[\<ios>](../standard-library/ios.md)<br/>

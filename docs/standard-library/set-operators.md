@@ -16,23 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: 16308623a845fdbf804f4e72f2159bc2a2dbc76b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412595"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246402"
 ---
 # <a name="ltsetgt-operators"></a>&lt;Ustaw&gt; operatorów
 
-||||
-|-|-|-|
-|[Operator! = (set)](#op_neq)|[operator&gt; (ustawiona)](#op_gt)|[operator&gt;= (set)](#op_gt_eq)|
-|[operator&lt; (ustawiona)](#op_lt)|[operator&lt;= (set)](#op_lt_eq)|[Operator == (set)](#op_eq_eq)|
-|[Operator! = (multiset)](#op_neq_multiset)|[operator&gt; (multiset)](#op_gt_multiset)|[operator&gt;= (multiset)](#op_gt_eq_multiset)|
-|[operator&lt; (multiset)](#op_lt_multiset)|[operator&lt;= (multiset)](#op_lt_eq_multiset)|[Operator == (multiset)](#op_eq_eq_multiset)|
-
-## <a name="op_neq"></a>  Operator! = (set)
+## <a name="op_neq"></a> Operator! = (set)
 
 Sprawdza, czy obiekt zestawu po lewej stronie operatora nie jest równy obiektowi zestaw po prawej stronie.
 
@@ -42,10 +35,10 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `set`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -93,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a>  operator&lt; (ustawiona)
+## <a name="op_lt"></a> operator&lt; (ustawiona)
 
 Sprawdza, czy obiekt zestawu, po lewej stronie operatora jest mniejszy niż obiekt zestawu po prawej stronie.
 
@@ -103,10 +96,10 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `set`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -154,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;= (set)
+## <a name="op_lt_eq"></a> operator&lt;= (set)
 
 Sprawdza, czy zestaw obiektów po lewej stronie operatora jest mniejszy niż lub równy obiektowi zestaw po prawej stronie.
 
@@ -164,10 +157,10 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `set`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -215,14 +208,15 @@ int main( )
    else
       cout << "The set s1 is greater than the set s4." << endl;
 }
-/* Output:
+```
+
+```Output
 Set s1 is less than or equal to the set s2.
 The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
-*/
 ```
 
-## <a name="op_eq_eq"></a>  Operator == (set)
+## <a name="op_eq_eq"></a> Operator == (set)
 
 Sprawdza, czy obiekt zestawu po lewej stronie operatora jest równy obiektowi zestaw po prawej stronie.
 
@@ -232,10 +226,10 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `set`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -277,13 +271,14 @@ int main( )
    else
       cout << "The sets s1 and s3 are not equal." << endl;
 }
-/* Output:
-The sets s1 and s2 are not equal.
-The sets s1 and s3 are equal.
-*/
 ```
 
-## <a name="op_gt"></a>  operator&gt; (ustawiona)
+```Output
+The sets s1 and s2 are not equal.
+The sets s1 and s3 are equal.
+```
+
+## <a name="op_gt"></a> operator&gt; (ustawiona)
 
 Sprawdza, czy obiekt zestawu po lewej stronie operatora jest większy niż obiekt zestawu po prawej stronie.
 
@@ -293,10 +288,10 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `set`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -344,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;= (set)
+## <a name="op_gt_eq"></a> operator&gt;= (set)
 
 Sprawdza, czy obiekt zestawu po lewej stronie operatora jest większy lub równy obiektowi zestaw po prawej stronie.
 
@@ -354,10 +349,10 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `set`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -405,14 +400,15 @@ int main( )
    else
       cout << "The set s1 is less than the set s4." << endl;
 }
-/* Output:
+```
+
+```Output
 The set s1 is less than the set s2.
 Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
-*/
 ```
 
-## <a name="op_neq_multiset"></a>  Operator! = (multiset)
+## <a name="op_neq_multiset"></a> Operator! = (multiset)
 
 Sprawdza, czy obiekt multiset — po lewej stronie operatora nie jest równy obiektowi multiset — po prawej stronie.
 
@@ -422,10 +418,10 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `multiset`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -467,13 +463,14 @@ int main( )
    else
       cout << "The multisets s1 and s3 are equal." << endl;
 }
-/* Output:
-The multisets s1 and s2 are not equal.
-The multisets s1 and s3 are equal.
-*/
 ```
 
-## <a name="op_lt_multiset"></a>  operator&lt; (multiset)
+```Output
+The multisets s1 and s2 are not equal.
+The multisets s1 and s3 are equal.
+```
+
+## <a name="op_lt_multiset"></a> operator&lt; (multiset)
 
 Sprawdza, czy multiset — obiekt po lewej stronie operatora jest mniejszy niż obiekt multiset — po prawej stronie.
 
@@ -483,10 +480,10 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `multiset`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -532,13 +529,14 @@ int main( )
       cout << "The multiset s1 is not less than "
            << "the multiset s3." << endl;
 }
-/* Output:
-The multiset s1 is less than the multiset s2.
-The multiset s1 is not less than the multiset s3.
-*/
 ```
 
-## <a name="op_lt_eq_multiset"></a>  operator&lt;= (multiset)
+```Output
+The multiset s1 is less than the multiset s2.
+The multiset s1 is not less than the multiset s3.
+```
+
+## <a name="op_lt_eq_multiset"></a> operator&lt;= (multiset)
 
 Sprawdza, czy zestaw wielokrotny obiektu po lewej stronie operatora jest mniejszy niż lub równy obiektowi multiset — po prawej stronie.
 
@@ -548,10 +546,10 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `multiset`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -605,14 +603,15 @@ int main( )
       cout << "The multiset s1 is greater than "
            << "the multiset s4." << endl;
 }
-/* Output:
+```
+
+```Output
 The multiset s1 is less than or equal to the multiset s2.
 The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
-*/
 ```
 
-## <a name="op_eq_eq_multiset"></a>  Operator == (multiset)
+## <a name="op_eq_eq_multiset"></a> Operator == (multiset)
 
 Sprawdza, czy multiset — obiekt po lewej stronie operatora jest równy obiektowi multiset — po prawej stronie.
 
@@ -622,10 +621,10 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `multiset`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -667,13 +666,14 @@ int main( )
    else
       cout << "The multisets s1 and s3 are not equal." << endl;
 }
-/* Output:
-The multisets s1 and s2 are not equal.
-The multisets s1 and s3 are equal.
-*/
 ```
 
-## <a name="op_gt_multiset"></a>  operator&gt; (multiset)
+```Output
+The multisets s1 and s2 are not equal.
+The multisets s1 and s3 are equal.
+```
+
+## <a name="op_gt_multiset"></a> operator&gt; (multiset)
 
 Sprawdza, czy multiset — obiekt po lewej stronie operatora jest większy niż obiekt multiset — po prawej stronie.
 
@@ -683,10 +683,10 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `multiset`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -732,13 +732,14 @@ int main( )
       cout << "The multiset s1 is not greater than "
            << "the multiset s3." << endl;
 }
-/* Output:
-The multiset s1 is not greater than the multiset s2.
-The multiset s1 is greater than the multiset s3.
-*/
 ```
 
-## <a name="op_gt_eq_multiset"></a>  operator&gt;= (multiset)
+```Output
+The multiset s1 is not greater than the multiset s2.
+The multiset s1 is greater than the multiset s3.
+```
+
+## <a name="op_gt_eq_multiset"></a> operator&gt;= (multiset)
 
 Sprawdza, czy multiset — obiekt po lewej stronie operatora jest większy lub równy obiektowi multiset — po prawej stronie.
 
@@ -748,10 +749,10 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Obiekt typu `multiset`.
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -805,13 +806,10 @@ int main( )
       cout << "The multiset s1 is less than "
            << "the multiset s4." << endl;
 }
-/* Output:
+```
+
+```Output
 The multiset s1 is less than the multiset s2.
 The multiset s1 is greater than or equal to the multiset s3.
 The multiset s1 is greater than or equal to the multiset s4.
-*/
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[\<set>](../standard-library/set.md)<br/>

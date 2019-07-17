@@ -6,18 +6,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 98a7e8197a0d729ab3a4e9ec0daf55a28cdaeb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3904393096422a8986414a253d515342c7382f0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412647"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246046"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;wyjątek&gt; definicje typów
-
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
 
 ## <a name="exception_ptr"></a>  exception_ptr
 
@@ -43,7 +39,7 @@ Pomimo swojej nazwy `exception_ptr` obiektu sam nie jest wskaźnikiem. Go nie st
 
 Możesz użyć równości ( `==`) i nierówności ( `!=`) operatory do porównywania dwóch `exception_ptr` obiektów. Operatory nie porównują wartość binarna (wzorca bitowego) `EXCEPTION_RECORD` struktur, które reprezentują wyjątki. Zamiast tego, operatory porównują adresy w polu odwołania do wyjątku `exception_ptr` obiektów. W związku z tym, o wartości null `exception_ptr` i porównywane równe wartości NULL.
 
-## <a name="terminate_handler"></a>  terminate_handler
+## <a name="terminate_handler"></a> terminate_handler
 
 Typ opisuje wskaźnik do funkcji odpowiedni do użytku jako `terminate_handler`.
 
@@ -59,7 +55,7 @@ Typ opisuje wskaźnik do funkcji odpowiedni do użytku jako program obsługi zak
 
 Zobacz [set_terminate](../standard-library/exception-functions.md#set_terminate) przykładem użycia `terminate_handler`.
 
-## <a name="unexpected_handler"></a>  unexpected_handler
+## <a name="unexpected_handler"></a> unexpected_handler
 
 Typ opisuje wskaźnik do funkcji odpowiedni do użytku jako `unexpected_handler`.
 
@@ -70,7 +66,3 @@ typedef void (*unexpected_handler)();
 ### <a name="example"></a>Przykład
 
 Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) przykładem użycia `unexpected_handler`.
-
-## <a name="see-also"></a>Zobacz także
-
-[\<wyjątku >](../standard-library/exception.md)<br/>

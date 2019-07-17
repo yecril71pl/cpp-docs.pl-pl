@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 96d70a24b87a84275f17813e76473a82fbff90da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399385"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240546"
 ---
 # <a name="unarynegate-class"></a>unary_negate — Klasa
 
@@ -24,7 +24,6 @@ template <class Predicate>
 class unary_negate
     : public unaryFunction<typename Predicate::argument_type, bool>
 {
-public:
     explicit unary_negate(const Predicate& Func);
     bool operator()(const typename Predicate::argument_type& left) const;
 };
@@ -32,10 +31,10 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Func*<br/>
+*FUNC*\
 Funkcja jednoargumentowe być ujemna.
 
-*left*<br/>
+*po lewej stronie*\
 Argument operacji funkcję jednoargumentową, aby być ujemna.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -93,20 +92,10 @@ int main()
     cout << "The number of elements in v1 not greater than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 30 35 )
 The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
-*/
 ```
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

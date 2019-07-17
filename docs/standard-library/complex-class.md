@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 2ebaee81b792f9acc475fe25ac1ef7cc7a78a0de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376162"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244728"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
@@ -42,42 +42,40 @@ W szczególności nie subtelne może różnice między konstrukcja kopiowania i 
 
 Jawne specjalizacje szablonu klasy złożone dla istnieją trzy typy zmiennoprzecinkowe. W tej implementacji wartość innego typu `Type` jest rzutowanie typu do **double** rzeczywiste obliczenia z **double** wynik przypisana z powrotem do przechowywany obiekt typu `Type`.
 
+## <a name="members"></a>Elementy członkowskie
+
 ### <a name="constructors"></a>Konstruktorów
 
-|Konstruktor|Opis|
+|||
 |-|-|
 |[complex](#complex)|Tworzy liczby zespolonej z określonym rzeczywiste i urojone części lub jako kopię inne liczby zespolonej.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[value_type](#value_type)|Typ, który reprezentuje typ danych używany do reprezentowania rzeczywiste i urojone części liczb zespolonych.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="functions"></a>Funkcje
 
-|Funkcja elementu członkowskiego|Opis|
+|||
 |-|-|
 |[imag](#imag)|Wyodrębnia urojone części liczby zespolonej.|
-|[real](#real)|Wyodrębnia rzeczywisty składnik liczby zespolonej.|
+|[rzeczywiste](#real)|Wyodrębnia rzeczywisty składnik liczby zespolonej.|
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
 |[operator*=](#op_star_eq)|Mnoży docelowej liczby zespolonej przez współczynnik, który może być złożonym procesem, lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.|
 |[operator+=](#op_add_eq)|Dodaje numer docelowej liczby zespolonej, w przypadku, gdy liczba dodawane mogą być skomplikowane, lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, do którego zostanie dodany.|
 |[operator-=](#operator-_eq)|Odejmuje liczbę od liczby zespolonej docelowego, w przypadku, gdy liczba odejmowana mogą być skomplikowane, lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, do którego zostanie dodany.|
-|[operator/=](#op_div_eq)|Dzieli docelowej liczby zespolonej przez dzielnik, która może być złożonym procesem lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.|
+|[operator / =](#op_div_eq)|Dzieli docelowej liczby zespolonej przez dzielnik, która może być złożonym procesem lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.|
 |[operator=](#op_eq)|Przypisuje numer docelowej liczby zespolonej, gdzie mogą być skomplikowane numer przypisany lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, które są przypisane.|
 
-## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<złożonych >
 
-**Namespace:** standardowe
-
-## <a name="complex"></a>  COMPLEX::Complex
+## <a name="complex"></a> złożone
 
 Tworzy liczby zespolonej z określonym rzeczywiste i urojone części lub jako kopię inne liczby zespolonej.
 
@@ -93,13 +91,13 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*<br/>
+*_RealVal*\
 Wartość rzeczywistego części, używane do zainicjowania liczby zespolonej budowany.
 
-*_ImagVal*<br/>
+*_ImagVal*\
 Wartość urojone części, używane do zainicjowania liczby zespolonej budowany.
 
-*complexNum*<br/>
+*complexNum*\
 Liczby zespolonej, którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej budowany.
 
 ### <a name="remarks"></a>Uwagi
@@ -161,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>  COMPLEX::imag
+## <a name="imag"></a> imag
 
 Wyodrębnia urojone części liczby zespolonej.
 
@@ -173,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Liczby zespolonej, którego urojone wartość do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -215,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>  COMPLEX::operator * =
+## <a name="op_star_eq"></a> operator * =
 
 Mnoży docelowej liczby zespolonej przez współczynnik, który może być złożonym procesem, lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.
 
@@ -230,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Liczbą lub liczbą, która jest tego samego typu co parametr liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -300,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>  COMPLEX::operator +=
+## <a name="op_add_eq"></a> += — operator
 
 Dodaje numer docelowej liczby zespolonej, w przypadku, gdy liczba dodawane mogą być skomplikowane, lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, do którego zostanie dodany.
 
@@ -315,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Liczbą lub liczbą, która jest tego samego typu co parametr liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -403,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>  COMPLEX::operator-=
+## <a name="operator-_eq"></a> operator-=
 
 Odejmuje liczbę od liczby zespolonej docelowego, w przypadku, gdy liczba odejmowana mogą być skomplikowane, lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, do którego zostanie dodany.
 
@@ -418,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Liczby zespolonej odjęta od liczby zespolonej docelowego.
 
-*_RealPart*<br/>
+*_RealPart*\
 Liczba rzeczywista jest odejmowana od liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -511,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>  COMPLEX::operator / =
+## <a name="op_div_eq"></a> operator / =
 
 Dzieli docelowej liczby zespolonej przez dzielnik, która może być złożonym procesem lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.
 
@@ -526,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Liczby zespolonej odjęta od liczby zespolonej docelowego.
 
-*_RealPart*<br/>
+*_RealPart*\
 Liczba rzeczywista jest odejmowana od liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -615,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>  COMPLEX::operator =
+## <a name="op_eq"></a> operator =
 
 Przypisuje numer docelowej liczby zespolonej, gdzie mogą być skomplikowane numer przypisany lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, które są przypisane.
 
@@ -628,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Liczbą lub liczbą, która jest tego samego typu co parametr liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -693,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>  COMPLEX::Real
+## <a name="real"></a> rzeczywiste
 
 Pobiera lub ustawia rzeczywisty składnik liczby zespolonej.
 
@@ -705,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Liczby zespolonej, którego rzeczywistą wartość do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -714,7 +712,7 @@ Rzeczywiste część liczby zespolonej.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla liczby zespolonej *+ bi*, część rzeczywista lub składnik jest *Re(a + bi) =*.
+Dla liczby zespolonej *+ bi*, część rzeczywista lub składnik jest *Re(a + bi) =* .
 
 ### <a name="example"></a>Przykład
 
@@ -747,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a>  COMPLEX::value_type
+## <a name="value_type"></a> value_type
 
 Typ, który reprezentuje typ danych używany do reprezentowania rzeczywiste i urojone części liczb zespolonych.
 

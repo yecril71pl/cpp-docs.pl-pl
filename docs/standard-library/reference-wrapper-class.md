@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369593"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240273"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper — Klasa
 
@@ -35,7 +35,6 @@ Opakowuje odwołania.
 template <class Ty>
 class reference_wrapper
 {
-public:
     typedef Ty type;
 
     reference_wrapper(Ty&) noexcept;
@@ -45,9 +44,6 @@ public:
     template <class... Types>
     auto operator()(Types&&... args) const ->
         decltype(std::invoke(get(), std::forward<Types>(args)...));
-
-private:
-    Ty *ptr; // exposition only
 };
 ```
 
@@ -59,39 +55,35 @@ Typ `Ty` musi być typu obiektu lub typu funkcji lub asercja statyczna kończy s
 
 Funkcje pomocnicze [std::ref](functional-functions.md#ref) i [std::cref](functional-functions.md#cref) może służyć do tworzenia `reference_wrapper` obiektów.
 
+## <a name="members"></a>Elementy członkowskie
+
 ### <a name="constructors"></a>Konstruktorów
 
-|Konstruktor|Opis|
+|||
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Konstruuje `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa typu|Opis|
+|||
 |-|-|
 |[result_type](#result_type)|Typ wyniku słabe odwołanie opakowana.|
 |[type](#type)|Typ opakowany odwołania.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="functions"></a>Funkcje
 
-|Funkcja elementu członkowskiego|Opis|
+|||
 |-|-|
 |[get](#get)|Pobiera opakowany odwołania.|
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Pobiera wskaźnik do odwołania opakowana.|
-|[reference_wrapper::operator()](#op_call)|Wywołuje opakowana odwołania.|
+|[Operator Ty&amp;](#op_ty_amp)|Pobiera wskaźnik do odwołania opakowana.|
+|[operator()](#op_call)|Wywołuje opakowana odwołania.|
 
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="get"></a>  reference_wrapper::Get
+## <a name="get"></a> Pobierz
 
 Pobiera opakowany odwołania.
 
@@ -130,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;
+## <a name="op_ty_amp"></a> Operator Ty&amp;
 
 Pobiera odniesienie opakowana.
 
@@ -166,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a>  reference_wrapper::operator()
+## <a name="op_call"></a> Operator()
 
 Wywołuje opakowana odwołania.
 
@@ -177,10 +169,10 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*Typy*<br/>
+*Typy*\
 Typy list argumentów.
 
-*argumenty*<br/>
+*argumenty*\
 Lista argumentów.
 
 ### <a name="remarks"></a>Uwagi
@@ -212,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper
+## <a name="reference_wrapper"></a> reference_wrapper —
 
 Konstruuje `reference_wrapper`.
 
@@ -222,10 +214,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ do opakowania.
 
-*Val*<br/>
+*Val*\
 Wartość do zakodowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -263,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a>  reference_wrapper::result_type
+## <a name="result_type"></a> Element result_type
 
 Typ wyniku słabe odwołanie opakowana.
 
@@ -302,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a>  reference_wrapper::type
+## <a name="type"></a> Typ
 
 Typ opakowany odwołania.
 
@@ -343,8 +335,3 @@ int main() {
 i = 1
 rwi = 1
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[cref](../standard-library/functional-functions.md#cref)<br/>
-[ref](../standard-library/functional-functions.md#ref)<br/>

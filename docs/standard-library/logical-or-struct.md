@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: d9a4bf5b72a134bf166fe9297aaa41610718aa8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413089"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246447"
 ---
 # <a name="logicalor-struct"></a>logical_or — Struktura
 
@@ -39,12 +39,13 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator||` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+*Typ*, *T*, *U*\
+Dowolny typ, który obsługuje `operator||` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*po lewej stronie*<br/>
+*po lewej stronie*\
 Lewy operand logicznego rozłączenia operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*po prawej stronie*<br/>
+*po prawej stronie*\
 Prawy operand logicznego rozłączenia operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -104,23 +105,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( true true false false true false false )
 Original deque:
 d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
 d3 = ( true true false true true true true )
-*/
 ```
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

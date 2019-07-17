@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-ms.openlocfilehash: 7fd554a28775a6b625332ac250a46171dd369f50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 731b99faed6515268b93ec3a1a43c96796e49dd3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413102"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246472"
 ---
 # <a name="logicalnot-struct"></a>logical_not — Struktura
 
@@ -39,10 +39,10 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*Typ*\
 Dowolny typ, który obsługuje `operator!` która przyjmuje argument typu określonego lub wywnioskowane uprawnienie.
 
-*po lewej stronie*<br/>
+*po lewej stronie*\
 Operand logicznego nie operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *typu*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -86,21 +86,11 @@ int main( )
       cout << *iter2 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( false true false true false true false )
 The deque with its values negated is:
 d2 = ( true false true false true false true )
-*/
 ```
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

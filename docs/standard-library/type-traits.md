@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278985"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243524"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -68,7 +68,7 @@ Kategorie typu podstawowego
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Sprawdza, czy typ jest **void**.|
+|[is_void —](../standard-library/is-void-class.md)|Sprawdza, czy typ jest **void**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Sprawdza, czy typ jest `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Sprawdza, czy typ jest integralną częścią.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Sprawdza, czy typ jest zmiennoprzecinkowych.|
@@ -92,7 +92,7 @@ Typ złożony kategorii
 |[is_fundamental](../standard-library/is-fundamental-class.md)|Sprawdza, czy typ jest **void** lub arytmetyczne.|
 |[is_object](../standard-library/is-object-class.md)|Sprawdza, czy typ jest typem obiektu.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Sprawdza, czy typ jest skalarna.|
-|[is_compound](../standard-library/is-compound-class.md)|Sprawdza, czy określony typ nie jest skalarny.|
+|[is_compound —](../standard-library/is-compound-class.md)|Sprawdza, czy określony typ nie jest skalarny.|
 |[is_member_pointer](../standard-library/is-member-pointer-class.md)|Sprawdza, czy typ jest wskaźnik do elementu członkowskiego.|
 
 Właściwości typu
@@ -110,6 +110,7 @@ Właściwości typu
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Sprawdza, czy typ jest polimorficznej klasy.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Sprawdza, czy typ jest klasą abstrakcyjną.|
 |[is_final](../standard-library/is-final-class.md)|Sprawdza, czy typ jest typem klasy oznaczone `final`.|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Sprawdza, czy typ jest liczba całkowita ze znakiem.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Sprawdza, czy typ jest liczbą całkowitą bez znaku.|
 |[is_constructible](../standard-library/is-constructible-class.md)|Sprawdza, czy typ jest konstrukcyjną, za pomocą określone typy argumentów.|
@@ -119,6 +120,8 @@ Właściwości typu
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Sprawdza, czy pierwszy typ można przypisać wartości drugiego typu.|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Sprawdza, czy można przypisać typu const wartość odwołanie do typu.|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Sprawdza, czy typ można przypisać typu odwołanie rvalue.|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible](../standard-library/is-destructible-class.md)|Sprawdza, czy typ jest zniszczalnych.|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Sprawdza, czy typ korzysta z żadnych operacji nietrywialnymi, gdy tworzony przy użyciu określonego typu.|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Sprawdza, czy typ używa ma nieuproszczone operacji, gdy domyślny skonstruowany.|
@@ -135,8 +138,11 @@ Właściwości typu
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Sprawdza, czy typ jest możliwy do przypisania, przy użyciu określonego typu, przypisanie wiadomo, że nie zostać zgłoszony.|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Sprawdza, czy typ jest możliwy do przypisania kopiowania, przypisanie wiadomo, że nie zostać zgłoszony.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Sprawdza, czy typ jest możliwy do przypisania przeniesienia, przypisanie wiadomo, że nie zostać zgłoszony.|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Sprawdza, czy typ jest zniszczalnych, destruktor wiadomo, że nie zostać zgłoszony.|
 |`has_virtual_destructor`|Sprawdza, czy typ ma destruktor wirtualny.|
+|`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | Sprawdza, czy możliwy do wywołania typu może być wywoływany przy użyciu określone typy argumentów.<br/> Dodane w języku C ++ 17. |
 | [is_invocable_r](is-invocable-classes.md) | Sprawdza, czy możliwy do wywołania typu może być wywoływany przy użyciu określone typy argumentów i wynik jest konwertowany na typ określony.<br/> Dodane w języku C ++ 17. |
 | [is_nothrow_invocable](is-invocable-classes.md) | Sprawdza, czy możliwy do wywołania typu może być wywoływany przy użyciu określonego argumentu typów, wiadomo, nie zgłasza wyjątków.<br/> Dodane w języku C ++ 17. |
@@ -147,7 +153,7 @@ Zapytania dotyczące właściwości typu
 |||
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|Pobiera wyrównania tekstu.|
-|[rank](../standard-library/rank-class.md)|Pobiera liczbę wymiarów tablicy.|
+|[Ranga](../standard-library/rank-class.md)|Pobiera liczbę wymiarów tablicy.|
 |[extent](../standard-library/extent-class.md)|Pobiera liczbę elementów w wymiarze określonej tablicy.|
 
 Typ relacji
@@ -188,7 +194,7 @@ Modyfikacje tablicy
 
 |||
 |-|-|
-|[remove_all_extents](../standard-library/remove-all-extents-class.md)|Tworzy typ inny niż tablica z typu tablicy.|
+|[remove_all_extents —](../standard-library/remove-all-extents-class.md)|Tworzy typ inny niż tablica z typu tablicy.|
 |[remove_extent](../standard-library/remove-extent-class.md)|Tworzy typ elementu z typu tablicy.|
 
 Wskaźnik zmiany
@@ -211,6 +217,14 @@ Inne przekształcenia
 |[invoke_result](invoke-result-class.md)|Określa typ zwracany typ możliwy do wywołania, który przyjmuje określone typy argumentów. <br/>Dodane w języku C ++ 17. |
 |[result_of](../standard-library/result-of-class.md)|Określa typ zwracany typ możliwy do wywołania, który przyjmuje określone typy argumentów. <br/>Dodane w języku C ++ 14, uznane za przestarzałe w języku C ++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Tworzy podstawowy typ całkowitą typ wyliczenia.|
+
+Operator logiczny cech
+
+|||
+|-|-|
+|[razem](../standard-library/conjunction-class.md)||
+|[alternatywa](../standard-library/disjunction-class.md)||
+|[Negacja](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Zobacz także
 

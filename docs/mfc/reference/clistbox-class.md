@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225272"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243578"
 ---
 # <a name="clistbox-class"></a>Clistbox — klasa
 
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|Zwraca liczbę ciągów, w polu listy.|
 |[CListBox::GetCurSel](#getcursel)|Zwraca liczony od zera indeks zaznaczonego ciągu w polu listy.|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|Zwraca szerokość w pikselach, że pole listy może być przewijane w poziomie.|
-|[CListBox::GetItemData](#getitemdata)|Zwraca 32-bitową wartość skojarzona z elementem pola listy.|
+|[CListBox::GetItemData](#getitemdata)|Zwraca wartość skojarzoną z elementem pola listy.|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|Zwraca wskaźnik do elementu pola listy.|
 |[CListBox::GetItemHeight](#getitemheight)|Określa wysokość elementów w polu listy.|
 |[CListBox::GetItemRect](#getitemrect)|Zwraca prostokąt otaczający element pola listy jest aktualnie wyświetlany.|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Ustawia szerokość kolumny wielokolumnowe pole listy.|
 |[CListBox::SetCurSel](#setcursel)|Określa ciąg w polu listy.|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|Określa szerokość w pikselach, że pole listy może być przewijane w poziomie.|
-|[CListBox::SetItemData](#setitemdata)|Ustawia wartość 32-bitowych, skojarzone z elementem pola listy.|
+|[CListBox::SetItemData](#setitemdata)|Ustawia wartość skojarzoną z elementem pola listy.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Ustawia wskaźnik do elementu pola listy.|
 |[CListBox::SetItemHeight](#setitemheight)|Określa wysokość elementów w polu listy.|
 |[CListBox::SetLocale](#setlocale)|Określa identyfikator ustawień regionalnych dla pola listy.|
@@ -702,7 +702,7 @@ Określa liczony od zera indeks elementu w polu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-32-bitową wartość skojarzony element lub LB_ERR, jeśli wystąpi błąd.
+Wartość skojarzona z elementu lub LB_ERR, jeśli wystąpi błąd.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1288,7 +1288,7 @@ Ta funkcja elementu członkowskiego nie jest przydatne w przypadku pól listy wi
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-Ustawia wartość 32-bitowych, skojarzone z określonym elementem w polu listy.
+Ustawia wartość skojarzoną z określonym elementem w polu listy.
 
 ```
 int SetItemData(

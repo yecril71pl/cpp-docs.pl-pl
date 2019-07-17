@@ -6,26 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 4c9746a0ffee654bb783e30e9a98e708b68048cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393990"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246733"
 ---
 # <a name="ltdequegt"></a>&lt;deque —&gt;
 
 Definiuje deque klasy szablonu kontenera i kilka szablonów pomocniczych.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <deque>
-```
+**Nagłówek**: \<deque >
+
+> [!NOTE]
+> \<Deque > używa również biblioteki `#include <initializer_list>` instrukcji.
+
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
 |[operator!=](../standard-library/deque-operators.md#op_neq)|Sprawdza, czy obiekt deque po lewej stronie operatora nie jest równy obiektowi deque — po prawej stronie.|
 |[Operator <](../standard-library/deque-operators.md#op_lt)|Sprawdza, czy obiekt deque, po lewej stronie operatora jest mniejszy niż obiekt deque — po prawej stronie.|
@@ -36,13 +39,13 @@ Definiuje deque klasy szablonu kontenera i kilka szablonów pomocniczych.
 
 ### <a name="functions"></a>Funkcje
 
-|Funkcja|Opis|
+|||
 |-|-|
 |[swap](../standard-library/deque-functions.md#swap)|Zamienia elementy z dwóch deques.|
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
 |[deque, klasa](../standard-library/deque-class.md)|Klasa szablonu kontenerów sekwencji, które Rozmieść elementy danego typu w układzie liniowych, takich jak wektory, dostęp do szybkiego losowego dowolnego elementu i wydajne wstawiania i usuwania tyłu kontenera.|
 

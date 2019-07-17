@@ -7,26 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: c029095d5298048874a7eb6f1a41209d6a6f4779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e23c47b3eaecec92e462af7b2cc47627c5bad86a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413245"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245318"
 ---
 # <a name="ltlimitsgt"></a>&lt;limity&gt;
 
 Definiuje klasę szablonu `numeric_limits` i dwa wyliczenia dotyczącymi reprezentacji zmiennoprzecinkowe i zaokrąglania.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <limits>
-```
+**Nagłówek:** \<limity >
+
+**Namespace:** standardowe
 
 ## <a name="remarks"></a>Uwagi
 
 Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów podstawowych, w tym znak, liczba całkowita i typów zmiennoprzecinkowych i **bool** , które są implementacji zdefiniowane, a nie przez reguły języka C++. Właściwości opisane w \<limity > obejmują dokładności, minimalnej i maksymalnej wielkości oświadczenia, zaokrąglania oraz trybu sygnalizowania błędów typu.
+
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="enumerations"></a>Wyliczenia
 
@@ -37,7 +39,7 @@ Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów 
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
 |[numeric_limits, klasa](../standard-library/numeric-limits-class.md)|Klasa szablonu opisuje arytmetyczne właściwości wbudowanych typów liczbowych.|
 

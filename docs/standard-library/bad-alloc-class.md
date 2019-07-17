@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 63b474d0209a5cc385de9dc11b56d5de8382a9cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d1d81e393b4a3eb27ea08bc53634bfcbc119240
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376422"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243976"
 ---
 # <a name="badalloc-class"></a>bad_alloc — Klasa
 
@@ -22,20 +22,16 @@ Klasa opisuje wyjątek generowany, aby wskazać, że żądanie alokacji nie powi
 ```cpp
 class bad_alloc : public exception {
     bad_alloc();
-virtual ~bad_alloc();
-
+    virtual ~bad_alloc();
+    bad_alloc(const bad_alloc&);
+    bad_alloc& operator=(const bad_alloc&);
+    const char* what() const override;
 };
 ```
 
 ## <a name="remarks"></a>Uwagi
 
 Wartość zwrócona przez obiekt `what` jest ciągiem C zdefiniowanych w implementacji. Żadna z funkcji elementu członkowskiego generuje żadnych wyjątków.
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<nowe >
-
-**Namespace:** standardowe
 
 ## <a name="example"></a>Przykład
 
@@ -58,17 +54,6 @@ int main() {
 }
 ```
 
-## <a name="sample-output"></a>Przykładowe dane wyjściowe
-
 ```Output
 bad allocation
 ```
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<nowe >
-
-## <a name="see-also"></a>Zobacz także
-
-[exception, klasa](../standard-library/exception-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

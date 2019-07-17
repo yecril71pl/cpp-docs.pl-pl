@@ -12,21 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380198"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243333"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset —&gt; operatorów
 
-||||
-|-|-|-|
-|[Operator&amp;](#op_amp)|[Operator&gt;&gt;](#op_gt_gt)|[Operator&lt;&lt;](#op_lt_lt)|
-|[operator^](#op_xor)|[operator&#124;](#op_or)| |
-
-## <a name="op_amp"></a>  Operator&amp;
+## <a name="op_amp"></a> Operator&amp;
 
 Wykonuje bitową operację `AND` między dwoma bitsets.
 
@@ -40,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND`.
 
-*right*<br/>
+*po prawej stronie*\
 Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -78,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>  Operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operator&lt;&lt;
 
 Wstawia tekstowa reprezentacja bitową sekwencję do strumienia wyjściowego.
 
@@ -91,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*po prawej stronie*\
 Obiekt typu **bitset —\<N >** który ma zostać wstawiony do strumienia wyjściowego, jako ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -102,7 +97,7 @@ Tekstowa reprezentacja bitową sekwencję w `ostr`.
 
 Przeciążenia funkcji szablonu `operator<<`, dzięki czemu zestawu bitów do zapisania bez uprzedniego przekonwertowania na ciąg. Funkcja szablonu skutecznie wykonuje:
 
-**OSTR** << _ *po prawej stronie*. [to_string —](bitset-class.md) < **CharType**, **cech**, **alokatora** \< **CharType**>>)
+**OSTR** << _*po prawej stronie*. [to_string —](bitset-class.md) <**CharType**, **cech**, **alokatora**\<**CharType**>>)
 
 ### <a name="example"></a>Przykład
 
@@ -135,7 +130,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>  Operator&gt;&gt;
+## <a name="op_gt_gt"></a> Operator&gt;&gt;
 
 Odczytuje ciąg znaków bit do zestawu bitów.
 
@@ -150,10 +145,10 @@ _Istr,
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr*<br/>
+*_Istr*\
 Ciąg, który jest wprowadzany do strumienia wejściowego, który ma zostać wstawiony do bitset —.
 
-*right*<br/>
+*po prawej stronie*\
 Bitset — otrzymuje bity ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -221,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  operator ^
+## <a name="op_xor"></a> operator ^
 
 Wykonuje bitową operację `EXCLUSIVE-OR` między dwoma bitsets.
 
@@ -235,10 +230,10 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `EXCLUSIVE-OR`.
 
-*right*<br/>
+*po prawej stronie*\
 Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -273,7 +268,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  operator&#124;
+## <a name="op_or"></a> operator&#124;
 
 Wykonuje bitową operację `OR` między dwoma bitsets.
 
@@ -287,10 +282,10 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR`.
 
-*right*<br/>
+*po prawej stronie*\
 Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -324,7 +319,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[\<bitset — >](../standard-library/bitset.md)<br/>

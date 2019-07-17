@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348461"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243816"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;Pamięć&gt; operatorów
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[Operator&gt;=](#op_gt_eq)|
-|[Operator&lt;](#op_lt)|[Operator&lt;&lt;](#op_lt_lt)|[Operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator! =
+## <a name="op_neq"></a> operator! =
 
 Testuje pod kątem nierówności pomiędzy obiektami.
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Jednym z obiektów, które ma zostać przetestowana pod kątem nierówności.
 
-*right*<br/>
+*po prawej stronie*\
 Jednym z obiektów, które ma zostać przetestowana pod kątem nierówności.
 
-*Ty1*<br/>
+*Ty1*\
 Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2*<br/>
+*Ty2*\
 Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>  operator ==
+## <a name="op_eq_eq"></a> operator ==
 
 Testuje pod kątem równości pomiędzy obiektami.
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Jednym z obiektów, które ma zostać przetestowana pod kątem równości.
 
-*right*<br/>
+*po prawej stronie*\
 Jednym z obiektów, które ma zostać przetestowana pod kątem równości.
 
-*Ty1*<br/>
+*Ty1*\
 Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2*<br/>
+*Ty2*\
 Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>  Operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 Sprawdza, czy jeden obiekt jest większy lub równy drugiemu obiektowi.
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Jednym z obiektów, które mają być porównane.
 
-*right*<br/>
+*po prawej stronie*\
 Jednym z obiektów, które mają być porównane.
 
-*Ty1*<br/>
+*Ty1*\
 Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2*<br/>
+*Ty2*\
 Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ### <a name="remarks"></a>Uwagi
 
 Operatorzy szablonów zwracają `left.get() >= right.get()`.
 
-## <a name="op_lt"></a>  Operator&lt;
+## <a name="op_lt"></a> Operator&lt;
 
 Sprawdza, czy jeden obiekt jest mniejszy niż drugi obiekt.
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Jednym z obiektów, które mają być porównane.
 
-*right*<br/>
+*po prawej stronie*\
 Jednym z obiektów, które mają być porównane.
 
-*Ty1*<br/>
+*Ty1*\
 Typ kontrolowany przez wskaźnik po lewej stronie.
 
-*Ty2*<br/>
+*Ty2*\
 Typ kontrolowany przez wskaźnik prawo.
 
-## <a name="op_lt_eq"></a>  Operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 Sprawdza, czy jeden obiekt jest mniejszy niż lub równy drugiemu obiektowi.
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Jednym z obiektów, które mają być porównane.
 
-*right*<br/>
+*po prawej stronie*\
 Jednym z obiektów, które mają być porównane.
 
-*Ty1*<br/>
+*Ty1*\
 Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2*<br/>
+*Ty2*\
 Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ### <a name="remarks"></a>Uwagi
 
 Zwróć operatory szablonu `left.get() <= right.get()`
 
-## <a name="op_gt"></a>  Operator&gt;
+## <a name="op_gt"></a> Operator&gt;
 
 Sprawdza, czy jeden obiekt jest większy niż drugi obiekt.
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*po lewej stronie*\
 Jednym z obiektów, które mają być porównane.
 
-*right*<br/>
+*po prawej stronie*\
 Jednym z obiektów, które mają być porównane.
 
-*Ty1*<br/>
+*Ty1*\
 Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2*<br/>
+*Ty2*\
 Typ kontrolowany przez dzielony wskaźnik prawo.
 
-## <a name="op_lt_lt"></a>  Operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operator&lt;&lt;
 
 Zapisuje wspólny wskaźnik do strumienia.
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
+*Elem*\
 Typ elementu strumienia.
 
-*TR*<br/>
+*TR*\
 Typ cechy elementu strumienia.
 
-*Ty*<br/>
+*Ty*\
 Typ kontrolowany przez dzielony wskaźnik.
 
-*out*<br/>
+*limit*\
 Strumień danych wyjściowych.
 
-*SP*<br/>
+*SP*\
 Wspólny wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>Zobacz także
-
-[\<memory>](../standard-library/memory.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388218"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243384"
 ---
 # <a name="binder1st-class"></a>binder1st — Klasa
 
@@ -43,13 +43,13 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*binary_fn*<br/>
+*binary_fn*\
 Obiekt binarny funkcji do konwersji na obiekt funkcyjny jednoargumentowy.
 
-*left*<br/>
+*po lewej stronie*\
 Wartość, do którego ma zostać powiązany pierwszy argument obiektu binarnego funkcji.
 
-*right*<br/>
+*po prawej stronie*\
 Wartość argumentu, który porównuje dostosowane obiektu binarnego stała wartość drugiego argumentu.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -58,9 +58,9 @@ Obiekt funkcji Jednoelementowy, będącą wynikiem powiązanie pierwszy argument
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię obiektu binarnego funkcja *binary_fn* w `op`, a kopia *po lewej stronie* w `value`. Definiuje jej funkcji członkowskiej `operator()` powrotu `op( value, right )`.
+Klasa szablonu przechowuje kopię obiektu binarnego funkcja *binary_fn* w `op`, a kopia *po lewej stronie* w `value`. Definiuje jej funkcji członkowskiej `operator()` powrotu `op(value, right)`.
 
-Jeśli *binary_fn* jest obiektem typu `Operation` i `c` jest stałą, następnie `bind1st( binary_fn, c )` jest bardziej wygodne odpowiednikiem `binder1st<Operation>( binary_fn, c )`. Aby uzyskać więcej informacji, zobacz [bind1st —](../standard-library/functional-functions.md#bind1st).
+Jeśli *binary_fn* jest obiektem typu `Operation` i `c` jest stałą, następnie `bind1st(binary_fn, c)` jest bardziej wygodne odpowiednikiem `binder1st<Operation>(binary_fn, c)`. Aby uzyskać więcej informacji, zobacz [bind1st —](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Przykład
 
@@ -105,20 +105,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<funkcjonalności >
-
-**Namespace:** standardowe
-
-## <a name="see-also"></a>Zobacz także
-
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

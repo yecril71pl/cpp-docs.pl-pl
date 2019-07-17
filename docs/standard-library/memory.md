@@ -1,50 +1,62 @@
 ---
 title: '&lt;Pamięć&gt;'
-ms.date: 11/04/2016
+ms.date: 04/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.assetid: ef8e38da-7c9d-4037-9ad1-20c99febf5dc
-ms.openlocfilehash: c63421995fdabc94a7e6495df8d9937049dbba9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217342"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246806"
 ---
 # <a name="ltmemorygt"></a>&lt;Pamięć&gt;
 
 Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zwalniać obiekty.
 
-## <a name="syntax"></a>Składnia
+## <a name="requirements"></a>Wymagania
 
-```cpp
-#include <memory>
-```
+**Nagłówek:** \<pamięci >
+
+**Namespace:** standardowe
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="functions"></a>Funkcje
 
-|Funkcja|Opis|
+|||
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|Pobiera prawdziwy adres obiektu.|
 |[align](../standard-library/memory-functions.md#align)|Zwraca wskaźnik do zakresu o podanej wielkości, na podstawie podanego wyrównania i adresu początkowego.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Tworzy `shared_ptr` do obiektów, które są przydzielane i zbudowane dla danego typu przy użyciu określonego alokatora.|
+|[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
+|[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
+|[atomic_compare_exchange_strong_explicit](../standard-library/memory-functions.md#atomic_compare_exchange_strong_explicit)||
+|[atomic_compare_exchange_weak_explicit](../standard-library/memory-functions.md#atomic_compare_exchange_weak_explicit)||
+|[atomic_exchange](../standard-library/memory-functions.md#atomic_exchange)||
+|[atomic_exchange_explicit](../standard-library/memory-functions.md#atomic_exchange_explicit)||
+|[atomic_is_lock_free](../standard-library/memory-functions.md#atomic_is_lock_free)||
+|[atomic_load —](../standard-library/memory-functions.md#atomic_load)||
+|[atomic_load_explicit](../standard-library/memory-functions.md#atomic_load_explicit)||
+|[atomic_store](../standard-library/memory-functions.md#atomic_store)||
+|[atomic_store_explicit](../standard-library/memory-functions.md#atomic_store_explicit)||
 |[const_pointer_cast](../standard-library/memory-functions.md#const_pointer_cast)|Rzutowanie stałe na `shared_ptr`.|
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Informuje moduł odśmiecający pamięci, że znaki, począwszy od określonego adresu i objęte rozmiarem bloku, nie zawierają wskaźników mogących podlegać śledzeniu.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Informuje moduł odśmiecania pamięci, że wskazany adres prowadzi do przydzielonej pamięci i jest osiągalny.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Usuwa obiekty przydzielone za pomocą `operator new`. Odpowiedni do użytku z `unique_ptr`.|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Skrót `destroy` metody.|
+|[destroy](../standard-library/memory-functions.md#destroy)|Skrót `destroy` metody.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Skrót `destroy` metody.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Rzutowanie dynamiczne na `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Pobieranie programu usuwającego z `shared_ptr`.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Zwraca typ bezpieczeństwa wskaźnika założony przez dowolny moduł odśmiecania pamięci.|
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Przydziela tymczasową pamięć dla sekwencji elementów, która nie przekracza określonej liczby elementów.|
 |[make_shared](../standard-library/memory-functions.md#make_shared)|Tworzy i zwraca `shared_ptr` który wskazuje na przydzielony obiekt skonstruowany z zera lub więcej argumentów za pomocą domyślnego alokatora.|
 |[make_unique](../standard-library/memory-functions.md#make_unique)|Tworzy i zwraca [unique_ptr](../standard-library/unique-ptr-class.md) który wskazuje na przydzielony obiekt skonstruowany z zera lub więcej argumentów.|
-|[owner_less](../standard-library/memory-functions.md#owner_less)|Pozwala na mieszane porównania oparte na własności współdzielonych i słabych wskaźników.|
 |[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Wyliczenie wszystkich możliwych wartości zwracanych dla `get_pointer_safety`.|
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Zwalnia pamięć tymczasową, która została przydzielona za pomocą `get_temporary_buffer` funkcji szablonu.|
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Rzutowanie statyczne na `shared_ptr`.|
@@ -53,12 +65,19 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Informuje `garbage_collector` określona lokalizacja w pamięci nie jest dostępny.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Kopiuje obiekty z określonego zakresu wejściowego do niezainicjowanego zakresu docelowego.|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Tworzy kopię określonej liczby elementów z iteratora danych wejściowych. Kopie są wprowadzane do iteratora do przodu.|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Skrót `uninitialized_default_construct` metody.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Skrót `uninitialized_construct` metody.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Kopiuje obiekty z określoną wartością do niezainicjowanego zakresu docelowego.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Kopiuje obiekty z określoną wartością do określonej liczby elementów niezainicjowanego zakresu docelowego.|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Skrót `uninitialized_move` metody.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Skrót `uninitialized_move` metody.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Skrót `uninitialized_value_construct` metody.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Skrót `uninitialized_value_construct` metody.|
+|[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Operatory
 
-|Operator|Opis|
+|||
 |-|-|
 |[operator!=](../standard-library/memory-operators.md#op_neq)|Testuje pod kątem nierówności pomiędzy obiektami alokatora określonej klasy.|
 |[operator==](../standard-library/memory-operators.md#op_eq_eq)|Testuje pod kątem równości pomiędzy obiektami alokatora określonej klasy.|
@@ -70,7 +89,7 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|||
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Klasa szablonu opisuje obiekt, który zarządza alokacją pamięci i zwalnianiem dla tablic obiektów typu **typu**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Opisuje obiekt określający wszystkie informacje, które są wymagane przez kontener z obsługą alokatora.|
@@ -82,6 +101,16 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 |[shared_ptr](../standard-library/shared-ptr-class.md)|Otacza inteligentny wskaźnik zliczonych odwołań wokół obiektu przydzielanego dynamicznie.|
 |[unique_ptr](../standard-library/unique-ptr-class.md)|Przechowuje wskaźnik do posiadanego obiektu. Wskaźnik jest własnością żadnego innego `unique_ptr`. `unique_ptr` Jest niszczony, kiedy niszczony jest właściciel.|
 |[weak_ptr](../standard-library/weak-ptr-class.md)|Otacza słabo połączony wskaźnik.|
+
+### <a name="structures"></a>Struktury
+
+|||
+|-|-|
+|[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
+|[default_delete](../standard-library/default-delete-struct.md)||
+|[Skrót]()||
+|[owner_less —](../standard-library/memory-functions.md#owner_less)|Pozwala na mieszane porównania oparte na własności współdzielonych i słabych wskaźników.|
+|[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
 ### <a name="specializations"></a>Specjalizacje
 
