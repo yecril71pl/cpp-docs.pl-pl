@@ -11,24 +11,27 @@ ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 helpviewer_keywords:
 - std::accumulate [C++]
 - std::adjacent_difference [C++]
+- std::exclusive_scan [C++]
+- std::gcd [C++]
+- std::inclusive_scan [C++]
 - std::inner_product [C++]
 - std::iota [C++]
+- std::lcm [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+- std::reduce [C++]
+- std::transform_exclusive_scan [C++]
+- std::transform_inclusive_scan [C++]
+- std::transform_reduce [C++]
+ms.openlocfilehash: 0a9d0ce34b1dcd2dd9252f4b243db85118deabe6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236562"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246719"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;liczbowe&gt; funkcji
 
-||||
-|-|-|-|
-|[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|
-|[iota](#iota)|[partial_sum](#partial_sum)|
-
-## <a name="accumulate"></a>  accumulate
+## <a name="accumulate"></a> accumulate
 
 Oblicza sumę wszystkich elementów w określonym zakresie, w tym niektóre wartości początkowe przez obliczanie kolejnych sum częściowych, lub oblicza kolejne wyniki częściowe podobnie uzyskanej przy użyciu określonej operacji binarnej niż suma.
 
@@ -46,25 +49,25 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie sumowane lub scalony według określonej operacji binarnej.
 
-*last*<br/>
+*ostatni*\
 Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie ma być sumowany lub scalony według określonej operacji binarnej, który jest jedną pozycję poza ostatnim elementem faktycznie włączonym w iterowaną akumulację.
 
-*Val*<br/>
+*Val*\
 Początkowa wartość, do której każdy element z kolei jest dodane lub w połączeniu z według określonej operacji binarnej.
 
-*binary_op*<br/>
+*binary_op*\
 Operacja binarna, który ma być stosowana do każdego elementu w określonym zakresie i wynik jego starszymi aplikacjami.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Suma *val* i wszystkie elementy w określonym zakresie, pierwsza funkcja szablonu lub, druga funkcja szablonu wynik zastosowania operacja binarna określona zamiast operacji sumowania (  *PartialResult, \*Iter*), gdzie *PartialResult* jest wynikiem starszymi aplikacjami operacji i `Iter` jest iteratora wskazującego elementu w zakresie.
+Suma *val* i wszystkie elementy w określonym zakresie, pierwsza funkcja szablonu lub, druga funkcja szablonu wynik zastosowania operacja binarna określona zamiast operacji sumowania ( *PartialResult, \*Iter*), gdzie *PartialResult* jest wynikiem starszymi aplikacjami operacji i `Iter` jest iteratora wskazującego elementu w zakresie.
 
 ### <a name="remarks"></a>Uwagi
 
-Początkowa wartość ubezpieczycielom, że zawsze będą wynik wyraźnie określone, gdy zakres jest pusta, w którym to przypadku *val* jest zwracana. Operacja binarna nie musi być asocjacyjna ani komutatywna. Wynik jest ustawiana na wartość początkową *val* i następnie *wynik*  =  `binary_op` ( *wynik*, <strong>\*</strong> `Iter`) jest obliczana iteracyjne przy użyciu zakresu, gdzie `Iter` jest iteratora wskazującego kolejnych elementu w zakresie. Zakres musi być prawidłowy i złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **typu** zapewnienie zamknięcia podczas iteracji.
+Początkowa wartość ubezpieczycielom, że zawsze będą wynik wyraźnie określone, gdy zakres jest pusta, w którym to przypadku *val* jest zwracana. Operacja binarna nie musi być asocjacyjna ani komutatywna. Wynik jest ustawiana na wartość początkową *val* i następnie *wynik*  =  `binary_op` (*wynik*, <strong>\*</strong> `Iter`) jest obliczana iteracyjne przy użyciu zakresu, gdzie `Iter` jest iteratora wskazującego kolejnych elementu w zakresie. Zakres musi być prawidłowy i złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **typu** zapewnienie zamknięcia podczas iteracji.
 
 ### <a name="example"></a>Przykład
 
@@ -165,7 +168,7 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a>  adjacent_difference
+## <a name="adjacent_difference"></a> adjacent_difference
 
 Oblicza kolejne różnice między każdym elementem i jego poprzednikiem w zakresie wejściowym i generuje wyjściowe wyniki do zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie operacja różnicy zostaje zastąpiona przez inną, określoną operację binarną.
 
@@ -182,25 +185,41 @@ OutputIterator adjacent_difference(
     InputIterator last,
     OutputIterator result,
     BinaryOperation binary_op);
+
+template <class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 adjacent_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template <class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation>
+ForwardIterator2 adjacent_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie na parze wartości ma działać inna określona operacja binarna.
 
-*last*<br/>
+*ostatni*\
 Iterator danych wejściowych odnoszący się do ostatniego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie na parze wartości ma działać inna określona operacja binarna.
 
-*result*<br/>
+*wynik*\
 Iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg różnic lub wyniki określonej operacji.
 
-*binary_op*<br/>
+*binary_op*\
 Operacja binarna, który ma być stosowana w ogólnej operacji zastępującej operację odejmowania w procedurze różnicującej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator danych wyjściowych odnoszący końca zakresu docelowego: `result` + ( `last`  -  `first`).
+Iterator danych wyjściowych odnoszący końca zakresu docelowego: `result` + (`last` - `first`).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -210,7 +229,7 @@ Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym, pierwsza funkc
 
 Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym, druga funkcja szablonu przechowuje kolejne `partial_difference`s *a* 1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2, w zakresie docelowym.
 
-Operacja binarna `binary_op` nie musi być asocjacyjna ani komutatywna, ponieważ kolejność operacji, które mają zastosowanie, jest całkowicie określona.
+Operacja binarna `binary_op` nie musi być asocjacyjna ani komutatywna, ponieważ kolejność operacji stosowany jest określony.
 
 ### <a name="example"></a>Przykład
 
@@ -273,7 +292,70 @@ int main( )
 }
 ```
 
-## <a name="inner_product"></a>  inner_product —
+## <a name="exclusive_scan"></a> exclusive_scan
+
+```cpp
+template<class InputIterator, class OutputIterator, class T>
+OutputIterator exclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+T init);
+template<class InputIterator, class OutputIterator, class T, class BinaryOperation>
+OutputIterator exclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+T init, BinaryOperation binary_op);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
+ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+T init);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T,
+class BinaryOperation>
+ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+T init, BinaryOperation binary_op);
+```
+
+## <a name="gcd"></a> GCD
+
+```cpp
+template <class M, class N>
+constexpr common_type_t<M,N> gcd(M m, N n);
+```
+
+## <a name="inclusive_scan"></a> inclusive_scan
+
+```cpp
+template<class InputIterator, class OutputIterator>
+OutputIterator inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result);
+template<class InputIterator, class OutputIterator, class BinaryOperation>
+OutputIterator inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+BinaryOperation binary_op);
+template<class InputIterator, class OutputIterator, class BinaryOperation, class T>
+OutputIterator inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+BinaryOperation binary_op, T init);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation>
+ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+BinaryOperation binary_op);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation, class T>
+ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+BinaryOperation binary_op, T init);
+```
+
+## <a name="inner_product"></a> inner_product —
 
 Oblicza sumę mnożenia elementów z dwóch zakresów i dodaje go do określonej wartości początkowej lub oblicza wynik ogólnej procedury, gdzie operacje sumowania i danych binarnych są zastępowane przez inne określone operacje binarne.
 
@@ -297,22 +379,22 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parametry
 
-*first1*<br/>
+*first1*\
 Iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
 
-*last1*<br/>
+*Nazwisko1*\
 Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
 
-*first2*<br/>
+*first2*\
 Iterator danych wejściowych, odnoszący się do pierwszego elementu w drugiego zakresu, w których wewnętrzna produktem, czy uogólnionego wewnętrzny z pierwszego zakresu jest ma zostać obliczony.
 
-*Val*<br/>
+*Val*\
 Wartość początkowa, do którego ma zostać dodany produkt wewnętrzny lub uogólnionego produktu wewnętrzny między zakresów.
 
-*binary_op1*<br/>
+*binary_op1*\
 Operacja binarna, który zastępuje operacja produktu wewnętrzny sumy w stosunku do element-wise produktów w generalizacji produktu wewnętrzny.
 
-*binary_op2*<br/>
+*binary_op2*\
 Operacja binarna, który zastępuje produktu wewnętrzny element-wise działanie, należy pomnożyć w generalizacji produktu wewnętrzny.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -331,7 +413,7 @@ iteracyjne zastępując *val* z `val` *binary_op1* ( *a*i *binary_op2* *b*i ).
 
 ### <a name="remarks"></a>Uwagi
 
-Początkowa wartość zapewnia, że zawsze będą wynik wyraźnie określone, gdy zakres jest pusta, w którym to przypadku *val* jest zwracana. Operacji binarnych nie trzeba zespolonego lub przemiennego. Zakres musi być prawidłowy i złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **typu** zapewnienie zamknięcia podczas iteracji.
+Początkowa wartość zapewnia, że zawsze będą wynik wyraźnie określone, gdy zakres jest pusta, w którym to przypadku *val* jest zwracana. Operacji binarnych nie muszą być asocjacyjna ani komutatywna. Zakres musi być prawidłowy i złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **typu** zapewnienie zamknięcia podczas iteracji.
 
 ### <a name="example"></a>Przykład
 
@@ -423,9 +505,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a>  iota
+## <a name="iota"></a> iota
 
-Przechowuje wartość początkową, zaczynając od pierwszego elementu i wypełniając kolejne przyrosty wartości (` value++`) we wszystkich elementów w interwale `[ first,  last)`.
+Przechowuje wartość początkową, zaczynając od pierwszego elementu i wypełniając kolejne przyrosty wartości (` value++`) we wszystkich elementów w interwale `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -434,16 +516,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszy*\
 Iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie, który ma zostać wypełniony.
 
-*last*<br/>
+*ostatni*\
 Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie, który ma zostać wypełniony.
 
-*value*<br/>
-Wartość początkową do przechowywania w pierwszym elemencie i kolejno przyrostu dla kolejnych elementów.
-
-### <a name="remarks"></a>Uwagi
+*Wartość*\
+Wartość początkową do przechowywania w pierwszym elemencie i kolejno przyrostu dla nowszych elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -487,7 +567,14 @@ int main(void)
 }
 ```
 
-## <a name="partial_sum"></a>  partial_sum —
+## <a name="lcm"></a> LCM
+
+```cpp
+template <class M, class N>
+constexpr common_type_t<M,N> lcm(M m, N n);
+```
+
+## <a name="partial_sum"></a> partial_sum —
 
 Oblicza serię sum zakresu wejściowego od pierwszego elementu przez *i*Ty element i zapisuje wynik każdej takiej sumy w *i*-tym elemencie zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie suma operacji jest zastępowana inną określoną operację binarną.
 
@@ -508,16 +595,16 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który ma być częściowo sumowany lub scalony według określonej operacji binarnej.
 
-*last*<br/>
+*ostatni*\
 Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie, który ma być częściowo sumowany lub scalony według określonej operacji binarnej, znajdujący się o jedną pozycję poza ostatnim elementem faktycznie włączonym w iterowaną akumulację.
 
-*result*<br/>
+*wynik*\
 Iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg częściowych sum lub wyniki określonej operacji.
 
-*binary_op*<br/>
+*binary_op*\
 Operacja binarna, który ma być stosowana w ogólnej operacji zastępującej operację sumowania w procedurze częściowej sumy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -528,11 +615,11 @@ Iterator danych wyjściowych odnoszący końca zakresu docelowego: `result` + (`
 
 Iterator danych wyjściowych *wynik* może być tym samym iteratorem, co iterator danych wejściowych *pierwszy*, dzięki czemu sumy częściowe mogą być obliczone w miejscu.
 
-Sekwencji wartości *a*1, *a*2, *a*3, zakresu wejściowego pierwszej funkcji szablonu przechowuje kolejnych sum częściowych w zakresie docelowym gdzie *i*th element jest określany przez ((( *a*1 + *a*2) + *a*3) *a*i).
+Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym, pierwsza funkcja szablonu przechowuje kolejne sumy częściowe w zakresie docelowym, gdzie *i*th element jest nadawana przez (((*a*1 + *a*2) + *a*3) *a*i).
 
-Sekwencji wartości *a*1, *a*2, *a*3, zakresu wejściowego drugi funkcji szablonu przechowuje kolejnych sum częściowych w zakresie docelowym, gdzie jest wskazującego element podana przez ((( *a*1 `binary_op` *a*2) `binary_op` *a*3) *a*i).
+Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym, druga funkcja szablonu przechowuje kolejne sumy częściowe w zakresie docelowym, w którym jest element ię od podana przez (((*a*1 `binary_op` *a*2) `binary_op` *a*3) *a*i).
 
-Operacja binarna *binary_op* nie musi być asocjacyjna ani komutatywna, ponieważ kolejność operacji, które mają zastosowanie, jest całkowicie określona.
+Operacja binarna *binary_op* nie musi być asocjacyjna ani komutatywna, ponieważ kolejność operacji stosowany jest określony.
 
 ### <a name="example"></a>Przykład
 
@@ -594,6 +681,125 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="reduce"></a> Zmniejsz
 
-[\<liczbowe >](../standard-library/numeric.md)<br/>
+```cpp
+template<class InputIterator>
+typename iterator_traits<InputIterator>::value_type
+reduce(InputIterator first, InputIterator last);
+template<class InputIterator, class T>
+T reduce(InputIterator first, InputIterator last, T init);
+template<class InputIterator, class T, class BinaryOperation>
+T reduce(InputIterator first, InputIterator last, T init,
+BinaryOperation binary_op);
+template<class ExecutionPolicy, class ForwardIterator>
+typename iterator_traits<ForwardIterator>::value_type
+reduce(ExecutionPolicy&& exec, 
+ForwardIterator first, ForwardIterator last);
+template<class ExecutionPolicy, class ForwardIterator, class T>
+T reduce(ExecutionPolicy&& exec, 
+ForwardIterator first, ForwardIterator last, T init);
+template<class ExecutionPolicy, class ForwardIterator, class T, class BinaryOperation>
+T reduce(ExecutionPolicy&& exec, 
+ForwardIterator first, ForwardIterator last, T init,
+BinaryOperation binary_op);
+```
+
+## <a name="transform_exclusive_scan"></a> transform_exclusive_scan
+
+```cpp
+template<class InputIterator, class OutputIterator, class T,
+class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+T init,
+BinaryOperation binary_op,
+UnaryOperation unary_op);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2, class T,
+class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+T init,
+BinaryOperation binary_op,
+UnaryOperation unary_op);
+```
+
+## <a name="transform_inclusive_scan"></a> transform_inclusive_scan
+
+```cpp
+template<class InputIterator, class OutputIterator,
+class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+BinaryOperation binary_op,
+UnaryOperation unary_op);
+template<class InputIterator, class OutputIterator,
+class BinaryOperation, class UnaryOperation, class T>
+OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+BinaryOperation binary_op,
+UnaryOperation unary_op,
+T init);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+BinaryOperation binary_op,
+UnaryOperation unary_op);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation, class UnaryOperation, class T>
+ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+BinaryOperation binary_op,
+UnaryOperation unary_op,
+T init);
+```
+
+## <a name="transform_reduce"></a> transform_reduce
+
+```cpp
+template<class InputIterator1, class InputIterator2, class T>
+T transform_reduce(InputIterator1 first1, InputIterator1 last1,
+InputIterator2 first2,
+T init);
+template<class InputIterator1, class InputIterator2, class T,
+class BinaryOperation1, class BinaryOperation2>
+T transform_reduce(InputIterator1 first1, InputIterator1 last1,
+InputIterator2 first2,
+T init,
+BinaryOperation1 binary_op1,
+BinaryOperation2 binary_op2);
+template<class InputIterator, class T,
+class BinaryOperation, class UnaryOperation>
+T transform_reduce(InputIterator first, InputIterator last,
+T init,
+BinaryOperation binary_op, UnaryOperation unary_op);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2, class T>
+T transform_reduce(ExecutionPolicy&& exec, 
+ForwardIterator1 first1, ForwardIterator1 last1,
+ForwardIterator2 first2,
+T init);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2, class T,
+class BinaryOperation1, class BinaryOperation2>
+T transform_reduce(ExecutionPolicy&& exec, 
+ForwardIterator1 first1, ForwardIterator1 last1,
+ForwardIterator2 first2,
+T init,
+BinaryOperation1 binary_op1,
+BinaryOperation2 binary_op2);
+template<class ExecutionPolicy,
+class ForwardIterator, class T,
+class BinaryOperation, class UnaryOperation>
+T transform_reduce(ExecutionPolicy&& exec, 
+ForwardIterator first, ForwardIterator last,
+T init,
+BinaryOperation binary_op, UnaryOperation unary_op);
+```
