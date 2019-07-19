@@ -1,33 +1,38 @@
 ---
 title: '&lt;cstdbool&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <cstdbool>
+- cstdbool
+helpviewer_keywords:
+- cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ed780e059a5e456731fd6a4f651639e282016f5e
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244500"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341103"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
-Dołącza nagłówek biblioteki standardowej C \<stdbool.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Zawiera nagłówek \<standardowej biblioteki C stdbool. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw.
 
 > [!NOTE]
-> Tego pliku nagłówkowego jest przestarzała w C++ 17.
+> Ponieważ nagłówek stdbool. h > definiuje makra, które są słowami C++kluczowymi, w tym nie ma żadnego wpływu. \< Nagłówek > stdbool. h jest przestarzały w programie C++ \< Nagłówek \<> cstdbool jest przestarzały w języku c++ 17 i został usunięty z wersji Standard c++ 20.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<cstdbool >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="remarks"></a>Uwagi
 
-Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
+Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
+[C++Omówienie biblioteki standardowej](cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](thread-safety-in-the-cpp-standard-library.md)

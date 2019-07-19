@@ -5,35 +5,35 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: 8f92692fb19b0eeff2fe9af179fc8fe3fa6c2f7e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 44d8956313053ca6c7a55994f241c00bd71092b4
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149729"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340984"
 ---
 # <a name="c-tokens"></a>Tokeny języka C
 
-W programie źródłowym C podstawowy element rozpoznawane przez kompilator jest "token". Token jest tekst program źródłowy, który kompilator nie podzielić na elementy składowe.
+W programie źródłowym języka C podstawowym elementem rozpoznawanym przez kompilator jest "token". Token jest tekstem w programie źródłowym, który nie jest podzielony na elementy składnika.
 
 ## <a name="syntax"></a>Składnia
 
-*Token*: *— słowo kluczowe*
+*token*: *słowo kluczowe*
 
-*Identyfikator*
+*identyfikatora*
 
-*Stałe*
+*stałego*
 
-*string-literal*
+*literał ciągu*
 
 *operator*
 
-*znak interpunkcyjny*
+*punctuator*
 
 > [!NOTE]
->  Zobacz wprowadzenie do[podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md) objaśnienia dotyczące Konwencji składni ANSI.
+>  Zapoznaj się z artykułem wprowadzenie do [podsumowania składni języka C](../c-language/c-language-syntax-summary.md) , aby uzyskać wyjaśnienie Konwencji składni ANSI.
 
-Słowa kluczowe, identyfikatory, stałe, literały ciągów i operatorów opisane w tej sekcji przedstawiono tokenów. Znaki interpunkcyjne, takie jak nawiasy kwadratowe (**[**), nawiasy klamrowe (**{}**), nawiasy ( **()** ), kropki i przecinki (**,**) również są tokenami.
+Słowa kluczowe, identyfikatory, stałe, literały ciągów i operatory opisane w tej sekcji są przykładami tokenów. Znaki interpunkcyjne, takie jak nawiasy ( **[]** ), nawiasy klamrowe ( **{}** ), nawiasy ( **()** ) i przecinki ( **,** ) są również tokenami.
 
 ## <a name="see-also"></a>Zobacz także
 
