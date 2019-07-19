@@ -414,6 +414,8 @@
                   href: build/reference/general-property-page-project.md
                 - name: Strona właściwości ogólnych
                   href: build/reference/general-property-page-file.md
+                - name: Strona właściwości zaawansowanych
+                  href: build/reference/advanced-property-page.md
                 - name: Strona właściwości katalogów VC++
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Strony właściwości wiersza polecenia
