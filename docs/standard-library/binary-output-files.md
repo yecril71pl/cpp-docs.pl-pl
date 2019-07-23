@@ -6,16 +6,16 @@ helpviewer_keywords:
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4562f5c1167aeadc6689313e73545ed1ad9bbcf8
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414064"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376333"
 ---
 # <a name="binary-output-files"></a>Binarne pliki wyjściowe
 
-Strumienie pierwotnie zostały zaprojektowane dla tekstu, więc to domyślny tryb wyjściowy jest tekst. W trybie tekstowym znak nowego wiersza (szesnastkowa 10) rozszerza się na powrót karetki return-wysuwu wiersza (tylko 16-bitowy). Rozszerzenie może spowodować problemy, jak pokazano poniżej:
+Strumienie zostały pierwotnie zaprojektowane dla tekstu, więc domyślny tryb wyjściowy to Text. W trybie tekstowym znak wysuwu wiersza (nowy wiersz) jest rozszerzany do pary wysuwu wiersza powrotu karetki. Rozszerzanie może spowodować problemy, jak pokazano poniżej:
 
 ```cpp
 // binary_output_files.cpp
@@ -30,7 +30,7 @@ int main( )
 }
 ```
 
-Można by oczekiwać na dane wyjściowe sekwencja bajtów {99, 0, 10, 0}; tego programu Zamiast tego Wyświetla {99, 0, 13, 10, 0}, która powoduje występowanie problemów, w programie oczekiwano binarnego danych wejściowych. Jeśli potrzebujesz true binarne dane wyjściowe, w którym zapisywane są znaki nieprzetłumaczone, można określić binarne dane wyjściowe przy użyciu [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) argumentu openmode konstruktora:
+Może się spodziewać, że ten program będzie wyprowadzać sekwencję bajtów {99, 0, 10, 0}; Zamiast tego zwraca {99, 0, 13, 10, 0}, co powoduje problemy dla programu oczekiwanie na dane wejściowe binarne. Jeśli potrzebujesz prawdziwe dane wyjściowe binarne, w których znaki są zapisywane nieprzetłumaczone, możesz określić binarne dane wyjściowe przy użyciu argumentu konstruktora `openmode` [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream):
 
 ```cpp
 // binary_output_files2.cpp
@@ -50,4 +50,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Strumienie wyjściowe](../standard-library/output-streams.md)<br/>
+[Strumienie wyjściowe](../standard-library/output-streams.md)
