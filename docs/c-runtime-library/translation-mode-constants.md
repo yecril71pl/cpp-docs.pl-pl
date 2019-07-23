@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: 18e0ad8615bbe89c265247041729027f661915fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304387"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376278"
 ---
 # <a name="translation-mode-constants"></a>Tryb tłumaczenia — Stałe
 
@@ -34,17 +34,17 @@ ms.locfileid: "62304387"
 
 ## <a name="remarks"></a>Uwagi
 
-`_O_BINARY` i `_O_TEXT` stałych manifestu określić tryb translacji dla plików (`_open` i `_sopen`) lub tryb translacji dla strumieni (`_setmode`).
+`_open` `_setmode` `_sopen`Stałe manifestu `_O_TEXT` i określają tryb tłumaczenia dla plików (i) lub trybu tłumaczenia strumieni (). `_O_BINARY`
 
 Dozwolone wartości to:
 
 |||
 |-|-|
-`_O_TEXT`  | Otwiera plik w trybie tekstowym (tłumaczonym). Karetki - kombinacji (CR-LF) wysuwu wiersza są tłumaczone na jednym wysuwu wiersza (LF) na dane wejściowe. Znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W przypadku plików otwartych do odczytu lub odczytu/zapisu `fopen` wyszukuje klawisze CTRL + Z, na końcu pliku i usuwa go, jeśli jest to możliwe. Odbywa się, ponieważ używa `fseek` i `ftell` może spowodować, że funkcje, aby przenieść w pliku kończy się znakiem CRTL + Z `fseek` działać nieprawidłowo w pobliżu końca pliku.
+`_O_TEXT`  | Otwiera plik w trybie tekstu (tłumaczone). Kombinacje powrotu karetki liniowej (CR-LF) są tłumaczone na pojedynczy znak wysuwu wiersza (LF) na wejściu. Znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W plikach otwartych do odczytu i do odczytu i zapisu program `fopen` sprawdza, czy Ctrl + Z na końcu pliku i usuwa go, jeśli jest to możliwe. Dzieje się tak, ponieważ używanie `fseek` funkcji `ftell` i do poruszania się w pliku kończącym się na klawiaturze `fseek` Ctrl + z może spowodować zachowanie nieprawidłowego końca pliku.
 `_O_BINARY`  | Otwiera plik w trybie binarnym (nieprzetłumaczonym). Powyższe tłumaczenia są pomijane.
-`_O_RAW`  | Taki sam jak `_O_BINARY`. Obsługiwane w przypadku zgodności C w wersji 2.0.
+`_O_RAW`  | Analogicznie `_O_BINARY`jak. Obsługiwane w przypadku zgodności C 2,0.
 
-Aby uzyskać więcej informacji, zobacz [tekstowych i binarnych We/Wy trybu](../c-runtime-library/text-and-binary-mode-file-i-o.md) i [tłumaczenia pliku](../c-runtime-library/file-translation-constants.md).
+Aby uzyskać więcej informacji, zobacz [plik tekstowy i tryb binarny we/wy](../c-runtime-library/text-and-binary-mode-file-i-o.md) oraz [tłumaczenie plików](../c-runtime-library/file-translation-constants.md).
 
 ## <a name="see-also"></a>Zobacz także
 

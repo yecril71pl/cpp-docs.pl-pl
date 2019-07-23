@@ -11,12 +11,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ef9b986753de05c45b3071e55f9b163fa5a6a7da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343672"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375916"
 ---
 # <a name="file-translation-constants"></a>Stałe tłumaczenia pliku
 
@@ -28,22 +28,22 @@ ms.locfileid: "62343672"
 
 ## <a name="remarks"></a>Uwagi
 
-Te stałe określić tryb translacji (**"b"** lub **"t"**). Tryb znajduje się w ciąg określający typ dostępu (**"r"**, **"w"**, **""**, **"r +"**, **"w +"**, **"+"**).
+Te stałe określają tryb tłumaczenia ( **"b"** lub **"t"** ). Tryb jest dołączony do ciągu określającego typ dostępu ( **"r"** , **"w"** , **"a"** , **"r +"** , **"w +"** , **"a +"** ).
 
 Tryby tłumaczenia są następujące:
 
 - **t**
 
-   Zostanie otwarty w trybie tekstowym (tłumaczonym). W tym trybie kombinacji (CR-LF) powrotu karetki return/wysuwu wiersza są tłumaczone na jednym znaki wysuwu wiersza (LF) na dane wejściowe, a znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W przypadku plików otwartych do odczytu lub odczytu/zapisu `fopen` wyszukuje klawisze CTRL + Z, na końcu pliku i usuwa go, jeśli jest to możliwe. Odbywa się, ponieważ używa `fseek` i `ftell` może spowodować, że funkcje, aby przenieść w pliku kończy się znakiem CRTL + Z `fseek` działać nieprawidłowo w pobliżu końca pliku.
+   Otwiera w trybie tekst (przetłumaczony). W tym trybie kombinacje wysuwu wiersza (CR-LF) są tłumaczone na znaki wysuwu wiersza (LF) na wejściu, a sygnały LF są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W plikach otwartych do odczytu lub odczytu i zapisu program `fopen` sprawdza, czy Ctrl + Z na końcu pliku i usuwa go, jeśli jest to możliwe. Dzieje się tak, ponieważ używanie `fseek` funkcji `ftell` i do poruszania się w pliku kończącym się na klawiaturze `fseek` Ctrl + z może spowodować zachowanie nieprawidłowego końca pliku.
 
    > [!NOTE]
-   > **t** opcja nie jest częścią standardu ANSI `fopen` i `freopen`. Jest rozszerzeniem firmy Microsoft i nie powinna być używana gdzie pożądana jest przenośność kodowania ANSI.
+   > Opcja **t** nie jest częścią standardu ANSI dla `fopen` i. `freopen` Jest to rozszerzenie firmy Microsoft i nie powinno być używane w przypadku potrzeby przenoszenia w formacie ANSI.
 
 - **b**
 
-   Zostanie otwarty w trybie binarnym (nieprzetłumaczonym). Powyższe tłumaczenia są pomijane.
+   Otwiera w trybie binarnym (nieprzetłumaczonym). Powyższe tłumaczenia są pomijane.
 
-Jeśli **t** lub **b** nie jest podana w *tryb*, tryb translacji jest zdefiniowany przez zmienną trybu domyślnego [_fmode](../c-runtime-library/fmode.md). Aby uzyskać więcej informacji na temat używania w trybach tekstowym i binarnym, zobacz [tekstowych i binarnych We/Wy trybu](../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Jeśli **t** lub **b** nie jest określony w *trybie*, tryb tłumaczenia jest definiowany przez zmienną trybu domyślnego [_fmode](../c-runtime-library/fmode.md). Aby uzyskać więcej informacji na temat używania trybów tekstowych i binarnych, zobacz [plik tekstowy i tryb binarny we/wy](../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
 ## <a name="see-also"></a>Zobacz także
 

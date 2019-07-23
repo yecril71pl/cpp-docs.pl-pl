@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357658"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376306"
 ---
 # <a name="read"></a>_read
 
@@ -49,30 +49,30 @@ int _read(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
-Deskryptor pliku odnoszące się do otwartego pliku.
+*proces*<br/>
+Deskryptor pliku odwołujący się do otwartego pliku.
 
 *buffer*<br/>
-Lokalizacja magazynowa danych.
+Lokalizacja magazynu dla danych.
 
 *buffer_size*<br/>
 Maksymalna liczba bajtów do odczytania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_przeczytaj** zwraca liczbę bajtów odczytanych, który może być mniejsza niż *buffer_size* w przypadku mniej niż *buffer_size* bajtów pozostałych w pliku, czy plik został otwarty w trybie tekstowym. W trybie tekstowym wierszami powrotu karetki kanału informacyjnego pary `\r\n` jest zastępowany znaku wysuwu wiersza pojedynczego `\n`. Tylko znak wysuwu wiersza pojedynczego jest liczony w wartości zwracanej. Zastąpienie nie ma wpływu na wskaźnik pliku.
+**_read** zwraca liczbę odczytanych bajtów, która może być mniejsza niż *buffer_size* , jeśli w pliku jest mniej niż *buffer_size* bajtów lub plik został otwarty w trybie tekstowym. W trybie tekstowym każda para `\r\n` wysuwu wiersza jest zastępowana pojedynczym znakiem `\n`wysuwu wiersza. W zwracanej wartości jest uwzględniany tylko pojedynczy znak wysuwu wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku.
 
-Jeśli funkcja próbuje odczytać na końcu pliku, zwraca wartość 0. Jeśli *fd* jest nieprawidłowa, plik nie jest otwarty do odczytu, lub plik jest zablokowany, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i ustawia **errno** do **EBADF**.
+Jeśli funkcja próbuje odczytać na końcu pliku, zwraca 0. Jeśli *FD* jest nieprawidłowy, plik nie jest otwarty do odczytu lub plik jest zablokowany, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EBADF**.
 
-Jeśli *buforu* jest **NULL**, lub jeśli *buffer_size* > **INT_MAX**, zostanie wywołany nieprawidłowy parametr uchwytu. Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i **errno** ustawiono **EINVAL**.
+Jeśli *bufor* ma **wartość null**lub jeśli *buffer_size* > **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na **EINVAL**.
 
-Aby uzyskać więcej informacji na temat tego i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Przeczytaj** funkcja odczytuje maksymalnie *buffer_size* bajtów do *buforu* z pliku skojarzone z *fd*. Operacja odczytu rozpoczyna się w bieżącym położeniu wskaźnika pliku skojarzone z danym pliku. Po zakończeniu operacji odczytu wskaźnik pliku wskazuje na następny znak jako nieprzeczytane.
+Funkcja **_read** odczytuje maksymalnie *buffer_size* bajtów do *buforu* z pliku skojarzonego z *FD*. Operacja odczytu rozpoczyna się na bieżącym miejscu wskaźnika pliku skojarzonego z danym plikiem. Po operacji odczytu wskaźnik pliku wskazuje na Następny nieprzeczytany znak.
 
-Jeśli plik został otwarty w trybie tekstowym, odczytu skończy się, gdy **_przeczytaj** napotka znaku CTRL + Z, który jest traktowany jako wskaźnik końca pliku. Użyj [_lseek —](lseek-lseeki64.md) wyczyść wskaźnik końca pliku.
+Jeśli plik został otwarty w trybie tekstowym, odczyt kończy się, gdy **_read** NAPOTKA znak Ctrl + Z, który jest traktowany jako wskaźnik końca pliku. Użyj [_lseek](lseek-lseeki64.md) , aby wyczyścić wskaźnik końca pliku.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -80,11 +80,11 @@ Jeśli plik został otwarty w trybie tekstowym, odczytu skończy się, gdy **_pr
 |-------------|---------------------|
 |**_read**|\<io.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -126,7 +126,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtreadtxt"></a>Dane wejściowe: crt_read.txt
+### <a name="input-crtreadtxt"></a>Dane wejściowe: crt_read. txt
 
 ```Input
 Line one.
@@ -141,7 +141,7 @@ Read 19 bytes from file
 
 ## <a name="see-also"></a>Zobacz także
 
-[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fread](fread.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

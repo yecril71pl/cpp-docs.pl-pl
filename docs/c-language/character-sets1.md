@@ -2,32 +2,32 @@
 title: Zestawy znaków
 ms.date: 11/04/2016
 ms.assetid: ef21daa0-b4b4-4f1a-86f4-25904d83fc86
-ms.openlocfilehash: 4f8cc9f1d33a33848396dab7199b5eee65727e9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64e83eb1932c3ee379b67351f0f283f1ea7c9836
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312703"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375878"
 ---
 # <a name="character-sets"></a>Zestawy znaków
 
-**ANSI 3.1.3.4** członków mapowania źródła zestawu znaków
+**3.1.3.4 ANSI** Mapowanie elementów członkowskich zestawu znaków źródłowych
 
-Zestaw znaków źródła i wykonania zestawu znaków obejmują znaki ASCII, wymienione w poniższej tabeli. Sekwencje unikowe są także wyświetlane w tabeli.
+Zestaw znaków źródła i zestaw znaków wykonywania zawierają znaki ASCII wymienione w poniższej tabeli. Sekwencje unikowe są również wyświetlane w tabeli.
 
 ## <a name="escape-sequences"></a>Sekwencje unikowe
 
-|Sekwencja unikowa|Znak|ASCII Value|
+|Sekwencja unikowa|Znak|Wartość ASCII|
 |---------------------|---------------|-----------------|
-|&#92;a|Alert/dzwonka|7|
+|&#92;a|Alert/dzwonek|7|
 |&#92;b|Backspace|8|
-|&#92;f|Wysuw strony|12|
-|&#92;n|nowy wiersz|10|
-|&#92;r|Powrót karetki|13|
-|&#92;t|tabulator poziomy|9|
-|&#92;v|tabulator pionowy|11|
-|&#92;"|Podwójnego cudzysłowu|34|
-|&#92;'|Pojedynczego cudzysłowu|39|
+|&#92;f|Kanał informacyjny formularza|12|
+|&#92;n|Ani|10|
+|&#92;r|Znak powrotu karetki|13|
+|&#92;t|Tabulator poziomy|9|
+|&#92;v|Tabulator pionowy|11|
+|&#92;"|Podwójny cudzysłów|34|
+|&#92;'|Pojedynczy cytat|39|
 |&#92;&#92;|Ukośnik odwrotny|92|
 
 ## <a name="see-also"></a>Zobacz także
