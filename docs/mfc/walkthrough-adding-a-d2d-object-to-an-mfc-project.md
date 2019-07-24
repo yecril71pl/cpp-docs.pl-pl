@@ -5,26 +5,26 @@ helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cbb9e4002bb47ad8f65678c7a324267ca9717e94
+ms.sourcegitcommit: f82a6de52470070accb09a3a8f8b08060c492efa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558176"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68411756"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Przewodnik: Dodawanie obiektu D2D do projektu MFC
 
-Ten przewodnik omawia sposób dodawania podstawowe Direct2D (D2D) obiektu do programu Visual C++ projektu Microsoft Foundation Class Library (MFC), a następnie skompilowanie projektu do aplikacji, która drukuje "Hello, world" na gradientu tła.
+W tym instruktażu przedstawiono sposób dodawania podstawowego obiektu Direct2D (D2D) do projektu wizualizacji C++, biblioteka MFC (MFC), a następnie tworzenia projektu w aplikacji, która drukuje "Hello, World!" na tle gradientu.
 
-Instruktażu przedstawiono sposób wykonywania tych zadań:
+W tym przewodniku przedstawiono sposób wykonywania następujących zadań:
 
-- Tworzenie aplikacji MFC.
+- Utwórz aplikację MFC.
 
-- Utwórz pełny kolor pędzla i pędzla gradientu liniowego.
+- Utwórz pędzel z pełnymi kolorami i gradient liniowy.
 
-- Zmodyfikuj pędzla gradientów, tak, aby członkowie zmieniają się odpowiednio po zmianie rozmiaru okna.
+- Zmodyfikuj pędzel gradientu w taki sposób, aby zmienił się odpowiednio po zmianie rozmiaru okna.
 
-- Implementowanie obsługi rysowania D2D.
+- Zaimplementuj procedurę obsługi rysowania D2D.
 
 - Sprawdź wyniki.
 
@@ -32,19 +32,19 @@ Instruktażu przedstawiono sposób wykonywania tych zadań:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Do przeprowadzenia tego instruktażu, konieczne jest posiadanie zainstalowanego za pomocą programu Visual Studio **programowanie aplikacji klasycznych w języku C++** obciążenia i opcjonalną **Visual C++ MFC dla x86 i x64** składnika.
+Aby ukończyć ten przewodnik, musisz mieć zainstalowany program Visual Studio z programowaniem dla **komputerów C++ stacjonarnych z** obciążeniem i opcjonalną **wizualizacją C++ MFC dla składnika x86 i x64** .
 
 ## <a name="to-create-an-mfc-application"></a>Aby utworzyć aplikację MFC
 
-1. Użyj **Kreator aplikacji MFC** do tworzenia aplikacji MFC. Zobacz [instruktażu: Używanie nowych formantów powłoki MFC](walkthrough-using-the-new-mfc-shell-controls.md) w jaki sposób otworzyć kreatora dla używanej wersji programu Visual Studio.
+1. Użyj **Kreatora aplikacji MFC** , aby utworzyć aplikację MFC. Zobacz [Przewodnik: Aby uzyskać instrukcje dotyczące sposobu otwierania](walkthrough-using-the-new-mfc-shell-controls.md) kreatora dla używanej wersji programu Visual Studio, użyj nowych formantów powłoki MFC.
 
-1. W **nazwa** wpisz *MFCD2DWalkthrough*. Wybierz **OK**.
+1. W polu **Nazwa** wpisz *MFCD2DWalkthrough*. Wybierz **OK**.
 
-1. W **Kreator aplikacji MFC**, wybierz **Zakończ** bez zmieniania żadnych ustawień.
+1. W **Kreatorze aplikacji MFC**wybierz pozycję **Zakończ** bez zmiany jakichkolwiek ustawień.
 
-## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Aby utworzyć pełny kolor pędzla i pędzla gradientu liniowego
+## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Tworzenie pędzla pełnego koloru i gradientu liniowego
 
-1. W **Eksploratora rozwiązań**w **MFCD2DWalkthrough** projektu w **pliki nagłówkowe** folder, otwórz MFCD2DWalkthroughView.h. Dodaj następujący kod do `CMFCD2DWalkthroughView` klasy w celu utworzenia trzech zmiennych danych:
+1. W **Eksplorator rozwiązań**w projekcie **MFCD2DWalkthrough** , w folderze **pliki nagłówkowe** Otwórz MFCD2DWalkthroughView. h. Dodaj ten kod do klasy `CMFCD2DWalkthroughView` , aby utworzyć trzy zmienne danych:
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -54,7 +54,7 @@ Do przeprowadzenia tego instruktażu, konieczne jest posiadanie zainstalowanego 
 
    Zapisz plik i zamknij go.
 
-1. W **pliki źródłowe** folder, otwórz MFCD2DWalkthroughView.cpp. W Konstruktorze `CMFCD2DWalkthroughView` klasy, Dodaj następujący kod:
+1. W folderze **pliki źródłowe** Otwórz MFCD2DWalkthroughView. cpp. W konstruktorze `CMFCD2DWalkthroughView` klasy Dodaj następujący kod:
 
    ```cpp
    // Enable D2D support for this window:
@@ -98,15 +98,15 @@ Do przeprowadzenia tego instruktażu, konieczne jest posiadanie zainstalowanego 
 
    Zapisz plik i zamknij go.
 
-## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>Aby zmodyfikować pędzla gradientów, tak, aby członkowie zmieniają się odpowiednio po zmianie rozmiaru okna
+## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>Aby zmodyfikować pędzel gradientu w taki sposób, że zmieni się odpowiednio po zmianie rozmiaru okna
 
-1. Na **projektu** menu, wybierz **Kreator klas**.
+1. W menu **projekt** wybierz **kreatora klas**.
 
-1. W **Kreator klas MFC**w obszarze **Nazwa klasy**, wybierz opcję `CMFCD2DWalkthroughView`.
+1. W **Kreatorze klasy MFC**w obszarze **Nazwa klasy**wybierz opcję `CMFCD2DWalkthroughView`.
 
-1. Na **wiadomości** na karcie **wiadomości** wybierz opcję `WM_SIZE` , a następnie wybierz **Dodaj obsługę**. Ta akcja spowoduje dodanie `OnSize` program obsługi komunikatów do `CMFCD2DWalkthroughView` klasy.
+1. Na karcie **komunikaty** w polu **wiadomości** wybierz `WM_SIZE` pozycję, a następnie wybierz pozycję **Dodaj procedurę obsługi**. Ta akcja dodaje `OnSize` procedurę obsługi komunikatów `CMFCD2DWalkthroughView` do klasy.
 
-1. W **istniejące programy obsługi** wybierz opcję `OnSize`. Wybierz **Edytuj kod** do wyświetlenia `CMFCD2DWalkthroughView::OnSize` metody. Na końcu metody Dodaj następujący kod.
+1. W polu **istniejące programy obsługi** wybierz opcję `OnSize`. Wybierz polecenie **Edytuj kod** , `CMFCD2DWalkthroughView::OnSize` aby wyświetlić metodę. Na końcu metody Dodaj następujący kod.
 
    ```cpp
    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
@@ -114,17 +114,17 @@ Do przeprowadzenia tego instruktażu, konieczne jest posiadanie zainstalowanego 
 
    Zapisz plik i zamknij go.
 
-## <a name="to-implement-a-d2d-drawing-handler"></a>Aby zaimplementować mechanizm obsługi rysowania D2D
+## <a name="to-implement-a-d2d-drawing-handler"></a>Aby zaimplementować procedurę obsługi rysowania D2D
 
-1. Na **projektu** menu, wybierz **Kreator klas**.
+1. W menu **projekt** wybierz **kreatora klas**.
 
-1. W **Kreator klas MFC**w obszarze **Nazwa klasy**, wybierz opcję `CMFCD2DWalkthroughView`.
+1. W **Kreatorze klasy MFC**w obszarze **Nazwa klasy**wybierz opcję `CMFCD2DWalkthroughView`.
 
-1. Na **wiadomości** kartę, wybrać **dodać niestandardowy komunikat**.
+1. Na karcie **wiadomości** wybierz pozycję **Dodaj komunikat niestandardowy**.
 
-1. W **dodać niestandardowy komunikat** dialogowym **komunikat Windows niestandardowego** wpisz *AFX_WM_DRAW2D*. W **Nazwa procedury obsługi wiadomości** wpisz *OnDraw2D*. Wybierz **zarejestrowany komunikat** opcji, a następnie wybierz **OK**. Ta akcja spowoduje dodanie obsługi komunikatów do wiadomości AFX_WM_DRAW2D `CMFCD2DWalkthroughView` klasy.
+1. W oknie dialogowym **Dodawanie komunikatu niestandardowego** w polu **niestandardowy komunikat systemu Windows** wpisz *AFX_WM_DRAW2D*. W polu **Nazwa programu obsługi wiadomości** wpisz *OnDraw2D*. Wybierz opcję **zarejestrowany komunikat** , a następnie wybierz **przycisk OK**. Ta akcja dodaje do `CMFCD2DWalkthroughView` klasy procedurę obsługi komunikatów AFX_WM_DRAW2D.
 
-1. W **istniejące programy obsługi** wybierz opcję `OnDraw2D`. Wybierz **Edytuj kod** do wyświetlenia `CMFCD2DWalkthroughView::OnDraw2D` metody. Użyj tego kodu na potrzeby `CMFCD2DWalkthroughView::OnDrawD2D` metody:
+1. W polu **istniejące programy obsługi** wybierz opcję `OnDraw2D`. Wybierz polecenie **Edytuj kod** , `CMFCD2DWalkthroughView::OnDraw2D` aby wyświetlić metodę. Użyj tego kodu dla `CMFCD2DWalkthroughView::OnDrawD2D` metody:
 
    ```cpp
    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(
@@ -151,9 +151,9 @@ Do przeprowadzenia tego instruktażu, konieczne jest posiadanie zainstalowanego 
 
    Zapisz plik i zamknij go.
 
-## <a name="to-verify-the-results"></a>Aby sprawdzić oddziaływanie
+## <a name="to-verify-the-results"></a>Aby sprawdzić wyniki
 
-Skompiluj i uruchom aplikację. Powinien on gradientu prostokąt, który zmienia się podczas zmiany rozmiaru okna. "Hello World!" powinna być wyświetlana w Centrum prostokąta.
+Skompiluj i uruchom aplikację. Powinien on mieć prostokąt gradientu, który zmienia się po zmianie rozmiaru okna. "Hello world!" powinna być wyświetlana na środku prostokąta.
 
 ## <a name="see-also"></a>Zobacz także
 
