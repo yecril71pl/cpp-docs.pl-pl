@@ -24,12 +24,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: 7248eb08409b50d855dbb70c7638a856302b345b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287879"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376184"
 ---
 # <a name="fread"></a>fread
 
@@ -49,30 +49,30 @@ size_t fread(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynowa danych.
+Lokalizacja magazynu dla danych.
 
-*Rozmiar*<br/>
+*zmienia*<br/>
 Rozmiar elementu w bajtach.
 
-*Liczba*<br/>
-Maksymalna liczba elementów, które mają być odczytywane.
+*liczbą*<br/>
+Maksymalna liczba elementów, które mają zostać odczytane.
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fread —** zwraca liczbę elementów pełną odczytane, które mogą być mniej niż *liczba* Jeśli wystąpi błąd lub napotkano koniec pliku przed osiągnięciem *liczba*. Użyj **feof** lub **ferror** funkcję, aby odróżnić błąd odczytu z warunkiem końca pliku. Jeśli *rozmiar* lub *liczba* ma wartość 0, **fread —** zwraca 0 i zawartości buforu nie uległy zmianie. Jeśli *strumienia* lub *buforu* jest pustym wskaźnikiem, **fread —** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca wartość 0.
+**fread** zwraca liczbę pełnych elementów, które są faktycznie odczytywane, co może być mniejsze niż *Count* , jeśli wystąpi błąd lub jeśli koniec pliku zostanie napotkany przed osiągnięciem *liczby*. Użyj funkcji **feof** lub  odwołującej, aby odróżnić błąd odczytu od stanu końca pliku. Jeśli *rozmiar* lub *Liczba* to 0, **fread** zwraca 0, a zawartość buforu nie jest zmieniana. Jeśli *strumień* lub *bufor* jest wskaźnikiem o wartości null, **fread** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
-Zobacz [ \_doserrno —, errno, \_sys\_errlist, i \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) więcej informacji na temat tych kodów błędu.
+Zobacz [ \_\_doserrno, errno, \_sys errlist i sys\_NERR, aby uzyskać więcej informacji na temat tych kodów błędów. \_](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
 ## <a name="remarks"></a>Uwagi
 
-**Fread —** funkcja odczytuje maksymalnie *liczba* elementy *rozmiar* bajtów z danych wejściowych *strumienia* i zapisuje je w *buforu* . Skojarzony wskaźnik pliku *strumienia* (jeśli istnieje) jest zwiększana o liczbę faktycznie odczytanych bajtów. Jeśli dany strumień jest otwarty w [tryb tekstu](../../c-runtime-library/text-and-binary-mode-file-i-o.md), newlines Windows style są konwertowane na oddzielane stylu systemu Unix. Oznacza to powrót karetki return wysuwu wiersza (CRLF) pary zastępuje znaki pojedynczego wysuwu wiersza (LF). Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślony, jeśli wystąpi błąd. Nie można określić wartość elementu częściowo odczytu.
+Funkcja **fread** odczytuje do *liczby* elementów *w bajtach* *wejściowych i* zapisuje je w *buforze*. Wskaźnik pliku skojarzony ze *strumieniem* (jeśli istnieje) jest zwiększany o liczbę bajtów rzeczywiście odczytanych. Jeśli dany strumień jest otwarty w [trybie tekstowym](../../c-runtime-library/text-and-binary-mode-file-i-o.md), nowy wiersz w stylu systemu Windows jest konwertowany na znaki nowego wiersza systemu UNIX. Oznacza to, że podwójne znaki wysuwu wiersza (CRLF) są zastępowane znakami pojedynczego znaku wysuwu wiersza (LF). Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślona w przypadku wystąpienia błędu. Nie można określić wartości częściowo odczytanego elementu.
 
-Gdy jest używana w trybie strumienia tekstu, jeśli żądana ilość danych (oznacza to, *rozmiar* \* *liczba*) jest większa niż lub równa wewnętrzny **pliku** \*rozmiar buforu (wartość domyślna wynosi 4096 bajtów, które można konfigurować za pomocą [setvbuf —](../../c-runtime-library/reference/setvbuf.md)), przesyłanie strumieniowe danych jest kopiowana bezpośrednio do bufora podanego przez użytkownika i nowego wiersza konwersji odbywa się w tym buforu. Ponieważ przekonwertowanego danych może być krótszy niż przesyłanie strumieniowe danych skopiowanych do bufora danych w ciągu ostatnich *buforu*\[*wartość_zwracana* \* *rozmiar*] () gdzie *wartość_zwracana* jest wartość zwrotną z elementu **fread —**) mogą zawierać nieprzekonwertowane dane z pliku. Z tego powodu zaleca się, zostanie przerwane wartością null — dane znakowe na *buforu*\[*wartość_zwracana* \* *rozmiar*] Jeśli celem buforu do działania jako ciąg stylu C. Zobacz [fopen —](fopen-wfopen.md) szczegółowe informacje dotyczące efektów w trybie tekstowym i binarnym.
+W przypadku użycia w strumieniu trybu tekstu, jeśli ilość żądanych danych (czyli *licznik* *rozmiaru* \* ) jest większa lub równa rozmiarowi wewnętrznego buforu **plików** \* (domyślnie jest to 4096 bajtów, można skonfigurować za pomocą [ setvbuf —](../../c-runtime-library/reference/setvbuf.md)) dane przesyłane strumieniowo są kopiowane bezpośrednio do buforu dostarczonego przez użytkownika, a konwersja nowego wiersza jest wykonywana w tym buforze. Ponieważ przekonwertowane dane mogą być krótsze niż dane strumienia skopiowane do bufora, *rozmiar* *RETURN_VALUE* \* *bufora*\[danych poprzedzających] (gdzie *RETURN_VALUE* jest wartością zwracaną z **fread**) może zawierają nieskonwertowane dane z pliku. Z tego powodu zalecamy, aby dane o znakach kończących wartość \[null w buforze*RETURN_VALUE* \* *rozmiar*], jeśli celem buforu jest działanie jako ciąg w stylu języka C. Zobacz [fopen](fopen-wfopen.md) , aby uzyskać szczegółowe informacje na temat skutków trybu tekstowego i trybu binarnego.
 
-Ta funkcja blokuje inne wątki. Jeśli potrzebujesz wersji bez blokady, użyj **_fread_nolock —**.
+Ta funkcja blokuje inne wątki. Jeśli potrzebujesz wersji, która nie jest blokowana, użyj **_fread_nolock**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -80,7 +80,7 @@ Ta funkcja blokuje inne wątki. Jeśli potrzebujesz wersji bez blokady, użyj **
 |--------------|---------------------|
 |**fread**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -134,8 +134,8 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
-[We/Wy tekstu i pliku binarnego](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
-[fopen —](fopen-wfopen.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy plików tekstowych i binarnych](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[fopen](fopen-wfopen.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

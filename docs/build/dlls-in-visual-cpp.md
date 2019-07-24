@@ -1,6 +1,6 @@
 ---
-title: Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio
-ms.date: 05/06/2019
+title: Tworzenie C/C++ dll w Visual Studio
+ms.date: 07/18/2019
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,58 +8,58 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 7f1c2b71a58c59bf0662aa4ffec53344ce657df0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220758"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341069"
 ---
-# <a name="create-cc-dlls-in-visual-studio"></a>Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio
+# <a name="create-cc-dlls-in-visual-studio"></a>Tworzenie C/C++ dll w Visual Studio
 
-W Windows biblioteki dołączanej (dynamicznie DLL) jest rodzaj pliku wykonywalnego, który działa jako współdzielona biblioteka funkcji i zasobów. Konsolidacja dynamiczna jest funkcją systemu operacyjnego, która umożliwia plik wykonywalny do wywołania funkcji lub korzystać z zasobów przechowywanych w oddzielnym pliku. Te funkcje i zasoby można skompilowana i wdrożona oddzielnie od plików wykonywalnych, które z nich korzystają. Biblioteka DLL nie jest autonomicznym plikiem wykonywalnym; działa w kontekście aplikacji, który ją wywołuje. System operacyjny może załadować biblioteki DLL do przestrzeni pamięci aplikacji po załadowaniu aplikacji (*niejawna Konsolidacja*), lub na żądanie w czasie wykonywania (*jawne tworzenie łączy*). Biblioteki DLL ułatwiają również udostępniać funkcje i zasoby w plikach wykonywalnych. Wiele aplikacji można uzyskać dostęp do zawartości pojedynczej kopii biblioteki DLL w pamięci, w tym samym czasie.
+W systemie Windows biblioteka dołączana dynamicznie (DLL) to rodzaj pliku wykonywalnego, który działa jako udostępniona biblioteka funkcji i zasobów. Dynamiczne łączenie to możliwość systemu operacyjnego, która umożliwia plikowi wykonywalnemu wywoływanie funkcji lub korzystanie z zasobów przechowywanych w osobnym pliku. Te funkcje i zasoby można kompilować i wdrażać niezależnie od plików wykonywalnych, które z nich korzystają. Biblioteka DLL nie jest autonomicznym plikiem wykonywalnym; działa w kontekście aplikacji, która ją wywołuje. System operacyjny może załadować bibliotekę DLL do miejsca w pamięci aplikacji podczas ładowania aplikacji (niejawnego*łączenia*) lub na żądanie w czasie wykonywania (*jawne łączenie*). Biblioteki DLL ułatwiają także udostępnianie funkcji i zasobów w plikach wykonywalnych. Wiele aplikacji może jednocześnie uzyskać dostęp do zawartości pojedynczej kopii biblioteki DLL w pamięci.
 
-## <a name="differences-between-dynamic-linking-and-static-linking"></a>Różnice między dynamiczne łączenie i łączenie statyczne
+## <a name="differences-between-dynamic-linking-and-static-linking"></a>Różnice między łączeniem dynamicznym i konsolidacją statyczną
 
-Łączenie statyczne kopiuje całego kodu obiektowego w bibliotece statycznej do plików wykonywalnych, które należy użyć, jeśli zostały one utworzone. Konsolidacja dynamiczna zawiera tylko informacje wymagane przez Windows w czasie wykonywania do lokalizowania i ładowania biblioteki DLL, który zawiera element danych lub funkcji. Podczas tworzenia biblioteki DLL, możesz również utworzyć bibliotekę importu, który zawiera te informacje. Podczas tworzenia pliku wykonywalnego, który wywołuje bibliotekę DLL, konsolidator używa wyeksportowanego symboli w bibliotece importu do przechowywania tych informacji do modułu ładującego Windows. Podczas ładowania biblioteki DLL modułu ładującego biblioteki DLL jest zamapowana na obszar pamięci aplikacji. Jeśli jest obecny, specjalnej funkcji w bibliotece DLL, `DllMain`, jest wywoływana w celu przeprowadzenia wszelkich inicjowania biblioteki DLL wymaga.
+Konsolidacja statyczna kopiuje wszystkie kody obiektów w bibliotece statycznej do plików wykonywalnych, które używają ich podczas kompilowania. Konsolidacja dynamiczna zawiera tylko te informacje, które są konieczne w systemie Windows w czasie wykonywania, aby zlokalizować i załadować bibliotekę DLL, która zawiera element danych lub funkcję. Podczas tworzenia biblioteki DLL należy również utworzyć bibliotekę importowaną, która zawiera te informacje. Podczas kompilowania pliku wykonywalnego, który wywołuje bibliotekę DLL, konsolidator używa eksportowanych symboli w bibliotece importu do przechowywania tych informacji dla modułu ładującego systemu Windows. Gdy moduł ładujący ładuje bibliotekę DLL, biblioteka DLL jest mapowana na przestrzeń pamięci aplikacji. Jeśli jest obecny, Funkcja specjalna w bibliotece DLL `DllMain`jest wywoływana w celu wykonania dowolnego inicjalizacji wymaganego przez bibliotekę DLL.
 
 <a name="differences-between-applications-and-dlls"></a>
 
-## <a name="differences-between-applications-and-dlls"></a>Różnice między aplikacjami a bibliotekami DLL
+## <a name="differences-between-applications-and-dlls"></a>Różnice między aplikacjami i bibliotekami DLL
 
-Mimo że biblioteki dll i aplikacje są zarówno pliku wykonywalnego modułów, różnią się one na kilka sposobów. Dla użytkownika końcowego najbardziej oczywiste różnica polega na to, że biblioteki DLL nie są aplikacje, które mogą być wykonywane bezpośrednio. Z punktu widzenia systemu istnieją dwie podstawowe różnice między aplikacjami a bibliotekami DLL:
+Mimo że biblioteki DLL i aplikacje są modułami wykonywalnymi, różnią się one na kilka sposobów. Dla użytkownika końcowego najbardziej oczywistą różnicą jest to, że biblioteki DLL nie są aplikacjami, które mogą być wykonywane bezpośrednio. Z punktu widzenia systemu istnieją dwie podstawowe różnice między aplikacjami i bibliotekami DLL:
 
-- Aplikacja może mieć wielu wystąpień sam jednocześnie działa w systemie, biblioteki DLL mogą mieć tylko jedno wystąpienie.
+- Aplikacja może mieć jednocześnie uruchomione wiele wystąpień w systemie, natomiast biblioteka DLL może mieć tylko jedno wystąpienie.
 
-- Aplikacja może być załadowany jako proces, który może mieć elementy, takie jak stos, wątki wykonywania, globalnej pamięci, dojścia do plików i kolejki komunikatów, ale nie biblioteki DLL.
+- Aplikacja może zostać załadowana jako proces, który może mieć własne elementy, takie jak stos, wątki wykonywania, pamięć globalna, dojścia do plików i kolejka komunikatów, ale biblioteka DLL nie może.
 
 <a name="advantages-of-using-dlls"></a>
 
-## <a name="advantages-of-using-dlls"></a>Zalety używania bibliotek DLL
+## <a name="advantages-of-using-dlls"></a>Zalety korzystania z bibliotek DLL
 
-Łączenia dynamicznego zamiast statycznego do kodu i zasobów ma kilka zalet. Gdy używasz biblioteki dll, można zaoszczędzić miejsce w pamięci i zmniejszają. Gdy wiele aplikacji, można użyć pojedynczej kopii biblioteki DLL, można zaoszczędzić miejsce na dysku i pobrać przepustowości. Biblioteki dll mogą być wdrażane i aktualizowane oddzielnie, pozwalającej zapewnienia pomocy technicznej oraz aktualizowanie oprogramowania posprzedażne bez konieczności ponownego kompilowania i dostarczaj całego kodu. Biblioteki DLL są wygodny sposób dostarczania zasobów specyficznych dla ustawień regionalnych, które obsługują wiele języków programy, a jej obsługi ułatwiają tworzenie międzynarodowych wersji aplikacji. Jawne tworzenie łączy, można zezwolić aplikacji wykrycie i załadowanie biblioteki dll w czasie wykonywania, takie jak rozszerzenia, które udostępniają nowe możliwości.
+Dynamiczne łączenie z kodem i zasobami zapewnia kilka korzyści w stosunku do konsolidacji statycznej:
 
-Konsolidacja dynamiczna ma następujące zalety:
+- Konsolidacja dynamiczna oszczędza pamięć i zmniejsza wymianę. Wiele procesów może korzystać z biblioteki DLL jednocześnie, udostępniając jedną kopię części tylko do odczytu biblioteki DLL w pamięci. Natomiast każda aplikacja skompilowana przy użyciu biblioteki połączonej statycznie ma kompletną kopię kodu biblioteki, którą system Windows musi załadować do pamięci.
 
-- Konsolidacja dynamiczna zużycie pamięci i zmniejsza zamianę. Wiele procesów służy biblioteki DLL jednocześnie udostępnianie jednej kopii tylko do odczytu części biblioteki DLL w pamięci. Z kolei każda aplikacja, która powstała przy użyciu statycznie połączone biblioteki ma pełną kopię kodu biblioteki, który Windows należy załadować do pamięci.
+- Konsolidacja dynamiczna oszczędza miejsce na dysku i przepustowość. Wiele aplikacji może współużytkować jedną kopię biblioteki DLL na dysku. Natomiast każda aplikacja skompilowana przy użyciu biblioteki dołączanej statycznie ma kod biblioteki połączony z jego obrazem wykonywalnym, który zużywa więcej miejsca na dysku i wymaga większej przepustowości.
 
-- Konsolidacja dynamiczna zapisuje miejsca na dysku i przepustowości. Wiele aplikacji można udostępniać pojedynczej kopii biblioteki DLL na dysku. Z kolei każda aplikacja utworzona za pomocą biblioteki dołączanej zawiera kod biblioteki podłączonymi do jego obrazu pliku wykonywalnego, który używa więcej miejsca na dysku i Trwa większej przepustowości do transferu.
+- Konserwacja, poprawki zabezpieczeń i uaktualnienia mogą być łatwiejsze. Gdy aplikacje korzystają z typowych funkcji w bibliotece DLL, tak długo, jak argumenty funkcji i wartości zwracane nie zmieniają się, można zaimplementować poprawki błędów i wdrożyć aktualizacje biblioteki DLL. Po zaktualizowaniu bibliotek DLL aplikacje, które ich używają, nie muszą zostać ponownie skompilowane ani połączone, a następnie używają nowej biblioteki DLL zaraz po jej wdrożeniu. W przeciwieństwie do tego, poprawki wprowadzane w statycznie połączonym kodzie obiektu muszą zostać ponownie połączone i wdrożone we wszystkich aplikacjach, które z nich korzystają.
 
-- Poprawki zabezpieczeń, konserwacja i uaktualnienia mogą stanowić łatwiejsze. Użycie aplikacji typowych funkcji w bibliotece DLL, następnie tak długo, jak nie zmieniaj argumenty funkcji i zwracanych wartości, można zaimplementować poprawki błędów i wdrażać aktualizacje do biblioteki DLL. Po zaktualizowaniu bibliotek DLL, aplikacji, które z nich korzystają nie muszą być ponownie kompilowane lub połączyć ponownie, a oni skorzystać z nowej biblioteki DLL zaraz po jego wdrożeniu. W odróżnieniu od nich poprawek, które wprowadzasz w kodzie statycznie połączonego obiektu wymagają Połącz ponownie i Wdróż ponownie każdą aplikacją, która korzysta z niego.
+- Aby zapewnić pomoc techniczną na rynku, można użyć bibliotek DLL. Na przykład biblioteka DLL sterownika wyświetlania może być modyfikowana w taki sposób, aby obsługiwała wyświetlanie, które nie były dostępne podczas wysyłania aplikacji.
 
-- Aby umożliwiają wsparcie posprzedażne, można użyć bibliotek DLL. Na przykład można zmodyfikować sterownik ekranu biblioteki DLL do obsługi wyświetlania, które nie były dostępne, gdy aplikacja zostało wysłane. Ładowanie rozszerzenia aplikacji jako biblioteki DLL za pomocą jawnego łączenia i dodawania nowych funkcji do aplikacji bez przebudowa lub jej ponownego wdrażania.
+- Za pomocą jawnego łączenia można odnajdywać i ładować biblioteki DLL w środowisku uruchomieniowym, takie jak rozszerzenia aplikacji, które dodają nowe funkcje do aplikacji bez konieczności ponownego kompilowania lub wdrażania.
 
-- Konsolidacja dynamiczna ułatwia obsługuje aplikacje napisane w różnych językach programowania. Programy napisane w różnych językach programowania, można wywołać tej samej funkcji DLL, tak długo, jak programy postępuj zgodnie z Konwencją wywoływania funkcji. Programy i funkcji DLL musi być zgodny w następujący sposób: kolejność, w której funkcja oczekuje argumentów ma zostać wypchnięty na stos, czy funkcja lub aplikacja jest odpowiedzialny za Oczyszczanie stosu i czy są argumenty przekazywane w rejestrach.
+- Konsolidacja dynamiczna ułatwia obsługę aplikacji pisanych w różnych językach programowania. Programy napisywane w różnych językach programowania mogą wywołać tę samą funkcję DLL, o ile programy przestrzegają konwencji wywoływania funkcji. Programy i funkcja DLL muszą być zgodne w następujący sposób: kolejność, w jakiej funkcja oczekuje, że jej argumenty mają być wypychane na stosie, niezależnie od tego, czy funkcja lub aplikacja jest odpowiedzialna za czyszczenie stosu, oraz czy wszystkie argumenty są Zakończono przekazywanie rejestrów.
 
-- Dynamiczne łączenie umożliwia mechanizm rozszerzenia klas bibliotek MFC. Można dziedziczyć klasy z istniejących klas MFC i umieszczenie ich w rozszerzenia MFC biblioteki DLL do użytku przez aplikacje MFC.
+- Dynamiczne łączenie zapewnia mechanizm rozszerzający klasy biblioteki MFC. Klasy można dziedziczyć z istniejących klas MFC i umieścić je w bibliotece DLL rozszerzenia MFC do użytku przez aplikacje MFC.
 
-- Konsolidacja dynamiczna ułatwia tworzenie międzynarodowych wersji aplikacji. Wprowadzenie do ustawień regionalnych specyficznych dla zasobów w bibliotece DLL, jest znacznie ułatwiają tworzenie międzynarodowych wersji aplikacji. Zamiast wysyłania wielu zlokalizowane wersje aplikacji, można umieścić ciągów i obrazów dla każdego z języków, które znajdują się w oddzielnych Biblioteka DLL zasobu, a następnie aplikacja mogła ładować odpowiednie zasoby dla danego ustawienia regionalnego w czasie wykonywania.
+- Konsolidacja dynamiczna ułatwia tworzenie międzynarodowych wersji aplikacji. Biblioteki dll to wygodny sposób dostarczania zasobów specyficznych dla ustawień regionalnych, które znacznie ułatwiają tworzenie międzynarodowych wersji aplikacji. Zamiast dostarczania wielu zlokalizowanych wersji aplikacji, można umieścić ciągi i obrazy dla każdego języka w oddzielnej bibliotece DLL zasobów, a następnie aplikacja może załadować odpowiednie zasoby dla tych ustawień regionalnych w czasie wykonywania.
 
-Potencjalne wadą korzystania z biblioteki DLL jest aplikacja nie jest niezależna; To zależy od istnienia oddzielny moduł DLL, który należy wdrożyć lub dokonać weryfikacji w ramach instalacji.
+Potencjalną wadą korzystania z bibliotek DLL jest to, że aplikacja nie jest samodzielna. jest to zależne od istnienia oddzielnego modułu DLL, który należy wdrożyć lub zweryfikować jako część instalacji.
 
-## <a name="more-information-on-how-to-create-and-use-dlls"></a>Więcej informacji na temat tworzenia i używania biblioteki dll
+## <a name="more-information-on-how-to-create-and-use-dlls"></a>Więcej informacji na temat tworzenia i używania bibliotek DLL
 
-Poniższe tematy zawierają szczegółowe informacje o sposobie tworzenia C /C++ bibliotek DLL w programie Visual Studio.
+Poniższe tematy zawierają szczegółowe informacje na temat tworzenia C/C++ dll w programie Visual Studio.
 
 [Przewodnik: tworzenie i używanie biblioteki dołączanej dynamicznie (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 Zawiera opis sposobu tworzenia i używania biblioteki DLL przy użyciu Visual Studio.
@@ -67,32 +67,32 @@ Zawiera opis sposobu tworzenia i używania biblioteki DLL przy użyciu Visual St
 [Rodzaje bibliotek DLL](kinds-of-dlls.md)<br/>
 Dostarcza informacje dotyczące różnych rodzajów bibliotek DLL, które mogą być skompilowane.
 
-[DLL — często zadawane pytania](dll-frequently-asked-questions.md)<br/>
+[Biblioteka DLL — często zadawane pytania](dll-frequently-asked-questions.md)<br/>
 Dostarcza odpowiedzi na często zadawane pytania dotyczące bibliotek DLL.
 
 [Łączenie pliku wykonywalnego z biblioteką DLL](linking-an-executable-to-a-dll.md)<br/>
 Opisuje jawne i niejawne łączenia z biblioteką DLL.
 
-[Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
-Omawia kod inicjalizacji biblioteki DLL, który musi być wykonany kiedy DLL się ładuje.
+[Inicjowanie biblioteki DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
+Omawia kod inicjujący DLL, który musi zostać wykonany w przypadku ładowania biblioteki DLL.
 
 [Zachowanie biblioteki wykonawczej DLL i Visual C++](run-time-library-behavior.md)<br/>
 Opisuje, jak biblioteka uruchomieniowa wykonuje sekwencję uruchamiania biblioteki DLL.
 
 [LoadLibrary i AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
-Omawia przy użyciu **LoadLibrary** i `AfxLoadLibrary` jawne łącze do biblioteki DLL w czasie wykonywania.
+Omawia użycie  funkcji LoadLibrary `AfxLoadLibrary` i jawne łączenie z biblioteką DLL w czasie wykonywania.
 
 [GetProcAddress](getprocaddress.md)<br/>
-Omawia przy użyciu **GetProcAddress** celu uzyskania adresu eksportowanych funkcji w bibliotece DLL.
+W tym artykule omówiono użycie polecenia **GetProcAddress** w celu uzyskania adresu eksportowanej funkcji w bibliotece DLL.
 
 [FreeLibrary i AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
-Omawia przy użyciu **FreeLibrary** i `AfxFreeLibrary` gdy moduł DLL nie jest już potrzebny.
+W tym  artykule omówiono `AfxFreeLibrary` użycie FreeLibrary i, gdy moduł dll nie jest już wymagany.
 
-[Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
-Opisuje ścieżkę wyszukiwania, używany przez system operacyjny Windows do lokalizowania biblioteki DLL w systemie.
+[Kolejność wyszukiwania biblioteki dołączanej dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+Zawiera opis ścieżki wyszukiwania używanej przez system operacyjny Windows do lokalizowania biblioteki DLL w systemie.
 
 [Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
-Opisuje Stany modułu zwykłej, które biblioteki MFC DLL łączonej dynamicznie z MFC.
+Opisuje Stany modułu zwykłej biblioteki MFC DLL dynamicznie połączonej z MFC.
 
 [Biblioteki DLL rozszerzeń MFC](extension-dlls-overview.md)<br/>
 Omawia biblioteki DLL, które zazwyczaj implementują klasy wielokrotnego użytku, pochodzące z istniejących klas biblioteki klas Microsoft Foundation.
@@ -107,7 +107,7 @@ Oferuje rozszerzoną obsługę satelitarnej biblioteki DLL; jest to funkcja, kt�
 Zawiera opis importowania symboli publicznych do aplikacji lub eksportowania funkcji z biblioteki DLL
 
 [Technologia Active i biblioteki DLL](active-technology-and-dlls.md)<br/>
-Umożliwia serwerom obiektu do zaimplementowania wewnątrz biblioteki DLL.
+Zezwala na implementowanie serwerów obiektów wewnątrz biblioteki DLL.
 
 [Automatyzacja w bibliotece DLL](automation-in-a-dll.md)<br/>
 Zawiera opis opcji automatyzacji w Kreatorze MFC DLL.
@@ -115,13 +115,13 @@ Zawiera opis opcji automatyzacji w Kreatorze MFC DLL.
 [Konwencje nazewnictwa bibliotek MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
 Omawia ustrukturyzowaną konwencję nazewnictwa bibliotek DLL i bibliotek zawartych w MFC.
 
-[Wywoływanie funkcji DLL z aplikacji języka Visual Basic](calling-dll-functions-from-visual-basic-applications.md)<br/>
+[Wywoływanie funkcji DLL z aplikacji Visual Basic](calling-dll-functions-from-visual-basic-applications.md)<br/>
 Opisuje, jak wywoływać funkcje biblioteki DLL z aplikacji Visual Basic.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)<br/>
-Opisuje regularne biblioteki DLL MFC, które umożliwiają korzystanie z biblioteki MFC jako części biblioteki dll Windows.
+Opisuje regularne biblioteki DLL MFC, które umożliwiają korzystanie z biblioteki MFC jako części biblioteki dołączanej dynamicznie systemu Windows.
 
-[Wersja dll biblioteki MFC](../mfc/tn033-dll-version-of-mfc.md)<br/>
-W tym artykule opisano, jak można użyć MFCxx.dll i MFCxxD.dll (gdzie x jest numerem wersji MFC) udostępnionych bibliotek DLL z aplikacji MFC i biblioteki DLL rozszerzeń MFC.
+[Wersja biblioteki DLL MFC](../mfc/tn033-dll-version-of-mfc.md)<br/>
+Opisuje, jak można używać MFCxx. dll i MFCxxD. dll (gdzie x jest numerem wersji MFC) udostępnionych bibliotek dołączanych dynamicznie z aplikacjami MFC i bibliotekami DLL rozszerzenia MFC.

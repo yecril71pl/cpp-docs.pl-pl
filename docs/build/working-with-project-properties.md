@@ -1,111 +1,110 @@
 ---
-title: Ustaw kompilator języka C++ i właściwości w programie Visual Studio kompilacji
-description: Użyj środowiska IDE programu Visual Studio, aby zmienić opcje kompilatora i konsolidatora C++ i inne ustawienia kompilacji.
-ms.date: 03/27/2019
+title: Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio
+description: Aby zmienić C++ opcje kompilatora i konsolidatora oraz inne ustawienia kompilacji, użyj środowiska IDE programu Visual Studio.
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446186"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313447"
 ---
-# <a name="set-compiler-and-build-properties"></a>Ustaw kompilatora i właściwości kompilacji
+# <a name="set-compiler-and-build-properties"></a>Ustawianie właściwości kompilatora i Build
 
-W środowisku IDE, wszystkie informacje, które są potrzebne do tworzenia projektu jest przedstawiany jako *właściwości*. Informacje te obejmują nazwę aplikacji, rozszerzenie (np. biblioteki DLL, LIB i EXE), opcje kompilatora, opcje konsolidatora, ustawienia debugera, niestandardowych kroków kompilacji i wielu innych rzeczy. Zazwyczaj można użyć *stron właściwości* ( **projektu &#124; właściwości**) aby wyświetlić i zmodyfikować te właściwości. Aby uzyskać dostęp do strony właściwości, wybierz opcję **Projekt > \<Nazwa projektu > właściwości** z menu głównego, lub kliknij prawym przyciskiem myszy na węzeł projektu w **Eksploratora rozwiązań** i wybierz polecenie **Właściwości**.
+W środowisku IDE wszystkie informacje, które są konieczne do skompilowania projektu, są ujawniane jako *Właściwości*. Te informacje obejmują nazwę aplikacji, rozszerzenie (na przykład DLL, LIB, EXE), opcje kompilatora, Opcje konsolidatora, ustawienia debugera, niestandardowe kroki kompilacji i wiele innych rzeczy. Zazwyczaj można używać *stron właściwości* do wyświetlania i modyfikowania tych właściwości. Aby uzyskać dostęp do stron właściwości, wybierz pozycję **Project** >  **_ProjectName_ Properties (właściwości** projektu) z menu głównego lub kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**.
 
 ## <a name="default-properties"></a>Właściwości domyślne
 
-Podczas tworzenia projektu, system przypisuje wartości różnych właściwości. Wartości domyślne, różnią się nieco w zależności od typu projektu i jakie opcje należy wybrać w Kreatorze aplikacji. Na przykład Projekt ATL ma właściwości związanych z plikami MIDL, ale są nieobecne w podstawowa Aplikacja konsoli. Domyślne właściwości są wyświetlane w okienku ogólne na stronach właściwości:
+Podczas tworzenia projektu system przypisuje wartości dla różnych właściwości. Wartości domyślne różnią się w zależności od rodzaju projektu i opcji wybranych w Kreatorze aplikacji. Na przykład Projekt ATL ma właściwości powiązane z plikami MIDL, ale nie są one obecne w podstawowej aplikacji konsolowej. Właściwości domyślne są wyświetlane w okienku ogólne na stronach właściwości:
 
-![Program Visual C&#43; &#43; domyślne wartości projektu](media/visual-c---project-defaults.png "Visual C++ wartości domyślne projektu")
+![Ustawienia domyślne&#43; &#43; ](media/visual-c---project-defaults.png "projektu wizualizacji języka Visual C C++ ")
 
-## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Stosowanie właściwości, aby tworzyć konfiguracje i platformy docelowej
+## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Stosowanie właściwości do konfiguracji kompilacji i platform docelowych
 
-Niektóre właściwości, takie jak nazwa aplikacji, dotyczą wszystkich zmian kompilacji, niezależnie od platformy docelowej i czy jest on kompilację debugowania lub wydania. Jednak większość właściwości jest zależne od konfiguracji. Jest to spowodowane kompilator musi wiedzieć, jakie określonej platformy, program będzie uruchamiany na i jakie kompilatora określone opcje do użycia, aby generować poprawny kod. W związku z tym po ustawieniu właściwości jest zwrócenie uwagi, konfiguracji i platformy, które dotyczą nową wartość. Powinna ona dotyczą tylko kompilacje Debug Win32 lub powinien on dotyczą również debugować ARM i debugowanie x64? Na przykład **optymalizacji** właściwość, domyślnie jest ustawiona na **Maksymalizuj prędkość (/ O2)** w konfiguracji wydania, ale jest wyłączone w konfiguracji debugowania.
+Niektóre właściwości, takie jak nazwa aplikacji, mają zastosowanie do wszystkich wariantów kompilacji, niezależnie od platformy docelowej lub do kompilacji debugowania lub wydania. Ale większość właściwości jest zależna od konfiguracji. Wynika to z faktu, że kompilator musi wiedzieć, jaka konkretna platforma zostanie uruchomiona, i jakie opcje kompilatora mają być używane w celu wygenerowania poprawnego kodu. W związku z tym podczas ustawiania właściwości należy zwrócić uwagę na to, której konfiguracji i platformy ma dotyczyć nowa wartość. Czy ma zastosowanie tylko do debugowania systemu Win32 lub czy ma również zastosowanie do aktywacji ARM i debugowania x64? Na przykład właściwość **optymalizacji** domyślnie ustawia wartość **maksymalizuj szybkość (/O2)** w konfiguracji wydania, ale jest wyłączona w konfiguracji debugowania.
 
-Strony właściwości zaprojektowano tak, aby zawsze możesz zobaczyć, a jeśli potrzeby zmodyfikować, których konfiguracja i platforma wartość właściwości stosuje się do. Poniższa ilustracja przedstawia strony właściwości z konfiguracją i informacje o platformie w polach listy u góry. Gdy **optymalizacji** właściwość jest ustawiona w tym miejscu, będzie stosowana tylko do kompilacji Debug Win32, które akurat jest aktywnej konfiguracji przedstawione przez czerwony strzałki.
+Strony właściwości są zaprojektowane tak, aby zawsze widzieć, i w razie potrzeby zmodyfikować, do której konfiguracji i platformy ma być stosowana wartość właściwości. Poniższa ilustracja przedstawia strony właściwości z informacjami o konfiguracji i platformie w polach listy u góry. Gdy właściwość **optymalizacji** jest ustawiona w tym miejscu, będzie stosowana tylko do debugowania Win32, która stanie się aktywną konfiguracją, jak pokazano na czerwono.
 
-![Program Visual C&#43; &#43; stron właściwości przedstawiający aktywnej konfiguracji](media/visual-c---property-pages-showing-active-configuration.png "stron właściwości w usłudze Visual C++ przedstawiający aktywnej konfiguracji")
+![Strony właściwości&#43; &#43; języka Visual C przedstawiające]aktywne(media/visual-c---property-pages-showing-active-configuration.png " C++ strony właściwości") usługi Active Configuration pokazujące aktywną konfigurację
 
-Na poniższej ilustracji przedstawiono na tej samej stronie właściwości projektu, ale konfiguracja została zmieniona do wydania. Należy pamiętać, inną wartość dla właściwości optymalizacji. Należy również zauważyć, że aktywnej konfiguracji jest nadal debugowania. Można ustawić właściwości dla wszystkich konfiguracji, w tym miejscu; nie musi być aktywne.
+Na poniższej ilustracji przedstawiono tę samą stronę właściwości projektu, ale konfiguracja została zmieniona na Release. Zwróć uwagę na różne wartości właściwości Optymalizacja. Należy również pamiętać, że aktywna konfiguracja nadal jest debugowana. W tym miejscu możesz ustawić właściwości dla dowolnej konfiguracji; nie musi ona być aktywna.
 
-![Program Visual C&#43; &#43; konfiguracji wydania przedstawiający stron właściwości](media/visual-c---property-pages-showing-release-config.png "konfiguracji wydania przedstawiający stron właściwości w usłudze Visual C++")
+![Strony właściwości&#43; &#43; języka Visual C przedstawiające](media/visual-c---property-pages-showing-release-config.png "strony C++ właściwości wizualizacji konfiguracji wydania przedstawiające konfigurację wydania")
 
 ## <a name="target-platforms"></a>Platformy docelowe
 
-*Platforma docelowa* odwołuje się do typu urządzenia i/lub uruchamianego pliku wykonywalnego w systemie operacyjnym. Możesz tworzyć projekt służący do więcej niż jedną platformę. Platformy docelowe dostępne dla projektów C++ zależą od rodzaju projektu. obejmują, ale nie są ograniczone do Win32, x64, ARM, Android i iOS.     **X86** platformę docelową, które można napotkać w **programu Configuration Manager** jest taka sama jak **Win32** w natywnych projektów w języku C++. Oznacza Win32, Windows 32-bitowe i **x64** oznacza Windows 64-bitowych. Aby uzyskać więcej informacji na temat tych dwóch platform, zobacz [uruchomiona 32-bitowych aplikacji](/windows/desktop/WinProg64/running-32-bit-applications).
+*Platforma* docelowa odnosi się do rodzaju urządzenia i/lub systemu operacyjnego, na którym będzie uruchamiany plik wykonywalny. Można skompilować projekt dla więcej niż jednej platformy. Dostępne platformy docelowe dla C++ projektów zależą od rodzaju projektu; obejmują one, ale nie są ograniczone do Win32, x64, ARM, Android i iOS.     Platforma docelowa **x86** , która może być widoczna w **Configuration Manager** jest taka sama jak C++ **Win32** w projektach natywnych. Win32 oznacza 32-bitowe systemy Windows i **x64** oznaczają 64-bitowe okna. Aby uzyskać więcej informacji na temat tych dwóch platform, zobacz [Uruchamianie aplikacji 32-bitowych](/windows/desktop/WinProg64/running-32-bit-applications).
 
-**Dowolny Procesor** wartość platformy, które można napotkać w docelowa **programu Configuration Manager** nie ma wpływu na natywny C++ projektów; są odpowiednie dla C++/interfejs wiersza polecenia i .NET innych typów projektów. Aby uzyskać więcej informacji, zobacz [/clrimagetype (określenie typu z obrazu CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
+Dowolna wartość platformy docelowej **procesora CPU** , która może być widoczna w **Configuration Manager** nie ma wpływu C++ na natywne projekty; jest to istotne dla C++/CLI i innych typów projektów .NET. Aby uzyskać więcej informacji, zobacz [/CLRIMAGETYPE (Określ typ obrazu CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
-
-Aby uzyskać więcej informacji na temat ustawiania właściwości kompilacji debugowania zobacz:
+Aby uzyskać więcej informacji na temat ustawiania właściwości dla kompilacji debugowania, zobacz:
 
 - [Ustawienia projektu dla konfiguracji debugowania w języku C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [Ustawienia debugera i przygotowanie](/visualstudio/debugger/debugger-settings-and-preparation)
-- [Przygotowanie debugowania: Typy projektów Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [Przygotowanie debugowania: Typy C++ projektów wizualnych](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Określanie plików symboli (pdb) i plików źródłowych w debugerze programu Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
-## <a name="c-compiler-and-linker-options"></a>Opcje kompilatora i konsolidatora C++
+## <a name="c-compiler-and-linker-options"></a>C++Opcje kompilatora i konsolidatora
 
-Opcje kompilatora i konsolidatora C++ znajdują się w obszarze **C/C++** i **konsolidatora** węzłów w lewym okienku w obszarze **właściwości konfiguracji**. Te wykonuje translację elementu bezpośrednio do opcji wiersza polecenia, które zostaną przekazane do kompilatora. Aby uzyskać dokumentację dotyczącą określonej opcji, wybierz opcję w środkowym okienku i naciśnij klawisz **F1**. Lub możesz przeglądać dokumentacji dla wszystkich opcji w [opcje kompilatora MSVC](reference/compiler-options.md) i [opcje konsolidatora MSVC](reference/linker-options.md). 
+C++Opcje kompilatora i konsolidatora znajdują się w węzłach **C/C++**  i **konsolidatora** w lewym okienku w obszarze **Właściwości konfiguracji**. Są one tłumaczone bezpośrednio do opcji wiersza polecenia, które zostaną przesłane do kompilatora. Aby zapoznać się z dokumentacją dotyczącą konkretnej opcji, wybierz opcję w środkowym okienku i naciśnij klawisz **F1**. Można też przejrzeć dokumentację dotyczącą wszystkich opcji w opcjach [kompilatora MSVC](reference/compiler-options.md) i [MSVC Opcje konsolidatora](reference/linker-options.md). 
 
-**Stron właściwości** wyświetlane okno dialogowe strony właściwości, które mają zastosowanie do bieżącego projektu. Na przykład, jeśli projekt nie ma pliku .idl, nie zostanie wyświetlona strona właściwości MIDL. Aby uzyskać więcej informacji o ustawieniu na poszczególnych stronach właściwości, zobacz [strony właściwości (C++)](reference/property-pages-visual-cpp.md). 
+Okno dialogowe **strony właściwości** pokazuje tylko strony właściwości, które mają zastosowanie w bieżącym projekcie. Na przykład, jeśli projekt nie ma pliku .idl, nie zostanie wyświetlona strona właściwości MIDL. Aby uzyskać więcej informacji na temat ustawienia na każdej stronie właściwości, zobacz [strony właściwościC++()](reference/property-pages-visual-cpp.md). 
 
 ## <a name="directory-and-path-values"></a>Wartości katalogu i ścieżki
 
-Program MSBuild obsługuje stałe kompilacji o nazwie "makrami" dla niektórych wartości ciągu obejmują katalogi i ścieżki. Te są widoczne na stronach właściwości, w którym można znaleźć i zmodyfikuj je za pomocą [Edytor właściwości](#property_editor). 
+MSBuild obsługuje użycie stałych czasu kompilacji o nazwie "MACROS" dla niektórych wartości ciągów, takich jak katalogi i ścieżki. Są one widoczne na stronach właściwości, w których można odwoływać się do i modyfikować przy użyciu [edytora właściwości](#property_editor). 
 
-Poniższa ilustracja przedstawia strony właściwości dla programu Visual Studio C++ projektu. W okienku po lewej stronie **katalogi VC ++** *reguły* jest zaznaczone, a w okienku po prawej stronie zawiera listę właściwości, które są skojarzone z tą regułą. `$(...)` Wartości są nazywane *makra*. A *— makro* jest stałą czasu kompilacji, która może odnosić się do wartości, który jest zdefiniowany przez Visual Studio lub MSBuild system lub wartości zdefiniowanej przez użytkownika. Za pomocą makr zamiast jednoznacznie ustalonych wartości, takich jak ścieżki katalogów, można łatwo udostępniać ustawienia właściwości między komputerami oraz między wersjami programu Visual Studio i lepiej zagwarantować, że ustawienia projektu poprawnie w programie uczestniczyć [ dziedziczenie właściwości](project-property-inheritance.md). 
+Poniższa ilustracja przedstawia strony właściwości dla projektu programu Visual Studio C++ . W lewym okienku jest zaznaczona reguła **katalogów VC + +**  , a w prawym okienku zostaną wyświetlone właściwości skojarzone z tą regułą. Wartości są nazywane makrami.  `$(...)` *Makro* jest stałą czasu kompilacji, która może odwoływać się do wartości zdefiniowanej przez program Visual Studio lub system MSBuild lub do wartości zdefiniowanej przez użytkownika. Za pomocą makr zamiast zakodowanych wartości, takich jak ścieżki katalogów, można łatwo udostępniać ustawienia właściwości między komputerami i między wersjami programu Visual Studio, a także lepiej upewnić się, że ustawienia projektu poprawnie uczestniczą w [właściwości Dziedziczenie](project-property-inheritance.md). 
 
 ![Strony właściwości projektu](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-Edytor właściwości służy do wyświetlania wartości wszystkich dostępnych makr.
+Aby wyświetlić wartości wszystkich dostępnych makr, można użyć edytora właściwości.
 
 ### <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
 *makra globalne*<br/>
-Dotyczy wszystkich elementów w konfiguracji projektu. Ma składnię `$(name)`. Przykładem globalnego makro jest `$(VCInstallDir)`, które przechowuje katalog główny instalacji programu Visual Studio. Makro globalne odpowiada `PropertyGroup` w programie MSBuild.
+Dotyczy wszystkich elementów w konfiguracji projektu. Ma składnię `$(name)`. Przykładem makra globalnego jest `$(VCInstallDir)`, który przechowuje katalog główny instalacji programu Visual Studio. Makro globalne odnosi się do `PropertyGroup` w programie MSBuild.
 
-*makra elementów*<br/>
-Ma składnię `%(name)`. Dla pliku makro elementu dotyczy tylko tego pliku — na przykład, można użyć `%(AdditionalIncludeDirectories)` do określenia Dołącz katalogi, które są stosowane tylko do określonego pliku. Tego rodzaju makro elementu odpowiada `ItemGroup` metadanych w programie MSBuild. Gdy jest używane w kontekście konfiguracji projektu, makro elementu stosuje się do wszystkich plików określonego typu. Na przykład C/C++ **definicje preprocesora** właściwość konfiguracji może potrwać `%(PreprocessorDefinitions)` makro elementu, który ma zastosowanie do wszystkich plików .cpp w projekcie. Tego rodzaju makro elementu odpowiada `ItemDefinitionGroup` metadanych w programie MSBuild. Aby uzyskać więcej informacji, zobacz [definicje elementu](/visualstudio/msbuild/item-definitions).
+*makra elementu*<br/>
+Ma składnię `%(name)`. Dla pliku, makro elementu dotyczy tylko tego pliku — na przykład można użyć `%(AdditionalIncludeDirectories)` , aby określić katalogi dołączania, które mają zastosowanie tylko do określonego pliku. Tego rodzaju makro elementu odpowiada `ItemGroup` metadanych w programie MSBuild. Gdy jest używane w kontekście konfiguracji projektu, makro elementu stosuje się do wszystkich plików określonego typu. Na przykład właściwość konfiguracjaC++ **Definicje preprocesora** C/preprocesor `%(PreprocessorDefinitions)` może przyjmować makro elementu, które ma zastosowanie do wszystkich plików. cpp w projekcie. Tego rodzaju makro elementu odpowiada `ItemDefinitionGroup` metadanych w programie MSBuild. Aby uzyskać więcej informacji, zobacz [definicje elementu](/visualstudio/msbuild/item-definitions).
 
 ### <a name="user-defined-macros"></a>Makra zdefiniowane przez użytkownika
 
-Możesz utworzyć *zdefiniowane przez użytkownika makra* do wykorzystania jako zmienne w kompilacjach projektu. Na przykład, można utworzyć makro zdefiniowane przez użytkownika, które udostępnia wartość do niestandardowego kroku kompilacji lub niestandardowego narzędzia kompilacji. Makro zdefiniowane przez użytkownika to para nazwa/wartość. W pliku projektu użyj **$(**<em>nazwa</em>**)** Notacja do uzyskania dostępu do wartości.
+Można utworzyć *makra zdefiniowane przez użytkownika* , które będą używane jako zmienne w kompilacjach projektu. Na przykład, można utworzyć makro zdefiniowane przez użytkownika, które udostępnia wartość do niestandardowego kroku kompilacji lub niestandardowego narzędzia kompilacji. Makro zdefiniowane przez użytkownika to para nazwa/wartość. W pliku projektu Użyj notacji **$ (** <em>name</em> **)** , aby uzyskać dostęp do wartości.
 
-Makro zdefiniowane przez użytkownika jest przechowywane w arkuszu właściwości. Jeśli projekt nie zawiera jeszcze arkusza właściwości, można utworzyć jeden, wykonując kroki opisane w temacie [udziału lub ponowne użycie ustawienia projektu programu Visual Studio](create-reusable-property-configurations.md).
+Makro zdefiniowane przez użytkownika jest przechowywane w arkuszu właściwości. Jeśli projekt nie zawiera jeszcze arkusza właściwości, można go utworzyć, wykonując czynności opisane w sekcji [udostępnianie lub ponowne używanie ustawień projektu programu Visual Studio](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Aby utworzyć makro zdefiniowane przez użytkownika
 
-1. W **Menedżer właściwości** okna (na pasku menu wybierz **widoku**, **Menedżer właściwości**), otwórz menu skrótów dla arkusza właściwości (jego nazwa kończy się na .user), a następnie wybierz Właściwości. **Stron właściwości** zostanie otwarte okno dialogowe dla tego arkusza właściwości.
+1. Otwórz okno **Menedżer właściwości** . (Na pasku menu wybierz polecenie **Wyświetl** > **Menedżer właściwości** lub **Wyświetl** > inne**Menedżer właściwości** **systemu Windows** > ). Otwórz menu skrótów dla arkusza właściwości (jego nazwa jest zakończona w. user), a następnie wybierz polecenie **Właściwości**. Zostanie otwarte okno dialogowe **strony właściwości** dla tego arkusza właściwości.
 
-1. W lewym okienku okna dialogowego wybierz **makra użytkownika**. W okienku po prawej stronie wybierz **Dodaj makro** przycisk, aby otworzyć **Dodaj makro użytkownika** okno dialogowe.
+1. W lewym okienku okna dialogowego wybierz opcję **makra użytkownika**. W prawym okienku wybierz przycisk **Dodaj makro** , aby otworzyć okno dialogowe **Dodaj makro użytkownika** .
 
-1. W oknie dialogowym określ nazwę i wartość dla makra. Opcjonalnie można zaznaczyć **Ustaw to makro jako zmienną środowiskową w środowisku kompilacji** pole wyboru.
+1. W oknie dialogowym określ nazwę i wartość dla makra. Opcjonalnie zaznacz pole wyboru **Ustaw to makro jako zmienną środowiskową w środowisku kompilacji** .
 
 ## <a name="property_editor">Edytor właściwości</a>
 
-Edytor właściwości służy do modyfikowania niektórych właściwości ciągów i zaznaczania makr jako wartości. Aby otworzyć Edytor właściwości, zaznacz właściwość na stronie właściwości, a następnie wybierz strzałkę w dół po prawej stronie. Jeśli zawiera listy rozwijanej  **\<Edytuj >**, a następnie wybierz pozycję go, aby wyświetlić Edytor właściwości dla tej właściwości.
+Edytor właściwości służy do modyfikowania niektórych właściwości ciągów i zaznaczania makr jako wartości. Aby otworzyć Edytor właściwości, zaznacz właściwość na stronie właściwości, a następnie wybierz strzałkę w dół po prawej stronie. Jeśli lista rozwijana zawiera  **\<> edycji**, możesz wybrać ją, aby wyświetlić Edytor właściwości dla tej właściwości.
 
 ![Property&#95;Editor&#95;Dropdown](media/property_editor_dropdown.png "Property_Editor_Dropdown")
 
-W edytorze właściwości można wybrać **makra** przycisk w celu wyświetlenia dostępnych makr oraz ich bieżących wartości. Poniższa ilustracja przedstawia Edytor właściwości dla **dodatkowe katalogi dołączenia** właściwości po **makra** został wybrany przycisk. Gdy **Dziedzicz po elemencie nadrzędnym lub domyślnych wartościach projektu** pole wyboru jest zaznaczone i Dodaj nową wartość, jest ona dołączana do dowolnych wartości, które obecnie są dziedziczone. Jeśli usuniesz zaznaczenie pola wyboru, nowa wartość zamieni wartości dziedziczone. W większości przypadków pozostaw zaznaczone pole wyboru.
+W edytorze właściwości można wybrać przycisk **makra** w celu wyświetlenia dostępnych makr i ich bieżących wartości. Na poniższej ilustracji przedstawiono Edytor właściwości dla właściwości **Dodatkowe katalogi** dołączane po wybraniu przycisku **makra** . Gdy pole wyboru **Dziedzicz z wartości nadrzędnych lub domyślnych projektu** jest zaznaczone i dodawana jest nowa wartość, jest ona dołączana do dowolnych wartości, które są obecnie dziedziczone. Jeśli usuniesz zaznaczenie pola wyboru, nowa wartość zamieni wartości dziedziczone. W większości przypadków pozostaw zaznaczone pole wyboru.
 
-![Property editor, Visual C&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
+![Edytor właściwości, Visual C&#43; ](media/propertyeditorvc.png "PropertyEditorVC")
 
-## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>Dodawanie katalogu plików dołączonych do zestawu katalogów domyślnych
+## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>Dodaj katalog dołączania do zestawu katalogów domyślnych
 
-Podczas dodawania katalogu plików dołączonych do projektu jest ważne, aby nie zastąpić domyślnych katalogów. Poprawny sposób dodania katalogu to dołączenie nowej ścieżki, na przykład "C:\MyNewIncludeDir\", a następnie dołączenie **$(IncludePath)** do wartości właściwości.
+Podczas dodawania katalogu plików dołączonych do projektu jest ważne, aby nie zastąpić domyślnych katalogów. Poprawny sposób dodania katalogu to dołączenie nowej ścieżki, na przykład "C:\MyNewIncludeDir\", a następnie dołączenie makra **$ (IncludePath)** do wartości właściwości.
 
-## <a name="quickly-browse-and-search-all-properties"></a>Szybko przeglądać i wyszukiwać wszystkie właściwości
+## <a name="quickly-browse-and-search-all-properties"></a>Szybko Przeglądaj i Przeszukaj wszystkie właściwości
 
-**Wszystkie opcje** strony właściwości (w obszarze **właściwości konfiguracji &#124; C/C++** w węźle **stron właściwości** okno dialogowe) zapewnia szybki sposób przeglądania i wyszukiwania właściwości, które są dostępne w bieżącym kontekście. Ma specjalne pole wyszukiwania i prostą składnię, aby pomóc w filtrowaniu wyników:
+Strona właściwości **wszystkie opcje** (w obszarze **właściwości &#124; konfiguracji C/C++**  , w oknie dialogowym **strony właściwości** ) zapewnia szybki sposób przeglądania i wyszukiwania właściwości, które są dostępne w bieżącym kontekście. Ma specjalne pole wyszukiwania i prostą składnię, aby pomóc w filtrowaniu wyników:
 
 Brak prefiksu:<br/>
 Wyszukiwanie tylko w nazwach właściwości (podciąg bez uwzględniania wielkości liter).
@@ -118,24 +117,24 @@ Wyszukiwanie tylko w wartościach (podciąg bez uwzględniania wielkości liter)
 
 ## <a name="set-environment-variables-for-a-build"></a>Ustawianie zmiennych środowiskowych dla kompilacji
 
-Kompilator MSVC (cl.exe) rozpoznaje pewne zmienne środowiskowe, w szczególności LIB, LIBPATH, PATH lub INCLUDE. Podczas kompilowania za pomocą środowiska IDE, właściwości, które są ustawiane w [VC ++ Directories Property Page](reference/vcpp-directories-property-page.md) strona właściwości są używane do ustawiania tych zmiennych środowiskowych. Jeśli wartości LIB, LIBPATH i INCLUDE zostały już ustawione, na przykład przez wiersz polecenia programistów, zostaną zastąpione wartościami odpowiednich właściwości programu MSBuild. Następnie kompilacja dołącza wartość właściwości katalogów plików wykonywalnych Katalogi VC++ do PATH. Można ustawić zmienną środowiskową zdefiniowanych przez użytkownika utworzyć makro zdefiniowane przez użytkownika, a następnie zaznaczając pole wyboru, które mówi **Ustaw to makro jako zmienną środowiskową w środowisku kompilacji**.
+Kompilator MSVC (CL. exe) rozpoznaje pewne zmienne środowiskowe, w tym LIB, LIBPATH, PATH i INCLUDE. Podczas kompilowania przy użyciu środowiska IDE właściwości, które są ustawione na stronie właściwości [katalogów VC + +](reference/vcpp-directories-property-page.md) , są używane do ustawiania tych zmiennych środowiskowych. Jeśli wartości LIB, LIBPATH i INCLUDE zostały już ustawione, na przykład przez wiersz polecenia programistów, zostaną zastąpione wartościami odpowiednich właściwości programu MSBuild. Następnie kompilacja dołącza wartość właściwości katalogów plików wykonywalnych Katalogi VC++ do PATH. Można ustawić zmienną środowiskową zdefiniowaną przez użytkownika, tworząc makro zdefiniowane przez użytkownika, a następnie zaznaczając pole wyboru Dodaj **to makro jako zmienną środowiskową w środowisku kompilacji**.
 
 ## <a name="set-environment-variables-for-a-debugging-session"></a>Ustawianie zmiennych środowiskowych dla sesji debugowania
 
-W okienku po lewej stronie projektu **stron właściwości** okna dialogowego rozwiń **właściwości konfiguracji** , a następnie wybierz **debugowanie**.
+W lewym okienku okna dialogowego **strony właściwości** projektu rozwiń węzeł **Właściwości konfiguracji** , a następnie wybierz pozycję **debugowanie**.
 
-W okienku po prawej stronie Zmień **środowiska** lub **Scal środowisko** ustawienia projektu, a następnie wybierz **OK** przycisku.
+W prawym okienku zmodyfikuj ustawienia projektu **środowisko** lub **Scal środowisko** , a następnie wybierz przycisk **OK** .
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Udostępnianie lub ponowne używanie ustawień projektów programu Visual Studio](create-reusable-property-configurations.md)<br/>
-Jak utworzyć plik .props za pomocą ustawień niestandardowej kompilacji, które mogą być udostępniane lub resused.
+Jak utworzyć plik. props z niestandardowymi ustawieniami kompilacji, które mogą być udostępniane lub ponownie używane.
 
 [Dziedziczenie właściwości projektu](project-property-inheritance.md)<br/>
-W tym artykule opisano kolejność obliczania, .props, .targets, pliki.vcxproj i zmiennych środowiskowych w procesie kompilacji.
+Opisuje kolejność obliczeń dla plików. props,. Target,. vcxproj i zmiennych środowiskowych w procesie kompilacji.
 
 [Modyfikowanie właściwości i obiektów docelowych bez zmieniania pliku projektu](modify-project-properties-without-changing-project-file.md)<br/>
-Jak utworzyć ustawienia tymczasowego kompilacji bez konieczności modyfikowania pliku projektu. 
+Jak utworzyć ustawienia kompilacji tymczasowej bez konieczności modyfikowania pliku projektu. 
 
 ## <a name="see-also"></a>Zobacz także
 

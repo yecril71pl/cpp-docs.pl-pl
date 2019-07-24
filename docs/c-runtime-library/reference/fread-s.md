@@ -20,16 +20,16 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287814"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376135"
 ---
 # <a name="freads"></a>fread_s
 
-Odczytuje dane ze strumienia. Ta wersja [fread —](fread.md) ma wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczytuje dane ze strumienia. Ta wersja programu [fread](fread.md) zawiera ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,31 +46,31 @@ size_t fread_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynowa danych.
+Lokalizacja magazynu dla danych.
 
 *bufferSize*<br/>
-Rozmiar buforu miejsca docelowego w bajtach.
+Rozmiar buforu docelowego w bajtach.
 
 *elementSize*<br/>
-Rozmiar elementu do odczytu w bajtach.
+Rozmiar elementu, który ma zostać odczytany w bajtach.
 
-*Liczba*<br/>
-Maksymalna liczba elementów, które mają być odczytywane.
+*liczbą*<br/>
+Maksymalna liczba elementów, które mają zostać odczytane.
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fread_s** zwraca liczbę (pełne), elementy, które zostały wczytane do buforu, który może być mniejsza niż *liczba* Jeśli błąd lub koniec pliku zostanie osiągnięty zanim *liczba* zostanie osiągnięty. Użyj **feof** lub **ferror** funkcję, aby odróżnić błąd z warunkiem końca pliku. Jeśli *rozmiar* lub *liczba* ma wartość 0, **fread_s** zwraca 0 i zawartości buforu nie uległy zmianie. Jeśli *strumienia* lub *buforu* jest pustym wskaźnikiem, **fread_s** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca wartość 0.
+**fread_s** zwraca liczbę (całość) elementów, które zostały odczytane do buforu, co może być mniejsze niż *licznik* , jeśli wystąpi błąd odczytu lub koniec pliku przed osiągnięciem *liczby* . Użyj funkcji **feof** lub  odwołującej, aby odróżnić błąd od stanu końca pliku. Jeśli *rozmiar* lub *Liczba* to 0, **fread_s** zwraca 0, a zawartość buforu nie jest zmieniana. Jeśli *strumień* lub *bufor* jest wskaźnikiem o wartości null, **fread_s** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
 Aby uzyskać więcej informacji o kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Fread_s** funkcja odczytuje maksymalnie *liczba* elementy *elementSize* bajtów z danych wejściowych *strumienia* i przechowuje je w *buforu*.  Wskaźnik pliku, który jest skojarzony z *strumienia* (jeśli istnieje) jest zwiększana o liczbę faktycznie odczytanych bajtów. Jeśli dany strumień jest otwarty w trybie tekstowym, pary wysuwu wiersza powrotu karetki są zastępowane przez znaki wysuwu pojedynczego wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślony, jeśli wystąpi błąd. Nie można określić wartość elementu częściowo odczytu.
+Funkcja **fread_s** odczytuje do *liczby* elementów *elementSize* bajtów ze *strumienia* wejściowego i zapisuje je w buforze.  Wskaźnik pliku skojarzony ze strumieniem (  Jeśli istnieje) jest zwiększany o liczbę bajtów faktycznie odczytywanych. Jeśli dany strumień jest otwarty w trybie tekstowym, pary wysuwu wiersza są zastępowane znakami wysuwu wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślona w przypadku wystąpienia błędu. Nie można określić wartości częściowo odczytanego elementu.
 
-Ta funkcja blokuje inne wątki. Jeśli potrzebujesz wersji bez blokady, użyj **_fread_nolock —**.
+Ta funkcja blokuje inne wątki. Jeśli wymagana jest wersja bez blokowania, należy użyć **_fread_nolock**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -78,7 +78,7 @@ Ta funkcja blokuje inne wątki. Jeśli potrzebujesz wersji bez blokady, użyj **
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -149,6 +149,6 @@ Contents of buffer after write/read:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

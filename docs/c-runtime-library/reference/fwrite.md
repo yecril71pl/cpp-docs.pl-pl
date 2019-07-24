@@ -22,12 +22,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287550"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376065"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -47,28 +47,28 @@ size_t fwrite(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Wskaźnik do danych, które ma zostać zapisany.
+Wskaźnik do danych do zapisania.
 
-*Rozmiar*<br/>
-Rozmiar elementu w bajtach.
+*zmienia*<br/>
+Rozmiar elementu, w bajtach.
 
-*Liczba*<br/>
-Maksymalna liczba elementów, które mają być zapisywane.
+*liczbą*<br/>
+Maksymalna liczba elementów do zapisania.
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fwrite —** zwraca liczbę pełnych elementów rzeczywiście zapisanych, która może być mniejsza niż *liczba* w przypadku wystąpienia błędu. Ponadto jeśli wystąpi błąd, nie można określić wskaźnik położenia pliku. Jeśli *strumienia* lub *buforu* jest wskaźnikiem typu null lub jeżeli nieparzystą liczbę bajtów do zapisania została określona w trybie Unicode, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca wartość 0.
+**fwrite** zwraca liczbę pełnych elementów, które faktycznie zapisano, co może być mniejsze niż *Liczba* w przypadku wystąpienia błędu. Ponadto, jeśli wystąpi błąd, nie można określić wskaźnika położenia pliku. Jeśli *strumień* lub *bufor* jest wskaźnikiem typu null lub jeśli w trybie Unicode określono nieparzystą liczbę bajtów do zapisania, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fwrite —** funkcja zapisuje do *liczba* elementów, z *rozmiar* długość każdej z nich i z *buforu* w danych wyjściowych *strumienia*. Skojarzony wskaźnik pliku *strumienia* (jeśli istnieje) jest zwiększany o liczbę bajtów, które rzeczywiście zapisanych. Jeśli *strumienia* jest otwarty w trybie tekstowym każdego wysuwu wiersza jest zastępowany znaku powrotu karetki - pary wysuwu wiersza. Zastąpienie nie ma wpływu na wartość zwracaną.
+Funkcja **fwrite** zapisuje maksymalnie *liczbę* elementów *o długości każdego* z bufora do *strumienia*wyjściowego  . Wskaźnik pliku skojarzony ze *strumieniem* (jeśli istnieje) jest zwiększany o liczbę bajtów rzeczywiście zapisywana. Jeśli *strumień* jest otwarty w trybie tekstowym, każde źródło wierszy jest zastępowane parą wysuwu wiersza. Zastąpienie nie ma wpływu na wartość zwracaną.
 
-Gdy *strumienia* jest otwarty w trybie tłumaczenia Unicode — na przykład, jeśli *strumienia* jest otwarty przez wywołanie metody **fopen —** i za pomocą parametru tryb, który zawiera **ccs = UNICODE**, **ccs = UTF-16LE**, lub **ccs = UTF-8**, lub zmiana tryb na tryb translacji Unicode przy użyciu **_setmode —** i tryb parametr, który zawiera **_O_WTEXT**, **_O_U16TEXT**, lub **_O_U8TEXT**—*buforu* jest interpretowany jako wskaźnik do Tablica **wchar_t** zawierający dane UTF-16. Błąd sprawdzania poprawności parametru powoduje, że próba zapisu nieparzystą liczbę bajtów w tym trybie.
+Gdy *strumień* jest otwarty w trybie tłumaczenia Unicode — na przykład, jeśli *strumień* jest otwarty przez wywołanie **fopen** i przy użyciu parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb jest Zmieniono do trybu translacji Unicode przy użyciu **_setmode** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**—*bufor* jest interpretowany jako wskaźnik do tablicy **wchar_t** , która zawiera Dane UTF-16. Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
 
-Ponieważ ta funkcja blokuje wątek wywołujący, jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz **_fwrite_nolock —**.
+Ponieważ ta funkcja blokuje wątek wywołujący, jest bezpieczny wątkowo. W przypadku wersji, która nie jest blokowana, zobacz **_fwrite_nolock**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -76,15 +76,15 @@ Ponieważ ta funkcja blokuje wątek wywołujący, jest metodą o bezpiecznych w�
 |--------------|---------------------|
 |**fwrite**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [fread —](fread.md).
+Zobacz przykład dla [fread](fread.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_setmode](setmode.md)<br/>
 [fread](fread.md)<br/>
 [_fwrite_nolock](fwrite-nolock.md)<br/>

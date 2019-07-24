@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cfb4bcea4a110cf8a9c9db664c42d6603328cf0
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287589"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376081"
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 
@@ -57,43 +57,43 @@ int _fseeki64(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 *offset*<br/>
-Liczba bajtów z *pochodzenia*.
+Liczba bajtów od *początku*.
 
-*Punkt początkowy*<br/>
+*źródł*<br/>
 Pozycja początkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **fseek** i **_fseeki64 —** zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera. Na urządzeniach bez możliwości wyszukiwania wartość zwracana jest niezdefiniowane. Jeśli *strumienia* jest wskaźnikiem typu null, lub jeśli *pochodzenia* nie jest jednym z dozwolonych wartości opisanych poniżej, **fseek** i **_fseeki64 —** wywołania nieprawidłowy Procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1.
+Jeśli to się powiedzie, **fseek** i **_fseeki64** zwraca 0. W przeciwnym razie zwraca wartość różną od zera. Na urządzeniach, które nie mogą przeszukiwania, wartość zwracana jest niezdefiniowana. Jeśli *strumień* jest wskaźnikiem typu null lub jeśli *Źródło* nie jest jedną z dozwolonych wartości opisanych poniżej, **fseek** i **_fseeki64** Wywołaj procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i Return-1.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fseek** i **_fseeki64 —** funkcje przenosi skojarzony wskaźnik pliku (jeśli istnieje) *strumienia* do nowej lokalizacji, która jest *przesunięcie* bajty z *pochodzenia*. Następnej operacji na strumieniu odbywa się w nowej lokalizacji. W strumieniu otwarte na potrzeby aktualizacji następnej operacji może być Odczyt lub zapis. Argument *pochodzenia* musi mieć jedną z następujących stałych, zdefiniowane w stdio —. GODZ.:
+Funkcje **fseek** i **_fseeki64** przesuwają wskaźnik pliku (jeśli istnieje) skojarzony ze *strumieniem* do nowej lokalizacji, która jest przesunięta o bajty od *początku*. Kolejna operacja w strumieniu odbywa się w nowej lokalizacji. W przypadku otwartego strumienia na potrzeby aktualizacji kolejną operacją może być odczyt lub zapis. Pochodzenie  argumentu musi być jedną z następujących stałych zdefiniowanych w stdio. C
 
-|Wartość źródła|Znaczenie|
+|wartość pochodzenia|Znaczenie|
 |-|-|
 | **SEEK_CUR** | Bieżąca pozycja wskaźnika pliku. |
 | **SEEK_END** | Koniec pliku. |
 | **SEEK_SET** | Początek pliku. |
 
-Możesz użyć **fseek** i **_fseeki64 —** można przesunąć kursor w dowolnym miejscu w pliku. Wskaźnik również może być umieszczony poza końcem pliku. **fseek** i **_fseeki64 —** czyści wskaźnik końca pliku i neguje efekt dowolnej wcześniejszej [ungetc —](ungetc-ungetwc.md) wywołuje względem *strumienia*.
+Możesz użyć **fseek** i **_fseeki64** , aby zmienić położenie wskaźnika w dowolnym miejscu w pliku. Wskaźnik może być również umieszczony poza końcem pliku. **fseek** i **_fseeki64** czyści wskaźnik końca pliku i wyklucza efekt wszystkich wcześniejszych wywołań [ungetc —](ungetc-ungetwc.md) do *strumienia*.
 
-Po otwarciu pliku do wykonania operacji dołączania danych bieżącej pozycji w pliku zależy od ostatniej operacji We/Wy nie, gdzie może wystąpić następnego zapisu. Jeśli jeszcze wystąpił żadnej operacji We/Wy na pliku otwartego do wykonania operacji dołączania, położenie pliku jest początku pliku.
+Gdy plik jest otwierany do dołączania danych, bieżąca pozycja w pliku jest określana przez ostatnią operację we/wy, a nie przez miejsce wystąpienia następnego zapisu. Jeśli nie wykonano jeszcze operacji we/wy na pliku otwartym do dołączenia, pozycja w pliku jest początkiem pliku.
 
-Dla strumieni otwarty w trybie tekstowym **fseek** i **_fseeki64 —** mają ograniczony użycia, ponieważ może spowodować tłumaczenia wysuwu wiersza powrotu karetki **fseek** i **_ fseeki64 —** dają nieoczekiwane wyniki. Tylko **fseek** i **_fseeki64 —** operacje gwarantowane strumieni otwarty w trybie tekstowym:
+W przypadku strumieni otwartych w trybie tekstowym **fseek** i **_fseeki64** mają ograniczone użycie, ponieważ przetłumaczenia kanałów powrotu karetki mogą spowodować nieoczekiwane wyniki **fseek** i **_fseeki64** . Jedyną operacją **fseek** i **_fseeki64** zagwarantowaną do pracy nad strumieniami otwartymi w trybie tekstowym są:
 
-- Wyszukiwanie z przesunięciem 0 względem wartości pochodzenia.
+- Wyszukiwanie z przesunięciem równym 0 względem którejkolwiek z wartości pochodzenia.
 
-- Wyszukiwanie od początku pliku wartość przesunięcia zwrócony z wywołania do [ftell —](ftell-ftelli64.md) przy użyciu **fseek** lub [_ftelli64 —](ftell-ftelli64.md) przy użyciu **_fseeki64 —**.
+- Wyszukiwanie od początku pliku z wartością przesunięcia zwracaną z wywołania do [ftell](ftell-ftelli64.md) przy użyciu **fseek** lub [_ftelli64](ftell-ftelli64.md) podczas korzystania z **_fseeki64**.
 
-Również w trybie tekstowym, CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W przypadku plików otwartych do odczytu/zapisu [fopen —](fopen-wfopen.md) i wszystkie powiązane procedury Sprawdź klawisze CTRL + Z końcem pliku i usuń go, jeśli jest to możliwe. Odbywa się, ponieważ używa kombinacji **fseek** i [ftell —](ftell-ftelli64.md) lub **_fseeki64 —** i [_ftelli64 —](ftell-ftelli64.md), aby przenieść w pliku, która kończy się CTRL + Z może spowodować, że **fseek** lub **_fseeki64 —** działać nieprawidłowo w pobliżu końca pliku.
+Ponadto w trybie tekstowym klawisze CTRL + Z są interpretowane jako znak końca pliku na wejściu. W plikach otwartych do odczytu/zapisu, [fopen](fopen-wfopen.md) i wszystkie powiązane procedury sprawdź, czy Ctrl + Z na końcu pliku i usuń go, jeśli to możliwe. Dzieje się tak, ponieważ przy użyciu kombinacji **fseek** i [ftell](ftell-ftelli64.md) lub **_fseeki64** i [_ftelli64](ftell-ftelli64.md)do przenoszenia w pliku, który kończy się na Ctrl + z, może spowodować, że **fseek** lub **_fseeki64** zachowuje się nieprawidłowo blisko końca rozszerzeniem.
 
-Gdy CRT otwiera plik, który rozpocznie się za pomocą znacznika kolejności bajtów (BOM), wskaźnik pliku znajduje się po znaku BOM (oznacza to, na początku pliku rzeczywistej zawartości). Jeśli zajdzie potrzeba **fseek** na początku pliku, użyj [ftell —](ftell-ftelli64.md) uzyskać położenie początkowe i **fseek** do niego, a nie do pozycji 0.
+Gdy CRT otwiera plik zaczynający się od znaku kolejności bajtów (BOM), wskaźnik pliku jest umieszczony po BOM (czyli na początku rzeczywistej zawartości pliku). Jeśli musisz **fseek** na początku pliku, użyj [ftell](ftell-ftelli64.md) , aby pobrać początkową pozycję i **fseek** do niej, a nie pozycję 0.
 
-Ta funkcja blokuje innych wątków podczas wykonywania i dlatego jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz [_fseek_nolock —, _fseeki64_nolock —](fseek-nolock-fseeki64-nolock.md).
+Ta funkcja blokuje inne wątki podczas wykonywania i dlatego jest bezpieczna wątkowo. W przypadku wersji, która nie jest blokowana, zobacz [_fseek_nolock, _fseeki64_nolock](fseek-nolock-fseeki64-nolock.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -102,7 +102,7 @@ Ta funkcja blokuje innych wątków podczas wykonywania i dlatego jest metodą o 
 |**fseek**|\<stdio.h>|
 |**_fseeki64**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -146,7 +146,7 @@ This is the file 'fseek.out'.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
