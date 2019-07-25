@@ -1,21 +1,21 @@
 ---
-title: '&lt;IStream&gt; operatorów'
+title: '&lt;Operatory&gt; IStream'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 05b10c27d8e0cf4c0300bb307d8b7ceda43ddb2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413310"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447783"
 ---
-# <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operatorów
+# <a name="ltistreamgt-operators"></a>&lt;Operatory&gt; IStream
 
-## <a name="op_gt_gt"></a>  Operator&gt;&gt;
+## <a name="op_gt_gt"></a>zakład&gt;&gt;
 
-Wyodrębnia znaki oraz ciągi znaków ze strumienia.
+Wyodrębnia znaki i ciągi ze strumienia.
 
 ```cpp
 template <class Elem, class Tr>
@@ -56,16 +56,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
+*Ch*\
 Znak.
 
-*Istr*<br/>
+*Istr*\
 Strumień.
 
-*str*<br/>
+*str*\
 Ciąg.
 
-*Val*<br/>
+*użyte*\
 Typ.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -74,7 +74,7 @@ Strumień
 
 ### <a name="remarks"></a>Uwagi
 
-`basic_istream` Klasa definiuje również kilka operatorów wyodrębniania. Aby uzyskać więcej informacji, zobacz [basic_istream::operator >>](../standard-library/basic-istream-class.md#op_gt_gt).
+`basic_istream` Klasa definiuje również kilka operatorów wyodrębniania. Aby uzyskać więcej informacji, zobacz [basic_istream:: operator > >](../standard-library/basic-istream-class.md#op_gt_gt).
 
 Funkcja szablonu:
 
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-wyodrębnia maksymalnie *N* - 1 elementy i przechowuje je w tablicy, zaczynając od _ *Str*. If `Istr`. [szerokość](../standard-library/ios-base-class.md#width) jest większa od zera, *N* jest `Istr`. **szerokość**; w przeciwnym razie jest rozmiar największego tablicę `Elem` mogą być deklarowane. Funkcja zawsze przechowuje wartość `Elem()` po wyodrębnieniu dowolne elementy, które są przechowywane. Wyodrębnianie wcześnie zatrzymuje się na końcu pliku, na znak o wartości **Elem**(0) (który jest nie wyodrębnić), lub w dowolnym elemencie, (która nie jest wyodrębniany), który będzie odrzucany przez [ws](../standard-library/istream-functions.md#ws). Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). W każdym przypadku wywoływanych przez nią `Istr`. **szerokość**(0) i zwraca *Istr*.
+wyodrębnia do *N* -1 elementów i zapisuje je w tablicy, zaczynając od _ *str*. If `Istr`. [Szerokość](../standard-library/ios-base-class.md#width) jest większa od zera, *N* jest `Istr`. **Szerokość**; w przeciwnym razie jest to rozmiar największej tablicy `Elem` , która może być zadeklarowana. Funkcja zawsze przechowuje wartość `Elem()` po wszystkich wyodrębnionych elementach, które przechowuje. Ekstrakcja kończy się wczesnie na końcu pliku, na znaku o wartości **elem**(0) (który nie jest wyodrębniony) ani w żadnym elemencie (który nie został wyodrębniony), który zostałby odrzucony przez [usługę WS](../standard-library/istream-functions.md#ws). Jeśli funkcja nie wyodrębni żadnych elementów, wywołuje `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate) (**failbit**). W każdym przypadku wywołuje `Istr`. **Szerokość** (0) i zwraca *ISTR*.
 
-**Uwaga dotycząca zabezpieczeń** ciąg zakończony zerem wyodrębniania ze strumienia wejściowego, nie może przekraczać rozmiaru bufora docelowego *str*. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Ciąg zakończony znakiem null, który jest wyodrębniany ze strumienia wejściowego, nie może przekraczać rozmiaru docelowego *str*. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 Funkcja szablonu:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-wyodrębnia element, jeśli jest to możliwe i zapisuje go w *Ch*. W przeciwnym razie wywoływanych przez nią **jest**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). W każdym przypadku zwraca *Istr*.
+wyodrębnienie elementu, jeśli jest to możliwe, i zapisanie go w *ch*. W przeciwnym razie wywołuje **is**. [setstate](../standard-library/basic-ios-class.md#setstate) ( **failbit**). W każdym przypadku zwraca *ISTR*.
 
 Funkcja szablonu:
 
@@ -106,7 +106,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```
 
-Zwraca `Istr >> ( char * ) str`.
+zwraca `Istr >> ( char * ) str`wartość.
 
 Funkcja szablonu:
 
@@ -116,7 +116,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```
 
-Zwraca `Istr >> ( char& ) Ch`.
+zwraca `Istr >> ( char& ) Ch`wartość.
 
 Funkcja szablonu:
 
@@ -126,7 +126,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```
 
-Zwraca `Istr >> ( char * ) str`.
+zwraca `Istr >> ( char * ) str`wartość.
 
 Funkcja szablonu:
 
@@ -136,7 +136,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```
 
-Zwraca `Istr >> ( char& ) Ch`.
+zwraca `Istr >> ( char& ) Ch`wartość.
 
 Funkcja szablonu:
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Zwraca `Istr >> val` (i konwertuje odwołania rvalue do `Istr` z wartościowaniem lewostronnym w procesie).
+zwraca `Istr >> val` (i konwertuje odwołanie rvalue do `Istr` lvalue w procesie).
 
 ### <a name="example"></a>Przykład
 
@@ -170,4 +170,4 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

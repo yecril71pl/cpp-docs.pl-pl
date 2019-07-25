@@ -1,5 +1,5 @@
 ---
-title: '&lt;limity&gt;'
+title: '&lt;ograniczeń&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - limits/std::<limits>
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: e23c47b3eaecec92e462af7b2cc47627c5bad86a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245318"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447571"
 ---
-# <a name="ltlimitsgt"></a>&lt;limity&gt;
+# <a name="ltlimitsgt"></a>&lt;ograniczeń&gt;
 
-Definiuje klasę szablonu `numeric_limits` i dwa wyliczenia dotyczącymi reprezentacji zmiennoprzecinkowe i zaokrąglania.
+Definiuje klasę `numeric_limits` szablonu i dwa wyliczenia dotyczące reprezentacji zmiennoprzecinkowych i zaokrąglania.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<limity >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="remarks"></a>Uwagi
 
-Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów podstawowych, w tym znak, liczba całkowita i typów zmiennoprzecinkowych i **bool** , które są implementacji zdefiniowane, a nie przez reguły języka C++. Właściwości opisane w \<limity > obejmują dokładności, minimalnej i maksymalnej wielkości oświadczenia, zaokrąglania oraz trybu sygnalizowania błędów typu.
+Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów podstawowych, takich jak znak, liczba całkowita i typy zmiennoprzecinkowe oraz **bool** , które są zdefiniowane przez implementację, a nie ustalone przez reguły C++język. Właściwości opisane w \<limitach > obejmują dokładność, minimalną i maksymalną reprezentację rozmiaru, zaokrąglenie i Sygnalizowanie błędów typu.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -34,8 +34,8 @@ Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów 
 
 |||
 |-|-|
-|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|Wyliczenia w tym artykule opisano różne metody, które można wybrać implementacji reprezentujący wartość zmiennoprzecinkowa nieznormalizowany — jeden zbyt mała, aby przedstawić jako wartość znormalizowaną:|
-|[float_round_style](../standard-library/limits-enums.md#float_round_style)|Wyliczenia w tym artykule opisano różne metody wdrażania można wybrać podczas zaokrąglania wartość zmiennoprzecinkowa wartość będącą liczbą całkowitą.|
+|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|Wyliczenie opisuje różne metody, które można wybrać do reprezentowania nieznormalizowanej wartości zmiennoprzecinkowej — jeden za mały, aby reprezentować jako znormalizowaną wartość:|
+|[float_round_style](../standard-library/limits-enums.md#float_round_style)|Wyliczenie opisuje różne metody, które można wybrać, aby zaokrąglić wartość zmiennoprzecinkową do wartości całkowitej.|
 
 ### <a name="classes"></a>Klasy
 
@@ -45,5 +45,5 @@ Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

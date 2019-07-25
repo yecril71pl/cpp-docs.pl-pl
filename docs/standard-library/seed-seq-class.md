@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::seed_seq [C++], size
 - std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
-ms.openlocfilehash: 5309042e9f26875e0cf5c2024cc74910fef21148
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2dc561a9160188507a61ec3734cfbf9f3e74199
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295724"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450506"
 ---
 # <a name="seedseq-class"></a>seed_seq — Klasa
 
-Przechowuje wektor wartości liczb całkowitych bez znaku, które mogą dostarczać losowo siewnego dla silnika liczb losowych.
+Przechowuje wektor niepodpisanych wartości całkowitych, które mogą dostarczyć losowy inicjator dla silnika liczb losowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,7 +62,7 @@ public:
 typedef unsigned int result_type;
 ```
 
-Typ elementów sekwencji inicjatora. Typ 32-bitowej nieoznaczonej liczby całkowitej.
+Typ elementów sekwencji inicjatora. 32-bitowy typ liczby całkowitej bez znaku.
 
 ## <a name="constructors"></a>Konstruktorów
 
@@ -70,23 +70,23 @@ Typ elementów sekwencji inicjatora. Typ 32-bitowej nieoznaczonej liczby całkow
 seed_seq();
 ```
 
-Domyślny konstruktor, inicjuje ma pustą sekwencją wewnętrznego.
+Konstruktor domyślny inicjuje, że ma pustą sekwencję wewnętrzną.
 
 ```cpp
 template<class T>
 seed_seq(initializer_list<T> initlist);
 ```
 
-Używa `initlist` można ustawić sekwencję wewnętrznych.
-`T` musi być typu integer.
+Używa `initlist` do ustawiania sekwencji wewnętrznej.
+`T`musi być typem liczbą całkowitą.
 
 ```cpp
 template<class InputIterator>
 seed_seq(InputIterator begin, InputIterator end);
 ```
 
-Inicjuje sekwencję wewnętrznych przy użyciu wszystkich elementów w zakresie iterator danych wejściowych, pod warunkiem.
-`iterator_traits<InputIterator>::value_type` musi być typu integer.
+Inicjuje wewnętrzną sekwencję przy użyciu wszystkich elementów w podanym zakresie iteratora wejściowego.
+`iterator_traits<InputIterator>::value_type`musi być typem liczbą całkowitą.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -98,8 +98,8 @@ void generate(RandomAccessIterator begin,
           RandomAccessIterator end);
 ```
 
-Zostaną wyświetlone wszystkie elementy podanej sekwencji, za pomocą wewnętrznego algorytmu. Ten algorytm jest zależna od wewnętrznego sekwencji za pomocą którego `seed_seq` został zainicjowany.
-Nie robi nic, jeśli `begin == end`.
+Wypełnia elementy podanej sekwencji przy użyciu wewnętrznego algorytmu. Ten algorytm ma wpływ na sekwencję wewnętrzną, `seed_seq` która została zainicjowana.
+Nic nie robi `begin == end`.
 
 ### <a name="property-functions"></a>Funkcje właściwości
 
@@ -114,11 +114,11 @@ template<class OutputIterator>
 void param(OutputIterator dest) const;
 ```
 
-Kopiuje wewnętrznego sekwencji do iteratora wyjściowego `dest`.
+Kopiuje sekwencję wewnętrzną do iteratora `dest`danych wyjściowych.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod wykonuje trzy konstruktory i generuje dane wyjściowe z wynikowy `seed_seq` wystąpień po przypisaniu do tablicy. Aby uzyskać przykład, który używa `seed_seq` generator liczb losowych widoczne [ \<losowy >](../standard-library/random.md).
+Poniższy przykład kodu wykonuje trzy konstruktory i generuje dane wyjściowe z wynikowych `seed_seq` wystąpień po przypisaniu do tablicy. Przykład, który używa `seed_seq` z generatorem liczb losowych, można znaleźć w temacie [ \<Random >](../standard-library/random.md).
 
 ```cpp
 #include <iostream>
@@ -187,14 +187,14 @@ Generating a sequence of 5 elements into an array:
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje Członkowskie tej klasy nie zgłaszają wyjątki.
+Funkcje członkowskie tej klasy nie generują wyjątków.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowy >
+**Nagłówek:** \<losowe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

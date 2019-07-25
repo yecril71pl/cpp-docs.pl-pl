@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_reference class
 - remove_reference
 ms.assetid: 294e1965-3ae3-46ee-bc42-4fdf60c24717
-ms.openlocfilehash: 76f700b488d78af77e39ec91c7328604d18931fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f185994f943b2419a67fe86ce957751dc4031cbe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186039"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451272"
 ---
 # <a name="removereference-class"></a>remove_reference — Klasa
 
@@ -30,12 +30,12 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_reference<T>` przechowuje zmodyfikowany typ, który jest `T1` podczas *T* ma postać `T1&`, w przeciwnym razie *T*.
+Wystąpienie `remove_reference<T>` ma zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `T1&`, w przeciwnym razie *t*.
 
 ## <a name="example"></a>Przykład
 
@@ -63,9 +63,9 @@ remove_reference_t<int&> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference, klasa](../standard-library/add-lvalue-reference-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[add_lvalue_reference, klasa](../standard-library/add-lvalue-reference-class.md)

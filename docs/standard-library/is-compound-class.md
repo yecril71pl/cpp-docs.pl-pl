@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: f270a1a58bb8023d91d84b0d1ca3395d36298c95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337105"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452906"
 ---
 # <a name="iscompound-class"></a>is_compound — Klasa
 
-Sprawdza, czy określony typ nie jest podstawową.
+Testuje, czy określony typ nie jest podstawowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma **false** Jeśli typ *Ty* jest typem podstawowym (to znaczy, jeśli [is_fundamental —](../standard-library/is-fundamental-class.md)\<Ty > przechowuje  **wartość true,**); w przeciwnym razie przechowuje **true**. W związku z tym, zawiera predykat **true** Jeśli *Ty* jest typu tablicowego, typu funkcji, wskaźnik do **void** lub obiekt lub funkcję, a odwołanie, klasę, złożenia, wyliczenia lub w wskaźnik do składowej niestatycznych klas lub *kwalifikowana cv* postaci jednego z nich.
+Wystąpienie predykatu typu ma **wartość false** , jeśli typ *ty* jest typem podstawowym (czyli jeśli [is_fundamental](../standard-library/is-fundamental-class.md)\<> ty ma **wartość true**); w przeciwnym razie **ma wartość true**. W związku z tym predykat ma **wartość true** , jeśli *ty* jest typem tablicy, typem funkcji, wskaźnikiem do **void** lub obiektem lub funkcją, odwołaniem, klasą, Unią, wyliczeniem lub wskaźnikiem do niestatycznego elementu członkowskiego klasy lub z kwalifikowaną postacią *CV* jeden z nich.
 
 ## <a name="example"></a>Przykład
 
@@ -79,9 +79,9 @@ is_compound<int> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_class, klasa](../standard-library/is-class-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_class, klasa](../standard-library/is-class-class.md)

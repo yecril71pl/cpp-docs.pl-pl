@@ -9,32 +9,32 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-ms.openlocfilehash: 2246e50c81da9eb505fd30cfa31f9f24e3fe4703
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e59e8852172a998e4bf4f42f9f919dc29c2ded85
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210765"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450651"
 ---
 # <a name="c-program-startup-and-termination"></a>Uruchamianie i kończenie działania programu C++
 
-Program w języku C++ wykonuje te same operacje co C program w momencie uruchamiania programu i kończenie działania programu, a także kilka więcej opisana w tym temacie.
+C++ Program wykonuje te same operacje co program w języku C podczas uruchamiania programu i kończenia działania programu oraz kilka bardziej opisanych tutaj.
 
-Przed docelowego środowiska wywołuje funkcję `main`, i po przechowuje stałej wartości początkowe określisz we wszystkich obiektach, które mają statyczny czas trwania, program wykonuje wszystkie pozostałe konstruktory takich obiektów statycznych. Kolejność wykonywania nie jest określony w zakresie od jednostki translacji, ale można jednak założyć, że niektóre [iostreams](../standard-library/iostreams-conventions.md) obiekty zostały poprawnie zainicjowane do użytku przez te konstruktorów statycznych. Te strumienie tekstu formantu są następujące:
+Przed wywołaniem funkcji `main`przez środowisko docelowe i po przechowywaniu wszystkich stałych wartości początkowych określonych we wszystkich obiektach, które mają statyczny czas trwania, program wykonuje wszystkie pozostałe konstruktory dla takich obiektów statycznych. Kolejność wykonywania nie jest określona między jednostkami tłumaczenia, ale można jednak założyć, że niektóre obiekty [iostreams](../standard-library/iostreams-conventions.md) są prawidłowo zainicjowane do użytku przez te konstruktory statyczne. Te strumienie tekstu kontrolki są następujące:
 
-- [CIN](../standard-library/iostream.md#cin) — Aby uzyskać standardowe dane wejściowe.
+- [CIN](../standard-library/iostream.md#cin) — dla standardowych danych wejściowych.
 
-- [Cout](../standard-library/iostream.md#cout) — do wyjścia standardowego.
+- [cout](../standard-library/iostream.md#cout) — dla wyjścia standardowego.
 
-- [cerr](../standard-library/iostream.md#cerr) — dla Niebuforowane standardowe dane wyjściowe błędów.
+- [cerr](../standard-library/iostream.md#cerr) — w przypadku niebuforowanego wyjścia błędu standardowego.
 
-- [clog —](../standard-library/iostream.md#clog) — dla buforowanych standardowe dane wyjściowe błędów.
+- [CLOG](../standard-library/iostream.md#clog) — dla buforowanych standardowych danych wyjściowych błędu.
 
-Można również użyć tych obiektów w ramach destruktory wywoływana dla obiektów statycznych podczas Kończenie działania programu.
+Można również użyć tych obiektów w destruktorach wywoływanych dla obiektów statycznych podczas kończenia działania programu.
 
-Podobnie jak w przypadku C, zwracanie z `main` lub wywoływania `exit` wywołuje funkcje wszystkie zarejestrowane w usłudze `atexit` w odwrotnej kolejności z rejestru. Wyjątek zgłoszony z takiego zarejestrowanych funkcja wywołuje `terminate`.
+Podobnie jak w przypadku języka C `main` , zwracanie `exit` z lub wywołania `atexit` wywołań wszystkie funkcje zarejestrowane w odwrotnej kolejności rejestru. Zgłoszono wyjątek z takich zarejestrowanych wywołań `terminate`funkcji.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

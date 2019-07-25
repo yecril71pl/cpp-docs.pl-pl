@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - <cstdint>
 ms.assetid: 87afafb2-c630-4383-a2fc-a6b47c639e21
-ms.openlocfilehash: fbe18ee6f59a638da1510b6746733713dd6b7c96
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 9f4839ed6166e328feac4ae89fcce0637abce993
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244401"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447478"
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
 
-Dołącza nagłówek biblioteki standardowej C \<stdint.h > i dodaje skojarzone nazwy `std` przestrzeni nazw. Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
+Zawiera standardowy nagłówek \<biblioteki C stdin. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw. Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,5 +71,5 @@ SIZE_MAX
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 6e6b8a286dca8c451e6920e7f25f07829d3b453f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451252"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454216"
 ---
 # <a name="enableif-class"></a>enable_if — Klasa
 
-Warunkowo sprawia, że wystąpienie typu SFINAE Rozpoznanie przeciążenia. Zagnieżdżony typedef `enable_if<Condition,Type>::type` istnieje — i jest synonimem dla `Type`— tylko wtedy, gdy `Condition` jest **true**.
+Warunkowo tworzy wystąpienie typu do rozpoznawania przeciążenia SFINAE. Zagnieżdżony element `enable_if<Condition,Type>::type` typedef istnieje — i jest synonimem `Type`dla — if i tylko `Condition` wtedy, gdy ma **wartość true**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,30 +27,30 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parametry
 
-*B*<br/>
-Wartość, która określa istnienie wynikowy typ.
+*B*\
+Wartość określająca istnienie typu będącego wynikiem.
 
-*T*<br/>
-Typ do utworzenia wystąpienia, jeśli *B* ma wartość true.
+*&* \
+Typ do wystąpienia, jeśli *B* ma wartość true.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli *B* ma wartość true, `enable_if<B, T>` ma element zagnieżdżony typedef o nazwie "type", który jest synonimem dla *T*.
+Jeśli *B* ma wartość true `enable_if<B, T>` , ma zagnieżdżony element typedef o nazwie "Type", który jest synonimem dla *T*.
 
-Jeśli *B* ma wartość FAŁSZ, `enable_if<B, T>` nie zawiera zagnieżdżony typedef o nazwie "type".
+Jeśli *B* ma wartość false `enable_if<B, T>` , nie ma zagnieżdżonego elementu typedef o nazwie "Type".
 
-Dostarczono szablon tego aliasu:
+Ten szablon aliasu jest dostępny:
 
 ```cpp
 template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-W języku C++, Niepowodzenie podstawiania parametrów szablonu nie jest to błąd w sobie — jest to określane jako *SFINAE* (niepowodzenie podstawienia nie jest błąd "). Zazwyczaj `enable_if` służy do usuwania kandydatów przeciążonym — czyli go culls zestaw przeciążenia — tak, aby jedna definicja może odrzucić na rzecz innego. Odpowiada to zachowanie SFINAE. Aby uzyskać więcej informacji na temat SFINAE zobacz [błąd podstawienia nie jest to błąd](https://go.microsoft.com/fwlink/p/?linkid=394798) w witrynie Wikipedia.
+W C++, Niepowodzenie podstawiania parametrów szablonu nie jest błędem samego siebie — jest to określane jako *SFINAE* (niepowodzenie podstawiania nie jest błędem). `enable_if` Zwykle jest używany do usuwania kandydatów z rozpoznawania przeciążenia — to znaczy, że odrzuca zestaw przeciążenia, dzięki czemu jedna definicja może zostać odrzucona na korzyść innego. Jest to zgodne z zachowaniem SFINAE. Aby uzyskać więcej informacji na temat SFINAE, zobacz niepowodzenie podstawiania [nie jest błędem](https://go.microsoft.com/fwlink/p/?linkid=394798) w witrynie Wikipedia.
 
-Poniżej przedstawiono cztery przykładowe scenariusze:
+Oto cztery przykładowe scenariusze:
 
-- Scenariusz 1: Zawijanie zwracany typ funkcji:
+- Scenariusz 1: Zawijanie zwracanego typu funkcji:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Scenariusz 2: Dodawanie parametru funkcji, która ma argument domyślny:
+- Scenariusz 2: Dodawanie parametru funkcji, który ma domyślny argument:
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- Scenariusz 3: Dodawanie parametru szablonu, który ma argument domyślny:
+- Scenariusz 3: Dodawanie parametru szablonu, który ma domyślny argument:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- Scenariusz 4: Jeśli funkcja ma argument szablonem, może zawijać się jej typ:
+- Scenariusz 4: Jeśli funkcja ma argument bez szablonu, można zawijać jego typ:
 
 ```cpp
     template <typename T>
@@ -90,9 +90,9 @@ s) {// ...
 }
 ```
 
-Scenariusz 1 nie działa z konstruktorów i operatory konwersji, ponieważ nie mają zwracanych typów.
+Scenariusz 1 nie działa z konstruktorami i operatorami konwersji, ponieważ nie mają typów zwracanych.
 
-Scenariusz 2 pozostawia parametrów bez nazwy. Można powiedzieć `::type Dummy = BAR`, ale nazwa `Dummy` nie ma znaczenia, i może wyzwalać to ostrzeżenie "Nieużywany parametr" nadając mu nazwę. Należy wybrać opcję `FOO` typ parametru funkcji i `BAR` domyślnych argumentów.  Można powiedzieć **int** i `0`, ale następnie użytkownicy Twój kod może przypadkowo przekazać do funkcji dodatkowych liczba całkowita, która będzie ignorowane. Zamiast tego zaleca się używanie `void **` i `0` lub **nullptr** ponieważ prawie nic nie jest konwertowany na `void **`:
+Scenariusz 2 pozostawia parametr bez nazwy. Można to powiedzieć `::type Dummy = BAR`, ale nazwa `Dummy` jest nieistotna i nadając jej nazwę może wyzwolić ostrzeżenie "parametr bez odwołania". Musisz wybrać `FOO` typ parametru funkcji i `BAR` argument domyślny.  Można powiedzieć **int** i `0`, ale następnie użytkownicy kodu mogą przypadkowo przekazać do funkcji dodatkową liczbę całkowitą, która byłaby ignorowana. Zamiast tego `void **` zalecamy używanie `0` i lub **nullptr** , ponieważ niemal niczego nie można przekonwertować na `void **`:
 
 ```cpp
 template <your_stuff>
@@ -101,23 +101,23 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
 }
 ```
 
-Scenariusz 2 działa również w przypadku zwykłych konstruktorów.  Jednak to nie zadziała dla operatorów konwersji, ponieważ nie przyjmują dodatkowe parametry.  Ponadto nie działa dla [ze zmienną liczbą argumentów](../cpp/ellipses-and-variadic-templates.md) konstruktory ponieważ dodanie dodatkowych parametrów sprawia, że parametr funkcji pakietu kontekst wywnioskować, a tym samym pozbawia `enable_if`.
+Scenariusz 2 działa również w przypadku zwykłych konstruktorów.  Jednak nie działa w przypadku operatorów konwersji, ponieważ nie mogą przyjmować dodatkowych parametrów.  Nie działa również w przypadku konstruktorów [wariadyczne](../cpp/ellipses-and-variadic-templates.md) , ponieważ dodanie dodatkowych parametrów sprawia, że pakiet parametrów funkcji nie został wywnioskowany, a tym samym obniża `enable_if`cel.
 
-Scenariusz 3 używa nazwy `Dummy`, ale jest opcjonalny. Po prostu " `typename = typename`" będzie działać, ale jeśli Twoim zdaniem wygląda nieco dziwne, można użyć nazwy "fikcyjny" — po prostu nie użyj jednej z nich, które mogą być również używane w definicji funkcji. Jeśli nie udzielisz typu `enable_if`, jego wartość domyślna to void i doskonale jest uzasadnione, ponieważ nieważne co `Dummy` jest. Działa to w przypadku wszystkim, łącznie z operatorów konwersji i [ze zmienną liczbą argumentów](../cpp/ellipses-and-variadic-templates.md) konstruktorów.
+Scenariusz 3 używa nazwy `Dummy`, ale jest opcjonalny. `typename = typename`"" Może działać, ale jeśli uważasz, że szuka brzmienia, możesz użyć nazwy "fikcyjnej" — po prostu nie używaj tego elementu, który może być również używany w definicji funkcji. Jeśli nie przydajesz typu do `enable_if`, jego wartość domyślna to void i jest to doskonale uzasadnione, ponieważ nie musisz dochodzić do tego, co `Dummy` to jest. Działa to w przypadku wszystkich elementów, takich jak operatory konwersji i konstruktory [wariadyczne](../cpp/ellipses-and-variadic-templates.md) .
 
-Scenariusz 4 działa w konstruktorach, które nie mają zwracanych typów, a tym samym rozwiązuje ograniczenie zawijania scenariusz 1.  Scenariusz 4 jest jednak ograniczone do argumentów bez szablonu funkcji, które nie są zawsze dostępne.  (Przy użyciu 4 scenariusz na argumentu funkcji oparte na szablonach zapobiega odliczanie argumentu szablon z pracujemy nad tym.)
+Scenariusz 4 działa w konstruktorach, które nie mają zwracanych typów i w związku z tym rozwiązuje ograniczenie otoki scenariusza 1.  Jednak scenariusz 4 jest ograniczony do argumentów funkcji nienależących do szablonu, które nie są zawsze dostępne.  (Użycie scenariusza 4 w argumencie funkcji z szablonami uniemożliwia odliczanie argumentu szablonu od pracy z nim).
 
-`enable_if` to zaawansowane, ale także niebezpieczne, jeśli jest niewłaściwego użycia.  Jej celem jest zapewnienie kandydatów znikają przed Rozpoznanie przeciążenia, gdy jest niewłaściwego użycia, jego skutków może być bardzo mylące.  Poniżej przedstawiono kilka zaleceń:
+`enable_if`jest zaawansowany, ale również niebezpieczny, jeśli jest nieużywany.  Ponieważ celem jest przeprowadzenie kandydatów przed rozpoznaniem przeciążenia, gdy nie jest on używany, jego skutki mogą być bardzo mylące.  Poniżej przedstawiono niektóre zalecenia:
 
-- Nie używaj `enable_if` wybrać między implementacjami w czasie kompilacji. Nigdy nie zapisuj jeden `enable_if` dla `CONDITION` i inny wpis dla `!CONDITION`.  Zamiast tego należy użyć *tag wysyłania* wzorzec — na przykład algorytm, który wybiera implementacji w zależności od silnych Iteratory mają one.
+- Nie należy używać `enable_if` do wybierania między implementacjami w czasie kompilacji. Nie pisz jeszcze jeden `enable_if` dla `CONDITION` i drugi dla `!CONDITION`.  Zamiast tego należy użyć wzorca *wysyłania tagów* — na przykład algorytmu, który wybiera implementacje, w zależności od siły podanym iteratorów.
 
-- Nie używaj `enable_if` do wymuszania wymagań.  Jeśli chcesz sprawdzić poprawność parametrów szablonu, a Jeśli weryfikacja zakończy się niepowodzeniem, powodują wystąpienie błędu zamiast zaznaczania innego wdrożenia, należy użyć [static_assert](../cpp/static-assert.md).
+- Nie należy używać `enable_if` do wymuszania wymagań.  Jeśli chcesz sprawdzić poprawność parametrów szablonu, a jeśli Walidacja nie powiedzie się, wystąpi błąd, zamiast wybierać inną implementację, użyj [static_assert](../cpp/static-assert.md).
 
-- Użyj `enable_if` przypadku zestaw przeciążenia, który sprawia, że w przeciwnym razie dobre kodu niejednoznaczne.  Najczęściej dzieje się to niejawnie konwersja konstruktorów.
+- Użyj `enable_if` w przypadku zestawu przeciążenia, który sprawia, że w przeciwnym razie dobry kod jest niejednoznaczny.  Najczęściej jest to spowodowane niejawnie konwertowaniem konstruktorów.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie opisano sposób, w jaki C++ standardowej biblioteki szablonów funkcji [std::make_pair()](../standard-library/utility-functions.md#make_pair) wykorzystuje `enable_if`.
+W tym przykładzie wyjaśniono C++ , jak funkcja standardowego szablonu biblioteki [std:: make_pair ()](../standard-library/utility-functions.md#make_pair) korzysta `enable_if`z programu.
 
 ```cpp
 void func(const pair<int, int>&);
@@ -127,16 +127,16 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-W tym przykładzie `make_pair("foo", "bar")` zwraca `pair<const char *, const char *>`. Rozpoznanie przeciążenia musi ustalić, które `func()` ma. `pair<A, B>` ma konstruktora niejawnej konwersji z `pair<X, Y>`.  Nie jest to nowy — w języku C ++ 98. Jednak w języku C ++ 98/03, sygnatury konstruktora niejawnej konwersji zawsze istnieje, nawet jeśli jest on `pair<int, int>(const pair<const char *, const char *>&)`.  Rozpoznanie przeciążenia zależy, czy podjęto próbę utworzenia wystąpienia tego konstruktora rozkłada horribly, ponieważ `const char *` nie jest niejawnie konwertowany na **int**; tylko poszukuje podpisów, przed funkcją definicje są wystąpienia.  W związku z tym, przykładowy kod jest niejednoznaczny, ponieważ istnieje podpisów, aby przekonwertować `pair<const char *, const char *>` zarówno `pair<int, int>` i `pair<string, string>`.
+W tym przykładzie `make_pair("foo", "bar")` zwraca wartość `pair<const char *, const char *>`. Rozpoznanie przeciążenia musi określić, `func()` która z nich ma zostać wybrana. `pair<A, B>`ma niejawnie przekonwertowanego `pair<X, Y>`konstruktora z.  To nie jest Nowość — w języku C++ 98. Jednak w języku C++ 98/03, niejawnie konwertowany podpis konstruktora zawsze istnieje, nawet jeśli jest `pair<int, int>(const pair<const char *, const char *>&)`to.  Funkcja rozpoznawania przeciążenia nie ma wpływu na to, że próba wystąpienia tego konstruktora zostaje `const char *` rozwinięta horribly, ponieważ nie jest to niejawnie konwertowane na **int**; szuka tylko sygnatur, zanim zostaną utworzone wystąpienia definicji funkcji.  W związku z tym przykładowy kod jest niejednoznaczny, ponieważ istnieją sygnatury do `pair<int, int>` przekonwertowania `pair<const char *, const char *>` na jednocześnie i `pair<string, string>`.
 
-C ++ 11 rozwiązać tę niejednoznaczność, za pomocą `enable_if` zapewnienie `pair<A, B>(const pair<X, Y>&)` istnieje **tylko** podczas `const X&` jest niejawnie konwertowany na `A` i `const Y&` jest niejawnie konwertowany na `B`.  Dzięki temu określić, że funkcja rozpoznawania przeciążeń `pair<const char *, const char *>` nie jest konwertowany na `pair<int, int>` i że przeciążenie przyjmującej `pair<string, string>` jest możliwego do użycia.
+Język c++ 11 rozwiązał tę niejednoznaczność za `enable_if` pomocą polecenia, `pair<A, B>(const pair<X, Y>&)` aby upewnić `const X&` się, że istnieje `A` **tylko** wtedy, gdy jest `B`niejawnie konwertowany na i `const Y&` jest niejawnie konwertowany na.  Umożliwia to rozpoznanie przeciążenia, aby `pair<const char *, const char *>` określić, że nie `pair<int, int>` jest to możliwe do konwersji na `pair<string, string>` i że Przeciążenie, które pobiera, jest żywotne.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

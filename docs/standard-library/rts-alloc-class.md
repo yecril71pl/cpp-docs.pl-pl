@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409749"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451139"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc — Klasa
 
-Rts_alloc — klasa szablonu opisuje [filtru](../standard-library/allocators-header.md) zawierający tablicę pamięci podręcznej wystąpień i określa, które wystąpienie na potrzeby alokacji i dezalokacji w czasie wykonywania, a nie w czasie kompilacji.
+Klasa szablonu rts_alloc opisuje [Filtr](../standard-library/allocators-header.md) , który przechowuje tablicę wystąpień pamięci podręcznej i określa, które wystąpienie ma być używane do alokacji i dealokacji w czasie wykonywania, a nie podczas kompilowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,27 +34,27 @@ class rts_alloc
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Pamięć podręczna*|Typ wystąpienia pamięci podręcznej znajdujących się w tablicy. Może to być [cache_chunklist — klasa](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Pamięć podręczna*|Typ wystąpień pamięci podręcznej zawartych w tablicy. Może to być [Cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Uwagi
 
-Tej klasy szablonu zawiera blok wiele wystąpień programu przydzielania i określa, które wystąpienie na potrzeby alokacji i dezalokacji w czasie wykonywania, a nie w czasie kompilacji. Kompilatory, których nie można skompilować ponowne wiązanie jest używany.
+Ta klasa szablonu zawiera wiele wystąpień alokatora blokowego i określa, które wystąpienie ma być używane do alokacji lub cofania alokacji w czasie wykonywania, a nie podczas kompilowania. Jest on używany z kompilatorami, które nie mogą skompilować ponownie powiązania.
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
-|[equals](#equals)|Porównuje dwa pamięci podręczne dla równości.|
+|[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
+|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<buforów >
+**Nagłówek:** \<przypisania >
 
-**Namespace:** stdext
+**Przestrzeń nazw:** stdext
 
-## <a name="allocate"></a>  rts_alloc::allocate
+## <a name="allocate"></a>rts_alloc:: Allocate
 
 Przydziela blok pamięci.
 
@@ -66,19 +66,19 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
+|*liczbą*|Liczba elementów w tablicy, która ma zostać przypisana.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do przydzielonego obiektu.
+Wskaźnik do przydzielony obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca `caches[_IDX].allocate(count)`, gdzie indeks `_IDX` zależy od rozmiaru żądanego bloku *liczba*, lub jeśli *liczba* jest za duży, funkcja zwraca `operator new(count)`. `cache`, która reprezentuje buforowany obiekt.
+Funkcja członkowska zwraca `caches[_IDX].allocate(count)`, gdzie indeks `_IDX` jest określony przez żądaną *liczbę*rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca wartość `operator new(count)`. `cache`, która reprezentuje obiekt pamięci podręcznej.
 
-## <a name="deallocate"></a>  rts_alloc::deallocate
+## <a name="deallocate"></a>rts_alloc::d eallocate
 
-Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -88,16 +88,16 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
-|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.|
+|*liczbą*|Liczba obiektów do cofnięcia przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji elementu członkowskiego `caches[_IDX].deallocate(ptr, count)`, gdzie indeks `_IDX` zależy od rozmiaru żądanego bloku *liczba*, lub jeśli *liczba* jest za duży, funkcja zwraca `operator delete(ptr)`.
+Funkcja elementu członkowskiego `caches[_IDX].deallocate(ptr, count)`wywołuje, gdzie indeks `_IDX` jest określony przez żądaną *liczbę*rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca `operator delete(ptr)`.
 
-## <a name="equals"></a>  rts_alloc::Equals
+## <a name="equals"></a>rts_alloc:: Equals
 
-Porównuje dwa pamięci podręczne dla równości.
+Porównuje dwie pamięci podręczne pod kątem równości.
 
 ```cpp
 bool equals(const sync<_Cache>& _Other) const;
@@ -107,14 +107,14 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*_Cache*|Buforowany obiekt skojarzony z filtrem.|
-|*_Inne*|Buforowany obiekt do porównania dla równości.|
+|*_Cache*|Obiekt pamięci podręcznej skojarzony z filtrem.|
+|*_Other*|Obiekt pamięci podręcznej, który ma zostać porównany pod kątem równości.|
 
 ### <a name="remarks"></a>Uwagi
 
-**wartość true,** Jeśli wynikiem `caches[0].equals(other.caches[0])`; w przeciwnym razie **false**. `caches` reprezentuje tablicę obiektów w pamięci podręcznej.
+**prawda** , jeśli wynik `caches[0].equals(other.caches[0])`; w przeciwnym razie, **Fałsz**. `caches`reprezentuje tablicę obiektów pamięci podręcznej.
 
 ## <a name="see-also"></a>Zobacz także
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

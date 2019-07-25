@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcjonalności&gt;'
+title: '&lt;działanie&gt;'
 ms.date: 02/21/2019
 f1_keywords:
 - <functional>
@@ -9,68 +9,68 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2f8ef031731e4213ce8cda326d05f1241cd03625
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243758"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447388"
 ---
-# <a name="ltfunctionalgt"></a>&lt;funkcjonalności&gt;
+# <a name="ltfunctionalgt"></a>&lt;działanie&gt;
 
-Definiuje funkcje standardowej biblioteki języka C++, które pomagają tworzyć *funkcji obiektów*, znane również jako *funktory*i ich wiążących. Obiekt funkcji jest obiektem typu, który definiuje `operator()`. Obiekt funkcyjny mogą być wskaźnik funkcji, ale zazwyczaj obiekt jest używany do przechowywania dodatkowych informacji, które może uzyskać dostęp podczas wywołania funkcji.
+Definiuje C++ standardowe funkcje biblioteki, które ułatwiają konstruowanie *obiektów funkcji*, znanych również jako *funktory*, oraz ich powiązań. Obiekt funkcyjny jest obiektem typu, który definiuje `operator()`. Obiekt funkcji może być wskaźnikiem funkcji, ale zazwyczaj jest to obiekt używany do przechowywania dodatkowych informacji, do których można uzyskać dostęp podczas wywołania funkcji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<funkcjonalności >
+**Nagłówek:** \<> funkcjonalne
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="remarks"></a>Uwagi
 
-Algorytmy wymagają dwóch typów obiektów funkcyjnych: *jednoargumentowe* i *binarne*. Obiekty funkcyjne jednoargumentowe wymaga jednego argumentu i obiekty binarne funkcji wymaga dwóch argumentów. Obiektu funkcyjnego i wskaźników do funkcji mogą być przekazywane jako predykatu do algorytmu, ale obiekty funkcyjne są również dostosowywalne i zwiększyć zakres, elastyczność i efektywność standardowej biblioteki języka C++. Jeśli na przykład wartość potrzebne może być powiązane z funkcją przed przesłaniem do algorytmu, następnie wskaźnik funkcji nie można użyć. Funkcja adapterów konwertowanie wskaźników funkcji obiekty potężnej funkcji, które mogą być powiązane z wartością. Nagłówek \<funkcjonalności > zawiera także adapterów funkcja elementu członkowskiego, zezwalających na wywoływanie jako obiekty funkcyjne potężnej funkcji elementu członkowskiego. Funkcje są potężnej, jeśli mają one deklaracje typu zagnieżdżonego, określając ich argumentów i zwracanych typów. Obiekty funkcji i ich adapterów umożliwiają standardowej biblioteki C++ uaktualnić istniejące aplikacje i pomóc zintegrować biblioteki środowiska programowania w języku C++.
+Algorytmy wymagają dwóch typów obiektów funkcyjnych  : jednoargumentowych i *binarnych*. Jednoargumentowe obiekty funkcyjne wymagają jednego argumentu, a obiekty funkcji binarnych wymagają dwóch argumentów. Obiekt funkcyjny i wskaźniki funkcji mogą być przesyłane jako predykat do algorytmu, ale obiekty funkcji są również dostosowywane i zwiększają zakres, elastyczność i wydajność biblioteki C++ standardowej. Jeśli na przykład wartość wymagana do powiązania z funkcją przed przekazaniem do algorytmu, nie można użyć wskaźnika funkcji. Adaptery funkcji konwertują wskaźniki funkcji do dostosowywalnych obiektów funkcji, które mogą być powiązane z wartością. > Funkcjonalny nagłówka \<zawiera również adaptery funkcji Członkowskich, które umożliwiają wywoływanie funkcji Członkowskich jako dostosowywalnych obiektów funkcji. Funkcje są dostosowywane, jeśli mają deklaracje typu zagnieżdżonego określające ich argumenty i typy zwracane. Obiekty funkcyjne i ich adaptery umożliwiają C++ uaktualnianie istniejących aplikacji i integrację biblioteki ze środowiskiem C++ programowania.
 
-Implementacja obiekty funkcji w \<funkcjonalności > zawiera *przezroczyste funktory operatora*. które mają specjalizacje obiektów standardowej funkcji i nie mają żadnych parametrów szablonu i wykonywać Perfekcyjne przekazywanie argumentów funkcji i doskonałe zwrócenia wyniku. Te specjalizacje szablonu nie wymagają określenia typy argumentów, gdy wywołujesz arytmetyczne, logiczne, porównanie i funktory operatora bitowego. Można przeciążać operacje arytmetyczne, logiczne, porównanie lub operatory bitowe własnych typów lub kombinacji heterogenicznych typów i następnie użyć przezroczyste funktory operatora jako argumenty funkcji. Na przykład jeśli danego typu *MyType* implementuje `operator<`, można wywołać `sort(my_collection.begin(), my_collection.end(), less<>())` zamiast jawne określenie typu `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
+Implementacja obiektów funkcji w \<> funkcjonalnej zawiera przezroczyste *Operatory funktory*. są to specjalizacje standardowych obiektów funkcyjnych i nie pobierają parametrów szablonu i realizują doskonałe przekazywanie argumentów funkcji i idealny zwrot wyniku. Te specjalizacje szablonów nie wymagają określenia typów argumentów podczas wywoływania arytmetycznego, porównania, logicznego i bitowego operatora funktory. Operatory arytmetyczne, porównania, logiczne lub bitowe można przeciążać dla własnych typów lub dla niejednorodnych kombinacji typów, a następnie używać przezroczystego operatora funktory jako argumenty funkcji. Na przykład, jeśli typ *MyType* `operator<`implementuje, można wywołać `sort(my_collection.begin(), my_collection.end(), less<>())` zamiast jawnie określić typ `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
 
-Następujące funkcje zostały dodane w C ++ 11, C ++ 14 i C ++ 17:
+W językach C++ 11, C++ 14 i C++ 17 dodano następujące funkcje:
 
-- A *sygnatury wywołania* nazywa się typem zwracanym, a następnie ujęty w nawiasy rozdzielaną przecinkami listę zero lub więcej typów argumentów.
+- *Sygnatura wywołania* to nazwa typu zwracanego, po którym następuje rozdzielona przecinkami lista z zerem lub większą liczbą typów argumentów.
 
-- A *typ możliwy do wywołania* jest wskaźnikiem do funkcji, wskaźnik do funkcji składowej, wskaźnik do składowej danych lub typu klasy, w których obiekty można pojawiają się natychmiast po lewej stronie operatora wywołania funkcji.
+- Możliwy do wywołania *Typ* jest wskaźnikiem do funkcji, wskaźnikiem do funkcji składowej, wskaźnikiem do danych elementu członkowskiego lub typem klasy, której obiekty mogą pojawić się bezpośrednio po lewej stronie operatora wywołania funkcji.
 
-- A *wywoływanego obiektu* jest obiektem typu możliwy do wywołania.
+- Wywoływany *obiekt* jest obiektem typu, który jest możliwy do przetrwania.
 
-- A *wywołać typ otoki* to typ, który przechowuje wywoływanego obiektu i obsługuje operację wywołania, które powodują przekazanie do tego obiektu.
+- *Typ otoki wywołania* to typ, który posiada wywoływany obiekt i obsługuje operację wywołania, która przekazuje do tego obiektu.
 
-- A *wywołanie otoką* jest obiektem typu wywołania otoki.
+- *Otoka wywołań* jest obiektem typu otoki wywołania.
 
-- A *obiekt docelowy* jest obiekt w posiadaniu obiektu wywołania.
+- *Obiekt docelowy* jest obiektem możliwym do przetrzymywania przez obiekt otoki wywołania.
 
-Pseudo-funkcja `INVOKE(f, t1, t2, ..., tN)` oznacza to jedną z następujących czynności:
+Pseudo funkcja `INVOKE(f, t1, t2, ..., tN)` oznacza jedną z następujących czynności:
 
-- `(t1.*f)(t2, ..., tN)` gdy `f` jest wskaźnikiem do funkcji składowej klasy typu `T` i `t1` jest obiektem typu `T` lub odwołanie do obiektu typu `T` lub odwołanie do obiektu typu pochodną `T`.
+- `(t1.*f)(t2, ..., tN)`gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `t1` jest obiektem typu `T` lub odwołaniem do obiektu typu `T` lub odwołaniem do obiektu typu pochodnego od `T`.
 
-- `((*t1).*f)(t2, ..., tN)` gdy `f` jest wskaźnikiem do funkcji składowej klasy typu `T` i `t1` nie jest jednym z typów, opisanych w poprzedniej pozycji.
+- `((*t1).*f)(t2, ..., tN)`gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `t1` nie jest jednym z typów opisanych w poprzednim elemencie.
 
-- `t1.*f` Gdy N == 1 i `f` to wskaźnik do danych elementów członkowskich klasy `T` i `t1` jest obiektem typu `T` lub odwołanie do obiektu typu `T` lub odwołanie do obiektu typu pochodnego od `T`.
+- `t1.*f`gdy N = = 1 i `f` jest wskaźnikiem do danych elementu członkowskiego klasy `T` i `t1` jest obiektem typu `T` lub odwołaniem do obiektu typu `T` lub odwołaniem do obiektu typu pochodnego od `T`.
 
-- `(*t1).*f` Gdy N == 1 i `f` to wskaźnik do danych elementów członkowskich klasy `T` i `t1` nie jest jednym z typów, opisanych w poprzedniej pozycji.
+- `(*t1).*f`gdy N = = 1 i `f` jest wskaźnikiem do danych składowych klasy `T` i `t1` nie jest jednym z typów opisanych w poprzednim elemencie.
 
-- `f(t1, t2, ..., tN)` we wszystkich innych przypadkach.
+- `f(t1, t2, ..., tN)`we wszystkich innych przypadkach.
 
-Pseudo-funkcja `INVOKE(f, t1, t2, ..., tN, R)` oznacza `INVOKE(f, t1, t2, ..., tN)` niejawnie konwertowane na `R`.
+Pseudo funkcja `INVOKE(f, t1, t2, ..., tN, R)` oznacza `INVOKE(f, t1, t2, ..., tN)` niejawnie przekonwertowaną na `R`.
 
-Jeśli wywołanie otoką *typ wyniku słabe*, typ jego typ elementu członkowskiego `result_type` opiera się na typ `T` obiektu docelowego otoki, w następujący sposób:
+Jeśli otoka wywołania ma *słaby typ wyniku*, typ jego elementu członkowskiego `result_type` jest oparty na typie `T` obiektu docelowego otoki w następujący sposób:
 
-- Jeśli `T` jest wskaźnikiem do funkcji, `result_type` jest synonimem dla zwracanego typu `T`.
+- Jeśli `T` jest wskaźnikiem do funkcji, `result_type` jest synonimem `T`dla zwracanego typu.
 
-- Jeśli `T` jest wskaźnikiem do funkcji składowej `result_type` jest synonimem dla zwracanego typu `T`.
+- If `T` jest wskaźnikiem do funkcji składowej `result_type` , jest synonimem `T`dla zwracanego typu.
 
-- Jeśli `T` jest typu klasy, która ma typ elementu członkowskiego `result_type`, następnie `result_type` jest synonimem dla `T::result_type`.
+- Jeśli `T` jest typem klasy, który ma typ `result_type`elementu członkowskiego, `result_type` jest synonimem dla `T::result_type`.
 
-- W przeciwnym razie nie ma żadnego elementu członkowskiego `result_type`.
+- W przeciwnym razie nie ma żadnego `result_type`elementu członkowskiego.
 
-Otoka co wywołanie ma Konstruktor przenoszący i Konstruktor kopiujący. A *prostego wywołania otoki* jest otoką wywołania mającego przypisania operatora i której Konstruktor kopiujący, Konstruktor przenoszący i operator przypisania nie zgłaszają wyjątki. A *przekazywania wywołanie otoką* jest otoką wywołań, który można wywoływać za pomocą listy argumentów dowolnego, i który dostarcza argumentów na obiekt opakowany jako odwołania. Wszystkie argumenty r-wartości są dostarczane jako odwołania rvalue, a argumenty lvalue są dostarczane jako odwołania lvalue.
+Każda otoka wywołania ma Konstruktor przenoszenia i Konstruktor kopiujący. *Prosta otoka wywołań* jest otoką wywołania, która ma operator przypisania i której Konstruktor kopiujący, Konstruktor przenoszenia i operator przypisania nie zgłasza wyjątków. *Otoka wywołań przekazywania* jest otoką wywołania, która może być wywoływana przy użyciu arbitralnej listy argumentów i która dostarcza argumenty do zapakowanego wywołującego obiektu jako odwołania. Wszystkie argumenty rvalue są dostarczane jako odwołania rvalue, a argumenty lvalue są dostarczane jako odwołania lvalue.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -78,90 +78,90 @@ Otoka co wywołanie ma Konstruktor przenoszący i Konstruktor kopiujący. A *pro
 
 |||
 |-|-|
-|[bad_function_call](../standard-library/bad-function-call-class.md)|Klasa, która opisuje wyjątek generowany w celu wskazania, że wywołanie `operator()` na [funkcja](../standard-library/function-class.md) obiektu nie powiodło się, ponieważ obiekt był pusty.|
-|[binary_negate](../standard-library/binary-negate-class.md)|Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną określoną funkcję binarny.<br/> (Przestarzałe w języku C ++ 17). |
-|[binder1st](../standard-library/binder1st-class.md)|Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie pierwszy argument funkcji binarnego na określoną wartość.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[binder2nd —](../standard-library/binder2nd-class.md)|Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie drugi argument funkcji binarnego na określoną wartość.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
+|[bad_function_call](../standard-library/bad-function-call-class.md)|Klasa opisująca wyjątek zgłoszony w celu wskazania, że wywołanie `operator()` w obiekcie [Function](../standard-library/function-class.md) nie powiodło się, ponieważ obiekt był pusty.|
+|[binary_negate](../standard-library/binary-negate-class.md)|Klasa szablonu dostarczająca funkcję członkowską, która wyklucza wartość zwracaną określonej funkcji binarnej.<br/> (Przestarzałe w języku C++ 17). |
+|[binder1st](../standard-library/binder1st-class.md)|Klasa szablonu dostarczająca Konstruktor, który konwertuje obiekt funkcji binarnej na jednoargumentowy obiekt funkcji przez powiązanie pierwszego argumentu funkcji Binary z określoną wartością.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[binder2nd —](../standard-library/binder2nd-class.md)|Klasa szablonu dostarczająca Konstruktor, który konwertuje obiekt funkcji binarnej na jednoargumentowy obiekt funkcji przez powiązanie drugiego argumentu funkcji Binary z określoną wartością.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
 |[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
 |[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
-|[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Klasa adaptera, która umożliwia const funkcja elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiekt funkcji jednoargumentowe podczas inicjowania przy użyciu argument odwołania.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Klasa adaptera, która umożliwia stałą funkcję elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiektu funkcyjnego jednoargumentowe podczas inicjowania przy użyciu argumentu będącego wskaźnikiem.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Klasa adaptera, która umożliwia const funkcja elementu członkowskiego, która przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argument odwołania.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Klasa adaptera, która umożliwia stałą funkcję elementu członkowskiego, która przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argumentu będącego wskaźnikiem.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
+|[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Klasa adaptera, która umożliwia stałej funkcji składowej, która nie przyjmuje argumentów, które mają być wywoływane jako jednoargumentowy obiekt funkcji po zainicjowaniu z argumentem Reference.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Klasa adaptera, która umożliwia stałej funkcji składowej, która nie przyjmuje argumentów, które mają być wywoływane jako jednoargumentowy obiekt funkcji, gdy zostanie zainicjowany przy użyciu argumentu wskaźnika.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Klasa adaptera, która umożliwia stałemu funkcji składowej, która przyjmuje pojedynczy argument jako obiekt funkcji binarnej po zainicjowaniu z argumentem Reference.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Klasa adaptera, która umożliwia stałemu funkcji składowej, która przyjmuje pojedynczy argument jako obiekt funkcji binarnej, gdy zostanie zainicjowany przy użyciu argumentu wskaźnika.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
 |[default_searcher](../standard-library/default-searcher-class.md)||
-|[— Funkcja](../standard-library/function-class.md)|Klasa, która otacza obiekt możliwy do wywołania.|
-|[Skrót](../standard-library/hash-class.md)|Klasa, która oblicza wartość skrótu dla wartości.|
-|[is_bind_expression](../standard-library/is-bind-expression-class.md)|Klasa, która sprawdza, czy określony typ jest generowany przez wywołanie metody `bind`.|
+|[funkcyjn](../standard-library/function-class.md)|Klasa, która otacza wywoływany obiekt.|
+|[skrótu](../standard-library/hash-class.md)|Klasa, która oblicza kod skrótu dla wartości.|
+|[is_bind_expression](../standard-library/is-bind-expression-class.md)|Klasa, która sprawdza, czy określony typ jest generowany przez wywołanie `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Klasa, która sprawdza, czy określony typ jest symbolem zastępczym.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Klasa adaptera, który umożliwia `non_const` funkcja elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiekt funkcji jednoargumentowe po zainicjowaniu z argumentem odwołania.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Klasa adaptera, który umożliwia `non_const` funkcja elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiektu funkcyjnego jednoargumentowe podczas inicjowania przy użyciu argumentu będącego wskaźnikiem.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Klasa adaptera, który umożliwia `non_const` funkcja elementu członkowskiego, który przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argument odwołania.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Klasa adaptera, który umożliwia `non_const` funkcja elementu członkowskiego, który przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argumentu będącego wskaźnikiem.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Konwertuje wskaźnika funkcji binarne potężnej funkcja binarnego.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Konwertuje funkcję jednoargumentową potężnej jednoargumentowe wskaźnika funkcji.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[reference_wrapper](../standard-library/reference-wrapper-class.md)|Klasa, która otacza odwołania.|
-|[unary_negate](../standard-library/unary-negate-class.md)|Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną funkcję jednoargumentową określony.<br/> (Przestarzałe w języku C ++ 17).  |
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Klasa adaptera, która umożliwia `non_const` funkcji składowej, która nie przyjmuje argumentów do wywołania jednoargumentowego obiektu funkcyjnego, gdy jest inicjowany z argumentem odwołania.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Klasa adaptera, która umożliwia `non_const` funkcji składowej, która nie przyjmuje argumentów do wywołania jednoargumentowego obiektu funkcyjnego, gdy zostanie zainicjowany z argumentem wskaźnika.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Klasa adaptera, która umożliwia `non_const` funkcji składowej, która przyjmuje pojedynczy argument jako obiekt funkcji binarnej, gdy zostanie zainicjowany przy użyciu argumentu odwołania.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Klasa adaptera, która umożliwia `non_const` funkcji składowej, która przyjmuje pojedynczy argument jako obiekt funkcji binarnej, gdy zostanie zainicjowany przy użyciu argumentu wskaźnika.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Konwertuje wskaźnik funkcji binarnej na dostosowywalną funkcję binarną.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Konwertuje wskaźnik jednoargumentowy funkcji na dostosowywalną funkcję jednoargumentową.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[reference_wrapper](../standard-library/reference-wrapper-class.md)|Klasa, która otacza odwołanie.|
+|[unary_negate](../standard-library/unary-negate-class.md)|Klasa szablonu dostarczająca funkcję członkowską, która wyklucza wartość zwracaną przez określoną funkcję jednoargumentową.<br/> (Przestarzałe w języku C++ 17).  |
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|[powiązania](../standard-library/functional-functions.md#bind)|Wiąże argumenty wywoływanego obiektu.|
-|[bind1st](../standard-library/functional-functions.md#bind1st)|Funkcja szablonu pomocnika, która tworzy adapter do skonwertowania obiektu binarnego funkcja do obiektu funkcyjnego jednoargumentowe przez powiązanie pierwszy argument funkcji binarnego na określoną wartość.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Funkcja szablonu pomocnika, która tworzy adapter do skonwertowania obiektu binarnego funkcja do obiektu funkcyjnego jednoargumentowe przez powiązanie drugi argument funkcji binarnego na określoną wartość.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[bit_and](../standard-library/functional-functions.md#bit_and)|Zwraca wartość iloczynu bitowego AND logiczne (operator binarny &) z dwóch parametrów.|
-|[bit_not](../standard-library/functional-functions.md#bit_not)|Zwraca wartość logiczną bitowe uzupełnienie (operator ~) parametru.<br/> (Dodane w języku C ++ 14). |
-|[bit_or](../standard-library/functional-functions.md#bit_or)|Zwraca wartość logiczną logiczne OR (operator&#124;) z dwóch parametrów.|
-|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Zwraca wartość iloczynu bitowego XOR logiczne (operator ^) z dwóch parametrów.|
-|[cref](../standard-library/functional-functions.md#cref)|Konstruuje stałą `reference_wrapper` z argumentem.|
-|[wywołania](../standard-library/functional-functions.md#invoke)||
-|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Generuje otoki prostemu wywołaniu.|
-|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Pomocnik funkcje szablonu użytego do stworzenia funkcji adapterów obiektu dla funkcji składowych po zainicjowaniu wskaźnika argumentów.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Funkcji pomocnika, która szablonu użytego do stworzenia funkcji adapterów obiektu dla funkcji składowych po zainicjowaniu z argumentami odwołania.|
-|[not1](../standard-library/functional-functions.md#not1)|Zwraca uzupełnienie predykat.<br/> (Przestarzałe w języku C ++ 17). |
-|[not2](../standard-library/functional-functions.md#not2)|Zwraca uzupełnienie predykat binarny.<br/> (Przestarzałe w języku C ++ 17). |
-|[not_fn](../standard-library/functional-functions.md#not_fn)|Zwraca uzupełnienie wynik jego obiektu funkcyjnego.<br/> (Dodane w języku C ++ 17). |
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Funkcję pomocnika szablonu umożliwia jednoargumentowe konwersji i binarnego funkcja wskaźników, odpowiednio do funkcji potężnej jednoargumentowy i danych binarnych.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[ref](../standard-library/functional-functions.md#ref)|Konstruuje `reference_wrapper` z argumentem.|
-|[swap](../standard-library/functional-functions.md#swap)|Zamień dwa `function` obiektów.|
+|[węglowodor](../standard-library/functional-functions.md#bind)|Tworzy powiązania argumentów z wywoływanym obiektem.|
+|[bind1st](../standard-library/functional-functions.md#bind1st)|Funkcja szablonu pomocnika, która tworzy adapter do konwertowania obiektu funkcji binarnej na jednoargumentowy obiekt funkcji przez powiązanie pierwszego argumentu funkcji Binary z określoną wartością.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Funkcja szablonu pomocnika, która tworzy adapter do przekonwertowania obiektu funkcji binarnej na jednoargumentowy obiekt funkcji przez powiązanie drugiego argumentu funkcji Binary z określoną wartością.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[bit_and](../standard-library/functional-functions.md#bit_and)|Zwraca koniunkcję logiczną i (operator binarny &) dwóch parametrów.|
+|[bit_not](../standard-library/functional-functions.md#bit_not)|Zwraca bitowe dopełnienie logiczne (operator ~) parametru.<br/> (Dodano w języku C++ 14). |
+|[bit_or](../standard-library/functional-functions.md#bit_or)|Zwraca bitowe wartości logiczne OR (operator&#124;) dwóch parametrów.|
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Zwraca bitowe logiczne XOR (operator ^) dwóch parametrów.|
+|[cref](../standard-library/functional-functions.md#cref)|Konstruuje stałą `reference_wrapper` z argumentu.|
+|[wywołuje](../standard-library/functional-functions.md#invoke)||
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Generuje prosty otokę wywołania.|
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funkcje szablonu pomocnika służące do konstruowania adapterów obiektów funkcji dla funkcji Członkowskich po zainicjowaniu z argumentami wskaźnika.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Funkcja szablonu pomocnika służąca do konstruowania adapterów obiektów funkcji dla funkcji Członkowskich po zainicjowaniu z argumentami odwołania.|
+|[not1](../standard-library/functional-functions.md#not1)|Zwraca uzupełnienie predykatu jednoargumentowego.<br/> (Przestarzałe w języku C++ 17). |
+|[not2](../standard-library/functional-functions.md#not2)|Zwraca uzupełnienie predykatu binarnego.<br/> (Przestarzałe w języku C++ 17). |
+|[not_fn](../standard-library/functional-functions.md#not_fn)|Zwraca uzupełnienie wyniku obiektu funkcji.<br/> (Dodano w języku C++ 17) |
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Funkcja szablonu pomocnika służąca do konwersji jednoargumentowych i binarnych wskaźników funkcji, odpowiednio, do funkcji, które można dostosowywać jednoargumentowo.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[ref](../standard-library/functional-functions.md#ref)|Tworzy element `reference_wrapper` a z argumentu.|
+|[swap](../standard-library/functional-functions.md#swap)|Zamienia dwa `function` obiekty.|
 
 ### <a name="structs"></a>Struktury
 
 |||
 |-|-|
-|[binary_function —](../standard-library/binary-function-struct.md)|Pusta klasa podstawowa definiująca typy, które mogą być dziedziczone przez klasy pochodnej, który dostarcza obiekt funkcji binarnego.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
-|[dzieli](../standard-library/divides-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje operacji arytmetycznej dzielenia elementów typu określoną wartość.|
-|[equal_to](../standard-library/equal-to-struct.md)|Predykat binarny, który umożliwia sprawdzenie, czy wartość określonego typu jest taki sam, z inną wartością tego typu.|
-|[większa](../standard-library/greater-struct.md)|Predykat binarny, który umożliwia sprawdzenie, czy wartość o określonym typie jest większa niż wartość innego typu.|
-|[greater_equal](../standard-library/greater-equal-struct.md)|Predykat binarny, który umożliwia sprawdzenie, czy wartość o określonym typie jest większy lub równy z inną wartością tego typu.|
-|[less](../standard-library/less-struct.md)|Predykat binarny, który umożliwia sprawdzenie, czy wartość o określonym typie jest mniejsza niż wartość innego typu.|
-|[less_equal](../standard-library/less-equal-struct.md)|Predykat binarny, który umożliwia sprawdzenie, czy wartość o określonym typie jest mniejsze niż lub równe z inną wartością tego typu.|
-|[logical_and](../standard-library/logical-and-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje operacje logiczne połączeniu elementów typu określoną wartość i testów prawdziwość lub falsity wyniku.|
-|[logical_not](../standard-library/logical-not-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje operacje logiczne negacji elementów typu określoną wartość i testów prawdziwość lub falsity wyniku.|
-|[logical_or](../standard-library/logical-or-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje operacje logiczne rozłączenia elementów typu określoną wartość i testów prawdziwość lub falsity wyniku.|
-|[znak minus](../standard-library/minus-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje operacji arytmetycznej odejmowania elementów typu określoną wartość.|
-|[modulus](../standard-library/modulus-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje arytmetyczne operacji modulo elementów typu określoną wartość.|
-|[Mnoży](../standard-library/multiplies-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje operacji arytmetycznej mnożenia elementów typu określoną wartość.|
-|[negate](../standard-library/negate-struct.md)|Klasa oferuje obiektu wstępnie zdefiniowana funkcja, która zwraca ujemne wartości element.|
-|[not_equal_to](../standard-library/not-equal-to-struct.md)|Predykat binarny, który umożliwia sprawdzenie, czy wartość o określonym typie nie jest równa z inną wartością tego typu.|
-|[plus](../standard-library/plus-struct.md)|Klasa zawiera obiekt wstępnie zdefiniowana funkcja, która wykonuje arytmetyczne operacji dodawania elementów typu określoną wartość.|
-|[unary_function —](../standard-library/unary-function-struct.md)|Pusta klasa podstawowa definiująca typy, które mogą być dziedziczone przez klasy pochodnej, który dostarcza obiekt funkcji jednoargumentowy.<br/> (Zaniechane w C ++ 11, usunięte w języku C ++ 17). |
+|[binary_function](../standard-library/binary-function-struct.md)|Pusta Klasa bazowa, która definiuje typy, które mogą być dziedziczone przez klasę pochodną, która udostępnia obiekt funkcji binarnej.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
+|[dzieli](../standard-library/divides-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt Function, który wykonuje operację arytmetyczną dzielenia na elementy o określonym typie wartości.|
+|[equal_to](../standard-library/equal-to-struct.md)|Predykat binarny, który sprawdza, czy wartość określonego typu jest równa innej wartości tego typu.|
+|[mniejszą](../standard-library/greater-struct.md)|Predykat binarny, który sprawdza, czy wartość określonego typu jest większa niż inna wartość tego typu.|
+|[greater_equal](../standard-library/greater-equal-struct.md)|Predykat binarny, który sprawdza, czy wartość określonego typu jest większa lub równa innej wartości tego typu.|
+|[wcześniejsz](../standard-library/less-struct.md)|Predykat binarny, który sprawdza, czy wartość określonego typu jest mniejsza niż inna wartość tego typu.|
+|[less_equal](../standard-library/less-equal-struct.md)|Predykat binarny, który sprawdza, czy wartość określonego typu jest mniejsza lub równa innej wartości tego typu.|
+|[logical_and](../standard-library/logical-and-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt Function, który wykonuje logiczną operację połączenia dla elementów określonego typu wartości i testów dla prawdy lub falsity wyniku.|
+|[logical_not](../standard-library/logical-not-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt Function, który wykonuje logiczną operację negacji dla elementów określonego typu wartości i testów dla prawdy lub falsity wyniku.|
+|[logical_or](../standard-library/logical-or-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt Function, który wykonuje logiczną operację rozłączenia dla elementów określonego typu wartości i testów dla prawdy lub falsity wyniku.|
+|[przed](../standard-library/minus-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje arytmetyczne odejmowania dla elementów o określonym typie wartości.|
+|[modulus](../standard-library/modulus-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje arytmetyczne modułu dla elementów o określonym typie wartości.|
+|[Mnoży](../standard-library/multiplies-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt Function, który wykonuje operacje arytmetyczne mnożenia dla elementów o określonym typie wartości.|
+|[negate](../standard-library/negate-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt Function, który zwraca wartość ujemną wartości elementu.|
+|[not_equal_to](../standard-library/not-equal-to-struct.md)|Predykat binarny, który sprawdza, czy wartość określonego typu nie jest równa innej wartości tego typu.|
+|[plus](../standard-library/plus-struct.md)|Klasa zawiera wstępnie zdefiniowany obiekt funkcji, który wykonuje operację arytmetyczną dodawania dla elementów o określonym typie wartości.|
+|[unary_function](../standard-library/unary-function-struct.md)|Pusta Klasa bazowa, która definiuje typy, które mogą być dziedziczone przez klasę pochodną, która dostarcza jednoargumentowy obiekt funkcji.<br/> (Przestarzałe w języku C++ 11, usunięte w języku C++ 17). |
 
 ### <a name="objects"></a>Obiekty
 
 |||
 |-|-|
-|[_1.._M](../standard-library/1-object.md)|Symbole zastępcze dla wymiennych argumentów.|
+|[_1.._M](../standard-library/1-object.md)|Symbole zastępcze dla argumentów do przemieszczenia.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[operator==](../standard-library/functional-operators.md#op_eq_eq)|Nie zezwala na porównanie równości obiektów możliwy do wywołania.|
-|[operator!=](../standard-library/functional-operators.md#op_neq)|Nie zezwala na porównanie nierówności wywoływalnej obiektów.|
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|Nie zezwala na porównanie wartości wywoływanych obiektów.|
+|[operator!=](../standard-library/functional-operators.md#op_neq)|Nie zezwala na porównanie wywoływanych obiektów.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

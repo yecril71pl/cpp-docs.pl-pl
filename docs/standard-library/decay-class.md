@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - decay class
 ms.assetid: 96baa2fd-c8e0-49af-be91-ba375ba7f9dc
-ms.openlocfilehash: 23c2cff37e67e78ba68c37468c110d7a3725b785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73b9e2d8ef9a14830c13ee3f6566137bb51e939d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394066"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450641"
 ---
 # <a name="decay-class"></a>decay — Klasa
 
-Tworzy typ, jak przekazać przez wartość. Tworzy typ niebędący odniesieniem, niestały, trwałej lub tworzy wskaźnik do typu z funkcją lub typem tablicowym.
+Tworzy typ jako przekazaną przez wartość. Sprawia, że typ nie jest odwołaniem, niestałym, nietrwałym lub tworzy wskaźnik do typu z funkcji lub typu tablicy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,27 +29,27 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wybierz szablon zanikania i generuje wynikowy typ tak, jakby typ został przekazany przez wartość jako argument. Typedef składowej klasy szablonu `type` ma zmodyfikowany typ, który jest zdefiniowany w następujących etapach:
+Użyj szablonu pozostałej w celu utworzenia typu wynikowego, tak jakby typ został przekazano przez wartość jako argument. Składowa klasy szablonu typedef `type` zawiera zmodyfikowany typ, który jest zdefiniowany w następujących etapach:
 
 - Typ `U` jest zdefiniowany jako `remove_reference<T>::type`.
 
-- Jeśli `is_array<U>::value` ma wartość true, zmodyfikowany typ `type` jest `remove_extent<U>::type *`.
+- Jeśli `is_array<U>::value` ma wartość true, modyfikowany `type` jest `remove_extent<U>::type *`typ.
 
-- W przeciwnym razie, jeśli `is_function<U>::value` ma wartość true, zmodyfikowany typ `type` jest `add_pointer<U>::type`.
+- W przeciwnym razie `is_function<U>::value` , jeśli ma wartość true, `type` zmodyfikowany `add_pointer<U>::type`typ to.
 
-- W przeciwnym razie zmodyfikowany typ `type` jest `remove_cv<U>::type`.
+- W przeciwnym razie zmodyfikowany typ `type` to `remove_cv<U>::type`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

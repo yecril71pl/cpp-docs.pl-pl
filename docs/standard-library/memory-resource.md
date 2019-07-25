@@ -5,16 +5,16 @@ f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: b5957412d2beff0dc709dc71a77834f13eeacb41
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d4b25c6ee575191f1e17b0202d33298e2e9e67f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268157"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451905"
 ---
 # <a name="ltmemoryresourcegt"></a>&lt;memory_resource&gt;
 
-Definiuje memory_resource klasy szablonu kontenera i jego szablonów pomocniczych.
+Definiuje klasę szablonu kontenera memory_resource i jej szablony pomocnicze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,8 +28,8 @@ Definiuje memory_resource klasy szablonu kontenera i jego szablonów pomocniczyc
 
 |||
 |-|-|
-|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Sprawdza, czy obiekt memory_resource po lewej stronie operatora nie jest równy obiektowi memory_resource po prawej stronie.|
-|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Sprawdza, czy obiekt memory_resource po lewej stronie operatora jest równy obiektowi memory_resource po prawej stronie.|
+|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Testuje, czy obiekt memory_resource po lewej stronie operatora nie jest równy obiektowi memory_resource po prawej stronie.|
+|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Testuje, czy obiekt memory_resource po lewej stronie operatora jest równy obiektowi memory_resource po prawej stronie.|
 
 ### <a name="specialized-template-functions"></a>Specialized Template — Funkcje
 
@@ -50,14 +50,14 @@ Definiuje memory_resource klasy szablonu kontenera i jego szablonów pomocniczyc
 
 |||
 |-|-|
-|[memory_resource klasy](../standard-library/memory-resource-class.md)||
-|[monotonic_buffer_resource klasy](../standard-library/monotonic-buffer-resource-class.md)||
-|[pool_options — struktura](../standard-library/pool-options-structure.md)||
-|[synchronized_pool_resource klasy](../standard-library/synchronized-pool-resource-class.md)||
-|[unsynchronized_pool_resource klasy](../standard-library/unsynchronized-pool-resource-class.md)||
+|[Klasa memory_resource](../standard-library/memory-resource-class.md)||
+|[Klasa monotonic_buffer_resource](../standard-library/monotonic-buffer-resource-class.md)||
+|[pool_options, struktura](../standard-library/pool-options-structure.md)||
+|[Klasa synchronized_pool_resource](../standard-library/synchronized-pool-resource-class.md)||
+|[Klasa unsynchronized_pool_resource](../standard-library/unsynchronized-pool-resource-class.md)||
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

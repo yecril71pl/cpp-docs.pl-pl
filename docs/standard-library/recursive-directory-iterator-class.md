@@ -4,18 +4,18 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::tr2::sys::recursive_directory_iterator
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
-ms.openlocfilehash: 52e6f738aa226dba26bae0cf6e97cd18d107d677
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98eaf2494a3bc17c0f9d11683fc67fed433ba3a5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370134"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451708"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator — klasa
 
-Opisuje iterator danych wejściowych, sekwencji za pomocą nazwy plików w katalogu, prawdopodobnie malejącej w podkatalogach cyklicznie. Dla iteratora `X`, wyrażenie `*X` zwróci obiekt klasy `directory_entry` to wszystko na nazwę pliku i nic wiedzieć o jego stan.
+Opisuje iterator danych wejściowych, który umożliwia cykliczne przechodzenie sekwencji między nazwami plików w katalogu. W przypadku iteratora `X`wyrażenie `*X` szacuje obiekt klasy `directory_entry` , która otacza nazwę pliku i wszystkie znane informacje o stanie.
 
-Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
+Aby uzyskać więcej informacji i przykładów kodu, zobacz [Nawigacja systemu plikówC++()](../standard-library/file-system-navigation.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,82 +25,82 @@ class recursive_directory_iterator;
 
 ## <a name="remarks"></a>Uwagi
 
-Magazyny klasy szablonu:
+Klasy szablonu są przechowywane:
 
-1. obiekt typu `stack<pair<directory_iterator, path>>`, co jest nazywane `mystack` w tym miejscu na potrzeby specyfikacji, która reprezentuje zagnieżdżonych katalogów do być sekwencjonowania
+1. Obiekt typu `stack<pair<directory_iterator, path>>`, wywoływany `mystack` w tym miejscu do celów specyfikacji, który reprezentuje zagnieżdżenie katalogów do sekwencjonowania
 
-1. obiekt typu `directory_entry` o nazwie `myentry` tutaj, który reprezentuje bieżący nazwy pliku w sekwencji katalogu
+1. Obiekt typu `directory_entry` o nazwie `myentry` w tym miejscu, który reprezentuje bieżącą nazwę pliku w sekwencji katalogu
 
-1. obiekt typu **bool**, co jest nazywane `no_push` tutaj, który rejestruje, czy zejścia cyklicznego do podkatalogów jest wyłączona
+1. Obiekt typu **bool**, wywoływany `no_push` w tym miejscu, który rejestruje, czy rekursywny w podkatalogach jest wyłączony
 
-1. obiekt typu `directory_options`, co jest nazywane `myoptions` tutaj, który rejestruje opcje ustalone w konstrukcji
+1. Obiekt typu `directory_options`o nazwie `myoptions` , który rejestruje opcje ustalone w konstrukcji
 
-Domyślne obiektu typu `recursive_directory_entry` ma iterator sekwencja kończenia w `mystack.top().first` i reprezentuje iterator sekwencja kończenia. Na przykład, biorąc pod uwagę katalogu `abc` z wpisy `def` (katalog) `def/ghi`, i `jkl`, kod:
+Domyślny skonstruowany obiekt typu `recursive_directory_entry` ma iterator End of Sequence w `mystack.top().first` i reprezentuje iterator końca sekwencji. Na przykład `abc` , mając katalog z wpisami `def` (katalog), `def/ghi`, i `jkl`, kod:
 
 ```cpp
 for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
     visit(next->path());
 ```
 
-Wywołanie odwiedzi z argumentami `path("abc/def/ghi")` i `path("abc/jkl")`. Może kwalifikujesz się do sekwencjonowania za pośrednictwem podstrom na dwa sposoby:
+wywoła odwiedzenie z `path("abc/def/ghi")` argumentami `path("abc/jkl")`i. Sekwencjonowanie można zakwalifikować za pomocą poddrzewa katalogów na dwa sposoby:
 
-1. Link symboliczny katalog ma zostać przeprowadzone skanowanie tylko wtedy, gdy konstruowania `recursive_directory_iterator` z `directory_options` argumentu, którego wartością jest `directory_options::follow_directory_symlink`.
+1. Link symboliczny katalogu zostanie przeskanowany tylko wtedy, gdy konstruujesz `recursive_directory_iterator` `directory_options` z argumentem, którego `directory_options::follow_directory_symlink`wartość to.
 
-1. Jeśli wywołasz `disable_recursion_pending` kolejnych katalogu podczas przyrostowa nie będzie cyklicznie skanowania.
+1. Jeśli zostanie wywołana `disable_recursion_pending` , kolejny katalog napotkany podczas przyrostu nie będzie przeskanowany cyklicznie.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[recursive_directory_iterator](#recursive_directory_iterator)|Konstruuje `recursive_directory_iterator`.|
+|[recursive_directory_iterator](#recursive_directory_iterator)|Konstruuje `recursive_directory_iterator`a.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[Głębokość](#depth)|Zwraca `mystack.size() - 1`, więc `pval` jest na poziomie od zera.|
-|[disable_recursion_pending](#disable_recursion_pending)|Magazyny **true** w `no_push`.|
-|[Inkrementacja](#increment)|Przechodzi do następnego nazwy pliku w sekwencji.|
-|[Opcje](#options)|Zwraca `myoptions`.|
-|[POP](#pop)|Zwraca następny obiekt.|
-|[recursion_pending](#recursion_pending)|Zwraca `!no_push`.|
+|[ścisł](#depth)|Zwraca `mystack.size() - 1`, więc `pval` ma głębokość zero.|
+|[disable_recursion_pending](#disable_recursion_pending)|Przechowuje **wartość true** w `no_push`.|
+|[pełny](#increment)|Przechodzi do kolejnej nazwy pliku w sekwencji.|
+|[Opcje](#options)|Zwraca `myoptions`wartość.|
+|[skakując](#pop)|Zwraca następny obiekt.|
+|[recursion_pending](#recursion_pending)|Zwraca `!no_push`wartość.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator!=](#op_neq)|Zwraca `!(*this == right)`.|
-|[operator=](#op_as)|Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.|
-|[operator==](#op_eq)|Zwraca **true** tylko wtedy, gdy oba `*this` i *prawo* są Iteratory sekwencja kończenia i / lub czy nie end z sekwencji Iteratory.|
-|[operator*](#op_multiply)|Zwraca `myentry`.|
-|[operator->](#op_cast)|Zwraca `&**this`.|
-|[operator++](#op_increment)|Zwiększa `recursive_directory_iterator`.|
+|[operator!=](#op_neq)|Zwraca `!(*this == right)`wartość.|
+|[operator=](#op_as)|Operatory przypisywania domyślnego elementu członkowskiego zachowują się zgodnie z oczekiwaniami.|
+|[operator==](#op_eq)|Zwraca **wartość true** tylko wtedy `*this` , gdy obie i *prawo* są iteratorami End-of-Sequence lub oba nie są kompletnymi iteratorami sekwencji.|
+|[zakład](#op_multiply)|Zwraca `myentry`wartość.|
+|[operator — >](#op_cast)|Zwraca `&**this`wartość.|
+|[operator++](#op_increment)|`recursive_directory_iterator`Zwiększa.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<filesystem >
+**Nagłówek:** \<> systemu plików
 
-**Namespace:** STD::tr2:: sys
+**Przestrzeń nazw:** std:: TR2:: sys
 
-## <a name="depth"></a> recursive_directory_iterator::DEPTH
+## <a name="depth"></a>recursive_directory_iterator::d epth
 
-Zwraca `mystack.size() - 1`, więc `pval` jest na poziomie od zera.
+Zwraca `mystack.size() - 1`, więc `pval` ma głębokość zero.
 
 ```cpp
 int depth() const;
 ```
 
-## <a name="disable_recursion_pending"></a> recursive_directory_iterator::disable_recursion_pending
+## <a name="disable_recursion_pending"></a>recursive_directory_iterator::d isable_recursion_pending
 
-Magazyny **true** w `no_push`.
+Przechowuje **wartość true** w `no_push`.
 
 ```cpp
 void disable_recursion_pending();
 ```
 
-## <a name="increment"></a> recursive_directory_iterator::Increment
+## <a name="increment"></a>recursive_directory_iterator:: Increment
 
-Przechodzi do następnego nazwy pliku w sekwencji.
+Przechodzi do kolejnej nazwy pliku w sekwencji.
 
 ```cpp
 recursive_directory_iterator& increment(error_code& ec) noexcept;
@@ -108,16 +108,16 @@ recursive_directory_iterator& increment(error_code& ec) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*ec*<br/>
+*udziela*\
 Określony kod błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja polegające na Przejdź do następnego nazwy pliku w zagnieżdżonych sekwencji. Jeśli operacja się powiedzie, przechowuje nazwę tego pliku w `myentry`; w przeciwnym razie wywołuje iteratora sekwencja kończenia.
+Funkcja próbuje przejść do kolejnej nazwy pliku w sekwencji zagnieżdżonej. Jeśli to się powiedzie, przechowuje tę `myentry`nazwę pliku w; w przeciwnym razie generuje iterator sekwencji końcowej.
 
-## <a name="op_neq"></a> recursive_directory_iterator::operator! =
+## <a name="op_neq"></a>recursive_directory_iterator:: operator! =
 
-Zwraca `!(*this == right)`.
+Zwraca `!(*this == right)`wartość.
 
 ```cpp
 bool operator!=(const recursive_directory_iterator& right) const;
@@ -125,12 +125,12 @@ bool operator!=(const recursive_directory_iterator& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*Kliknij*\
 [Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) do porównania.
 
-## <a name="op_as"></a> recursive_directory_iterator::operator =
+## <a name="op_as"></a>recursive_directory_iterator:: operator =
 
-Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.
+Operatory przypisywania domyślnego elementu członkowskiego zachowują się zgodnie z oczekiwaniami.
 
 ```cpp
 recursive_directory_iterator& operator=(const recursive_directory_iterator&) = default;
@@ -139,12 +139,12 @@ recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept
 
 ### <a name="parameters"></a>Parametry
 
-*recursive_directory_iterator*<br/>
-[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) są kopiowane do `recursive_directory_iterator`.
+*recursive_directory_iterator*\
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) kopiowany do `recursive_directory_iterator`.
 
-## <a name="op_eq"></a> recursive_directory_iterator::operator ==
+## <a name="op_eq"></a>recursive_directory_iterator:: operator = =
 
-Zwraca **true** tylko wtedy, gdy oba `*this` i *prawo* są Iteratory sekwencja kończenia i / lub czy nie end z sekwencji Iteratory.
+Zwraca **wartość true** tylko wtedy `*this` , gdy obie i *prawo* są iteratorami End-of-Sequence lub oba nie są kompletnymi iteratorami sekwencji.
 
 ```cpp
 bool operator==(const recursive_directory_iterator& right) const;
@@ -152,28 +152,28 @@ bool operator==(const recursive_directory_iterator& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*Kliknij*\
 [Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) do porównania.
 
-## <a name="op_multiply"></a> recursive_directory_iterator::operator *
+## <a name="op_multiply"></a>recursive_directory_iterator:: operator *
 
-Zwraca `myentry`.
+Zwraca `myentry`wartość.
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> recursive_directory_iterator::operator ->
+## <a name="op_cast"></a>recursive_directory_iterator:: operator->
 
-Zwraca `&**this`.
+Zwraca `&**this`wartość.
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-## <a name="op_increment"></a> recursive_directory_iterator::operator ++
+## <a name="op_increment"></a>recursive_directory_iterator:: operator + +
 
-Zwiększa `recursive_directory_iterator`.
+`recursive_directory_iterator`Zwiększa.
 
 ```cpp
 recursive_directory_iterator& operator++();
@@ -183,22 +183,22 @@ recursive_directory_iterator& operator++(int);
 
 ### <a name="parameters"></a>Parametry
 
-*int*<br/>
-Określonym przyrostem.
+*ZAOKR*\
+Określony przyrost.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszego wywołania funkcji elementu członkowskiego `increment()`, następnie zwraca `*this`. Funkcja drugiego członka tworzy kopię obiektu wywołania `increment()`, następnie zwraca kopię.
+Pierwsza funkcja elementu członkowskiego `increment()`wywołuje metodę, `*this`a następnie zwraca. Druga funkcja członkowska wykonuje kopię obiektu, wywołuje `increment()`, a następnie zwraca kopię.
 
-## <a name="options"></a> recursive_directory_iterator::Options
+## <a name="options"></a>recursive_directory_iterator:: Options
 
-Zwraca `myoptions`.
+Zwraca `myoptions`wartość.
 
 ```cpp
 directory_options options() const;
 ```
 
-## <a name="pop"></a> recursive_directory_iterator::POP —
+## <a name="pop"></a>recursive_directory_iterator::p op
 
 Zwraca następny obiekt.
 
@@ -208,19 +208,19 @@ void pop();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `depth() == 0` obiekt staje się iterator sekwencja kończenia. W przeciwnym razie funkcja elementu członkowskiego kończy się skanowanie bieżącego katalogu (najgłębiej zagnieżdżoną) i zostanie wznowiona na następny głębokość niższe.
+Jeśli `depth() == 0` obiekt jest iteratorem końca sekwencji. W przeciwnym razie funkcja członkowska kończy skanowanie bieżącego (najgłębszego) katalogu i wznawia się z następną niższą głębokością.
 
-## <a name="recursion_pending"></a> recursive_directory_iterator::recursion_pending
+## <a name="recursion_pending"></a>recursive_directory_iterator::recursion_pending
 
-Zwraca `!no_push`.
+Zwraca `!no_push`wartość.
 
 ```cpp
 bool recursion_pending() const;
 ```
 
-## <a name="recursive_directory_iterator"></a> recursive_directory_iterator::recursive_directory_iterator
+## <a name="recursive_directory_iterator"></a>recursive_directory_iterator::recursive_directory_iterator
 
-Konstruuje `recursive_directory_iterator`.
+Konstruuje `recursive_directory_iterator`a.
 
 ```cpp
 recursive_directory_iterator() noexcept;
@@ -240,26 +240,26 @@ recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 
 ### <a name="parameters"></a>Parametry
 
-*pval*<br/>
+*pval*\
 Określona ścieżka.
 
-*error_code*<br/>
-Określonego kodu błędu.
+*error_code*\
+Określony kod błędu.
 
-*zdecyduje*<br/>
-Opcje określonego katalogu.
+*Zasubskrybowanie*\
+Określone opcje katalogu.
 
-*recursive_directory_iterator*<br/>
-`recursive_directory_iterator` Którego stworzonego elementu `recursive_directory_iterator` jest kopią.
+*recursive_directory_iterator*\
+`recursive_directory_iterator` Którego konstrukcja`recursive_directory_iterator` ma być kopią.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor tworzy iterator sekwencja kończenia. Magazyn drugie i trzecie konstruktory **false** w `no_push` i `directory_options::none` w `myoptions`, następnie spróbować otworzyć i przeczytać *pval* jako katalog. Jeśli operacja się powiedzie, mogą zainicjować `mystack` i `myentry` do wyznaczenia pierwszy filename-directory zagnieżdżonych sekwencji; w przeciwnym razie produkują iterator sekwencja kończenia.
+Pierwszy Konstruktor tworzy iterator końca sekwencji. Drugi i trzeci konstruktory przechowują **fałszywe** w `directory_options::none` `no_push` i `myoptions`w, a następnie próbują otworzyć i odczytać *Pval* jako katalog. Jeśli zakończyło się `mystack` pomyślnie `myentry` , zainicjują i wyznaczyli pierwszy plik spoza katalogu w sekwencji zagnieżdżonej; w przeciwnym razie tworzy iterator końca sekwencji.
 
-Czwarty i piąty Konstruktor działa tak samo jak drugi i trzeci, chyba że najpierw zapisać *zdecyduje* w `myoptions`. Domyślne construtors zachowują się zgodnie z oczekiwaniami.
+Czwarte i piąte konstruktory zachowują się tak samo, jak drugi i trzeci, z  tą różnicą, że najpierw `myoptions`są załączane. Wartość domyślna construtors zachowuje się zgodnie z oczekiwaniami.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[Nawigacja w systemie plików (C++)](../standard-library/file-system-navigation.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)\
+[Nawigacja w systemie plikówC++()](../standard-library/file-system-navigation.md)

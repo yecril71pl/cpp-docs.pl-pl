@@ -1,52 +1,69 @@
 ---
 title: Ostrzeżenie LNK4217 narzędzi konsolidatora
-ms.date: 04/15/2019
+ms.date: 07/23/2019
 f1_keywords:
 - LNK4217
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: f1ea3cd0a8770571ae5c55d29a901c134311550f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1301dd53f71c616d7b7af346923a54c42903c9fd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410229"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450863"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Ostrzeżenie LNK4217 narzędzi konsolidatora
 
-> symbol "*symbol*"zdefiniowane w"*filename_1.obj*"zaimportowanych przez"*filename_2.obj*"w funkcji"*funkcja*"
+> Symbol "*symbol*" zdefiniowany w elemencie "*filename_1. obj*" został zaimportowany przez element "*filename_2. obj*" w funkcji "*Function*"
 
-[__declspec(DllImport)](../../cpp/dllexport-dllimport.md) został określony dla symbolu, nawet jeśli symbol jest zdefiniowana w pliku obiektu tego samego obrazu. Usuń `__declspec(dllimport)` modyfikator, aby rozwiązać tego ostrzeżenia.
+określono [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) dla symbolu, chociaż symbol jest zdefiniowany w pliku obiektu w tym samym obrazie. Usuń modyfikator `__declspec(dllimport)` , aby rozwiązać to ostrzeżenie.
 
 ## <a name="remarks"></a>Uwagi
 
-*symbol* jest nazwa symbolu, który jest zdefiniowany w obrazie. *Funkcja* jest funkcją, która importuje symbolu.
+*symbol* jest nazwą symbolu, który jest zdefiniowany w obrazie. *Funkcja* jest funkcją, która importuje symbol.
 
-To ostrzeżenie nie jest wyświetlany podczas kompilowania przy użyciu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opcji.
+To ostrzeżenie nie pojawia się podczas kompilowania przy użyciu opcji [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) .
 
-LNK4217 może również wystąpić, Jeśli spróbujesz połączyć dwa moduły ze sobą, jeśli zamiast tego należy skompilować moduł drugi z biblioteką importu modułu pierwszy.
+LNK4217 narzędzi KONSOLIDATORA może również wystąpić, jeśli spróbujesz połączyć dwa moduły jednocześnie, gdy zamiast tego należy skompilować drugi moduł z biblioteką importu pierwszego modułu.
 
 ```cpp
-// LNK4217.cpp
-// compile with: /LD
-#include "windows.h"
-__declspec(dllexport) void func(unsigned short*) {}
+// main.cpp
+__declspec(dllimport) void func();
+
+int main()
+{
+    func();
+    return 0;
+}
+
 ```
 
-Następnie wyszukaj maszynę
+A następnie
 
 ```cpp
-// LNK4217b.cpp
+// tt.cpp
 // compile with: /c
-#include "windows.h"
-__declspec(dllexport) void func(unsigned short*) {}
+void func() {}
 ```
 
-Próba połączenia się te dwa moduły spowoduje LNK4217. Skompiluj przykład drugi z biblioteką importu pierwszego przykładu, aby rozwiązać.
+Próba skompilowania tych dwóch modułów, jak pokazano w tym miejscu, spowoduje LNK4217 narzędzi KONSOLIDATORA:
+
+```cmd
+cl.exe /c main.cpp tt.cpp
+link.exe main.obj tt.obj
+```
+
+Aby naprawić ten błąd, po skompilowaniu dwóch plików, należy przekazać TT. obj do lib. exe, aby utworzyć plik. lib, a następnie połączyć Main. obj z TT. lib, jak pokazano poniżej:
+
+```cmd
+cl.exe /c main.cpp tt.cpp
+lib.exe tt.obj /export:func /def
+link.exe main.obj tt.lib
+```
 
 ## <a name="see-also"></a>Zobacz także
 
 [Linker Tools Warning LNK4049](linker-tools-warning-lnk4049.md) \
-[Linker Tools Warning LNK4286](linker-tools-warning-lnk4286.md) \
+[Ostrzeżenie narzędzi konsolidatora LNK4286](linker-tools-warning-lnk4286.md) \
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

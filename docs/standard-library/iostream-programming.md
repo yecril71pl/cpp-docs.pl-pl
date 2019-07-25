@@ -17,18 +17,18 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 56b6d2a69372c9c8232823feb085780c38c00f0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385163"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449066"
 ---
 # <a name="iostream-programming"></a>iostream Programming
 
-Ta sekcja zawiera [ogólny opis](../standard-library/what-a-stream-is.md) z iostream klasy, a następnie w tym artykule opisano [strumieni danych wyjściowych](../standard-library/output-streams.md), [strumienie wejściowe](../standard-library/input-streams.md), i [wejścia/wyjścia strumienie](../standard-library/input-output-streams.md). Koniec sekcji zawiera informacje o zaawansowanych iostream — programowanie.
+Ta sekcja zawiera [ogólny opis](../standard-library/what-a-stream-is.md) klas iostream, a następnie opisuje strumienie [wyjściowe](../standard-library/output-streams.md), [strumienie wejściowe](../standard-library/input-streams.md)i [strumienie wejścia/wyjścia](../standard-library/input-output-streams.md). Koniec sekcji zawiera informacje na temat zaawansowanego programowania iostream.
 
-Istnieje również dyskusję na [bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md) i [stdext — przestrzeń nazw](../standard-library/stdext-namespace.md).
+Istnieje również dyskusja w [zakresie bezpieczeństwa wątków w bibliotece C++ standardowej](../standard-library/thread-safety-in-the-cpp-standard-library.md) i [przestrzeni nazw stdext](../standard-library/stdext-namespace.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -38,11 +38,11 @@ Istnieje również dyskusję na [bezpieczeństwo wątku w standardowej bibliotec
 
 [Strumienie wejściowe](../standard-library/input-streams.md)
 
-[Input/Output Streams](../standard-library/input-output-streams.md)
+[Strumienie wejściowe/wyjściowe](../standard-library/input-output-streams.md)
 
 [Niestandardowe manipulatory z argumentami](../standard-library/custom-manipulators-with-arguments.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Konwencje iostream](../standard-library/iostreams-conventions.md)<br/>
+[C++Biblioteka standardowa](../standard-library/cpp-standard-library-reference.md)\
+[Konwencje iostream](../standard-library/iostreams-conventions.md)

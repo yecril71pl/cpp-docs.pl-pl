@@ -1,21 +1,21 @@
 ---
-title: is_default_constructible Class
+title: Klasa is_default_constructible
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_default_constructible
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 7fc1c70a1244688888174b834fe653d5d6d2497b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336669"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452785"
 ---
-# <a name="isdefaultconstructible-class"></a>is_default_constructible Class
+# <a name="isdefaultconstructible-class"></a>Klasa is_default_constructible
 
-Sprawdza, czy typ ma konstruktora domyślnego.
+Testuje, czy typ ma konstruktora domyślnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,12 +26,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest typu klasy, która ma Konstruktor domyślny w przeciwnym razie przechowuje wartość false. Jest to równoważne do predykatu `is_constructible<T>`. Typ *T* musi być typem kompletnym **void**, lub tablicę nieznany powiązane z.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest typem klasy z konstruktorem domyślnym, w przeciwnym razie ma wartość false. Jest to odpowiednik predykatu `is_constructible<T>`. Typ *T* musi być kompletnym typem, **void**lub tablicą nieznanego powiązania.
 
 ## <a name="example"></a>Przykład
 
@@ -71,8 +71,8 @@ is_default_constructible<Simple2> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

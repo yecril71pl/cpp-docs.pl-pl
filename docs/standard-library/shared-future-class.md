@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412608"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450491"
 ---
 # <a name="sharedfuture-class"></a>shared_future — Klasa
 
-W tym artykule opisano *asynchronicznego zwrotu obiektu*. W przeciwieństwie [przyszłych](../standard-library/future-class.md) obiektu *dostawcę asynchronicznego* można skojarzyć z dowolną liczbą `shared_future` obiektów.
+Opisuje *asynchroniczny obiekt Return*. W przeciwieństwie do [przyszłego](../standard-library/future-class.md) obiektu *dostawca asynchroniczny* może być skojarzony z `shared_future` dowolną liczbą obiektów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,9 +38,9 @@ class shared_future;
 
 ## <a name="remarks"></a>Uwagi
 
-Nie wywołuj żadnych metod innych niż `valid`, `operator=`i destruktor na `shared_future` obiektu to *pusty*.
+Nie wywołuj żadnych metod innych `valid`niż, `operator=`i destruktora na `shared_future` obiekcie, który jest *pusty*.
 
-`shared_future` obiekty nie są zsynchronizowane. Wywoływanie metod na tym samym obiekcie z wielu wątków wprowadza dane sytuacji wyścigu, która ma nieprzewidywalne rezultaty.
+`shared_future`obiekty nie są zsynchronizowane. Wywoływanie metod na tym samym obiekcie z wielu wątków wprowadza rasę danych, który ma nieprzewidywalne wyniki.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,33 +48,33 @@ Nie wywołuj żadnych metod innych niż `valid`, `operator=`i destruktor na `sha
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[shared_future](#shared_future)|Konstruuje `shared_future` obiektu.|
+|[shared_future](#shared_future)|Konstruuje `shared_future` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[get](#get)|Pobiera wynik, który jest przechowywany w *asynchroniczny stan stowarzyszony*.|
-|[Nieprawidłowa](#valid)|Określa, czy obiekt nie jest pusty.|
-|[Czekaj](#wait)|Blokuje bieżący wątek, aż asynchronicznego stanu stowarzyszonego będzie gotowa.|
-|[wait_for](#wait_for)|Bloki, aż do asynchronicznego stanu stowarzyszonego jest gotowy, lub do określonego czasu upłynął.|
-|[wait_until](#wait_until)|Bloki, aż do asynchronicznego stanu stowarzyszonego jest gotowy, lub do momentu określonego punktu w czasie.|
+|[get](#get)|Pobiera wynik, który jest przechowywany w *skojarzonym stanie asynchronicznym*.|
+|[prawidłowa](#valid)|Określa, czy obiekt nie jest pusty.|
+|[trwa](#wait)|Blokuje bieżący wątek do momentu, gdy skojarzony stan asynchroniczny jest gotowy.|
+|[wait_for](#wait_for)|Bloki do momentu, aż skojarzony stan asynchroniczny jest gotowy lub dopóki nie upłynie określony czas.|
+|[wait_until](#wait_until)|Bloki do momentu, aż skojarzony stan asynchroniczny jest gotowy lub do określonego punktu w czasie.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[shared_future::operator =](#op_eq)|Przypisuje nowy asynchronicznego stanu stowarzyszonego.|
+|[shared_future:: operator =](#op_eq)|Przypisuje nowy, skojarzony stan asynchroniczny.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przyszłych >
+**Nagłówek:** \<przyszłe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="get"></a>  shared_future::Get —
+## <a name="get"></a>shared_future:: Get
 
-Pobiera wynik, który jest przechowywany w *asynchroniczny stan stowarzyszony*.
+Pobiera wynik, który jest przechowywany w *skojarzonym stanie asynchronicznym*.
 
 ```cpp
 const Ty& get() const;
@@ -86,17 +86,17 @@ void get() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wynik jest wyjątek, metoda ponownie zgłasza go. W przeciwnym razie wynik jest zwracany.
+Jeśli wynikiem jest wyjątek, Metoda ponownie zgłosi ją. W przeciwnym razie zwracany jest wynik.
 
-Zanim pobiera wynik, ta metoda blokują bieżący wątek, aż asynchronicznego stanu stowarzyszonego będzie gotowa.
+Przed pobraniem wyniku ta metoda blokuje bieżący wątek do momentu, gdy skojarzony stan asynchroniczny będzie gotowy.
 
-Przypadku częściowej specjalizacji `shared_future<Ty&>`, wartość przechowywana jest skutecznym odniesieniem do obiektu, który został przekazany do *dostawcę asynchronicznego* jako wartość zwracaną.
+W przypadku częściowej specjalizacji `shared_future<Ty&>`przechowywana wartość jest efektywnie odwołaniem do obiektu, który został przekazano do *dostawcy asynchronicznego* jako wartość zwracana.
 
-Ponieważ przechowywana wartość nie istnieje w przypadku specjalizacji `shared_future<void>`, metoda zwraca **void**.
+Ponieważ nie istnieje wartość składowana dla specjalizacji `shared_future<void>`, metoda zwraca wartość **void**.
 
-## <a name="op_eq"></a>  shared_future::operator =
+## <a name="op_eq"></a>shared_future:: operator =
 
-Transfery *asynchroniczny stan stowarzyszony* od określonego obiektu.
+Przenosi *skojarzony stan asynchroniczny* z określonego obiektu.
 
 ```cpp
 shared_future& operator=(shared_future&& Right) noexcept;
@@ -105,8 +105,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*<br/>
-Element `shared_future` obiektu.
+*Kliknij*\
+`shared_future` Obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -114,13 +114,13 @@ Element `shared_future` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy operator *po prawej stronie* nie posiada już stowarzyszonego stanu asynchronicznego po wykonaniu operacji.
+W przypadku pierwszego operatora *prawo* nie ma już skojarzonego stanu asynchronicznego po operacji.
 
-W przypadku drugiej metody *po prawej stronie* zachowuje jego asynchronicznie powiązanym stanie.
+W przypadku drugiej metody, *prawo* zachowuje swój skojarzony stan asynchroniczny.
 
-## <a name="shared_future"></a>  shared_future::shared_future — Konstruktor
+## <a name="shared_future"></a>shared_future:: shared_future — Konstruktor
 
-Konstruuje `shared_future` obiektu.
+Konstruuje `shared_future` obiekt.
 
 ```cpp
 shared_future() noexcept;
@@ -131,20 +131,20 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*<br/>
-A [przyszłych](../standard-library/future-class.md) lub `shared_future` obiektu.
+*Kliknij*\
+[Przyszłość](../standard-library/future-class.md) lub `shared_future` obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor konstruuje `shared_future` obiektu, który nie ma *asynchroniczny stan stowarzyszony*.
+Pierwszy Konstruktor konstruuje `shared_future` obiekt, który nie ma *skojarzonego stanu asynchronicznego*.
 
-Drugie i trzecie konstruktory konstruowania `shared_future` obiektu i transferu asynchronicznego stanu stowarzyszonego z *po prawej stronie*. *Po prawej stronie* nie posiada już stowarzyszonego stanu asynchronicznego.
+Drugi i trzeci konstruktory konstruują `shared_future` obiekt i przesyłają skojarzony stan asynchroniczny z *prawej strony*. *Prawo* nie ma już skojarzonego stanu asynchronicznego.
 
-Czwarty Konstruktor konstruuje `shared_future` asynchronicznego stanu jako skojarzony obiekt, który ma taką samą *po prawej stronie*.
+Czwarty Konstruktor konstruuje `shared_future` obiekt, który ma ten sam skojarzony stan asynchroniczny jako *prawo*.
 
-## <a name="valid"></a>  shared_future::valid —
+## <a name="valid"></a>shared_future:: prawidłowe
 
-Określa, czy obiekt ma *asynchroniczny stan stowarzyszony*.
+Określa, czy obiekt ma *skojarzony stan asynchroniczny*.
 
 ```cpp
 bool valid() noexcept;
@@ -152,11 +152,11 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt ma asynchronicznego stanu stowarzyszonego; w przeciwnym razie **false**.
+ma **wartość true** , jeśli obiekt ma skojarzony stan asynchroniczny; w przeciwnym razie **false**.
 
-## <a name="wait"></a>  shared_future::wait —
+## <a name="wait"></a>shared_future:: wait
 
-Blokuje bieżący wątek, dopóki *asynchroniczny stan stowarzyszony* jest *gotowe*.
+Blokuje bieżący wątek do momentu, gdy *skojarzony stan asynchroniczny* jest *gotowy*.
 
 ```cpp
 void wait() const;
@@ -164,11 +164,11 @@ void wait() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Asynchronicznego stanu stowarzyszonego jest gotowy, tylko wtedy, gdy jego dostawcę asynchronicznego jest przechowywana wartość zwracaną lub przechowywane wyjątek.
+Skojarzony stan asynchroniczny jest gotowy tylko wtedy, gdy jego dostawca asynchroniczny przechowuje wartość zwracaną lub zgłosił wyjątek.
 
-## <a name="wait_for"></a>  shared_future::wait_for —
+## <a name="wait_for"></a>shared_future::wait_for
 
-Blokuje bieżący wątek, dopóki nie zostanie asynchronicznego stanu stowarzyszonego *gotowe* lub dopóki nie upłynie czas określony.
+Blokuje bieżący wątek do momentu, aż skojarzony stan asynchroniczny jest *gotowy* lub dopóki nie upłynie określony czas.
 
 ```cpp
 template <class Rep, class Period>
@@ -178,20 +178,20 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parametry
 
-*Rel_time*<br/>
-A [chrono::duration](../standard-library/duration-class.md) obiekt, który określa przedział czasu maksymalna, która blokuje wątek.
+*Rel_time*\
+Obiekt [chrono::d wersja](../standard-library/duration-class.md) , który określa maksymalny przedział czasu, który jest blokowany przez wątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [future_status —](../standard-library/future-enums.md#future_status) oznacza Przyczyna zwrotu.
+Element [future_status](../standard-library/future-enums.md#future_status) , który wskazuje przyczynę zwrócenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest asynchronicznego stanu stowarzyszonego *gotowe* tylko wtedy, gdy jego dostawcę asynchronicznego jest przechowywana wartość zwracaną lub przechowywane wyjątek.
+Skojarzony stan asynchroniczny jest *gotowy* tylko wtedy, gdy jego dostawca asynchroniczny przechowuje wartość zwracaną lub zgłosił wyjątek.
 
-## <a name="wait_until"></a>  shared_future::wait_until —
+## <a name="wait_until"></a>shared_future::wait_until
 
-Blokuje bieżący wątek, dopóki nie zostanie asynchronicznego stanu stowarzyszonego *gotowe* lub dopiero po określonym czasie punktu.
+Blokuje bieżący wątek do momentu, aż skojarzony stan asynchroniczny jest *gotowy* lub do momentu po określonym punkcie czasu.
 
 ```cpp
 template <class Clock, class Duration>
@@ -201,18 +201,18 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*Abs_time*<br/>
-A [chrono::time_point](../standard-library/time-point-class.md) obiektu, który określa czas, po którym można odblokować wątku.
+*Abs_time*\
+Obiekt [chrono:: time_point](../standard-library/time-point-class.md) , który określa czas, po którym wątek może zostać odblokowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [future_status —](../standard-library/future-enums.md#future_status) oznacza Przyczyna zwrotu.
+Element [future_status](../standard-library/future-enums.md#future_status) , który wskazuje przyczynę zwrócenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Asynchronicznego stanu stowarzyszonego jest gotowy, tylko wtedy, gdy jego dostawcę asynchronicznego jest przechowywana wartość zwracaną lub przechowywane wyjątek.
+Skojarzony stan asynchroniczny jest gotowy tylko wtedy, gdy jego dostawca asynchroniczny przechowuje wartość zwracaną lub zgłosił wyjątek.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

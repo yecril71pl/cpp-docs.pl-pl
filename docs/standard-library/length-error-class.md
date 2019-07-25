@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-ms.openlocfilehash: 67de20907dcf13fa54119d8886aabc8d521165cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c88b9e3af5d00a3d2c0b3146783b0babe9d0a01a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223972"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447597"
 ---
 # <a name="lengtherror-class"></a>length_error — Klasa
 
-Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych do zgłaszania próba wygenerowania zbyt długo, należy określić obiekt.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych w celu zgłoszenia próby wygenerowania obiektu zbyt długo.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwracana przez [co](../standard-library/exception-class.md) to jest kopia[danych](../standard-library/basic-string-class.md#data) **komunikatów**`.`.
 
 ## <a name="example"></a>Przykład
 
@@ -79,9 +79,9 @@ Type class std::length_error
 
 **Nagłówek:** \<stdexcept >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[logic_error, klasa](../standard-library/logic-error-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Klasa logic_error](../standard-library/logic-error-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

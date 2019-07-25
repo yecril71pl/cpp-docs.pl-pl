@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cfloat header
 ms.assetid: 25ec4ab9-3c1d-46e3-9e68-ad9a8762cadb
-ms.openlocfilehash: 7a839c7c8d06c29523b1b0d612355abcabb5c9cb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0ce5a4612363dde1daa991d4f84eb8a77aebaaa5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244921"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449007"
 ---
 # <a name="ltcfloatgt"></a>&lt;cfloat&gt;
 
-Dołącza nagłówek biblioteki standardowej C \<float.h >.
+Zawiera nagłówek \<standardowej biblioteki C w liczbie zmiennoprzecinkowej >.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,6 +70,6 @@ Dołącza nagłówek biblioteki standardowej C \<float.h >.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

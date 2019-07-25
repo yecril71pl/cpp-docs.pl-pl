@@ -1,21 +1,21 @@
 ---
-title: is_trivially_move_constructible Class
+title: Klasa is_trivially_move_constructible
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_move_constructible
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-ms.openlocfilehash: a1aef356716fac903b4e44a358602c709572e8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 279da956eaff21c39c6e5ca563f26989105f7e74
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413398"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448361"
 ---
-# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible Class
+# <a name="istriviallymoveconstructible-class"></a>Klasa is_trivially_move_constructible
 
-Konstruktor przenoszący sprawdza, czy typ ma proste.
+Testuje, czy typ ma Konstruktor prostego przenoszenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,37 +26,37 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma Konstruktor przenoszący prosta w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma prosty Konstruktor przenoszenia, w przeciwnym razie ma wartość false.
 
-Konstruktor przenoszący dla klasy *Ty* jest proste jeśli:
+Konstruktor przenoszenia dla klasy *ty* jest prosty, jeśli:
 
-jest niejawnie zadeklarowana
+jest on niejawnie zadeklarowany
 
-jego typy parametrów są równoważne do tych deklaracji niejawnej
+jego typy parametrów są równoważne z niejawną deklaracją
 
-Klasa *Ty* ma żadnych funkcji wirtualnych
+Klasa *ty* nie ma żadnych funkcji wirtualnych
 
-Klasa *Ty* ma nie baz wirtualnych
+Klasa *ty* nie ma wirtualnych baz.
 
-Klasa nie ma danych niestatycznych elementów członkowskich
+Klasa nie ma niestatycznych elementów członkowskich danych
 
-wszystkie bezpośrednio baz klasy *Ty* ma konstruktorów przenoszących prosta
+wszystkie bezpośrednie bazy klasy *ty* mają konstruktorów prostego przenoszenia
 
-klasy wszystkie składowe danych niestatycznych typu klasy ma konstruktorów przenoszących prosta
+klasy wszystkich niestatycznych składowych danych typu klasy mają konstruktorów prostych przenoszenia
 
-klasy wszystkie składowe danych niestatycznych typu tablicowego klasy ma konstruktorów przenoszących prosta
+klasy wszystkich niestatycznych składowych danych typu Array klasy mają konstruktorów prostego przenoszenia
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-ms.openlocfilehash: 0c3037c007e9388485f9553f9d2b0a69a1980b9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a1f72ae3e6860d8ab532a72a1776b77c7204f48
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410827"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450915"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Tworzenie manipulatorów bez argumentów
 
-Zapisywanie manipulatory, które nie korzystają z argumentami wymaga pochodnym klasy ani złożone makra używane. Załóżmy, że drukarka wymaga pary \<ESC > [tak, aby przejść do trybu pogrubienie. Ta para można wstawić bezpośrednio do strumienia:
+Pisanie manipulowania, które nie używają argumentów, nie wymaga klasy pochodnej ani nie korzysta ze złożonych makr. Załóżmy, że drukarka wymaga pary \<ESC > [aby wprowadzić tryb pogrubiony. Tę parę można wstawić bezpośrednio do strumienia:
 
 ```cpp
 cout << "regular " << '\033' << '[' << "boldface" << endl;
 ```
 
-Lub można zdefiniować `bold` manipulator, który wstawia znaki:
+Można też zdefiniować `bold` manipulator, który wstawia znaki:
 
 ```cpp
 ostream& bold(ostream& os) {
@@ -28,7 +28,7 @@ ostream& bold(ostream& os) {
 cout << "regular " << bold << "boldface" << endl;
 ```
 
-Globalnie zdefiniowanych `bold` funkcja przyjmuje `ostream` odwoływać się do argumentu i zwraca `ostream` odwołania. Nie jest funkcją składową lub znajomego, ponieważ nie wymaga dostępu do żadnych elementów Klasa prywatna. `bold` Funkcja łączy do strumienia, ponieważ strumień `<<` operator jest przeciążony do akceptowania tego typu funkcji, za pomocą deklaracji, która wygląda mniej więcej tak:
+Funkcja zdefiniowana `bold` globalnie `ostream` przyjmuje argument `ostream` odwołania i zwraca odwołanie. Nie jest to funkcja członkowska ani zaprzyjaźniona, ponieważ nie potrzebuje dostępu do żadnych prywatnych elementów klasy. Funkcja nawiązuje połączenie ze strumieniem, ponieważ `<<` operator strumienia jest przeciążony do akceptowania tego typu funkcji przy użyciu deklaracji, która wygląda następująco: `bold`
 
 ```cpp
 _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
@@ -40,8 +40,8 @@ _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
 }
 ```
 
-Ta funkcja umożliwia rozszerzanie innych przeciążonych operatorów. W tym przypadku jest też przypadkowe, `bold` wstawia znaki do strumienia. Funkcja jest wywoływana, gdy go jest wstawiany do strumienia, niekoniecznie drukowaniu sąsiadujących znaków. W związku z tym drukowanie, może być opóźniony ze względu na buforowanie strumienia.
+Za pomocą tej funkcji można rozłożyć inne przeciążone operatory. W tym przypadku jest to przypadkowe, które `bold` wstawia znaki do strumienia. Funkcja jest wywoływana, gdy zostanie wstawiona do strumienia, niekoniecznie po wydrukowaniu sąsiadujących znaków. W związku z tym drukowanie może być opóźnione ze względu na buforowanie strumienia.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Strumienie wyjściowe](../standard-library/output-streams.md)<br/>
+[Strumienie wyjściowe](../standard-library/output-streams.md)

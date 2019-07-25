@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412218"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447428"
 ---
 # <a name="submatch-class"></a>sub_match — Klasa
 
-W tym artykule opisano poddopasowanie.
+Opisuje poddopasowanie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,20 +41,20 @@ class sub_match
 
 ## <a name="parameters"></a>Parametry
 
-*BidIt*<br/>
-Typ iteratora poddopasowania.
+*BidIt*\
+Typ iteratora dla podpasowań.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który określa sekwencję znaków pasujących do grupy przechwytywania w wywołaniu [regex_match —](../standard-library/regex-functions.md#regex_match) lub [regex_search —](../standard-library/regex-functions.md#regex_search). Obiekty typu [match_results, klasa](../standard-library/match-results-class.md) przechowują tablicę tych obiektów, po jednym dla każdej grupy przechwytywania w wyrażeniu regularnym, który został użyty w wyszukiwaniu.
+Klasa szablonu opisuje obiekt, który wyznacza sekwencję znaków, które pasują do grupy przechwytywania w wywołaniu [regex_match](../standard-library/regex-functions.md#regex_match) lub [regex_search](../standard-library/regex-functions.md#regex_search). Obiekty typu [match_results](../standard-library/match-results-class.md) zawierają tablicę tych obiektów, jedną dla każdej grupy przechwytywania w wyrażeniu regularnym, która została użyta w wyszukiwaniu.
 
-Jeśli grupa przechwytywania nie było dopasować element członkowski danych obiektu `matched` przechowuje wartość FAŁSZ i dwoma iteratorami `first` i `second` (dziedziczone od podstawy `std::pair`) są takie same. Jeśli zostały dopasowane do grupy przechwytywania, `matched` ma wartość true, przechowuje iterator `first` wskazuje na pierwszy znak w sekwencji docelowej, który pasuje do grupy przechwytywania, a iterator `second` wskazuje jedną pozycję poza ostatnim znakiem w elemencie docelowym Sekwencja dopasowanym do grupy przechwytywania. Należy zauważyć, że o zerowej długości dopasowania elementu członkowskiego `matched` posiada wartość true, dwa Iteratory są równe, a oba będą wskazywały na pozycji dopasowania.
+Jeśli grupa przechwytywania nie była `matched` zgodna z elementem członkowskim danych obiektu, ma wartość false, a dwa `first` Iteratory i `second` (dziedziczone z bazy `std::pair`) są równe. Jeśli grupa przechwytywania została dopasowana, `matched` ma wartość true, iterator `first` wskazuje na pierwszy znak w sekwencji docelowej, która pasuje do grupy przechwytywania, a następnie punkty iteratora `second` po ostatnim znaku w elemencie docelowym Sekwencja zgodna z grupą przechwytywania. Należy zauważyć, że w przypadku dopasowania o zerowej `matched` długości element członkowski ma wartość true, dwa Iteratory będą równe, a oba będą wskazywały na pozycję dopasowania.
 
-Dopasowanie o zerowej długości może wystąpić, gdy grupa przechwytywania składa się wyłącznie z potwierdzenie lub z powtórzenia umożliwiająca Brak powtórzeń. Na przykład:
+Dopasowanie o zerowej długości może wystąpić, gdy grupa przechwytywania składa się wyłącznie z potwierdzenia lub powtórzenia, które dopuszcza zero powtórzeń. Przykład:
 
-"^" pasuje do sekwencji docelowej ";" `sub_match` obiekt odpowiadający 0 grupę przechwytywania zawiera Iteratory zarówno wskaż pierwszego znaku w sekwencji.
+"^" pasuje do sekwencji docelowej "a"; `sub_match` obiekt odpowiadający grupie przechwytywania 0 przechowuje Iteratory wskazujące na pierwszy znak w sekwencji.
 
-"b(a*) b" pasuje do sekwencji docelowej "bb"; `sub_match` obiekt odpowiadający grupę przechwytywania 1 zawiera Iteratory zarówno wskaż drugim znaku w sekwencji.
+"b (a *) b" pasuje do sekwencji docelowej "bb"; `sub_match` obiekt odpowiadający grupy przechwytywania 1 przechowuje Iteratory, które wskazują drugi znak w sekwencji.
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -64,20 +64,20 @@ Dopasowanie o zerowej długości może wystąpić, gdy grupa przechwytywania sk�
 |[iterator](#iterator)|Typ iteratora.|
 |[value_type](#value_type)|Typ elementu.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[compare](#compare)|Porównaj poddopasowanie względem sekwencji.|
-|[Długość](#length)|Zwraca długość poddopasowanie.|
-|[dopasowane](#matched)|Wskazuje, czy dopasowanie zakończyła się pomyślnie.|
+|[porównaniu](#compare)|Porównaj poddopasowanie z sekwencją.|
+|[length](#length)|Zwraca długość poddopasowania.|
+|[uzgodni](#matched)|Wskazuje, czy dopasowanie zakończyło się pomyślnie.|
 |[str](#str)|Konwertuje poddopasowanie na ciąg.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[Operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Poddopasowanie rzutowania na ciąg.|
+|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Rzutuje poddopasowanie na ciąg.|
 
 ## <a name="example"></a>Przykład
 
@@ -133,13 +133,13 @@ compare(sub) == 0
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wyrażenia regularnego >
+**Nagłówek:** \<> wyrażeń regularnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="compare"></a>  sub_match::COMPARE
+## <a name="compare"></a>sub_match:: Compare
 
-Porównaj poddopasowanie względem sekwencji.
+Porównaj poddopasowanie z sekwencją.
 
 ```cpp
 int compare(const sub_match& right) const;
@@ -149,28 +149,28 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*Kliknij*\
 Poddopasowanie do porównania.
 
-*str*<br/>
+*str*\
 Ciąg do porównania.
 
-*ptr*<br/>
-Sekwencja zakończony wartością null do porównania.
+*PTR*\
+Sekwencja zakończona wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego porównuje dopasowane sekwencji `[first, second)` dopasowane sekwencji `[right.first, right.second)`. Funkcja drugiego członka porównuje dopasowane sekwencji `[first, second)` sekwencję znaków `[right.begin(), right.end())`. Trzecia funkcja członkowska porównuje dopasowane sekwencji `[first, second)` sekwencję znaków `[right, right + std::char_traits<value_type>::length(right))`.
+Pierwsza funkcja członkowska porównuje dopasowaną `[first, second)` sekwencję do dopasowanej sekwencji `[right.first, right.second)`. Druga funkcja członkowska porównuje dopasowaną `[first, second)` sekwencję do sekwencji `[right.begin(), right.end())`znaków. Trzecia funkcja członkowska porównuje dopasowaną `[first, second)` sekwencję do sekwencji `[right, right + std::char_traits<value_type>::length(right))`znaków.
 
 Każda funkcja zwraca:
 
-wartość ujemną, jeśli pierwsza wartość różne dopasowane sekwencji porównuje mniej niż odpowiadający mu element w sekwencji operand (zgodnie z ustaleniami `std::char_traits<value_type>::compare`), czy dwa mają Wspólny prefiks, ale nie do sekwencji docelowej
+wartość ujemna, jeśli pierwsza różna wartość w dopasowanej sekwencji porównuje mniej niż odpowiadający element w sekwencji operandu (zgodnie z definicją `std::char_traits<value_type>::compare`przez) lub jeśli dwa mają wspólny prefiks, ale sekwencja docelowa jest dłuższa
 
-zero, jeśli dwa porównywane elementów i tę samą długość
+zero, jeśli dwa porównania są równe elementu przez element i mają tę samą długość
 
-w przeciwnym razie wartość dodatnią
+wartość dodatnia w przeciwnym razie
 
-## <a name="difference_type"></a>  sub_match::difference_type
+## <a name="difference_type"></a>sub_match::d ifference_type
 
 Typ różnicy iteratora.
 
@@ -180,9 +180,9 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typedef jest synonimem dla `iterator_traits<BidIt>::difference_type`.
+Element typedef jest synonimem dla `iterator_traits<BidIt>::difference_type`.
 
-## <a name="iterator"></a>  sub_match::iterator
+## <a name="iterator"></a>sub_match:: iterator
 
 Typ iteratora.
 
@@ -192,11 +192,11 @@ typedef BidIt iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typedef jest synonimem dla argument typu szablonu `Bidit`.
+Element typedef jest synonimem dla argumentu `Bidit`typu szablonu.
 
-## <a name="length"></a>  sub_match::length
+## <a name="length"></a>sub_match:: length
 
-Zwraca długość poddopasowanie.
+Zwraca długość poddopasowania.
 
 ```cpp
 difference_type length() const;
@@ -204,11 +204,11 @@ difference_type length() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca długość dopasowane sekwencji lub zero, jeśli nie było żadnych dopasowane sekwencji.
+Funkcja członkowska zwraca długość dopasowanej sekwencji lub zero, jeśli nie ma dopasowanej sekwencji.
 
-## <a name="matched"></a>  sub_match::matched
+## <a name="matched"></a>sub_match:: MATCHED
 
-Wskazuje, czy dopasowanie zakończyła się pomyślnie.
+Wskazuje, czy dopasowanie zakończyło się pomyślnie.
 
 ```cpp
 bool matched;
@@ -216,11 +216,11 @@ bool matched;
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski przechowuje **true** tylko wtedy, gdy skojarzona z grupą przechwytywania `*this` było częścią dopasowanie wyrażenia regularnego.
+Składowa **ma wartość true** tylko wtedy, gdy grupa przechwytywania skojarzona z `*this` elementem była częścią wyrażenia regularnego.
 
-## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
+## <a name="op_basic_string_lt_value_type_gt"></a>sub_match:: operator basic_string&lt;value_type&gt;
 
-Poddopasowanie rzutowania na ciąg.
+Rzutuje poddopasowanie na ciąg.
 
 ```cpp
 operator basic_string<value_type>() const;
@@ -228,9 +228,9 @@ operator basic_string<value_type>() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego zwraca `str()`.
+Operator elementu członkowskiego `str()`zwraca.
 
-## <a name="str"></a>  sub_match::str
+## <a name="str"></a>sub_match:: str
 
 Konwertuje poddopasowanie na ciąg.
 
@@ -240,9 +240,9 @@ basic_string<value_type> str() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca `basic_string<value_type>(first, second)`.
+Funkcja członkowska zwraca `basic_string<value_type>(first, second)`wartość.
 
-## <a name="value_type"></a>  sub_match::value_type
+## <a name="value_type"></a>sub_match::value_type
 
 Typ elementu.
 
@@ -252,9 +252,9 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typedef jest synonimem dla `iterator_traits<BidIt>::value_type`.
+Element typedef jest synonimem dla `iterator_traits<BidIt>::value_type`.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)
