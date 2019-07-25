@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-ms.openlocfilehash: bb3aca47b61bdcc5b28eeedc1a6b4edefc303c4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330c97cd945e161d2bf47deb377dd732bf53b3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383597"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455982"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable Class
 
-Sprawdza, czy typ ma operator przypisania kopiowania, który jest znany w kompilatorze nie zostać zgłoszony.
+Testuje, czy typ ma operator przypisania kopiowania, który jest znany przez kompilator, aby nie zgłaszać.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,20 +26,20 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, dla którego można się odwoływać typu *T* gdzie `is_nothrow_assignable<T&, const T&>` przechowuje wartość PRAWDA; w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true dla typu referencyjnego *T* , gdzie `is_nothrow_assignable<T&, const T&>` ma wartość true; w przeciwnym razie ma wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_nothrow_assignable, klasa](../standard-library/is-nothrow-assignable-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_nothrow_assignable, klasa](../standard-library/is-nothrow-assignable-class.md)

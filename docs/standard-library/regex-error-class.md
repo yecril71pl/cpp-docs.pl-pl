@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: eed961ea698591935c22fc748ff79583ae636b27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52b6bfd74a08200f7d924d2601b85718a941dd85
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369621"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451657"
 ---
 # <a name="regexerror-class"></a>regex_error — Klasa
 
-Raporty obiektu basic_regex zła.
+Zgłasza zły obiekt basic_regex.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,25 +27,25 @@ class regex_error
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje obiekt wyjątku wyzwolony, aby zgłosić błąd w konstrukcji lub użytkowania `basic_regex` obiektu.
+Klasa opisuje obiekt wyjątku zgłoszony, aby zgłosić błąd w konstrukcji lub użyciu `basic_regex` obiektu.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[regex_error](#regex_error)|Tworzy obiekt.|
+|[regex_error](#regex_error)|Konstruuje obiekt.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[Kod](#code)|Zwraca kod błędu.|
+|[kodu](#code)|Zwraca kod błędu.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wyrażenia regularnego >
+**Nagłówek:** \<> wyrażeń regularnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="example"></a>Przykład
 
@@ -82,7 +82,7 @@ int main()
 regex error: unbalanced parentheses
 ```
 
-## <a name="code"></a>  regex_error::Code
+## <a name="code"></a>regex_error:: Code
 
 Zwraca kod błędu.
 
@@ -92,11 +92,11 @@ regex_constants::error_code code() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcji zwraca wartość, która została przekazana do konstruktora obiektu.
+Funkcja członkowska zwraca wartość, która została przeniesiona do konstruktora obiektu.
 
-## <a name="regex_error"></a>  regex_error::regex_error
+## <a name="regex_error"></a>regex_error::regex_error
 
-Tworzy obiekt.
+Konstruuje obiekt.
 
 ```cpp
 regex_error(regex_constants::error_code error);
@@ -104,20 +104,20 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parametry
 
-*Błąd*<br/>
+*Porn*\
 Kod błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor konstruuje obiekt, który przechowuje wartość *błąd*.
+Konstruktor konstruuje obiekt, który zawiera *błąd*wartości.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants, klasa](../standard-library/regex-constants-class.md)<br/>
-[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
-[regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
-[\<wyrażenie regularne > operatorów](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>
-[\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Klasa regex_constants](../standard-library/regex-constants-class.md)\
+[\<Funkcje > wyrażenia regularnego](../standard-library/regex-functions.md)\
+[Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<Operatory > wyrażenia regularnego](../standard-library/regex-operators.md)\
+[Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Klasa regex_traits](../standard-library/regex-traits-class.md)\
+[\<wyrażenie regularne > Typedefs](../standard-library/regex-typedefs.md)

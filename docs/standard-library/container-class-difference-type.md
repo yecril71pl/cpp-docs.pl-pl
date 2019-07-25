@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - difference_type typedef
 ms.assetid: fae52485-d424-484e-9856-13505cfe528c
-ms.openlocfilehash: 5cef7bc44c2339e4ef2771cac346443dd67f94aa
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a62e5094a7994ac70df65f609a1822de9fd24b01
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221660"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457081"
 ---
 # <a name="container-classdifferencetype"></a>Kontener Class::difference_type
 
 > [!NOTE]
-> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
 
-Opisuje obiekt, który może reprezentować różnica między adresami którychkolwiek dwóch elementów w kontrolowanej sekwencji.
+Opisuje obiekt, który może reprezentować różnicę między adresami wszystkich dwóch elementów w kontrolowanej sekwencji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,4 +31,4 @@ Jest on opisany tutaj jako synonim dla nieokreślonego typu `T1` (zazwyczaj `All
 
 ## <a name="see-also"></a>Zobacz także
 
-[Sample Container, klasa](../standard-library/sample-container-class.md)<br/>
+[Sample Container, klasa](../standard-library/sample-container-class.md)

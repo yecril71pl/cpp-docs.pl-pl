@@ -34,16 +34,16 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&lt;=
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
-ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 35b0dc55bf5db2f799d9ade28cd5968ceab3332b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342975"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458956"
 ---
 # <a name="directoryentry-class"></a>directory_entry — klasa
 
-Opisuje obiekt, który jest zwracany przez `*X`, gdzie *X* jest [directory_iterator](../standard-library/directory-iterator-class.md) lub [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md).
+Opisuje obiekt, który jest zwracany przez `*X`, gdzie *X* to [directory_iterator](../standard-library/directory-iterator-class.md) lub [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,48 +53,48 @@ class directory_entry;
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa przechowuje obiekt typu [ścieżki](../standard-library/path-class.md). Przechowywany `path` może być wystąpieniem elementu [path — klasa](../standard-library/path-class.md) lub typu, który jest tworzony na podstawie `path`. Przechowuje także dwa [typ_pliku](../standard-library/filesystem-enumerations.md#file_type) wartości; taki, który reprezentuje, co jest znane o stanie nazwy pliku przechowywanego, a druga reprezentujący, co jest znane o stanie łącza symbolicznego, nazwy pliku.
+Klasa przechowuje obiekt typu [Path](../standard-library/path-class.md). Składowa `path` może być wystąpieniem [klasy Path](../standard-library/path-class.md) lub typu, który pochodzi od `path`. Przechowuje również dwie wartości [file_type](../standard-library/filesystem-enumerations.md#file_type) ; taki, który reprezentuje informacje o stanie przechowywanej nazwy pliku, oraz drugi, który reprezentuje informacje o stanie łącza symbolicznego nazwy pliku.
 
-Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
+Aby uzyskać więcej informacji i przykładów kodu, zobacz [Nawigacja systemu plikówC++()](../standard-library/file-system-navigation.md).
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[directory_entry](#directory_entry)|Domyślne konstruktory zachowują się zgodnie z oczekiwaniami. Czwarty Konstruktor inicjuje `mypath` do *pval*, `mystat` do *stat_arg*, i `mysymstat` do *symstat_arg*.|
+|[directory_entry](#directory_entry)|Konstruktory domyślne zachowują się zgodnie z oczekiwaniami. Czwarty Konstruktor inicjuje `mypath` się *Pval*, `mystat` *stat_arg*i `mysymstat` *symstat_arg*.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[Przypisz](#assign)|Funkcja elementu członkowskiego przypisuje *pval* do `mypath`, *stat* do `mystat`, i *symstat* do `mysymstat`.|
-|[Ścieżka](#path)|Funkcja elementu członkowskiego zwraca `mypath`.|
-|[replace_filename](#replace_filename)|Funkcji składowej zastępuje `mypath` z `mypath.parent_path()`  /  *pval*, `mystat` z *stat_arg*, i `mysymstat` z *symstat_arg*|
-|[status](#status)|Obie funkcje Członkowskie zwracają `mystat` prawdopodobnie najpierw zmienić.|
-|[symlink_status](#symlink_status)|Obie funkcje Członkowskie zwracają `mysymstat` prawdopodobnie najpierw zmienić.|
+|[ponownie](#assign)|Funkcja członkowska przypisuje *Pval* `mypath`do, *stat* do `mystat`i *symstat* do `mysymstat`.|
+|[Ścieżka](#path)|Funkcja członkowska zwraca `mypath`wartość.|
+|[replace_filename](#replace_filename)|Funkcja członkowska zastępuje `mypath` atrybutem  /  `mystat`  `mysymstat`   Pval, with stat_arg i with symstat_arg `mypath.parent_path()`|
+|[status](#status)|Obie funkcje członkowskie zwracają `mystat` prawdopodobnie najpierw zmienione.|
+|[symlink_status](#symlink_status)|Obie funkcje członkowskie zwracają `mysymstat` prawdopodobnie najpierw zmienione.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator!=](#op_neq)|Zamienia elementy listy kopię innej listy.|
-|[operator=](#op_as)|Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.|
-|[operator==](#op_eq)|Zwraca `mypath == right.mypath`.|
-|[Operator <](#op_lt)|Zwraca `mypath < right.mypath`.|
-|[Operator < =](#op_lteq)|Zwraca `!(right < *this)`.|
-|[operator>](#op_gt)|Zwraca `right < *this`.|
-|[operator>=](#op_gteq)|Zwraca `!(*this < right)`.|
-|[Operator const path_type &](#path_type)|Zwraca `mypath`.|
+|[operator!=](#op_neq)|Zamienia elementy listy na kopię innej listy.|
+|[operator=](#op_as)|Operatory przypisywania domyślnego elementu członkowskiego zachowują się zgodnie z oczekiwaniami.|
+|[operator==](#op_eq)|Zwraca `mypath == right.mypath`wartość.|
+|[< operatora](#op_lt)|Zwraca `mypath < right.mypath`wartość.|
+|[< operatora =](#op_lteq)|Zwraca `!(right < *this)`wartość.|
+|[operator>](#op_gt)|Zwraca `right < *this`wartość.|
+|[operator>=](#op_gteq)|Zwraca `!(*this < right)`wartość.|
+|[operator const path_type &](#path_type)|Zwraca `mypath`wartość.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<eksperymentalne/systemu plików&gt;
+**Nagłówek:** \<eksperymentalny/system plików&gt;
 
-**Namespace:** std::experimental::filesystem
+**Przestrzeń nazw:** std:: eksperymentalne:: filesystem
 
-## <a name="assign"></a> Przypisz
+## <a name="assign"></a>ponownie
 
-Funkcja elementu członkowskiego przypisuje *pval* do `mypath`, *stat_arg* do `mystat`, i *symstat_arg* do `mysymstat`.
+Funkcja członkowska przypisuje *Pval* `mypath`do, *stat_arg* do `mystat`i *symstat_arg* do `mysymstat`.
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -104,18 +104,18 @@ void assign(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parametry
 
-*pval*<br/>
-Ścieżka Nazwa pliku przechowywanego.
+*pval*\
+Ścieżka nazwy przechowywanego pliku.
 
-*stat_arg*<br/>
-Stan nazwy pliku przechowywanego.
+*stat_arg*\
+Stan nazwy przechowywanego pliku.
 
-*symstat_arg*<br/>
-Stan łącza symbolicznego nazwy pliku przechowywanego.
+*symstat_arg*\
+Stan linku symbolicznego nazwy przechowywanego pliku.
 
-## <a name="directory_entry"></a> directory_entry
+## <a name="directory_entry"></a>directory_entry
 
-Domyślne konstruktory zachowują się zgodnie z oczekiwaniami. Czwarty Konstruktor inicjuje `mypath` do *pval*, `mystat` do *stat_arg*, i `mysymstat` do *symstat_arg*.
+Konstruktory domyślne zachowują się zgodnie z oczekiwaniami. Czwarty Konstruktor inicjuje `mypath` się *Pval*, `mystat` *stat_arg*i `mysymstat` *symstat_arg*.
 
 ```cpp
 directory_entry() = default;
@@ -128,18 +128,18 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parametry
 
-*pval*<br/>
-Ścieżka Nazwa pliku przechowywanego.
+*pval*\
+Ścieżka nazwy przechowywanego pliku.
 
-*stat_arg*<br/>
-Stan nazwy pliku przechowywanego.
+*stat_arg*\
+Stan nazwy przechowywanego pliku.
 
-*symstat_arg*<br/>
-Stan łącza symbolicznego nazwy pliku przechowywanego.
+*symstat_arg*\
+Stan linku symbolicznego nazwy przechowywanego pliku.
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
-Funkcja elementu członkowskiego zwraca `!(*this == right)`.
+Funkcja członkowska zwraca `!(*this == right)`wartość.
 
 ```cpp
 bool operator!=(const directory_entry& right) const noexcept;
@@ -147,12 +147,12 @@ bool operator!=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) którą jest porównywany `directory_entry`.
+*Kliknij*\
+[Directory_entry](../standard-library/directory-entry-class.md) jest porównywany `directory_entry`z.
 
-## <a name="op_as"></a> operator =
+## <a name="op_as"></a>operator =
 
-Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.
+Operatory przypisywania domyślnego elementu członkowskiego zachowują się zgodnie z oczekiwaniami.
 
 ```cpp
 directory_entry& operator=(const directory_entry&) = default;
@@ -161,12 +161,12 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) są kopiowane do `directory_entry`.
+*Kliknij*\
+[Directory_entry](../standard-library/directory-entry-class.md) kopiowany do `directory_entry`.
 
-## <a name="op_eq"></a> operator ==
+## <a name="op_eq"></a>operator = =
 
-Funkcja elementu członkowskiego zwraca `mypath == right.mypath`.
+Funkcja członkowska zwraca `mypath == right.mypath`wartość.
 
 ```cpp
 bool operator==(const directory_entry& right) const noexcept;
@@ -174,12 +174,12 @@ bool operator==(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) którą jest porównywany `directory_entry`.
+*Kliknij*\
+[Directory_entry](../standard-library/directory-entry-class.md) jest porównywany `directory_entry`z.
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>zakład&lt;
 
-Funkcja elementu członkowskiego zwraca `mypath < right.mypath`.
+Funkcja członkowska zwraca `mypath < right.mypath`wartość.
 
 ```cpp
 bool operator<(const directory_entry& right) const noexcept;
@@ -187,12 +187,12 @@ bool operator<(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) którą jest porównywany `directory_entry`.
+*Kliknij*\
+[Directory_entry](../standard-library/directory-entry-class.md) jest porównywany `directory_entry`z.
 
-## <a name="op_lteq"></a> Operator&lt;=
+## <a name="op_lteq"></a>zakład&lt;=
 
-Funkcja elementu członkowskiego zwraca `!(right < *this)`.
+Funkcja członkowska zwraca `!(right < *this)`wartość.
 
 ```cpp
 bool operator&lt;=(const directory_entry& right) const noexcept;
@@ -200,12 +200,12 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) którą jest porównywany `directory_entry`.
+*Kliknij*\
+[Directory_entry](../standard-library/directory-entry-class.md) jest porównywany `directory_entry`z.
 
-## <a name="op_gt"></a> Operator&gt;
+## <a name="op_gt"></a>zakład&gt;
 
-Funkcja elementu członkowskiego zwraca `right < *this`.
+Funkcja członkowska zwraca `right < *this`wartość.
 
 ```cpp
 bool operator&gt;(const directory_entry& right) const noexcept;
@@ -213,12 +213,12 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) którą jest porównywany `directory_entry`.
+*Kliknij*\
+[Directory_entry](../standard-library/directory-entry-class.md) jest porównywany `directory_entry`z.
 
-## <a name="op_gteq"></a> Operator&gt;=
+## <a name="op_gteq"></a>zakład&gt;=
 
-Funkcja elementu członkowskiego zwraca `!(*this < right)`.
+Funkcja członkowska zwraca `!(*this < right)`wartość.
 
 ```cpp
 bool operator&gt;=(const directory_entry& right) const noexcept;
@@ -226,28 +226,28 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) którą jest porównywany `directory_entry`.
+*Kliknij*\
+[Directory_entry](../standard-library/directory-entry-class.md) jest porównywany `directory_entry`z.
 
-## <a name="path_type"></a> Operator const path_type &
+## <a name="path_type"></a>operator const path_type &
 
-Operator elementu członkowskiego zwraca `mypath`.
+Operator elementu członkowskiego `mypath`zwraca.
 
 ```cpp
 operator const std::experimental::filesystem::path&() const;
 ```
 
-## <a name="path"></a> Ścieżka
+## <a name="path"></a>ścieżka
 
-Funkcja elementu członkowskiego zwraca `mypath`.
+Funkcja członkowska zwraca `mypath`wartość.
 
 ```cpp
 const std::experimental::filesystem::path& path() const noexcept;
 ```
 
-## <a name="replace_filename"></a> replace_filename
+## <a name="replace_filename"></a>replace_filename
 
-Funkcji składowej zastępuje `mypath` z `mypath.parent_path()`  /  *pval*, `mystat` z *stat_arg*, i `mysymstat` z *symstat_arg*
+Funkcja członkowska zastępuje `mypath` atrybutem  /  `mystat`  `mysymstat`   Pval, with stat_arg i with symstat_arg `mypath.parent_path()`
 
 ```cpp
 void replace_filename(
@@ -258,22 +258,22 @@ void replace_filename(
 
 ### <a name="parameters"></a>Parametry
 
-*pval*<br/>
-Ścieżka Nazwa pliku przechowywanego.
+*pval*\
+Ścieżka nazwy przechowywanego pliku.
 
-*stat_arg*<br/>
-Stan nazwy pliku przechowywanego.
+*stat_arg*\
+Stan nazwy przechowywanego pliku.
 
-*symstat_arg*<br/>
-Stan łącza symbolicznego nazwy pliku przechowywanego.
+*symstat_arg*\
+Stan linku symbolicznego nazwy przechowywanego pliku.
 
-## <a name="status"></a> Stan
+## <a name="status"></a>Stany
 
-Obie funkcje Członkowskie zwracają `mystat` prawdopodobnie najpierw zmienić w następujący sposób:
+Obie funkcje członkowskie zwracają `mystat` prawdopodobnie najpierw zmienione w następujący sposób:
 
-1. Jeśli `status_known(mystat)` nic nie rób.
+1. Jeśli `status_known(mystat)` nie, nic nie rób.
 
-1. W przeciwnym razie, jeśli `!status_known(mysymstat) && !is_symlink(mysymstat)` następnie `mystat = mysymstat`.
+1. `!status_known(mysymstat) && !is_symlink(mysymstat)` W`mystat = mysymstat`przeciwnym razie.
 
 ```cpp
 file_status status() const;
@@ -282,12 +282,12 @@ file_status status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*ec*<br/>
-Kod stanu błędu.
+*udziela*\
+Kod błędu stanu.
 
-## <a name="symlink_status"></a> symlink_status —
+## <a name="symlink_status"></a>symlink_status
 
-Obie funkcje Członkowskie zwracają `mysymstat` prawdopodobnie najpierw zmienić w następujący sposób: Jeśli `status_known(mysymstat)` nic nie rób. W przeciwnym razie `mysymstat = symlink_status(mypval)`.
+Obie funkcje członkowskie zwracają `mysymstat` prawdopodobnie najpierw zmienione w następujący sposób: Jeśli `status_known(mysymstat)` nie, nic nie rób. W przeciwnym razie. `mysymstat = symlink_status(mypval)`
 
 ```cpp
 file_status symlink_status() const;
@@ -296,10 +296,10 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*ec*<br/>
-Kod stanu błędu.
+*udziela*\
+Kod błędu stanu.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem&gt;](../standard-library/filesystem.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem&gt;](../standard-library/filesystem.md)

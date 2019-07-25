@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 3dff4650cf0337a5ff54065d3b1644e11008ecfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413622"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455762"
 ---
 # <a name="ispod-class"></a>is_pod — Klasa
 
-Sprawdza, czy typ jest ZASOBNIKÓW.
+Testuje, czy typ jest POD.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,36 +27,36 @@ struct is_pod;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-`is_pod<T>::value` jest **true** Jeśli typ *T* to zwykłe stare dane (POD). W przeciwnym razie jest **false**.
+`is_pod<T>::value`ma **wartość true** , jeśli typ *T* jest zwykłymi danymi (pod). W przeciwnym razie ma **wartość false**.
 
-Arytmetyczne typy, Typy wyliczeniowe, typy wskaźników i wskaźnik na typy Członkowskie są ZASOBNIKÓW.
+Typy arytmetyczne, typy wyliczeniowe, typy wskaźników i wskaźniki do typów elementów członkowskich są poniżej.
 
-Kwalifikowana cv wersji typu ZASOBNIKA jest typem POD.
+Kwalifikowana dla CV wersja typu POD jest sama typem POD.
 
-Tablica ZASOBNIKA jest ZASOBNIKÓW.
+Tablica POD jest sama POD.
 
-Struktury lub Unii, są wszystkie których elementy członkowskie danych niestatycznych ZASOBNIKÓW, sama jest ZASOBNIKA jeśli ma ona:
+Struktura lub Unia, dla której wszystkie niestatyczne składowe danych znajdują się na poziomie, jest sama POD, jeśli ma:
 
-- Zgłoszone przez użytkownika konstruktorów.
+- Brak konstruktorów zadeklarowanych przez użytkownika.
 
-- Nie prywatnych lub chronionych niestatycznych składowych danych.
+- Brak prywatnych lub chronionych niestatycznych elementów członkowskich danych.
 
 - Nie mają klas bazowych.
 
-- Żadnych funkcji wirtualnych.
+- Brak funkcji wirtualnych.
 
-- Nie niestatycznych elementów członkowskich danych typu referencyjnego.
+- Brak niestatycznych elementów członkowskich danych typu referencyjnego.
 
-- Żaden operator przypisywania kopiowania zdefiniowanych przez użytkownika.
+- Brak zdefiniowanego przez użytkownika operatora przypisania kopiowania.
 
-- Nie destruktor zdefiniowany przez użytkownika.
+- Brak destruktora zdefiniowanego przez użytkownika.
 
-W związku z tym można rekursywnie kompilacji POD struktur i tablic, które zawierają ZASOBNIKA struktur i tablic.
+W związku z tym można rekursywnie kompilować struktury i tablice, które zawierają POD struktury i tablice.
 
 ## <a name="example"></a>Przykład
 
@@ -98,8 +98,8 @@ is_pod<throws> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

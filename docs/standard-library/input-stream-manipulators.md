@@ -5,19 +5,19 @@ helpviewer_keywords:
 - input streams, manipulators
 - input stream objects
 ms.assetid: 0addcacb-7b7b-4d70-9775-a59abc400fb3
-ms.openlocfilehash: 17f18aa127b84538229b3cf4e4246dfefb6c1f98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d9a6f00f1b5a52d4d388ace376676b45547bdd49
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404913"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451029"
 ---
 # <a name="input-stream-manipulators"></a>Manipulatory strumieni wejścia
 
-Manipulatory wiele takich jak [setprecision](../standard-library/iomanip-functions.md#setprecision), są zdefiniowane dla `ios` klasy i w związku z tym dotyczą strumienie wejściowe. Manipulatory kilka jednak faktycznie wpływa na obiekty strumienia wejściowego. Takie, które są najważniejsze są manipulatory podstawy, `dec`, `oct`, i `hex`, które określają podstawowy konwersji używane z międzynarodowymi numerami identyfikującymi ze strumienia wejściowego.
+Wiele manipulowania, takich jak [setprecision](../standard-library/iomanip-functions.md#setprecision), jest zdefiniowanych dla `ios` klasy i w związku z tym ma zastosowanie do strumieni wejściowych. Niektóre manipulowania, jednak faktycznie mają wpływ na obiekty strumienia wejściowego. Dla tych, które to najważniejsze, są podstawy manipulowania, `dec`, `oct`, i `hex`, które określają bazę konwersji używaną z liczbami ze strumienia wejściowego.
 
-Na wyodrębniania `hex` manipulator umożliwia przetwarzanie różnych formatów danych wejściowych. Na przykład c C, 0xc, 0xC, 0Xc i 0XC są interpretowane jako dziesiętna liczba całkowita 12. Dowolny znak inny niż od 0 do 9, od A do F, do f x i X kończy konwersji numerycznej. Ten sposób sekwencji `"124n5"` jest konwertowany na liczbę 124 [basic_ios::fail](../standard-library/basic-ios-class.md#fail) bitu.
+Przy wyodrębnianiu `hex` Manipulator umożliwia przetwarzanie różnych formatów wejściowych. Na przykład, c, C, 0xC, 0xC, 0Xc i 0XC są interpretowane jako dziesiętna liczba całkowita 12. Dowolny znak inny niż od 0 do 9, od A do F, a do f, x, i X kończy konwersję liczbową. W związku z `"124n5"` tym sekwencja jest konwertowana na liczbę 124 z ustawionym bitem [basic_ios:: Fail](../standard-library/basic-ios-class.md#fail) .
 
 ## <a name="see-also"></a>Zobacz także
 
-[Strumienie wejściowe](../standard-library/input-streams.md)<br/>
+[Strumienie wejściowe](../standard-library/input-streams.md)

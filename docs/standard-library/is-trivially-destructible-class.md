@@ -1,21 +1,21 @@
 ---
-title: is_trivially_destructible Class
+title: Klasa is_trivially_destructible
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_destructible
 helpviewer_keywords:
 - is_trivially_destructible
 ms.assetid: 3f7a787d-2448-40c5-ac51-a228318e02ce
-ms.openlocfilehash: 61d626c308338595a64031a45908ab299ae1a957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a978b7cc32e6de3d4b1d811b9aa6f52cf0370d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409775"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459640"
 ---
-# <a name="istriviallydestructible-class"></a>is_trivially_destructible Class
+# <a name="istriviallydestructible-class"></a>Klasa is_trivially_destructible
 
-Sprawdza, czy typ jest przypadku zniszczalnych.
+Testuje, czy typ jest bardzo zniszczalnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,19 +26,19 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest typem zniszczalnych i destruktor jest znany w kompilatorze korzystania z nie nietrywialnymi operacji. W przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest typem zniszczalnych i destruktor jest znany kompilatorowi, aby nie używał operacji innych niż uproszczone. W przeciwnym razie zawiera wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

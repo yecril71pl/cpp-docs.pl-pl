@@ -7,25 +7,25 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 65f2197a4a9ac37ad5910bfa8dbef457fda5f611
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244117"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453773"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Definiuje stosu klasy szablonu i dwóch szablonów pomocniczych.
+Definiuje stos klas szablonu i dwa szablony pomocnicze.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stosu >
+**Nagłówek:** \<> stosu
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 > [!NOTE]
-> \<Stosu > używa również biblioteki `#include <initializer_list>` instrukcji.
+> `#include <initializer_list>` Biblioteka \<> stosu używa również instrukcji.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -33,12 +33,12 @@ Definiuje stosu klasy szablonu i dwóch szablonów pomocniczych.
 
 |||
 |-|-|
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Sprawdza, czy obiekt stosu po lewej stronie operatora nie jest równy obiektowi stosu po prawej stronie.|
-|[Operator <](../standard-library/stack-operators.md#op_lt)|Sprawdza, czy obiekt stack po lewej stronie operatora jest mniejszy niż obiekt stosu po prawej stronie.|
-|[Operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Sprawdza, czy stosu obiektów po lewej stronie operatora jest mniejszy niż lub równy obiektowi stosu po prawej stronie.|
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Sprawdza, czy obiekt stack po lewej stronie operatora jest równy obiektowi stosu po prawej stronie.|
-|[operator>](../standard-library/stack-operators.md#op_gt)|Sprawdza, czy obiekt stack po lewej stronie operatora jest większy niż obiekt stosu po prawej stronie.|
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Sprawdza, czy obiekt stack po lewej stronie operatora jest większy lub równy obiektowi stosu po prawej stronie.|
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Testuje, czy obiekt stosu po lewej stronie operatora nie jest równy obiektowi stosu po prawej stronie.|
+|[< operatora](../standard-library/stack-operators.md#op_lt)|Testuje, czy obiekt stosu po lewej stronie operatora jest mniejszy niż obiekt stosu po prawej stronie.|
+|[zakład\<=](../standard-library/stack-operators.md#op_lt_eq)|Testuje, czy obiekt stosu po lewej stronie operatora jest mniejszy niż lub równy obiektowi stosu po prawej stronie.|
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testuje, czy obiekt stosu po lewej stronie operatora jest równy obiektowi stosu po prawej stronie.|
+|[operator>](../standard-library/stack-operators.md#op_gt)|Testuje, czy obiekt stosu po lewej stronie operatora jest większy niż obiekt stosu po prawej stronie.|
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testuje, czy obiekt stosu po lewej stronie operatora jest większy niż lub równy obiektowi stosu po prawej stronie.|
 
 ### <a name="functions"></a>Funkcje
 
@@ -50,10 +50,10 @@ Definiuje stosu klasy szablonu i dwóch szablonów pomocniczych.
 
 |||
 |-|-|
-|[stack, klasa](../standard-library/stack-class.md)|Szablon kontenera adaptera Klasa udostępniająca ograniczenia funkcjonalność ograniczania dostępu do elementu ostatnio dodane do niektórych podstawowych typ kontenera.|
+|[stack, klasa](../standard-library/stack-class.md)|Klasa adaptera kontenerów szablonu, która zapewnia ograniczenie funkcjonalności ograniczającej dostęp do elementu, który ostatnio został dodany do pewnego bazowego typu kontenera.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

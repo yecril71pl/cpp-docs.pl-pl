@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_reference class
 - is_reference
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
-ms.openlocfilehash: 793a84f03dba762ff686627004ffe3830a5d98d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99aae64bcaef1e17956c3b3001627d128f966352
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413570"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455681"
 ---
 # <a name="isreference-class"></a>is_reference — Klasa
 
@@ -27,12 +27,12 @@ struct is_reference;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest odwołaniem do obiektu lub funkcji, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest odwołaniem do obiektu lub funkcji, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -73,9 +73,9 @@ is_reference<int(&)()> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_pointer, klasa](../standard-library/is-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_pointer, klasa](../standard-library/is-pointer-class.md)

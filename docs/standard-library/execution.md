@@ -1,21 +1,21 @@
 ---
-title: '&lt;Wykonanie&gt;'
+title: '&lt;działania&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3bce34019f9ed4880d72a9d16c3c8b78dde0e0e3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267881"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457966"
 ---
-# <a name="ltexecutiongt"></a>&lt;Wykonanie&gt;
+# <a name="ltexecutiongt"></a>&lt;działania&gt;
 
-W tym artykule opisano zasady wykonywania równoległych algorytmów.
+Opisuje zasady wykonywania dla algorytmów równoległych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,19 +33,19 @@ namespace std::execution {
 
 |||
 |-|-|
-|[is_execution_policy — struktura](is-execution-policy-struct.md)|Wykrywa zasad wykonywania na potrzeby sygnatury funkcji z wyjątkiem z udziału rozpoznawania przeciążenie inaczej niejednoznaczne.|
-|[parallel_policy klasy](parallel-policy-class.md)|Używany jako unikatowy typ, do odróżniania przeciążenie algorytmu równoległego i wskazują, że wykonywanie algorytmu równoległego może odbywać się równolegle.|
-|[parallel_unsequenced_policy klasy](parallel-unsequenced-policy-class.md)|Używany jako unikatowy typ, do odróżniania przeciążenie algorytmu równoległego i wskazywać, że algorytmu równoległego wykonywania może być zrównoleglona i zwektoryzowana.|
-|[sequenced_policy klasy](sequenced-policy-class.md)|Używane jako typ unikatowy odróżnić przeciążenie algorytmu równoległego, i wymagają, że algorytmu równoległego wykonywania może nie być przetwarzane równolegle.|
+|[is_execution_policy, struktura](is-execution-policy-struct.md)|Wykrywa zasady wykonywania w celu wykluczania podpisów funkcji ze względu na niejednoznaczny udział w rozpoznawaniu przeciążenia.|
+|[Klasa parallel_policy](parallel-policy-class.md)|Używany jako unikatowy typ niejednoznacznego przeciążenia algorytmu równoległego i wskazujący, że wykonywanie algorytmu równoległego może być równoległe.|
+|[Klasa parallel_unsequenced_policy](parallel-unsequenced-policy-class.md)|Używany jako unikatowy typ niejednoznacznego przeciążenia algorytmu równoległego i wskazujący, że wykonywanie algorytmu równoległego może być równoległe i wektorowe.|
+|[Klasa sequenced_policy](sequenced-policy-class.md)|Używany jako unikatowy typ odróżnienia przeciążenia algorytmu równoległego i wymaganie, aby wykonywanie algorytmu równoległego mogło nie być równoległe.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wykonywania >
+**Nagłówek:** \<> wykonywania
 
-**Namespace:** stdext
+**Przestrzeń nazw:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki C++](cpp-standard-library-reference.md)

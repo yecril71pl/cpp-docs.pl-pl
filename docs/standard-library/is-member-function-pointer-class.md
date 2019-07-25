@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: 0eb758977abf889a7d5ec8cdec9213980493ba2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f51c389e86f2d0550a6418d04080f40f4bf4204
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351933"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456181"
 ---
 # <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer — Klasa
 
-Sprawdza, czy typ jest wskaźnikiem do funkcji członkowskiej.
+Testuje, czy typ jest wskaźnikiem do funkcji składowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest wskaźnikiem do funkcji składowej lub `cv-qualified` wskaźnik do elementu członkowskiego funkcji, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest wskaźnikiem do funkcji składowej lub `cv-qualified` wskaźnikiem do funkcji składowej, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -81,9 +81,9 @@ is_member_function_pointer<int (functional::*)()> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer, klasa](../standard-library/is-member-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_member_pointer, klasa](../standard-library/is-member-pointer-class.md)

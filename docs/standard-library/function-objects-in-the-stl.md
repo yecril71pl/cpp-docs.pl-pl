@@ -1,5 +1,5 @@
 ---
-title: Obiekty funkcji w standardowej bibliotece C++
+title: Obiekty funkcji w bibliotece C++ standardowej
 ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159369"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454075"
 ---
-# <a name="function-objects-in-the-c-standard-library"></a>Obiekty funkcji w standardowej bibliotece C++
+# <a name="function-objects-in-the-c-standard-library"></a>Obiekty funkcji w bibliotece C++ standardowej
 
-A *obiektu funkcyjnego*, lub *funktor*, jest dowolny typ, który implementuje operator(). Ten operator jest określany jako *operator wywołania* lub czasami *operatora aplikacji*. Standardowa biblioteka C++ używa obiektów funkcyjnych, przede wszystkim jako kryteria dla kontenerów i algorytmów sortowania.
+*Obiekt Function*lub *Funktor*jest dowolnym typem, który implementuje operator (). Ten operator jest nazywany *operatorem wywołania* lub czasami *operatorem aplikacji*. Biblioteka C++ standardowa używa obiektów funkcji głównie jako kryterium sortowania kontenerów i algorytmów.
 
-Obiekty funkcyjne zapewniają dwie główne korzyści wywoływanej funkcji proste. Pierwsza to, że obiekt funkcji może zawierać stanu. Drugim jest, że obiektu funkcyjnego jest typem i dlatego może służyć jako parametr szablonu.
+Obiekty funkcyjne zapewniają dwie główne zalety wywołania funkcji prostych. Pierwszy polega na tym, że obiekt funkcji może zawierać stan. Drugim jest to, że obiekt funkcji jest typem i dlatego może być używany jako parametr szablonu.
 
-## <a name="creating-a-function-object"></a>Tworzenie obiektu — funkcja
+## <a name="creating-a-function-object"></a>Tworzenie obiektu funkcji
 
-Aby utworzyć obiekt funkcji, Utwórz typ i zaimplementować operator(), takich jak:
+Aby utworzyć obiekt funkcji, należy utworzyć typ i zaimplementować operatora (), takie jak:
 
 ```cpp
 class Functor
@@ -43,11 +43,11 @@ int main()
 }
 ```
 
-Ostatni wiersz `main` funkcji pokazuje, jak wywołać obiekt funkcji. Tego wywołania wygląda wywołanie funkcji, ale jego faktycznego wywoływania operator() typu Funktor. Podobieństwo wywołanie obiektu funkcji i funkcji jest jak obiekt funkcji, który termin dostarczone.
+Ostatni wiersz `main` funkcji pokazuje, jak wywołać obiekt Function. To wywołanie wygląda jak wywołanie funkcji, ale rzeczywiście wywołuje operator () typu Funktor. Ta podobieństwo między wywołaniem obiektu funkcyjnego a funkcją polega na tym, jak pochodziło na obiekt funkcji terminowej.
 
-## <a name="function-objects-and-containers"></a>Funkcja obiektów i kontenerów
+## <a name="function-objects-and-containers"></a>Obiekty funkcyjne i kontenery
 
-Standardowa biblioteka C++ zawiera kilka obiektów funkcyjnych w [ \<funkcjonalności >](../standard-library/functional.md) pliku nagłówka. Jest jednym z tych obiektów funkcyjnych zastosowań jako kryterium sortowania dla kontenerów. Na przykład `set` kontenera jest zadeklarowana w następujący sposób:
+Biblioteka C++ standardowa zawiera kilka obiektów funkcji w [ \<> funkcjonalny](../standard-library/functional.md) plik nagłówkowy. Jednym z nich jest użycie tych obiektów funkcyjnych jako kryterium sortowania kontenerów. Na przykład `set` kontener jest zadeklarowany w następujący sposób:
 
 ```cpp
 template <class Key,
@@ -56,11 +56,11 @@ template <class Key,
 class set
 ```
 
-Typ drugiego argumentu szablonu jest obiektem funkcji `less`. Ta funkcja zwraca **true** Jeśli pierwszy parametr jest mniejszy niż drugi parametr. Ponieważ niektóre kontenery sortowanie swoich elementów, kontener musi w jakiś sposób porównywania dwóch elementów. Porównanie jest wykonywane przy użyciu obiektu funkcji. Można zdefiniować własne sortowanie kryteria dla kontenerów, tworząc obiekt funkcji, a następnie określając jej na liście szablonów dla kontenera.
+Drugi argument szablonu jest obiektem `less`funkcji. Ten obiekt funkcji zwraca **wartość true** , jeśli pierwszy parametr jest mniejszy niż drugi parametr. Ponieważ niektóre kontenery są sortowane według ich elementów, kontener wymaga metody porównania dwóch elementów. Porównanie odbywa się przy użyciu obiektu Function. Można zdefiniować własne kryteria sortowania dla kontenerów, tworząc obiekt funkcji i określając go na liście szablonów dla kontenera.
 
-## <a name="function-objects-and-algorithms"></a>Obiekty funkcji i algorytmy
+## <a name="function-objects-and-algorithms"></a>Obiekty i algorytmy funkcji
 
-Innym zastosowaniem obiektów funkcjonalności jest algorytmów. Na przykład `remove_if` algorytm jest zadeklarowana w następujący sposób:
+Inne użycie obiektów funkcjonalnych jest w algorytmach. Na przykład `remove_if` algorytm jest zadeklarowany w następujący sposób:
 
 ```cpp
 template <class ForwardIterator, class Predicate>
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-Ostatni argument `remove_if` jest obiektem funkcji, która zwraca wartość logiczną ( *predykatu*). Jeśli wynik obiekt funkcji, który jest **true**, a następnie element zostanie usunięty z kontenera, w której uzyskuje dostęp przez Iteratory `first` i `last`. Można użyć dowolnego z obiektów funkcyjnych, zadeklarowany w [ \<funkcjonalności >](../standard-library/functional.md) nagłówka dla argumentu `pred` lub możesz utworzyć swój własny.
+Ostatni argument `remove_if` jest obiektem funkcji, który zwraca wartość logiczną (predykatu) . Jeśli wynik obiektu Function ma **wartość true**, element zostanie usunięty z kontenera, do którego uzyskuje dostęp Iteratory `first` i. `last` Można użyć dowolnych obiektów funkcji zadeklarowanych w `pred` [ \<nagłówku > funkcjonalnym](../standard-library/functional.md) dla argumentu lub można utworzyć własne.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

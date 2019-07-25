@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: 242c55cfa6b62e49aa5b73de0aa1a353c16827f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46b74cc9c1d3c6f3a93925d6df46f46d0151e2d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366605"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452593"
 ---
 # <a name="isfloatingpoint-class"></a>is_floating_point — Klasa
 
-Sprawdza, czy typ jest liczba zmiennoprzecinkowa.
+Testuje, czy typ jest liczbą zmiennoprzecinkową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,14 +27,14 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest zmiennoprzecinkowy typu punktu lub `cv-qualified` typu formularza zmiennoprzecinkowej, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem zmiennoprzecinkowym lub `cv-qualified` postacią typu zmiennoprzecinkowego, w przeciwnym razie ma wartość false.
 
-A punktem typu zmiennoprzecinkowego jest jednym z **float**, **double**, lub **typu long double**.
+Typ zmiennoprzecinkowy to jeden z wartości **zmiennoprzecinkowych**, **Double**lub **Long Double**.
 
 ## <a name="example"></a>Przykład
 
@@ -72,9 +72,9 @@ is_floating_point<float> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_integral, klasa](../standard-library/is-integral-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_integral, klasa](../standard-library/is-integral-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405277"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459851"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname — Klasa
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*<br/>
-O nazwie ustawienia regionalne.
+*_Locname*\
+Nazwane ustawienia regionalne.
 
-*_Refs*<br/>
-Licznik odwołań początkowej.
+*_Refs*\
+Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Aspekty byname są tworzone automatycznie, gdy jest konstruowany o nazwie ustawień regionalnych.
+Zestawy reguł byname są tworzone automatycznie podczas konstruowania nazwanych ustawień regionalnych.
 
-Jego zachowanie jest określana przez nazwany ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje jego podstawowego obiektu z [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType > ( `_Refs`).
+Jego zachowanie zależy od nazwanych ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType > ( `_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

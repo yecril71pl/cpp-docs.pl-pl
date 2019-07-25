@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 06a7cbc8b054075f881474dbf49ad3bd42f0a9dc
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ac6a82cc7f342f6a96b5f79f36b23d23a1d27097
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450684"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453937"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution — Klasa
 
@@ -70,34 +70,34 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType*<br/>
-Typ wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*Liczba rzeczywista*\
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
 
-*URNG*<br/>
-Jednolity numer generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*URNG*\
+Jednolity aparat generatora liczb losowych. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji tworzącego wartości określonych przez użytkownika zmiennoprzecinkowych wpisać lub typ **double** rozkładane Jeśli nie zostanie podana, rozkład Gamma. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
+Klasa szablonu opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem gamma. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
 |`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
 
-Funkcje właściwości `alpha()` i `beta()` zwracają odpowiadających im wartości dla parametrów przechowywanych dystrybucji *alfa* i *beta*.
+Funkcja `alpha()` właściwości i `beta()` zwracają odpowiednie wartości dla przechowywanych parametrów dystrybucji *Alpha* i *beta*.
 
-Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
+Element członkowski `param()` właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
 
-`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największych możliwych wyników, odpowiednio.
+`min()` I`max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-`reset()` Funkcja elementu członkowskiego odrzuca wszystkie wartości z pamięci podręcznej, tak aby wynik następnego wywołania metody `operator()` nie zależy od żadnych wartości uzyskane z aparatu przed wywołaniem.
+Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem. `reset()`
 
-`operator()` Funkcje Członkowskie zwracają dalej wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub pakietu określony parametr.
+Funkcje `operator()` Członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat rozkład gamma, zobacz artykuł Wolfram MathWorld [rozkład Gamma](https://go.microsoft.com/fwlink/p/?linkid=401111).
+Aby uzyskać szczegółowe informacje o dystrybucji gamma, zobacz [rozkład gamma](https://go.microsoft.com/fwlink/p/?linkid=401111)artykułu Wolfram MathWorld.
 
 ## <a name="example"></a>Przykład
 
@@ -184,13 +184,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowy >
+**Nagłówek:** \<losowe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution
+## <a name="gamma_distribution"></a>gamma_distribution::gamma_distribution
 
-Tworzy rozkład.
+Konstruuje dystrybucję.
 
 ```cpp
 explicit gamma_distribution(result_type alpha = 1.0, result_type beta = 1.0);
@@ -199,24 +199,24 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*alpha*<br/>
-`alpha` Parametru dystrybucji.
+*alfa*\
+Parametr `alpha` rozkładu.
 
-*Beta*<br/>
-`beta` Parametru dystrybucji.
+*Beta*\
+Parametr `beta` rozkładu.
 
-*parm*<br/>
-Struktura parametr, używane do konstruowania dystrybucji.
+*parametr*\
+Struktura parametru używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < alpha` i `0.0 < beta`
+**Warunek wstępny:** `0.0 < alpha` i`0.0 < beta`
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `alpha` wartość przechowuje wartość *alfa* i którego przechowywane `beta` wartość przechowuje wartość *beta*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `alpha` wartość przechowuje wartość *Alpha* i której przechowywana `beta` wartość przechowuje wartość *beta*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="param_type"></a>  gamma_distribution::param_type
+## <a name="param_type"></a>gamma_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -234,21 +234,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*alpha*<br/>
-`alpha` Parametru dystrybucji.
+*alfa*\
+Parametr `alpha` rozkładu.
 
-*Beta*<br/>
-`beta` Parametru dystrybucji.
+*Beta*\
+Parametr `beta` rozkładu.
 
-*right*<br/>
-`param_type` Wystąpienie do porównania.
+*Kliknij*\
+Wystąpienie `param_type` , do którego ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < alpha` i `0.0 < beta`
+**Warunek wstępny:** `0.0 < alpha` i`0.0 < beta`
 
-Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

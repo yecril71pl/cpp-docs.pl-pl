@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451245"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457881"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution — Klasa
 
@@ -67,28 +67,28 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType*<br/>
-Typ wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*Liczba rzeczywista*\
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
 
-*URNG*<br/>
-Liczba generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*URNG*\
+Aparat generatora liczb losowych. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji, który tworzy wartości całkowitego określone przez użytkownika typu lub typu **double** rozkładane Jeśli nie zostanie podana, rozkład wykładniczy. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
+Klasa szablonu opisuje dystrybucję, która produkuje wartości typu całkowitego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem wykładniczym. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
 |`exponential_distribution::operator()`||[param_type](#param_type)|
 
-Funkcja elementu członkowskiego właściwość `lambda()` zwraca wartość dla parametru przechowywanych dystrybucji `lambda`.
+Funkcja `lambda()` członkowska właściwości zwraca wartość dla przechowywanego parametru `lambda`dystrybucji.
 
-Funkcja elementu członkowskiego właściwość `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
+Funkcja `param()` elementu członkowskiego właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat rozkład wykładniczy, zobacz artykuł Wolfram MathWorld [rozkład wykładniczy](https://go.microsoft.com/fwlink/p/?linkid=401098).
+Aby uzyskać szczegółowe informacje na temat rozkładu wykładniczego, zobacz [rozkład wykładniczy](https://go.microsoft.com/fwlink/p/?linkid=401098)w artykule Wolfram MathWorld.
 
 ## <a name="example"></a>Przykład
 
@@ -167,13 +167,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowy >
+**Nagłówek:** \<losowe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution
+## <a name="exponential_distribution"></a>exponential_distribution::exponential_distribution
 
-Tworzy rozkład.
+Konstruuje dystrybucję.
 
 ```cpp
 explicit exponential_distribution(result_type lambda = 1.0);
@@ -182,21 +182,21 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*lambda*<br/>
-`lambda` Parametru dystrybucji.
+*kreślone*\
+Parametr `lambda` rozkładu.
 
-*parm*<br/>
-Pakiet parametru wykorzystywany do konstruowania dystrybucji.
+*parametr*\
+Pakiet parametrów używany do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < lambda`
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `lambda` wartość przechowuje wartość *lambda*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `lambda` wartość przechowuje wartość *lambda*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="param_type"></a>  exponential_distribution::param_type
+## <a name="param_type"></a>exponential_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -213,18 +213,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*lambda*<br/>
-`lambda` Parametru dystrybucji.
+*kreślone*\
+Parametr `lambda` rozkładu.
 
-*right*<br/>
-`param_type` Obiekt do porównania z tym.
+*Kliknij*\
+Obiekt `param_type` , który ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < lambda`
 
-Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

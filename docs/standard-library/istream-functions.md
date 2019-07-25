@@ -1,26 +1,26 @@
 ---
-title: '&lt;IStream&gt; funkcji'
+title: '&lt;funkcje&gt; IStream'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: b590559b01bb8f5db21fca9f78d220d8bad5c27e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413336"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458766"
 ---
-# <a name="ltistreamgt-functions"></a>&lt;IStream&gt; funkcji
+# <a name="ltistreamgt-functions"></a>&lt;funkcje&gt; IStream
 
 |||
 |-|-|
 |[swap](#istream_swap)|[ws](#ws)|
 
-## <a name="istream_swap"></a>  swap
+## <a name="istream_swap"></a>wymiany
 
-Zamienia elementy z dwóch obiektów strumienia.
+Wymienia elementy dwóch obiektów strumienia.
 
 ```cpp
 template <class Elem, class Tr>
@@ -36,13 +36,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*lewym*\
 Strumień.
 
-*right*<br/>
+*Kliknij*\
 Strumień.
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a>WS
 
 Pomija biały znak w strumieniu.
 
@@ -52,7 +52,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr*<br/>
+*_Istr*\
 Strumień.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -61,14 +61,14 @@ Strumień.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator wyodrębnia i odrzuca wszelkie elementy `ch` dla którego [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**>> ( [getloc —](../standard-library/ios-base-class.md#getloc)). **jest**( **ctype** \< **Elem**>:: **miejsca**, **ch**) ma wartość true.
+Manipulator wyodrębnia i `ch` odrzuca wszystkie elementy, dla których [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType** \< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **jest** ( **CType** \< **elem**>:: **Space**, **ch**) ma wartość true.
 
-Wywołania funkcji [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) w przypadku wykrycia koniec pliku podczas wyodrębniania elementów. Zwraca *_Istr*.
+Funkcja wywołuje metodę [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**), jeśli napotka koniec pliku podczas wyodrębniania elementów. Zwraca *_Istr*.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [operator >>](../standard-library/istream-operators.md#op_gt_gt) na przykład za pomocą `ws`.
+Zobacz [> operatora >](../standard-library/istream-operators.md#op_gt_gt) , aby zapoznać się z `ws`przykładem użycia.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

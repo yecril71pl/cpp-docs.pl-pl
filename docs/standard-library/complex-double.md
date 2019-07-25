@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 7cb516363df7267c2870d2188a14208f54f7ffe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565a2e6b5ee4eb495cb4cc3241bb8ce72de538a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148410"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453151"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **double**, najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
+Opisuje obiekt, który przechowuje uporządkowaną parę obiektów typu **Double**, pierwszej reprezentującej rzeczywistą część liczby zespolonej, a drugą reprezentującą część urojoną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,24 +36,24 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*RealVal*<br/>
-Wartość typu **double** rzeczywistych część liczby zespolonej budowany.
+*RealVal*\
+Wartość typu **Double** dla rzeczywistej części konstruowanej liczby zespolonej.
 
-*ImagVal*<br/>
-Wartość typu **double** dla urojone części liczb zespolonych budowany.
+*ImagVal*\
+Wartość typu **Double** dla części urojonej konstruowanej liczby zespolonej.
 
-*complexNum*<br/>
-Liczby zespolonej typu **float** lub typu **typu long double** którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej typu **double** budowany.
+*complexNum*\
+Liczba zespolona typu **zmiennoprzecinkowego** lub typu **Long podwójnie** , których elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby typu **Double** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczby zespolonej typu **double**.
+Złożona liczba typu **Double**.
 
 ## <a name="remarks"></a>Uwagi
 
-Jawna specjalizacja szablonu klasy złożone i klasy złożone typu **double** różni się od klasy szablonu, tylko w konstruktorach definiuje. Konwersja z **float** do **double** może być niejawne, ale konwersja z **typu long double** do **double** musi być **jawne**. Korzystanie z **jawne** wyklucza rozpoczęcia z konwersję typu przy użyciu składni przypisania.
+Jawna specjalizacja klasy szablonu złożonej do złożonej klasy typu **Double** różni się od klasy szablonu tylko w konstruktorach, które definiuje. Konwersja z wartości **zmiennoprzecinkowej** na **Double** może być niejawna, ale konwersja z typu **Long Double** do **Double** musi być **jawna**. Użycie jawnych  reguł inicjacji z konwersją typu przy użyciu składni przypisania.
 
-Aby uzyskać więcej informacji na temat klasy szablonu `complex`, zobacz [complex — klasa](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy szablonu `complex`, zobacz.
+Aby uzyskać więcej informacji na temat klasy `complex`szablonu, zobacz [Klasa złożona](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy `complex`szablonu, zobacz.
 
 ## <a name="example"></a>Przykład
 
@@ -112,11 +112,11 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<złożonych >
+**Nagłówek**: \<złożony >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[complex, klasa](../standard-library/complex-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Klasa złożona](../standard-library/complex-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

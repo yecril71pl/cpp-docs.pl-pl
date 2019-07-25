@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: ff48b1848e2d7631d789621a5ef845d04d8e8821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: becea4ff52342a79d0b87ffe0022e2cf84c47949
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411139"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456529"
 ---
 # <a name="addvolatile-class"></a>add_volatile — Klasa
 
-Sprawia, że **volatile** typu z określonego typu.
+Tworzy typ  nietrwały z określonego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,12 +30,12 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `add_volatile<T>` ma składową **typedef** `type` czyli *T* Jeśli *T* jest odwołaniem, funkcją lub volatile kwalifikowanego typu, w przeciwnym razie **volatile** *T*. Alias `add_volatile_t` to skrót umożliwiający dostęp do elementu członkowskiego **typedef** `type`.
+Wystąpienie `add_volatile<T>` ma element członkowski **typedef** `type` , który jest *t* if *t* jest odwołaniem, funkcją lub typem kwalifikowanym niestabilnym, w przeciwnym razie **volatile** *t*. Alias `add_volatile_t` jest skrótem umożliwiającym dostęp do elementu członkowskiego **typedef** `type`.
 
 ## <a name="example"></a>Przykład
 
@@ -63,9 +63,9 @@ add_volatile<int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_volatile, klasa](../standard-library/remove-volatile-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_volatile, klasa](../standard-library/remove-volatile-class.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: b0c77b523dbe31bc5b07ae3d736441880fe04546
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383571"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455566"
 ---
 # <a name="moneybase-class"></a>money_base — Klasa
 
-Klasa opisuje, wyliczenia i struktury, które są wspólne dla wszystkich specjalizacje szablonu klasy [moneypunct](../standard-library/moneypunct-class.md).
+Klasa opisuje Wyliczenie i strukturę wspólną dla wszystkich specjalizacji klasy szablonu [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,24 +28,24 @@ struct pattern
 
 ## <a name="remarks"></a>Uwagi
 
-Wyliczanie `part` opisano możliwe wartości w elementach pola tablicy we wzorcu struktury. Wartości `part` są:
+Wyliczenie `part` opisuje możliwe wartości w elementach pola tablicy we wzorcu struktury. Wartości `part` są:
 
-- `none` Aby dopasować zero lub więcej spacji lub generowanie nothing.
+- `none`Aby dopasować zero lub więcej spacji lub wygenerować Nothing.
 
-- `sign` Aby dopasować lub generowanie znaku dodatniego lub ujemnego.
+- `sign`Aby dopasować lub wygenerować znak dodatni lub ujemny.
 
-- `space` Aby dopasować zero lub więcej spacji lub generowanie spację.
+- `space`Aby dopasować zero lub więcej spacji lub wygenerować spację.
 
-- `symbol` Aby dopasować lub wygenerowania symbolu waluty.
+- `symbol`Aby dopasować lub wygenerować symbol waluty.
 
-- `value` Aby dopasować lub wygenerować wartość pieniężną.
+- `value`Aby dopasować lub wygenerować wartość pieniężną.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

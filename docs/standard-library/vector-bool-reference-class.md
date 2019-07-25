@@ -1,25 +1,25 @@
 ---
-title: 'Wektor&lt;bool&gt;:: reference — klasa'
+title: 'Vector&lt;bool&gt;:: Reference — Klasa'
 ms.date: 11/04/2016
 f1_keywords:
 - vector/vector<bool>::reference
 helpviewer_keywords:
 - vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
-ms.openlocfilehash: 7930c1cd93cd05a752d4997b9480c766ee26bd99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65bfc91cf5dc79fb1e5151a6f62c394b4579883b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407721"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453214"
 ---
-# <a name="vectorltboolgtreference-class"></a>Wektor&lt;bool&gt;:: reference — klasa
+# <a name="vectorltboolgtreference-class"></a>Vector&lt;bool&gt;:: Reference — Klasa
 
-`vector<bool>::reference` Klasa jest klasą proxy dostarczoną przez [wektor\<bool > klasa](../standard-library/vector-bool-class.md) do symulacji `bool&`.
+Klasa jest klasą proxy dostarczoną przez `bool&` [klasę >\<bool wektorowego](../standard-library/vector-bool-class.md) do symulowania. `vector<bool>::reference`
 
 ## <a name="remarks"></a>Uwagi
 
-Symulowane odwołanie jest wymagane, ponieważ C++ nie zezwala natywnie na bezpośrednie odwołania do bitów. `vector<bool>` używa tylko jednego bitu na element, który można odwoływać się za pomocą tej klasy proxy. Jednakże symulacja odwołania nie jest kompletna, ponieważ niektóre przypisania nie są prawidłowe. Na przykład ponieważ adres `vector<bool>::reference` obiektu nie może być przyjęty, następujący kod, który próbuje użyć `vector<bool>::operator&` jest nieprawidłowy:
+Symulowane odwołanie jest wymagane, ponieważ C++ nie zezwala natywnie na bezpośrednie odwołania do bitów. `vector<bool>`wykorzystuje tylko jeden bit na element, do którego można odwoływać się za pomocą tej klasy proxy. Jednakże symulacja odwołania nie jest kompletna, ponieważ niektóre przypisania nie są prawidłowe. Na przykład, ponieważ nie można wykonać adresu `vector<bool>::reference` obiektu, następujący kod, który próbuje użyć `vector<bool>::operator&` , jest niepoprawny:
 
 ```cpp
 vector<bool> vb;
@@ -28,22 +28,22 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use
 ```
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[flip](../standard-library/vector-bool-reference-flip.md)|Odwraca wartość logiczną elementu wektora.|
-|[bool — operator](../standard-library/vector-bool-reference-operator-bool.md)|Dostarcza niejawną konwersję z `vector<bool>::reference` do **bool**.|
+|[stosowane](../standard-library/vector-bool-reference-flip.md)|Odwraca wartość logiczną elementu wektora.|
+|[wartość logiczna operatora](../standard-library/vector-bool-reference-operator-bool.md)|Zapewnia niejawną konwersję z `vector<bool>::reference` na wartość **logiczną**.|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|Przypisuje do bitu wartość logiczną lub wartość przechowywaną przez odnośny element.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek**: \<wektor >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<vector>](../standard-library/vector.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<> wektora](../standard-library/vector.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

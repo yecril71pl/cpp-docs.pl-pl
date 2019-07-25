@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: e18f210dba03d66fa3a4ea111a6dfc61f0d0c12a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412010"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460029"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname — Klasa
 
-Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł ustawień regionalnych typu `time_get` \<CharType, InputIterator >.
+Klasa pochodna szablonu opisuje obiekt, który może być używany jako zestaw reguł ustawień regionalnych `time_get`typu \<CharType, InputIterator >.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,22 +40,22 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*<br/>
-O nazwie ustawienia regionalne.
+*_Locname*\
+Nazwane ustawienia regionalne.
 
-*_Refs*<br/>
-Licznik odwołań początkowej.
-
-## <a name="requirements"></a>Wymagania
-
-Jego zachowanie jest określana przez nazwany ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje jego podstawowego obiektu z [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator > ( `_Refs`).
+*_Refs*\
+Początkowa liczba odwołań.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+Jego zachowanie zależy od nazwanych ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator > ( `_Refs`).
 
-**Namespace:** standardowe
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<> ustawień regionalnych
+
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

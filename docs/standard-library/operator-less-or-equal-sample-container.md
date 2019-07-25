@@ -1,5 +1,5 @@
 ---
-title: operator&lt;= (&lt;przykładowy kontener&gt;)
+title: operator&lt;= (&lt;przykład kontenera&gt;)
 ms.date: 11/04/2016
 f1_keywords:
 - std::<=
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - <= operator, with specific objects
 - <= operator
 ms.assetid: 338577dd-dc88-4a2b-9e12-0379c54fc8a2
-ms.openlocfilehash: 78d49f82f39bc0e96f88ffdcad2cde8a20b0f123
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: c559838f66c483f7c1a76fd17f6a4c07b8aa1fec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221385"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456602"
 ---
-# <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;przykładowy kontener&gt;)
+# <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;przykład kontenera&gt;)
 
 > [!NOTE]
-> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
 
-Overloads **operator < =** do porównywania dwóch obiektów klasy szablonu [kontenera](../standard-library/sample-container-class.md).
+Operator overloads **< =** do porównania dwóch obiektów [kontenera](../standard-library/sample-container-class.md)klasy szablonu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,8 +39,8 @@ bool operator<=(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `!(right < left)`.
+Zwraca `!(right < left)`wartość.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Przykładowy kontener >](../standard-library/sample-container.md)<br/>
+[\<Przykładowy > kontenera](../standard-library/sample-container.md)

@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - end method
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
-ms.openlocfilehash: 43b8d82b86cbe1eae0412c82fdf1f8af897233dc
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: db2563fff62d05765ad98c3405f1a658f5ce23e9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221626"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453341"
 ---
 # <a name="container-classend"></a>Kontener Class::end
 
 > [!NOTE]
-> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
 
-Zwraca iterator, który wskazuje tuż za koniec sekwencji.
+Zwraca iterator, który wskazuje tuż poza końcem sekwencji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,4 +29,4 @@ iterator end();
 
 ## <a name="see-also"></a>Zobacz także
 
-[Sample Container, klasa](../standard-library/sample-container-class.md)<br/>
+[Sample Container, klasa](../standard-library/sample-container-class.md)

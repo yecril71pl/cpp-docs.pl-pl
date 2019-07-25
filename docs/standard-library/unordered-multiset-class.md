@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 34fb3e16dc7369526895a011c7e192d2f51edf14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 836b7f9b0116b41dad57c150f87faf2d41f8f8b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278556"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454737"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset — Klasa
 
@@ -160,9 +160,9 @@ class unordered_multiset;
 |Parametr|Opis|
 |-|-|
 |*Key*|Typ klucza.|
-|*Skrót*|Typ obiektu funkcji mieszania.|
-|*P.*|Typ obiektu funkcji porównywania równości.|
-|*Alokacji*|Klasa alokatora.|
+|*Skrótu*|Typ obiektu funkcji mieszania.|
+|*Pred*|Typ obiektu funkcji porównywania równości.|
+|*Alokacj*|Klasa alokatora.|
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -192,25 +192,25 @@ class unordered_multiset;
 |[bucket_size](#bucket_size)|Pobiera rozmiar przedziału.|
 |[cbegin](#cbegin)|Określa początek kontrolowanej sekwencji.|
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
-|[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy.|
-|[Liczba](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
+|[Wyczyść](#clear)|Usuwa wszystkie elementy.|
+|[liczbą](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
 |[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
-|[pusty](#empty)|Sprawdza, czy nie ma żadnych elementów.|
-|[koniec](#end)|Określa koniec kontrolowanej sekwencji.|
+|[empty](#empty)|Sprawdza, czy nie ma żadnych elementów.|
+|[punktów](#end)|Określa koniec kontrolowanej sekwencji.|
 |[equal_range](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|
-|[wymazywanie](#erase)|Usuwa elementy z określonych pozycji.|
-|[Znajdź](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
+|[Wyłączanie](#erase)|Usuwa elementy z określonych pozycji.|
+|[wyświetlić](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
-|[insert](#insert)|Dodaje elementy.|
+|[wstawienia](#insert)|Dodaje elementy.|
 |[key_eq](#key_eq)|Pobiera przechowywany obiekt funkcji porównywania.|
 |[load_factor](#load_factor)|Oblicza średnią liczbę elementów na przedział.|
 |[max_bucket_count](#max_bucket_count)|Pobiera maksymalną liczbę przedziałów.|
 |[max_load_factor](#max_load_factor)|Pobiera lub ustawia maksymalną liczbę elementów na przedział.|
 |[max_size](#max_size)|Pobiera maksymalny rozmiar kontrolowanej sekwencji.|
 |[rehash —](#rehash)|Przebudowuje tabelę mieszania.|
-|[Rozmiar](#size)|Liczy liczbę elementów.|
+|[zmienia](#size)|Liczy liczbę elementów.|
 |[swap](#swap)|Zamienia zawartości dwóch kontenerów.|
 |[unordered_multiset](#unordered_multiset)|Konstruuje obiekt kontenera.|
 
@@ -220,21 +220,21 @@ class unordered_multiset;
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt porządkuje sekwencję którą kontroluje, przez wywołanie dwóch przechowywanych obiektów, obiektu funkcji porównywania typu [unordered_multiset::key_equal](#key_equal) i obiektu funkcji mieszania typu [unordered_multiset::hasher](#hasher). Dostęp do pierwszego przechowywanego obiektu przez wywołanie funkcji elementu członkowskiego [unordered_multiset::key_eq](#key_eq)`()`; i dostęp do drugiego przechowywanego obiektu przez wywołanie funkcji elementu członkowskiego [unordered_multiset::hash_ Funkcja](#hash)`()`. W szczególności dla wszystkich wartości `X` i `Y` typu `Key`, wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy dwie wartości argumentu mają równoważną kolejność; wywołanie `hash_function()(keyval)` daje w wyniku rozkład wartości typu `size_t`. W odróżnieniu od klasy szablonu [unordered_set, klasa](../standard-library/unordered-set-class.md), obiekt klasy szablonu `unordered_multiset` nie upewnij się, że `key_eq()(X, Y)` ma zawsze wartość false dla którychkolwiek dwóch elementów kontrolowanej sekwencji. (Klucze nie muszą być unikatowy.)
+Obiekt porządkuje sekwencję, która kontroluje, wywołując dwa przechowywane obiekty, obiekt funkcji porównania typu [unordered_multiset:: key_equal](#key_equal) i obiektu funkcji hash typu [unordered_multiset:: Hasher](#hasher). Użytkownik uzyskuje dostęp do pierwszego przechowywanego obiektu przez wywołanie funkcji składowej [unordered_multiset:: key_eq](#key_eq)`()`;, a następnie uzyskuje dostęp do drugiego przechowywanego obiektu przez wywołanie funkcji składowej [unordered_multiset:: hash_function](#hash)`()`. W odniesieniu do `X` wszystkich `Y` wartości i `Key`typu, wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy dwie wartości argumentu mają równoważne porządkowanie; `hash_function()(keyval)` wywołanie daje rozkład wartości typu `size_t`. W przeciwieństwie do klasy szablonu Klasa [unordered_set](../standard-library/unordered-set-class.md), obiekt klasy `unordered_multiset` szablonu nie gwarantuje, że `key_eq()(X, Y)` zawsze ma wartość false dla każdego z dwóch elementów kontrolowanej sekwencji. (Klucze nie muszą być unikatowy.)
 
-Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli Wstawianie elementu powoduje, że [unordered_multiset::load_factor](#load_factor) `()` przekracza współczynnik maksymalnego obciążenia, kontener zwiększa liczbę przedziałów i odbudowuje tabelę mieszania, stosownie do potrzeb.
+Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli wstawianie elementu powoduje przekroczenie maksymalnego współczynnika obciążenia przez [unordered_multiset:: load_factor](#load_factor) `()` , kontener zwiększa liczbę zasobników i ponownie kompiluje tabelę skrótów zgodnie z wymaganiami.
 
 Rzeczywista kolejność elementów w kontrolowanej sekwencji zależy od funkcji mieszania, funkcji porównywania, kolejności wstawiania, współczynnika maksymalnego obciążenia i bieżącej liczby przedziałów. Na ogół nie można przewidzieć kolejności elementów w kontrolowanej sekwencji. Można jednak zawsze mieć pewność, że dowolny podzbiór elementów, które mają równoważną kolejność, są obok siebie w kontrolowanej sekwencji.
 
-Obiekt przydziela i zwalnia pamięć dla sekwencji za pośrednictwem przechowywanego obiektu alokatora typu [unordered_multiset::allocator_type](#allocator_type). Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny co obiekt klasy szablonu `allocator`. Należy zauważyć, że przechowywany obiekt alokatora nie jest kopiowany po przypisaniu obiektu kontenera.
+Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje przez przechowywany obiekt alokatora typu [unordered_multiset:: allocator_type](#allocator_type). Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny, co obiekt klasy `allocator`szablonu. Należy zauważyć, że przechowywany obiekt alokatora nie jest kopiowany po przypisaniu obiektu kontenera.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<unordered_set >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="allocator_type"></a>  unordered_multiset::allocator_type
+## <a name="allocator_type"></a>unordered_multiset::allocator_type
 
 Typ alokatora do zarządzania pamięcią.
 
@@ -244,7 +244,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `Alloc`.
+Typ jest synonimem dla parametru `Alloc`szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -272,9 +272,9 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a>  unordered_multiset::BEGIN
+## <a name="begin"></a>unordered_multiset:: BEGIN
 
-Określa początek kontrolowanej sekwencji lub przedział.
+Określa początek kontrolowanej sekwencji lub przedziału.
 
 ```cpp
 iterator begin();
@@ -290,11 +290,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 |Parametr|Opis|
 |-|-|
-|*nbucket*|Numer przedziału.|
+|*nbucket*|Numer zasobnika.|
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwie funkcje Członkowskie zwracają iterator do przodu, na którą wskazuje na pierwszy element sekwencji (lub tuż za koniec pustej sekwencji). Ostatnie dwie funkcje Członkowskie zwracają iterator do przodu, na którą wskazuje na pierwszy element zasobnika *nbucket* (lub tuż za koniec pusty zasobnik).
+Pierwsze dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji). Ostatnie dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje na pierwszy element zasobnika *nbucket* (lub tuż poza końcem pustego zasobnika).
 
 ### <a name="example"></a>Przykład
 
@@ -340,7 +340,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a>  unordered_multiset::Bucket
+## <a name="bucket"></a>unordered_multiset:: zasobnik
 
 Pobiera numer przedziału dla wartości klucza.
 
@@ -350,12 +350,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*<br/>
-Wartość klucza do mapowania.
+*keyval*\
+Wartość klucza do zamapowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca numer przedziału obecnie odpowiadający wartości klucza `keyval`.
+Funkcja członkowska zwraca numer zasobnika aktualnie odpowiadający wartości `keyval`klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -396,7 +396,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>  unordered_multiset::bucket_count
+## <a name="bucket_count"></a>unordered_multiset::bucket_count
 
 Pobiera liczbę przedziałów.
 
@@ -406,7 +406,7 @@ size_type bucket_count() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca bieżącej liczby przedziałów.
+Funkcja członkowska zwraca bieżącą liczbę zasobników.
 
 ### <a name="example"></a>Przykład
 
@@ -481,9 +481,9 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>  unordered_multiset::bucket_size
+## <a name="bucket_size"></a>unordered_multiset::bucket_size
 
-Pobiera rozmiar przedziału
+Pobiera rozmiar zasobnika
 
 ```cpp
 size_type bucket_size(size_type nbucket) const;
@@ -491,12 +491,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*<br/>
-Numer przedziału.
+*nbucket*\
+Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje elementów członkowskich zwraca rozmiar numer przedziału *nbucket*.
+Funkcja członkowska zwraca rozmiar zasobnika *nbucket*.
 
 ### <a name="example"></a>Przykład
 
@@ -537,9 +537,9 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>  unordered_multiset::cbegin
+## <a name="cbegin"></a>unordered_multiset:: cbegin
 
-Zwraca **const** iterator odnoszący się do pierwszego elementu w zakresie.
+Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 
 ```cpp
 const_iterator cbegin() const;
@@ -547,13 +547,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A **const** iterator dostępu do przodu, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
+Iterator **const** dostęp do przodu, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Uwagi
 
-Wartością zwracaną `cbegin`, nie można modyfikować elementów w zakresie.
+Z wartością `cbegin`zwracaną nie można modyfikować elementów w zakresie.
 
-Można użyć tej funkcji elementu członkowskiego zamiast `begin()` funkcja elementu członkowskiego w celu zagwarantowania, że wartość zwracana jest `const_iterator`. Zazwyczaj jest używana w połączeniu z [automatycznie](../cpp/auto-cpp.md) wpisz słowem kluczowym dedukcji, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` jako modyfikowalny (nie - **const**) kontener dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
+Można użyć tej funkcji elementu członkowskiego zamiast `begin()` funkcji składowej, aby zagwarantować, że wartość zwracana to. `const_iterator` Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy `Container` , że jest to modyfikowalny kontener dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -563,9 +563,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  unordered_multiset::cend
+## <a name="cend"></a>unordered_multiset:: cend
 
-Zwraca **const** iterator adresujący lokalizację tuż za ostatnim elementem w zakresie.
+Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
 
 ```cpp
 const_iterator cend() const;
@@ -573,13 +573,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A **const** iterator dostępu do przodu, który wskazuje tuż za koniec zakresu.
+Iterator **const** dostępu do przodu, który wskazuje tuż poza końcem zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`cend` Służy do sprawdzenia, czy iterator minął koniec swojego zakresu.
+`cend`służy do sprawdzania, czy iterator przeszedł koniec zakresu.
 
-Można użyć tej funkcji elementu członkowskiego zamiast `end()` funkcja elementu członkowskiego w celu zagwarantowania, że wartość zwracana jest `const_iterator`. Zazwyczaj jest używana w połączeniu z [automatycznie](../cpp/auto-cpp.md) wpisz słowem kluczowym dedukcji, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` jako modyfikowalny (nie - **const**) kontener dowolnego rodzaju, który obsługuje `end()` i `cend()`.
+Można użyć tej funkcji elementu członkowskiego zamiast `end()` funkcji składowej, aby zagwarantować, że wartość zwracana to. `const_iterator` Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy `Container` , że jest to modyfikowalny kontener dowolnego rodzaju, który obsługuje `end()` i `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -589,9 +589,9 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Wartość zwrócona przez obiekt `cend` nie należy usuwać odwołania.
+Nie można usunąć odwołania `cend` do wartości zwracanej przez.
 
-## <a name="clear"></a>  unordered_multiset::Clear
+## <a name="clear"></a>unordered_multiset:: Clear
 
 Usuwa wszystkie elementy.
 
@@ -601,7 +601,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji elementu członkowskiego [unordered_multiset::erase](#erase) `(` [unordered_multiset::begin](#begin) `(),` [unordered_multiset::end](#end) `())`.
+Funkcja członkowska wywołuje [unordered_multiset:: Erase](#erase) `(` [unordered_multiset:: BEGIN](#begin) `(),` [unordered_multiset:: end](#end)`())`.
 
 ### <a name="example"></a>Przykład
 
@@ -658,7 +658,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>  unordered_multiset::const_iterator
+## <a name="const_iterator"></a>unordered_multiset::const_iterator
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -668,7 +668,7 @@ typedef T1 const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały iterator do przodu dla kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T1`.
+Typ opisuje obiekt, który może działać jako ciągły iterator do przodu dla kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu `T1`zdefiniowanego przez implementację.
 
 ### <a name="example"></a>Przykład
 
@@ -701,7 +701,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a>  unordered_multiset::const_local_iterator
+## <a name="const_local_iterator"></a>unordered_multiset::const_local_iterator
 
 Typ iteratora stałego przedziału dla kontrolowanej sekwencji.
 
@@ -711,7 +711,7 @@ typedef T5 const_local_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały iterator do przodu dla przedziału. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T5`.
+Typ opisuje obiekt, który może obsłużyć ciągły iterator do przodu dla przedziału. Jest on opisany tutaj jako synonim dla typu `T5`zdefiniowanego przez implementację.
 
 ### <a name="example"></a>Przykład
 
@@ -749,7 +749,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a>  unordered_multiset::const_pointer
+## <a name="const_pointer"></a>unordered_multiset::const_pointer
 
 Typ stałego wskaźnika do elementu.
 
@@ -759,7 +759,7 @@ typedef Alloc::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały wskaźnik do elementu w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako stały wskaźnik do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -795,7 +795,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a>  unordered_multiset::const_reference
+## <a name="const_reference"></a>unordered_multiset::const_reference
 
 Typ stałego odwołania do elementu.
 
@@ -805,7 +805,7 @@ typedef Alloc::const_reference const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stałe odwołanie do elementu w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może stanowić stałe odwołanie do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -841,7 +841,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a>  unordered_multiset::Count
+## <a name="count"></a>unordered_multiset:: Count
 
 Wyszukuje liczbę elementów pasujących do określonego klucza.
 
@@ -851,12 +851,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*<br/>
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcji zwraca liczbę elementów w zakresie rozdzielone [unordered_multiset::equal_range](#equal_range)`(keyval)`.
+Funkcja członkowska zwraca liczbę elementów w zakresie ograniczonym przez [unordered_multiset:: equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Przykład
 
@@ -896,7 +896,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>  unordered_multiset::difference_type
+## <a name="difference_type"></a>unordered_multiset::d ifference_type
 
 Typ odległości ze znakiem między dwoma elementami.
 
@@ -906,7 +906,7 @@ typedef T3 difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ liczby całkowitej ze znakiem opisuje obiekt, który może reprezentować różnica między adresami którychkolwiek dwóch elementów w kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T3`.
+Typ Liczba całkowita ze znakiem opisuje obiekt, który może reprezentować różnicę między adresami wszystkich dwóch elementów w kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu `T3`zdefiniowanego przez implementację.
 
 ### <a name="example"></a>Przykład
 
@@ -955,9 +955,9 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>  unordered_multiset::emplace
+## <a name="emplace"></a>unordered_multiset:: emplace
 
-Wstawia element skonstruowany w miejscu (nie kopiowania lub przenoszenia operacji).
+Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia).
 
 ```cpp
 template <class... Args>
@@ -968,7 +968,7 @@ iterator emplace(Args&&... args);
 
 |Parametr|Opis|
 |-|-|
-|*argumenty*|Argumenty przekazywane do konstruowania element do wstawienia do unordered_multiset.|
+|*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do unordered_multiset.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -976,15 +976,15 @@ Iterator do nowo wstawionego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie odwołania do elementów kontenera nie są unieważniane przez tę funkcję, ale może unieważnić, wszystkie Iteratory do kontenera.
+Ta funkcja nie zawiera żadnych odwołań do elementów kontenera, ale może unieważnić wszystkie Iteratory do kontenera.
 
-Podczas wstawiania Jeśli wyjątek jest zgłaszany, lecz nie występuje w kontenerze funkcji mieszania, kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji mieszania, wynik jest niezdefiniowany.
+Podczas wstawiania, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcji skrótu kontenera, kontener nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji skrótu, wynik jest niezdefiniowany.
 
-Dla przykładu kodu zobacz [multiset::emplace](../standard-library/multiset-class.md#emplace).
+Aby zapoznać się z przykładem kodu, zobacz zestaw [wielokrotny:: emplace](../standard-library/multiset-class.md#emplace).
 
-## <a name="emplace_hint"></a>  unordered_multiset::emplace_hint
+## <a name="emplace_hint"></a>unordered_multiset::emplace_hint
 
-Wstawia element skonstruowany w miejscu (nie kopiowania lub przenoszenia operacji), ze wskazówką położenia.
+Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia) z wskazówką dotyczącą położenia.
 
 ```cpp
 template <class... Args>
@@ -997,8 +997,8 @@ iterator emplace_hint(
 
 |Parametr|Opis|
 |-|-|
-|*argumenty*|Argumenty przekazywane do konstruowania element do wstawienia do unordered_multiset.|
-|*gdzie*|Wskazówki dotyczące właściwe miejsce rozpoczęcia wyszukiwania prawidłowy punkt wstawiania.|
+|*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do unordered_multiset.|
+|*miejscu*|Wskazówka dotycząca miejsca, w którym rozpoczyna się wyszukiwanie poprawnego punktu wstawiania.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1006,13 +1006,13 @@ Iterator do nowo wstawionego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie odwołania do elementów kontenera nie są unieważniane przez tę funkcję, ale może unieważnić, wszystkie Iteratory do kontenera.
+Ta funkcja nie zawiera żadnych odwołań do elementów kontenera, ale może unieważnić wszystkie Iteratory do kontenera.
 
-Podczas wstawiania Jeśli wyjątek jest zgłaszany, lecz nie występuje w kontenerze funkcji mieszania, kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji mieszania, wynik jest niezdefiniowany.
+Podczas wstawiania, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcji skrótu kontenera, kontener nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji skrótu, wynik jest niezdefiniowany.
 
-Dla przykładu kodu zobacz [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
+Aby zapoznać się z przykładem kodu, zobacz [set:: emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a>  unordered_multiset::Empty
+## <a name="empty"></a>unordered_multiset:: Empty
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -1022,7 +1022,7 @@ bool empty() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca wartość true dla pustą kontrolowaną sekwencję.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1079,7 +1079,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>  unordered_multiset::end
+## <a name="end"></a>unordered_multiset:: end
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -1092,12 +1092,12 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*<br/>
-Numer przedziału.
+*nbucket*\
+Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwie funkcje Członkowskie zwracają iterator do przodu, który wskazuje tuż za koniec sekwencji. Ostatnie dwie funkcje Członkowskie zwracają iterator do przodu, na którą wskazuje tuż za koniec przedziału *nbucket*.
+Pierwsze dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje tuż poza końcem sekwencji. Ostatnie dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje tuż poza końcem zasobnika *nbucket*.
 
 ### <a name="example"></a>Przykład
 
@@ -1145,7 +1145,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a>  unordered_multiset::equal_range
+## <a name="equal_range"></a>unordered_multiset::equal_range
 
 Wyszukuje zakres, który odpowiada określonemu kluczowi.
 
@@ -1159,12 +1159,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*<br/>
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca parę iteratorów `X` tak, aby `[X.first, X.second)` rozgranicza tylko te elementy kontrolowanej sekwencji, które mają równoważną kolejność z *keyval*. Jeśli istnieje nie takie elementy, oba Iteratory są `end()`.
+Funkcja członkowska zwraca parę iteratorów `X` , które `[X.first, X.second)` ograniczają tylko te elementy kontrolowanej sekwencji, które mają równoważne porządkowanie z *keyval*. Jeśli takie elementy nie istnieją, oba Iteratory są `end()`.
 
 ### <a name="example"></a>Przykład
 
@@ -1214,9 +1214,9 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a>  unordered_multiset::ERASE
+## <a name="erase"></a>unordered_multiset:: Erase
 
-Usuwa element lub zakres elementów w unordered_multiset z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.
+Usuwa element lub zakres elementów w unordered_multiset z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.
 
 ```cpp
 iterator erase(
@@ -1232,29 +1232,29 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Where*<br/>
+*Miejscu*\
 Pozycja elementu, który ma zostać usunięty.
 
-*pierwszy*<br/>
-Pozycja pierwszego elementu do usunięcia.
+*Pierwszego*\
+Pozycja pierwszego elementu, który ma zostać usunięty.
 
-*ostatni*<br/>
-Pozycja tuż za ostatni element do usunięcia.
+*Ostatniego*\
+Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 
-*Key*<br/>
+*Głównych*\
 Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsze dwie funkcje Członkowskie, aby uzyskać iteratora dwukierunkowego, określa pierwszy element pozostający poza wszelkimi elementami usuniętymi lub element, który jest końcem unordered_multiset, jeśli taki element nie istnieje.
+W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element, który jest poza wszystkimi elementami usuniętymi lub element, który jest końcem unordered_multiset, jeśli taki element nie istnieje.
 
-Dla trzeciego funkcja elementu członkowskiego zwraca liczbę elementów, które zostały usunięte z unordered_multiset.
+Dla trzeciej funkcji składowej zwraca liczbę elementów, które zostały usunięte z unordered_multiset.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla przykładu kodu zobacz [set::erase](../standard-library/set-class.md#erase).
+Aby zapoznać się z przykładem kodu, zobacz [set:: Erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a>  unordered_multiset::find
+## <a name="find"></a>unordered_multiset:: find
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -1264,12 +1264,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*<br/>
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca [unordered_multiset::equal_range](#equal_range)`(keyval).first`.
+Funkcja członkowska zwraca [unordered_multiset:: equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Przykład
 
@@ -1314,7 +1314,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a>  unordered_multiset::get_allocator
+## <a name="get_allocator"></a>unordered_multiset::get_allocator
 
 Pobiera przechowywany obiekt alokatora.
 
@@ -1324,7 +1324,7 @@ Alloc get_allocator() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca przechowywany obiekt alokatora.
+Funkcja członkowska zwraca przechowywany obiekt alokatora.
 
 ### <a name="example"></a>Przykład
 
@@ -1352,7 +1352,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>  unordered_multiset::hash_function
+## <a name="hash"></a>unordered_multiset::hash_function
 
 Pobiera przechowywany obiekt funkcji mieszania.
 
@@ -1362,7 +1362,7 @@ Hash hash_function() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca przechowywany obiekt funkcji mieszania.
+Funkcja członkowska zwraca przechowywany obiekt funkcji skrótu.
 
 ### <a name="example"></a>Przykład
 
@@ -1390,7 +1390,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>  unordered_multiset::hasher
+## <a name="hasher"></a>unordered_multiset:: Hasher
 
 Typ funkcji mieszania.
 
@@ -1400,7 +1400,7 @@ typedef Hash hasher;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `Hash`.
+Typ jest synonimem dla parametru `Hash`szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1428,7 +1428,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>  unordered_multiset::insert
+## <a name="insert"></a>unordered_multiset:: INSERT
 
 Wstawia element lub zakres elementów do unordered_multiset.
 
@@ -1470,39 +1470,39 @@ IList);
 
 |Parametr|Opis|
 |-|-|
-|*Val*|Wartość elementu do wstawienia do unordered_multiset.|
-|*Where*|Miejsce, aby rozpocząć wyszukiwanie poprawne punktu wstawiania.|
-|*ValTy*|Parametr szablonu określający typ argumentu, który unordered_multiset służy do konstruowania elementu [value_type](../standard-library/map-class.md#value_type)i przekazuje doskonałe rozwiązanie *Val* jako argument.|
-|*pierwszy*|Pozycja pierwszego elementu, który ma być skopiowany.|
-|*ostatni*|Pozycja tuż za ostatnim elementem do skopiowania.|
-|*InputIterator*|Argument funkcji szablonu, który spełnia wymagania [iterator danych wejściowych](../standard-library/input-iterator-tag-struct.md) wskazującej elementów typu, który może służyć do konstruowania [value_type](../standard-library/map-class.md#value_type) obiektów.|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) z którego można skopiować elementy.|
+|*Użyte*|Wartość elementu, który ma zostać wstawiony do unordered_multiset.|
+|*Where*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania.|
+|*ValTy*|Parametr szablonu, który określa typ argumentu, który unordered_multiset może używać do konstruowania elementu [value_type](../standard-library/map-class.md#value_type), i idealny do przesyłania *dalej jako argumentu* .|
+|*Pierwszego*|Pozycja pierwszego elementu, który ma zostać skopiowany.|
+|*Ostatniego*|Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany.|
+|*InputIterator*|Argument funkcji szablonu, który spełnia wymagania iteratora [danych wejściowych](../standard-library/input-iterator-tag-struct.md) , który wskazuje elementy typu, które mogą być używane do konstruowania obiektów [value_type](../standard-library/map-class.md#value_type) .|
+|*IList*|[Initializer_list](../standard-library/initializer-list.md) , z którego mają zostać skopiowane elementy.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcje elementów członkowskich pojedynczego elementu Wstawianie (1) i (2), zwracają iterator miejsce, gdy nowy element został wstawiony unordered_multiset.
+Funkcje składowe pojedynczego elementu, (1) i (2) zwracają iterator do pozycji, w której nowy element został wstawiony do unordered_multiset.
 
-Funkcje Członkowskie jednego elementu za pomocą wskazówki, (3) i (4) zwraca iterator, który wskazuje miejsce, gdy nowy element został wstawiony unordered_multiset.
+Funkcje członkowskie jednoelementowe z wskazówką, (3) i (4) zwracają iterator, który wskazuje na pozycję, gdzie nowy element został wstawiony do unordered_multiset.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie wskaźników lub odwołań są unieważniane przez tę funkcję, ale może unieważnić, wszystkie Iteratory do kontenera.
+Ta funkcja nie sprawdza wskaźników ani odwołań, ale może unieważnić wszystkie Iteratory do kontenera.
 
-Podczas wstawiania tylko jeden element Jeśli wyjątek jest zgłaszany, lecz nie występuje w funkcji mieszania kontenera, stan kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji mieszania, wynik jest niezdefiniowany. Podczas wstawiania wielu elementów jeśli wyjątek jest zgłaszany, kontener pozostanie w stanie nieokreślony, ale prawidłowe.
+Podczas wstawiania tylko jednego elementu, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcji skrótu kontenera, stan kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji skrótu, wynik jest niezdefiniowany. Podczas wstawiania wielu elementów, jeśli wyjątek jest zgłaszany, kontener pozostaje w nieokreślonym, ale prawidłowym stanie.
 
-[Value_type](../standard-library/map-class.md#value_type) kontenera jest typedef, który należy do kontenera, a w przypadku zestawu, `unordered_multiset<V>::value_type` jest typem `const V`.
+[Value_type](../standard-library/map-class.md#value_type) kontenera jest elementem TypeDef, który należy do kontenera, a dla zestawu, `unordered_multiset<V>::value_type` jest typ. `const V`
 
-Funkcja elementu członkowskiego zakres [5] wstawia sekwencję wartości elementu do unordered_multiset, która odnosi się do każdego elementu kierowanego przez iterator w zakresie `[First, Last)`; w związku z tym, *ostatniego* nie uzyskać wstawiony. Funkcja elementu członkowskiego kontenera `end()` odwołuje się do pozycji zaraz po ostatnim elemencie w kontenerze — na przykład instrukcja `m.insert(v.begin(), v.end());` wstawia wszystkie elementy `v` do `m`.
+Funkcja elementu członkowskiego zakresu (5) wstawia sekwencję wartości elementów do unordered_multiset, która odnosi się do każdego elementu, który jest adresowany do zakresu `[First, Last)`; w związku z tym *ostatni* nie zostanie wstawiony. Funkcja `end()` elementu członkowskiego kontenera odwołuje się do pozycji tuż po ostatnim elemencie w kontenerze — na przykład, instrukcja `m.insert(v.begin(), v.end());` wstawia wszystkie elementy `v` do `m`.
 
-(6) używa funkcji elementu członkowskiego listy inicjatorów [initializer_list](../standard-library/initializer-list.md) do skopiowania elementów do unordered_multiset.
+Funkcja członkowska listy inicjatorów (6) używa [initializer_list](../standard-library/initializer-list.md) do kopiowania elementów do unordered_multiset.
 
-Do wstawienia element skonstruowany w miejscu — oznacza to, że są wykonywane żadne operacje kopiowania lub przenoszenia — zobacz [unordered_multiset::emplace](#emplace) i [unordered_multiset::emplace_hint](#emplace_hint).
+Do wstawienia elementu skonstruowanego w miejscu — to znaczy, że nie są wykonywane żadne operacje kopiowania ani przenoszenia — zobacz [unordered_multiset:: emplace](#emplace) i [unordered_multiset:: emplace_hint](#emplace_hint).
 
-Dla przykładu kodu zobacz [multiset::insert](../standard-library/multiset-class.md#insert).
+Aby zapoznać się z przykładem kodu, zobacz zestaw [wielokrotny:: INSERT](../standard-library/multiset-class.md#insert).
 
-## <a name="iterator"></a>  unordered_multiset::iterator
+## <a name="iterator"></a>unordered_multiset:: iterator
 
-Typ, który zapewnia stałą [iterator do przodu](../standard-library/forward-iterator-tag-struct.md) który może odczytywać elementy unordered_multiset.
+Typ, który zapewnia ciągły [iterator do przodu](../standard-library/forward-iterator-tag-struct.md) , który może odczytywać elementy w unordered_multiset.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1510,9 +1510,9 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [rozpocząć](../standard-library/multiset-class.md#begin) przykładowy sposób deklarowania i użyj **iteratora**.
+Zapoznaj się z przykładem początku, aby zapoznać [się](../standard-library/multiset-class.md#begin) z przykładem sposobu deklarowania **iteratora**i korzystania z niego.
 
-## <a name="key_eq"></a>  unordered_multiset::key_eq
+## <a name="key_eq"></a>unordered_multiset::key_eq
 
 Pobiera przechowywany obiekt funkcji porównywania.
 
@@ -1522,7 +1522,7 @@ Pred key_eq() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca przechowywany obiekt funkcji porównywania.
+Funkcja członkowska zwraca przechowywany obiekt funkcji porównywania.
 
 ### <a name="example"></a>Przykład
 
@@ -1552,7 +1552,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>  unordered_multiset::key_equal
+## <a name="key_equal"></a>unordered_multiset::key_equal
 
 Typ funkcji porównywania.
 
@@ -1562,7 +1562,7 @@ typedef Pred key_equal;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `Pred`.
+Typ jest synonimem dla parametru `Pred`szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1592,7 +1592,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>  unordered_multiset::key_type
+## <a name="key_type"></a>unordered_multiset::key_type
 
 Typ klucza sortowania.
 
@@ -1602,7 +1602,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `Key`.
+Typ jest synonimem dla parametru `Key`szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1646,7 +1646,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a>  unordered_multiset::load_factor
+## <a name="load_factor"></a>unordered_multiset::load_factor
 
 Oblicza średnią liczbę elementów na przedział.
 
@@ -1656,7 +1656,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca `(float)` [unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()`, średnia liczba elementów na przedział.
+Funkcja członkowska zwraca `(float)` [unordered_multiset:: size](#size)`() / (float)`[unordered_multiset:: bucket_count](#bucket_count)`()`, średnią liczbę elementów na przedział.
 
 ### <a name="example"></a>Przykład
 
@@ -1714,9 +1714,9 @@ int main()
 }
 ```
 
-## <a name="local_iterator"></a>  unordered_multiset::local_iterator
+## <a name="local_iterator"></a>unordered_multiset::local_iterator
 
-Typ iteratora przedziału.
+Typ iteratora zasobnika.
 
 ```cpp
 typedef T4 local_iterator;
@@ -1724,7 +1724,7 @@ typedef T4 local_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako iterator do przodu dla przedziału. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T4`.
+Typ opisuje obiekt, który może obsłużyć iterator do przodu dla przedziału. Jest on opisany tutaj jako synonim dla typu `T4`zdefiniowanego przez implementację.
 
 ### <a name="example"></a>Przykład
 
@@ -1762,7 +1762,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a>  unordered_multiset::max_bucket_count
+## <a name="max_bucket_count"></a>unordered_multiset::max_bucket_count
 
 Pobiera maksymalną liczbę przedziałów.
 
@@ -1772,7 +1772,7 @@ size_type max_bucket_count() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca maksymalną liczbę przedziałów obecnie dozwolone.
+Funkcja członkowska zwraca maksymalną dozwoloną liczbę zasobników.
 
 ### <a name="example"></a>Przykład
 
@@ -1848,7 +1848,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>  unordered_multiset::max_load_factor
+## <a name="max_load_factor"></a>unordered_multiset::max_load_factor
 
 Pobiera lub ustawia maksymalną liczbę elementów na przedział.
 
@@ -1860,12 +1860,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*współczynnik*<br/>
-Nowy współczynnik maksymalnego obciążenia.
+*1U*\
+Nowy maksymalny współczynnik obciążenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego zwraca współczynnik przechowywanych maksymalnego obciążenia. Funkcja drugiego członka zastępuje czynnik przechowywanych maksymalnego obciążenia *współczynnik*.
+Pierwsza funkcja członkowska zwraca przechowywany maksymalny współczynnik obciążenia. Druga funkcja członkowska zastępuje zachowaną wartość maksymalnego obciążenia *czynnikem*.
 
 ### <a name="example"></a>Przykład
 
@@ -1941,7 +1941,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>  unordered_multiset::max_size
+## <a name="max_size"></a>unordered_multiset::max_size
 
 Pobiera maksymalny rozmiar kontrolowanej sekwencji.
 
@@ -1951,7 +1951,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca długość najdłuższej sekwencji, która może kontrolować obiekt.
+Funkcja członkowska zwraca długość najdłuższej sekwencji, którą obiekt może kontrolować.
 
 ### <a name="example"></a>Przykład
 
@@ -1976,7 +1976,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="op_eq"></a>  unordered_multiset::operator =
+## <a name="op_eq"></a>unordered_multiset:: operator =
 
 Kopiuje tabelę mieszania.
 
@@ -1990,11 +1990,11 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 |Parametr|Opis|
 |-|-|
-|*right*|[Unordered_multiset](../standard-library/unordered-multiset-class.md) są kopiowane do `unordered_multiset`.|
+|*right*|[Unordered_multiset](../standard-library/unordered-multiset-class.md) kopiowany do `unordered_multiset`.|
 
 ### <a name="remarks"></a>Uwagi
 
-Po wymazaniu wszelkie elementy istniejących w `unordered_multiset`, `operator=` kopiuje lub przenosi zawartość *prawo* do `unordered_multiset`.
+Po wymazaniu wszelkich istniejących elementów w programie `unordered_multiset`, `operator=` kopiuje lub przenosi `unordered_multiset`zawartość *bezpośrednio* do.
 
 ### <a name="example"></a>Przykład
 
@@ -2033,7 +2033,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  unordered_multiset::Pointer
+## <a name="pointer"></a>unordered_multiset::p ointer
 
 Typ wskaźnika do elementu.
 
@@ -2043,7 +2043,7 @@ typedef Alloc::pointer pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako wskaźnik do elementu w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako wskaźnik do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2080,7 +2080,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a>  unordered_multiset::Reference
+## <a name="reference"></a>unordered_multiset:: Reference
 
 Typ odwołania do elementu.
 
@@ -2090,7 +2090,7 @@ typedef Alloc::reference reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako odwołanie do elementu w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako odwołanie do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2127,7 +2127,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a>  unordered_multiset::rehash
+## <a name="rehash"></a>unordered_multiset:: rehash
 
 Przebudowuje tabelę mieszania.
 
@@ -2137,12 +2137,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*<br/>
-Żądaną liczbę przedziałów.
+*nbuckets*\
+Żądana liczba zasobników.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zmienia liczbę przedziałów, na co najmniej *nbuckets* i odbudowuje tabelę mieszania, stosownie do potrzeb.
+Funkcja członkowska zmienia liczbę przedziałów na co najmniej *nbuckets* i ponownie kompiluje tabelę skrótów zgodnie z wymaganiami.
 
 ### <a name="example"></a>Przykład
 
@@ -2205,7 +2205,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>  unordered_multiset::size
+## <a name="size"></a>unordered_multiset:: size
 
 Liczy liczbę elementów.
 
@@ -2215,7 +2215,7 @@ size_type size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca długość kontrolowanej sekwencji.
+Funkcja członkowska zwraca długość kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2272,7 +2272,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>  unordered_multiset::size_type
+## <a name="size_type"></a>unordered_multiset::size_type
 
 Typ odległości bez znaku między dwoma elementami.
 
@@ -2282,7 +2282,7 @@ typedef T2 size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ całkowitoliczbowy bez znaku, opisująca obiekt, który może reprezentować długość wszelkie kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T2`.
+Typ liczby całkowitej bez znaku opisuje obiekt, który może reprezentować długość dowolnej kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu `T2`zdefiniowanego przez implementację.
 
 ### <a name="example"></a>Przykład
 
@@ -2308,7 +2308,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>  unordered_multiset::swap
+## <a name="swap"></a>unordered_multiset:: swap
 
 Zamienia zawartości dwóch kontenerów.
 
@@ -2318,12 +2318,12 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-Kontener wymiany.
+*Kliknij*\
+Kontener, w którym ma zostać zamieniony.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zamienia kontrolowanej sekwencji między `*this` i *prawo*. Jeśli [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`robi to w stałym czasie, jego zgłasza wyjątek, tylko w wyniku kopiowanie obiektów przechowywanych cech typu `Tr`, a jego unieważnia żadnych odwołań, wskaźniki, lub Iteratory, które wyznaczają elementy w dwóch kontrolowanej sekwencji. W przeciwnym razie wykonuje szereg element zadania i Konstruktor wywołuje proporcjonalna do liczby elementów w dwóch kontrolowanej sekwencji.
+Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Jeśli [unordered_multiset:: get_allocator](#get_allocator)`() == right.get_allocator()`, robi to w stałym czasie, zgłasza wyjątek tylko w wyniku kopiowania obiektu składowanych cech typu `Tr`i unieważnia odwołania, wskaźniki lub Iteratory, które Wyznaczanie elementów w dwóch kontrolowanej sekwencji. W przeciwnym razie wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do liczby elementów w dwóch kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2380,7 +2380,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multiset"></a>  unordered_multiset::unordered_multiset
+## <a name="unordered_multiset"></a>unordered_multiset::unordered_multiset
 
 Konstruuje obiekt kontenera.
 
@@ -2437,28 +2437,28 @@ unordered_multiset(
 |Parametr|Opis|
 |-|-|
 |*InputIterator*|Typ iteratora.|
-|*Al*|Obiekt alokatora, który ma być przechowywany.|
-|*Comp*|Obiekt funkcji porównywania, który ma być przechowywany.|
-|*Skrót*|Obiekt funkcji mieszania, który ma być przechowywany.|
+|*Wsp*|Obiekt alokatora, który ma być przechowywany.|
+|*Przepisów*|Obiekt funkcji porównywania, który ma być przechowywany.|
+|*Skrótu*|Obiekt funkcji mieszania, który ma być przechowywany.|
 |*Bucket_count*|Minimalna liczba przedziałów.|
-|*po prawej stronie*|Kontener, który ma być skopiowany.|
-|*IList*|Lista initializer_list, z którego można skopiować.|
+|*Kliknij*|Kontener, który ma być skopiowany.|
+|*IList*|Initializer_list, z którego ma zostać skopiowana.|
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor Określa kopię sekwencji kontrolowanej przez *po prawej stronie*. Drugi konstruktor określa pustą kontrolowaną sekwencję. Trzeci Konstruktor wstawia sekwencję wartości elementu `[First, Last)`. Czwarty Konstruktor Określa kopię sekwencji, przesuwając *po prawej stronie*.
+Pierwszy Konstruktor określa kopię sekwencji kontrolowanej przez *prawo*. Drugi konstruktor określa pustą kontrolowaną sekwencję. Trzeci Konstruktor wstawia sekwencję wartości `[First, Last)`elementów. Czwarty Konstruktor określa kopię sekwencji, przenosząc *prawo*.
 
-Wszystkie konstruktory również inicjują kilka przechowywanych wartości. Dla konstruktora kopiującego, wartości są uzyskiwane z *po prawej stronie*. W przeciwnym razie:
+Wszystkie konstruktory również inicjują kilka przechowywanych wartości. W przypadku konstruktora kopiującego wartości są uzyskiwane z *prawej strony*. W przeciwnym razie:
 
-Minimalna liczba przedziałów jest argumentem *bucket_count —*, jeśli obecny; w przeciwnym razie jest to wartość domyślna opisana tutaj jako wartość zdefiniowana w implementacji `N0`.
+Minimalna liczba przedziałów jest argumentem *Bucket_count*, jeśli jest obecny; w przeciwnym razie jest to wartość domyślna opisana tutaj jako wartość `N0`zdefiniowana przez implementację.
 
-Obiekt funkcji mieszania jest argumentem *skrótu*, jeśli obecny; w przeciwnym razie jest `Hash()`.
+Obiekt funkcji mieszania jest *wartością skrótu*argumentu (jeśli istnieje); w przeciwnym razie `Hash()`.
 
-Obiekt funkcji porównywania jest argumentem *Comp*, jeśli obecny; w przeciwnym razie jest `Comp()`.
+Obiekt funkcji porównywania jest argumentem *COMP*, jeśli jest obecny; w przeciwnym razie `Comp()`.
 
-Obiekt alokatora jest argumentem *Al*, jeśli obecny; w przeciwnym razie jest `Alloc()`.
+Obiekt alokatora jest argumentem *Al*, jeśli jest obecny; w przeciwnym razie jest `Alloc()`to.
 
-## <a name="value_type"></a>  unordered_multiset::value_type
+## <a name="value_type"></a>unordered_multiset::value_type
 
 Typ elementu.
 
@@ -2468,7 +2468,7 @@ typedef Key value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje elementu w kontrolowanej sekwencji.
+Typ opisuje element kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2514,7 +2514,7 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
-[Kontenery](../cpp/containers-modern-cpp.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[<unordered_set>](../standard-library/unordered-set.md)\
+[Opakowania](../cpp/containers-modern-cpp.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

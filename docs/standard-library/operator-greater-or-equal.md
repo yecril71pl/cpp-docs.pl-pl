@@ -1,5 +1,5 @@
 ---
-title: Operator&gt;=
+title: zakład&gt;=
 ms.date: 11/04/2016
 f1_keywords:
 - operator>=
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 9994456a1345276af426bddd883fa7c53d7b93d0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6eb8db25f5f30a978de197d699acf28bf8bea116
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220281"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447963"
 ---
-# <a name="operatorgt"></a>Operator&gt;=
+# <a name="operatorgt"></a>zakład&gt;=
 
 > [!NOTE]
-> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
 
-Overloads **operator > =** do porównywania dwóch obiektów klasy szablonu [kontenera](../standard-library/sample-container-class.md).
+Operator overloads **> =** do porównania dwóch obiektów [kontenera](../standard-library/sample-container-class.md)klasy szablonu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,8 +38,8 @@ bool operator>=(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `!(left < right)`.
+Zwraca `!(left < right)`wartość.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Przykładowy kontener >](../standard-library/sample-container.md)<br/>
+[\<Przykładowy > kontenera](../standard-library/sample-container.md)

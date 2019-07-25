@@ -1,5 +1,5 @@
 ---
-title: '&lt;unordered_map —&gt; funkcji'
+title: '&lt;funkcje&gt; unordered_map'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::swap
@@ -8,20 +8,20 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: ae00a9204e2bd5dc5220f3b2755e16b895193df3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158550"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454819"
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map —&gt; funkcji
+# <a name="ltunorderedmapgt-functions"></a>&lt;funkcje&gt; unordered_map
 
 |||
 |-|-|
 |[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
 
-## <a name="swap"></a>  swap (unordered_map)
+## <a name="swap"></a>swap (unordered_map)
 
 Zamienia zawartości dwóch kontenerów.
 
@@ -34,30 +34,30 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
+*Głównych*\
 Typ klucza.
 
-*Ty*<br/>
+*Br*\
 Typ mapowany.
 
-*Skrót*<br/>
+*Skrótu*\
 Typ obiektu funkcji mieszania.
 
-*P.*<br/>
+*Pred*\
 Typ obiektu funkcji porównywania równości.
 
-*Alokacji*<br/>
+*Alokacj*\
 Klasa alokatora.
 
-*left*<br/>
-Pierwszy kontener do wymiany.
+*lewym*\
+Pierwszy kontener do zamiany.
 
-*right*<br/>
-Drugi kontener do wymiany.
+*Kliknij*\
+Drugi kontener do zamiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu wykonuje `left.` [unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.
+Funkcja Template wykonuje `left.` [unordered_map:: swap](../standard-library/unordered-map-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -114,7 +114,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap_function_multimap"></a>  swap (unordered_multimap)
+## <a name="swap_function_multimap"></a>swap (unordered_multimap)
 
 Zamienia zawartości dwóch kontenerów.
 
@@ -127,30 +127,30 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
+*Głównych*\
 Typ klucza.
 
-*Ty*<br/>
+*Br*\
 Typ mapowany.
 
-*Skrót*<br/>
+*Skrótu*\
 Typ obiektu funkcji mieszania.
 
-*P.*<br/>
+*Pred*\
 Typ obiektu funkcji porównywania równości.
 
-*Alokacji*<br/>
+*Alokacj*\
 Klasa alokatora.
 
-*left*<br/>
-Pierwszy kontener do wymiany.
+*lewym*\
+Pierwszy kontener do zamiany.
 
-*right*<br/>
-Drugi kontener do wymiany.
+*Kliknij*\
+Drugi kontener do zamiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu wykonuje `left.` [unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
+Funkcja Template wykonuje `left.` [unordered_multimap:: swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -209,4 +209,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

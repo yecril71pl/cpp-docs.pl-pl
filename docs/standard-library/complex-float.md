@@ -1,21 +1,21 @@
 ---
-title: complex&lt;float&gt;
+title: złożone&lt;zmiennoprzecinkowe&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - complex/std::complex<float>
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: a09b6d0306f633754cad4b12a652eac557f96634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279089"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453114"
 ---
-# <a name="complexltfloatgt"></a>complex&lt;float&gt;
+# <a name="complexltfloatgt"></a>złożone&lt;zmiennoprzecinkowe&gt;
 
-Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **float**, najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
+Opisuje obiekt, który przechowuje uporządkowaną parę obiektów typu **float**, pierwszą reprezentującą rzeczywistą część liczby zespolonej i drugą reprezentującą część urojoną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,24 +41,24 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*<br/>
-Wartość typu **float** rzeczywistych część liczby zespolonej budowany.
+*_RealVal*\
+Wartość typu **float** dla rzeczywistej części konstruowanej liczby zespolonej.
 
-*_ImagVal*<br/>
-Wartość typu **float** dla urojone części liczb zespolonych budowany.
+*_ImagVal*\
+Wartość typu **float** dla części urojonej konstruowanej liczby zespolonej.
 
-*complexNum*<br/>
-Liczby zespolonej typu **double** lub typu **typu long double** którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej typu **float** budowany.
+*complexNum*\
+Złożona liczba typu **Double** lub typu **Long Double** , których elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby konstruowanych typów **zmiennoprzecinkowych** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczby zespolonej typu **float**.
+Złożona liczba typu zmiennoprzecinkowego .
 
 ## <a name="remarks"></a>Uwagi
 
-Jawna specjalizacja szablonu klasy złożone i klasy złożone typu **float** różni się od klasy szablonu, tylko w konstruktorach definiuje. Konwersja z **float** do **double** może być niejawne, jednak mniej bezpieczne konwersja **float** do **typu long double** jest musi być **jawne**. Korzystanie z **jawne** wyklucza rozpoczęcia z konwersję typu przy użyciu składni przypisania.
+Jawna specjalizacja klasy szablonu złożonej do złożonej klasy typu zmiennoprzecinkowego różni  się od klasy szablonu tylko w konstruktorach, które definiuje. Konwersja z wartości **zmiennoprzecinkowej** na **Double** może być niejawna, ale mniej bezpieczna konwersja z  wartości zmiennoprzecinkowych na **Long Double** musi być **jawna**. Użycie jawnych  reguł inicjacji z konwersją typu przy użyciu składni przypisania.
 
-Aby uzyskać więcej informacji na temat klasy szablonu `complex`, zobacz [complex — klasa](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy szablonu `complex`, zobacz.
+Aby uzyskać więcej informacji na temat klasy `complex`szablonu, zobacz [Klasa złożona](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy `complex`szablonu, zobacz.
 
 ## <a name="example"></a>Przykład
 
@@ -118,11 +118,11 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<złożonych >
+**Nagłówek**: \<złożony >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[complex, klasa](../standard-library/complex-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Klasa złożona](../standard-library/complex-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

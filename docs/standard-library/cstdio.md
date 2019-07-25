@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdio header
 ms.assetid: 838ca50b-dea5-4ee3-a39c-e7c23a6ee016
-ms.openlocfilehash: e64170dd3a428cd78fe3f30c6644fefec6c43a48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5896bdc79c7f494fa83a4c741df0260ae4f6b61
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394250"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447447"
 ---
 # <a name="ltcstdiogt"></a>&lt;cstdio&gt;
 
-Dołącza nagłówek biblioteki standardowej C \<stdio.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Zawiera nagłówek \<standardowej biblioteki C STDIO. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,10 +25,10 @@ Dołącza nagłówek biblioteki standardowej C \<stdio.h > i dodaje skojarzone n
 
 ## <a name="remarks"></a>Uwagi
 
-Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
+Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

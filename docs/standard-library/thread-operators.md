@@ -1,5 +1,5 @@
 ---
-title: '&lt;Wątek&gt; operatorów'
+title: '&lt;Operatory&gt; wątku'
 ms.date: 11/04/2016
 f1_keywords:
 - thread/std::operator!=
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412049"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458442"
 ---
-# <a name="ltthreadgt-operators"></a>&lt;Wątek&gt; operatorów
+# <a name="ltthreadgt-operators"></a>&lt;Operatory&gt; wątku
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[Operator&gt;=](#op_gt_eq)|
-|[Operator&lt;](#op_lt)|[Operator&lt;&lt;](#op_lt_lt)|[Operator&lt;=](#op_lt_eq)|
+|[operator!=](#op_neq)|[zakład&gt;](#op_gt)|[zakład&gt;=](#op_gt_eq)|
+|[zakład&lt;](#op_lt)|[zakład&lt;&lt;](#op_lt_lt)|[zakład&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|
 
-## <a name="op_gt_eq"></a>  Operator&gt;=
+## <a name="op_gt_eq"></a>zakład&gt;=
 
-Określa, czy jeden `thread::id` obiekt jest większy niż lub równy innemu.
+Określa, czy `thread::id` jeden obiekt jest większy lub równy drugiemu.
 
 ```cpp
 bool operator>= (
@@ -45,11 +45,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*<br/>
-Po lewej stronie `thread::id` obiektu.
+*Lewym*\
+Lewy `thread::id` obiekt.
 
-*po prawej stronie*<br/>
-Po prawej stronie `thread::id` obiektu.
+*Kliknij*\
+Prawidłowy `thread::id` obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -59,9 +59,9 @@ Po prawej stronie `thread::id` obiektu.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="op_gt"></a>  Operator&gt;
+## <a name="op_gt"></a>zakład&gt;
 
-Określa, czy jeden `thread::id` obiekt jest większy niż inny.
+Określa, czy `thread::id` jeden obiekt jest większy niż inny.
 
 ```cpp
 bool operator> (
@@ -71,11 +71,11 @@ bool operator> (
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*<br/>
-Po lewej stronie `thread::id` obiektu.
+*Lewym*\
+Lewy `thread::id` obiekt.
 
-*po prawej stronie*<br/>
-Po prawej stronie `thread::id` obiektu.
+*Kliknij*\
+Prawidłowy `thread::id` obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -85,9 +85,9 @@ Po prawej stronie `thread::id` obiektu.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="op_lt_eq"></a>  Operator&lt;=
+## <a name="op_lt_eq"></a>zakład&lt;=
 
-Określa, czy jeden `thread::id` obiekt jest mniejszy niż lub równe drugiemu.
+Określa, czy `thread::id` jeden obiekt jest mniejszy lub równy drugiemu.
 
 ```cpp
 bool operator<= (
@@ -97,11 +97,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*<br/>
-Po lewej stronie `thread::id` obiektu.
+*Lewym*\
+Lewy `thread::id` obiekt.
 
-*po prawej stronie*<br/>
-Po prawej stronie `thread::id` obiektu.
+*Kliknij*\
+Prawidłowy `thread::id` obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -111,9 +111,9 @@ Po prawej stronie `thread::id` obiektu.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="op_lt"></a>  Operator&lt;
+## <a name="op_lt"></a>zakład&lt;
 
-Określa, czy jeden `thread::id` obiekt jest mniejszy niż inny.
+Określa, czy `thread::id` jeden obiekt jest mniejszy niż inny.
 
 ```cpp
 bool operator<(
@@ -123,25 +123,25 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*<br/>
-Po lewej stronie `thread::id` obiektu.
+*Lewym*\
+Lewy `thread::id` obiekt.
 
-*po prawej stronie*<br/>
-Po prawej stronie `thread::id` obiektu.
+*Kliknij*\
+Prawidłowy `thread::id` obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli *po lewej stronie* poprzedza *po prawej stronie* w kolejności całkowita; w przeciwnym razie **false**.
+**wartość true** , jeśli *Left* poprzedza *prawo* w całkowitej kolejności; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator definiuje kolejność całkowita we wszystkich `thread::id` obiektów. Te obiekty może służyć jako klucze w kontenerach asocjacyjnych.
+Operator definiuje całkowitą kolejność dla wszystkich `thread::id` obiektów. Te obiekty mogą być używane jako klucze w kontenerach asocjacyjnych.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="op_neq"></a>  operator! =
+## <a name="op_neq"></a>operator! =
 
-Porównuje dwa `thread::id` obiekty pod kątem nierówności.
+Porównuje `thread::id` dwa obiekty pod kątem nierówności.
 
 ```cpp
 bool operator!= (
@@ -151,11 +151,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*<br/>
-Po lewej stronie `thread::id` obiektu.
+*Lewym*\
+Lewy `thread::id` obiekt.
 
-*po prawej stronie*<br/>
-Po prawej stronie `thread::id` obiektu.
+*Kliknij*\
+Prawidłowy `thread::id` obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -165,9 +165,9 @@ Po prawej stronie `thread::id` obiektu.
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="op_eq_eq"></a>  operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Porównuje dwa `thread::id` obiekty pod kątem równości.
+Porównuje `thread::id` dwa obiekty pod kątem równości.
 
 ```cpp
 bool operator== (
@@ -177,23 +177,23 @@ bool operator== (
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*<br/>
-Po lewej stronie `thread::id` obiektu.
+*Lewym*\
+Lewy `thread::id` obiekt.
 
-*po prawej stronie*<br/>
-Po prawej stronie `thread::id` obiektu.
+*Kliknij*\
+Prawidłowy `thread::id` obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** czy dwa obiekty reprezentują ten sam wątek wykonywania, czy żaden obiekt reprezentuje wątek wykonywania; w przeciwnym razie **false**.
+**ma wartość true** , jeśli dwa obiekty reprezentują ten sam wątek wykonywania lub jeśli żaden z obiektów nie reprezentuje wątku wykonywania; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="op_lt_lt"></a>  Operator&lt;&lt;
+## <a name="op_lt_lt"></a>zakład&lt;&lt;
 
-Wstawia tekstowa reprezentacja `thread::id` obiektu do strumienia.
+Wstawia tekstową reprezentację `thread::id` obiektu do strumienia.
 
 ```cpp
 template <class Elem, class Tr>
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostr*<br/>
-A [basic_ostream](../standard-library/basic-ostream-class.md) obiektu.
+*Ostr*\
+Obiekt [basic_ostream](../standard-library/basic-ostream-class.md) .
 
-*Identyfikator*<br/>
-Element `thread::id` obiektu.
+*#C1*\
+`thread::id` Obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-*OSTR*.
+*Ostr*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja wstawia *identyfikator* do *Ostr*.
+Ta funkcja wstawia *Identyfikator* do *ostr*.
 
-Jeśli dwa `thread::id` obiekty są sobie równe, reprezentujący wstawiony tekst te obiekty są takie same.
+Jeśli dwa `thread::id` obiekty są porównywane jako równe, wstawiona tekstowa reprezentacja tych obiektów jest taka sama.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Wątek >](../standard-library/thread.md)<br/>
+[\<> wątku](../standard-library/thread.md)

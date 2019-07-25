@@ -1,21 +1,21 @@
 ---
-title: is_trivially_copy_assignable Class
+title: Klasa is_trivially_copy_assignable
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_copy_assignable
 helpviewer_keywords:
 - is_trivially_copy_assignable
 ms.assetid: 7410133e-f367-493f-92a7-e34e3ec5e879
-ms.openlocfilehash: 831e7c5afdd39980876a8e8284a68fec2084a4e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0019257a032d3becc268513336ed59e58a2e1d5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413466"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447996"
 ---
-# <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable Class
+# <a name="istriviallycopyassignable-class"></a>Klasa is_trivially_copy_assignable
 
-Sprawdza, czy typ ma operator przypisania kopiowania prosta.
+Testuje, czy typ ma operator przypisania prostego kopiowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,21 +26,21 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *T* to klasa, która ma proste operatora przypisanej kopii, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest klasą, która ma operator przypisania prostego kopiowania, w przeciwnym razie zawiera wartość false.
 
-Konstruktor przypisania dla klasy *T* jest proste, jeśli jest niejawnie podany, klasa *T* ma żadnych funkcji wirtualnych klasy *T* ma nie baz wirtualnych klas Wszyscy członkowie danych niestatycznych typu klasy mają operatory przypisania proste, a klasy wszystkie składowe danych niestatycznych tablicy typu klasy mieć operatory przypisania prosta.
+Konstruktor przypisania dla klasy *t* jest uproszczony, jeśli jest niejawnie określony, Klasa *t* nie ma żadnych funkcji wirtualnych, Klasa *t* nie ma żadnych wirtualnych podstaw, klasy wszystkich niestatycznych elementów członkowskich danych typu klasy mają proste przypisanie Operatory i klasy wszystkich niestatycznych elementów członkowskich danych typu Array klasy mają proste operatory przypisania.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -38,16 +38,16 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: 47e0a1e51809efad2924a2051d1627fe2e9ff95f
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: a34346b4fc15beb605836037ef8a05a541562f33
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400677"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451509"
 ---
 # <a name="regextraits-class"></a>regex_traits — Klasa
 
-Zawiera opis właściwości elementów do dopasowania.
+Opisuje charakterystykę elementów do dopasowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,52 +58,52 @@ class regex_traits
 
 ## <a name="parameters"></a>Parametry
 
-*Elem*<br/>
-Typ elementu znaku do opisu.
+*Elem*\
+Typ elementu znaku do opisania.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje różne cechy wyrażeń regularnych dla typu *Elem*. Klasa szablonu [basic_regex, klasa](../standard-library/basic-regex-class.md) używa tych informacji do manipulowania elementów typu *Elem*.
+Klasa szablonu opisuje różne cechy wyrażeń regularnych dla typu *elem*. [Klasa basic_regex](../standard-library/basic-regex-class.md) klasy szablonu używa tych informacji do manipulowania elementami typu *elem*.
 
-Każdy `regex_traits` obiekt przechowuje obiekt typu `regex_traits::locale` która jest używana przez niektóre z jego elementów członkowskich. Domyślne ustawienia regionalne jest kopią `regex_traits::locale()`. Funkcja elementu członkowskiego `imbue` zastępuje obiekt ustawień regionalnych i funkcja elementu członkowskiego `getloc` zwraca kopię obiektu ustawień regionalnych.
+Każdy `regex_traits` obiekt zawiera obiekt typu `regex_traits::locale` , który jest używany przez niektóre z jego funkcji składowych. Domyślne ustawienia regionalne to kopia `regex_traits::locale()`. Funkcja `imbue` członkowska zastępuje obiekt ustawień regionalnych, a funkcja `getloc` członkowska zwraca kopię obiektu ustawień regionalnych.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[regex_traits](#regex_traits)|Tworzy obiekt.|
+|[regex_traits](#regex_traits)|Konstruuje obiekt.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[char_class_type](#char_class_type)|Typ oznaczenia klasy znaku.|
+|[char_class_type](#char_class_type)|Typ wyznaczania klasy znaków.|
 |[char_type](#char_type)|Typ elementu.|
-|[locale_type](#locale_type)|Typ obiektu przechowywanych ustawień regionalnych.|
-|[size_type](#size_type)|Typ długość sekwencji.|
+|[locale_type](#locale_type)|Typ przechowywanego obiektu ustawień regionalnych.|
+|[size_type](#size_type)|Typ długości sekwencji.|
 |[string_type](#string_type)|Typ ciągu elementów.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[getloc](#getloc)|Zwraca obiekt ustawień regionalnych przechowywanych.|
-|[imbue](#imbue)|Zmienia obiektu przechowywanych ustawień regionalnych.|
-|[isctype —](#isctype)|Testuje, czy klasa członkostwa.|
-|[Długość](#length)|Zwraca długość sekwencji zakończony znakiem null.|
-|[lookup_classname](#lookup_classname)|Mapuje sekwencji klasy znaku.|
-|[lookup_collatename](#lookup_collatename)|Mapuje element sortujący sekwencji.|
-|[transform](#transform)|Konwertuje odpowiednik uporządkowane sekwencji.|
-|[transform_primary](#transform_primary)|Konwertuje odpowiednik caseless uporządkowane sekwencji.|
-|[translate](#translate)|Konwertuje równoważne pasujący element.|
-|[translate_nocase](#translate_nocase)|Konwertuje równoważne caseless pasujący element.|
-|[value](#value)|Konwertuje element na wartość cyfrę.|
+|[getloc](#getloc)|Zwraca przechowywany obiekt locale.|
+|[imbue](#imbue)|Zmienia przechowywany obiekt locale.|
+|[isctype —](#isctype)|Testy dla członkostwa w klasie.|
+|[length](#length)|Zwraca długość sekwencji zakończonych znakiem null.|
+|[lookup_classname](#lookup_classname)|Mapuje sekwencję do klasy znaków.|
+|[lookup_collatename](#lookup_collatename)|Mapuje sekwencję do elementu sortowania.|
+|[transform](#transform)|Konwertuje na równoważną uporządkowaną sekwencję.|
+|[transform_primary](#transform_primary)|Konwertuje na równoważną sekwencję uporządkowaną bezliterowo.|
+|[Przetłumacz](#translate)|Konwertuje na odpowiedni pasujący element.|
+|[translate_nocase](#translate_nocase)|Konwertuje do równoważnego elementu pasującego do samego wielkości liter.|
+|[value](#value)|Konwertuje element na wartość cyfrową.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wyrażenia regularnego >
+**Nagłówek:** \<> wyrażeń regularnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="example"></a>Przykład
 
@@ -175,9 +175,9 @@ class digit == d == true
 hex C == 12
 ```
 
-## <a name="char_class_type"></a>  regex_traits::char_class_type
+## <a name="char_class_type"></a>regex_traits::char_class_type
 
-Typ oznaczenia klasy znaku.
+Typ wyznaczania klasy znaków.
 
 ```cpp
 typedef T8 char_class_type;
@@ -185,9 +185,9 @@ typedef T8 char_class_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla nieokreślonego typu, który wyznacza klasy znaków. Wartości tego typu można łączyć, używając `|` operatora, aby wyznaczyć klas znaków, które są Unii, klas wyznaczonym przez argumenty operacji.
+Typ jest synonimem dla nieokreślonego typu, który wyznacza klasy znaków. Wartości tego typu można łączyć za pomocą `|` operatora, aby wyznaczyć klasy znaków, które są Unią klas wyznaczonych przez operandy.
 
-## <a name="char_type"></a>  regex_traits::char_type
+## <a name="char_type"></a>regex_traits::char_type
 
 Typ elementu.
 
@@ -197,11 +197,11 @@ typedef Elem char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typedef jest synonimem dla argumentu szablonu `Elem`.
+Element typedef jest synonimem argumentu `Elem`szablonu.
 
-## <a name="getloc"></a>  regex_traits::getloc
+## <a name="getloc"></a>regex_traits:: getloc
 
-Zwraca obiekt ustawień regionalnych przechowywanych.
+Zwraca przechowywany obiekt locale.
 
 ```cpp
 locale_type getloc() const;
@@ -209,11 +209,11 @@ locale_type getloc() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca przechowywany `locale` obiektu.
+Funkcja członkowska zwraca przechowywany `locale` obiekt.
 
-## <a name="imbue"></a>  regex_traits::imbue
+## <a name="imbue"></a>regex_traits:: imbue —
 
-Zmienia obiektu przechowywanych ustawień regionalnych.
+Zmienia przechowywany obiekt locale.
 
 ```cpp
 locale_type imbue(locale_type loc);
@@ -221,16 +221,16 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja*<br/>
-Obiekt ustawień regionalnych, który ma być przechowywany.
+*Loc*\
+Obiekt ustawień regionalnych do przechowywania.
 
 ### <a name="remarks"></a>Uwagi
 
-Kopiuje funkcja elementu członkowskiego *loc* do przechowywanej `locale` obiektu i zwraca kopię poprzednią wartość przechowywaną `locale` obiektu.
+Funkcja członkowska kopiuje element *Loc* do przechowywanego `locale` obiektu i zwraca kopię poprzedniej wartości przechowywanego `locale` obiektu.
 
-## <a name="isctype"></a>  regex_traits::isctype
+## <a name="isctype"></a>regex_traits:: isctype —
 
-Testuje, czy klasa członkostwa.
+Testy dla członkostwa w klasie.
 
 ```cpp
 bool isctype(char_type ch, char_class_type cls) const;
@@ -238,19 +238,19 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*ch*\
 Element do przetestowania.
 
-*cls*<br/>
-Klasy do testowania.
+*ze*\
+Klasy do przetestowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcji zwraca wartość PRAWDA, tylko wtedy, gdy znak *ch* w klasie znaków wyznaczonym przez *zgodny ze specyfikacją*.
+Funkcja członkowska zwraca wartość true tylko wtedy, gdy znak *ch* jest w klasie znakowej oznaczonej przez *CLS*.
 
-## <a name="length"></a>  regex_traits::length
+## <a name="length"></a>regex_traits:: length
 
-Zwraca długość sekwencji zakończony znakiem null.
+Zwraca długość sekwencji zakończonych znakiem null.
 
 ```cpp
 static size_type length(const char_type *str);
@@ -258,16 +258,16 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Sekwencja zakończona wartością null.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja statycznej składowej zwraca `std::char_traits<char_type>::length(str)`.
+Statyczna funkcja członkowska `std::char_traits<char_type>::length(str)`zwraca wartość.
 
-## <a name="locale_type"></a>  regex_traits::locale_type
+## <a name="locale_type"></a>regex_traits::locale_type
 
-Typ obiektu przechowywanych ustawień regionalnych.
+Typ przechowywanego obiektu ustawień regionalnych.
 
 ```cpp
 typedef T7 locale_type;
@@ -275,11 +275,11 @@ typedef T7 locale_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typedef jest synonimem dla typu, który hermetyzuje ustawień regionalnych. W specjalizacji `regex_traits<char>` i `regex_traits<wchar_t>` jest synonimem `std::locale`.
+Element typedef jest synonimem typu, który hermetyzuje ustawienia regionalne. W specjalizacjach `regex_traits<char>` i `regex_traits<wchar_t>` jest synonimem dla `std::locale`.
 
-## <a name="lookup_classname"></a>  regex_traits::lookup_classname
+## <a name="lookup_classname"></a>regex_traits::lookup_classname
 
-Mapuje sekwencji klasy znaku.
+Mapuje sekwencję do klasy znaków.
 
 ```cpp
 template <class FwdIt>
@@ -288,23 +288,23 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszego*\
 Początek sekwencji do wyszukania.
 
-*last*<br/>
+*ostatniego*\
 Koniec sekwencji do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca wartość, która wskazuje klasy znaków o nazwie określonej przez sekwencję znaków, wskazywana przez argumenty. Wartość zależy od wielkość liter w sekwencji.
+Funkcja członkowska zwraca wartość, która wyznacza klasę znaku o nazwie w sekwencji znaków wskazywanej przez argumenty. Wartość nie jest zależna od wielkości liter w sekwencji.
 
-Specjalizacja `regex_traits<char>` rozpoznaje nazwy `"d"`, `"s"`, `"w"`, `"alnum"`, `"alpha"`, `"blank"`, `"cntrl"`, `"digit"`, `"graph"`, `"lower"`, `"print"`, `"punct"`, `"space"`, `"upper"`, i `"xdigit"`, wszystko bez uwzględniania wielkości liter.
+`regex_traits<char>` Specjalizacja rozpoznaje nazwy ,`"lower"`, `"s"` ,,`"blank"`, ,`"digit"`, ,`"graph"`, `"d"` `"w"` `"alnum"` `"alpha"` `"cntrl"` `"print"`, ,`"punct"` ,i`"xdigit"`, wszystkie bez względu na wielkość liter. `"space"` `"upper"`
 
-Specjalizacja `regex_traits<wchar_t>` rozpoznaje nazwy `L"d"`, `L"s"`, `L"w"`, `L"alnum"`, `L"alpha"`, `L"blank"`, `L"cntrl"`, `L"digit"`, `L"graph"`, `L"lower"`, `L"print"`, `L"punct"`, `L"space"`, `L"upper"`, i `L"xdigit"`, wszystko bez uwzględniania wielkości liter.
+`regex_traits<wchar_t>` Specjalizacja rozpoznaje nazwy ,`L"lower"`, `L"s"` ,,`L"blank"`, ,`L"digit"`, ,`L"graph"`, `L"d"` `L"w"` `L"alnum"` `L"alpha"` `L"cntrl"` `L"print"`, ,`L"punct"` ,i`L"xdigit"`, wszystkie bez względu na wielkość liter. `L"space"` `L"upper"`
 
-## <a name="lookup_collatename"></a>  regex_traits::lookup_collatename
+## <a name="lookup_collatename"></a>regex_traits::lookup_collatename
 
-Mapuje element sortujący sekwencji.
+Mapuje sekwencję do elementu sortowania.
 
 ```cpp
 template <class FwdIt>
@@ -313,19 +313,19 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszego*\
 Początek sekwencji do wyszukania.
 
-*last*<br/>
+*ostatniego*\
 Koniec sekwencji do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca obiekt ciągu zawierający element sortujący odpowiadające Sekwencja `[first, last)`, ani być pustym ciągiem, jeżeli sekwencja nie jest prawidłowym elementem sortowania.
+Funkcja członkowska zwraca obiekt String zawierający element sortowania odpowiadający sekwencji `[first, last)`lub pusty ciąg, jeśli sekwencja nie jest prawidłowym elementem sortowania.
 
-## <a name="regex_traits"></a>  regex_traits::regex_traits
+## <a name="regex_traits"></a>regex_traits::regex_traits
 
-Tworzy obiekt.
+Konstruuje obiekt.
 
 ```cpp
 regex_traits();
@@ -333,11 +333,11 @@ regex_traits();
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor konstruuje obiekt, którego przechowywane `locale` obiekt jest inicjowany do domyślnych ustawień regionalnych.
+Konstruktor konstruuje obiekt, którego przechowywany `locale` obiekt jest zainicjowany do domyślnych ustawień regionalnych.
 
-## <a name="size_type"></a>  regex_traits::size_type
+## <a name="size_type"></a>regex_traits::size_type
 
-Typ długość sekwencji.
+Typ długości sekwencji.
 
 ```cpp
 typedef T6 size_type;
@@ -345,11 +345,11 @@ typedef T6 size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typedef jest synonimem dla nieoznaczoną liczbę całkowitą. W specjalizacji `regex_traits<char>` i `regex_traits<wchar_t>` jest synonimem `std::size_t`.
+Element typedef jest synonimem dla niepodpisanego typu całkowitego. W specjalizacjach `regex_traits<char>` i `regex_traits<wchar_t>` jest synonimem dla `std::size_t`.
 
-Typedef jest synonimem dla `std::size_t`.
+Element typedef jest synonimem dla `std::size_t`.
 
-## <a name="string_type"></a>  regex_traits::STRING_TYPE
+## <a name="string_type"></a>regex_traits::string_type
 
 Typ ciągu elementów.
 
@@ -359,11 +359,11 @@ typedef basic_string<Elem> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typedef jest synonimem dla `basic_string<Elem>`.
+Element typedef jest synonimem dla `basic_string<Elem>`.
 
-## <a name="transform"></a>  regex_traits::Transform
+## <a name="transform"></a>regex_traits:: Transform
 
-Konwertuje odpowiednik uporządkowane sekwencji.
+Konwertuje na równoważną uporządkowaną sekwencję.
 
 ```cpp
 template <class FwdIt>
@@ -372,19 +372,19 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
-Początek sekwencji w celu przekształcania.
+*pierwszego*\
+Początek sekwencji do przekształcenia.
 
-*last*<br/>
+*ostatniego*\
 Koniec sekwencji do przekształcenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca ciąg, który generuje przy użyciu reguły przekształcania, który zależy od przechowywanej `locale` obiektu. Dla dwie sekwencje znaków wyznaczonym przez zakresy iteratorów `[first1, last1)` i `[first2, last2)`, `transform(first1, last1) < transform(first2, last2)` Jeśli sekwencja znaków wyznaczony przez zakres iteratora `[first1, last1)` sortowaniu znajduje się przed wyznaczonym przez zakres iteratora sekwencji znaków `[first2, last2)`.
+Funkcja członkowska zwraca ciąg wygenerowany przy użyciu reguły transformacji, która zależy od przechowywanego `locale` obiektu. Dla dwóch sekwencji znaków wyznaczono przez zakresy `[first1, last1)` iteratora i `transform(first1, last1) < transform(first2, last2)` `[first2, last2)`, jeśli sekwencja znaków oznaczona przez zakres `[first1, last1)` iteratora jest sortowana przed sekwencją znaków wyznaczono przez zakres iteratora `[first2, last2)`.
 
-## <a name="transform_primary"></a>  regex_traits::transform_primary
+## <a name="transform_primary"></a>regex_traits::transform_primary
 
-Konwertuje odpowiednik caseless uporządkowane sekwencji.
+Konwertuje na równoważną sekwencję uporządkowaną bezliterowo.
 
 ```cpp
 template <class FwdIt>
@@ -393,19 +393,19 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
-Początek sekwencji w celu przekształcania.
+*pierwszego*\
+Początek sekwencji do przekształcenia.
 
-*last*<br/>
+*ostatniego*\
 Koniec sekwencji do przekształcenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca ciąg, który generuje przy użyciu reguły przekształcania, który zależy od przechowywanej `locale` obiektu. Dla dwie sekwencje znaków wyznaczonym przez zakresy iteratorów `[first1, last1)` i `[first2, last2)`, `transform_primary(first1, last1) < transform_primary(first2, last2)` Jeśli sekwencja znaków wyznaczony przez zakres iteratora `[first1, last1)` sortowaniu znajduje się przed wyznaczonym przez zakres iteratora sekwencji znaków `[first2, last2)` bez względu na przypadek i wyróżniania.
+Funkcja członkowska zwraca ciąg wygenerowany przy użyciu reguły transformacji, która zależy od przechowywanego `locale` obiektu. Dla dwóch sekwencji znaków wyznaczono przez zakresy `[first1, last1)` iteratora i `transform_primary(first1, last1) < transform_primary(first2, last2)` `[first2, last2)`, jeśli sekwencja znaków oznaczona przez zakres `[first1, last1)` iteratora jest sortowana przed sekwencją znaków wyznaczono przez zakres iteratora `[first2, last2)` bez względu na wielkość liter lub akcentów.
 
-## <a name="translate"></a>  regex_traits::TRANSLATE
+## <a name="translate"></a>regex_traits:: tłumaczyć
 
-Konwertuje równoważne pasujący element.
+Konwertuje na odpowiedni pasujący element.
 
 ```cpp
 char_type translate(char_type ch) const;
@@ -413,16 +413,16 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*ch*\
 Element do przekonwertowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcji zwraca znak, który generuje przy użyciu reguły przekształcania, który zależy od przechowywanej `locale` obiektu. Dla dwóch `char_type` obiektów `ch1` i `ch2`, `translate(ch1) == translate(ch2)` tylko wtedy, gdy `ch1` i `ch2` powinny odpowiadać, gdy wystąpi jedno w definicji wyrażenia regularnego i innych występuje w odpowiednim miejscu w elemencie docelowym Sekwencja pod kątem dopasowania zależne od ustawień regionalnych.
+Funkcja członkowska zwraca znak generowany przy użyciu reguły transformacji, która zależy od przechowywanego `locale` obiektu. Dla dwóch `char_type` obiektów `ch1` `translate(ch1) == translate(ch2)` i ,tylko`ch1` wtedy, gdy`ch2` i powinny być zgodne, gdy występuje w definicji wyrażenia regularnego, a drugi występuje w odpowiedniej pozycji w miejscu docelowym `ch2` Sekwencja dla dopasowania z uwzględnieniem ustawień regionalnych.
 
-## <a name="translate_nocase"></a>  regex_traits::translate_nocase
+## <a name="translate_nocase"></a>regex_traits::translate_nocase
 
-Konwertuje równoważne caseless pasujący element.
+Konwertuje do równoważnego elementu pasującego do samego wielkości liter.
 
 ```cpp
 char_type translate_nocase(char_type ch) const;
@@ -430,16 +430,16 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*ch*\
 Element do przekonwertowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcji zwraca znak, który generuje przy użyciu reguły przekształcania, który zależy od przechowywanej `locale` obiektu. Dla dwóch `char_type` obiektów `ch1` i `ch2`, `translate_nocase(ch1) == translate_nocase(ch2)` tylko wtedy, gdy `ch1` i `ch2` powinny odpowiadać, gdy wystąpi jedno w definicji wyrażenia regularnego i innych występuje w odpowiednim miejscu w elemencie docelowym Sekwencja dopasowanie bez uwzględniania wielkości liter.
+Funkcja członkowska zwraca znak generowany przy użyciu reguły transformacji, która zależy od przechowywanego `locale` obiektu. Dla dwóch `char_type` obiektów `ch1` `translate_nocase(ch1) == translate_nocase(ch2)` i ,tylko`ch1` wtedy, gdy`ch2` i powinny być zgodne, gdy występuje w definicji wyrażenia regularnego, a drugi występuje w odpowiedniej pozycji w miejscu docelowym `ch2` Sekwencja dla dopasowania bez uwzględniania wielkości liter.
 
-## <a name="value"></a>  regex_traits::Value
+## <a name="value"></a>regex_traits:: value
 
-Konwertuje element na wartość cyfrę.
+Konwertuje element na wartość cyfrową.
 
 ```cpp
 int value(Elem ch, int radix) const;
@@ -447,25 +447,25 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*ch*\
 Element do przekonwertowania.
 
-*radix*<br/>
-Arytmetyczny podstawowy do użycia.
+*podstawy*\
+Baza arytmetyczna, która ma zostać użyta.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca wartość, reprezentowany przez znak *ch* w podstawowym *podstawy*, lub wartość-1, jeśli *ch* nie jest prawidłową cyfrą w podstawie *podstawy*. Funkcja tylko nelze volat *podstawy* argumentu, 8, 10 lub 16.
+Funkcja członkowska zwraca wartość reprezentowaną przez znak *ch* w podstawowym *podstawy*lub-1 Jeśli *ch* nie jest prawidłową cyfrą w podstawowym *podstawy*. Funkcja będzie wywoływana tylko z argumentem *podstawy* o wartości 8, 10 lub 16.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants, klasa](../standard-library/regex-constants-class.md)<br/>
-[regex_error, klasa](../standard-library/regex-error-class.md)<br/>
-[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
-[regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
-[\<wyrażenie regularne > operatorów](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
-[\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)<br/>
-[regex_traits\<char > klasa](../standard-library/regex-traits-char-class.md)<br/>
-[regex_traits\<wchar_t > klasa](../standard-library/regex-traits-wchar-t-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Klasa regex_constants](../standard-library/regex-constants-class.md)\
+[Klasa regex_error](../standard-library/regex-error-class.md)\
+[\<Funkcje > wyrażenia regularnego](../standard-library/regex-functions.md)\
+[Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<Operatory > wyrażenia regularnego](../standard-library/regex-operators.md)\
+[Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[\<wyrażenie regularne > Typedefs](../standard-library/regex-typedefs.md)\
+[Klasa\<regex_traits char >](../standard-library/regex-traits-char-class.md)\
+[Klasa\<regex_traits wchar_t >](../standard-library/regex-traits-wchar-t-class.md)

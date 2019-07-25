@@ -1,5 +1,5 @@
 ---
-title: '&lt;bitset —&gt;'
+title: '&lt;bitset&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <bitset>
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: b0a5a01ca04d01d9535291e3c4a254143bc09e5a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243297"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449706"
 ---
-# <a name="ltbitsetgt"></a>&lt;bitset —&gt;
+# <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-Definiuje bitset — klasa szablonu i dwie funkcje szablonu pomocnicze do reprezentujący i manipulowania sekwencje o stałym rozmiarze bitów.
+Definiuje klasę szablonu bitset i dwie funkcje szablonu pomocniczego do reprezentowania i manipulowania sekwencji o ustalonym rozmiarze bitów.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<bitset — >
+**Nagłówek:** \<bitset >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -30,19 +30,19 @@ Definiuje bitset — klasa szablonu i dwie funkcje szablonu pomocnicze do reprez
 
 |||
 |-|-|
-|[Operator &](../standard-library/bitset-operators.md#op_amp)|Wykonuje iloczynu bitowego AND między dwoma bitsets.|
-|[Operator <\<](../standard-library/bitset-operators.md#op_lt_lt)|Wstawia tekst reprezentujący sekwencji bit do standardowego strumienia wyjściowego.|
-|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Wstawia tekst reprezentujący sekwencji bit do standardowego strumienia wejściowego.|
-|[operator^](../standard-library/bitset-operators.md#op_xor)|Wykonuje logiczny OR wyłączne między dwoma bitsets.|
-|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Wykonuje logiczną lub między dwoma bitsets.|
+|[& operatora](../standard-library/bitset-operators.md#op_amp)|Wykonuje bitowe i między dwoma bitsets.|
+|[< operatora\<](../standard-library/bitset-operators.md#op_lt_lt)|Wstawia tekstową reprezentację sekwencji bitowej do standardowego strumienia wyjściowego.|
+|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Wstawia tekstową reprezentację sekwencji bitowej do standardowego strumienia wejściowego.|
+|[operator^](../standard-library/bitset-operators.md#op_xor)|Wykonuje bitowe wykluczające lub między dwoma bitsets.|
+|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Wykonuje wartość bitową lub między dwoma bitsets.|
 
 ### <a name="classes"></a>Klasy
 
 |||
 |-|-|
-|[bitset —](../standard-library/bitset-class.md)|Klasa szablonu opisuje typ obiektu, który przechowuje sekwencji składającej się z stałą liczbą bitów, które zapewniają zwarty sposób zachowania flagi dla zestawu elementów lub warunki.|
+|[bitset](../standard-library/bitset-class.md)|Klasa szablonu opisuje typ obiektu, który przechowuje sekwencję składającą się z stałej liczby bitów, która zapewnia kompaktowy sposób utrzymywania flag dla zestawu elementów lub warunków.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

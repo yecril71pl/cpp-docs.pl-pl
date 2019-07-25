@@ -7,22 +7,22 @@ helpviewer_keywords:
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-ms.openlocfilehash: 0f56f5ffc8e61c0881eddbbd65e1c431b9219674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dc3fa0af76f73897fe1181d944eb34c8d05bc64
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404926"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449329"
 ---
 # <a name="input-streams"></a>Strumienie wejściowe
 
-Obiekt strumienia wejściowego jest źródłem bajtów. Są trzy najważniejsze klasy strumień wejściowy [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md), i [istringstream](../standard-library/basic-istringstream-class.md).
+Obiekt strumienia danych wejściowych jest źródłem bajtów. Trzy najważniejsze klasy strumienia wejściowego to [IStream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md)i [istringstream —](../standard-library/basic-istringstream-class.md).
 
-`istream` Klasy najlepiej nadaje się do trybu sekwencyjnego tekstu w danych wejściowych. Można skonfigurować obiektów klasy `istream` buforowane lub Niebuforowane operacji. Wszystkie funkcje klasy bazowej, `ios`, znajduje się w `istream`. Konstruujesz rzadko obiektów z klasy `istream`. Zamiast tego zazwyczaj użyje wstępnie zdefiniowanego `cin` obiektu, który jest faktycznie obiekt klasy [ostream](../standard-library/basic-ostream-class.md). W niektórych przypadkach można przypisać `cin` do innych obiektów strumień po uruchomieniu programu.
+`istream` Klasa jest Najlepsza do użycia w sekwencyjnym wejściu w trybie tekstowym. Można skonfigurować obiekty klasy `istream` dla operacji buforowanej lub niebuforowanej. Wszystkie funkcje klasy podstawowej, `ios`,, są zawarte w. `istream` Obiekty z klasy `istream`są rzadko konstruowane. Zamiast tego zwykle używany jest wstępnie zdefiniowany `cin` obiekt, który jest obiektem klasy [ostream](../standard-library/basic-ostream-class.md). W niektórych przypadkach można przypisać `cin` do innych obiektów strumienia po uruchomieniu programu.
 
-`ifstream` Klasa obsługuje dysku pliku wejściowego. Jeśli potrzebujesz tylko szyfrowanie plików na dysku, utworzyć obiekt klasy `ifstream`. Można określić dane binarne lub tekstowej. Jeśli określisz parametr filename w konstruktorze, plik jest automatycznie otwierany, gdy obiekt jest konstruowany. W przeciwnym razie można użyć `open` funkcji po wywołaniu konstruktora domyślnego. Wiele funkcji formatowania opcje i elementów członkowskich dotyczą `ifstream` obiektów. Wszystkie funkcje klasy bazowe `ios` i `istream` znajduje się w `ifstream`.
+`ifstream` Klasa obsługuje dane wejściowe pliku dyskowego. Jeśli potrzebujesz pliku dyskowego tylko do wprowadzania danych, Utwórz obiekt klasy `ifstream`. Można określić dane binarne lub w trybie tekstowym. Jeśli określisz nazwę pliku w konstruktorze, plik zostanie automatycznie otwarty podczas konstruowania obiektu. W przeciwnym razie można użyć `open` funkcji po wywołaniu konstruktora domyślnego. Wiele opcji formatowania i funkcji Członkowskich ma zastosowanie `ifstream` do obiektów. Wszystkie funkcje klas `ios` podstawowych i `istream` są zawarte w `ifstream`.
 
-Funkcja biblioteki, takie jak `sscanf_s`, `istringstream` klasa obsługuje dane wejściowe z ciągów w pamięci. Aby wyodrębnić dane z tablicy znaków, który ma terminator o wartości null, przydzielanie i inicjuje ciąg, a następnie utworzyć obiekt klasy `istringstream`.
+Podobnie jak w przypadku `sscanf_s`funkcji biblioteki `istringstream` , Klasa obsługuje dane wejściowe z ciągów w pamięci. Aby wyodrębnić dane z tablicy znaków, która ma terminator o wartości null, przydzielić i zainicjować ciąg, a następnie utworzyć obiekt klasy `istringstream`.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -40,4 +40,4 @@ Funkcja biblioteki, takie jak `sscanf_s`, `istringstream` klasa obsługuje dane 
 
 ## <a name="see-also"></a>Zobacz także
 
-[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
+[iostream, programowanie](../standard-library/iostream-programming.md)

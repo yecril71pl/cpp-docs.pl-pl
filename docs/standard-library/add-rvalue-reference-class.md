@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: e5e658f16657c0021b78175e87d122a3accd11eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411177"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456538"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference — klasa
 
-Tworzy typ odwołania rvalue parametru szablonu, jeśli jest to typ obiektu lub funkcji. W przeciwnym razie ze względu na semantykę odniesienie zwijania typ jest taka sama jak wartość parametru szablonu.
+Tworzy typ odwołania rvalue dla parametru szablonu, jeśli jest typem obiektu lub funkcji. W przeciwnym razie, ze względu na semantykę zwijania odwołania, typ jest taki sam jak parametr szablonu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,18 +29,18 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-`add_rvalue_reference` Klasa ma składową o nazwie `type`, która jest aliasem dla typu odwołania rvalue do parametru szablonu *T*. Semantyka odniesienie zwijania oznacza, że, dla typów niebędących obiektami i innych funkcji *T*, `T&&` jest *T*. Na przykład, gdy *T* jest typem odwołania wartościowanego lewostronnie `add_rvalue_reference<T>::type` jest l-wartości typu odwołania, nie odwołanie rvalue.
+Klasa ma element członkowski o nazwie `type`, który jest aliasem dla typu odwołania rvalue do parametru szablonu *T.* `add_rvalue_reference` Semantyka zwijania odwołania oznacza, że dla typu niebędącego obiektem i nienależącym do funkcji t `T&&` , to *t*. Na przykład, jeśli *T* jest typem odwołania lvalue, `add_rvalue_reference<T>::type` jest typem referencyjnym lvalue, a nie odwołaniem rvalue.
 
-Dla wygody \<type_traits > określa szablon Pomocnika `add_rvalue_reference_t`, które aliasy `type` członkiem `add_rvalue_reference`.
+Dla wygody \<type_traits > definiuje `add_rvalue_reference_t`szablon pomocnika, `add_rvalue_reference`który aliasuje `type` element członkowski.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład kodu używa static_assert, aby pokazać, jak typy odwołań r-wartości są tworzone za pomocą `add_rvalue_reference` i `add_rvalue_reference_t`i w jaki sposób wynik `add_rvalue_reference` na odwołanie lvalue nie jest odwołaniem rvalue typu, ale jest ustawiana na typ odwołania lvalue.
+Ten przykład kodu używa static_assert, aby pokazać, jak rvalue typy odwołań są tworzone `add_rvalue_reference` za `add_rvalue_reference_t`pomocą i, `add_rvalue_reference` i w jaki sposób wynik dla typu odwołania lvalue nie jest odwołaniem rvalue, ale jest zwijany do typu odwołania lvalue.
 
 ```cpp
 // ex_add_rvalue_reference.cpp
@@ -73,10 +73,10 @@ All static_assert tests of add_rvalue_reference passed.
 
 Nagłówek: \<type_traits >
 
-Namespace: standardowe
+Przestrzeń nazw: std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference, klasa](../standard-library/add-lvalue-reference-class.md)<br/>
-[is_rvalue_reference, klasa](../standard-library/is-rvalue-reference-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)\
+[is_rvalue_reference, klasa](../standard-library/is-rvalue-reference-class.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;dla systemu IOS&gt;'
+title: '&lt;wykonane&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ios>
@@ -7,37 +7,37 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245235"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449132"
 ---
-# <a name="ltiosgt"></a>&lt;dla systemu IOS&gt;
+# <a name="ltiosgt"></a>&lt;wykonane&gt;
 
-Definiuje kilka typów i funkcji podstawowych operacji iostream. Ten nagłówek będzie zazwyczaj uwzględniony dla Ciebie innego nagłówków iostream; rzadko uwzględniania go bezpośrednio.
+Definiuje kilka typów i funkcji podstawowych dla operacji iostreams. Ten nagłówek jest zwykle uwzględniany przez inne nagłówki iostream; rzadko umieszczasz ją bezpośrednio.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<dla systemu ios >
+**Nagłówek**: \<> systemu iOS
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 > [!NOTE]
-> \<Dla systemu ios > używa biblioteki `#include <iosfwd>` instrukcji.
+> Biblioteka > `#include <iosfwd>` systemu iOS używa instrukcji. \<
 
 ## <a name="remarks"></a>Uwagi
 
-Dużej grupy funkcji są manipulatory. Manipulator zadeklarowanych w \<dla systemu ios > powoduje zmianę wartości przechowywane w obiekcie klasy jej argument [ios_base —](../standard-library/ios-base-class.md). Inne manipulatory wykonywać akcje na strumienie kontrolowane przez obiekty typu pochodzącego z tej klasy, takie jak specjalizacja jednej z klas szablonów [basic_istream](../standard-library/basic-istream-class.md) lub [basic_ostream](../standard-library/basic-ostream-class.md). Na przykład [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) czyści flagi formatu `ios_base::skipws` w obiekcie `str`, który może być jednego z tych typów.
+Duża grupa funkcji to manipulowanie. Manipulator zadeklarowany w \<systemie iOS > zmienia wartości przechowywanych w obiekcie argument klasy [ios_base](../standard-library/ios-base-class.md). Inne manipulowania wykonuje akcje dotyczące strumieni kontrolowanych przez obiekty typu pochodnego od tej klasy, na przykład specjalizacji jednej z klas szablonu [basic_istream](../standard-library/basic-istream-class.md) lub [basic_ostream](../standard-library/basic-ostream-class.md). Na przykład [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) Czyści flagę `ios_base::skipws` formatu w obiekcie `str`, który może być jednego z tych typów.
 
-Można również wywołać manipulator przez wstawienie go do strumienia wyjściowego lub wyodrębniania ze strumienia wejściowego, ze względu na specjalne operacji wstawienia i wydobycia dostarczony dla klas pochodnych `ios_base`. Na przykład:
+Możesz również wywołać Manipulator przez wstawienie go do strumienia wyjściowego lub wyodrębnienie go ze strumienia wejściowego, z powodu specjalnych operacji wstawiania i wyodrębniania dostarczonych dla klas pochodnych `ios_base`. Na przykład:
 
 ```cpp
 istr>> noskipws;
 ```
 
-wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
+wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -45,41 +45,41 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |||
 |-|-|
-|[dla systemu IOS](../standard-library/ios-typedefs.md#ios)|Obsługuje klasy dla systemu ios ze starego biblioteką iostream.|
-|[streamoff](../standard-library/ios-typedefs.md#streamoff)|Obsługuje operacje wewnętrznego.|
-|[streampos](../standard-library/ios-typedefs.md#streampos)|Zawiera bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.|
+|[wykonane](../standard-library/ios-typedefs.md#ios)|Obsługuje klasę systemu iOS ze starej biblioteki iostream.|
+|[streamoff](../standard-library/ios-typedefs.md#streamoff)|Obsługuje operacje wewnętrzne.|
+|[streampos](../standard-library/ios-typedefs.md#streampos)|Przechowuje bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.|
 |[streamsize](../standard-library/ios-typedefs.md#streamsize)|Określa rozmiar strumienia.|
-|[wios](../standard-library/ios-typedefs.md#wios)|Obsługuje klasy wios ze starego biblioteką iostream.|
-|[wstreampos](../standard-library/ios-typedefs.md#wstreampos)|Zawiera bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.|
+|[wios](../standard-library/ios-typedefs.md#wios)|Obsługuje klasę wios ze starej biblioteki iostream.|
+|[wstreampos](../standard-library/ios-typedefs.md#wstreampos)|Przechowuje bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.|
 
 ### <a name="manipulators"></a>Manipulatory
 
 |||
 |-|-|
-|[boolalpha](../standard-library/ios-functions.md#boolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są traktowane jako **true** lub **false** w strumieniu.|
-|[Gru](../standard-library/ios-functions.md#dec)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 10.|
-|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Określa flagi o `ios_base` obiekt ma być używany domyślny format wyświetlania dla wartości zmiennoprzecinkowych.|
-|[Stała](../standard-library/ios-functions.md#fixed)|Określa, czy liczba zmiennoprzecinkowa jest wyświetlana w notacji dziesiętnej stałej.|
-|[hex](../standard-library/ios-functions.md#hex)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 16.|
-|[typu hexfloat](../standard-library/ios-functions.md#hexfloat)|
-|[internal](../standard-library/ios-functions.md#internal)|Powoduje, że znak numeru, aby być wyrównane do lewej i numer do prawej.|
-|[left](../standard-library/ios-functions.md#left)|Powoduje, że tekst, który nie jest szerokie, jak szerokość dane wyjściowe pojawią się w opróżniania strumienia do lewego marginesu.|
-|[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są traktowane jako 1 lub 0 w strumieniu.|
-|[noshowbase](../standard-library/ios-functions.md#noshowbase)|Wyłącza wskazujący notational podstawowy, w którym jest wyświetlany numer.|
-|[noshowpoint](../standard-library/ios-functions.md#noshowpoint)|Wyświetla tylko część liczby całkowitej liczby zmiennoprzecinkowe, którego część ułamkową wynosi zero.|
-|[noshowpos](../standard-library/ios-functions.md#noshowpos)|Powoduje, że liczb dodatnich nie jawnie były podpisane.|
-|[noskipws](../standard-library/ios-functions.md#noskipws)|Spowodować miejsca do magazynowania zostanie odczytany przez strumień wejściowy.|
-|[nounitbuf](../standard-library/ios-functions.md#nounitbuf)|Powoduje, że dane wyjściowe buforowane i przetworzone zapełnienia buforu.|
-|[nouppercase](../standard-library/ios-functions.md#nouppercase)|Określa, że cyfry szesnastkowe i wykładnika w notacji naukowej są pisane małymi literami.|
-|[oct](../standard-library/ios-functions.md#oct)|Określa, czy zmiennych całkowitych są wyświetlane w podstawowej notacji 8.|
-|[right](../standard-library/ios-functions.md#right)|Powoduje, że tekst, który nie jest szerokie, jak szerokość dane wyjściowe pojawią się w opróżniania strumienia do prawego marginesu.|
-|[scientific](../standard-library/ios-functions.md#scientific)|Powoduje, że mają być wyświetlane przy użyciu notacji wykładniczej liczb zmiennoprzecinkowych.|
-|[showbase](../standard-library/ios-functions.md#showbase)|Wskazuje podstawowy notational, w którym jest wyświetlany numer.|
-|[showpoint](../standard-library/ios-functions.md#showpoint)|Wyświetla część liczba całkowita liczba zmiennoprzecinkowa i cyfr z prawej strony punktu dziesiętnego, nawet wtedy, gdy część ułamkową wynosi zero.|
-|[showpos](../standard-library/ios-functions.md#showpos)|Powoduje, że liczb dodatnich jawnie były podpisane.|
-|[skipws](../standard-library/ios-functions.md#skipws)|Spowodować miejsca do magazynowania nie można odczytać strumienia wejściowego.|
-|[unitbuf](../standard-library/ios-functions.md#unitbuf)|Powoduje, że dane wyjściowe mają być przetwarzane, gdy ten bufor nie jest pusty.|
-|[wielkie litery](../standard-library/ios-functions.md#uppercase)|Określa, że cyfry szesnastkowe i wykładnika w notacji naukowej są pisane wielkimi literami.|
+|[boolalpha](../standard-library/ios-functions.md#boolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako **true** lub **false** w strumieniu.|
+|[grudzień](../standard-library/ios-functions.md#dec)|Określa, że zmienne całkowite pojawiają się w notacji Base 10.|
+|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Konfiguruje flagi `ios_base` obiektu, aby użyć domyślnego formatu wyświetlania wartości zmiennoprzecinkowych.|
+|[FIXED](../standard-library/ios-functions.md#fixed)|Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji o stałej liczbie dziesiętnej.|
+|[hex](../standard-library/ios-functions.md#hex)|Określa, że zmienne całkowite pojawiają się w notacji Base 16.|
+|[hexfloat](../standard-library/ios-functions.md#hexfloat)|
+|[internal](../standard-library/ios-functions.md#internal)|Powoduje, że znak liczby jest wyrównany do lewej, a liczba powinna być wyrównana do prawej.|
+|[left](../standard-library/ios-functions.md#left)|Powoduje, że tekst nie jest tak szeroki, jak szerokość danych wyjściowych, która ma być wyświetlana w strumieniu opróżniania z lewego marginesu.|
+|[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako 1 lub 0 w strumieniu.|
+|[noshowbase](../standard-library/ios-functions.md#noshowbase)|Wyłącza opcję wskazującą podstawę notacji, w której wyświetlana jest liczba.|
+|[noshowpoint](../standard-library/ios-functions.md#noshowpoint)|Wyświetla tylko liczbę całkowitą części liczb zmiennoprzecinkowych, których część ułamkowa ma wartość zero.|
+|[noshowpos](../standard-library/ios-functions.md#noshowpos)|Powoduje, że liczby dodatnie nie mogą być podpisywane jawnie.|
+|[noskipws](../standard-library/ios-functions.md#noskipws)|Zapoznaj się z miejscem, w którym znajduje się strumień wejściowy.|
+|[nounitbuf](../standard-library/ios-functions.md#nounitbuf)|Powoduje, że dane wyjściowe są buforowane i przetwarzane, gdy bufor jest pełny.|
+|[nowielkie litery](../standard-library/ios-functions.md#nouppercase)|Określa, że cyfry szesnastkowe i wykładnik w notacji wykładniczej są wyświetlane małymi literami.|
+|[oct](../standard-library/ios-functions.md#oct)|Określa, że zmienne całkowite pojawiają się w notacji Base 8.|
+|[right](../standard-library/ios-functions.md#right)|Powoduje, że tekst nie jest tak szeroki, jak szerokość danych wyjściowych, która ma być wyświetlana w strumieniu opróżniania z prawego marginesu.|
+|[scientific](../standard-library/ios-functions.md#scientific)|Powoduje wyświetlanie liczb zmiennoprzecinkowych przy użyciu notacji wykładniczej.|
+|[showbase](../standard-library/ios-functions.md#showbase)|Wskazuje podstawę notacji, w której wyświetlana jest liczba.|
+|[showpoint](../standard-library/ios-functions.md#showpoint)|Wyświetla część liczby zmiennoprzecinkowej i cyfr z prawej strony punktu dziesiętnego, nawet jeśli część ułamkowa jest równa zero.|
+|[showpos](../standard-library/ios-functions.md#showpos)|Powoduje jawne podpisywanie liczb dodatnich.|
+|[skipws](../standard-library/ios-functions.md#skipws)|Nie należy odczytywać spacji w strumieniu wejściowym.|
+|[unitbuf](../standard-library/ios-functions.md#unitbuf)|Powoduje, że dane wyjściowe będą przetwarzane, gdy bufor nie jest pusty.|
+|[znaki](../standard-library/ios-functions.md#uppercase)|Określa, że cyfry szesnastkowe i wykładnik w notacji wykładniczej są wyświetlane wielką literą.|
 
 ### <a name="error-reporting"></a>Raportowanie błędów
 
@@ -95,13 +95,13 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |||
 |-|-|
-|[basic_ios —](../standard-library/basic-ios-class.md)|Klasa szablonu Opisuje funkcje magazynu i elementów członkowskich, które muszą być wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni danych wyjściowych (szablonu klasy [basic_ostream](../standard-library/basic-ostream-class.md)) zależą od Parametry szablonu.|
-|[fpos —](../standard-library/fpos-class.md)|Klasa szablonu opisuje obiekt, który można przechowywać wszystkie informacje niezbędne do przywrócenia wskaźnika dowolnego położenie pliku w dowolnej usłudze stream.|
-|[ios_base](../standard-library/ios-base-class.md)|Klasa opisuje magazynu i funkcje Członkowskie wspólne dla danych wejściowych i wyjściowych strumieni, które nie są zależne od parametrów szablonu.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Klasa szablonu opisuje funkcje magazynu i elementów członkowskich wspólne dla obu strumieni wejściowych (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni wyjściowych (klasy szablonu [basic_ostream](../standard-library/basic-ostream-class.md)), które są zależne od parametrów szablonu.|
+|[FPOS](../standard-library/fpos-class.md)|Klasa szablonu opisuje obiekt, który może przechowywać wszystkie informacje potrzebne do przywrócenia dowolnego wskaźnika położenia pliku w ramach dowolnego strumienia.|
+|[ios_base](../standard-library/ios-base-class.md)|Klasa zawiera opis funkcji magazynu i elementów członkowskich wspólnych dla strumieni wejściowych i wyjściowych, które nie zależą od parametrów szablonu.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
-[Konwencje iostream](../standard-library/iostreams-conventions.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Konwencje iostream](../standard-library/iostreams-conventions.md)

@@ -4,16 +4,16 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::tr2::sys::space_info
 ms.assetid: f2b35b42-06ff-45bd-8617-39a0f5358a54
-ms.openlocfilehash: b6998f4ac7ced2d85063186edbd47227b6d24ca5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a9856746a8bbc796871663a81bd8911d34dcd4a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399450"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457552"
 ---
 # <a name="spaceinfo-structure"></a>space_info — Struktura
 
-Przechowuje informacje o woluminie.
+Zawiera informacje o woluminie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,18 +32,18 @@ struct space_info
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`unsigned long long capacity`|Reprezentuje całkowita liczba bajtów reprezentujących woluminu.|
+|`unsigned long long capacity`|Reprezentuje łączną liczbę bajtów, które może reprezentować wolumin.|
 |`unsigned long long free`|Reprezentuje liczbę bajtów, które nie są używane do reprezentowania danych w woluminie.|
 |`unsigned long long available`|Reprezentuje liczbę bajtów, które są dostępne do reprezentowania danych w woluminie.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<filesystem >
+**Nagłówek:** \<> systemu plików
 
-**Namespace:** std::experimental::filesystem
+**Przestrzeń nazw:** std:: eksperymentalne:: filesystem
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[Nawigacja w systemie plików (C++)](../standard-library/file-system-navigation.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)\
+[Nawigacja w systemie plikówC++()](../standard-library/file-system-navigation.md)

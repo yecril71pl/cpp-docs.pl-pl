@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 75691c1b09b71580474cc22cdc8382bff55a5e29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413505"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457414"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout — Klasa
 
-Sprawdza, czy typ jest standardowego układu.
+Testuje, czy typ jest układem standardowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,18 +29,18 @@ struct is_standard_layout;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Ty*|Typ do zapytania|
+|*Br*|Typ do zapytania|
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie tego typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma standardowy układ obiektów w pamięci w przeciwnym razie przechowuje wartość false.
+Wystąpienie tego predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma standardowy układ obiektów składowych w pamięci, w przeciwnym razie ma wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

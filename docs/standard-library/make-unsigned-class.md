@@ -7,16 +7,16 @@ helpviewer_keywords:
 - make_unsigned class
 - make_unsigned
 ms.assetid: 7a6a3c4f-1a4c-47e8-9ee2-ac1f7b669353
-ms.openlocfilehash: 42c722c5250a4989b930d8f1e6fe52f2eccc614a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c0224bd5fd7dc8c6589ae474bb9acb9a8f09cf6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413050"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456321"
 ---
 # <a name="makeunsigned-class"></a>make_unsigned — Klasa
 
-Tworzy typ lub najmniejszy niepodpisane wpisz większa lub równa rozmiarze do typu.
+Ustawia typ lub najmniejszy typ bez znaku, który jest większy niż lub równy rozmiarowi do typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,14 +36,14 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie modyfikatora typu przechowuje zmodyfikowany typ, który jest *T* Jeśli `is_unsigned<T>` prawdziwe. W przeciwnym razie jest najmniejszą typ ze znakiem `ST` dla którego `sizeof (T) <= sizeof (ST)`.
+Wystąpienie modyfikatora typu zawiera zmodyfikowany typ, `is_unsigned<T>` *który ma wartość* true. W przeciwnym razie jest to najmniejszy podpisany `ST` typ, `sizeof (T) <= sizeof (ST)`dla którego.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

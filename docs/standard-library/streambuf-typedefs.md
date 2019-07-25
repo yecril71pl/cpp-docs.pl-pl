@@ -1,26 +1,26 @@
 ---
-title: '&lt;streambuf —&gt; definicje typów'
+title: '&lt;streambuf&gt; Typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 505739861771a05dd39741f432579a6e9b2d0c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 178b489d92a4ed7340084490329fdf8fa16c2aa7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412387"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449587"
 ---
-# <a name="ltstreambufgt-typedefs"></a>&lt;streambuf —&gt; definicje typów
+# <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt; Typedefs
 
 |||
 |-|-|
 |[streambuf](#streambuf)|[wstreambuf](#wstreambuf)|
 
-## <a name="streambuf"></a>  streambuf —
+## <a name="streambuf"></a>streambuf
 
-Specjalizacja `basic_streambuf` , który używa **char** jako parametry szablonu.
+Specjalizacja `basic_streambuf` , która używa **znaków** jako parametrów szablonu.
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
@@ -28,11 +28,11 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla klasy szablonu [basic_streambuf](../standard-library/basic-streambuf-class.md), wyspecjalizowany dla elementów typu **char** przy użyciu domyślnego cech.
+Typ jest synonimem dla klasy szablonu [basic_streambuf](../standard-library/basic-streambuf-class.md), wyspecjalizowany dla elementów typu **char** z domyślnymi cechami znaków.
 
-## <a name="wstreambuf"></a>  wstreambuf
+## <a name="wstreambuf"></a>wstreambuf —
 
-Specjalizacja `basic_streambuf` , który używa **wchar_t** jako parametry szablonu.
+Specjalizacja `basic_streambuf` , która używa **wchar_t** jako parametrów szablonu.
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
@@ -40,8 +40,8 @@ typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla klasy szablonu [basic_streambuf](../standard-library/basic-streambuf-class.md), wyspecjalizowany dla elementów typu **wchar_t** przy użyciu domyślnego cech.
+Typ jest synonimem dla klasy szablonu [basic_streambuf](../standard-library/basic-streambuf-class.md), wyspecjalizowany dla elementów typu **wchar_t** z cechami domyślnymi znaków.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<streambuf>](../standard-library/streambuf.md)<br/>
+[\<streambuf>](../standard-library/streambuf.md)

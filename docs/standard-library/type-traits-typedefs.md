@@ -1,5 +1,5 @@
 ---
-title: '&lt;type_traits&gt; definicje typów'
+title: '&lt;type_traits&gt; Typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::false_type
@@ -7,22 +7,22 @@ f1_keywords:
 - type_traits/std::true_type
 - xtr1common/std::true_type
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
-ms.openlocfilehash: 579d276b7e9f2a7b44b41681b85fffd318ecddbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eff1a99fb95f15c6377e8a74cca36e718cbd6fd9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278998"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455081"
 ---
-# <a name="lttypetraitsgt-typedefs"></a>&lt;type_traits&gt; definicje typów
+# <a name="lttypetraitsgt-typedefs"></a>&lt;type_traits&gt; Typedefs
 
 |||
 |-|-|
 |[false_type](#false_type)|[true_type](#true_type)|
 
-## <a name="false_type"></a>  false_type — Typedef
+## <a name="false_type"></a>false_type typedef
 
-Zawiera stałą całkowitą o wartości false.
+Przechowuje stałą całkowitą z wartością false.
 
 ```cpp
 typedef integral_constant<bool, false> false_type;
@@ -53,7 +53,7 @@ false_type == false
 true_type == true
 ```
 
-## <a name="true_type"></a>  true_type — Typedef
+## <a name="true_type"></a>true_type typedef
 
 Zawiera stałą całkowitą o wartości true.
 
@@ -90,4 +90,4 @@ true_type == true
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

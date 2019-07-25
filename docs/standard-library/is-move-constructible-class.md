@@ -1,21 +1,21 @@
 ---
-title: is_move_constructible Class
+title: Klasa is_move_constructible
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_move_constructible
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 1b1e450338a123c51b80f40f2369207c8b987cd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83ed4365fd0e73a7daa8b9894c5e85f20387a79
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383636"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456115"
 ---
-# <a name="ismoveconstructible-class"></a>is_move_constructible Class
+# <a name="ismoveconstructible-class"></a>Klasa is_move_constructible
 
-Sprawdza, czy typ ma konstruktora przenoszącego.
+Testuje, czy typ ma Konstruktor przenoszenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,19 +26,19 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ, który ma zostać obliczone
+*&* \
+Typ, który ma zostać obliczony
 
 ## <a name="remarks"></a>Uwagi
 
-Predykat typów, które daje w wyniku wartość true, jeśli typ *T* można skonstruować przy użyciu operacji przenoszenia. Ten predykat jest odpowiednikiem `is_constructible<T, T&&>`.
+Predykat typu, którego wynikiem jest wartość true, jeśli typ *T* może być skonstruowany przy użyciu operacji przenoszenia. Ten predykat jest odpowiednikiem `is_constructible<T, T&&>`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -1,21 +1,21 @@
 ---
-title: bad_array_new_length klasy
+title: Klasa bad_array_new_length
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::bad_alloc
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 823da1555119735e9aa1c46aa4db2e3a47affdec
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b00042513364ac04b62ac7e1943d912dcb78f212
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267962"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459488"
 ---
-# <a name="badarraynewlength-class"></a>bad_array_new_length klasy
+# <a name="badarraynewlength-class"></a>Klasa bad_array_new_length
 
-Klasa opisuje wyjątek generowany w celu wskazania, że żądanie alokacji nie powiodła się ze względu na rozmiar tablicy, mniejsze od zera lub większa niż limit.
+Klasa zawiera opis zgłoszonego wyjątku, aby wskazać, że żądanie alokacji nie zakończyło się niepowodzeniem z powodu rozmiaru tablicy mniejszego niż zero lub większego od jego limitu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +28,7 @@ class bad_array_new_length : public bad_alloc {
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez obiekt `what` jest ciągiem C zdefiniowanych w implementacji. Żadna z funkcji elementu członkowskiego generuje żadnych wyjątków.
+Wartość zwrócona przez `what` to ciąg języka C zdefiniowany przez implementację. Żadna z funkcji Członkowskich nie zgłasza żadnych wyjątków.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -36,5 +36,5 @@ Wartość zwrócona przez obiekt `what` jest ciągiem C zdefiniowanych w impleme
 
 ## <a name="see-also"></a>Zobacz także
 
-[exception, klasa](../standard-library/exception-class.md)<br/>
+[Klasa wyjątku](../standard-library/exception-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_array class
 - is_array
 ms.assetid: 61fb2201-8de3-4746-9721-617f02df170f
-ms.openlocfilehash: daaa4faa82dba7f98a6636cc06b2637534cfc99b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c54664ed5f56411929c60a0f15ae3c4f0e4581ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252717"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456659"
 ---
 # <a name="isarray-class"></a>is_array — Klasa
 
-Sprawdza, czy typ jest tablicą.
+Testuje, czy typ jest tablicą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_array;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest typem tablicy, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem tablicy, w przeciwnym razie zawiera wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -70,10 +70,10 @@ is_array<int[5]> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent, klasa](../standard-library/extent-class.md)<br/>
-[rank, klasa](../standard-library/rank-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa zakresu](../standard-library/extent-class.md)\
+[rank, klasa](../standard-library/rank-class.md)

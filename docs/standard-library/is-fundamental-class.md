@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: d16dfeebabd5909212425fcc27b355110e891d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348448"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456257"
 ---
 # <a name="isfundamental-class"></a>is_fundamental — Klasa
 
-Sprawdza, czy jest typu void lub arytmetyczne.
+Testuje, czy typ jest typem void czy arytmetyką.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest typem podstawowym, czyli **void**, typu całkowitego, zmiennoprzecinkowego punktu lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem podstawowym, czyli **void**, typem całkowitym, typem zmiennoprzecinkowym lub postaci jednego z nich, w przeciwnym `cv-qualified` razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -73,9 +73,9 @@ is_fundamental<void> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound, klasa](../standard-library/is-compound-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_compound, klasa](../standard-library/is-compound-class.md)

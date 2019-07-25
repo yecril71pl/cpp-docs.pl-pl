@@ -1,21 +1,21 @@
 ---
-title: is_nothrow_move_assignable Class
+title: Klasa is_nothrow_move_assignable
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_nothrow_move_assignable
 helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
-ms.openlocfilehash: eb1ddcace7a68bf60154a15117a1c16a438d263d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8273be92a9c7e60e446b3c2b561a6020e70fb2f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148463"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455890"
 ---
-# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable Class
+# <a name="isnothrowmoveassignable-class"></a>Klasa is_nothrow_move_assignable
 
-Sprawdza, czy typ ma **nothrow** przenoszący operator przypisania.
+Testuje, czy typ  ma operator przypisania elementu "nothrow".
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,19 +26,19 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* ma nothrow operator przypisania przenoszenia, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* ma operator przypisania operacji przenoszenia nothrow, w przeciwnym razie ma wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

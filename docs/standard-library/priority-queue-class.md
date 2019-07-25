@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3591264efec87c2c3454d0f885c19b30b73ae51c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370019"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458430"
 ---
 # <a name="priorityqueue-class"></a>priority_queue — Klasa
 
-Klasa adaptera kontenera szablonu, która umożliwia ograniczenie funkcjonalności, ograniczanie dostępu do górnego elementu niektóre bazowego typu kontenera, który zawsze jest największy, lub o najwyższym priorytecie. Nowe elementy mogą być dodawane do priority_queue — i górnego elementu priority_queue — mogą być kontrolowane lub usunięta.
+Klasa adaptera kontenerów szablonu, która zapewnia ograniczenie funkcjonalności ograniczające dostęp do górnego elementu pewnego bazowego typu kontenera, który jest zawsze największy lub najwyższy priorytet. Nowe elementy można dodać do priority_queue, a górny element priority_queue można sprawdzić lub usunąć.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,66 +40,66 @@ class priority_queue
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
-Typ danych elementu, który ma być przechowywany w priority_queue —.
+*Wprowadź*\
+Typ danych elementu, który ma być przechowywany w priority_queue.
 
-*Kontener*<br/>
-Typ podstawowy kontener używany do implementowania priority_queue —.
+*Wbudowane*\
+Typ źródłowego kontenera używany do implementowania priority_queue.
 
-*Compare*<br/>
-Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w priority_queue —. Ten argument jest opcjonalny i predykat dwuelementowy `less<typename Container::value_type>` jest wartością domyślną.
+*Porównaniu*\
+Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w priority_queue. Ten argument jest opcjonalny, a predykat `less<typename Container::value_type>` binarny jest wartością domyślną.
 
 ## <a name="remarks"></a>Uwagi
 
-Elementy klasy `Type` określone w szablonie pierwszy parametr obiekt kolejki jest równoznaczny z [value_type](#value_type) i musi odpowiadać typowi elementu w klasie podstawowej kontenera `Container` określonymi przez drugi parametr szablonu. `Type` Musi być możliwy do przypisania, więc jest możliwe, aby skopiować obiekty tego typu, a także do przypisywania wartości do zmiennych tego typu.
+Elementy klasy `Type` ustalone w pierwszym parametrze szablonu obiektu kolejki są synonimem [value_type](#value_type) i muszą być zgodne z typem elementu w klasie `Container` bazowego kontenera określonym przez drugi szablon konstruktora. `Type` Należy je przypisać, aby można było kopiować obiekty tego typu i przypisywać wartości do zmiennych tego typu.
 
-Priority_queue — porządkuje sekwencję którą kontroluje, przez wywołanie przechowywanego obiektu funkcji klasy `Traits`. Ogólnie rzecz biorąc, elementy muszą być nieco mniej porównywalne, aby ustalić kolejność: tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi) lub, że jeden jest mniejszy niż ten drugi. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Ze strony bardziej technicznej, funkcja porównywania jest predykatem binarnym, który wymusza ścisłe słabe porządkowanie w standardowym sensie matematycznym.
+Priority_queue porządkuje sekwencję, która kontroluje, wywołując obiekt funkcji składowanej klasy `Traits`. Ogólnie rzecz biorąc, elementy muszą być nieco mniej porównywalne, aby ustalić kolejność: tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi) lub, że jeden jest mniejszy niż ten drugi. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Ze strony bardziej technicznej, funkcja porównywania jest predykatem binarnym, który wymusza ścisłe słabe porządkowanie w standardowym sensie matematycznym.
 
-Odpowiednie podstawowej klasy kontenera dla priority_queue — obejmują [deque — klasa](../standard-library/deque-class.md) i domyślnego [vector, klasa](../standard-library/vector-class.md) lub innego kontenera sekwencji, która obsługuje operacje `front`, `push_back`, i `pop_back` i iterator dostępu swobodnego. Podstawowej klasy kontenera są hermetyzowane w obrębie adaptera kontenera, który uwidacznia tylko ograniczony zestaw funkcji elementów członkowskich kontenerów sekwencji jako interfejs publiczny.
+Odpowiednie źródłowe klasy kontenerów dla priority_queue obejmują [klasę deque](../standard-library/deque-class.md) i domyślną [klasę Vector](../standard-library/vector-class.md) lub inny kontener sekwencji obsługujący operacje `front`, `push_back`, i `pop_back` i Iterator dostępu swobodnego. Bazowa Klasa kontenera jest hermetyzowana w ramach adaptera kontenerów, która uwidacznia tylko ograniczony zestaw funkcji Członkowskich kontenera sekwencji jako interfejs publiczny.
 
-Dodawanie elementów do i usuwanie elementów z `priority_queue` mają logarytmicznej złożoności. Uzyskiwanie dostępu do elementów w `priority_queue` ma stałą złożoność.
+Dodawanie elementów do i usuwanie elementów z `priority_queue` obu tych wartości ma złożoność logarytmiczną. Uzyskiwanie dostępu do `priority_queue` elementów w programie ma stałą złożoność.
 
-Istnieją trzy typy adaptery kontenera definicją C++ standardowej biblioteki: stosu, kolejki i priority_queue —. Każdy ogranicza funkcjonalność niektóre podstawowe klasy kontenera dokładnie kontrolowanym interfejs do struktury danych w warstwie standardowa.
+Istnieją trzy typy adapterów kontenerów zdefiniowane przez bibliotekę C++ standardową: Stack, Queue i priority_queue. Każdy z nich ogranicza funkcjonalność pewnej klasy bazowego kontenera do zapewnienia precyzyjnego kontrolowanego interfejsu do standardowej struktury danych.
 
-- [Stack — klasa](../standard-library/stack-class.md) obsługuje ostatni na wejściu, first-out (LIFO) strukturę danych. Dobre analogowy na uwadze byłoby były stosem talerzy. Elementy (talerzy) może wstawiania, inspekcji lub usunąć tylko z góry stosu, w którym jest ostatnim elementem na końcu podstawowym kontenerem. Ograniczenie do uzyskiwania dostępu do górnego elementu jest przyczyna przy użyciu klasy stosu.
+- [Klasa stosu](../standard-library/stack-class.md) obsługuje strukturę danych Last-in, First-Out (LIFO). Dobrym sposobem na zachowywać się to stos płyt. Elementy (płytki) mogą być wstawiane, badane lub usuwane tylko z góry stosu, który jest ostatnim elementem na końcu kontenera podstawowego. Ograniczenie dostępu do elementu Top jest przyczyną użycia klasy stosu.
 
-- [Kolejkowania klasy](../standard-library/queue-class.md) obsługuje pierwszy in, first-out (FIFO) strukturę danych. Dobre analogowy na uwadze byłoby osób wyrównywania dla dla kasjerów bankowych. Elementy (osób) mogą być dodawane do końca wiersza i są usuwane z początku wiersza. Mogą być kontrolowane zarówno do przodu, jak i do tyłu wiersza. Ograniczenie do uzyskiwania dostępu do tylko przód i Wstecz elementy w ten sposób jest przyczyna przy użyciu klasy kolejki.
+- [Klasa Queue](../standard-library/queue-class.md) obsługuje strukturę danych First-In, First-Out (FIFO). Dobrym analogem na to, aby mieć na uwadze, osoby tworzące informację o poinformowaniu banku. Elementy (ludzie) mogą zostać dodane z tyłu wiersza i są usuwane z przodu wiersza. Można sprawdzić zarówno przód, jak i tyłu wiersza. Ograniczenie do uzyskiwania dostępu tylko do elementów przednich i z tyłu w ten sposób jest przyczyną użycia klasy kolejki.
 
-- Priority_queue — klasa zamówień jego elementy, dzięki czemu największy element jest zawsze u góry. Obsługuje ona Wstawianie elementu i inspekcji i usuwania górnego elementu. Dobre analogowy na uwadze byłoby osób wyrównywanie gdzie one są uporządkowane według wiek, wysokości lub innego kryterium.
+- Klasa priority_queue porządkuje swoje elementy, aby największy element zawsze znajduje się na górze. Obsługuje wstawianie elementu i inspekcję oraz usuwanie elementu Top. Dobrym analogicznym sposobem jest pogrupowanie osób, które są ułożone według wieku, wysokości lub innego kryterium.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[priority_queue](#priority_queue)|Konstruuje `priority_queue` pusty lub jest kopii zakresu obiektu kontenera podstawowej lub innych `priority_queue`.|
+|[priority_queue](#priority_queue)|Tworzy element `priority_queue` a, który jest pusty lub jest kopią zakresu podstawowego obiektu kontenera lub innych. `priority_queue`|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[container_type](#container_type)|Typ, który zapewnia podstawowy kontener, aby zostać dostosowane przez `priority_queue`.|
-|[size_type](#size_type)|Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w `priority_queue`.|
+|[container_type](#container_type)|Typ, który dostarcza kontener podstawowy, który ma zostać dostosowany przez `priority_queue`.|
+|[size_type](#size_type)|Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów `priority_queue`w.|
 |[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `priority_queue`.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[pusty](#empty)|Sprawdza, czy `priority_queue` jest pusty.|
-|[POP](#pop)|Usuwa największy element z `priority_queue` z góry.|
-|[push](#push)|Dodaje element do kolejki priorytetowej na podstawie priorytetu elementu od operatora <.|
-|[Rozmiar](#size)|Zwraca liczbę elementów w `priority_queue`.|
-|[Do góry](#top)|Zwraca wartość typu const odwołanie do największego elementu w górnej części `priority_queue`.|
+|[empty](#empty)|Testuje, `priority_queue` czy jest pusty.|
+|[skakując](#pop)|Usuwa największy element `priority_queue` z powyższego położenia.|
+|[push](#push)|Dodaje element do kolejki priorytetu na podstawie priorytetu elementu z < operatora.|
+|[zmienia](#size)|Zwraca liczbę elementów w `priority_queue`.|
+|[Do góry](#top)|Zwraca odwołanie const do największego elementu w górnej części `priority_queue`.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<kolejki >
+**Nagłówek:** \<> kolejki
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="container_type"></a>  priority_queue::container_type
+## <a name="container_type"></a>priority_queue::container_type
 
-Typ, który dostarcza podstawowy kontener, aby dostosować.
+Typ, który dostarcza kontener bazowy, który ma zostać dostosowany.
 
 ```cpp
 typedef Container container_type;
@@ -107,17 +107,17 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `Container`. C++ Klasy kontenera sekwencja standardowej biblioteki `deque` i domyślną klasę `vector` spełniają wymagania, które ma być używany jako bazowy kontener dla obiektu priority_queue —. Typy zdefiniowane przez użytkownika niespełniających wymagań można także.
+Typ jest synonimem dla parametru `Container`szablonu. `vector` C++ Klasa`deque` kontenera sekwencji biblioteki standardowej i Klasa domyślna spełniają wymagania, które mają być używane jako podstawowy kontener dla obiektu priority_queue. Typy zdefiniowane przez użytkownika spełniające wymagania mogą być również używane.
 
-Aby uzyskać więcej informacji na temat `Container`, zobacz sekcję Uwagi [priority_queue — klasa](../standard-library/priority-queue-class.md) tematu.
+Aby uzyskać więcej informacji `Container`na temat, zobacz sekcję Uwagi w temacie [Klasa priority_queue](../standard-library/priority-queue-class.md) .
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [priority_queue —](#priority_queue) przykładowy sposób deklarowania i użyj `container_type`.
+Zapoznaj się z przykładem dla [priority_queue](#priority_queue) , aby zapoznać się z przykładem sposobu deklarowania i używania `container_type`.
 
-## <a name="empty"></a>  priority_queue::Empty
+## <a name="empty"></a>priority_queue:: Empty
 
-Sprawdza, czy priority_queue — jest pusty.
+Testuje, czy element priority_queue jest pusty.
 
 ```cpp
 bool empty() const;
@@ -125,7 +125,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli priority_queue — jest pusta. **false** przypadku niepustych priority_queue —.
+**wartość true** , jeśli priority_queue jest pusta; **Fałsz** , jeśli priority_queue nie jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -161,9 +161,9 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.
 ```
 
-## <a name="pop"></a>  priority_queue::POP
+## <a name="pop"></a>priority_queue::p op
 
-Usuwa największy element priority_queue — z góry.
+Usuwa największy element priority_queue z pozycji najwyższego poziomu.
 
 ```cpp
 void pop();
@@ -171,7 +171,7 @@ void pop();
 
 ### <a name="remarks"></a>Uwagi
 
-Priority_queue — musi być niepustym do zastosowania funkcji elementu członkowskiego. Priority_queue — początku zawsze jest zajęta przez największego elementu w kontenerze.
+Priority_queue nie może być pusta, aby zastosować funkcję członkowską. Góra priority_queue jest zawsze zajęta przez największy element w kontenerze.
 
 ### <a name="example"></a>Przykład
 
@@ -217,9 +217,9 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.
 ```
 
-## <a name="priority_queue"></a>  priority_queue::priority_queue
+## <a name="priority_queue"></a>priority_queue::p riority_queue
 
-Tworzy priority_queue —, który jest pusty lub jest kopią zakresu obiektu kontenera podstawowego lub innego priority_queue —.
+Konstruuje priority_queue, który jest pusty lub jest kopią zakresu podstawowego obiektu kontenera lub innej priority_queue.
 
 ```cpp
 priority_queue();
@@ -242,28 +242,28 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 
 ### <a name="parameters"></a>Parametry
 
-*_comp*<br/>
-Funkcja porównywania typu **constTraits** porządkowania elementów w priority_queue — wartość domyślna to porównanie funkcji podstawowym kontenerem.
+*_comp*\
+Funkcja porównania typu **constTraits** użyta do uporządkowania elementów w priority_queue, które domyślnie umożliwiają porównanie funkcji kontenera podstawowego.
 
-*_Cont*<br/>
-Podstawowy kontener, którego skonstruowany priority_queue — jest kopią.
+*_Cont*\
+Podstawowy kontener, którego skonstruowany priority_queue ma być kopia.
 
-*right*<br/>
-Priority_queue — której zestaw zbudowany jest kopią.
+*Kliknij*\
+Priority_queue, którego skonstruowany zestaw ma być kopią.
 
-*pierwszy*<br/>
+*pierwszego*\
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*last*<br/>
+*ostatniego*\
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy pierwsze trzy konstruktory Określa pusty początkowej priority_queue —, drugi również określenie typu funkcji porównywania (`comp`) do użycia podczas ustalania kolejności elementów, a trzeci jawnie określając `container_type`(`_Cont`) ma być używany. Słowo kluczowe **jawne** powoduje pominięcie niektórych rodzajów konwersji typu automatyczne.
+Każdy z trzech pierwszych konstruktorów określa pustą priority_queueę początkową, a drugi określa typ funkcji porównywania (`comp`), która ma być używana w ustalaniu kolejności elementów i trzeciej jawnie określającej `container_type`(`_Cont`) do użycia. Słowo kluczowe **Explicit** pomija pewne rodzaje automatycznej konwersji typów.
 
-Czwarty Konstruktor Określa kopię priority_queue — *prawo*.
+Czwarty Konstruktor określa kopię priority_queue *po prawej stronie*.
 
-Ostatnie trzy konstruktory kopiują zakres \[ *pierwszy*, *ostatniego*) niektóre kontenera i użyć wartości, aby zainicjować priority_queue — uwzględni się rosnącą explicitness podczas określania typu Porównanie funkcji klasy `Traits` i `container_type`.
+Ostatnie trzy konstruktory skopiują zakres \[ *pierwszy*, *ostatni*) z pewnego kontenera i używają wartości, aby zainicjować priority_queue z rosnącą jawnością w określaniu typu funkcji porównania klasy `Traits` i `container_type`.
 
 ### <a name="example"></a>Przykład
 
@@ -376,9 +376,9 @@ int main( )
 }
 ```
 
-## <a name="push"></a>  priority_queue::push
+## <a name="push"></a>priority_queue::p USH
 
-Dodaje element do kolejki priorytetowej na podstawie priorytetu elementu od operatora <.
+Dodaje element do kolejki priorytetu na podstawie priorytetu elementu z < operatora.
 
 ```cpp
 void push(const Type& val);
@@ -386,12 +386,12 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
-Element dodany na początku priority_queue —.
+*użyte*\
+Element dodany na górze priority_queue.
 
 ### <a name="remarks"></a>Uwagi
 
-Górnej priority_queue — jest pozycja zajmowane przez największego elementu w kontenerze.
+Góra priority_queue jest pozycją zajmowaną przez największy element w kontenerze.
 
 ### <a name="example"></a>Przykład
 
@@ -425,9 +425,9 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="size"></a>  priority_queue::size
+## <a name="size"></a>priority_queue:: size
 
-Priority_queue — zwraca liczbę elementów.
+Zwraca liczbę elementów w priority_queue.
 
 ```cpp
 size_type size() const;
@@ -435,7 +435,7 @@ size_type size() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca długość priority_queue —.
+Bieżąca długość priority_queue.
 
 ### <a name="example"></a>Przykład
 
@@ -466,9 +466,9 @@ The priority_queue length is 1.
 The priority_queue length is now 2.
 ```
 
-## <a name="size_type"></a>  priority_queue::size_type
+## <a name="size_type"></a>priority_queue::size_type
 
-Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w priority_queue —.
+Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w priority_queue.
 
 ```cpp
 typedef typename Container::size_type size_type;
@@ -476,15 +476,15 @@ typedef typename Container::size_type size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `size_type` podstawowy kontenera dostosowane przez priority_queue —.
+Typ jest synonimem dla `size_type` kontenera podstawowego dostosowany przez priority_queue.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [rozmiar](#size) przykładowy sposób deklarowania i użyj `size_type`.
+Zapoznaj się z przykładem dotyczącym [rozmiaru](#size) , aby zapoznać się z `size_type`przykładem sposobu deklarowania i używania.
 
-## <a name="top"></a>  priority_queue::Top
+## <a name="top"></a>priority_queue:: Top
 
-Zwraca wartość const odwołanie do największego elementu w górnej części priority_queue —.
+Zwraca odwołanie const do największego elementu w górnej części priority_queue.
 
 ```cpp
 const_reference top() const;
@@ -492,11 +492,11 @@ const_reference top() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do największego elementu zgodnie z ustaleniami `Traits` funkcji, obiekt priority_queue —.
+Odwołanie do największego elementu, zgodnie z `Traits` określoną przez funkcję, obiekt priority_queue.
 
 ### <a name="remarks"></a>Uwagi
 
-Priority_queue — musi być niepustym do zastosowania funkcji elementu członkowskiego.
+Priority_queue nie może być pusta, aby zastosować funkcję członkowską.
 
 ### <a name="example"></a>Przykład
 
@@ -530,9 +530,9 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="value_type"></a>  priority_queue::value_type
+## <a name="value_type"></a>priority_queue::value_type
 
-Typ, który reprezentuje typ obiektu przechowywanego jako element w priority_queue —.
+Typ, który reprezentuje typ obiektu przechowywanego jako element w priority_queue.
 
 ```cpp
 typedef typename Container::value_type value_type;
@@ -540,7 +540,7 @@ typedef typename Container::value_type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `value_type` podstawowy kontenera dostosowane przez priority_queue —.
+Typ jest synonimem dla `value_type` kontenera podstawowego dostosowany przez priority_queue.
 
 ### <a name="example"></a>Przykład
 
@@ -574,5 +574,5 @@ The element at the top of the priority_queue is 69.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Tablica&gt; funkcji'
+title: '&lt;funkcje&gt; tablicy'
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::get
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 719377be2ac130100e3f9e9ea608c5c27be3101f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377273"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456772"
 ---
-# <a name="ltarraygt-functions"></a>&lt;Tablica&gt; funkcji
+# <a name="ltarraygt-functions"></a>&lt;funkcje&gt; tablicy
 
-\<Array > Nagłówek zawiera dwie funkcje nieczłonkowskie, `get` i `swap`, które działają na **tablicy** obiektów.
+Nagłówek > `get` `swap`tablicy zawiera dwie funkcje, które nie są elementami członkowskimi, i, które działają na obiektach **Array.** \<
 
 |||
 |-|-|
 |[get](#get)|[swap](#swap)|
 
-## <a name="get"></a>  Pobierz
+## <a name="get"></a>Pobierz
 
 Zwraca odwołanie do określonego elementu tablicy.
 
@@ -42,17 +42,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Index*<br/>
+*Indeks*\
 Przesunięcie elementu.
 
-*T*<br/>
+*&* \
 Typ elementu.
 
-*N*<br/>
+*AZOTAN*\
 Liczba elementów w tablicy.
 
-*Moduł ARR*<br/>
-Tablica, które można wybierać.
+*Genotyp*\
+Tablica do wyboru.
 
 ### <a name="example"></a>Przykład
 
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a>wymiany
 
-Specjalizacja składowej szablonu `std::swap` Zamień dwa **tablicy** obiektów.
+Specjalizacja `std::swap` szablonu nieczłonkowskiego, który zamienia dwa obiekty **tablicy** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,21 +97,21 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ elementu.
 
-*N*<br/>
+*AZOTAN*\
 Rozmiar tablicy.
 
-*left*<br/>
-Pierwsza tablica można zamienić.
+*lewym*\
+Pierwsza tablica do zamiany.
 
-*right*<br/>
-Druga tablica można zamienić.
+*Kliknij*\
+Druga tablica do zamiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu wykonuje `left.swap(right)`.
+Funkcja szablonu jest wykonywana `left.swap(right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

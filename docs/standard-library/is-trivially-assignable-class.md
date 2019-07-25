@@ -1,21 +1,21 @@
 ---
-title: is_trivially_assignable Class
+title: Klasa is_trivially_assignable
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_assignable
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-ms.openlocfilehash: eeef85a0b26c25eb745258c7e0e35394f0cab979
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11aed7fbe2540984d8ed69f88b2a95649e8fee70
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413498"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457489"
 ---
-# <a name="istriviallyassignable-class"></a>is_trivially_assignable Class
+# <a name="istriviallyassignable-class"></a>Klasa is_trivially_assignable
 
-Sprawdza, czy wartość `From` typu mogą być w przypadku przypisane do `To` typu
+Testuje, czy wartość `From` typu może być przypisana do typu `To`
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,22 +26,22 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*To*<br/>
-Typ obiektu, który odbiera przypisania.
+*Do*\
+Typ obiektu, który odbiera przypisanie.
 
-*From*<br/>
+*Wniosek*\
 Typ obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowany, a musi być znane w kompilatorze, będą musieli ma nieuproszczone operacji. Zarówno `From` i `To` muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
+Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowane i musi być znane kompilatorowi, aby nie wymagało nieuproszczonych operacji. Oba `From` i`To` muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

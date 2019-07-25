@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: b25d16658def4e3cf620ab707d2dabacb2620f33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 324e4a1f1bd3528f09f21c5e485ac814038b7517
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413397"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448383"
 ---
 # <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable Class
 
-Sprawdza, czy typ ma operator przypisania przenoszenia prosta.
+Testuje, czy typ ma operator przypisania prostego przenoszenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,31 +26,31 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma proste operator przypisania przenoszenia, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma operator przypisania prostego przenoszenia, w przeciwnym razie ma wartość false.
 
-Operator przypisania przenoszenia dla klasy *Ty* jest proste jeśli:
+Operator przypisania przenoszenia dla klasy *ty* jest prosty, jeśli:
 
-Domyślnie jest ona udostępniana
+jest to niejawnie podane
 
-Klasa *Ty* ma żadnych funkcji wirtualnych
+Klasa *ty* nie ma żadnych funkcji wirtualnych
 
-Klasa *Ty* ma nie baz wirtualnych
+Klasa *ty* nie ma wirtualnych baz.
 
-klasy wszystkie składowe danych niestatycznych typu klasy mają trivial przenoszące operatory przypisania
+klasy wszystkich niestatycznych elementów członkowskich danych typu klasy mają operatory przypisania prostego przenoszenia
 
-klasy wszystkie składowe danych niestatycznych typu tablicowego klasy mają trivial przenoszące operatory przypisania
+klasy wszystkich niestatycznych składowych danych typu Array klasy mają operatory przypisania prostego przenoszenia
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

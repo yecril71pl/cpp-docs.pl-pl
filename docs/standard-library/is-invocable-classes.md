@@ -1,5 +1,5 @@
 ---
-title: is_invocable, is_invocable_r, is_nothrow_invocable is_nothrow_invocable_r klas
+title: is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r, klasy
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: bb5e75a897029ded2e00e491d93d2df41a3e115b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336234"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456233"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable is_nothrow_invocable_r klas
+# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r, klasy
 
-Szablony te określają, jeśli typ może być wywoływana ze określone typy argumentów. `is_invocable_r` i `is_nothrow_invocable_r` również określić, czy wynik wywołania jest konwertowany na określonego typu. `is_nothrow_invocable` i `is_nothrow_invocable_r` określają również, jeśli wywołanie znanego nie zgłasza wyjątków. Dodane w języku C ++ 17.
+Te szablony określają, czy typ można wywołać z określonymi typami argumentów. `is_invocable_r`a `is_nothrow_invocable_r` także określić, czy wynik wywołania jest konwertowany do określonego typu. `is_nothrow_invocable`a `is_nothrow_invocable_r` także określić, czy wywołanie jest znane, aby nie zgłaszać wyjątków. Dodano w języku C++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Parametry
 
-*Możliwy do wywołania*<br/>
-Wywoływane typ do zapytania.
+*Żądanie*\
+Typ możliwy do zapytania.
 
-*Args*<br/>
-Typy argumentów do wykonywania zapytań.
+*Argumentów*\
+Typy argumentów do zapytania.
 
-*Przekonwertować*<br/>
-Typ wyniku z *Callable* musi być konwertowany na.
+*Dach*\
+Typ wyniku możliwego do *zażądanie* musi być konwertowany na.
 
 ## <a name="remarks"></a>Uwagi
 
-`is_invocable` Typu predykatu ma wartość true, jeśli typ możliwy do wywołania *Callable* może być wywoływany przy użyciu argumentów *Args* w nieznanym kontekście.
+Predykat typu ma wartość true, jeśli możliwy do wywołania typ wywołujący *może być* wywoływany przy użyciu argumentów *argumenty w* nieoszacowanym kontekście. `is_invocable`
 
-`is_invocable_r` Typu predykatu ma wartość true, jeśli typ możliwy do wywołania *Callable* może być wywoływany przy użyciu argumentów *Args* w nieobliczonym kontekście w celu utworzenia wyniku można przekonwertować na typ  *Przekonwertować*.
+Predykat typu ma wartość true, jeśli możliwy do *wywołania typ można* wywołać za pomocą argumentów *argumenty w* nieoszacowanym kontekście, aby utworzyć konwersję typu wynik do *konwersji.* `is_invocable_r`
 
-`is_nothrow_invocable` Typu predykatu ma wartość true, jeśli typ możliwy do wywołania *Callable* może być wywoływany przy użyciu argumentów *Args* w nieznanym kontekście, który takie wywołanie jest znana nie zgłasza wyjątku.
+Predykat typu ma wartość true, jeśli możliwy do *wywołania typ można* wywołać przy użyciu argumentów *argumenty w* nieoszacowanym kontekście i że takie wywołanie jest znane, aby nie zgłosić wyjątku. `is_nothrow_invocable`
 
-`is_nothrow_invocable_r` Typu predykatu ma wartość true, jeśli typ możliwy do wywołania *Callable* może być wywoływany przy użyciu argumentów *Args* w nieobliczonym kontekście w celu utworzenia wyniku można przekonwertować na typ  *Przekonwertować*, że takie wywołanie wiadomo, że nie można zgłosić wyjątek.
+Predykat typu ma wartość true, jeśli możliwy do wywołania typ wywołujący *może być* wywoływany przy użyciu *argumentów arguments* w nieoszacowanym kontekście, aby utworzyć konwersję typu wyniku do konwersji, i że takie wywołanie jest znane.  `is_nothrow_invocable_r` wyjątek.
 
-Każdy z typów *przekonwertować*, *Callable*i typy w pakiecie parametr *Args* musi być typem kompletnym, tablicę powiązane z nieznanego lub prawdopodobniekwalifikowanacv**void**. W przeciwnym razie zachowanie predykatu jest niezdefiniowane.
+Każdy typ, który można *przekonwertować*, *wywołać*i typy w parametrach *pakietu parametrów* , musi być kompletnym typem, tablicą nieznanej granicy lub prawdopodobnie **void**kwalifikowaną. W przeciwnym razie zachowanie predykatu jest niezdefiniowane.
 
 ## <a name="example"></a>Przykład
 
@@ -118,9 +118,9 @@ int main()
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[wywołania](functional-functions.md#invoke)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[wywołuje](functional-functions.md#invoke)

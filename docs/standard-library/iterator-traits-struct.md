@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224042"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455582"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits — Struktura
 
-Struktura pomocnika szablonu używany do określenia wszystkich definicji typu krytycznego dla mających iterator.
+Struktura pomocnika szablonu używana do określania wszystkich definicji typu krytycznego, które powinny mieć iterator.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,23 +33,23 @@ struct iterator_traits {
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablon definiuje typy elementów członkowskich
+Struktura szablonu definiuje typy elementów członkowskich
 
-- `iterator_category`: jest to synonim `Iterator::iterator_category`.
+- `iterator_category`: synonim dla `Iterator::iterator_category`.
 
-- `value_type`: jest to synonim `Iterator::value_type`.
+- `value_type`: synonim dla `Iterator::value_type`.
 
-- `difference_type`: jest to synonim `Iterator::difference_type`.
+- `difference_type`: synonim dla `Iterator::difference_type`.
 
-- `distance_type`: jest to synonim `Iterator::difference_type.`
+- `distance_type`: synonim dla`Iterator::difference_type.`
 
-- `pointer`: jest to synonim `Iterator::pointer`.
+- `pointer`: synonim dla `Iterator::pointer`.
 
-- `reference`: jest to synonim `Iterator::reference`.
+- `reference`: synonim dla `Iterator::reference`.
 
-Częściowe specjalizacje określić typy krytyczne skojarzony wskaźnik do obiektu typu **typu** <strong>\*</strong> lub **typ const**  <strong>\*</strong>.
+Częściowe specjalizacje określają typy krytyczne skojarzone ze wskaźnikiem <strong>\*</strong> obiektu typu **Type lub** **const** <strong>\*</strong>.
 
-W tej implementacji, które można również użyć kilku funkcji szablonu, które nie należy wprowadzać użytkowania częściowej specjalizacji:
+W tej implementacji można także użyć kilku funkcji szablonu, które nie używają częściowej specjalizacji:
 
 ```cpp
 template <class Category, class Type, class Diff>
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-te określają kilka takich samych typach bardziej pośrednio. Te funkcje są używane jako argumentów w wywołaniu funkcji. Jedynym ich celem jest podać parametr klasy szablonu przydatne dla wywoływanej funkcji.
+co bardziej pośrednio określa kilka typów tego samego typu. Te funkcje są używane jako argumenty wywołania funkcji. Ich jedynym celem jest dostarczenie użytecznego parametru klasy szablonu do wywołanej funkcji.
 
 ## <a name="example"></a>Przykład
 
@@ -118,12 +118,12 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iterator >
+**Nagłówek:** \<> iteratora
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

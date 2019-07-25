@@ -7,16 +7,16 @@ helpviewer_keywords:
 - make_signed class
 - make_signed
 ms.assetid: 686247c0-247c-496b-9b1b-ba9dcd633621
-ms.openlocfilehash: c9fe9d54d503f1aa1dfb3debfaeb7649f2e5c18d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3c35e28dec3270299329c0186273e324effc2bb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413063"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453684"
 ---
 # <a name="makesigned-class"></a>make_signed — Klasa
 
-Tworzy typ lub najmniejszą podpisem wpisz większa lub równa rozmiarze do typu.
+Ustawia typ lub najmniejszy typ podpisany o wartości większej lub równej rozmiarowi do typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,19 +30,19 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie modyfikatora typu przechowuje zmodyfikowany typ, który jest *T* Jeśli `is_signed<T>` prawdziwe. W przeciwnym razie jest najmniejszą typ bez znaku `UT` dla którego `sizeof (T) <= sizeof (UT)`.
+Wystąpienie modyfikatora typu zawiera zmodyfikowany typ, `is_signed<T>` *który ma wartość* true. W przeciwnym razie jest to najmniejszy typ `UT` bez znaku `sizeof (T) <= sizeof (UT)`, dla którego.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

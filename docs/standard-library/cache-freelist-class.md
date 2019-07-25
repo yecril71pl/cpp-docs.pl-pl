@@ -10,16 +10,16 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352115"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449687"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist — Klasa
 
-Definiuje [block alokatora](../standard-library/allocators-header.md) który przydziela i zwalnia bloki pamięci o rozmiarze jednego.
+Definiuje [Alokator bloku](../standard-library/allocators-header.md) , który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,35 +32,35 @@ class cache_freelist
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Sz*|Liczba elementów w tablicy do przydzielenia.|
-|*Maksymalna*|Klasa max reprezentujący maksymalny rozmiar wolnego listy. Może to być [max_fixed_size —](../standard-library/max-fixed-size-class.md), [max_none —](../standard-library/max-none-class.md), [max_unbounded —](../standard-library/max-unbounded-class.md), lub [max_variable_size —](../standard-library/max-variable-size-class.md).|
+|*Sz*|Liczba elementów w tablicy, która ma zostać przypisana.|
+|*Maksymalna*|Maksymalna Klasa reprezentująca maksymalny rozmiar listy bezpłatnej. Może to być [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md)lub [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Uwagi
 
-Cache_freelist — klasa szablonu przechowuje listę wolne bloki pamięci o rozmiarze *Sz*. Po zapełnieniu listy bezpłatne używa **operatora delete** można cofnąć alokacji pamięci blokuje. Bezpłatne lista jest pusta korzysta **nowy operator** przydzielić nowe bloki pamięci. Maksymalny rozmiar wolnego list jest określany przez klasę klasy max przekazanej *Max* parametru.
+Klasa szablonu cache_freelist przechowuje bezpłatną listę bloków pamięci o rozmiarze *sz*. Gdy lista bezpłatnych jest pełna, użyje **operatora delete** w celu cofnięcia alokacji bloków pamięci. Gdy lista bezpłatnych jest pusta, używa **operatora new** w celu przydzielenia nowych bloków pamięci. Maksymalny rozmiar bezpłatnej listy jest określany przez maksymalną klasę klasy przekazaną w parametrze *Max* .
 
-Każdy blok pamięci przechowuje *Sz* w bajtach dostępnej pamięci i danych, **nowy operator** i **operatora delete** wymagają.
+Każdy blok pamięci zawiera *sz* bajtów użytecznej pamięci oraz dane, które **operator new** i **operator delete** wymagają.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[cache_freelist](#cache_freelist)|Tworzy obiekt typu `cache_freelist`.|
+|[cache_freelist](#cache_freelist)|Konstruuje obiekt typu `cache_freelist`.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<buforów >
+**Nagłówek:** \<przypisania >
 
-**Namespace:** stdext
+**Przestrzeń nazw:** stdext
 
-## <a name="allocate"></a>  cache_freelist::allocate
+## <a name="allocate"></a>cache_freelist:: Allocate
 
 Przydziela blok pamięci.
 
@@ -72,17 +72,17 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
+|*liczbą*|Liczba elementów w tablicy, która ma zostać przypisana.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do przydzielonego obiektu.
+Wskaźnik do przydzielony obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cache_freelist"></a>  cache_freelist::cache_freelist
+## <a name="cache_freelist"></a>cache_freelist::cache_freelist
 
-Tworzy obiekt typu `cache_freelist`.
+Konstruuje obiekt typu `cache_freelist`.
 
 ```cpp
 cache_freelist();
@@ -90,9 +90,9 @@ cache_freelist();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="deallocate"></a>  cache_freelist::deallocate
+## <a name="deallocate"></a>cache_freelist::d eallocate
 
-Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -102,11 +102,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
-|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.|
+|*liczbą*|Liczba obiektów do cofnięcia przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

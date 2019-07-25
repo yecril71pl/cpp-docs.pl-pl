@@ -1,5 +1,5 @@
 ---
-title: valarray&lt;bool&gt; klasy
+title: Klasa&lt;bool&gt; valarray
 ms.date: 11/04/2016
 f1_keywords:
 - valarray<bool>
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-ms.openlocfilehash: c7cf76935bc1e4489a963f67cc9ffeece5e7dfb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b597bbe5327eb95c8c2be1016a2a036ed7ef2baa
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167585"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452295"
 ---
-# <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; klasy
+# <a name="valarrayltboolgt-class"></a>Klasa&lt;bool&gt; valarray
 
-Specjalizowanej wersji szablonu klasy **valarray\<typ >** do elementów typu **bool**.
+Wyspecjalizowana wersja klasy szablonu **valarray\<typ >** do elementów typu **bool**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,9 +75,9 @@ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 
 **Nagłówek:** \<valarray >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[valarray, klasa](../standard-library/valarray-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Klasa valarray](../standard-library/valarray-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

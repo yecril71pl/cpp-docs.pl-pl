@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159561"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448921"
 ---
 # <a name="gslicearray-class"></a>gslice_array — Klasa
 
-Klasy wewnętrzne, pomocnicze w ramach szablonu, która obsługuje obiekty wycinek ogólne, zapewniając operacji między macierzami podzbioru zdefiniowanych przez ogólne wycinek tablicy valarray.
+Wewnętrzna, pomocnicza Klasa szablonu, która obsługuje ogólne obiekty wycinków, dostarczając operacje między tablicami podzestawu zdefiniowanymi przez ogólny wycinek elementu valarray.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisująca obiekt, który zawiera odwołanie do obiektu `va` klasy [valarray](../standard-library/valarray-class.md)**\<typ >**, wraz z obiektem `gs` klasy [ gslice —](../standard-library/gslice-class.md) opisano sekwencji elementów, które można wybierać `valarray<Type>` obiektu.
+Klasa opisuje obiekt `va` , który przechowuje odwołanie do obiektu klasy [valarray](../standard-library/valarray-class.md) **\<typu >** , wraz z obiektem `gs` klasy [gslice](../standard-library/gslice-class.md) , który opisuje sekwencję elementów do wyboru `valarray<Type>` obiekt.
 
-Konstruowanie `gslice_array<Type>` obiektu Pisząc wyrażenie w formie [oceny luk w zabezpieczeniach&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Funkcje Członkowskie gslice_array — klasa następnie zachowują się jak odpowiedniej sygnatury funkcji zdefiniowanych dla `valarray<Type>`, z tą różnicą, że dotyczy tylko kolejność wybranych elementów.
+`gslice_array<Type>` Obiekt można skonstruować tylko przez napisanie wyrażenia w postaci [VA&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Funkcje składowe klasy gslice_array, zachowują się jak odpowiadające im sygnatury `valarray<Type>`funkcji zdefiniowane dla, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów.
 
-Klasa szablonu jest pośrednio tworzony przez niektóre operacje valarray i nie można użyć bezpośrednio w programie. Klasa wewnętrznego pomocnicze w ramach szablonu zamiast tego jest używany przez operator indeksu dolnego wycinek:
+Klasa szablonu jest tworzona pośrednio przez pewne operacje valarray i nie może być używana bezpośrednio w programie. Wewnętrzna Klasa szablonu pomocniczego jest używana przez Operator indeksu dolnego:
 
-`gslice_array`\< **Typ** >  `valarray` \< **typu**>:: `operator[]` ( **constgslice &**).
+`gslice_array`\<**Typ** >  **Wpisz >** : :`operator[]` ( **constgslice &** ). `valarray` \<
 
-Konstruowanie `gslice_array<Type>` obiektu Pisząc wyrażenie w formie `va[gsl]`, dla wycinka `gsl` z tablicy valarray `va`. Funkcje Członkowskie gslice_array — klasa następnie zachowują się jak odpowiedniej sygnatury funkcji zdefiniowanych dla `valarray<Type>`, z tą różnicą, że dotyczy tylko kolejność wybranych elementów. Na sekwencję kontrolowaną przez gslice_array — jest definiowany przez trzy parametry konstruktora wycinek, indeksu pierwszego elementu w pierwszym wycinku liczbę elementów w każdym wycinkiem i odległości między elementami w każdym wycinkiem.
+`gslice_array<Type>` Obiekt można skonstruować tylko przez napisanie wyrażenia w postaci `va[gsl]`dla wycinka `gsl` valarray `va`. Funkcje składowe klasy gslice_array, zachowują się jak odpowiadające im sygnatury `valarray<Type>`funkcji zdefiniowane dla, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów. Sekwencja kontrolowana przez gslice_array jest definiowana przez trzy parametry konstruktora wycinka, indeks pierwszego elementu w pierwszym wycinkze, liczbę elementów w każdym wycinku i odległość między elementami w każdym wycinku.
 
 W poniższym przykładzie:
 
@@ -75,18 +75,18 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
 //   indices 3, 5, 7, 10, 12, 14
 ```
 
-Indeksy muszą być prawidłowe procedury był prawidłowy.
+Indeksy muszą być prawidłowe, aby procedura była prawidłowa.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [gslice::gslice](../standard-library/gslice-class.md#gslice) przykładowy sposób deklarowania i użyj Tablica typu slice_array.
+Zobacz przykład dla [gslice:: gslice](../standard-library/gslice-class.md#gslice) , aby zapoznać się z przykładem sposobu deklarowania i używania slice_array.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<valarray >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

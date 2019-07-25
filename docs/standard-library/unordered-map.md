@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: a7238d36e27b516aa30ad89b7322e6830f57e403
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243463"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454760"
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
 
-Definiuje klasy szablonów kontenera [unordered_map](../standard-library/unordered-map-class.md) i [unordered_multimap](../standard-library/unordered-multimap-class.md) i ich szablonów pomocniczych.
+Definiuje klasy szablonu kontenera [unordered_map](../standard-library/unordered-map-class.md) i [unordered_multimap](../standard-library/unordered-multimap-class.md) oraz ich szablony pomocnicze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,27 +24,27 @@ Definiuje klasy szablonów kontenera [unordered_map](../standard-library/unorder
 ```
 
 > [!NOTE]
-> \<Unordered_map > używa również biblioteki `#include <initializer_list>` instrukcji.
+> `#include <initializer_list>` Biblioteka \<> unordered_map używa również instrukcji.
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[unordered_map, klasa](../standard-library/unordered-map-class.md)|Tabeli mieszania magazyny par {klucza, zamapowanego}.|
-|[unordered_multimap, klasa](../standard-library/unordered-multimap-class.md)|Tabeli mieszania magazyny par {klucza, zamapowanego}.|
+|[unordered_map, klasa](../standard-library/unordered-map-class.md)|Przechowuje tabelę skrótów zawierającą pary {Key, zamapowany}.|
+|[unordered_multimap, klasa](../standard-library/unordered-multimap-class.md)|Przechowuje tabelę skrótów zawierającą pary {Key, zamapowany}.|
 
 ### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Sprawdza, czy obiekt unordered_map po lewej stronie operatora nie jest równy obiektowi unordered_map po prawej stronie.|
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Sprawdza, czy obiekt unordered_map po lewej stronie operatora jest równy obiektowi unordered_map po prawej stronie.|
-|[swap — funkcja (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamienia dwóch map.|
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Sprawdza, czy obiekt unordered_multimap po lewej stronie operatora nie jest równy obiektowi unordered_multimap po prawej stronie.|
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Sprawdza, czy obiekt unordered_multimap po lewej stronie operatora jest równy obiektowi unordered_multimap po prawej stronie.|
-|[swap — funkcja (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamienia dwa multimaps.|
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Testuje, czy obiekt unordered_map po lewej stronie operatora nie jest równy obiektowi unordered_map po prawej stronie.|
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Testuje, czy obiekt unordered_map po lewej stronie operatora jest równy obiektowi unordered_map po prawej stronie.|
+|[Swap — Funkcja (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamienia dwie mapy.|
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Testuje, czy obiekt unordered_multimap po lewej stronie operatora nie jest równy obiektowi unordered_multimap po prawej stronie.|
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Testuje, czy obiekt unordered_multimap po lewej stronie operatora jest równy obiektowi unordered_multimap po prawej stronie.|
+|[Swap — Funkcja (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Zamienia dwie mapy wieloskładnikowe.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[unordered_multiset, klasa](../standard-library/unordered-multiset-class.md)<br/>
-[unordered_set, klasa](../standard-library/unordered-set-class.md)<br/>
+[Klasa unordered_multiset](../standard-library/unordered-multiset-class.md)\
+[unordered_set, klasa](../standard-library/unordered-set-class.md)

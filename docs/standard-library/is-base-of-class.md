@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383675"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456620"
 ---
 # <a name="isbaseof-class"></a>is_base_of — Klasa
 
-Sprawdza, czy jest użycie jednego typu podstawowego innego.
+Testuje, czy jeden typ jest podstawą innego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,15 +27,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parametry
 
-*Base*<br/>
-Klasa bazowa do testowania.
+*Opiera*\
+Klasa bazowa do przetestowania.
 
-*Pochodne*<br/>
-Typ pochodny do testowania.
+*Pozyskiwan*\
+Typ pochodny do przetestowania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *podstawowy* jest klasą bazową typu *Derived*, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *podstawowy* jest klasą bazową typu pochodnego , w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -76,9 +76,9 @@ is_base_of<derived, base> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible, klasa](../standard-library/is-convertible-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_convertible, klasa](../standard-library/is-convertible-class.md)

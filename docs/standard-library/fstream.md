@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-ms.openlocfilehash: 20efdc755b7f706fc6ee962daa32bd352df39d45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba6a4152b8d37f5b0186f9d05c6ba850e8c2e54c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159772"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454017"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
-Definiuje kilka klas, które obsługują operacje iostreams w sekwencji przechowywanych w zewnętrznych plikach.
+Definiuje kilka klas, które obsługują operacje iostreams na sekwencjach przechowywanych w plikach zewnętrznych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,27 +27,27 @@ Definiuje kilka klas, które obsługują operacje iostreams w sekwencji przechow
 
 |Nazwa typu|Opis|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Typ `basic_filebuf` wyspecjalizowane na **char** parametry szablonu.|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|Typ `basic_fstream` wyspecjalizowane na **char** parametry szablonu.|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|Typ `basic_ifstream` wyspecjalizowane na **char** parametry szablonu.|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|Typ `basic_ofstream` wyspecjalizowane na **char** parametry szablonu.|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|Typ `basic_fstream` wyspecjalizowane na **wchar_t** parametry szablonu.|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|Typ `basic_ifstream` wyspecjalizowane na **wchar_t** parametry szablonu.|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|Typ `basic_ofstream` wyspecjalizowane na **wchar_t** parametry szablonu.|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|Typ `basic_filebuf` wyspecjalizowane na **wchar_t** parametry szablonu.|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Typ `basic_filebuf` wyspecjalizowany dla parametrów szablonu **char** .|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|Typ `basic_fstream` wyspecjalizowany dla parametrów szablonu **char** .|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|Typ `basic_ifstream` wyspecjalizowany dla parametrów szablonu **char** .|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|Typ `basic_ofstream` wyspecjalizowany dla parametrów szablonu **char** .|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|Typ `basic_fstream` wyspecjalizowany dla parametrów szablonu **wchar_t** .|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|Typ `basic_ifstream` wyspecjalizowany dla parametrów szablonu **wchar_t** .|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|Typ `basic_ofstream` wyspecjalizowany dla parametrów szablonu **wchar_t** .|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|Typ `basic_filebuf` wyspecjalizowany dla parametrów szablonu **wchar_t** .|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|Klasa szablonu opisuje buforu strumieni, który kontroluje transmisji elementów typu `Elem`, którego cech są określane przez klasę `Tr`, do i z sekwencji elementów przechowywanych w pliku zewnętrznym.|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wstawienia i wydobycia elementów i obiektów zakodowanych przy użyciu bufor strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**Elem**,  **TR**>, z elementami typu `Elem`, którego cech są określane przez klasę `Tr`.|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowany obiektów z bufor strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, z elementami typu `Elem`, którego cech są określane przez klasę `Tr`.|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wstawiania elementów i zakodowany obiekty do bufora strumienia, klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, z elementami typu `Elem`, którego cech są określane przez klasę `Tr`.|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|Klasa szablonu opisuje bufor strumienia, który kontroluje przekazywanie elementów typu `Elem`, których cechy znaków są określane przez klasę `Tr`, do i z sekwencji elementów przechowywanych w zewnętrznym pliku.|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu bufora strumienia klasy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**elem**, **TR**>, z elementami typu `Elem`, których cechy znaków są określane przez klasę `Tr`.|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**elem**, **TR**>, z elementami typu `Elem`, których cechy znaku są określane przez klasę `Tr`.|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje Wstawianie elementów i zakodowanych obiektów do bufora strumienia klasy [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**elem**, **TR**>, z elementami typu `Elem`, których cechy znaku są określane przez klasę `Tr`.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
-[Konwencje iostream](../standard-library/iostreams-conventions.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Konwencje iostream](../standard-library/iostreams-conventions.md)

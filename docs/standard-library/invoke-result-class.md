@@ -1,5 +1,5 @@
 ---
-title: invoke_result klasy
+title: Klasa invoke_result
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::invoke_result
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 7c03240d3ee666fcda30562279a8dbda2ca8dc7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404854"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447642"
 ---
-# <a name="invokeresult-class"></a>invoke_result klasy
+# <a name="invokeresult-class"></a>Klasa invoke_result
 
-Określa typ zwracany typ możliwy do wywołania, który ma określone typy argumentów w czasie kompilacji. Dodane w języku C ++ 17.
+Określa zwracany typ wywoływanego typu, który przyjmuje określone typy argumentów w czasie kompilacji. Dodano w języku C++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,23 +33,23 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>Parametry
 
-*Możliwy do wywołania*<br/>
-Wywoływane typ do zapytania.
+*Żądanie*\
+Typ możliwy do zapytania.
 
-*Args*<br/>
-Typy argumentów na typ możliwy do wywołania do wykonywania zapytań.
+*Argumentów*\
+Typy listy argumentów dla wywoływanego typu do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tego szablonu, aby określić typ wyniku *Callable*(*Args*...) w czasie kompilacji, gdzie *Callable* i wszystkie typy w *Args* dowolny typ pełną, tablicę nieznany powiązane z lub prawdopodobnie cv kwalifikowanego `void`. `type` Składowej klasy szablonu, nazwy typu zwracanego *Callable* po wywołaniu, przy użyciu argumentów *Args*... `type` Elementu członkowskiego jest zdefiniowana tylko, jeśli *Callable* może być wywoływana, gdy wywoływany przy użyciu argumentów *Args*... w nieznanym kontekście. W przeciwnym razie klasa szablonu nie ma składowej `type`, co pozwala SFINAE testów na określony zestaw typów argumentów w czasie kompilacji.
+Użyj tego szablonu, aby określić typ wyniku możliwego do *przeprowadzenia (* *args*...) w czasie *kompilacji, gdzie możliwe* jest dokończenie i wszystkie typy w *args* , tablica nieznanej granicy lub prawdopodobnie kwalifikowana `void`CV. Element członkowski klasy Template name zwraca typ *możliwy* do wywołania, gdy zostanie wywołane przy użyciu argumentów *argumenty..* .. `type` Element `type` członkowski jest definiowany tylko wtedy, *gdy można wywołać* wywoływanie przy użyciu argumentów *argumenty..* . w nieoszacowanym kontekście. W przeciwnym razie Klasa szablonu nie ma elementu `type`Członkowskiego, który umożliwia SFINAE testy na określonym zestawie typów argumentów w czasie kompilacji.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[wywołania](functional-functions.md#invoke)
+[< type_traits >](../standard-library/type-traits.md)\
+[wywołuje](functional-functions.md#invoke)

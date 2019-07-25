@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 43a4211d9841e754cefbe1bdf405001f0f4657d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383649"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456648"
 ---
 # <a name="isclass-class"></a>is_class — Klasa
 
-Sprawdza, czy typ jest klasą.
+Testuje, czy typ jest klasą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* typ jest zdefiniowany jako **klasy** lub **struktury**, lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem zdefiniowanym jako **Klasa** lub `cv-qualified` **Struktura**lub postaci jednego z nich, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -67,10 +67,10 @@ is_class<int> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound, klasa](../standard-library/is-compound-class.md)<br/>
-[is_union, klasa](../standard-library/is-union-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa is_compound](../standard-library/is-compound-class.md)\
+[is_union, klasa](../standard-library/is-union-class.md)

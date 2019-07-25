@@ -1,38 +1,38 @@
 ---
-title: Strumienie wejście wyjście
+title: Strumienie danych wejściowych i wyjściowych
 ms.date: 11/04/2016
 helpviewer_keywords:
 - I/O [C++], stream
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
-ms.openlocfilehash: d426baacb52095ab2d933263fdac8e312fc29558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d5344ede3a62375c4c8102d1fc39445518eb0c4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159239"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455270"
 ---
 # <a name="inputoutput-streams"></a>Input/Output Streams
 
-`basic_iostream`, która została zdefiniowana w pliku nagłówkowym \<istream >, jest szablonem klasy, dla obiektów, które obsługiwać oba modele danych wejściowych i wyjściowych opartego na znakach strumieniach we/wy.
+`basic_iostream`, który jest zdefiniowany w pliku \<nagłówka IStream >, jest szablonem klasy dla obiektów, które obsługują zarówno dane wejściowe, jak i wyjściowe strumienie we/wy.
 
-Istnieją dwie definicje typów, które definiują specyficzne dla znaków specjalizacje `basic_iostream` i mogą pomóc poprawić czytelność kodu: `iostream` (nie należy mylić z plikiem nagłówka \<iostream >) jest strumień we/wy, który jest oparty na `basic_iostream<char>`; `wiostream` jest strumień we/wy, który jest oparty na `basic_iostream<wchar_t>`.
+Istnieją dwa definicje typów, które definiują specjalizacje charakterystyczne dla `basic_iostream` znaków i mogą ułatwić odczytywanie kodu: `iostream` (nie należy mylić z plikiem \<nagłówka iostream >) to strumień we/wy oparty na `basic_iostream<char>`; to strumień we/wy oparty na `basic_iostream<wchar_t>`. `wiostream`
 
-Aby uzyskać więcej informacji, zobacz [basic_iostream — klasa](../standard-library/basic-iostream-class.md), [iostream](../standard-library/basic-iostream-class.md), i [wiostream](../standard-library/basic-iostream-class.md).
+Aby uzyskać więcej informacji, zobacz [Basic_iostream Class](../standard-library/basic-iostream-class.md), [iostream](../standard-library/basic-iostream-class.md)i [wiostream](../standard-library/basic-iostream-class.md).
 
-Wynikających ze `basic_iostream` jest szablonem klasy `basic_fstream`, który jest używany do strumienia znaków danych do i z plików.
+Pochodny od `basic_iostream` to szablon `basic_fstream`klasy, który jest używany do przesyłania strumieniowego danych do i z plików.
 
-Istnieją również definicje typów, zapewniające specjalizacje znaków specyficznych `basic_fstream`. Są one `fstream`, czyli strumień we/wy pliku, który jest oparty na **char**, i `wfstream`, czyli strumień we/wy pliku, który jest oparty na **wchar_t**. Aby uzyskać więcej informacji, zobacz [basic_fstream — klasa](../standard-library/basic-fstream-class.md), [fstream —](../standard-library/basic-fstream-class.md), i [wfstream](../standard-library/basic-fstream-class.md). Korzystanie z tych definicji typów wymaga włączenia plik nagłówkowy \<fstream — >.
+Istnieją również definicje typów, które zapewniają specjalizację specyficzną dla `basic_fstream`znaków. Są to `fstream`, czyli strumień we/wy pliku oparty `wfstream`na znakach, który jest strumieniem we/wy pliku opartym na **wchar_t**. Aby uzyskać więcej informacji, zobacz [Basic_fstream Class](../standard-library/basic-fstream-class.md), [fstream —](../standard-library/basic-fstream-class.md)i [wfstream](../standard-library/basic-fstream-class.md). Użycie tych elementów typedef wymaga włączenia pliku \<nagłówka fstream — >.
 
 > [!NOTE]
-> Gdy `basic_fstream` obiekt jest używany do wykonywania operacji We/Wy w pliku, mimo że podstawowego buforu zawiera oddzielnie wyznaczony pozycji do odczytu i zapisu, bieżących danych wejściowych i bieżącej pozycji dane wyjściowe są powiązane ze sobą i w związku z tym, przenosi odczytu niektórych danych Pozycja w danych wyjściowych.
+> `basic_fstream` Gdy obiekt jest używany do wykonywania operacji we/wy na plikach, chociaż bazowy bufor zawiera oddzielnie wskazane położenia do odczytu i zapisu, bieżące wejściowe i bieżące pozycje wyjściowe są powiązane ze sobą, a tym samym odczytywanie niektórych danych przenosi Pozycja wyjściowa.
 
-Szablon klasy `basic_stringstream` i jego typowe specjalizacji `stringstream`, są często używane do pracy z obiektami strumienia we/wy do wstawiania i wyodrębnianie danych znakowych. Aby uzyskać więcej informacji, zobacz [basic_stringstream — klasa](../standard-library/basic-stringstream-class.md).
+Szablon `basic_stringstream` klasy i jego wspólna specjalizacja `stringstream`, są często używane do pracy z obiektami strumienia we/wy w celu wstawiania i wyodrębniania danych znakowych. Aby uzyskać więcej informacji, zobacz [Klasa basic_stringstream](../standard-library/basic-stringstream-class.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[stringstream](../standard-library/basic-stringstream-class.md)<br/>
-[basic_stringstream, klasa](../standard-library/basic-stringstream-class.md)<br/>
-[\<sstream>](../standard-library/sstream.md)<br/>
-[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[stringstream](../standard-library/basic-stringstream-class.md)\
+[Klasa basic_stringstream](../standard-library/basic-stringstream-class.md)\
+[\<sstream>](../standard-library/sstream.md)\
+[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

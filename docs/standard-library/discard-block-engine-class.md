@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: a0df754f53b52c134b9eb1126f90882ceaaf1e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386203"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454394"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine — Klasa
 
-Generuje losową sekwencję przez odrzucenie wartości zwracanych przez silnik podstawowy.
+Generuje losową sekwencję przez odrzucenie wartości zwracanych przez aparat podstawowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*Aparat*<br/>
-Typ podstawowy aparat.
+*Wyszukiwarce*\
+Typ aparatu podstawowego.
 
-*P*<br/>
-**Rozmiaru bloku**. Liczba wartości w każdym bloku.
+*ST*\
+**Rozmiar bloku**. Liczba wartości w każdym bloku.
 
-*R*<br/>
-**Blok używanych**. Liczba wartości w każdym bloku, które są używane. Pozostałe zostaną odrzucone (`P` - `R`). **Warunek wstępny**: `0 < R ≤ P`
+*R*\
+**Używany blok**. Liczba wartości w każdym używanym bloku. Pozostałe są odrzucane (`P` - `R`). **Warunek wstępny**:`0 < R ≤ P`
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,18 +42,18 @@ Typ podstawowy aparat.
 |`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|
 |`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|
 
-Aby uzyskać więcej informacji na temat elementów członkowskich aparatu zobacz [ \<losowy >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu opisuje Adapter aparat, który tworzy wartości przez odrzucenie niektórych wartości zwracanych przez silnik podstawowy.
+Ta klasa szablonu opisuje adapter aparatu, który tworzy wartości przez odrzucenie niektórych wartości zwracanych przez aparat podstawowy.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowy >
+**Nagłówek:** \<losowe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

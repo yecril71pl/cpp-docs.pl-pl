@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348175"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454956"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution — Klasa
 
-Generuje jednolity (każda wartość jest równie prawdopodobna) rozkład całkowitoliczbowy w zakresie wyjściowym dwustronnie zamkniętym.
+Generuje jednolity (każda wartość jest równie prawdopodobna) Dystrybucja liczb całkowitych w ramach zakresu wyjściowego, który jest włącznie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,29 +71,29 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType*<br/>
-Typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*IntType*\
+Typ wyniku liczby całkowitej, wartość domyślna to **int**. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji włączne włączne, która wytwarza wartości typu całkowitego określone przez użytkownika z rozkładem, tak aby każda wartość jest równie prawdopodobna. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
+Klasa szablonu opisuje dystrybucję obejmującą włącznie, która tworzy wartości typu całkowitego określonego przez użytkownika z dystrybucją, tak aby każda wartość była równie prawdopodobna. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
 |`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
 
-Właściwość elementu członkowskiego `a()` zwraca aktualnie przechowywana minimum granica dystrybucji, gdy `b()` zwraca aktualnie przechowywana maksymalną granicę. Ta klasa dystrybucji następujące minimalne i maksymalne wartości są takie same, jak zwracany przez typowe funkcje właściwość `min()` i `max()`.
+Element członkowski `a()` właściwości zwraca aktualnie przechowywaną minimalną granicę dystrybucji, podczas `b()` gdy zwraca aktualnie przechowywaną granicę maksymalną. Dla tej klasy dystrybucji te wartości minimalne i maksymalne są takie same jak te, które są zwracane przez funkcje `min()` wspólne właściwości i. `max()`
 
-Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
+Element członkowski `param()` właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
 
-`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największych możliwych wyników, odpowiednio.
+`min()` I`max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-`reset()` Funkcja elementu członkowskiego odrzuca wszystkie wartości z pamięci podręcznej, tak aby wynik następnego wywołania metody `operator()` nie zależy od żadnych wartości uzyskane z aparatu przed wywołaniem.
+Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem. `reset()`
 
-`operator()` Funkcje Członkowskie zwracają dalej wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub pakietu określony parametr.
+Funkcje `operator()` Członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
 
 ## <a name="example"></a>Przykład
 
@@ -175,13 +175,13 @@ Distribution for 200 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowy >
+**Nagłówek:** \<losowe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distribution"></a>uniform_int_distribution::uniform_int_distribution
 
-Tworzy rozkład.
+Konstruuje dystrybucję.
 
 ```cpp
 explicit uniform_int_distribution(
@@ -191,14 +191,14 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Dolna granica wartości losowych, włącznie.
+*z*\
+Dolna granica wartości losowych włącznie.
 
-*b*<br/>
+*b*\
 Górna granica wartości losowych, włącznie.
 
-*parm*<br/>
-`param_type` Struktura używana do konstruowania dystrybucji.
+*parametr*\
+`param_type` Struktura używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -206,9 +206,9 @@ Górna granica wartości losowych, włącznie.
 
 Pierwszy Konstruktor konstruuje obiekt, którego przechowywane *a* wartość przechowuje wartość *a* i którego przechowywane *b* wartość przechowuje wartość *b*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="param_type"></a>  uniform_int_distribution::param_type
+## <a name="param_type"></a>uniform_int_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Dolna granica wartości losowych, włącznie.
+*z*\
+Dolna granica wartości losowych włącznie.
 
-*b*<br/>
+*b*\
 Górna granica wartości losowych, włącznie.
 
-*right*<br/>
-`param_type` Obiekt do porównania z tym.
+*Kliknij*\
+Obiekt `param_type` , który ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `a ≤ b`
 
-Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

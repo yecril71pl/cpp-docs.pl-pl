@@ -1,34 +1,34 @@
 ---
-title: Input / Output Alternatives
+title: Dane wejściowe danych wejściowych i wyjściowych
 ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: 5fb98714a96dedf725ea17332d7c1627e3390896
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: b46ff242fc263be5069eb691dd0ea9e8fb00b0f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221391"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455290"
 ---
 # <a name="inputoutput-alternatives"></a>Input/Output Alternatives
 
-Microsoft C++ kompilator udostępnia kilka rozwiązań alternatywnych dla operacji We/Wy programowania:
+Kompilator firmy C++ Microsoft oferuje kilka alternatywnych rozwiązań programistycznych we/wy:
 
-- C biblioteki wykonawczej bezpośrednie, Niebuforowane operacje We/Wy.
+- Biblioteka wykonawcza języka C bezpośrednio, niebuforowane we/wy.
 
-- We/Wy strumienia biblioteki wykonawczej C do ANSI.
+- Strumień operacji we/wy biblioteki wykonawczej ANSI C.
 
-- Konsoli i portu bezpośrednie we/wy.
+- Bezpośrednie we/wy konsoli i portu.
 
-- Microsoft Foundation Class Library.
+- Biblioteka MFC.
 
-- Microsoft C++ Standard Library.
+- Standardowa C++ Biblioteka firmy Microsoft.
 
-Iostream, które klasy są przydatne w przypadku buforowane, sformatowany tekst we/wy. Są one przydatne w przypadku operacji We/Wy Niebuforowane lub binarny również wtedy, jeśli potrzebujesz interfejs programowania C++ i nie chcesz używać biblioteki Microsoft Foundation Class (MFC). Klasy iostream — są zorientowane obiektowo operacji We/Wy alternatywa funkcje środowiska wykonawczego języka C.
+Klasy iostream są przydatne w przypadku buforowanych, sformatowanych we/wy tekstu. Są one również przydatne dla niebuforowanego lub binarnego wejścia/wyjścia, jeśli potrzebujesz C++ interfejsu programowania i nie będą używać biblioteki Microsoft Foundation Class (MFC). Klasy iostream są alternatywnym obiektem we/wy dla funkcji w czasie wykonywania języka C.
 
-W systemie operacyjnym Microsoft Windows, można użyć klasach iostream. Ciąg i plików strumieni pracy bez ograniczeń, ale obiekty strumienia tryb znakowy `cin`, `cout`, `cerr`, i `clog` są niespójne z Windows graficznego interfejsu użytkownika. Może również pochodzić klasy strumieni niestandardowych, wchodzących w interakcję bezpośrednio za pomocą środowiska Windows.
+Klas iostream można użyć z systemem operacyjnym Microsoft Windows. Strumienie ciągów i plików działają bez ograniczeń, `cin`ale obiekty strumienia trybu znakowego `cerr`, `cout`, i `clog` są niespójne z graficznym interfejsem użytkownika systemu Windows. Można również utworzyć niestandardowe klasy strumienia, które współpracują bezpośrednio ze środowiskiem systemu Windows.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Czym jest strumień?](../standard-library/what-a-stream-is.md)<br/>
+[Czym jest strumień?](../standard-library/what-a-stream-is.md)

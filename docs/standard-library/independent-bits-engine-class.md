@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159226"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456344"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine — Klasa
 
-Generuje losową sekwencję liczb z określoną liczbą bitów za pomocą liczby bitów przepakowanie na podstawie wartości zwracanych przez silnik podstawowy.
+Generuje losową sekwencję liczb z określoną liczbą bitów przez przepakowywanie bitów z wartości zwracanych przez aparat podstawowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,14 +26,14 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*Aparat*<br/>
-Typ podstawowy aparat.
+*Wyszukiwarce*\
+Typ aparatu podstawowego.
 
-*W*<br/>
-**Word rozmiar**. Rozmiar w bitach poszczególnych liczb wygenerowany. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*K*\
+**Rozmiar wyrazu**. Rozmiar w bitach dla każdej wygenerowanej liczby. **Warunek wstępny**:`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
-Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*UInttype*\
+Typ wyniku bez znaku liczby całkowitej. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,18 +42,18 @@ Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losow
 |`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|
 |`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|
 
-Aby uzyskać więcej informacji na temat elementów członkowskich aparatu zobacz [ \<losowy >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu opisuje *łącznik aparatu* która wytwarza wartości przez przepakowaniu bitów z wartości zwracanych przez silnik podstawowy skutkuje *W*— wartości bitowe.
+Ta klasa szablonu opisuje *adapter aparatu* , który tworzy wartości poprzez przepakowywanie bitów z wartości zwracanych przez aparat podstawowy, co spowodowało wartości w bitach .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowy >
+**Nagłówek:** \<losowe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

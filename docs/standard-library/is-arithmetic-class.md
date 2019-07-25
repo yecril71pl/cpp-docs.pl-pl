@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_arithmetic class
 - is_arithmetic
 ms.assetid: ea427b7e-0141-4a04-848f-561054c53001
-ms.openlocfilehash: 7aff4b051786c3d77dacb65ddbdbd29fa695ca48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2c148b7cb58cf38e5f73d4e3d2297eac099ef7e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404809"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456688"
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic — Klasa
 
-Sprawdza, czy typ jest arytmetyczne.
+Testuje, czy typ jest arytmetyczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest typ arytmetyczny, czyli typu całkowitoliczbowego lub zmiennoprzecinkową punktu lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem arytmetycznym, czyli typem całkowitym lub typem zmiennoprzecinkowym lub `cv-qualified` postaci jednego z nich, w przeciwnym razie zawiera wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -70,10 +70,10 @@ is_arithmetic<float> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_floating_point, klasa](../standard-library/is-floating-point-class.md)<br/>
-[is_integral, klasa](../standard-library/is-integral-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa is_floating_point](../standard-library/is-floating-point-class.md)\
+[is_integral, klasa](../standard-library/is-integral-class.md)

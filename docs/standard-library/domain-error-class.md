@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - domain_error class
 ms.assetid: a1d8245d-61c2-4d1e-973f-073bd5dd5fa3
-ms.openlocfilehash: a6aef1ab644be702bee60bd12f2d30f1730bbcc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eabb4ca8ed1c7b5259a8479e1a3e067de073b8e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413830"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454320"
 ---
 # <a name="domainerror-class"></a>domain_error — Klasa
 
-Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych, aby zgłosić błąd domeny.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych w celu zgłaszania błędu domeny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwracana przez [co](../standard-library/exception-class.md) to jest kopia[danych](../standard-library/basic-string-class.md#data) **komunikatów**`.`.
 
 ## <a name="example"></a>Przykład
 
@@ -64,9 +64,9 @@ Type: class std::domain_error
 
 **Nagłówek:** \<stdexcept >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[logic_error, klasa](../standard-library/logic-error-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Klasa logic_error](../standard-library/logic-error-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

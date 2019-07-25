@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, int or long argument manipulators
 ms.assetid: 338f3164-b5e2-4c5a-a605-7d9dc3629ca1
-ms.openlocfilehash: e093512af2741329c58db0b613453f3388bacdf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93e4de25323514eb4105814b565dc3ddc3fbb737
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370804"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453006"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Manipulatory strumieni wyjściowych z jednym argumentem (int lub long)
 
-Iostream — Biblioteka klas zawiera zbiór makra do tworzenia manipulatory sparametryzowanych. Manipulatory za pomocą jednego **int** lub **długie** argument jest przypadkiem szczególnym. Do utworzenia manipulator strumienia wyjściowego, który akceptuje pojedynczy **int** lub **długie** argumentu (takich jak `setw`), należy użyć makro _Smanip, która jest zdefiniowana w \<iomanip >. Ten przykład definiuje `fillblank` manipulator, który wstawia określoną liczbę wartości pustych w strumieniu:
+Biblioteka klas iostream zawiera zestaw makr do tworzenia sparametryzowanych manipulowania. Manipulowanie za pomocą pojedynczego argumentu **int** lub **Long** jest szczególnym przypadkiem. Aby utworzyć strumień danych wyjściowych manipulator, który akceptuje pojedynczy argument **int** lub **Long** ( `setw`na przykład), należy użyć makra _Smanip, który jest zdefiniowany w \<iomanip >. Ten przykład definiuje `fillblank` manipulator, który wstawia określoną liczbę pustych znaków do strumienia:
 
 ## <a name="example"></a>Przykład
 
@@ -48,4 +48,4 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[Niestandardowe manipulatory z argumentami](../standard-library/custom-manipulators-with-arguments.md)<br/>
+[Niestandardowe manipulatory z argumentami](../standard-library/custom-manipulators-with-arguments.md)

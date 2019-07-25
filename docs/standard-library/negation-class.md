@@ -1,18 +1,18 @@
 ---
-title: Negacja klasy
+title: Klasa negacji
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::negation
 helpviewer_keywords:
 - negation
-ms.openlocfilehash: abf3fd4001b7839dbbf01d28f29eaa9035ad188b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 113ba19681900406ddc24c62d77b1b2f2f993d9f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267935"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457046"
 ---
-# <a name="negation-class"></a>Negacja klasy
+# <a name="negation-class"></a>Klasa negacji
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,8 +25,8 @@ struct negation;
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

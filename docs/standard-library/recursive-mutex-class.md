@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 448b4d03e4d38dc45621cddab7d8f5d03b805968
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369647"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451682"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex — Klasa
 
-Reprezentuje *typu obiektu mutex*. W przeciwieństwie do [mutex](../standard-library/mutex-class-stl.md), zachowanie wywołania blokowania metod dla obiektów, które są już zablokowane jest dobrze zdefiniowany.
+Reprezentuje *Typ muteksu*. W przeciwieństwie do [obiektu mutex](../standard-library/mutex-class-stl.md), zachowanie wywołań metod blokowania dla obiektów, które są już zablokowane jest dobrze zdefiniowane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,26 +37,26 @@ class recursive_mutex;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[recursive_mutex](#recursive_mutex)|Konstruuje `recursive_mutex` obiektu.|
-|[~recursive_mutex Destructor](#dtorrecursive_mutex_destructor)|Zwalnia wszelkie zasoby, które są używane przez `recursive_mutex` obiektu.|
+|[recursive_mutex](#recursive_mutex)|Konstruuje `recursive_mutex` obiekt.|
+|[~recursive_mutex Destructor](#dtorrecursive_mutex_destructor)|Zwalnia wszystkie zasoby, które są używane przez `recursive_mutex` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[lock](#lock)|Blokuje wątek wywołujący, aż wątek uzyskuje własność obiektu mutex.|
-|[try_lock](#try_lock)|Próby uzyskania własności obiektu mutex bez blokowania.|
+|[lock](#lock)|Blokuje wątek wywołujący do momentu, gdy wątek uzyska własność obiektu mutex.|
+|[try_lock](#try_lock)|Próbuje uzyskać własność muteksu bez blokowania.|
 |[unlock](#unlock)|Zwalnia własność obiektu mutex.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<mutex >
+**Nagłówek:** \<> mutex
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="lock"></a>  Blokady
+## <a name="lock"></a>skręt
 
-Blokuje wątek wywołujący, aż wątek uzyskuje własność `mutex`.
+Blokuje wątek wywołujący do momentu, aż wątek uzyska własność `mutex`.
 
 ```cpp
 void lock();
@@ -64,19 +64,19 @@ void lock();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wątek wywołujący jest już właścicielem `mutex`, metoda zwraca natychmiast i obowiązuje poprzednią blokadę.
+Jeśli wątek wywołujący jest już właścicielem `mutex`, metoda zwraca natychmiast, a poprzednia blokada pozostaje w mocy.
 
-## <a name="recursive_mutex"></a>  recursive_mutex
+## <a name="recursive_mutex"></a>recursive_mutex
 
-Konstruuje `recursive_mutex` obiektu, który nie jest zablokowany.
+Konstruuje `recursive_mutex` obiekt, który nie jest zablokowany.
 
 ```cpp
 recursive_mutex();
 ```
 
-## <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex
+## <a name="dtorrecursive_mutex_destructor"></a>~ recursive_mutex
 
-Zwalnia wszelkie zasoby, które są używane przez obiekt.
+Zwalnia wszystkie zasoby, które są używane przez obiekt.
 
 ```cpp
 ~recursive_mutex();
@@ -84,11 +84,11 @@ Zwalnia wszelkie zasoby, które są używane przez obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt jest zablokowany, po uruchomieniu destruktora, zachowanie jest niezdefiniowane.
+Jeśli obiekt jest zablokowany podczas działania destruktora, zachowanie jest niezdefiniowane.
 
-## <a name="try_lock"></a>  try_lock —
+## <a name="try_lock"></a>try_lock
 
-Próby uzyskania własności `mutex` bez blokowania.
+Próbuje uzyskać własność `mutex` bez blokowania.
 
 ```cpp
 bool try_lock() noexcept;
@@ -96,13 +96,13 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli metoda pomyślnie uzyskuje własność `mutex` lub jeśli wątek wywołujący jest już właścicielem `mutex**; otherwise, **false`.
+**prawda** , jeśli metoda pomyślnie uzyska własność `mutex` lub jeśli `mutex**; otherwise, **false`wątek wywołujący jest już właścicielem.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wątek wywołujący jest już właścicielem `mutex`, funkcja natychmiast zwraca **true**, i obowiązuje poprzednią blokadę.
+Jeśli wątek wywołujący jest już właścicielem `mutex`, funkcja natychmiast zwraca **wartość true**, a poprzednia blokada pozostaje w mocy.
 
-## <a name="unlock"></a>  Odblokowywanie
+## <a name="unlock"></a>odblokowania
 
 Zwalnia własność obiektu mutex.
 
@@ -112,11 +112,11 @@ void unlock();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwalnia własność `mutex` tylko wtedy, gdy jest on nazywany tyle razy, ile [blokady](#lock) i [try_lock —](#try_lock) pomyślnie wywołana dla `recursive_mutex` obiektu.
+Ta metoda `mutex` zwalnia własność tylko wtedy, gdy jest wywoływana tak dużo razy, jak [blokady](#lock) i [try_lock](#try_lock) zostały pomyślnie wywołane dla `recursive_mutex` obiektu.
 
-Jeśli wątek wywołujący nie jest właścicielem `mutex`, zachowanie jest niezdefiniowane.
+Jeśli wątek wywołujący nie jest własnym `mutex`, zachowanie jest niezdefiniowane.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

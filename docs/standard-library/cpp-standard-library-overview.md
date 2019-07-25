@@ -7,30 +7,30 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e5226db751605d5352b1c5195759c34d080f5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210804"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452449"
 ---
 # <a name="c-standard-library-overview"></a>Standardowa biblioteka C++ — Przegląd
 
-Wszystkie jednostki biblioteki języka C++ są zadeklarowane lub zdefiniowane w co najmniej jeden standardowy nagłówek. Ta implementacja zawiera dwa dodatkowe nagłówki, \<hash_map > i \<hash_set >, które nie są wymagane przez C++ standardowych. Aby uzyskać pełną listę nagłówków obsługiwanych przez tę implementację, zobacz [odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md).
+Wszystkie C++ jednostki biblioteki są zadeklarowane lub zdefiniowane w co najmniej jednym nagłówku standardowym. Ta implementacja obejmuje dwa dodatkowe nagłówki, \<hash_map > i \<hash_set >, które nie są wymagane przez C++ Standard. Aby uzyskać pełną listę nagłówków obsługiwanych przez tę implementację, zobacz [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md).
 
-Autonomicznej implementacji bibliotekę języka C++ udostępnia tylko podzbiór tych nagłówków:
+Wolnostojąca implementacja C++ biblioteki zawiera tylko podzestaw tych nagłówków:
 
 |||
 |-|-|
-|[\<cstddef>](../standard-library/cstddef.md)|[\<cstdlib — >](../standard-library/cstdlib.md) (co najmniej deklarowania funkcji `abort`, `atexit`, i `exit`)|
-|[\<wyjątku >](../standard-library/exception.md)|[\<limits>](../standard-library/limits.md)|
+|[\<cstddef>](../standard-library/cstddef.md)|cstdlib > (deklarując co najmniej funkcje `abort`, `atexit`i `exit`) [ \<](../standard-library/cstdlib.md)|
+|[\<> wyjątku](../standard-library/exception.md)|[\<limits>](../standard-library/limits.md)|
 |[\<new>](../standard-library/new.md)|[\<cstdarg>](../standard-library/cstdarg.md)|
 
-Nagłówków biblioteki C++ ma dwa podziałów szersze:
+Nagłówki C++ biblioteki mają dwa szersze podpodziały:
 
-- [iostream](../standard-library/iostreams-conventions.md) Konwencji.
+- konwencje [iostreams](../standard-library/iostreams-conventions.md) .
 
-- [Odwołanie do biblioteki Standard C++](../standard-library/cpp-standard-library-reference.md) Konwencji.
+- Konwencje [odwołania do biblioteki standardowej. C++ ](../standard-library/cpp-standard-library-reference.md)
 
 Ta sekcja zawiera następujące sekcje:
 
@@ -56,8 +56,8 @@ Ta sekcja zawiera następujące sekcje:
 
 - [Wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)
 
-Aby uzyskać więcej informacji na temat biblioteki wykonawczej języka Visual C++, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
+Aby uzyskać więcej informacji o C++ bibliotekach czasu wykonywania wizualizacji, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

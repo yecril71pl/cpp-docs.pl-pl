@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 59d1a0dc987ddb0dc538fb02bfe28e0b073d3a7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370819"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453086"
 ---
 # <a name="outofrange-class"></a>out_of_range — Klasa
 
-Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych do zgłaszania argument, który jest poza prawidłowym zakresem.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych w celu zgłoszenia argumentu, który jest poza prawidłowym zakresem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwracana przez [co](../standard-library/exception-class.md) to jest kopia[danych](../standard-library/basic-string-class.md#data) **komunikatów**`.`.
 
 ## <a name="example"></a>Przykład
 
@@ -67,9 +67,9 @@ Caught: invalid string position
 
 **Nagłówek:** \<stdexcept >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[logic_error, klasa](../standard-library/logic-error-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Klasa logic_error](../standard-library/logic-error-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

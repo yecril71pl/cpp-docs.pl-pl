@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_volatile class
 - is_volatile
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
-ms.openlocfilehash: 7fc873a2ec21dbfad83fd9d9c006d8345b83cdb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: daba5dff55e0f3afa1e9996631125bf7ba64d52e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413362"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458842"
 ---
 # <a name="isvolatile-class"></a>is_volatile — Klasa
 
-Sprawdza, czy typ jest nietrwały.
+Testuje, czy typ jest nietrwały.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_volatile;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli *Ty* jest `volatile-qualified`.
+Wystąpienie predykatu typu ma wartość true, jeśli *ty* jest `volatile-qualified`.
 
 ## <a name="example"></a>Przykład
 
@@ -73,9 +73,9 @@ is_volatile<volatile int> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_const, klasa](../standard-library/is-const-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_const, klasa](../standard-library/is-const-class.md)

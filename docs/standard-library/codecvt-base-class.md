@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 6f957c39f9c78fd182b7ba2a14bdab7f27db56ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405303"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459388"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base — Klasa
 
-Klasa bazowa dla klasy codecvt, która służy do definiowania typu wyliczenia, określane jako `result`, który jest używany jako typ zwracany dla funkcji składowych zestawu reguł, aby wskazać wynik konwersji.
+Klasa bazowa dla klasy codecvt, która jest używana do definiowania typu wyliczenia `result`, który jest określany jako, używany jako zwracany typ dla funkcji składowych aspektu, aby wskazać wynik konwersji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,22 +38,22 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje wyliczenie, które są wspólne dla wszystkich specjalizacje szablonu klasy [codecvt](../standard-library/codecvt-class.md). Wynik wyliczenia w tym artykule opisano możliwe wartości zwracane z [do_in](../standard-library/codecvt-class.md#do_in) lub [do_out](../standard-library/codecvt-class.md#do_out):
+Klasa opisuje Wyliczenie wspólne dla wszystkich specjalizacji klasy szablonu [codecvt](../standard-library/codecvt-class.md). Wynik wyliczenia zawiera opis możliwych wartości zwracanych z [do_in](../standard-library/codecvt-class.md#do_in) lub [do_out](../standard-library/codecvt-class.md#do_out):
 
-- `ok` Jeśli konwersja między kodowaniem znaków wewnętrznych i zewnętrznych zakończy się powodzeniem.
+- `ok`w przypadku powodzenia konwersji między wewnętrznymi i zewnętrznymi kodowaniem znaków.
 
-- `partial` Jeśli miejsce docelowe nie jest wystarczająco duży dla konwersja powiodła się.
+- `partial`Jeśli miejsce docelowe nie jest wystarczająco duże, aby konwersja powiodła się.
 
-- `error` Jeśli sekwencja źródłowa jest ill sformułowana.
+- `error`Jeśli sekwencja źródłowa jest źle sformułowana.
 
-- `noconv` Jeśli funkcja nie wykonuje żadnych konwersji.
+- `noconv`Jeśli funkcja nie wykonuje konwersji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

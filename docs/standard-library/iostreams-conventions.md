@@ -5,33 +5,33 @@ helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-ms.openlocfilehash: 52cdd06385994e49ff793e40318ca4cbbbcfcda0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 222a65f60b231ba4b3768131c15d6e0d736f211e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404835"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449014"
 ---
 # <a name="iostreams-conventions"></a>Konwencje iostream
 
-Nagłówki iostreams obsługi konwersji między tekst i zakodowany formularzy oraz dane wejściowe i wyjściowe do zewnętrznych plików:
+Nagłówki iostreams obsługują konwersje pomiędzy tekstem i zakodowanymi formularzami, a wejściem i wyjściem do plików zewnętrznych:
 
 |||
 |-|-|
 |[\<fstream>](../standard-library/fstream.md)|[\<iomanip >](../standard-library/iomanip.md)|
-|[\<ios>](../standard-library/ios.md)|[\<iosfwd>](../standard-library/iosfwd.md)|
+|[\<> systemu iOS](../standard-library/ios.md)|[\<iosfwd>](../standard-library/iosfwd.md)|
 |[\<iostream>](../standard-library/iostream.md)|[\<istream>](../standard-library/istream.md)|
-|[\<ostream>](../standard-library/ostream.md)|[\<sstream>](../standard-library/sstream.md)|
+|[\<ostream>](../standard-library/ostream.md)|[\<strumienia >](../standard-library/sstream.md)|
 |[\<streambuf>](../standard-library/streambuf.md)|[\<strstream>](../standard-library/strstream.md)|
 
-Najprostsze użycie iostreams wymaga jedynie, czy dołączyć nagłówek [ \<iostream >](../standard-library/iostream.md). Następnie można wyodrębnić wartości z [cin](../standard-library/iostream.md#cin) lub [wcin](../standard-library/iostream.md#wcin) odczytać standardowe dane wejściowe. Zasady dotyczące dostarczania więc są przedstawione opis klasy [basic_istream — klasa](../standard-library/basic-istream-class.md). Można także wstawić wartości [cout](../standard-library/iostream.md#cout) lub [wcout](../standard-library/iostream.md#wcout) do zapisu do wyjścia standardowego. Zasady dotyczące dostarczania więc są przedstawione opis klasy [basic_ostream — klasa](../standard-library/basic-ostream-class.md). Format wspólnych dla ekstraktory i insertors zarządzać przez klasę [basic_ios — klasa](../standard-library/basic-ios-class.md). Manipulowanie tego formatu informacji w podszywając wyodrębniania i wstawianie obiektów jest prowincji manipulatory kilka.
+Najprostsza użycie iostreams wymaga tylko dołączenia nagłówka [ \<iostream >](../standard-library/iostream.md). Następnie można wyodrębnić wartości z [CIN](../standard-library/iostream.md#cin) lub [wcin](../standard-library/iostream.md#wcin) , aby odczytać standardowe dane wejściowe. Reguły, które należy wykonać, są opisane w opisie klasy klasy [basic_istream](../standard-library/basic-istream-class.md). Możesz również wstawić wartości do [cout](../standard-library/iostream.md#cout) lub [wcout](../standard-library/iostream.md#wcout) , aby napisać standardowe dane wyjściowe. Reguły, które należy wykonać, są opisane w opisie klasy klasy [basic_ostream](../standard-library/basic-ostream-class.md). Kontrolka formatu wspólna dla obu ekstraktorów i wstawek jest zarządzana przez klasę klasy [basic_ios](../standard-library/basic-ios-class.md). Manipulowanie tym formatem informacjami w Guise wyodrębniania i wstawiania obiektów jest prowincją kilku manipulowania.
 
-Można wykonać te same operacje iostreams na plikach, które otwierają według nazwy, za pomocą klasy zadeklarowanej w [ \<fstream — >](../standard-library/fstream.md). Aby wykonać konwersję między iostreams i obiektów klasy [basic_string — klasa](../standard-library/basic-string-class.md), użyj klasy zadeklarowanej w [ \<strumienia >](../standard-library/sstream.md). Aby zrobić z ciągami C, należy użyć klasy zadeklarowanej w [ \<strstream — >](../standard-library/strstream.md).
+Te same operacje iostreams na plikach, które są otwierane przez nazwę, można wykonać przy użyciu klas zadeklarowanych w [ \<fstream — >](../standard-library/fstream.md). Aby przeprowadzić konwersję między iostreams i obiektami [klasy klasy basic_string](../standard-library/basic-string-class.md), użyj klas zadeklarowanych w [ \<strumienia >](../standard-library/sstream.md). Aby zrobić to samo w przypadku ciągów języka C, użyj klas zadeklarowanych w [ \<strstream >](../standard-library/strstream.md).
 
-Pozostałe nagłówki świadczyć usług pomocy technicznej, zwykle orientacyjnego bezpośrednich do najbardziej zaawansowanych użytkowników klasy iostreams.
+Pozostałe nagłówki zapewniają usługi pomocy technicznej, zwykle są bezpośrednio przydatne tylko dla najbardziej zaawansowanych użytkowników klas iostreams.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
-[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
+[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

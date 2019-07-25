@@ -7,12 +7,12 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 6a3145cb1837a3ea95c48022db391ddbccf55199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411100"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456478"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage — Klasa
 
@@ -30,15 +30,15 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*Len*<br/>
+*Funkcja*\
 Rozmiar obiektu.
 
-*Dopasuj*<br/>
+*Dostosowania*\
 Wyrównanie obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon elementu członkowskiego typedef `type` jest synonimem typu POD z wyrównaniem *Wyrównaj* i rozmiar *Len*. *Wyrównaj* musi być równa `alignment_of<T>::value` dla pewnego typu `T`, lub wyrównanie domyślne.
+Element członkowski szablonu typedef `type` jest synonimem typu pod z wyrównaniem *wyrównanym* i rozmiarem *len*. *Wyrównanie* musi być równe `alignment_of<T>::value` dla pewnego typu `T`lub domyślnego wyrównania.
 
 ## <a name="example"></a>Przykład
 
@@ -68,9 +68,9 @@ aligned to double == 8
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[alignment_of, klasa](../standard-library/alignment-of-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[alignment_of, klasa](../standard-library/alignment-of-class.md)

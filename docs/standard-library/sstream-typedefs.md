@@ -1,5 +1,5 @@
 ---
-title: '&lt;sstream —&gt; definicje typów'
+title: '&lt;strumienia&gt; Typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::istringstream
@@ -11,24 +11,24 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 12eb7a23c2986223de38ccb0fe763ff42c5e48b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27aed1d92b4893e054d7416dc5933ab23b843297
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412491"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451826"
 ---
-# <a name="ltsstreamgt-typedefs"></a>&lt;sstream —&gt; definicje typów
+# <a name="ltsstreamgt-typedefs"></a>&lt;strumienia&gt; Typedefs
 
 ||||
 |-|-|-|
 |[istringstream](#istringstream)|[ostringstream](#ostringstream)|[stringbuf](#stringbuf)|
-|[stringstream](#stringstream)|[wistringstream](#wistringstream)|[wostringstream](#wostringstream)|
+|[stringstream](#stringstream)|[wistringstream](#wistringstream)|[wostringstream —](#wostringstream)|
 |[wstringbuf](#wstringbuf)|[wstringstream](#wstringstream)|
 
-## <a name="istringstream"></a>  istringstream
+## <a name="istringstream"></a>istringstream —
 
-Tworzy typ `basic_istringstream` wyspecjalizowane na **char** parametru szablonu.
+Tworzy typ `basic_istringstream` wyspecjalizowany dla parametru szablonu **char** .
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
@@ -36,11 +36,11 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_istringstream —](../standard-library/basic-istringstream-class.md), wyspecjalizowany dla elementów typu **char**.
+Typ jest synonimem dla klasy szablonu [basic_istringstream](../standard-library/basic-istringstream-class.md), wyspecjalizowany dla elementów typu **char**.
 
-## <a name="ostringstream"></a>  ostringstream
+## <a name="ostringstream"></a>ostringstream —
 
-Tworzy typ `basic_ostringstream` wyspecjalizowane na **char** parametru szablonu.
+Tworzy typ `basic_ostringstream` wyspecjalizowany dla parametru szablonu **char** .
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
@@ -48,11 +48,11 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_ostringstream —](../standard-library/basic-ostringstream-class.md), wyspecjalizowany dla elementów typu **char**.
+Typ jest synonimem dla klasy szablonu [basic_ostringstream](../standard-library/basic-ostringstream-class.md), wyspecjalizowany dla elementów typu **char**.
 
-## <a name="stringbuf"></a>  stringbuf
+## <a name="stringbuf"></a>stringbuf —
 
-Tworzy typ `basic_stringbuf` wyspecjalizowane na **char** parametru szablonu.
+Tworzy typ `basic_stringbuf` wyspecjalizowany dla parametru szablonu **char** .
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
@@ -60,11 +60,11 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md), wyspecjalizowany dla elementów typu **char**.
+Typ jest synonimem dla klasy szablonu [basic_stringbuf](../standard-library/basic-stringbuf-class.md), wyspecjalizowany dla elementów typu **char**.
 
-## <a name="stringstream"></a>  stringstream
+## <a name="stringstream"></a>stringstream —
 
-Tworzy typ `basic_stringstream` wyspecjalizowane na **char** parametru szablonu.
+Tworzy typ `basic_stringstream` wyspecjalizowany dla parametru szablonu **char** .
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
@@ -72,11 +72,11 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_stringstream —](../standard-library/basic-stringstream-class.md), wyspecjalizowany dla elementów typu **char**.
+Typ jest synonimem dla klasy szablonu [basic_stringstream](../standard-library/basic-stringstream-class.md), wyspecjalizowany dla elementów typu **char**.
 
-## <a name="wistringstream"></a>  wistringstream
+## <a name="wistringstream"></a>wistringstream —
 
-Tworzy typ `basic_istringstream` wyspecjalizowane na **wchar_t** parametru szablonu.
+Tworzy typ `basic_istringstream` wyspecjalizowany dla parametru szablonu **wchar_t** .
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -84,11 +84,11 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_istringstream —](../standard-library/basic-istringstream-class.md), wyspecjalizowany dla elementów typu **wchar_t**.
+Typ jest synonimem dla klasy szablonu [basic_istringstream](../standard-library/basic-istringstream-class.md), wyspecjalizowany dla elementów typu **wchar_t**.
 
-## <a name="wostringstream"></a>  wostringstream
+## <a name="wostringstream"></a>wostringstream —
 
-Tworzy typ `basic_ostringstream` wyspecjalizowane na **wchar_t** parametru szablonu.
+Tworzy typ `basic_ostringstream` wyspecjalizowany dla parametru szablonu **wchar_t** .
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -96,11 +96,11 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_ostringstream —](../standard-library/basic-ostringstream-class.md), wyspecjalizowany dla elementów typu **wchar_t**.
+Typ jest synonimem dla klasy szablonu [basic_ostringstream](../standard-library/basic-ostringstream-class.md), wyspecjalizowany dla elementów typu **wchar_t**.
 
-## <a name="wstringbuf"></a>  wstringbuf
+## <a name="wstringbuf"></a>wstringbuf —
 
-Tworzy typ `basic_stringbuf` wyspecjalizowane na **wchar_t** parametru szablonu.
+Tworzy typ `basic_stringbuf` wyspecjalizowany dla parametru szablonu **wchar_t** .
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -108,11 +108,11 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_stringbuf —](../standard-library/basic-stringbuf-class.md), wyspecjalizowany dla elementów typu **wchar_t**.
+Typ jest synonimem dla klasy szablonu [basic_stringbuf](../standard-library/basic-stringbuf-class.md), wyspecjalizowany dla elementów typu **wchar_t**.
 
-## <a name="wstringstream"></a>  wstringstream
+## <a name="wstringstream"></a>wstringstream —
 
-Tworzy typ `basic_stringstream` wyspecjalizowane na **wchar_t** parametru szablonu.
+Tworzy typ `basic_stringstream` wyspecjalizowany dla parametru szablonu **wchar_t** .
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -120,8 +120,8 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_stringstream —](../standard-library/basic-stringstream-class.md), wyspecjalizowany dla elementów typu **wchar_t**.
+Typ jest synonimem dla klasy szablonu [basic_stringstream](../standard-library/basic-stringstream-class.md), wyspecjalizowany dla elementów typu **wchar_t**.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<sstream>](../standard-library/sstream.md)<br/>
+[\<strumienia >](../standard-library/sstream.md)

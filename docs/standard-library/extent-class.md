@@ -7,16 +7,16 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 7463b424d15ee86f851b7d81953abf3fe1c98fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393977"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457792"
 ---
 # <a name="extent-class"></a>extent — Klasa
 
-Pobiera wymiaru tablicy.
+Pobiera wymiar tablicy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,15 +27,15 @@ struct extent;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
-*I*<br/>
-Tablica jest powiązany z zapytania.
+*MAM*\
+Tablica powiązana z kwerendą.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli *Ty* jest typem tablicy, który ma co najmniej *I* wymiarów, zapytania typu przechowuje liczbę elementów w wymiarze określony przez *I*. Jeśli *Ty* nie jest typem tablicowym lub rangę jest mniejsza niż *I*, lub jeśli *I* wynosi zero i *Ty* jest typu "granica tablicy nieznany `U` ", typu zapytania zawiera wartość 0.
+Jeśli *ty* jest typem tablicy, który ma co najmniej *I* wymiary, zapytanie typu przechowuje liczbę elementów w wymiarze określonym przez *i*. Jeśli *ty* nie jest typem tablicy lub jego rangą jest mniejsza niż *I*lub jeśli *i* jest zero i *ty* jest `U`typu "tablica nieznanej granicy", zapytanie typu utrzymuje wartość 0.
 
 ## <a name="example"></a>Przykład
 
@@ -65,10 +65,10 @@ extent 1 == 10
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents, klasa](../standard-library/remove-all-extents-class.md)<br/>
-[remove_extent, klasa](../standard-library/remove-extent-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa remove_all_extents](../standard-library/remove-all-extents-class.md)\
+[remove_extent, klasa](../standard-library/remove-extent-class.md)

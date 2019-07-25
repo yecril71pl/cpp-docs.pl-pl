@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_polymorphic class
 - is_polymorphic
 ms.assetid: 4e1704db-d6f9-4154-a100-0ba02a373f20
-ms.openlocfilehash: 8d9846f03db60cdad88fccc04ba520eeb935dc33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 662d68d13e076733e9923d0fad7e9272cd01b559
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413583"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455721"
 ---
 # <a name="ispolymorphic-class"></a>is_polymorphic — Klasa
 
-Sprawdza, czy typ ma funkcję wirtualną.
+Testuje, czy typ ma funkcję wirtualną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która deklaruje lub dziedziczy wirtualnej funkcji, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która deklaruje lub dziedziczy funkcję wirtualną, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -88,9 +88,9 @@ is_polymorphic<throws> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_abstract, klasa](../standard-library/is-abstract-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_abstract, klasa](../standard-library/is-abstract-class.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: 56470040365f1b1aa0e311f43937d7ec33f7f148
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b7c432a649b566b455109f6de1f7bcc0734ff9b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413128"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453801"
 ---
 # <a name="logicerror-class"></a>logic_error — Klasa
 
-Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych do zgłaszania błędów prawdopodobnie wykrywalny, przed wykonaniem programu, takie jak naruszenia warunków wstępnych logiczne.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych w celu zgłaszania błędów, które są wykrywalne przed wykonaniem programu, na przykład naruszenia logicznych warunków wstępnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwracana przez [co](../standard-library/exception-class.md) to jest kopia[danych](../standard-library/basic-string-class.md#data) **komunikatów**`.`.
 
 ## <a name="example"></a>Przykład
 
@@ -64,9 +64,9 @@ Type: class std::logic_error
 
 **Nagłówek:** \<stdexcept >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[exception, klasa](../standard-library/exception-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Klasa wyjątku](../standard-library/exception-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

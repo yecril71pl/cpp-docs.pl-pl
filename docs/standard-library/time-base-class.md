@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412023"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460037"
 ---
 # <a name="timebase-class"></a>time_base — Klasa
 
-Klasa służy jako klasa bazowa dla zestawów reguł klasy szablonu time_get, definiująca tylko Typ wyliczany `dateorder` oraz kilka stałych tego typu.
+Klasa służy jako klasa bazowa dla aspektów klasy szablonu time_get, definiując tylko typ `dateorder` wyliczeniowy i kilka stałych tego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,24 +36,24 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Każdej z nich charakteryzuje się inny sposób, aby uporządkować składniki daty. Stałe są następujące:
+Każda stała charakteryzuje inny sposób uporządkowania składników daty. Stałe są następujące:
 
-- `no_order` Określa losowej kolejności.
+- `no_order`Określa brak określonej kolejności.
 
-- `dmy` Określa kolejność dzień, miesiąc, a następnie roku, tak jak 2 1979 grudnia.
+- `dmy`określa dzień zamówienia, miesiąc, rok, jak w 2 grudnia 1979.
 
-- `mdy` Określa kolejność miesiąc, dzień, a następnie roku, tak jak 2 grudnia 1979.
+- `mdy`określa miesiąc zamówienia, dzień, rok, zgodnie z 2 grudnia 1979.
 
-- `ymd` Określa kolejność rok, miesiąc, a następnie dzień, jak 1979/12/2.
+- `ymd`Określa rok zamówienia, miesiąc, dzień, jak w 1979/12/2.
 
-- `ydm` Określa kolejność rok, dzień, a następnie miesiąca, tak jak 1979: 2 grudnia.
+- `ydm`Określa rok zamówienia, dzień, miesiąc, jak w 1979: 2 grudnia.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

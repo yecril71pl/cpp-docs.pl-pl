@@ -7,16 +7,16 @@ helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-ms.openlocfilehash: f627705109315d3fee84c1777390f00e1e2010ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3605b34a2bfc50831c889976ac5ea884053bb642
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405121"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449495"
 ---
 # <a name="commontype-class"></a>common_type — Klasa
 
-Określa typ wspólny jednego lub więcej typów.
+Określa typ wspólny jednego lub kilku typów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,15 +43,15 @@ struct common_type<T, U, V...> {
 
 ### <a name="parameters"></a>Parametry
 
-Lista typów, które są albo [ukończenia typy](../c-language/incomplete-types.md) lub void.
+Lista typów, które są [pełnymi typami](../c-language/incomplete-types.md) lub void.
 
 ## <a name="remarks"></a>Uwagi
 
-`type` Element członkowski jest wspólny typ, do których wszystkich typów w parametrze można przekonwertować listy.
+`type` Element członkowski jest wspólnym typem, do którego można przekonwertować wszystkie typy na liście parametrów.
 
 ## <a name="example"></a>Przykład
 
-Następujący program pokazuje niektóre prawidłowe przykłady użycia scenariuszy oraz testów dla wyników.
+W poniższym programie przedstawiono niektóre poprawne scenariusze użycia i testy dotyczące wyników.
 
 ```cpp
 // Compile using cl.exe /EHsc
@@ -118,8 +118,8 @@ ClassType: true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

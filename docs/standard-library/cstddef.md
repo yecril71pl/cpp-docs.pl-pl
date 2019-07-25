@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244451"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457574"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Dołącza nagłówek biblioteki standardowej C \<stddef.h > i dodaje skojarzone nazwy `std` przestrzeni nazw. Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
+Zawiera nagłówek \<standardowej biblioteki C STDDEF. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw. Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
 
 > [!NOTE]
-> \<cstddef — > zawiera typ **bajtów** i nie zawiera typu **wchar_t**.
+> \<cstddef > obejmuje typ **Byte** i nie zawiera typu **wchar_t**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +26,7 @@ Dołącza nagłówek biblioteki standardowej C \<stddef.h > i dodaje skojarzone 
 #include <cstddef>
 ```
 
-## <a name="namespace-and-macros"></a>Makra i Namespace
+## <a name="namespace-and-macros"></a>Przestrzeń nazw i makra
 
 ```cpp
 namespace std {
@@ -42,19 +42,19 @@ namespace std {
 
 ### <a name="parameters"></a>Parametry
 
-*ptrdiff_t —* \
-Zdefiniowane w implementacji podpisany typ całkowitoliczbowy, który może pomieścić różnica dwóch indeksy dolne tablicy obiektów.
+*ptrdiff_t*\
+Zdefiniowany przez implementację typ Integer ze znakiem, który może zawierać różnicę dwóch indeksów dolnych w obiekcie array.
 
 *size_t*\
-Typ zdefiniowanych w implementacji liczb całkowitych bez znaku, który jest wystarczająco duży, aby zawierać rozmiar w bajtach każdego obiektu.
+Zdefiniowany w implementacji typ liczby całkowitej bez znaku, który jest wystarczająco duży, aby można było zawierać rozmiar w bajtach dowolnego obiektu.
 
 *max_align_t*\
-Typem POD, którego wymóg wyrównania jest przynajmniej tak duży jak w przypadku wszystkich typów skalarnych i którego wymóg wyrównania jest obsługiwana w każdym kontekście.
+Typ POD, którego wymaganie wyrównania jest co najmniej tak duże, jak każdy typ skalarny, i którego wymaganie wyrównania jest obsługiwane w każdym kontekście.
 
 *nullptr_t*\
-Synonim dla typu **nullptr** wyrażenia. Mimo że **nullptr** adresu nie może być przyjęty, adresu innego *nullptr_t* obiekt, który jest l-wartości, które mogą być podejmowane.
+Synonim dla typu wyrażenia **nullptr** . Mimo że nie można pobrać adresu **nullptr** , można wykonać adres innego obiektu *nullptr_t* , który jest lvalue.
 
-## <a name="byte-class"></a>Byte, klasa
+## <a name="byte-class"></a>Byte — Klasa
 
 ```cpp
 enum class byte : unsigned char {};
@@ -79,6 +79,6 @@ template <class IntType>
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

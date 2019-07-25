@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - rend method
 ms.assetid: 80f3dd04-dd2c-4b52-b0ed-d567ec5d186c
-ms.openlocfilehash: 7c9ef068c8a6698c4860814749e923740079b4e7
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 0ddb9be04ab47f516106ba46eb4c102fecd69e03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221562"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453237"
 ---
 # <a name="container-classrend"></a>Kontener Class::rend
 
 > [!NOTE]
-> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
 
-Funkcja elementu członkowskiego zwraca odwrotnego iteratora, który wskazuje na pierwszy element sekwencji (lub tuż za koniec pustej sekwencji), wyznaczanie koniec odwrotnej kolejności.
+Funkcja członkowska zwraca iterator odwrotny, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji), wyznaczający koniec sekwencji odwrotnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,4 +29,4 @@ reverse_iterator rend();
 
 ## <a name="see-also"></a>Zobacz także
 
-[Sample Container, klasa](../standard-library/sample-container-class.md)<br/>
+[Sample Container, klasa](../standard-library/sample-container-class.md)

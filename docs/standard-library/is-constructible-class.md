@@ -1,21 +1,21 @@
 ---
-title: is_constructible Class
+title: Klasa is_constructible
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_constructible
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: c921efd5b7e12873ce986952029ae39f118ad763
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0596ac7a3fc2bcbcbe49f5fa4b20a971e5e445
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336858"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452861"
 ---
-# <a name="isconstructible-class"></a>is_constructible Class
+# <a name="isconstructible-class"></a>Klasa is_constructible
 
-Sprawdza, czy typ jest konstrukcyjną, gdy są używane określone typy argumentów.
+Testuje, czy typ jest konstrukcyjną, gdy są używane określone typy argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,22 +26,22 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
-*Args*<br/>
-Typy argumentów, aby dopasować w Konstruktorze z *T*.
+*Argumentów*\
+Typy argumentów do dopasowania w konstruktorze *T*.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest konstrukcyjną, korzystając z typami argumentów w elemencie *Args*, w przeciwnym razie przechowuje wartość false. Typ *T* jest konstrukcyjną Jeśli definicja zmiennej `T t(std::declval<Args>()...);` jest poprawnie sformułowany. Zarówno *T* i wszystkie typy w *Args* muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest konstrukcyjną przy użyciu typów argumentów w *args*, w przeciwnym razie ma wartość false. Typ *T* jest konstrukcyjną, jeśli definicja `T t(std::declval<Args>()...);` zmiennej jest poprawnie sformułowana. Zarówno *T* , jak i wszystkie typy w *args* muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

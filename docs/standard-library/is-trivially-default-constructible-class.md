@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_default_constructible
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
-ms.openlocfilehash: b35458ca280285eb699c9b12b15b705660299ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a5e8afedf3e59d5dafa937af4f7d35343eb7d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413414"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459652"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible — klasa
 
-Sprawdza, czy typ ma konstruktora domyślnego prosta.
+Testuje, czy typ ma prosty Konstruktor domyślny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,33 +26,33 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma proste konstruktora, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma prosty Konstruktor, w przeciwnym razie ma wartość false.
 
-Domyślny konstruktor dla klasy *Ty* jest proste jeśli:
+Domyślny konstruktor dla klasy *ty* jest prosty, jeśli:
 
-- jest niejawnie zadeklarowany Konstruktor domyślny
+- jest to niejawnie zadeklarowany Konstruktor domyślny
 
-- Klasa *Ty* ma żadnych funkcji wirtualnych
+- Klasa *ty* nie ma żadnych funkcji wirtualnych
 
-- Klasa *Ty* ma nie baz wirtualnych
+- Klasa *ty* nie ma wirtualnych baz.
 
-- wszystkie bezpośrednio baz klasy *Ty* mieć konstruktorów prosta
+- wszystkie bezpośrednie bazy klasy *ty* mają uproszczone konstruktory
 
-- klasy wszystkie składowe danych niestatycznych typu klasy mieć konstruktorów prosta
+- klasy wszystkich niestatycznych składowych danych typu klasy mają proste konstruktory
 
-- klasy wszystkie składowe danych niestatycznych typu tablicowego klasy mieć konstruktorów prosta
+- klasy wszystkich niestatycznych składowych danych typu Array klasy mają proste konstruktory
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

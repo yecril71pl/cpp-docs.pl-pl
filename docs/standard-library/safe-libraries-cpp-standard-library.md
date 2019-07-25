@@ -8,31 +8,31 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220470"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454550"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bezpieczne biblioteki: Standardowa biblioteka C++
 
-Wprowadzono kilka ulepszeń bibliotek, które są dostarczane z firmą Microsoft C++, w tym C++ bibliotekę standardową, aby zwiększyć ich bezpieczeństwo.
+Wprowadzono kilka ulepszeń w bibliotekach dostarczanych z firmą Microsoft C++, w tym biblioteki C++ standardowej, aby zwiększyć ich bezpieczeństwo.
 
-Kilku metod w standardowej biblioteki języka C++ zostały zidentyfikowane jako potencjalnie niebezpieczne, ponieważ mogą one prowadzić do przepełnienia buforu lub innych wada kodu. Nie zaleca się korzystanie z tych metod i je zastąpić zostały utworzone nowe, bardziej bezpiecznymi metodami. Te nowe metody wszystkie zakończone w `_s`.
+Niektóre metody w bibliotece C++ standardowej zostały zidentyfikowane jako potencjalnie niebezpieczne, ponieważ mogą one prowadzić do przepełnienia buforu lub uszkodzenia kodu. Korzystanie z tych metod jest niezalecane, a nowe, bardziej bezpieczne metody zostały utworzone w celu ich zastąpienia. Wszystkie te nowe metody kończą się `_s`.
 
-Aby zwiększyć bezpieczeństwo iteratorów i algorytmów wprowadzono również kilka ulepszeń. Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md), [Debug Iterator Support](../standard-library/debug-iterator-support.md) i [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+Wprowadzono również kilka ulepszeń, które zwiększają bezpieczeństwo iteratorów i algorytmów. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md), [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md) i [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Uwagi
 
-W poniższej tabeli wymieniono metody standardowej biblioteki języka C++, które są potencjalnie niebezpieczne, a także ich odpowiednika bezpieczniejsze:
+W poniższej tabeli wymieniono C++ metody biblioteki standardowej, które są potencjalnie niebezpieczne, a także ich bezpieczniejszy odpowiednik:
 
-|Potencjalnie niebezpieczne — metoda|Odpowiednik bezpieczniejsze|
+|Potencjalnie niebezpieczna Metoda|Bezpieczniejszy odpowiednik|
 |-------------------------------|----------------------|
-|[Kopiuj](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|
-|[Kopiuj](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|
+|[kopiowane](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|
+|[kopiowane](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|
 
-Jeśli wywołanie jednej z powyższych metod potencjalnie niebezpieczne lub jeśli używasz niepoprawnie Iteratory, kompilator wygeneruje [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Aby uzyskać informacji na temat sposobu wyłączania te ostrzeżenia, zobacz [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
+W przypadku wywołania jednej z potencjalnie niebezpiecznych metod powyżej lub w przypadku nieprawidłowego użycia iteratorów kompilator generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Aby uzyskać informacje na temat sposobu wyłączania tych ostrzeżeń, zobacz [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -46,4 +46,4 @@ Jeśli wywołanie jednej z powyższych metod potencjalnie niebezpieczne lub jeś
 
 ## <a name="see-also"></a>Zobacz także
 
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
+[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)

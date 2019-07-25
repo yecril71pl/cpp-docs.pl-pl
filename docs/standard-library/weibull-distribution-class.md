@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: bbcfa23ae84d0a035d4b00d1c154da4b4281be32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410840"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459619"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution — Klasa
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parametry
 
-*RealType*<br/>
-Typ wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*Liczba rzeczywista*\
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji, który tworzy wartości zmiennoprzecinkowej określonych przez użytkownika wpisać lub typ **double** rozkładane Jeśli nie zostanie podana, rozkład Weibulla. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
+Klasa szablonu opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem Weibulla. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
@@ -84,17 +84,17 @@ Klasa szablonu opisuje dystrybucji, który tworzy wartości zmiennoprzecinkowej 
 
 Funkcje właściwości `a()` i `b()` zwracać odpowiadających im wartości dla parametrów przechowywanych dystrybucji *a* i *b*.
 
-Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
+Element członkowski `param()` właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
 
-`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największych możliwych wyników, odpowiednio.
+`min()` I`max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-`reset()` Funkcja elementu członkowskiego odrzuca wszystkie wartości z pamięci podręcznej, tak aby wynik następnego wywołania metody `operator()` nie zależy od żadnych wartości uzyskane z aparatu przed wywołaniem.
+Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem. `reset()`
 
-`operator()` Funkcje Członkowskie zwracają dalej wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub pakietu określony parametr.
+Funkcje `operator()` Członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat rozkład Weibulla, zobacz artykuł Wolfram MathWorld [rozkład Weibulla](http://mathworld.wolfram.com/WeibullDistribution.html).
+Aby uzyskać szczegółowe informacje na temat dystrybucji Weibulla, zobacz artykuł Wolfram MathWorld [rozkład Weibulla](http://mathworld.wolfram.com/WeibullDistribution.html).
 
 ## <a name="example"></a>Przykład
 
@@ -157,7 +157,7 @@ int main()
 
 ## <a name="output"></a>Dane wyjściowe
 
-Najpierw uruchom:
+Pierwsze uruchomienie:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -182,7 +182,7 @@ Distribution for 10 samples:
     10: 2.1201210996
 ```
 
-Uruchom drugie:
+Drugi przebieg:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowy >
+**Nagłówek:** \<losowe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -222,24 +222,24 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-`a` Parametru dystrybucji.
+*z*\
+Parametr `a` rozkładu.
 
-*b*<br/>
-`b` Parametru dystrybucji.
+*b*\
+Parametr `b` rozkładu.
 
-*parm*<br/>
-`param_type` Struktura używana do konstruowania dystrybucji.
+*parametr*\
+`param_type` Struktura używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < a` i `0.0 < b`
+**Warunek wstępny:** `0.0 < a` i`0.0 < b`
 
 Pierwszy Konstruktor konstrukcji obiektu których przechowywane `a` wartość przechowuje wartość *a* i których przechowywane `b` wartość zawiera wartość *b*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="param_type"></a>  weibull_distribution::param_type
+## <a name="param_type"></a>weibull_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -257,21 +257,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-`a` Parametru dystrybucji.
+*z*\
+Parametr `a` rozkładu.
 
-*b*<br/>
-`b` Parametru dystrybucji.
+*b*\
+Parametr `b` rozkładu.
 
-*right*<br/>
-`param_type` Obiekt do porównania z tym.
+*Kliknij*\
+Obiekt `param_type` , który ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < a` i `0.0 < b`
+**Warunek wstępny:** `0.0 < a` i`0.0 < b`
 
-Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

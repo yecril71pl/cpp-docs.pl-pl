@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: 5bb306ec29da225293affd0207f67271f59ec599
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413557"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450058"
 ---
 # <a name="issame-class"></a>is_same — Klasa
 
-Sprawdza, czy dwa typy są takie same.
+Testuje, czy dwa typy są takie same.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,15 +27,15 @@ struct is_same;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty1*<br/>
+*Ty1*\
 Pierwszy typ do zapytania.
 
-*Ty2*<br/>
+*Ty2*\
 Drugi typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typy *Ty1* i *Ty2* są tego samego typu, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typy *Ty1* i *Ty2* są tego samego typu, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -84,10 +84,10 @@ is_same<int, const int> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible, klasa](../standard-library/is-convertible-class.md)<br/>
-[is_base_of, klasa](../standard-library/is-base-of-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa is_convertible](../standard-library/is-convertible-class.md)\
+[is_base_of, klasa](../standard-library/is-base-of-class.md)

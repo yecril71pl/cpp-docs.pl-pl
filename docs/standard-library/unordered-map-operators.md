@@ -1,26 +1,26 @@
 ---
-title: '&lt;unordered_map —&gt; operatorów'
+title: '&lt;Operatory&gt; unordered_map'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: a27ef8e320f59464f15603c330346db86bc30aac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158450"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454769"
 ---
-# <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map —&gt; operatorów
+# <a name="ltunorderedmapgt-operators"></a>&lt;Operatory&gt; unordered_map
 
 |||||
 |-|-|-|-|
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
 
-## <a name="op_neq"></a>  operator! =
+## <a name="op_neq"></a>operator! =
 
-Testy czy [unordered_map](../standard-library/unordered-map-class.md) obiekt po lewej stronie operatora nie jest równy obiektowi unordered_map po prawej stronie.
+Testuje, czy obiekt [unordered_map](../standard-library/unordered-map-class.md) po lewej stronie operatora nie jest równy obiektowi unordered_map po prawej stronie.
 
 ```cpp
 bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
@@ -28,19 +28,19 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*lewym*\
 Obiekt typu `unordered_map`.
 
-*right*<br/>
+*Kliknij*\
 Obiekt typu `unordered_map`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** unordered_maps nie są równe; **false** czy są równe.
+**wartość true** , Jeśli unordered_maps nie są równe; **Fałsz** , jeśli są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów unordered_map nie dotyczy dowolnego kolejność, w którym są przechowywane ich elementów. Dwa unordered_maps są takie same, jeśli mają taką samą liczbę elementów, a elementy w jeden kontener są permutacji elementy znajdujące się w innych kontenera. W przeciwnym razie są nierówne.
+Nie ma to wpływ na porównanie obiektów unordered_map, w którym są przechowywane ich elementy. Dwa unordered_maps są równe, jeśli mają taką samą liczbę elementów, a elementy w jednym kontenerze są Permutacją elementów w innym kontenerze. W przeciwnym razie są one nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -82,9 +82,9 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq"></a>  operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Testy czy [unordered_map](../standard-library/unordered-map-class.md) obiektu po lewej stronie operatora jest równy obiektowi unordered_map po prawej stronie.
+Testuje, czy obiekt [unordered_map](../standard-library/unordered-map-class.md) po lewej stronie operatora jest równy obiektowi unordered_map po prawej stronie.
 
 ```cpp
 bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
@@ -92,19 +92,19 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*lewym*\
 Obiekt typu `unordered_map`.
 
-*right*<br/>
+*Kliknij*\
 Obiekt typu `unordered_map`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** unordered_maps są równe; **false** nie są równe.
+**wartość true** , Jeśli unordered_maps są równe; **wartość false** , jeśli nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów unordered_map nie dotyczy dowolnego kolejność, w którym są przechowywane ich elementów. Dwa unordered_maps są takie same, jeśli mają taką samą liczbę elementów, a elementy w jeden kontener są permutacji elementy znajdujące się w innych kontenera. W przeciwnym razie są nierówne.
+Nie ma to wpływ na porównanie obiektów unordered_map, w którym są przechowywane ich elementy. Dwa unordered_maps są równe, jeśli mają taką samą liczbę elementów, a elementy w jednym kontenerze są Permutacją elementów w innym kontenerze. W przeciwnym razie są one nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -146,9 +146,9 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="op_neq_multimap"></a>  operator! =
+## <a name="op_neq_multimap"></a>operator! =
 
-Testy czy [unordered_multimap](../standard-library/unordered-multimap-class.md) obiekt po lewej stronie operatora nie jest równy obiektowi unordered_multimap po prawej stronie.
+Testuje, czy obiekt [unordered_multimap](../standard-library/unordered-multimap-class.md) po lewej stronie operatora nie jest równy obiektowi unordered_multimap po prawej stronie.
 
 ```cpp
 bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
@@ -156,19 +156,19 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*lewym*\
 Obiekt typu `unordered_multimap`.
 
-*right*<br/>
+*Kliknij*\
 Obiekt typu `unordered_multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** unordered_multimaps nie są równe; **false** czy są równe.
+**wartość true** , jeśli unordered_multimaps nie są równe; **Fałsz** , jeśli są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów unordered_multimap nie dotyczy dowolnego kolejność, w którym są przechowywane ich elementów. Dwa unordered_multimaps są takie same, jeśli mają taką samą liczbę elementów, a elementy w jeden kontener są permutacji elementy znajdujące się w innych kontenera. W przeciwnym razie nie są równe.
+Nie ma to wpływ na porównanie obiektów unordered_multimap, w którym są przechowywane ich elementy. Dwa unordered_multimaps są równe, jeśli mają taką samą liczbę elementów, a elementy w jednym kontenerze są Permutacją elementów w innym kontenerze. W przeciwnym razie nie są równe.
 
 ### <a name="example"></a>Przykład
 
@@ -211,9 +211,9 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq_multimap"></a>  operator ==
+## <a name="op_eq_eq_multimap"></a>operator = =
 
-Testy czy [unordered_multimap](../standard-library/unordered-multimap-class.md) obiektu po lewej stronie operatora jest równy obiektowi unordered_multimap po prawej stronie.
+Testuje, czy obiekt [unordered_multimap](../standard-library/unordered-multimap-class.md) po lewej stronie operatora jest równy obiektowi unordered_multimap po prawej stronie.
 
 ```cpp
 bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
@@ -221,19 +221,19 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*lewym*\
 Obiekt typu `unordered_multimap`.
 
-*right*<br/>
+*Kliknij*\
 Obiekt typu `unordered_multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** unordered_multimaps są równe; **false** nie są równe.
+**wartość true** , jeśli unordered_multimaps są równe; **wartość false** , jeśli nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów unordered_multimap nie dotyczy dowolnego kolejność, w którym są przechowywane ich elementów. Dwa unordered_multimaps są takie same, jeśli mają taką samą liczbę elementów, a elementy w jeden kontener są permutacji elementy znajdujące się w innych kontenera. W przeciwnym razie są nierówne.
+Nie ma to wpływ na porównanie obiektów unordered_multimap, w którym są przechowywane ich elementy. Dwa unordered_multimaps są równe, jeśli mają taką samą liczbę elementów, a elementy w jednym kontenerze są Permutacją elementów w innym kontenerze. W przeciwnym razie są one nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -278,4 +278,4 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

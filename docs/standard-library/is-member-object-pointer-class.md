@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_member_object_pointer class
 - is_member_object_pointer
 ms.assetid: 64f9cdf3-4621-4310-a076-a7bc986926b9
-ms.openlocfilehash: 401beed2a45be0492ba1a5cbd57cc92153dbaa91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d836c3626b492750ffa28c378413757119c9d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351082"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456164"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer — Klasa
 
-Sprawdza, czy typ jest wskaźnik do elementu członkowskiego obiektu.
+Testuje, czy typ jest wskaźnikiem do obiektu elementu członkowskiego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest wskaźnikiem do obiektu elementu członkowskiego lub `cv-qualified` wskaźnik do elementu członkowskiego obiektu, w przeciwnym razie przechowuje wartość false. Należy pamiętać, że `is_member_object_pointer` przechowuje FAŁSZ Jeśli *Ty* jest wskaźnikiem do funkcji członkowskiej.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest wskaźnikiem do obiektu elementu członkowskiego lub `cv-qualified` wskaźnikiem do obiektu elementu członkowskiego, w przeciwnym razie ma wartość false. Należy pamiętać `is_member_object_pointer` , że ma wartość false, jeśli *ty* jest wskaźnikiem do funkcji członkowskiej.
 
 ## <a name="example"></a>Przykład
 
@@ -81,9 +81,9 @@ is_member_object_pointer<int (functional::*)()> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer, klasa](../standard-library/is-member-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_member_pointer, klasa](../standard-library/is-member-pointer-class.md)

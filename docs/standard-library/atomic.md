@@ -48,16 +48,16 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c46eb2b9bea30bf37800b33ce0dcf44c0d807f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376604"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456728"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
-Definiuje klasy i szablonu klasy służące do tworzenia typów, które obsługują niepodzielnych operacji.
+Definiuje klasy i klasy szablonów, które mają być używane do tworzenia typów, które obsługują operacje niepodzielne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,56 +68,56 @@ Definiuje klasy i szablonu klasy służące do tworzenia typów, które obsługu
 ## <a name="remarks"></a>Uwagi
 
 > [!NOTE]
-> W kodzie, który jest kompilowany przy użyciu **/CLR**, tego pliku nagłówkowego jest zablokowany.
+> W kodzie, który jest kompilowany przy użyciu **/CLR**, ten nagłówek jest zablokowany.
 
-Operacją niepodzielną ma dwie właściwości klucza, które ułatwiają poprawnie zaznaczać obiektu bez używania blokad mutex za pomocą wielu wątków.
+Operacja niepodzielna ma dwie właściwości klucza, które ułatwiają poprawne manipulowanie obiektem bez użycia blokad muteksów.
 
-- Ponieważ niepodzielną operacją niepodzielną, drugą operację niepodzielną do tego samego obiektu z innego wątku można uzyskać stanu obiektu tylko przed lub po pierwszą operacją niepodzielną.
+- Ze względu na to, że operacja niepodzielna jest nierozdzielna, druga niepodzielna operacja na tym samym obiekcie z innego wątku może uzyskać stan obiektu tylko przed pierwszą operacją niepodzielną.
 
-- Na podstawie jego [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument operacją niepodzielną ustanawia porządkowanie wymagań w zakresie widoczność efektów innych operacji atomowych wykonywanych w tym samym wątku. W związku z tym powstrzymuje optymalizacje kompilatora, które naruszają szeregowania wymagania.
+- Na podstawie jego argumentu [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , niepodzielna operacja ustala wymagania dotyczące porządkowania dla widoczności efektów innych operacji niepodzielnych w tym samym wątku. W związku z tym wstrzymuje optymalizacje kompilatora, które naruszają wymagania dotyczące porządkowania.
 
-Na niektórych platformach go może nie być możliwe do wydajnego implementowania operacji niepodzielnych w przypadku niektórych typów bez użycia `mutex` blokad. Typ niepodzielny *wolne od blokady* Jeśli żadne operacje niepodzielne tego typu nie używają blokady.
+Na niektórych platformach może nie być możliwe wydajne Implementowanie operacji niepodzielnych dla niektórych typów bez używania `mutex` blokad. Typ niepodzielny jest *zablokowany* , jeśli żadna niepodzielna operacja na tym typie nie używa blokad.
 
-**C++11**: W procedurach obsługi sygnału można wykonywać niepodzielne operacje na obiekcie `obj` Jeśli `obj.is_lock_free()` lub `atomic_is_lock_free(x)` mają wartość true.
+**C++11**: W przypadku obsługi sygnałów, można wykonywać operacje niepodzielne na obiekcie `obj` , `obj.is_lock_free()` Jeśli `atomic_is_lock_free(x)` lub są spełnione.
 
-Klasa [atomic_flag](../standard-library/atomic-flag-structure.md) zapewnia minimalne typ niepodzielny, zawierający **bool** flagi. Jej operacje są zawsze wolne od blokady.
+Klasa [atomic_flag](../standard-library/atomic-flag-structure.md) zapewnia minimalny typ niepodzielny, który przechowuje flagę **logiczną** . Jego operacje są zawsze odblokowywane bezpłatnie.
 
-Klasa szablonu `atomic<T>` przechowuje obiekt typu argumentu `T` i zapewnia atomic dostęp do tego przechowywanej wartości. Można utworzyć za pomocą dowolnego typu, który można skopiować przy użyciu [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) i sprawdzane pod kątem równości, za pomocą [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). W szczególności umożliwia ona z typami zdefiniowanymi przez użytkownika, które spełniają te wymagania i w wielu przypadkach z typów zmiennoprzecinkowych.
+Klasa `atomic<T>` szablonu przechowuje obiekt typu `T` argumentu i zapewnia dostęp do tej wartości. Można utworzyć wystąpienie go przy użyciu dowolnego typu, który można skopiować za pomocą [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) i przetestowano pod kątem równości przy użyciu [funkcji memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). W szczególności można użyć go z typami zdefiniowanymi przez użytkownika, które spełniają te wymagania, a w wielu przypadkach z typami zmiennoprzecinkowymi.
 
-Szablon ma również zbiór specjalizacje w przypadku typów całkowitych i częściowej specjalizacji dla wskaźników. Te specjalizacje zapewniają dodatkowe operacje, które nie są dostępne za pośrednictwem szablonu podstawowego.
+Szablon zawiera również zestaw specjalizacji dla typów całkowitych i częściowej specjalizacji wskaźników. Specjalizacje te zapewniają dodatkowe operacje, które nie są dostępne za pomocą szablonu podstawowego.
 
-## <a name="pointer-specializations"></a>Wskaźnik specjalizacji
+## <a name="pointer-specializations"></a>Specjalizacje wskaźnika
 
-`atomic<T *>` Specjalizacjami częściowymi mają zastosowanie do wszystkich typów wskaźnika. Zapewniają one metody arytmetyka wskaźnika.
+`atomic<T *>` Częściowe specjalizacje stosują się do wszystkich typów wskaźnika. Udostępniają one metody arytmetyczne wskaźnika.
 
-## <a name="integral-specializations"></a>Integralne specjalizacje
+## <a name="integral-specializations"></a>Niezintegrowane specjalizacje
 
-`atomic<integral>` Specjalizacje mają zastosowanie do wszystkich typów całkowitych. Zapewniają one dodatkowe operacje, które nie są dostępne za pośrednictwem szablonu podstawowego.
+`atomic<integral>` Specjalizacje stosują się do wszystkich typów całkowitych. Zapewniają one dodatkowe operacje, które nie są dostępne za pomocą szablonu podstawowego.
 
-Każdy `atomic<integral>` typ ma odpowiednie makro, które można używać w `if directive` do określenia w czasie kompilacji, czy operacje tego typu są wolne od blokady. Jeśli wartość makra wynosi zero, operacje typu nie są wolne od blokady. Jeśli wartość wynosi 1, operacji może być wolne od blokady i środowisko uruchomieniowe wyboru jest wymagana. Jeśli wartość jest równa 2, operacje są wolne od blokady. Można użyć funkcji `atomic_is_lock_free` pod kątem w czasie wykonywania operacji na typie wolne od blokady.
+Każdy `atomic<integral>` typ ma odpowiednie makro, którego można użyć `if directive` w celu określenia czasu kompilacji, niezależnie od tego, czy operacje na tym typie są wolne od blokady. Jeśli wartość makra jest równa zero, operacje na tym typie nie są wolne od blokady. Jeśli wartość wynosi 1, operacje mogą być wolne od blokady i wymagane jest sprawdzenie środowiska uruchomieniowego. Jeśli wartość jest równa 2, operacje są wolne od blokady. Za pomocą funkcji `atomic_is_lock_free` można określić, czy w czasie wykonywania operacje na typie są wolne od blokady.
 
-Dla każdego z typów całkowitych ma odpowiedni typ niepodzielny nazwane zarządzanego obiektu typu całkowitego. Każdy `atomic_integral` typ ma ten sam zestaw funkcji elementów członkowskich jako odpowiedniego wystąpienia `atomic<T>` i mogą być przekazywane do dowolnego atomic funkcje nieczłonkowskie.
+Dla każdego z typów całkowitych istnieje odpowiedni nazwany typ niepodzielny, który zarządza obiektem tego typu całkowitego. Każdy `atomic_integral` typ ma ten sam zestaw funkcji składowych, co odpowiadające mu wystąpienie `atomic<T>` i może być przesłany do którejkolwiek z nienależących do nich funkcji niepodzielnych.
 
-|`atomic_integral` Typ|Typ całkowity|`atomic_is_lock_free` — Makro|
+|`atomic_integral`Wprowadź|Typ całkowity|`atomic_is_lock_free`Makro|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**podpisany char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**znak ze znakiem**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**znak bez znaku**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
 |`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
 |`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
 |`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
-|`atomic_ushort`|**short bez znaku**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**bez znaku Short**|ATOMIC_SHORT_LOCK_FREE|
 |`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
-|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**niepodpisany int**|ATOMIC_INT_LOCK_FREE|
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
-|`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
-|`atomic_llong`|**długi długi**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**Nieoznaczony długi długi**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ulong`|**bez znaku**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**Long Long**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**bez znaku Long Long**|ATOMIC_LLONG_LOCK_FREE|
 
-Nazwy elementów TypeDef istnieje dla specjalizacji szablonu atomic dla niektórych typów, które są zdefiniowane w nagłówku \<inttypes.h >.
+Nazwy typedef istnieją dla specjalizacji szablonu niepodzielnego dla niektórych typów, które są zdefiniowane w nagłówku \<inttypes. h >.
 
-|Typ niepodzielny|Nazwa TypeDef|
+|Typ niepodzielny|Nazwa typedef|
 |-----------------|------------------|
 |`atomic_int8_t`|`atomic<int8_t>`|
 |`atomic_uint8_t`|`atomic<uint8_t>`|
@@ -154,52 +154,52 @@ Nazwy elementów TypeDef istnieje dla specjalizacji szablonu atomic dla niektór
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[atomic, struktura](../standard-library/atomic-structure.md)|Opisuje obiekt, który wykonuje niepodzielne operacje na przechowywanej wartości.|
-|[atomic_flag, struktura](../standard-library/atomic-flag-structure.md)|Opisuje obiekt, który niepodzielnie Ustawia lub usuwa **bool** flagi.|
+|[atomic, struktura](../standard-library/atomic-structure.md)|Opisuje obiekt, który wykonuje operacje niepodzielne na przechowywanej wartości.|
+|[atomic_flag, struktura](../standard-library/atomic-flag-structure.md)|Opisuje obiekt, który niepodzielnie ustawia i czyści flagę **logiczną** .|
 
 ## <a name="enums"></a>Wyliczenia
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[memory_order Enum](../standard-library/atomic-enums.md#memory_order_enum)|Dostarcza symbolicznych nazw dla operacji synchronizacji w lokalizacji pamięci. Operacje te wpływają na jak przydziały w jednym wątku stają się widoczne w innym.|
+|[memory_order Enum](../standard-library/atomic-enums.md#memory_order_enum)|Dostarcza symboliczne nazwy dla operacji synchronizacji w lokalizacjach pamięci. Te operacje wpływają na sposób, w jaki przypisania w jednym wątku stają się widoczne w innym.|
 
 ## <a name="functions"></a>Funkcje
 
-Na liście poniżej, funkcje, które nie kończą się na `_explicit` ma semantykę odpowiadającego `_explicit`, chyba że mają niejawny [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumenty `memory_order_seq_cst`.
+Na poniższej liście funkcje, które nie kończą się w `_explicit` programie, mają semantykę odpowiadającą `_explicit`, z tą różnicą, że mają niejawne argumenty `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Wykonuje *porównanie atomowe i wymianę* operacji.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Wykonuje *porównanie atomowe i wymianę* operacji.|
-|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Wykonuje *weak atomic porównania i wymiany* operacji.|
-|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Wykonuje *weak atomic porównania i wymiany* operacji.|
-|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Zastępuje przechowywanej wartości.|
-|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Zastępuje przechowywanej wartości.|
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Wykonuje słabą, niepodzielną operację *porównania i wymiany* .|
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Wykonuje słabą, niepodzielną operację *porównania i wymiany* .|
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Zastępuje przechowywaną wartość.|
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Zastępuje przechowywaną wartość.|
 |[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Dodaje określoną wartość do istniejącej wartości przechowywanej.|
 |[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Dodaje określoną wartość do istniejącej wartości przechowywanej.|
-|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Wykonuje bitową operację `and` na określoną wartość i istniejącej wartości przechowywanej.|
-|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Wykonuje bitową operację `and` na określoną wartość i istniejącej wartości przechowywanej.|
-|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Wykonuje bitową operację `or` na określoną wartość i istniejącej wartości przechowywanej.|
-|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Wykonuje bitową operację `or` na określoną wartość i istniejącej wartości przechowywanej.|
-|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Odejmuje określoną wartość z istniejącej wartości przechowywanej.|
-|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Odejmuje określoną wartość z istniejącej wartości przechowywanej.|
-|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Wykonuje bitową operację `exclusive or` na określoną wartość i istniejącej wartości przechowywanej.|
-|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Wykonuje bitową operację `exclusive or` na określoną wartość i istniejącej wartości przechowywanej.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Ustawia flagę `atomic_flag` obiekt **false**.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Ustawia flagę `atomic_flag` obiekt **false**.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Ustawia flagę `atomic_flag` obiekt **true**.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Ustawia flagę `atomic_flag` obiekt **true**.|
-|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Ustawia wartość przechowywaną w `atomic` obiektu.|
-|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Określa, czy niepodzielne operacje na określony obiekt są wolne od blokady.|
-|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Niepodzielnie pobiera wartość.|
-|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Niepodzielnie pobiera wartość.|
-|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Działa jako *horyzont* który ustanawia pamięci zamawiania, wymagania dotyczące zaporami wywołującymi wywołania wątku, który ma procedurach obsługi sygnału wykonywane w tym samym wątku.|
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Wykonuje wartość bitową `and` dla określonej wartości i istniejącej wartości przechowywanej.|
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Wykonuje wartość bitową `and` dla określonej wartości i istniejącej wartości przechowywanej.|
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Wykonuje wartość bitową `or` dla określonej wartości i istniejącej wartości przechowywanej.|
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Wykonuje wartość bitową `or` dla określonej wartości i istniejącej wartości przechowywanej.|
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Odejmuje określoną wartość od istniejącej przechowywanej wartości.|
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Odejmuje określoną wartość od istniejącej przechowywanej wartości.|
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Wykonuje wartość bitową `exclusive or` dla określonej wartości i istniejącej wartości przechowywanej.|
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Wykonuje wartość bitową `exclusive or` dla określonej wartości i istniejącej wartości przechowywanej.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Ustawia flagę w `atomic_flag` obiekcie na **false**.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Ustawia flagę w `atomic_flag` obiekcie na **false**.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Ustawia flagę w `atomic_flag` obiekcie na **wartość true**.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Ustawia flagę w `atomic_flag` obiekcie na **wartość true**.|
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Ustawia wartość przechowywaną w `atomic` obiekcie.|
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Określa, czy operacje niepodzielne na określonym obiekcie są wolne od blokady.|
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Niepodzielnie Pobiera wartość.|
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Niepodzielnie Pobiera wartość.|
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Działa jako *ogrodzenie* ustanawiające wymagania dotyczące porządkowania pamięci między ogrodzeniami w wątku wywołującym, które ma programy obsługi sygnałów wykonywane w tym samym wątku.|
 |[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Niepodzielne przechowuje wartość.|
 |[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Niepodzielne przechowuje wartość.|
-|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Działa jako *horyzont* który ustanawia pamięci zamawiania wymagań dotyczących innymi zaporami wywołującymi.|
-|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Przerywa łańcuch zależności możliwe.|
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Działa jako *ogrodzenie* ustanawiające wymagania dotyczące porządkowania pamięci w odniesieniu do innych ogrodzeniów.|
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Dzieli możliwy łańcuch zależności.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

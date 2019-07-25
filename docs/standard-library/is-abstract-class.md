@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_abstract class
 - is_abstract
 ms.assetid: 8867f660-3434-404c-ba90-c26607a5e0d2
-ms.openlocfilehash: 02863f5694f519e8cca54d07622a185f69de82d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57b2413e673f92e5258bee5711db2870e2b58a11
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404822"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448985"
 ---
 # <a name="isabstract-class"></a>is_abstract — Klasa
 
-Sprawdza, czy typ jest klasą abstrakcyjną.
+Testuje, czy typ jest klasą abstrakcyjną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_abstract;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma co najmniej jedną czystą mfunkcję wirtualną, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma co najmniej jedną czystą funkcję wirtualną, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -72,9 +72,9 @@ is_abstract<abstract> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_polymorphic, klasa](../standard-library/is-polymorphic-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_polymorphic, klasa](../standard-library/is-polymorphic-class.md)

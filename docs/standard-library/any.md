@@ -1,26 +1,26 @@
 ---
-title: '&lt;Wszystkie&gt;'
+title: '&lt;ile&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <any>
 helpviewer_keywords:
 - <any>
-ms.openlocfilehash: 169e44880c98248dc1941ccc8c9adfe05f76f358
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 19e30b1ab0a9b0f30c1a4f3d4b614643cb8b50ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267950"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456281"
 ---
-# <a name="ltanygt"></a>&lt;Wszystkie&gt;
+# <a name="ltanygt"></a>&lt;ile&gt;
 
-Definiuje klasę i kilka obsługujące funkcje i klasy.
+Definiuje klasę i kilka pomocniczych funkcji i klas.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wszelkie >
+**Nagłówek:** \<wszystkie >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -28,17 +28,17 @@ Definiuje klasę i kilka obsługujące funkcje i klasy.
 
 |||
 |-|-|
-|[any_cast](../standard-library/any-functions.md#any_cast)|Tworzy obiekt do dowolnego.|
+|[any_cast](../standard-library/any-functions.md#any_cast)|Sprawia, że obiekt jest dowolna.|
 |[make_any](../standard-library/any-functions.md#make_any)|Pobiera wartości i tworzy dowolny obiekt.|
-|[swap](../standard-library/any-functions.md#swap)|Zamienia wszystkie elementy z dwóch obiektów.|
+|[swap](../standard-library/any-functions.md#swap)|Wymienia elementy dwóch obiektów.|
 
 ### <a name="classes"></a>Klasy
 
 |||
 |-|-|
-|[Wszystkie](../standard-library/any-class.md)|Przechowuje dowolnego typu, który spełnia wymagania konstruktora lub nie ma wartości.|
-|[bad_any_cast](../standard-library/bad-any-cast-class.md)|Obiekty zgłoszony, który uległ awarii `any_cast`.|
+|[ile](../standard-library/any-class.md)|Przechowuje dowolny typ, który spełnia wymagania konstruktora lub nie ma wartości.|
+|[bad_any_cast](../standard-library/bad-any-cast-class.md)|Obiekty zgłoszone przez nie `any_cast`powiodły się.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

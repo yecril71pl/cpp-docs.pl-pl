@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 003ba2136e779c444c7edad9b1759a861a8b0803
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383558"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460213"
 ---
 # <a name="moneypunctbyname-class"></a>moneypunct_byname — Klasa
 
-Klasa pochodna szablonu opisująca obiekt, który może służyć jako `moneypunct` aspekt danych ustawień regionalnych, umożliwiając formatowanie pieniężnych danych wejściowych, pole lub pola pieniężnych danych wyjściowych.
+Klasa pochodna szablonu opisująca obiekt, który może być używany jako `moneypunct` zestaw reguł dla danego ustawienia regionalnego, umożliwiając formatowanie pola wejściowego pieniężnego lub pola walutowych danych wyjściowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,14 +40,14 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie jest określana przez nazwany ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego podstawowego obiektu z [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl > ( `_Refs`).
+Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje swój obiekt podstawowy z [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl > ( `_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

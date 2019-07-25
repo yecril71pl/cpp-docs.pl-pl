@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_code_enum class
 ms.assetid: cee5be2d-7c20-4cec-a352-1ab8b7d32601
-ms.openlocfilehash: bc4ed7cd2e058414448c9366011b9efab97ee3d5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 4080c62034b224a9553eca2787aa1c2f2cf69ab8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245189"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454631"
 ---
 # <a name="iserrorcodeenum-class"></a>is_error_code_enum — Klasa
 
-Reprezentuje typu predykatu, który sprawdza, czy [error_code](../standard-library/error-code-class.md) wyliczenia.
+Reprezentuje predykat typu, który testuje Wyliczenie [error_code](../standard-library/error-code-class.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,10 +26,10 @@ template <_Enum>
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie tego elementu [predykatu typów](../standard-library/type-traits.md) ma wartość true, jeśli typ `_Enum` jest wartością wyliczenia odpowiedniego do przechowywania w obiekcie typu `error_code`.
+Wystąpienie tego predykatu [typu](../standard-library/type-traits.md) ma wartość true, jeśli typ `_Enum` jest wartością wyliczenia odpowiednią do przechowywania w obiekcie typu. `error_code`
 
-Jest dozwolone, aby dodać specjalizacje tego typu dla typów zdefiniowanych przez użytkownika.
+Dozwolone jest dodanie specjalizacji do tego typu dla typów zdefiniowanych przez użytkownika.
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

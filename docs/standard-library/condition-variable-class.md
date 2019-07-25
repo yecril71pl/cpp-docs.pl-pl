@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244625"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449456"
 ---
 # <a name="conditionvariable-class"></a>condition_variable — Klasa
 
-Użyj `condition_variable` klasy oczekiwania na zdarzenie, kiedy masz `mutex` typu `unique_lock<mutex>`. Obiekty tego typu może mieć lepszą wydajność niż obiekty typu [condition_variable_any < unique_lock\<mutex >>](../standard-library/condition-variable-any-class.md).
+Użyj klasy `condition_variable` , aby zaczekać na zdarzenie, gdy `mutex` masz typ `unique_lock<mutex>`. Obiekty tego typu mogą mieć lepszą wydajność niż obiekty typu [condition_variable_any < unique_lock\<muteks > >](../standard-library/condition-variable-any-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,22 +43,22 @@ class condition_variable;
 
 |||
 |-|-|
-|[condition_variable](#condition_variable)|Konstruuje `condition_variable` obiektu.|
+|[condition_variable](#condition_variable)|Konstruuje `condition_variable` obiekt.|
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|[native_handle](#native_handle)|Zwraca typ implementacji reprezentujący dojście condition_variable.|
-|[notify_all](#notify_all)|Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiektu.|
-|[notify_one](#notify_one)|Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiektu.|
-|[Czekaj](#wait)|Blokuje wątek.|
+|[native_handle](#native_handle)|Zwraca typ specyficzny dla implementacji reprezentujący uchwyt condition_variable.|
+|[notify_all](#notify_all)|Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiekt.|
+|[notify_one](#notify_one)|Odblokowuje jeden z wątków, które oczekują `condition_variable` na obiekt.|
+|[trwa](#wait)|Blokuje wątek.|
 |[wait_for](#wait_for)|Blokuje wątek i ustawia przedział czasu, po którym odblokowuje wątek.|
 |[wait_until](#wait_until)|Blokuje wątek i ustawia maksymalny punkt w czasie, w którym odblokowuje wątek.|
 
-## <a name="condition_variable"></a> condition_variable
+## <a name="condition_variable"></a>condition_variable
 
-Konstruuje `condition_variable` obiektu.
+Konstruuje `condition_variable` obiekt.
 
 ```cpp
 condition_variable();
@@ -66,11 +66,11 @@ condition_variable();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli nie ma wystarczającej ilości pamięci jest dostępny, Konstruktor wyrzuca [system_error](../standard-library/system-error-class.md) obiekt, który ma `not_enough_memory` kod błędu. Jeśli nie można utworzyć obiektu, ponieważ niektóre inne zasoby nie są dostępne, Konstruktor wyrzuca `system_error` obiekt, który ma `resource_unavailable_try_again` kod błędu.
+Jeśli nie jest dostępna wystarczająca ilość pamięci, Konstruktor zgłasza obiekt [system_error](../standard-library/system-error-class.md) , który ma `not_enough_memory` kod błędu. Jeśli nie można utworzyć obiektu, ponieważ jakiś inny zasób nie jest dostępny, Konstruktor zgłasza `system_error` obiekt, który `resource_unavailable_try_again` ma kod błędu.
 
-## <a name="native_handle"></a> native_handle —
+## <a name="native_handle"></a>native_handle
 
-Zwraca typ implementacji reprezentujący dojście condition_variable.
+Zwraca typ specyficzny dla implementacji, który reprezentuje uchwyt condition_variable.
 
 ```cpp
 native_handle_type native_handle();
@@ -78,25 +78,25 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`native_handle_type` jest zdefiniowany jako wskaźnik do współbieżności środowiska wykonawczego wewnętrznych struktur danych.
+`native_handle_type`jest definiowana jako wskaźnik do środowisko uruchomieniowe współbieżności wewnętrznych struktur danych.
 
-## <a name="notify_all"></a> notify_all
+## <a name="notify_all"></a>notify_all
 
-Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiektu.
+Odblokowuje wszystkie wątki, które oczekują na `condition_variable` obiekt.
 
 ```cpp
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a> notify_one
+## <a name="notify_one"></a>notify_one
 
-Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiektu.
+Odblokowuje jeden z wątków, które oczekują na `condition_variable` obiekt.
 
 ```cpp
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a> Czekaj
+## <a name="wait"></a>trwa
 
 Blokuje wątek.
 
@@ -109,15 +109,15 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametry
 
-*Lck*\
-A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
+*LCK*\
+Obiekt [>\<mutex unique_lock](../standard-library/unique-lock-class.md) .
 
-*P.* \
-Dowolne wyrażenie zwracające **true** lub **false**.
+*Pred*\
+Dowolne wyrażenie zwracające **wartość true** lub **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza metoda blokuje do `condition_variable` zasygnalizowania obiektu przez wywołanie [notify_one](#notify_one) lub [notify_all](#notify_all). Go może również obudzić błędnie.
+Pierwsza metoda blokuje do momentu `condition_variable` zasygnalizowania obiektu przez wywołanie [notify_one](#notify_one) lub [notify_all](#notify_all). Może również wzbudzać obudzić.
 
 W efekcie druga metoda wykonuje następujący kod.
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
 Blokuje wątek i ustawia przedział czasu, po którym odblokowuje wątek.
 
@@ -145,24 +145,24 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parametry
 
-*Lck*\
-A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
+*LCK*\
+Obiekt [>\<mutex unique_lock](../standard-library/unique-lock-class.md) .
 
 *Rel_time*\
-Element `chrono::duration` obiektu, który określa ilość czasu przed wątek zostanie wznowiona.
+`chrono::duration` Obiekt, który określa czas, po którym wątek zostanie wznowiony.
 
-*P.* \
-Dowolne wyrażenie zwracające **true** lub **false**.
+*Pred*\
+Dowolne wyrażenie zwracające **wartość true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza metoda zwraca `cv_status::timeout` Jeśli skończy się czas oczekiwania, gdy *Rel_time* upłynął. W przeciwnym razie metoda zwraca `cv_status::no_timeout`.
+Pierwsza metoda zwraca `cv_status::timeout` , jeśli czas oczekiwania zakończy się, gdy *Rel_time* . W przeciwnym razie metoda zwraca `cv_status::no_timeout`.
 
 Druga metoda zwraca wartość *p*.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza metoda blokuje do `condition_variable` zasygnalizowania obiektu przez wywołanie [notify_one](#notify_one) lub [notify_all](#notify_all) lub do momentu aż interwał czasowy *Rel_time* upłynął. Go może również obudzić błędnie.
+Pierwsza metoda blokuje do momentu `condition_variable` zasygnalizowania obiektu przez wywołanie [notify_one](#notify_one) lub [notify_all](#notify_all) lub do czasu, aż upłynie czas *Rel_time* . Może również wzbudzać obudzić.
 
 W efekcie druga metoda wykonuje następujący kod.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a> wait_until
+## <a name="wait_until"></a>wait_until
 
 Blokuje wątek i ustawia maksymalny punkt w czasie, w którym odblokowuje wątek.
 
@@ -203,24 +203,24 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*Lck*\
-A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
+*LCK*\
+Obiekt [>\<mutex unique_lock](../standard-library/unique-lock-class.md) .
 
 *Abs_time*\
-A [chrono::time_point](../standard-library/time-point-class.md) obiektu.
+Obiekt [chrono:: time_point](../standard-library/time-point-class.md) .
 
-*P.* \
-Dowolne wyrażenie zwracające **true** lub **false**.
+*Pred*\
+Dowolne wyrażenie zwracające **wartość true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Metody, które zwracają `cv_status` wpisz powrotu `cv_status::timeout` Jeśli skończy się czas oczekiwania, gdy *Abs_time* upływa. W przeciwnym razie metody zwracają `cv_status::no_timeout`.
+Metody, które zwracają `cv_status` typ Return `cv_status::timeout` , jeśli oczekiwania zakończy się po upłynięciu *Abs_time* . W przeciwnym razie metody zwracają `cv_status::no_timeout`.
 
 Metody, które zwracają **bool** zwracają wartość *p*.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza metoda blokuje do `condition_variable` zasygnalizowania obiektu przez wywołanie [notify_one](#notify_one) lub [notify_all](#notify_all) lub do momentu `Abs_time`. Go może również obudzić błędnie.
+Pierwsza metoda blokuje do momentu `condition_variable` zasygnalizowania obiektu przez wywołanie [notify_one](#notify_one) lub [notify_all](#notify_all) lub do `Abs_time`. Może również wzbudzać obudzić.
 
 W efekcie druga metoda wykonuje następujący kod
 
@@ -232,9 +232,9 @@ while(!Pred())
 return true;
 ```
 
-Metody trzecia i czwarta za pomocą wskaźnika do obiektu typu `xtime` zastąpić `chrono::time_point` obiektu. `xtime` Obiektu określa maksymalną ilość czasu oczekiwania na sygnał.
+Trzecia i czwarta Metoda używa wskaźnika do obiektu typu `xtime` , aby `chrono::time_point` zastąpić obiekt. `xtime` Obiekt Określa maksymalną ilość czasu oczekiwania na sygnał.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[<condition_variable>](../standard-library/condition-variable.md)

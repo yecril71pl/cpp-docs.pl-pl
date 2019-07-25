@@ -1,21 +1,21 @@
 ---
-title: is_assignable Class
+title: Klasa is_assignable
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_assignable
 helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-ms.openlocfilehash: b1357bf8c5ad4dfd5035855e34a8fd6a7ed73d15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33b0ce6112119c935ff70e5d619b284acc6ee8c2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391013"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456667"
 ---
-# <a name="isassignable-class"></a>is_assignable Class
+# <a name="isassignable-class"></a>Klasa is_assignable
 
-Sprawdza, czy wartość `From` typu mogą być przypisane do `To` typu.
+Testuje, `To` czy wartość `From` typu może być przypisana do typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,22 +26,22 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*To*<br/>
-Typ obiektu, który odbiera przypisania.
+*Do*\
+Typ obiektu, który odbiera przypisanie.
 
-*From*<br/>
+*Wniosek*\
 Typ obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie nieobliczonym `declval<To>() = declval<From>()` musi być poprawnie sformułowany. Zarówno `From` i `To` muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
+Wyrażenie `declval<To>() = declval<From>()` nieoceniane musi być poprawnie sformułowane. Oba `From` i`To` muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

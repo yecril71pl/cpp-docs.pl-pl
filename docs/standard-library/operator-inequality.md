@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: e29088b64b46e3aa907f4a09ec131c6f9b68a74b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1214dd7d5034b80b14f8dd1422aa1a3b8a253023
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220503"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447648"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
-> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
 
-Overloads `operator!=` do porównywania dwóch obiektów klasy szablonu [kontenera](../standard-library/sample-container-class.md).
+Przeciążenia `operator!=` do porównywania dwóch obiektów [kontenera](../standard-library/sample-container-class.md)klas szablonu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,8 +38,8 @@ bool operator!=(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `!(left == right)`.
+Zwraca `!(left == right)`wartość.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Przykładowy kontener >](../standard-library/sample-container.md)<br/>
+[\<Przykładowy > kontenera](../standard-library/sample-container.md)

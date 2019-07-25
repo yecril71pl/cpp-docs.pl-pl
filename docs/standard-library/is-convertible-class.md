@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_convertible class
 - is_convertible
 ms.assetid: 75614008-1894-42ea-bd57-974399628536
-ms.openlocfilehash: cdc3276f229fb9c1ac059a9eeb29e77655b4fc69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c90fe5687992e4df49e8655387cfdd14b40aa529
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337378"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454629"
 ---
 # <a name="isconvertible-class"></a>is_convertible — Klasa
 
-Sprawdza, czy jeden typ jest konwertowany na inny.
+Testuje, czy jeden typ jest konwertowany na inny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,15 +27,15 @@ struct is_convertible;
 
 ### <a name="parameters"></a>Parametry
 
-*From*<br/>
-Typ, który można przekonwertować z.
+*Wniosek*\
+Typ, z którego ma zostać przeprowadzona konwersja.
 
-*Ty*<br/>
-Typ docelowy konwersji.
+*Br*\
+Typ do przekonwertowania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli wyrażenie `To to = from;`, gdzie `from` jest obiektem typu `From`, jest poprawnie sformułowany.
+Wystąpienie predykatu typu ma wartość true, jeśli wyrażenie `To to = from;`, gdzie `from` jest obiektem typu `From`, jest poprawnie sformułowane.
 
 ## <a name="example"></a>Przykład
 
@@ -73,9 +73,9 @@ is_convertible<char, int> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_base_of, klasa](../standard-library/is-base-of-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_base_of, klasa](../standard-library/is-base-of-class.md)

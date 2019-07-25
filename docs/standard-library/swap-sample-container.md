@@ -1,5 +1,5 @@
 ---
-title: swap (&lt;przykładowy kontener&gt;)
+title: swap (&lt;przykład kontenera&gt;)
 ms.date: 11/04/2016
 f1_keywords:
 - std.swap
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-ms.openlocfilehash: 48238e4a67fb656eac714a8732ee071e26847768
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d89a59e90c3e4258c8ca7bf9e981536f3779d4b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220298"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450338"
 ---
-# <a name="swap-ltsample-containergt"></a>swap (&lt;przykładowy kontener&gt;)
+# <a name="swap-ltsample-containergt"></a>swap (&lt;przykład kontenera&gt;)
 
 > [!NOTE]
-> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
 
-Wykonuje `left.` [wymiany](../standard-library/container-class-swap.md)`(right)`.
+Wykonuje `left.` [zamianę](../standard-library/container-class-swap.md)`(right)`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,4 +33,4 @@ void swap(
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Przykładowy kontener >](../standard-library/sample-container.md)<br/>
+[\<Przykładowy > kontenera](../standard-library/sample-container.md)

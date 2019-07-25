@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: dc457fd4efba538e96200f7f42f84a73fc1b5228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f27a8e4bc0bea3a469d46a56e8885dabe5894df
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411243"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456584"
 ---
 # <a name="addconst-class"></a>add_const — Klasa
 
@@ -27,12 +27,12 @@ struct add_const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie modyfikatora typu przechowuje zmodyfikowany typ, który jest *Ty* Jeśli *Ty* jest odwołaniem, funkcją lub kwalifikowanego typu const, w przeciwnym razie `const Ty`.
+Wystąpienie modyfikatora typu posiada zmodyfikowany typ, który jest *ty* , jeśli *ty* jest odwołaniem, funkcją lub typem kwalifikowanym z kwalifikatorem, w przeciwnym razie `const Ty`.
 
 ## <a name="example"></a>Przykład
 
@@ -62,9 +62,9 @@ add_const<int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const, klasa](../standard-library/remove-const-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_const, klasa](../standard-library/remove-const-class.md)

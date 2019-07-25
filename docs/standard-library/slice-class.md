@@ -12,54 +12,54 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412530"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450359"
 ---
 # <a name="slice-class"></a>slice — Klasa
 
-Klasa narzędzia do tablicy valarray, który jest używany do definiowania jednowymiarowa podzbiór valarray nadrzędnej. Jeśli tablica valarray jest traktowany jako dwuwymiarowej macierzy przy użyciu wszystkich elementów w tablicy, wycinek wyodrębnia wektora w jednym wymiarze poza dwuwymiarową tablicę.
+Klasa narzędzi do valarray, która jest używana do definiowania jednowymiarowych podzestawów nadrzędnej valarray. Jeśli valarray jest traktowany jako dwuwymiarowa macierz ze wszystkimi elementami w tablicy, wycinek zostanie wyodrębniony w jednym wymiarze z tablicy dwuwymiarowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa przechowuje parametrów, charakteryzujące się do obiektu typu [slice_array —](../standard-library/slice-array-class.md) podzbiór tablicy valarray pośrednio jest tworzony, gdy obiekt klasy wycinka jest wyświetlany jako argument dla obiektu klasy [valarray ](../standard-library/valarray-class.md#op_at)  **\<Typ >**. Przechowywane wartości, które określają podzbioru wybrana w zaufanym valarray nadrzędnego obejmują:
+Klasa przechowuje parametry, które opisują obiekt typu [slice_array](../standard-library/slice-array-class.md) podzbiór valarray jest pośrednio skonstruowany, gdy obiekt klasy wycinka jest wyświetlany jako argument dla obiektu klasy [valarray](../standard-library/valarray-class.md#op_at) **\<typu >** . Przechowywane wartości określające podzbiór wybrany z elementu nadrzędnego valarray obejmują:
 
-- Indeks początkowy w tablicy valarray.
+- Początkowy indeks w valarray.
 
-- Łączna długość lub liczba elementów w wycinka.
+- Łączna długość lub liczba elementów wycinka.
 
-- Krok lub odległość między kolejnych indeksy elementów w tablicy valarray.
+- Krok lub odległość między kolejnymi indeksami elementów w valarray.
 
-Jeśli zestawu zdefiniowanego przez wycinek jest podzbiorem stałej tablicy valarray, wycinek jest nowej tablicy valarray. Jeśli zestawu zdefiniowanego przez wycinek jest podzbiorem stałymi valarray, wycinek ma semantyki odwołania do oryginalnego tablicy valarray. Mechanizm oceny dla nieunikatowego valarrays oszczędza czas i pamięci.
+Jeśli zestaw zdefiniowany przez wycinek jest podzbiorem stałej valarray, wycinek jest nowym valarray. Jeśli zestaw zdefiniowany przez wycinek jest podzbiorem niestałego valarray, wówczas wycinek ma semantykę odwołania do oryginalnego valarray. Mechanizm oceny dla niestałe valarrays oszczędza czas i pamięć.
 
-Operacje na valarrays jest gwarantowane tylko wtedy, gdy podzestawy źródłowym i docelowym, zdefiniowane przez wycinki różniące się od siebie i wszystkich indeksów są prawidłowe.
+Operacje na valarrays są gwarantowane tylko wtedy, gdy podzbiory źródłowe i docelowe zdefiniowane przez wycinki są różne i wszystkie indeksy są prawidłowe.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[slice](#slice)|Definiuje podzbiór `valarray` składający się z liczbą elementów, które są równe odległości i, która jest uruchamiana na określony element.|
+|[slice](#slice)|Definiuje podzestaw `valarray` składający się z wielu elementów, które są równej odległości od siebie i zaczyna się od określonego elementu.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[Rozmiar](#size)|Wyszukuje liczbę elementów w wycinku `valarray`.|
-|[start](#start)|Znajduje indeks początkowy wycinek `valarray`.|
-|[stride](#stride)|Odległość między elementami w wycinku `valarray`.|
+|[zmienia](#size)|Znajduje liczbę elementów w wycinku `valarray`.|
+|[start](#start)|Znajduje początkowy indeks wycinka `valarray`.|
+|[stride](#stride)|Znajduje odległość między elementami w wycinku a `valarray`.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<valarray >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="size"></a>  Slice::size
+## <a name="size"></a>plasterek:: size
 
-Wyszukuje liczbę elementów w wycinku tablicy valarray.
+Znajduje liczbę elementów w wycinku valarray.
 
 ```cpp
 size_t size() const;
@@ -67,7 +67,7 @@ size_t size() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów w wycinku tablicy valarray.
+Liczba elementów w wycinku elementu valarray.
 
 ### <a name="example"></a>Przykład
 
@@ -121,9 +121,9 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.
 ```
 
-## <a name="slice"></a>  Slice::Slice
+## <a name="slice"></a>plasterek:: Slice
 
-Definiuje podzbiór tablicy valarray, która składa się z liczbą elementów, które są równe odległości i, która jest uruchamiana na określony element.
+Definiuje podzestaw elementu valarray, który składa się z wielu elementów, które są równej odległości od siebie i zaczyna się od określonego elementu.
 
 ```cpp
 slice();
@@ -136,22 +136,22 @@ slice(
 
 ### <a name="parameters"></a>Parametry
 
-*_StartIndex*<br/>
-Indeks tablicy valarray pierwszego elementu w podzbiorze.
+*_StartIndex*\
+Indeks valarray pierwszego elementu w podzbiorze.
 
-*_Len*<br/>
+*_Len*\
 Liczba elementów w podzbiorze.
 
-*stride*<br/>
+*tabela*\
 Odległość między elementami w podzbiorze.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Domyślny konstruktor przechowuje zera indeks początkowy, całkowita długość i krok. Drugi Konstruktor magazynów *_StartIndex* począwszy od indeksu *_Len* całkowita długość i *stride* dla krok.
+Konstruktor domyślny przechowuje zera dla początkowego indeksu, całkowitej długości i krok. Drugi Konstruktor przechowuje *_StartIndex* dla indeksu początkowego, *_LEN* dla łącznej długości i *krok* dla tego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Krok może być ujemna.
+Krok może być ujemny.
 
 ### <a name="example"></a>Przykład
 
@@ -194,9 +194,9 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```
 
-## <a name="start"></a>  Slice::Start
+## <a name="start"></a>Slice:: Start
 
-Znajduje indeks początkowy wycinek tablicy valarray.
+Znajduje początkowy indeks wycinka elementu valarray.
 
 ```cpp
 size_t start() const;
@@ -204,7 +204,7 @@ size_t start() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks początkowy wycinek tablicy valarray.
+Początkowy indeks wycinka elementu valarray.
 
 ### <a name="example"></a>Przykład
 
@@ -252,9 +252,9 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.
 ```
 
-## <a name="stride"></a>  Slice::STRIDE
+## <a name="stride"></a>Slice:: krok
 
-Umożliwia znalezienie odległości między elementami w wycinku tablicy valarray.
+Znajduje odległość między elementami w wycinku valarray.
 
 ```cpp
 size_t stride() const;
@@ -262,7 +262,7 @@ size_t stride() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odległość między elementami w wycinku tablicy valarray.
+Odległość między elementami w wycinku valarray.
 
 ### <a name="example"></a>Przykład
 
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,21 +1,21 @@
 ---
-title: is_copy_constructible Class
+title: Klasa is_copy_constructible
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_copy_constructible
 helpviewer_keywords:
 - is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-ms.openlocfilehash: c85d036efda2509885a079cf59a130a63c0389bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70de134fa0cb3e9d6b0259135372f37b9c017e92
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336634"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452796"
 ---
-# <a name="iscopyconstructible-class"></a>is_copy_constructible Class
+# <a name="iscopyconstructible-class"></a>Klasa is_copy_constructible
 
-Sprawdza, czy typ ma konstruktora kopiującego.
+Testuje, czy typ ma Konstruktor kopiujący.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,12 +26,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma Konstruktor kopiujący w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma Konstruktor kopiujący, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -71,8 +71,8 @@ is_copy_constructible<NotCopyable > == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

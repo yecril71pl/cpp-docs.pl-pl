@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: c7d0d8b8572c26bfa75b9fab81900c0ae21fb932
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336498"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456237"
 ---
 # <a name="isintegral-class"></a>is_integral — Klasa
 
-Sprawdza, czy typ jest integralną częścią.
+Testuje, czy typ jest całkowity.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,14 +27,14 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest jednym z typów całkowitych lub `cv-qualified` postaci jednego z typów całkowitych, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest jednym z typów całkowitych lub `cv-qualified` postaci jednego z typów całkowitych, w przeciwnym razie ma wartość false.
 
-Przykładem jest typem całkowitym **bool**, **char**, **unsigned char**, **podpisany char**, **wchar_t**, **krótki**, **typ unsigned short**, **int**, **unsigned int**, **długie**i **unsigned long**. Ponadto za pomocą kompilatorów, które zapewniają ich typ całkowity może być jednym z **long long**, **unsigned long long**, **__int64**, i **unsigned __int64**.
+Typem całkowitym jest jeden z wartości typu **bool**, **char**, unsigned char **, wchar_t**, **Short**, unsigned **Short**, **int**, unsigned **int**, **Long**i unsigned **Long**. Ponadto w przypadku kompilatorów, które je dostarczają, typem całkowitym może być jeden z wartości typu **Long**Long, unsigned long **Long**, **__int64**i unsigned **__int64**.
 
 ## <a name="example"></a>Przykład
 
@@ -72,10 +72,10 @@ is_integral<float> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_enum, klasa](../standard-library/is-enum-class.md)<br/>
-[is_floating_point, klasa](../standard-library/is-floating-point-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa is_enum](../standard-library/is-enum-class.md)\
+[is_floating_point, klasa](../standard-library/is-floating-point-class.md)

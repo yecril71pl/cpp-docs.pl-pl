@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_member_pointer class
 - is_member_pointer
 ms.assetid: da07ff4e-9ee0-4baa-ad93-1741f10913d1
-ms.openlocfilehash: a02d8a156a861367f34ac0cda4744c3de9e43efe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07e32c8ab1ea82a0c3616e96baca920a95e3042
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404783"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456135"
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer — Klasa
 
-Sprawdza, czy typ jest wskaźnik do składowej.
+Testuje, czy typ jest wskaźnikiem do elementu członkowskiego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest wskaźnikiem do funkcji składowej lub wskaźnik do obiektu elementu członkowskiego lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest wskaźnikiem do funkcji składowej lub wskaźnikiem do obiektu elementu członkowskiego lub `cv-qualified` z jednym z nich, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -81,11 +81,11 @@ is_member_pointer<int (functional::*)()> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_function_pointer, klasa](../standard-library/is-member-function-pointer-class.md)<br/>
-[is_member_object_pointer, klasa](../standard-library/is-member-object-pointer-class.md)<br/>
-[is_pointer, klasa](../standard-library/is-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)\
+[is_member_object_pointer Class](../standard-library/is-member-object-pointer-class.md)\
+[is_pointer, klasa](../standard-library/is-pointer-class.md)

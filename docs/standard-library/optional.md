@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - <optional>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: c73ad2ad94a5de29bc2c457fdf6ca8b9c783615c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267899"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447183"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Definiuje klasę szablonu pojemnika opcjonalne i kilka szablonów pomocniczych.
+Definiuje klasę szablonu kontenera opcjonalnie i kilka szablonów pomocniczych.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<opcjonalne >
+**Nagłówek:** \<> opcjonalne
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -29,31 +29,31 @@ Definiuje klasę szablonu pojemnika opcjonalne i kilka szablonów pomocniczych.
 
 |||
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Sprawdza, czy `optional` obiekt po lewej stronie operatora jest równy `optional` obiektu po prawej stronie.|
-|[operator!=](../standard-library/optional-operators.md#op_neq)|Sprawdza, czy `optional` obiektu po lewej stronie operatora nie jest równa `optional` obiektu po prawej stronie.|
-|[Operator <](../standard-library/optional-operators.md#op_lt)|Sprawdza, czy `optional` obiekt po lewej stronie operatora jest mniejszy od `optional` obiektu po prawej stronie.|
-|[Operator < =](../standard-library/optional-operators.md#op_lt_eq)|Sprawdza, czy `optional` obiekt po lewej stronie operatora jest mniejszy niż lub równe `optional` obiektu po prawej stronie.|
-|[operator>](../standard-library/optional-operators.md#op_gt)|Sprawdza, czy `optional` obiekt po lewej stronie operatora jest większy niż `optional` obiektu po prawej stronie.|
-|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Sprawdza, czy `optional` obiektu po lewej stronie operatora jest większy niż lub równa `optional` obiektu po prawej stronie.|
+|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Testuje, `optional` czy obiekt po lewej stronie operatora jest równy `optional` obiektowi po prawej stronie.|
+|[operator!=](../standard-library/optional-operators.md#op_neq)|Testuje, `optional` czy obiekt po lewej stronie operatora nie jest równy `optional` obiektowi po prawej stronie.|
+|[< operatora](../standard-library/optional-operators.md#op_lt)|Testuje, `optional` czy obiekt po lewej stronie operatora jest mniejszy `optional` od obiektu po prawej stronie.|
+|[< operatora =](../standard-library/optional-operators.md#op_lt_eq)|Testuje, `optional` czy obiekt po lewej stronie operatora jest mniejszy od lub równy `optional` obiektowi po prawej stronie.|
+|[operator>](../standard-library/optional-operators.md#op_gt)|Testuje, `optional` czy obiekt po lewej stronie operatora jest większy `optional` niż obiekt po prawej stronie.|
+|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testuje, `optional` czy obiekt po lewej stronie operatora jest większy niż lub równy `optional` obiektowi po prawej stronie.|
 
 > [!NOTE]
-> Oprócz relacyjnych porównuje \<opcjonalne > Operatorzy pomocy technicznej porównanie z **nullopt** i `T`.
+> Oprócz porównywania \<relacyjnego operatory opcjonalne > obsługują również porównanie z **nullopt** i `T`.
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|[make_optional](../standard-library/optional-functions.md#make_optional)|Sprawia, że obiekt opcjonalne.|
+|[make_optional](../standard-library/optional-functions.md#make_optional)|Sprawia, że obiekt jest opcjonalny.|
 |[swap](../standard-library/optional-functions.md#swap)||
 
 ### <a name="classes-and-structs"></a>Klasy i struktury
 
 |||
 |-|-|
-|[Skrót]()||
-|[Klasa opcjonalne](../standard-library/optional-class.md)|Opisuje obiekt, który może lub nie może zawierać wartości.|
-|[nullopt_t — struktura](../standard-library/nullopt-t-structure.md)|Opisuje obiekt przechowujący nie wartość.|
-|[bad_optional_access klasy](../standard-library/bad-optional-access-class.md)|Opisuje obiekt, który został zgłoszony jako wyjątek do zgłaszania próba uzyskania dostępu do wartości nie istnieje.|
+|[skrótu]()||
+|[Klasa opcjonalna](../standard-library/optional-class.md)|Opisuje obiekt, który może lub nie może zawierać wartości.|
+|[nullopt_t, struktura](../standard-library/nullopt-t-structure.md)|Opisuje obiekt, który nie utrzymuje wartości.|
+|[Klasa bad_optional_access](../standard-library/bad-optional-access-class.md)|Opisuje obiekt zgłoszony jako wyjątek, aby zgłosić próbę uzyskania dostępu do wartości, która nie istnieje.|
 
 ### <a name="objects"></a>Obiekty
 
@@ -63,4 +63,4 @@ Definiuje klasę szablonu pojemnika opcjonalne i kilka szablonów pomocniczych.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

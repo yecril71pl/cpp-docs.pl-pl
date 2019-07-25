@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: 18b95884bb673305398739968ef2530e8c4778d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca66a3273567a8d30a982211a6e977c129b00f5f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405225"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459707"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
-Reprezentuje [ustawień regionalnych](../standard-library/locale-class.md) reguł, który wykonuje konwersję między zakodowanymi w formacie UCS-2 lub UCS-4 znaków dwubajtowych i zakodowanymi w formacie UTF-16LE lub UTF-16BE strumienia bajtów.
+Reprezentuje zestaw reguł [ustawień regionalnych](../standard-library/locale-class.md) , który konwertuje między znaki szerokie kodowane jako UCS-2 lub UCS-4 i strumień bajtów zakodowany jako UTF-16LE lub UTF-16BE.
 
 ```cpp
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
@@ -24,23 +24,23 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parametry
 
-*Elem*<br/>
-Typ elementu znaków dwubajtowych.
+*Elem*\
+Typ elementu dwubajtowego.
 
-*Maxcode*<br/>
+*Maxcode*\
 Maksymalna liczba znaków dla zestawu reguł ustawień regionalnych.
 
-*Tryb*<br/>
-Informacje o konfiguracji dla zestawu reguł ustawień regionalnych.
+*Wyst*\
+Informacje o konfiguracji zestawu reguł ustawień regionalnych.
 
 ## <a name="remarks"></a>Uwagi
 
-Konwertuje między zakodowanymi w formacie UCS-2 lub UCS-4 znaków dwubajtowych i strumień bajtów zakodowanymi w formacie UTF-16LE, w tej klasy szablonu, jeśli tryb & little_endian lub UTF-16BE inaczej.
+Ten szablon klasy wykonuje konwersję między znakami dwubajtowymi zakodowanymi jako UCS-2 lub UCS-4 i strumień bajtów zakodowany jako UTF-16LE, jeśli tryb & LITTLE_ENDIAN lub UTF-16BE w inny sposób.
 
-Strumień bajtów powinny być zapisywane w pliku binarnym; mogą zostać uszkodzone, jeśli zapisane do pliku tekstowego.
+Strumień bajtów powinien być zapisany w pliku binarnym; może być uszkodzona, jeśli Zapisano w pliku tekstowym.
 
 ## <a name="requirements"></a>Wymagania
 
 Nagłówek: \<codecvt >
 
-Namespace: standardowe
+Przestrzeń nazw: std

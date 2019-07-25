@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; operatorów'
+title: '&lt;Operatory&gt; string_view'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,26 +17,26 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 1fbb7faf7d6fc92a053c0f4d47575c5c53c7968e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: caa6e515428cc0ea767eef20e819753c8f7ff8f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346630"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459221"
 ---
-# <a name="ltstringviewgt-operators"></a>&lt;string_view&gt; operatorów
+# <a name="ltstringviewgt-operators"></a>&lt;Operatory&gt; string_view
 
-Użyj tych operatorów do porównywania dwóch obiektów string_view, lub string_view i innego obiektu stringu (na przykład [std::string](basic-string-class.md), lub **char\***) dla niejawnej konwersji znajdujący się. 
+Te operatory służą do porównywania dwóch obiektów string_view lub string_view i niektórych innych obiektów String (na przykład [std:: String](basic-string-class.md)lub **char\*** ), dla których podano niejawną konwersję. 
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[Operator&gt;=](#op_gt_eq)|
-|[Operator&lt;](#op_lt)|[Operator&lt;&lt;](#op_lt_lt)|[Operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|[operator""sv](#op_sv)|
+|[operator!=](#op_neq)|[zakład&gt;](#op_gt)|[zakład&gt;=](#op_gt_eq)|
+|[zakład&lt;](#op_lt)|[zakład&lt;&lt;](#op_lt_lt)|[zakład&lt;=](#op_lt_eq)|
+|[operator==](#op_eq_eq)|[operator "" SV](#op_sv)|
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
-Sprawdza, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
+Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
 
 ```cpp
 template <class CharType, class Traits>
@@ -57,25 +57,25 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*lewym*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
-*right*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*Kliknij*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt po lewej stronie operatora nie jest leksykograficznie równy obiektowi po prawej stronie, a w przeciwnym **false**.
+**ma wartość true** , jeśli obiekt po lewej stronie operatora nie jest lexicographically równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Musi istnieć niejawna konwersja *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć z *convertible_string_type* do string_view po drugiej stronie. 
 
-Porównanie opiera się na parowania porównanie lexicographical sekwencji znaków. Jeśli mają taką samą liczbę elementów, a elementy są równe, dwa obiekty są równe. W przeciwnym razie są nierówne.
+Porównanie jest oparte na lexicographical parowania sekwencji znaków. Jeśli mają taką samą liczbę elementów, a wszystkie elementy są równe, te dwa obiekty są równe. W przeciwnym razie są one nierówne.
 
-## <a name="op_eq_eq"></a> operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Sprawdza, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
+Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
 
 ```cpp
 template <class CharType, class Traits>
@@ -96,26 +96,26 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*lewym*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
-*right*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*Kliknij*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt po lewej stronie operatora jest leksykograficznie równy obiektowi po prawej stronie, a w przeciwnym **false**.
+**ma wartość true** , jeśli obiekt po lewej stronie operatora jest lexicographically równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Musi istnieć niejawna konwersja *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć z *convertible_string_type* do string_view po drugiej stronie. 
 
-Porównanie opiera się na parowania porównanie lexicographical sekwencji znaków. Jeśli mają taką samą liczbę elementów, a elementy są równe, dwa obiekty są równe.
+Porównanie jest oparte na lexicographical parowania sekwencji znaków. Jeśli mają taką samą liczbę elementów, a wszystkie elementy są równe, te dwa obiekty są równe.
 
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>zakład&lt;
 
-Sprawdza, czy obiekt po lewej stronie operatora jest mniejszy niż obiekt w prawo sidestring_view
+Testuje, czy obiekt po lewej stronie operatora jest mniejszy od obiektu po prawej stronie sidestring_view
 ```cpp
 template <class CharType, class Traits>
 bool operator<(
@@ -135,21 +135,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*lewym*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
-*right*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*Kliknij*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiektu po lewej stronie operatora jest leksykograficznie krótszy niż obiekt po prawej stronie; w przeciwnym razie **false**.
+**true** , jeśli obiekt po lewej stronie operatora jest lexicographically mniejszy niż obiekt po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Musi istnieć niejawna konwersja *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć z *convertible_string_type* do string_view po drugiej stronie. 
 
-Porównanie opiera się na parowania porównanie lexicographical sekwencji znaków. Po napotkaniu pierwszego nierówne pary znaków wynik tego porównania jest zwracana. Jeśli zostaną znalezione żadne znaki nie nierówne, ale jednej sekwencji jest krótszy, krótszy sekwencji jest mniejsza niż dłużej. Innymi słowy "cat" jest mniejsza niż "cats".
+Porównanie jest oparte na lexicographical parowania sekwencji znaków. Po napotkaniu pierwszej nierównej pary znaków jest zwracany wynik tego porównania. Jeśli nie zostaną znalezione żadne nierówne znaki, ale jedna sekwencja jest krótsza, krótsza sekwencja jest mniejsza niż dłuższa. Inaczej mówiąc, "Cat" jest mniejszy niż "koty".
 
 ### <a name="example"></a>Przykład
 
@@ -173,9 +173,9 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a> Operator&lt;=
+## <a name="op_lt_eq"></a>zakład&lt;=
 
-Sprawdza, czy obiekt po lewej stronie operatora jest mniejszy niż lub równy obiektowi po prawej stronie.
+Testuje, czy obiekt po lewej stronie operatora jest mniejszy od lub równy obiektowi po prawej stronie.
 
 ```cpp
 template <class CharType, class Traits>
@@ -196,23 +196,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*lewym*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
-*right*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*Kliknij*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiektu po lewej stronie operatora jest leksykograficznie krótszy niż lub równy obiektowi po prawej stronie, w przeciwnym **false**.
+**true** , jeśli obiekt po lewej stronie operatora jest lexicographically mniejszy lub równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [operator&lt;](#op_lt).
 
-## <a name="op_lt_lt"></a> Operator&lt;&lt;
+## <a name="op_lt_lt"></a>zakład&lt;&lt;
 
-Zapisuje string_view do strumienia wyjściowego.
+Zapisuje string_view w strumieniu wyjściowym.
 
 ```cpp
 template <class CharType, class Traits>
@@ -222,23 +222,23 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostr*<br/>
-były zapisywane do strumienia wyjściowego.
+*Ostr*\
+strumień wyjściowy, w którym jest zapisywane.
 
-*str*<br/>
-String_view wprowadzonych do strumienia wyjściowego.
+*Str*\
+String_view do wprowadzenia do strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-były zapisywane do strumienia wyjściowego.
+strumień wyjściowy, w którym jest zapisywane.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tego operatora, aby wstawić zawartość string_view do strumienia wyjściowego, np. przy użyciu [std::cout](iostream.md#cout).
+Użyj tego operatora, aby wstawić zawartość string_view do strumienia wyjściowego, na przykład używając [std:: cout](iostream.md#cout).
 
-## <a name="op_gt"></a> Operator&gt;
+## <a name="op_gt"></a>zakład&gt;
 
-Sprawdza, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
+Testuje, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
 
 ```cpp
 template <class CharType, class Traits>
@@ -259,23 +259,23 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*lewym*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
-*right*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*Kliknij*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt po lewej stronie operatora jest leksykograficznie większy niż obiekt string_view po prawej stronie, a w przeciwnym **false**.
+**true** , jeśli obiekt po lewej stronie operatora jest lexicographically większy niż obiekt string_view po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [operator&lt;](#op_lt).
 
-## <a name="op_gt_eq"></a> Operator&gt;=
+## <a name="op_gt_eq"></a>zakład&gt;=
 
-Sprawdza, czy obiekt po lewej stronie operatora jest większy lub równy obiektowi po prawej stronie.
+Testuje, czy obiekt po lewej stronie operatora jest większy niż lub równy obiektowi po prawej stronie.
 
 ```cpp
 template <class CharType, class Traits>
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*lewym*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
-*right*<br/>
-Dowolny typ konwertowany ciąg lub obiekt typu `basic_string_view` mają być porównane.
+*Kliknij*\
+Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt po lewej stronie operatora jest leksykograficznie większa niż lub równy obiektowi po prawej stronie, w przeciwnym **false**.
+**true** , jeśli obiekt po lewej stronie operatora jest lexicographically większy lub równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [operator&lt;](#op_lt).
 
-## <a name="op_sv"></a> operator"" sv (string_view literału)
+## <a name="op_sv"></a>operator "" SV (string_view literal)
 
-Tworzy string_view z literału ciągu znaków. Przestrzeń nazw wymaga `std::literals::string_view_literals`. 
+Konstruuje string_view z literału ciągu. Wymaga przestrzeni `std::literals::string_view_literals`nazw. 
 
 ### <a name="example"></a>Przykład
 
@@ -329,4 +329,4 @@ using namespace literals::string_view_literals;
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<string_view >](../standard-library/string-view.md)<br/>
+[\<string_view >](../standard-library/string-view.md)

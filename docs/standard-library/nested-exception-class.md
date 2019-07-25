@@ -1,21 +1,21 @@
 ---
-title: nested_exception klasy
+title: Klasa nested_exception
 ms.date: 11/04/2016
 f1_keywords:
 - exception/std::bad_exception
 helpviewer_keywords:
 - bad_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: a568a8d9a3817883656406d63c3dd948539bb385
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267911"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460178"
 ---
-# <a name="nestedexception-class"></a>nested_exception klasy
+# <a name="nestedexception-class"></a>Klasa nested_exception
 
-Klasa opisuje wyjątek do użycia z wielokrotnego dziedziczenia. Jego przechwytuje aktualnie obsługiwany wyjątek i zapisuje go do późniejszego użycia.
+Klasa opisuje wyjątek do użycia z wielokrotnym dziedziczeniem. Przechwytuje aktualnie obsłużony wyjątek i zapisuje go do późniejszego użycia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,16 +40,16 @@ class nested_exception {
 
 |||
 |-|-|
-|[rethrow_nested](#rethrow_nested)|Wyjątek przechowywanych.|
-|[nested_ptr](#nested_ptr)|Zwraca przechowywaną wyjątku.|
+|[rethrow_nested](#rethrow_nested)|Zgłasza wyjątek przechowywany.|
+|[nested_ptr](#nested_ptr)|Zwraca przechowywany wyjątek.|
 
-### <a name="op_as"></a> operator =
+### <a name="op_as"></a>operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a> nested_ptr
+### <a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -57,9 +57,9 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Przechowywane wyjątek przechwycony przez to `nested_exception` obiektu.
+Przechowywany wyjątek przechwytywany przez ten `nested_exception` obiekt.
 
-### <a name="rethrow_nested"></a> rethrow_nested
+### <a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -67,15 +67,15 @@ Przechowywane wyjątek przechwycony przez to `nested_exception` obiektu.
 
 #### <a name="remarks"></a>Uwagi
 
-Jeśli `nested_ptr()` zwraca wskaźnikiem typu null, wywołania funkcji `std::terminate()`. W przeciwnym razie wyniku weryfikacji zgłasza wyjątek przechowywanych wyjątek przechwycony przez `*this`.
+Jeśli `nested_ptr()` zwraca wskaźnik o wartości null, wywołuje `std::terminate()`funkcję. W przeciwnym razie zgłasza przechowywany wyjątek przechwytywany przez `*this`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wyjątku >
+**Nagłówek:** \<> wyjątku
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[exception, klasa](../standard-library/exception-class.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Klasa wyjątku](../standard-library/exception-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

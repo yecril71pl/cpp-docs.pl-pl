@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 623bda13a12ac311618e1b9fffdbc3f676013df6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336509"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452680"
 ---
 # <a name="isenum-class"></a>is_enum — Klasa
 
-Sprawdza, czy typ jest wyliczeniem.
+Testuje, czy typ jest wyliczeniem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest typem wyliczenia lub `cv-qualified` formularza typu wyliczeniowego, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem wyliczenia lub `cv-qualified` postacią typu wyliczenia, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -73,9 +73,9 @@ is_enum<int> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_integral, klasa](../standard-library/is-integral-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_integral, klasa](../standard-library/is-integral-class.md)

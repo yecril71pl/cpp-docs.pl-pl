@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
-ms.openlocfilehash: 7da7d9dd0fae3ce3fa21ecd774f88643dca49c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7bec211f30986deccc869a879dd5155ea70996b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212004"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457283"
 ---
 # <a name="constructing-output-stream-objects"></a>Konstruowanie obiektów strumienia wyjściowego
 
-Jeśli używasz tylko wstępnie zdefiniowanych `cout`, `cerr`, lub `clog` obiektów, nie trzeba utworzyć strumień wyjściowy. Należy użyć konstruktory:
+Jeśli używasz tylko wstępnie zdefiniowanych `cout`, `cerr`lub `clog` obiektów, nie musisz tworzyć strumienia wyjściowego. Należy użyć konstruktorów dla:
 
-- [Dane wyjściowe pliku Stream konstruktorów](#vclrfoutputfilestreamconstructorsanchor1)
+- [Konstruktory strumienia plików wyjściowych](#vclrfoutputfilestreamconstructorsanchor1)
 
-- [Konstruktory Stream ciągu danych wyjściowych](#vclrfoutputstringstreamconstructorsanchor2)
+- [Konstruktory strumienia ciągów wyjściowych](#vclrfoutputstringstreamconstructorsanchor2)
 
-## <a name="vclrfoutputfilestreamconstructorsanchor1"></a> Dane wyjściowe pliku Stream konstruktorów
+## <a name="vclrfoutputfilestreamconstructorsanchor1"></a>Konstruktory strumienia plików wyjściowych
 
-Możesz utworzyć strumień wyjściowy plik na jeden z dwóch sposobów:
+Strumień pliku wyjściowego można skonstruować na jeden z dwóch sposobów:
 
-- Użyj domyślnego konstruktora, a następnie wywołaj `open` funkcja elementu członkowskiego.
+- Użyj konstruktora domyślnego, a następnie Wywołaj `open` funkcję członkowską.
 
    ```cpp
    ofstream myFile; // Static or on the stack
@@ -33,15 +33,15 @@ Możesz utworzyć strumień wyjściowy plik na jeden z dwóch sposobów:
    pmyFile->open("filename");
    ```
 
-- Określ flagi nazwę pliku i tryb w wywołaniu konstruktora.
+- Określ nazwę pliku i flagi trybu w wywołaniu konstruktora.
 
    ```cpp
    ofstream myFile("filename", ios_base::out);
    ```
 
-## <a name="vclrfoutputstringstreamconstructorsanchor2"></a> Konstruktory Stream ciągu danych wyjściowych
+## <a name="vclrfoutputstringstreamconstructorsanchor2"></a>Konstruktory strumienia ciągów wyjściowych
 
-Aby utworzyć strumień wyjściowy ciągu, można użyć `ostringstream` w następujący sposób:
+Aby utworzyć strumień ciągu wyjściowego, można użyć `ostringstream` w następujący sposób:
 
 ```cpp
 using namespace std;
@@ -53,8 +53,8 @@ string sp = myString.str(); // Obtain string
 cout << sp << endl;
 ```
 
-`ends` "Manipulator" dodaje niezbędne kończącego znaku null na ciąg.
+`ends` "Manipulator" dodaje do ciągu niezbędny kończący znak null.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Strumienie wyjściowe](../standard-library/output-streams.md)<br/>
+[Strumienie wyjściowe](../standard-library/output-streams.md)

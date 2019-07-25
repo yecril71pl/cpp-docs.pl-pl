@@ -1,28 +1,28 @@
 ---
-title: '&lt;Wektor&gt;'
+title: '&lt;niemożliwe&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <vector>
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240963"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448065"
 ---
-# <a name="ltvectorgt"></a>&lt;Wektor&gt;
+# <a name="ltvectorgt"></a>&lt;niemożliwe&gt;
 
 Definiuje wektor klasy szablonu kontenera i kilka szablonów pomocniczych.
 
-`vector` Jest kontenerem, który służy do organizowania elementów danego typu w liniowej sekwencji. Umożliwia szybkiego losowego dostęp do dowolnego elementu i dynamiczne dodań i usunięć wpisów do i z sekwencji. `vector` Jest preferowanym kontenerem dla sekwencji, gdy wydajność dostępu swobodnego znajduje się w warstwie premium.
+`vector` Jest kontenerem, który organizuje elementy danego typu w sekwencji liniowej. Umożliwia szybki dostęp losowy do dowolnego elementu, a także dynamiczne dodawanie i usuwanie do i z sekwencji. Jest `vector` to preferowany kontener dla sekwencji, gdy wydajność dostępu swobodnego jest w warstwie Premium.
 
 > [!NOTE]
-> \<Wektor > używa również biblioteki `#include <initializer_list>` instrukcji.
+> Biblioteka wektora > również `#include <initializer_list>` używa instrukcji. \<
 
-Aby uzyskać więcej informacji o klasie `vector`, zobacz [vector, klasa](../standard-library/vector-class.md). Aby uzyskać informacje o specjalizacji `vector<bool>`, zobacz [wektora\<bool > klasa](../standard-library/vector-bool-class.md).
+Aby uzyskać więcej informacji na temat `vector`klasy, zobacz [Vector class](../standard-library/vector-class.md). Aby uzyskać informacje o specjalizacji `vector<bool>`, zobacz [Vector\<bool > Class](../standard-library/vector-bool-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,17 +77,17 @@ void swap (
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
-Parametr szablonu dla typu danych przechowywanych w wektorze.
+*Wprowadź*\
+Parametr szablonu dotyczący typu danych przechowywanych w wektorze.
 
-*Allocator*\
-Parametr szablonu, aby uzyskać przechowywany obiekt alokatora odpowiedzialny za alokacji i dezalokacji pamięci.
+*Alokator*\
+Parametr szablonu dla przechowywanego obiektu alokatora odpowiedzialnego za alokację i cofanie alokacji pamięci.
 
-*po lewej stronie*\
-Pierwszego wektora (po lewej stronie) w ramach operacji porównania
+*lewym*\
+Pierwszy (lewy) wektor w operacji porównania
 
-*po prawej stronie*\
-Drugi wektor (po prawej) w ramach operacji porównania.
+*Kliknij*\
+Drugi (prawy) wektor w operacji porównania.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -95,34 +95,34 @@ Drugi wektor (po prawej) w ramach operacji porównania.
 
 |||
 |-|-|
-|[operator! =](../standard-library/vector-operators.md#op_neq)|Sprawdza, czy obiekt wektora po lewej stronie operatora nie jest równy obiektowi wektora po prawej stronie.|
-|[Operator <](../standard-library/vector-operators.md#op_lt)|Sprawdza, czy obiektu wektora po lewej stronie operatora jest mniejszy niż obiekt wektora po prawej stronie.|
-|[Operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Sprawdza, czy wektora obiektu po lewej stronie operatora jest mniejszy niż lub równy obiektowi wektora po prawej stronie.|
-|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Sprawdza, czy obiekt wektora po lewej stronie operatora jest równy obiektowi wektora po prawej stronie.|
-|[operator>](../standard-library/vector-operators.md#op_gt)|Sprawdza, czy obiekt wektora, po lewej stronie operatora jest większy niż obiektu wektora po prawej stronie.|
-|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Sprawdza, czy obiekt wektora po lewej stronie operatora jest większy lub równy obiektowi wektora po prawej stronie.|
+|[zakład! =](../standard-library/vector-operators.md#op_neq)|Testuje, czy obiekt Vector po lewej stronie operatora nie jest równy obiektowi wektora po prawej stronie.|
+|[< operatora](../standard-library/vector-operators.md#op_lt)|Testuje, czy obiekt Vector po lewej stronie operatora jest mniejszy niż obiekt wektora po prawej stronie.|
+|[zakład\<=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, czy obiekt Vector po lewej stronie operatora jest mniejszy niż lub równy obiektowi wektora po prawej stronie.|
+|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Testuje, czy obiekt Vector po lewej stronie operatora jest równy obiektowi wektora po prawej stronie.|
+|[operator>](../standard-library/vector-operators.md#op_gt)|Testuje, czy obiekt Vector po lewej stronie operatora jest większy niż obiekt wektora po prawej stronie.|
+|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, czy obiekt Vector po lewej stronie operatora jest większy niż lub równy obiektowi wektora po prawej stronie.|
 
 ### <a name="classes"></a>Klasy
 
 |||
 |-|-|
-|[vector, klasa](../standard-library/vector-class.md)|Klasa szablonu kontenerów sekwencji, które Rozmieść elementy danego typu w układzie liniowych i zezwolić na dostęp szybkiego losowego do dowolnego elementu.|
+|[vector, klasa](../standard-library/vector-class.md)|Klasa szablonu kontenerów sekwencji, które układają elementy danego typu w rozmieszczeniu liniowym i umożliwiają szybki dostęp losowy do dowolnego elementu.|
 
 ### <a name="specializations"></a>Specjalizacje
 
 |||
 |-|-|
-|[Skrót]()||
-|[Wektor\<bool > klasa](../standard-library/vector-bool-class.md)|Pełne specjalizacji wektora klasy szablonu dla elementów typu `bool` z alokator dla podstawowego typu, które są używane przez specjalizację.|
+|[skrótu]()||
+|[Klasa\<bool > Vector](../standard-library/vector-bool-class.md)|Pełna specjalizacja klasy szablonu wektora dla elementów typu `bool` z alokatorem dla typu podstawowego używanego przez specjalizację.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wektor >
+**Nagłówek:** \<> wektora
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

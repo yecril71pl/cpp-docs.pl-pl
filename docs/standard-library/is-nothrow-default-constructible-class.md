@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_default_constructible
 ms.assetid: c576fcc9-5be1-43aa-b93a-64d3f1848887
-ms.openlocfilehash: d635c8a06d3acc45d214dbe7cb1eb7800f56dc86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76b58800a454f42f6b5b6fcea23df161c37564b2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148487"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455928"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible —  klasa
 
-Sprawdza, czy typ ma niezgłaszające domyślnego konstruktora.
+Testuje, czy typ ma niezgłaszany domyślny Konstruktor.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,19 +26,19 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* ma nothrow Konstruktor domyślny, w przeciwnym razie przechowuje wartość false. Wystąpienie typu predykatu jest odpowiednikiem `is_nothrow_constructible<Ty>`.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* ma konstruktora domyślnego nothrow, w przeciwnym razie zawiera wartość false. Wystąpienie predykatu typu jest równoważne z `is_nothrow_constructible<Ty>`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 20191b84e4bbad760de1035fdb027fcbe827c874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412946"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460171"
 ---
 # <a name="maxnone-class"></a>max_none — Klasa
 
-W tym artykule opisano [maksymalnej liczby klas](../standard-library/allocators-header.md) obiekt, który ogranicza [FreeList —](../standard-library/freelist-class.md) obiektu do maksymalnej długości równy zero.
+Opisuje obiekt [klasy maksymalnej](../standard-library/allocators-header.md) , który ogranicza obiekt [freelist](../standard-library/freelist-class.md) do maksymalnej długości równej zero.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,27 +38,27 @@ class max_none
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Maksymalna*|Maksymalna klasę, która określa maksymalną liczbę elementów do przechowywania w `freelist`.|
+|*Maksymalna*|Maksymalna Klasa, która określa maksymalną liczbę elementów do przechowywania w `freelist`.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[przydzielona](#allocated)|Zwiększa liczbę bloków ilość przydzielonej pamięci.|
-|[Cofnięto alokację](#deallocated)|Dekrementuje liczbę przydzielonych bloków pamięci.|
-|[full](#full)|Zwraca wartość określającą, czy więcej bloków pamięci powinna być dodana do listy bezpłatne.|
-|[Wydana](#released)|Zmniejsza liczbę pamięci blokuje się na liście bezpłatne.|
-|[zapisano](#saved)|Zwiększa liczbę bloków pamięci na liście bezpłatne.|
+|[rozdziela](#allocated)|Zwiększa liczbę przydzieloną bloków pamięci.|
+|[bez alokacji](#deallocated)|Zmniejsza liczbę przydzieloną bloków pamięci.|
+|[full](#full)|Zwraca wartość określającą, czy więcej bloków pamięci należy dodać do listy bezpłatnych.|
+|[zwolni](#released)|Zmniejsza liczbę bloków pamięci na liście bezpłatnych.|
+|[zapis](#saved)|Zwiększa liczbę bloków pamięci na liście bezpłatnych.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<buforów >
+**Nagłówek:** \<przypisania >
 
-**Namespace:** stdext
+**Przestrzeń nazw:** stdext
 
-## <a name="allocated"></a>  max_none::allocated
+## <a name="allocated"></a>max_none:: przydzielono
 
-Zwiększa liczbę bloków ilość przydzielonej pamięci.
+Zwiększa liczbę przydzieloną bloków pamięci.
 
 ```cpp
 void allocated(std::size_t _Nx = 1);
@@ -72,11 +72,11 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego nie działa. Jest wywoływane po każdym pomyślnym wywołaniem przez `cache_freelist::allocate` operatora **nowe**. Argument *_Nx* jest to liczba bloków pamięci we fragmencie przydzielonej przez operator **nowe**.
+Ta funkcja członkowska nic nie robi. Jest wywoływana po każdym pomyślnym wywołaniu `cache_freelist::allocate` do operatora **New**. Argument *_Nx* jest liczbą bloków pamięci w fragmencie przydzielonym przez operator **New**.
 
-## <a name="deallocated"></a>  max_none::deallocated
+## <a name="deallocated"></a>max_none::d eallocated
 
-Dekrementuje liczbę przydzielonych bloków pamięci.
+Zmniejsza liczbę przydzieloną bloków pamięci.
 
 ```cpp
 void deallocated(std::size_t _Nx = 1);
@@ -90,11 +90,11 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego nie działa. Ta funkcja członkowska jest wywoływana po każdym wywołaniu przez `cache_freelist::deallocate` operatora **Usuń**. Argument *_Nx* jest to liczba bloków pamięci we fragmencie cofnięta przez operator **Usuń**.
+Funkcja członkowska nic nie robi. Ta funkcja członkowska jest wywoływana po każdym wywołaniu `cache_freelist::deallocate` operatora, aby operator został **usunięty**. Argument *_Nx* to liczba bloków pamięci w cofnięciu przydziału fragmentów przez operator **delete**.
 
-## <a name="full"></a>  max_none::Full
+## <a name="full"></a>max_none:: Full
 
-Zwraca wartość określającą, czy więcej bloków pamięci powinna być dodana do listy bezpłatne.
+Zwraca wartość określającą, czy więcej bloków pamięci należy dodać do listy bezpłatnych.
 
 ```cpp
 bool full();
@@ -102,15 +102,15 @@ bool full();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ta funkcja członkowska jest zawsze zwraca **true**.
+Ta funkcja członkowska zawsze zwraca **wartość true**.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest wywoływana przez `cache_freelist::deallocate`. Jeśli to wywołanie zwraca **true**, `deallocate` umieszcza blok pamięci na liście bezpłatne; Jeśli zostanie zwrócona wartość false, `deallocate` operatora wywołania **Usuń** można cofnąć alokacji bloku.
+Ta funkcja członkowska jest wywoływana `cache_freelist::deallocate`przez. Jeśli wywołanie zwraca **wartość true**, `deallocate` umieszcza blok pamięci na liście bezpłatnych. Jeśli zwróci wartość false, `deallocate` wywołania operatora **delete** w celu cofnięcia alokacji bloku.
 
-## <a name="released"></a>  max_none::released
+## <a name="released"></a>max_none:: wydana
 
-Zmniejsza liczbę pamięci blokuje się na liście bezpłatne.
+Zmniejsza liczbę bloków pamięci na liście bezpłatnych.
 
 ```cpp
 void released();
@@ -118,11 +118,11 @@ void released();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego nie działa. `released` Funkcji składowej klasy bieżący maksymalny jest wywoływana przez `cache_freelist::allocate` zawsze, gdy usunie blok pamięci z bezpłatnych listy.
+Ta funkcja członkowska nic nie robi. Funkcja członkowska bieżącej klasy Max jest wywoływana za `cache_freelist::allocate` każdym razem, gdy usuwa blok pamięci z listy bezpłatnych. `released`
 
-## <a name="saved"></a>  max_none::Saved
+## <a name="saved"></a>max_none:: Zapisano
 
-Zwiększa liczbę bloków pamięci na liście bezpłatne.
+Zwiększa liczbę bloków pamięci na liście bezpłatnych.
 
 ```cpp
 void saved();
@@ -130,8 +130,8 @@ void saved();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego nie działa. Jest ona wywoływana przez `cache_freelist::deallocate` zawsze umieszcza blok pamięci na liście bezpłatne.
+Ta funkcja członkowska nic nie robi. Jest wywoływana za `cache_freelist::deallocate` każdym razem, gdy umieszcza blok pamięci na liście bezpłatnych.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -1,21 +1,21 @@
 ---
-title: is_destructible, klasa
+title: Klasa is_destructible
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_destructible
 helpviewer_keywords:
 - is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-ms.openlocfilehash: 1036a3756a736ee3916ed9fca84aa935bb0ba2cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80592a6fca274533a798b2f5a2459d336ee2c301
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336832"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452732"
 ---
-# <a name="isdestructible-class"></a>is_destructible, klasa
+# <a name="isdestructible-class"></a>Klasa is_destructible
 
-Sprawdza, czy typ jest zniszczalnych.
+Testuje, czy typem jest zniszczalnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,19 +26,19 @@ struct is_destructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest zniszczalnych typu, w przeciwnym razie przechowuje wartość false. Zniszczalnych typy są typami odwołań, typów i typów obiektów gdzie dla pewnego typu `U` równa `remove_all_extents_t<T>` nieobliczonym operand `std::declval<U&>.~U()` jest poprawnie sformułowany. Innych typów, w tym niekompletnych typów **void**i typy funkcji, nie są typami zniszczalnych.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest typem zniszczalnych, w przeciwnym razie zawiera wartość false. Typy zniszczalnych to typy odwołań, typy obiektów i typy, w których dla niektórych `U` typów, `remove_all_extents_t<T>` które są równe nieocenianego operandu `std::declval<U&>.~U()` , są poprawnie sformułowane. Inne typy, w tym niekompletne typy, **void**i typy funkcji, nie są typami zniszczalnych.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

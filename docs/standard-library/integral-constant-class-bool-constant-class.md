@@ -1,5 +1,5 @@
 ---
-title: integral_constant, klasa, bool_constant, klasa
+title: Klasa integral_constant, Klasa bool_constant
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::integral_constant
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: f7b9217560bc94c536a7c819276266fd16fa4b07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404874"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452046"
 ---
-# <a name="integralconstant-class-boolconstant-class"></a>integral_constant, klasa, bool_constant, klasa
+# <a name="integralconstant-class-boolconstant-class"></a>Klasa integral_constant, Klasa bool_constant
 
-Sprawia, że całkowita stałe od typu i wartości.
+Tworzy całkowitą stałą na podstawie typu i wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ stałej.
 
-*v*<br/>
+*v*\
 Wartość stałej.
 
 ## <a name="remarks"></a>Uwagi
 
-`integral_constant` Klasy szablonu, gdy wyspecjalizowane z typem całkowitym *T* i wartość *v* tego typu reprezentuje obiekt, który zawiera stałą całkowitą typu z określoną wartością. Element członkowski o nazwie `type` jest aliasem dla typu specjalizacji wygenerowany szablon i `value` elementu członkowskiego zawiera wartość *v* użyty do utworzenia specjalizacji.
+Klasa szablonu, gdy jest wyspecjalizowany dla typu całkowitego *T* i wartość v tego typu, reprezentuje obiekt, który przechowuje stałą tego typu całkowitego z określoną wartością.  `integral_constant` Element członkowski o `type` nazwie jest aliasem dla wygenerowanego typu specjalizacji szablonu, `value` a składowa zawiera wartość *v* użytą do utworzenia specjalizacji.
 
-`bool_constant` Klasy szablonu jest jawna specjalizacja częściowe `integral_constant` , który używa **bool** jako *T* argumentu.
+Klasa szablonu jest jawną specjalizacją `integral_constant` częściową, która używa **bool** jako argumentu *T.* `bool_constant`
 
 ## <a name="example"></a>Przykład
 
@@ -76,10 +76,10 @@ integral_constant<bool, false> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

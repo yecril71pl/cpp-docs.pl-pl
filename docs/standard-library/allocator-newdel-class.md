@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-ms.openlocfilehash: eac2fb993eb3e9aab5d043debe6402576d7b49b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d49a1596371e4a69873b826d3e756f263539d034
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411022"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448309"
 ---
 # <a name="allocatornewdel-class"></a>allocator_newdel — Klasa
 
-Implementuje alokatora, który używa **operatora delete** można cofnąć alokacji pamięci bloku i **nowy operator** można przydzielić bloku pamięci.
+Implementuje program przydzielający, który używa **operatora delete** do cofnięcia alokacji bloku pamięci i **operatora new** , aby przydzielić blok pamięci.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,18 +31,18 @@ class allocator_newdel;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Typ*|Typ elementów przydzielonej przez alokator.|
+|*Typ*|Typ elementów przyznanych przez alokatora.|
 
 ## <a name="remarks"></a>Uwagi
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) — makro przekazuje tę klasę jako *nazwa* parametru w następującej instrukcji: `ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+Makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) przekazuje tę klasę jako parametr *name* w następującej instrukcji:`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<buforów >
+**Nagłówek:** \<przypisania >
 
-**Namespace:** stdext
+**Przestrzeń nazw:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

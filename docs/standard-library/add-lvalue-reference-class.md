@@ -1,21 +1,21 @@
 ---
-title: add_lvalue_reference, klasa
+title: Klasa add_lvalue_reference
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::add_lvalue_reference
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 8dbb4f91da8d7a0bf0a90b3edc4fce2918d52a9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6317b6665adb7f3a06da564fcf049d0b64eb42e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411204"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456562"
 ---
-# <a name="addlvaluereference-class"></a>add_lvalue_reference, klasa
+# <a name="addlvaluereference-class"></a>Klasa add_lvalue_reference
 
-Sprawia, że odwołanie do typu z typu.
+Tworzy odwołanie do typu z typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,12 +29,12 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie modyfikatora typu przechowuje zmodyfikowany typ, który jest *T* Jeśli *T* jest odwołanie lvalue, w przeciwnym razie `T&`.
+Wystąpienie modyfikatora typu zawiera zmodyfikowany typ, który jest *t* , jeśli *t* jest odwołaniem lvalue, w przeciwnym razie `T&`.
 
 ## <a name="example"></a>Przykład
 
@@ -63,9 +63,9 @@ add_lvalue_reference_t<int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_reference, klasa](../standard-library/remove-reference-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_reference, klasa](../standard-library/remove-reference-class.md)

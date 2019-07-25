@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::operator=
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
-ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ced1f60c811f585928f47c6cfd5e695d0c4085
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160020"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457752"
 ---
 # <a name="filestatus-class"></a>file_status — Klasa
 
-Opakowuje [typ_pliku](../standard-library/filesystem-enumerations.md#file_type) i plik [perms](../standard-library/filesystem-enumerations.md#perms).
+Zawija [file_type](../standard-library/filesystem-enumerations.md#file_type) i [uprawnienia](../standard-library/filesystem-enumerations.md#perms)pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,11 +33,11 @@ class file_status;
 
 |Konstruktor|Opis|
 |-|-|
-|[file_status](#file_status)|Tworzy otokę dla [typ_pliku](../standard-library/filesystem-enumerations.md#file_type) i plik [perms](../standard-library/filesystem-enumerations.md#perms).|
+|[file_status](#file_status)|Konstruuje otokę dla [file_type](../standard-library/filesystem-enumerations.md#file_type) i [uprawnienia](../standard-library/filesystem-enumerations.md#perms)pliku.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[type](#type)|Pobiera lub ustawia `file_type`.|
 |[uprawnienia](#permissions)|Pobiera lub ustawia uprawnienia do pliku.|
@@ -46,17 +46,17 @@ class file_status;
 
 |Operator|Opis|
 |-|-|
-|[operator=](#op_as)|Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.|
+|[operator=](#op_as)|Operatory przypisywania domyślnego elementu członkowskiego zachowują się zgodnie z oczekiwaniami.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<filesystem >
+**Nagłówek:** \<> systemu plików
 
-**Namespace:** std::experimental::filesystem, std::experimental::filesystem
+**Przestrzeń nazw:** std:: eksperymentalne:: FileSystem, std:: eksperymentalne:: filesystem
 
-## <a name="file_status"></a> file_status::file_status —
+## <a name="file_status"></a>file_status::file_status
 
-Tworzy otokę dla [typ_pliku](../standard-library/filesystem-enumerations.md#file_type) i plik [perms](../standard-library/filesystem-enumerations.md#perms).
+Konstruuje otokę dla [file_type](../standard-library/filesystem-enumerations.md#file_type) i [uprawnienia](../standard-library/filesystem-enumerations.md#perms)pliku.
 
 ```cpp
 explicit file_status(
@@ -72,18 +72,18 @@ file_status(file_status&&) noexcept = default;
 
 ### <a name="parameters"></a>Parametry
 
-*ftype*<br/>
-Określony `file_type`, wartość domyślna to `file_type::none`.
+*ftype*\
+Określony `file_type` ,`file_type::none`domyślnie.
 
-*Maska*<br/>
-Określony plik `perms`, wartość domyślna to `perms::unknown`.
+*bitowa*\
+Określony plik `perms`, `perms::unknown`domyślnie.
 
-*file_status*<br/>
+*file_status*\
 Przechowywany obiekt.
 
-## <a name="op_as"></a> file_status::operator =
+## <a name="op_as"></a>file_status:: operator =
 
-Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.
+Operatory przypisywania domyślnego elementu członkowskiego zachowują się zgodnie z oczekiwaniami.
 
 ```cpp
 file_status& operator=(const file_status&) noexcept = default;
@@ -92,10 +92,10 @@ file_status& operator=(file_status&&) nexcept = default;
 
 ### <a name="parameters"></a>Parametry
 
-*file_status*<br/>
-[File_status](../standard-library/file-status-class.md) są kopiowane do `file_status`.
+*file_status*\
+[File_status](../standard-library/file-status-class.md) kopiowany do `file_status`.
 
-## <a name="type"></a> Typ
+## <a name="type"></a>Wprowadź
 
 Pobiera lub ustawia `file_type`.
 
@@ -106,14 +106,14 @@ void type(file_type ftype) noexcept
 
 ### <a name="parameters"></a>Parametry
 
-*ftype*<br/>
+*ftype*\
 Określony `file_type`.
 
-## <a name="permissions"></a> Uprawnienia
+## <a name="permissions"></a>uprawnienia
 
 Pobiera lub ustawia uprawnienia do pliku.
 
-Użyj metody ustawiającej, aby wyświetlić plik `readonly` lub usuń `readonly` atrybutu.
+Użyj metody ustawiającej, aby utworzyć `readonly` plik lub `readonly` usunąć atrybut.
 
 ```cpp
 perms permissions() const noexcept
@@ -122,11 +122,11 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Parametry
 
-*Maska*<br/>
+*bitowa*\
 Określony `perms`.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[path, klasa](../standard-library/path-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Path — Klasa](../standard-library/path-class.md)\
+[\<filesystem>](../standard-library/filesystem.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_cv class
 - remove_cv
 ms.assetid: 8502602a-1c80-479c-84e0-33bd1d6496d6
-ms.openlocfilehash: dcabf9b4687d473898dea98f1001647299a40b76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbe21d8e9f0ed0dc7c72a19584f24ee1bce0803c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368906"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451322"
 ---
 # <a name="removecv-class"></a>remove_cv — Klasa
 
@@ -30,12 +30,12 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_cv<T>` przechowuje zmodyfikowany typ, który jest `T1` podczas *T* ma postać `const T1`, `volatile T1`, lub `const volatile T1`, w przeciwnym razie *T*.
+Wystąpienie `remove_cv<T>` zawiera zmodyfikowany typ, który jest `T1` , gdy *t* ma `const T1`postać, `volatile T1`lub `const volatile T1`, w przeciwnym razie *t*.
 
 ## <a name="example"></a>Przykład
 
@@ -63,10 +63,10 @@ remove_cv_t<const volatile int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const, klasa](../standard-library/remove-const-class.md)<br/>
-[remove_volatile, klasa](../standard-library/remove-volatile-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[Klasa remove_const](../standard-library/remove-const-class.md)\
+[remove_volatile, klasa](../standard-library/remove-volatile-class.md)

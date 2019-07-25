@@ -10,16 +10,16 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380120"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449655"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc — Klasa
 
-Definiuje [block alokatora](../standard-library/allocators-header.md) który przydziela i zwalnia bloki pamięci o rozmiarze jednego.
+Definiuje [Alokator bloku](../standard-library/allocators-header.md) , który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,34 +32,34 @@ class cache_suballoc
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Sz*|Liczba elementów w tablicy do przydzielenia.|
+|*Sz*|Liczba elementów w tablicy, która ma zostać przypisana.|
 
 ## <a name="remarks"></a>Uwagi
 
-Cache_suballoc — klasa szablonu przechowuje bloki cofnięcia przydziału pamięci w bezpłatnej listę o długości niepowiązane przy użyciu `freelist<sizeof(Type), max_unbounded>`i suballocates bloki pamięci z większych fragment przydzielonymi **nowy operator** po liście bezpłatne pusty.
+Klasa szablonu cache_suballoc przechowuje cofnięte alokacje bloków pamięci na wolnej liście o nieograniczonej długości, `freelist<sizeof(Type), max_unbounded>`przy użyciu i podporządkować bloków pamięci z większego fragmentu przydzielonego za pomocą **operatora new** , gdy lista bezpłatna jest pusta.
 
-Każdy fragment zawiera `Sz * Nelts` w bajtach dostępnej pamięci i danych, **nowy operator** i **operatora delete** wymagają. Przydzielone fragmenty nigdy nie są zwalniane.
+Każdy fragment zawiera `Sz * Nelts` bajty użytecznej pamięci oraz dane, które **operator new** i **operator delete** wymagają. Przydzieloną fragmenty nie są nigdy zwalniane.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[cache_suballoc](#cache_suballoc)|Tworzy obiekt typu `cache_suballoc`.|
+|[cache_suballoc](#cache_suballoc)|Konstruuje obiekt typu `cache_suballoc`.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<buforów >
+**Nagłówek:** \<przypisania >
 
-**Namespace:** stdext
+**Przestrzeń nazw:** stdext
 
-## <a name="allocate"></a>  cache_suballoc::allocate
+## <a name="allocate"></a>cache_suballoc:: Allocate
 
 Przydziela blok pamięci.
 
@@ -71,17 +71,17 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
+|*liczbą*|Liczba elementów w tablicy, która ma zostać przypisana.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do przydzielonego obiektu.
+Wskaźnik do przydzielony obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
+## <a name="cache_suballoc"></a>cache_suballoc::cache_suballoc
 
-Tworzy obiekt typu `cache_suballoc`.
+Konstruuje obiekt typu `cache_suballoc`.
 
 ```cpp
 cache_suballoc();
@@ -89,9 +89,9 @@ cache_suballoc();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="deallocate"></a>  cache_suballoc::deallocate
+## <a name="deallocate"></a>cache_suballoc::d eallocate
 
-Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
-|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.|
+|*liczbą*|Liczba obiektów do cofnięcia przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

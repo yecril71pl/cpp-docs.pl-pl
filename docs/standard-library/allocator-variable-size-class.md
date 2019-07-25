@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocator_variable_size
 - stdext::allocators [C++], allocator_variable_size
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
-ms.openlocfilehash: a2c4681ec5252166754a45b026ea119651f18a38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf243089ee8f4e26930e183b007a108e38f444e3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371675"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458155"
 ---
 # <a name="allocatorvariablesize-class"></a>allocator_variable_size — Klasa
 
-Opisuje obiekt, który zarządza alokacją pamięci i zwalnianiem dla obiektów typu *typu* używanie pamięci podręcznej typu [cache_freelist](../standard-library/cache-freelist-class.md) o długości zarządza [max_variable_size —](../standard-library/max-variable-size-class.md).
+Opisuje obiekt, który zarządza alokacją i zwalnianiem magazynu dla obiektów typu *typu za pomocą* pamięci podręcznej typu [cache_freelist](../standard-library/cache-freelist-class.md) o długości zarządzanej przez [max_variable_size](../standard-library/max-variable-size-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,18 +31,18 @@ class allocator_variable_size;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Typ*|Typ elementów przydzielonej przez alokator.|
+|*Typ*|Typ elementów przyznanych przez alokatora.|
 
 ## <a name="remarks"></a>Uwagi
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) — makro przekazuje tę klasę jako *nazwa* parametru w następującej instrukcji: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
+Makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) przekazuje tę klasę jako parametr *name* w następującej instrukcji:`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<buforów >
+**Nagłówek:** \<przypisania >
 
-**Namespace:** stdext
+**Przestrzeń nazw:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -12,56 +12,56 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159473"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448895"
 ---
 # <a name="gslice-class"></a>gslice — Klasa
 
-Klasy narzędzi do tablicy valarray, który jest używany do definiowania wielowymiarowe podzbiór tablicy valarray. Jeśli tablica valarray jest traktowany jako wielowymiarowe macierzy przy użyciu wszystkich elementów w tablicy, wycinek wyodrębnia wektor z tablicy wielowymiarowej.
+Klasa narzędzi do valarray, która jest używana do definiowania wielowymiarowych podzestawów valarray. Jeśli valarray jest traktowany jako wielowymiarowa macierz ze wszystkimi elementami w tablicy, wycinek zostanie wyodrębniony z tablicy wielowymiarowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa przechowuje parametrów, charakteryzujące się do obiektu typu [gslice_array —](../standard-library/gslice-array-class.md). Podzbiór tablicy valarray pośrednio jest tworzony, gdy obiekt gslice — klasa pojawi się jako argument dla obiektu klasy [valarray](../standard-library/valarray-class.md#op_at)**\<typ >**. Przechowywane wartości, które określają podzbioru wybrana w zaufanym valarray nadrzędnego obejmują:
+Klasa przechowuje parametry, które opisują obiekt typu [gslice_array](../standard-library/gslice-array-class.md). Podzestaw elementu valarray jest pośrednio skonstruowany, gdy obiekt klasy gslice pojawia się jako argument dla obiektu klasy [valarray](../standard-library/valarray-class.md#op_at) **\<typu >** . Przechowywane wartości określające podzbiór wybrany z elementu nadrzędnego valarray obejmują:
 
 - Indeks początkowy.
 
-- Długość wektora klasy `valarray<size_t>`.
+- Wektor długości klasy `valarray<size_t>`.
 
-- Wektor stride klasy `valarray<size_t>`.
+- Wektora krok klasy `valarray<size_t>`.
 
 Dwa wektory muszą mieć tę samą długość.
 
-Jeśli zestawu zdefiniowanego przez gslice — jest podzbiorem stałej tablicy valarray, gslice — jest nowej tablicy valarray. Jeśli zestawu zdefiniowanego przez gslice — jest podzbiorem stałymi valarray, gslice — ma semantyki odwołania do oryginalnego tablicy valarray. Mechanizm oceny dla nieunikatowego valarrays oszczędza czas i pamięci.
+Jeśli zestaw zdefiniowany przez gslice jest podzbiorem stałej valarray, wówczas gslice jest nowym valarray. Jeśli zestaw zdefiniowany przez gslice jest podzbiorem niestałej valarray, wówczas gslice ma semantykę odwołania do oryginalnego valarray. Mechanizm oceny dla niestałe valarrays oszczędza czas i pamięć.
 
-Operacje na valarrays jest gwarantowane tylko wtedy, gdy podzestawy źródłowym i docelowym, zdefiniowane przez gslices różniące się od siebie i wszystkich indeksów są prawidłowe.
+Operacje na valarrays są gwarantowane tylko wtedy, gdy źródłowe i docelowe podzestawy zdefiniowane przez gslices są różne i wszystkie indeksy są prawidłowe.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[gslice](#gslice)|Definiuje podzbiór `valarray` składający się z wielu wycinków `valarray` że wszystkie zaczynają się od określonego elementu.|
+|[gslice](#gslice)|Definiuje podzestaw `valarray` , który składa się z wielu wycinków `valarray` tego, że wszystkie zaczynają się od określonego elementu.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[Rozmiar](#size)|Umożliwia znalezienie wartości tablicy, określenie liczby elementów w ogólne wycinek `valarray`.|
-|[start](#start)|Znajduje indeks początkowy ogólne wycinek `valarray`.|
-|[stride](#stride)|Odległość między elementami w wycinku ogólne `valarray`.|
+|[zmienia](#size)|Znajduje wartości tablicowe określające liczby elementów w ogólnym wycinku `valarray`.|
+|[start](#start)|Znajduje początkowy indeks ogólnego wycinka `valarray`.|
+|[stride](#stride)|Znajduje odległość między elementami w ogólnym wycinku a `valarray`.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<valarray >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="gslice"></a>  gslice::gslice
+## <a name="gslice"></a>gslice:: gslice
 
-Klasy narzędzi do tablicy valarray, który jest używany do definiowania wycinków wielowymiarowej tablicy valarray.
+Klasa narzędzi do valarray, która jest używana do definiowania wielowymiarowych wycinków valarray.
 
 ```cpp
 gslice();
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>Parametry
 
-*_StartIndex*<br/>
-Indeks tablicy valarray pierwszego elementu w podzbiorze.
+*_StartIndex*\
+Indeks valarray pierwszego elementu w podzbiorze.
 
-*_LenArray*<br/>
-Tablica, określając liczbę elementów w każdym wycinkiem.
+*_LenArray*\
+Tablica określająca liczbę elementów w każdym wycinku.
 
-*_IncArray*<br/>
-Tablica, określając krok w każdym wycinkiem.
+*_IncArray*\
+Tablica określająca krok w każdym wycinku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Domyślny konstruktor przechowuje zera indeks początkowy i czynnikami ułatwiającymi wektorów długości i stride o zerowej długości. Drugi Konstruktor magazynów *_StartIndex* począwszy od indeksu *_LenArray* tablicy długości i *_IncArray* dla tablicy krok.
+Konstruktor domyślny przechowuje zero dla indeksu początkowego i wektorów o zerowej długości dla wektorów długości i kroków. Drugi Konstruktor przechowuje *_StartIndex* dla indeksu początkowego, *_LenArray* dla tablicy długości i *_IncArray* dla tablicy kroków.
 
 ### <a name="remarks"></a>Uwagi
 
-**gslice —** definiuje podzbiór tablicy valarray, który składa się z wielu wycinków tablicy valarray, rozpoczyna się w tym samym określony element. Możliwość używania tablic do definiowania wielu wycinków jest jedyną różnicą między `gslice` i [slice::slice](../standard-library/slice-class.md#slice). Pierwszy wycinek ma pierwszego elementu z indeksu *_StartIndex*, liczbę elementów w określonym przez pierwszy element *_LenArray*i stride, biorąc pod uwagę, pierwszego elementu *_IncArray* . Kolejny zbiór prostopadły wycinki ma pierwszych elementów z podanym przez pierwszy wycinek. Drugi element *_LenArray* określa liczbę elementów. Drugi element wynosi stride *_IncArray*. Trzeci wymiar wycinków będzie wykonać elementy dwuwymiarową tablicę jako wyjścia elementy i kontynuować analogicznie
+**gslice** definiuje podzestaw valarray, który składa się z wielu wycinków valarray, które rozpoczynają się w tym samym określonym elemencie. Możliwość używania tablic do definiowania kilku wycinków jest jedyną różnicą między elementami `gslice` i [Slice:: Slice](../standard-library/slice-class.md#slice). Pierwszy plasterek ma pierwszy element o indeksie *_StartIndex*, liczbę elementów określoną przez pierwszy element *_LenArray*i krok podany przez pierwszy element *_IncArray*. Następny zestaw ortogonalnych wycinków ma pierwsze elementy określone przez pierwszy plasterek. Drugi element *_LenArray* określa liczbę elementów. Krok jest przyznany przez drugi element *_IncArray*. Trzeci wymiar wycinków będzie przyjmować elementy dwuwymiarowej tablicy jako elementy początkowe i działać analogicznie
 
 ### <a name="example"></a>Przykład
 
@@ -138,9 +138,9 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)
 ```
 
-## <a name="size"></a>  gslice::size
+## <a name="size"></a>gslice:: size
 
-Umożliwia znalezienie wartości tablicy, określając liczby elementów w ogólne wycinek tablicy valarray.
+Znajduje wartości tablicy, określając liczbę elementów w ogólnym wycinku valarray.
 
 ```cpp
 valarray<size_t> size() const;
@@ -148,11 +148,11 @@ valarray<size_t> size() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — Określanie liczby elementów w każdym wycinkiem ogólne wycinek tablicy valarray.
+Valarray określający liczbę elementów w każdym wycinku ogólnego wycinka valarray.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca przechowywaną długości wycinki.
+Funkcja członkowska zwraca przechowywane długości wycinków.
 
 ### <a name="example"></a>Przykład
 
@@ -216,9 +216,9 @@ The size of vaResult is:
 vaGSlice.size ( ) = ( 4 4 ).
 ```
 
-## <a name="start"></a>  gslice::Start
+## <a name="start"></a>gslice:: Start
 
-Znajduje indeks początkowy ogólne wycinek tablicy valarray.
+Znajduje początkowy indeks ogólnego wycinka valarray.
 
 ```cpp
 size_t start() const;
@@ -226,7 +226,7 @@ size_t start() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks początkowy ogólne wycinek tablicy valarray.
+Początkowy indeks ogólnego wycinka valarray.
 
 ### <a name="example"></a>Przykład
 
@@ -279,9 +279,9 @@ va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
-## <a name="stride"></a>  gslice::STRIDE
+## <a name="stride"></a>gslice:: krok
 
-Umożliwia znalezienie odległości między elementami w ogólne wycinek tablicy valarray.
+Znajduje odległość między elementami w ogólnym wycinku valarray.
 
 ```cpp
 valarray<size_t> stride() const;
@@ -289,7 +289,7 @@ valarray<size_t> stride() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — Określanie odległości między elementami w każdym wycinkiem ogólne wycinek tablicy valarray.
+Valarray określający odległość między elementami w każdym wycinku ogólnego wycinka valarray.
 
 ### <a name="example"></a>Przykład
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

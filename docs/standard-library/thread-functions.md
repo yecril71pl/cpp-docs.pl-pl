@@ -1,5 +1,5 @@
 ---
-title: '&lt;Wątek&gt; funkcji'
+title: '&lt;funkcje&gt; wątku'
 ms.date: 11/04/2016
 f1_keywords:
 - thread/std::get_id
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: c0a8e42cb7ee78c399459be82e50ef37ab203816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279037"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458501"
 ---
-# <a name="ltthreadgt-functions"></a>&lt;Wątek&gt; funkcji
+# <a name="ltthreadgt-functions"></a>&lt;funkcje&gt; wątku
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
 |[swap](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>  get_id —
+## <a name="get_id"></a>get_id
 
-Jednoznacznie identyfikuje bieżącego wątku wykonywania.
+Jednoznacznie identyfikuje bieżący wątek wykonania.
 
 ```cpp
 thread::id this_thread::get_id() noexcept;
@@ -38,9 +38,9 @@ thread::id this_thread::get_id() noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt typu [Thread::ID —](../standard-library/thread-class.md) , który jednoznacznie identyfikuje bieżącego wątku wykonywania.
+Obiekt typu [thread:: ID](../standard-library/thread-class.md) , który jednoznacznie identyfikuje bieżący wątek wykonywania.
 
-## <a name="sleep_for"></a>  sleep_for —
+## <a name="sleep_for"></a>sleep_for
 
 Blokuje wątek wywołujący.
 
@@ -52,16 +52,16 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parametry
 
-*Rel_time*<br/>
-A [czas trwania](../standard-library/duration-class.md) obiekt, który określa przedział czasu.
+*Rel_time*\
+Obiekt [czasu trwania](../standard-library/duration-class.md) , który określa przedział czasu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja blokuje wątek wywołujący dla co najmniej czas, który jest określony przez *Rel_time*. Ta funkcja nie generuje żadnych wyjątków.
+Funkcja blokuje wątek wywołujący przez co najmniej godzinę, która jest określona przez *Rel_time*. Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="sleep_until"></a>  sleep_until
+## <a name="sleep_until"></a>sleep_until
 
-Blokuje wątek wywołujący, co najmniej do określonego czasu.
+Blokuje wątek wywołujący co najmniej do określonego czasu.
 
 ```cpp
 template <class Clock, class Duration>
@@ -72,16 +72,16 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parametry
 
-*Abs_time*<br/>
+*Abs_time*\
 Reprezentuje punkt w czasie.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja nie generuje żadnych wyjątków.
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a>wymiany
 
-Zamienia dwa stany **wątku** obiektów.
+Zamienia Stany dwóch obiektów **wątku** .
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,19 +89,19 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*<br/>
-Po lewej stronie **wątku** obiektu.
+*Lewym*\
+Obiekt **wątku** Left.
 
-*po prawej stronie*<br/>
-Po prawej stronie **wątku** obiektu.
+*Kliknij*\
+Prawidłowy obiekt **wątku** .
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji `Left.swap(Right)`.
+Wywołania `Left.swap(Right)`funkcji.
 
-## <a name="yield"></a>  YIELD
+## <a name="yield"></a>zbiór
 
-Sygnały systemu operacyjnego do uruchomienia innych wątków, nawet wtedy, gdy bieżący wątek zazwyczaj będzie nadal działał.
+Sygnalizuje systemowi operacyjnemu Uruchamianie innych wątków, nawet jeśli bieżący wątek będzie normalnie nadal działać.
 
 ```cpp
 inline void yield() noexcept;
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Wątek >](../standard-library/thread.md)<br/>
+[\<> wątku](../standard-library/thread.md)

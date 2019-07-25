@@ -1,5 +1,5 @@
 ---
-title: char_traits&lt;wchar_t&gt; — struktura
+title: char_traits&lt;—&gt; struktura wchar_t
 ms.date: 11/04/2016
 f1_keywords:
 - char_traits<wchar_t>
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<wchar_t> class
 ms.assetid: 31f34072-04d6-4871-88fe-48e17d473484
-ms.openlocfilehash: ef40a34b5aa874c8bdf48aeb7657ae3496160eec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f8a882020ddb3d87436d08b3d85ea9407b1c08
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379223"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458975"
 ---
-# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; — struktura
+# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;—&gt; struktura wchar_t
 
-Klasa, która jest specjalizacją szablonu struktury **char_traits\<CharType >** do elementu typu **wchar_t**.
+Klasa, która jest specjalizacją struktury szablonu **char_traits\<CharType >** do elementu typu **wchar_t**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,15 +27,15 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>Uwagi
 
-Specjalizacja umożliwia struktury móc korzystać z funkcji biblioteki, które manipulowania obiektów tego typu **wchar_t**.
+Specjalizacja umożliwia strukturze korzystanie z funkcji bibliotek, które manipulują obiektami tego typu **wchar_t**.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ciąg >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[char_traits, struktura](../standard-library/char-traits-struct.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[char_traits, struktura](../standard-library/char-traits-struct.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

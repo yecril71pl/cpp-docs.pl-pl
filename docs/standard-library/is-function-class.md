@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_function class
 - is_function
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
-ms.openlocfilehash: ea1f2ae025823a700ca4e91f3f6b3c05ed79e1cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e436d205c7569aeac7b9dc65b122f3fe289f334
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336572"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456270"
 ---
 # <a name="isfunction-class"></a>is_function — Klasa
 
-Sprawdza, czy typ jest typem funkcji.
+Testuje, czy typ jest typem funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_function;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest typ funkcji w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem funkcji, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -75,9 +75,9 @@ is_function<float()> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_object, klasa](../standard-library/is-object-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_object, klasa](../standard-library/is-object-class.md)

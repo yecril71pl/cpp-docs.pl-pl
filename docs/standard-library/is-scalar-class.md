@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_scalar class
 - is_scalar
 ms.assetid: a0cdfc9a-f27e-4808-890f-6ed7942db60c
-ms.openlocfilehash: 2b981e009b895d55c251bc55a654739fe1eb5b95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d562ba4beb037d547846f57e7b40eaceb409a358
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413544"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449807"
 ---
 # <a name="isscalar-class"></a>is_scalar — Klasa
 
-Sprawdza, czy typ jest skalarna.
+Testuje, czy typ jest skalarny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct is_scalar;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Br*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to integralny typ, zmiennoprzecinkowa typ, typ wyliczenia, typ wskaźnika lub wskaźnik do typu elementu członkowskiego lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem całkowitym, typu zmiennoprzecinkowego, typu wyliczeniowego, typu wskaźnika lub wskaźnikiem do typu elementu członkowskiego lub z jedną z `cv-qualified` nich, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -73,9 +73,9 @@ is_scalar<float> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound, klasa](../standard-library/is-compound-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_compound, klasa](../standard-library/is-compound-class.md)

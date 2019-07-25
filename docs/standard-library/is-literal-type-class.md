@@ -1,21 +1,21 @@
 ---
-title: is_literal_type, klasa
+title: Klasa is_literal_type
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_literal_type
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: 804ef0462308b967fc0c4c95d8dfa96476475aab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450c32d050a18f64e71992bd7a30412ebafe93de
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336470"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456210"
 ---
-# <a name="isliteraltype-class"></a>is_literal_type, klasa
+# <a name="isliteraltype-class"></a>Klasa is_literal_type
 
-Sprawdza, czy typ mogą być używane jako `constexpr` zmiennej lub skonstruowany, używane przez lub zwrócone w wyniku `constexpr` funkcji.
+Testuje, czy typ może być używany jako `constexpr` zmienna, czy być skonstruowany, używany przez lub zwrócony `constexpr` z funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,19 +26,19 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest *literalne*, w przeciwnym razie przechowuje wartość false. Jest typem literału **void**, typowi skalarnemu, typ odwołania, tablicy literału typu lub typu klasy literału. Typ literału klasy jest typu klasy, która ma destruktor proste, jest albo odpowiedni typ agregacji lub ma co najmniej jednego innego niż z przeniesienia / kopia `constexpr` Konstruktor i wszystkie jej klasy bazowe i elementy członkowskie danych niestatycznych są typy literałów trwałej. Chociaż typ literału jest zawsze typem literału, koncepcji typem literału obejmuje wszystkie elementy, które kompilator może być interpretowane jako `constexpr` w czasie kompilacji.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest *typem literału*, w przeciwnym razie ma wartość false. Typ literału to **void**, typ skalarny, typ referencyjny, tablica typu literału lub typ klasy literału. Typ klasy literału jest typem klasy, który ma prosty destruktor, jest typem agregującym lub ma co najmniej jeden `constexpr` Konstruktor, który nie należy do przenoszenia, a wszystkie jego klasy bazowe i niestatyczne elementy członkowskie danych są typami literałów nietrwałych. Chociaż typ literału zawsze jest typem literału, pojęcie typu literału zawiera wszystkie elementy, które kompilator może oszacować jako `constexpr` w czasie kompilacji.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)
