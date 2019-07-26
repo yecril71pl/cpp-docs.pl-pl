@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413284"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458744"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
-Definiuje basic_istream klasy szablonu, które przekazuje ekstrakcji dla iostream, i basic_iostream szablonu klasy —, które przekazuje wstawienia i wyodrębniania. Nagłówek definiuje również powiązane manipulatora. Tego pliku nagłówkowego to zazwyczaj uwzględniony dla Ciebie przez inną nagłówka iostream. rzadko trzeba uwzględnić go bezpośrednio.
+Definiuje klasę basic_istream, która koryguje ekstrakcje dla iostreams i klasy szablonu basic_iostream, która koryguje wstawienia i wyodrębnienia. Nagłówek definiuje także powiązaną Manipulator. Ten plik nagłówka jest zwykle dołączany przez inny nagłówek iostreams; rzadko trzeba dołączyć go bezpośrednio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,33 +29,33 @@ Definiuje basic_istream klasy szablonu, które przekazuje ekstrakcji dla iostrea
 
 |Nazwa typu|Opis|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` wyspecjalizowane na **char**.|
-|[istream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` wyspecjalizowane na **char**.|
-|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` wyspecjalizowane na **wchar**.|
-|[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` wyspecjalizowane na **wchar**.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` wyspecjalizowany dla **znaku**.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` wyspecjalizowany dla **znaku**.|
+|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` wyspecjalizowany w **WCHAR**.|
+|[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` wyspecjalizowany w **WCHAR**.|
 
 ### <a name="manipulators"></a>Manipulatory
 
 |||
 |-|-|
 |[ws](../standard-library/istream-functions.md#ws)|Pomija biały znak w strumieniu.|
-|[swap](../standard-library/istream-functions.md#istream_swap)|Zamienia dwa obiekty strumienia.|
+|[swap](../standard-library/istream-functions.md#istream_swap)|Wymienia dwa obiekty strumienia.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Wyodrębnia znaki oraz ciągi znaków ze strumienia.|
+|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Wyodrębnia znaki i ciągi ze strumienia.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[basic_iostream](../standard-library/basic-iostream-class.md)|Klasa strumienia, która może wykonać obie czynności danych wejściowych i wyjściowych.|
-|[basic_istream](../standard-library/basic-istream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowany obiektów z elementami typu bufor strumienia `Elem`, znane również jako [char_type](../standard-library/basic-ios-class.md#char_type), którego cech są określane przez klasę `Tr`, znane również jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_iostream](../standard-library/basic-iostream-class.md)|Klasa strumienia, która może wykonywać zarówno dane wejściowe, jak i wyjściowe.|
+|[basic_istream](../standard-library/basic-istream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia z elementami typu `Elem`, znanym również jako [char_type](../standard-library/basic-ios-class.md#char_type), których cechy znaku są określane przez klasę `Tr`, również znana jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
-[Konwencje iostream](../standard-library/iostreams-conventions.md)<br/>
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Konwencje iostream](../standard-library/iostreams-conventions.md)

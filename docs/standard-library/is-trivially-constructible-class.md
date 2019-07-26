@@ -1,21 +1,21 @@
 ---
-title: is_trivially_constructible Class
+title: Klasa is_trivially_constructible
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_constructible
 helpviewer_keywords:
 - is_trivially_constructible
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
-ms.openlocfilehash: c83bea8be5c88876ffa25337464caa62b998ab45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f177463b985d3e7b2f7ab7783f9c3db0dcd5722
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413479"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448012"
 ---
-# <a name="istriviallyconstructible-class"></a>is_trivially_constructible Class
+# <a name="istriviallyconstructible-class"></a>Klasa is_trivially_constructible
 
-Sprawdza, czy typ jest przypadku konstrukcyjną, gdy są używane określone typy argumentów.
+Testuje, czy typ jest bardzo konstrukcyjną, gdy są używane określone typy argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,22 +26,22 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&* \
 Typ do zapytania.
 
-*Args*<br/>
-Typy argumentów, aby dopasować w Konstruktorze z *T*.
+*Argumentów*\
+Typy argumentów do dopasowania w konstruktorze *T*.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest przypadku konstrukcyjną, korzystając z typami argumentów w elemencie *Args*, w przeciwnym razie przechowuje wartość false. Typ *T* jest przypadku konstrukcyjną Jeśli definicja zmiennej `T t(std::declval<Args>()...);` jest poprawnie sformułowany, wiadomo, że do wywoływania nie nietrywialnymi operacji. Zarówno *T* i wszystkie typy w *Args* muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest niekonstrukcyjnąy przy użyciu typów *argumentów w*argumentach, w przeciwnym razie ma wartość false. Typ *T* jest niekonstrukcyjnąy, jeśli definicja `T t(std::declval<Args>()...);` zmiennej jest poprawnie sformułowana i jest znana do wywołania braku prostych operacji. Zarówno *T* , jak i wszystkie typy w *args* muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)
