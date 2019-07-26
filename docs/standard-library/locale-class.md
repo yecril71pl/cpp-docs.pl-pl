@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 495e82d54a2d3b010e40403271713cd799b9b8ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245408"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453541"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -40,7 +40,7 @@ class locale;
 
 ## <a name="remarks"></a>Uwagi
 
-Zestaw reguł jest wskaźnikiem do obiektu klasy pochodzącej od klasy [aspekt](#facet_class) ma obiekt publiczny w postaci:
+Zestaw reguł jest wskaźnikiem do obiektu klasy pochodzącej od aspektu klasy [](#facet_class) , który ma obiekt publiczny formularza:
 
 ```cpp
 static locale::id id;
@@ -48,7 +48,7 @@ static locale::id id;
 
 Można zdefiniować nieograniczony zbiór tych zestawów reguł. Można także skonstruować obiekt ustawień regionalnych, który wyznacza dowolną liczbę zestawów reguł.
 
-Wstępnie zdefiniowane grupy tych zestawów reguł reprezentują [kategorie ustawień regionalnych](#category) tradycyjnie zarządzanych w standardowej bibliotece C przez funkcję `setlocale`.
+Wstępnie zdefiniowane grupy tych aspektów reprezentują [Kategorie ustawień regionalnych](#category) tradycyjnie zarządzane w standardowej bibliotece C przez funkcję `setlocale`.
 
 Kategoria collate (LC_COLLATE) obejmuje zestawy reguł:
 
@@ -112,7 +112,7 @@ messages<wchar_t>
 
 Niektóre z tych wstępnie zdefiniowanych zestawów reguł są używane przez klasy iostreams w celu kontroli konwersji wartości numerycznych do i z sekwencji tekstowych.
 
-Obiekt klasy Locale również przechowuje nazwy ustawień regionalnych jako obiekt klasy [ciąg](../standard-library/string-typedefs.md#string). Przy użyciu nieprawidłowej nazwy ustawień regionalnych do skonstruowania zestaw reguł ustawień regionalnych lub obiektu ustawień regionalnych zgłasza obiekt klasy [runtime_error](../standard-library/runtime-error-class.md). Jest przechowywana nazwa ustawień regionalnych `"*"` Jeśli obiekt ustawień regionalnych nie może mieć pewności, że ustawienia regionalne stylu C odpowiadają dokładnie, reprezentowane przez obiekt. W przeciwnym razie możesz ustanowić pasujące ustawienia regionalne w ramach standardowej biblioteki C dla obiektu ustawień regionalnych `Loc`, wywołując `setlocale`(LC_ALL `,` `Loc`. [Nazwa](#name)`().c_str()`).
+Obiekt ustawień regionalnych klasy również przechowuje nazwę ustawień regionalnych jako obiekt [ciągu](../standard-library/string-typedefs.md#string)klasy. Użycie nieprawidłowej nazwy ustawień regionalnych do skonstruowania zestawu reguł ustawień regionalnych lub obiektu ustawień regionalnych zgłasza obiekt klasy [runtime_error](../standard-library/runtime-error-class.md). Nazwa przechowywanych ustawień regionalnych ma `"*"` wartość, jeśli obiekt locale nie może mieć pewności, że ustawienia regionalne w stylu języka C odpowiadają dokładnie na te reprezentowane przez obiekt. W przeciwnym razie można określić pasujące ustawienia regionalne w `Loc`standardowej bibliotece C dla obiektu ustawień regionalnych przez wywołanie `setlocale`(LC_ALL `,` `Loc`. [](#name)nazwa`().c_str()`).
 
 W tej implementacji można również wywołać funkcję statycznego elementu członkowskiego:
 
@@ -120,13 +120,13 @@ W tej implementacji można również wywołać funkcję statycznego elementu cz�
 static locale empty();
 ```
 
-do konstruowania obiektu ustawień regionalnych, który ma nie zestawu reguł. Warto również przezroczyste ustawienia regionalne; Jeśli funkcje szablonu [has_facet](../standard-library/locale-functions.md#has_facet) i [use_facet](../standard-library/locale-functions.md#use_facet) nie można odnaleźć żądanego zestawu reguł w przezroczystych ustawieniach regionalnych odwołują się do najpierw globalne ustawienia regionalne a następnie, jeśli są przezroczyste, klasyczne ustawienia regionalne. W ten sposób można napisać:
+do konstruowania obiektu ustawień regionalnych, który ma nie zestawu reguł. Jest to również przejrzyste ustawienie regionalne; Jeśli funkcje szablonu [has_facet](../standard-library/locale-functions.md#has_facet) i [use_facet](../standard-library/locale-functions.md#use_facet) nie mogą znaleźć żądanego zestawu reguł w przezroczystych ustawieniach regionalnych, sprawdzają najpierw globalne ustawienia regionalne, a następnie, jeśli są przezroczyste, klasyczne ustawienia regionalne. W ten sposób można napisać:
 
 ```cpp
 cout.imbue(locale::empty());
 ```
 
-Kolejne wstawienia do [cout](../standard-library/iostream.md#cout) są przenoszone przez przez bieżącego stanu globalnych ustawień regionalnych. Można nawet napisać:
+Kolejne wstawienia do [cout](../standard-library/iostream.md#cout) są korygowane przez bieżący stan globalnych ustawień regionalnych. Można nawet napisać:
 
 ```cpp
 locale loc(locale::empty(),
@@ -136,13 +136,13 @@ locale loc(locale::empty(),
 cout.imbue(loc);
 ```
 
-Reguły formatowania numerycznego dla kolejnych wstawień do `cout` pozostaje taki sam jak ustawienia regionalne C, nawet jeśli globalne ustawienia regionalne dostarczają zmieniających zasad wstawiania dat i kwot pieniężnych.
+Reguły formatowania liczb dla kolejnych `cout` wstawek pozostają takie same jak w ustawieniach regionalnych języka C, nawet jeśli globalne ustawienia regionalne dostarczają zmiany reguł wstawiania dat i kwot pieniężnych.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[Ustawienia regionalne](#locale)|Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych.|
+|[ustawienie](#locale)|Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -150,27 +150,27 @@ Reguły formatowania numerycznego dla kolejnych wstawień do `cout` pozostaje ta
 |-|-|
 |[category](#category)|Typ całkowitoliczbowy, który zawiera wartości masek bitowych dla oznaczenia standardowych rodzin zestawów reguł.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[Łączenie](#combine)|Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.|
+|[żądany](#combine)|Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.|
 |[name](#name)|Zwraca przechowywaną nazwę ustawień regionalnych.|
 
 ### <a name="static-functions"></a>Funkcje statyczne
 
 |||
 |-|-|
-|[Model Klasyczny](#classic)|Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|
+|[motyw](#classic)|Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|
 |[global](#global)|Resetuje domyślne ustawienia lokalne dla programu.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator=](#op_eq)|Przypisuje ustawień regionalnych.|
+|[operator=](#op_eq)|Przypisuje ustawienia regionalne.|
 |[operator!=](#op_neq)|Testuje dwa ustawienia lokalne pod kątem nierówności.|
-|[operator( )](#op_call)|Porównuje dwa `basic_string` obiektów.|
+|[operator( )](#op_call)|Porównuje `basic_string` dwa obiekty.|
 |[operator==](#op_eq_eq)|Testuje dwa ustawienia lokalne pod kątem równości.|
 
 ### <a name="classes"></a>Klasy
@@ -182,11 +182,11 @@ Reguły formatowania numerycznego dla kolejnych wstawień do `cout` pozostaje ta
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="category"></a>  Locale::category
+## <a name="category"></a>locale:: Category
 
 Typ całkowitoliczbowy, który zawiera wartości masek bitowych dla oznaczenia standardowych rodzin zestawów reguł.
 
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla **int** typ, który może reprezentować grupę odrębnych elementach maską bitów wpisz lokalny dla klasy locale lub może służyć do reprezentowania znajdujących się w odpowiedniej kategorii C w ustawieniach regionalnych. Dostępne są następujące elementy:
+Typ jest synonimem dla typu **int** , który może reprezentować grupę odrębnych elementów typu maski bitowej do ustawień regionalnych klasy lub może służyć do reprezentowania dowolnej z odpowiednich kategorii języka C. Elementy to:
 
 - `collate`, odpowiadające kategorii C LC_COLLATE
 
@@ -216,17 +216,17 @@ Typ jest synonimem dla **int** typ, który może reprezentować grupę odrębnyc
 
 - `time`, odpowiadające kategorii C LC_TIME
 
-- `messages`, odpowiadające kategorii Posix LC_MESSAGES
+- `messages`, odpowiadające kategorii POSIX LC_MESSAGES
 
-Ponadto dwa użyteczne wartości są następujące:
+Ponadto dwie przydatne wartości to:
 
-- `none`, odpowiadające na Brak kategorii C
+- `none`, odpowiadające żadnej kategorii C
 
-- `all`, odpowiadający C sumę wszystkich kategorii LC_ALL
+- `all`, odpowiadające Unii C wszystkich kategorii LC_ALL
 
-Dowolne grupy kategorii mogą być reprezentowane za pomocą `OR` za pomocą tych stałych, jak `monetary` &#124; `time`.
+Można reprezentować dowolną grupę kategorii za pomocą `OR` tych stałych, jak w. &#124; `time` `monetary`
 
-## <a name="classic"></a>  Locale::Classic
+## <a name="classic"></a>locale:: klasyczny
 
 Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.
 
@@ -236,11 +236,11 @@ static const locale& classic();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do ustawienia regionalne C.
+Odwołanie do ustawień regionalnych języka C.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasyczne ustawienia regionalne c. jest Stanów Zjednoczonych Ustawienia regionalne angielskiej ASCII w ramach standardowej biblioteki C, która niejawnie używane w programach, które nie są międzynarodowych.
+Klasyczne ustawienia regionalne języka C to Stany Zjednoczone Angielskie ustawienia regionalne języka ASCII w standardowej bibliotece C, która jest niejawnie używana w programach, które nie są międzynarodowe.
 
 ### <a name="example"></a>Przykład
 
@@ -281,7 +281,7 @@ The previous locale was classic.
 The current locale is not classic.
 ```
 
-## <a name="combine"></a>  Locale::Combine
+## <a name="combine"></a>locale:: łączenie
 
 Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.
 
@@ -292,12 +292,12 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja*<br/>
-Ustawienia regionalne, zawierająca zestaw reguł do wstawienia do docelowych ustawień regionalnych.
+*Loc*\
+Ustawienia regionalne zawierające zestaw reguł, który ma zostać wstawiony do docelowego ustawienia regionalnego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja elementu członkowskiego zwraca obiekt ustawień regionalnych, który zastępuje lub dodaje do  **\*to** aspekt `Facet` na liście *Loc*.
+Funkcja członkowska zwraca obiekt ustawień regionalnych, który zastępuje lub dodaje do  **\*tego** aspektu `Facet` wymienionego w *lokalizacji.*
 
 ### <a name="example"></a>Przykład
 
@@ -329,7 +329,7 @@ int main() {
 }
 ```
 
-## <a name="facet_class"></a>  facet — klasa
+## <a name="facet_class"></a>facet — Klasa
 
 Klasa, która służy jako klasa bazowa dla wszystkich zestawów reguł ustawień regionalnych.
 
@@ -347,13 +347,13 @@ private:
 
 ### <a name="remarks"></a>Uwagi
 
-Należy pamiętać, nie można kopiować ani przypisać obiekt klasy zestawu reguł. Można skonstruować i niszczy obiektów pochodzących od klasy `locale::facet` , ale nie obiekty odpowiednie klasy bazowej. Zazwyczaj utworzenia obiektu `_Myfac` pochodzące z zestawu reguł, podczas tworzenia ustawień regionalnych, podobnie jak w **localeloc**( `locale::classic`(), **nowe**`_Myfac`);
+Należy pamiętać, że nie można skopiować ani przypisać obiektu zestawu reguł. Można tworzyć i niszczyć obiekty pochodne od klasy `locale::facet` , ale nie obiekty klasy podstawowej właściwej. Zwykle tworzony jest obiekt `_Myfac` pochodzący z aspektu podczas konstruowania ustawień regionalnych, jak w **localeloc**( `locale::classic`(), **New**`_Myfac`);
 
-W takich przypadkach konstruktora dla klasy bazowej aspekt powinien mieć wartość zero `_Refs` argumentu. Gdy obiekt nie jest już potrzebny, został usunięty. W związku z tym, podaj wartość różną od zera _ *system plików Refs* argument tylko w tych rzadkich przypadkach, w którym użytkownik ponosi odpowiedzialność za okres istnienia obiektu.
+W takich przypadkach Konstruktor aspektu klasy bazowej powinien mieć argument zero `_Refs` . Gdy obiekt nie jest już wymagany, zostanie usunięty. W tym celu należy podać argument *ReFS* o wartości niezerowej tylko w tych rzadkich przypadkach, w których należy podjąć odpowiedzialność za okres istnienia obiektu.
 
-## <a name="global"></a>  Locale::Global
+## <a name="global"></a>locale:: Global
 
-Resetuje domyślne ustawienia regionalne dla programu. Dotyczy to globalnych ustawień regionalnych dla C i C++.
+Resetuje domyślne ustawienia regionalne dla programu. Ma to wpływ na globalne ustawienia regionalne dla języków C++C i.
 
 ```cpp
 static locale global(const locale& Loc);
@@ -361,16 +361,16 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja*<br/>
-Ustawienia regionalne do użycia jako domyślnych ustawień regionalnych przez program.
+*Loc*\
+Ustawienia regionalne, które mają być używane jako domyślne ustawienia regionalne programu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Poprzednie ustawienia regionalne, zanim został zresetowany domyślnych ustawień regionalnych.
+Poprzednie ustawienia regionalne przed zresetowaniem domyślnych ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
-W momencie uruchamiania programu globalnych ustawień regionalnych jest taka sama jak klasyczne ustawienia regionalne. `global()` Wywołaniach funkcji `setlocale( LC_ALL, loc.name. c_str())` nawiązać pasujące ustawienia regionalne biblioteki standardowej C.
+W trakcie uruchamiania programu globalne ustawienia regionalne są takie same jak klasyczne ustawienia regionalne. `global()` Funkcja wywołuje`setlocale( LC_ALL, loc.name. c_str())` w celu nawiązania dopasowania ustawień regionalnych w standardowej bibliotece C.
 
 ### <a name="example"></a>Przykład
 
@@ -400,7 +400,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C
 ```
 
-## <a name="id_class"></a>  ID — klasa
+## <a name="id_class"></a>ID — Klasa
 
 Klasa składowej zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.
 
@@ -414,11 +414,11 @@ class id
 ```
 ### <a name="remarks"></a>Uwagi
 
-Klasa elementu członkowskiego opisuje wymagany przez każdy reguł ustawień regionalnych unikatowy obiekt statyczny element członkowski. Należy pamiętać, że nie można kopiować ani przypisać obiekt klasy `id`.
+Klasa członkowska opisuje statyczny Obiekt członkowski wymagany przez każdy unikatowy zestaw reguł ustawień regionalnych. Należy pamiętać, że nie można skopiować ani przypisać obiektu klasy `id`.
 
-## <a name="locale"></a>  Locale::Locale
+## <a name="locale"></a>locale:: locale
 
-Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych. Zawiera także destruktora.
+Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych. Zawiera również destruktor.
 
 ```cpp
 locale();
@@ -437,40 +437,40 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parametry
 
-*Locname*<br/>
+*Locname*\
 Nazwa ustawień regionalnych.
 
-*Lokalizacja*<br/>
-Ustawienia regionalne, który ma zostać skopiowane do tworzenia nowych ustawień regionalnych.
+*Loc*\
+Ustawienia regionalne, które mają zostać skopiowane podczas konstruowania nowych ustawień regionalnych.
 
-*Inne*<br/>
-Ustawienia regionalne, z którego można wybrać kategorię.
+*Różnych*\
+Ustawienia regionalne, z których należy wybrać kategorię.
 
-*CAT*<br/>
-Kategoria do podstawienia do skonstruowanego ustawień regionalnych.
+*Cat*\
+Kategoria, która ma zostać zastąpiona przez skonstruowane ustawienia regionalne.
 
-*FAC*<br/>
-Zestaw reguł do podstawienia do skonstruowanego ustawień regionalnych.
+*Fac*\
+Zestaw reguł, który ma zostać zastąpiony przez skonstruowane ustawienia regionalne.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje obiekt do dopasowania globalnych ustawień regionalnych. Drugie i trzecie konstruktory zainicjowania wszystkich kategorii ustawień regionalnych na zachowanie zgodne z nazwy ustawień regionalnych *Locname*. Pozostałe konstruktory kopiują *Loc*, z wyjątkiem wymienionych:
+Pierwszy Konstruktor inicjuje obiekt, aby odpowiadał globalnym ustawieniom regionalnym. Drugi i trzeci konstruktorzy inicjują wszystkie kategorie ustawień regionalnych, aby mieć zachowanie spójne z nazwą ustawień regionalnych *Locname*. Pozostałe konstruktory copy *Loc*z wymienionymi wyjątkami:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-zastępuje z *innych* te aspekty odpowiadający kategorii C, dla których C & *Cat* jest różna od zera.
+zastępuje z *innych* aspektów, odpowiadających kategorii c, dla których C & *Cat* jest różna od zera.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-zastępuje z `locale(Locname, _All)` te aspekty odpowiadający kategorii C, dla których C & *Cat* jest różna od zera.
+zastępuje z `locale(Locname, _All)` tych aspektów odnoszących się do kategorii c, dla których C & *Cat* jest różna od zera.
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-zastępuje (lub dodaje do) *Loc* aspekt *Fac*, jeśli *Fac* nie jest wskaźnikiem typu null.
+zamienia w (lub dodaje do) *Loc* aspektu *FAC*, jeśli *FAC* nie jest wskaźnikiem o wartości null.
 
-Jeśli nazwy ustawień regionalnych *Locname* jest wskaźnikiem typu null lub nieprawidłowa, funkcja zgłasza [runtime_error](../standard-library/runtime-error-class.md).
+Jeśli nazwa ustawień regionalnych *Locname* jest wskaźnikiem typu null lub jest nieprawidłowa, funkcja zwraca [runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Przykład
 
@@ -512,7 +512,7 @@ int main( ) {
 }
 ```
 
-## <a name="name"></a>  Locale::Name
+## <a name="name"></a>locale:: Name
 
 Zwraca przechowywaną nazwę ustawień regionalnych.
 
@@ -522,7 +522,7 @@ string name() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg, podając nazwę ustawień regionalnych.
+Ciąg określający nazwę ustawień regionalnych.
 
 ### <a name="example"></a>Przykład
 
@@ -551,15 +551,15 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="op_eq"></a>  Locale::operator =
+## <a name="op_eq"></a>locale:: operator =
 
-Przypisuje ustawień regionalnych.
+Przypisuje ustawienia regionalne.
 
 ```cpp
 const locale& operator=(const locale& other) noexcept;
 ```
 
-## <a name="op_neq"></a>  Locale::operator! =
+## <a name="op_neq"></a>locale:: operator! =
 
 Testuje dwa ustawienia lokalne pod kątem nierówności.
 
@@ -569,16 +569,16 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-Jedno z ustawień regionalnych, który ma zostać przetestowana pod kątem nierówności.
+*Kliknij*\
+Jedno z wartości lokalnych do przetestowania pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość logiczna, która jest **true** Jeśli ustawienia regionalne nie są kopie tych samych ustawień regionalnych; **false** Jeśli ustawienia regionalne są kopie tych samych ustawień regionalnych.
+Wartość logiczna **prawda** , jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych; **Fałsz** , jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa ustawienia lokalne są takie same, jeśli są one tych samych ustawień regionalnych, jeśli jeden jest kopią innego lub jeśli mają identyczne nazwy.
+Dwa ustawienia lokalne są równe, jeśli są one tymi samymi ustawieniami regionalnymi, jeśli jedna z nich jest kopią drugiego lub jeśli mają identyczne nazwy.
 
 ### <a name="example"></a>Przykład
 
@@ -620,9 +620,9 @@ locales loc1 (German_Germany.1252) and
 loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="op_call"></a>  Locale:: operator()
+## <a name="op_call"></a>locale:: operator ()
 
-Porównuje dwa `basic_string` obiektów.
+Porównuje `basic_string` dwa obiekty.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -633,25 +633,25 @@ bool operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
-Ciąg, który po lewej stronie.
+*lewym*\
+Lewy ciąg.
 
-*right*<br/>
-Ciąg, do prawej.
+*Kliknij*\
+Prawidłowy ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja elementu członkowskiego zwraca:
+Funkcja członkowska zwraca:
 
-- -1, jeśli pierwszej sekwencji porównuje mniejsza od drugiej sekwencji.
+- -1, jeśli pierwsza sekwencja porównuje mniej niż drugą sekwencję.
 
-- \+ 1, jeśli drugiej sekwencji porównuje mniejszą od pierwszej sekwencji.
+- \+ 1, jeśli druga sekwencja porównuje mniej niż pierwszą sekwencję.
 
-- 0, jeśli sekwencji, które są równoważne.
+- 0, jeśli sekwencje są równoważne.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego skutecznie wykonuje:
+Funkcja członkowska skutecznie wykonuje:
 
 ```cpp
 const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
@@ -659,7 +659,7 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```
 
-W związku z tym można użyć obiektu ustawień regionalnych jako obiekt funkcyjny.
+W tym celu można użyć obiektu locale jako obiektu funkcji.
 
 ### <a name="example"></a>Przykład
 
@@ -692,7 +692,7 @@ int main( )
 0
 ```
 
-## <a name="op_eq_eq"></a>  Locale::operator ==
+## <a name="op_eq_eq"></a>locale:: operator = =
 
 Testuje dwa ustawienia lokalne pod kątem równości.
 
@@ -702,16 +702,16 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-Jedno z ustawień regionalnych, który ma zostać przetestowana pod kątem równości.
+*Kliknij*\
+Jeden z ustawień regionalnych, które mają być testowane pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość logiczna, która jest **true** Jeśli ustawienia regionalne są kopie tych samych ustawień regionalnych; **false** Jeśli ustawienia regionalne nie są kopie tych samych ustawień regionalnych.
+Wartość logiczna **prawda** , jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych; **Fałsz** , jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa ustawienia lokalne są takie same, jeśli są one tych samych ustawień regionalnych, jeśli jeden jest kopią innego lub jeśli mają identyczne nazwy.
+Dwa ustawienia lokalne są równe, jeśli są one tymi samymi ustawieniami regionalnymi, jeśli jedna z nich jest kopią drugiego lub jeśli mają identyczne nazwy.
 
 ### <a name="example"></a>Przykład
 
@@ -759,7 +759,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustawienia regionalne >](../standard-library/locale.md)<br/>
-[Strony kodowe](../c-runtime-library/code-pages.md)<br/>
-[Nazwy lokalne, języki i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Strony kodowe](../c-runtime-library/code-pages.md)\
+[Nazwy lokalne, Języki i ciągi kraj/region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

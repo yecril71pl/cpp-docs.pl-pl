@@ -11,26 +11,26 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 9042093bb073807e9bb1476ab514c82010aeab70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394063"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450589"
 ---
 # <a name="debug-iterator-support"></a>Obsługa iteratora debugowania
 
-Biblioteka środowiska uruchomieniowego Visual C++ wykrywa użycie iteratora niepoprawne potwierdza i wyświetla okno dialogowe w czasie wykonywania. Aby włączyć Obsługa iteratora debugowania, należy użyć wersje do debugowania biblioteki standardowej języka C++ i biblioteki wykonawczej języka C skompilować program. Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md). Aby uzyskać informacje o sposobie używania Iteratory sprawdzane, zobacz [Checked Iterators](../standard-library/checked-iterators.md).
+Biblioteka wykonawcza wizualizacji C++ wykrywa nieprawidłowe użycie iteratora i potwierdza i wyświetla okno dialogowe w czasie wykonywania. Aby włączyć obsługę iteratora debugowania, należy użyć wersji debugowania biblioteki C++ standardowej i biblioteki środowiska uruchomieniowego języka C do kompilowania programu. Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md). Aby uzyskać informacje o sposobach używania sprawdzonych iteratorów, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
 
-C++ standard w tym artykule opisano sposób elementów członkowskich może spowodować Iteratory do kontenera, które staną się nieprawidłowe. Dwa przykłady to:
+Standard C++ opisuje sposób, w jaki funkcje elementów członkowskich mogą powodować, że Iteratory do kontenera stają się nieprawidłowe. Dwa przykłady:
 
-- Wymazywanie elementu z kontenera powoduje, że Iteratory do elementu staną się nieprawidłowe.
+- Wymazanie elementu z kontenera powoduje, że Iteratory elementu stają się nieprawidłowe.
 
-- Zwiększenie rozmiaru [wektor](../standard-library/vector.md) za pomocą wypychania lub Wstaw iteratorów powoduje, że do `vector` staną się nieprawidłowe.
+- Zwiększenie rozmiaru wektora przy [](../standard-library/vector.md) użyciu instrukcji push lub INSERT powoduje, że `vector` Iteratory do stają się nieprawidłowe.
 
-## <a name="invalid-iterators"></a>Nieprawidłowy Iteratory
+## <a name="invalid-iterators"></a>Nieprawidłowe Iteratory
 
-W przypadku kompilacji ten przykładowy program w trybie debugowania w czasie wykonywania go potwierdza i kończy się.
+W przypadku skompilowania tego przykładowego programu w trybie debugowania w czasie wykonywania zostanie potwierdzone i przerwane.
 
 ```cpp
 // iterator_debugging_0.cpp
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Za pomocą _ITERATOR_DEBUG_LEVEL
+## <a name="using-iteratordebuglevel"></a>Korzystanie z _ITERATOR_DEBUG_LEVEL
 
-Można użyć makra preprocesora [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) wyłączenia debugowania funkcji do kompilacji debugowanej iteratora. Ten program nie, ale nadal wyzwala niezdefiniowane zachowanie.
+Aby wyłączyć funkcję debugowania iteratora w kompilacji debugowania, można użyć [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) makro preprocesora. Ten program nie potwierdza, ale nadal wyzwala niezdefiniowane zachowanie.
 
 ```cpp
 // iterator_debugging_1.cpp
@@ -87,9 +87,9 @@ int main() {
 -572662307
 ```
 
-## <a name="unitialized-iterators"></a>Iteratory niezainicjowanej
+## <a name="unitialized-iterators"></a>Iteratory Unitialized
 
-Asercja również występuje, Jeśli spróbujesz użyć iteratora, zanim zostanie zainicjowany, jak pokazano poniżej:
+Potwierdzenie występuje również wtedy, gdy spróbujesz użyć iteratora przed zainicjowaniem, jak pokazano poniżej:
 
 ```cpp
 // iterator_debugging_2.cpp
@@ -106,7 +106,7 @@ int main() {
 
 ## <a name="incompatible-iterators"></a>Niezgodne Iteratory
 
-Poniższy przykładowy kod powoduje potwierdzenie, ponieważ dwóch iteratorów [for_each](../standard-library/algorithm-functions.md#for_each) algorytm są niezgodne. Algorytmy Sprawdź, czy Iteratory, które są dostarczane do nich odwoływać się do tego samego kontenera.
+Poniższy przykład kodu powoduje potwierdzenie, ponieważ dwa Iteratory algorytmu [for_each](../standard-library/algorithm-functions.md#for_each) są niezgodne. Algorytmy sprawdzają, czy Iteratory, które są dostarczane do nich odwołują się do tego samego kontenera.
 
 ```cpp
 // iterator_debugging_3.cpp
@@ -126,11 +126,11 @@ int main()
 }
 ```
 
-Zwróć uwagę, że w tym przykładzie użyto wyrażenia lambda `[] (int& elem) { elem *= 2; }` zamiast funktorem. Mimo że ten wybór nie ma wpływu na niepowodzenie asercji — podobne funktor mogłoby spowodować wystąpienie takiego samego błędu — wyrażenia lambda są bardzo przydatne w sposób wykonywania zadań obiektu compact funkcji. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lambda](../cpp/lambda-expressions-in-cpp.md).
+Zwróć uwagę, że w tym przykładzie używane `[] (int& elem) { elem *= 2; }` jest wyrażenie lambda zamiast Funktor. Mimo że wybór ten nie ma wpływu na błąd potwierdzenia — podobny Funktor może spowodować wystąpienie tego samego błędu — wyrażenia lambda są bardzo przydatne w przypadku wykonywania zadań obiektów funkcji Compact. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="iterators-going-out-of-scope"></a>Iteratory przerywaj poza zakresem
+## <a name="iterators-going-out-of-scope"></a>Iteratory wykraczające poza zakres
 
-Debugowania iteratora sprawdza również powodować zmienna iteratora, który jest zadeklarowany w **dla** pętli się poza zakres, kiedy **dla** zakończeniu zakresu pętli.
+Testy iteratora debugowania również powodują, że zmienna iteratora zadeklarowana w pętli **for** jest poza zakresem, gdy zostanie zakończony zakres pętli **for** .
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Destruktory dla iteratorów debugowania
 
-Debugowanie Iteratory mają nietrywialnymi destruktory. Jeśli destruktor nie działa, ale obiektu pamięć jest zwalniana, mogą wystąpić dostępu naruszenia i uszkodzenia danych. Rozważmy następujący przykład:
+Iteratory debugowania mają nieproste destruktory. Jeśli destruktor nie zostanie uruchomiony, ale pamięć obiektu jest zwolniona, mogą wystąpić naruszenia zasad dostępu i uszkodzenia danych. Rozważmy następujący przykład:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ struct derived : base {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
+[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)

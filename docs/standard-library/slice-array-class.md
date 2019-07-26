@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: 9577447b2201c1c9e53192b99abad1979f45d15f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412543"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450400"
 ---
 # <a name="slicearray-class"></a>slice_array — Klasa
 
-Klasy wewnętrzne, pomocnicze w ramach szablonu, która obsługuje obiekty wycinek, zapewniając operacji między macierzami z podzbioru zdefiniowanych przez wycinek tablicy valarray.
+Wewnętrzna, pomocnicza Klasa szablonu, która obsługuje obiekty plasterków, dostarczając operacje między tablicami podzestawu zdefiniowanymi przez wycinek elementu valarray.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,24 +42,24 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisująca obiekt, który zawiera odwołanie do obiektu klasy [valarray](../standard-library/valarray-class.md)**\<typ >**, oraz obiekt klasy [wycinek](../standard-library/slice-class.md), który Zawiera opis sekwencji elementów, które można wybierać **valarray\<typ >** obiektu.
+Klasa opisuje obiekt, który przechowuje odwołanie do obiektu klasy [valarray](../standard-library/valarray-class.md) **\<typu >** , wraz z obiektem wycinka klasy, który opisuje [](../standard-library/slice-class.md)sekwencję elementów do wybrania z **valarray\<Wpisz >** obiektu.
 
-Klasa szablonu jest pośrednio tworzony przez niektóre operacje valarray i nie można użyć bezpośrednio w programie. Klasa szablonu pomocnicze, wewnętrzne, która jest używana przez operatora indeksu dolnego wycinek:
+Klasa szablonu jest tworzona pośrednio przez pewne operacje valarray i nie może być używana bezpośrednio w programie. Wewnętrzna, pomocnicza Klasa szablonu, która jest używana przez Operator indeksu dolnego:
 
-`slice_array`\< **Typ**> `valarray`< **typu**:: `operator[]` ( `slice`).
+`slice_array`\<**Typ** >  **Typ:** : (`operator[]` ). `valarray` <  `slice`
 
-Konstruowanie `slice_array<Type>` obiektu Pisząc wyrażenie w formie [oceny luk w zabezpieczeniach&#91;sl&#93;](../standard-library/valarray-class.md#op_at), dla wycinka `sl` z tablicy valarray `va`. Funkcje Członkowskie slice_array — klasa następnie zachowują się jak odpowiedniej sygnatury funkcji zdefiniowanych dla `valarray<Type>`, z tą różnicą, że dotyczy tylko kolejność wybranych elementów. Na sekwencję kontrolowaną przez slice_array — jest definiowany przez trzy parametry konstruktora wycinek, indeksu pierwszego elementu w wycinek, liczbę elementów i odległości między elementami. Tablica typu slice_array obcięty z tablicy valarray `va` zdeklarowane **oceny luk w zabezpieczeniach**[ `slice`(2, 5, 3)] wybiera elementy z indeksów, 2, 5, 8, 11 i 14 z `va`. Indeksy muszą być prawidłowe procedury był prawidłowy.
+`slice_array<Type>` Obiekt można skonstruować tylko przez napisanie wyrażenia w postaci [VA&#91;SL&#93;](../standard-library/valarray-class.md#op_at), dla wycinka `sl` valarray `va`. Funkcje składowe klasy slice_array, zachowują się jak odpowiadające im sygnatury `valarray<Type>`funkcji zdefiniowane dla, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów. Sekwencja kontrolowana przez slice_array jest definiowana przez trzy parametry konstruktora wycinka, indeks pierwszego elementu w wycinkze, liczbę elementów i odległość między elementami. Slice_array wycięty z valarray `va` zadeklarowanych przez VA `slice`[(2, 5, 3)] wybiera elementy z indeksami 2, 5, 8, 11 i 14 z. `va` Indeksy muszą być prawidłowe, aby procedura była prawidłowa.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [slice::slice](../standard-library/slice-class.md#slice) przykładowy sposób deklarowania i użyj Tablica typu slice_array.
+Zapoznaj się z przykładem [wycinka:: Slice](../standard-library/slice-class.md#slice) , aby zapoznać się z przykładem sposobu deklarowania i używania slice_array.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<valarray >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

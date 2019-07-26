@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac034a4b80225bd9674e72ca3255938316c5905a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223561"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457701"
 ---
 # <a name="numput-class"></a>num_put — Klasa
 
-Klasa szablonu opisująca obiekt, który może służyć jako zestaw reguł ustawień regionalnych w celu kontroli konwersji wartości liczbowych na sekwencje typu `CharType`.
+Klasa szablonu opisująca obiekt, który może stanowić zestaw reguł ustawień regionalnych w celu kontrolowania konwersji wartości numerycznych na sekwencje typu `CharType`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,15 +35,15 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*<br/>
+*CharType*\
 Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Typ iteratora, do którego funkcje numeryczne put zapisują swoje dane wyjściowe.
 
 ## <a name="remarks"></a>Uwagi
 
-Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba dostępu do jego przechowywanej wartości przechowuje unikatową wartość dodatnią w **identyfikator.**
+Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości przechowuje unikatową wartość dodatnią w **identyfikatorze.**
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -58,20 +58,20 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 |[char_type](#char_type)|Typ opisujący znak używany przez ustawienie regionalne.|
 |[iter_type](#iter_type)|Typ, który opisuje iterator danych wyjściowych.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[do_put](#do_put)|Funkcja wirtualna, która jest wywoływana w celu przekonwertowania liczby na sekwencję `CharType`s, która reprezentuje liczbę sformatowaną dla danego ustawienia regionalnego.|
 |[put](#put)|Konwertuje liczbę na sekwencję `CharType`s, która reprezentuje liczbę sformatowaną dla danego ustawienia regionalnego.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="char_type"></a>  num_put::char_type
+## <a name="char_type"></a>num_put::char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -81,9 +81,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `CharType`.
+Typ jest synonimem dla parametru `CharType`szablonu.
 
-## <a name="do_put"></a>  num_put::do_put
+## <a name="do_put"></a>num_put::d o_put
 
 Funkcja wirtualna, która jest wywoływana w celu przekonwertowania liczby na sekwencję `CharType`s, która reprezentuje liczbę sformatowaną dla danego ustawienia regionalnego.
 
@@ -139,59 +139,59 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametry
 
-*next*<br/>
-Iterator adresujący pierwszy element wstawiony ciągu.
+*ponown*\
+Iterator odnoszący się do pierwszego elementu wstawionego ciągu.
 
-*_Iosbase*<br/>
-Należy określić strumień, który zawiera ustawień regionalnych przy użyciu reguł numpunct — umożliwia znak przestankowy danych wyjściowych i flagi do formatowania danych wyjściowych.
+*_Iosbase*\
+Określono strumień zawierający ustawienia regionalne z zestawem reguł numpunct używany do punctuate danych wyjściowych i flag do formatowania danych wyjściowych.
 
-*_Fill*<br/>
-Znak, który jest używany do rozdzielenia.
+*_Fill*\
+Znak, który jest używany na potrzeby odstępów.
 
-*Val*<br/>
-Liczba lub typu Boolean, który ma być danych wyjściowych.
+*użyte*\
+Liczba lub typ wartości logicznej, która ma być wyjściowa.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator danych wyjściowych adresy jednej pozycji za ostatnim elementem generowany.
+Iterator danych wyjściowych odnosi się do położenia jednej poza ostatnim produkowanym elementem.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja wirtualna elementu członkowskiego chronionego generuje elementów sekwencyjnego, rozpoczynając od *dalej* aby wygenerować dane wyjściowe pola Liczba całkowita od wartości *val*. Funkcja zwraca iterator wyznaczanie dalej miejscem, w którym można wstawić elementu poza pole danych wyjściowych wygenerowana liczba całkowita.
+Funkcja pierwszej wirtualnej chronionej składowej generuje elementy sekwencyjne zaczynające się *obok* pola danych wyjściowych Integer z wartości *Val*. Funkcja zwraca iterator wyznaczający następne miejsce do wstawienia elementu poza wygenerowane pole danych wyjściowych.
 
-Pola Liczba całkowita w danych wyjściowych jest generowany przez te same zasady, które są używane przez funkcje drukowania do generowania szereg **char** elementy do pliku. Przyjęto, że każdy element char mapowania na równoważne elementu typu `CharType` przez mapowania proste, jeden do jednego. W przypadku, gdy funkcja drukowania dopełnia pola z miejsc do magazynowania lub cyfry 0, jednak `do_put` zamiast tego używa `fill`. Specyfikacja równoważna konwersji wydruku jest określany w następujący sposób:
+Pole danych wyjściowych w postaci liczby całkowitej jest generowane przez te same reguły, które są używane przez funkcje drukowania do generowania serii elementów **char** do pliku. Każdy taki znak jest założono, że jest mapowany na odpowiednik elementu typu `CharType` przez proste, jedno-do-jednego mapowania. Gdy funkcja drukowania jest konsolą pola z spacjami lub cyfrą 0, `do_put` zamiast tego używa. `fill` Równoważna specyfikacja konwersji druku jest określana w następujący sposób:
 
-- Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), to specyfikacja konwersji `lo`.
+- Jeśli **iosbase**. [flagami](../standard-library/ios-base-class.md#flags) & dlaKTZ`ios_base::basefield`, specyfikacja konwersji[](../standard-library/ios-functions.md#oct)to .`lo` == `ios_base::`
 
-- Jeśli **iosbase.flags** & **ios_base::basefield** == `ios_base::`[szesnastkowy](../standard-library/ios-functions.md#hex), to specyfikacja konwersji `lx`.
+- Jeśli **iosbase. flags** & **ios_base:: basefield** == `ios_base::`[HEX](../standard-library/ios-functions.md#hex), specyfikacja konwersji to `lx`.
 
-- W przeciwnym razie jest specyfikacja konwersji `ld`.
+- W przeciwnym razie specyfikacja konwersji to `ld`.
 
-Jeśli **iosbase**. [szerokość](../standard-library/ios-base-class.md#width) jest różna od zera, szerokość pola w tej wartości jest dołączony. Następnie wywołuje funkcję **iosbase**. **szerokość**(0), można zresetować szerokość pola na wartość zero.
+Jeśli **iosbase**. [Szerokość](../standard-library/ios-base-class.md#width) jest różna od zera, a szerokość pola tej wartości jest dołączona. Funkcja następnie wywołuje **iosbase**. **Szerokość** (0) aby zresetować szerokość pola do zera.
 
-Dopełnienie występuje tylko wtedy, gdy minimalną liczbę elementów *N* określić pole danych wyjściowych jest mniejsza niż **iosbase**. [szerokość](../standard-library/ios-base-class.md#width). Takie dopełnienie składa się z sekwencji *N* - **szerokość** kopie **wypełnienia**. Dopełnienie następnie odbywa się w następujący sposób:
+Uzupełnienie występuje tylko wtedy, gdy minimalna liczba elementów ( *N* ) wymagana do określenia pola danych wyjściowych jest mniejsza niż **iosbase**. [Szerokość](../standard-library/ios-base-class.md#width). Takie uzupełnienie składa się z sekwencji o**długości** " *N* - " kopii **wypełnienia**. Uzupełnienie jest wykonywane w następujący sposób:
 
-- Jeśli **iosbase**. **flagi** & `ios_base::adjustfield` == `ios_base::`[po lewej stronie](../standard-library/ios-functions.md#left), Flaga **-** jest dołączony. (Dopełnienie występuje po wygenerowanego tekstu.)
+- Jeśli **iosbase**. **flagi** & [po lewej](../standard-library/ios-functions.md#left)stronie **flaga-** jest poprzedzona.`ios_base::adjustfield` == `ios_base::` (Uzupełnienie występuje po wygenerowaniu tekstu).
 
-- Jeśli **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[wewnętrzny](../standard-library/ios-functions.md#internal), Flaga **0** jest dołączony. (Pola liczbowego danych wyjściowych, dopełnienie występuje gdy konsoli funkcji drukowania od 0.)
+- Jeśli **iosbase. flags** & **ios_base:: adjustfield** == `ios_base::`[Internal](../standard-library/ios-functions.md#internal), flaga **0** jest poprzedzona. (W przypadku pola danych wyjściowych liczbowych dopełnienie ma miejsce w przypadku, gdy konsola funkcji drukowania ma wartość 0).
 
-- W przeciwnym razie jest poprzedzona nie dodatkowe flagi. (Dopełnienie występuje przed wygenerowanym sekwencji.)
+- W przeciwnym razie żadna dodatkowa flaga nie jest połączona. (Dopełnienie występuje przed wygenerowaną sekwencją).
 
-Na koniec:
+Ostateczny
 
-- Jeśli **iosbase**. **flagi** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) jest różna od zera, Flaga **+** jest dołączony do specyfikacja konwersji.
+- Jeśli **iosbase**. **flagi** & [](../standard-library/ios-functions.md#showpos) showpos są różna od zera, flaga **+** jest poprzedzona specyfikacją konwersji.`ios_base::`
 
-- Jeśli **iosbase**. **flagi** & **ios_base —::**[showbase](../standard-library/ios-functions.md#showbase) jest różna od zera, Flaga **#** jest dołączony do specyfikacja konwersji.
+- Jeśli **iosbase**. **flagi**[](../standard-library/ios-functions.md#showbase) **#** ios_base:: showbase mają wartość różną od zera, flaga jest poprzedzona specyfikacją konwersji. & 
 
-Format liczby całkowitej danych wyjściowych pola dalsze jest określana przez [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class)**fac** zwracany przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct — ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). W szczególności:
+Format pola danych wyjściowych w postaci liczby całkowitej jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class)**FAC** zwrócony przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md) \< **elem**> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Opracowany
 
-- **FAC**. [Grupowanie](../standard-library/numpunct-class.md#grouping) określa sposób grupowania cyfr na lewo od każdego znaku dziesiętnego
+- **FAC**. [grupowanie](../standard-library/numpunct-class.md#grouping) określa sposób grupowania cyfr na lewo od dowolnego punktu dziesiętnego
 
-- **FAC**. [thousands_sep —](../standard-library/numpunct-class.md#thousands_sep) określa kolejność, która oddziela grup cyfr na lewo od każdego znaku dziesiętnego
+- **FAC**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) Określa sekwencję, która oddziela grupy cyfr po lewej stronie dowolnego punktu dziesiętnego.
 
-Jeśli narzuca bez ograniczeń grupowania **fac**. **Grupowanie** (jej pierwszego elementu z wartością CHAR_MAX), następnie żadnych wystąpień **fac**. `thousands_sep` w polu dane wyjściowe będą generowane. W przeciwnym razie separatory są wstawiane po konwersji drukowania.
+Jeśli żadne ograniczenia grupowania nie są nakładane przez **FAC**. **grupowanie** (jego pierwszy element ma wartość CHAR_MAX), a następnie nie ma wystąpień elementu **FAC**. `thousands_sep`są generowane w polu danych wyjściowych. W przeciwnym razie separatory są wstawiane po konwersji wydruku.
 
-Druga funkcja wirtualna elementu członkowskiego chronionego:
+Druga wirtualna chroniona funkcja członkowska:
 
 ```cpp
 virtual iter_type do_put(iter_type next,
@@ -200,9 +200,9 @@ virtual iter_type do_put(iter_type next,
     unsigned long val) const;
 ```
 
-zachowuje się taka sama jak pierwsza strona, z tą różnicą, że zastępuje specyfikacja konwersji `ld` z `lu`.
+zachowuje się tak samo jak pierwszy, z tą różnicą, że zastępuje specyfikację `ld` konwersji `lu`z.
 
-Trzecia funkcja wirtualna elementu członkowskiego chronionego:
+Trzecia wirtualna chroniona funkcja członkowska:
 
 ```cpp
 virtual iter_type do_put(iter_type next,
@@ -211,21 +211,21 @@ virtual iter_type do_put(iter_type next,
     double val) const;
 ```
 
-zachowuje się taka sama jak pierwsza strona, chyba że generuje pole zmiennoprzecinkowych dane wyjściowe z wartości **val**. **FAC**. [decimal_point —](../standard-library/numpunct-class.md#decimal_point) określa kolejność, która oddziela liczby całkowite od cyfr końcowej. Specyfikacja równoważna konwersji wydruku jest określany w następujący sposób:
+zachowuje się tak samo jak pierwszy, z tą różnicą, że generuje pole danych wyjściowych zmiennoprzecinkowych z wartości **Val**. **FAC**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) Określa sekwencję oddzielające cyfry całkowite od cyfr ułamkowych. Równoważna specyfikacja konwersji druku jest określana w następujący sposób:
 
-- Jeśli **iosbase**. **flagi** & `ios_base::floatfield` == `ios_base::`[stałej](../standard-library/ios-functions.md#fixed), to specyfikacja konwersji `lf`.
+- Jeśli **iosbase**. **flagi**zostałynaprawione,Specyfikacja & [](../standard-library/ios-functions.md#fixed)konwersji to`lf`.`ios_base::floatfield` == `ios_base::`
 
-- Jeśli **iosbase**. **flagi** & **ios_base::floatfield** == `ios_base::`[naukowych](../standard-library/ios-functions.md#scientific), to specyfikacja konwersji `le`. Jeśli **iosbase**. **flagi** & `ios_base::`[wielkie](../standard-library/ios-functions.md#uppercase) jest różna od zera, `e` zostaje zastąpiona opcją `E`.
+- Jeśli **iosbase**. **flagi** == **ios_base:: floatfield**[](../standard-library/ios-functions.md#scientific) `le`,Specyfikacjakonwersjito.`ios_base::` &  Jeśli **iosbase**. **flagi**[](../standard-library/ios-functions.md#uppercase) `e` `E`pisane wielką literą mają wartość różną od zera, są zamieniane na. & `ios_base::`
 
-- W przeciwnym razie jest specyfikacja konwersji **lg**. Jeśli **iosbase**. **flagi** & **ios_base::uppercase** jest różna od zera, `g` zostaje zastąpiona opcją `G`.
+- W przeciwnym razie specyfikacja konwersji to **LG**. Jeśli **iosbase**. **flagi** `g` `G`ios_base:: wielkie litery nie są równe zero, jest zastępowany przez. & 
 
-Jeśli **iosbase**. **flagi** & **ios_base::fixed** jest różna od zera lub jeśli **iosbase**. [dokładność](../standard-library/ios-base-class.md#precision) jest większa od zera, dokładności, wartością **iosbase**. **dokładność** jest dołączony do specyfikacja konwersji. Wszelkie dopełnienie zachowuje się takie same jak dla pola Liczba całkowita danych wyjściowych. Jest znak dopełnienia **wypełnienia**. Na koniec:
+Jeśli **iosbase**. **flagi** & **ios_base:: fixed** mają wartość różną od zera lub **iosbase**. [precyzja](../standard-library/ios-base-class.md#precision) jest większa od zera, dokładność z wartością **iosbase**. **precyzja** jest poprzedzona specyfikacją konwersji. Każde uzupełnienie zachowuje się tak samo jak w przypadku pola danych wyjściowych w postaci liczby całkowitej. Znak uzupełniania jest **wypełniany**. Ostateczny
 
-- Jeśli **iosbase**. **flagi** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) jest różna od zera, Flaga **+** jest dołączony do specyfikacja konwersji.
+- Jeśli **iosbase**. **flagi** & [](../standard-library/ios-functions.md#showpos) showpos są różna od zera, flaga **+** jest poprzedzona specyfikacją konwersji.`ios_base::`
 
-- Jeśli **iosbase**. **flagi** & `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint) jest różna od zera, Flaga **#** jest dołączony do specyfikacja konwersji.
+- Jeśli **iosbase**. **flagi** & [](../standard-library/ios-functions.md#showpoint) Showpoint są różna od zera, flaga **#** jest poprzedzona specyfikacją konwersji.`ios_base::`
 
-Czwarty chronionych funkcja wirtualna elementu członkowskiego:
+Czwarta chroniona funkcja wirtualna elementu członkowskiego:
 
 ```cpp
 virtual iter_type do_put(iter_type next,
@@ -234,9 +234,9 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```
 
-działa tak samo trzeci, chyba że kwalifikator `l` w konwersji jest zastępowany specyfikacji `L`.
+zachowuje się tak samo, z tą różnicą, że kwalifikator `l` w specyfikacji konwersji jest `L`zastępowany przez.
 
-Piąty chronionych funkcja wirtualna elementu członkowskiego:
+Piąta chroniona funkcja wirtualna elementu członkowskiego:
 
 ```cpp
 virtual iter_type do_put(iter_type next,
@@ -245,9 +245,9 @@ virtual iter_type do_put(iter_type next,
     const void* val) const;
 ```
 
-działa tak samo, pierwsza strona, z tą różnicą, że jest specyfikacja konwersji `p` **,** oraz wszelkie kwalifikator potrzebne do określenia dopełnienia.
+zachowuje się tak samo, z tą różnicą, że specyfikacja konwersji `p`to, i kwalifikator **,** który jest wymagany do określenia uzupełnienia.
 
-Szósty chronionych funkcja wirtualna elementu członkowskiego:
+Szósta chroniona funkcja wirtualna elementu członkowskiego:
 
 ```cpp
 virtual iter_type do_put(iter_type next,
@@ -256,11 +256,11 @@ virtual iter_type do_put(iter_type next,
     bool val) const;
 ```
 
-zachowuje się taka sama jak pierwsza strona, z tą różnicą, że generuje pola logicznych dane wyjściowe z *val*.
+zachowuje się tak samo jak pierwszy, z tą różnicą, że generuje pole danych wyjściowych Boolean z wartości *Val*.
 
-Pola logicznych danych wyjściowych ma jedną z dwóch form. Jeśli `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) jest **false**, funkcja elementu członkowskiego zwraca `do_put(_Next, _Iosbase, _Fill, (long)val)`, która zazwyczaj tworzy sekwencję wygenerowanego albo 0 (dla **false**) lub 1 (dla **true**). W przeciwnym razie wygenerowany sekwencji jest *fac*.[ falsename —](../standard-library/numpunct-class.md#falsename) (dla **false**), lub *fac*.[ truename —](../standard-library/numpunct-class.md#truename) (dla **true**).
+Pole dane wyjściowe wartości logicznej przyjmuje jedną z dwóch form. Jeśli `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) ma **wartość false**, funkcja członkowska `do_put(_Next, _Iosbase, _Fill, (long)val)`zwraca, która zwykle generuje wygenerowaną sekwencję 0 (dla **wartości false**) lub 1 (dla **prawdy**). W przeciwnym razie wygenerowana sekwencja to *FAC*. [wartość falsename](../standard-library/numpunct-class.md#falsename) (w przypadku **wartości false**) lub *FAC*. [wartość TrueName](../standard-library/numpunct-class.md#truename) (w przypadku **wartości true**).
 
-Siódmego chronionych funkcja wirtualna elementu członkowskiego:
+Siódma wirtualna chroniona funkcja członkowska:
 
 ```cpp
 virtual iter_type do_put(iter_type next,
@@ -269,9 +269,9 @@ virtual iter_type do_put(iter_type next,
     long long val) const;
 ```
 
-zachowuje się taka sama jak pierwsza strona, z tą różnicą, że zastępuje specyfikacja konwersji `ld` z `lld`.
+zachowuje się tak samo jak pierwszy, z tą różnicą, że zastępuje specyfikację `ld` konwersji `lld`z.
 
-Ósmego chronionych funkcja wirtualna elementu członkowskiego:
+Ósma wirtualna chroniona funkcja członkowska:
 
 ```cpp
 virtual iter_type do_put(iter_type next,
@@ -280,13 +280,13 @@ virtual iter_type do_put(iter_type next,
     unsigned long long val) const;
 ```
 
-zachowuje się taka sama jak pierwsza strona, z tą różnicą, że zastępuje specyfikacja konwersji `ld` z `llu`.
+zachowuje się tak samo jak pierwszy, z tą różnicą, że zastępuje specyfikację `ld` konwersji `llu`z.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [umieścić](#put), która wywołuje metodę `do_put`.
+Zobacz przykład umieszczania [](#put)wywołań `do_put`.
 
-## <a name="iter_type"></a>  num_put::iter_type
+## <a name="iter_type"></a>num_put::iter_type
 
 Typ, który opisuje iterator danych wyjściowych.
 
@@ -298,7 +298,7 @@ typedef OutputIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu **OutputIterator.**
 
-## <a name="num_put"></a>  num_put::num_put
+## <a name="num_put"></a>num_put::num_put
 
 Konstruktor dla obiektów typu `num_put`.
 
@@ -308,24 +308,24 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*<br/>
-Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*\
+Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
+Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
-- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
 
-- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzany ręcznie.
 
 - \> 1: Te wartości nie są zdefiniowane.
 
-Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
+Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
-Konstruktor inicjuje jego podstawowego obiektu z **locale::**[aspekt](../standard-library/locale-class.md#facet_class)(_ *system plików Refs*).
+Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::** [facet](../standard-library/locale-class.md#facet_class)(_ *ReFS*).
 
-## <a name="put"></a>  num_put::Put
+## <a name="put"></a>num_put::p UT
 
 Konwertuje liczbę na sekwencję `CharType`s, która reprezentuje liczbę sformatowaną dla danego ustawienia regionalnego.
 
@@ -381,25 +381,25 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
-Iterator adresujący pierwszy element wstawiony ciągu.
+*dest*\
+Iterator odnoszący się do pierwszego elementu wstawionego ciągu.
 
-*_Iosbase*<br/>
-Należy określić strumień, który zawiera ustawień regionalnych przy użyciu reguł numpunct — umożliwia znak przestankowy danych wyjściowych i flagi do formatowania danych wyjściowych.
+*_Iosbase*\
+Określono strumień zawierający ustawienia regionalne z aspektem numpunct używanym do punctuate danych wyjściowych i flag do formatowania danych wyjściowych.
 
-*_Fill*<br/>
-Znak, który jest używany do rozdzielenia.
+*_Fill*\
+Znak, który jest używany na potrzeby odstępów.
 
-*Val*<br/>
-Liczba lub typu Boolean, który ma być danych wyjściowych.
+*użyte*\
+Liczba lub typ wartości logicznej, która ma być wyjściowa.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator danych wyjściowych adresy jednej pozycji za ostatnim elementem generowany.
+Iterator danych wyjściowych odnosi się do położenia jednej poza ostatnim produkowanym elementem.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie funkcje Członkowskie zwracają [do_put —](#do_put)( `next`, `_Iosbase`, `_Fill`, `val`).
+Wszystkie funkcje składowe [](#do_put)zwracają do_put `next`( `_Iosbase`, `_Fill`, `val`,).
 
 ### <a name="example"></a>Przykład
 
@@ -439,6 +439,6 @@ num_put( ) = 1.000,67
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet Class](../standard-library/locale-class.md#facet_class)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet — Klasa](../standard-library/locale-class.md#facet_class)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,42 +1,34 @@
 ---
 title: '&lt;cuchar&gt;'
-ms.date: 04/04/2019
+ms.date: 07/17/2019
 f1_keywords:
 - <cuchar>
+- cuchar
 helpviewer_keywords:
 - cuchar header
-ms.openlocfilehash: 9fe161d5079aa2fe82dfaef0a483c3a3e600408b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 004ca23ea86134fb7cd6149015ac31cc51b5a403
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267926"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341055"
 ---
-# <a name="ltcwchargt"></a>&lt;cwchar —&gt;
+# <a name="ltcuchargt"></a>&lt;cuchar&gt;
 
-Dołącza nagłówek biblioteki standardowej C \<uchar.h > i dodaje skojarzone nazwy `std` przestrzeni nazw.
+Zawiera nagłówek \<standardowej biblioteki C uchar. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<cuchar >
 
-**Namespace:** standardowe
-
-## <a name="member-functions"></a>Funkcje Członkowskie
-
-|||
-|-|-|
-|[c16rtomb](../standard-library/cuchar-functions.md#c16rtomb)|Brak opisu.|
-|[c32rtomb](../standard-library/cuchar-functions.md#c32rtomb)|Brak opisu.|
-|[mbrtoc16](../standard-library/cuchar-functions.md#mbrtoc16)|Brak opisu.|
-|[mbrtoc32](../standard-library/cuchar-functions.md#mbrtoc32)|Brak opisu.|
+**Przestrzeń nazw:** std
 
 ## <a name="remarks"></a>Uwagi
 
-Dołączenie tego pliku nagłówkowego gwarantuje również, że nazwy zadeklarowane przez zewnętrzne powiązanie w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
+Ten nagłówek dodaje `mbstate_t` standardowe typy biblioteki języka C oraz `size_t`funkcje [c16rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md), [](../c-runtime-library/reference/c16rtomb-c32rtomb1.md) `std` c32rtomb, [mbrtoc16](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)i [mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md) do przestrzeni nazw.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
+[C++Omówienie biblioteki standardowej](cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](thread-safety-in-the-cpp-standard-library.md)

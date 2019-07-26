@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394185"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449357"
 ---
 # <a name="ctypebase-class"></a>ctype_base — Klasa
 
-Klasa służy jako klasa bazowa dla zestawów reguł klasy szablonu [ctype](../standard-library/ctype-class.md). Klasa bazowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.
+Klasa służy jako klasa bazowa dla aspektów klasy szablonu [CType](../standard-library/ctype-class.md). Klasa bazowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,38 +45,38 @@ struct ctype_base : public locale::facet
 
 ## <a name="remarks"></a>Uwagi
 
-Definiuje wyliczenie maski. Każda stała wyliczenia charakteryzuje inny sposób do klasyfikowania znaków, zgodnie z definicją funkcji o podobnych nazwach, zadeklarowany w nagłówku \<ctype.h >. Stałe są następujące:
+Definiuje on maskę wyliczenia. Każda stała wyliczenia charakteryzuje inny sposób klasyfikowania znaków, zgodnie z definicją w funkcjach o podobnych nazwach zadeklarowanych \<w nagłówku CType. h >. Stałe są następujące:
 
 - **miejsce** (funkcja [isspace](../standard-library/locale-functions.md#isspace))
 
 - **Drukuj** (funkcja [isprint](../standard-library/locale-functions.md#isprint))
 
-- **nacisnąć klawisze CTRL +** (funkcja [iscntrl](../standard-library/locale-functions.md#iscntrl))
+- **cntrl** (funkcja [iscntrl](../standard-library/locale-functions.md#iscntrl))
 
-- **Górny** (funkcja [isupper](../standard-library/locale-functions.md#isupper))
+- **wielkie litery** (funkcja [IsUpper](../standard-library/locale-functions.md#isupper))
 
-- **niższe** (funkcja [islower](../standard-library/locale-functions.md#islower))
+- **poniżej** (funkcja [IsLower](../standard-library/locale-functions.md#islower))
 
-- **cyfra** (funkcja [isdigit](../standard-library/locale-functions.md#isdigit))
+- **cyfra** (funkcja [](../standard-library/locale-functions.md#isdigit)iscyfra)
 
 - **punct** (funkcja [ispunct](../standard-library/locale-functions.md#ispunct))
 
 - **xdigit** (funkcja [isxdigit](../standard-library/locale-functions.md#isxdigit))
 
-- **alfa** (funkcja [isalpha](../standard-library/locale-functions.md#isalpha))
+- **Alpha** (funkcja [isalpha](../standard-library/locale-functions.md#isalpha))
 
 - **alnum** (funkcja [isalnum](../standard-library/locale-functions.md#isalnum))
 
-- **Wykres** (funkcja [isgraph](../standard-library/locale-functions.md#isgraph))
+- **Wykres** (funkcja [isgraf](../standard-library/locale-functions.md#isgraph))
 
-Kombinacja klasyfikacji przez ORing można scharakteryzowania te stałe. W szczególności jest zawsze wartość true, który **alnum** == ( **alfa** &#124; **cyfrę** \) i **wykres** \= \= \( **alnum** &#124; **punct**).
+Można scharakteryzowanie kombinacji klasyfikacji, ORing te stałe. W szczególności zawsze jest to prawdą, że **alnum** = = (  &#124; **cyfry** \) alfa i **Graph** \= \= \( **alnum** &#124; **punct**).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

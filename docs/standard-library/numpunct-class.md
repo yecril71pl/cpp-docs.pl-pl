@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371480"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454183"
 ---
 # <a name="numpunct-class"></a>numpunct — Klasa
 
-Klasa szablonu opisująca obiekt, który może służyć jako lokalny zestaw reguł do opisania sekwencji typu `CharType` używanych do przedstawiania informacji o formatowaniu i znakach interpunkcyjnych wyrażeń liczbowych i logicznych.
+Klasa szablonu opisująca obiekt, który może służyć jako zestaw reguł lokalnych do opisywania sekwencji typu `CharType` używanego do reprezentowania informacji o formatowaniu i interpunkcji wyrażeń liczbowych i logicznych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,18 +50,18 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*<br/>
+*CharType*\
 Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 ## <a name="remarks"></a>Uwagi
 
-Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba dostępu do jego przechowywanej wartości przechowuje unikatową wartość dodatnią w **identyfikator.**
+Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości przechowuje unikatową wartość dodatnią w **identyfikatorze.**
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[numpunct —](#numpunct)|Konstruktor dla obiektów typu `numpunct`.|
+|[numpunct](#numpunct)|Konstruktor dla obiektów typu `numpunct`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -70,9 +70,9 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 |[char_type](#char_type)|Typ opisujący znak używany przez ustawienie regionalne.|
 |[string_type](#string_type)|Typ, który opisuje ciąg zawierający znaki typu `CharType`.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[decimal_point](#decimal_point)|Zwraca element ustawień regionalnych używany jako separator dziesiętny.|
 |[do_decimal_point](#do_decimal_point)|Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia elementu specyficznego dla ustawień regionalnych używanego jako separator dziesiętny.|
@@ -80,18 +80,18 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 |[do_grouping](#do_grouping)|Chroniona funkcja wirtualna elementu członkowskiego, wywoływana w celu zwrócenia reguły specyficznej dla ustawień regionalnych, aby określić sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.|
 |[do_thousands_sep](#do_thousands_sep)|Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia elementu specyficznego dla ustawień regionalnych używanego jako separator tysięczny.|
 |[do_truename](#do_truename)|Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia ciągu do użycia jako tekstowa reprezentacja wartości **true**.|
-|[falsename —](#falsename)|Zwraca ciąg wykorzystywany jako tekstowa reprezentacja wartości **false**.|
-|[Grupowanie](#grouping)|Zwraca regułę specyficzną dla ustawień regionalnych określającą sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.|
-|[thousands_sep —](#thousands_sep)|Zwraca element specyficzny dla ustawień regionalnych używany jako separator tysięczny.|
-|[truename —](#truename)|Zwraca ciąg wykorzystywany jako tekstowa reprezentacja wartości **true**.|
+|[wartość falsename](#falsename)|Zwraca ciąg, który ma być używany jako tekstowa reprezentacja wartości **false**.|
+|[grupie](#grouping)|Zwraca regułę specyficzną dla ustawień regionalnych określającą sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.|
+|[thousands_sep](#thousands_sep)|Zwraca element specyficzny dla ustawień regionalnych używany jako separator tysięczny.|
+|[wartość TrueName](#truename)|Zwraca ciąg, który ma być używany jako tekstowa reprezentacja wartości **true**.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="char_type"></a>  numpunct::char_type
+## <a name="char_type"></a>numpunct:: char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -101,9 +101,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu **CharType.**
+Typ jest synonimem dla parametru szablonu CharType **.**
 
-## <a name="decimal_point"></a>  numpunct::decimal_point
+## <a name="decimal_point"></a>numpunct::d ecimal_point
 
 Zwraca element ustawień regionalnych używany jako separator dziesiętny.
 
@@ -113,11 +113,11 @@ CharType decimal_point() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element specyficzne dla ustawień regionalnych używany jako separator dziesiętny.
+Element specyficzny dla ustawień regionalnych, który ma być używany jako punkt dziesiętny.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca [do_decimal_point —](#do_decimal_point).
+Funkcja członkowska zwraca [do_decimal_point](#do_decimal_point).
 
 ### <a name="example"></a>Przykład
 
@@ -146,7 +146,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="do_decimal_point"></a>  numpunct::do_decimal_point
+## <a name="do_decimal_point"></a>numpunct::d o_decimal_point
 
 Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia elementu specyficznego dla ustawień regionalnych używanego jako separator dziesiętny.
 
@@ -156,15 +156,15 @@ virtual CharType do_decimal_point() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element specyficzne dla ustawień regionalnych używany jako separator dziesiętny.
+Element specyficzny dla ustawień regionalnych, który ma być używany jako punkt dziesiętny.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [decimal_point —](#decimal_point), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `decimal_point`.
+Zobacz przykład dla [decimal_point](#decimal_point), gdzie wirtualna funkcja członkowska jest wywoływana przez `decimal_point`.
 
-## <a name="do_falsename"></a>  numpunct::do_falsename
+## <a name="do_falsename"></a>numpunct::d o_falsename
 
-Funkcja chronionych wirtualna elementu członkowskiego zwraca sekwencję jako tekstowa reprezentacja wartości **false**.
+Chroniona funkcja wirtualna elementu członkowskiego zwraca sekwencję do użycia jako tekstowa reprezentacja wartości **false**.
 
 ```cpp
 virtual string_type do_falsename() const;
@@ -172,17 +172,17 @@ virtual string_type do_falsename() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg zawierający sekwencji do użycia jako tekstowa reprezentacja wartości **false**.
+Ciąg zawierający sekwencję do użycia jako tekstowa reprezentacja wartości **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca ciąg "false", do reprezentowania wartości **false** we wszystkich ustawieniach regionalnych.
+Funkcja członkowska zwraca ciąg "false" reprezentujący wartość **false** we wszystkich ustawieniach regionalnych.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [falsename —](#falsename), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `falsename`.
+Zobacz przykład dla falsename, gdzie wirtualna funkcja członkowska jest wywoływana przez. [](#falsename) `falsename`
 
-## <a name="do_grouping"></a>  numpunct::do_grouping
+## <a name="do_grouping"></a>numpunct::d o_grouping
 
 Chroniona funkcja wirtualna elementu członkowskiego, wywoływana w celu zwrócenia reguły specyficznej dla ustawień regionalnych, aby określić sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
 
@@ -192,17 +192,17 @@ virtual string do_grouping() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reguła specyficzne dla ustawień regionalnych określić sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
+Reguła specyficzna dla ustawień regionalnych określająca sposób grupowania cyfr na lewo od dowolnego miejsca dziesiętnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzną dla ustawień regionalnych, aby określić sposób grupowania cyfr na lewo od każdego separatora dziesiętnego. Kodowanie jest taka sama, jak w przypadku **lconv::grouping**.
+Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzną dla ustawień regionalnych, aby określić sposób grupowania cyfr na lewo od każdego separatora dziesiętnego. Kodowanie jest takie samo jak dla elementu **lconv:: Group**.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [grupowanie](#grouping), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `grouping`.
+Zobacz przykład [grupowania](#grouping), gdzie wirtualna funkcja członkowska jest wywoływana przez `grouping`.
 
-## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
+## <a name="do_thousands_sep"></a>numpunct::d o_thousands_sep
 
 Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia elementu specyficznego dla ustawień regionalnych używanego jako separator tysięczny.
 
@@ -216,13 +216,13 @@ Zwraca element specyficzny dla ustawień regionalnych używany jako separator ty
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chronionych wirtualna elementu członkowskiego zwraca element specyficzne dla ustawień regionalnych typu `CharType` używany jako separator grup na lewo od każdego znaku dziesiętnego.
+Chroniona funkcja wirtualna elementu członkowskiego zwraca element specyficzny dla ustawień `CharType` regionalnych typu, który ma być używany jako separator grupy z lewej strony dowolnego punktu dziesiętnego.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [thousands_sep —](#thousands_sep), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `thousands_sep`.
+Zobacz przykład dla [thousands_sep](#thousands_sep), gdzie wirtualna funkcja członkowska jest wywoływana przez `thousands_sep`.
 
-## <a name="do_truename"></a>  numpunct::do_truename
+## <a name="do_truename"></a>numpunct::d o_truename
 
 Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia ciągu do użycia jako tekstowa reprezentacja wartości **true**.
 
@@ -232,17 +232,17 @@ virtual string_type do_truename() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Ciąg do użycia jako tekstowa reprezentacja wartości **true**.
+Ciąg, który ma być używany jako tekstowa reprezentacja wartości **true**.
 
-Wszystkie ustawienia regionalne zwrócenia ciągu "true", do reprezentowania wartości **true**.
+Wszystkie ustawienia regionalne zwracają ciąg "true", aby reprezentować wartość **true**.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [truename —](#truename), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `truename`.
+Zobacz przykład dla prawdyname, gdzie wirtualna funkcja członkowska jest wywoływana przez. [](#truename) `truename`
 
-## <a name="falsename"></a>  numpunct::falsename
+## <a name="falsename"></a>numpunct:: falsename
 
-Zwraca ciąg wykorzystywany jako tekstowa reprezentacja wartości **false**.
+Zwraca ciąg, który ma być używany jako tekstowa reprezentacja wartości **false**.
 
 ```cpp
 string_type falsename() const;
@@ -250,13 +250,13 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg zawierający sekwencji `CharType`s do użycia jako tekstowa reprezentacja wartości **false**.
+Ciąg zawierający sekwencję `CharType`s do użycia jako tekstowa reprezentacja wartości **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca ciąg "false", do reprezentowania wartości **false** we wszystkich ustawieniach regionalnych.
+Funkcja członkowska zwraca ciąg "false" reprezentujący wartość **false** we wszystkich ustawieniach regionalnych.
 
-Funkcja elementu członkowskiego zwraca [do_falsename —](#do_falsename).
+Funkcja członkowska zwraca [do_falsename](#do_falsename).
 
 ### <a name="example"></a>Przykład
 
@@ -289,7 +289,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="grouping"></a>  numpunct::GROUPING
+## <a name="grouping"></a>numpunct:: Grouping
 
 Zwraca regułę specyficzną dla ustawień regionalnych określającą sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
 
@@ -299,11 +299,11 @@ string grouping() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reguła specyficzne dla ustawień regionalnych określić sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
+Reguła specyficzna dla ustawień regionalnych określająca sposób grupowania cyfr na lewo od dowolnego miejsca dziesiętnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca [do_grouping —](#do_grouping).
+Funkcja członkowska zwraca [do_grouping](#do_grouping).
 
 ### <a name="example"></a>Przykład
 
@@ -335,7 +335,7 @@ German_Germany.1252 international grouping:
 the 0th group to the left of the radix character is of size 3
 ```
 
-## <a name="numpunct"></a>  numpunct::numpunct
+## <a name="numpunct"></a>numpunct:: numpunct
 
 Konstruktor dla obiektów typu `numpunct`.
 
@@ -345,26 +345,26 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*<br/>
-Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*\
+Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
+Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
-- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
 
-- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzany ręcznie.
 
 - \> 1: Te wartości nie są zdefiniowane.
 
-Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
+Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
-Konstruktor inicjuje jego podstawowego obiektu z **locale::**[aspekt](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
-## <a name="string_type"></a>  numpunct::STRING_TYPE
+## <a name="string_type"></a>numpunct:: string_type
 
-Typ, który opisuje ciąg zawierający znaki typu **CharType**.
+Typ, który opisuje ciąg zawierający znaki typu CharType .
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
@@ -372,9 +372,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basic-string-class.md) których obiekty można przechowywać kopie sekwencje znaków interpunkcyjnych.
+Typ opisuje specjalizację klasy szablonu [basic_string](../standard-library/basic-string-class.md) , której obiekty mogą przechowywać kopie sekwencji interpunkcji.
 
-## <a name="thousands_sep"></a>  numpunct::thousands_sep
+## <a name="thousands_sep"></a>numpunct:: thousands_sep
 
 Zwraca element specyficzny dla ustawień regionalnych używany jako separator tysięczny.
 
@@ -384,11 +384,11 @@ CharType thousands_sep() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element specyficzne dla ustawień regionalnych używany jako tysięcy separatora.
+Element specyficzny dla ustawień regionalnych, który ma być używany jako separator tysięcy.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca [do_thousands_sep —](#do_thousands_sep).
+Funkcja członkowska zwraca [do_thousands_sep](#do_thousands_sep).
 
 ### <a name="example"></a>Przykład
 
@@ -417,9 +417,9 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="truename"></a>  numpunct::truename
+## <a name="truename"></a>numpunct:: TrueName
 
-Zwraca ciąg wykorzystywany jako tekstowa reprezentacja wartości **true**.
+Zwraca ciąg, który ma być używany jako tekstowa reprezentacja wartości **true**.
 
 ```cpp
 string_type falsename() const;
@@ -427,13 +427,13 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg do użycia jako tekstowa reprezentacja wartości **true**.
+Ciąg, który ma być używany jako tekstowa reprezentacja wartości **true**.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca [do_truename —](#do_truename).
+Funkcja członkowska zwraca [do_truename](#do_truename).
 
-Wszystkie ustawienia regionalne zwrócenia ciągu "true", do reprezentowania wartości **true**.
+Wszystkie ustawienia regionalne zwracają ciąg "true", aby reprezentować wartość **true**.
 
 ### <a name="example"></a>Przykład
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet Class](../standard-library/locale-class.md#facet_class)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet — Klasa](../standard-library/locale-class.md#facet_class)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

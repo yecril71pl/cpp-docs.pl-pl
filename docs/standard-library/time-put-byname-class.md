@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: ffe7aa276e9380b6544a78c1c1735ab57765507a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2da2bf4ea1c709b820c1a82dc20e288634139a83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411971"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460001"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname — Klasa
 
-Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł ustawień regionalnych typu `time_put` \< CharType, OutputIterator >.
+Klasa pochodna szablonu opisuje obiekt, który może być używany jako zestaw reguł ustawień regionalnych `time_put` typu \< CharType, OutputIterator >.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,22 +40,22 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*<br/>
-Nazwy ustawień regionalnych.
+*_Locname*\
+Nazwa ustawień regionalnych.
 
-*_Refs*<br/>
-Licznik odwołań początkowej.
+*_Refs*\
+Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie jest określana przez [o nazwie](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje jego podstawowego obiektu z [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
+Jego zachowanie zależy od nazwanych [](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

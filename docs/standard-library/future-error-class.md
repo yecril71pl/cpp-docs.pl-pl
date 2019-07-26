@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - future/std::future_error
 ms.assetid: 6071c545-ac2a-49ef-9967-07b0125da861
-ms.openlocfilehash: 2b3f754c0ceb7384d99c6a657de214d30aca24b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed3f9d63c45d0e185e3e1476094736d132822173
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159759"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447347"
 ---
 # <a name="futureerror-class"></a>future_error — Klasa
 
-Opisuje obiekt wyjątku, który może zostać wygenerowany za pomocą metod, typów, które zarządzają [przyszłych](../standard-library/future-class.md) obiektów.
+Opisuje obiekt wyjątku, który może być zgłaszany przez metody typów, które [](../standard-library/future-class.md) zarządzają przyszłymi obiektami.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,12 +31,12 @@ const char *what() const throw();
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przyszłych >
+**Nagłówek:** \<przyszłe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
-[logic_error, klasa](../standard-library/logic-error-class.md)<br/>
-[error_code, klasa](../standard-library/error-code-class.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Klasa logic_error](../standard-library/logic-error-class.md)\
+[error_code, klasa](../standard-library/error-code-class.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412194"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447418"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine — Klasa
 
-Generuje losową sekwencję przez algorytm odejmowania z przeniesienia (opóźnioną kopię Fibonacci).
+Generuje losową sekwencję przy użyciu algorytmu odejmowania z przenoszonej (Fibonacci).
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,17 +36,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*UIntType*<br/>
-Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*UInttype*\
+Typ wyniku bez znaku liczby całkowitej. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
 
-*W*<br/>
-**Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*K*\
+**Rozmiar wyrazu**. Rozmiar każdego wyrazu, w bitach, sekwencji stanu. **Warunek wstępny**:`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
-**Krótkie opóźnienie**. Liczba wartości całkowitych. **Warunek wstępny**: `0 < S < R`
+*WOLUMIN*\
+**Krótkie opóźnienie**. Liczba wartości całkowitych. **Warunek wstępny**:`0 < S < R`
 
-*R*<br/>
-**Opóźnione w długo**. Określa cyklu w serii wygenerowany.
+*R*\
+**Długi czas opóźnienia**. Określa cykl w wygenerowanych seriach.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -54,34 +54,34 @@ Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losow
 |-|-|-|
 |`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|
 |`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|
-|`default_seed` jest elementem członkowskim stałą, definiowany jako `19780503u`, który jest używany jako wartość domyślna parametru `subtract_with_carry_engine::seed` i konstruktora pojedynczej wartości.|||
+|`default_seed`jest stałą składową, zdefiniowaną `19780503u`jako domyślną `subtract_with_carry_engine::seed` wartością parametru i konstruktorem pojedynczej wartości.|||
 
-Aby uzyskać więcej informacji na temat elementów członkowskich aparatu zobacz [ \<losowy >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-`substract_with_carry_engine` Klasy szablonu jest ulepszeniem [linear_congruential_engine —](../standard-library/linear-congruential-engine-class.md). Żadna tych aparatów jest tak szybko, lub jako wysokiej jakości wyniki w postaci [mersenne_twister_engine —](../standard-library/mersenne-twister-engine-class.md).
+Klasa szablonu jest ulepszeniem w linear_congruential_engine. [](../standard-library/linear-congruential-engine-class.md) `substract_with_carry_engine` Żadna z tych aparatów nie jest tak szybka, jak i z wysoką jakością jako [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Ten aparat tworzy wartości określonych przez użytkownika typ bez znaku typu całkowitego przy użyciu relacji cyklu ( *okres*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, gdzie `cy(i)` ma wartość `1` Jeśli `x(i - S) - x(i - R) - cy(i - 1) < 0`, w przeciwnym razie `0`, i `M` ma wartość `2` <sup>W</sup>. Stan aparatu to przeniesienie wskaźnika plus *R* wartości. Wartości te składają się z ostatnich *R* wartości zwracane, gdy `operator()` została wywołana co najmniej *R* czas, w przeciwnym razie `N` wartości, które zostały zwrócone, a ostatni `R - N` wartości inicjatora.
+Ten aparat tworzy wartości określonego przez użytkownika niepodpisanego typu całkowitego przy użyciu relacji powtarzania (kropka `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`) `cy(i)` , gdzie ma `1` wartość `x(i - S) - x(i - R) - cy(i - 1) < 0`, jeśli `0`, w `M` przeciwnym razie, i ma wartość `2` <sup>w</sup>. Stanem aparatu jest wskaźnik przenoszenia Plus wartości *R* . Te wartości składają się z ostatnich wartości *R* zwróconych `operator()` , jeśli został wywołany co najmniej `N` *r* razy, w przeciwnym razie wartości, które zostały zwrócone `R - N` , a ostatnią wartością inicjatora.
 
-Argument szablonu `UIntType` musi być wystarczająco duży, aby przechowywać wartości do `M - 1`.
+Argument `UIntType` szablonu musi być wystarczająco duży, aby można było przechowywać wartości `M - 1`do.
 
-Chociaż można utworzyć generatora z tego aparatu bezpośrednio, umożliwia także jeden z tych wstępnie zdefiniowanych definicje typów:
+Chociaż można skonstruować Generator z tego aparatu bezpośrednio, można również użyć jednego z tych wstępnie zdefiniowanych typów typedef:
 
-`ranlux24_base`: Używane jako podstawa `ranlux24`.
+`ranlux24_base`: Używany jako podstawa dla `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: Używane jako podstawa `ranlux48`.
+`ranlux48_base`: Używany jako podstawa dla `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparatem przeniesienia, zobacz artykułu w Wikipedii [generator opóźnioną kopię Fibonacci](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
+Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparatu przenoszenia, zobacz artykuł witryny Wikipedia z [opóźnionym generatorem Fibonacci](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowy >
+**Nagłówek:** \<losowe >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

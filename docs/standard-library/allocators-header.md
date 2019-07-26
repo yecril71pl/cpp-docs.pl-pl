@@ -1,21 +1,21 @@
 ---
-title: '&lt;allocators&gt;'
+title: '&lt;alokatorów&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <allocators>
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 064afd4467a2aedebe3a9892fc80b14597c8552f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de872080bc02f4654f53d94928b5e44dbc36816
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375408"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453696"
 ---
-# <a name="ltallocatorsgt"></a>&lt;allocators&gt;
+# <a name="ltallocatorsgt"></a>&lt;alokatorów&gt;
 
-Definiuje kilka szablonów, które pomagają przydzielać i zwalniać bloki pamięci dla kontenerów opartych na węźle.
+Definiuje kilka szablonów, które ułatwiają przydzielanie i zwalnianie bloków pamięci dla kontenerów opartych na węzłach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,24 +25,24 @@ Definiuje kilka szablonów, które pomagają przydzielać i zwalniać bloki pami
 
 ## <a name="remarks"></a>Uwagi
 
-\<Buforów > Nagłówek zawiera sześć szablonów programu przydzielania, które mogą służyć do wybierania strategie zarządzania pamięci dla kontenerów opartych na węźle. Korzystanie z tych szablonów zawiera także kilka filtrów różnych synchronizacji dostosować strategię zarządzania pamięcią z szeroką gamą różnych systemów wielowątkowości (w tym none). Dopasowanie strategii zarządzania pamięci do pamięci znanych wzorców użycia i wymagania dotyczące synchronizacji określonej aplikacji można często zwiększyć szybkość lub zmniejszyć ogólne wymagania dotyczące pamięci aplikacji.
+\<Przystawcy > nagłówkowy zawiera sześć szablonów alokatora, których można użyć do wybrania strategii zarządzania pamięcią dla kontenerów opartych na węzłach. Do użycia z tymi szablonami zapewnia także kilka różnych filtrów synchronizacji w celu dostosowywania strategii zarządzania pamięcią do różnych różnych schematów wielowątkowości (w tym brak). Dopasowanie strategii zarządzania pamięcią do znanych wzorców użycia pamięci i wymagania dotyczące synchronizacji konkretnej aplikacji może często zwiększyć szybkość lub zmniejszyć ogólne wymagania dotyczące pamięci aplikacji.
 
-Szablony programu przydzielania są implementowane za pomocą składniki wielokrotnego użytku, które można dostosować lub zastąpione, aby zapewnić dodatkowe zarządzanie pamięcią strategii.
+Szablony programu przydzielania są implementowane za pomocą składników wielokrotnego użytku, które można dostosować lub zastąpić, aby zapewnić dodatkowe strategie zarządzania pamięcią.
 
-Kontenery oparte na węzłach w standardowej bibliotece C++ (kontener std::list, kontener std::set, std::multiset, std::map i std::multimap) przechowywania ich elementy w poszczególnych węzłach. Wszystkie węzły z konkretnym typem kontenera jest taki sam rozmiar dzięki elastyczności Menedżera pamięci ogólnego przeznaczenia nie jest potrzebna. Ponieważ rozmiar każdy blok pamięci jest znany w czasie kompilacji, Menedżer pamięci może być znacznie prostszy i szybszy.
+Kontenery oparte na węzłach w C++ standardowej bibliotece (std:: list, std:: Set, std:: zestaw wielokrotny, std:: map i std:: multimap) przechowują elementy w poszczególnych węzłach. Wszystkie węzły dla określonego typu kontenera mają taki sam rozmiar, więc elastyczność Menedżera pamięci ogólnego przeznaczenia nie jest wymagana. Ponieważ rozmiar każdego bloku pamięci jest znany w czasie kompilacji, Menedżer pamięci może być znacznie prostszy i szybszy.
 
-Gdy jest używane z kontenerów, które nie są oparte na węzeł (takie jak C++ std::deque std::vector kontenery standardowej biblioteki i std::basic_string), szablony alllocator będą działać poprawnie, ale prawdopodobnie nie zapewnia poprawy wydajności domyślnego programu przydzielania.
+W przypadku używania z kontenerami, które nie są oparte na węzłach C++ (takich jak standardowe kontenery biblioteki std:: Vector std::d eque, i std:: basic_string), szablony alllocator będą działały prawidłowo, ale nie zapewniają zwiększenia wydajności domyślny Alokator.
 
-Alokatora jest klasa szablonu opisująca obiekt, który zarządza alokacją pamięci i zwalnianiem dla obiekty i tablice obiektów wyznaczonym typu. Obiektami alokatora są używane przez szereg klas szablonu kontenera standardowej biblioteki języka C++.
+Alokator jest klasą szablonu opisującą obiekt, który zarządza alokacją magazynu i zwalnia dla obiektów i tablic obiektów typu wyznaczono. Obiekty alokatora są używane przez kilka klas szablonu kontenera w C++ standardowej bibliotece.
 
-Allocators — są wszystkie szablony tego typu:
+Wszystkie szablony tego typu są następujące:
 
 ```cpp
 template<class Type>
 class allocator;
 ```
 
-gdy argument szablonu `Type` jest typu zarządzanego przez to wystąpienie programu przydzielania. Standardowa biblioteka C++ zawiera domyślnego programu przydzielania, szablon klasy [alokatora](../standard-library/allocator-class.md), który jest zdefiniowany w [ \<pamięci >](../standard-library/memory.md). \<Buforów > Nagłówek zawiera następujący buforów:
+gdzie argument `Type` szablonu jest typem zarządzanym przez wystąpienie alokatora. Biblioteka C++ standardowa zawiera domyślnego alokatora, czyli alokatora [](../standard-library/allocator-class.md)klas szablonów, który jest zdefiniowany w [ \<pamięci >](../standard-library/memory.md). \<Przypisanie > nagłówku udostępnia następujące przypisania:
 
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)
 
@@ -56,7 +56,7 @@ gdy argument szablonu `Type` jest typu zarządzanego przez to wystąpienie progr
 
 - [allocator_chunklist](../standard-library/allocator-chunklist-class.md)
 
-Podczas tworzenia kontenera, na przykład w poniższym przykładzie kodu należy użyć odpowiedniej podczas tworzenia wystąpienia alokatora jako drugi argument typu.
+Użyj odpowiedniego wystąpienia alokatora jako drugiego argumentu typu podczas tworzenia kontenera, takiego jak Poniższy przykład kodu.
 
 ```cpp
 #include <list>
@@ -66,7 +66,7 @@ std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;
 
 _List0 przydziela węzły z `allocator_chunklist` i domyślny filtr synchronizacji.
 
-Użyj makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) do tworzenia szablonów alokatora z filtrami synchronizacji inny niż domyślny:
+Użyj [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) makro, aby utworzyć szablony alokatora z filtrami synchronizacji inną niż domyślna:
 
 ```cpp
 #include <list>
@@ -75,13 +75,13 @@ ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);
 std::list<int, alloc<int> > _List1;
 ```
 
-_Lst1 przydziela węzły z `allocator_chunklist` i [sync_per_thread —](../standard-library/sync-per-thread-class.md) filtr synchronizacji.
+_Lst1 przydziela węzły z `allocator_chunklist` i filtr synchronizacji [sync_per_thread](../standard-library/sync-per-thread-class.md) .
 
-Alokator bloku jest pamięć podręczna lub filtru. Pamięć podręczna jest klasą szablonu, który przyjmuje jeden argument typu std::size_t. Definiuje alokator bloku, który przydziela i zwalnia bloki pamięci o rozmiarze jednego. Musi uzyskać pamięci za pomocą operatora **nowe**, ale potrzebujesz tworzy osobne wywołanie operatora **nowe** dla każdego bloku. Na przykład, może on podrzędnej z większych blokowych lub bloków dla kolejnych ponownej alokacji z cofniętą alokacją pamięci podręcznej.
+Alokator bloku jest pamięcią podręczną lub filtrem. Pamięć podręczna jest klasą szablonu, która przyjmuje jeden argument typu std:: size_t. Definiuje program przydzielający blok, który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze. Musi on uzyskać pamięć przy użyciu operatora **New**, ale nie musi wykonywać osobnego wywołania operatora **New** dla każdego bloku. Może to być na przykład alokacja z większymi blokami lub alokacja pamięci podręcznej w celu kolejnej ponownej alokacji.
 
-Za pomocą kompilatora nie można skompilować ponowne wiązanie, wartość argumentu std::size_t używany, gdy szablon został uruchomiony, nie ma zawsze wartość _Sz argument przekazany do funkcji elementów członkowskich w pamięci podręcznej przydzielić i cofnąć jej przydział.
+Kompilator, który nie może skompilować ponownie powiązać wartości argumentu std:: size_t użytego podczas tworzenia wystąpienia szablonu, nie musi być wartością argumentu _Sz przekazaną do funkcji składowych pamięci podręcznej alokacji i alokacji.
 
-\<allocators — > zawiera następujące szablony pamięci podręcznej:
+\<przypisania > udostępniają następujące szablony pamięci podręcznej:
 
 - [cache_freelist](../standard-library/cache-freelist-class.md)
 
@@ -89,7 +89,7 @@ Za pomocą kompilatora nie można skompilować ponowne wiązanie, wartość argu
 
 - [cache_chunklist](../standard-library/cache-chunklist-class.md)
 
-Filtr jest alokator bloku, który implementuje jej funkcje Członkowskie przy użyciu innego alokator bloku, który jest przekazywany do niej jako argument szablonu. Najczęściej używany typ filtru jest filtr synchronizacji mają zastosowanie zasady synchronizacji, aby kontrolować dostęp do funkcji składowych wystąpienia innym alokator bloku. \<allocators — > zawiera następujące filtry synchronizacji:
+Filtr jest przydziałem bloku, który implementuje funkcje składowe przy użyciu innego alokatora bloku, który jest przekazaniem do niego jako argument szablonu. Najbardziej typową formą filtru jest filtr synchronizacji, który stosuje zasady synchronizacji w celu kontrolowania dostępu do funkcji składowych wystąpienia innego alokatora blokowego. \<przypisania > udostępniają następujące filtry synchronizacji:
 
 - [sync_none](../standard-library/sync-none-class.md)
 
@@ -99,15 +99,15 @@ Filtr jest alokator bloku, który implementuje jej funkcje Członkowskie przy u�
 
 - [sync_shared](../standard-library/sync-shared-class.md)
 
-\<allocators — > udostępnia również filtr [rts_alloc —](../standard-library/rts-alloc-class.md), który posiada wiele alokator bloku wystąpień i określa, które wystąpienie na potrzeby alokacji i dezalokacji w czasie wykonywania, a nie w czasie kompilacji. Kompilatory, których nie można skompilować ponowne wiązanie jest używany.
+\<przydziały > oferują również filtr [rts_alloc](../standard-library/rts-alloc-class.md), który zawiera wiele wystąpień alokatora blokowego i określa, które wystąpienie ma być używane na potrzeby alokacji lub cofania alokacji w czasie wykonywania, a nie podczas kompilowania. Jest on używany z kompilatorami, które nie mogą skompilować ponownie powiązania.
 
-Zasady synchronizacji Określa, jak wystąpienie programu przydzielania obsługuje równoczesnych żądań alokacji i dezalokacji z wielu wątków. Najprostszą jest przekazywanie wszystkich żądań bezpośrednio przez do bazowego obiektu pamięci podręcznej, pozostawiając zarządzania synchronizacji dla użytkownika. Bardziej złożone zasady można serializować dostęp do bazowego obiektu pamięci podręcznej za pomocą elementu mutex.
+Zasady synchronizacji określają, jak wystąpienie alokatora obsługuje równoczesne alokacje i cofa alokacji z wielu wątków. Najprostszą zasadą jest przekazanie wszystkich żądań bezpośrednio do bazowego obiektu pamięci podręcznej, pozostawiając użytkownikowi Zarządzanie synchronizacją. Bardziej skomplikowane zasady mogą być używane do serializacji dostępu do bazowego obiektu pamięci podręcznej przy użyciu elementu mutex.
 
-Jeśli kompilator obsługuje kompilowanie aplikacje jednowątkowe i wielowątkowych, jest domyślnego filtru synchronizacji aplikacje jednowątkowe `sync_none`; w przypadku wszystkich innych przypadkach jest `sync_shared`.
+Jeśli kompilator obsługuje Kompilowanie aplikacji wielowątkowych i wielowątkowych, domyślny filtr synchronizacji dla aplikacji jednowątkowych to `sync_none`; dla wszystkich innych przypadków. `sync_shared`
 
-Szablon pamięci podręcznej `cache_freelist` przyjmuje argument max klasy, która określa maksymalną liczbę elementów, które mają być przechowywane na liście bezpłatne.
+Szablon `cache_freelist` pamięci podręcznej przyjmuje argument Max Class, który określa maksymalną liczbę elementów, które mają być przechowywane na liście bezpłatnych.
 
-\<allocators — > zawiera następujące klasy maksymalna:
+\<przypisania > udostępniają następujące maksymalne klasy:
 
 - [max_none](../standard-library/max-none-class.md)
 
@@ -115,56 +115,56 @@ Szablon pamięci podręcznej `cache_freelist` przyjmuje argument max klasy, któ
 
 - [max_fixed_size](../standard-library/max-fixed-size-class.md)
 
-- [max_variable_size —](../standard-library/max-variable-size-class.md)
+- [max_variable_size](../standard-library/max-variable-size-class.md)
 
 ### <a name="macros"></a>Makra
 
 |Macro|Opis|
 |-|-|
-|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Daje alokatora klasy szablonu.|
-|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Daje `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
-|[CACHE_FREELIST —](../standard-library/allocators-functions.md#cache_freelist)|Daje `stdext::allocators::cache_freelist<sizeof(Type), max>`.|
-|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Daje `stdext::allocators::cache_suballoc<sizeof(Type)>`.|
-|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Daje filtr synchronizacji.|
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Zwraca klasę szablonu alokatora.|
+|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Daje w wyniku. `stdext::allocators::cache_chunklist<sizeof(Type)>`|
+|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Daje w wyniku. `stdext::allocators::cache_freelist<sizeof(Type), max>`|
+|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Daje w wyniku. `stdext::allocators::cache_suballoc<sizeof(Type)>`|
+|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Zwraca filtr synchronizacji.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[Operator! = (\<buforów >)](../standard-library/allocators-operators.md#op_neq)|Testuje pod kątem nierówności pomiędzy obiektami alokatora określonej klasy.|
-|[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|Testuje pod kątem równości pomiędzy obiektami alokatora określonej klasy.|
+|[operator! = (\<przydzielenie >)](../standard-library/allocators-operators.md#op_neq)|Testuje pod kątem nierówności pomiędzy obiektami alokatora określonej klasy.|
+|[operator = = (\<przydzielenie >)](../standard-library/allocators-operators.md#op_eq_eq)|Testuje pod kątem równości pomiędzy obiektami alokatora określonej klasy.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[allocator_base](../standard-library/allocator-base-class.md)|Definiuje klasę bazową i typowe funkcje potrzebne do utworzenia programu przydzielania zdefiniowanych przez użytkownika z filtru synchronizacji.|
-|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Opisuje obiekt, który zarządza alokacją pamięci i zwalnianiem dla obiektów przy użyciu pamięci podręcznej typu [cache_chunklist](../standard-library/cache-chunklist-class.md).|
-|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Opisuje obiekt, który zarządza alokacją pamięci i zwalnianiem dla obiektów typu `Type` używanie pamięci podręcznej typu [cache_freelist](../standard-library/cache-freelist-class.md) o długości zarządza [max_fixed_size —](../standard-library/max-fixed-size-class.md).|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementuje alokatora, który używa **operatora delete** można cofnąć alokacji pamięci bloku i **nowy operator** można przydzielić bloku pamięci.|
-|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Opisuje obiekt, który zarządza alokacją pamięci i zwalnianiem dla obiektów typu `Type` używanie pamięci podręcznej typu [cache_suballoc](../standard-library/cache-suballoc-class.md).|
-|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Opisuje obiekt, który zarządza alokacją pamięci i zwalnianiem dla obiektów typu `Type` używanie pamięci podręcznej typu [cache_freelist](../standard-library/cache-freelist-class.md) o długości zarządza [max_unbounded —](../standard-library/max-unbounded-class.md).|
-|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Opisuje obiekt, który zarządza alokacją pamięci i zwalnianiem dla obiektów typu `Type` używanie pamięci podręcznej typu [cache_freelist](../standard-library/cache-freelist-class.md) o długości zarządza [max_variable_size —](../standard-library/max-variable-size-class.md).|
-|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Definiuje alokator bloku, który przydziela i zwalnia bloki pamięci o rozmiarze jednego.|
-|[cache_freelist](../standard-library/cache-freelist-class.md)|Definiuje alokator bloku, który przydziela i zwalnia bloki pamięci o rozmiarze jednego.|
-|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Definiuje alokator bloku, który przydziela i zwalnia bloki pamięci o rozmiarze jednego.|
-|[FreeList —](../standard-library/freelist-class.md)|Zarządza listą bloki pamięci.|
-|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Zawiera opis obiektu max klasy, która ogranicza [FreeList —](../standard-library/freelist-class.md) obiekt do stałej długości maksymalnej.|
-|[max_none](../standard-library/max-none-class.md)|Zawiera opis obiektu max klasy, która ogranicza [FreeList —](../standard-library/freelist-class.md) obiektu do maksymalnej długości równy zero.|
-|[max_unbounded](../standard-library/max-unbounded-class.md)|Zawiera opis obiektu max klasy, która nie istnieje limit maksymalnego [FreeList —](../standard-library/freelist-class.md) obiektu.|
-|[max_variable_size —](../standard-library/max-variable-size-class.md)|Zawiera opis obiektu max klasy, która ogranicza [FreeList —](../standard-library/freelist-class.md) obiektu do maksymalnej długości, który jest około proporcjonalny do liczby przydzielonych bloków pamięci.|
-|[rts_alloc](../standard-library/rts-alloc-class.md)|Rts_alloc — klasa szablonu opisuje [filtru](../standard-library/allocators-header.md) zawierający tablicę pamięci podręcznej wystąpień i określa, które wystąpienie na potrzeby alokacji i dezalokacji w czasie wykonywania, a nie w czasie kompilacji.|
-|[sync_none](../standard-library/sync-none-class.md)|W tym artykule opisano filtr synchronizacji, który zapewnia brak synchronizacji.|
-|[sync_per_container](../standard-library/sync-per-container-class.md)|W tym artykule opisano filtr synchronizacji, który dostarcza obiekt oddzielne pamięci podręcznej dla każdego obiektu programu przydzielania.|
-|[sync_per_thread](../standard-library/sync-per-thread-class.md)|W tym artykule opisano filtr synchronizacji, który dostarcza obiekt oddzielne pamięci podręcznej dla każdego wątku.|
-|[sync_shared](../standard-library/sync-shared-class.md)|W tym artykule opisano filtr synchronizacji, który używa obiektu mutex do kontrolowania dostępu do obiektu pamięci podręcznej, który jest współużytkowany przez wszystkich buforów.|
+|[allocator_base](../standard-library/allocator-base-class.md)|Definiuje klasę bazową i typowe funkcje, które są konieczne do utworzenia alokatora zdefiniowanego przez użytkownika z filtru synchronizacji.|
+|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Opisuje obiekt, który zarządza alokacją i zwalnianiem magazynu dla obiektów przy użyciu pamięci podręcznej typu [cache_chunklist](../standard-library/cache-chunklist-class.md).|
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Opisuje obiekt, który zarządza alokacją i zwalnianiem magazynu dla obiektów typu `Type` za pomocą pamięci podręcznej typu [cache_freelist](../standard-library/cache-freelist-class.md) o długości zarządzanej przez [max_fixed_size](../standard-library/max-fixed-size-class.md).|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementuje program przydzielający, który używa **operatora delete** do cofnięcia alokacji bloku pamięci i **operatora new** , aby przydzielić blok pamięci.|
+|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Opisuje obiekt, który zarządza alokacją i zwalnianiem magazynu dla obiektów typu `Type` za pomocą pamięci podręcznej typu [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Opisuje obiekt, który zarządza alokacją i zwalnianiem magazynu dla obiektów typu `Type` za pomocą pamięci podręcznej typu [cache_freelist](../standard-library/cache-freelist-class.md) o długości zarządzanej przez [max_unbounded](../standard-library/max-unbounded-class.md).|
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Opisuje obiekt, który zarządza alokacją i zwalnianiem magazynu dla obiektów typu `Type` za pomocą pamięci podręcznej typu [cache_freelist](../standard-library/cache-freelist-class.md) o długości zarządzanej przez [max_variable_size](../standard-library/max-variable-size-class.md).|
+|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Definiuje Alokator bloku, który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze.|
+|[cache_freelist](../standard-library/cache-freelist-class.md)|Definiuje Alokator bloku, który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze.|
+|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Definiuje Alokator bloku, który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze.|
+|[freelist](../standard-library/freelist-class.md)|Zarządza listą bloków pamięci.|
+|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Opisuje obiekt Max Class, który ogranicza obiekt [freelist](../standard-library/freelist-class.md) do stałej maksymalnej długości.|
+|[max_none](../standard-library/max-none-class.md)|Opisuje obiekt klasy maksymalnej, który ogranicza obiekt [freelist](../standard-library/freelist-class.md) do maksymalnej długości równej zero.|
+|[max_unbounded](../standard-library/max-unbounded-class.md)|Opisuje obiekt Max Class, który nie ogranicza maksymalnej długości obiektu [freelist](../standard-library/freelist-class.md) .|
+|[max_variable_size](../standard-library/max-variable-size-class.md)|Opisuje obiekt klasy maksymalnej, który ogranicza obiekt [freelist](../standard-library/freelist-class.md) do maksymalnej długości, która jest w przybliżeniu proporcjonalna do liczby przydzielone bloków pamięci.|
+|[rts_alloc](../standard-library/rts-alloc-class.md)|Klasa szablonu rts_alloc opisuje [Filtr](../standard-library/allocators-header.md) , który przechowuje tablicę wystąpień pamięci podręcznej i określa, które wystąpienie ma być używane do alokacji i dealokacji w czasie wykonywania, a nie podczas kompilowania.|
+|[sync_none](../standard-library/sync-none-class.md)|Opisuje filtr synchronizacji, który nie zapewnia synchronizacji.|
+|[sync_per_container](../standard-library/sync-per-container-class.md)|Opisuje filtr synchronizacji, który zawiera oddzielny obiekt pamięci podręcznej dla każdego obiektu alokatora.|
+|[sync_per_thread](../standard-library/sync-per-thread-class.md)|Opisuje filtr synchronizacji, który zawiera oddzielny obiekt pamięci podręcznej dla każdego wątku.|
+|[sync_shared](../standard-library/sync-shared-class.md)|Opisuje filtr synchronizacji, który używa elementu mutex do kontrolowania dostępu do obiektu pamięci podręcznej, który jest współużytkowany przez wszystkie przypisania.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<buforów >
+**Nagłówek:** \<przypisania >
 
-**Namespace:** stdext
+**Przestrzeń nazw:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

@@ -4,71 +4,71 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-ms.openlocfilehash: c797a893549c8ec708cfb60e6f002b35c27cd35c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2024574633069cc70f0885fdce63f3afc09227c0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220233"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451107"
 ---
 # <a name="sample-container-class"></a>Sample Container — Klasa
 
 > [!NOTE]
-> W tym temacie znajduje się w Microsoft C++ przesłać dokumenty będące prawidłowo przykład kontenerów używanych w C++ biblioteki standardowej. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
 
-Opisuje obiekt, który kontroluje różnej długości sekwencje elementów typu zazwyczaj `Ty`. Sekwencja jest przechowywany na różne sposoby, w zależności od rzeczywistej kontenera.
+Opisuje obiekt, który kontroluje różnej długości sekwencji elementów, zazwyczaj typu `Ty`. Sekwencja jest przechowywana na różne sposoby, w zależności od rzeczywistego kontenera.
 
-Funkcja konstruktora lub elementu członkowskiego kontenera może się okazać razem, gdy wywołanie konstruktora **Ty**(**const Ty &**) lub funkcja **Ty::operator =**(**const Ty &**). Jeśli takie wywołanie zgłasza wyjątek, obiekt kontenera jest zobowiązany do utrzymanie integralności i aby można było ponownie każdy wyjątek, który przechwytuje. Możesz bezpiecznie wymiany, przypisz do wymazania lub zniszczenia obiektu kontenera po zgłasza wyjątek, jeden z tych wyjątków. Ogólnie rzecz biorąc jednak nie może w przeciwnym razie przewidzieć stanu na sekwencję kontrolowaną przez obiekt kontenera.
+Konstruktor kontenera lub funkcja członkowska może odwoływać się do konstruktora **ty**(**const Ty &** ) lub funkcji **ty:: operator =** (**const br &** ). Jeśli takie wywołanie zgłasza wyjątek, obiekt kontenera jest zobowiązany do utrzymania jego integralności i ponownego zgłoszenia wszelkich wyjątków, które wychwytuje. Można bezpiecznie zamienić, przypisać do, wymazać lub zniszczyć obiekt kontenera po wystąpieniu jednego z tych wyjątków. Ogólnie rzecz biorąc, nie można w inny sposób przewidzieć stanu sekwencji kontrolowanej przez obiekt kontenera.
 
-Kilka dodatkowych ostrzeżenia:
+Niektóre dodatkowe zastrzeżenia:
 
-- Jeśli wyrażenie `~Ty` zgłasza wyjątek, który, stan wynikowy obiekt kontenera jest niezdefiniowana.
+- Jeśli wyrażenie `~Ty` zgłasza wyjątek, stan wynikający z obiektu kontenera jest niezdefiniowany.
 
-- Jeśli kontener przechowywany obiekt alokatora *al*, i *al* zgłasza wyjątek innych niż w wyniku wywołania `al.allocate`, stan wynikowy obiekt kontenera jest niezdefiniowana.
+- Jeśli kontener przechowuje obiekt alokatora *Al*, a *Al* zgłasza wyjątek inny niż w wyniku wywołania `al.allocate`, wynikowy stan obiektu kontenera jest niezdefiniowany.
 
-- Jeśli kontener przechowuje obiekt funkcyjny *comp*, aby ustalić sposób uporządkowania kontrolowanej sekwencji i *comp* zgłaszającej wyjątek dowolnego rodzaju, stan wynikowy obiekt kontenera jest niezdefiniowana.
+- Jeśli kontener przechowuje *zgodność*obiektu funkcji, aby określić sposób uporządkowania kontrolowanej sekwencji, a funkcja *COMP* zgłasza wyjątek dowolnego rodzaju, stan wyniku obiektu kontenera jest niezdefiniowany.
 
-Klasy kontenera, zdefiniowane przez standardowej biblioteki języka C++ spełnić kilka dodatkowych wymagań, zgodnie z opisem w sekcjach.
+Klasy kontenerów zdefiniowane przez C++ bibliotekę standardową spełniają kilka dodatkowych wymagań, zgodnie z opisem w poniższych akapitach.
 
-Klasę szablonu pojemnika [listy](../standard-library/list-class.md) zapewnia zachowanie deterministyczne i są przydatne, nawet w obecności wyjątków opisanych powyżej. Na przykład jeśli wyjątek jest generowany podczas wstawiania jednego lub więcej elementów, kontener niezmieniony po lewej stronie, a wyjątek jest zgłaszany ponownie.
+[Lista](../standard-library/list-class.md) klas szablonu kontenera zawiera deterministyczne i przydatne zachowanie, nawet w obecności wyjątków opisanych powyżej. Na przykład, jeśli wyjątek jest zgłaszany podczas wstawiania jednego lub kilku elementów, kontener pozostaje niezmienione i zostanie ponownie zgłoszony wyjątek.
 
-Dla *wszystkie* klasy kontenera definicją standardowej biblioteki języka C++, jeśli wyjątek zostanie zgłoszony podczas wywołania do następujących funkcji elementu członkowskiego, `insert`, `push_back`, lub `push_front`, kontener pozostanie niezmienione i wyjątek jest zgłaszany ponownie.
+W przypadku *wszystkich* klas kontenerów zdefiniowanych C++ przez bibliotekę Standard, jeśli wyjątek jest zgłaszany podczas wywołań do następujących funkcji składowych `insert`, `push_back`,, `push_front`lub, kontener jest pozostawiony bez zmian i wyjątek jest zgłaszany ponownie.
 
-Aby uzyskać *wszystkich* klas kontenerów zdefiniowanych w standardowej biblioteki języka C++, jest zgłaszany żaden wyjątek podczas wywołania do następujących składowych: `pop_back`, `pop_front`.
+Dla *wszystkich* klas kontenerów zdefiniowanych przez C++ bibliotekę standardową nie jest zgłaszany wyjątek podczas wywołań następujących funkcji Członkowskich: `pop_back`,. `pop_front`
 
-Funkcja elementu członkowskiego [wymazać](../standard-library/container-class-erase.md) zgłasza wyjątek, tylko wtedy, gdy operacja kopiowania (przypisania lub kopiowania konstrukcja) zgłasza wyjątek.
+Funkcja członkowska [Wymaż](../standard-library/container-class-erase.md) zgłasza wyjątek tylko wtedy, gdy operacja kopiowania (konstrukcja przypisania lub kopiowania) zgłosi wyjątek.
 
-Ponadto podczas kopiowania iterator, który został zwrócony przez funkcję elementu członkowskiego jest zgłaszany żaden wyjątek.
+Ponadto żaden wyjątek nie jest zgłaszany podczas kopiowania iteratora zwróconego przez funkcję członkowską.
 
-Funkcja elementu członkowskiego [wymiany](../standard-library/container-class-swap.md) sprawia, że dodatkowe obietnic dla *wszystkich* klasy kontenera definicją standardowej biblioteki języka C++:
+Zamiana funkcji [](../standard-library/container-class-swap.md) składowej sprawia, że dodatkowe niesie obietnice zwiększenia dla *wszystkich* klas C++ kontenerów zdefiniowanych przez bibliotekę standardową:
 
-- Funkcja elementu członkowskiego zgłasza wyjątek, tylko wtedy, gdy kontener przechowuje Al — obiekt programu przydzielania i `al` zgłasza wyjątek podczas kopiowania.
+- Funkcja członkowska zgłasza wyjątek tylko wtedy, gdy kontener przechowuje obiekt alokatora Al i `al` zgłasza wyjątek podczas kopiowania.
 
-- Ważność odwołania, wskaźniki i Iteratory, które wyznaczają elementy kontrolowanej sekwencji, które są wymieniane.
+- Odwołania, wskaźniki i Iteratory, które wyznaczają elementy z wymienianych sekwencji są prawidłowe.
 
-Obiekt klasy kontenera, zdefiniowane przez standardowej biblioteki języka C++ przydziela i zwalnia pamięć dla sekwencję którą kontroluje, przez przechowywany obiekt typu `Alloc`, który zazwyczaj jest parametrem szablonu. Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny co obiekt klasy `allocator<Ty>`. W szczególności `Alloc` musi być taki sam typ co `Alloc::rebind<value_type>::other`
+Obiekt klasy kontenera zdefiniowany przez C++ bibliotekę Standard alokuje i zwalnia magazyn dla sekwencji, która kontroluje przez przechowywany obiekt typu `Alloc`, który jest zazwyczaj parametrem szablonu. Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny, co obiekt klasy `allocator<Ty>`. W szczególności `Alloc` musi być tego samego typu co`Alloc::rebind<value_type>::other`
 
-Aby uzyskać *wszystkich* klasy kontenera definicją standardowej biblioteki języka C++, funkcja elementu członkowskiego `Alloc get_allocator const;` zwraca kopię obiektu przechowywany obiekt alokatora. Należy zauważyć, że przechowywany obiekt alokatora *nie* kopiowany po przypisaniu obiektu kontenera. Wszystkie konstruktory inicjują wartość przechowywaną w `allocator`, `Alloc` Jeśli Konstruktor nie zawiera żadnego parametru alokatora.
+Dla *wszystkich* klas kontenerów, C++ które są zdefiniowane przez bibliotekę standardową, funkcja `Alloc get_allocator const;` członkowska zwraca kopię przechowywanego obiektu alokatora. Należy zauważyć, że przechowywany obiekt alokatora *nie* jest kopiowany po przypisaniu obiektu kontenera. Wszystkie konstruktory inicjują wartość przechowywaną `allocator`w `Alloc` , do, jeśli Konstruktor nie zawiera parametru alokatora.
 
-Zgodnie ze standardem C++ klasy kontenera, zdefiniowane przez standardowej biblioteki języka C++ można założyć, że:
+Zgodnie ze C++ standardem, Klasa kontenera zdefiniowana przez bibliotekę C++ standardową może przyjąć, że:
 
-- Wszystkie obiekty klasy `Alloc` porównania równości.
+- Wszystkie obiekty klasy `Alloc` są porównywane.
 
-- Typ `Alloc::const_pointer` jest taka sama jak `const Ty *`.
+- Typ `Alloc::const_pointer` jest taki sam jak `const Ty *`.
 
-- Typ `Alloc::const_reference` jest taka sama jak `const Ty&`.
+- Typ `Alloc::const_reference` jest taki sam jak `const Ty&`.
 
-- Typ `Alloc::pointer` jest taka sama jak `Ty *`.
+- Typ `Alloc::pointer` jest taki sam jak `Ty *`.
 
-- Typ `Alloc::reference` jest taka sama jak `Ty&`.
+- Typ `Alloc::reference` jest taki sam jak `Ty&`.
 
-W tej implementacji jednak kontenerów nie należy wprowadzać takie założenia. W związku z tym działają prawidłowo z obiektami alokatora, które są bardziej ambitne:
+W tej implementacji jednak kontenery nie upraszczają założeń. W ten sposób działają poprawnie z obiektami alokatora, które są bardziej ambitne podejście:
 
-- Wszystkie obiekty klasy `Alloc` nie jest konieczne porównanie równego. (Obsługa wielu pul magazynu).
+- Wszystkie obiekty klasy `Alloc` nie muszą porównywać wartości równej. (Można zachować wiele pul magazynu).
 
-- Typ `Alloc::const_pointer` nie musi być taka sama jak `const Ty *`. (Wskaźnika elementu const może być klasą).
+- Typ `Alloc::const_pointer` nie musi być taki sam jak `const Ty *`. (Stała wskaźnik może być klasą).
 
-- Typ `Alloc::pointer` nie musi być taka sama jak `Ty *`. (Wskaźnik może mieć klasy).
+- Typ `Alloc::pointer` nie musi być taki sam jak `Ty *`. (Wskaźnik może być klasą).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -76,4 +76,4 @@ W tej implementacji jednak kontenerów nie należy wprowadzać takie założenia
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Przykładowy kontener >](../standard-library/sample-container.md)<br/>
+[\<Przykładowy > kontenera](../standard-library/sample-container.md)

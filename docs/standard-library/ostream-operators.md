@@ -1,25 +1,25 @@
 ---
-title: '&lt;ostream&gt; operatorów'
+title: '&lt;Operatory&gt; ostream'
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: ee1a9a6829dbef13b034300d696c43ddba48d9d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370958"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453519"
 ---
-# <a name="ltostreamgt-operators"></a>&lt;ostream&gt; operatorów
+# <a name="ltostreamgt-operators"></a>&lt;Operatory&gt; ostream
 
 ||
 |-|
-|[Operator&lt;&lt;](#op_lt_lt)|
+|[zakład&lt;&lt;](#op_lt_lt)|
 
-## <a name="op_lt_lt"></a>  Operator&lt;&lt;
+## <a name="op_lt_lt"></a>zakład&lt;&lt;
 
-Zapisuje różnych typów w strumieniu.
+Zapisuje różne typy w strumieniu.
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -80,22 +80,22 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*<br/>
+*_Ch*\
 Znak.
 
-*_Elem*<br/>
+*_Elem*\
 Typ elementu.
 
-*_Ostr*<br/>
+*_Ostr*\
 Element `basic_ostream` obiektu.
 
-*str*<br/>
+*str*\
 Ciąg znaków.
 
-*_Tr*<br/>
+*_Tr*\
 Cechy znaków.
 
-*Val*<br/>
+*użyte*\
 Typ
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -104,7 +104,7 @@ Strumień.
 
 ### <a name="remarks"></a>Uwagi
 
-`basic_ostream` Klasa definiuje również wiele operatorów wstawiania. Aby uzyskać więcej informacji, zobacz [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
+`basic_ostream` Klasa definiuje również kilka operatorów wstawiania. Aby uzyskać więcej informacji, zobacz [basic_ostream::&lt;operator&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
 
 Funkcja szablonu
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-Określa długość N = `traits_type::` [długość](../standard-library/char-traits-struct.md#length)(`str`) na początku sekwencji *str*i wstawia sekwencję. Jeśli N < `_Ostr.` [szerokość](../standard-library/ios-base-class.md#width), wówczas funkcja również wstawia powtórzenia `_Ostr.width` -N znaki. Powtarzanie poprzedza sekwencji, jeśli (`_Ostr`. [flagi](../standard-library/ios-base-class.md#flags)  &  `adjustfield` ! = [po lewej stronie](../standard-library/ios-functions.md#left). W przeciwnym razie powtarzania następuje sekwencji. Funkcja zwraca *_Ostr*.
+Określa długość `traits_type::`N = [Długość](../standard-library/char-traits-struct.md#length)(`str`) sekwencji rozpoczynającej się o *str*i wstawia sekwencję. Jeśli N < `_Ostr.` [Szerokość](../standard-library/ios-base-class.md#width), funkcja wstawia również powtarzające `_Ostr.width` się znaki wypełnienia (-N). Powtórzenie poprzedza sekwencję if (`_Ostr`. [](../standard-library/ios-base-class.md#flags)flagi & != [Left](../standard-library/ios-functions.md#left).`adjustfield` W przeciwnym razie powtórzenia następuje po sekwencji. Funkcja zwraca *_Ostr*.
 
 Funkcja szablonu
 
@@ -126,7 +126,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-Wstawia element `_Ch`. Jeśli 1 < `_Ostr.width`, wówczas funkcja również wstawia powtórzenia `_Ostr.width` - 1 wprowadź znaki. Powtarzanie poprzedza sekwencji, jeśli `_Ostr.flags & adjustfield != left`. W przeciwnym razie powtarzania następuje sekwencji. Zwraca *_Ostr*.
+Wstawia element `_Ch`. Jeśli 1 < `_Ostr.width`, funkcja wstawia również powtarzające `_Ostr.width` się znaki wypełniania-1. Powtórzenie poprzedza sekwencję `_Ostr.flags & adjustfield != left`. W przeciwnym razie powtórzenia następuje po sekwencji. Zwraca *_Ostr*.
 
 Funkcja szablonu
 
@@ -137,7 +137,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const char *str);
 ```
 
-działa tak samo jak
+zachowuje się tak samo jak
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-z tą różnicą, że każdy element *_Ch* na początku sekwencji *str* jest konwertowany na obiekt typu `Elem` przez wywołanie metody `_Ostr.` [umieścić](../standard-library/basic-ostream-class.md#put)(`_Ostr.` [mogą zostać poszerzone](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
+z tą różnicą, że każdy element *_Ch* sekwencji zaczynającej się od *str* jest konwertowany na `Elem` obiekt typu `_Ostr.`przez wywołanie`_Ostr.`metody [Put](../standard-library/basic-ostream-class.md#put)([rozszerzając](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 Funkcja szablonu
 
@@ -157,7 +157,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     char _Ch);
 ```
 
-działa tak samo jak
+zachowuje się tak samo jak
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-z tą różnicą, że *_Ch* jest konwertowany na obiekt typu `Elem` przez wywołanie metody `_Ostr.put`( `_Ostr.widen`( `_Ch`)).
+z tą różnicą, że *_Ch* jest konwertowany na `Elem` obiekt typu `_Ostr.put`przez `_Ostr.widen`wywoływanie (( `_Ch`)).
 
 Funkcja szablonu
 
@@ -177,7 +177,7 @@ basic_ostream<char, _Tr>& operator<<(
     const char *str);
 ```
 
-działa tak samo jak
+zachowuje się tak samo jak
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -186,7 +186,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-(Go nie ma rozszerzenie elementy przed wstawieniem ich).
+(Nie trzeba poszerzać elementów przed wstawianiem ich).
 
 Funkcja szablonu
 
@@ -197,7 +197,7 @@ basic_ostream<char, Tr>& operator<<(
     char _Ch);
 ```
 
-działa tak samo jak
+zachowuje się tak samo jak
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(Nie ma rozszerzenie *_Ch* przed wstawieniem.)
+(Nie musi on poszerzać *_Ch* przed wstawieniem).
 
 Funkcja szablonu
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-Zwraca `_Ostr` << (`const char *`) `str`.
+zwraca `_Ostr` < < (`const char *`) `str`.
 
 Funkcja szablonu
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-Zwraca `_Ostr` << (`char`) `_Ch`.
+zwraca `_Ostr` < < (`char`) `_Ch`.
 
 Funkcja szablonu:
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-Zwraca `_Ostr` << (`const char *`) `str`.
+zwraca `_Ostr` < < (`const char *`) `str`.
 
 Funkcja szablonu:
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-Zwraca `_Ostr` << (`char`) `_Ch`.
+zwraca `_Ostr` < < (`char`) `_Ch`.
 
 Funkcja szablonu:
 
@@ -261,12 +261,12 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-Zwraca `_Ostr` `<<` `val` (i konwertuje [odwołanie RValue](../cpp/rvalue-reference-declarator-amp-amp.md) do `_Ostr` z wartościowaniem lewostronnym w procesie).
+zwraca `_Ostr` `_Ostr` [](../cpp/rvalue-reference-declarator-amp-amp.md) (i konwertuje odwołanie rvalue do lvalue w procesie). `<<` `val`
 
 ### <a name="example"></a>Przykład
 
-Zobacz [opróżniania](../standard-library/ostream-functions.md#flush) dla przykłady dotyczące używania `operator<<`.
+Zobacz [opróżnianie](../standard-library/ostream-functions.md#flush) , aby zapoznać `operator<<`się z przykładem.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<ostream>](../standard-library/ostream.md)<br/>
+[\<ostream>](../standard-library/ostream.md)

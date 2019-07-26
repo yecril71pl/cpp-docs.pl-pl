@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-ms.openlocfilehash: 30ae1e6384b3861bc4324d42f095516f80dce6e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400685"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455518"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream — Klasa
 
-Opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowany obiektów z bufor strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, z elementami typu `Elem`, którego cechy znaków są określane przez klasę `Tr`.
+Opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, z elementami typu `Elem`, których cechy znaku są określone przez klasę `Tr`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +36,19 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
-Podstawowy element buforu plików.
+*Elem*\
+Podstawowy element buforu pliku.
 
-*TR*<br/>
-Cechy elementu podstawowego buforu pliku (zazwyczaj `char_traits` <  `Elem`>).
+*Zdawczy*\
+Cechy podstawowego elementu buforu plików (zwykle `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt przechowuje obiekt klasy `basic_filebuf` <  `Elem`, `Tr`>.
+`basic_filebuf`Obiekt przechowuje obiekt klasy <  `Elem`, >.`Tr`
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób odczytywania tekstu z pliku.
+Poniższy przykład pokazuje, jak czytać tekst z pliku.
 
 ```cpp
 // basic_ifstream_class.cpp
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>Dane wejściowe: basic_ifstream_class.txt
+## <a name="input-basicifstreamclasstxt"></a>Dane wejściowe: basic_ifstream_class. txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -87,33 +87,33 @@ This is the contents of basic_ifstream_class.txt.
 
 |Konstruktor|Opis|
 |-|-|
-|[basic_ifstream](#basic_ifstream)|Inicjuje nowe wystąpienie klasy `basic_ifstream` obiektu.|
+|[basic_ifstream](#basic_ifstream)|Inicjuje nowe wystąpienie `basic_ifstream` obiektu.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[close](#close)|Zamyka plik.|
 |[is_open](#is_open)|Określa, czy plik jest otwarty.|
 |[open](#open)|Otwiera plik.|
-|[rdbuf](#rdbuf)|Zwraca adres buforu strumienia przechowywanych.|
-|[swap](#swap)|Wymienia zawartość tego `basic_ifstream` zawartości dotyczącej dostępnego `basic_ifstream`.|
+|[rdbuf](#rdbuf)|Zwraca adres buforu zapisanego strumienia.|
+|[swap](#swap)|Wymienia zawartość tego `basic_ifstream` elementu dla zawartości podanej `basic_ifstream`.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator=](#op_eq)|Przypisuje zawartość tego obiektu strumienia. Jest to przeniesienia przypisania obejmujące `rvalue` , nie pozostawione kopię.|
+|[operator=](#op_eq)|Przypisuje zawartość tego obiektu strumienia. Jest to przypisanie przenoszenia obejmujące element `rvalue` , który nie pozostawia kopii w tle.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<fstream — >
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="basic_ifstream"></a>  basic_ifstream::basic_ifstream
+## <a name="basic_ifstream"></a>basic_ifstream::basic_ifstream
 
-Tworzy obiekt typu `basic_ifstream`.
+Konstruuje obiekt typu `basic_ifstream`.
 
 ```cpp
 basic_ifstream();
@@ -133,26 +133,26 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa p_liku*<br/>
-Nazwa pliku, aby otworzyć.
+*_Filename*\
+Nazwa pliku do otwarcia.
 
-*_Tryb*<br/>
-Jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Mode*\
+Jedno z wyliczeń w [ios_base:: openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
-Domyślny plik otwarcie ochrony odpowiednikiem `shflag` parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*\
+Domyślna ochrona otwierania plików, równoważna `shflag` parametrowi w [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje klasę bazową, wywołując [basic_istream](../standard-library/basic-istream-class.md)( `sb`), gdzie `sb` jest przechowywany obiekt klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md) <  `Elem`, `Tr`>. Inicjuje również `sb` przez wywołanie metody `basic_filebuf` <  `Elem`, `Tr`>.
+Pierwszy Konstruktor inicjuje klasę bazową przez wywołanie [basic_istream](../standard-library/basic-istream-class.md)( `sb`), gdzie `sb` jest przechowywany obiekt klasy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. `sb` Inicjuje się to również przez `basic_filebuf` < wywołanie `Elem`, >.`Tr`
 
-Drugi i trzeci Konstruktor inicjuje klasę bazową, wywołując `basic_istream`( `sb`). Inicjuje również `sb` przez wywołanie metody [basic_filebuf —](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`>, następnie `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`). Jeśli ostatnie funkcja zwraca pusty wskaźnik, wywołuje konstruktor **setstate**( `failbit`).
+Drugi i trzeci Konstruktor inicjuje klasę bazową przez wywołanie `basic_istream`( `sb`). Jest on również `sb` inicjowany przez wywołanie `Tr` [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, > `sb`, then. [Otwórz](../standard-library/basic-filebuf-class.md#open) ( `_Filename`, `_Mode` &#124; `ios_base::in`). Jeśli druga funkcja zwraca wskaźnik o wartości null, Konstruktor wywołuje metodę **setstate**( `failbit`).
 
-Czwarty Konstruktor inicjuje obiekt z zawartością `right`, traktowane jako odwołanie rvalue.
+Czwarty Konstruktor inicjuje obiekt z zawartością `right`, traktowany jako odwołanie rvalue.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób odczytywania tekstu z pliku. Aby utworzyć plik, zobacz przykład [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream).
+Poniższy przykład pokazuje, jak czytać tekst z pliku. Aby utworzyć plik, zobacz przykład dla [basic_ofstream:: basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream).
 
 ```cpp
 // basic_ifstream_ctor.cpp
@@ -175,7 +175,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="close"></a>  basic_ifstream::Close
+## <a name="close"></a>basic_ifstream:: Close
 
 Zamyka plik.
 
@@ -185,13 +185,13 @@ void close();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji elementu członkowskiego [rdbuf —](#rdbuf) **->** [Zamknij](../standard-library/basic-filebuf-class.md#close).
+Funkcja członkowska wywołuje [rdbuf](#rdbuf) **->** [Close](../standard-library/basic-filebuf-class.md#close).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) przykład, który używa `close`.
+Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z `close`przykładem, który używa.
 
-## <a name="is_open"></a>  basic_ifstream::is_open
+## <a name="is_open"></a>basic_ifstream::is_open
 
 Określa, czy plik jest otwarty.
 
@@ -201,17 +201,17 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli plik jest otwarty, **false** inaczej.
+**ma wartość true** , jeśli plik jest otwarty; w przeciwnym razie **zwraca wartość false** .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca [rdbuf —](#rdbuf) **->** [is_open —](../standard-library/basic-filebuf-class.md#is_open).
+Funkcja członkowska zwraca [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) przykład, który używa `is_open`.
+Zobacz [basic_filebuf:: is_open](../standard-library/basic-filebuf-class.md#is_open) , aby zapoznać się z `is_open`przykładem, który używa.
 
-## <a name="open"></a>  basic_ifstream::Open
+## <a name="open"></a>basic_ifstream:: Open
 
 Otwiera plik.
 
@@ -237,26 +237,26 @@ void open(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa p_liku*<br/>
-Nazwa pliku, aby otworzyć.
+*_Filename*\
+Nazwa pliku do otwarcia.
 
-*_Tryb*<br/>
-Jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Mode*\
+Jedno z wyliczeń w [ios_base:: openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
-Domyślny plik otwarcie ochrony odpowiednikiem `shflag` parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*\
+Domyślna ochrona otwierania plików, równoważna `shflag` parametrowi w [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji elementu członkowskiego [rdbuf —](#rdbuf) **->** [Otwórz](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124;  **ios_base::in**). Jeśli open zakończy się niepowodzeniem, wywołania funkcji [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`), które mogą zgłosić wyjątek ios_base::failure.
+Funkcja członkowska wywołuje [rdbuf](#rdbuf) **->** [Open](../standard-library/basic-filebuf-class.md#open)(_ *filename*, `_Mode` &#124; **ios_base:: in**). Jeśli operacja otwierania nie powiedzie się [](../standard-library/basic-ios-class.md#setstate), funkcja wywołuje`failbit`metodę setstate (), która może zgłosić wyjątek ios_base:: Failure.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) przykład, który używa `open`.
+Zobacz [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) , aby zapoznać się z `open`przykładem, który używa.
 
-## <a name="op_eq"></a>  basic_ifstream::operator =
+## <a name="op_eq"></a>basic_ifstream:: operator =
 
-Przypisuje zawartość tego obiektu strumienia. Jest to przeniesienia przypisania obejmujące rvalue, który nie pozostawione kopię.
+Przypisuje zawartość tego obiektu strumienia. Jest to przypisanie przenoszenia obejmujące rvalue, które nie pozostawia kopii w tle.
 
 ```cpp
 basic_ifstream& operator=(basic_ifstream&& right);
@@ -264,20 +264,20 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
-Odwołania rvalue do `basic_ifstream` obiektu.
+*Kliknij*\
+Odwołanie rvalue do `basic_ifstream` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `*this`.
+Zwraca `*this`wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator składowy zastępuje zawartość obiektu przy użyciu zawartości *prawo*, traktowane jako odwołanie rvalue. Aby uzyskać więcej informacji, zobacz [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md).
+Operator elementu członkowskiego zastępuje zawartość obiektu przy użyciu zawartości *Right*, traktowanej jako odwołanie rvalue. Aby uzyskać więcej informacji, zobacz [lvalues i rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
-## <a name="rdbuf"></a>  basic_ifstream::rdbuf
+## <a name="rdbuf"></a>basic_ifstream:: rdbuf
 
-Zwraca adres buforu strumienia przechowywanych.
+Zwraca adres buforu zapisanego strumienia.
 
 ```cpp
 basic_filebuf<Elem, Tr> *rdbuf() const
@@ -285,15 +285,15 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [basic_filebuf —](../standard-library/basic-filebuf-class.md) obiekt reprezentujący bufor strumienia przechowywanych.
+Wskaźnik do obiektu [basic_filebuf](../standard-library/basic-filebuf-class.md) reprezentujący przechowywany bufor strumienia.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) przykład, który używa `rdbuf`.
+Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z `rdbuf`przykładem, który używa.
 
-## <a name="swap"></a>  basic_ifstream::swap
+## <a name="swap"></a>basic_ifstream:: swap
 
-Zamienia zawartości dwóch `basic_ifstream` obiektów.
+Wymienia zawartość dwóch `basic_ifstream` obiektów.
 
 ```cpp
 void swap(basic_ifstream& right);
@@ -301,15 +301,15 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*Kliknij*\
 Odwołanie do innego buforu strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego wymienia zawartość tego obiektu, dla zawartości *prawo*.
+Funkcja członkowska zamienia zawartość tego obiektu na zawartość z *prawej strony*.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
-[Konwencje iostream](../standard-library/iostreams-conventions.md)<br/>
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Konwencje iostream](../standard-library/iostreams-conventions.md)

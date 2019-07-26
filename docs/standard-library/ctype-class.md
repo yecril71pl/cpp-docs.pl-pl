@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15efae85baf3f03b764c7117538d7cc179553050
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394146"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450889"
 ---
 # <a name="ctype-class"></a>ctype — Klasa
 
@@ -56,32 +56,32 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*<br/>
+*CharType*\
 Typ używany w programie do kodowania znaków.
 
 ## <a name="remarks"></a>Uwagi
 
-Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba dostępu do jego przechowywanej wartości przechowuje unikatową wartość dodatnią w `id`. Do kryteriów klasyfikacji jest dostarczany typ zagnieżdżonej maski bitów w klasie bazowej ctype_base.
+Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości przechowuje unikatową wartość dodatnią `id`w. Do kryteriów klasyfikacji jest dostarczany typ zagnieżdżonej maski bitów w klasie bazowej ctype_base.
 
-Standardowa biblioteka C++ definiuje dwie jawne specjalizacje tej klasy szablonu:
+C++ Standardowa biblioteka definiuje dwie jawne specjalizacje tej klasy szablonu:
 
-- `ctype<char>`, jawna specjalizacja, której różnice są opisane osobno. Aby uzyskać więcej informacji, zobacz [ctype&lt;char&gt; klasy](../standard-library/ctype-char-class.md).
+- `ctype<char>`Jawna specjalizacja, której różnice są opisane osobno. Aby uzyskać więcej informacji, [Zobacz&lt;ctype&gt; char Class](../standard-library/ctype-char-class.md).
 
-- `ctype<wchar_t>`, który traktuje elementy jako znaki dwubajtowe.
+- `ctype<wchar_t>`, która traktuje elementy jako znaki dwubajtowe.
 
-Pozostałe specjalizacje szablonu klasy `ctype<CharType>`:
+Inne specjalizacje klasy `ctype<CharType>`szablonu:
 
-- Konwertowanie wartości *ch* typu *CharType* na wartość typu **char** z wyrażeniem `(char)ch`.
+- Konwertuj wartość *ch* typu CharType  na wartość typu **char** z wyrażeniem `(char)ch`.
 
-- Konwertowanie wartości *bajtów* typu **char** na wartość typu *CharType* z wyrażeniem `CharType(byte)`.
+- Przekonwertuj wartość *bajtu* typu **char** na wartość typu CharType  z wyrażeniem `CharType(byte)`.
 
-Wszystkie inne operacje są wykonywane na **char** wartości w taki sam sposób jak w przypadku jawnej specjalizacji `ctype<char>`.
+Wszystkie inne operacje są wykonywane na wartościach **char** w taki sam sposób jak w przypadku jawnej `ctype<char>`specjalizacji.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[ctype](#ctype)|Konstruktor dla obiektów klasy `ctype` które służą jako zestawy reguł ustawień regionalnych dla znaków.|
+|[ctype](#ctype)|Konstruktor dla obiektów klasy `ctype` , które stanowią zestawy reguł ustawień regionalnych dla znaków.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -89,32 +89,32 @@ Wszystkie inne operacje są wykonywane na **char** wartości w taki sam sposób 
 |-|-|
 |[char_type](#char_type)|Typ, który opisuje znak używany przez ustawienie regionalne.|
 
-### <a name="member-functions"></a>Funkcje Członkowskie
+### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[do_is](#do_is)|Funkcja wirtualna wywoływana w celu sprawdzenia, czy pojedynczy znak ma określony atrybut, lub sklasyfikowania atrybutów każdego znaku w zakresie i przechowywania ich w tablicy.|
-|[do_narrow](#do_narrow)|Funkcja wirtualna wywoływana w celu konwersji znaku typu `CharType` używany przez ustawienie regionalne do odpowiedniego znaku typu **char** w macierzystym znaków.|
+|[do_narrow](#do_narrow)|Funkcja wirtualna wywoływana w celu przekonwertowania znaku typu `CharType` używanego przez ustawienia regionalne do odpowiedniego znaku typu **char** w macierzystym zestawie znaków.|
 |[do_scan_is](#do_scan_is)|Wirtualna funkcja wywoływana w celu zlokalizowania pierwszego znaku w zakresie, który pasuje do określonej maski.|
 |[do_scan_not](#do_scan_not)|Funkcja wirtualna wywoływana w celu zlokalizowania pierwszego znaku w zakresie, który nie pasuje do określonej maski.|
 |[do_tolower](#do_tolower)|Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na ich małe litery.|
 |[do_toupper](#do_toupper)|Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na ich wielkie litery.|
-|[do_widen](#do_widen)|Funkcja wirtualna wywoływana w celu konwertuje znak typu **char** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używany przez ustawienie regionalne.|
+|[do_widen](#do_widen)|Funkcja wirtualna wywoływana w celu przekonwertowania znaku typu **char** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używanego przez ustawienia regionalne.|
 |[is](#is)|Sprawdza, czy pojedynczy znak ma określony atrybut, lub klasyfikuje atrybuty każdego znaku w zakresie i przechowuje je w tablicy.|
-|[Zawęź](#narrow)|Konwertuje znak typu `CharType` używany przez ustawienie regionalne do odpowiedniego znaku typu char w macierzystym zestawem znaków.|
+|[dokładniej](#narrow)|Konwertuje znak typu `CharType` używany przez ustawienia regionalne do odpowiedniego znaku typu char w macierzystym zestawie znaków.|
 |[scan_is](#scan_is)|Lokalizuje pierwszy znak w zakresie, który pasuje do określonej maski.|
 |[scan_not](#scan_not)|Lokalizuje pierwszy znak w zakresie, który nie pasuje do określonej maski.|
-|[tolower](#tolower)|Konwertuje znak lub zakres znaków na małe litery.|
-|[toupper](#toupper)|Konwertuje znak lub zakres znaków na wielkie litery.|
-|[widen](#widen)|Konwertuje znak typu **char** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używany przez ustawienie regionalne.|
+|[ToLower](#tolower)|Konwertuje znak lub zakres znaków na małe litery.|
+|[ToUpper](#toupper)|Konwertuje znak lub zakres znaków na wielkie litery.|
+|[widen](#widen)|Konwertuje znak typu **char** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używanego przez ustawienia regionalne.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ustawień regionalnych >
+**Nagłówek:** \<> ustawień regionalnych
 
-**Namespace:** standardowe
+**Przestrzeń nazw:** std
 
-## <a name="char_type"></a>  CType::char_type
+## <a name="char_type"></a>CType:: char_type
 
 Typ, który opisuje znak używany przez ustawienie regionalne.
 
@@ -124,15 +124,15 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu *CharType*.
+Typ jest synonimem dla parametru szablonu CharType .
 
 ### <a name="example"></a>Przykład
 
-Zobacz opis funkcji elementu członkowskiego [mogą zostać poszerzone](#widen) przykład, który używa `char_type` jako wartości zwracanej.
+Zapoznaj się z [przykładem funkcja](#widen) członkowska, `char_type` która używa jako wartości zwracanej.
 
-## <a name="ctype"></a>  CType::CType
+## <a name="ctype"></a>CType:: CType
 
-Konstruktor dla obiektów klasy ctype, które służą jako zestawy reguł ustawień regionalnych dla znaków.
+Konstruktor dla obiektów klasy CType, które stanowią zestawy reguł ustawień regionalnych dla znaków.
 
 ```cpp
 explicit ctype(size_t _Refs = 0);
@@ -140,24 +140,24 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*<br/>
-Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*\
+Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
+Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
-- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
+- 0: Okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
 
-- 1: Okres istnienia obiektu musi być zarządzane ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzany ręcznie.
 
 - \> 1: Te wartości nie są zdefiniowane.
 
-Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
+Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
-Konstruktor inicjuje jego `locale::facet` podstawowego obiektu z **locale::**[aspekt](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Konstruktor inicjuje swój `locale::facet` obiekt podstawowy przy użyciu **ustawień regionalnych::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
-## <a name="do_is"></a>  CType::do_is
+## <a name="do_is"></a>CType::d o_is
 
 Funkcja wirtualna wywoływana w celu sprawdzenia, czy pojedynczy znak ma określony atrybut, lub sklasyfikowania atrybutów każdego znaku w zakresie i przechowywania ich w tablicy.
 
@@ -174,38 +174,38 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*<br/>
-Wartość maski, dla którego ma zostać przetestowana znak.
+*maskVal*\
+Wartość maski, dla której ma zostać przetestowany znak.
 
-*ch*<br/>
-Znak, w których atrybuty są badane.
+*ch*\
+Znak, którego atrybuty mają zostać przetestowane.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu, w których atrybuty, które mają być klasyfikowane.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
-*dest*<br/>
-Wskaźnik do początku tablicy, gdzie mają być przechowywane wartości maski charakteryzujące atrybuty znaków.
+*dest*\
+Wskaźnik do początku tablicy, gdzie są przechowywane wartości maski charakteryzujące atrybuty każdego z znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja elementu członkowskiego zwraca wartość logiczną, która jest **true** Jeśli znak przetestowane ma atrybut, który został opisany przez wartość maski; **false** Jeżeli nie ma atrybutu.
+Pierwsza funkcja członkowska zwraca wartość logiczną **prawda** , jeśli testowany znak ma atrybut opisany przez wartość maski; **wartość false** , jeśli nie ma atrybutu.
 
-Druga funkcja elementu członkowskiego zwraca tablicę zawierającą wartości maski charakteryzujące atrybuty wszystkich znaków w zakresie.
+Druga funkcja członkowska zwraca tablicę zawierającą wartości maski charakteryzujące atrybuty każdego ze znaków w zakresie.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartości maski klasyfikowania atrybutów znaki są dostarczane przez klasy [ctype_base](../standard-library/ctype-base-class.md), z których ctype pochodzi. Pierwsza funkcja elementu członkowskiego może akceptować wyrażenia jako pierwszy parametr określa się jako masek bitowych i tworzony na podstawie kombinacji wartości maski przez operatory logiczne bitowe (&#124; &, ^, ~).
+Wartości masek klasyfikacji atrybutów znaków są dostarczane przez klasę [ctype_base](../standard-library/ctype-base-class.md), z których CType dziedziczy. Pierwsza funkcja członkowska może przyjmować wyrażenia dla pierwszego parametru, zwane jako masek bitowych i utworzone z kombinacji wartości maski przez logiczne operatory bitowe (&#124; , &, ^, ~).
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [jest](#is), która wywołuje metodę `do_is`.
+Zapoznaj [się](#is)z przykładem, który `do_is`wywołuje.
 
-## <a name="do_narrow"></a>  CType::do_narrow
+## <a name="do_narrow"></a>CType::d o_narrow
 
-Funkcja wirtualna wywoływana w celu konwersji znaku typu `CharType` używany przez ustawienie regionalne do odpowiedniego znaku typu **char** w macierzystym znaków.
+Funkcja wirtualna wywoływana w celu przekonwertowania znaku typu `CharType` używanego przez ustawienia regionalne do odpowiedniego znaku typu **char** w macierzystym zestawie znaków.
 
 ```cpp
 virtual char do_narrow(
@@ -221,36 +221,36 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
-Znak typu `Chartype` używane przez ustawienia regionalne do skonwertowania.
+*ch*\
+Znak typu `Chartype` używany przez ustawienia regionalne do przekonwertowania.
 
-*default*<br/>
-Wartość domyślna ma zostać przypisany przez funkcję elementu członkowskiego, aby znaki typu `CharType` nie mają odpowiednika znaki typu **char**.
+*wartooć*\
+Wartość domyślna, która ma zostać przypisana przez funkcję członkowską do znaków `CharType` typu, które nie mają odpowiedników znaków typu **char**.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie znaków do przekonwertowania.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekonwertowania.
 
-*dest*<br/>
-Wskaźnika elementu const do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
+*dest*\
+Stała wskaźnik do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowany zakres znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja chronionego elementu członkowskiego zwraca natywnych znaku typu CHAR, który odpowiada znakowi parametr typu `CharType` lub *domyślne* Jeśli nie zdefiniowano odpowiednika.
+Pierwsza chroniona funkcja członkowska zwraca natywny znak typu char, który odpowiada znakowi parametru typu `CharType` lub wartości *domyślnej* , jeśli nie zdefiniowano odpowiednika.
 
-Druga funkcja chronionego elementu członkowskiego zwraca wskaźnik do zakresu docelowego, natywne znaków, znaków typu `CharType`.
+Druga funkcja chronionego elementu członkowskiego zwraca wskaźnik do zakresu docelowego znaków natywnych przekonwertowanych z znaków typu `CharType`.
 
 ### <a name="remarks"></a>Uwagi
 
-Drugi chronionego elementu członkowskiego szablonu funkcji sklepów w `dest`[ `I`] wartość `do_narrow`( `first` [ `I`], `default`), aby uzyskać `I` w interwale [0, `last`  -  `first`).
+Druga funkcja szablonu chronionego elementu członkowskiego `dest`przechowuje `I`w [] `do_narrow`wartość `first` ( `I`[] `default`,) dla `I` interwału [0, `last`  -  `first`).
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [zawęzić](#narrow), która wywołuje metodę `do_narrow`.
+Zapoznaj się z [](#narrow)przykładem wąskich `do_narrow`wywołań.
 
-## <a name="do_scan_is"></a>  CType::do_scan_is
+## <a name="do_scan_is"></a>CType::d o_scan_is
 
 Wirtualna funkcja wywoływana w celu zlokalizowania pierwszego znaku w zakresie, który pasuje do określonej maski.
 
@@ -263,28 +263,28 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*<br/>
-Wartość maski mają być dopasowywane o znak.
+*maskVal*\
+Wartość maski do dopasowania przez znak.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do pierwszego znaku w zakresie, który pasuje do określonej maski. Jeśli takie wartość nie istnieje, funkcja zwraca *ostatniego*.
+Wskaźnik do pierwszego znaku w zakresie, który jest zgodny z określoną maską. Jeśli taka wartość nie istnieje, funkcja zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja elementu członkowskiego zwraca najmniejszy wskaźnik `ptr` w zakresie [ `first`, `last`) dla której [do_is —](#do_is)( `maskVal`, \* `ptr`) ma wartość true.
+Funkcja chronionego elementu członkowskiego zwraca najmniejszy `ptr` wskaźnik z zakresu [ `first`, `last`), dla [](#do_is)którego do_is `maskVal`( \* , `ptr`) ma wartość true.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [scan_is —](#scan_is), która wywołuje metodę `do_scan_is`.
+Zobacz przykład dla [scan_is](#scan_is), który wywołuje `do_scan_is`.
 
-## <a name="do_scan_not"></a>  CType::do_scan_not
+## <a name="do_scan_not"></a>CType::d o_scan_not
 
 Funkcja wirtualna wywoływana w celu zlokalizowania pierwszego znaku w zakresie, który nie pasuje do określonej maski.
 
@@ -297,28 +297,28 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*<br/>
-Wartość maski nie mają być dopasowywane znak.
+*maskVal*\
+Wartość maski nie powinna być dopasowana przez znak.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do pierwszego znaku w zakresie, który nie pasuje do określonej maski. Jeśli takie wartość nie istnieje, funkcja zwraca *ostatniego*.
+Wskaźnik do pierwszego znaku w zakresie, który nie pasuje do określonej maski. Jeśli taka wartość nie istnieje, funkcja zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja elementu członkowskiego zwraca najmniejszy wskaźnik `ptr` w zakresie [ `first`, `last`) dla której [do_is —](#do_is)( `maskVal`, \* `ptr`) ma wartość false.
+Funkcja chronionego elementu członkowskiego zwraca najmniejszy `ptr` wskaźnik z zakresu [ `first`, `last`), dla [](#do_is)którego do_is `maskVal`( \* , `ptr`) ma wartość false.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [scan_not —](#scan_not), która wywołuje metodę `do_scan_not`.
+Zobacz przykład dla [scan_not](#scan_not), który wywołuje `do_scan_not`.
 
-## <a name="do_tolower"></a>  CType::do_tolower
+## <a name="do_tolower"></a>CType::d o_tolower
 
 Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na małe litery.
 
@@ -332,28 +332,28 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
-Znak, który ma zostać przekonwertowany na małe litery.
+*ch*\
+Znak do przekonwertowania na małe litery.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja chronionego elementu członkowskiego zwraca małe formularza parametru *ch*. Jeśli żadna z form małe istnieje, zwraca *ch*. Drugi chroniony element członkowski funkcja zwraca *ostatniego*.
+Pierwsza chroniona funkcja członkowska zwraca małą formę parametru *ch*. Jeśli nie istnieje małe litery, zwraca wartość *ch*. Druga funkcja chronionego elementu członkowskiego zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
-Druga funkcja szablonu chroniony element członkowski zastępuje każdy element `first` [ `I`], aby uzyskać `I` w interwale [0, `last`  -  `first`), za pomocą `do_tolower`( `first` [ `I`]).
+Druga funkcja szablonu chronionego elementu członkowskiego zastępuje `first` każdy `I`element [] `I` , dla wartości w interwale [ `last`0,  -  `first`) `do_tolower`, `first` z ([ `I`]).
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [tolower](#tolower), która wywołuje metodę `do_tolower`.
+Zobacz przykład dla [ToLower](#tolower), który wywołuje `do_tolower`.
 
-## <a name="do_toupper"></a>  CType::do_toupper
+## <a name="do_toupper"></a>CType::d o_toupper
 
 Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na ich wielkie litery.
 
@@ -367,30 +367,30 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
-Znak, który ma zostać przekonwertowany na wielkie litery.
+*ch*\
+Znak do przekonwertowania na wielkie litery.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja chronionego elementu członkowskiego zwraca wielkich liter parametru *ch*. Jeśli istnieje nie wielkich liter, zwraca *ch*. Drugi chroniony element członkowski funkcja zwraca *ostatniego*.
+Pierwsza chroniona funkcja członkowska zwraca wielką formę parametru *ch*. Jeśli nie istnieje Wielka litera, zwraca wartość *ch*. Druga funkcja chronionego elementu członkowskiego zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
-Druga funkcja szablonu chroniony element członkowski zastępuje każdy element `first` [ `I`], aby uzyskać `I` w interwale [0, `last`  -  `first`), za pomocą `do_toupper`( `first` [ `I`]).
+Druga funkcja szablonu chronionego elementu członkowskiego zastępuje `first` każdy `I`element [] `I` , dla wartości w interwale [ `last`0,  -  `first`) `do_toupper`, `first` z ([ `I`]).
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [toupper](#toupper), która wywołuje metodę `do_toupper`.
+Zobacz przykład dla [ToUpper](#toupper), który wywołuje `do_toupper`.
 
-## <a name="do_widen"></a>  CType::do_widen
+## <a name="do_widen"></a>CType::d o_widen
 
-Funkcja wirtualna wywoływana w celu konwertuje znak typu **char** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używany przez ustawienie regionalne.
+Funkcja wirtualna wywoływana w celu przekonwertowania znaku typu **char** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używanego przez ustawienia regionalne.
 
 ```cpp
 virtual CharType do_widen(char byte) const;
@@ -403,35 +403,35 @@ virtual const char *do_widen(
 
 ### <a name="parameters"></a>Parametry
 
-*byte*<br/>
-Znak typu **char** w macierzystym zestawie znaków do skonwertowania.
+*byte*\
+Znak typu **char** w macierzystym zestawie znaków do przekonwertowania.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie znaków do przekonwertowania.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekonwertowania.
 
-*dest*<br/>
-Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
+*dest*\
+Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowany zakres znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja chronionego elementu członkowskiego zwraca znak typu `CharType` , który odpowiada znakowi parametr typu natywnego **char**.
+Pierwsza chroniona funkcja członkowska zwraca znak typu `CharType` , który odpowiada znakowi parametru typu natywnego **char**.
 
-Druga funkcja chronionego elementu członkowskiego zwraca wskaźnik do zakresu docelowego znaków typu `CharType` używany przez ustawienie regionalne natywnych znaków typu **char**.
+Druga funkcja chronionego elementu członkowskiego zwraca wskaźnik do docelowego zakresu znaków typu `CharType` używanego przez ustawienia regionalne konwertowane z znaków natywnych typu **char**.
 
 ### <a name="remarks"></a>Uwagi
 
-Drugi chronionego elementu członkowskiego szablonu funkcji sklepów w `dest`[ `I`] wartość `do_widen`( `first`[ `I`]), aby uzyskać `I` w interwale [0, `last`  -  `first`).
+Druga funkcja szablonu chronionego elementu członkowskiego `dest`przechowuje `I`wartość  -  `last` `I` `first` `do_widen`([ `I`]) w interwale [0, `first`).
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [mogą zostać poszerzone](#widen), która wywołuje metodę `do_widen`.
+Zobacz przykład dla [rozszerzenia](#widen), które wywołuje `do_widen`.
 
-## <a name="is"></a>  CType::is
+## <a name="is"></a>CType:: is
 
-Sprawdza, czy pojedynczy znak ma określony atrybut lub klasyfikuje atrybuty każdego znaku w zakresie i przechowuje je w tablicy.
+Testuje, czy pojedynczy znak ma określony atrybut, lub klasyfikuje atrybuty każdego znaku w zakresie i zapisuje je w tablicy.
 
 ```cpp
 bool is(mask maskVal, CharType ch) const;
@@ -444,30 +444,30 @@ const CharType *is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*<br/>
-Wartość maski, dla którego ma zostać przetestowana znak.
+*maskVal*\
+Wartość maski, dla której ma zostać przetestowany znak.
 
-*ch*<br/>
-Znak, w których atrybuty są badane.
+*ch*\
+Znak, którego atrybuty mają zostać przetestowane.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu, w których atrybuty, które mają być klasyfikowane.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
-*dest*<br/>
-Wskaźnik do początku tablicy, gdzie mają być przechowywane wartości maski charakteryzujące atrybuty znaków.
+*dest*\
+Wskaźnik do początku tablicy, gdzie są przechowywane wartości maski charakteryzujące atrybuty każdego z znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja elementu członkowskiego zwraca **true** Jeśli znak przetestowane ma atrybut, który został opisany przez wartość maski; **false** Jeżeli nie ma atrybutu.
+Pierwsza funkcja członkowska zwraca **wartość true** , jeśli testowany znak ma atrybut opisany przez wartość maski; **wartość false** , jeśli nie ma atrybutu.
 
-Druga funkcja elementu członkowskiego zwraca wskaźnik do ostatniego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
+Druga funkcja członkowska zwraca wskaźnik do ostatniego znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartości maski klasyfikowania atrybutów znaki są dostarczane przez klasy [ctype_base — klasa](../standard-library/ctype-base-class.md), z których ctype pochodzi. Pierwsza funkcja elementu członkowskiego może akceptować wyrażenia jako pierwszy parametr określa się jako masek bitowych i tworzony na podstawie kombinacji wartości maski przez operatory logiczne bitowe (&#124; &, ^, ~).
+Wartości masek klasyfikacji atrybutów znaków są dostarczane przez [klasę ctype_base](../standard-library/ctype-base-class.md)klasy, z której pochodzi CType. Pierwsza funkcja członkowska może przyjmować wyrażenia dla pierwszego parametru, zwane jako masek bitowych i utworzone z kombinacji wartości maski przez logiczne operatory bitowe (&#124; , &, ^, ~).
 
 ### <a name="example"></a>Przykład
 
@@ -508,9 +508,9 @@ int main() {
 }
 ```
 
-## <a name="narrow"></a>  CType::Narrow
+## <a name="narrow"></a>CType:: Narrow
 
-Konwertuje znaki typu `CharType` używany przez ustawienie regionalne do odpowiedniego znaki typu **char** w macierzystym znaków.
+Konwertuje znaki typu `CharType` używane przez ustawienia regionalne do odpowiednich znaków typu **char** w macierzystym zestawie znaków.
 
 ```cpp
 char narrow(CharType ch, char default = '\0') const;
@@ -524,30 +524,30 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
-Znak typu `Chartype` używane przez ustawienia regionalne do skonwertowania.
+*ch*\
+Znak typu `Chartype` używany przez ustawienia regionalne do przekonwertowania.
 
-*default*<br/>
-Wartość domyślna ma zostać przypisany przez funkcję elementu członkowskiego, aby znaki typu `CharType` nie mają odpowiednika znaki typu **char**.
+*wartooć*\
+Wartość domyślna, która ma zostać przypisana przez funkcję członkowską do znaków `CharType` typu, które nie mają odpowiedników znaków typu **char**.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie znaków do przekonwertowania.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekonwertowania.
 
-*dest*<br/>
-Wskaźnika elementu const do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
+*dest*\
+Stała wskaźnik do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowany zakres znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja elementu członkowskiego zwraca znak natywnego typu **char** , który odpowiada znakowi parametr typu `CharType default` Jeśli odpowiednika nie został zdefiniowany.
+Pierwsza funkcja członkowska zwraca natywny znak typu **char** , który odpowiada znakowi parametru typu `CharType default` , jeśli nie jest odpowiednika.
 
-Druga funkcja elementu członkowskiego zwraca wskaźnik do zakresu docelowego, natywne znaków, znaków typu `CharType`.
+Druga funkcja członkowska zwraca wskaźnik do zakresu docelowego znaków natywnych przekonwertowanych z znaków typu `CharType`.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego zwraca [do_narrow —](#do_narrow)(`ch`, `default`). Druga funkcja elementu członkowskiego zwraca [do_narrow —](#do_narrow) (`first`, `last`, `default`, `dest`). Tylko znaków podstawowego źródła są musi mieć unikatowy obraz odwrotność `CharType` w obszarze `narrow`. Tych znaków podstawowego źródła, zawiera następujące niezmiennej: `narrow` ( [mogą zostać poszerzone](#widen) ( **c** ), 0) == **c**.
+Pierwsza funkcja członkowska zwraca [do_narrow](#do_narrow)(`ch`, `default`). Druga funkcja członkowska zwraca [do_narrow](#do_narrow) (`first`, `last`, `default` `dest`,). Tylko podstawowe znaki źródłowe mają mieć unikatowy obraz `CharType` `narrow`odwrotny. W przypadku następujących podstawowych znaków źródłowych `narrow` : ( [rozszerzenie](#widen) ( **c** ), 0) = = **c**.
 
 ### <a name="example"></a>Przykład
 
@@ -575,7 +575,7 @@ int main( )
 Xhello everyone
 ```
 
-## <a name="scan_is"></a>  CType::scan_is
+## <a name="scan_is"></a>CType:: scan_is
 
 Lokalizuje pierwszy znak w zakresie, który pasuje do określonej maski.
 
@@ -588,22 +588,22 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*<br/>
-Wartość maski mają być dopasowywane o znak.
+*maskVal*\
+Wartość maski do dopasowania przez znak.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do pierwszego znaku w zakresie, który pasuje do określonej maski. Jeśli takie wartość nie istnieje, funkcja zwraca *ostatniego*.
+Wskaźnik do pierwszego znaku w zakresie, który jest zgodny z określoną maską. Jeśli taka wartość nie istnieje, funkcja zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca [do_scan_is —](#do_scan_is)(`maskVal`, `first`, `last`).
+Funkcja członkowska zwraca [do_scan_is](#do_scan_is)(`maskVal`, `first`, `last`).
 
 ### <a name="example"></a>Przykład
 
@@ -631,7 +631,7 @@ int main( )
 The first punctuation is "," at position: 5
 ```
 
-## <a name="scan_not"></a>  CType::scan_not
+## <a name="scan_not"></a>CType:: scan_not
 
 Lokalizuje pierwszy znak w zakresie, który nie pasuje do określonej maski.
 
@@ -644,22 +644,22 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*<br/>
-Wartość maski nie mają być dopasowywane znak.
+*maskVal*\
+Wartość maski nie powinna być dopasowana przez znak.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do pierwszego znaku w zakresie, który nie pasuje do określonej maski. Jeśli takie wartość nie istnieje, funkcja zwraca *ostatniego*.
+Wskaźnik do pierwszego znaku w zakresie, który nie pasuje do określonej maski. Jeśli taka wartość nie istnieje, funkcja zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca [do_scan_not —](#do_scan_not)(`maskVal`, `first`, `last`).
+Funkcja członkowska zwraca [do_scan_not](#do_scan_not)(`maskVal`, `first`, `last`).
 
 ### <a name="example"></a>Przykład
 
@@ -687,7 +687,7 @@ int main( )
 First nonalpha character is "," at position: 5
 ```
 
-## <a name="tolower"></a>  CType::tolower
+## <a name="tolower"></a>CType:: ToLower
 
 Konwertuje znak lub zakres znaków na małe litery.
 
@@ -699,24 +699,24 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
-Znak, który ma zostać przekonwertowany na małe litery.
+*ch*\
+Znak do przekonwertowania na małe litery.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja elementu członkowskiego zwraca małe formularza parametru *ch*. Jeśli żadna z form małe istnieje, zwraca *ch*.
+Pierwsza funkcja członkowska zwraca małą formę parametru *ch*. Jeśli nie istnieje małe litery, zwraca wartość *ch*.
 
-Druga funkcja elementu członkowskiego zwraca *ostatniego*.
+Druga funkcja członkowska zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego zwraca [do_tolower —](#do_tolower)(`ch`). Druga funkcja elementu członkowskiego zwraca [do_tolower —](#do_tolower)(`first`, `last`).
+Pierwsza funkcja członkowska zwraca [do_tolower](#do_tolower)(`ch`). Druga funkcja członkowska zwraca [do_tolower](#do_tolower)(`first`, `last`).
 
 ### <a name="example"></a>Przykład
 
@@ -743,7 +743,7 @@ int main( )
 The lowercase string is: hello, my name is john
 ```
 
-## <a name="toupper"></a>  CType::toupper
+## <a name="toupper"></a>CType:: ToUpper
 
 Konwertuje znak lub zakres znaków na wielkie litery.
 
@@ -754,24 +754,24 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
-Znak, który ma zostać przekonwertowany na wielkie litery.
+*ch*\
+Znak do przekonwertowania na wielkie litery.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja elementu członkowskiego zwraca wielkich liter parametru *ch*. Jeśli istnieje nie wielkich liter, zwraca *ch*.
+Pierwsza funkcja członkowska zwraca wielką formę parametru *ch*. Jeśli nie istnieje Wielka litera, zwraca wartość *ch*.
 
-Druga funkcja elementu członkowskiego zwraca *ostatniego*.
+Druga funkcja członkowska zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego zwraca [do_toupper —](#do_toupper)(`ch`). Druga funkcja elementu członkowskiego zwraca [do_toupper —](#do_toupper)( `first`, `last`).
+Pierwsza funkcja członkowska zwraca [do_toupper](#do_toupper)(`ch`). Druga funkcja członkowska zwraca [do_toupper](#do_toupper)( `first`, `last`).
 
 ### <a name="example"></a>Przykład
 
@@ -798,9 +798,9 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN
 ```
 
-## <a name="widen"></a>  CType::widen
+## <a name="widen"></a>CType:: rozszerzając
 
-Konwertuje znak typu **char** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używany przez ustawienie regionalne.
+Konwertuje znak typu **char** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używanego przez ustawienia regionalne.
 
 ```cpp
 CharType widen(char byte) const;
@@ -809,27 +809,27 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="parameters"></a>Parametry
 
-*byte*<br/>
-Ustaw znaku typu char w macierzystym znaków ma zostać przekonwertowany.
+*byte*\
+Znak typu char w macierzystym zestawie znaków do przekonwertowania.
 
-*pierwszy*<br/>
-Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
+*pierwszego*\
+Wskaźnik do pierwszego znaku w zakresie znaków do przekonwertowania.
 
-*last*<br/>
-Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
+*ostatniego*\
+Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekonwertowania.
 
-*dest*<br/>
-Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
+*dest*\
+Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowany zakres znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja elementu członkowskiego zwraca znak typu `CharType` , który odpowiada znakowi parametr typu natywnego **char**.
+Pierwsza funkcja członkowska zwraca znak typu `CharType` , który odpowiada znakowi parametru typu natywnego **char**.
 
-Druga funkcja elementu członkowskiego zwraca wskaźnik do zakresu docelowego znaków typu `CharType` używany przez ustawienie regionalne natywnych znaków typu **char**.
+Druga funkcja członkowska zwraca wskaźnik do docelowego zakresu znaków typu `CharType` używanego przez ustawienia regionalne konwertowane z znaków natywnych typu **char**.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego zwraca [do_widen —](#do_widen)(`byte`). Druga funkcja elementu członkowskiego zwraca [do_widen —](#do_widen)(`first`, `last`, `dest`).
+Pierwsza funkcja członkowska zwraca [do_widen](#do_widen)(`byte`). Druga funkcja członkowska zwraca [do_widen](#do_widen)(`first`, `last`, `dest`).
 
 ### <a name="example"></a>Przykład
 
@@ -863,5 +863,5 @@ Hello everyone!
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
