@@ -444,16 +444,7 @@
                 - name: Strona właściwości Zarządzane zasoby
                   href: build/reference/managed-resources-property-page.md
                 - name: Strony właściwości MIDL
-                  expanded: false
-                  items:
-                    - name: Strony właściwości MIDL
-                      href: build/reference/midl-property-pages.md
-                    - name: 'Strony właściwości MIDL: Ogólne'
-                      href: build/reference/midl-property-pages-general.md
-                    - name: 'Strony właściwości MIDL: Dane wyjściowe'
-                      href: build/reference/midl-property-pages-output.md
-                    - name: 'Strony właściwości MIDL: Zaawansowane'
-                      href: build/reference/midl-property-pages-advanced.md
+                  href: build/reference/midl-property-pages.md
                 - name: Strona właściwości Odwołania sieci Web
                   href: build/reference/web-references-property-page.md
                 - name: Strona właściwości narzędzia generowania danych XML
