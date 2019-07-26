@@ -14,12 +14,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299731"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492131"
 ---
 # <a name="c-project-property-page-reference"></a>C++odwołanie do strony właściwości projektu
 
@@ -47,21 +47,7 @@ W przypadku stron właściwości w projektach systemu Linux zapoznaj się z info
 
 [Strona właściwości ogólnych (plik)](general-property-page-file.md)
 
-
-
-
-
 [Strony właściwości HLSL](hlsl-property-pages.md)
-
-[Strony właściwości HLSL: Zaawansowane](hlsl-property-pages-advanced.md)
-
-[Strony właściwości HLSL: Ogólne](hlsl-property-pages-general.md)
-
-[Strony właściwości HLSL: Pliki wyjściowe](hlsl-property-pages-output-files.md)
-
-
-
-
 
 [Strony właściwości konsolidatora](linker-property-pages.md)
 
@@ -71,17 +57,9 @@ W przypadku stron właściwości w projektach systemu Linux zapoznaj się z info
 
 [Strony właściwości MIDL](midl-property-pages.md)
 
-[Strony właściwości MIDL: Zaawansowane](midl-property-pages-advanced.md)
-
-[Strony właściwości MIDL: Ogólne](midl-property-pages-general.md)
-
-[Strony właściwości MIDL: Wyjściowe](midl-property-pages-output.md)
-
 [Strona właściwości NMake](nmake-property-page.md)
 
 [Strony właściwości zasobów](resources-property-pages.md)
-
-
 
 [Strona właściwości Odwołania sieci Web](web-references-property-page.md)
 
