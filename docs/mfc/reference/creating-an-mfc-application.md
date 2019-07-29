@@ -1,28 +1,28 @@
 ---
 title: Tworzenie aplikacji MFC
-ms.date: 11/04/2016
+ms.date: 07/28/2019
 helpviewer_keywords:
 - applications [MFC]
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 0f16fe577f1dc02dc9a2fc0cffb5899b16ad8cca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 454a994da6db2841317d41ea1cdacfd36b0705e4
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708234"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606480"
 ---
 # <a name="creating-an-mfc-application"></a>Tworzenie aplikacji MFC
 
-Aplikacja MFC jest aplikacją wykonywalnego pliku dla Windows, który jest oparty na bibliotece Microsoft Foundation Class (MFC). Najprostszym sposobem utworzenia aplikacji MFC jest użycie Kreatora aplikacji MFC.
+Aplikacja MFC jest aplikacją wykonywalną dla systemu Windows opartą na bibliotece Microsoft Foundation Class (MFC). Najprostszym sposobem tworzenia aplikacji MFC jest użycie Kreatora aplikacji MFC (**projekt aplikacji MFC** w programie Visual Studio 2019). Aby utworzyć aplikację konsolową MFC, użyj Kreatora pulpitu systemu Windows, a następnie wybierz opcje **Aplikacja konsolowa** i **nagłówki MFC** .
 
 > [!IMPORTANT]
->  Projekty MFC nie są obsługiwane w wersjach programu Visual Studio Express.
+>  Projekty MFC nie są obsługiwane w wersjach Visual Studio Express.
 
-Pliki wykonywalne MFC zazwyczaj należą do pięciu typów: standardowe aplikacje Windows, okna dialogowe, aplikacje oparte na formularzach, aplikacje w stylu Eksploratora i aplikacje w stylu przeglądarki sieci Web. Aby uzyskać więcej informacji, zobacz:
+Pliki wykonywalne MFC zazwyczaj mieszczą się w pięciu typach: standardowe aplikacje systemu Windows, okna dialogowe, aplikacje oparte na formularzach, aplikacje w stylu Eksploratora i aplikacje w stylu przeglądarki sieci Web. Aby uzyskać więcej informacji, zobacz:
 
-- [Używanie klas do pisania aplikacji Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
+- [Korzystanie z klas do zapisywania aplikacji systemu Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
 
 - [Tworzenie i wyświetlanie okien dialogowych](../../mfc/creating-and-displaying-dialog-boxes.md)
 
@@ -36,18 +36,18 @@ Kreator aplikacji MFC generuje odpowiednie klasy i pliki dla dowolnego z tych ty
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Aby utworzyć aplikację MFC przy użyciu Kreatora aplikacji MFC
 
-1. Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu aplikacji konsoli w języku C++](../../get-started/tutorial-console-cpp.md).
+1. Postępuj zgodnie z instrukcjami w temacie pomocy [Tworzenie C++ projektu aplikacji konsoli](../../get-started/tutorial-console-cpp.md).
 
-1. W **nowy projekt** okno dialogowe, wybierz opcję **aplikacji MFC** w okienku szablonów, aby otworzyć kreatora.
+1. W oknie dialogowym **Nowy projekt** wybierz pozycję **aplikacja MFC** w okienku szablony, aby otworzyć kreatora.
 
-1. Definiowanie ustawień aplikacji za pomocą [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md).
+1. Zdefiniuj ustawienia aplikacji za pomocą [Kreatora aplikacji MFC](../../mfc/reference/mfc-application-wizard.md).
 
     > [!NOTE]
-    >  Pomiń ten krok, aby kreator ustawienia domyślne.
+    >  Pomiń ten krok, aby zachować ustawienia domyślne kreatora.
 
-1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i otworzyć nowy projekt w środowisku programistycznym.
+1. Kliknij przycisk **Zakończ** , aby zamknąć kreatora i otworzyć nowy projekt w środowisku programistycznym.
 
-Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla programu Visual Studio C++ projektów](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Po utworzeniu projektu można wyświetlić pliki utworzone w **Eksplorator rozwiązań**. Aby uzyskać więcej informacji na temat plików tworzonych przez kreatora dla projektu, zobacz plik Readme. txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów C++ programu Visual Studio](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Zobacz także
 
