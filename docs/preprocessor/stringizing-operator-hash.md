@@ -12,39 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 4f23eea017197ae1f984e097bb3967c1228fef09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 720817b34326d822ef797351655e4ace907e4baf
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179649"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661625"
 ---
 # <a name="stringizing-operator-"></a>Operator tworzenia ciągów (#)
 
-Znak numeru lub operator "tworzenia ciągu" (**#**) konwertuje parametry makr do literałów ciągu bez rozszerzania definicji parametru. Jest on używany tylko z makrami, które przyjmują argumenty. Jeżeli poprzedza on parametr formalny w definicji makra, rzeczywisty argument przekazywany przez wywołanie makra jest ujęty w znaki cudzysłowu i traktowany jako literał ciągu. Literał ciągu następnie zamienia każde wystąpienie kombinacji operatora tworzenia ciągu i parametru formalnego w ramach definicji makra.
+Operator Number-Sign lub "tworzenia ciągu" ( **#** ) konwertuje parametry makr na literały ciągu bez rozszerzania definicji parametru. Jest on używany tylko z makrami, które przyjmują argumenty. Jeżeli poprzedza on parametr formalny w definicji makra, rzeczywisty argument przekazywany przez wywołanie makra jest ujęty w znaki cudzysłowu i traktowany jako literał ciągu. Literał ciągu następnie zamienia każde wystąpienie kombinacji operatora tworzenia ciągu i parametru formalnego w ramach definicji makra.
 
 > [!NOTE]
-> Rozszerzenie Microsoft C (wersje 6.0 i starsze) dla standardu ANSI C, które wcześniej rozszerzało argumenty formalne makra pojawiające się wewnątrz literałów ciągu i stałych ciągu, nie jest już obsługiwane. Kod, który opierał się na tym rozszerzeniu powinien zostać przepisany z użyciem tworzenia ciągu (**#**) — operator.
+> Rozszerzenie Microsoft C (wersje 6.0 i starsze) dla standardu ANSI C, które wcześniej rozszerzało argumenty formalne makra pojawiające się wewnątrz literałów ciągu i stałych ciągu, nie jest już obsługiwane. Kod, który opiera się na tym rozszerzeniu, należy napisać ponownie przy użyciu **#** operatora tworzenia ciągu ().
 
 Odstęp poprzedzający pierwszy token rzeczywistego argumentu i występujący po ostatnim tokenie rzeczywistego argumentu jest ignorowany. Wszelkie odstępy między tokenami w rzeczywistym argumencie są skracane do pojedynczego odstępu w wynikowym literale ciągu. Zatem jeśli komentarz występuje między dwoma tokenami w rzeczywistym argumencie, jest on skracany do jednego odstępu. Wynikowy literał ciągu jest automatycznie łączony z dowolnymi przylegającymi literałami ciągu, od których jest on oddzielony odstępem.
 
-Dalej, jeśli znak zawarty w argumencie zwykle wymaga sekwencji ucieczki w literale ciągu (na przykład znak cudzysłowu (**"**) lub ukośnika odwrotnego (**\\**) znak), niezbędny ukośnik odwrotny ucieczki jest automatycznie wstawiany przed znakiem.
+Ponadto, jeśli znak zawarty w argumencie zazwyczaj wymaga sekwencji ucieczki, gdy jest używany w literale ciągu (na przykład znak cudzysłowu ( **"** ) lub ukośnik odwrotny ( **\\** )), niezbędny ukośnik odwrotny dla ucieczki jest automatycznie wstawiany przed znakiem.
 
-Operator tworzenia ciągu Visual C++ nie działają prawidłowo, gdy jest używany z ciągów, które zawierają sekwencje ucieczki. W takiej sytuacji, kompilator generuje [błąd kompilatora C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
+Operator wizualny C++ tworzenia ciągu nie działa prawidłowo, gdy jest używany z ciągami, które zawierają sekwencje ucieczki. W tej sytuacji kompilator generuje [błąd kompilatora C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
 ## <a name="examples"></a>Przykłady
 
 W poniższym przykładzie pokazano definicję makra, która zawiera operator tworzenia ciągu i główną funkcję, która wywołuje makro:
-
-Takie wywołania będą rozwijane podczas wstępnego przetwarzania, generując poniższy kod:
-
-```cpp
-int main() {
-   printf_s( "In quotes in the printf function call\n" "\n" );
-   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
-   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
-}
-```
 
 ```cpp
 // stringizer.cpp
@@ -54,6 +44,16 @@ int main() {
    stringer( In quotes in the printf function call );
    stringer( "In quotes when printed to the screen" );
    stringer( "This: \"  prints an escaped double quote" );
+}
+```
+
+Takie wywołania będą rozwijane podczas wstępnego przetwarzania, generując poniższy kod:
+
+```cpp
+int main() {
+   printf_s( "In quotes in the printf function call\n" "\n" );
+   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
+   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
 }
 ```
 
