@@ -3,18 +3,16 @@ title: Właściwości CC++ /Project (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342246"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537570"
 ---
 # <a name="cc-property-pages"></a>Strony CC++ /właściwości
 
-Poniższe strony właściwości są dostępne we > właściwościach**konfiguracji** > właściwości **projektu** > **C/C++** :
+Poniższe strony **właściwości** >  są dostępne we właściwościach**konfiguracji** > właściwości **projektu** > **C/C++** :
 
 ## <a name="cc-general-properties"></a>Właściwości CC++ /ogólne
 
@@ -436,7 +434,7 @@ Wybierz domyślną konwencję wywoływania dla aplikacji (może być zastąpiona
 **Decyzji**
 
 - **__cdecl** — określa konwencję wywoływania __cdecl dla wszystkich funkcji, C++ z wyjątkiem funkcji składowych i funkcji oznaczonych jako __stdcall lub __fastcall.
-- **__fastcall** — określa konwencję wywoływania __fastcall dla wszystkich funkcji z C++ wyjątkiem elementu członkowskiego sfunctions i funkcji oznaczonych jako __cdecl lub __stdcall. Wszystkie funkcje __fastcall muszą mieć prototypy.
+- **__fastcall** — określa konwencję wywoływania __fastcall dla wszystkich funkcji, C++ z wyjątkiem funkcji składowych i funkcji oznaczonych jako __cdecl lub __stdcall. Wszystkie funkcje __fastcall muszą mieć prototypy.
 - **__stdcall** — określa konwencję wywoływania __stdcall dla wszystkich funkcji, C++ z wyjątkiem funkcji składowych i funkcji oznaczonych jako __cdecl lub __fastcall. Wszystkie funkcje __stdcall muszą mieć prototypy.
 - **__vectorcall** — określa konwencję wywoływania __vectorcall dla wszystkich funkcji, C++ z wyjątkiem funkcji składowych i funkcji oznaczonych jako __cdecl, __fastcall lub __stdcall. Wszystkie funkcje __vectorcall muszą mieć prototypy.
 
@@ -482,7 +480,7 @@ Określa sposób, w jaki wewnętrzne błędy narzędzi powinny być zgłaszane z
 
 - **Nie wysyłaj raportu** — raporty dotyczące wewnętrznych błędów kompilatora nie będą zbierane ani wysyłane do firmy Microsoft.
 - **Monituj natychmiast** — wyświetla monit o wysłanie raportu po pojawieniu się błędu wewnętrznego kompilatora.
-- **Kolejka dla następnego logowania** — kolejkuje raport o błędach. Gdy logujesz się przy użyciu uprawnień administratora, wyświetlane jest okno podręczne, które umożliwia zgłaszanie błędów od czasu ostatniego logowania (nie zostanie wyświetlony monit o wysłanie raportów dotyczących błędów więcej niż raz na trzy dni). Kolejka jest wartością domyślną podczas kompilowania aplikacji w wierszu polecenia.
+- **Kolejka dla następnego logowania** — kolejkuje raport o błędach. Po zalogowaniu się przy użyciu uprawnień administratora zostanie wyświetlone okno podręczne, które umożliwia zgłaszanie błędów od czasu ostatniego logowania (nie będzie wyświetlany monit o wysłanie raportów dotyczących błędów więcej niż raz na trzy dni). Kolejka jest wartością domyślną podczas kompilowania aplikacji w wierszu polecenia.
 - **Automatycznie** wysyłaj raporty o błędach wewnętrznych kompilatora do firmy Microsoft. Aby włączyć tę opcję, musisz najpierw wyrazić zgodę na zasady zbierania danych przez firmę Microsoft% 27s. Przy pierwszym określeniu/errorReport: Send na komputerze komunikat kompilatora odwołuje się do witryny sieci Web zawierającej zasady zbierania danych Microsoft% 27s.
 
 ### <a name="treat-specific-warnings-as-errors"></a>Traktuj konkretne ostrzeżenia jako błędy
