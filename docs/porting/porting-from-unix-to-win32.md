@@ -1,70 +1,23 @@
 ---
-title: Eksportowanie z systemu UNIX do Win32
-ms.date: 05/02/2019
+title: Uruchamianie programów systemu Linux w systemie Windows
+ms.date: 07/31/2019
 helpviewer_keywords:
-- APIs [C++], porting to Win32
-- Windows API [C++], migrating from UNIX
-- migration [C++]
-- UNIX [C++], porting to Win32
-- porting to Win32 [C++], from UNIX
-- porting to Win32 [C++]
-- Win32 applications [C++], migrating from UNIX
+- Linux [C++], porting to Win32
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 66ac5b478929a42b37d6d0b712063552cfae9104
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 6b59d7685aaada3ba44c03da2e5c27c75c8a473a
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449027"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682390"
 ---
-# <a name="porting-from-unix-to-win32"></a>Eksportowanie z systemu UNIX do Win32
+# <a name="running-linux-programs-on-windows"></a>Uruchamianie programów systemu Linux w systemie Windows
 
-Podczas migracji aplikacji z systemu UNIX do Windows, masz kilka opcji:
+Aby uruchomić program systemu Linux w systemie Windows, dostępne są następujące opcje:
 
-- Przy użyciu biblioteki systemu UNIX do portu aplikacji z systemu UNIX do Win32
+- Uruchom program w postaci, w której znajduje się podsystem Windows dla systemu Linux (WSL). W programie WSL program jest wykonywany bezpośrednio na sprzęcie komputera, a nie na maszynie wirtualnej. WSL również włącza bezpośrednie wywołania systemu plików między systemami Windows i Linux, eliminując konieczność transportu SSL. WSL jest zaprojektowana jako środowisko wiersza polecenia i nie jest zalecane w przypadku aplikacji intensywnie korzystających z grafiki. Aby uzyskać więcej informacji, zobacz temat [podsystem Windows dla systemu Linux](/windows/wsl/about).
+- Uruchom program w taki sam sposób, jak w przypadku maszyny wirtualnej z systemem Linux lub kontenera Docker, na komputerze lokalnym lub na platformie Azure. Aby uzyskać więcej informacji, zobacz [Virtual Machines](https://azure.microsoft.com/services/virtual-machines/) i [Docker na platformie Azure](https://docs.microsoft.com/azure/docker/).
+- Skompiluj program przy użyciu usługi Microsoft w zatoce lub Clang w środowiskach [MinGW](http://MinGW.org/) lub [MinGW-W64](https://MinGW-w64.org/doku.php) , które zapewniają warstwę translacji z wywołań systemu Linux do systemu Windows.
+- Kompiluj i uruchamiaj program za pomocą usługi Microsoft w zatoce lub Clang w środowisku [Cygwin](https://www.cygwin.com/) , które zapewnia pełniejsze środowisko systemu Linux w systemie Windows w porównaniu do MinGW lub MinGW-W64.
+- Ręcznie przeportować kod z systemu Linux i Kompiluj dla Windows C++ przy użyciu programu Microsoft (MSVC). Obejmuje to refaktoryzację kodu niezależnego od platformy do oddzielnych bibliotek, a następnie ponowne zapisanie kodu specyficznego dla systemu Linux w celu użycia kodu specyficznego dla Windows (na przykład interfejsów API Win32 lub DirectX). W przypadku aplikacji, które wymagają grafiki o wysokiej wydajności, jest to prawdopodobnie najlepsza opcja.
 
-- Przenoszenie aplikacji z systemu UNIX do Win32 natywnie
-
-- Uruchamianie aplikacji systemu UNIX w Windows, za pomocą podsystemu POSIX
-
-## <a name="unix-libraries"></a>Biblioteki systemu UNIX
-
-Jedną z opcji UNIX programistów zwykle należy wziąć pod uwagę przy użyciu bibliotek podobnymi do systemu UNIX innych firm umożliwiające ich kompilacji kodu systemu UNIX jako plikiem wykonywalnym środowiska Win32. Wiele komercyjnych (i co najmniej jedną domenę publiczną) biblioteki to zrobić. Jest to opcja dla niektórych aplikacji. Te przenoszenie bibliotek zaletą jest to, że one zminimalizować początkowy przenoszenia. Główne wady, konkurencyjnych oprogramowania jest, zwykle krócej portu macierzystego systemu Win32 w aplikacji i będą mieć więcej funkcji. Może być nieodpowiednich dla aplikacji wkraczać poza powłoki systemu UNIX, wymaga wykonywania wywołań Win32, aby uzyskać więcej energii z Windows.
-
-Na poniższej liście przedstawiono firmy Microsoft i innych zasobów przenoszenie i UNIX migrację do programu Visual C++:
-
-### <a name="unix-migration-guides"></a>Przewodniki dotyczące migracji z systemu UNIX
-
-[Przewodnik migracji aplikacji niestandardowych UNIX](https://technet.microsoft.com/library/bb656290.aspx) zapewnia pomoc techniczną na migrację kodu z systemu UNIX do środowiska Win32.
-
-[Przewodnik projektu migracji Unix](https://technet.microsoft.com/library/bb656287.aspx) uzupełnia Przewodnik migracji aplikacji niestandardowego systemu UNIX, zapewniając wysokiego poziomu pomocy w przypadku migrowania projektów istotne z systemu UNIX do Win32. Przewodnik zawiera porady dotyczące zagadnień do uwzględnienia na każdym etapie migracji projektu.
-
-### <a name="c-boost-web-site"></a>C++ zwiększenie wydajności witryny sieci Web
-
-[https://www.boost.org/](https://www.boost.org/)
-
-## <a name="porting-unix-applications-directly-to-win32"></a>Przenoszenie aplikacji systemu UNIX bezpośrednio do systemu Win32
-
-Innym rozwiązaniem jest przenoszenie aplikacji systemu UNIX bezpośrednio do systemu Win32. Przy użyciu biblioteki ANSI C/C++ i komercyjnych bibliotek kompilator C, wiele tradycyjny system, który wywołuje opiera się na aplikacji systemu UNIX są dostępne w aplikacji Win32.
-
-Model danych wyjściowych **stdio —**-aplikacji nie musi zostać zmienione w stosunku konsoli Win32 API naśladować **stdio —** modelu i wersji *curses* istnieje używające konsoli Win32 API. Aby uzyskać więcej informacji, zobacz [SetConsoleCursorPosition](/windows/console/setconsolecursorposition).
-
-Aplikacje oparte na gniazdo Berkeley muszą bardzo kilka zmian, aby pracować w aplikacji Win32. Interfejsu Windows Sockets został zaprojektowany do celów przenośności przy użyciu gniazd BSD, przy minimalnych zmianach, które zostały wymienione w sekcjach wprowadzające specyfikacji interfejsu WinSock.
-
-Windows obsługuje CLS DCE RPC, tak aby łatwo można używać aplikacji opartego na protokole RPC. Zobacz [funkcji RPC](/windows/desktop/Rpc/rpc-functions).
-
-Jest jednym z największych obszarów różnica w modelu procesów. Ma UNIX `fork`; Win32 — nie. W zależności od użycia `fork` i kodzie podstawowym, Win32 ma dwa interfejsy API, które mogą być używane: `CreateProcess` i `CreateThread`. Aplikacji systemu UNIX, który rozwidlenia wielu kopii sam można przekształcił w systemie Win32 wiele procesów lub jeden proces w wielu wątkach. Wiele procesów są używane, dostępnych jest wiele metod IPC, który może służyć do komunikacji między procesami (i prawdopodobnie aktualizowania kodu i danych nowego procesu jako element nadrzędny, np. Jeśli funkcjonalność, `fork` zapewnia jest potrzebny). Aby uzyskać więcej informacji o IPC, zobacz [komunikacji międzyprocesowej](/windows/desktop/ipc/interprocess-communications).
-
-Windows i UNIX graficzny modeli są bardzo różne. UNIX używa X okna systemu graficznego interfejsu użytkownika, gdy Windows korzysta z użyciem interfejsu GDI. Chociaż jest to podobne, nie ma żadnych mapowania proste interfejsu API X do interfejsu API z użyciem interfejsu GDI. Jednak obsługa OpenGL jest dostępne do migracji aplikacji OpenGL systemu UNIX. Wiąże się z X klientów i X serwerów Windows. Zobacz [konteksty urządzenia](/windows/desktop/gdi/device-contexts) informacji z użyciem interfejsu GDI.
-
-Podstawowe aplikacji systemu UNIX, w tym wiele aplikacji CGI, powinien portu łatwe do programu Visual C++ w systemie Windows. Funkcje, takie jak `open`, `fopen`, `read`, `write` i inne są dostępne w bibliotece środowiska wykonawczego Visual C++. Ponadto istnieje mapowanie jeden do jednego między interfejsów API systemu UNIX C i Win32: `open` do `CreateFile`, `read` do `ReadFile`, `write` do `WriteFile`, `ioctl` do `DeviceIOControl`, `close` do `CloseFile`i tak dalej.
-
-## <a name="windows-posix-subsystem"></a>Podsystem Windows POSIX
-
-Inną opcja UNIX programistów przyjrzeć to podsystemu Windows POSIX. Jednakże obsługuje on tylko 1003.1 POSIX, który jedynie wersja POSIX standaryzowane podczas tworzenia systemu Windows NT. Od tamtej pory nastąpiła nieco żądanie do ten podsystem rozszerzania, ponieważ większość aplikacji zostały przekonwertowane na Win32. 1003.1 system jest ograniczone znaczenie w odniesieniu do aplikacji w pełni wyposażone, ponieważ nie zawiera wiele funkcji (takich jak te w 1003.2 sieci pomocy technicznej i tak dalej). Pełne polecanych aplikacji uruchamiana z podsystem Windows POSIX nie mają dostępu do funkcji Windows, które są dostępne do aplikacji Win32, takich jak pliki mapowane w pamięci, sieci i grafiki. Aplikacje, takie jak VI, LS i GREP są główne cele podsystemu Windows POSIX.
-
-## <a name="see-also"></a>Zobacz także
-
-[Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](visual-cpp-change-history-2003-2015.md)<br/>
-[UNIX](../c-runtime-library/unix.md)<br/>
-[Zasady wnioskowania](../build/reference/inference-rules.md)

@@ -1,39 +1,39 @@
 ---
 title: Odwołanie do biblioteki OpenMP
-ms.date: 03/20/2019
+ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: 6f4bbeca54bff1fc44a3576362edca9c30926d5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362520"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682589"
 ---
 # <a name="openmp-library-reference"></a>Odwołanie do biblioteki OpenMP
 
-Zawiera łącza do konstrukcji używanych w interfejsie API OpenMP.
+Oferuje linki do konstrukcji używanych w interfejsie API OpenMP.
 
-Implementacja języka Visual C++ OpenMP standard obejmuje następujące elementy.
+Wizualna C++ implementacja standardu OpenMP obejmuje następujące konstrukcje.
 
 |Konstrukcja|Opis|
 |---------------|-----------------|
-|[Dyrektywy](openmp-directives.md)|Zawiera łącza do informacji o dyrektywach używany w interfejsie API OpenMP.|
-|[Klauzule](openmp-directives.md)|Zawiera łącza do klauzul używany w interfejsie API OpenMP.|
+|[Dyrektywy](openmp-directives.md)|Zawiera łącza do dyrektyw używanych w interfejsie API OpenMP.|
+|[Klauzule](openmp-clauses.md)|Zawiera łącza do klauzul używanych w interfejsie API OpenMP.|
 |[Funkcje](openmp-functions.md)|Zawiera łącza do funkcji używanych w interfejsie API OpenMP.|
-|[Zmienne środowiskowe](openmp-environment-variables.md)|Zawiera łącza do zmiennych środowiskowych, używany w interfejsie API OpenMP.|
+|[Zmienne środowiskowe](openmp-environment-variables.md)|Oferuje linki do zmiennych środowiskowych używanych w interfejsie API OpenMP.|
 
-Element wizualny C++ OpenMP, funkcje biblioteki wykonawczej są zawarte w następujących bibliotek.
+Funkcje biblioteki C++ wykonawczej Visual OpenMP są zawarte w następujących bibliotekach.
 
-|Biblioteka środowiska uruchomieniowego OpenMP|Właściwości|
+|Biblioteka wykonawcza OpenMP|Elementy|
 |------------------------------|---------------------|
-|VCOMP.LIB|Link wielowątkowych i dynamiczny (bibliotekę importowaną VCOMP. LIB).|
-|VCOMPD.LIB|Link wielowątkowych i dynamiczny (bibliotekę importowaną VCOMPD. POKRYWY) (debugowanie)|
+|VCOMP.LIB|Wielowątkowy, dynamiczny link (Biblioteka importowana dla VCOMP. LIB).|
+|VCOMPD.LIB|Wielowątkowy, dynamiczny link (Biblioteka importowana dla VCOMPD. POKRYWA) (Debuguj)|
 
-Jeśli _DEBUG jest zdefiniowany w kompilacji i `#include omp.h` znajduje się w kodzie źródłowym, VCOMPD. LIB będzie lib domyślny, w przeciwnym razie VCOMP. Lib — będzie używana.
+Jeśli _DEBUG jest zdefiniowany w kompilacji i jeśli `#include omp.h` znajduje się w kodzie źródłowym, VCOMPD. LIB będzie domyślną lib, w przeciwnym razie VCOMP. Zostanie użyta Biblioteka LIB.
 
-Możesz użyć [/nodefaultlib (Ignoruj biblioteki)](../../../build/reference/nodefaultlib-ignore-libraries.md) usunąć biblioteki domyślne i jawnie utworzyć łącze z lib wybranych przez użytkownika.
+Możesz użyć [/NODEFAULTLIB (Ignoruj biblioteki)](../../../build/reference/nodefaultlib-ignore-libraries.md) , aby usunąć domyślną lib i jawnie połączyć z dowolnie wybraną lib.
 
-Biblioteki DLL OpenMP znajdują się w katalogu pakiet redystrybucyjny Visual C++ i muszą być dystrybuowane za pomocą aplikacji, które używają OpenMP.
+Biblioteki DLL OpenMP znajdują się w C++ katalogu redystrybucyjnym wizualizacji i muszą być dystrybuowane z aplikacjami, które używają OpenMP.
 
 ## <a name="see-also"></a>Zobacz także
 
