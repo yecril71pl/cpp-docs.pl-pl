@@ -1,5 +1,5 @@
 ---
-title: Programowanie przy użyciu platformy .NET C++sposób niezamierzony (Visual C++)
+title: Programowanie na platformie C++.NET za pomocą C++/CLI (wizualizacja)
 ms.date: 09/18/2018
 helpviewer_keywords:
 - programming [C++], .NET programming
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ac73ec4921b57f5a4c8e1fdeb16edc4d92f57e1
+ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303799"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68711133"
 ---
-# <a name="net-programming-with-ccli-visual-c"></a>Programowanie przy użyciu platformy .NET C++sposób niezamierzony (Visual C++)
+# <a name="net-programming-with-ccli-visual-c"></a>Programowanie na platformie C++.NET za pomocą C++/CLI (wizualizacja)
 
-**Visual Studio 2015**: Domyślnie projekty CLR utworzonych za pomocą programu Visual Studio 2015 ukierunkowane na .NET Framework 4.5.2. Do obiektu docelowego .NET Framework 4.6 podczas tworzenia nowego projektu w **nowy projekt** okno dialogowe, zmienić platformę docelową z listy rozwijanej w górnej środkowej części okna dialogowego. Aby zmienić platformę docelową dla istniejącego projektu, zamknij projekt, Edytuj plik projektu (.vcxproj) i zmienić wartość docelową wersję platformy 4.6. Gdy następnym razem otworzysz projekt, ustawienia zaczęły obowiązywać.
+**Visual Studio 2015**: Domyślnie projekty CLR utworzone przy użyciu programu Visual Studio 2015 Target .NET Framework 4.5.2. Aby docelowa .NET Framework 4,6 podczas tworzenia nowego projektu, w oknie dialogowym **Nowy projekt** Zmień platformę docelową na liście rozwijanej w górnej części okna dialogowego. Aby zmienić platformę docelową dla istniejącego projektu, Zamknij projekt, edytuj plik projektu (. vcxproj) i zmień wartość docelowej wersji platformy na 4,6. Przy następnym otwarciu projektu ustawienia zaczną obowiązywać.
 
-**Visual Studio 2017**: W programie Visual Studio 2017, domyślna struktura jest 4.6.1 i selektor wersji Framework znajduje się w dolnej części **okna dialogowego Nowy projekt**. C++/ CLI, sama nie jest instalowany domyślnie. Aby zainstalować składnik, otwórz Instalator programu Visual Studio, a następnie wybierz polecenie C++składnika w sposób niezamierzony w obszarze Visual C++.
+**Visual Studio 2017**: W programie Visual Studio 2017, struktura domyślna to 4.6.1, a selektor wersji struktury znajduje się u dołu **okna dialogowego Nowy projekt**. C++Sama/CLI nie jest instalowana domyślnie. Aby zainstalować składnik, Otwórz Instalator programu Visual Studio i wybierz składnik C++/CLI w obszarze Wizualizacja. C++
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -26,13 +26,11 @@ ms.locfileid: "62303799"
 
 [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)
 
-[Podręcznik migracji C++/CLI](../dotnet/cpp-cli-migration-primer.md)
-
 [Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
 
 [Wyrażenia regularne (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[Obsługa plików i we/wy (C++sposób niezamierzony)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[Obsługa plików i we/wy (C++/CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [Operacje graficzne (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
 
