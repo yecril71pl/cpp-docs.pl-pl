@@ -1,19 +1,17 @@
 ---
 title: Inicjatory
-ms.date: 11/19/2018
+ms.date: 07/29/2019
+description: Jak zainicjować klasy, struktury, tablice i podstawowe typy w C++.
 helpviewer_keywords:
-- array-element initializers
-- initializing arrays [C++], initializers
 - arrays [C++], array-element initializers
-- declarators, as initializers
-- initializers, array element
+- aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183535"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661614"
 ---
 # <a name="initializers"></a>Inicjatory
 
@@ -53,7 +51,7 @@ Inicjatory mogą przybierać następujące formy:
     string s = "hello";
     ```
 
-- Lista inicjatorów w nawiasach klamrowych. Lista może być pusta lub może się składać z zestawu list, jak w poniższym przykładzie:
+- Lista inicjatorów w nawiasach klamrowych. Lista może być pusta lub może składać się z zestawu list, jak w poniższym przykładzie:
 
     ```cpp
     struct Point{
@@ -73,21 +71,21 @@ Inicjatory mogą przybierać następujące formy:
     }
     ```
 
-## <a name="kinds-of-initialization"></a>Rodzaje inicjowania
+## <a name="kinds-of-initialization"></a>Rodzaje inicjacji
 
 Istnieje kilka rodzajów inicjowania, które mogą wystąpić w różnych punktach wykonywania programu. Różne rodzaje inicjowania nie wykluczają się nawzajem — na przykład inicjowanie listy może wywołać inicjowanie wartości, a w innych okolicznościach może wywołać inicjowanie agregacji.
 
-### <a name="zero-initialization"></a>Inicjalizacja wartością zerową
+### <a name="zero-initialization"></a>Inicjowanie zerowe
 
 Inicjalizacja wartością zerową to ustawienie zmiennej na wartość zero niejawnie konwertowaną na typ:
 
 - Zmienne liczbowe są inicjowane na wartość 0 (lub 0,0 lub 0,0000000000 itp.).
 
-- Zmienne char są inicjowane na `'\0'`.
+- Zmienne char są inicjowane `'\0'`do.
 
-- Wskaźniki są inicjowane na **nullptr**.
+- Wskaźniki są inicjowane do **nullptr**.
 
-- Tablice, [ZASOBNIKA](../standard-library/is-pod-class.md) klas, struktur i Unii członkowie ich inicjowane z wartością zero.
+- W tablicach [, klasach](../standard-library/is-pod-class.md) , strukturach i związkach ich składowe zostały zainicjowane do wartości zerowej.
 
 Inicjalizacja z wartością zerową odbywa się w różnym czasie:
 
@@ -116,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a> Inicjowanie domyślne
+### <a name="default_initialization"></a>Domyślna Inicjalizacja
 
-Inicjowanie domyślne klas, struktur i Unii to inicjowanie przy użyciu domyślnego konstruktora. Konstruktor domyślny może być wywoływana z nie wyrażenia inicjowania lub **nowe** — słowo kluczowe:
+Domyślna Inicjalizacja klas, struktur i Unii jest inicjowana przy użyciu domyślnego konstruktora. Konstruktor domyślny można wywołać bez wyrażenia inicjowania lub za pomocą słowa kluczowego **New** :
 
 ```cpp
 MyClass mc1;
@@ -127,7 +125,7 @@ MyClass* mc3 = new MyClass;
 
 Jeśli klasa, struktura lub unia nie ma domyślnego konstruktora, kompilator generuje błąd.
 
-Zmienne skalarne są inicjowane, gdy są one definiowane za pomocą nie wyrażenia inicjowania domyślnego. Mają one wartości nieokreślone.
+Zmienne skalarne są inicjowane domyślnie, gdy są zdefiniowane bez wyrażenia inicjowania. Mają one wartości nieokreślone.
 
 ```cpp
 int i1;
@@ -135,7 +133,7 @@ float f;
 char c;
 ```
 
-Tablice są inicjowane, gdy są one definiowane za pomocą nie wyrażenia inicjowania domyślnego. Gdy tablica jest zainicjowana domyślnie, jej elementy członkowskie są domyślnie zainicjowane i mają wartości nieokreślone, jak w poniższym przykładzie:
+Tablice są inicjowane domyślnie, gdy są zdefiniowane bez wyrażenia inicjowania. Gdy tablica jest inicjowana domyślnie, jej składowe są domyślnie inicjowane i mają wartości nieokreślone, jak w poniższym przykładzie:
 
 ```cpp
 int int_arr[3];
@@ -143,9 +141,9 @@ int int_arr[3];
 
 Jeśli elementy członkowskie tablicy nie mają domyślnego konstruktora, kompilator generuje błąd.
 
-#### <a name="default-initialization-of-constant-variables"></a>Domyślna Inicjalizacja stałych zmiennych
+#### <a name="default-initialization-of-constant-variables"></a>Domyślna Inicjalizacja zmiennych stałych
 
-Stałe zmienne muszą zostać zadeklarowane wraz z inicjatorem. Jeśli są one typu skalarnego spowodują błąd kompilatora, a jeśli są typami klas, które mają Konstruktor domyślny powodują one ostrzeżenie:
+Stałe zmienne muszą zostać zadeklarowane wraz z inicjatorem. Jeśli są to typy skalarne powodujące błąd kompilatora, a jeśli są typami klas, które mają Konstruktor domyślny, powodują Ostrzeżenie:
 
 ```cpp
 class MyClass{};
@@ -156,9 +154,9 @@ int main() {
 }
 ```
 
-#### <a name="default-initialization-of-static-variables"></a>Domyślna Inicjalizacja zmiennych statycznych
+#### <a name="default-initialization-of-static-variables"></a>Domyślne Inicjowanie zmiennych statycznych
 
-Zmienne statyczne, które są zadeklarowane za pomocą inicjatora nie jest inicjowana wartością 0 (niejawnie konwertowane na typ).
+Zmienne statyczne, które są zadeklarowane bez inicjatora są inicjowane do wartości 0 (niejawnie konwertowane na typ).
 
 ```cpp
 class MyClass {
@@ -175,27 +173,27 @@ int main() {
 }
 ```
 
-Aby uzyskać więcej informacji na temat inicjowania statycznych obiektów globalnych, zobacz [Additional Startup Considerations](../cpp/additional-startup-considerations.md).
+Aby uzyskać więcej informacji na temat inicjowania globalnych obiektów statycznych, zobacz [dodatkowe zagadnienia dotyczące uruchamiania](../cpp/additional-startup-considerations.md).
 
 ### <a name="value-initialization"></a>Inicjowanie wartości
 
 Inicjalizacja wartości występuje w następujących przypadkach:
 
-- wartość nazwana jest inicjowana za pomocą pustych nawiasów klamrowych
+- nazwana wartość jest inicjowana za pomocą pustego nawiasu klamrowego
 
-- anonimowy obiekt tymczasowy jest inicjowany za pomocą pustych nawiasów zwykłych lub klamrowych
+- Anonimowy obiekt tymczasowy jest inicjowany za pomocą pustych nawiasów lub nawiasów klamrowych
 
-- obiekt jest inicjowany za pomocą **nowe** — słowo kluczowe oraz pustych nawiasów zwykłych lub klamrowych
+- Obiekt jest inicjowany za pomocą słowa kluczowego **New** i pustych nawiasów lub nawiasów klamrowych
 
 Inicjalizacja wartości wykonuje następujące czynności:
 
-- klas z co najmniej jeden konstruktor publiczny wywoływany jest konstruktor domyślny
+- dla klas z co najmniej jednym konstruktorem publicznym wywoływany jest Konstruktor domyślny
 
-- dla klas spoza Unii nie deklarowanych konstruktorów obiekt jest inicjowany z wartością zerową i wywoływany jest konstruktor domyślny
+- dla klas nienależących do Unii bez zadeklarowanych konstruktorów obiekt jest inicjowany od zera i Konstruktor domyślny jest wywoływany
 
-- dla tablic każdy element jest inicjowany przez wartość
+- w przypadku tablic każdy element jest inicjowany przez wartość
 
-- we wszystkich innych przypadkach zmienna jest zainicjowana zero
+- we wszystkich innych przypadkach zmienna jest inicjowana zero
 
 ```cpp
 class BaseClass {
@@ -212,23 +210,23 @@ int main() {
 }
 ```
 
-### <a name="copy-initialization"></a>Inicjalizacja kopiująca.
+### <a name="copy-initialization"></a>Kopiuj inicjalizację
 
-Inicjalizacja kopiująca to Inicjalizacja jednego obiektu przy użyciu innego obiektu. Pojawi się w następujących przypadkach:
+Inicjalizacja kopiowania jest inicjalizacją jednego obiektu przy użyciu innego obiektu. Występuje w następujących przypadkach:
 
-- zmienna jest inicjowana przy użyciu znaku równości
+- Zmienna jest inicjowana przy użyciu znaku równości
 
-- argument jest przekazywany do funkcji
+- do funkcji jest przenoszona argument
 
-- obiekt jest zwracany przez funkcję
+- Obiekt jest zwracany z funkcji
 
-- wyjątek jest zgłaszany lub wychwycony
+- wyjątek jest zgłaszany lub przechwytywany
 
-- element członkowski danych niestatycznych jest inicjowana za pomocą znaku równości
+- niestatyczny element członkowski danych jest inicjowany przy użyciu znaku równości
 
-- klasy, struktury i składowych Unii są inicjowane przez inicjalizację kopiującą podczas inicjowania agregacji. Zobacz [inicjowania agregacji](#agginit) przykłady.
+- elementy członkowskie klasy, struktury i Unii są inicjowane przez inicjalizację kopiowania podczas inicjowania agregacji. Przykłady [](#agginit) można znaleźć w temacie Inicjalizacja agregacji.
 
-Poniższy kod pokazuje kilka przykładów inicjalizacji kopiującej:
+Poniższy kod pokazuje kilka przykładów inicjalizacji kopiowania:
 
 ```cpp
 #include <iostream>
@@ -260,7 +258,7 @@ int main() {
 }
 ```
 
-Inicjalizacja kopiująca nie może wywołać jawne konstruktory.
+Inicjalizacja kopiowania nie może wywoływać jawnych konstruktorów.
 
 ```cpp
 vector<int> v = 10; // the constructor is explicit; compiler error C2440: cannot convert from 'int' to 'std::vector<int,std::allocator<_Ty>>'
@@ -270,21 +268,21 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
 
 W niektórych przypadkach, jeśli konstruktor kopiujący klasy jest usunięty lub niedostępny, inicjalizacja kopiująca powoduje błąd kompilatora.
 
-### <a name="direct-initialization"></a>Inicjalizacja bezpośrednia
+### <a name="direct-initialization"></a>Inicjowanie bezpośrednie
 
-Inicjalizacja bezpośrednia jest inicjalizacja za pomocą (niepustych) nawiasów zwykłych lub klamrowych. W przeciwieństwie do inicjalizacji kopiującej, może wywołać jawne konstruktory. Pojawi się w następujących przypadkach:
+Inicjalizacja bezpośrednia jest inicjowana za pomocą (Niepuste) nawiasów klamrowych lub nawiasów. W przeciwieństwie do inicjalizacji kopiującej, może wywołać jawne konstruktory. Występuje w następujących przypadkach:
 
-- zmienna jest inicjowana za pomocą niepustych nawiasów zwykłych lub klamrowych
+- Zmienna jest inicjowana z niepustymi nawiasami klamrowymi lub nawiasami
 
-- zmienna jest inicjowana za pomocą **nowe** — słowo kluczowe oraz niepustych nawiasów zwykłych lub klamrowych
+- Zmienna jest inicjowana za pomocą słowa kluczowego **New** i niepustych nawiasów klamrowych lub nawiasów
 
-- zmienna jest inicjowana za pomocą **static_cast**
+- Zmienna jest inicjowana za pomocą **static_cast**
 
-- w konstruktorze klasy podstawowe i Niestatyczne składowe są inicjowane za pomocą listy inicjalizatora
+- w konstruktorze klasy bazowe i niestatyczne składowe są inicjowane za pomocą listy inicjalizatora
 
-- w kopii przechwyconych zmiennej w wyrażeniu lambda
+- w kopii przechwyconej zmiennej wewnątrz wyrażenia lambda
 
-Poniższy kod pokazuje kilka przykładów inicjalizacji bezpośredniej:
+Poniższy kod przedstawia kilka przykładów inicjalizacji bezpośredniej:
 
 ```cpp
 class BaseClass{
@@ -313,25 +311,25 @@ int main(){
 }
 ```
 
-### <a name="list-initialization"></a>Inicjalizacja listy
+### <a name="list-initialization"></a>Inicjowanie listy
 
-Inicjalizacja listy występuje, gdy zmienna jest inicjowana za pomocą listy inicjatora w nawiasach klamrowych. W nawiasach klamrowych inicjatora list mogą być używane w następujących przypadkach:
+Inicjalizacja listy występuje, gdy zmienna jest inicjowana za pomocą listy inicjalizatora w nawiasach klamrowych. Listy inicjalizatora w nawiasach klamrowych mogą być używane w następujących przypadkach:
 
-- zmienna jest inicjowana.
+- Zmienna jest inicjowana
 
-- Klasa jest inicjowana za pomocą **nowe** — słowo kluczowe
+- Klasa jest inicjowana za pomocą słowa kluczowego **New**
 
-- obiekt jest zwracany przez funkcję
+- Obiekt jest zwracany z funkcji
 
-- argument przekazany do funkcji
+- argument przesłany do funkcji
 
-- jeden z argumentów w inicjalizacji bezpośredniej
+- jeden z argumentów w inicjacji bezpośredniej
 
-- w inicjatorze składowej danych niestatycznych
+- w inicjatorze niestatycznej składowej danych
 
 - na liście inicjatora konstruktora
 
-Poniższy kod pokazuje kilka przykładów inicjalizacji listy:
+Poniższy kod przedstawia kilka przykładów inicjalizacji listy:
 
 ```cpp
 class MyClass {
@@ -364,22 +362,22 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a> Inicjowanie agregacji
+### <a name="agginit"></a>Inicjalizacja agregacji
 
 Inicjalizacja agregacji jest formą inicjalizacji listy dla tablic lub typów klas (zwykle struktur lub unii), które:
 
-- nie składników prywatnych ani chronionych
+- Brak prywatnych lub chronionych składowych
 
-- dostarczony przez użytkownika konstruktorów, z wyjątkiem jawnie ustawionych domyślnie lub usuniętych konstruktorów
+- Brak konstruktorów dostarczonych przez użytkownika, z wyjątkiem jawnie domyślnych lub usuniętych konstruktorów
 
-- nie mają klas bazowych
+- Brak klas bazowych
 
-- nie funkcji wirtualnych elementów członkowskich
+- Brak wirtualnych funkcji Członkowskich
 
 > [!NOTE]
-> <!--conformance note-->W programie Visual Studio 2015 i starszych wartość zagregowana nie może mieć inicjatory nawiasów klamrowych lub znaku równości dla niestatycznych elementów członkowskich. To ograniczenie zostało usunięte w standard C ++ 14 i zaimplementowane w Visual Studio 2017.
+> <!--conformance note-->W programie Visual Studio 2015 i starszych funkcja agregująca nie może mieć inicjatorów w nawiasach klamrowych i niestatycznych elementów członkowskich. To ograniczenie zostało usunięte w standardzie C++ 14 i zaimplementowane w programie Visual Studio 2017.
 
-Inicjatory agregacji składają się z listy usztywnionego inicjowania z lub bez znaku równości, jak w poniższym przykładzie:
+Inicjatory agregujące składają się z listy inicjalizacji z nawiasami klamrowymi, z lub bez znaku równości, tak jak w poniższym przykładzie:
 
 ```cpp
 #include <iostream>
@@ -390,9 +388,14 @@ struct MyAggregate{
     char myChar;
 };
 
+struct MyAggregate2{
+    int myInt;
+    char myChar = 'Z'; // member-initializer OK in C++14
+};
+
 int main() {
     MyAggregate agg1{ 1, 'c' };
-
+    MyAggregate2 agg2{2};
     cout << "agg1: " << agg1.myChar << ": " << agg1.myInt << endl;
     cout << "agg2: " << agg2.myChar << ": " << agg2.myInt << endl;
 
@@ -418,17 +421,17 @@ Powinny zostać wyświetlone następujące dane wyjściowe:
 
 ```Output
 agg1: c: 1
-agg2: d: 2
+agg2: Z: 2
 myArr1: 1 2 3 4
 myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Elementy członkowskie tablicy zadeklarowane, ale nie zostały jawnie zainicjowana podczas inicjowania agregacji jest inicjowany z wartością zerową, jak w `myArr3` powyżej.
+> Elementy członkowskie tablicy, które są zadeklarowane, ale nie są jawnie inicjowane podczas inicjowania agregacji `myArr3` , są inicjowane od zera, jak powyżej.
 
 #### <a name="initializing-unions-and-structs"></a>Inicjowanie Unii i struktur
 
-Jeżeli Unia nie ma konstruktora, można ją zainicjować przy użyciu pojedynczej wartości (lub z innego wystąpienia Unii). Wartość służy do inicjowania pierwszego pola niestatycznego. Różni się to od inicjowania struktury, w którym pierwsza wartość w inicjatorze służy do inicjowania pierwszego pola, druga do zainicjowania drugiego pola itd. Porównaj inicjowania Unii i struktur w następującym przykładzie:
+Jeśli Unia nie ma konstruktora, można ją zainicjować za pomocą pojedynczej wartości (lub z innym wystąpieniem Unii). Wartość służy do inicjowania pierwszego pola niestatycznego. Różni się to od inicjowania struktury, w którym pierwsza wartość w inicjatorze służy do inicjowania pierwszego pola, druga do zainicjowania drugiego pola itd. Porównaj inicjalizacje Unii i struktur w następującym przykładzie:
 
 ```cpp
 struct MyStruct {
@@ -459,7 +462,7 @@ int main() {
 }
 ```
 
-#### <a name="initializing-aggregates-that-contain-aggregates"></a>Inicjowanie agregacji zawierających agregacje
+#### <a name="initializing-aggregates-that-contain-aggregates"></a>Inicjowanie agregacji zawierających wartości zagregowane
 
 Typy agregacji mogą zawierać inne typy agregacji, na przykład tablice tablic, tablice struktur itd. Te typy są inicjowane przy użyciu zagnieżdżonych zestawów nawiasów klamrowych, na przykład:
 
@@ -475,7 +478,7 @@ int main() {
 }
 ```
 
-### <a name="reference-initialization"></a>Inicjalizacja odwołania
+### <a name="reference-initialization"></a>Inicjowanie odwołania
 
 Zmienne typu referencyjnego muszą być inicjowane z obiektem typu, który dziedziczy ten typ referencyjny lub obiektem typu, który może zostać przekonwertowany na typ, z którego dziedziczy typ referencyjny. Na przykład:
 
@@ -508,7 +511,7 @@ Zmienna typu odwołania może być deklarowana bez inicjatorów tylko w następu
     int func( int& );
     ```
 
-- Deklaracje typu funkcji zwracanej. Na przykład:
+- Deklaracje typu funkcji zwracanej. Przykład:
 
     ```cpp
     int& func( int& );
@@ -520,7 +523,7 @@ Zmienna typu odwołania może być deklarowana bez inicjatorów tylko w następu
     class c {public:   int& i;};
     ```
 
-- Deklaracja zmiennej jawnie określony jako **extern**. Na przykład:
+- Deklaracja zmiennej jawnie określona jako **extern**. Przykład:
 
     ```cpp
     extern int& iVal;
@@ -528,13 +531,13 @@ Zmienna typu odwołania może być deklarowana bez inicjatorów tylko w następu
 
 Podczas inicjowania zmiennej typu odwołania, kompilator używa wykresu decyzji pokazanego na poniższym rysunku, aby wybrać między utworzeniem odwołania do obiektu a tymczasowym obiektem, który wskazuje odwołanie.
 
-![Wykres decyzji dla inicjowania typów referencyjnych](../cpp/media/vc38s71.gif "wykres decyzji dla inicjowania typów referencyjnych") <br/>
-Wykres decyzji dla inicjowania typów referencyjnych
+![Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych](../cpp/media/vc38s71.gif "Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych") <br/>
+Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych
 
-Odwołuje się do **volatile** typów (zadeklarowane jako **volatile** *typename* <strong>&</strong> *identyfikator*) mogą być zainicjowane z **volatile** obiektów tego samego typu lub z obiektami, które nie zostały zadeklarowane jako **volatile**. Mogą jednak nie, można zainicjować za pomocą **const** obiektów tego typu. Podobnie, odwołania do **const** typów (zadeklarowane jako **const** *typename* <strong>&</strong> *identyfikator* ) mogą być zainicjowane z **const** obiektów tego samego typu (lub wszystko, co ma konwersję do tego typu lub z obiektami, które nie zostały zadeklarowane jako **const**). Mogą jednak nie, można zainicjować za pomocą **volatile** obiektów tego typu.
+Odwołania do typów nietrwałych ( zadeklarowanych jako nietrwały *Identyfikator* *TypeName* <strong>&</strong> ) mogą być inicjowane za pomocą obiektów **lotnych** tego samego typu lub obiektów, które nie zostały zadeklarowane jako nietrwałe . Nie mogą jednak być inicjowane z obiektami **const** tego typu. Podobnie odwołania do typów **stałych** (zadeklarowanych jako *Identyfikator* *TypeName* <strong>&</strong> **const** ) mogą być inicjowane za pomocą obiektów **const** tego samego typu (lub dowolnego elementu, który ma konwersję na ten typ lub z obiektami , które nie zostały zadeklarowane jako **const**). Nie mogą jednak być inicjowane z obiektami nietrwałymi tego typu.
 
-Odwołania, które nie są kwalifikowany za pomocą albo **const** lub **volatile** — słowo kluczowe może być inicjowane tylko z obiektami niezadeklarowanymi jako **const** ani  **volatile**.
+Odwołania, które nie są kwalifikowane za pomocą słowa kluczowego **const** lub **volatile** , mogą być inicjowane tylko z obiektami zadeklarowanymi jako ani **const** lub **volatile**.
 
 ### <a name="initialization-of-external-variables"></a>Inicjalizacja zmiennych zewnętrznych
 
-Deklaracje zmiennych automatycznych, statycznych i zewnętrznych mogą zawierać inicjatory. Deklaracje zmiennych zewnętrznych może jednak zawierać inicjatory tylko wtedy, gdy zmienne nie są deklarowane jako **extern**.
+Deklaracje zmiennych automatycznych, statycznych i zewnętrznych mogą zawierać inicjatory. Jednakże deklaracje zmiennych zewnętrznych mogą zawierać inicjatory tylko wtedy, gdy zmienne nie są zadeklarowane jako **extern**.

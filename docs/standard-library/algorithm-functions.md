@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313395"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661540"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;funkcje&gt; algorytmu
 
@@ -611,6 +611,14 @@ int main()
 }
 ```
 
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
+```
+
 ## <a name="clamp"></a>opraw
 
 Porównuje wartość z górną i dolną granicą i zwraca odwołanie do wartości, jeśli jest między granicami lub odwołaniem do górnej lub dolnej granicy, jeśli wartość jest odpowiednio powyżej lub poniżej.
@@ -845,6 +853,13 @@ int main() {
 }
 ```
 
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
+```
+
 ## <a name="copy_if"></a>copy_if
 
 W zakresie elementów Kopiuje elementy, które są **spełnione** dla określonego warunku.
@@ -894,6 +909,61 @@ Funkcja szablonu oblicza
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
 jeden raz dla `N` każdego z zakresów `[0, last - first)`, `N` dla ściśle rosnących wartości rozpoczynających się od najniższej wartości. Jeśli *docelowy* i *pierwszy* wyznaczysz regiony magazynu, element *docelowy* nie może znajdować `[ first, last )`się w zakresie.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
 
 ## <a name="copy_n"></a>copy_n
 
@@ -5344,7 +5414,7 @@ Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryte
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Algorytm nie gwarantuje, że elementy w podzakresach są sortowane po obu stronach tego elementu.  `nth_element` W ten sposób zwiększa się mniejsze `partial_sort`gwarancje niż, które porządkują elementy w zakresie poniżej pewnego wybranego elementu i mogą być używane jako szybsze alternatywy `partial_sort` dla sytuacji, gdy kolejność niższych zakresów nie jest wymagana.
+Algorytm nie gwarantuje, że elementy w podzakresach są sortowane po obu stronach tego elementu. `nth_element` W ten sposób zwiększa się mniejsze `partial_sort`gwarancje niż, które porządkują elementy w zakresie poniżej pewnego wybranego elementu i mogą być używane jako szybsze alternatywy `partial_sort` dla sytuacji, gdy kolejność niższych zakresów nie jest wymagana.
 
 Elementy są równoważne, ale niekoniecznie równe, jeśli nie są mniejsze od siebie.
 
