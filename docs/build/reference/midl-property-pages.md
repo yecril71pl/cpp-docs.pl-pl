@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 8174f6382ea2dab4ef2a49f5d30a6e27e8af3f5b
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492165"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787076"
 ---
 # <a name="midl-property-pages"></a>Strony właściwości MIDL
 
@@ -129,15 +129,15 @@ Określa środowisko docelowe ([/ENV](/windows/win32/midl/-env) arm32 | Win32 | 
 
 ### <a name="generate-stubless-proxies"></a>Generuj proxy bez klas zastępczych
 
-Generuj w pełni interpretowane klasy zastępcze z rozszerzeniami oraz proxy bez klas zastępczych dla interfejsów obiektów ([/Oicf](/windows/win32/midl/-Oicf), [/OIF](/windows/win32/midl/-Oif) ).
+Generuj w pełni interpretowane klasy zastępcze z rozszerzeniami oraz proxy bez klas zastępczych dla interfejsów obiektów ([/Oicf](/windows/win32/midl/-oi), [/OIF](/windows/win32/midl/-oi) ).
 
 ### <a name="suppress-compiler-warnings"></a>Pomijanie ostrzeżeń kompilatora
 
-Pomijaj komunikaty ostrzegawcze kompilatora ([/no_warn](/windows/win32/midl/-no_warn)).
+Pomijaj komunikaty ostrzegawcze kompilatora ([/no_warn](/windows/win32/midl/-no-warn)).
 
 ### <a name="application-configuration-mode"></a>Tryb konfiguracji aplikacji
 
-Zezwalaj na wybrane atrybuty ACF w pliku IDL ([/app_config](/windows/win32/midl/-app_config)).
+Zezwalaj na wybrane atrybuty ACF w pliku IDL ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>Identyfikator ustawień regionalnych
 
@@ -220,7 +220,7 @@ Określa format pliku biblioteki typów ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>Opcje przetwarzania wstępnego C
 
-Określa przełączniki do przekazania do preprocesora kompilatora języka C (przełączniki[/cpp_opt](/windows/win32/midl/-cpp_opt) ).
+Określa przełączniki do przekazania do preprocesora kompilatora języka C (przełączniki[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
 
 ### <a name="undefine-preprocessor-definitions"></a>Usuń Definicje preprocesora
 
@@ -258,15 +258,15 @@ Emituj dodatkowe sprawdzenie poprawności danych szczątkowych po stronie serwer
 
 ### <a name="prepend-with-abi-namespace"></a>Poprzedź z przestrzenią nazw "ABI"
 
-Dołącz przestrzeń nazw "ABI" do wszystkich typów.  ([/ns_prefix](/windows/win32/midl/-ns_prefix)).
+Dołącz przestrzeń nazw "ABI" do wszystkich typów.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
 
 ### <a name="validate-parameters"></a>Weryfikuj parametry
 
-Generuj dodatkowe informacje, aby sprawdzić poprawność parametrów ([/Robust](/windows/win32/midl/-robust) | [/Robust](/windows/win32/midl/-no_robust)).
+Generuj dodatkowe informacje, aby sprawdzić poprawność parametrów ([/Robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Wyrównanie elementu członkowskiego struktury
 
-Określa poziom pakowania struktur w systemie docelowym ([/ZpN](/windows/win32/midl/-zpn)).
+Określa poziom pakowania struktur w systemie docelowym (/ZpN).
 
 **Decyzji**
 
