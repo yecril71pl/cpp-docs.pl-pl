@@ -1,5 +1,5 @@
 ---
-title: CMFCEditBrowseCtrl Class
+title: Klasa CMFCEditBrowseCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCEditBrowseCtrl
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31fadc0a960ddfcf216951e1af481983b122ea0f
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237645"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821302"
 ---
-# <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl Class
+# <a name="cmfceditbrowsectrl-class"></a>Klasa CMFCEditBrowseCtrl
 
-`CMFCEditBrowseCtrl` Klasa obsługuje formant przeglądania edycji, który jest edytowalnym polem tekstowym opcjonalnie zawierający przycisk przeglądania. Gdy użytkownik kliknie przycisk przeglądania, formant wykonuje niestandardowe lub wyświetla standardowe okno dialogowe zawierający przeglądarkę plików lub przeglądarkę katalogów.
+`CMFCEditBrowseCtrl` Klasa obsługuje kontrolkę Edytuj przeglądanie, która jest edytowalnym polem tekstowym, które opcjonalnie zawiera przycisk przeglądania. Gdy użytkownik kliknie przycisk Przeglądaj, formant wykonuje akcję niestandardową lub wyświetla standardowe okno dialogowe zawierające przeglądarkę plików lub przeglądarkę folderów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,7 +49,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Domyślny konstruktor.|
+|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Konstruktor domyślny.|
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
@@ -57,54 +57,54 @@ class CMFCEditBrowseCtrl : public CEdit
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Włącza lub wyłącza (ukrywa) przycisk przeglądania.|
-|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Włącza przycisk Przeglądaj i umieszcza formant przeglądania edycji w *przeglądanie plików* trybu.|
-|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Włącza przycisk Przeglądaj i umieszcza formant przeglądania edycji w *przeglądanie folderów* trybu.|
+|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Włącza przycisk Przeglądaj i umieszcza kontrolkę Edycja przeglądania w trybie *przeglądania plików* .|
+|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Włącza przycisk Przeglądaj i umieszcza kontrolkę Edytuj przeglądanie w trybie *przeglądania folderów* .|
 |[CMFCEditBrowseCtrl::GetMode](#getmode)|Zwraca bieżący tryb przeglądania.|
-|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Wywoływane przez platformę, po zaktualizowaniu formant przeglądania edycji z wynikami akcji przeglądania.|
-|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Wywoływane przez platformę po użytkownik kliknie przycisk przeglądania.|
-|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Odrysowuje bieżącego formant przeglądania edycji.|
-|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Metoda wywoływana przez platformę, by narysować przycisk przeglądania.|
-|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Wywoływane przez platformę, gdy wprowadzono niedozwoloną nazwę pliku w formancie edycji.|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. Informacje o składni i więcej informacji, zobacz [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
-|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Ustawia niestandardowy obraz dla przycisku Przeglądaj.|
+|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Wywoływane przez platformę po zaktualizowaniu kontrolki edycji przeglądania z wynikiem akcji przeglądania.|
+|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk Przeglądaj.|
+|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Odświeża bieżącą kontrolkę przeglądania edycji.|
+|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Wywoływane przez platformę, by narysować przycisk przeglądania.|
+|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Wywoływane przez platformę, gdy w kontrolce edycji wprowadzono niedozwoloną nazwę pliku.|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Aby uzyskać informacje o składni i więcej informacji, zobacz [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Ustawia niestandardowy obraz przycisku przeglądania.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj formant przeglądania edycji, aby wybrać nazwę pliku lub folderu. Opcjonalnie za pomocą kontrolki wykonywanie niestandardowej akcji, takich jak, aby wyświetlić okno dialogowe. Możesz wyświetlać lub przycisk przeglądania nie jest wyświetlany i stosować etykiety niestandardowej lub obrazu na przycisku.
+Użyj kontrolki edycji edytowanie, aby wybrać nazwę pliku lub folderu. Opcjonalnie można użyć kontrolki, aby wykonać akcję niestandardową, na przykład w celu wyświetlenia okna dialogowego. Możesz wyświetlić lub nie wyświetlić przycisku Przeglądaj i można zastosować na przycisku etykietę niestandardową lub obraz.
 
-*Tryb przeglądania* przeglądania edycji kontrolki Określa czy Wyświetla przycisk przeglądania i jakie działania pojawia się po kliknięciu przycisku. Aby uzyskać więcej informacji, zobacz [GetMode](#getmode) metody.
+*Tryb przeglądania* kontrolki Edytuj przeglądanie decyduje o tym, czy ma być wyświetlany przycisk Przeglądaj, oraz jaka akcja występuje po kliknięciu przycisku. Aby uzyskać więcej informacji, zobacz [](#getmode) Metoda GetMode.
 
 `CMFCEditBrowseCtrl` Klasa obsługuje następujące tryby.
 
 - **Tryb niestandardowy**
 
-   Akcja niestandardowa jest wykonywane, gdy użytkownik kliknie przycisk przeglądania. Na przykład można wyświetlić okno dialogowe specyficzne dla aplikacji.
+   Akcja niestandardowa jest wykonywana, gdy użytkownik kliknie przycisk Przeglądaj. Na przykład można wyświetlić okno dialogowe specyficzne dla aplikacji.
 
 - **tryb pliku**
 
-   Okno dialogowe Wybieranie standardowych plików jest wyświetlana, gdy użytkownik kliknie przycisk przeglądania.
+   Standardowe okno dialogowe wyboru pliku jest wyświetlane, gdy użytkownik kliknie przycisk Przeglądaj.
 
 - **Tryb folderu**
 
-   Okno dialogowe Wybieranie folderu standard jest wyświetlany, gdy użytkownik kliknie przycisk przeglądania.
+   Standardowe okno dialogowe wyboru folderów jest wyświetlane, gdy użytkownik kliknie przycisk Przeglądaj.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Instrukcje: Określ formant przeglądania edycji
+## <a name="how-to-specify-an-edit-browse-control"></a>Instrukcje: Określanie kontrolki przeglądania edycji
 
-Wykonaj poniższe kroki, aby włączyć formant przeglądania edycji w Twojej aplikacji:
+Wykonaj następujące kroki, aby dołączyć kontrolkę przeglądania edycji w swojej aplikacji:
 
-1. Jeśli chcesz zaimplementować tryb przeglądanie niestandardowe pochodną klasy z `CMFCEditBrowseCtrl` klasy, a następnie zastąpić [CMFCEditBrowseCtrl::OnBrowse](#onbrowse) metody. W metodzie zgodnym z przesłoniętą wykonać akcji niestandardowej przeglądania i zaktualizuj formant przeglądania edycji z wynikiem.
+1. Jeśli chcesz zaimplementować niestandardowy tryb przeglądania, Utwórz własną klasę z `CMFCEditBrowseCtrl` klasy, a następnie Zastąp metodę [CMFCEditBrowseCtrl:: OnBrowse](#onbrowse) . W zastąpionej metodzie należy wykonać niestandardową akcję przeglądania i zaktualizować kontrolkę Edytuj przeglądanie z wynikiem.
 
-1. Osadzanie albo `CMFCEditBrowseCtrl` obiekt lub obiekt formant przeglądania edycji pochodnej do okna nadrzędnego obiektu.
+1. `CMFCEditBrowseCtrl` Osadź obiekt lub pochodny formant przeglądania edycji w obiekcie okna nadrzędnego.
 
-1. Jeśli używasz **Kreator klas** Aby utworzyć okno dialogowe, należy dodać formant edycji ( `CEdit`) do formularza okno dialogowe. Ponadto można dodać zmiennej, aby uzyskać dostęp do formantu w pliku nagłówka. W pliku nagłówka, Zmień typ zmiennej z `CEdit` do `CMFCEditBrowseCtrl`. Formant przeglądania edycji zostaną utworzone automatycznie. Jeśli nie używasz **Kreator klas**, Dodaj `CMFCEditBrowseCtrl` zmiennej do pliku nagłówka i następnie wywołaniu jego `Create` metody.
+1. Jeśli używasz **kreatora klas** do utworzenia okna dialogowego, Dodaj kontrolkę edycji ( `CEdit`) do formularza okna dialogowego. Ponadto Dodaj zmienną, aby uzyskać dostęp do kontrolki w pliku nagłówkowym. W pliku nagłówkowym Zmień typ zmiennej z `CEdit` na. `CMFCEditBrowseCtrl` Kontrolka edycji zostanie utworzona automatycznie. Jeśli nie używasz **kreatora klas**, Dodaj `CMFCEditBrowseCtrl` zmienną do pliku nagłówkowego, `Create` a następnie Wywołaj metodę.
 
-1. Jeśli dodasz formant przeglądania edycji do okna dialogowego, użyj **ClassWizard** narzędzie, aby skonfigurować wymiany danych.
+1. Jeśli dodasz kontrolkę edycji przeglądania do okna dialogowego, użyj narzędzia **ClassWizard** , aby skonfigurować wymianę danych.
 
-1. Wywołaj [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton), lub [enablebrowsebutton —](#enablebrowsebutton) metodę, aby ustawić tryb przeglądania i wyświetlić przycisk przeglądania. Wywołaj [GetMode](#getmode) metodę, aby uzyskać bieżący tryb przeglądania.
+1. Wywołaj metodę [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton)lub [EnableBrowseButton](#enablebrowsebutton) , aby ustawić tryb przeglądania i wyświetlić przycisk przeglądania. Wywołaj [](#getmode) metodę GetMode, aby uzyskać bieżący tryb przeglądania.
 
-1. Aby zapewnić obraz niestandardowy przycisk przeglądania, należy wywołać [SetBrowseButtonImage](#setbrowsebuttonimage) metody lub zastąpienie [OnDrawBrowseButton](#ondrawbrowsebutton) metody.
+1. Aby zapewnić niestandardowy obraz przycisku Przeglądaj, wywołaj metodę [SetBrowseButtonImage](#setbrowsebuttonimage) lub Zastąp metodę [OnDrawBrowseButton](#ondrawbrowsebutton) .
 
-1. Aby usunąć formant przeglądania edycji przycisk przeglądania, należy wywołać [enablebrowsebutton —](#enablebrowsebutton) metody z *bWłączenie* parametr jest ustawiony na wartość FALSE.
+1. Aby usunąć przycisk przeglądania z kontrolki Edytuj przeglądanie, wywołaj metodę [EnableBrowseButton](#enablebrowsebutton) z parametrem *bEnable* ustawionym na wartość false.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -120,18 +120,18 @@ Wykonaj poniższe kroki, aby włączyć formant przeglądania edycji w Twojej ap
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak istnieją dwie metody w `CMFCEditBrowseCtrl` klasy: `EnableFolderBrowseButton` i `EnableFileBrowseButton`. W tym przykładzie jest częścią [przykładowe nowych formantów](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia dwóch metod w `CMFCEditBrowseCtrl` klasie: `EnableFolderBrowseButton` i `EnableFileBrowseButton`. Ten przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxeditbrowsectrl.h
+**Nagłówek:** afxeditbrowsectrl. h
 
-##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton
+##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton
 
-Wyświetla lub nie jest wyświetlany przycisk przeglądania na bieżącym formant przeglądania edycji.
+Wyświetla lub nie wyświetla przycisku Przeglądaj w bieżącej kontrolce przeglądania edycji.
 
 ```
 void EnableBrowseButton(
@@ -141,21 +141,21 @@ void EnableBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-Wartość TRUE, aby wyświetlić przycisk przeglądania; FALSE, aby nie wyświetlać przycisk przeglądania. Wartość domyślna to TRUE.
+*bEnable*<br/>
+Wartość TRUE, aby wyświetlić przycisk przeglądania; Wartość FALSE, aby wyświetlić przycisk Przeglądaj. Wartość domyślna to TRUE.
 
 *szLabel*<br/>
-Etykieta, który jest wyświetlany na przycisku Przeglądaj. Wartość domyślna to " **...** ".
+Etykieta wyświetlana na przycisku przeglądania. Wartość domyślna to " **...** ".
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *bWłączenie* parametr ma wartość PRAWDA, implementować akcję niestandardową do wykonania, gdy kliknięto przycisk przeglądania. Aby zaimplementować akcję niestandardową, należy wyprowadzić klasę z `CMFCEditBrowseCtrl` klasy, a następnie zastąpić jej [onbrowse —](#onbrowse) metody.
+Jeśli parametr *bEnable* ma wartość true, należy zaimplementować akcję niestandardową do wykonania po kliknięciu przycisku przeglądania. Aby zaimplementować akcję niestandardową, należy utworzyć klasę z `CMFCEditBrowseCtrl` klasy, a następnie zastąpić metodę OnBrowse. [](#onbrowse)
 
-Jeśli *bWłączenie* parametr ma wartość PRAWDA, to tryb przeglądania kontrolki `BrowseMode_Default`; w przeciwnym razie tryb przeglądania jest `BrowseMode_None`. Aby uzyskać więcej informacji na temat trybów przeglądania, zobacz [GetMode](#getmode) metody.
+Jeśli parametr *bEnable* ma wartość true, tryb przeglądania kontrolki to `BrowseMode_Default`; w przeciwnym razie tryb przeglądania to. `BrowseMode_None` Aby uzyskać więcej informacji na temat trybów przeglądania, [](#getmode) Zobacz GetMode Metoda.
 
-##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton
+##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton
 
-Wyświetla przycisk przeglądania na bieżącym formant przeglądania edycji i umieszcza formantu *przeglądanie plików* trybu.
+Wyświetla przycisk Przeglądaj w bieżącej kontrolce edycji przeglądania i umieszcza formant w trybie *przeglądania plików* .
 
 ```
 void EnableFileBrowseButton(
@@ -167,23 +167,23 @@ void EnableFileBrowseButton(
 ### <a name="parameters"></a>Parametry
 
 *lpszDefExt*<br/>
-Określa rozszerzenie nazwy pliku domyślny, który jest używany w oknie dialogowym wyboru plików. Wartością domyślną jest NULL.
+Określa domyślne rozszerzenie nazwy pliku, które jest używane w oknie dialogowym Wybór pliku. Wartość domyślna to NULL.
 
 *lpszFilter*<br/>
-Określa domyślny ciąg filtru jest używana w oknie dialogowym wyboru plików. Wartością domyślną jest NULL.
+Określa domyślny ciąg filtru, który jest używany w oknie dialogowym Wybór pliku. Wartość domyślna to NULL.
 
-*dwFlags*<br/>
-Flagi okno dialogowe. Wartością domyślną jest bitową kombinacją (lub) OFN_HIDEREADONLY i OFN_OVERWRITEPROMPT.
+*flagiDW*<br/>
+Flagi okna dialogowego. Wartość domyślna to kombinacja bitowa (lub) OFN_HIDEREADONLY i OFN_OVERWRITEPROMPT.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy formant przeglądania edycji jest w trybie przeglądania plików, a użytkownik kliknie przycisk przeglądania, formant Wyświetla okno dialogowe Wybieranie standardowych plików.
+Gdy kontrolka edycji jest w trybie przeglądania plików, a użytkownik kliknie przycisk Przeglądaj, w oknie dialogowym Wybór pliku standardowego zostanie wyświetlone okno dialogowe.
 
-Aby uzyskać pełną listę dostępnych flag, zobacz [LPSTRFILE struktury openfilename](/windows/desktop/api/commdlg/ns-commdlg-tagofna).
+Pełną listę dostępnych flag można znaleźć w temacie [OPENFILENAME Structure](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
-##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton
+##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton
 
-Wyświetla przycisk przeglądania na bieżącym formant przeglądania edycji i umieszcza formantu *przeglądanie folderów* trybu.
+Wyświetla przycisk Przeglądaj w bieżącej kontrolce edycji przeglądania i umieszcza formant w trybie *przeglądania folderów* .
 
 ```
 void EnableFolderBrowseButton();
@@ -191,11 +191,11 @@ void EnableFolderBrowseButton();
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy formant przeglądania edycji jest w trybie przeglądania folderów, a użytkownik kliknie przycisk przeglądania, formant Wyświetla okno dialogowe wyboru folderu standard.
+Gdy kontrolka Edytuj przeglądanie jest w trybie przeglądania folderów, a użytkownik kliknie przycisk Przeglądaj, w oknie dialogowym wybór folderu standardowego zostanie wyświetlone okno dialogowe.
 
-##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode
+##  <a name="getmode"></a>CMFCEditBrowseCtrl:: GetMode
 
-Pobiera tryb przeglądania bieżącego formant przeglądania edycji.
+Pobiera tryb przeglądania bieżącego formantu przeglądania edycji.
 
 ```
 CMFCEditBrowseCtrl::BrowseMode GetMode() const;
@@ -203,24 +203,24 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Przejdź jedną z wartości wyliczenia, które określa bieżący tryb edycji kontrolki. Tryb przeglądania Określa, czy w ramach Wyświetla przycisk przeglądania i jaka akcja występuje, gdy użytkownik kliknie ten przycisk.
+Jedna z wartości wyliczenia, która określa bieżący tryb kontrolki edycji przeglądania. Tryb przeglądania Określa, czy struktura ma wyświetlać przycisk Przeglądaj i jakie akcje występuje po kliknięciu tego przycisku przez użytkownika.
 
-Poniższa tabela zawiera listę możliwych wartości zwracanych.
+Poniższa tabela zawiera listę możliwych zwracanych wartości.
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`BrowseMode_Default`|**trybu niestandardowego**. Odbywa się to działanie zdefiniowane przez programistę.|
-|`BrowseMode_File`|**tryb pliku**. Zostanie wyświetlone okno dialogowe przeglądarki standardowego pliku.|
-|`BrowseMode_Folder`|**Tryb folderu**. Zostanie wyświetlone okno dialogowe przeglądarki folderu standard.|
-|`BrowseMode_None`|Przycisk przeglądania nie jest wyświetlana.|
+|`BrowseMode_Default`|**Tryb niestandardowy**. Jest wykonywana akcja zdefiniowana przez programistę.|
+|`BrowseMode_File`|**tryb pliku**. Zostanie wyświetlone okno dialogowe standardowa przeglądarka plików.|
+|`BrowseMode_Folder`|**Tryb folderu**. Zostanie wyświetlone okno dialogowe standardowa przeglądarka folderów.|
+|`BrowseMode_None`|Przycisk przeglądania nie jest wyświetlany.|
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `CMFCEditBrowseCtrl` obiekt jest inicjowany do `BrowseMode_None` trybu. Modyfikowanie tryb przeglądania z [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), i [CMFCEditBrowseCtrl::EnableFolderBrowseButton ](#enablefolderbrowsebutton) metody.
+Domyślnie `CMFCEditBrowseCtrl` obiekt jest zainicjowany do `BrowseMode_None` trybu. Zmodyfikuj tryb przeglądania przy użyciu metod [CMFCEditBrowseCtrl:: EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl:: EnableFileBrowseButton](#enablefilebrowsebutton)i [CMFCEditBrowseCtrl:: EnableFolderBrowseButton](#enablefolderbrowsebutton) .
 
-##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate
+##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate
 
-Wywoływane przez platformę, po zaktualizowaniu formant przeglądania edycji z wynikami akcji przeglądania.
+Wywoływane przez platformę po zaktualizowaniu kontrolki edycji przeglądania z wynikiem akcji przeglądania.
 
 ```
 virtual void OnAfterUpdate();
@@ -228,11 +228,11 @@ virtual void OnAfterUpdate();
 
 ### <a name="remarks"></a>Uwagi
 
-Zastępuje tę metodę w klasie pochodnej w celu wykonania akcji niestandardowej.
+Zastąp tę metodę w klasie pochodnej, aby zaimplementować akcję niestandardową.
 
-##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse
+##  <a name="onbrowse"></a>CMFCEditBrowseCtrl:: OnBrowse
 
-Wywoływane przez platformę, po kliknięciu przycisku przeglądania formant przeglądania edycji.
+Wywoływane przez platformę, gdy użytkownik kliknie przycisk Przeglądaj w kontrolce Edycja przeglądania.
 
 ```
 virtual void OnBrowse();
@@ -240,11 +240,11 @@ virtual void OnBrowse();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia wykonanie kodu niestandardowego, gdy użytkownik kliknie przycisk przeglądania formant przeglądania edycji. Pochodną klasy z `CMFCEditBrowseCtrl` klasy i zastąp jego `OnBrowse` metody. W tej metodzie wykonania akcji niestandardowej przeglądania i opcjonalnie zaktualizuj pole tekstowe formant przeglądania edycji. W aplikacji, należy użyć [enablebrowsebutton —](#enablebrowsebutton) metodę, aby umieścić formant przeglądania edycji w *przeglądanie niestandardowe* trybu.
+Użyj tej metody, aby wykonać kod niestandardowy, gdy użytkownik kliknie przycisk Przeglądaj w kontrolce Edycja. Utwórz własną klasę z `CMFCEditBrowseCtrl` klasy i Zastąp jej `OnBrowse` metodę. W tej metodzie Zaimplementuj niestandardową akcję przeglądania i opcjonalnie zaktualizuj pole tekstowe kontrolki Edytuj przeglądanie. W aplikacji użyj metody [EnableBrowseButton](#enablebrowsebutton) , aby ustawić kontrolkę Edytuj przeglądanie w trybie *przeglądania niestandardowego* .
 
-##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout
+##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout
 
-Odrysowuje bieżącego formant przeglądania edycji.
+Odświeża bieżącą kontrolkę przeglądania edycji.
 
 ```
 virtual void OnChangeLayout();
@@ -252,11 +252,11 @@ virtual void OnChangeLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, gdy tryb przeglądania przeglądania edycji kontrolować zmiany. Aby uzyskać więcej informacji, zobacz [CMFCEditBrowseCtrl::GetMode](#getmode).
+Struktura wywołuje tę metodę, gdy tryb przeglądania kontrolki edycji edytuje zmiany. Aby uzyskać więcej informacji, zobacz [CMFCEditBrowseCtrl:: GetMode](#getmode).
 
-##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton
+##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton
 
-Metoda wywoływana przez platformę, by narysować przycisk przeglądania na formant przeglądania edycji.
+Wywoływane przez platformę, aby narysować przycisk przeglądania w kontrolce Edycja przeglądania.
 
 ```
 virtual void OnDrawBrowseButton(
@@ -271,22 +271,22 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 Wskaźnik do kontekstu urządzenia.
 
-*Rect*<br/>
-Prostokąt otaczający przycisk przeglądania.
+*Cinania*<br/>
+Prostokąt ograniczający przycisk przeglądania.
 
 *bIsButtonPressed*<br/>
-Wartość TRUE, jeśli przycisk jest wciśnięty; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli przycisk jest wciśnięty; w przeciwnym razie FALSE.
 
 *bIsButtonHot*<br/>
-Wartość TRUE, jeśli przycisk jest wyróżniony; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli przycisk jest wyróżniony; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłonić tę funkcję w klasie pochodnej, aby dostosować wygląd przycisk przeglądania.
+Przesłoń tę funkcję w klasie pochodnej, aby dostosować wygląd przycisku przeglądania.
 
-##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage
+##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage
 
-Ustawia obraz niestandardowy na przycisku przeglądania formant przeglądania edycji.
+Ustawia obraz niestandardowy na przycisku przeglądania kontrolki edytowanie.
 
 ```
 void SetBrowseButtonImage(
@@ -312,15 +312,15 @@ Uchwyt mapy bitowej.
 Identyfikator zasobu mapy bitowej.
 
 *bAutoDestroy*<br/>
-Wartość TRUE, aby usunąć określony ikona lub mapa bitowa, gdy ta metoda kończy działanie; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.
+TRUE, aby usunąć określoną ikonę lub mapę bitową, gdy ta metoda zostanie zakończona; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia zastosowanie obrazu niestandardowego do przycisku przeglądania. Domyślnie struktura uzyskuje standardowy obraz, gdy formant przeglądania edycji znajduje się w *przeglądanie plików* lub *przeglądanie folderów* trybu.
+Użyj tej metody, aby zastosować obraz niestandardowy do przycisku przeglądania. Domyślnie struktura uzyskuje standardowy obraz, gdy kontrolka edycji jest w trybie przeglądania *plików* lub *folderów* .
 
-##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName
+##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName
 
-Wywoływane przez platformę, gdy wprowadzono niedozwoloną nazwę pliku w formancie edycji.
+Wywoływane przez platformę, gdy w kontrolce edycji wprowadzono niedozwoloną nazwę pliku.
 
 ```
 virtual BOOL OnIllegalFileName(CString& strFileName);
@@ -329,11 +329,11 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ### <a name="parameters"></a>Parametry
 
 *strFileName*<br/>
-Określa nazwę pliku niedozwolone.
+Określa niedozwoloną nazwę pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Powinna zwrócić FALSE, jeśli ta nazwa pliku nie może być przekazywany dostosowaną okno dialogowe pliku. W tym przypadku fokus jest ustawiana dla kontrolki edycji, a użytkownik powinien kontynuować edycję. Domyślna implementacja Wyświetla okno komunikatu z informacją dla użytkownika o nazwie pliku niedozwolone i zwraca wartość FALSE. Należy przesłonić tę metodę, Popraw nazwę pliku i zwraca wartość TRUE, do dalszego przetwarzania.
+Jeśli nazwa pliku nie może zostać przeniesiona do okna dialogowego pliku, powinna zostać zwrócona wartość FALSE. W takim przypadku fokus jest ustawiany z powrotem do kontrolki edycji, a użytkownik powinien kontynuować edytowanie. Domyślna implementacja Wyświetla okno komunikatu informującego użytkownika o niedozwolonej nazwie pliku i zwraca wartość FALSE. Można zastąpić tę metodę, poprawić nazwę pliku i zwrócić wartość TRUE w celu dalszej obróbki.
 
 ### <a name="remarks"></a>Uwagi
 

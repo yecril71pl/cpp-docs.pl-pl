@@ -4,18 +4,18 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: e417de57292e4b21d81e8d6643ba77d8b169af07
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 07c2e8e9ff061e20f9a3bceaa3d12d051e975e1e
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448175"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821090"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora według wersji kompilatora
 
-Kompilator może pominąć ostrzeżenia, które zostały wprowadzone po wersji, należy określić za pomocą [WV](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Ta opcja jest przydatna do zarządzania proces kompilacji, gdy wprowadzenia nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowe ostrzeżenia. Ta opcja umożliwia pominięcie ostrzeżenia i komunikaty o błędach nie nowe. Nie pomijaj wszystkie nowe ostrzeżenia trwale! Firma Microsoft zaleca, zawsze Kompiluj na najwyższym poziomie ostrzeżenia regularnych, `/W4`i Usuń `/Wv` opcja tak szybko, jak praktyczne w kompilacji.
+Kompilator może pominąć ostrzeżenia, które zostały wprowadzone po określonej przez Ciebie wersji przy użyciu opcji kompilatora [/WV](../../build/reference/compiler-option-warning-level.md) . Ta opcja jest przydatna do zarządzania procesem kompilacji po wprowadzeniu nowej wersji zestawu narzędzi i zamiarem tymczasowego pomijania nowych ostrzeżeń. Ta opcja powoduje pominięcie tylko ostrzeżeń, a nie nowych komunikatów o błędach. Nie pomijaj trwale wszystkich nowych ostrzeżeń! Zalecamy, aby zawsze kompilować na najwyższym poziomie `/W4`ostrzeżeń, i `/Wv` usunąć opcję z kompilacji tak szybko, jak to możliwe.
 
-Te wersje kompilatora wprowadzono nowe ostrzeżenia:
+W tych wersjach kompilatora wprowadzono nowe ostrzeżenia:
 
 | Produkt | Numer wersji kompilatora |
 |-|-|
@@ -31,23 +31,23 @@ Te wersje kompilatora wprowadzono nowe ostrzeżenia:
 | Visual Studio 2015 Update 2 | 19.00.23918.0 |
 | Visual Studio 2015 Update 3 | 19.00.24215.1 |
 | Visual Studio 2017 RTM | 19.10.25017.0 |
-| Visual Studio 2017 w wersji 15.3 | 19.11.25506.0 |
+| Visual Studio 2017 w wersji 15,3 | 19.11.25506.0 |
 | Visual Studio 2017 w wersji 15.5 | 19.12.25830.0 |
 | Visual Studio 2017 wersja 15.6 | 19.13.26128.0 |
-| Visual Studio 2017 w wersji 15.7 | 19.14.26428.0 |
+| Visual Studio 2017 w wersji 15,7 | 19.14.26428.0 |
 | Visual Studio 2017 w wersji 15.8 | 19.15.26726.0 |
-| Visual Studio 2017 w wersji 15.9 | 19.16.26926.0 |
+| Visual Studio 2017 w wersji 15,9 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
 
-Można określić tylko główny numer, głównych i pomocniczych numerów lub głównych i pomocniczych i tworzyć numery `/Wv` opcji. Kompilator zgłasza wszystkie ostrzeżenia, które odpowiadają wersji, które zaczynają się od podanej liczbie i wyłącza wszystkie ostrzeżenia dla wersji większy niż określoną liczbę. Na przykład `/Wv:17` raporty ostrzeżenia wprowadzone w lub przed dowolnej wersji programu Visual Studio 2012 i powoduje pominięcie ostrzeżenia wprowadzone za pomocą dowolnego kompilatora z programu Visual Studio 2013 (wersja 18) lub nowszego. Aby pominąć ostrzeżenia wprowadzone w programie Visual Studio 2015 update 2 i później, możesz użyć `/Wv:19.00.23506`. Użyj `/Wv:19.11` raportu ostrzeżenia wprowadzone w dowolnej wersji programu Visual Studio przed Visual Studio 2017 w wersji 15.5, ale Pomiń ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15.5 lub nowszej.
+Do `/Wv` opcji można określić tylko numer główny, wartości główne i pomocnicze, a także numery główne, pomocnicze i kompilacje. Kompilator raportuje wszystkie ostrzeżenia, które są zgodne z wersjami zaczynającymi się od określonej liczby, i pomija wszystkie ostrzeżenia dla wersji większych niż określona liczba. Na przykład `/Wv:17` raporty ostrzeżeń wprowadzone w lub przed wszystkimi wersjami programu Visual Studio 2012 i pomijają ostrzeżenia wprowadzone przez dowolny kompilator z Visual Studio 2013 (wersja 18) lub nowszy. Aby pominąć ostrzeżenia wprowadzone w programie Visual Studio 2015 Update 2 lub nowszym, można użyć `/Wv:19.00.23506`. Służy `/Wv:19.11` do zgłaszania ostrzeżeń wprowadzonych w dowolnej wersji programu Visual Studio przed Visual Studio 2017 w wersji 15,5, ale pomijania ostrzeżeń wprowadzonych w programie Visual Studio 2017 w wersji 15,5 lub nowszej.
 
-W poniższych sekcjach wymieniono ostrzeżenia wynikające z każdą wersją programu Visual C++ , można pominąć za pomocą `/Wv` — opcja kompilatora. `/Wv` Opcji nie można pominąć ostrzeżenia, które nie są wyświetlane, które powstały wcześniej niż określona wersji kompilatora.
+W poniższych sekcjach wymieniono ostrzeżenia wprowadzone przez poszczególne wersje wizualizacji C++ , które można pominąć przy użyciu `/Wv` opcji kompilatora. `/Wv` Opcja nie może pominąć ostrzeżeń, które nie znajdują się na liście, które stanowią wcześniejszą wersję kompilatora.
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Ostrzeżenia wprowadzone w programie Visual Studio RTW 2019 r (wersja kompilatora 19.20.27004.0)
+## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2019 RTW (wersja kompilatora 19.20.27004.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.15`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.15`kompilatora.
 
 |||
 |-|-|
@@ -57,9 +57,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 wersja 15.8 (wersja kompilatora 19.15.26726.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15,8 (kompilator w wersji 19.15.26726.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.14`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.14`kompilatora.
 
 |||
 |-|-|
@@ -83,26 +83,26 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C5106 | `macro redefined with different parameter names` |
 | C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 wersji 15.7 (wersja kompilatora 19.14.26428.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15,7 (kompilator w wersji 19.14.26428.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.13`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.13`kompilatora.
 
 |||
 |-|-|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15.6 (wersja kompilatora 19.13.26128.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15,6 (kompilator w wersji 19.13.26128.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.12`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.12`kompilatora.
 
 |||
 |-|-|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15.5 (wersja kompilatora 19.12.25830.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15,5 (kompilator w wersji 19.12.25830.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.11`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.11`kompilatora.
 
 |||
 |-|-|
@@ -114,9 +114,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15.3 (wersja kompilatora 19.11.25506.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 w wersji 15,3 (kompilator w wersji 19.11.25506.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.10`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.10`kompilatora.
 
 |||
 |-|-|
@@ -135,9 +135,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
 | C5038 | `data member 'member1' will be initialized after data member 'member2'` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 RTM (wersja kompilatora 19.10.25017.0)
+## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2017 RTM (kompilator w wersji 19.10.25017.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.00`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.00`kompilatora.
 
 |||
 |-|-|
@@ -148,9 +148,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 
 ::: moniker-end
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2015 Update 3 (wersja kompilatora 19.00.24215.1)
+## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2015 Update 3 (wersja kompilatora: 19.00.24215.1)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.00.23918`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.00.23918`kompilatora.
 
 |||
 |-|-|
@@ -159,9 +159,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
 | C4599 | `'argument': source argument number number does not match source` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2015 Update 2 (wersja kompilatora 19.00.23918.0)
+## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2015 Update 2 (kompilator w wersji 19.00.23918.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.00.23506`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.00.23506`kompilatora.
 
 |||
 |-|-|
@@ -170,9 +170,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
 | C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2015 Update 1 (wersja kompilatora 19.00.23506.0)
+## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2015 Update 1 (wersja kompilatora: 19.00.23506.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:19.00.23026`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:19.00.23026`kompilatora.
 
 |||
 |-|-|
@@ -181,9 +181,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
 | C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2015 RTM (wersja kompilatora 19.00.23026.0)
+## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2015 RTM (kompilator w wersji 19.00.23026.0)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:18`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:18`kompilatora.
 
 |||
 |-|-|
@@ -240,9 +240,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
 | C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2013 (wersja kompilatora 18.00.21005.1)
+## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Ostrzeżenia wprowadzone w Visual Studio 2013 (kompilator w wersji 18.00.21005.1)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:17`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:17`kompilatora.
 
 |||
 |-|-|
@@ -269,9 +269,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
 | C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
-## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2012 (wersja kompilatora 17.00.51106.1)
+## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2012 (wersja kompilatora: 17.00.51106.1)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:16`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:16`kompilatora.
 
 |||
 |-|-|
@@ -304,7 +304,7 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746|nietrwały dostęp "name" podlega/volatile: < iso | MS > ustawienie; należy rozważyć użycie funkcji wewnętrznych __iso_volatile_load/store funkcje wewnętrzne |
+| C4746|dostęp nietrwały elementu "name" podlega/volatile: < ISO | ustawienie MS >; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/Store |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -312,9 +312,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4988 | `'type': variable declared outside class/function scope` |
 | C4989 | `'description': type has conflicting definitions.` |
 
-## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2010 (wersja kompilatora 16.00.40219.01)
+## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2010 (wersja kompilatora: 16.00.40219.01)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:15`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:15`kompilatora.
 
 |||
 |-|-|
@@ -328,9 +328,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4986 | `'declaration': exception specification does not match previous declaration` |
 | C4987 | `nonstandard extension used: 'throw (...)'` |
 
-## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2008 (wersja kompilatora 15.00.21022.08)
+## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2008 (wersja kompilatora: 15.00.21022.08)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:14`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:14`kompilatora.
 
 |||
 |-|-|
@@ -343,9 +343,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
 | C4985 | `'declaration': attributes not present on previous declaration.` |
 
-## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2005 (wersja kompilatora 14.00.50727.762)
+## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2005 (wersja kompilatora: 14.00.50727.762)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:13`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:13`kompilatora.
 
 |||
 |-|-|
@@ -486,9 +486,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
 | C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
 
-## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2003 (wersja kompilatora 13.10.3077)
+## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2003 (wersja kompilatora: 13.10.3077)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:13.00.9466`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:13.00.9466`kompilatora.
 
 |||
 |-|-|
@@ -522,9 +522,9 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
 | C4954 | `'description': not profiled (contains __int64 switch expression)` |
 
-## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2002 (wersja kompilatora 13.00.9466)
+## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Ostrzeżenia wprowadzone w programie Visual Studio 2002 (wersja kompilatora: 13.00.9466)
 
-Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijane przy użyciu opcji kompilatora `/Wv:12`.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji `/Wv:12`kompilatora.
 
 |||
 |-|-|
@@ -667,14 +667,14 @@ Ostrzeżenia te i wszystkie ostrzeżenia w nowszych wersjach, które są pomijan
 | C4945 | `'name': cannot import symbol from 'source': as 'declaration' has already been imported from another assembly 'source'` |
 | C4946 | `reinterpret_cast used between related classes: 'declaration' and 'declaration'` |
 | C4995 | `'name': name was marked as #pragma deprecated` |
-| C4996 | `'issue': description` |
+| C4996 | `'deprecated declaration': deprecation message (or "was declared deprecated")` |
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
 ## <a name="see-also"></a>Zobacz także
 
-[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md) \
-[Ostrzeżenia kompilatora od C4000 - C5999](compiler-warnings-c4000-c5999.md) \
-[WV — opcja kompilatora](../../build/reference/compiler-option-warning-level.md) \
-[Ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
+[Błędy iC++ ostrzeżenia narzędzi języka C/kompilatora i kompilacji](../compiler-errors-1/c-cpp-build-errors.md) \
+[Ostrzeżenia kompilatora C4000-C5999](compiler-warnings-c4000-c5999.md) \
+[/WV — opcja kompilatora](../../build/reference/compiler-option-warning-level.md) \
+[Domyślnie wyłączone ostrzeżenia kompilatora](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
 [ostrzeżenie](../../preprocessor/warning.md)
