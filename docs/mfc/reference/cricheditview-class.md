@@ -100,16 +100,16 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eacb41a7ae4c42a34a67f57dc0af0d966d134c14
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372078"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916750"
 ---
 # <a name="cricheditview-class"></a>Klasa CRichEditView
 
-Za pomocą [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) i [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), zapewnia funkcję rozwiniętej kontroli edycji w kontekście architektury widoku dokumentu MFC.
+Funkcja [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) i [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)udostępnia funkcje kontrolki edycji wzbogaconej w kontekście architektury widoku dokumentu MFC.
 
 ## <a name="syntax"></a>Składnia
 
@@ -123,78 +123,78 @@ class CRichEditView : public CCtrlView
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRichEditView::CRichEditView](#cricheditview)|Konstruuje `CRichEditView` obiektu.|
+|[CRichEditView:: CRichEditView](#cricheditview)|Konstruuje `CRichEditView` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRichEditView::AdjustDialogPosition](#adjustdialogposition)|Przesuwa okno dialogowe, aby go nie może zasłaniać bieżącego zaznaczenia.|
-|[CRichEditView::CanPaste](#canpaste)|Informuje, czy Schowek zawiera dane, które można wkleić do widoku bogatej edycji.|
-|[CRichEditView::DoPaste](#dopaste)|Wkleja element OLE do tego widoku bogatej edycji.|
-|[CRichEditView::FindText](#findtext)|Znajduje określony tekst, wywołując kursor oczekiwania.|
-|[CRichEditView::FindTextSimple](#findtextsimple)|Znajduje określony tekst.|
-|[CRichEditView::GetCharFormatSelection](#getcharformatselection)|Pobiera znak formatowanie atrybutów dla bieżącego zaznaczenia.|
-|[CRichEditView::GetDocument](#getdocument)|Pobiera wskaźnik do powiązane [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md).|
-|[CRichEditView::GetInPlaceActiveItem](#getinplaceactiveitem)|Pobiera element OLE, który jest obecnie aktywny w miejscu w widoku bogatej edycji.|
-|[CRichEditView::GetMargins](#getmargins)|Pobiera marginesy dla tego widoku bogatej edycji.|
-|[CRichEditView::GetPageRect](#getpagerect)|Pobiera prostokąt strony dla tego widoku bogatej edycji.|
-|[CRichEditView::GetPaperSize](#getpapersize)|Pobiera rozmiar papieru dla tego widoku bogatej edycji.|
-|[CRichEditView::GetParaFormatSelection](#getparaformatselection)|Pobiera atrybuty dla bieżącego zaznaczenia formatowania akapitu.|
-|[CRichEditView::GetPrintRect](#getprintrect)|Pobiera drukowania prostokąt dla tego widoku bogatej edycji.|
-|[CRichEditView::GetPrintWidth](#getprintwidth)|Pobiera szerokość wydruku dla tego widoku bogatej edycji.|
-|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|Pobiera rozwiniętej kontroli edycji.|
-|[CRichEditView::GetSelectedItem](#getselecteditem)|Pobiera zaznaczony element z widoku bogatej edycji.|
-|[CRichEditView::GetTextLength](#gettextlength)|Pobiera długość tekstu w widoku bogatej edycji.|
-|[CRichEditView::GetTextLengthEx](#gettextlengthex)|Pobiera liczbę znaków lub liczbę bajtów w widoku bogatej edycji. Lista flagi rozwiniętej metoda określania długości.|
+|[CRichEditView:: AdjustDialogPosition](#adjustdialogposition)|Przenosi okno dialogowe, aby nie zasłaniał bieżącego zaznaczenia.|
+|[CRichEditView:: Ostatnia próba](#canpaste)|Wskazuje, czy Schowek zawiera dane, które można wkleić do widoku zaawansowanej edycji.|
+|[CRichEditView::D oPaste](#dopaste)|Wkleja element OLE do tego widoku wzbogaconej edycji.|
+|[CRichEditView:: ciąg FindText](#findtext)|Znajduje określony tekst, wywołując kursor oczekiwania.|
+|[CRichEditView:: FindTextSimple](#findtextsimple)|Znajduje określony tekst.|
+|[CRichEditView:: GetCharFormatSelection](#getcharformatselection)|Pobiera atrybuty formatowania znaku dla bieżącego zaznaczenia.|
+|[CRichEditView:: GetDocument](#getdocument)|Pobiera wskaźnik do powiązanej [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md).|
+|[CRichEditView::GetInPlaceActiveItem](#getinplaceactiveitem)|Pobiera element OLE, który jest obecnie aktywny w widoku edycji wzbogaconej.|
+|[CRichEditView:: GetMargins](#getmargins)|Pobiera marginesy dla tego widoku wzbogaconej edycji.|
+|[CRichEditView:: GetPageRect](#getpagerect)|Pobiera prostokąt strony dla tego widoku wzbogaconej edycji.|
+|[CRichEditView:: GetPaperSize](#getpapersize)|Pobiera rozmiar papieru dla tego widoku wzbogaconej edycji.|
+|[CRichEditView:: GetParaFormatSelection](#getparaformatselection)|Pobiera atrybuty formatowania akapitu dla bieżącego zaznaczenia.|
+|[CRichEditView:: GetPrintRect](#getprintrect)|Pobiera prostokąt drukowania dla tego widoku wzbogaconej edycji.|
+|[CRichEditView:: GetPrintWidth](#getprintwidth)|Pobiera szerokość wydruku dla tego widoku wzbogaconej edycji.|
+|[CRichEditView:: GetRichEditCtrl](#getricheditctrl)|Pobiera formant edycji wzbogaconej.|
+|[CRichEditView:: GetSelectedItem](#getselecteditem)|Pobiera wybrany element z widoku edycji wzbogaconej.|
+|[CRichEditView:: GetTextLength](#gettextlength)|Pobiera długość tekstu w widoku edycji wzbogaconej.|
+|[CRichEditView:: GetTextLengthEx](#gettextlengthex)|Pobiera liczbę znaków lub bajtów w widoku edycji wzbogaconej. Rozwinięta lista flag dla metody określania długości.|
 |[CRichEditView::InsertFileAsObject](#insertfileasobject)|Wstawia plik jako element OLE.|
-|[CRichEditView::InsertItem](#insertitem)|Wstawia nowy element jako element OLE.|
-|[CRichEditView::IsRichEditFormat](#isricheditformat)|Informuje, czy Schowek zawiera dane w formacie tekstowym lub bogatej edycji.|
-|[CRichEditView::OnCharEffect](#onchareffect)|Włącza/wyłącza formatowania dla bieżącego zaznaczenia znaków.|
-|[CRichEditView::OnParaAlign](#onparaalign)|Zmienia wyrównanie akapitach.|
-|[CRichEditView::OnUpdateCharEffect](#onupdatechareffect)|Aktualizacje poleceń interfejsu użytkownika dla znaków publiczne funkcje Członkowskie.|
-|[CRichEditView::OnUpdateParaAlign](#onupdateparaalign)|Aktualizacje poleceń interfejsu użytkownika dla funkcji składowych publicznych akapitu.|
-|[CRichEditView::PrintInsideRect](#printinsiderect)|Formatuje określony tekst w obrębie danego prostokąta.|
-|[CRichEditView::PrintPage](#printpage)|Formatuje tekst określony w ramach danej strony.|
-|[CRichEditView::SetCharFormat](#setcharformat)|Określa formatowanie atrybutów dla bieżącego zaznaczenia znaków.|
-|[CRichEditView::SetMargins](#setmargins)|Ustawia marginesy to Zaawansowane edytowanie widoku.|
-|[CRichEditView::SetPaperSize](#setpapersize)|Ustawia rozmiar papieru dla tego widoku bogatej edycji.|
-|[CRichEditView::SetParaFormat](#setparaformat)|Określa formatowanie atrybutów dla bieżącego zaznaczenia akapitu.|
-|[CRichEditView::TextNotFound](#textnotfound)|Resetuje stan wewnętrzny wyszukiwania kontrolki.|
+|[CRichEditView:: InsertItem](#insertitem)|Wstawia nowy element jako element OLE.|
+|[CRichEditView:: IsRichEditFormat](#isricheditformat)|Wskazuje, czy Schowek zawiera dane w formacie sformatowanym lub tekstowym.|
+|[CRichEditView:: OnCharEffect](#onchareffect)|Włącza lub wyłącza formatowanie znaków dla bieżącego zaznaczenia.|
+|[CRichEditView:: OnParaAlign](#onparaalign)|Zmienia wyrównanie akapitów.|
+|[CRichEditView:: OnUpdateCharEffect](#onupdatechareffect)|Aktualizuje interfejs użytkownika poleceń dla funkcji publicznego elementu członkowskiego znaku.|
+|[CRichEditView:: OnUpdateParaAlign](#onupdateparaalign)|Aktualizuje interfejs użytkownika poleceń dla publicznych funkcji Członkowskich akapitu.|
+|[CRichEditView::P rintInsideRect](#printinsiderect)|Formatuje określony tekst w obrębie danego prostokąta.|
+|[CRichEditView::P rintPage](#printpage)|Formatuje określony tekst na danej stronie.|
+|[CRichEditView:: SetCharFormat](#setcharformat)|Ustawia atrybuty formatowania znaku dla bieżącego zaznaczenia.|
+|[CRichEditView:: Setmargins](#setmargins)|Ustawia marginesy dla tego widoku wzbogaconej edycji.|
+|[CRichEditView::SetPaperSize](#setpapersize)|Ustawia rozmiar papieru dla tego widoku wzbogaconej edycji.|
+|[CRichEditView:: SetParaFormat](#setparaformat)|Ustawia atrybuty formatowania akapitu dla bieżącego zaznaczenia.|
+|[CRichEditView:: TextNotFound](#textnotfound)|Resetuje stan przeszukiwania wewnętrznego formantu.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRichEditView::GetClipboardData](#getclipboarddata)|Pobiera obiekt Schowka dla zakresu tego widoku bogatej edycji.|
-|[CRichEditView::GetContextMenu](#getcontextmenu)|Pobiera menu kontekstowe na korzystanie z prawego przycisku myszy w dół.|
-|[CRichEditView::IsSelected](#isselected)|Wskazuje, jeśli dany element OLE jest zaznaczone, czy nie.|
+|[CRichEditView:: GetClipboardData](#getclipboarddata)|Pobiera obiekt schowka dla zakresu w tym widoku wzbogaconej edycji.|
+|[CRichEditView::](#getcontextmenu)|Pobiera menu kontekstowe do użycia w prawym przyciskiem myszy w dół.|
+|[CRichEditView:: IsSelected](#isselected)|Wskazuje, czy dany element OLE jest zaznaczony, czy nie.|
 |[CRichEditView::OnFindNext](#onfindnext)|Znajduje następne wystąpienie podciągu.|
-|[CRichEditView::OnInitialUpdate](#oninitialupdate)|Odświeżanie widoku, gdy po raz pierwszy dołączony do dokumentu.|
+|[CRichEditView:: OnInitialUpdate](#oninitialupdate)|Odświeża widok, gdy jest on po raz pierwszy dołączony do dokumentu.|
 |[CRichEditView::OnPasteNativeObject](#onpastenativeobject)|Pobiera dane natywne z elementu OLE.|
-|[CRichEditView::OnPrinterChanged](#onprinterchanged)|Ustawia parametry wydruku dla danego urządzenia.|
-|[CRichEditView::OnReplaceAll](#onreplaceall)|Zamienia wszystkie wystąpienia podanego ciągu nowy ciąg.|
-|[CRichEditView::OnReplaceSel](#onreplacesel)|Zamienia bieżące zaznaczenie.|
-|[CRichEditView::OnTextNotFound](#ontextnotfound)|Obsługuje powiadomienia użytkownika, którego nie można odnaleźć żądanego tekstu.|
-|[CRichEditView::QueryAcceptData](#queryacceptdata)|Zapytania, aby wyświetlić dotyczące danych na `IDataObject`.|
-|[CRichEditView::WrapChanged](#wrapchanged)|Dostosowuje docelowe urządzenie wyjściowe dla tej kontrolki tekstu sformatowanego widok, w oparciu o wartość `m_nWordWrap`.|
+|[CRichEditView:: OnPrinterChanged](#onprinterchanged)|Ustawia charakterystykę drukowania dla danego urządzenia.|
+|[CRichEditView:: OnReplaceAll](#onreplaceall)|Zamienia wszystkie wystąpienia danego ciągu z nowym ciągiem.|
+|[CRichEditView:: OnReplaceSel](#onreplacesel)|Zastępuje bieżące zaznaczenie.|
+|[CRichEditView:: OnTextNotFound](#ontextnotfound)|Obsługuje powiadomienie użytkownika, że nie znaleziono żądanego tekstu.|
+|[CRichEditView:: QueryAcceptData](#queryacceptdata)|Wykonuje zapytania, aby zobaczyć dane w `IDataObject`.|
+|[CRichEditView:: WrapChanged](#wrapchanged)|Dostosowuje docelowe urządzenie wyjściowe dla tego widoku wzbogaconej edycji na podstawie wartości `m_nWordWrap`.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRichEditView::m_nBulletIndent](#m_nbulletindent)|Wskazuje wielkość wcięcia dla listy wypunktowane.|
-|[CRichEditView::m_nWordWrap](#m_nwordwrap)|Wskazuje ograniczenia zawijania programu word.|
+|[CRichEditView:: m_nBulletIndent](#m_nbulletindent)|Wskazuje liczbę wcięć dla list punktowanych.|
+|[CRichEditView:: m_nWordWrap](#m_nwordwrap)|Wskazuje ograniczenia zawijania wyrazów.|
 
 ## <a name="remarks"></a>Uwagi
 
-"Kontrolki edycji wzbogaconej" to okno, w którym użytkownik może wprowadzić i edytować tekst. Tekst można przypisać znaków i formatowanie akapitów i mogą zawierać osadzonych obiektów OLE. Kontrolki edycji wzbogaconej dostarczające interfejs programowania do formatowania tekstu. Jednak aplikacja musi zaimplementować wszelkie niezbędne udostępnić użytkownikowi operacji formatowania składników interfejsu użytkownika.
+"Kontrolka edycji wzbogaconej" to okno, w którym użytkownik może wprowadzać i edytować tekst. Do tekstu może być przypisany znak i formatowanie akapitu, które mogą zawierać osadzone obiekty OLE. Formanty edycji wzbogaconej zapewniają interfejs programowania do formatowania tekstu. Jednak aplikacja musi zaimplementować wszelkie składniki interfejsu użytkownika niezbędne do udostępnienia użytkownikowi operacji formatowania.
 
-`CRichEditView` przechowuje tekst i właściwości formatowania tekstu. `CRichEditDoc` przechowuje listę elementów klienta OLE, które znajdują się w widoku. `CRichEditCntrItem` udostępnia siebie kontener elementu klienta OLE.
+`CRichEditView`Zachowuje cechę tekstu i formatowania tekstu. `CRichEditDoc`zachowuje listę elementów klienta OLE, które znajdują się w widoku. `CRichEditCntrItem`zapewnia dostęp po stronie kontenera do elementu klienta OLE.
 
-Ten formant Windows wspólnej (i w związku z tym [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) i pokrewne klasy) jest dostępna tylko dla programów uruchomionych w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.
+Ten typowy formant systemu Windows (i w związku z tym [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) i powiązane klasy) jest dostępny tylko dla programów uruchomionych w systemach Windows 95/98 i Windows NT w wersji 3,51 i nowszych.
 
-Aby uzyskać przykład korzystania z widoku bogatej edycji w aplikacji MFC, zobacz [WORDPAD](../../overview/visual-cpp-samples.md) przykładowej aplikacji.
+Przykład korzystania z widoku edycji wzbogaconej w aplikacji MFC można znaleźć w przykładowej aplikacji programu [WordPad](../../overview/visual-cpp-samples.md) .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -212,11 +212,11 @@ Aby uzyskać przykład korzystania z widoku bogatej edycji w aplikacji MFC, zoba
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxrich.h
+**Nagłówek:** afxrich. h
 
-##  <a name="adjustdialogposition"></a>  CRichEditView::AdjustDialogPosition
+##  <a name="adjustdialogposition"></a>CRichEditView:: AdjustDialogPosition
 
-Wywołaj tę funkcję, aby przenieść okno dialogowe danego, tak, aby nie mogą zasłaniać bieżącego zaznaczenia.
+Wywołaj tę funkcję, aby przenieść odpowiednie okno dialogowe, aby nie zasłaniać bieżącego zaznaczenia.
 
 ```
 void AdjustDialogPosition(CDialog* pDlg);
@@ -227,9 +227,9 @@ void AdjustDialogPosition(CDialog* pDlg);
 *pDlg*<br/>
 Wskaźnik do `CDialog` obiektu.
 
-##  <a name="canpaste"></a>  CRichEditView::CanPaste
+##  <a name="canpaste"></a>CRichEditView:: Ostatnia próba
 
-Wywołaj tę funkcję, aby określić, gdy Schowek zawiera dane, które można wkleić do tego widoku bogatej edycji.
+Wywołaj tę funkcję, aby określić, czy Schowek zawiera informacje, które można wkleić do widoku wzbogaconej edycji.
 
 ```
 BOOL CanPaste() const;
@@ -237,19 +237,19 @@ BOOL CanPaste() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli Schowek zawiera dane w formacie, który może zaakceptować tego widoku bogatej edycji; w przeciwnym razie 0.
+Niezerowe, jeśli Schowek zawiera dane w formacie, który może akceptować ten widok wzbogaconej edycji. w przeciwnym razie 0.
 
-##  <a name="cricheditview"></a>  CRichEditView::CRichEditView
+##  <a name="cricheditview"></a>CRichEditView:: CRichEditView
 
-Wywołaj tę funkcję, aby utworzyć `CRichEditView` obiektu.
+Wywołaj tę funkcję, aby `CRichEditView` utworzyć obiekt.
 
 ```
 CRichEditView();
 ```
 
-##  <a name="dopaste"></a>  CRichEditView::DoPaste
+##  <a name="dopaste"></a>CRichEditView::D oPaste
 
-Wywołaj tę funkcję, aby wkleić elementu OLE w *dataobj* do tego dokumentu/widoku edycji wzbogaconej.
+Wywołaj tę funkcję, aby wkleić element OLE w *dataobj* do tego zaawansowanego dokumentu/widoku edycji.
 
 ```
 void DoPaste(
@@ -264,20 +264,20 @@ void DoPaste(
 [COleDataObject](../../mfc/reference/coledataobject-class.md) zawierający dane do wklejenia.
 
 *cf*<br/>
-Żądany format Schowka.
+Żądany format schowka.
 
 *hMetaPict*<br/>
-Metaplik reprezentujący element do wklejenia.
+Metaplik reprezentujący element, który ma zostać wklejony.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę funkcję, jako część domyślna Implementacja klasy [QueryAcceptData](#queryacceptdata).
+Struktura wywołuje tę funkcję jako część domyślnej implementacji [QueryAcceptData](#queryacceptdata).
 
-Ta funkcja określa typ Wklej na podstawie wyników procedury obsługi dla Wklej specjalne. Jeśli *cf* wynosi 0, nowy element używa bieżącej reprezentacji ikony. Jeśli *cf* jest różna od zera i *hMetaPict* nie ma wartości NULL, używa nowego elementu *hMetaPict* na jego reprezentację w postaci.
+Ta funkcja określa typ wklejania w oparciu o wyniki procedury obsługi dla wklejania specjalnego. Jeśli *CF* ma wartość 0, nowy element używa bieżącej reprezentacji ikon. Jeśli *CF* jest różna od zera, a *hMetaPict* nie ma wartości null, nowy element używa *hMetaPict* do reprezentowania.
 
-##  <a name="findtext"></a>  CRichEditView::FindText
+##  <a name="findtext"></a>CRichEditView:: ciąg FindText
 
-Wywołaj tę funkcję, aby znaleźć określony tekst i ustaw ją jako bieżącego zaznaczenia.
+Wywołaj tę funkcję, aby znaleźć określony tekst i ustaw go jako bieżący wybór.
 
 ```
 BOOL FindText(
@@ -290,32 +290,32 @@ BOOL FindText(
 ### <a name="parameters"></a>Parametry
 
 *lpszFind*<br/>
-Zawiera ciąg do wyszukania.
+Zawiera ciąg, który ma zostać wyszukany.
 
 *bCase*<br/>
-Wskazuje, jeśli w wyszukiwaniu jest uwzględniana wielkość liter.
+Wskazuje, czy w wyszukiwaniu jest uwzględniana wielkość liter.
 
 *bWord*<br/>
-Wskazuje, jeśli wyszukiwanie powinien być zgodny tylko całe wyrazy, nie części słowa.
+Wskazuje, czy wyszukiwanie powinno uwzględniać tylko całe wyrazy, nie części wyrazów.
 
-*bDalej*<br/>
-Wskazuje kierunek wyszukiwania. W przypadku opcji TRUE kierunek wyszukiwania jest pod koniec buforu. W przypadku wartości FAŁSZ kierunek wyszukiwania jest kierunku początku buforu.
+*bNext*<br/>
+Wskazuje kierunek wyszukiwania. W przypadku wartości TRUE kierunek wyszukiwania jest skierowany ku końcu buforu. W przypadku wartości FALSE kierunek wyszukiwania jest skierowany do początku buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli wartość różną od zera *lpszFind* tekst zostanie odnaleziony; w przeciwnym razie 0.
+Niezerowe, jeśli zostanie znaleziony tekst *lpszFind* ; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja ta wyświetla kursor oczekiwania podczas operacji wyszukiwania.
+Ta funkcja wyświetla kursor oczekiwania podczas operacji znajdowania.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#151](../../mfc/codesnippet/cpp/cricheditview-class_1.cpp)]
 
-##  <a name="findtextsimple"></a>  CRichEditView::FindTextSimple
+##  <a name="findtextsimple"></a>CRichEditView:: FindTextSimple
 
-Wywołaj tę funkcję, aby znaleźć określony tekst i ustaw ją jako bieżącego zaznaczenia.
+Wywołaj tę funkcję, aby znaleźć określony tekst i ustaw go jako bieżący wybór.
 
 ```
 BOOL FindTextSimple(
@@ -328,28 +328,28 @@ BOOL FindTextSimple(
 ### <a name="parameters"></a>Parametry
 
 *lpszFind*<br/>
-Zawiera ciąg do wyszukania.
+Zawiera ciąg, który ma zostać wyszukany.
 
 *bCase*<br/>
-Wskazuje, jeśli w wyszukiwaniu jest uwzględniana wielkość liter.
+Wskazuje, czy w wyszukiwaniu jest uwzględniana wielkość liter.
 
 *bWord*<br/>
-Wskazuje, jeśli wyszukiwanie powinien być zgodny tylko całe wyrazy, nie części słowa.
+Wskazuje, czy wyszukiwanie powinno uwzględniać tylko całe wyrazy, nie części wyrazów.
 
-*bDalej*<br/>
-Wskazuje kierunek wyszukiwania. W przypadku opcji TRUE kierunek wyszukiwania jest pod koniec buforu. W przypadku wartości FAŁSZ kierunek wyszukiwania jest kierunku początku buforu.
+*bNext*<br/>
+Wskazuje kierunek wyszukiwania. W przypadku wartości TRUE kierunek wyszukiwania jest skierowany ku końcu buforu. W przypadku wartości FALSE kierunek wyszukiwania jest skierowany do początku buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli wartość różną od zera *lpszFind* tekst zostanie odnaleziony; w przeciwnym razie 0.
+Niezerowe, jeśli zostanie znaleziony tekst *lpszFind* ; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRichEditView::FindText](#findtext).
+  Zobacz przykład dla [CRichEditView:: ciąg FindText](#findtext).
 
-##  <a name="getcharformatselection"></a>  CRichEditView::GetCharFormatSelection
+##  <a name="getcharformatselection"></a>CRichEditView:: GetCharFormatSelection
 
-Wywołaj tę funkcję, aby pobrać formatowanie atrybutów bieżącego zaznaczenia znaków.
+Wywołaj tę funkcję, aby pobrać atrybuty formatowania znaku bieżącego zaznaczenia.
 
 ```
 CHARFORMAT2& GetCharFormatSelection();
@@ -357,19 +357,19 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) strukturę, która zawiera znak, formatowanie atrybutów bieżącego zaznaczenia.
+Struktura [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , która zawiera atrybuty formatowania znaku bieżącego zaznaczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat) wiadomości i [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat) komunikat i struktura [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]
 
-##  <a name="getclipboarddata"></a>  CRichEditView::GetClipboardData
+##  <a name="getclipboarddata"></a>CRichEditView:: GetClipboardData
 
-Struktura wywołuje tę funkcję w ramach przetwarzania [IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata).
+Struktura wywołuje tę funkcję w ramach przetwarzania elementu [IRichEditOleCallback:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata).
 
 ```
 virtual HRESULT GetClipboardData(
@@ -382,42 +382,42 @@ virtual HRESULT GetClipboardData(
 ### <a name="parameters"></a>Parametry
 
 *lpchrg*<br/>
-Wskaźnik do [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) struktury, określając zakres znaków (i elementy OLE), aby skopiować obiekt danych określonego przez *lplpdataobj*.
+Wskaźnik do struktury [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) określający zakres znaków (i elementy OLE) do skopiowania do obiektu danych określonego przez *lplpdataobj*.
 
 *dwReco*<br/>
-Flaga operację Schowka. Może być jedną z następujących wartości.
+Flaga operacji Schowka. Może być jedną z następujących wartości.
 
-- RECO_COPY kopiowania do Schowka.
+- RECO_COPY skopiuj do Schowka.
 
-- RECO_CUT wyciąć do Schowka.
+- RECO_CUT Wytnij do Schowka.
 
-- Operacja przeciągania RECO_DRAG (przeciąganie i upuszczanie).
+- RECO_DRAG operacji przeciągania (przeciągnij i upuść).
 
-- RECO_DROP upuszczania (przeciąganie i upuszczanie).
+- RECO_DROP operacji usuwania (przeciągnij i upuść).
 
-- RECO_PASTE wklejaniu ze Schowka.
+- RECO_PASTE Wklej ze schowka.
 
 *lpRichDataObj*<br/>
-Wskaźnik do [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) formant edycji obiekt zawierający dane Schowka z zaawansowanych ( [IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)).
+Wskaźnik do obiektu [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) zawierającego dane ze schowka z kontrolki edycji wzbogaconej ( [IRichEditOle:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)).
 
 *lplpdataobj*<br/>
-Wskaźnik do zmiennej wskaźnika, który otrzymuje adres `IDataObject` obiekt reprezentujący zakresem określonym w *lpchrg* parametru. Wartość *lplpdataobj* jest ignorowana, jeśli zostanie zwrócony błąd.
+Wskaźnik do zmiennej wskaźnika, która odbiera adres `IDataObject` obiektu reprezentującego zakres określony w parametrze *lpchrg* . Wartość *lplpdataobj* jest ignorowana, Jeśli zwracany jest błąd.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość HRESULT zgłaszanie powodzenia operacji. Aby uzyskać więcej informacji na temat HRESULT, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes) w zestawie Windows SDK.
+Wartość HRESULT zgłasza sukces operacji. Aby uzyskać więcej informacji na temat HRESULT, zobacz [strukturę kodów błędów modelu COM](/windows/desktop/com/structure-of-com-error-codes) w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zwracana wartość wskazuje Powodzenie, `IRichEditOleCallback::GetClipboardData` zwraca `IDataObject` uzyskiwał dostęp do *lplpdataobj*; w przeciwnym razie zwraca jeden uzyskują *lpRichDataObj*. Należy przesłonić tę funkcję, aby dostarczyć dane Schowka. Domyślna implementacja ta funkcja zwraca E_NOTIMPL.
+Jeśli wartość `IRichEditOleCallback::GetClipboardData` zwracana wskazuje powodzenie, `IDataObject` zwraca dostępną przez *lplpdataobj*; w przeciwnym razie zwraca wartość dostępną przez *lpRichDataObj*. Zastąp tę funkcję, aby podać własne dane Schowka. Domyślna implementacja tej funkcji zwraca E_NOTIMPL.
 
-Jest to zaawansowany możliwym do zastąpienia.
+Jest to zaawansowany możliwy do zaawansowania.
 
-Aby uzyskać więcej informacji, zobacz [IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata), [IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata), i [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) w zestawie Windows SDK i zobacz [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IRichEditOle:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata), [IRichEditOleCallback:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)i [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) w Windows SDK i zobacz [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) w Windows SDK.
 
-##  <a name="getcontextmenu"></a>  CRichEditView::GetContextMenu
+##  <a name="getcontextmenu"></a>CRichEditView::
 
-Struktura wywołuje tę funkcję w ramach przetwarzania [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu).
+Struktura wywołuje tę funkcję w ramach przetwarzania elementu [IRichEditOleCallback::](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)get.
 
 ```
 virtual HMENU GetContextMenu(
@@ -429,13 +429,13 @@ virtual HMENU GetContextMenu(
 ### <a name="parameters"></a>Parametry
 
 *seltyp*<br/>
-Typ wyboru. Wybór typu wartości są opisane w sekcji uwag.
+Typ zaznaczenia. Wartości typu wyboru są opisane w sekcji uwagi.
 
 *lpoleobj*<br/>
-Wskaźnik do `OLEOBJECT` struktury, określając pierwszego wybranego obiektu OLE, jeśli zaznaczenie zawiera jeden lub więcej elementów OLE. Jeśli zaznaczenie nie zawiera żadnych elementów *lpoleobj* ma wartość NULL. `OLEOBJECT` Struktury przechowuje wskaźnik do obiektu OLE v tabeli.
+Wskaźnik do `OLEOBJECT` struktury określającej pierwszy zaznaczony obiekt OLE, jeśli zaznaczenie zawiera jeden lub więcej elementów OLE. Jeśli zaznaczenie nie zawiera żadnych elementów, *lpoleobj* ma wartość null. `OLEOBJECT` Struktura zawiera wskaźnik do tabeli obiektu OLE.
 
 *lpchrg*<br/>
-Wskaźnik do [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) struktury zawierającej bieżącego zaznaczenia.
+Wskaźnik do struktury [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) zawierającej bieżący wybór.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -443,11 +443,11 @@ Dojście do menu kontekstowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest typowy część prawym przyciskiem myszy w dół do przetwarzania.
+Ta funkcja jest typową częścią odpowiedniego przetworzenia przycisku myszy w dół.
 
-Typ wyboru może być dowolną kombinacją następujących flag:
+Typ zaznaczenia może być dowolną kombinacją następujących flag:
 
-- SEL_EMPTY wskazuje, że nie ma bieżącego zaznaczenia.
+- SEL_EMPTY wskazuje, że nie ma bieżącego wyboru.
 
 - SEL_TEXT wskazuje, że bieżące zaznaczenie zawiera tekst.
 
@@ -457,11 +457,11 @@ Typ wyboru może być dowolną kombinacją następujących flag:
 
 - SEL_MULTIOBJECT wskazuje, że bieżące zaznaczenie zawiera więcej niż jeden obiekt OLE.
 
-Domyślna implementacja zwraca wartość NULL. Jest to zaawansowany możliwym do zastąpienia.
+Domyślna implementacja zwraca wartość NULL. Jest to zaawansowany możliwy do zaawansowania.
 
-Aby uzyskać więcej informacji, zobacz [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) i [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IRichEditOleCallback::](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) geti [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) w Windows SDK.
 
-##  <a name="getdocument"></a>  CRichEditView::GetDocument
+##  <a name="getdocument"></a>CRichEditView:: GetDocument
 
 Wywołaj tę funkcję, aby uzyskać wskaźnik do `CRichEditDoc` skojarzonego z tym widokiem.
 
@@ -471,11 +471,11 @@ CRichEditDoc* GetDocument() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) obiekt skojarzony z Twojej `CRichEditView` obiektu.
+Wskaźnik do obiektu [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) skojarzonego z `CRichEditView` obiektem.
 
-##  <a name="getinplaceactiveitem"></a>  CRichEditView::GetInPlaceActiveItem
+##  <a name="getinplaceactiveitem"></a>CRichEditView:: GetInPlaceActiveItem
 
-Wywołanie elementu tę funkcję, aby pobrać OLE, który jest aktywowany w miejscu, w tym `CRichEditView` obiektu.
+Wywołaj tę funkcję, aby pobrać element OLE, który jest aktualnie aktywowany w miejscu `CRichEditView` w tym obiekcie.
 
 ```
 CRichEditCntrItem* GetInPlaceActiveItem() const;
@@ -483,11 +483,11 @@ CRichEditCntrItem* GetInPlaceActiveItem() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do aktywnego pojedynczy, w miejscu [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) obiektu tego widoku bogatej edycji; Wartość NULL, jeśli nie ma żadnego elementu OLE w stanie aktywnym w miejscu.
+Wskaźnik do pojedynczego, w miejscu aktywnego obiektu [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) w tym widoku edycji wzbogaconej; Wartość NULL, jeśli w stanie aktywnym nie ma obecnie elementu OLE.
 
-##  <a name="getmargins"></a>  CRichEditView::GetMargins
+##  <a name="getmargins"></a>CRichEditView:: GetMargins
 
-Wywołaj tę funkcję można pobrać bieżących marginesów używane podczas drukowania.
+Wywołaj tę funkcję, aby pobrać bieżące marginesy używane podczas drukowania.
 
 ```
 CRect GetMargins() const;
@@ -495,11 +495,11 @@ CRect GetMargins() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Marginesy używane w drukowaniu, mierzone w MM_TWIPS.
+Marginesy używane podczas drukowania, mierzone w MM_TWIPS.
 
-##  <a name="getpagerect"></a>  CRichEditView::GetPageRect
+##  <a name="getpagerect"></a>CRichEditView:: GetPageRect
 
-Wywołaj tę funkcję można pobrać wymiary strony drukowania.
+Wywołaj tę funkcję, aby uzyskać wymiary strony używanej do drukowania.
 
 ```
 CRect GetPageRect() const;
@@ -507,13 +507,13 @@ CRect GetPageRect() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Granice strony wydruku, mierzone w MM_TWIPS.
+Granice strony używanej w drukowaniu, mierzone w MM_TWIPS.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta wartość jest oparta na rozmiar papieru.
+Ta wartość jest oparta na rozmiarze papieru.
 
-##  <a name="getpapersize"></a>  CRichEditView::GetPaperSize
+##  <a name="getpapersize"></a>CRichEditView:: GetPaperSize
 
 Wywołaj tę funkcję, aby pobrać bieżący rozmiar papieru.
 
@@ -523,15 +523,15 @@ CSize GetPaperSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar papieru, używany w drukowaniu, mierzone w MM_TWIPS.
+Rozmiar papieru używanego do drukowania, mierzony w MM_TWIPS.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#153](../../mfc/codesnippet/cpp/cricheditview-class_3.cpp)]
 
-##  <a name="getparaformatselection"></a>  CRichEditView::GetParaFormatSelection
+##  <a name="getparaformatselection"></a>CRichEditView:: GetParaFormatSelection
 
-Wywołaj tę funkcję, aby pobrać atrybuty bieżącego zaznaczenia formatowania akapitu.
+Wywołaj tę funkcję, aby pobrać atrybuty formatowania akapitu bieżącego zaznaczenia.
 
 ```
 PARAFORMAT2& GetParaFormatSelection();
@@ -539,15 +539,15 @@ PARAFORMAT2& GetParaFormatSelection();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) strukturę, która zawiera atrybuty bieżącego zaznaczenia formatowania akapitu.
+Struktura [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) , która zawiera atrybuty formatowania akapitu bieżącego zaznaczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat) wiadomości i [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat) Message i [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Structure w Windows SDK.
 
-##  <a name="getprintrect"></a>  CRichEditView::GetPrintRect
+##  <a name="getprintrect"></a>CRichEditView:: GetPrintRect
 
-Wywołaj tę funkcję, aby pobrać granice obszar drukowania w prostokącie strony.
+Wywołaj tę funkcję, aby pobrać granice obszaru drukowania w obrębie prostokąta strony.
 
 ```
 CRect GetPrintRect() const;
@@ -555,13 +555,13 @@ CRect GetPrintRect() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Granice obszaru obrazu używanego w drukowaniu, mierzone w MM_TWIPS.
+Granice obszaru obrazu używane podczas drukowania, mierzone w MM_TWIPS.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#154](../../mfc/codesnippet/cpp/cricheditview-class_4.cpp)]
 
-##  <a name="getprintwidth"></a>  CRichEditView::GetPrintWidth
+##  <a name="getprintwidth"></a>CRichEditView:: GetPrintWidth
 
 Wywołaj tę funkcję, aby określić szerokość obszaru drukowania.
 
@@ -571,11 +571,11 @@ int GetPrintWidth() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Szerokość obszaru drukowania, mierzone w MM_TWIPS.
+Szerokość obszaru drukowania mierzona w MM_TWIPS.
 
-##  <a name="getricheditctrl"></a>  CRichEditView::GetRichEditCtrl
+##  <a name="getricheditctrl"></a>CRichEditView:: GetRichEditCtrl
 
-Wywołaj tę funkcję, aby pobrać [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) obiekt skojarzony z `CRichEditView` obiektu.
+Wywołaj tę funkcję, aby pobrać obiekt [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) skojarzony z `CRichEditView` obiektem.
 
 ```
 CRichEditCtrl& GetRichEditCtrl() const;
@@ -583,15 +583,15 @@ CRichEditCtrl& GetRichEditCtrl() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`CRichEditCtrl` Obiektu dla tego widoku.
+`CRichEditCtrl` Obiekt dla tego widoku.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRichEditView::FindText](#findtext).
+  Zobacz przykład dla [CRichEditView:: ciąg FindText](#findtext).
 
-##  <a name="getselecteditem"></a>  CRichEditView::GetSelectedItem
+##  <a name="getselecteditem"></a>CRichEditView:: GetSelectedItem
 
-Wywołaj tę funkcję, aby pobrać element OLE ( `CRichEditCntrItem` obiektu) aktualnie wybrane w tym `CRichEditView` obiektu.
+Wywołaj tę funkcję, aby pobrać element OLE ( `CRichEditCntrItem` obiekt), który jest aktualnie `CRichEditView` wybrany w tym obiekcie.
 
 ```
 CRichEditCntrItem* GetSelectedItem() const;
@@ -599,11 +599,11 @@ CRichEditCntrItem* GetSelectedItem() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) obiektu wybranego w `CRichEditView` obiektu; Wartość NULL, jeśli nie wybrano elementu w tym widoku.
+Wskaźnik do obiektu [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) zaznaczonego w `CRichEditView` obiekcie; Wartość NULL, jeśli nie wybrano żadnego elementu w tym widoku.
 
-##  <a name="gettextlength"></a>  CRichEditView::GetTextLength
+##  <a name="gettextlength"></a>CRichEditView:: GetTextLength
 
-Wywołaj tę funkcję, aby odczytać długość tekstu, w tym `CRichEditView` obiektu.
+Wywołaj tę funkcję, aby pobrać długość tekstu w tym `CRichEditView` obiekcie.
 
 ```
 long GetTextLength() const;
@@ -611,11 +611,11 @@ long GetTextLength() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Długość tekstu, w tym `CRichEditView` obiektu.
+Długość tekstu w tym `CRichEditView` obiekcie.
 
-##  <a name="gettextlengthex"></a>  CRichEditView::GetTextLengthEx
+##  <a name="gettextlengthex"></a>CRichEditView:: GetTextLengthEx
 
-Wywołaj tę funkcję elementu członkowskiego, aby obliczyć długość tekstu, w tym `CRichEditView` obiektu.
+Wywołaj tę funkcję elementu członkowskiego, aby obliczyć długość tekstu w `CRichEditView` tym obiekcie.
 
 ```
 long GetTextLengthEx(
@@ -625,23 +625,23 @@ long GetTextLengthEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*<br/>
-Wartość określająca metoda do użycia przy określaniu długość tekstu. Ten element członkowski może być jedną lub więcej wartości wymienione w flagi członkiem [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) opisanego w zestawie Windows SDK.
+*flagiDW*<br/>
+Wartość określająca metodę, która ma być używana podczas określania długości tekstu. Ten element członkowski może być co najmniej jedną wartością wymienioną w elemencie członkowskim flagi [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-gettextlengthex) opisanego w Windows SDK.
 
 *uCodePage*<br/>
-Strona kodowa tłumaczenia (CP_ACP dla strony kodowej ANSI, 1200 dla standardu Unicode).
+Strona kodowa dla tłumaczenia (CP_ACP dla strony kodowej ANSI, 1200 dla Unicode).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków lub liczbę bajtów w formancie edycji. Jeśli stan został ustawiony niezgodnymi flagami *Flagidw*, ta funkcja elementu członkowskiego zwraca E_INVALIDARG.
+Liczba znaków lub bajtów w kontrolce edycji. W przypadku ustawienia niezgodnych flag w *flagiDW*, ta funkcja członkowska zwraca E_INVALIDARG.
 
 ### <a name="remarks"></a>Uwagi
 
-`GetTextLengthEx` udostępnia dodatkowe sposoby określania długości tekstu. Obsługuje funkcje Zaawansowane edytowanie w wersji 2.0. Aby uzyskać więcej informacji, zobacz [o Zaawansowane formanty edycji](/windows/desktop/Controls/about-rich-edit-controls) w zestawie Windows SDK.
+`GetTextLengthEx`zapewnia dodatkowe sposoby określania długości tekstu. Obsługuje zaawansowane funkcje edycji 2,0. Aby uzyskać więcej informacji, zobacz [Informacje o kontrolkach edycji wzbogaconej](/windows/desktop/Controls/about-rich-edit-controls) w Windows SDK.
 
-##  <a name="insertfileasobject"></a>  CRichEditView::InsertFileAsObject
+##  <a name="insertfileasobject"></a>CRichEditView:: InsertFileAsObject
 
-Wywołaj tę funkcję, aby wstawić określonego pliku (jako [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) obiektu) do Zaawansowane edytowanie widoku.
+Wywołaj tę funkcję, aby wstawić określony plik (jako obiekt [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) ) do widoku wzbogaconej edycji.
 
 ```
 void InsertFileAsObject(LPCTSTR lpszFileName);
@@ -652,9 +652,9 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
 *lpszFileName*<br/>
 Ciąg zawierający nazwę pliku, który ma zostać wstawiony.
 
-##  <a name="insertitem"></a>  CRichEditView::InsertItem
+##  <a name="insertitem"></a>CRichEditView:: InsertItem
 
-Wywołaj tę funkcję, aby wstawić [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) obiekt w widoku bogatej edycji.
+Wywołaj tę funkcję, aby wstawić obiekt [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) do widoku wzbogaconej edycji.
 
 ```
 HRESULT InsertItem(CRichEditCntrItem* pItem);
@@ -663,19 +663,19 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ### <a name="parameters"></a>Parametry
 
 *pItem*<br/>
-Wskaźnik do elementu, który ma zostać wstawiony.
+Wskaźnik na element, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość HRESULT informujący o powodzeniu wstawiania.
+Wartość HRESULT wskazująca na powodzenie wstawiania.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat HRESULT, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat HRESULT, zobacz [strukturę kodów błędów modelu COM](/windows/desktop/com/structure-of-com-error-codes) w Windows SDK.
 
-##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat
+##  <a name="isricheditformat"></a>CRichEditView:: IsRichEditFormat
 
-Wywołaj tę funkcję, aby określić, czy *cf* jest format Schowka, czyli tekstu, tekst sformatowany lub tekstu sformatowanego przy użyciu elementów OLE.
+Wywołaj tę funkcję, aby określić, czy *CF* jest formatem schowka, który jest tekst, tekst sformatowany lub tekst sformatowany przy użyciu elementów OLE.
 
 ```
 static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
@@ -684,15 +684,15 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-Format schowka zainteresowania.
+Interesujący format schowka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli wartość różną od zera *cf* sformatowanego format schowka edycji lub tekstu.
+Niezerowe, jeśli *CF* jest sformatowanym formatem tekstu lub Schowka.
 
-##  <a name="isselected"></a>  CRichEditView::IsSelected
+##  <a name="isselected"></a>CRichEditView:: IsSelected
 
-Wywołaj tę funkcję, aby określić, jeśli określony element OLE jest aktualnie wybrany w tym widoku.
+Wywołaj tę funkcję, aby określić, czy określony element OLE jest aktualnie wybrany w tym widoku.
 
 ```
 virtual BOOL IsSelected(const CObject* pDocItem) const;
@@ -705,23 +705,23 @@ Wskaźnik do obiektu w widoku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli obiekt jest wybrany; w przeciwnym razie 0.
+Niezerowe, jeśli obiekt jest zaznaczony; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę funkcję, jeśli Klasa pochodna widoku ma inną metodę obsługi zaznaczenia elementów OLE.
+Przesłoń tę funkcję, jeśli Klasa widoku pochodnego ma inną metodę obsługi wyboru elementów OLE.
 
-##  <a name="m_nbulletindent"></a>  CRichEditView::m_nBulletIndent
+##  <a name="m_nbulletindent"></a>CRichEditView:: m_nBulletIndent
 
-Wcięcie punktora elementów na liście; Domyślnie 720 jednostki, która jest 1/2 cala.
+Wcięcie dla elementów punktorów na liście; Domyślnie 720 jednostek, czyli 1/2 cala.
 
 ```
 int m_nBulletIndent;
 ```
 
-##  <a name="m_nwordwrap"></a>  CRichEditView::m_nWordWrap
+##  <a name="m_nwordwrap"></a>CRichEditView:: m_nWordWrap
 
-Wskazuje typ zawijania dla tego widoku bogatej edycji.
+Wskazuje typ zawijania wyrazów dla tego widoku wzbogaconej edycji.
 
 ```
 int m_nWordWrap;
@@ -729,21 +729,21 @@ int m_nWordWrap;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeden z następujących wartości:
+Jedna z następujących wartości:
 
-- `WrapNone` Wskazuje nie zawijanie wyrazów automatyczne.
+- `WrapNone`Nie wskazuje automatycznego zawijania wyrazów.
 
-- `WrapToWindow` Wskazuje, zawijanie wyrazów, w oparciu o szerokości okna.
+- `WrapToWindow`Wskazuje Zawijanie słów na podstawie szerokości okna.
 
-- `WrapToTargetDevice` Wskazuje, zawijanie wyrazów na podstawie właściwości urządzenia docelowego.
+- `WrapToTargetDevice`Wskazuje Zawijanie słów na podstawie charakterystyki urządzenia docelowego.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRichEditView::WrapChanged](#wrapchanged).
+  Zobacz przykład dla [CRichEditView:: WrapChanged](#wrapchanged).
 
-##  <a name="onchareffect"></a>  CRichEditView::OnCharEffect
+##  <a name="onchareffect"></a>CRichEditView:: OnCharEffect
 
-Wywołaj tę funkcję, aby przełączyć formatowanie efekty dla bieżącego zaznaczenia znaków.
+Wywołaj tę funkcję, aby przełączać efekty formatowania znaków dla bieżącego zaznaczenia.
 
 ```
 void OnCharEffect(
@@ -754,24 +754,24 @@ void OnCharEffect(
 ### <a name="parameters"></a>Parametry
 
 *dwMask*<br/>
-Formatowanie znaków efekty do modyfikowania w bieżącym zaznaczeniu.
+Formatowanie znaków w bieżącym zaznaczeniu.
 
 *dwEffect*<br/>
-Odpowiednią listę formatowanie efekty, aby przełączyć znaków.
+Wymagana lista efektów formatowania znaków do przełączenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Każde wywołanie tej funkcji przełącza określony efekty formatowania dla bieżącego zaznaczenia.
+Każde wywołanie tej funkcji przełącza określone efekty formatowania dla bieżącego zaznaczenia.
 
-Aby uzyskać więcej informacji na temat *dwMask* i *dwEffect* parametrów i ich potencjalnych wartości, zobacz odpowiednie dane elementów członkowskich [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) w zestawie Windows SDK.
+Aby uzyskać więcej informacji o parametrach *dwMask* i *dwEffect* oraz ich potencjalnych wartościach, zobacz odpowiednie elementy członkowskie danych [Charformat](/windows/desktop/api/richedit/ns-richedit-_charformat) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]
 
-##  <a name="onfindnext"></a>  CRichEditView::OnFindNext
+##  <a name="onfindnext"></a>CRichEditView:: OnFindNext
 
-Wywoływane przez platformę podczas przetwarzania polecenia z okna dialogowego Znajdowanie i zamienianie.
+Wywoływane przez platformę podczas przetwarzania poleceń z okna dialogowego Znajdowanie/zamienianie.
 
 ```
 virtual void OnFindNext(
@@ -786,22 +786,22 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Ciąg do znalezienia.
 
-*bDalej*<br/>
-Kierunek wyszukiwania: Wartość TRUE wskazuje "False" działa.
+*bNext*<br/>
+Kierunek wyszukiwania: Wartość PRAWDA oznacza, że FAŁSZ, w górę.
 
 *bCase*<br/>
-Wskazuje, czy wyszukiwanie ma być uwzględniana wielkość liter.
+Wskazuje, czy w wyszukiwaniu ma być uwzględniana wielkość liter.
 
 *bWord*<br/>
-Wskazuje, czy wyszukiwanie ma dopasowywać całe wyrazy, tylko, czy nie.
+Wskazuje, czy wyszukiwanie ma uwzględniać tylko całe wyrazy, czy nie.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby wyszukać tekst w obrębie `CRichEditView`. Należy przesłonić tę funkcję, aby zmienić właściwości wyszukiwania dla klasy pochodnej widoku.
+Wywołaj tę funkcję, aby znaleźć tekst `CRichEditView`w. Zastąp tę funkcję, aby zmienić właściwości wyszukiwania dla klasy widoku pochodnego.
 
-##  <a name="oninitialupdate"></a>  CRichEditView::OnInitialUpdate
+##  <a name="oninitialupdate"></a>CRichEditView:: OnInitialUpdate
 
-Wywoływane przez platformę po widoku najpierw jest dołączony do dokumentu, ale przed wyświetleniu widoku.
+Wywoływane przez platformę po pierwszym dołączeniu widoku do dokumentu, ale zanim widok jest początkowo wyświetlany.
 
 ```
 virtual void OnInitialUpdate();
@@ -809,15 +809,15 @@ virtual void OnInitialUpdate();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja ta funkcja wywołuje [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) funkcji składowej bez informacji o wskazówki (oznacza to, używanie domyślnych wartości 0 dla *lHint* parametr i wartość NULL w przypadku *pHint* parametru). Należy przesłonić tę funkcję, by wykonać jednorazowe inicjowanie, która wymaga informacji o dokumencie. Na przykład jeśli aplikacja zawiera dokumenty o stałym rozmiarze, umożliwia tej funkcji inicjowania widoku limity przewijania w zależności od rozmiaru dokumentu. Jeśli aplikacja obsługuje dokumenty o zmiennym rozmiarze, użyj `OnUpdate` można zaktualizować przewijania ogranicza każdym razem, gdy zmiany w dokumencie.
+Domyślna implementacja tej funkcji wywołuje funkcję członkowską [CView:: OnUpdate](../../mfc/reference/cview-class.md#onupdate) bez informacji o wskazówce (to oznacza użycie wartości domyślnych 0 dla parametru *lHint* i wartości null dla parametru *pHint* ). Zastąp tę funkcję, aby wykonać jednorazowe inicjowanie, które wymaga informacji o dokumencie. Na przykład jeśli aplikacja ma dokumenty o stałym rozmiarze, można użyć tej funkcji do zainicjowania limitów przewijania widoku na podstawie rozmiaru dokumentu. Jeśli aplikacja obsługuje dokumenty o zmiennym rozmiarze, użyj `OnUpdate` do aktualizowania limitów przewijania za każdym razem, gdy dokument zostanie zmieniony.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRichEditView::m_nWordWrap](#m_nwordwrap).
+  Zobacz przykład dla [CRichEditView:: m_nWordWrap](#m_nwordwrap).
 
-##  <a name="onpastenativeobject"></a>  CRichEditView::OnPasteNativeObject
+##  <a name="onpastenativeobject"></a>CRichEditView:: OnPasteNativeObject
 
-Aby załadować dane natywne z osadzonego elementu, należy użyć tej funkcji.
+Użyj tej funkcji, aby załadować dane natywne z osadzonego elementu.
 
 ```
 virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
@@ -826,23 +826,23 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 ### <a name="parameters"></a>Parametry
 
 *lpStg*<br/>
-Wskaźnik do [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) obiektu.
+Wskaźnik do obiektu [Metoda IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle będzie to zrobisz, tworząc [COleStreamFile](../../mfc/reference/colestreamfile-class.md) wokół `IStorage`. `COleStreamFile` Mogą być dołączane do archiwum i [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) wywołuje się, jak załadować dane.
+Zazwyczaj można to zrobić, tworząc [COleStreamFile](../../mfc/reference/colestreamfile-class.md) wokół `IStorage`. Można dołączyć do archiwum i [CObject:: serializować](../../mfc/reference/cobject-class.md#serialize) wywołana, aby załadować dane. `COleStreamFile`
 
-Jest to zaawansowany możliwym do zastąpienia.
+Jest to zaawansowany możliwy do zaawansowania.
 
-Aby uzyskać więcej informacji, zobacz [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [Metoda IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) w Windows SDK.
 
-##  <a name="onparaalign"></a>  CRichEditView::OnParaAlign
+##  <a name="onparaalign"></a>CRichEditView:: OnParaAlign
 
-Wywołaj tę funkcję, aby zmienić wyrównanie akapitu dla wybranych akapitach.
+Wywołaj tę funkcję, aby zmienić wyrównanie akapitu dla wybranych akapitów.
 
 ```
 void OnParaAlign(WORD wAlign);
@@ -851,21 +851,21 @@ void OnParaAlign(WORD wAlign);
 ### <a name="parameters"></a>Parametry
 
 *wAlign*<br/>
-Żądane wyrównanie akapitu. Jeden z następujących wartości:
+Żądane wyrównanie akapitu. Jedna z następujących wartości:
 
-- PFA_LEFT wyrównanie akapitów z lewego marginesu.
+- PFA_LEFT Dopasuj akapity do lewego marginesu.
 
-- PFA_RIGHT wyrównanie akapitów do prawego marginesu.
+- PFA_RIGHT Dopasuj akapity do prawego marginesu.
 
-- PFA_CENTER Centrum akapitów między marginesów.
+- PFA_CENTER Wyśrodkuj akapity między marginesami.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#156](../../mfc/codesnippet/cpp/cricheditview-class_6.cpp)]
 
-##  <a name="onprinterchanged"></a>  CRichEditView::OnPrinterChanged
+##  <a name="onprinterchanged"></a>CRichEditView:: OnPrinterChanged
 
-Należy przesłonić tę funkcję, aby zmienić właściwości dla tego widoku bogatej edycji, gdy zmieni się drukarki.
+Zastąp tę funkcję, aby zmienić cechy dla tego widoku wzbogaconej edycji, gdy zmienia się drukarka.
 
 ```
 virtual void OnPrinterChanged(const CDC& dcPrinter);
@@ -874,15 +874,15 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ### <a name="parameters"></a>Parametry
 
 *dcPrinter*<br/>
-A [CDC](../../mfc/reference/cdc-class.md) obiektu dla nowej drukarki.
+Obiekt [](../../mfc/reference/cdc-class.md) przerzutowania dla nowej drukarki.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja ustawia rozmiar papieru fizycznych wysokość i szerokość dla urządzenia wyjściowego (drukarki). W przypadku kontekstu urządzenia skojarzone z *dcPrinter*, domyślna implementacja ustawia rozmiar papieru 8,5 przez x 11 cali.
+Domyślna implementacja ustawia rozmiar papieru na fizyczną wysokość i szerokość urządzenia wyjściowego (drukarki). Jeśli nie ma kontekstu urządzenia skojarzonego z *dcPrinter*, domyślna implementacja ustawia rozmiar papieru na 8,5 przez 11 cali.
 
-##  <a name="onreplaceall"></a>  CRichEditView::OnReplaceAll
+##  <a name="onreplaceall"></a>CRichEditView:: OnReplaceAll
 
-Wywoływane przez platformę podczas przetwarzania Zastąp wszystkie polecenia z okna dialogowego Zastąp.
+Wywoływane przez platformę podczas przetwarzania Zamień wszystkie polecenia z okna dialogowego Zastąp.
 
 ```
 virtual void OnReplaceAll(
@@ -895,28 +895,28 @@ virtual void OnReplaceAll(
 ### <a name="parameters"></a>Parametry
 
 *lpszFind*<br/>
-Tekst, który ma zostać zastąpione.
+Tekst, który ma zostać zastąpiony.
 
 *lpszReplace*<br/>
 Tekst zastępczy.
 
 *bCase*<br/>
-Wskazuje, jeśli w wyszukiwaniu jest uwzględniana wielkość liter.
+Wskazuje, czy w wyszukiwaniu jest uwzględniana wielkość liter.
 
 *bWord*<br/>
-Wskazuje, jeśli wyszukiwanie należy wybrać całe wyrazy, czy nie.
+Wskazuje, czy w wyszukiwaniu należy wybrać całe wyrazy, czy nie.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby zastąpić wszystkie wystąpienia danego tekst z innego ciągu. Należy przesłonić tę funkcję, aby zmienić właściwości wyszukiwania dla tego widoku.
+Wywołaj tę funkcję, aby zastąpić wszystkie wystąpienia danego tekstu innym ciągiem. Zastąp tę funkcję, aby zmienić właściwości wyszukiwania dla tego widoku.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRichEditView::FindText](#findtext).
+  Zobacz przykład dla [CRichEditView:: ciąg FindText](#findtext).
 
-##  <a name="onreplacesel"></a>  CRichEditView::OnReplaceSel
+##  <a name="onreplacesel"></a>CRichEditView:: OnReplaceSel
 
-Wywoływane przez platformę podczas przetwarzania polecenia Zastąp z okna dialogowego Zastąp.
+Wywoływane przez platformę podczas przetwarzania zamiany poleceń z okna dialogowego Zastąp.
 
 ```
 virtual void OnReplaceSel(
@@ -930,27 +930,27 @@ virtual void OnReplaceSel(
 ### <a name="parameters"></a>Parametry
 
 *lpszFind*<br/>
-Tekst, który ma zostać zastąpione.
+Tekst, który ma zostać zastąpiony.
 
-*bDalej*<br/>
-Wskazuje kierunek wyszukiwania: Wartość TRUE jest wyłączony; "False" działa.
+*bNext*<br/>
+Wskazuje kierunek wyszukiwania: PRAWDA nie działa; FAŁSZ, w górę.
 
 *bCase*<br/>
-Wskazuje, jeśli w wyszukiwaniu jest uwzględniana wielkość liter.
+Wskazuje, czy w wyszukiwaniu jest uwzględniana wielkość liter.
 
 *bWord*<br/>
-Wskazuje, jeśli wyszukiwanie należy wybrać całe wyrazy, czy nie.
+Wskazuje, czy w wyszukiwaniu należy wybrać całe wyrazy, czy nie.
 
 *lpszReplace*<br/>
 Tekst zastępczy.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby zastąpić jedno wystąpienie danego tekst z innego ciągu. Należy przesłonić tę funkcję, aby zmienić właściwości wyszukiwania dla tego widoku.
+Wywołaj tę funkcję, aby zastąpić jedno wystąpienie danego tekstu innym ciągiem. Zastąp tę funkcję, aby zmienić właściwości wyszukiwania dla tego widoku.
 
-##  <a name="ontextnotfound"></a>  CRichEditView::OnTextNotFound
+##  <a name="ontextnotfound"></a>CRichEditView:: OnTextNotFound
 
-Wywoływane przez platformę, zawsze wtedy, gdy wyszukiwanie nie powiedzie się.
+Wywoływane przez platformę, gdy wyszukiwanie nie powiedzie się.
 
 ```
 virtual void OnTextNotFound(LPCTSTR lpszFind);
@@ -963,17 +963,17 @@ Tekst, który nie został odnaleziony.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłonić tę funkcję, aby zmienić powiadomienie dane wyjściowe z [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep).
+Przesłoń tę funkcję, aby zmienić powiadomienie wyjściowe z [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep).
 
-Aby uzyskać więcej informacji, zobacz [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]
 
-##  <a name="onupdatechareffect"></a>  CRichEditView::OnUpdateCharEffect
+##  <a name="onupdatechareffect"></a>CRichEditView:: OnUpdateCharEffect
 
-Struktura wywołuje tę funkcję, aby zaktualizować poleceń interfejsu użytkownika dla poleceń efekt znaków.
+Struktura wywołuje tę funkcję, aby zaktualizować interfejs użytkownika poleceń dla poleceń dotyczących efektów znakowych.
 
 ```
 void OnUpdateCharEffect(
@@ -985,27 +985,27 @@ void OnUpdateCharEffect(
 ### <a name="parameters"></a>Parametry
 
 *pCmdUI*<br/>
-Wskaźnik do [CCmdUI](../../mfc/reference/ccmdui-class.md) obiektu.
+Wskaźnik do obiektu [CCmdUI](../../mfc/reference/ccmdui-class.md) .
 
 *dwMask*<br/>
-Określa formatowanie maski znaków.
+Wskazuje maskę formatowania znaku.
 
 *dwEffect*<br/>
-Określa formatowanie efekt znaków.
+Określa efekt formatowania znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Maska *dwMask* Określa, który znak w atrybutach formatowania, aby sprawdzić. Flagi *dwEffect* listę atrybutów, które mają zestaw/Wyczyść formatowanie znaków.
+Maska *dwMask* określa atrybuty formatowania znaku do sprawdzenia. Flagi *dwEffect* wyświetlają atrybuty formatowania znaku, aby ustawić/wyczyścić.
 
-Aby uzyskać więcej informacji na temat *dwMask* i *dwEffect* parametrów i ich potencjalnych wartości, zobacz odpowiednie dane elementów członkowskich [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) w zestawie Windows SDK.
+Aby uzyskać więcej informacji o parametrach *dwMask* i *dwEffect* oraz ich potencjalnych wartościach, zobacz odpowiednie elementy członkowskie danych [Charformat](/windows/desktop/api/richedit/ns-richedit-_charformat) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]
 
-##  <a name="onupdateparaalign"></a>  CRichEditView::OnUpdateParaAlign
+##  <a name="onupdateparaalign"></a>CRichEditView:: OnUpdateParaAlign
 
-Struktura wywołuje tę funkcję, aby zaktualizować poleceń interfejsu użytkownika dla poleceń efekt akapitu.
+Struktura wywołuje tę funkcję, aby zaktualizować interfejs użytkownika poleceń dla poleceń z efektem akapitu.
 
 ```
 void OnUpdateParaAlign(
@@ -1016,24 +1016,24 @@ void OnUpdateParaAlign(
 ### <a name="parameters"></a>Parametry
 
 *pCmdUI*<br/>
-Wskaźnik do [CCmdUI](../../mfc/reference/ccmdui-class.md) obiektu.
+Wskaźnik do obiektu [CCmdUI](../../mfc/reference/ccmdui-class.md) .
 
 *wAlign*<br/>
-Wyrównanie akapitu do sprawdzenia. Jeden z następujących wartości:
+Wyrównanie akapitu do sprawdzenia. Jedna z następujących wartości:
 
-- PFA_LEFT wyrównanie akapitów z lewego marginesu.
+- PFA_LEFT Dopasuj akapity do lewego marginesu.
 
-- PFA_RIGHT wyrównanie akapitów do prawego marginesu.
+- PFA_RIGHT Dopasuj akapity do prawego marginesu.
 
-- PFA_CENTER Centrum akapitów między marginesów.
+- PFA_CENTER Wyśrodkuj akapity między marginesami.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]
 
-##  <a name="printinsiderect"></a>  CRichEditView::PrintInsideRect
+##  <a name="printinsiderect"></a>CRichEditView::P rintInsideRect
 
-Wywołaj tę funkcję, aby sformatować zakres tekstu w formancie edycji wzbogaconej w celu dopasowania *rectLayout* dla urządzenia określonego przez *kontrolera pDC*.
+Wywołaj tę funkcję, aby sformatować zakres tekstu w kontrolce edycji wzbogaconej w celu dopasowania go do *rectLayout* dla urządzenia określonego przez *PDC*.
 
 ```
 long PrintInsideRect(
@@ -1047,35 +1047,35 @@ long PrintInsideRect(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-Wskaźnik do kontekstu urządzenia dla obszaru danych wyjściowych.
+Wskaźnik do kontekstu urządzenia dla obszaru wyjściowego.
 
 *rectLayout*<br/>
-[Prostokąt](/windows/desktop/api/windef/ns-windef-tagrect) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) definiujący obszaru wyjściowego.
+[Rect](/windows/desktop/api/windef/ns-windef-tagrect) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) , który definiuje obszar wyjściowy.
 
 *nIndexStart*<br/>
-Liczony od zera indeks pierwszego wystąpienia znaku do sformatowania.
+Indeks (liczony od zera) pierwszego znaku do sformatowania.
 
 *nIndexStop*<br/>
-Liczony od zera indeks ostatniego znaku do sformatowania.
+Indeks (liczony od zera) ostatniego znaku do sformatowania.
 
 *bOutput*<br/>
-Wskazuje, czy tekst powinien być renderowany. W przypadku wartości FAŁSZ mierzy się tylko tekst.
+Wskazuje, czy tekst powinien być renderowany. W przypadku wartości FALSE tekst jest mierzony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks ostatni znak, który pasuje do obszaru wyjściowego plus jeden.
+Indeks ostatniego znaku, który mieści się w obszarze wyjściowym plus jeden.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle to wywołanie następuje po wywołaniu [CRichEditCtrl::DisplayBand](../../mfc/reference/cricheditctrl-class.md#displayband) która generuje dane wyjściowe.
+Zwykle jest to wywołanie [CRichEditCtrl::D isplayband](../../mfc/reference/cricheditctrl-class.md#displayband) , które generuje dane wyjściowe.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRichEditView::GetPaperSize](#getpapersize).
+  Zobacz przykład dla [CRichEditView:: GetPaperSize](#getpapersize).
 
-##  <a name="printpage"></a>  CRichEditView::PrintPage
+##  <a name="printpage"></a>CRichEditView::P rintPage
 
-Wywołaj tę funkcję, aby sformatować zakres tekstu w formancie edycji wzbogaconej na urządzeniu wyjściowym określonym przez *kontrolera pDC*.
+Wywołaj tę funkcję, aby sformatować zakres tekstu w kontrolce edycji wzbogaconej dla urządzenia wyjściowego określonego przez *PDC*.
 
 ```
 long PrintPage(
@@ -1090,24 +1090,24 @@ long PrintPage(
 Wskaźnik do kontekstu urządzenia dla danych wyjściowych strony.
 
 *nIndexStart*<br/>
-Liczony od zera indeks pierwszego wystąpienia znaku do sformatowania.
+Indeks (liczony od zera) pierwszego znaku do sformatowania.
 
 *nIndexStop*<br/>
-Liczony od zera indeks ostatniego znaku do sformatowania.
+Indeks (liczony od zera) ostatniego znaku do sformatowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks ostatni znak, który mieści się na stronie plus jeden.
+Indeks ostatniego znaku, który mieści się na stronie oraz jeden.
 
 ### <a name="remarks"></a>Uwagi
 
-Układ każdej strony jest kontrolowana przez [GetPageRect](#getpagerect) i [GetPrintRect](#getprintrect). Zwykle to wywołanie następuje po wywołaniu [CRichEditCtrl::DisplayBand](../../mfc/reference/cricheditctrl-class.md#displayband) która generuje dane wyjściowe.
+Układ każdej strony jest kontrolowany przez [GetPageRect](#getpagerect) i [GetPrintRect](#getprintrect). Zwykle jest to wywołanie [CRichEditCtrl::D isplayband](../../mfc/reference/cricheditctrl-class.md#displayband) , które generuje dane wyjściowe.
 
-Należy pamiętać, że marginesy są względne wobec strony fizycznej strony logicznej. W związku z tym marginesy zero będzie często obcina tekst, ponieważ wiele drukarek ma nie do drukowania obszarów na stronie. Aby uniknąć przycinanie tekstu, należy wywołać [SetMargins](#setmargins) i ustawić marginesy uzasadnione, przed rozpoczęciem drukowania.
+Należy zauważyć, że marginesy są względne względem strony fizycznej, a nie strony logicznej. W związku z tym marginesy zerowe będą często obcinać tekst, ponieważ wiele drukarek ma niedrukowalne obszary na stronie. Aby uniknąć obcinania tekstu, należy wywołać metodę Setmargins i ustawić odpowiednie marginesy przed drukowaniem. [](#setmargins)
 
-##  <a name="queryacceptdata"></a>  CRichEditView::QueryAcceptData
+##  <a name="queryacceptdata"></a>CRichEditView:: QueryAcceptData
 
-Metoda wywoływana przez platformę, by wkleić obiekt do bogatej edycji.
+Wywoływane przez platformę, aby wkleić obiekt do edycji wzbogaconej.
 
 ```
 virtual HRESULT QueryAcceptData(
@@ -1121,37 +1121,37 @@ virtual HRESULT QueryAcceptData(
 ### <a name="parameters"></a>Parametry
 
 *lpdataobj*<br/>
-Wskaźnik do [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) do wykonywania zapytań.
+Wskaźnik do [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) do zapytania.
 
 *lpcfFormat*<br/>
-Wskaźnik do formatu utraconych danych.
+Wskaźnik na akceptowalny format danych.
 
 *dwReco*<br/>
 Nie używany.
 
 *bReally*<br/>
-Wskazuje, jeśli operacja wklejania powinno być kontynuowane, czy nie.
+Wskazuje, czy operacja wklejania powinna być kontynuowana, czy nie.
 
 *hMetaFile*<br/>
-Dojście do metaplik używany do rysowania ikona elementu.
+Uchwyt do metapliku używanego do rysowania ikony elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość HRESULT zgłaszanie powodzenia operacji.
+Wartość HRESULT zgłasza sukces operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę funkcję, aby obsłużyć innej organizacji elementów modelu COM w klasie pochodnej dokumentu. Jest to zaawansowany możliwym do zastąpienia.
+Zastąp tę funkcję, aby obsługiwać inną organizację elementów COM w klasie dokumentu pochodnego. Jest to zaawansowany możliwy do zaawansowania.
 
-Aby uzyskać więcej informacji na temat HRESULT i `IDataObject`, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes) i [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)odpowiednio w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat `IDataObject`HRESULT i, zobacz odpowiednio [strukturę kodów błędów modelu COM](/windows/desktop/com/structure-of-com-error-codes) i [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]
 
-##  <a name="setcharformat"></a>  CRichEditView::SetCharFormat
+##  <a name="setcharformat"></a>CRichEditView:: SetCharFormat
 
-Wywołaj tę funkcję, aby ustawić formatowanie atrybutów dla nowego tekstu w tym znaków `CRichEditView` obiektu.
+Wywołaj tę funkcję, aby ustawić atrybuty formatowania znaku dla nowego tekstu w `CRichEditView` tym obiekcie.
 
 ```
 void SetCharFormat(CHARFORMAT2 cf);
@@ -1160,21 +1160,21 @@ void SetCharFormat(CHARFORMAT2 cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury zawierającej znak nowego domyślnego formatowanie atrybutów.
+Struktura [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) zawierająca nowe atrybuty domyślnego formatowania znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Tylko atrybuty określone przez `dwMask` członkiem *cf* są zmieniane przez tę funkcję.
+Tylko atrybuty określone przez `dwMask` składową *CF* są zmieniane przez tę funkcję.
 
-Aby uzyskać więcej informacji, zobacz [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) wiadomości i [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) Message i [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) Structure w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]
 
-##  <a name="setmargins"></a>  CRichEditView::SetMargins
+##  <a name="setmargins"></a>CRichEditView:: Setmargins
 
-Wywołaj tę funkcję, aby ustawić marginesy drukowania dla tego widoku bogatej edycji.
+Wywołaj tę funkcję, aby ustawić marginesy drukowania dla tego widoku wzbogaconej edycji.
 
 ```
 void SetMargins(const CRect& rectMargin);
@@ -1183,21 +1183,21 @@ void SetMargins(const CRect& rectMargin);
 ### <a name="parameters"></a>Parametry
 
 *rectMargin*<br/>
-Nowe wartości marginesów wydruku, mierzone w MM_TWIPS.
+Nowe wartości marginesu do drukowania, mierzone w MM_TWIPS.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli [m_nWordWrap](#m_nwordwrap) jest `WrapToTargetDevice`, należy wywołać [WrapChanged](#wrapchanged) po użyciu tę funkcję, aby dostosować ustawienia drukowania.
+Jeśli [m_nWordWrap](#m_nwordwrap) jest `WrapToTargetDevice`, należy wywołać [WrapChanged](#wrapchanged) po użyciu tej funkcji, aby dostosować charakterystykę drukowania.
 
-Należy zauważyć, że posługują się marginesy [PrintPage](#printpage) są względne wobec strony fizycznej strony logicznej. W związku z tym marginesy zero będzie często obcina tekst, ponieważ wiele drukarek ma nie do drukowania obszarów na stronie. Aby uniknąć przycinanie tekstu, należy wywołać użyj `SetMargins` można ustawić marginesy uzasadnione drukarki, przed rozpoczęciem drukowania.
+Należy zauważyć, że marginesy używane przez [PrintPage](#printpage) są względne względem strony fizycznej, a nie strony logicznej. W związku z tym marginesy zerowe będą często obcinać tekst, ponieważ wiele drukarek ma niedrukowalne obszary na stronie. Aby uniknąć obcinania tekstu, należy wywołać metodę USE `SetMargins` , aby ustawić odpowiednie marginesy drukarki przed drukowaniem.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRichEditView::GetPaperSize](#getpapersize).
+  Zobacz przykład dla [CRichEditView:: GetPaperSize](#getpapersize).
 
-##  <a name="setpapersize"></a>  CRichEditView::SetPaperSize
+##  <a name="setpapersize"></a>CRichEditView:: setpapersize
 
-Wywołaj tę funkcję, aby ustawić rozmiar papieru do drukowania tego widoku bogatej edycji.
+Wywołaj tę funkcję, aby ustawić rozmiar papieru na potrzeby drukowania widoku wzbogaconej edycji.
 
 ```
 void SetPaperSize(CSize sizePaper);
@@ -1206,19 +1206,19 @@ void SetPaperSize(CSize sizePaper);
 ### <a name="parameters"></a>Parametry
 
 *sizePaper*<br/>
-Nowe wartości rozmiar papieru do drukowania, mierzone w MM_TWIPS.
+Nowe wartości rozmiaru papieru do drukowania, mierzone w MM_TWIPS.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli [m_nWordWrap](#m_nwordwrap) jest `WrapToTargetDevice`, należy wywołać [WrapChanged](#wrapchanged) po użyciu tę funkcję, aby dostosować ustawienia drukowania.
+Jeśli [m_nWordWrap](#m_nwordwrap) jest `WrapToTargetDevice`, należy wywołać [WrapChanged](#wrapchanged) po użyciu tej funkcji, aby dostosować charakterystykę drukowania.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#161](../../mfc/codesnippet/cpp/cricheditview-class_11.cpp)]
 
-##  <a name="setparaformat"></a>  CRichEditView::SetParaFormat
+##  <a name="setparaformat"></a>CRichEditView:: SetParaFormat
 
-Wywołaj tę funkcję, aby ustawić atrybuty dla bieżącego zaznaczenia w tym formatowania akapitów `CRichEditView` obiektu.
+Wywołaj tę funkcję, aby ustawić atrybuty formatowania akapitu dla bieżącego zaznaczenia w `CRichEditView` tym obiekcie.
 
 ```
 BOOL SetParaFormat(PARAFORMAT2& pf);
@@ -1227,25 +1227,25 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>Parametry
 
 *PF*<br/>
-[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) struktury zawierającej nowym domyślnym akapitu atrybuty formatowania.
+[](/windows/desktop/api/richedit/ns-richedit-paraformat2) Struktura PARAFORMAT2a zawierająca nowe domyślne atrybuty formatowania akapitu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Tylko atrybuty określone przez `dwMask` członkiem *pf* są zmieniane przez tę funkcję.
+Tylko atrybuty określone przez `dwMask` element członkowski *PF* są zmieniane przez tę funkcję.
 
-Aby uzyskać więcej informacji, zobacz [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat) wiadomości i [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat) Message i [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Structure w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]
 
-##  <a name="textnotfound"></a>  CRichEditView::TextNotFound
+##  <a name="textnotfound"></a>CRichEditView:: TextNotFound
 
-Wywołaj tę funkcję, aby zresetować stan wewnętrzny wyszukiwania [CRichEditView](../../mfc/reference/cricheditview-class.md) kontroli po wywołaniu nie powiodło się [FindText](#findtext).
+Wywołaj tę funkcję, aby zresetować stan przeszukiwania wewnętrznego formantu [CRichEditView](../../mfc/reference/cricheditview-class.md) po nieudanym wywołaniu do [ciąg FindText](#findtext).
 
 ```
 void TextNotFound(LPCTSTR lpszFind);
@@ -1254,21 +1254,21 @@ void TextNotFound(LPCTSTR lpszFind);
 ### <a name="parameters"></a>Parametry
 
 *lpszFind*<br/>
-Zawiera ciąg tekstowy, który nie został znaleziony.
+Zawiera ciąg tekstowy, który nie został odnaleziony.
 
 ### <a name="remarks"></a>Uwagi
 
-Zalecane jest, że tej metody można wywołać natychmiast po zakończonymi niepowodzeniem wywołaniami do [FindText](#findtext) tak, aby prawidłowo zresetowaniu stan wewnętrzny wyszukiwania kontrolki.
+Zaleca się, aby ta metoda była wywoływana natychmiast po nieudanych wywołaniach do [ciąg FindText](#findtext) , tak aby wewnętrzny stan wyszukiwania kontrolki został prawidłowo zresetowany.
 
-*LpszFind* parametr powinien zawierać taką samą zawartość jako ciąg do [FindText](#findtext). Po przywróceniu stanu wewnętrznego wyszukiwania, Metoda ta będzie wywoływać [OnTextNotFound](#ontextnotfound) metody za pomocą podanego ciągu.
+Parametr *lpszFind* powinien zawierać tę samą zawartość co ciąg dostarczony do [ciąg FindText](#findtext). Po zresetowaniu stanu wyszukiwania wewnętrznego ta metoda wywoła metodę [OnTextNotFound](#ontextnotfound) z podanym ciągiem wyszukiwania.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRichEditView::FindText](#findtext).
+  Zobacz przykład dla [CRichEditView:: ciąg FindText](#findtext).
 
-##  <a name="wrapchanged"></a>  CRichEditView::WrapChanged
+##  <a name="wrapchanged"></a>CRichEditView:: WrapChanged
 
-Wywołaj tę funkcję, gdy zmieniono ustawienia drukowania ( [SetMargins](#setmargins) lub [SetPaperSize](#setpapersize)).
+Wywołaj tę funkcję po zmianie charakterystyki drukowania (Setmargins lub setpapersize). [](#setmargins) [](#setpapersize)
 
 ```
 virtual void WrapChanged();
@@ -1276,7 +1276,7 @@ virtual void WrapChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Override tę funkcję, aby zmodyfikować sposób, w widoku edycji wzbogaconej reaguje na zmiany w [m_nWordWrap](#m_nwordwrap) lub drukowania cechy ( [OnPrinterChanged](#onprinterchanged)).
+Zastąp tę funkcję, aby zmodyfikować sposób, w jaki widok edycji wzbogaconej reaguje na zmiany w [m_nWordWrap](#m_nwordwrap) lub charakterystyce drukowania ( [OnPrinterChanged](#onprinterchanged)).
 
 ### <a name="example"></a>Przykład
 
@@ -1284,7 +1284,7 @@ Override tę funkcję, aby zmodyfikować sposób, w widoku edycji wzbogaconej re
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy program WORDPAD dla MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>

@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 15717c6f2f34836de9b546af203a45dc8099d4d4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222352"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866043"
 ---
 # <a name="namespaces-c"></a>Przestrzenie nazw (C++)
 
-Przestrzeń nazw jest deklaratywne region, który obejmuje zakres do identyfikatorów (nazwy typów, funkcje, zmienne itp.) wewnątrz niego. Przestrzenie nazw są używane do organizowania kodu w logiczne grupy i aby zapobiec kolizjom nazw, które mogą wystąpić, szczególnie w przypadku, gdy bazy kodu obejmuje wiele bibliotek. Wszystkie identyfikatory w zakresie przestrzeni nazw są widoczne dla siebie nawzajem bez kwalifikacji. Identyfikatory poza przestrzenią nazw, mogą uzyskiwać dostęp do elementów członkowskich przy użyciu w pełni kwalifikowanej nazwy dla każdego identyfikatora, na przykład `std::vector<std::string> vec;`, lub przez [użycie — deklaracja](../cpp/using-declaration.md) dla pojedynczego identyfikatora (`using std::string`), lub [użycie dyrektywy](../cpp/namespaces-cpp.md#using_directives) dla wszystkich identyfikatorów w przestrzeni nazw (`using namespace std;`). Kod w plikach nagłówkowych zawsze należy używać w pełni kwalifikowanej nazwy obszaru nazw.
+Przestrzeń nazw jest regionem deklaratywnym, który dostarcza zakres do identyfikatorów (nazwy typów, funkcji, zmiennych itp.). Przestrzenie nazw służą do organizowania kodu w grupy logiczne i zapobiegania kolizjom nazw, które mogą wystąpić zwłaszcza wtedy, gdy baza kodu zawiera wiele bibliotek. Wszystkie identyfikatory w zakresie przestrzeni nazw są widoczne dla siebie bez kwalifikacji. Identyfikatory poza przestrzenią nazw mogą uzyskiwać dostęp do elementów członkowskich przy użyciu w pełni kwalifikowanej nazwy dla każdego `std::vector<std::string> vec;`identyfikatora, na przykład lub w innej [deklaracji using](../cpp/using-declaration.md) dla jednego identyfikatora`using std::string`() lub [dyrektywy using](../cpp/namespaces-cpp.md#using_directives) dla wszystkich identyfikatory w przestrzeni nazw (`using namespace std;`). Kod w plikach nagłówkowych powinien zawsze używać w pełni kwalifikowanej nazwy przestrzeni nazw.
 
-W poniższym przykładzie pokazano deklarację przestrzeni nazw i trzy sposoby na to, że kod poza przestrzenią nazw, można uzyskuje dostęp do swoich elementów członkowskich.
+W poniższym przykładzie przedstawiono deklarację przestrzeni nazw i trzy sposoby, w których kod poza obszarem nazw może uzyskać dostęp do swoich członków.
 
 ```cpp
 namespace ContosoData
@@ -32,7 +32,7 @@ namespace ContosoData
 }
 ```
 
-Użyj w pełni kwalifikowana nazwa:
+Użyj w pełni kwalifikowanej nazwy:
 
 ```cpp
 ContosoData::ObjectManager mgr;
@@ -40,7 +40,7 @@ mgr.DoSomething();
 ContosoData::Func(mgr);
 ```
 
-Użyj, przy użyciu deklaracji w celu umożliwienia jeden identyfikator zakresu:
+Użyj deklaracji using, aby przenieść jeden identyfikator do zakresu:
 
 ```cpp
 using ContosoData::ObjectManager;
@@ -48,7 +48,7 @@ ObjectManager mgr;
 mgr.DoSomething();
 ```
 
-Użyj, przy użyciu dyrektywy, aby wyświetlić wszystkie elementy w przestrzeni nazw do zakresu:
+Użyj dyrektywy using, aby przenieść wszystkie elementy w przestrzeni nazw do zakresu:
 
 ```cpp
 using namespace ContosoData;
@@ -58,18 +58,18 @@ mgr.DoSomething();
 Func(mgr);
 ```
 
-## <a id="using_directives"></a> dyrektywy Using
+## <a id="using_directives"></a>dyrektywy using
 
-**Przy użyciu** dyrektywy zezwala na wszystkie nazwy **przestrzeni nazw** bez *nazwę przestrzeni nazw* jako jawne kwalifikator. Użyj, przy użyciu dyrektywy w pliku implementacji (tj. *.cpp), korzystając z kilku różnych identyfikatorów w przestrzeni nazw; Jeśli używane są tylko jeden lub dwa identyfikatory, rozważ użycie deklaracji tylko zapewnić tych identyfikatorów zakresu i nie wszystkie identyfikatory w przestrzeni nazw. Jeśli zmienna lokalna ma taką samą nazwę jak zmienna przestrzeni nazw, zmienna przestrzeni nazw jest ukryty. Jest to błąd, mieć zmienną o takiej samej nazwie jako zmiennej globalnej przestrzeni nazw.
+Dyrektywa **using** zezwala na używanie wszystkich nazw w **przestrzeni nazw** bez *nazwy przestrzeni nazw* jako jawnego kwalifikatora. Użyj dyrektywy using w pliku implementacji (tj. *. cpp), jeśli używasz kilku różnych identyfikatorów w przestrzeni nazw; Jeśli używasz tylko jednego lub dwóch identyfikatorów, rozważ użycie deklaracji using, aby przenieść te identyfikatory tylko do zakresu, a nie wszystkich identyfikatorów w przestrzeni nazw. Jeśli zmienna lokalna ma taką samą nazwę jak zmienna przestrzeni nazw, zmienna przestrzeni nazw jest ukryta. Błędem jest zmienna przestrzeni nazw o takiej samej nazwie jak zmienna globalna.
 
 > [!NOTE]
->  Using — dyrektywa można umieścić w górnej części pliku .cpp (w zakresie pliku), lub wewnątrz definicji klasy lub funkcji.
+>  Dyrektywa using może być umieszczona w górnej części pliku. cpp (w zakresie pliku) lub wewnątrz definicji klasy lub funkcji.
 >
->  Ogólnie rzecz biorąc, należy unikać umieszczania w plikach nagłówkowych przy użyciu dyrektyw (* .h) ponieważ każdego pliku, który zawiera ten nagłówek zostanie wyświetlone wszystkie elementy w przestrzeni nazw do zakresu, które mogą powodować ukrywaniem nazwy oraz problemy kolizji nazw, które są bardzo trudno debugować. Zawsze używaj w pełni kwalifikowanych nazw w pliku nagłówkowym. Jeśli te nazwy zbyt długo, można użyć aliasu przestrzeni nazw skrócić je. (Zobacz poniżej).
+>  Ogólnie rzecz biorąc, Unikaj umieszczania dyrektyw Using w plikach nagłówkowych (*. h), ponieważ każdy plik, który zawiera ten nagłówek, spowoduje przekazanie wszystkiego w przestrzeni nazw, co może spowodować Ukrywanie nazw i kolizję nazw, które są bardzo trudne do debugowania. Zawsze używaj w pełni kwalifikowanych nazw w pliku nagłówkowym. Jeśli te nazwy są zbyt długie, można użyć aliasu przestrzeni nazw, aby je skrócić. (Zobacz poniżej).
 
-## <a name="declaring-namespaces-and-namespace-members"></a>Deklarowanie przestrzeni nazw i przestrzeni nazw elementów członkowskich
+## <a name="declaring-namespaces-and-namespace-members"></a>Deklarowanie przestrzeni nazw i elementów członkowskich przestrzeni nazw
 
-Zazwyczaj można zadeklarować przestrzeni nazw w pliku nagłówkowym. Jeśli Twoje implementacji funkcji znajdują się w oddzielnym pliku, kwalifikują się nazwy funkcji, jak w poniższym przykładzie.
+Zazwyczaj należy zadeklarować przestrzeń nazw w pliku nagłówkowym. Jeśli implementacje funkcji znajdują się w osobnym pliku, należy zakwalifikować nazwy funkcji, jak w tym przykładzie.
 
 ```cpp
 //contosoData.h
@@ -81,7 +81,7 @@ namespace ContosoDataServer
 }
 ```
 
-Implementacje funkcji w contosodata.cpp należy używać w pełni kwalifikowana nazwa, nawet wtedy, gdy umieścisz **przy użyciu** dyrektywę w górnej części pliku:
+Implementacje funkcji w contosodata. cpp powinny używać w pełni kwalifikowanej nazwy, nawet jeśli w górnej części pliku zostanie umieszczona dyrektywa **using** :
 
 ```cpp
 #include "contosodata.h"
@@ -96,39 +96,38 @@ void ContosoDataServer::Foo() // use fully-qualified name here
 int ContosoDataServer::Bar(){return 0;}
 ```
 
-Przestrzeń nazw może być zadeklarowana w blokach w jednym pliku, a w wielu plikach. Kompilator tworzy sprzężenie części ze sobą podczas przetwarzania wstępnego, a wynikowy przestrzeń nazw zawiera wszystkie elementy członkowskie zadeklarowana we wszystkich częściach. Na przykład jest obszar nazw std, który jest zadeklarowany w każdym z plików nagłówka w bibliotece standardowej.
+Przestrzeń nazw może być zadeklarowana w wielu blokach w jednym pliku i w wielu plikach. Kompilator sprzęga części podczas przetwarzania wstępnego, a powstająca przestrzeń nazw zawiera wszystkie elementy członkowskie zadeklarowane we wszystkich częściach. Przykładem jest standardowa przestrzeń nazw, która jest zadeklarowana w każdym z plików nagłówkowych w standardowej bibliotece.
 
-Elementy członkowskie przestrzeni nazw o nazwie można zdefiniować poza przestrzenią nazw one zadeklarowane przez jawna kwalifikacja nazwa definiowanego. Jednakże definicja musi znajdować się po punkcie deklaracji w przestrzeni nazw, który zawiera deklarację przestrzeni nazw. Na przykład:
+Elementy członkowskie nazwanej przestrzeni nazw można zdefiniować poza przestrzenią nazw, w której są one deklarowane przez jawną kwalifikację zdefiniowanej nazwy. Jednakże definicja musi pojawić się po punkcie deklaracji w przestrzeni nazw, która jest ujęta w przestrzeń nazw deklaracji. Na przykład:
 
 ```cpp
 // defining_namespace_members.cpp
 // C2039 expected
 namespace V {
-        void f();
-    }
+    void f();
+}
 
-    void V::f() { }        // ok
-    void V::g() { }        // C2039, g() is not yet a member of V
+void V::f() { }        // ok
+void V::g() { }        // C2039, g() is not yet a member of V
 
-    namespace V {
-        void g();
-    }
+namespace V {
+    void g();
 }
 ```
 
-Ten błąd może wystąpić, gdy elementów członkowskich przestrzeni nazw są deklarowane w wiele plików nagłówkowych i tych nagłówków nie zostały uwzględnione w odpowiedniej kolejności.
+Ten błąd może wystąpić, gdy elementy członkowskie przestrzeni nazw są zadeklarowane w wielu plikach nagłówkowych, a nagłówki te nie zostały uwzględnione w poprawnej kolejności.
 
 ## <a name="the-global-namespace"></a>Globalna przestrzeń nazw
 
-Jeśli identyfikator nie jest zadeklarowany w jawną przestrzeń nazw, jest częścią niejawne globalnej przestrzeni nazw. Ogólnie rzecz biorąc, należy unikać, dzięki czemu deklaracji w zakresie globalnym, jeśli to możliwe, z wyjątkiem punktu wejścia [funkcji main](../c-language/main-function-and-program-execution.md), co jest wymagane w globalnej przestrzeni nazw. Aby kwalifikuj jawnie identyfikator globalny, użyj operatora rozpoznawania zakresu bez nazwy, podobnie jak w `::SomeFunction(x);`. Będzie to odróżnić identyfikator od żadnego elementu o tej samej nazwie w innych nazw, a także pozwoli to uczynić kod łatwiejszym dla innych użytkowników zrozumieć.
+Jeśli identyfikator nie jest zadeklarowany w jawnej przestrzeni nazw, jest częścią niejawnej globalnej przestrzeni nazw. Ogólnie rzecz biorąc, należy unikać tworzenia deklaracji w zakresie globalnym, gdy jest to możliwe, z wyjątkiem [funkcji Main](../c-language/main-function-and-program-execution.md)punktu wejścia, która musi znajdować się w globalnej przestrzeni nazw. Aby jawnie zakwalifikować identyfikator globalny, użyj operatora rozpoznawania zakresu bez nazwy, jak w `::SomeFunction(x);`. Spowoduje to odróżnienie identyfikatora od wszystkich elementów o tej samej nazwie w innej przestrzeni nazw, a także pomoże Ci ułatwić zrozumienie kodu innym użytkownikom.
 
-## <a name="the-std-namespace"></a>Obszar nazw std
+## <a name="the-std-namespace"></a>Przestrzeń nazw std
 
-Wszystkie typy biblioteki standardowej języka C++ i funkcje są deklarowane w `std` przestrzeni nazw lub przestrzeni nazw zagnieździć `std`.
+Wszystkie C++ standardowe typy i funkcje biblioteki są deklarowane w `std` przestrzeni nazw lub przestrzeni nazw `std`zagnieżdżonych wewnątrz.
 
 ## <a name="nested-namespaces"></a>Zagnieżdżone przestrzenie nazw
 
-Przestrzenie nazw mogą być zagnieżdżone. Ma zwykłych zagnieżdżone przestrzenie nazw niekwalifikowanych dostęp do elementów członkowskich jego elementu nadrzędnego, ale elementy nadrzędne bez niekwalifikowanej dostępu do zagnieżdżone przestrzenie nazw (chyba że jest ona zadeklarowana jako wbudowana), jak pokazano w poniższym przykładzie:
+Przestrzenie nazw mogą być zagnieżdżane. Zwykła zagnieżdżona przestrzeń nazw ma niekwalifikowany dostęp do elementów członkowskich jego elementu nadrzędnego, ale nadrzędne elementy członkowskie nie mają niekwalifikowanego dostępu do zagnieżdżonej przestrzeni nazw (chyba że jest ona zadeklarowana jako wbudowana), jak pokazano w następującym przykładzie:
 
 ```cpp
 namespace ContosoDataServer
@@ -146,11 +145,11 @@ namespace ContosoDataServer
 }
 ```
 
-Zwykłe zagnieżdżone przestrzenie nazw może służyć do hermetyzacji szczegóły wewnętrznej implementacji, które nie są częścią interfejsu publicznego nadrzędna przestrzeń nazw.
+Zwykłe zagnieżdżone przestrzenie nazw mogą być używane do hermetyzacji wewnętrznych szczegółów implementacji, które nie są częścią publicznego interfejsu przestrzeni nazw nadrzędnej.
 
-## <a name="inline-namespaces-c-11"></a>Wbudowane przestrzenie nazw (c ++ 11)
+## <a name="inline-namespaces-c-11"></a>Wbudowane przestrzenieC++ nazw (11)
 
-W przeciwieństwie do zwykłych zagnieżdżone przestrzenie nazw elementów członkowskich przestrzeni nazw usługi wbudowane są traktowane jako elementy członkowskie nadrzędna przestrzeń nazw. Cecha ta umożliwia wyszukiwanie zależne argumentu funkcji przeciążenia do pracy nad funkcjami, które mają przeciążenia elementu nadrzędnego i zagnieżdżone wbudowane przestrzeni nazw. Umożliwia również zadeklarować specjalizację w nadrzędna przestrzeń nazw dla szablonu, który jest zadeklarowany w przestrzeni nazw wbudowane. W poniższym przykładzie pokazano sposób zewnętrznego kodu tworzy powiązanie z przestrzeni nazw wbudowane domyślnie:
+W przeciwieństwie do zwykłej zagnieżdżonej przestrzeni nazw, elementy członkowskie wbudowanej przestrzeni nazw są traktowane jako elementy członkowskie nadrzędnej przestrzeni nazw. Ta cecha włącza wyszukiwanie zależne od argumentów dla przeciążonych funkcji do pracy z funkcjami, które mają przeciążenia w nadrzędnej i zagnieżdżonej wbudowanej przestrzeni nazw. Umożliwia także zadeklarować specjalizację w nadrzędnej przestrzeni nazw szablonu, który jest zadeklarowany w wbudowanej przestrzeni nazw. Poniższy przykład pokazuje, jak kod zewnętrzny jest domyślnie powiązany z wbudowaną przestrzenią nazw:
 
 ```cpp
 //Header.h
@@ -184,7 +183,7 @@ int main()
 }
 ```
 
-Poniższy przykład pokazuje, jak można zadeklarować specjalizację w obiekcie nadrzędnym szablonu, który jest zadeklarowany w przestrzeni nazw wbudowane:
+Poniższy przykład pokazuje, jak można zadeklarować specjalizację w elemencie nadrzędnym szablonu, który jest zadeklarowany w wbudowanej przestrzeni nazw:
 
 ```cpp
 namespace Parent
@@ -202,11 +201,11 @@ namespace Parent
 }
 ```
 
-Wbudowane przestrzenie nazw można użyć jako mechanizm obsługi wersji, zarządzanie zmianami w bibliotece interfejsu publicznego. Na przykład można utworzyć pojedynczy nadrzędna przestrzeń nazw i hermetyzacji każdą wersję interfejsu w jego własnej przestrzeni nazw zagnieżdżone wewnątrz obiektu nadrzędnego. Przestrzeń nazw, która zawiera najbardziej ostatnie lub preferowaną wersję kwalifikuje się jako wbudowane i dlatego jest narażony, tak jakby bezpośrednimi członkami nadrzędna przestrzeń nazw. Kod klienta, który wywołuje Parent::Class będzie automatycznie wiązany nowego kodu. Klienci, którzy wolą używać starszej wersji nadal do niego dostęp przy użyciu w pełni kwalifikowana ścieżka do zagnieżdżone przestrzenie nazw, który ma kod.
+Aby zarządzać zmianami interfejsu publicznego biblioteki programu, można użyć wbudowanych przestrzeni nazw jako mechanizmu obsługi wersji. Na przykład można utworzyć pojedynczą przestrzeń nazw nadrzędną i hermetyzować poszczególne wersje interfejsu we własnym obszarze nazw zagnieżdżonych w elemencie nadrzędnym. Przestrzeń nazw, która zawiera najnowszą lub preferowaną wersję, jest kwalifikowana jako wbudowana i dlatego jest udostępniana tak, jakby była bezpośrednią składową nadrzędnej przestrzeni nazw. Kod klienta, który wywołuje element nadrzędny:: Class, zostanie automatycznie powiązany z nowym kodem. Klienci, którzy wolą używać starszej wersji, mogą nadal uzyskać do niej dostęp przy użyciu w pełni kwalifikowanej ścieżki do zagnieżdżonej przestrzeni nazw, która ma ten kod.
 
-Wbudowane — słowo kluczowe musi zostać zastosowana do pierwszej deklaracji przestrzeni nazw w jednostce kompilacji.
+Wbudowane słowo kluczowe musi być stosowane do pierwszej deklaracji przestrzeni nazw w jednostce kompilacji.
 
-Poniższy przykład przedstawia dwie wersje interfejsu, każde WE zagnieżdżone przestrzenie nazw. `v_20` Przestrzeń nazw ma wprowadzając pewne modyfikacje z `v_10` interfejsu i jest oznaczony jako wbudowane. Kod klienta, który używa wywołań i Nowa biblioteka `Contoso::Funcs::Add` wywoła wersji v_20. Kod, który próbuje wywołać `Contoso::Funcs::Divide` uzyskają błąd w czasie kompilacji. Jeśli tak naprawdę potrzebują tej funkcji, mogą uzyskiwać dostęp `v_10` wersji przez jawne wywołanie `Contoso::v_10::Funcs::Divide`.
+Poniższy przykład przedstawia dwie wersje interfejsu, każdy w zagnieżdżonej przestrzeni nazw. Przestrzeń nazw ma pewne modyfikacje `v_10` w interfejsie i jest oznaczona jako wbudowana. `v_20` Kod klienta korzystający z nowej biblioteki i wywołań `Contoso::Funcs::Add` wywoła wersję v_20. Kod, który próbuje `Contoso::Funcs::Divide` wywołać, spowoduje teraz błąd czasu kompilacji. Jeśli naprawdę potrzebują tej funkcji, nadal mogą uzyskać dostęp `v_10` do wersji przez jawne wywołanie. `Contoso::v_10::Funcs::Divide`
 
 ```cpp
 namespace Contoso
@@ -242,9 +241,9 @@ namespace Contoso
 }
 ```
 
-## <a id="namespace_aliases"></a> Aliasy Namespace
+## <a id="namespace_aliases"></a>Aliasy przestrzeni nazw
 
-Namespace nazw musi być unikatowa, co oznacza, że często nie powinny być zbyt krótki. Jeśli długość nazwy sprawia, że kod jest trudne do odczytania, lub jest niewygodna do typu w pliku nagłówkowym, których nie można użyć dyrektywy using, a następnie możesz wprowadzić alias przestrzeni nazw, który stanowi skrót od nazwy. Na przykład:
+Nazwy przestrzeni nazw muszą być unikatowe, co oznacza, że często nie powinny być za krótkie. Jeśli długość nazwy utrudnia odczytywanie kodu lub żmudnym do wpisywania w pliku nagłówkowym, gdzie nie można użyć dyrektyw, można utworzyć alias przestrzeni nazw, który służy jako skrót dla rzeczywistej nazwy. Na przykład:
 
 ```cpp
 namespace a_very_long_namespace_name { class Foo {}; }
@@ -254,7 +253,7 @@ void Bar(AVLNN::Foo foo){ }
 
 ## <a name="anonymous-or-unnamed-namespaces"></a>anonimowe lub nienazwane przestrzenie nazw
 
-Można utworzyć jawną przestrzeń nazw, ale nie nadaj jej nazwę:
+Można utworzyć jawną przestrzeń nazw, ale nie nadać jej nazwy:
 
 ```cpp
 namespace
@@ -263,7 +262,7 @@ namespace
 }
 ```
 
-Jest to nazywane nienazwane lub anonimowe przestrzeni nazw i jest to przydatne, gdy użytkownik chce ukrywanie deklaracje zmiennych do kodu w innych plikach (czyli ciągowych powiązanie wewnętrzne) bez konieczności tworzenia nazwanego przestrzeni nazw. Cały kod w tym samym pliku widoczne identyfikatorów w przestrzeni nazw usługi bez nazwy, ale identyfikatorów, wraz z przestrzeni nazw, nie są widoczne poza ten plik, lub bardziej precyzyjne poza jednostki translacji.
+Jest to nazywane nienazwanymi lub anonimowymi przestrzeniami nazw i jest przydatne, gdy chcesz, aby deklaracje zmiennych były niewidoczne w kodzie w innych plikach (tj. powiązać wewnętrzne powiązania) bez konieczności tworzenia nazwanego obszaru nazw. Cały kod w tym samym pliku może zobaczyć identyfikatory w nienazwanym obszarze nazw, ale identyfikatory, wraz z samą przestrzenią nazw, nie są widoczne poza tym plikiem — lub dokładniej poza jednostką tłumaczenia.
 
 ## <a name="see-also"></a>Zobacz także
 

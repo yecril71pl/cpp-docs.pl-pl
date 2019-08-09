@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Tworzenie wystąpień shared_ptr i korzystanie'
+title: 'Instrukcje: Tworzenie wystąpień shared_ptr i korzystanie z nich'
 ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821682"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866147"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>Instrukcje: Tworzenie wystąpień shared_ptr i korzystanie
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>Instrukcje: Tworzenie wystąpień shared_ptr i korzystanie z nich
 
 Typ `shared_ptr` jest inteligentnym wskaźnikiem w standardowej bibliotece języka C++ przeznaczonym dla scenariuszy, w których więcej niż jeden właściciel może być zmuszony do zarządzania okresem istnienia obiektu w pamięci. Po zainicjowaniu wskaźnika `shared_ptr` można go kopiować, przekazywać wg wartości w argumentach funkcji oraz przypisywać do innych wystąpień wskaźnika `shared_ptr`. Wszystkie wystąpienia wskazują ten sam obiekt oraz mają wspólny dostęp do jednego „bloku sterującego”, który zwiększa i zmniejsza liczbę odwołań po każdym dodaniu nowego wskaźnika `shared_ptr`, wykroczeniu przez wskaźnik poza zakres lub jego zresetowaniu. Gdy licznik odwołań osiągnie zero, blok sterujący usuwa zasób pamięci i samego siebie.
 
 Na ilustracji poniżej widać kilka wystąpień wskaźnika `shared_ptr`, które wskazują jedną lokalizację w pamięci.
 
-![Diagram wskaźnika współdzielona](../cpp/media/shared_ptr.png "Shared wskaźnika diagramu")
+![Udostępniony diagram wskaźników](../cpp/media/shared_ptr.png "Udostępniony diagram wskaźników")
 
-## <a name="example-setup"></a>Konfiguracja przykładu
+## <a name="example-setup"></a>Przykładowa konfiguracja
 
-Przykłady, które należy wykonać wszystkie założono, że został uwzględniony w nagłówkach wymagane i zadeklarowana wymaganych typów, jak pokazano poniżej:
+Poniższe przykłady założono, że zostały dołączone wymagane nagłówki i zadeklarowano wymagane typy, jak pokazano poniżej:
 
 ```cpp
 // shared_ptr-examples.cpp
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>Przykład 1
 
-Możliwe, używaj [make_shared](../standard-library/memory-functions.md#make_shared) funkcji, aby utworzyć `shared_ptr` podczas tworzenia zasobu pamięci po raz pierwszy. Funkcja `make_shared` jest bezpieczna pod względem wyjątków. Wykorzystuje to samo wywołanie, aby przydzielić pamięci dla bloku sterowania i zasobów, co zmniejsza koszty tworzenia. Jeśli nie używasz `make_shared`, musisz użyć jawnego `new` wyrażenia do utworzenia obiektu, następnie przekazać go do `shared_ptr` konstruktora. Poniższy przykład pokazuje różne sposoby deklarowania i inicjowania wskaźnika `shared_ptr` razem z nowym obiektem.
+`shared_ptr` Jeśli to możliwe, użyj funkcji [make_shared](../standard-library/memory-functions.md#make_shared) , aby utworzyć gdy zasób pamięci jest tworzony po raz pierwszy. Funkcja `make_shared` jest bezpieczna pod względem wyjątków. Używa tego samego wywołania do przydzielania pamięci dla bloku sterowania i zasobu, co zmniejsza obciążenie związane z konstruowaniem. Jeśli nie używasz `make_shared`, musisz użyć jawnego `new` wyrażenia, aby utworzyć obiekt przed przekazaniem go do `shared_ptr` konstruktora. Poniższy przykład pokazuje różne sposoby deklarowania i inicjowania wskaźnika `shared_ptr` razem z nowym obiektem.
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -84,7 +84,7 @@ W przykładzie poniżej pokazano sposób deklarowania i inicjowania wystąpień 
 
 ## <a name="example-3"></a>Przykład 3
 
-`shared_ptr` jest także przydatny w C++ kontenery standardowej biblioteki, gdy są używane algorytmy kopiujące elementy. We wskaźniku `shared_ptr` można opakować elementy, po czym skopiować go do innych kontenerów przy założeniu, że bazowa pamięć jest zajęta tylko przez niezbędny czas, nie dłużej. Poniższy przykład pokazuje, jak używać algorytmu `replace_copy_if` do wystąpień wskaźnika `shared_ptr` w wektorze.
+`shared_ptr`jest również przydatne w C++ kontenerach biblioteki standardowej, gdy używane są algorytmy kopiujące elementy. We wskaźniku `shared_ptr` można opakować elementy, po czym skopiować go do innych kontenerów przy założeniu, że bazowa pamięć jest zajęta tylko przez niezbędny czas, nie dłużej. Poniższy przykład pokazuje, jak używać algorytmu `remove_copy_if` do wystąpień wskaźnika `shared_ptr` w wektorze.
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
@@ -98,17 +98,17 @@ Za pomocą funkcji `dynamic_pointer_cast`, `static_pointer_cast` i `const_pointe
 
 Wskaźnik `shared_ptr` można przekazać do innej funkcji w następujące sposoby:
 
-- Przekazanie wskaźnika `shared_ptr` wg wartości. Powoduje to wywołanie konstruktora kopiującego, zwiększenie wartości licznika odwołań i przekazanie własności obiektowi wywoływanemu. Brak niewielkiej ilości obciążenia, w tej operacji, które mogą być istotne w zależności od tego, ile `shared_ptr` obiektów, przechodząc. Użyj tej opcji, gdy kontrakt kodu niejawny lub jawny między obiektami wywołującym i wywoływanym wymaga, że obiekt wywoływany był właścicielem.
+- Przekazanie wskaźnika `shared_ptr` wg wartości. Powoduje to wywołanie konstruktora kopiującego, zwiększenie wartości licznika odwołań i przekazanie własności obiektowi wywoływanemu. W tej operacji występuje niewielka część kosztów, która może być istotna w zależności od liczby `shared_ptr` przekazywanych obiektów. Użyj tej opcji, gdy implikowany lub jawny kontrakt kodu między obiektem wywołującym i wywoływanym wymaga, aby element wywoływany był właścicielem.
 
-- Przekazanie wskaźnika `shared_ptr` wg odwołania lub odwołania stałego. W tym przypadku zwiększany nie jest licznik odwołań, a obiekt wywoływany ma dostęp do wskaźnika tak długo, jak długo obiekt wywołujący nie wykraczają poza zakres. Alternatywnie obiekt wywoływany może wybrać, aby utworzyć `shared_ptr` na podstawie odwołania i stać się współwłaścicielem. Opcji należy używać w sytuacjach, gdy obiekt wywołujący nic nie wie o obiekcie wywoływanym albo kiedy trzeba przekazać wskaźnik `shared_ptr`, ale ze względów wydajnościowych operacje kopiowania są niepożądane.
+- Przekazanie wskaźnika `shared_ptr` wg odwołania lub odwołania stałego. W tym przypadku licznik odwołań nie jest zwiększany, a wywoływany może uzyskać dostęp do wskaźnika, o ile obiekt wywołujący nie wykracza poza zakres. Lub element wywoływany może zdecydować się na utworzenie `shared_ptr` na podstawie odwołania i udostępnienie właściciela. Opcji należy używać w sytuacjach, gdy obiekt wywołujący nic nie wie o obiekcie wywoływanym albo kiedy trzeba przekazać wskaźnik `shared_ptr`, ale ze względów wydajnościowych operacje kopiowania są niepożądane.
 
-- Przekazanie bazowego wskaźnika lub odwołania do bazowego obiektu. Włącza / / wywoływany użyć obiektu, ale nie umożliwiają współwłaścicielem ani wydłużać jego okresu istnienia. Jeśli obiekt wywoływany tworzy `shared_ptr` ze surowego wskaźnika, nowy `shared_ptr` jest niezależny od oryginału i nie steruje bazowym zasobem. Opcję należy stosować w przypadku, gdy kontrakt między obiektami wywołującym i wywoływanym jednoznacznie określa, że obiekt wywołujący zachowuje własność nad okresem istnienia wskaźnika `shared_ptr`.
+- Przekazanie bazowego wskaźnika lub odwołania do bazowego obiektu. Dzięki temu obiekt wywoływany może korzystać z obiektu, ale nie pozwala na udostępnianie własności ani zwiększenie okresu istnienia. Jeśli obiekt `shared_ptr` wywoływany tworzy ze wskaźnika pierwotnego, nowy `shared_ptr` jest niezależny od oryginału i nie kontroluje bazowego zasobu. Opcję należy stosować w przypadku, gdy kontrakt między obiektami wywołującym i wywoływanym jednoznacznie określa, że obiekt wywołujący zachowuje własność nad okresem istnienia wskaźnika `shared_ptr`.
 
-- Podczas wybierania sposób przekazywania `shared_ptr`, określić, czy obiekt wywoływany ma być współwłaścicielem bazowego zasobu. „Właściciel” to obiekt lub funkcja, która może utrzymywać istnienie bazowego zasobu tak długo, jak to konieczne. Jeśli obiekt wywołujący ma gwarantować, że obiekt wywoływany może przedłużać okres istnienia wskaźnika poza okres istnienia funkcji, należy użyć pierwszej opcji. Gdy przedłużanie okresu istnienia przez obiekt wywoływany nie ma znaczenia, należy stosować przekazywanie wg odwołania i pozwolić obiektowi wywoływanemu na opcjonalne kopiowanie wskaźnika.
+- Podczas decydowania o sposobie przekazywania należy określić, `shared_ptr`czy element wywoływany ma udostępniać własność bazowego zasobu. „Właściciel” to obiekt lub funkcja, która może utrzymywać istnienie bazowego zasobu tak długo, jak to konieczne. Jeśli obiekt wywołujący ma gwarantować, że obiekt wywoływany może przedłużać okres istnienia wskaźnika poza okres istnienia funkcji, należy użyć pierwszej opcji. Gdy przedłużanie okresu istnienia przez obiekt wywoływany nie ma znaczenia, należy stosować przekazywanie wg odwołania i pozwolić obiektowi wywoływanemu na opcjonalne kopiowanie wskaźnika.
 
-- Jeśli musisz przyznać dostęp do funkcji pomocnika do bazowego wskaźnika, a wiadomo, funkcja pomocnika będzie po prostu użyj wskaźnika i zwróci wartość przed zwróceniem wywoływania zwraca funkcję, a następnie tej funkcji nie ma być współwłaścicielem bazowego wskaźnika. Potrzebuje tylko dostępu do wskaźnika w trakcie okresu istnienia obiektu wywołującego wskaźnika `shared_ptr`. W tym przypadku są bezpiecznie przekazać `shared_ptr` wg odwołania albo przekazać surowego wskaźnika lub odwołania do bazowego obiektu. Taki sposób przekazania jest nieco korzystniejszy pod względem obciążenia systemu, a dodatkowo może pomóc lepiej wyrazić cele programistyczne.
+- Jeśli konieczne jest przyznanie funkcji pomocnika dostępu do podstawowego wskaźnika i wiadomo, że funkcja pomocnika będzie używać wskaźnika i zwracać przed wywołaniem funkcji, wówczas ta funkcja nie musi udostępniać własności bazowego wskaźnika. Potrzebuje tylko dostępu do wskaźnika w trakcie okresu istnienia obiektu wywołującego wskaźnika `shared_ptr`. W takim przypadku jest bezpieczne przekazywanie `shared_ptr` przez odwołanie lub przekazanie surowego wskaźnika lub odwołania do obiektu źródłowego. Taki sposób przekazania jest nieco korzystniejszy pod względem obciążenia systemu, a dodatkowo może pomóc lepiej wyrazić cele programistyczne.
 
-- Czasami, na przykład w konstrukcji `std::vector<shared_ptr<T>>`, może być konieczne przekazanie każdego wskaźnika `shared_ptr` do treści wyrażenia lambda lub do nazwanego obiektu funkcji. Jeśli wyrażenie lambda lub funkcja nie przechowuje wskaźnika, należy przekazać `shared_ptr` przez odwołanie, aby uniknąć wywoływania konstruktora kopiującego dla każdego elementu.
+- Czasami, na przykład w konstrukcji `std::vector<shared_ptr<T>>`, może być konieczne przekazanie każdego wskaźnika `shared_ptr` do treści wyrażenia lambda lub do nazwanego obiektu funkcji. Jeśli wyrażenie lambda lub funkcja nie przechowuje wskaźnika, Przekaż `shared_ptr` przez odwołanie, aby uniknąć wywoływania konstruktora kopiującego dla każdego elementu.
 
 ## <a name="example-6"></a>Przykład 6
 
