@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375853"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916140"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 
@@ -1205,7 +1205,7 @@ Gdy jest ustawiony znak hasła, ten znak jest wyświetlany dla każdego znaku ty
 
 Ta funkcja członkowska nie ma wpływu na kontrolkę edycji wielowierszowej.
 
-Gdy wywoływana jest funkcja `CEdit` członkowska, program ponownie narysuje wszystkie widoczne znaki przy użyciu znaku określonego przez ch `SetPasswordChar` .
+Gdy wywoływana jest funkcja `CEdit`członkowska, program ponownie narysuje wszystkie widoczne znaki przy użyciu znaku określonego przez ch `SetPasswordChar` .
 
 Jeśli kontrolka edycji jest tworzona przy użyciu stylu [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , jako domyślny znak hasła jest ustawiana gwiazdka ( <strong>\*</strong>). Ten styl jest usuwany `SetPasswordChar` , jeśli jest wywoływany z *ch* o wartości 0.
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*pEditBalloonTip*|podczas Wskaźnik do struktury [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) , która opisuje wskazówkę dymka.|
+|*pEditBalloonTip*|podczas Wskaźnik do struktury [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) , która opisuje wskazówkę dymka.|
 |*lpszTitle*|podczas Wskaźnik na ciąg Unicode, który zawiera tytuł porady dymkowej.|
 |*lpszText*|podczas Wskaźnik na ciąg Unicode, który zawiera tekst porady dymkowej.|
-|*ttiIcon*|podczas Liczba **całkowita** określająca typ ikony, która ma zostać skojarzona z końcówką dymka. Wartość domyślna to TTI_NONE. Aby uzyskać więcej informacji, zobacz `ttiIcon` element członkowski struktury [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) .|
+|*ttiIcon*|podczas Liczba **całkowita** określająca typ ikony, która ma zostać skojarzona z końcówką dymka. Wartość domyślna to TTI_NONE. Aby uzyskać więcej informacji, zobacz `ttiIcon` element członkowski struktury [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Wartość zwracana
 

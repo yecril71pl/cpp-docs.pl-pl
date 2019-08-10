@@ -1,5 +1,5 @@
 ---
-title: Klasa CReBarCtrl
+title: Klasa korzystanie CReBarCtrl
 ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
@@ -98,16 +98,16 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: a6996f978305472ec7a3af171ecf0987724751d5
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 102c06879ffaedb91f20a4b5085a10015d7a4c8b
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504750"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916870"
 ---
-# <a name="crebarctrl-class"></a>Klasa CReBarCtrl
+# <a name="crebarctrl-class"></a>Klasa korzystanie CReBarCtrl
 
-Hermetyzuje funkcje sterowania formantu rebar, który jest kontenerem dla okna podrzędnego.
+Hermetyzuje funkcjonalność formantu paska pomocniczego, który jest kontenerem dla okna podrzędnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -121,89 +121,89 @@ class CReBarCtrl : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CReBarCtrl::CReBarCtrl](#crebarctrl)|Konstruuje `CReBarCtrl` obiektu.|
+|[CReBarCtrl::CReBarCtrl](#crebarctrl)|Konstruuje `CReBarCtrl` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CReBarCtrl::BeginDrag](#begindrag)|Umieszcza formantu paska pomocniczego w trybie przeciągnij i upuść.|
-|[CReBarCtrl::Create](#create)|Tworzy kontrolkę paska pomocniczego i dołącza je do `CReBarCtrl` obiektu.|
-|[CReBarCtrl::CreateEx](#createex)|Tworzy kontrolkę paska pomocniczego przy użyciu określonego stylów rozszerzonej Windows i dołącza je do `CReBarCtrl` obiektu.|
-|[CReBarCtrl::DeleteBand](#deleteband)|Usuwa obiekt band z formantem paska pomocniczego.|
-|[CReBarCtrl::DragMove](#dragmove)|Aktualizuje pozycji przeciągnij w formancie paska pomocniczego po wywołaniu `BeginDrag`.|
+|[CReBarCtrl::BeginDrag](#begindrag)|Umieszcza formant paska pomocniczego w trybie przeciągania i upuszczania.|
+|[Korzystanie CReBarCtrl:: Create](#create)|Tworzy formant paska pomocniczego i dołącza go do `CReBarCtrl` obiektu.|
+|[Korzystanie CReBarCtrl:: CreateEx](#createex)|Tworzy formant paska pomocniczego z określonymi stylami rozszerzonymi systemu Windows i dołącza go do `CReBarCtrl` obiektu.|
+|[CReBarCtrl::DeleteBand](#deleteband)|Usuwa przedział z kontrolki paska pomocniczego.|
+|[CReBarCtrl::DragMove](#dragmove)|Aktualizuje pozycję przeciągania w kontrolce paska pomocniczego po wywołaniu `BeginDrag`.|
 |[CReBarCtrl::EndDrag](#enddrag)|Kończy operację przeciągania i upuszczania kontrolki paska pomocniczego.|
-|[CReBarCtrl::GetBandBorders](#getbandborders)|Pobiera obramowania grupy.|
-|[CReBarCtrl::GetBandCount](#getbandcount)|Pobiera liczbę paskami aktualnie w formancie paska pomocniczego.|
-|[CReBarCtrl::GetBandInfo](#getbandinfo)|Pobiera informacje o określonym poza pasmem w formancie paska pomocniczego.|
-|[CReBarCtrl::GetBandMargins](#getbandmargins)|Pobiera marginesy poza pasmem.|
-|[CReBarCtrl::GetBarHeight](#getbarheight)|Pobiera wysokość formantu paska pomocniczego.|
-|[CReBarCtrl::GetBarInfo](#getbarinfo)|Pobiera informacje o formancie paska pomocniczego i listy obrazów, które są używane.|
-|[CReBarCtrl::GetBkColor](#getbkcolor)|Pobiera formantu paska pomocniczego domyślny kolor tła.|
-|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Pobiera [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktury skojarzonego z kontrolką paska pomocniczego.|
-|[CReBarCtrl::GetDropTarget](#getdroptarget)|Pobiera z formantem paska pomocniczego `IDropTarget` wskaźnika interfejsu.|
-|[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|Pobiera styl rozszerzony bieżącego formantu paska pomocniczego.|
-|[CReBarCtrl::GetImageList](#getimagelist)|Pobiera listę obrazu skojarzonego z kontrolką paska pomocniczego.|
-|[CReBarCtrl::GetPalette](#getpalette)|Pobiera bieżącej palecie kontrolki paska pomocniczego.|
-|[CReBarCtrl::GetRect](#getrect)|Pobiera prostokąt otaczający dla danego urządzenia band w formancie paska pomocniczego.|
-|[CReBarCtrl::GetRowCount](#getrowcount)|Pobiera liczbę wierszy poza pasmem w formancie paska pomocniczego.|
-|[CReBarCtrl::GetRowHeight](#getrowheight)|Pobiera wysokość określony wiersz w kontrolce paska pomocniczego.|
-|[CReBarCtrl::GetTextColor](#gettextcolor)|Pobiera formantu paska pomocniczego domyślny kolor tekstu.|
-|[CReBarCtrl::GetToolTips](#gettooltips)|Pobranie dojścia do dowolnego z formantem etykietki narzędzia skojarzonego z kontrolką paska pomocniczego.|
-|[CReBarCtrl::HitTest](#hittest)|Określa, która część pasma paska pomocniczego jest w danym momencie na ekranie, jeśli obiekt band paska pomocniczego istnieje w tym momencie.|
-|[CReBarCtrl::IDToIndex](#idtoindex)|Konwertuje poza pasmem identyfikator (ID) na indeks poza pasmem w formancie paska pomocniczego.|
-|[CReBarCtrl::InsertBand](#insertband)|Wstawia nową grupę w formancie paska pomocniczego.|
-|[CReBarCtrl::MaximizeBand](#maximizeband)|Zmienia rozmiar przedziału w formancie paska pomocniczego do największego rozmiaru.|
-|[CReBarCtrl::MinimizeBand](#minimizeband)|Zmienia rozmiar pasma w formancie paska pomocniczego do najmniejszego rozmiaru.|
-|[CReBarCtrl::MoveBand](#moveband)|Przenosi obiekt band z jednego indeksu.|
-|[CReBarCtrl::PushChevron](#pushchevron)|Programowe wypycha strzałki.|
-|[CReBarCtrl::RestoreBand](#restoreband)|Zmienia rozmiar pasma w formancie paska pomocniczego, jego rozmiar idealny.|
-|[CReBarCtrl::SetBandInfo](#setbandinfo)|Ustawia właściwości istniejącego poza pasmem w formancie paska pomocniczego.|
-|[CReBarCtrl::SetBandWidth](#setbandwidth)|Ustawia szerokość określoną zadokowany poza pasmem w bieżącego formantu paska pomocniczego.|
-|[CReBarCtrl::SetBarInfo](#setbarinfo)|Ustawia właściwości formantu paska pomocniczego.|
-|[CReBarCtrl::SetBkColor](#setbkcolor)|Ustawia formantu paska pomocniczego domyślny kolor tła.|
-|[CReBarCtrl::SetColorScheme](#setcolorscheme)|Ustawia schemat kolorów dla przycisków w formancie paska pomocniczego.|
-|[CReBarCtrl::SetExtendedStyle](#setextendedstyle)|Ustawia rozszerzone style dla bieżącego formantu paska pomocniczego.|
-|[CReBarCtrl::SetImageList](#setimagelist)|Ustawia listy obrazów z formantem paska pomocniczego.|
-|[CReBarCtrl::SetOwner](#setowner)|Ustawia okno właściciela z formantem paska pomocniczego.|
-|[CReBarCtrl::SetPalette](#setpalette)|Ustawia bieżącej palecie kontrolki paska pomocniczego.|
-|[CReBarCtrl::SetTextColor](#settextcolor)|Ustawia formantu paska pomocniczego domyślny kolor tekstu.|
-|[CReBarCtrl::SetToolTips](#settooltips)|Tworzy skojarzenia między formantem etykietki narzędzia, za pomocą kontrolki paska pomocniczego.|
-|[CReBarCtrl::SetWindowTheme](#setwindowtheme)|Ustawia styl wizualny formantu paska pomocniczego.|
-|[CReBarCtrl::ShowBand](#showband)|Pokazuje lub ukrywa danego poza pasmem w formancie paska pomocniczego.|
-|[CReBarCtrl::SizeToRect](#sizetorect)|Pasuje do formantu paska pomocniczego do określonego prostokąta.|
+|[CReBarCtrl::GetBandBorders](#getbandborders)|Pobiera obramowania pasma.|
+|[CReBarCtrl::GetBandCount](#getbandcount)|Pobiera liczbę pasm znajdujących się obecnie w kontrolce paska pomocniczego.|
+|[CReBarCtrl::GetBandInfo](#getbandinfo)|Pobiera informacje o określonym paśmie w kontrolce paska pomocniczego.|
+|[CReBarCtrl::GetBandMargins](#getbandmargins)|Pobiera marginesy pasma.|
+|[Korzystanie CReBarCtrl:: GetBarHeight](#getbarheight)|Pobiera wysokość formantu paska pomocniczego.|
+|[CReBarCtrl::GetBarInfo](#getbarinfo)|Pobiera informacje o kontrolce paska pomocniczego i liście obrazów, których używa.|
+|[CReBarCtrl::GetBkColor](#getbkcolor)|Pobiera domyślny kolor tła formantu paska pomocniczego.|
+|[Korzystanie CReBarCtrl:: GetColorScheme](#getcolorscheme)|Pobiera strukturę [ColorScheme](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) skojarzoną z kontrolką paska pomocniczego.|
+|[CReBarCtrl::GetDropTarget](#getdroptarget)|Pobiera wskaźnik `IDropTarget` interfejsu formantu paska pomocniczego.|
+|[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|Pobiera rozszerzony styl bieżącej kontrolki paska pomocniczego.|
+|[CReBarCtrl::GetImageList](#getimagelist)|Pobiera listę obrazów skojarzoną z kontrolką paska pomocniczego.|
+|[CReBarCtrl::GetPalette](#getpalette)|Pobiera bieżącą paletę kontrolki paska pomocniczego.|
+|[CReBarCtrl::GetRect](#getrect)|Pobiera prostokąt ograniczenia dla danego pasma w kontrolce paska pomocniczego.|
+|[CReBarCtrl::GetRowCount](#getrowcount)|Pobiera liczbę wierszy pasma w kontrolce paska pomocniczego.|
+|[Korzystanie CReBarCtrl:: GetRowHeight](#getrowheight)|Pobiera wysokość określonego wiersza w kontrolce paska pomocniczego.|
+|[CReBarCtrl::GetTextColor](#gettextcolor)|Pobiera domyślny kolor tekstu formantu paska pomocniczego.|
+|[Korzystanie CReBarCtrl:: GetToolTips](#gettooltips)|Pobiera dojście do kontrolki etykietki narzędzia skojarzonej z kontrolką paska pomocniczego.|
+|[CReBarCtrl::HitTest](#hittest)|Określa, która część pasma paska pomocniczego znajduje się w danym punkcie na ekranie, jeśli na tym etapie istnieje pasmo paska pomocniczego.|
+|[CReBarCtrl::IDToIndex](#idtoindex)|Konwertuje identyfikator pasma (ID) na indeks pasma w kontrolce paska pomocniczego.|
+|[Korzystanie CReBarCtrl:: InsertBand](#insertband)|Wstawia nowy pasek w kontrolce paska pomocniczego.|
+|[Korzystanie CReBarCtrl:: MaximizeBand](#maximizeband)|Zmienia rozmiar pasma w kontrolce paska pomocniczego na jej największy rozmiar.|
+|[CReBarCtrl::MinimizeBand](#minimizeband)|Zmienia rozmiar pasma w kontrolce paska pomocniczego na najmniejszy rozmiar.|
+|[CReBarCtrl::MoveBand](#moveband)|Przenosi pasmo z jednego indeksu do innego.|
+|[Korzystanie CReBarCtrl::P ushChevron](#pushchevron)|Program programowo wypycha cudzysłów ostrokątny.|
+|[CReBarCtrl::RestoreBand](#restoreband)|Zmienia rozmiar pasma w kontrolce paska pomocniczego na jego idealny rozmiar.|
+|[CReBarCtrl::SetBandInfo](#setbandinfo)|Ustawia charakterystykę istniejącego pasma w kontrolce paska pomocniczego.|
+|[CReBarCtrl::SetBandWidth](#setbandwidth)|Ustawia szerokość określonego zadokowanego pasma w bieżącym formancie paska pomocniczego.|
+|[CReBarCtrl::SetBarInfo](#setbarinfo)|Ustawia charakterystykę formantu paska pomocniczego.|
+|[CReBarCtrl::SetBkColor](#setbkcolor)|Ustawia domyślny kolor tła formantu paska pomocniczego.|
+|[CReBarCtrl::SetColorScheme](#setcolorscheme)|Ustawia schemat kolorów dla przycisków w kontrolce paska pomocniczego.|
+|[CReBarCtrl::SetExtendedStyle](#setextendedstyle)|Ustawia rozszerzone style dla bieżącej kontrolki paska pomocniczego.|
+|[CReBarCtrl::SetImageList](#setimagelist)|Ustawia listę obrazów kontrolki paska pomocniczego.|
+|[CReBarCtrl::SetOwner](#setowner)|Ustawia okno właściciela kontrolki paska pomocniczego.|
+|[CReBarCtrl::SetPalette](#setpalette)|Ustawia bieżącą paletę kontrolki paska pomocniczego.|
+|[CReBarCtrl::SetTextColor](#settextcolor)|Ustawia domyślny kolor tekstu formantu paska pomocniczego.|
+|[CReBarCtrl::SetToolTips](#settooltips)|Kojarzy formant etykietki narzędzia z kontrolką paska pomocniczego.|
+|[CReBarCtrl::SetWindowTheme](#setwindowtheme)|Ustawia styl wizualizacji formantu paska pomocniczego.|
+|[CReBarCtrl::ShowBand](#showband)|Pokazuje lub ukrywa dany pasek w kontrolce paska pomocniczego.|
+|[CReBarCtrl::SizeToRect](#sizetorect)|Dopasowuje formant paska pomocniczego do określonego prostokąta.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aplikacja, w której znajduje się w formancie paska pomocniczego przypisuje okna podrzędnego zawarty w formancie paska pomocniczego do grupy paska pomocniczego. Okno podrzędne jest zazwyczaj inny wspólnej kontroli.
+Aplikacja, w której znajduje się formant paska pomocniczego, przypisuje okno potomne zawarte przez formant paska pomocniczego do pasma paska pomocniczego. Okno podrzędne jest zwykle inną wspólną kontrolką.
 
-Formanty paska pomocniczego zawiera jeden lub więcej grup. Każdego pasma może zawierać kombinację pasek uchwytu, mapy bitowej, etykietę tekstową i okna podrzędnego. Pasmo może zawierać tylko jeden z tych elementów.
+Kontrolki paska pomocniczego zawierają co najmniej jedną podgrupę. Każda grupa może zawierać kombinację paska uchwytu, mapy bitowej, etykiety tekstowej i okna podrzędnego. Pasmo może zawierać tylko jeden z tych elementów.
 
-Kontrolki paska pomocniczego, można wyświetlić okno podrzędne za pośrednictwem określonego tła mapy bitowej. Wszystkie kontrolki paskami pomocniczymi rozmiar można zmieniać, z wyjątkiem tych, które używają stylu RBBS_FIXEDSIZE. Zmienianie położenia lub zmieniania rozmiaru grupy kontrolki paska pomocniczego, formantu paska pomocniczego zarządza, rozmiar i położenie okna podrzędnego, przypisany do tej grupy. Aby zmienić rozmiar lub zmiana kolejności paskami w kontrolce, kliknij i przeciągnij pasek uchwytu poza pasmem.
+Kontrolka paska pomocniczego może wyświetlać okno podrzędne nad określoną mapą bitową w tle. Można zmienić rozmiar wszystkich grup formantów paska pomocniczego, z wyjątkiem tych, które używają stylu RBBS_FIXEDSIZE. W miarę zmieniania położenia lub zmiany rozmiaru pasma formantu paska pomocniczego, kontrolka paska pomocniczego zarządza rozmiarem i położeniem okna podrzędnego przypisanego do tego pasma. Aby zmienić rozmiar lub zmianę kolejności pasków w kontrolce, kliknij i przeciągnij pasek uchwytu pasma.
 
-Poniższa ilustracja przedstawia kontrolkę paska pomocniczego, zawierającej trzy przedziały:
+Na poniższej ilustracji przedstawiono kontrolkę paska pomocniczego, która ma trzy pasma:
 
-- Poza pasmem 0 zawiera formant narzędzi stałą, przejrzysty.
+- Pasmo 0 zawiera płaski, przezroczysty formant paska narzędzi.
 
-- Poza pasmem 1 zawiera przyciski przezroczyste listy rozwijanej standardowe i przejrzystości.
+- Pasmo 1 zawiera przezroczyste, standardowe i przezroczyste przyciski rozwijane.
 
-- Poza pasmem 2 zawiera pola kombi i cztery przyciski standardowe.
+- Pasmo 2 zawiera pole kombi i cztery przyciski standardowe.
 
-   ![Przykład menu paska pomocniczego](../../mfc/reference/media/vc4scc1.gif "przykład menu paska pomocniczego")
+   ![Przykład menu paska pomocniczego](../../mfc/reference/media/vc4scc1.gif "Przykład menu paska pomocniczego")
 
-## <a name="rebar-control"></a>Paska pomocniczego kontrolki
+## <a name="rebar-control"></a>Paska pomocniczego — formant
 
-Paska pomocniczego kontrolki pomocy technicznej:
+Obsługa formantów paska pomocniczego:
 
 - Listy obrazów.
 
 - Obsługa komunikatów.
 
-- Funkcja niestandardowego rysowania.
+- Niestandardowe funkcje rysowania.
 
-- Różne style kontrolki oprócz standardowego okna Style. Aby uzyskać listę tych stylów, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie Windows SDK.
+- Różne style formantów oprócz standardowych stylów okien. Aby uzyskać listę tych stylów, zobacz [Style formantu paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [korzystanie z CReBarCtrl](../../mfc/using-crebarctrl.md).
+Aby uzyskać więcej informacji, zobacz [using korzystanie CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -217,11 +217,11 @@ Aby uzyskać więcej informacji, zobacz [korzystanie z CReBarCtrl](../../mfc/usi
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcmn.h
+**Nagłówek:** afxcmn. h
 
 ##  <a name="begindrag"></a>  CReBarCtrl::BeginDrag
 
-Implementuje zachowanie komunikatów Win32 [RB_BEGINDRAG](/windows/desktop/Controls/rb-begindrag), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_BEGINDRAG](/windows/desktop/Controls/rb-begindrag)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 void BeginDrag(
@@ -232,14 +232,14 @@ void BeginDrag(
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem, którego będzie dotyczyć operacji przeciągania i upuszczania.
+Indeks (liczony od zera) pasma, którego będzie dotyczyć operacja przeciągania i upuszczania.
 
 *dwPos*<br/>
-Wartość DWORD, zawierającą początkowy myszy współrzędnych. Pozioma współrzędne znajduje się w LOWORD i pionowy współrzędnych znajduje się w HIWORD. Jeśli przekażesz (DWORD) -1, formantu paska pomocniczego użyje położenie myszy ostatniego wątku formantu o nazwie `GetMessage` lub `PeekMessage`.
+Wartość typu DWORD, która zawiera współrzędne myszy początkowej. Współrzędne poziome są zawarte w LOWORD, a Współrzędna pionowa jest zawarta w HIWORD. Jeśli przejdziesz (DWORD)-1, formant paska pomocniczego będzie używać pozycji myszy przy ostatnim wywołaniu `GetMessage` wątku kontrolki lub. `PeekMessage`
 
-##  <a name="create"></a>  CReBarCtrl::Create
+##  <a name="create"></a>Korzystanie CReBarCtrl:: Create
 
-Tworzy kontrolkę paska pomocniczego i dołącza je do `CReBarCtrl` obiektu.
+Tworzy formant paska pomocniczego i dołącza go do `CReBarCtrl` obiektu.
 
 ```
 virtual BOOL Create(
@@ -252,38 +252,38 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *dwStyle*<br/>
-Określa kombinację style kontrolki paska pomocniczego stosowane do formantu. Zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie SDK Windows, aby uzyskać listę obsługiwanych style.
+Określa kombinację stylów formantu paska pomocniczego zastosowanych do kontrolki. Zobacz [Style formantów paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w Windows SDK, aby uzyskać listę obsługiwanych stylów.
 
-*Rect*<br/>
-Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, która jest położenie i rozmiar formantu paska pomocniczego.
+*cinania*<br/>
+Odwołanie do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , który jest pozycją i rozmiarem kontrolki paska pomocniczego.
 
 *pParentWnd*<br/>
-Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki paska pomocniczego. Nie może być równa NULL.
+Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który jest oknem nadrzędnym kontrolki paska pomocniczego. Nie może mieć wartości NULL.
 
 *nID*<br/>
-Określa identyfikator kontrolki paska pomocniczego kontrolki.
+Określa identyfikator formantu paska pomocniczego formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli obiekt został utworzony pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli obiekt został utworzony pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Tworzenie formantu paska pomocniczego w dwóch etapach:
+Utwórz kontrolkę paska pomocniczego w dwóch krokach:
 
-1. Wywołaj [z CReBarCtrl](#crebarctrl) do konstruowania `CReBarCtrl` obiektu.
+1. Wywołaj [Korzystanie CReBarCtrl](#crebarctrl) w celu `CReBarCtrl` skonstruowania obiektu.
 
-1. Wywołanie tej funkcji elementu członkowskiego, która tworzy kontrolkę paska pomocniczego Windows i dołącza go do `CReBarCtrl` obiektu.
+1. Wywołaj tę funkcję elementu członkowskiego, która tworzy formant paska pomocniczego systemu Windows i dołącza go `CReBarCtrl` do obiektu.
 
-Gdy wywołujesz `Create`, typowe formanty są inicjowane.
+Po wywołaniu `Create`, są inicjowane typowe formanty.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#3](../../mfc/reference/codesnippet/cpp/crebarctrl-class_1.cpp)]
 
-##  <a name="createex"></a>  CReBarCtrl::CreateEx
+##  <a name="createex"></a>Korzystanie CReBarCtrl:: CreateEx
 
-Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CReBarCtrl` obiektu.
+Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CReBarCtrl` obiektem.
 
 ```
 virtual BOOL CreateEx(
@@ -297,31 +297,31 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwExStyle*<br/>
-Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.
+Określa rozszerzony styl formantu, który jest tworzony. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w Windows SDK.
 
 *dwStyle*<br/>
-Określa kombinację style kontrolki paska pomocniczego stosowane do formantu. Aby uzyskać listę obsługiwanych style, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie Windows SDK.
+Określa kombinację stylów formantu paska pomocniczego zastosowanych do kontrolki. Aby zapoznać się z listą obsługiwanych stylów, zobacz [Style formantu paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w Windows SDK.
 
-*Rect*<br/>
-Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+*cinania*<br/>
+Odwołanie do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
 
 *nID*<br/>
-Identyfikator formantu okna podrzędnego.
+Identyfikator okna podrzędnego kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_** .
+Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone style systemu Windows, które są określone przez **WS_EX_** styl rozszerzony systemu Windows.
 
 ##  <a name="crebarctrl"></a>  CReBarCtrl::CReBarCtrl
 
-Tworzy `CReBarCtrl` obiektu.
+`CReBarCtrl` Tworzy obiekt.
 
 ```
 CReBarCtrl();
@@ -329,11 +329,11 @@ CReBarCtrl();
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CReBarCtrl::Create](#create).
+  Zobacz przykład dla [Korzystanie CReBarCtrl:: Create](#create).
 
 ##  <a name="deleteband"></a>  CReBarCtrl::DeleteBand
 
-Implementuje zachowanie komunikatów Win32 [RB_DELETEBAND](/windows/desktop/Controls/rb-deleteband), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_DELETEBAND](/windows/desktop/Controls/rb-deleteband)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL DeleteBand(UINT uBand);
@@ -342,11 +342,11 @@ BOOL DeleteBand(UINT uBand);
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem do usunięcia.
+Liczony od zera indeks pasma do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli urządzenia band pomyślnie usunięte, w przeciwnym razie wartość zero.
+Niezerowe, jeśli pasek został usunięty pomyślnie; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
@@ -354,7 +354,7 @@ Wartość różną od zera, jeśli urządzenia band pomyślnie usunięte, w prze
 
 ##  <a name="dragmove"></a>  CReBarCtrl::DragMove
 
-Implementuje zachowanie komunikatów Win32 [RB_DRAGMOVE](/windows/desktop/Controls/rb-dragmove), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_DRAGMOVE](/windows/desktop/Controls/rb-dragmove)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 void DragMove(DWORD dwPos = (DWORD)-1);
@@ -363,11 +363,11 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ### <a name="parameters"></a>Parametry
 
 *dwPos*<br/>
-Wartość DWORD, który zawiera nowe współrzędne myszy. Pozioma współrzędne znajduje się w LOWORD i pionowy współrzędnych znajduje się w HIWORD. Jeśli przekażesz (DWORD) -1, formantu paska pomocniczego użyje położenie myszy ostatniego wątku formantu o nazwie `GetMessage` lub `PeekMessage`.
+Wartość DWORD, która zawiera nowe Współrzędne myszy. Współrzędne poziome są zawarte w LOWORD, a Współrzędna pionowa jest zawarta w HIWORD. Jeśli przejdziesz (DWORD)-1, formant paska pomocniczego będzie używać pozycji myszy przy ostatnim wywołaniu `GetMessage` wątku kontrolki lub. `PeekMessage`
 
-##  <a name="enddrag"></a>  CReBarCtrl::EndDrag
+##  <a name="enddrag"></a>Korzystanie CReBarCtrl:: EndDrag
 
-Implementuje zachowanie komunikatów Win32 [RB_ENDDRAG](/windows/desktop/Controls/rb-enddrag), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_ENDDRAG](/windows/desktop/Controls/rb-enddrag)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 void EndDrag();
@@ -375,7 +375,7 @@ void EndDrag();
 
 ##  <a name="getbandborders"></a>  CReBarCtrl::GetBandBorders
 
-Implementuje zachowanie komunikatów Win32 [RB_GETBANDBORDERS](/windows/desktop/Controls/rb-getbandborders), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETBANDBORDERS](/windows/desktop/Controls/rb-getbandborders)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 void GetBandBorders(
@@ -386,14 +386,14 @@ void GetBandBorders(
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks pasmo, dla którego będą pobierane obramowania.
+Indeks (liczony od zera) pasma, dla którego będą pobierane obramowania.
 
-*Chińska Republika Ludowa*<br/>
-Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, który będzie otrzymywał obramowania poza pasmem. Jeśli do formantu paska pomocniczego jest styl RBS_BANDBORDERS, każdy członek tej struktury otrzyma liczbę pikseli odpowiedniego stronie poza pasmem, wchodzących w skład obramowania. Jeśli formantu paska pomocniczego nie ma stylu RBS_BANDBORDERS, po lewej stronie członkiem tej struktury odbiera prawidłowe informacje. Aby uzyskać opis style kontrolki paska pomocniczego, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie Windows SDK.
+*Republika*<br/>
+Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , która będzie odbierać obramowania pasma. Jeśli formant paska pomocniczego ma styl RBS_BANDBORDERS, każdy element członkowski tej struktury otrzyma liczbę pikseli na odpowiedniej stronie pasma, która stanowi obramowanie. Jeśli formant paska pomocniczego nie ma stylu RBS_BANDBORDERS, tylko lewa składowa tej struktury otrzymuje prawidłowe informacje. Aby uzyskać opis stylów formantu paska pomocniczego, zobacz [Style formantów paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w Windows SDK.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
-Implementuje zachowanie komunikatów Win32 [RB_GETBANDCOUNT](/windows/desktop/Controls/rb-getbandcount), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETBANDCOUNT](/windows/desktop/Controls/rb-getbandcount)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 UINT GetBandCount() const;
@@ -401,11 +401,11 @@ UINT GetBandCount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba grup przypisany do kontrolki.
+Liczba pasm przypisanych do kontrolki.
 
 ##  <a name="getbandinfo"></a>  CReBarCtrl::GetBandInfo
 
-Implementuje zachowanie komunikatów Win32 [RB_GETBANDINFO](/windows/desktop/Controls/rb-getbandinfo) zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie komunikatu Win32 [RB_GETBANDINFO](/windows/desktop/Controls/rb-getbandinfo) zgodnie z opisem w Windows SDK.
 
 ```
 BOOL GetBandInfo(
@@ -416,18 +416,18 @@ BOOL GetBandInfo(
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks pasmo, dla którego będą pobierane informacje.
+Indeks (liczony od zera) pasma, dla którego zostaną pobrane informacje.
 
 *prbbi*<br/>
-Wskaźnik do [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktury do odbierania informacji poza pasmem. Należy ustawić `cbSize` członkiem tej struktury, aby `sizeof(REBARBANDINFO)` i ustaw `fMask` elementu członkowskiego do elementów do pobrania przed wysłaniem tego komunikatu.
+Wskaźnik do struktury [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) , aby otrzymać informacje o paśmie. Należy ustawić `cbSize` element członkowski tej struktury do `sizeof(REBARBANDINFO)` i ustawić `fMask` element członkowski dla elementów, które mają zostać pobrane przed wysłaniem tej wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
-##  <a name="getbandmargins"></a>  CReBarCtrl::GetBandMargins
+##  <a name="getbandmargins"></a>Korzystanie CReBarCtrl:: GetBandMargins
 
-Pobiera marginesy pasmo.
+Pobiera marginesy pasma.
 
 ```
 void GetBandMargins(PMARGINS pMargins);
@@ -436,13 +436,13 @@ void GetBandMargins(PMARGINS pMargins);
 ### <a name="parameters"></a>Parametry
 
 *pMargins*<br/>
-Wskaźnik do [MARGINESY](/windows/desktop/api/uxtheme/ns-uxtheme-_margins)struktury, który będzie otrzymywać informacje.
+Wskaźnik do struktury [marginesów](/windows/desktop/api/uxtheme/ns-uxtheme-margins), który będzie otrzymywał informacje.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska emuluje funkcjonalność [RB_GETBANDMARGINS](/windows/desktop/Controls/rb-getbandmargins) komunikat, zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność komunikatu [RB_GETBANDMARGINS](/windows/desktop/Controls/rb-getbandmargins) , zgodnie z opisem w Windows SDK.
 
-##  <a name="getbarheight"></a>  CReBarCtrl::GetBarHeight
+##  <a name="getbarheight"></a>Korzystanie CReBarCtrl:: GetBarHeight
 
 Pobiera wysokość paska paska pomocniczego.
 
@@ -452,11 +452,11 @@ UINT GetBarHeight() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość reprezentująca wysokość w pikselach formantu.
+Wartość, która reprezentuje wysokość formantu w pikselach.
 
 ##  <a name="getbarinfo"></a>  CReBarCtrl::GetBarInfo
 
-Implementuje zachowanie komunikatów Win32 [RB_GETBARINFO](/windows/desktop/Controls/rb-getbarinfo), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETBARINFO](/windows/desktop/Controls/rb-getbarinfo)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL GetBarInfo(REBARINFO* prbi) const;
@@ -465,15 +465,15 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ### <a name="parameters"></a>Parametry
 
 *prbi*<br/>
-Wskaźnik do [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) struktury, który będzie otrzymywać informacje kontrolki paska pomocniczego. Należy ustawić *elementu cbSize* członkiem tej struktury, aby `sizeof(REBARINFO)` przed wysłaniem tego komunikatu.
+Wskaźnik do struktury [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) , która będzie odbierać informacje kontrolne paska pomocniczego. `sizeof(REBARINFO)` Przed wysłaniem tej wiadomości należy ustawić element członkowski *cbSize* tej struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ##  <a name="getbkcolor"></a>  CReBarCtrl::GetBkColor
 
-Implementuje zachowanie komunikatów Win32 [RB_GETBKCOLOR](/windows/desktop/Controls/rb-getbkcolor), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETBKCOLOR](/windows/desktop/Controls/rb-getbkcolor)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 COLORREF GetBkColor() const;
@@ -483,9 +483,9 @@ COLORREF GetBkColor() const;
 
 Wartość COLORREF, która reprezentuje bieżący domyślny kolor tła.
 
-##  <a name="getcolorscheme"></a>  CReBarCtrl::GetColorScheme
+##  <a name="getcolorscheme"></a>Korzystanie CReBarCtrl:: GetColorScheme
 
-Pobiera [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) strukturę dla formantu paska pomocniczego.
+Pobiera strukturę [ColorScheme](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) dla kontrolki paska pomocniczego.
 
 ```
 BOOL GetColorScheme(COLORSCHEME* lpcs);
@@ -493,20 +493,20 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 
 ### <a name="parameters"></a>Parametry
 
-*LPC*<br/>
-Wskaźnik do [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktury, zgodnie z opisem w zestawie Windows SDK.
+*lpcs*<br/>
+Wskaźnik do struktury [ColorScheme](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) , zgodnie z opisem w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
 `COLORSCHEME` Struktura zawiera kolor wyróżnienia przycisku i kolor cienia przycisku.
 
-##  <a name="getdroptarget"></a>  CReBarCtrl::GetDropTarget
+##  <a name="getdroptarget"></a>Korzystanie CReBarCtrl:: GetDropTarget
 
-Implementuje zachowanie komunikatów Win32 [RB_GETDROPTARGET](/windows/desktop/Controls/rb-getdroptarget), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETDROPTARGET](/windows/desktop/Controls/rb-getdroptarget)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 IDropTarget* GetDropTarget() const;
@@ -514,9 +514,9 @@ IDropTarget* GetDropTarget() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interfejsu.
+Wskaźnik do interfejsu [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) .
 
-##  <a name="getextendedstyle"></a>  CReBarCtrl::GetExtendedStyle
+##  <a name="getextendedstyle"></a>Korzystanie CReBarCtrl:: getextendeds
 
 Pobiera rozszerzone style bieżącego formantu paska pomocniczego.
 
@@ -526,15 +526,15 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitowa kombinacja (lub) flagi wskazujące rozszerzone style. Możliwe flagi są RBS_EX_SPLITTER i RBS_EX_TRANSPARENT. Aby uzyskać więcej informacji, zobacz *dwMask* parametru [CReBarCtrl::SetExtendedStyle](#setextendedstyle) metody.
+Kombinacja bitowa (lub) flag wskazujących style rozszerzone. Możliwe flagi to RBS_EX_SPLITTER i RBS_EX_TRANSPARENT. Aby uzyskać więcej informacji, zobacz parametr *dwMask* metody [Korzystanie CReBarCtrl:: setextended](#setextendedstyle) .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wysyła [RB_GETEXTENDEDSTYLE](/windows/desktop/Controls/rb-dragmove) komunikat, który jest opisany w zestawie Windows SDK.
+Ta metoda wysyła komunikat [RB_GETEXTENDEDSTYLE](/windows/desktop/Controls/rb-dragmove) , który jest opisany w Windows SDK.
 
 ##  <a name="getimagelist"></a>  CReBarCtrl::GetImageList
 
-Pobiera `CImageList` obiekt skojarzony z formantem paska pomocniczego.
+`CImageList` Pobiera obiekt skojarzony z kontrolką paska pomocniczego.
 
 ```
 CImageList* GetImageList() const;
@@ -542,15 +542,15 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu. Zwraca wartość NULL, jeśli nie listy obrazów kontrolki.
+Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) . Zwraca wartość NULL, jeśli nie ustawiono żadnej listy obrazów dla kontrolki.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska używa rozmiaru i maska informacji przechowywanych w [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) struktury, zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja członkowska używa informacji o rozmiarze i masce przechowywanych w strukturze [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) , zgodnie z opisem w Windows SDK.
 
 ##  <a name="getpalette"></a>  CReBarCtrl::GetPalette
 
-Pobiera bieżącej palecie kontrolki paska pomocniczego.
+Pobiera bieżącą paletę kontrolki paska pomocniczego.
 
 ```
 CPalette* GetPalette() const;
@@ -558,19 +558,19 @@ CPalette* GetPalette() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CPalette](../../mfc/reference/cpalette-class.md) obiektu określenie bieżącej palecie kontrolki paska pomocniczego.
+Wskaźnik do obiektu [CPalette](../../mfc/reference/cpalette-class.md) określający bieżącą paletę kontrolki paska pomocniczego.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że ta funkcja członkowska używa `CPalette` obiektu jako jego wartość zwracana zamiast HPALETTE.
+Należy zauważyć, że ta funkcja członkowska używa `CPalette` obiektu jako wartości zwracanej, a nie elementu HPALETTE.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#5](../../mfc/reference/codesnippet/cpp/crebarctrl-class_3.cpp)]
 
-##  <a name="getrect"></a>  CReBarCtrl::GetRect
+##  <a name="getrect"></a>Korzystanie CReBarCtrl:: getRect
 
-Implementuje zachowanie komunikatów Win32 [RB_GETRECT](/windows/desktop/Controls/rb-getrect), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETRECT](/windows/desktop/Controls/rb-getrect)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL GetRect(
@@ -581,22 +581,22 @@ BOOL GetRect(
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem w formancie paska pomocniczego.
+Indeks (liczony od zera) pasma w kontrolce paska pomocniczego.
 
-*Chińska Republika Ludowa*<br/>
-Wskaźnik do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, który będzie otrzymywał granice poza pasmem paska pomocniczego.
+*Republika*<br/>
+Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , która będzie odbierać granice pasma paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#6](../../mfc/reference/codesnippet/cpp/crebarctrl-class_4.cpp)]
 
-##  <a name="getrowcount"></a>  CReBarCtrl::GetRowCount
+##  <a name="getrowcount"></a>Korzystanie CReBarCtrl:: GetRowCount
 
-Implementuje zachowanie komunikatów Win32 [RB_GETROWCOUNT](/windows/desktop/Controls/rb-getrowcount), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETROWCOUNT](/windows/desktop/Controls/rb-getrowcount)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 UINT GetRowCount() const;
@@ -604,15 +604,15 @@ UINT GetRowCount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartości UINT, który reprezentuje liczbę wierszy poza pasmem w formancie.
+Wartość UINT, która reprezentuje liczbę wierszy pasma w formancie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#7](../../mfc/reference/codesnippet/cpp/crebarctrl-class_5.cpp)]
 
-##  <a name="getrowheight"></a>  CReBarCtrl::GetRowHeight
+##  <a name="getrowheight"></a>Korzystanie CReBarCtrl:: GetRowHeight
 
-Implementuje zachowanie komunikatów Win32 [RB_GETROWHEIGHT](/windows/desktop/Controls/rb-getrowheight), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETROWHEIGHT](/windows/desktop/Controls/rb-getrowheight)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 UINT GetRowHeight(UINT uRow) const;
@@ -621,11 +621,11 @@ UINT GetRowHeight(UINT uRow) const;
 ### <a name="parameters"></a>Parametry
 
 *uRow*<br/>
-Liczony od zera indeks zespół, który będzie miał wysokość pobierane.
+Indeks przedziału liczony od zera, który zostanie pobrany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość UINT, która przedstawia wysokość wiersza, w pikselach.
+Wartość UINT, która reprezentuje wysokość wiersza (w pikselach).
 
 ### <a name="example"></a>Przykład
 
@@ -633,7 +633,7 @@ Wartość UINT, która przedstawia wysokość wiersza, w pikselach.
 
 ##  <a name="gettextcolor"></a>  CReBarCtrl::GetTextColor
 
-Implementuje zachowanie komunikatów Win32 [RB_GETTEXTCOLOR](/windows/desktop/Controls/rb-gettextcolor), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETTEXTCOLOR](/windows/desktop/Controls/rb-gettextcolor)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 COLORREF GetTextColor() const;
@@ -643,9 +643,9 @@ COLORREF GetTextColor() const;
 
 Wartość COLORREF, która reprezentuje bieżący domyślny kolor tekstu.
 
-##  <a name="gettooltips"></a>  CReBarCtrl::GetToolTips
+##  <a name="gettooltips"></a>Korzystanie CReBarCtrl:: GetToolTips
 
-Implementuje zachowanie komunikatów Win32 [RB_GETTOOLTIPS](/windows/desktop/Controls/rb-gettooltips), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_GETTOOLTIPS](/windows/desktop/Controls/rb-gettooltips)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -653,15 +653,15 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) obiektu.
+Wskaźnik do obiektu [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) .
 
 ### <a name="remarks"></a>Uwagi
 
-Należy pamiętać, że implementacja MFC `GetToolTips` zwraca wskaźnik do `CToolTipCtrl`, a nie właściwością HWND.
+Należy zauważyć, że implementacja `GetToolTips` MFC zwraca wskaźnik do elementu `CToolTipCtrl`, a nie jako HWND.
 
 ##  <a name="hittest"></a>  CReBarCtrl::HitTest
 
-Implementuje zachowanie komunikatów Win32 [RB_HITTEST](/windows/desktop/Controls/rb-hittest), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_HITTEST](/windows/desktop/Controls/rb-hittest)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 int HitTest(RBHITTESTINFO* prbht);
@@ -670,15 +670,15 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="parameters"></a>Parametry
 
 *prbht*<br/>
-Wskaźnik do [RBHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_rb_hittestinfo) struktury. Przed wysłaniem wiadomości, `pt` członkiem tej struktury, musi zostać zainicjowany do punktu, który będzie testowany w sposób współrzędne klienta.
+Wskaźnik do struktury [RBHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_rb_hittestinfo) . Przed wysłaniem komunikatu `pt` element członkowski tej struktury musi być zainicjowany do punktu, który zostanie przetestowany w celu współrzędnych klienta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks poza pasmem danego punktu lub -1, jeśli w momencie poza pasmem nie paska pomocniczego.
+Indeks (liczony od zera) pasma w danym punkcie lub-1, jeśli w punkcie nie ma paska pomocniczego pasma.
 
-##  <a name="idtoindex"></a>  CReBarCtrl::IDToIndex
+##  <a name="idtoindex"></a>Korzystanie CReBarCtrl:: IDToIndex
 
-Implementuje zachowanie komunikatów Win32 [RB_IDTOINDEX](/windows/desktop/controls/rb-idtoindex), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_IDTOINDEX](/windows/desktop/controls/rb-idtoindex)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 int IDToIndex(UINT uBandID) const;
@@ -687,15 +687,15 @@ int IDToIndex(UINT uBandID) const;
 ### <a name="parameters"></a>Parametry
 
 *uBandID*<br/>
-Przekazany identyfikator zdefiniowanych przez aplikację określoną pasmo `wID` członkiem [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktury, gdy znajduje się poza pasmem.
+Zdefiniowany przez aplikację identyfikator określonego pasma, który został przeniesiony `wID` do elementu członkowskiego struktury [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) , gdy zostanie wstawiony pasek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks przedziału liczony od zera, jeśli kończy się pomyślnie lub -1, w przeciwnym razie. Jeśli istnieją zduplikowane poza pasmem indeksów, zwracany jest pierwszy z nich.
+Indeks pasma liczony od zera, jeśli zakończyło się pomyślnie, lub-1 w przeciwnym razie. W przypadku istnienia zduplikowanych indeksów pasma zwracana jest pierwsza z nich.
 
-##  <a name="insertband"></a>  CReBarCtrl::InsertBand
+##  <a name="insertband"></a>Korzystanie CReBarCtrl:: InsertBand
 
-Implementuje zachowanie komunikatów Win32 [RB_INSERTBAND](/windows/desktop/Controls/rb-insertband), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_INSERTBAND](/windows/desktop/Controls/rb-insertband)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL InsertBand(
@@ -706,22 +706,22 @@ BOOL InsertBand(
 ### <a name="parameters"></a>Parametry
 
 *uIndex*<br/>
-Liczony od zera indeks lokalizacji, w którym zostanie wstawiony poza pasmem. Jeśli ten parametr jest ustawiony na wartość -1, formant doda nową grupę w ostatnich lokalizacji.
+Indeks w lokalizacji, w której zostanie wstawiony pasmo (liczony od zera). Jeśli ustawisz ten parametr na wartość-1, formant doda nowy punkt w ostatniej lokalizacji.
 
 *prbbi*<br/>
-Wskaźnik do [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) strukturę, która definiuje poza pasmem do wstawienia. Należy ustawić *elementu cbSize* członkiem tej struktury, aby `sizeof(REBARBANDINFO)` przed wywołaniem tej funkcji.
+Wskaźnik do struktury [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) , który definiuje pasmo do wstawienia. `sizeof(REBARBANDINFO)` Przed wywołaniem tej funkcji należy ustawić element członkowski *cbSize* tej struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#9](../../mfc/reference/codesnippet/cpp/crebarctrl-class_7.cpp)]
 
-##  <a name="maximizeband"></a>  CReBarCtrl::MaximizeBand
+##  <a name="maximizeband"></a>Korzystanie CReBarCtrl:: MaximizeBand
 
-Zmienia rozmiar przedziału w formancie paska pomocniczego do największego rozmiaru.
+Zmienia rozmiar pasma w kontrolce paska pomocniczego na jej największy rozmiar.
 
 ```
 void MaximizeBand(UINT uBand);
@@ -730,19 +730,19 @@ void MaximizeBand(UINT uBand);
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem, aby zmaksymalizować.
+Indeks (liczony od zera) pasma do zmaksymalizowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementuje zachowanie komunikatów Win32 [RB_MAXIMIZEBAND](/windows/desktop/Controls/rb-maximizeband) z `fIdeal` ustawiona na 0, zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_MAXIMIZEBAND](/windows/desktop/Controls/rb-maximizeband) komunikatu Win32 z `fIdeal` ustawioną na 0, zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#10](../../mfc/reference/codesnippet/cpp/crebarctrl-class_8.cpp)]
 
-##  <a name="minimizeband"></a>  CReBarCtrl::MinimizeBand
+##  <a name="minimizeband"></a>Korzystanie CReBarCtrl:: MinimizeBand
 
-Zmienia rozmiar pasma w formancie paska pomocniczego do najmniejszego rozmiaru.
+Zmienia rozmiar pasma w kontrolce paska pomocniczego na najmniejszy rozmiar.
 
 ```
 void MinimizeBand(UINT uBand);
@@ -751,11 +751,11 @@ void MinimizeBand(UINT uBand);
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem, minimalizowanie.
+Indeks przedziału (liczony od zera), który ma zostać zminimalizowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementuje zachowanie komunikatów Win32 [RB_MINIMIZEBAND](/windows/desktop/Controls/rb-minimizeband), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_MINIMIZEBAND](/windows/desktop/Controls/rb-minimizeband)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -763,7 +763,7 @@ Implementuje zachowanie komunikatów Win32 [RB_MINIMIZEBAND](/windows/desktop/Co
 
 ##  <a name="moveband"></a>  CReBarCtrl::MoveBand
 
-Implementuje zachowanie komunikatów Win32 [RB_MOVEBAND](/windows/desktop/Controls/rb-moveband), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_MOVEBAND](/windows/desktop/Controls/rb-moveband)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL MoveBand(
@@ -774,18 +774,18 @@ BOOL MoveBand(
 ### <a name="parameters"></a>Parametry
 
 *uFrom*<br/>
-Liczony od zera indeks poza pasmem do przeniesienia.
+Liczony od zera indeks przedziału, który ma zostać przeniesiony.
 
-*uTo*<br/>
-Liczony od zera indeks w nowe miejsce poza pasmem. Wartości tego parametru nigdy nie może być większa niż liczba grup minus jeden. Aby uzyskać liczbę grup, należy wywołać [GetBandCount](#getbandcount).
+*matyczna*<br/>
+Indeks (liczony od zera) nowej pozycji pasma. Wartość tego parametru nie może być większa niż liczba przedziałów równa 1. Aby uzyskać liczbę pasm, wywołaj [GetBandCount](#getbandcount).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
-##  <a name="pushchevron"></a>  CReBarCtrl::PushChevron
+##  <a name="pushchevron"></a>Korzystanie CReBarCtrl::P ushChevron
 
-Implementuje zachowanie komunikatów Win32 [RB_PUSHCHEVRON](/windows/desktop/Controls/rb-pushchevron), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_PUSHCHEVRON](/windows/desktop/Controls/rb-pushchevron)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 void PushChevron(
@@ -796,14 +796,14 @@ void PushChevron(
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem, których cudzysłów ostrokątny jest ma zostać wypchnięty.
+Indeks (liczony od zera) pasma, którego ma dotyczyć wypychanie.
 
 *lAppValue*<br/>
-Zdefiniowana wartość 32-bitowych aplikacji. Zobacz *lAppValue* w [RB_PUSHCHEVRON](/windows/desktop/Controls/rb-pushchevron) w zestawie Windows SDK.
+Zdefiniowana przez aplikację 32-bitową wartość. Zobacz *lAppValue* in [RB_PUSHCHEVRON](/windows/desktop/Controls/rb-pushchevron) w Windows SDK.
 
-##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand
+##  <a name="restoreband"></a>Korzystanie CReBarCtrl:: RestoreBand
 
-Zmienia rozmiar pasma w formancie paska pomocniczego, jego rozmiar idealny.
+Zmienia rozmiar pasma w kontrolce paska pomocniczego na jego idealny rozmiar.
 
 ```
 void RestoreBand(UINT uBand);
@@ -812,11 +812,11 @@ void RestoreBand(UINT uBand);
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem, aby zmaksymalizować.
+Indeks (liczony od zera) pasma do zmaksymalizowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementuje zachowanie komunikatów Win32 [RB_MAXIMIZEBAND](/windows/desktop/Controls/rb-maximizeband) z `fIdeal` ustawiona na 1, zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_MAXIMIZEBAND](/windows/desktop/Controls/rb-maximizeband) komunikatu Win32 z `fIdeal` ustawioną na 1, zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -824,7 +824,7 @@ Implementuje zachowanie komunikatów Win32 [RB_MAXIMIZEBAND](/windows/desktop/Co
 
 ##  <a name="setbandinfo"></a>  CReBarCtrl::SetBandInfo
 
-Implementuje zachowanie komunikatów Win32 [RB_SETBANDINFO](/windows/desktop/Controls/rb-setbandinfo), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_SETBANDINFO](/windows/desktop/Controls/rb-setbandinfo)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL SetBandInfo(
@@ -835,14 +835,14 @@ BOOL SetBandInfo(
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem, aby zastosować nowe ustawienia.
+Liczony od zera indeks pasma, który ma otrzymywać nowe ustawienia.
 
 *prbbi*<br/>
-Wskaźnik do [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) strukturę, która definiuje poza pasmem do wstawienia. Należy ustawić `cbSize` członkiem tej struktury, aby `sizeof(REBARBANDINFO)` przed wysłaniem tego komunikatu.
+Wskaźnik do struktury [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) , która definiuje pasmo do wstawienia. Przed wysłaniem tej `cbSize` wiadomości należy ustawić element członkowski tej struktury. `sizeof(REBARBANDINFO)`
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
@@ -850,7 +850,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartoś
 
 ##  <a name="setbandwidth"></a>  CReBarCtrl::SetBandWidth
 
-Ustawia szerokość określoną zadokowany poza pasmem w bieżącego formantu paska pomocniczego.
+Ustawia szerokość określonego zadokowanego pasma w bieżącym formancie paska pomocniczego.
 
 ```
 BOOL SetBandWidth(
@@ -862,32 +862,32 @@ BOOL SetBandWidth(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*uBand*|[in] Liczony od zera indeks pasma paska pomocniczego.|
-|*cxWidth*|[in] Nową szerokość paska pomocniczego poza pasmem, a w pikselach.|
+|*uBand*|podczas Indeks paska pomocniczego pasma liczony od zera.|
+|*cxWidth*|podczas Nowa szerokość pasma paska pomocniczego (w pikselach).|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wysyła [RB_SETBANDWIDTH](/windows/desktop/Controls/rb-setbandwidth) komunikat, który jest opisany w zestawie Windows SDK.
+Ta metoda wysyła komunikat [RB_SETBANDWIDTH](/windows/desktop/Controls/rb-setbandwidth) , który jest opisany w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
-Poniższy kod definiuje zmienną, `m_rebar`, to znaczy umożliwiają dostęp do bieżącego formantu paska pomocniczego. Ta zmienna jest używana w następnym przykładzie.
+Poniższy przykład kodu definiuje zmienną, `m_rebar`, która jest używana do uzyskiwania dostępu do bieżącej kontrolki paska pomocniczego. Ta zmienna jest używana w następnym przykładzie.
 
 [!code-cpp[NVC_MFC_CReBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/crebarctrl-class_12.h)]
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu ustawia każdego pasma paska pomocniczego, aby mieć taką samą szerokość.
+Poniższy przykład kodu ustawia, że każdy paska pomocniczego przedziału ma taką samą szerokość.
 
 [!code-cpp[NVC_MFC_CReBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/crebarctrl-class_13.cpp)]
 
 ##  <a name="setbarinfo"></a>  CReBarCtrl::SetBarInfo
 
-Implementuje zachowanie komunikatów Win32 [RB_SETBARINFO](/windows/desktop/Controls/rb-setbarinfo), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_SETBARINFO](/windows/desktop/Controls/rb-setbarinfo)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL SetBarInfo(REBARINFO* prbi);
@@ -896,11 +896,11 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ### <a name="parameters"></a>Parametry
 
 *prbi*<br/>
-Wskaźnik do [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) strukturę, która zawiera informacje, należy ustawić. Należy ustawić `cbSize` członkiem tej struktury, aby `sizeof(REBARINFO)` przed wysłaniem tego komunikatu
+Wskaźnik do struktury [REBARINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) , która zawiera informacje, które mają zostać ustawione. Musisz ustawić `cbSize` element członkowski tej struktury na `sizeof(REBARINFO)` przed wysłaniem tej wiadomości
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
@@ -908,7 +908,7 @@ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartoś
 
 ##  <a name="setbkcolor"></a>  CReBarCtrl::SetBkColor
 
-Implementuje zachowanie komunikatów Win32 [RB_SETBKCOLOR](/windows/desktop/Controls/rb-setbkcolor), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_SETBKCOLOR](/windows/desktop/Controls/rb-setbkcolor)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 COLORREF SetBkColor(COLORREF clr);
@@ -916,20 +916,20 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*clr*<br/>
-Wartość COLORREF, który reprezentuje nowy domyślny kolor tła.
+*CLR*<br/>
+Wartość COLORREF, która reprezentuje nowy domyślny kolor tła.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [COLORREF](/windows/desktop/gdi/colorref) wartość, która reprezentuje poprzedniego domyślny kolor tła.
+Wartość [COLORREF](/windows/desktop/gdi/colorref) , która reprezentuje poprzedni domyślny kolor tła.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz ten temat, aby uzyskać więcej informacji na temat ustawić kolor tła ustawić wartości domyślne.
+Zapoznaj się z tym tematem, aby uzyskać więcej informacji na temat momentu ustawienia koloru tła i ustawienia wartości domyślnej.
 
 ##  <a name="setcolorscheme"></a>  CReBarCtrl::SetColorScheme
 
-Ustawia schemat kolorów dla przycisków w formancie paska pomocniczego.
+Ustawia schemat kolorów dla przycisków w kontrolce paska pomocniczego.
 
 ```
 void SetColorScheme(const COLORSCHEME* lpcs);
@@ -937,16 +937,16 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 
 ### <a name="parameters"></a>Parametry
 
-*LPC*<br/>
-Wskaźnik do [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struktury, zgodnie z opisem w zestawie Windows SDK.
+*lpcs*<br/>
+Wskaźnik do struktury [ColorScheme](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) , zgodnie z opisem w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-`COLORSCHEME` Struktura zawiera kolor wyróżnienia przycisku i kolor cienia przycisku.
+`COLORSCHEME` Struktura zawiera zarówno kolor wyróżnienia przycisku, jak i kolor cienia przycisku.
 
-##  <a name="setextendedstyle"></a>  CReBarCtrl::SetExtendedStyle
+##  <a name="setextendedstyle"></a>Korzystanie CReBarCtrl:: setextended
 
-Ustawia rozszerzone style dla bieżącego formantu paska pomocniczego.
+Ustawia rozszerzone style dla bieżącej kontrolki paska pomocniczego.
 
 ```
 DWORD SetExtendedStyle(
@@ -958,20 +958,20 @@ DWORD SetExtendedStyle(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*dwMask*|[in] Bitowa kombinacja (lub) flagi określające flag, które w *dwStyleEx* zastosować parametr. Użyj co najmniej jeden z następujących wartości:<br /><br /> RBS_EX_SPLITTER: Domyślnie pokazuj rozdzielacza na dole w poziomym trybie, a po prawej stronie w pionowym trybie.<br /><br /> RBS_EX_TRANSPARENT: Do przodu [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) wiadomości do okna nadrzędnego.|
-|*dwStyleEx*|[in] Bitowa kombinacja (lub) flagi określające, style, które mają zastosowanie. Aby ustawić stylu, podaj tę samą flagę, która jest używana w *dwMask* parametru. Aby zresetować stylu, należy określić binarne zero.|
+|*dwMask*|podczas Kombinacja bitowa (lub) flag, które określają, które flagi w parametrze *dwStyleEx* mają zastosowanie. Użyj co najmniej jednej z następujących wartości:<br /><br /> RBS_EX_SPLITTER: Domyślnie Pokaż rozdzielacz u dołu w trybie poziomym i w prawo w trybie pionowym.<br /><br /> RBS_EX_TRANSPARENT: Przekaż komunikat [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) do okna nadrzędnego.|
+|*dwStyleEx*|podczas Kombinacja bitowa (lub) flag, które określają style, które mają zostać zastosowane. Aby ustawić styl, należy określić tę samą flagę, która jest używana w parametrze *dwMask* . Aby zresetować styl, określ wartość binarną zero.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Poprzedni rozszerzone style.
+Poprzedni rozszerzony styl.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wysyła [RB_SETEXTENDEDSTYLE](/windows/desktop/Controls/rb-setextendedstyle) komunikat, który jest opisany w zestawie Windows SDK.
+Ta metoda wysyła komunikat [RB_SETEXTENDEDSTYLE](/windows/desktop/Controls/rb-setextendedstyle) , który jest opisany w Windows SDK.
 
 ##  <a name="setimagelist"></a>  CReBarCtrl::SetImageList
 
-Przypisuje listy obrazów z formantem paska pomocniczego.
+Przypisuje listę obrazów do kontrolki paska pomocniczego.
 
 ```
 BOOL SetImageList(CImageList* pImageList);
@@ -980,15 +980,15 @@ BOOL SetImageList(CImageList* pImageList);
 ### <a name="parameters"></a>Parametry
 
 *pImageList*<br/>
-Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt, który zawiera listy obrazów do przypisania do formantu paska pomocniczego.
+Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) zawierającego listę obrazów, która ma zostać przypisana do kontrolki paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ##  <a name="setowner"></a>  CReBarCtrl::SetOwner
 
-Implementuje zachowanie komunikatów Win32 [RB_SETPARENT](/windows/desktop/Controls/rb-setparent), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_SETPARENT](/windows/desktop/Controls/rb-setparent)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 CWnd* SetOwner(CWnd* pWnd);
@@ -997,22 +997,22 @@ CWnd* SetOwner(CWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Wskaźnik do `CWnd` obiekt, aby ustawić jako właściciela formantu paska pomocniczego.
+Wskaźnik do `CWnd` obiektu, który ma zostać ustawiony jako właściciel formantu paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest bieżącym właścicielem formantu paska pomocniczego.
+Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który jest bieżącym właścicielem kontrolki paska pomocniczego.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy pamiętać, że ta funkcja członkowska używa wskaźników do `CWnd` obiekty dla bieżącego i wybranego właściciela formantu paska pomocniczego, a nie obsługuje systemu Windows.
+Należy zauważyć, że ta funkcja członkowska `CWnd` używa wskaźników do obiektów zarówno dla bieżącego, jak i wybranego właściciela kontrolki paska pomocniczego, a nie uchwytów do systemu Windows.
 
 > [!NOTE]
->  Ta funkcja elementu członkowskiego nie powoduje zmiany rzeczywistego obiektu nadrzędnego, który został ustawiony podczas tworzenia kontrolki; zamiast wysyła powiadomienia do okna, które określisz.
+>  Ta funkcja członkowska nie zmienia rzeczywistego elementu nadrzędnego, który został ustawiony podczas tworzenia kontrolki; Zamiast tego wysyła komunikaty powiadomień do określonego okna.
 
 ##  <a name="setpalette"></a>  CReBarCtrl::SetPalette
 
-Implementuje zachowanie komunikatów Win32 [RB_SETPALETTE](/windows/desktop/Controls/rb-setpalette), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_SETPALETTE](/windows/desktop/Controls/rb-setpalette)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 CPalette* SetPalette(HPALETTE hPal);
@@ -1021,19 +1021,19 @@ CPalette* SetPalette(HPALETTE hPal);
 ### <a name="parameters"></a>Parametry
 
 *hPal*<br/>
-Hpalette — określający nowe palety, używanego przez formant paska pomocniczego.
+Element HPALETTE, który określa nową paletę, która będzie używana przez formant paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CPalette](../../mfc/reference/cpalette-class.md) określający palecie poprzedniej kontrolki paska pomocniczego.
+Wskaźnik do obiektu [CPalette](../../mfc/reference/cpalette-class.md) , który określa poprzednią paletę kontrolki paska pomocniczego.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że ta funkcja członkowska używa `CPalette` obiektu jako jego wartość zwracana zamiast HPALETTE.
+Należy zauważyć, że ta funkcja członkowska używa `CPalette` obiektu jako wartości zwracanej, a nie elementu HPALETTE.
 
 ##  <a name="settextcolor"></a>  CReBarCtrl::SetTextColor
 
-Implementuje zachowanie komunikatów Win32 [RB_SETTEXTCOLOR](/windows/desktop/Controls/rb-settextcolor), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_SETTEXTCOLOR](/windows/desktop/Controls/rb-settextcolor)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 COLORREF SetTextColor(COLORREF clr);
@@ -1041,20 +1041,20 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*clr*<br/>
-Wartość COLORREF, który reprezentuje nowy tekst koloru `CReBarCtrl` obiektu.
+*CLR*<br/>
+Wartość COLORREF, która reprezentuje nowy kolor tekstu w `CReBarCtrl` obiekcie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-[COLORREF](/windows/desktop/gdi/colorref) reprezentującą na poprzedni kolor tekstu skojarzony z `CReBarCtrl` obiektu.
+Wartość [COLORREF](/windows/desktop/gdi/colorref) reprezentująca poprzedni kolor tekstu skojarzony z `CReBarCtrl` obiektem.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest ona udostępniana do obsługi elastyczność kolor tekstu w formancie paska pomocniczego.
+Zapewnia obsługę elastyczności koloru tekstu w kontrolce paska pomocniczego.
 
-##  <a name="settooltips"></a>  CReBarCtrl::SetToolTips
+##  <a name="settooltips"></a>Korzystanie CReBarCtrl:: setetykietki narzędzi
 
-Tworzy skojarzenia między formantem etykietki narzędzia, z formantem paska pomocniczego.
+Kojarzy formant etykietki narzędzia z kontrolką paska pomocniczego.
 
 ```
 void SetToolTips(CToolTipCtrl* pToolTip);
@@ -1063,15 +1063,15 @@ void SetToolTips(CToolTipCtrl* pToolTip);
 ### <a name="parameters"></a>Parametry
 
 *pToolTip*<br/>
-Wskaźnik do [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) obiektu
+Wskaźnik do obiektu [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)
 
 ### <a name="remarks"></a>Uwagi
 
-Użytkownik musi zniszczyć `CToolTipCtrl` obiektu, kiedy są z nią zrobić.
+Gdy wszystko będzie gotowe `CToolTipCtrl` , należy zniszczyć obiekt.
 
 ##  <a name="setwindowtheme"></a>  CReBarCtrl::SetWindowTheme
 
-Ustawia styl wizualny formantu paska pomocniczego.
+Ustawia styl wizualizacji formantu paska pomocniczego.
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -1080,19 +1080,19 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="parameters"></a>Parametry
 
 *pszSubAppName*<br/>
-Wskaźnik do ciągu Unicode, który zawiera stylu wizualnego paska pomocniczego, aby ustawić.
+Wskaźnik do ciągu Unicode, który zawiera styl wizualizacji paska pomocniczego do ustawienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwracana wartość nie jest używana.
+Wartość zwracana nie jest używana.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska emuluje funkcjonalność [RB_SETWINDOWTHEME](/windows/desktop/Controls/rb-setwindowtheme) komunikat, zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność komunikatu [RB_SETWINDOWTHEME](/windows/desktop/Controls/rb-setwindowtheme) , zgodnie z opisem w Windows SDK.
 
 ##  <a name="showband"></a>  CReBarCtrl::ShowBand
 
-Implementuje zachowanie komunikatów Win32 [RB_SHOWBAND](/windows/desktop/Controls/rb-showband), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_SHOWBAND](/windows/desktop/Controls/rb-showband)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL ShowBand(
@@ -1103,18 +1103,18 @@ BOOL ShowBand(
 ### <a name="parameters"></a>Parametry
 
 *uBand*<br/>
-Liczony od zera indeks poza pasmem w formancie paska pomocniczego.
+Indeks (liczony od zera) pasma w kontrolce paska pomocniczego.
 
 *fShow*<br/>
-Wskazuje, jeśli pokazane lub ukryte pasmo. Jeśli ta wartość wynosi TRUE, będą wyświetlane pasmo. W przeciwnym razie pasmo zostanie ukryte.
+Wskazuje, czy pasmo ma być pokazywany czy ukryty. Jeśli ta wartość jest RÓWNa TRUE, zostanie wyświetlona Grupa. W przeciwnym razie pasek zostanie ukryty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
-##  <a name="sizetorect"></a>  CReBarCtrl::SizeToRect
+##  <a name="sizetorect"></a>Korzystanie CReBarCtrl:: SizeToRect
 
-Implementuje zachowanie komunikatów Win32 [RB_SIZETORECT](/windows/desktop/Controls/rb-sizetorect), zgodnie z opisem w zestawie Windows SDK.
+Implementuje zachowanie [RB_SIZETORECT](/windows/desktop/Controls/rb-sizetorect)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ```
 BOOL SizeToRect(CRect& rect);
@@ -1122,16 +1122,16 @@ BOOL SizeToRect(CRect& rect);
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa prostokąt, który formantu paska pomocniczego powinny być ustalone na poziomie.
+*cinania*<br/>
+Odwołanie do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa prostokąt, do którego należy określić rozmiar kontrolki paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że ta funkcja członkowska używa `CRect` obiektu jako parametr, a nie `RECT` struktury.
+Należy zauważyć, że ta funkcja członkowska używa `CRect` obiektu jako parametru, a nie `RECT` struktury.
 
 ## <a name="see-also"></a>Zobacz także
 

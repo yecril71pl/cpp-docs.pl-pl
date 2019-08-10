@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 292a1c6606585dc0694ee678ba8bc9b5fbc42681
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d875a039b01b7458a1df46a2539cf5c68aa67e41
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261449"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915934"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
-Nazwa funkcji identyfikowane przez trzeci parametr makra NOTIFY_HANDLER na mapie komunikatów.
+Nazwa funkcji identyfikowanej przez trzeci parametr makra NOTIFY_HANDLER w mapie wiadomości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,21 +28,21 @@ LRESULT NotifyHandler(
 #### <a name="parameters"></a>Parametry
 
 *idCtrl*<br/>
-Identyfikator formantu wysyłania komunikatu.
+Identyfikator kontrolki wysyłającej wiadomość.
 
 *pnmh*<br/>
-Adres [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) strukturę, która zawiera kod powiadomienia i dodatkowe informacje. Niektóre komunikaty powiadomień, ten parametr wskazuje większej struktury, która ma `NMHDR` struktury jako swojego pierwszego elementu członkowskiego.
+Adres struktury [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) , która zawiera kod powiadomienia i dodatkowe informacje. W przypadku niektórych komunikatów powiadomień ten parametr wskazuje większą strukturę, która ma `NMHDR` strukturę jako pierwszy element członkowski.
 
 *bHandled*<br/>
-Ustawia mapy wiadomości *bHandled* na wartość TRUE, przed *NotifyHandler* jest wywoływana. Jeśli *NotifyHandler* nie obsługuje w pełni komunikat, należy ją ustawić *bHandled* do **FALSE** do wskazania wiadomość wymaga dalszego przetwarzania.
+Mapa komunikatów ustawia *bHandled* na true przed wywołaniem *NotifyHandler* . Jeśli *NotifyHandler* nie obsługuje w pełni komunikatu, należy ustawić **wartość false** dla *bHandled* , aby wskazać, że komunikat musi zostać przetworzony.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik przetwarzania wiadomości. 0, jeśli kończy się pomyślnie.
+Wynik przetwarzania komunikatów. 0 w przypadku powodzenia.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać przykład korzystania z tej obsługi wiadomości w mapie komunikatów, zobacz [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
+Aby zapoznać się z przykładem użycia tego programu obsługi komunikatów w mapie komunikatów, zobacz [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
 
 ## <a name="see-also"></a>Zobacz także
 

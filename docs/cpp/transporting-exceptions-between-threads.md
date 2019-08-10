@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ca6ad9f9b923843d74a3b671691438af6ea5d82b
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221920"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68917026"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport wyjątków między wątkami
 
-Microsoft C++ kompilator (MSVC) obsługuje *transportowanie wyjątków* z jednego wątku do innego. Transport wyjątków umożliwia przechwytywanie wyjątków w jednym wątku, a następnie powodowanie, aby były generowane w innym wątku. Na przykład, możesz użyć tej funkcji do pisania aplikacji wielowątkowych, gdzie wątek główny obsługuje wszystkie wyjątki generowane przez pomocnicze wątki. Transport wyjątków jest przydatny głównie dla deweloperów, którzy tworzą biblioteki lub systemy programowania równoległego. Aby zaimplementować transport wyjątków, udostępnia MSVC [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typu i [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), i [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkcji.
+Kompilator firmy C++ Microsoft (MSVC) obsługuje *transportowanie wyjątku* z jednego wątku do innego. Transport wyjątków umożliwia przechwytywanie wyjątków w jednym wątku, a następnie powodowanie, aby były generowane w innym wątku. Na przykład, możesz użyć tej funkcji do pisania aplikacji wielowątkowych, gdzie wątek główny obsługuje wszystkie wyjątki generowane przez pomocnicze wątki. Transport wyjątków jest przydatny głównie dla deweloperów, którzy tworzą biblioteki lub systemy programowania równoległego. Aby zaimplementować transportowanie wyjątków, MSVC udostępnia typ [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) oraz funkcje [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)i [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,16 +42,16 @@ namespace std
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Nie określono tego parametru*|Nieokreślona Klasa wewnętrzna, która jest używana do zaimplementowania `exception_ptr` typu.|
+|*nieokreślony*|Nieokreślona Klasa wewnętrzna, która jest używana do implementowania `exception_ptr` typu.|
 |*p*|`exception_ptr` Obiekt, który odwołuje się do wyjątku.|
 |*E*|Klasa, która reprezentuje wyjątek.|
-|*e*|Wystąpienie parametru `E` klasy.|
+|*e*|Wystąpienie klasy Parameter `E` .|
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`current_exception` Funkcja zwraca `exception_ptr` obiekt, który odwołuje się do wyjątku, który jest obecnie w toku. Jeśli wyjątek nie jest w toku, funkcja zwraca `exception_ptr` obiektu, który nie jest skojarzony z żadnym wyjątkiem.
+`current_exception` Funkcja`exception_ptr` zwraca obiekt, który odwołuje się do wyjątku, który jest aktualnie w toku. Jeśli żaden wyjątek nie jest w toku, funkcja zwraca `exception_ptr` obiekt, który nie jest skojarzony z żadnym wyjątkiem.
 
-`make_exception_ptr` Funkcja zwraca `exception_ptr` obiektu, który odwołuje się do wyjątków określonych przez *e* parametru.
+Funkcja zwraca obiekt, który odwołuje się do wyjątku określonego przez parametr *e.* `make_exception_ptr` `exception_ptr`
 
 ## <a name="remarks"></a>Uwagi
 
@@ -63,13 +63,13 @@ Jednak jeśli wątek pomocniczy zgłasza wyjątek, wskazane jest, aby watek gł�
 
 ### <a name="solution"></a>Rozwiązanie
 
-Aby obsłużyć poprzedni scenariusz, standard C++ obsługuje transportowanie wyjątków pomiędzy wątkami. Jeśli wątek pomocniczy zgłasza wyjątek, wyjątek ten staje się *bieżący wyjątek*. Poprzez analogię do świata rzeczywistego, bieżący wyjątek jest nazywany *w locie*. Bieżący wyjątek jest w locie od czasu, kiedy jest generowany, aż do momentu, gdy zostanie zwrócony przez kod obsługi wyjątków, który go przechwycił.
+Aby obsłużyć poprzedni scenariusz, standard C++ obsługuje transportowanie wyjątków pomiędzy wątkami. Jeśli wątek pomocniczy zgłasza wyjątek, ten wyjątek zmieni się na *bieżący wyjątek*. Analogicznie do rzeczywistego świata, bieżący wyjątek jest uznawany za *w locie*. Bieżący wyjątek jest w locie od czasu, kiedy jest generowany, aż do momentu, gdy zostanie zwrócony przez kod obsługi wyjątków, który go przechwycił.
 
-Wątek pomocniczy może przechwycić wyjątek bieżący w **catch** zablokować, a następnie wywołaj `current_exception` funkcji do przechowywania wyjątku w `exception_ptr` obiektu. `exception_ptr` Obiekt musi być dostępny dla pomocniczego wątku i wątku głównego. Na przykład `exception_ptr` obiekt może być zmienną globalną, do których dostęp jest kontrolowany przez mutex. Termin *transportować wyjątek* oznacza, że wyjątek w jednym wątku można przekonwertować na formularz, który może zostać oceniony przez inny wątek.
+Wątek pomocniczy może przechwycić bieżący wyjątek w bloku **catch** , a następnie wywołać `current_exception` funkcję w celu zapisania wyjątku w `exception_ptr` obiekcie. `exception_ptr` Obiekt musi być dostępny dla wątku pomocniczego i do wątku głównego. Na przykład `exception_ptr` obiekt może być zmienną globalną, której dostęp jest kontrolowany przez mutex. Termin *transport wyjątku* oznacza, że wyjątek w jednym wątku można przekonwertować na formularz, do którego można uzyskać dostęp za pomocą innego wątku.
 
-Następnie wątek główny wywołuje `rethrow_exception` funkcji, która wyodrębnia i następnie zgłasza wyjątek z `exception_ptr` obiektu. Wygenerowany wyjątek staje się bieżącym wyjątkiem w wątku głównym. Oznacza to, że wyjątek wygląda tak, jakby pochodził z wątku głównego.
+Następnie wątek podstawowy wywołuje `rethrow_exception` funkcję, która wyodrębnia, a następnie zgłasza wyjątek `exception_ptr` z obiektu. Wygenerowany wyjątek staje się bieżącym wyjątkiem w wątku głównym. Oznacza to, że wyjątek wygląda tak, jakby pochodził z wątku głównego.
 
-Wreszcie, wątek główny może przechwycić wyjątek bieżący w **catch** zablokować, a następnie go przetworzyć lub zgłosić do wyższego poziomu obsługi wyjątków. Lub wątek główny może zignorować wyjątek i pozwolić zakończyć proces.
+Na koniec wątek główny może przechwycić bieżący wyjątek w bloku **catch** , a następnie przetworzyć go lub zgłosić do programu obsługi wyjątków wyższego poziomu. Lub wątek główny może zignorować wyjątek i pozwolić zakończyć proces.
 
 Większość aplikacji nie musi transportować wyjątków między wątkami. Jednak ta funkcja jest przydatna w systemach przetwarzania równoległego, ponieważ system może podzielić pracę pomiędzy wątki pomocnicze, procesory lub rdzenie. W środowisku przetwarzania równoległego pojedynczy, wyspecjalizowany wątek może obsługiwać wszystkie wyjątki z pomocniczych wątków i może stanowić spójny model obsługi wyjątków dla innych aplikacji.
 
@@ -77,74 +77,74 @@ Aby uzyskać więcej informacji o propozycji komitetu standardów C++, znajdź w
 
 ### <a name="exception-handling-models-and-compiler-options"></a>Opcje kompilatora i modele obsługi wyjątków
 
-Model obsługi wyjątków aplikacji określa, czy można przechwycić i transportować wyjątek. Visual C++ obsługuje trzy modele, które mogą obsługiwać wyjątki C++, obsługę wyjątków strukturalnych (SEH) i wyjątki środowiska uruchomieniowego języka wspólnego (CLR). Użyj [/EH](../build/reference/eh-exception-handling-model.md) i [/CLR](../build/reference/clr-common-language-runtime-compilation.md) opcji kompilatora, aby określić model obsługi wyjątków w aplikacji.
+Model obsługi wyjątków aplikacji określa, czy można przechwycić i transportować wyjątek. Visual C++ obsługuje trzy modele, które mogą obsługiwać wyjątki C++, obsługę wyjątków strukturalnych (SEH) i wyjątki środowiska uruchomieniowego języka wspólnego (CLR). Użyj opcji kompilatora [/EH](../build/reference/eh-exception-handling-model.md) i [/CLR](../build/reference/clr-common-language-runtime-compilation.md) , aby określić model obsługi wyjątków aplikacji.
 
 Tylko następujące połączenie opcji kompilatora i instrukcji programowania może transportować wyjątek. Inne połączenia nie mogą przechwytywać wyjątków lub mogą je przechwytywać, ale nie transportować.
 
-- **/Eha** — opcja kompilatora i **catch** instrukcji transportuje wyjątki SEH i C++.
+- Opcja kompilatora **/EHa** i instrukcja **catch** mogą transportować SEH i C++ wyjątki.
 
-- **/Eha**, **/EHS**, i **/ehsc** opcje kompilatora i **catch** poufności informacji mogą transportować wyjątki C++.
+- Opcje kompilatora **/EHa**, **/EHS**i **/EHsc** oraz instrukcja **catch** mogą transportować C++ wyjątki.
 
-- **/CLR** — opcja kompilatora i **catch** poufności informacji mogą transportować wyjątki C++. **/CLR** — opcja kompilatora oznacza określenie **/eha** opcji. Należy zauważyć, że kompilator nie obsługuje transportowania wyjątków zarządzanych. Jest to spowodowane wyjątki zarządzane, które są uzyskiwane z [klasy System.Exception](../standard-library/exception-class.md), są już obiektami, które mogą być przenoszone między wątkami przy użyciu środowiska uruchomieniowego wspólnego wyprowadzane.
+- Opcja kompilatora **/CLR** i instrukcja **catch** mogą transportować C++ wyjątki. Opcja kompilatora **/CLR** implikuje specyfikację opcji **/EHa** . Należy zauważyć, że kompilator nie obsługuje transportowania wyjątków zarządzanych. Wynika to z faktu, że zarządzane wyjątki, które pochodzą z [klasy System. Exception](../standard-library/exception-class.md), są już obiektami, które można przenosić między wątkami przy użyciu obiektów wspólnego środowiska uruchomieniowego języka.
 
    > [!IMPORTANT]
-   > Firma Microsoft zaleca, aby określić **/ehsc** — opcja kompilatora i przechwytywać tylko wyjątki C++. Można się narazić na zagrożenia bezpieczeństwa, jeśli używasz **/eha** lub **/CLR** — opcja kompilatora i **catch** instrukcji z wielokropkiem  *deklaracji wyjątku* (`catch(...)`). Zamierzasz prawdopodobnie używać **catch** instrukcję, aby przechwycić kilka szczególnych wyjątków. Jednak `catch(...)` instrukcji przechwytuje wyjątki wszystkich języków C++ i SEH, w tym nieoczekiwane, które powinny być krytyczne. Jeśli zignorujesz lub źle obsłużysz nieoczekiwany wyjątek, złośliwy kod wykorzystać tę szansę do obejścia zabezpieczeń programu.
+   > Zalecamy określenie opcji kompilatora **/EHsc** i przechwycenie tylko C++ wyjątków. Jeśli używasz opcji kompilatora **/EHa** lub **/CLR** i instrukcji **catch** z *deklaracją wyjątku* wielokropka (`catch(...)`), narażasz się na zagrożenia bezpieczeństwa. Prawdopodobnie zamierzasz użyć instrukcji **catch** do przechwycenia kilku określonych wyjątków. Jednak instrukcja przechwytuje wszystkie i SEH wyjątki, w tym nieoczekiwane, które powinny być krytyczne. C++ `catch(...)` Jeśli zignorujesz lub źle obsłużysz nieoczekiwany wyjątek, złośliwy kod wykorzystać tę szansę do obejścia zabezpieczeń programu.
 
 ## <a name="usage"></a>Użycie
 
-W poniższych sekcjach opisano sposób transportu wyjątków za pomocą `exception_ptr` typu i `current_exception`, `rethrow_exception`, i `make_exception_ptr` funkcji.
+W poniższych sekcjach opisano, jak transportować wyjątki `exception_ptr` przy użyciu typu, `current_exception`oraz `rethrow_exception`funkcji, `make_exception_ptr` i.
 
-## <a name="exceptionptr-type"></a>Typ exception_ptr
+## <a name="exception_ptr-type"></a>Typ exception_ptr
 
-Użyj `exception_ptr` obiekt, aby odwoływać się do bieżącego wyjątku lub wystąpienia wyjątku określonego przez użytkownika. W implementacji firmy Microsoft wyjątek jest reprezentowany przez [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) struktury. Każdy `exception_ptr` obiekt zawiera pole odwołania wyjątku wskazuje kopię `EXCEPTION_RECORD` strukturę, która reprezentuje wyjątek.
+`exception_ptr` Użyj obiektu, aby odwołać się do bieżącego wyjątku lub wystąpienia wyjątku określonego przez użytkownika. W implementacji firmy Microsoft wyjątek jest reprezentowany przez strukturę [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) . Każdy `exception_ptr` obiekt zawiera pole odwołania wyjątku, które wskazuje kopię `EXCEPTION_RECORD` struktury, która reprezentuje wyjątek.
 
-Kiedy Deklarujesz `exception_ptr` zmiennej, zmienna nie jest skojarzony z żadnym wyjątkiem. To znaczy, że pole odwołania wyjątku ma wartość NULL. Takie `exception_ptr` obiekt jest nazywany *null exception_ptr*.
+Podczas deklarowania `exception_ptr` zmiennej zmienna nie jest skojarzona z żadnym wyjątkiem. To znaczy, że pole odwołania wyjątku ma wartość NULL. Taki obiekt jest nazywany exception_ptr o *wartości null.* `exception_ptr`
 
-Użyj `current_exception` lub `make_exception_ptr` funkcję, aby przypisać wyjątek do `exception_ptr` obiektu. Podczas przypisywania wyjątku do `exception_ptr` zmiennej, pole odwołania wyjątku zmiennej wskazuje kopię wyjątku. W przypadku braku pamięci, aby skopiować wyjątek, pole odwołania wyjątku wskazuje kopię [std::bad_alloc](../standard-library/bad-alloc-class.md) wyjątku. Jeśli `current_exception` lub `make_exception_ptr` funkcji nie może skopiować wyjątku jakiegokolwiek innego powodu, wywołania funkcji [zakończyć](../c-runtime-library/reference/terminate-crt.md) funkcję, aby zakończyć bieżący proces.
+Użyj funkcji `make_exception_ptr` `exception_ptr` or, aby przypisać wyjątek do obiektu. `current_exception` Po przypisaniu wyjątku do `exception_ptr` zmiennej pole odwołania wyjątku zmiennej wskazuje kopię wyjątku. Jeśli nie ma wystarczającej ilości pamięci do skopiowania wyjątku, pole odwołania wyjątku wskazuje kopię wyjątku [std:: bad_alloc](../standard-library/bad-alloc-class.md) . Jeśli funkcja `make_exception_ptr` or nie może skopiować wyjątku z innych przyczyn, funkcja wywołuje funkcję Terminate, aby wyjść z bieżącego procesu. [](../c-runtime-library/reference/terminate-crt.md) `current_exception`
 
-Pomimo swojej nazwy `exception_ptr` obiektu sam nie jest wskaźnikiem. Go nie stosuje semantyki wskaźnika i nie można używać z dostępu do elementu członkowskiego wskaźnika (`->`) lub pośrednio (`*`) operatorów. `exception_ptr` Obiekt nie ma publicznych elementów członkowskich danych ani funkcji elementów członkowskich.
+Pomimo nazwy, `exception_ptr` obiekt nie jest samo wskaźnikiem. Nie przestrzega on semantyki wskaźnika i nie można go używać z operatorami dostępu do elementów`->`członkowskich wskaźnika () ani pośrednimi (`*`). `exception_ptr` Obiekt nie ma publicznych składowych danych ani funkcji Członkowskich.
 
 ### <a name="comparisons"></a>Porównania
 
-Możesz użyć równości (`==`) i nierówności (`!=`) operatory do porównywania dwóch `exception_ptr` obiektów. Operatory nie porównują wartość binarna (wzorca bitowego) `EXCEPTION_RECORD` struktur, które reprezentują wyjątki. Zamiast tego, operatory porównują adresy w polu odwołania do wyjątku `exception_ptr` obiektów. W związku z tym, o wartości null `exception_ptr` i porównywane równe wartości NULL.
+Do porównywania dwóch`==` `exception_ptr` obiektów można użyć operatorów równości () i`!=`nierówności (). Operatory nie porównują wartości binarnej (wzorca bitowego) `EXCEPTION_RECORD` struktur, które reprezentują wyjątki. Zamiast tego operatory porównują adresy w polu `exception_ptr` odwołanie wyjątku obiektów. W związku z tym wartość `exception_ptr` null i wartości null są porównywane jako równe.
 
-## <a name="currentexception-function"></a>Funkcja current_exception
+## <a name="current_exception-function"></a>Funkcja current_exception
 
-Wywołaj `current_exception` działa w programach **catch** bloku. Jeśli wyjątek jest w locie i **catch** bloku może przechwycić wyjątek, `current_exception` funkcja zwraca `exception_ptr` obiekt, który odwołuje się do wyjątku. W przeciwnym razie funkcja zwraca wartość null `exception_ptr` obiektu.
+Wywołaj funkcję w bloku **catch.** `current_exception` Jeśli wyjątek jest w locie i blok **catch** może przechwycić wyjątek, `current_exception` funkcja zwraca `exception_ptr` obiekt, który odwołuje się do wyjątku. W przeciwnym razie funkcja zwraca obiekt o `exception_ptr` wartości null.
 
 ### <a name="details"></a>Szczegóły
 
-`current_exception` Funkcja przechwytuje wyjątek, który jest w locie, niezależnie od tego, czy **catch** instrukcja Określa [deklaracji wyjątku](../cpp/try-throw-and-catch-statements-cpp.md) instrukcji.
+Funkcja przechwytuje wyjątek, który jest w locie, niezależnie od tego, czy instrukcja **catch** określa deklarację [wyjątku.](../cpp/try-throw-and-catch-statements-cpp.md) `current_exception`
 
-Destruktor dla bieżącego wyjątku jest wywoływany pod koniec **catch** zablokować, jeśli nie jest ponownie zgłaszany wyjątek. Jednak nawet wtedy, gdy wywołujesz `current_exception` funkcji w destruktorze, funkcja zwraca `exception_ptr` obiektu, który odwołuje się do bieżącego wyjątku.
+Destruktor dla bieżącego wyjątku jest wywoływany na końcu bloku **catch** , jeśli ten wyjątek nie zostanie ponownie zgłoszony. Jednak nawet w przypadku wywołania `current_exception` funkcji w destruktorze funkcja `exception_ptr` zwraca obiekt, który odwołuje się do bieżącego wyjątku.
 
-Kolejne wywołania `current_exception` funkcji powrotu `exception_ptr` obiekty, które odwołują się do różnych kopii bieżącego wyjątku. W związku z tym obiekty są porównane jako nierówne, ponieważ odnoszą się one do poszczególnych kopii, mimo że kopie mają tę samą wartość binarną.
+Kolejne wywołania `current_exception` funkcji zwracają `exception_ptr` obiekty odwołujące się do różnych kopii bieżącego wyjątku. W związku z tym obiekty są porównane jako nierówne, ponieważ odnoszą się one do poszczególnych kopii, mimo że kopie mają tę samą wartość binarną.
 
 ### <a name="seh-exceptions"></a>Wyjątki SEH
 
-Jeśli używasz **/eha** opcję kompilatora przechwytujesz wyjątek SEH w języku C++ **catch** bloku. `current_exception` Funkcja zwraca `exception_ptr` obiekt, który odwołuje się do wyjątku SEH. I `rethrow_exception` funkcja zgłasza wyjątek SEH, jeśli wywołujesz ją z thetransported `exception_ptr` obiekt jako argumentu.
+Jeśli używasz opcji kompilatora **/EHa** , możesz przechwycić wyjątek SEH w C++ bloku **catch** . `current_exception` Funkcja`exception_ptr` zwraca obiekt, który odwołuje się do wyjątku SEH. Funkcja zgłasza wyjątek SEH, jeśli jest wywoływana z obiektem thetransported `exception_ptr` jako argumentem. `rethrow_exception`
 
-`current_exception` Funkcja zwraca wartość null `exception_ptr` Jeśli wywołasz ją w SEH **__finally** obsługi zakończenia **__except** obsługi wyjątków lub **__except**wyrażenie filtru.
+`exception_ptr` Funkcja zwraca wartość null, jeśli wywołuje ją w obsłudze SEH __finally, __except lub wyrażenie filtru __except. `current_exception`
 
-Transportowany wyjątek nie obsługuje wyjątków zagnieżdżonych. Wyjątek zagnieżdżony występuje, jeśli podczas obsługi wyjątku jest zgłaszany inny wyjątek. Jeśli przechwytujesz wyjątek zagnieżdżony `EXCEPTION_RECORD.ExceptionRecord` element członkowski danych wskazuje łańcuch `EXCEPTION_RECORD` struktur, które opisują wyjątki skojarzone. `current_exception` Funkcja nie obsługuje wyjątków zagnieżdżonych, ponieważ zwraca `exception_ptr` którego `ExceptionRecord` element członkowski danych jest zerowany.
+Transportowany wyjątek nie obsługuje wyjątków zagnieżdżonych. Wyjątek zagnieżdżony występuje, jeśli podczas obsługi wyjątku jest zgłaszany inny wyjątek. Jeśli przechwytywany jest wyjątek zagnieżdżony, `EXCEPTION_RECORD.ExceptionRecord` element członkowski danych wskazuje `EXCEPTION_RECORD` łańcuch struktur, które opisują skojarzone wyjątki. Funkcja `current_exception` nie obsługuje zagnieżdżonych wyjątków, ponieważ `exception_ptr` zwraca obiekt, którego `ExceptionRecord` składowa danych jest różna od zera.
 
-Jeśli przechwytujesz wyjątek SEH, musisz zarządzać pamięcią, do przywoływane przez dowolny wskaźnik w `EXCEPTION_RECORD.ExceptionInformation` tablicy elementów członkowskich danych. Musisz gwarantować, że pamięć jest prawidłowa w okresie istnienia odpowiadającego `exception_ptr` obiektu i że pamięć jest zwalniana podczas `exception_ptr` obiekt zostanie usunięty.
+W przypadku przechwycenia wyjątku SEH należy zarządzać pamięcią, do której odwołuje się dowolny `EXCEPTION_RECORD.ExceptionInformation` wskaźnik w tablicy elementów członkowskich danych. Należy zagwarantować, że pamięć jest prawidłowa w okresie istnienia odpowiedniego `exception_ptr` obiektu i że pamięć jest zwalniana `exception_ptr` po usunięciu obiektu.
 
-Można użyć funkcji tłumacza wyjątków strukturalnych (SE) wraz z funkcją transportu wyjątków. Jeśli wyjątek SEH jest tłumaczony na wyjątek C++ `current_exception` funkcja zwraca `exception_ptr` odwołujący się do przetłumaczonego wyjątku zamiast oryginalnego wyjątku SEH. `rethrow_exception` Funkcja generuje następnie przetłumaczony wyjątek, a nie wyjątek oryginalny. Aby uzyskać więcej informacji o funkcjach tłumacza SE, zobacz [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).
+Można użyć funkcji tłumacza wyjątków strukturalnych (SE) wraz z funkcją transportu wyjątków. Jeśli wyjątek SEH jest tłumaczony na C++ wyjątek, `current_exception` funkcja zwraca `exception_ptr` odwołanie odwołujące się do przetłumaczonego wyjątku zamiast oryginalnego wyjątku SEH. Następnie `rethrow_exception` funkcja zgłasza wyjątek przetłumaczony, a nie oryginalny wyjątek. Aby uzyskać więcej informacji na temat funkcji translatora SE, zobacz [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).
 
-## <a name="rethrowexception-function"></a>Funkcja rethrow_exception
+## <a name="rethrow_exception-function"></a>Funkcja rethrow_exception
 
-Po zapisaniu przechwyconego wyjątku w `exception_ptr` obiektu, wątek główny może przetworzyć obiekt. W podstawowym wątku, wywołaj `rethrow_exception` działać razem z `exception_ptr` obiekt jako argumentu. `rethrow_exception` Funkcja wyodrębnia wyjątek z `exception_ptr` obiektu i następnie zgłasza wyjątek w kontekście wątku głównego. Jeśli *p* parametru `rethrow_exception` funkcji ma wartość null `exception_ptr`, funkcja zgłasza [std::bad_exception](../standard-library/bad-exception-class.md).
+Po przechowaniu przechwyconego wyjątku w `exception_ptr` obiekcie wątek główny może przetworzyć obiekt. W wątku podstawowym Wywołaj `rethrow_exception` funkcję razem `exception_ptr` z obiektem jako argumentem. Funkcja wyodrębnia wyjątek `exception_ptr` z obiektu, a następnie zgłasza wyjątek w kontekście wątku głównego. `rethrow_exception` Jeśli `rethrow_exception` parametr *p* funkcji ma wartość null `exception_ptr`, funkcja zgłasza [std:: bad_exception](../standard-library/bad-exception-class.md).
 
-Wyodrębniony wyjątek jest teraz wyjątkiem bieżącym w wątku podstawowym i można go obsłużyć, podobnie jak w przypadku innych wyjątków. Jeśli przechwytujesz wyjątek, możesz go obsługiwać bezpośrednio lub użyć **throw** instrukcję, aby wysłać go do wyższego poziomu obsługi wyjątków. W przeciwnym razie nic nie rób, niech domyślny program obsługi wyjątków systemu zakończy proces.
+Wyodrębniony wyjątek jest teraz wyjątkiem bieżącym w wątku podstawowym i można go obsłużyć, podobnie jak w przypadku innych wyjątków. W przypadku przechwycenia wyjątku można go obsłużyć natychmiast lub użyć instrukcji **throw** , aby wysłać ją do programu obsługi wyjątków wyższego poziomu. W przeciwnym razie nic nie rób, niech domyślny program obsługi wyjątków systemu zakończy proces.
 
-## <a name="makeexceptionptr-function"></a>Funkcja make_exception_ptr
+## <a name="make_exception_ptr-function"></a>Funkcja make_exception_ptr
 
-`make_exception_ptr` Funkcja przyjmuje instancję klasy jako argument, a następnie zwraca `exception_ptr` która odwołuje się do wystąpienia. Zwykle określaj [klasy wyjątku](../standard-library/exception-class.md) obiekt jako argument `make_exception_ptr` funkcji, mimo że dowolny obiekt klasy może być argumentem.
+Funkcja przyjmuje wystąpienie klasy jako argument, a następnie `exception_ptr` zwraca odwołanie odwołujące się do wystąpienia. `make_exception_ptr` Zazwyczaj należy określić obiekt [klasy wyjątku](../standard-library/exception-class.md) jako argument `make_exception_ptr` funkcji, chociaż każdy obiekt klasy może być argumentem.
 
-Wywoływanie `make_exception_ptr` funkcji jest odpowiednikiem zgłaszania wyjątku C++, przechwytywania go w **catch** bloku, a następnie wywoływania `current_exception` funkcja zwraca `exception_ptr` obiekt, który odwołuje się do wyjątku. Implementacja firmy Microsoft `make_exception_ptr` jest bardziej efektywna niż generowanie i następnie przechwytywanie wyjątku.
+`current_exception` `exception_ptr` C++ Wywołanie funkcji jest równoważne do zgłaszania wyjątku, przechwytywania go w bloku catch, a następnie wywołania funkcji zwracającej obiekt, który odwołuje się do wyjątku. `make_exception_ptr` Implementacja firmy Microsoft dla `make_exception_ptr` funkcji jest bardziej wydajna niż zgłaszanie i przechwytywanie wyjątku.
 
-Aplikacja zazwyczaj nie wymaga `make_exception_ptr` funkcji, a my odradzamy jej użycie.
+Aplikacja zwykle nie wymaga `make_exception_ptr` funkcji i odradza jej używanie.
 
 ## <a name="example"></a>Przykład
 
@@ -252,7 +252,7 @@ exception_ptr 1: Caught a  myException exception.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wyjątku >
+**Nagłówek:** \<> wyjątku
 
 ## <a name="see-also"></a>Zobacz także
 

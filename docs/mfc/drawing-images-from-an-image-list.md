@@ -7,28 +7,28 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e2058c727620c9aae4ccd9a3fbeaae02c78ce8c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262804"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916408"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Rysowanie obrazów z poziomu listy obrazów
 
-Aby narysować obrazu, należy użyć [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) funkcja elementu członkowskiego. Należy podać wskaźnik do obiektu kontekstu urządzenia: indeks obrazu, aby narysować lokalizacji w kontekście urządzenia, w którym do rysowania obrazu i zestaw flag, aby wskazać styl rysowania.
+Aby narysować obraz, użyj funkcji [Korzystanie CImageList::D RAW](../mfc/reference/cimagelist-class.md#draw) . Określisz wskaźnik do obiektu kontekstu urządzenia, indeks obrazu do rysowania, lokalizację w kontekście urządzenia, w której ma nastąpić Rysowanie obrazu, oraz zestaw flag wskazujących styl rysowania.
 
-Po określeniu **ILD_TRANSPARENT** stylu `Draw` używa dwuetapowego procesu do rysowania obrazu maskowanego. Najpierw wykonuje logiczny — i operacji na bitów obrazu i bity maski. Następnie wykonuje operację XOR logiczne na wyniki pierwszej operacji i bity tła kontekstu urządzenia docelowego. Ten proces tworzy przezroczystych obszarów w obraz wynikowy; oznacza to, że każdy biały bit maski powoduje, że odnośny bit w Wynikowy obraz, który ma być przezroczysty.
+Po określeniu stylu **ILD_TRANSPARENT** program `Draw` używa procesu dwuetapowego do rysowania zamaskowanego obrazu. Po pierwsze wykonuje operacje logiczne i w bitach obrazu oraz bity maski. Następnie wykonuje operacje logiczne-XOR na wyniki pierwszej operacji i bitów w tle kontekstu urządzenia docelowego. Ten proces tworzy przezroczyste obszary na obrazie wyników; oznacza to, że każdy biały bit w masce powoduje, że odpowiedni bit w obrazie, który ma być przezroczysty.
 
-Przed narysowaniem obrazu maskowanego na pełnego koloru tła, należy użyć [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) funkcję elementu członkowskiego, aby ustawić kolor tła, listy obrazów do tego samego koloru jako miejsce docelowe. Ustawianie koloru eliminuje potrzebę tworzenie obszarów przezroczystych obrazu i umożliwia `Draw` można po prostu skopiować obraz do kontekstu urządzenia docelowego, co spowoduje znaczne zwiększenie wydajności. Aby narysować obrazu, należy określić **ILD_NORMAL** stylu po wywołaniu `Draw`.
+Przed rysowaniem zamaskowanego obrazu na tle pełnego koloru należy użyć funkcji składowej [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) , aby ustawić kolor tła listy obrazów na taki sam kolor jak miejsce docelowe. Ustawienie koloru eliminuje konieczność tworzenia przezroczystych obszarów na obrazie i umożliwia `Draw` po prostu skopiowanie obrazu do kontekstu urządzenia docelowego, co spowodowało znaczny wzrost wydajności. Aby narysować obraz, określ styl **ILD_NORMAL** podczas wywoływania `Draw`.
 
-Można ustawić kolor tła dla listy obrazów maskowane ([CImageList](../mfc/reference/cimagelist-class.md)) w dowolnym momencie, dzięki czemu jej poprawnie rysuje na wszelkie stałe tła. Ustawianie koloru tła **CLR_NONE** powoduje, że obrazy, które będą używane w sposób niewidoczny dla użytkownika domyślnie. Aby pobrać kolor tła listy obrazów, użyj [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) funkcja elementu członkowskiego.
+Możesz ustawić kolor tła dla listy zamaskowanego obrazu ([Korzystanie CImageList](../mfc/reference/cimagelist-class.md)) w dowolnym momencie, tak aby był prawidłowo pobierany na dowolnym ciągłym tle. Ustawienie koloru tła na **CLR_NONE** powoduje, że obrazy są rysowane domyślnie w sposób przezroczysty. Aby pobrać kolor tła listy obrazów, użyj funkcji składowej [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) .
 
-**ILD_BLEND25** i **ILD_BLEND50** style Symulacja obraz z kolor wyróżnienia systemu. Te style są przydatne w przypadku maskowana obrazu do reprezentowania obiekt, który użytkownik może wybrać. Na przykład, można użyć **ILD_BLEND50** styl rysowania obrazu, gdy użytkownik wybierze je.
+Style **ILD_BLEND25** i **ILD_BLEND50** są symulowane dla obrazu za pomocą koloru wyróżnienia systemu. Te style są przydatne w przypadku użycia zamaskowanego obrazu do reprezentowania obiektu, który użytkownik może wybrać. Na przykład można użyć stylu **ILD_BLEND50** do narysowania obrazu, gdy użytkownik go wybierze.
 
-Nonmasked obrazu jest kopiowany do docelowego urządzenia kontekstu przy użyciu `SRCCOPY` operacji rastrowych. Kolory na obrazie są wyświetlane takie same, niezależnie od koloru tła kontekstu urządzenia. Style rysowania, określone w `Draw` również nie mają wpływu na wygląd nonmasked obrazu.
+Obraz niemaskowany jest kopiowany do kontekstu urządzenia docelowego przy użyciu `SRCCOPY` operacji rastrowej. Kolory obrazu są wyświetlane w taki sam sposób, niezależnie od koloru tła kontekstu urządzenia. Style rysowania określone w programie `Draw` również nie mają wpływu na wygląd obrazu niemaskowanego.
 
-Oprócz funkcję składową Draw inną funkcję, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozszerza możliwości renderowania obrazu. `DrawIndirect` przyjmuje jako parametr, [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) struktury. Ta struktura może służyć do dostosowywania renderowania bieżącego obrazu, łącznie z użyciem kody operacji (w prawym GÓRNYM) rastrowych. Aby uzyskać więcej informacji o kodach przycinanie — zobacz [kody operacji rastrowych](/windows/desktop/gdi/raster-operation-codes) i [map bitowych jako pędzle](/windows/desktop/gdi/bitmaps-as-brushes) w zestawie Windows SDK.
+Oprócz funkcji rysowania elementu członkowskiego, inna funkcja, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozszerza możliwość renderowania obrazu. `DrawIndirect`przyjmuje jako parametr [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) strukturę. Ta struktura może służyć do dostosowywania renderowania bieżącego obrazu, łącznie z użyciem kodów operacji rastrowych (ROP). Aby uzyskać więcej informacji na temat kodów ROP, zobacz sekcję [operacje rastrowe](/windows/desktop/gdi/raster-operation-codes) i [mapy bitowe jako pędzle](/windows/desktop/gdi/bitmaps-as-brushes) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

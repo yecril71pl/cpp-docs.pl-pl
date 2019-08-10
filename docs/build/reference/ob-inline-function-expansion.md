@@ -1,6 +1,6 @@
 ---
 title: /Ob (Rozszerzenie funkcji wbudowanej)
-ms.date: 09/25/2017
+ms.date: 08/08/2019
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
@@ -24,52 +24,77 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7eb3db1e359349eaf5125a6c8a46a3ac7d847f2f
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320230"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915482"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Rozszerzenie funkcji wbudowanej)
 
-Kontroluje wbudowane rozwijanie funkcji.
+Kontroluje wbudowane rozwijanie funkcji. Domyślnie podczas optymalizowania, rozszerzanie odbywa się zgodnie z uznaniem kompilatora dla wszystkich funkcji, często nazywane autoskalowaniem.
 
 ## <a name="syntax"></a>Składnia
 
-> /Ob{0|1|2}
+::: moniker range=">=vs-2019"
+
+> **/Ob** {**0**|12|**3**}|
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+> **/Ob** {**0**|12|}
+
+::: moniker-end
 
 ## <a name="arguments"></a>Argumenty
 
-**0**<br/>
-Wyłącza wbudowane rozszerzenia. Domyślnie rozszerzenie występuje według uznania kompilatora wszystkie funkcje, często nazywane *auto-inlining*.
+**2,0**\
+Wartość domyślna w obszarze [/od](od-disable-debug.md). Wyłącza wbudowane rozszerzenia.
 
-**1**<br/>
-Umożliwia rozwinięcie tylko funkcje oznaczone [wbudowane](../../cpp/inline-functions-cpp.md), `__inline`, lub `__forceinline`, lub w funkcji składowej C++, zdefiniowane w deklaracji klasy.
+**1**\
+Zezwala na rozszerzanie tylko funkcji [](../../cpp/inline-functions-cpp.md)oznaczonych jako inline, [__inline](../../cpp/inline-functions-cpp.md)lub [__forceinline](../../cpp/inline-functions-cpp.md)lub C++ w funkcji składowej zdefiniowanej w deklaracji klasy.
 
-**2**<br/>
-Wartość domyślna. Umożliwia rozwijanie funkcje oznaczone jako `inline`, `__inline`, lub `__forceinline`oraz wszystkie inne funkcje, które wybierze kompilator.
+**dwóch**\
+Wartość domyślna w obszarze [/O1](o1-o2-minimize-size-maximize-speed.md) i [/O2](o1-o2-minimize-size-maximize-speed.md). Zezwala kompilatorowi na rozwijanie dowolnej funkcji, która nie jest jawnie oznaczona jako niewyróżniający.
 
-**/ Ob2** jest w działa, gdy [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md) lub [OX (Włącz większość optymalizacji szybkości)](ox-full-optimization.md) jest używany.
+::: moniker range=">=vs-2019"
 
-Ta opcja wymaga, aby włączyć optymalizacje przy użyciu **/O1**, **/O2**, **ox**, lub **/Og**.
+**r.3**\
+Ta opcja określa bardziej agresywne wykreślenie poza **/Ob2**, ale ma takie same ograniczenia. Opcja **/Ob3** jest dostępna od programu Visual Studio 2019.
+
+::: moniker-end
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilator traktuje opcje rozszerzenia wbudowane i słów kluczowych jako sugestie. Nie ma żadnej gwarancji, że dowolnej funkcji będą rozwinięte wbudowanego. Można wyłączyć rozszerzenia w tekście, ale nie może wymusić na kompilatorze wbudowane określonej funkcji, nawet w przypadku używania `__forceinline` — słowo kluczowe.
+Kompilator traktuje wbudowane opcje rozwijania i słowa kluczowe jako sugestie. Nie ma gwarancji, że jakakolwiek funkcja zostanie rozwinięta w tekście. Można wyłączyć rozszerzanie wbudowane, ale nie można wymusić wbudowania określonej funkcji przez kompilator, nawet w przypadku użycia `__forceinline` słowa kluczowego.
 
-Możesz użyć `#pragma` [auto_inline](../../preprocessor/auto-inline.md) dyrektywy, które mają zostać wykluczone funkcje pod uwagę podczas tworzenia dla wbudowane rozwijanie. Zobacz też `#pragma` [wewnętrzne](../../preprocessor/intrinsic.md) dyrektywy.
+Aby wykluczyć funkcje z rozważania jako kandydaci do rozwinięcia wbudowane, można użyć [__declspec (NoLine)](../../cpp/noinline.md)lub regionu oznaczonego przez [#pragma auto_inline (off)](../../preprocessor/auto-inline.md) i [#pragma auto_inline (on)](../../preprocessor/auto-inline.md) dyrektyw. Aby uzyskać informacje na temat innego sposobu udostępniania wskazówek dotyczących dekreślenia do kompilatora, zobacz [wewnętrzną dyrektywę #pragma](../../preprocessor/intrinsic.md) .
 
 > [!NOTE]
-> Informacje zebrane w trakcie przebiegów testowych profilowania zastępuje optymalizacje, które normalnie w efekcie w przypadku określenia **/Ob**, **/Os**, lub **/Ot**. Aby uzyskać więcej informacji, zobacz [optymalizacje Profile-Guided](../profile-guided-optimizations.md).
+> Informacje zbierane z przebiegów testów profilowania zastępują optymalizacje, które w przeciwnym razie byłyby stosowane, ponieważ określono **/ob**, **/OS**lub **/OT**. Aby uzyskać więcej informacji, [](../profile-guided-optimizations.md)zapoznaj się z tematem optymalizacje profilowane.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji**, **C/C++** i wybierz **optymalizacji**.
+1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **Optymalizacja** .
 
-1. Modyfikowanie **rozwijania funkcji Inline** właściwości.
+1. Zmodyfikuj właściwość **rozwinięcia funkcji wbudowanej** .
+
+::: moniker range=">=vs-2019"
+
+Opcja **/Ob3** jest niedostępna we właściwości **rozwinięcia funkcji wbudowanej** . Aby ustawić **/Ob3**:
+
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+
+1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **wiersz polecenia** .
+
+1. Wprowadź **/Ob3** w polu **Opcje dodatkowe**.
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -77,6 +102,6 @@ Możesz użyć `#pragma` [auto_inline](../../preprocessor/auto-inline.md) dyrekt
 
 ## <a name="see-also"></a>Zobacz także
 
-[/O Opcje (Optymalizuj kod)](o-options-optimize-code.md)<br/>
-[Opcje kompilatora MSVC](compiler-options.md)<br/>
+[/O opcje (Optymalizuj kod)](o-options-optimize-code.md)\
+[Opcje kompilatora MSVC](compiler-options.md)\
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

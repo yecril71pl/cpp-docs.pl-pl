@@ -9,20 +9,20 @@ helpviewer_keywords:
 - stream operations in CRichEditCtrl
 - stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
-ms.openlocfilehash: 04cf0b06773937bf66defccbb0e5e880c06e8d88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04bf49371b3ab5eaaad2775b532d8d35bf990ce3
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306684"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915291"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operacje strumieniowe w formantach edycji wzbogaconej
 
-Można użyć strumieni na przesyłanie danych do lub z kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Strumień jest definiowany przez [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) struktury, która określa buforu i zdefiniowanych przez aplikację funkcji wywołania zwrotnego.
+Strumienie służą do transferowania danych do lub z kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Strumień jest zdefiniowany przez strukturę [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream) , która określa bufor i funkcję wywołania zwrotnego zdefiniowanego przez aplikację.
 
-Do odczytywania danych do zaawansowane Edytuj kontrolkę (oznacza to, przesyłanie strumieniowe danych), użyj [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) funkcja elementu członkowskiego. Kontrolka wywołuje wielokrotnie zdefiniowany przez aplikację funkcji wywołania zwrotnego, który przenosi część danych w buforze każdorazowo.
+Aby odczytać dane do kontrolki edycji wzbogaconej (czyli strumieniowego przesyłania danych w programie), użyj funkcji elementu członkowskiego [strumienia](../mfc/reference/cricheditctrl-class.md#streamin) . Kontrolka wielokrotnie wywołuje funkcję wywołania zwrotnego zdefiniowaną przez aplikację, która przenosi część danych do bufora za każdym razem.
 
-Zapisz formant edycji zawartości Zaawansowane (czyli przesyłać strumieniowo dane wyjściowe), możesz użyć [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) funkcja elementu członkowskiego. Kontrolka wielokrotnie zapisuje do buforu, a następnie wywołuje zdefiniowane przez aplikację funkcji wywołania zwrotnego. Dla każdego wywołania funkcji wywołania zwrotnego zapisuje zawartość buforu.
+Aby zapisać zawartość kontrolki edycji wzbogaconej (czyli strumieniowego przesyłania danych), można użyć funkcji składowej [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) . Kontrolka wielokrotnie zapisuje dane w buforze, a następnie wywołuje funkcję wywołania zwrotnego zdefiniowanego przez aplikację. Dla każdego wywołania funkcja wywołania zwrotnego zapisuje zawartość bufora.
 
 ## <a name="see-also"></a>Zobacz także
 

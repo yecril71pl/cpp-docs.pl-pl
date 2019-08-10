@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf38af464f08e143ed9073befe30f6aeb8b913b6
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271635"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915462"
 ---
 # <a name="exceptions-cc"></a>Wyjątki (C/C++)
 
-Dwa kody wyjątków może być wywoływane, gdy zostaną napotkane błędy:
+Po napotkaniu błędów mogą być zgłaszane dwa kody wyjątków:
 
-- Aby uzyskać **LoadLibrary** awarii
+- W przypadku błędu funkcji **LoadLibrary**
 
-- Aby uzyskać **GetProcAddress** awarii
+- Dla błędu **GetProcAddress**
 
-Poniżej przedstawiono informacje o wyjątku:
+Oto informacje o wyjątku:
 
 ```
 //
@@ -37,11 +37,11 @@ Poniżej przedstawiono informacje o wyjątku:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-Kody wyjątków, zgłaszane są standardowe VcppException (error_severity_error —, error_mod_not_found —) i wartości VcppException (error_severity_error —, ERROR_PROC_NOT_FOUND). Wyjątek przekazuje wskaźnik do **DelayLoadInfo** struktury LPDWORD wartości, które mogą być pobierane według **GetExceptionInformation** w [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) Struktura, pole ExceptionInformation [0].
+Zgłoszone kody wyjątków to standardowe wartości VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) i VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Wyjątek przekazuje wskaźnik do struktury **DelayLoadInfo** w wartości LPDWORD, która może zostać pobrana przez **GetExceptionInformation** w strukturze [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) , ExceptionInformation [0].
 
-Ponadto jeśli niepoprawne bity są ustawione w polu grAttrs, ERROR_INVALID_PARAMETER wyjątku. Ten wyjątek jest na wszystkich intents i purposes, krytyczny.
+Ponadto jeśli w polu grAttrs są ustawione nieprawidłowe bity, zostanie zgłoszony wyjątek ERROR_INVALID_PARAMETER. Ten wyjątek dotyczy wszystkich intencji i celów, które są krytyczne.
 
-Zobacz [struktura i stała — definicje](structure-and-constant-definitions.md) Aby uzyskać więcej informacji.
+Zobacz [struktury i definicje stałe,](structure-and-constant-definitions.md) Aby uzyskać więcej informacji.
 
 ## <a name="see-also"></a>Zobacz także
 

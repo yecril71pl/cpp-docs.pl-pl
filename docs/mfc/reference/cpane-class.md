@@ -133,16 +133,16 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d6a408b6ed7e7ab6f3dd138a4222b262978fd6c
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373157"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916923"
 ---
 # <a name="cpane-class"></a>Klasa CPane
 
-`CPane` Klasa jest rozszerzeniem [klasa CControlBar](../../mfc/reference/ccontrolbar-class.md). Jeśli przeprowadzasz uaktualnienie istniejącego projektu MFC, należy zastąpić wszystkie wystąpienia `CControlBar` z `CPane`.
+Klasa jest ulepszeniem [klasy CControlBar.](../../mfc/reference/ccontrolbar-class.md) `CPane` Jeśli uaktualniasz istniejący projekt MFC, Zastąp wszystkie wystąpienia elementu `CControlBar`. `CPane`
 
 ## <a name="syntax"></a>Składnia
 
@@ -162,91 +162,91 @@ class CPane : public CBasePane
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Od razu ponownie oblicza układ w okienku.|
-|[CPane::AllocElements](#allocelements)|Przydziela pamięć do użytku wewnętrznego.|
-|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Określa, czy okienka znajduje się na liście generowane przez środowisko uruchomieniowe okienka dla aplikacji.|
-|[CPane::CalcAvailableSize](#calcavailablesize)|Oblicza różnicę w rozmiarze między określonym prostokąt i bieżący prostokąt okna.|
-|[CPane::CalcInsideRect](#calcinsiderect)|Oblicza wewnątrz prostokąt okienka, biorąc pod uwagę obramowanie i uchwyty.|
-|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Oblicza ostatnio zadokowany prostokąta.|
+|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Natychmiast ponownie oblicza układ okienka.|
+|[CPane::AllocElements](#allocelements)|Przydziela magazyn do użytku wewnętrznego.|
+|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Określa, czy okienko jest wymienione na liście wygenerowanej przez środowisko uruchomieniowe okienek aplikacji.|
+|[CPane::CalcAvailableSize](#calcavailablesize)|Oblicza różnicę rozmiaru między określonym prostokątem a bieżącym prostokątem okna.|
+|[CPane::CalcInsideRect](#calcinsiderect)|Oblicza prostokąt wewnątrz okienka, biorąc pod uwagę obramowania i uchwyty.|
+|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Oblicza ostatnio zadokowany prostokąt.|
 |[CPane::CalcSize](#calcsize)|Oblicza rozmiar okienka.|
-|[CPane::CanBeDocked](#canbedocked)|Określa, czy w okienku określony podstawowy może być zadokowane okienka.|
-|[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Określa, czy okienku można przekonwertować na dokument z kartami.|
-|[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Konwertuje dokument z kartami dokowalne okienka.|
-|[CPane::CopyState](#copystate)|Kopiuje stan okienka. (Przesłania [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
-|[CPane::Create](#create)|Tworzy pasek sterowania i dołącza je do `CPane` obiektu.|
-|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Tworzy okno mini ramki dla okienka zmiennoprzecinkowy.|
-|[CPane::CreateEx](#createex)|Tworzy pasek sterowania i dołącza je do `CPane` obiektu.|
-|`CPane::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
-|[CPane::DockByMouse](#dockbymouse)|Stacje dokujące okienko za pomocą myszy dokowanie metody.|
-|[CPane::DockPane](#dockpane)|Dokowane unoszącego do podstawowej okienka.|
-|[CPane::DockPaneStandard](#dockpanestandard)|Stacje dokujące okienko przy użyciu konspektu dokowanie (standardowa).|
-|[CPane::DockToFrameWindow](#docktoframewindow)|Dokowane dokowalne okienka w ramce. (Przesłania `CBasePane::DockToFrameWindow`).|
-|[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Wskazuje, czy można zadokować innego okienka, w tym samym wierszu, w której jest zadokowany bieżącego okienka.|
-|[CPane::FloatPane](#floatpane)|Liczby zmiennoprzecinkowe okienka.|
-|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Zwraca czas, w pikselach, którą można rozwinąć okienka.|
-|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Zwraca czas, w pikselach, można zmniejszyć okienka.|
-|[CPane::GetBorders](#getborders)|Zwraca szerokość obramowania okienka.|
-|[CPane::GetClientHotSpot](#getclienthotspot)|Zwraca *aktywny* dla tego okienka.|
-|[CPane::GetDockSiteRow](#getdocksiterow)|Zwraca wiersz dokowania, w której jest zadokowany okienka.|
-|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Określa, czy okienko jest w trybie wyłączności wiersza.|
-|[CPane::GetHotSpot](#gethotspot)|Zwraca punkt aktywny, która jest przechowywana w podstawowej `CMFCDragFrameImpl` obiektu.|
-|[CPane::GetMinSize](#getminsize)|Pobiera minimalną dozwoloną rozmiar okienka.|
-|[CPane::GetPaneName](#getpanename)|Pobiera tytuł dla tego okienka.|
+|[CPane::CanBeDocked](#canbedocked)|Określa, czy okienko może być zadokowane w określonym okienku podstawowym.|
+|[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Określa, czy okienko można przekonwertować na dokument z kartami.|
+|[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Konwertuje okienko było dokować na dokument z kartami.|
+|[CPane::CopyState](#copystate)|Kopiuje stan okienka. (Przesłania [CBasePane:: CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
+|[CPane:: Create](#create)|Tworzy pasek sterowania i dołącza go do `CPane` obiektu.|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Tworzy okno mini-frame dla okienka zmiennoprzecinkowego.|
+|[CPane::CreateEx](#createex)|Tworzy pasek sterowania i dołącza go do `CPane` obiektu.|
+|`CPane::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|[CPane::DockByMouse](#dockbymouse)|Dokowanie okienka przy użyciu metody dokowania myszy.|
+|[CPane::DockPane](#dockpane)|Dokowanie przepływającego okienka do okienka bazowego.|
+|[CPane::D ockPaneStandard](#dockpanestandard)|Służy do dokowania okienka przy użyciu narzędzia do dokowania konspektu (standard).|
+|[CPane::DockToFrameWindow](#docktoframewindow)|Dokowanie okienka było dokować do ramki. (Przesłania `CBasePane::DockToFrameWindow`).|
+|[CPane::D oesAllowSiblingBars](#doesallowsiblingbars)|Wskazuje, czy można zadokować inne okienko w tym samym wierszu, w którym bieżące okienko jest zadokowane.|
+|[CPane::FloatPane](#floatpane)|Przepływa z okienka.|
+|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Zwraca wartość (w pikselach), którą okienko można rozwinąć.|
+|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Zwraca wartość (w pikselach), którą okienko można zmniejszyć.|
+|[CPane:: GetBorders](#getborders)|Zwraca szerokość obramowania okienka.|
+|[CPane::GetClientHotSpot](#getclienthotspot)|Zwraca punkt *aktywny* dla okienka.|
+|[CPane::GetDockSiteRow](#getdocksiterow)|Zwraca wiersz dokowania, w którym okienko jest zadokowane.|
+|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Określa, czy okienko jest w trybie wiersza wyłącznego.|
+|[CPane::GetHotSpot](#gethotspot)|Zwraca punkt aktywny, który jest przechowywany w obiekcie źródłowym `CMFCDragFrameImpl` .|
+|[CPane::GetMinSize](#getminsize)|Pobiera minimalny dozwolony rozmiar okienka.|
+|[CPane:: getselectorname](#getpanename)|Pobiera tytuł okienka.|
 |`CPane::GetResizeStep`|Używane wewnętrznie.|
-|`CPane::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
-|[CPane::GetVirtualRect](#getvirtualrect)|Pobiera *wirtualnego prostokąt* okienka.|
-|[CPane::IsChangeState](#ischangestate)|Okienko jest przenoszone, Metoda ta analizuje położenie okienka względem inne okienka zadokować wierszy i okna mini ramki i zwraca odpowiednią wartość AFX_CS_STATUS.|
-|[CPane::IsDragMode](#isdragmode)|Określa, czy przeciągania okienka.|
-|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Określa, czy okienka w oknie ramowym wielu okienka. (Przesłania `CBasePane::IsInFloatingMultiPaneFrameWnd`).|
-|[CPane::IsLeftOf](#isleftof)|Określa, czy okienko zostanie pozostawiony (lub powyżej) określonego prostokąta.|
-|[CPane::IsResizable](#isresizable)|Określa, czy można zmienić rozmiar okienka. (Przesłania [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
-|[CPane::IsTabbed](#istabbed)|Określa, czy kontrolka karty okna z kartami włożono okienka. (Przesłania [CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|
-|[CPane::LoadState](#loadstate)|Ładuje stan okienka z rejestru. (Przesłania [CBasePane::LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
-|[CPane::MoveByAlignment](#movebyalignment)|Przenosi okienka i wirtualnych prostokąt określony.|
-|[CPane::MovePane](#movepane)|Przenosi okienka przycinania na prostokąt określony.|
-|[CPane::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę, gdy zmieniono element nadrzędny w okienku.|
-|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Wywoływane przez platformę, gdy element nadrzędny w okienku zostanie zmienione.|
-|[CPane::OnPressCloseButton](#onpressclosebutton)|Wywoływane przez platformę, gdy użytkownik wybierze przycisk Zamknij na podpisu dla okienka.|
+|`CPane::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CPane::GetVirtualRect](#getvirtualrect)|Pobiera *wirtualny prostokąt* okienka.|
+|[CPane::IsChangeState](#ischangestate)|Gdy okienko jest przenoszone, ta metoda analizuje położenie okienka względem innych okienek, Zadokuj wiersze i okien z ramkami mini i zwraca odpowiednią wartość AFX_CS_STATUS.|
+|[CPane:: isprzeciągnijmode](#isdragmode)|Określa, czy okienko jest przeciągane.|
+|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Określa, czy okienko znajduje się w wielookienkowym oknie ramek. (Przesłania `CBasePane::IsInFloatingMultiPaneFrameWnd`).|
+|[CPane::IsLeftOf](#isleftof)|Określa, czy okienko jest pozostawione (lub powyżej) określonego prostokąta.|
+|[CPane::IsResizable](#isresizable)|Określa, czy można zmienić rozmiar okienka. (Przesłania [CBasePane:: IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
+|[CPane:: istab](#istabbed)|Określa, czy okienko zostało wstawione do kontrolki Karta okna z kartami. (Zastępuje [CBasePane::](../../mfc/reference/cbasepane-class.md#istabbed)istabd).|
+|[CPane:: LoadState](#loadstate)|Ładuje stan okienka z rejestru. (Przesłania [CBasePane:: LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
+|[CPane::MoveByAlignment](#movebyalignment)|Przenosi okienko i wirtualny prostokąt o określoną liczbę.|
+|[CPane::MovePane](#movepane)|Przenosi okienko do określonego prostokąta.|
+|[CPane::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę, gdy element nadrzędny okienka został zmieniony.|
+|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Wywoływane przez platformę, gdy element nadrzędny okienka ma zostać zmieniony.|
+|[CPane::OnPressCloseButton](#onpressclosebutton)|Wywoływane przez platformę, gdy użytkownik wybierze przycisk Zamknij na podpisie okienka.|
 |`CPane::OnProcessDblClk`|Używane wewnętrznie.|
-|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Wywoływane przez platformę, gdy menu okienka specjalne ma być wyświetlany.|
-|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Wywoływane przez platformę, gdy menu okienka specjalne ma być wyświetlany.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Wywoływane przez platformę, gdy zostanie wyświetlone specjalne menu okienka.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Wywoływane przez platformę, gdy zostanie wyświetlone specjalne menu okienka.|
 |`CPane::PrepareToDock`|Używane wewnętrznie.|
-|[CPane::RecalcLayout](#recalclayout)|Ponownie oblicza układ informacji dla tego okienka. (Przesłania [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
-|[CPane::SaveState](#savestate)|Zapisuje stan okienka w rejestrze. (Przesłania [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
-|[CPane::SetActiveInGroup](#setactiveingroup)|Flagi okienko jako aktywne.|
-|[CPane::SetBorders](#setborders)|Ustawia wartości obramowania okienka.|
-|[CPane::SetClientHotSpot](#setclienthotspot)|Ustawia aktywny dla tego okienka.|
-|[CPane::SetDockState](#setdockstate)|Przywracanie informacji o stanie dla okienka dokowania.|
-|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Włącza lub wyłącza tryb wyłączności wiersza.|
-|[CPane::SetMiniFrameRTC](#setminiframertc)|Ustawia informacje o klasie czasu wykonywania dla domyślnego okna mini ramki.|
+|[CPane::RecalcLayout](#recalclayout)|Ponownie oblicza informacje o układzie dla okienka. (Przesłania [CBasePane:: RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
+|[CPane:: SaveState](#savestate)|Zapisuje stan okienka w rejestrze. (Przesłania [CBasePane:: SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
+|[CPane::SetActiveInGroup](#setactiveingroup)|Flaguje okienko jako aktywne.|
+|[CPane:: setborderers](#setborders)|Ustawia wartości obramowania okienka.|
+|[CPane::SetClientHotSpot](#setclienthotspot)|Ustawia punkt aktywny dla okienka.|
+|[CPane::SetDockState](#setdockstate)|Przywraca informacje o stanie dokowania dla okienka.|
+|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Włącza lub wyłącza tryb wiersza wyłącznego.|
+|[CPane::SetMiniFrameRTC](#setminiframertc)|Ustawia informacje o klasie środowiska uruchomieniowego dla domyślnego okna mini-frame.|
 |[CPane::SetMinSize](#setminsize)|Ustawia minimalny dozwolony rozmiar okienka.|
-|[CPane::SetVirtualRect](#setvirtualrect)|Zestawy *wirtualnego prostokąt* okienka.|
-|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Rozciąga okienko w pionie lub poziomie oparte na styl dokowania.|
-|[CPane::ToggleAutoHide](#toggleautohide)|Włącza lub wyłącza tryb automatycznego ukrywania.|
-|[CPane::UndockPane](#undockpane)|Usuwa okienka z witryny dokowania, suwak domyślne lub okna mini ramki, w którym aktualnie jest zadokowany. (Przesłania [CBasePane::UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
-|[CPane::UpdateVirtualRect](#updatevirtualrect)|Aktualizuje wirtualnego prostokąta.|
+|[CPane::SetVirtualRect](#setvirtualrect)|Ustawia *wirtualny prostokąt* okienka.|
+|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Rozciąga okienko w pionie lub w poziomie na podstawie stylu dokowania.|
+|[CPane::ToggleAutoHide](#toggleautohide)|Przełącza tryb autoukrywania.|
+|[CPane::UndockPane](#undockpane)|Usuwa okienko z witryny Docker, domyślnego suwaka lub okna mini-frame, w którym jest obecnie zadokowane. (Przesłania [CBasePane:: UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
+|[CPane::UpdateVirtualRect](#updatevirtualrect)|Aktualizuje wirtualny prostokąt.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPane::OnAfterDock](#onafterdock)|Wywoływane przez platformę, gdy okienko zostały zadokowany.|
-|[CPane::OnAfterFloat](#onafterfloat)|Wywoływane przez platformę, gdy okienko zostały przestawione.|
-|[CPane::OnBeforeDock](#onbeforedock)|Wywoływane przez platformę, gdy ma być zadokowane okienka.|
-|[CPane::OnBeforeFloat](#onbeforefloat)|Wywoływane przez platformę, gdy ma być przestawione okienko.|
+|[CPane::OnAfterDock](#onafterdock)|Wywoływane przez platformę, gdy okienko zostało zadokowane.|
+|[CPane::OnAfterFloat](#onafterfloat)|Wywoływane przez platformę, gdy okienko zostało przepływane.|
+|[CPane::OnBeforeDock](#onbeforedock)|Wywoływane przez platformę, gdy okienko ma zostać zadokowane.|
+|[CPane::OnBeforeFloat](#onbeforefloat)|Wywoływane przez platformę, gdy okienko ma być przepływane.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Włącza spójną obsługę Określa minimalny rozmiar okienka.|
-|[CPane::m_recentDockInfo](#m_recentdockinfo)|Zawiera najnowsze informacje dokowania.|
+|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Umożliwia spójną obsługę okienek o minimalnym rozmiarze.|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|Zawiera najnowsze informacje dotyczące dokowania.|
 
 ## <a name="remarks"></a>Uwagi
 
-Zazwyczaj `CPane` obiekty nie są bezpośrednio tworzone. Jeśli potrzebujesz okienka w którym ma funkcje dokowania, pochodzi z obiektu [CDockablePane](../../mfc/reference/cdockablepane-class.md). Jeśli potrzebujesz funkcji narzędzi, pochodzi z obiektu [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
+`CPane` Zazwyczaj obiekty nie są tworzone bezpośrednio. Jeśli potrzebujesz okienka, które ma funkcjonalność dokowania, Utwórz obiekt z [CDockablePane](../../mfc/reference/cdockablepane-class.md). Jeśli potrzebujesz funkcji paska narzędzi, Utwórz obiekt z [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
 
-Po utworzeniu klasy pochodnej klasy z `CPane`, może być zadokowane w [CDockSite](../../mfc/reference/cdocksite-class.md) i może być przestawione w [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Podczas wyprowadzania klasy z `CPane`programu można ją zadokować w [CDockSite](../../mfc/reference/cdocksite-class.md) i można ją przemieścić w [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -262,11 +262,11 @@ Po utworzeniu klasy pochodnej klasy z `CPane`, może być zadokowane w [CDockSit
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxPane.h
+**Nagłówek:** afxPane. h
 
-##  <a name="adjustsizeimmediate"></a>  CPane::AdjustSizeImmediate
+##  <a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate
 
-Od razu ponownie oblicza układ w okienku.
+Natychmiast ponownie oblicza układ okienka.
 
 ```
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
@@ -275,15 +275,15 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bRecalcLayout*<br/>
-[in] Wartość TRUE, aby automatycznie ponownie Oblicz Układ panelu. w przeciwnym razie wartość FALSE.
+podczas Wartość TRUE powoduje automatyczne ponowne obliczenie układu okienka; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, gdy będzie dynamicznie zmieniać układ w okienku. Na przykład można wywołać tej metody, gdy można ukryć lub pokazać przyciski paska narzędzi.
+Wywołaj tę metodę, gdy dynamicznie zmienisz układ okienka. Na przykład można wywołać tę metodę podczas ukrywania lub pokazywania przycisków paska narzędzi.
 
-##  <a name="allocelements"></a>  CPane::AllocElements
+##  <a name="allocelements"></a>CPane::AllocElements
 
-Przydziela pamięć do użytku wewnętrznego.
+Przydziela magazyn do użytku wewnętrznego.
 
 ```
 BOOL AllocElements(
@@ -294,18 +294,18 @@ BOOL AllocElements(
 ### <a name="parameters"></a>Parametry
 
 *nElements*<br/>
-[in] Liczba elementów, dla których ma zostać przydzielony magazyn.
+podczas Liczba elementów, dla których należy przydzielić magazyn.
 
 *cbElement*<br/>
-[in] Rozmiar w bajtach elementu.
+podczas Rozmiar, w bajtach, elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość FALSE, jeśli Alokacja pamięci nie powiodło się; w przeciwnym razie PRAWDA.
+Wartość FALSE, jeśli alokacja pamięci nie powiedzie się; w przeciwnym razie wartość TRUE.
 
-##  <a name="allowshowonpanemenu"></a>  CPane::AllowShowOnPaneMenu
+##  <a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu
 
-Określa, czy okienka znajduje się na liście generowane przez środowisko uruchomieniowe okienka dla aplikacji.
+Określa, czy okienko jest wymienione na liście wygenerowanej przez środowisko uruchomieniowe okienek aplikacji.
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -313,15 +313,15 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli na liście zostanie wyświetlone okienko w przeciwnym razie wartość FALSE. Podstawowa implementacja zawsze zwraca wartość PRAWDA.
+Ma wartość TRUE, jeśli okienko zostanie wyświetlone na liście. w przeciwnym razie FALSE. Implementacja podstawowa zawsze zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wygenerowane przez Kreatora aplikacji zawiera opcję menu z listą okienek, które zawiera. Ta metoda określa, czy okienko jest wyświetlana na liście.
+Aplikacja generowana przez AppWizard zawiera opcję menu zawierającą listę okienek, które zawiera. Ta metoda określa, czy okienko zostanie wyświetlone na liście.
 
-##  <a name="calcavailablesize"></a>  CPane::CalcAvailableSize
+##  <a name="calcavailablesize"></a>CPane::CalcAvailableSize
 
-Oblicza różnicę w rozmiarze między określonym prostokąt i bieżący prostokąt okna.
+Oblicza różnicę rozmiaru między określonym prostokątem a bieżącym prostokątem okna.
 
 ```
 virtual CSize CalcAvailableSize(CRect rectRequired);
@@ -330,15 +330,15 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ### <a name="parameters"></a>Parametry
 
 *rectRequired*<br/>
-[in] Wymagane prostokąt.
+podczas Wymagany prostokąt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różnica w szerokość i wysokość między *rectRequired* i bieżący prostokąt okna.
+Różnica szerokości i wysokości między *rectRequired* i bieżącym prostokątem okna.
 
-##  <a name="calcinsiderect"></a>  CPane::CalcInsideRect
+##  <a name="calcinsiderect"></a>CPane::CalcInsideRect
 
-Oblicza wewnątrz prostokąt okienka, w tym obramowania i uchwyty.
+Oblicza prostokąt wewnątrz okienka, włącznie z obramowaniem i uchwytami.
 
 ```
 void CalcInsideRect(
@@ -348,19 +348,19 @@ void CalcInsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[out] Zawiera rozmiar i Przesunięcie obszaru klienckiego okienka.
+*cinania*<br/>
+określoną Zawiera rozmiar i Przesunięcie obszaru klienta okienka.
 
 *bHorz*<br/>
-[in] Wartość TRUE, jeśli okienko jest ustawiony jedynie w pionie. w przeciwnym razie wartość FALSE.
+podczas Ma wartość TRUE, jeśli okienko jest zorientowane w poziomie. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez platformę, gdy należy ponownie Oblicz układ dla okienka. *Prostokąt* parametru jest wypełniany rozmiar i Przesunięcie obszaru klienckiego okienka. W tym jej obramowanie i uchwyty.
+Ta metoda jest wywoływana przez platformę, gdy musi ponownie obliczyć układ dla okienka. Parametr *Rect* jest wypełniony rozmiarem i przesunięciem obszaru klienta w okienku. Obejmuje to obramowania i uchwytów.
 
-##  <a name="calcrecentdockedrect"></a>  CPane::CalcRecentDockedRect
+##  <a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect
 
-Oblicza ostatnio zadokowany prostokąta.
+Oblicza ostatnio zadokowany prostokąt.
 
 ```
 void CalcRecentDockedRect();
@@ -368,9 +368,9 @@ void CalcRecentDockedRect();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda aktualizuje [CPane::m_recentDockInfo](#m_recentdockinfo).
+Ta metoda aktualizuje [CPane:: m_recentDockInfo](#m_recentdockinfo).
 
-##  <a name="calcsize"></a>  CPane::CalcSize
+##  <a name="calcsize"></a>CPane::CalcSize
 
 Oblicza rozmiar okienka.
 
@@ -381,7 +381,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="parameters"></a>Parametry
 
 *bVertDock*<br/>
-[in] Wartość TRUE, jeśli okienko jest jest zadokowany w pionie, i wartość FALSE w przeciwnym razie.
+podczas Ma wartość TRUE, jeśli okienko jest zadokowane w pionie, w przeciwnym razie FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -393,7 +393,7 @@ Klasy pochodne powinny przesłaniać tę metodę.
 
 ##  <a name="canbedocked"></a>  CPane::CanBeDocked
 
-Określa, jeśli w okienku określony podstawowy może być zadokowane okienka.
+Określa, czy okienko może być zadokowane w określonym okienku podstawowym.
 
 ```
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
@@ -402,21 +402,21 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ### <a name="parameters"></a>Parametry
 
 *pDockBar*<br/>
-[in] Określa okienko, w którym ma być zadokowane, w tym okienku.
+podczas Określa okienko, w którym ma zostać zadokowane to okienko.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli w tym okienku może być zadokowane w określonym dokowania panelu. w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli to okienko może być zadokowane w określonym okienku dokującym; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest zazwyczaj wywoływana przez platformę, aby określić, czy okienko może być zadokowane w określonym okienka dokowania. Aby ustalić, czy okienka może być zadokowane, metoda daje w wyniku tego okienka aktualnie włączone wyrównanie dokowania.
+Ta metoda jest zwykle wywoływana przez platformę, aby określić, czy okienko może być zadokowane w określonym okienku dokującym. Aby określić, czy okienko może być zadokowane, Metoda szacuje aktualnie włączone wyrównanie dokowania w okienku.
 
-Możesz włączyć dokowanie na różnych stronach w oknie ramki, wywołując [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Możesz włączyć dokowanie do różnych stron okna ramki przez wywołanie [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
 ##  <a name="canbetabbeddocument"></a>  CPane::CanBeTabbedDocument
 
-Określa, jeśli można przekonwertować okienka dokumentu z zakładkami.
+Określa, czy okienko można przekonwertować na dokument z kartami.
 
 ```
 virtual BOOL CanBeTabbedDocument() const;
@@ -424,15 +424,15 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka mogą być konwertowane do dokumentu z kartami. w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko można przekonwertować na dokument z kartami. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę metodę w klasie pochodnej i zwraca wartość FALSE, jeśli chcesz uniemożliwić konwertowana do dokumentu z zakładkami w okienku. Dokument z kartami, nie będzie wymieniony w menu pozycję okna.
+Zastąp tę metodę w klasie pochodnej i zwróć wartość FALSE, jeśli chcesz zapobiec konwersji okienka na dokument z kartami. Dokument z kartami nie zostanie wyświetlony w menu pozycja okna.
 
-##  <a name="converttotabbeddocument"></a>  CPane::ConvertToTabbedDocument
+##  <a name="converttotabbeddocument"></a>CPane::ConvertToTabbedDocument
 
-Konwertuje dokument z kartami dokowalne okienka.
+Konwertuje okienko było dokować na dokument z kartami.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -441,13 +441,13 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bActiveTabOnly*<br/>
-[in] Nie używany w `CPane::ConvertToTabbedDocument`.
+podczas Nieużywane w `CPane::ConvertToTabbedDocument`.
 
 ### <a name="remarks"></a>Uwagi
 
-Tylko okienek dokowalnych mogą być konwertowane na dokumenty z kartami. Aby uzyskać informacje, zobacz [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
+Tylko okienka było dokować można przekonwertować na dokumenty z kartami. Aby uzyskać więcej informacji, zobacz [CDockablePane:: ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
 
-##  <a name="copystate"></a>  CPane::CopyState
+##  <a name="copystate"></a>CPane::CopyState
 
 Kopiuje stan okienka.
 
@@ -458,15 +458,15 @@ virtual void CopyState(CPane* pOrgBar);
 ### <a name="parameters"></a>Parametry
 
 *pOrgBar*<br/>
-[in] Wskaźnik do okienka.
+podczas Wskaźnik do okienka.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda kopiuje stan *pOrgBar* do bieżącego okienka.
 
-##  <a name="create"></a>  CPane::Create
+##  <a name="create"></a>CPane:: Create
 
-Tworzy pasek sterowania i dołącza je do [CPane](../../mfc/reference/cpane-class.md) obiektu.
+Tworzy pasek sterowania i dołącza go do obiektu [CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual BOOL Create(
@@ -482,39 +482,39 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszClassName*<br/>
-[in] Określa nazwę klasy Windows.
+podczas Określa nazwę klasy systemu Windows.
 
 *dwStyle*<br/>
-[in] Określa atrybuty stylu okna. Aby uzyskać więcej informacji, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+podczas Określa atrybuty stylu okna. Aby uzyskać więcej informacji, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
-[in] Określa początkowy rozmiar i położenie *pParentWnd* okna na współrzędne klienta.
+*cinania*<br/>
+podczas Określa początkowy rozmiar i położenie okna *pParentWnd* w współrzędnej klienta.
 
 *pParentWnd*<br/>
-[out w] Określa, w tym okienku okno nadrzędne.
+[in. out] Określa okno nadrzędne tego okienka.
 
 *nID*<br/>
-[in] Określa identyfikator okienka.
+podczas Określa identyfikator okienka.
 
 *dwControlBarStyle*<br/>
-[in] Określa styl dla tego okienka. Aby uzyskać więcej informacji, zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+podczas Określa styl okienka. Aby uzyskać więcej informacji, zobacz [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[out w] Określa kontekst Utwórz okienka.
+[in. out] Określa kontekst tworzenia okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli okienko zostało utworzone pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy okienko Windows i dołącza go do `CPane` obiektu.
+Ta metoda tworzy okienko systemu Windows i dołącza je do `CPane` obiektu.
 
-Jeśli nie ma jawnie zainicjować [CPane::m_recentDockInfo](#m_recentdockinfo) przed wywołaniem `Create`, parametr *prostokąt* będzie służyć jako prostokąt, gdy liczb zmiennoprzecinkowych lub okienka dokowania.
+Jeśli nie zainicjowano jawnie [CPane:: m_recentDockInfo](#m_recentdockinfo) przed wywołaniem `Create`, będzie on używany jako prostokąt podczas przepływania lub dokowania okienka.
 
-##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe
+##  <a name="createdefaultminiframe"></a>CPane::CreateDefaultMiniframe
 
-Tworzy okno mini ramki dla okienka zmiennoprzecinkowy.
+Tworzy okno mini-frame dla okienka zmiennoprzecinkowego.
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -523,21 +523,21 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ### <a name="parameters"></a>Parametry
 
 *rectInitial*<br/>
-[in] Określa początkowy rozmiar i położenie we współrzędnych ekranu okna mini ramki, aby utworzyć.
+podczas Określa początkowy rozmiar i położenie, we współrzędnych ekranu okna mini-frame do utworzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nowo utworzony mini ramki okna.
+Nowo utworzone okno mini-frame.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez platformę, by utworzyć okno mini ramki, gdy okienko jest przestawione. Okno mini ramki mogą być typu [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) lub typu [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Okno mini ramki multi jest tworzony, jeśli okienka stylem AFX_CBRS_FLOAT_MULTI.
+Ta metoda jest wywoływana przez platformę w celu utworzenia okna mini-frame, gdy okienko jest przepływane. Okno mini-frame może być typu [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) lub typu [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Zostanie utworzone okno z ramkami wieloskładnikowymi, jeśli okienko ma styl AFX_CBRS_FLOAT_MULTI.
 
-Informacje o klasie czasu wykonywania dla okna mini ramki są przechowywane w `CPane::m_pMiniFrameRTC` elementu członkowskiego. Można ustawić tego elementu członkowskiego, jeśli zdecydujesz się utworzyć dostosowany mini ramki okien, można użyć klasy pochodnej.
+Informacje o klasie środowiska uruchomieniowego dla okna mini frame są przechowywane w `CPane::m_pMiniFrameRTC` elemencie członkowskim. Można użyć klasy pochodnej do ustawienia tego elementu członkowskiego, jeśli zdecydujesz się utworzyć niestandardowe okna z systemem Windows.
 
-##  <a name="createex"></a>  CPane::CreateEx
+##  <a name="createex"></a>CPane::CreateEx
 
-Tworzy pasek sterowania i dołącza je do [CPane](../../mfc/reference/cpane-class.md) obiektu.
+Tworzy pasek sterowania i dołącza go do obiektu [CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual BOOL CreateEx(
@@ -554,42 +554,42 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwStyleEx*<br/>
-[in] Określa atrybuty stylu okna rozszerzonej. Aby uzyskać więcej informacji, zobacz [rozszerzone Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
+podczas Określa atrybuty stylu okna rozszerzonego. Aby uzyskać więcej informacji, zobacz [Style okna rozszerzonego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
 *lpszClassName*<br/>
-[in] Określa nazwę klasy Windows.
+podczas Określa nazwę klasy systemu Windows.
 
 *dwStyle*<br/>
-[in] Określa atrybuty stylu okna. Aby uzyskać więcej informacji, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+podczas Określa atrybuty stylu okna. Aby uzyskać więcej informacji, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
-[in] Określa początkowy rozmiar i położenie *pParentWnd* okna na współrzędne klienta.
+*cinania*<br/>
+podczas Określa początkowy rozmiar i położenie okna *pParentWnd* w współrzędnej klienta.
 
 *pParentWnd*<br/>
-[out w] Określa, w tym okienku okno nadrzędne.
+[in. out] Określa okno nadrzędne tego okienka.
 
 *nID*<br/>
-[in] Określa identyfikator okienka.
+podczas Określa identyfikator okienka.
 
 *dwControlBarStyle*<br/>
-[in] Określa styl dla tego okienka. Aby uzyskać więcej informacji, zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+podczas Określa styl okienka. Aby uzyskać więcej informacji, zobacz [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[out w] Określa kontekst Utwórz okienka.
+[in. out] Określa kontekst tworzenia dla okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli okienko zostało utworzone pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy okienko Windows i dołącza go do `CPane` obiektu.
+Ta metoda tworzy okienko systemu Windows i dołącza je do `CPane` obiektu.
 
-Jeśli nie ma jawnie zainicjować [CPane::m_recentDockInfo](#m_recentdockinfo) przed wywołaniem `CreateEx`, parametr *prostokąt* będzie służyć jako prostokąt, gdy liczb zmiennoprzecinkowych lub okienka dokowania.
+Jeśli nie zainicjowano jawnie [CPane:: m_recentDockInfo](#m_recentdockinfo) przed wywołaniem `CreateEx`, będzie on używany jako prostokąt podczas przepływania lub dokowania okienka.
 
-##  <a name="dockbymouse"></a>  CPane::DockByMouse
+##  <a name="dockbymouse"></a>CPane::D ockByMouse
 
-Stacje dokujące okienko za pomocą myszy.
+Dokowanie okienka za pomocą myszy.
 
 ```
 virtual BOOL DockByMouse(CBasePane* pDockBar);
@@ -598,15 +598,15 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ### <a name="parameters"></a>Parametry
 
 *pDockBar*<br/>
-[in] Określa podstawowy okienko, dla której chcesz zadokować w tym okienku.
+podczas Określa okienko podstawowe, do którego ma zostać zadokowane to okienko.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienka był zadokowany pomyślnie; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko zostało pomyślnie zadokowane; w przeciwnym razie FALSE.
 
-##  <a name="dockpane"></a>  CPane::DockPane
+##  <a name="dockpane"></a>CPane::D ockPane
 
-Dokowane unoszącego do podstawowej okienka.
+Dokowanie przepływającego okienka do okienka bazowego.
 
 ```
 virtual BOOL DockPane(
@@ -618,34 +618,34 @@ virtual BOOL DockPane(
 ### <a name="parameters"></a>Parametry
 
 *pDockBar*<br/>
-[out w] Określa podstawowy okienko, aby zadokować w tym okienku, aby.
+[in. out] Określa okienko podstawowe, do którego zostanie zadokowane to okienko.
 
 *lpRect*<br/>
-[in] Określa prostokąt na podstawowej okienko, w którym ma być zadokowane, w tym okienku.
+podczas Określa prostokąt w okienku bazowym, w którym to okienko ma zostać zadokowane.
 
 *dockMethod*<br/>
-[in] Określa metodę dokowania do użycia. Opcje dostępne są następujące:
+podczas Określa metodę dokowania do użycia. Dostępne są następujące opcje:
 
 |Opcja|Opis|
 |------------|-----------------|
-|DM_UNKNOWN|Ta opcja jest używana w ramach, gdy metoda dokowania jest nieznany. Okienko nie przechowuje położenia zmiennoprzecinkowy najbardziej aktualne. Ta opcja umożliwia również programowo zadokować okienko, gdy jest konieczne przechowywanie ostatnich pozycji zmiennoprzecinkowy.|
+|DM_UNKNOWN|Struktura używa tej opcji, gdy metoda dokowania jest nieznana. W okienku nie jest przechowywana Najnowsza pozycja zmiennoprzecinkowa. Można również użyć tej opcji, aby programowo zadokować okienko, gdy nie trzeba przechowywać ostatnio przepływającej pozycji.|
 |DM_MOUSE|Używane wewnętrznie.|
-|DM_DBL_CLICK|Ta opcja jest używana po dwukrotnym kliknięciu uchwytu. Okienka zostaje przeniesiony na najnowszych położenia dokowania. Jeśli okienko jest oddokowania komputera przez dwukrotne kliknięcie, okienka zostaje przeniesiony w jego najnowszych pozycji zmiennoprzecinkowy.|
-|DM_SHOW|Ta opcja może służyć do programowo zadokować okienka. Okienka przechowuje położenia zmiennoprzecinkowy najbardziej aktualne.|
-|DM_RECT|Okienko jest zadokowany w regionie, który jest określony przez *lprect —*.|
-|DM_STANDARD|Tej opcji ramach pobiera okienka jako konturu ramki, a ich przenoszenia.|
+|DM_DBL_CLICK|Ta opcja jest używana po dwukrotnym kliknięciu uchwytu. Okienko jest zmieniane na jego najnowszą pozycję dokowania. Jeśli okienko jest oddokowane przez dwukrotne kliknięcie, okienko jest zmieniane na jego ostatnią pozycję zmiennoprzecinkową.|
+|DM_SHOW|Tej opcji można użyć do programistycznego zadokowania okienka. W okienku jest przechowywana ostatnia pozycja zmiennoprzecinkowa.|
+|DM_RECT|Okienko jest zadokowane w regionie, który jest określony przez *lpRect*.|
+|DM_STANDARD|Gdy użyjesz tej opcji, struktura rysuje okienko jako ramkę konturową podczas przenoszenia.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienka był zadokowany pomyślnie; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko zostało pomyślnie zadokowane; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest dokowane okienka do okienka podstawowy, który jest określony przez *pDockBar* parametru. Należy najpierw włączyć dokowania, wywołując [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Ta metoda służy do dokowania okienka do okienka bazowego określonego przez parametr *pDockBar* . Najpierw należy włączyć dokowanie przez wywołanie [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-##  <a name="dockpanestandard"></a>  CPane::DockPaneStandard
+##  <a name="dockpanestandard"></a>CPane::D ockPaneStandard
 
-Stacje dokujące okienko przy użyciu konspektu dokowanie (standardowa).
+Służy do dokowania okienka przy użyciu narzędzia do dokowania konspektu (standard).
 
 ```
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
@@ -654,19 +654,19 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="parameters"></a>Parametry
 
 *bWasDocked*<br/>
-[in] Wartość TRUE, jeśli pomyślnie był zadokowany okienka; w przeciwnym razie wartość FALSE.
+podczas Wartość TRUE, jeśli okienko zostało pomyślnie zadokowane; w przeciwnym razie FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ta metoda zawsze zwraca **to** wskaźnika.
+Ta metoda zawsze zwraca **ten** wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest używana tylko w przypadku okienek, które są uzyskiwane z [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md). Aby uzyskać więcej informacji, zobacz [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
+Ta metoda jest używana tylko dla okienek, które są wyprowadzane z [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md). Aby uzyskać więcej informacji, zobacz [CDockablePane::D ockpanestandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
 
-##  <a name="docktoframewindow"></a>  CPane::DockToFrameWindow
+##  <a name="docktoframewindow"></a>CPane::D ockToFrameWindow
 
-Dokowane dokowalne okienka w ramce.
+Dokowanie okienka było dokować do ramki.
 
 ```
 virtual BOOL DockToFrameWindow(
@@ -681,32 +681,32 @@ virtual BOOL DockToFrameWindow(
 ### <a name="parameters"></a>Parametry
 
 *dwAlignment*<br/>
-[in] Po stronie nadrzędnej ramki, który chcesz zadokować okienka, aby.
+podczas Strona ramki nadrzędnej, do której ma zostać zadokowane okienko.
 
 *lpRect*<br/>
-[in] Określony rozmiar.
+podczas Określony rozmiar.
 
 *dwDockFlags*<br/>
-[in] Ignorowane.
+podczas Ignoruj.
 
 *pRelativeBar*<br/>
-[in] Ignorowane.
+podczas Ignoruj.
 
 *nRelativeIndex*<br/>
-[in] Ignorowane.
+podczas Ignoruj.
 
 *bOuterEdge*<br/>
-[in] Jeśli PRAWDA, a są inne okienek dokowalnych po stronie, które są określone przez *dwAlignment*, okienka jest zadokowany poza inne okienka bliżej krawędzią nadrzędnej ramki. W przypadku wartości FAŁSZ okienka jest zadokowany bliżej do środka obszaru klienta.
+podczas Jeśli wartość jest równa TRUE, a po stronie są inne okienka było dokować określone przez *dwAlignment*, okienko jest zadokowane poza innymi okienkami bliżej krawędzi ramki nadrzędnej. W przypadku wartości FALSE okienko jest zadokowane bliżej środka obszaru klienckiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość FALSE, jeśli rozdzielacz okienka ( [klasa CPaneDivider](../../mfc/reference/cpanedivider-class.md)) nie można utworzyć; w przeciwnym razie wartość TRUE.
+Wartość FALSE, jeśli nie można utworzyć podziału okienka ( [Klasa CPaneDivider](../../mfc/reference/cpanedivider-class.md)); w przeciwnym razie wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="doesallowsiblingbars"></a>  CPane::DoesAllowSiblingBars
+##  <a name="doesallowsiblingbars"></a>CPane::D oesAllowSiblingBars
 
-Wskazuje, czy można zadokować innego okienka, w tym samym wierszu, w której jest zadokowany bieżącego okienka.
+Wskazuje, czy można zadokować inne okienko w tym samym wierszu, w którym bieżące okienko jest zadokowane.
 
 ```
 virtual BOOL DoesAllowSiblingBars() const;
@@ -714,17 +714,17 @@ virtual BOOL DoesAllowSiblingBars() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli w tym okienku można zadokować innego okienka na tym samym wierszu. w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli to okienko może zostać zadokowane do innego okienka w tym samym wierszu, co sama; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Można włączyć lub wyłączyć tego zachowania, wywołując [CPane::SetExclusiveRowMode](#setexclusiverowmode).
+To zachowanie można włączyć lub wyłączyć, wywołując [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
 
-Domyślnie paski narzędzi ma wyłączono tryb wyłączności wiersza, a następnie na pasku menu ma włączony tryb wyłączności wiersza.
+Domyślnie paski narzędzi mają wyłączony tryb wiersza, a na pasku menu jest włączony tryb wiersza wyłącznego.
 
-##  <a name="floatpane"></a>  CPane::FloatPane
+##  <a name="floatpane"></a>CPane::FloatPane
 
-Liczby zmiennoprzecinkowe okienka.
+Przepływa z okienka.
 
 ```
 virtual BOOL FloatPane(
@@ -736,25 +736,25 @@ virtual BOOL FloatPane(
 ### <a name="parameters"></a>Parametry
 
 *rectFloat*<br/>
-[in] Określa lokalizację, w układzie współrzędnych ekranu, aby zmienić położenie okienka, gdy jest on przestawione.
+podczas Określa położenie okienka w obszarze Współrzędne ekranu, gdy jest ono przepływane.
 
 *dockMethod*<br/>
-[in] Określa metodę dokowania do użycia podczas okienka jest przestawione. Aby uzyskać listę możliwych wartości, zobacz [CPane::DockPane](#dockpane).
+podczas Określa metodę dokowania, która ma być używana, gdy okienko jest swobodne. Aby uzyskać listę możliwych wartości, zobacz [CPane::D ockpane](#dockpane).
 
 *bShow*<br/>
-[in] Wartość TRUE, aby wyświetlić okienko po przestawione; w przeciwnym razie wartość FALSE.
+podczas Wartość TRUE, aby wyświetlić okienko po przekroczeniu; w przeciwnym razie FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienka został pomyślnie przestawione lub nie może być przestawione okienka, ponieważ [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) zwraca wartość FAŁSZ; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko zostało pomyślnie przepływające lub nie można go wystawić, ponieważ [CBasePane:: onfloat](../../mfc/reference/cbasepane-class.md#canfloat) zwraca wartość false; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, float okienko w położeniu, który jest określony przez *rectFloat* parametru. Ta metoda tworzy automatycznie okno mini ramki nadrzędne dla tego okienka.
+Wywołaj tę metodę, aby przestawić okienko na pozycji określonej przez parametr *rectFloat* . Ta metoda powoduje automatyczne utworzenie nadrzędnego okna z ramką mini dla okienka.
 
-##  <a name="getavailableexpandsize"></a>  CPane::GetAvailableExpandSize
+##  <a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize
 
-Zwraca czas, w pikselach, którą można rozwinąć okienka.
+Zwraca wartość (w pikselach), którą okienko można rozwinąć.
 
 ```
 virtual int GetAvailableExpandSize() const;
@@ -762,13 +762,13 @@ virtual int GetAvailableExpandSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli okienko jest zadokowany w poziomie, wartość zwracana jest szerokością dostępne; w przeciwnym razie wartość zwracana jest dostępna wysokość.
+Jeśli okienko jest zadokowane w poziomie, wartość zwracana jest dostępna szerokość; w przeciwnym razie wartość zwracana jest dostępna wysokość.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getavailablestretchsize"></a>  CPane::GetAvailableStretchSize
+##  <a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize
 
-Zwraca czas, w pikselach, można zmniejszyć okienka.
+Zwraca wartość (w pikselach), którą okienko można zmniejszyć.
 
 ```
 virtual int GetAvailableStretchSize() const;
@@ -776,13 +776,13 @@ virtual int GetAvailableStretchSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Czas, w pikselach, można zmniejszyć okienka. Jeśli okienko jest zadokowany w poziomie, ta liczba jest dostępna szerokość; w przeciwnym razie jest dostępna wysokość.
+Kwota w pikselach, którą okienko można zmniejszyć. Jeśli okienko jest zadokowane w poziomie, ta kwota jest dostępną szerokością; w przeciwnym razie jest to dostępna wysokość.
 
 ### <a name="remarks"></a>Uwagi
 
-Dostępny rozmiar Stretch Database jest obliczana przez odjęcie ilości minimalny dozwolony rozmiar okienka ( [CPane::GetMinSize](#getminsize)) z bieżącego rozmiaru ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
+Dostępny rozmiar rozciągany jest obliczany przez odjęcie minimalnego dozwolonego rozmiaru okienka ( [CPane:: GetMinSize](#getminsize)) z bieżącego rozmiaru ( [CWnd:: GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
 
-##  <a name="getborders"></a>  CPane::GetBorders
+##  <a name="getborders"></a>CPane:: GetBorders
 
 Zwraca szerokość obramowania okienka.
 
@@ -792,15 +792,15 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera bieżący szerokość w pikselach każdej stronie okienka. Na przykład, wartość `left` członkiem `CRect` obiektu to szerokość lewej krawędzi.
+Obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który zawiera bieżącą Szerokość (w pikselach) każdej strony okienka. Na przykład wartość `left` elementu członkowskiego `CRect` obiektu to szerokość lewej krawędzi.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić rozmiar obramowania, należy wywołać [CPane::SetBorders](#setborders).
+Aby ustawić rozmiar obramowań, wywołaj [CPane::](#setborders)setborderers.
 
-##  <a name="getclienthotspot"></a>  CPane::GetClientHotSpot
+##  <a name="getclienthotspot"></a>CPane::GetClientHotSpot
 
-Zwraca *aktywny* dla tego okienka.
+Zwraca punkt *aktywny* dla okienka.
 
 ```
 CPoint GetClientHotSpot() const;
@@ -810,11 +810,11 @@ CPoint GetClientHotSpot() const;
 
 ### <a name="remarks"></a>Uwagi
 
-*Aktywny* punktu w okienko w którym użytkownik wybiera i przechowuje przenieść okienka. Punkt aktywny jest używana do płynne animacje, po przeniesieniu od pozycji zadokowanego okienka.
+Punkt *aktywny* jest punktem w okienku, który użytkownik wybiera i utrzymuje, aby przenieść okienko. Gorąca plamka służy do wygładzania animacji, gdy okienko jest przenoszone z pozycji zadokowanej.
 
-##  <a name="getdocksiterow"></a>  CPane::GetDockSiteRow
+##  <a name="getdocksiterow"></a>CPane::GetDockSiteRow
 
-Zwraca wiersz dock ( [klasa CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)), w której jest zadokowany w okienku.
+Zwraca wiersz dokowania ( [Klasa CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)), w którym okienko jest zadokowane.
 
 ```
 CDockingPanesRow* GetDockSiteRow() const;
@@ -822,11 +822,11 @@ CDockingPanesRow* GetDockSiteRow() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `CDockingPanesRow`* wskazującego na wiersz dokowania, w której jest zadokowany okienka lub wartość NULL, jeśli nie jest zadokowany okienka.
+A `CDockingPanesRow`* wskazuje wiersz dokowania, w którym znajduje się okienko zadokowane, lub wartość null, jeśli okienko nie jest zadokowane.
 
-##  <a name="getexclusiverowmode"></a>  CPane::GetExclusiveRowMode
+##  <a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode
 
-Określa, czy okienko w trybie wyłączności wiersza.
+Określa, czy okienko jest w trybie wiersza wyłącznego.
 
 ```
 virtual BOOL GetExclusiveRowMode() const;
@@ -834,15 +834,15 @@ virtual BOOL GetExclusiveRowMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienko jest w trybie wyłączności wiersza; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko jest w trybie wiersza wyłącznego; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat trybu wyłączności wiersz zobacz [CPane::SetExclusiveRowMode](#setexclusiverowmode).
+Aby uzyskać więcej informacji na temat trybu wiersza wyłącznego, zobacz [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
 
-##  <a name="gethotspot"></a>  CPane::GetHotSpot
+##  <a name="gethotspot"></a>CPane:: gethotspot
 
-Zwraca punkt aktywny, która jest przechowywana w podstawowej `CMFCDragFrameImpl` obiektu.
+Zwraca punkt aktywny, który jest przechowywany w obiekcie źródłowym `CMFCDragFrameImpl` .
 
 ```
 CPoint GetHotSpot() const;
@@ -852,11 +852,11 @@ CPoint GetHotSpot() const;
 
 ### <a name="remarks"></a>Uwagi
 
-`CPane` Klasa zawiera `CMFCDragFrameImpl` obiektu `m_dragFrameImpl`, która jest odpowiedzialne za narysowanie prostokąt, który jest wyświetlany, gdy użytkownik przesuwa okienko w trybie standardowego dokowania. Punkt aktywny jest używany do narysować prostokąt względem bieżącego położenia kursora myszy, gdy użytkownik przesuwa okienka.
+Klasa zawiera obiekt ,`m_dragFrameImpl`, który jest odpowiedzialny za rysowanie prostokąta, który pojawia się, gdy użytkownik przenosi okienko w standardowym trybie dokowania. `CMFCDragFrameImpl` `CPane` Punkt aktywny służy do rysowania prostokąta względem bieżącej pozycji myszy, gdy użytkownik przesunie okienko.
 
-##  <a name="getminsize"></a>  CPane::GetMinSize
+##  <a name="getminsize"></a>CPane::GetMinSize
 
-Pobiera minimalną dozwoloną rozmiar okienka.
+Pobiera minimalny dozwolony rozmiar okienka.
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -864,14 +864,14 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-[out] A `CSize` obiekt, który zostanie wypełniony kolorem minimalny dozwolony rozmiar.
+*zmienia*<br/>
+określoną `CSize` Obiekt, który jest wypełniony minimalnym dozwolonym rozmiarem.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getpanename"></a>  CPane::GetPaneName
+##  <a name="getpanename"></a>CPane:: getselectorname
 
-Pobiera tytuł dla tego okienka.
+Pobiera tytuł okienka.
 
 ```
 virtual void GetPaneName(CString& strName) const;
@@ -880,15 +880,15 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="parameters"></a>Parametry
 
 *strName*<br/>
-[out] A `CString` obiekt, który zostanie wypełniony kolorem nazwy podpisu.
+określoną `CString` Obiekt, który jest wypełniony nazwą podpisu.
 
 ### <a name="remarks"></a>Uwagi
 
-Okienko tytuł jest wyświetlany w obszarze podpis, jeśli panel jest zadokowany lub przestawny. Jeśli okienko jest częścią grupy z kartami, tytuł jest wyświetlany w obszarze karty. Jeśli okienko jest w trybie autoukrywania, tytuł jest wyświetlany na `CMFCAutoHideButton`.
+Tytuł okienka jest wyświetlany w obszarze podpisu, gdy okienko jest zadokowane lub przestawne. Jeśli okienko jest częścią grupy z kartami, tytuł zostanie wyświetlony w obszarze karty. Jeśli okienko jest w trybie Autoukrywanie, tytuł jest wyświetlany w `CMFCAutoHideButton`.
 
-##  <a name="getvirtualrect"></a>  CPane::GetVirtualRect
+##  <a name="getvirtualrect"></a>CPane::GetVirtualRect
 
-Pobiera *wirtualnego prostokąt* okienka.
+Pobiera *wirtualny prostokąt* okienka.
 
 ```
 void GetVirtualRect(CRect& rectVirtual) const;
@@ -897,17 +897,17 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ### <a name="parameters"></a>Parametry
 
 *rectVirtual*<br/>
-[out] A `CRect` obiekt, który jest wypełniony prostokąt wirtualnego.
+określoną `CRect` Obiekt, który jest wypełniony prostokątem wirtualnym.
 
 ### <a name="remarks"></a>Uwagi
 
-Po przeniesieniu okienko ramach przechowuje początkowe położenie okienka w prostokącie wirtualnego. Struktura można użyć wirtualnych prostokąt można przywrócić początkowe położenie okienka.
+Po przeniesieniu okienka struktura przechowuje pierwotne położenie okienka w wirtualnym prostokącie. Struktura może używać wirtualnego prostokąta do przywracania oryginalnego położenia okienka.
 
-Nie wywołuj metod, które są powiązane z wirtualnego prostokątów, o ile nie są przenoszone okienka programowo.
+Nie wywołuj metod, które są związane z prostokątami wirtualnymi, chyba że program programowo przenosi okienka.
 
-##  <a name="ischangestate"></a>  CPane::IsChangeState
+##  <a name="ischangestate"></a>CPane::IsChangeState
 
-Okienko jest przenoszone, Metoda ta analizuje położeniu względem inne okienka zadokować wierszy i okna mini ramki i zwraca odpowiednią wartość AFX_CS_STATUS.
+Gdy okienko jest przenoszone, ta metoda analizuje jego położenie względem innych okienek, zadokowanych wierszy i okien z ramkami mini i zwraca odpowiednią wartość AFX_CS_STATUS.
 
 ```
 virtual AFX_CS_STATUS IsChangeState(
@@ -918,25 +918,25 @@ virtual AFX_CS_STATUS IsChangeState(
 ### <a name="parameters"></a>Parametry
 
 *nOffset*<br/>
-[in] Określa czułość dokowania. Na przykład okienka w którym jest przenoszony w ramach *nOffset* będzie zadokowany pikseli od wiersza dokowania.
+podczas Określa czułość dokowania. Na przykład okienko przenoszone w ciągu *nOffset* pikseli z wiersza dokowania zostanie zadokowane.
 
 *ppTargetBar*<br/>
-[in] Po powrocie z metody *ppTargetBar* zawiera wskaźnik do obiektu, do którego powinny być zadokowane bieżącego okienka lub wartość NULL, jeśli nie dokowanie powinny być wykonywane.
+podczas Gdy metoda zwraca, *ppTargetBar* zawiera wskaźnik do obiektu, do którego bieżące okienko powinno być zadokowane, lub wartość null, jeśli nie ma potrzeby dokowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeden z następujących wartości AFX_CS_STATUS:
+Jedna z następujących wartości AFX_CS_STATUS:
 
 |Wartość|Opis|
 |-----------|-----------------|
-|CS_NOTHING|Okienko nie zbliża się w witrynie stacji dokującej. Struktura nie zadokować okienka.|
-|CS_DOCK_IMMEDIATELY|Okienka dobiegł końca witrynie stacji dokującej i styl DT_IMMEDIATE jest włączony. Struktura dokowane okienka natychmiast.|
-|CS_DELAY_DOCK|Okienka znajduje się nad innym okienka dokowania lub krawędzi ramki głównej witryny dokowania. Struktura dokowane okienka, gdy użytkownik zwolni przejścia.|
-|CS_DELAY_DOCK_TO_TAB|Okienka znajduje się nad witrynie stacji dokującej, który powoduje, że okienka bez możliwości dokowania w oknie z kartami. Dzieje się tak, gdy okienka jest albo za pośrednictwem podpis innego okienka dokowania lub wartości obszar karty okienka z zakładkami. Struktura dokowane okienka, gdy użytkownik zwolni przejścia.|
+|CS_NOTHING|Okienko nie znajduje się w sąsiedztwie witryny dockowej. Struktura nie zadokuje okienka.|
+|CS_DOCK_IMMEDIATELY|Okienko znajduje się nad witryną dokowania, a styl DT_IMMEDIATE jest włączony. Platforma bezzwłocznie przedokowane okienko.|
+|CS_DELAY_DOCK|Okienko znajduje się nad witryną dokowania, która jest innym okienkiem dokującym lub krawędzią głównej ramki. Platforma zadokuje okienko, gdy użytkownik zwolni przeniesienie.|
+|CS_DELAY_DOCK_TO_TAB|Okienko znajduje się w witrynie dokowania, która powoduje zadokowanie okienka w oknie z kartami. Dzieje się tak, gdy okienko znajduje się na podpisie innego okienka dokowania lub w obszarze karty okienka z kartami. Platforma zadokuje okienko, gdy użytkownik zwolni przeniesienie.|
 
-##  <a name="isdragmode"></a>  CPane::IsDragMode
+##  <a name="isdragmode"></a>CPane:: isprzeciągnijmode
 
-Określa, czy jest przenoszony okienka.
+Określa, czy okienko jest przenoszone.
 
 ```
 virtual BOOL IsDragMode() const;
@@ -944,13 +944,13 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli Trwa przenoszenie okienka; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko jest przenoszone; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isinfloatingmultipaneframewnd"></a>  CPane::IsInFloatingMultiPaneFrameWnd
+##  <a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd
 
-Określa, czy okienka w oknie ramowym okienko wielu ( [klasa CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
+Określa, czy okienko znajduje się w wielookienkowym oknie ramek ( [Klasa CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -958,15 +958,15 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienka znajduje się w oknie ramce okienka wielu; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko znajduje się w wielookienkowym oknie ramek; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tylko okienek dokowalnych poruszać się w oknie ramowym wielu okienka. W związku z tym `CPane::IsInFloatingMultiPaneFrameWnd` zawsze zwraca wartość FALSE.
+Tylko okienka było dokować mogą być zmiennoprzecinkowe w wielookienkowym oknie ramek. W związku `CPane::IsInFloatingMultiPaneFrameWnd` z tym zawsze zwraca wartość false.
 
-##  <a name="isleftof"></a>  CPane::IsLeftOf
+##  <a name="isleftof"></a>CPane::IsLeftOf
 
-Określa, czy okienko zostanie pozostawiony (lub powyżej) określonego prostokąta.
+Określa, czy okienko jest pozostawione (lub powyżej) określonego prostokąta.
 
 ```
 bool IsLeftOf(
@@ -976,21 +976,21 @@ bool IsLeftOf(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[in] A `CRect` obiekt, który jest używany do porównania.
+*cinania*<br/>
+podczas `CRect` Obiekt, który jest używany do porównania.
 
 *bWindowRect*<br/>
-[in] W przypadku opcji TRUE *prostokąt* przyjęto, że będzie zawierać współrzędne ekranu; w przypadku wartości FAŁSZ *prostokąt* przyjęto, że będzie zawierać współrzędne klienta.
+podczas Jeśli wartość jest równa TRUE, przyjmuje się, że *prostokąt* zawiera współrzędne ekranu; w przypadku wartości FALSE przyjmuje się, że *prostokąt* zawiera współrzędne klienta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli okienko jest zadokowany w poziomie, ta metoda sprawdza, czy jego lokalizacji pozostałe *prostokąt*. W przeciwnym razie ta metoda sprawdza, czy lokalizacja jest powyżej *prostokąt*.
+Jeśli okienko jest zadokowane w poziomie, ta metoda sprawdza, czy jego lokalizacja jest pozostawiona z *prostokątem*. W przeciwnym razie ta metoda sprawdza, czy lokalizacja jestpowyżej prostokąta.
 
-##  <a name="isresizable"></a>  CPane::IsResizable
+##  <a name="isresizable"></a>CPane::IsResizable
 
-Określa, czy okienka o zmiennym rozmiarze.
+Określa, czy rozmiar okienka jest zmienny.
 
 ```
 virtual BOOL IsResizable() const;
@@ -998,19 +998,19 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienko jest o zmiennym rozmiarze; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli rozmiar okienka jest zmienny; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Podstawa `CPane` obiekty nie są o zmiennym rozmiarze.
+Nie `CPane` ma możliwości zmiany rozmiaru obiektów podstawowych.
 
-Menedżer dokowania używa flagi o zmiennym rozmiarze, aby określić układ w okienku. Okienka o zmiennym rozmiarze bez zawsze znajdują się w zewnętrznej krawędzi ramki nadrzędnej.
+Menedżer dokowania używa flagi o zmiennym rozmiarze do określenia układu okienka. Okienka bez zmiany rozmiaru są zawsze umieszczane na zewnętrznych krawędziach ramki nadrzędnej.
 
-Okienka o zmiennym rozmiarze nie może znajdować się w dokowanie kontenerów.
+Okienka, w których nie można zmieniać rozmiaru, nie mogą znajdować się w kontenerach dokowania.
 
-##  <a name="istabbed"></a>  CPane::IsTabbed
+##  <a name="istabbed"></a>CPane:: istab
 
-Określa, czy okienka został wstawiony do formantu karty okna z kartami.
+Określa, czy okienko zostało wstawione do kontrolki Karta okna z kartami.
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1018,13 +1018,13 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli jest na kartach okienka; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli okienko jest z zakładkami; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Stan z kartami są traktowane odrębnie od wartość zmiennoprzecinkowa, zadokowany i Autoukrywanie stanów.
+Stan z kartami jest traktowany oddzielnie od zmiennoprzecinkowych, zadokowanych i Autoukrywanie Stanów.
 
-##  <a name="loadstate"></a>  CPane::LoadState
+##  <a name="loadstate"></a>CPane:: LoadState
 
 Ładuje stan okienka z rejestru.
 
@@ -1038,27 +1038,27 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Nazwa profilu.
+podczas Nazwa profilu.
 
 *nIndex*<br/>
-[in] Indeks profilu.
+podczas Indeks profilu.
 
 *uiID*<br/>
-[in] Identyfikator okienka.
+podczas Identyfikator okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli stan okienka został załadowany pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli stan okienka został pomyślnie załadowany; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, aby załadować stan okienka z rejestru. Jej zastąpienie w klasie pochodnej, aby załadować dodatkowych informacji zapisywanych przez [CPane::SaveState](#savestate).
+Struktura wywołuje tę metodę, aby załadować stan okienka z rejestru. Zastąp go w klasie pochodnej w celu załadowania dodatkowych informacji zapisanych przez [CPane:: SaveState](#savestate).
 
-Gdy zastąpienie tej metody także wywołać metodę bazową i zwraca wartość FALSE, jeśli podstawowa metoda zwróci wartość FALSE.
+Podczas przesłonięcia tej metody należy wywołać metodę bazową i zwrócić wartość FALSE, jeśli metoda podstawowa zwróci wartość FALSE.
 
-##  <a name="m_bhandleminsize"></a>  CPane::m_bHandleMinSize
+##  <a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize
 
-Włącza spójną obsługę rozmiary okienka minimalnej.
+Włącza spójną obsługę rozmiaru minimalnych okienek.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
@@ -1066,13 +1066,13 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli co najmniej jeden tafli dokowania w aplikacji zastępują `GetMinSize`, czy Twoja aplikacja wywołuje `SetMinSize`, warto ustawić tego członka statycznego na wartość TRUE, aby włączyć platformę, by spójne obsługi, jak mają rozmiar okienka.
+Jeśli co najmniej jeden z zadokowanych okienek w `GetMinSize`aplikacji zostanie przesłonięty lub `SetMinSize`Jeśli aplikacja jest wywoływana, można ustawić ten statyczny element członkowski na wartość true w celu zapewnienia spójnego rozmiaru okienek.
 
-Jeśli ta wartość jest równa TRUE, wszystkie okienka, w których rozmiar powinien zostać zmniejszony poniżej ich minimalny rozmiar powoduje, nie jest rozciągana. Ponieważ struktura używa regiony okien do celów rozmiaru okienka, nie należy zmieniać rozmiar regionu okna dla okienka dokowania, jeśli ta wartość jest ustawiona na wartość TRUE.
+Jeśli ta wartość jest równa TRUE, wszystkie okienka, których rozmiar należy zmniejszyć poniżej ich minimalny rozmiar, są przycinane, nie rozciągane. Ponieważ struktura używa regionów okna do określania rozmiaru okienka, nie zmieniaj rozmiaru obszaru okna dla okienek dokowania, jeśli ta wartość jest ustawiona na TRUE.
 
-##  <a name="m_recentdockinfo"></a>  CPane::m_recentDockInfo
+##  <a name="m_recentdockinfo"></a>CPane::m_recentDockInfo
 
-Zawiera najnowsze informacje dokowania.
+Zawiera najnowsze informacje dotyczące dokowania.
 
 ```
 CRecentDockSiteInfo m_recentDockInfo;
@@ -1080,11 +1080,11 @@ CRecentDockSiteInfo m_recentDockInfo;
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura przechowuje dokowania najnowsze informacje o stanie dla tego okienka w tym elemencie członkowskim.
+W strukturze są przechowywane najnowsze informacje o stanie dokowania dla okienka w tym elemencie członkowskim.
 
-##  <a name="movebyalignment"></a>  CPane::MoveByAlignment
+##  <a name="movebyalignment"></a>CPane::MoveByAlignment
 
-Przenosi okienka i wirtualnych prostokąt określony.
+Przenosi okienko i wirtualny prostokąt o określoną liczbę.
 
 ```
 BOOL MoveByAlignment(
@@ -1095,30 +1095,30 @@ BOOL MoveByAlignment(
 ### <a name="parameters"></a>Parametry
 
 *dwAlignment*<br/>
-[in] Określa wyrównanie okienka.
+podczas Określa wyrównanie okienka.
 
 *nOffset*<br/>
-[in] Czas, w pikselach, według którego ma zostać przeniesiona z okienka i wirtualnych prostokąt.
+podczas Kwota (w pikselach), przez którą ma zostać przeniesione okienko i wirtualny prostokąt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-*dwAlignment* może być dowolną z następujących wartości:
+*dwAlignment* może być jedną z następujących wartości:
 
 |Wartość|Opis|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|Umożliwia okienka, aby być zadokowane, do góry obszaru klienckiego okna ramki.|
-|CBRS_ALIGN_BOTTOM|Umożliwia okienka, aby być zadokowane w dolnej części obszaru klienckiego okna ramki.|
-|CBRS_ALIGN_LEFT|Umożliwia okienka, aby być zadokowane po lewej stronie obszaru klienckiego okna ramki.|
-|CBRS_ALIGN_RIGHT|Umożliwia okienka, aby być zadokowane, aby po prawej stronie obszaru klienckiego okna ramki.|
-|CBRS_ALIGN_ANY|Umożliwia okienka, aby być zadokowane, na dowolnej stronie obszaru klienckiego okna ramki.|
+|CBRS_ALIGN_TOP|Umożliwia zadokowanie okienka w górnej części obszaru klienta okna ramki.|
+|CBRS_ALIGN_BOTTOM|Umożliwia zadokowanie okienka w dolnej części obszaru klienta okna ramki.|
+|CBRS_ALIGN_LEFT|Umożliwia zadokowanie okienka po lewej stronie obszaru klienta okna ramki.|
+|CBRS_ALIGN_RIGHT|Umożliwia zadokowanie okienka po prawej stronie obszaru klienta okna ramki.|
+|CBRS_ALIGN_ANY|Umożliwia zadokowanie okienka po dowolnej stronie obszaru klienta okna ramki.|
 
-Jeśli *dwAlignment* zawiera flagę CBRS_ALIGN_LEFT lub CBRS_ALIGN_RIGHT okienka i prostokąt wirtualnej są przenoszone w poziomie; w przeciwnym razie jeśli *dwAlignment* zawiera CBRS_ALIGN_TOP lub CBRS_ALIGN Flaga _dolne, w okienku i prostokąt wirtualnego są przenoszone w pionie.
+Jeśli *dwAlignment* zawiera flagę CBRS_ALIGN_LEFT lub CBRS_ALIGN_RIGHT, okienko i wirtualny prostokąt są przenoszone w poziomie. w przeciwnym razie, jeśli *dwAlignment* zawiera flagę CBRS_ALIGN_TOP lub CBRS_ALIGN_BOTTOM, okienko i wirtualny prostokąt są przenoszone w pionie.
 
-##  <a name="movepane"></a>  CPane::MovePane
+##  <a name="movepane"></a>CPane::MovePane
 
-Przenosi okienka przycinania na prostokąt określony.
+Przenosi okienko do określonego prostokąta.
 
 ```
 virtual CSize MovePane(
@@ -1130,25 +1130,25 @@ virtual CSize MovePane(
 ### <a name="parameters"></a>Parametry
 
 *rectNew*<br/>
-[in] Określa nowy prostokąt dla okienka.
+podczas Określa nowy prostokąt dla okienka.
 
 *bForceMove*<br/>
-[in] W przypadku opcji TRUE, ta metoda ignoruje minimalny dozwolony rozmiar okienka ( [CPane::GetMinSize](#getminsize)); w przeciwnym razie okienka jest korygowana, jeśli to konieczne upewnić się, że jest co najmniej minimalny dozwolony rozmiar.
+podczas W przypadku wartości TRUE ta metoda ignoruje Minimalny dozwolony rozmiar okienka ( [CPane:: GetMinSize](#getminsize)); w przeciwnym razie okienko jest dostosowywane w razie potrzeby, aby mieć pewność, że jest to co najmniej Minimalny dozwolony rozmiar.
 
 *hdwp*<br/>
-[in] Nie jest używany.
+podczas Nieużywane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `CSize` obiekt, który zawiera różnice w szerokość i wysokość między nowym i starym prostokąty (prostokąt, stare *rectNew*).
+Obiekt, który zawiera różnice szerokości i wysokości między nowym i starym prostokątem (starym prostokątem- *rectNew).* `CSize`
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest używana tylko w przypadku okienek dokowalnych.
+Ta metoda jest używana tylko dla okienek było dokować.
 
-##  <a name="onafterchangeparent"></a>  CPane::OnAfterChangeParent
+##  <a name="onafterchangeparent"></a>CPane::OnAfterChangeParent
 
-Wywoływane przez platformę, gdy zmieniono element nadrzędny w okienku.
+Wywoływane przez platformę, gdy element nadrzędny okienka został zmieniony.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1157,15 +1157,15 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Parametry
 
 *pWndOldParent*<br/>
-[out w] W okienku poprzedniego okna nadrzędnego.
+[in. out] Poprzednie okno nadrzędne okienka.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez platformę, gdy element nadrzędny w okienku zmienił się z powodu operacji dokowania lub zmiennoprzecinkową.
+Ta metoda jest wywoływana przez platformę, gdy element nadrzędny okienka został zmieniony z powodu operacji dokowania lub zmiennoprzecinkowej.
 
-##  <a name="onafterdock"></a>  CPane::OnAfterDock
+##  <a name="onafterdock"></a>CPane::OnAfterDock
 
-Wywoływane przez platformę, gdy okienko zostały zadokowany.
+Wywoływane przez platformę, gdy okienko zostało zadokowane.
 
 ```
 virtual void OnAfterDock(
@@ -1177,17 +1177,17 @@ virtual void OnAfterDock(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Ten parametr nie jest używany.
+podczas Ten parametr nie jest używany.
 
 *lpRect*<br/>
-[in] Ten parametr nie jest używany.
+podczas Ten parametr nie jest używany.
 
 *dockMethod*<br/>
-[in] Ten parametr nie jest używany.
+podczas Ten parametr nie jest używany.
 
-##  <a name="onafterfloat"></a>  CPane::OnAfterFloat
+##  <a name="onafterfloat"></a>CPane::OnAfterFloat
 
-Metoda wywoływana przez platformę po okienko liczby zmiennoprzecinkowe.
+Wywoływane przez platformę po przepływaniu okienka.
 
 ```
 virtual void OnAfterFloat();
@@ -1195,11 +1195,11 @@ virtual void OnAfterFloat();
 
 ### <a name="remarks"></a>Uwagi
 
-Można zastąpić tę metodę w klasie pochodnej, jeśli chcesz wykonywać żadnego przetwarzania po okienko liczby zmiennoprzecinkowe.
+Można zastąpić tę metodę w klasie pochodnej, jeśli chcesz wykonać dowolne przetwarzanie po przejściu okienka.
 
-##  <a name="onbeforechangeparent"></a>  CPane::OnBeforeChangeParent
+##  <a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent
 
-Wywoływane przez platformę, gdy element nadrzędny w okienku zostanie zmienione.
+Wywoływane przez platformę, gdy element nadrzędny okienka ma zostać zmieniony.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1210,20 +1210,20 @@ virtual void OnBeforeChangeParent(
 ### <a name="parameters"></a>Parametry
 
 *pWndNewParent*<br/>
-[out w] Określa nowe okno nadrzędne.
+[in. out] Określa nowe okno nadrzędne.
 
 *bDelay*<br/>
-[in] Wartość TRUE, aby opóźnić globalnego dokowania dostosowania układu; w przeciwnym razie wartość FALSE.
+podczas Wartość TRUE powoduje opóźnienie globalnego dopasowania układu dokowania; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez platformę, gdy nadrzędnego okienka ma zostać zmieniona, ponieważ jest okienka dokowania, jak i przestawione.
+Ta metoda jest wywoływana przez platformę, gdy element nadrzędny okienka zostanie zmieniony, ponieważ okienko jest zadokowane lub zmiennoprzecinkowe.
 
-Domyślnie okienka jest zarejestrowany za pomocą okienka dokowania, wywołując `CDockSite::RemovePane`.
+Domyślnie okienko jest wyrejestrowane w okienku dokującym przez wywołanie metody `CDockSite::RemovePane`.
 
-##  <a name="onbeforedock"></a>  CPane::OnBeforeDock
+##  <a name="onbeforedock"></a>CPane::OnBeforeDock
 
-Wywoływane przez platformę, gdy ma zadokować okienka.
+Wywoływane przez platformę, gdy okienko zostanie zadokowane.
 
 ```
 virtual BOOL OnBeforeDock(
@@ -1235,25 +1235,25 @@ virtual BOOL OnBeforeDock(
 ### <a name="parameters"></a>Parametry
 
 *ppDockBar*<br/>
-[out w] Określa okienko w którym to okienko jest zadokowane do.
+[in. out] Określa okienko, do którego to okienko jest zadokowane.
 
 *lpRect*<br/>
-[in] Określa prostokąt dokowania.
+podczas Określa prostokąt dokowania.
 
 *dockMethod*<br/>
-[in] Określa metodę dokowania.
+podczas Określa metodę dokowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli może być zadokowane okienka. Jeśli funkcja zwraca wartość FALSE, dokującego. Operacja zostanie przerwana.
+Ma wartość TRUE, jeśli okienko może być zadokowane. Jeśli funkcja zwraca wartość FALSE, operacja dokowania zostanie przerwana.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez platformę, gdy ma być zadokowane, okienko. Można zastąpić tę metodę w klasie pochodnej, jeśli chcesz wykonywać żadnego przetwarzania przed okienko na koniec jest zadokowany.
+Ta metoda jest wywoływana przez platformę, gdy okienko ma zostać zadokowane. Można zastąpić tę metodę w klasie pochodnej, jeśli chcesz wykonać dowolne przetwarzanie, zanim okienko zostanie ostatecznie zadokowane.
 
-##  <a name="onbeforefloat"></a>  CPane::OnBeforeFloat
+##  <a name="onbeforefloat"></a>CPane::OnBeforeFloat
 
-Wywoływane przez platformę, gdy okienko jest o na typ zmiennoprzecinkowy.
+Wywoływane przez platformę, gdy okienko będzie miało wartość zmiennoprzecinkową.
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1264,22 +1264,22 @@ virtual BOOL OnBeforeFloat(
 ### <a name="parameters"></a>Parametry
 
 *rectFloat*<br/>
-[in] Określa położenie i rozmiar okienka, gdy jest ona w stanie zmiennoprzecinkowy.
+podczas Określa położenie i rozmiar okienka, gdy jest w stanie przepływającym.
 
 *dockMethod*<br/>
-[in] Określa metodę dokujące okienka.
+podczas Określa metodę dokowania okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienku można przestawione; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli okienko może być wypływane; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez platformę, gdy okienko jest o na typ zmiennoprzecinkowy. Można zastąpić tę metodę w klasie pochodnej, jeśli chcesz wykonywać żadnego przetwarzania przed okienka na koniec liczby zmiennoprzecinkowe.
+Ta metoda jest wywoływana przez platformę, gdy okienko odnosi się do wartości zmiennoprzecinkowej. Można zastąpić tę metodę w klasie pochodnej, jeśli chcesz wykonać dowolne przetwarzanie przed przepływaniem okienka.
 
-##  <a name="onpressclosebutton"></a>  CPane::OnPressCloseButton
+##  <a name="onpressclosebutton"></a>CPane::OnPressCloseButton
 
-Wywoływane przez platformę, gdy użytkownik naciśnie przycisk zamknięcia na podpisu dla okienka.
+Wywoływane przez platformę, gdy użytkownik naciśnie przycisk Zamknij na podpisie okienka.
 
 ```
 virtual void OnPressCloseButton();
@@ -1287,11 +1287,11 @@ virtual void OnPressCloseButton();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez platformę, gdy użytkownik naciśnie **Zamknij** przycisku w okienku podpis. Aby otrzymywać powiadomienia o **Zamknij** zdarzeń, możesz zastąpić tę metodę w klasie pochodnej.
+Ta metoda jest wywoływana przez platformę, gdy użytkownik naciśnie przycisk **Zamknij** w podpisie okienka. Aby otrzymywać powiadomienia o zdarzeniu **zamknięcia** , można zastąpić tę metodę w klasie pochodnej.
 
-##  <a name="onshowcontrolbarmenu"></a>  CPane::OnShowControlBarMenu
+##  <a name="onshowcontrolbarmenu"></a>CPane::OnShowControlBarMenu
 
-Wywoływane przez platformę, gdy menu okienka specjalne ma być wyświetlany.
+Wywoływane przez platformę, gdy zostanie wyświetlone specjalne menu okienka.
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint point);
@@ -1299,20 +1299,20 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] Określa lokalizację menu.
+*moment*<br/>
+podczas Określa lokalizację menu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli mogą być wyświetlane menu; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli menu może być wyświetlane; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Menu zawiera kilka elementów, które umożliwiają określenie zachowania w okienku, a mianowicie: **Zmiennoprzecinkowe**, **dokowanie**, **autoukrywania**, i **Ukryj**. To menu dla wszystkich okienek można włączyć przez wywołanie [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Menu zawiera kilka elementów, które umożliwiają określenie zachowania okienka, mianowicie: **Przestawne**, **dokowanie**, **Autoukrywanie**i **ukrywanie**. To menu można włączyć dla wszystkich okienek, wywołując [CDockingManager:: EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
-##  <a name="recalclayout"></a>  CPane::RecalcLayout
+##  <a name="recalclayout"></a>CPane::RecalcLayout
 
-Ponownie oblicza układ informacji dla tego okienka.
+Ponownie oblicza informacje o układzie dla okienka.
 
 ```
 virtual void RecalcLayout();
@@ -1320,11 +1320,11 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli panel jest zadokowany, ta metoda aktualizuje wirtualnego prostokąt dla okienka, ustawiając jego rozmiar bieżący rozmiar okienka.
+Jeśli okienko jest zadokowane, ta metoda aktualizuje prostokąt wirtualny dla okienka przez ustawienie jego rozmiaru na bieżący rozmiar okienka.
 
-Jeśli okienko jest Opływanie, ta metoda powiadamia mini ramki nadrzędnej, aby dopasować rozmiar okienka, aby rozmiar mini ramki. Struktura zapewnia, że mini ramki jest co najmniej minimalny dozwolony rozmiar okienka ( [CPane::GetMinSize](#getminsize)) i zmienia rozmiar mini ramki, jeśli to konieczne.
+Jeśli okienko jest przestawne, ta metoda powiadamia nadrzędną minimalną ramkę, aby dostosować rozmiar okienka do rozmiaru minipaska ramek. Struktura zapewnia, że minimalna ramka jest co najmniej minimalnym dozwolonym rozmiarem okienka ( [CPane:: GetMinSize](#getminsize)) i w razie potrzeby zmienia rozmiar ramki minimalnej.
 
-##  <a name="savestate"></a>  CPane::SaveState
+##  <a name="savestate"></a>CPane:: SaveState
 
 Zapisuje stan okienka w rejestrze.
 
@@ -1338,27 +1338,27 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Nazwa profilu.
+podczas Nazwa profilu.
 
 *nIndex*<br/>
-[in] Indeks profilu.
+podczas Indeks profilu.
 
 *uiID*<br/>
-[in] Identyfikator okienka.
+podczas Identyfikator okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli stan został zapisany pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli stan został pomyślnie zapisany; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, gdy zapisuje stan okienka w rejestrze. Zastąp `SaveState` w klasie pochodnej do przechowywania dodatkowych informacji.
+Struktura wywołuje tę metodę, gdy zapisuje stan okienka do rejestru. Przesłoń `SaveState` w klasie pochodnej w celu przechowywania dodatkowych informacji.
 
-Gdy zastąpienie tej metody także wywołać metodę bazową i zwraca wartość FALSE, jeśli podstawowa metoda zwróci wartość FALSE.
+Podczas przesłonięcia tej metody należy wywołać metodę bazową i zwrócić wartość FALSE, jeśli metoda podstawowa zwróci wartość FALSE.
 
-##  <a name="setactiveingroup"></a>  CPane::SetActiveInGroup
+##  <a name="setactiveingroup"></a>CPane::SetActiveInGroup
 
-Flagi okienko jako aktywne.
+Flaguje okienko jako aktywne.
 
 ```
 virtual void SetActiveInGroup(BOOL bActive);
@@ -1366,18 +1366,18 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parametry
 
-*bWykonywanie aktywnych*<br/>
-[in] Wartość logiczna określająca, czy okienko zostanie oflagowana jako aktywne.
+*bActive*<br/>
+podczas Wartość logiczna określająca, czy okienko jest oflagowane jako aktywne.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy jest wyświetlana w okienku dokowalne lub wciśnięcia przycisku automatycznego ukrywania, odpowiednie okienko autoukrywanie jest oznaczane jako aktywne.
+Gdy zostanie wyświetlone okienko było dokować lub wybrano przycisk Autoukrywanie, odpowiednie okienko Autoukrywanie zostanie oznaczone jako aktywne.
 
-Wyglądu przycisku automatycznego ukrywania, który jest skojarzony z okienka opiera się na dwa czynniki. Jeśli jest aktywna, okienko i `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` ma wartość PRAWDA, wyświetla framework, automatyczne ukrywanie przycisku ikony oraz etykiety. Nieaktywne okienka ramach Wyświetla ikonę Autoukrywanie.
+Wygląd przycisku Autoukrywanie, który jest skojarzony z okienkiem, zależy od dwóch czynników. Jeśli okienko jest aktywne i `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` ma wartość true, struktura wyświetla przycisk Autoukrywanie jako ikonę i etykietę. W przypadku nieaktywnego okienka struktura wyświetla tylko ikonę autoukrywania.
 
-Jeśli `CMFCAutoHideButton::m_bOverlappingTabs` ma wartość FAŁSZ, lub jeśli okienko nie znajduje się w grupie, struktura Wyświetla przycisk Autoukrywanie skojarzone ikony oraz etykiety.
+Jeśli `CMFCAutoHideButton::m_bOverlappingTabs` ma wartość false lub jeśli okienko nie znajduje się w grupie, struktura wyświetla skojarzony przycisk Autoukrywanie jako ikonę i etykietę.
 
-##  <a name="setborders"></a>  CPane::SetBorders
+##  <a name="setborders"></a>CPane:: setborderers
 
 Ustawia wartości obramowania okienka.
 
@@ -1394,27 +1394,27 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *cxLeft*<br/>
-[in] Określa szerokość w pikselach, krawędzi lewej części okienka.
+podczas Określa szerokość lewej krawędzi okienka (w pikselach).
 
 *cyTop*<br/>
-[in] Określa szerokość w pikselach, krawędzi górnej części okienka.
+podczas Określa szerokość górnej krawędzi okienka w pikselach.
 
 *cxRight*<br/>
-[in] Określa szerokość w pikselach, prawej krawędzi okienka.
+podczas Określa szerokość prawej krawędzi okienka (w pikselach).
 
 *cyBottom*<br/>
-[in] Określa szerokość w pikselach, krawędzi dolnej części okienka.
+podczas Określa szerokość dolnego obramowania okienka (w pikselach).
 
 *lpRect*<br/>
-[in] A [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera szerokość w pikselach każdego obramowanie okienka.
+podczas Obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który zawiera szerokość (w pikselach) każdej obramowania okienka.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby ustawić rozmiar okienka obramowania.
+Wywołaj tę funkcję, aby ustawić rozmiary obramowań okienka.
 
-##  <a name="setclienthotspot"></a>  CPane::SetClientHotSpot
+##  <a name="setclienthotspot"></a>CPane::SetClientHotSpot
 
-Zestawy *aktywny* dla tego okienka.
+Ustawia *punkt aktywny* dla okienka.
 
 ```
 void SetClientHotSpot(const CPoint& ptNew);
@@ -1423,15 +1423,15 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="parameters"></a>Parametry
 
 *ptNew*<br/>
-[in] Element `CPoint` obiektu, który określa nowy punkt aktywny.
+podczas `CPoint` Obiekt, który określa nowy punkt aktywny.
 
 ### <a name="remarks"></a>Uwagi
 
-*Aktywny* punktu w okienko w którym użytkownik wybiera i przechowuje przenieść okienka. Punkt aktywny służy do płynne animacje po przeciągnięciu od pozycji zadokowanego okienka.
+Punkt *aktywny* jest punktem w okienku, który użytkownik wybiera i utrzymuje, aby przenieść okienko. Gorąca plamka służy do wygładzania animacji, gdy okienko jest przeciągane z pozycji zadokowanej.
 
-##  <a name="setdockstate"></a>  CPane::SetDockState
+##  <a name="setdockstate"></a>CPane::SetDockState
 
-Przywracanie informacji o stanie dla okienka dokowania.
+Przywraca informacje o stanie dokowania dla okienka.
 
 ```
 virtual void SetDockState(CDockingManager* pDockManager);
@@ -1440,17 +1440,17 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ### <a name="parameters"></a>Parametry
 
 *pDockManager*<br/>
-[in] Wskaźnik dokowania menedżera dla głównej ramki okna.
+podczas Wskaźnik do okna Menedżer dokowania dla ramki głównej.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez platformę, aby przywrócić najnowsze informacje o stanie dokowania dla okienka. Okienko przechowuje najnowsze informacje o stanie dokowania w [CPane::m_recentDockInfo](#m_recentdockinfo). Aby uzyskać więcej informacji, zobacz [klasa CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
+Ta metoda jest wywoływana przez platformę w celu przywrócenia ostatnich informacji o stanie dokowania dla tego okienka. W okienku są przechowywane najnowsze informacje o stanie dokowania w [CPane:: m_recentDockInfo](#m_recentdockinfo). Aby uzyskać więcej informacji, zobacz [Klasa CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
 
-Można również wywołać tę metodę, aby ustawić stan dokowania podczas ładowania informacji okienko ze źródła zewnętrznego.
+Możesz również wywołać tę metodę, aby ustawić stan dokowania podczas ładowania informacji okienka ze źródła zewnętrznego.
 
-##  <a name="setexclusiverowmode"></a>  CPane::SetExclusiveRowMode
+##  <a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode
 
-Włącza lub wyłącza tryb wyłączności wiersza.
+Włącza lub wyłącza tryb wiersza wyłącznego.
 
 ```
 virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
@@ -1459,15 +1459,15 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bExclusive*<br/>
-[in] Wartość TRUE, aby włączyć tryb wyłączności wiersza; w przeciwnym razie wartość FALSE.
+podczas Wartość TRUE powoduje włączenie trybu wiersza wyłącznego; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby włączyć lub wyłączyć tryb wyłączności wiersza. Gdy okienko jest w trybie wyłączności wiersza, go nie mogą mieć tego samego wiersza innych pasków narzędzi.
+Wywołaj tę metodę, aby włączyć lub wyłączyć tryb wiersza wyłącznego. Gdy okienko znajduje się w trybie wiersza wyłącznego, nie może współużytkować tego samego wiersza z innymi paskami narzędzi.
 
-Domyślnie wszystkie paski narzędzi ma wyłączono tryb wyłączności wiersza, a następnie na pasku menu ma włączony tryb wyłączności wiersza.
+Domyślnie wszystkie paski narzędzi mają wyłączony tryb wiersza, a na pasku menu jest włączony tryb wiersza wyłącznego.
 
-##  <a name="setminsize"></a>  CPane::SetMinSize
+##  <a name="setminsize"></a>CPane::SetMinSize
 
 Ustawia minimalny dozwolony rozmiar okienka.
 
@@ -1477,14 +1477,14 @@ void SetMinSize(const CSize& size);
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-[in] A `CSize` obiekt, który zawiera co najmniej dozwolony rozmiar okienka.
+*zmienia*<br/>
+podczas `CSize` Obiekt, który zawiera minimalny dozwolony rozmiar okienka.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setvirtualrect"></a>  CPane::SetVirtualRect
+##  <a name="setvirtualrect"></a>CPane::SetVirtualRect
 
-Zestawy *wirtualnego prostokąt* okienka.
+Ustawia *wirtualny prostokąt* okienka.
 
 ```
 void SetVirtualRect(
@@ -1494,21 +1494,21 @@ void SetVirtualRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[in] A `CRect` obiekt, który określa wirtualny prostokąt, można ustawić.
+*cinania*<br/>
+podczas `CRect` Obiekt, który określa wirtualny prostokąt, który ma zostać ustawiony.
 
 *bMapToParent*<br/>
-[in] Określ wartość PRAWDA, jeśli *prostokąt* zawiera punkty względem okna nadrzędnego.
+podczas Określ wartość TRUE, jeśli *prostokąt* zawiera punkty względem okna nadrzędnego.
 
 ### <a name="remarks"></a>Uwagi
 
-A *wirtualnego prostokąt* przechowuje oryginalnej pozycji w okienku po przeniesieniu. Struktura można użyć wirtualnych prostokąt do przywrócenia oryginalnego położenia.
+*Wirtualny prostokąt* przechowuje pierwotne położenie okienka podczas przenoszenia. Struktura może użyć wirtualnego prostokąta, aby przywrócić pierwotną pozycję.
 
-Nie wywołuj metod, które są powiązane z wirtualnego prostokątów, o ile nie są przenoszone okienka programowo.
+Nie wywołuj metod, które są związane z prostokątami wirtualnymi, chyba że program programowo przenosi okienka.
 
-##  <a name="setminiframertc"></a>  CPane::SetMiniFrameRTC
+##  <a name="setminiframertc"></a>CPane::SetMiniFrameRTC
 
-Ustawia informacje o klasie czasu wykonywania dla domyślnego okna mini ramki.
+Ustawia informacje o klasie środowiska uruchomieniowego dla domyślnego okna mini-frame.
 
 ```
 void SetMiniFrameRTC(CRuntimeClass* pClass);
@@ -1517,15 +1517,15 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ### <a name="parameters"></a>Parametry
 
 *pClass*<br/>
-[out w] Określa informacje o klasie czasu wykonywania dla okna mini ramki.
+[in. out] Określa informacje o klasie środowiska uruchomieniowego dla okna mini-frame.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy okienko jest przestawione, zostanie ono przełączone [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) okna (mini ramki). Można podać niestandardowy `CPaneFrameWnd`-klasy, które będzie używane podczas [CPane::CreateDefaultMiniframe](#createdefaultminiframe) jest wywoływana.
+Gdy okienko jest przepływane, jest umieszczane w oknie [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (mini-frame). Można podać klasę pochodną `CPaneFrameWnd`niestandardową, która będzie używana po wywołaniu [CPane:: CreateDefaultMiniframe](#createdefaultminiframe) .
 
-##  <a name="stretchpanedeferwndpos"></a>  CPane::StretchPaneDeferWndPos
+##  <a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos
 
-Rozciąga okienko w pionie lub poziomie oparte na styl dokowania.
+Rozciąga okienko w pionie lub w poziomie na podstawie stylu dokowania.
 
 ```
 virtual int StretchPaneDeferWndPos(
@@ -1536,22 +1536,22 @@ virtual int StretchPaneDeferWndPos(
 ### <a name="parameters"></a>Parametry
 
 *nStretchSize*<br/>
-[in] Czas, w pikselach, do usługi stretch w okienku. Ujemna wartość służy do zmniejszania w okienku.
+podczas Kwota, w pikselach, do rozciągnięcia okienka. Aby zmniejszyć okienko, użyj wartości ujemnej.
 
 *hdwp*<br/>
-[in] Nie jest używany.
+podczas Nieużywane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rzeczywista ilość w pikselach, czy rozciągnięte został okienka.
+Rzeczywista ilość (w pikselach), o której okienko zostało rozciągnięte.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to konieczne, Metoda ta modyfikuje *nStretchSize* aby upewnić się, że okienka nie przekracza limitów rozmiaru. Limity te są pobierane przez wywołanie metody [CPane::GetAvailableStretchSize](#getavailablestretchsize) i [CPane::GetAvailableExpandSize](#getavailableexpandsize).
+W razie potrzeby ta Metoda modyfikuje *nStretchSize* , aby upewnić się, że okienko nie przekracza limitów rozmiaru. Te limity są uzyskiwane przez wywołanie [CPane:: GetAvailableStretchSize](#getavailablestretchsize) i [CPane:: GetAvailableExpandSize](#getavailableexpandsize).
 
-##  <a name="toggleautohide"></a>  CPane::ToggleAutoHide
+##  <a name="toggleautohide"></a>CPane::ToggleAutoHide
 
-Włącza lub wyłącza tryb automatycznego ukrywania.
+Przełącza tryb autoukrywania.
 
 ```
 virtual void ToggleAutoHide();
@@ -1559,11 +1559,11 @@ virtual void ToggleAutoHide();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby przełączyć tryb automatycznego ukrywania. Okienko musi być zadokowane w oknie głównym ramki w celu Przełącz do trybu Autoukrywanie.
+Wywołaj tę metodę, aby przełączyć tryb autoukrywania. Aby można było przełączyć tryb autoukrywania, okienko musi być zadokowane do głównego okna ramowego.
 
-##  <a name="undockpane"></a>  CPane::UndockPane
+##  <a name="undockpane"></a>CPane::UndockPane
 
-Usuwa okienka z witryny dokowania, suwak domyślne lub okna mini ramki, w którym aktualnie jest zadokowany.
+Usuwa okienko z witryny Docker, domyślnego suwaka lub okna mini-frame, w którym jest obecnie zadokowane.
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
@@ -1572,37 +1572,37 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bDelay*<br/>
-[in] W przypadku wartości FAŁSZ struktura wywołuje [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) dostosować układ dokowania.
+podczas W przypadku wartości FALSE Framework wywołuje [CBasePane:: AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) , aby dostosować układ dokowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia programowe oddokować okienko.
+Użyj tej metody, aby programowo oddokować okienko.
 
-##  <a name="updatevirtualrect"></a>  CPane::UpdateVirtualRect
+##  <a name="updatevirtualrect"></a>CPane::UpdateVirtualRect
 
-Aktualizuje wirtualnego prostokąta.
+Aktualizuje wirtualny prostokąt.
 
 ```
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
-  void UpdateVirtualRect(CSize sizeNew);
+void UpdateVirtualRect(CSize sizeNew);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *ptOffset*<br/>
-[in] A `CPoint` obiekt, który określa przesunięcie za pomocą którego przesunięcie okienka.
+podczas `CPoint` Obiekt, który określa przesunięcie, według którego ma zostać przesunięte okienko.
 
 *sizeNew*<br/>
-[in] A `CSize` obiekt, który określa nowy rozmiar okienka.
+podczas `CSize` Obiekt, który określa nowy rozmiar okienka.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze przeciążenie ustawia prostokąt wirtualnych za pomocą bieżące położenie i rozmiar okienka.
+Pierwsze Przeciążenie ustawia prostokąt wirtualny przy użyciu bieżącej pozycji i rozmiaru okienka.
 
-Drugie przeciążenie przenosi wirtualnego prostokąt o kwotę, który jest określony przez *ptOffset*.
+Drugie Przeciążenie przenosi prostokąt wirtualny o ilość określoną przez *ptOffset*.
 
-Trzecie przeciążenie ustawia prostokąt wirtualnego przy użyciu bieżącego położenia obiektu okienka i rozmiar, który jest określony przez *sizeNew*.
+Trzecie Przeciążenie ustawia prostokąt wirtualny przy użyciu bieżącego położenia okienka i rozmiaru określonego przez *sizeNew*.
 
 ## <a name="see-also"></a>Zobacz także
 

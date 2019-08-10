@@ -52,19 +52,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: d66b126ce5fd6c3da80d2bb4e6322f8180f0b8cf
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: fa50282f3aa1f4db3ebf6306fa9dc3dab1311d1b
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552194"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915909"
 ---
 # <a name="caccesstoken-class"></a>Klasa CAccessToken
 
 Ta klasa jest otoką dla tokenu dostępu.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,65 +84,65 @@ class CAccessToken
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAccessToken::Attach](#attach)|Wywołaj tę metodę, aby przejąć prawo własności uchwyt token dostęp.|
-|[CAccessToken::CheckTokenMembership](#checktokenmembership)|Wywołaj tę metodę w celu określenia, czy określony identyfikator SID jest włączone w `CAccessToken` obiektu.|
+|[CAccessToken::Attach](#attach)|Wywołaj tę metodę, aby przejąć własność danego dojścia tokenu dostępu.|
+|[CAccessToken::CheckTokenMembership](#checktokenmembership)|Wywołaj tę metodę, aby określić, czy w `CAccessToken` obiekcie jest włączony określony identyfikator SID.|
 |[CAccessToken::CreateImpersonationToken](#createimpersonationtoken)|Wywołaj tę metodę, aby utworzyć nowy token dostępu personifikacji.|
 |[CAccessToken::CreatePrimaryToken](#createprimarytoken)|Wywołaj tę metodę, aby utworzyć nowy token podstawowy.|
-|[CAccessToken::CreateProcessAsUser](#createprocessasuser)|Wywołaj tę metodę, aby utworzyć nowy proces uruchomiony w kontekście zabezpieczeń użytkownika, reprezentowane przez `CAccessToken` obiektu.|
-|[CAccessToken::CreateRestrictedToken](#createrestrictedtoken)|Wywołaj tę metodę, aby utworzyć nową, ograniczeniami `CAccessToken` obiektu.|
-|[CAccessToken::Detach](#detach)|Wywołaj tę metodę, aby można było odwołać prawa własności tokenu dostępu.|
-|[CAccessToken::DisablePrivilege](#disableprivilege)|Wywołanie tej metody, aby wyłączyć uprawnień w `CAccessToken` obiektu.|
-|[CAccessToken::DisablePrivileges](#disableprivileges)|Wywołanie tej metody, aby wyłączyć co najmniej uprawnienia w `CAccessToken` obiektu.|
-|[CAccessToken::EnablePrivilege](#enableprivilege)|Wywołanie tej metody, aby umożliwić uprawnień w `CAccessToken` obiektu.|
-|[CAccessToken::EnablePrivileges](#enableprivileges)|Wywołanie tej metody, aby włączyć co najmniej uprawnienia w `CAccessToken` obiektu.|
-|[CAccessToken::GetDefaultDacl](#getdefaultdacl)|Wywołaj tę metodę, aby zwrócić `CAccessToken` obiektu domyślnej listy DACL.|
-|[CAccessToken::GetEffectiveToken](#geteffectivetoken)|Wywołaj tę metodę, aby uzyskać `CAccessToken` obiektu równa tokenu dostępu dla bieżącego wątku.|
-|[CAccessToken::GetGroups](#getgroups)|Wywołaj tę metodę, aby zwrócić `CAccessToken` obiektu tokenu grup.|
-|[CAccessToken::GetHandle](#gethandle)|Wywołaj tę metodę można pobrać dojścia do tokena dostępu.|
+|[CAccessToken::CreateProcessAsUser](#createprocessasuser)|Wywołaj tę metodę, aby utworzyć nowy proces uruchomiony w kontekście zabezpieczeń użytkownika reprezentowanego przez `CAccessToken` obiekt.|
+|[CAccessToken::CreateRestrictedToken](#createrestrictedtoken)|Wywołaj tę metodę, aby utworzyć nowy obiekt `CAccessToken` z ograniczeniami.|
+|[CAccessToken::Detach](#detach)|Wywołaj tę metodę, aby odwołać własność tokenu dostępu.|
+|[CAccessToken::D isablePrivilege](#disableprivilege)|Wywołaj tę metodę, aby wyłączyć uprawnienie w `CAccessToken` obiekcie.|
+|[CAccessToken::D isablePrivileges](#disableprivileges)|Wywołaj tę metodę, aby wyłączyć co najmniej jedno uprawnienia `CAccessToken` w obiekcie.|
+|[CAccessToken::EnablePrivilege](#enableprivilege)|Wywołaj tę metodę, aby włączyć uprawnienie w `CAccessToken` obiekcie.|
+|[CAccessToken::EnablePrivileges](#enableprivileges)|Wywołaj tę metodę, aby włączyć co najmniej jedno uprawnienia `CAccessToken` w obiekcie.|
+|[CAccessToken::GetDefaultDacl](#getdefaultdacl)|Wywołaj tę metodę, aby `CAccessToken` zwrócić domyślną listę DACL obiektu.|
+|[CAccessToken::GetEffectiveToken](#geteffectivetoken)|Wywołaj tę metodę, aby `CAccessToken` uzyskać obiekt równy tokenowi dostępu obowiązującego dla bieżącego wątku.|
+|[CAccessToken::GetGroups](#getgroups)|Wywołaj tę metodę, aby `CAccessToken` zwrócić grupy tokenów obiektu.|
+|[CAccessToken:: GetHandle](#gethandle)|Wywołaj tę metodę, aby pobrać uchwyt do tokenu dostępu.|
 |[CAccessToken::GetImpersonationLevel](#getimpersonationlevel)|Wywołaj tę metodę, aby uzyskać poziom personifikacji z tokenu dostępu.|
-|[CAccessToken::GetLogonSessionId](#getlogonsessionid)|Wywołanie tej metody można pobrać Identyfikatora sesji logowania, które są skojarzone z `CAccessToken` obiektu.|
-|[CAccessToken::GetLogonSid](#getlogonsid)|Wywołaj tę metodę w celu pobrania identyfikatora SID logowania skojarzone z `CAccessToken` obiektu.|
-|[CAccessToken::GetOwner](#getowner)|Wywołanie tej metody można pobrać skojarzony właściciel `CAccessToken` obiektu.|
-|[CAccessToken::GetPrimaryGroup](#getprimarygroup)|Wywołanie tej metody można pobrać skojarzone z grupą podstawową `CAccessToken` obiektu.|
-|[CAccessToken::GetPrivileges](#getprivileges)|Wywołanie tej metody, aby uzyskać uprawnienia skojarzone z `CAccessToken` obiektu.|
-|[CAccessToken::GetProcessToken](#getprocesstoken)|Wywołaj tę metodę, aby zainicjować `CAccessToken` przy użyciu tokenu dostępu z danego procesu.|
-|[CAccessToken::GetProfile](#getprofile)|Wywołanie tej metody można pobrać uchwytu, wskazując skojarzony profil użytkownika `CAccessToken` obiektu.|
-|[CAccessToken::GetSource](#getsource)|Wywołanie tej metody można pobrać źródło `CAccessToken` obiektu.|
-|[CAccessToken::GetStatistics](#getstatistics)|Wywołanie tej metody, aby uzyskać informacje związane z `CAccessToken` obiektu.|
-|[CAccessToken::GetTerminalServicesSessionId](#getterminalservicessessionid)|Wywołanie tej metody, aby uzyskać identyfikator sesji usług terminalowych skojarzony `CAccessToken` obiektu.|
-|[CAccessToken::GetThreadToken](#getthreadtoken)|Wywołaj tę metodę, aby zainicjować `CAccessToken` przy użyciu tokenu z danym wątku.|
-|[CAccessToken::GetTokenId](#gettokenid)|Wywołanie tej metody można pobrać tokenu identyfikator skojarzony z `CAccessToken` obiektu.|
-|[CAccessToken::GetType](#gettype)|Wywołanie tej metody można uzyskać tokenu typu `CAccessToken` obiektu.|
-|[CAccessToken::GetUser](#getuser)|Wywołanie tej metody, aby zidentyfikować użytkownika skojarzonego z `CAccessToken` obiektu.|
-|[CAccessToken::HKeyCurrentUser](#hkeycurrentuser)|Wywołanie tej metody można pobrać uchwytu, wskazując skojarzony profil użytkownika `CAccessToken` obiektu.|
-|[CAccessToken::Impersonate](#impersonate)|Wywołanie tej metody, aby przypisać personifikacji `CAccessToken` wątku.|
-|[CAccessToken::ImpersonateLoggedOnUser](#impersonateloggedonuser)|Wywołaj tę metodę, aby zezwolić na wątku wywołującego do personifikacji w kontekście zabezpieczeń zalogowanego użytkownika.|
-|[CAccessToken::IsTokenRestricted](#istokenrestricted)|Wywołaj tę metodę, aby sprawdzić, czy `CAccessToken` obiekt zawiera listę identyfikatorów SID ograniczone.|
-|[CAccessToken::LoadUserProfile](#loaduserprofile)|Wywołaj tę metodę, aby załadować profil użytkownika skojarzony z `CAccessToken` obiektu.|
-|[CAccessToken::LogonUser](#logonuser)|Wywołaj tę metodę, aby utworzyć sesję logowania dla użytkownika skojarzonego z danego poświadczenia.|
-|[CAccessToken::OpenCOMClientToken](#opencomclienttoken)|Wywołanie tej metody z w ramach serwera COM, obsługa wywołania klienta można zainicjować `CAccessToken` przy użyciu tokenu dostępu z klientów modelu COM.|
-|[CAccessToken::OpenNamedPipeClientToken](#opennamedpipeclienttoken)|Tę metodę należy wywołać z w ramach serwera żądania pobierania przez nazwany potok zainicjować `CAccessToken` przy użyciu tokenu dostępu od klienta.|
-|[CAccessToken::OpenRPCClientToken](#openrpcclienttoken)|Wywołanie tej metody z w ramach wywołania RPC klienta można zainicjować obsługi serwera `CAccessToken` przy użyciu tokenu dostępu od klienta.|
-|[CAccessToken::OpenThreadToken](#openthreadtoken)|Wywołaj tę metodę, aby ustawić poziom personifikacji i następnie zainicjowanie `CAccessToken` przy użyciu tokenu z danym wątku.|
-|[CAccessToken::PrivilegeCheck](#privilegecheck)|Wywołaj tę metodę w celu określenia, czy określony zestaw uprawnień są włączone w `CAccessToken` obiektu.|
-|[CAccessToken::Revert](#revert)|Wywołaj tę metodę, aby zatrzymać wątek, który jest przy użyciu tokenu personifikacji.|
-|[CAccessToken::SetDefaultDacl](#setdefaultdacl)|Wywołaj tę metodę, aby ustawić wartości domyślne listy DACL `CAccessToken` obiektu.|
-|[CAccessToken::SetOwner](#setowner)|Wywołaj tę metodę, aby ustawić właściciela `CAccessToken` obiektu.|
-|[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Wywołanie tej metody, aby ustawić podstawowej grupy `CAccessToken` obiektu.|
+|[CAccessToken::GetLogonSessionId](#getlogonsessionid)|Wywołaj tę metodę, aby uzyskać identyfikator sesji logowania skojarzony z `CAccessToken` obiektem.|
+|[CAccessToken::GetLogonSid](#getlogonsid)|Wywołaj tę metodę, aby uzyskać identyfikator SID logowania skojarzony `CAccessToken` z obiektem.|
+|[CAccessToken::GetOwner](#getowner)|Wywołaj tę metodę, aby uzyskać właściciela skojarzonego z `CAccessToken` obiektem.|
+|[CAccessToken::GetPrimaryGroup](#getprimarygroup)|Wywołaj tę metodę, aby uzyskać grupę podstawową skojarzoną `CAccessToken` z obiektem.|
+|[CAccessToken::GetPrivileges](#getprivileges)|Wywołaj tę metodę, aby uzyskać uprawnienia skojarzone z `CAccessToken` obiektem.|
+|[CAccessToken::GetProcessToken](#getprocesstoken)|Wywołaj tę metodę, `CAccessToken` aby zainicjować za pomocą tokenu dostępu z danego procesu.|
+|[CAccessToken::GetProfile](#getprofile)|Wywołaj tę metodę, aby uzyskać uchwyt wskazujący profil użytkownika skojarzony z `CAccessToken` obiektem.|
+|[CAccessToken:: GetSource](#getsource)|Wywołaj tę metodę, aby pobrać źródło `CAccessToken` obiektu.|
+|[CAccessToken:: getstatistics](#getstatistics)|Wywołaj tę metodę, aby uzyskać informacje skojarzone `CAccessToken` z obiektem.|
+|[CAccessToken::GetTerminalServicesSessionId](#getterminalservicessessionid)|Wywołaj tę metodę, aby uzyskać identyfikator sesji usług terminalowych skojarzony z `CAccessToken` obiektem.|
+|[CAccessToken::GetThreadToken](#getthreadtoken)|Wywołaj tę metodę, aby `CAccessToken` zainicjować za pomocą tokenu z danego wątku.|
+|[CAccessToken::GetTokenId](#gettokenid)|Wywołaj tę metodę, aby uzyskać identyfikator tokenu skojarzony z `CAccessToken` obiektem.|
+|[CAccessToken::GetType](#gettype)|Wywołaj tę metodę, aby uzyskać typ `CAccessToken` tokenu obiektu.|
+|[CAccessToken::GetUser](#getuser)|Wywołaj tę metodę, aby zidentyfikować użytkownika skojarzonego z `CAccessToken` obiektem.|
+|[CAccessToken::HKeyCurrentUser](#hkeycurrentuser)|Wywołaj tę metodę, aby uzyskać uchwyt wskazujący profil użytkownika skojarzony z `CAccessToken` obiektem.|
+|[CAccessToken:: personifikacja](#impersonate)|Wywołaj tę metodę, aby przypisać `CAccessToken` personifikację do wątku.|
+|[CAccessToken:: ImpersonateLoggedOnUser —](#impersonateloggedonuser)|Wywołaj tę metodę, aby zezwolić na wątek wywołujący do personifikacji kontekstu zabezpieczeń zalogowanego użytkownika.|
+|[CAccessToken::IsTokenRestricted](#istokenrestricted)|Wywołaj tę metodę, aby sprawdzić `CAccessToken` , czy obiekt zawiera listę identyfikatorów SID z ograniczeniami.|
+|[CAccessToken::LoadUserProfile](#loaduserprofile)|Wywołaj tę metodę, aby załadować profil użytkownika skojarzony z `CAccessToken` obiektem.|
+|[CAccessToken:: funkcji LogonUser](#logonuser)|Wywołaj tę metodę, aby utworzyć sesję logowania dla użytkownika skojarzonego z podanym poświadczeniami.|
+|[CAccessToken::OpenCOMClientToken](#opencomclienttoken)|Wywołaj tę metodę z poziomu serwera com obsługującego wywołanie z klienta, aby zainicjować `CAccessToken` za pomocą tokenu dostępu z klienta com.|
+|[CAccessToken::OpenNamedPipeClientToken](#opennamedpipeclienttoken)|Wywołaj tę metodę z poziomu serwera przyjmującego żądania za pośrednictwem nazwanego potoku, aby zainicjować `CAccessToken` za pomocą tokenu dostępu z klienta.|
+|[CAccessToken::OpenRPCClientToken](#openrpcclienttoken)|Wywołaj tę metodę z poziomu serwera obsługującego wywołanie z klienta RPC, `CAccessToken` aby zainicjować za pomocą tokenu dostępu z klienta.|
+|[CAccessToken::OpenThreadToken](#openthreadtoken)|Wywołaj tę metodę, aby ustawić poziom personifikacji, a `CAccessToken` następnie zainicjuj przy użyciu tokenu z danego wątku.|
+|[CAccessToken::PrivilegeCheck](#privilegecheck)|Wywołaj tę metodę, aby określić, `CAccessToken` czy w obiekcie włączono określony zestaw uprawnień.|
+|[CAccessToken:: Revert](#revert)|Wywołaj tę metodę, aby zatrzymać wątek, który używa tokenu personifikacji.|
+|[CAccessToken::SetDefaultDacl](#setdefaultdacl)|Wywołaj tę metodę, aby ustawić domyślną listę DACL `CAccessToken` obiektu.|
+|[CAccessToken:: SetOwner](#setowner)|Wywołaj tę metodę, aby ustawić właściciela `CAccessToken` obiektu.|
+|[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Wywołaj tę metodę, aby ustawić grupę `CAccessToken` podstawową obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-[Token dostępu](/windows/desktop/SecAuthZ/access-tokens) jest obiektem, w tym artykule opisano proces lub wątek kontekstu zabezpieczeń, która jest przydzielona do każdego użytkownika zalogowanego w systemie Windows.
+[Token dostępu](/windows/desktop/SecAuthZ/access-tokens) jest obiektem opisującym kontekst zabezpieczeń procesu lub wątku i jest przypisywany do każdego użytkownika zalogowanego w systemie Windows.
 
-Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.
+Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/desktop/SecAuthZ/access-control) w Windows SDK.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsecurity.h
+**Nagłówek:** atlsecurity. h
 
-##  <a name="attach"></a>  CAccessToken::Attach
+##  <a name="attach"></a>CAccessToken:: Attach
 
-Wywołaj tę metodę, aby przejąć prawo własności uchwyt token dostęp.
+Wywołaj tę metodę, aby przejąć własność danego dojścia tokenu dostępu.
 
 ```
 void Attach(HANDLE hToken) throw();
@@ -151,13 +151,13 @@ void Attach(HANDLE hToken) throw();
 ### <a name="parameters"></a>Parametry
 
 *hToken*<br/>
-Dojście do tokena dostępu.
+Dojście do tokenu dostępu.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania, wystąpi błąd asercji Jeśli `CAccessToken` obiekt ma już własności tokenu dostępu.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli `CAccessToken` obiekt ma już własność tokenu dostępu.
 
-##  <a name="dtor"></a>  CAccessToken:: ~ CAccessToken
+##  <a name="dtor"></a>CAccessToken:: ~ CAccessToken
 
 Destruktor.
 
@@ -167,11 +167,11 @@ virtual ~CAccessToken() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzielone zasoby.
+Zwalnia wszystkie przydzieloną zasoby.
 
-##  <a name="checktokenmembership"></a>  CAccessToken::CheckTokenMembership
+##  <a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership
 
-Wywołaj tę metodę w celu określenia, czy określony identyfikator SID jest włączone w `CAccessToken` obiektu.
+Wywołaj tę metodę, aby określić, czy w `CAccessToken` obiekcie jest włączony określony identyfikator SID.
 
 ```
 bool CheckTokenMembership(
@@ -182,25 +182,25 @@ bool CheckTokenMembership(
 ### <a name="parameters"></a>Parametry
 
 *rSid*<br/>
-Odwołanie do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
+Odwołanie do obiektu [klasy CSid](../../atl/reference/csid-class.md) .
 
 *pbIsMember*<br/>
-Wskaźnik do zmiennej, która otrzymuje wyniki sprawdzania.
+Wskaźnik do zmiennej, która otrzymuje wyniki kontroli.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-`CheckTokenMembership` Metoda sprawdza obecność identyfikatora SID w użytkowników i grup identyfikatory SID z tokenu dostępu. Jeśli identyfikator SID jest obecny i ma atrybut SE_GROUP_ENABLED *pbIsMember* jest ustawiona na TRUE; w przeciwnym razie, jest ustawiana na wartość FAŁSZ.
+`CheckTokenMembership` Metoda sprawdza obecność identyfikatora SID w identyfikatorach SID użytkowników i grup tokenu dostępu. Jeśli identyfikator SID jest obecny i ma atrybut SE_GROUP_ENABLED, *pbIsMember* jest ustawiona na wartość true; w przeciwnym razie jest ustawiony na wartość FALSE.
 
-W kompilacjach debugowania, wystąpi błąd asercji Jeśli *pbIsMember* nie jest prawidłowy wskaźnik.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli *pbIsMember* nie jest prawidłowym wskaźnikiem.
 
 > [!NOTE]
->  `CAccessToken` Obiekt musi być token personifikacji i nie token podstawowy.
+>  `CAccessToken` Obiekt musi być tokenem personifikacji, a nie tokenem podstawowym.
 
-##  <a name="createimpersonationtoken"></a>  CAccessToken::CreateImpersonationToken
+##  <a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken
 
 Wywołaj tę metodę, aby utworzyć token dostępu personifikacji.
 
@@ -215,18 +215,18 @@ bool CreateImpersonationToken(
 *pImp*<br/>
 Wskaźnik do nowego `CAccessToken` obiektu.
 
-*sil*<br/>
-Określa [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) wyliczany typ, który dostarcza poziom personifikacji nowy token.
+*SIL*<br/>
+Określa typ wyliczeniowy [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) , który dostarcza poziom personifikacji nowego tokenu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-`CreateImpersonationToken` wywołania [DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) do utworzenia nowego tokenu personifikacji.
+`CreateImpersonationToken`wywołuje [operacja duplicatetoken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) w celu utworzenia nowego tokenu personifikacji.
 
-##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
+##  <a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken
 
 Wywołaj tę metodę, aby utworzyć nowy token podstawowy.
 
@@ -243,22 +243,22 @@ bool CreatePrimaryToken(
 Wskaźnik do nowego `CAccessToken` obiektu.
 
 *dwDesiredAccess*<br/>
-Określa prawa dostępu do żądanego dla nowego tokenu. Domyślnie MAXIMUM_ALLOWED, żąda wszystkie prawa dostępu, które są prawidłowe dla obiektu wywołującego. Zobacz [prawa dostępu i maski dostępu](/windows/desktop/SecAuthZ/access-rights-and-access-masks) więcej włączone prawa dostępu.
+Określa żądane prawa dostępu dla nowego tokenu. Wartość domyślna, MAXIMUM_ALLOWED, żąda wszystkich praw dostępu, które są prawidłowe dla obiektu wywołującego. Aby uzyskać więcej informacji na temat praw dostępu, zobacz temat [prawa dostępu i Maska dostępu](/windows/desktop/SecAuthZ/access-rights-and-access-masks) .
 
 *pTokenAttributes*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, która określa deskryptora zabezpieczeń dla nowego tokenu i określa, czy procesy podrzędne mogą dziedziczyć token. Jeśli *pTokenAttributes* ma wartość NULL, token pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
+Wskaźnik do struktury [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , który określa deskryptor zabezpieczeń dla nowego tokenu i określa, czy procesy podrzędne mogą dziedziczyć token. Jeśli *pTokenAttributes* ma wartość null, token Pobiera domyślny deskryptor zabezpieczeń, a uchwyt nie może być dziedziczony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-`CreatePrimaryToken` wywołania [DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) do utworzenia nowego tokenu podstawowego.
+`CreatePrimaryToken`wywołuje [DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) , aby utworzyć nowy token podstawowy.
 
-##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
+##  <a name="createprocessasuser"></a>CAccessToken:: CreateProcessAsUser
 
-Wywołaj tę metodę, aby utworzyć nowy proces uruchomiony w kontekście zabezpieczeń użytkownika, reprezentowane przez `CAccessToken` obiektu.
+Wywołaj tę metodę, aby utworzyć nowy proces uruchomiony w kontekście zabezpieczeń użytkownika reprezentowanego przez `CAccessToken` obiekt.
 
 ```
 bool CreateProcessAsUser(
@@ -277,48 +277,48 @@ bool CreateProcessAsUser(
 ### <a name="parameters"></a>Parametry
 
 *pApplicationName*<br/>
-Wskaźnik na ciąg zakończony znakiem null Określa moduł do wykonania. Ten parametr nie może być NULL.
+Wskaźnik na ciąg zakończony znakiem null, który określa moduł do wykonania. Ten parametr nie może mieć wartości NULL.
 
 *pCommandLine*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który określa wiersz poleceń do wykonania.
+Wskaźnik na ciąg zakończony znakiem null, który określa wiersz polecenia do wykonania.
 
 *pProcessInformation*<br/>
-Wskaźnik do [struktury PROCESS_INFORMATION](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) , która otrzymuje informacje identyfikacyjne dotyczące nowego procesu.
+Wskaźnik do [struktury PROCESS_INFORMATION](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) , która otrzymuje informacje identyfikacyjne o nowym procesie.
 
 *pStartupInfo*<br/>
-Wskaźnik do [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) strukturę, która określa, jak powinno pojawić się główne okno nowy proces.
+Wskaźnik do struktury [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa) , który określa sposób wyświetlania głównego okna dla nowego procesu.
 
 *dwCreationFlags*<br/>
-Określa dodatkowe flagi, priorytet i utworzenia procesu. Zobacz opis funkcji Win32 [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) listę flag.
+Określa dodatkowe flagi kontrolujące klasę priorytetu i proces tworzenia procesu. Zobacz funkcję Win32 [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) , aby zapoznać się z listą flag.
 
 *bLoadProfile*<br/>
-W przypadku opcji TRUE profil użytkownika jest ładowany z [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
+W przypadku wartości TRUE profil użytkownika jest ładowany z [loadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
 *pProcessAttributes*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, która określa deskryptora zabezpieczeń dla nowego procesu i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pProcessAttributes* ma wartość NULL, proces pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
+Wskaźnik do struktury [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , który określa deskryptor zabezpieczeń dla nowego procesu i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pProcessAttributes* ma wartość null, proces Pobiera domyślny deskryptor zabezpieczeń, a uchwyt nie może być dziedziczony.
 
 *pThreadAttributes*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, która określa deskryptora zabezpieczeń dla nowego wątku i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pThreadAttributes* ma wartość NULL, wątek pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
+Wskaźnik do struktury [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , który określa deskryptor zabezpieczeń dla nowego wątku i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pThreadAttributes* ma wartość null, wątek Pobiera domyślny deskryptor zabezpieczeń, a uchwyt nie może być dziedziczony.
 
 *bInherit*<br/>
-Wskazuje, czy nowy proces dziedziczy dojść procesu wywołującego. W przypadku opcji TRUE każdy dziedziczne otwarte dojście w proces wywołujący jest dziedziczona przez nowy proces. Uchwyty odziedziczone mają takie same uprawnienia wartość i dostępem jako oryginalnego obsługuje.
+Wskazuje, czy nowy proces dziedziczy uchwyty z procesu wywołującego. Jeśli wartość jest równa TRUE, każdy Dziedziczony otwarty uchwyt w procesie wywołującym jest dziedziczony przez nowy proces. Dziedziczone dojścia mają takie same uprawnienia wartości i dostępu jak oryginalne dojścia.
 
 *pCurrentDirectory*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który określa bieżący dysk i katalog dla nowego procesu. Ciąg musi być pełną ścieżką, która zawiera literę dysku. Jeśli ten parametr ma wartość NULL, nowy proces, będzie miał ten sam bieżącego dysku i katalogu jako procesu wywołującego.
+Wskaźnik na ciąg zakończony znakiem null, który określa bieżący dysk i katalog dla nowego procesu. Ciąg musi być pełną ścieżką, która zawiera literę dysku. Jeśli ten parametr ma wartość NULL, nowy proces będzie miał ten sam bieżący dysk i katalog co proces wywołujący.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-`CreateProcessAsUser` używa `CreateProcessAsUser` funkcji Win32, aby utworzyć nowy proces, który jest uruchamiany w kontekście zabezpieczeń użytkownika, reprezentowane przez `CAccessToken` obiektu. Zobacz opis [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) funkcja pełne omówienie wymagane parametry.
+`CreateProcessAsUser`używa funkcji `CAccessToken` Win32 do utworzenia nowego procesu, który jest uruchamiany w kontekście zabezpieczeń użytkownika reprezentowanego przez obiekt. `CreateProcessAsUser` Zobacz opis funkcji [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) , aby uzyskać pełną dyskusję na temat wymaganych parametrów.
 
-Metoda ta powiedzie się `CAccessToken` obiekt musi przechowywać AssignPrimaryToken (chyba że jest tokenu ograniczonego) i IncreaseQuota uprawnień.
+Aby ta metoda zakończyła się `CAccessToken` pomyślnie, obiekt musi mieć AssignPrimaryToken (chyba że jest to ograniczony token) i IncreaseQuota uprawnień.
 
-##  <a name="createrestrictedtoken"></a>  CAccessToken::CreateRestrictedToken
+##  <a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken
 
-Wywołaj tę metodę, aby utworzyć nową, ograniczeniami `CAccessToken` obiektu.
+Wywołaj tę metodę, aby utworzyć nowy obiekt `CAccessToken` z ograniczeniami.
 
 ```
 bool CreateRestrictedToken(
@@ -331,31 +331,31 @@ bool CreateRestrictedToken(
 ### <a name="parameters"></a>Parametry
 
 *pRestrictedToken*<br/>
-Nowe, ograniczeniami `CAccessToken` obiektu.
+Nowy obiekt z ograniczeniami `CAccessToken` .
 
-*: SidsToDisable*<br/>
-A `CTokenGroups` obiekt, który określa tylko odmowa identyfikatory SID.
+*SidsToDisable*<br/>
+`CTokenGroups` Obiekt, który określa identyfikatory SID tylko Odmów.
 
 *SidsToRestrict*<br/>
-A `CTokenGroups` obiekt, który określa ograniczenie identyfikatory SID.
+`CTokenGroups` Obiekt, który określa ograniczanie identyfikatorów SID.
 
 *PrivilegesToDelete*<br/>
-A `CTokenPrivileges` obiekt, który określa uprawnienia do usunięcia w tokenu ograniczone. Domyślnie tworzy pustego obiektu.
+`CTokenPrivileges` Obiekt, który określa uprawnienia do usunięcia w ograniczonym tokenie. Wartość domyślna powoduje utworzenie pustego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-`CreateRestrictedToken` używa [CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) funkcji Win32, aby utworzyć nową `CAccessToken` obiektu z ograniczeniami.
+`CreateRestrictedToken`używa funkcji Win32 [CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) , aby utworzyć nowy `CAccessToken` obiekt z ograniczeniami.
 
 > [!IMPORTANT]
->  Korzystając z `CreateRestrictedToken`, upewnij się, że: istniejący token jest prawidłowy (i nie jest podana przez użytkownika) i *: SidsToDisable* i *PrivilegesToDelete* są prawidłowe (i nie jest podana przez użytkownika). Jeśli metoda zwraca wartość FALSE, odmowa funkcji.
+>  W przypadku `CreateRestrictedToken`korzystania z programu upewnij się, że istniejący token jest prawidłowy (i nie został wprowadzony przez użytkownika), a wartości *SidsToDisable* i *PrivilegesToDelete* są prawidłowe (i nie są wprowadzane przez użytkownika). Jeśli metoda zwraca FALSE, funkcja Odmów.
 
-##  <a name="detach"></a>  CAccessToken::Detach
+##  <a name="detach"></a>CAccessToken::D etach
 
-Wywołaj tę metodę, aby można było odwołać prawa własności tokenu dostępu.
+Wywołaj tę metodę, aby odwołać własność tokenu dostępu.
 
 ```
 HANDLE Detach() throw();
@@ -363,15 +363,15 @@ HANDLE Detach() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt do `CAccessToken` którego została odłączona.
+Zwraca dojście do, `CAccessToken` które zostało odłączone.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda odwołuje `CAccessToken`firmy własności tokenu dostępu.
+Ta metoda odwołuje `CAccessToken`własność tokenu dostępu.
 
-##  <a name="disableprivilege"></a>  CAccessToken::DisablePrivilege
+##  <a name="disableprivilege"></a>CAccessToken::D isablePrivilege
 
-Wywołanie tej metody, aby wyłączyć uprawnień w `CAccessToken` obiektu.
+Wywołaj tę metodę, aby wyłączyć uprawnienie w `CAccessToken` obiekcie.
 
 ```
 bool DisablePrivilege(
@@ -382,18 +382,18 @@ bool DisablePrivilege(
 ### <a name="parameters"></a>Parametry
 
 *pszPrivilege*<br/>
-Wskaźnik do ciągu zawierającego uprawnień, aby wyłączyć w `CAccessToken` obiektu.
+Wskaźnik do ciągu zawierającego uprawnienia, które ma zostać wyłączone w `CAccessToken` obiekcie.
 
 *pPreviousState*<br/>
-Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnienia.
+Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnień.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="disableprivileges"></a>  CAccessToken::DisablePrivileges
+##  <a name="disableprivileges"></a>CAccessToken::D isablePrivileges
 
-Wywołanie tej metody, aby wyłączyć co najmniej uprawnienia w `CAccessToken` obiektu.
+Wywołaj tę metodę, aby wyłączyć co najmniej jedno uprawnienia `CAccessToken` w obiekcie.
 
 ```
 bool DisablePrivileges(
@@ -404,18 +404,18 @@ bool DisablePrivileges(
 ### <a name="parameters"></a>Parametry
 
 *rPrivileges*<br/>
-Wskaźnik na tablicę ciągów, które zawierają uprawnień, aby wyłączyć w `CAccessToken` obiektu.
+Wskaźnik do tablicy ciągów zawierających uprawnienia, które mają zostać wyłączone w `CAccessToken` obiekcie.
 
 *pPreviousState*<br/>
-Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnienia.
+Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnień.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="enableprivilege"></a>  CAccessToken::EnablePrivilege
+##  <a name="enableprivilege"></a>CAccessToken::EnablePrivilege
 
-Wywołanie tej metody, aby umożliwić uprawnień w `CAccessToken` obiektu.
+Wywołaj tę metodę, aby włączyć uprawnienie w `CAccessToken` obiekcie.
 
 ```
 bool EnablePrivilege(
@@ -426,18 +426,18 @@ bool EnablePrivilege(
 ### <a name="parameters"></a>Parametry
 
 *pszPrivilege*<br/>
-Wskaźnik do ciągu zawierającego uprawnień do włączenia w `CAccessToken` obiektu.
+Wskaźnik do ciągu zawierającego uprawnienia do włączenia w `CAccessToken` obiekcie.
 
 *pPreviousState*<br/>
-Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnienia.
+Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnień.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="enableprivileges"></a>  CAccessToken::EnablePrivileges
+##  <a name="enableprivileges"></a>CAccessToken::EnablePrivileges
 
-Wywołanie tej metody, aby włączyć co najmniej uprawnienia w `CAccessToken` obiektu.
+Wywołaj tę metodę, aby włączyć co najmniej jedno uprawnienia `CAccessToken` w obiekcie.
 
 ```
 bool EnablePrivileges(
@@ -448,18 +448,18 @@ bool EnablePrivileges(
 ### <a name="parameters"></a>Parametry
 
 *rPrivileges*<br/>
-Wskaźnik na tablicę ciągów, które zawierają uprawnień do włączenia w `CAccessToken` obiektu.
+Wskaźnik do tablicy ciągów zawierających uprawnienia do włączenia w `CAccessToken` obiekcie.
 
 *pPreviousState*<br/>
-Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnienia.
+Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnień.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="getdefaultdacl"></a>  CAccessToken::GetDefaultDacl
+##  <a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl
 
-Wywołaj tę metodę, aby zwrócić `CAccessToken` obiektu domyślnej listy DACL.
+Wywołaj tę metodę, aby `CAccessToken` zwrócić domyślną listę DACL obiektu.
 
 ```
 bool GetDefaultDacl(CDacl* pDacl) const throw(...);
@@ -468,15 +468,15 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pDacl*<br/>
-Wskaźnik do [klasa CDacl](../../atl/reference/cdacl-class.md) obiektu, który otrzyma `CAccessToken` obiektu domyślnej listy DACL.
+Wskaźnik do obiektu [klasy CDacl](../../atl/reference/cdacl-class.md) , który otrzyma `CAccessToken` domyślną listę DACL obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE, jeśli domyślnej listy DACL zostało odzyskane, wartość FALSE w przeciwnym razie.
+Zwraca wartość TRUE, jeśli domyślna lista DACL została odzyskana, w przeciwnym razie FALSE.
 
-##  <a name="geteffectivetoken"></a>  CAccessToken::GetEffectiveToken
+##  <a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken
 
-Wywołaj tę metodę, aby uzyskać `CAccessToken` obiektu równa tokenu dostępu dla bieżącego wątku.
+Wywołaj tę metodę, aby `CAccessToken` uzyskać obiekt równy tokenowi dostępu obowiązującego dla bieżącego wątku.
 
 ```
 bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
@@ -485,15 +485,15 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwDesiredAccess*<br/>
-Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
+Określa maskę dostępu określającą żądane typy dostępu do tokenu dostępu. Te typy żądanych dostępu są porównywane z LISTą DACL tokenu, aby określić, które prawa dostępu są udzielane lub odrzucane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="getgroups"></a>  CAccessToken::GetGroups
+##  <a name="getgroups"></a>CAccessToken:: GetGroups
 
-Wywołaj tę metodę, aby zwrócić `CAccessToken` obiektu tokenu grup.
+Wywołaj tę metodę, aby `CAccessToken` zwrócić grupy tokenów obiektu.
 
 ```
 bool GetGroups(CTokenGroups* pGroups) const throw(...);
@@ -502,15 +502,15 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pGroups*<br/>
-Wskaźnik do [klasa CTokenGroups](../../atl/reference/ctokengroups-class.md) obiektu, który otrzyma informacje o grupie.
+Wskaźnik do obiektu [klasy CTokenGroups](../../atl/reference/ctokengroups-class.md) , który otrzyma informacje o grupie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="gethandle"></a>  CAccessToken::GetHandle
+##  <a name="gethandle"></a>CAccessToken:: GetHandle
 
-Wywołaj tę metodę można pobrać dojścia do tokena dostępu.
+Wywołaj tę metodę, aby pobrać uchwyt do tokenu dostępu.
 
 ```
 HANDLE GetHandle() const throw();
@@ -518,9 +518,9 @@ HANDLE GetHandle() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt do `CAccessToken` token dostępu tego obiektu.
+Zwraca dojście do `CAccessToken` tokenu dostępu obiektu.
 
-##  <a name="getimpersonationlevel"></a>  CAccessToken::GetImpersonationLevel
+##  <a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel
 
 Wywołaj tę metodę, aby uzyskać poziom personifikacji z tokenu dostępu.
 
@@ -532,15 +532,15 @@ bool GetImpersonationLevel(
 ### <a name="parameters"></a>Parametry
 
 *pImpersonationLevel*<br/>
-Wskaźnik do [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) typ wyliczeniowy, który otrzyma informacje o poziomie personifikacji.
+Wskaźnik do typu wyliczenia [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) , który otrzyma informacje o poziomie personifikacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="getlogonsessionid"></a>  CAccessToken::GetLogonSessionId
+##  <a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId
 
-Wywołanie tej metody można pobrać Identyfikatora sesji logowania, które są skojarzone z `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać identyfikator sesji logowania skojarzony z `CAccessToken` obiektem.
 
 ```
 bool GetLogonSessionId(LUID* pluid) const throw(...);
@@ -549,19 +549,19 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pluid*<br/>
-Wskaźnik do [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) której zostanie wyświetlony identyfikator sesji logowania.
+Wskaźnik do identyfikatora [LUID](/windows/desktop/api/winnt/ns-winnt-luid) , który będzie otrzymywał identyfikator sesji logowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania, wystąpi błąd asercji Jeśli *pluid* jest nieprawidłową wartością.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli *pluid* jest nieprawidłową wartością.
 
-##  <a name="getlogonsid"></a>  CAccessToken::GetLogonSid
+##  <a name="getlogonsid"></a>CAccessToken::GetLogonSid
 
-Wywołaj tę metodę w celu pobrania identyfikatora SID logowania skojarzone z `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać identyfikator SID logowania skojarzony `CAccessToken` z obiektem.
 
 ```
 bool GetLogonSid(CSid* pSid) const throw(...);
@@ -569,20 +569,20 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*<br/>
-Wskaźnik do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
+*Pusty PSID*<br/>
+Wskaźnik do obiektu [klasy CSid](../../atl/reference/csid-class.md) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania, wystąpi błąd asercji Jeśli *pSid* jest nieprawidłową wartością.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli *pusty PSID* jest nieprawidłową wartością.
 
-##  <a name="getowner"></a>  CAccessToken::GetOwner
+##  <a name="getowner"></a>CAccessToken:: getOwner
 
-Wywołanie tej metody można pobrać skojarzony właściciel `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać właściciela skojarzonego z `CAccessToken` obiektem.
 
 ```
 bool GetOwner(CSid* pSid) const throw(...);
@@ -590,20 +590,20 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*<br/>
-Wskaźnik do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
+*Pusty PSID*<br/>
+Wskaźnik do obiektu [klasy CSid](../../atl/reference/csid-class.md) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Właściciel jest ustawiany domyślnie na wszystkie obiekty utworzone ten token dostępu w czasie działania.
+Właściciel jest ustawiany domyślnie dla wszystkich obiektów utworzonych w trakcie działania tego tokenu dostępu.
 
 ##  <a name="getprimarygroup"></a>  CAccessToken::GetPrimaryGroup
 
-Wywołanie tej metody można pobrać skojarzone z grupą podstawową `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać grupę podstawową skojarzoną `CAccessToken` z obiektem.
 
 ```
 bool GetPrimaryGroup(CSid* pSid) const throw(...);
@@ -611,20 +611,20 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*<br/>
-Wskaźnik do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
+*Pusty PSID*<br/>
+Wskaźnik do obiektu [klasy CSid](../../atl/reference/csid-class.md) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Grupa jest ustawiona domyślnie na wszystkie obiekty utworzone ten token dostępu w czasie działania.
+Grupa jest ustawiana domyślnie dla wszystkich obiektów utworzonych w trakcie działania tego tokenu dostępu.
 
-##  <a name="getprivileges"></a>  CAccessToken::GetPrivileges
+##  <a name="getprivileges"></a>CAccessToken:: getprivileges
 
-Wywołanie tej metody, aby uzyskać uprawnienia skojarzone z `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać uprawnienia skojarzone z `CAccessToken` obiektem.
 
 ```
 bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
@@ -633,15 +633,15 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pPrivileges*<br/>
-Wskaźnik do [klasa CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md) obiektu, który otrzyma uprawnienia.
+Wskaźnik do obiektu [klasy CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md) , który otrzyma uprawnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="getprocesstoken"></a>  CAccessToken::GetProcessToken
+##  <a name="getprocesstoken"></a>CAccessToken::GetProcessToken
 
-Wywołaj tę metodę, aby zainicjować `CAccessToken` przy użyciu tokenu dostępu z danego procesu.
+Wywołaj tę metodę, `CAccessToken` aby zainicjować za pomocą tokenu dostępu z danego procesu.
 
 ```
 bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
@@ -650,22 +650,22 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwDesiredAccess*<br/>
-Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
+Określa maskę dostępu określającą żądane typy dostępu do tokenu dostępu. Te typy żądanych dostępu są porównywane z LISTą DACL tokenu, aby określić, które prawa dostępu są udzielane lub odrzucane.
 
 *hProcess*<br/>
-Dojście do procesu, którego token dostępu jest otwarty. Jeśli jest używana domyślna wartość NULL, jest używany bieżący proces.
+Dojście do procesu, którego token dostępu jest otwarty. Jeśli zostanie użyta domyślna wartość NULL, używany jest bieżący proces.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) funkcję Win32.
+Wywołuje funkcję Win32 [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) .
 
-##  <a name="getprofile"></a>  CAccessToken::GetProfile
+##  <a name="getprofile"></a>CAccessToken:: getprofil
 
-Wywołanie tej metody można pobrać uchwytu, wskazując skojarzony profil użytkownika `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać uchwyt wskazujący profil użytkownika skojarzony z `CAccessToken` obiektem.
 
 ```
 HANDLE GetProfile() const throw();
@@ -673,11 +673,11 @@ HANDLE GetProfile() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt wskazujący profilu użytkownika lub wartość NULL, jeśli nie istnieje profil.
+Zwraca dojście wskazujące profil użytkownika lub wartość NULL, jeśli profil nie istnieje.
 
-##  <a name="getsource"></a>  CAccessToken::GetSource
+##  <a name="getsource"></a>CAccessToken:: GetSource
 
-Wywołanie tej metody można pobrać źródło `CAccessToken` obiektu.
+Wywołaj tę metodę, aby pobrać źródło `CAccessToken` obiektu.
 
 ```
 bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
@@ -686,15 +686,15 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pSource*<br/>
-Wskaźnik do [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source) struktury.
+Wskaźnik do struktury [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-token_source) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="getstatistics"></a>  CAccessToken::GetStatistics
+##  <a name="getstatistics"></a>CAccessToken:: getstatistics
 
-Wywołanie tej metody, aby uzyskać informacje związane z `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać informacje skojarzone `CAccessToken` z obiektem.
 
 ```
 bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
@@ -703,15 +703,15 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pStatistics*<br/>
-Wskaźnik do [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics) struktury.
+Wskaźnik do struktury [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-token_statistics) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ##  <a name="getterminalservicessessionid"></a>  CAccessToken::GetTerminalServicesSessionId
 
-Wywołanie tej metody, aby uzyskać identyfikator sesji usług terminalowych skojarzony `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać identyfikator sesji usług terminalowych skojarzony z `CAccessToken` obiektem.
 
 ```
 bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
@@ -724,11 +724,11 @@ Identyfikator sesji usług terminalowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="getthreadtoken"></a>  CAccessToken::GetThreadToken
+##  <a name="getthreadtoken"></a>CAccessToken::GetThreadToken
 
-Wywołaj tę metodę, aby zainicjować `CAccessToken` przy użyciu tokenu z danym wątku.
+Wywołaj tę metodę, aby `CAccessToken` zainicjować za pomocą tokenu z danego wątku.
 
 ```
 bool GetThreadToken(
@@ -740,23 +740,23 @@ bool GetThreadToken(
 ### <a name="parameters"></a>Parametry
 
 *dwDesiredAccess*<br/>
-Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
+Określa maskę dostępu określającą żądane typy dostępu do tokenu dostępu. Te typy żądanych dostępu są porównywane z LISTą DACL tokenu, aby określić, które prawa dostępu są udzielane lub odrzucane.
 
 *hThread*<br/>
-Uchwyt do wątku, którego token dostępu jest otwarty.
+Dojście do wątku, którego token dostępu jest otwarty.
 
 *bOpenAsSelf*<br/>
-Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku `GetThreadToken` metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
+Wskazuje, czy sprawdzanie dostępu ma zostać wykonane względem kontekstu zabezpieczeń wątku wywołującego `GetThreadToken` metodę lub względem kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
-Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
+Jeśli ten parametr ma wartość FALSE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek personifikuje klienta, ten kontekst zabezpieczeń może być procesem klienta. Jeśli ten parametr ma wartość TRUE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="gettokenid"></a>  CAccessToken::GetTokenId
+##  <a name="gettokenid"></a>CAccessToken::GetTokenId
 
-Wywołanie tej metody można pobrać tokenu identyfikator skojarzony z `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać identyfikator tokenu skojarzony z `CAccessToken` obiektem.
 
 ```
 bool GetTokenId(LUID* pluid) const throw(...);
@@ -765,15 +765,15 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pluid*<br/>
-Wskaźnik do [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) który otrzyma tokenu identyfikatora.
+Wskaźnik do identyfikatora [LUID](/windows/desktop/api/winnt/ns-winnt-luid) , który będzie otrzymywał Identyfikator tokenu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="gettype"></a>  CAccessToken::GetType
+##  <a name="gettype"></a>CAccessToken:: GetType
 
-Wywołanie tej metody można uzyskać tokenu typu `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać typ `CAccessToken` tokenu obiektu.
 
 ```
 bool GetType(TOKEN_TYPE* pType) const throw(...);
@@ -782,19 +782,19 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pType*<br/>
-Adres [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) zmiennej, która w przypadku powodzenia otrzymuje typ tokenu.
+Adres zmiennej [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-token_type) , która po powodzeniu odbiera typ tokenu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Typ wyliczeniowy TOKEN_TYPE zawiera wartości, które rozróżnienia między podstawowym token i token personifikacji.
+Typ wyliczenia TOKEN_TYPE zawiera wartości, które różnią się między tokenem podstawowym i tokenem personifikacji.
 
-##  <a name="getuser"></a>  CAccessToken::GetUser
+##  <a name="getuser"></a>CAccessToken::GetUser
 
-Wywołanie tej metody, aby zidentyfikować użytkownika skojarzonego z `CAccessToken` obiektu.
+Wywołaj tę metodę, aby zidentyfikować użytkownika skojarzonego z `CAccessToken` obiektem.
 
 ```
 bool GetUser(CSid* pSid) const throw(...);
@@ -802,16 +802,16 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*<br/>
-Wskaźnik do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
+*Pusty PSID*<br/>
+Wskaźnik do obiektu [klasy CSid](../../atl/reference/csid-class.md) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-##  <a name="hkeycurrentuser"></a>  CAccessToken::HKeyCurrentUser
+##  <a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser
 
-Wywołanie tej metody można pobrać uchwytu, wskazując skojarzony profil użytkownika `CAccessToken` obiektu.
+Wywołaj tę metodę, aby uzyskać uchwyt wskazujący profil użytkownika skojarzony z `CAccessToken` obiektem.
 
 ```
 HKEY HKeyCurrentUser() const throw();
@@ -819,11 +819,11 @@ HKEY HKeyCurrentUser() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt wskazujący profilu użytkownika lub wartość NULL, jeśli nie istnieje profil.
+Zwraca dojście wskazujące profil użytkownika lub wartość NULL, jeśli profil nie istnieje.
 
-##  <a name="impersonate"></a>  CAccessToken::Impersonate
+##  <a name="impersonate"></a>CAccessToken:: personifikacja
 
-Wywołanie tej metody, aby przypisać personifikacji `CAccessToken` wątku.
+Wywołaj tę metodę, aby przypisać `CAccessToken` personifikację do wątku.
 
 ```
 bool Impersonate(HANDLE hThread = NULL) const throw(...);
@@ -832,21 +832,21 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *hThread*<br/>
-Uchwyt do wątku, który można przypisać token personifikacji, aby. Tego dojścia musi otworzyć przy użyciu TOKEN_IMPERSONATE praw dostępu. Jeśli *hThread* ma wartość NULL, metoda powoduje, że wątek przestać korzystać z tokenu personifikacji.
+Dojście do wątku, do którego ma zostać przypisany token personifikacji. Ten uchwyt musi być otwarty z prawami dostępu TOKEN_IMPERSONATE. Jeśli *hThread* ma wartość null, metoda powoduje zatrzymanie wątku przy użyciu tokenu personifikacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania, wystąpi błąd asercji Jeśli `CAccessToken` nie ma prawidłowego wskaźnika do tokenu.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli `CAccessToken` nie ma prawidłowego wskaźnika do tokenu.
 
-[Klasa CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) może służyć do automatycznie przywrócić tokenów dostępu spersonifikowanego.
+[Klasa CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) może być używana do automatycznego przywracania personifikowanych tokenów dostępu.
 
-##  <a name="impersonateloggedonuser"></a>  CAccessToken::ImpersonateLoggedOnUser
+##  <a name="impersonateloggedonuser"></a>CAccessToken:: ImpersonateLoggedOnUser —
 
-Wywołaj tę metodę, aby zezwolić na wątku wywołującego do personifikacji w kontekście zabezpieczeń zalogowanego użytkownika.
+Wywołaj tę metodę, aby zezwolić na wątek wywołujący do personifikacji kontekstu zabezpieczeń zalogowanego użytkownika.
 
 ```
 bool ImpersonateLoggedOnUser() const throw(...);
@@ -854,16 +854,16 @@ bool ImpersonateLoggedOnUser() const throw(...);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
 > [!IMPORTANT]
->  Jeśli wywołanie funkcji personifikacja nie powiedzie się z jakiegokolwiek powodu, klient nie jest Personifikowany i żądanie klienta jest nawiązywane w kontekście zabezpieczeń procesu, z którego wykonano wywołanie. Jeśli proces działa jako konto o wysokim poziomie uprawnień lub jako członek grupy administratorów, użytkownik będzie mógł wykonywać akcje on w przeciwnym razie będzie niedozwolone. W związku z tym zawsze należy potwierdzić wartość zwracana przez tę funkcję.
+>  Jeśli wywołanie funkcji personifikacji nie powiedzie się z jakiegokolwiek powodu, klient nie zostanie personifikowany, a żądanie klienta zostanie wykonane w kontekście zabezpieczeń procesu, z którego wykonano wywołanie. Jeśli proces jest uruchomiony jako konto o wysokim poziomie uprawnień lub jako członek grupy administracyjnej, może być możliwe wykonanie akcji, które w przeciwnym razie byłyby niedozwolone. W związku z tym, wartość zwracana dla tej funkcji powinna zawsze zostać potwierdzona.
 
-##  <a name="istokenrestricted"></a>  CAccessToken::IsTokenRestricted
+##  <a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted
 
-Wywołaj tę metodę, aby sprawdzić, czy `CAccessToken` obiekt zawiera listę identyfikatorów SID ograniczone.
+Wywołaj tę metodę, aby sprawdzić `CAccessToken` , czy obiekt zawiera listę identyfikatorów SID z ograniczeniami.
 
 ```
 bool IsTokenRestricted() const throw();
@@ -871,11 +871,11 @@ bool IsTokenRestricted() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE, jeśli obiekt zawiera listę ograniczenie identyfikatory SID, FALSE, jeśli nie ograniczenie identyfikatory SID, lub jeśli metoda nie powiedzie się.
+Zwraca wartość TRUE, jeśli obiekt zawiera listę ograniczającą identyfikatory SID, FAŁSZ Jeśli nie ma ograniczeń identyfikatorów SID lub metoda nie powiedzie się.
 
-##  <a name="loaduserprofile"></a>  CAccessToken::LoadUserProfile
+##  <a name="loaduserprofile"></a>CAccessToken:: LoadUserProfile
 
-Wywołaj tę metodę, aby załadować profil użytkownika skojarzony z `CAccessToken` obiektu.
+Wywołaj tę metodę, aby załadować profil użytkownika skojarzony z `CAccessToken` obiektem.
 
 ```
 bool LoadUserProfile() throw(...);
@@ -883,15 +883,15 @@ bool LoadUserProfile() throw(...);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania, wystąpi błąd asercji Jeśli `CAccessToken` nie zawiera prawidłowego tokenu lub jeśli użytkownik profilu już istnieje.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli `CAccessToken` nie zawiera on prawidłowego tokenu lub jeśli profil użytkownika już istnieje.
 
-##  <a name="logonuser"></a>  CAccessToken::LogonUser
+##  <a name="logonuser"></a>CAccessToken:: funkcji LogonUser
 
-Wywołaj tę metodę, aby utworzyć sesję logowania dla użytkownika skojarzonego z danego poświadczenia.
+Wywołaj tę metodę, aby utworzyć sesję logowania dla użytkownika skojarzonego z podanym poświadczeniami.
 
 ```
 bool LogonUser(
@@ -905,31 +905,31 @@ bool LogonUser(
 ### <a name="parameters"></a>Parametry
 
 *pszUserName*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który określa nazwę użytkownika. Jest to nazwa konta użytkownika, aby zalogować się do.
+Wskaźnik na ciąg zakończony znakiem null, który określa nazwę użytkownika. To jest nazwa konta użytkownika, na którym należy się zalogować.
 
 *pszDomain*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który określa nazwę domeny lub serwer, którego konto bazy danych zawiera *pszUserName* konta.
+Wskaźnik na ciąg zakończony znakiem null, który określa nazwę domeny lub serwera, którego baza danych kont zawiera konto *pszUserName* .
 
 *pszPassword*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który określa hasło zwykłego tekstu dla konta użytkownika określonego przez *pszUserName*.
+Wskaźnik na ciąg zakończony znakiem null, który określa hasło w postaci zwykłego tekstu dla konta użytkownika określonego przez *pszUserName*.
 
 *dwLogonType*<br/>
-Określa typ operacji logowania do wykonania. Zobacz [funkcji LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) Aby uzyskać więcej informacji.
+Określa typ operacji logowania do wykonania. Aby uzyskać więcej informacji, zobacz [funkcji LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
 
 *dwLogonProvider*<br/>
-Określa dostawcę logowania. Zobacz [funkcji LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) Aby uzyskać więcej informacji.
+Określa dostawcę logowania. Aby uzyskać więcej informacji, zobacz [funkcji LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Dostęp do tokenu wynikające z logowania zostaną skojarzone z `CAccessToken`. Metoda ta powiedzie się `CAccessToken` obiekt musi przechowywać SE_TCB_NAME uprawnień, identyfikacji posiadacza jako część zaufany komputer podstawowy. Zobacz [funkcji LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) Aby uzyskać więcej informacji na temat uprawnień wymaganych.
+Token dostępu wynikający z logowania zostanie skojarzony z `CAccessToken`. Aby ta metoda zakończyła się `CAccessToken` pomyślnie, obiekt musi mieć uprawnienia SE_TCB_NAME, identyfikując posiadacza w ramach bazy zaufanych komputerów. Aby uzyskać więcej informacji na temat wymaganych uprawnień, zobacz [funkcji LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
 
-##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken
+##  <a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken
 
-Wywołanie tej metody z w ramach serwera COM, obsługa wywołania klienta można zainicjować `CAccessToken` przy użyciu tokenu dostępu z klientów modelu COM.
+Wywołaj tę metodę z poziomu serwera com obsługującego wywołanie z klienta, aby zainicjować `CAccessToken` za pomocą tokenu dostępu z klienta com.
 
 ```
 bool OpenCOMClientToken(
@@ -941,27 +941,27 @@ bool OpenCOMClientToken(
 ### <a name="parameters"></a>Parametry
 
 *dwDesiredAccess*<br/>
-Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
+Określa maskę dostępu określającą żądane typy dostępu do tokenu dostępu. Te typy żądanych dostępu są porównywane z LISTą DACL tokenu, aby określić, które prawa dostępu są udzielane lub odrzucane.
 
 *bImpersonate*<br/>
-W przypadku opcji TRUE bieżącego wątku Personifikuj klienta wywołującego COM, jeśli to wywołanie zakończy się pomyślnie. W przypadku wartości FAŁSZ token dostępu zostanie otwarty, ale wątek nie będzie tokenu personifikacji po zakończeniu tego wywołania.
+W przypadku wartości TRUE bieżący wątek personifikuje wywołującego klienta COM, jeśli to wywołanie zakończy się pomyślnie. W przypadku wartości FALSE token dostępu zostanie otwarty, ale wątek nie będzie miał tokenu personifikacji po zakończeniu tego wywołania.
 
 *bOpenAsSelf*<br/>
-Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
+Wskazuje, czy sprawdzanie dostępu ma zostać wykonane względem kontekstu zabezpieczeń wątku wywołującego metodę [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) lub względem kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
-Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
+Jeśli ten parametr ma wartość FALSE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek personifikuje klienta, ten kontekst zabezpieczeń może być procesem klienta. Jeśli ten parametr ma wartość TRUE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-[Klasa CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) może służyć do automatycznie przywrócić tokenów dostępu spersonifikowanego, utworzone przez ustawienie *bImpersonate* flagi na wartość TRUE.
+[Klasy CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) można użyć do automatycznego przywrócenia personifikowanych tokenów dostępu utworzonych przez ustawienie flagi *bImpersonate* na true.
 
-##  <a name="opennamedpipeclienttoken"></a>  CAccessToken::OpenNamedPipeClientToken
+##  <a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken
 
-Tę metodę należy wywołać z w ramach serwera żądania pobierania przez nazwany potok zainicjować `CAccessToken` przy użyciu tokenu dostępu od klienta.
+Wywołaj tę metodę z poziomu serwera przyjmującego żądania za pośrednictwem nazwanego potoku, aby zainicjować `CAccessToken` za pomocą tokenu dostępu z klienta.
 
 ```
 bool OpenNamedPipeClientToken(
@@ -977,27 +977,27 @@ bool OpenNamedPipeClientToken(
 Dojście do nazwanego potoku.
 
 *dwDesiredAccess*<br/>
-Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
+Określa maskę dostępu określającą żądane typy dostępu do tokenu dostępu. Te typy żądanych dostępu są porównywane z LISTą DACL tokenu, aby określić, które prawa dostępu są udzielane lub odrzucane.
 
 *bImpersonate*<br/>
-W przypadku opcji TRUE bieżącego wątku Personifikuj klienta wywołującego potoku, jeśli to wywołanie zakończy się pomyślnie. W przypadku wartości FAŁSZ token dostępu zostanie otwarty, ale wątek nie będzie tokenu personifikacji po zakończeniu tego wywołania.
+W przypadku wartości TRUE bieżący wątek personifikuje klienta potoku wywołania, jeśli to wywołanie zakończy się pomyślnie. W przypadku wartości FALSE token dostępu zostanie otwarty, ale wątek nie będzie miał tokenu personifikacji po zakończeniu tego wywołania.
 
 *bOpenAsSelf*<br/>
-Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
+Wskazuje, czy sprawdzanie dostępu ma zostać wykonane względem kontekstu zabezpieczeń wątku wywołującego metodę [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) lub względem kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
-Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
+Jeśli ten parametr ma wartość FALSE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek personifikuje klienta, ten kontekst zabezpieczeń może być procesem klienta. Jeśli ten parametr ma wartość TRUE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-[Klasa CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) może służyć do automatycznie przywrócić tokenów dostępu spersonifikowanego, utworzone przez ustawienie *bImpersonate* flagi na wartość TRUE.
+[Klasy CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) można użyć do automatycznego przywrócenia personifikowanych tokenów dostępu utworzonych przez ustawienie flagi *bImpersonate* na true.
 
-##  <a name="openrpcclienttoken"></a>  CAccessToken::OpenRPCClientToken
+##  <a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken
 
-Wywołanie tej metody z w ramach wywołania RPC klienta można zainicjować obsługi serwera `CAccessToken` przy użyciu tokenu dostępu od klienta.
+Wywołaj tę metodę z poziomu serwera obsługującego wywołanie z klienta RPC, `CAccessToken` aby zainicjować za pomocą tokenu dostępu z klienta.
 
 ```
 bool OpenRPCClientToken(
@@ -1010,30 +1010,30 @@ bool OpenRPCClientToken(
 ### <a name="parameters"></a>Parametry
 
 *BindingHandle*<br/>
-Dojście powiązania na serwerze, który reprezentuje powiązanie do klienta.
+Dojście powiązania na serwerze, który reprezentuje powiązanie z klientem.
 
 *dwDesiredAccess*<br/>
-Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
+Określa maskę dostępu określającą żądane typy dostępu do tokenu dostępu. Te typy żądanych dostępu są porównywane z LISTą DACL tokenu, aby określić, które prawa dostępu są udzielane lub odrzucane.
 
 *bImpersonate*<br/>
-W przypadku opcji TRUE bieżącego wątku Personifikuj klienta wywołującego RPC, jeśli to wywołanie zakończy się pomyślnie. W przypadku wartości FAŁSZ token dostępu zostanie otwarty, ale wątek nie będzie tokenu personifikacji po zakończeniu tego wywołania.
+W przypadku wartości TRUE bieżący wątek personifikuje wywołującego klienta RPC, jeśli to wywołanie zostało pomyślnie zakończone. W przypadku wartości FALSE token dostępu zostanie otwarty, ale wątek nie będzie miał tokenu personifikacji po zakończeniu tego wywołania.
 
 *bOpenAsSelf*<br/>
-Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
+Wskazuje, czy sprawdzanie dostępu ma zostać wykonane względem kontekstu zabezpieczeń wątku wywołującego metodę [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) lub względem kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
-Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
+Jeśli ten parametr ma wartość FALSE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek personifikuje klienta, ten kontekst zabezpieczeń może być procesem klienta. Jeśli ten parametr ma wartość TRUE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-[Klasa CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) może służyć do automatycznie przywrócić tokenów dostępu spersonifikowanego, utworzone przez ustawienie *bImpersonate* flagi na wartość TRUE.
+[Klasy CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) można użyć do automatycznego przywrócenia personifikowanych tokenów dostępu utworzonych przez ustawienie flagi *bImpersonate* na true.
 
-##  <a name="openthreadtoken"></a>  CAccessToken::OpenThreadToken
+##  <a name="openthreadtoken"></a>CAccessToken:: OpenThreadToken —
 
-Wywołaj tę metodę, aby ustawić poziom personifikacji i następnie zainicjowanie `CAccessToken` przy użyciu tokenu z danym wątku.
+Wywołaj tę metodę, aby ustawić poziom personifikacji, a `CAccessToken` następnie zainicjuj przy użyciu tokenu z danego wątku.
 
 ```
 bool OpenThreadToken(
@@ -1046,32 +1046,32 @@ bool OpenThreadToken(
 ### <a name="parameters"></a>Parametry
 
 *dwDesiredAccess*<br/>
-Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
+Określa maskę dostępu określającą żądane typy dostępu do tokenu dostępu. Te typy żądanych dostępu są porównywane z LISTą DACL tokenu, aby określić, które prawa dostępu są udzielane lub odrzucane.
 
 *bImpersonate*<br/>
-W przypadku opcji TRUE wątku pozostanie na poziomie personifikacji żądanego po ukończeniu tej metody. W przypadku wartości FAŁSZ wątku powróci do jego oryginalnej poziom personifikacji.
+W przypadku wartości TRUE wątek zostanie pozostawiony na żądanym poziomie personifikacji po zakończeniu tej metody. W przypadku wartości FALSE wątek zostanie przywrócony do oryginalnego poziomu personifikacji.
 
 *bOpenAsSelf*<br/>
-Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
+Wskazuje, czy sprawdzanie dostępu ma zostać wykonane względem kontekstu zabezpieczeń wątku wywołującego metodę [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) lub względem kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
-Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
+Jeśli ten parametr ma wartość FALSE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek personifikuje klienta, ten kontekst zabezpieczeń może być procesem klienta. Jeśli ten parametr ma wartość TRUE, sprawdzanie dostępu odbywa się przy użyciu kontekstu zabezpieczeń procesu dla wątku wywołującego.
 
-*sil*<br/>
-Określa [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) wyliczany typ, który dostarcza poziom personifikacji tokenów.
+*SIL*<br/>
+Określa typ wyliczeniowy [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) , który dostarcza poziom personifikacji tokenu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-`OpenThreadToken` jest podobny do [CAccessToken::GetThreadToken](#getthreadtoken), ale ustawia poziom personifikacji przed inicjowanie `CAccessToken` z tokenu dostępu dla wątku.
+`OpenThreadToken`jest podobny do [CAccessToken:: GetThreadToken](#getthreadtoken), ale ustawia poziom personifikacji przed zainicjowaniem `CAccessToken` z tokenu dostępu do wątku.
 
-[Klasa CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) może służyć do automatycznie przywrócić tokenów dostępu spersonifikowanego, utworzone przez ustawienie *bImpersonate* flagi na wartość TRUE.
+[Klasy CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) można użyć do automatycznego przywrócenia personifikowanych tokenów dostępu utworzonych przez ustawienie flagi *bImpersonate* na true.
 
-##  <a name="privilegecheck"></a>  CAccessToken::PrivilegeCheck
+##  <a name="privilegecheck"></a>CAccessToken::P rivilegeCheck
 
-Wywołaj tę metodę w celu określenia, czy określony zestaw uprawnień są włączone w `CAccessToken` obiektu.
+Wywołaj tę metodę, aby określić, `CAccessToken` czy w obiekcie włączono określony zestaw uprawnień.
 
 ```
 bool PrivilegeCheck(
@@ -1082,22 +1082,22 @@ bool PrivilegeCheck(
 ### <a name="parameters"></a>Parametry
 
 *RequiredPrivileges*<br/>
-Wskaźnik do [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set) struktury.
+Wskaźnik do struktury [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-privilege_set) .
 
 *pbResult*<br/>
-Wskaźnik do wartości metody ustawia wskazuje, czy dowolne lub wszystkie określone uprawnienie są włączone w `CAccessToken` obiektu.
+Wskaźnik na wartość ustawianą przez metodę wskazującą, czy dowolne lub wszystkie określone uprawnienia są włączone w `CAccessToken` obiekcie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `PrivilegeCheck` zwraca, `Attributes` z każdej [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) struktury jest ustawiona na SE_PRIVILEGE_USED_FOR_ACCESS, jeśli włączono odpowiednie uprawnienia. Ta metoda wywołuje [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) funkcję Win32.
+Gdy `PrivilegeCheck` zwraca`Attributes` , składowa każdej struktury [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-luid_and_attributes) jest ustawiona na SE_PRIVILEGE_USED_FOR_ACCESS, jeśli odpowiednie uprawnienie jest włączone. Ta metoda wywołuje funkcję Win32 [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) .
 
-##  <a name="revert"></a>  CAccessToken::Revert
+##  <a name="revert"></a>CAccessToken:: Revert
 
-Wywołaj tę metodę, aby zatrzymać wątek z przy użyciu tokenu personifikacji.
+Wywołaj tę metodę, aby zatrzymać wątek przy użyciu tokenu personifikacji.
 
 ```
 bool Revert(HANDLE hThread = NULL) const throw();
@@ -1106,19 +1106,19 @@ bool Revert(HANDLE hThread = NULL) const throw();
 ### <a name="parameters"></a>Parametry
 
 *hThread*<br/>
-Uchwyt do wątku, aby przywrócić z personifikacji. Jeśli *hThread* ma wartość NULL, zakłada, że bieżący wątek.
+Dojście do wątku, aby powrócić po personifikacji. Jeśli *hThread* ma wartość null, przyjmuje się bieżący wątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja cofania personifikacji tokenów mogą być wykonywane automatycznie za pomocą [klasa CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md).
+Rewersję tokenów personifikacji można przeprowadzić automatycznie z klasą [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md).
 
-##  <a name="setdefaultdacl"></a>  CAccessToken::SetDefaultDacl
+##  <a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl
 
-Wywołaj tę metodę, aby ustawić wartości domyślne listy DACL `CAccessToken` obiektu.
+Wywołaj tę metodę, aby ustawić domyślną listę DACL `CAccessToken` obiektu.
 
 ```
 bool SetDefaultDacl(const CDacl& rDacl) throw(...);
@@ -1127,17 +1127,17 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ### <a name="parameters"></a>Parametry
 
 *rDacl*<br/>
-Nowe rozwiązanie domyślne [klasa CDacl](../../atl/reference/cdacl-class.md) informacji.
+Nowe domyślne informacje o [klasie CDacl](../../atl/reference/cdacl-class.md) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie lista DACL jest DACL, używany domyślnie, gdy nowe obiekty są tworzone za pomocą tego tokenu dostępu w praktyce.
+Domyślna lista DACL to lista DACL, która jest używana domyślnie podczas tworzenia nowych obiektów przy użyciu tego tokenu dostępu.
 
-##  <a name="setowner"></a>  CAccessToken::SetOwner
+##  <a name="setowner"></a>CAccessToken:: SetOwner
 
 Wywołaj tę metodę, aby ustawić właściciela `CAccessToken` obiektu.
 
@@ -1148,19 +1148,19 @@ bool SetOwner(const CSid& rSid) throw(...);
 ### <a name="parameters"></a>Parametry
 
 *rSid*<br/>
-[Klasa CSid](../../atl/reference/csid-class.md) obiekt zawierający informacje o właścicielu.
+Obiekt [klasy CSid](../../atl/reference/csid-class.md) zawierający informacje o właścicielu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Właściciel jest domyślnym właścicielem, który jest używany dla nowych obiektów tworzonych ten token dostępu w czasie działania.
+Właściciel jest domyślnym właścicielem, który jest używany dla nowych obiektów utworzonych w trakcie działania tego tokenu dostępu.
 
 ##  <a name="setprimarygroup"></a>  CAccessToken::SetPrimaryGroup
 
-Wywołanie tej metody, aby ustawić podstawowej grupy `CAccessToken` obiektu.
+Wywołaj tę metodę, aby ustawić grupę `CAccessToken` podstawową obiektu.
 
 ```
 bool SetPrimaryGroup(const CSid& rSid) throw(...);
@@ -1169,18 +1169,18 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ### <a name="parameters"></a>Parametry
 
 *rSid*<br/>
-[Klasa CSid](../../atl/reference/csid-class.md) obiekt zawierający podstawowe informacje o grupach.
+Obiekt [klasy CSid](../../atl/reference/csid-class.md) zawierający informacje o grupie podstawowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Grupa podstawowa jest domyślną grupą nowych obiektów tworzonych ten token dostępu w czasie działania.
+Grupa podstawowa jest grupą domyślną dla nowych obiektów utworzonych podczas działania tego tokenu dostępu.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
+[Przykład ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

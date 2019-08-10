@@ -7,24 +7,24 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-ms.openlocfilehash: 4516c4506419169ac3ab284e6c59cae71595be59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e493f46e2a2b5bec695177e8c8da9c09de13376d
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241809"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916452"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Bieżące zaznaczenie w formancie edycji wzbogaconej
 
-Użytkownik może wybrać tekstu w formancie edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) przy użyciu myszy lub klawiatury. Bieżące zaznaczenie jest zakresu znaków wybranego lub pozycji punktu wstawiania, jeśli żadne znaki nie są wybrane. Aplikację można uzyskać informacje na temat bieżącego zaznaczenia, Ustaw bieżące zaznaczenie, określić, kiedy Zaznacz bieżące zaznaczenie zmiany i Pokaż lub Ukryj zaznaczenie.
+Użytkownik może wybrać tekst w kontrolce edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) za pomocą myszy lub klawiatury. Bieżące zaznaczenie jest zakresem wybranych znaków lub pozycją punktu wstawiania, jeśli nie są zaznaczone żadne znaki. Aplikacja może uzyskać informacje o bieżącym zaznaczeniu, ustawić bieżące zaznaczenie, określić, kiedy bieżące zaznaczenie zostanie zmienione, i pokazać lub ukryć zaznaczenie.
 
-Aby określić bieżące zaznaczenie w formancie edycji wzbogaconej, użyj [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) funkcja elementu członkowskiego. Aby ustawić bieżącego zaznaczenia, użyj [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) funkcja elementu członkowskiego. [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) struktury służy do określania zakresu znaków za pomocą tych funkcji. Aby pobrać informacje o zawartości bieżącego zaznaczenia, można użyć [GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) funkcja elementu członkowskiego.
+Aby określić bieżące zaznaczenie w formancie edycji wzbogaconej, użyj funkcji składowej [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) . Aby ustawić bieżące zaznaczenie, użyj funkcji składowej [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) . Struktura [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) jest używana z tymi funkcjami, aby określić zakres znaków. Aby pobrać informacje o zawartości bieżącego zaznaczenia, można użyć funkcji elementu członkowskiego GetSelectionType. [](../mfc/reference/cricheditctrl-class.md#getselectiontype)
 
-Domyślnie przez kontrolki edycji wzbogaconej pokazuje i ukrywa wyróżnienie wybór, gdy uzyskuje i traci fokus. Możesz pokazać lub ukryć wyróżnienie wybór w dowolnym momencie za pomocą [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) funkcja elementu członkowskiego. Na przykład aplikacja może zawierać okno dialogowe Wyszukiwanie, aby wyszukać tekst w kontrolce edycji wzbogaconej. Aplikacja może wybrać pasujący tekst i bez konieczności zamykania okna dialogowego, w którym to przypadku należy użyć `HideSelection` zaznaczenie.
+Domyślnie kontrolka edycji wzbogaconej pokazuje i ukrywa zaznaczenie, gdy nastąpi i utraci fokus. W dowolnym momencie możesz pokazać lub ukryć zaznaczenie, używając funkcji składowej [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) . Na przykład aplikacja może udostępnić okno dialogowe wyszukiwania, aby znaleźć tekst w kontrolce edycji wzbogaconej. Aplikacja może wybrać pasujący tekst bez zamykania okna dialogowego, w takim przypadku należy użyć `HideSelection` , aby zaznaczyć zaznaczenie.
 
-Aby uzyskać zaznaczonego tekstu w formancie edycji wzbogaconej, użyj [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) funkcja elementu członkowskiego. Tekst jest kopiowany do określoną tablicę znaków. Należy się upewnić, że tablica jest wystarczająco duży, aby pomieścić zaznaczonego tekstu, a także kończącego znaku null.
+Aby wyświetlić zaznaczony tekst w kontrolce edycji wzbogaconej, użyj funkcji składowej [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) . Tekst jest kopiowany do określonej tablicy znaków. Należy upewnić się, że tablica jest wystarczająco duża, aby pomieścić zaznaczony tekst oraz kończący znak null.
 
-Możesz wyszukać ciąg znaków w kontrolce edycji wzbogaconej przy użyciu [FindText](../mfc/reference/cricheditctrl-class.md#findtext) funkcja elementu członkowskiego [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa) struktury używane z tą funkcją określa zakres tekstu do wyszukiwania i ciąg do wyszukania. Można również określić opcje, takie jak tego, czy w wyszukiwaniu jest uwzględniana wielkość liter.
+Można wyszukać ciąg w kontrolce edycji wzbogaconej przy użyciu funkcji składowej [ciąg FindText](../mfc/reference/cricheditctrl-class.md#findtext) , która jest używana przez strukturę [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-findtextexa) z tą funkcją określa zakres tekstu do przeszukania oraz ciąg do wyszukania. Możesz również określić takie opcje, jak w przypadku wyszukiwania rozróżniana jest wielkość liter.
 
 ## <a name="see-also"></a>Zobacz także
 

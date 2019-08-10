@@ -7,18 +7,18 @@ helpviewer_keywords:
 - CRichEditCtrl class [MFC], paragraph formatting in
 - formatting [MFC], paragraphs
 ms.assetid: 0df2e4c9-2074-4e41-b913-87cb8c1b4d43
-ms.openlocfilehash: baee4863bee9b96e7a850e70b8f13388f69b41cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0988e7940c8d8947b86e97a35d71586f8f5c316a
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218835"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916374"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Formatowanie akapitu w formantach edycji wzbogaconej
 
-Można użyć funkcji składowych kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) do formatowania akapitów i, aby pobrać informacje o formatowaniu. Atrybuty formatowania akapitu obejmują wyrównanie, karty, wcięcia i numerowania identyfikatorów.
+Możesz użyć funkcji składowych kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)), aby sformatować akapity i pobrać informacje o formatowaniu. Atrybuty formatowania akapitu obejmują wyrównanie, tabulatory, wcięcia i numerowanie.
 
-Można zastosować formatowanie przy użyciu akapitów [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) funkcja elementu członkowskiego. Aby określić bieżący akapit formatowanie do zaznaczonego tekstu, należy użyć [GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) funkcja elementu członkowskiego. [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) struktury jest używany z tych funkcji elementów członkowskich do określenia atrybuty akapitu. Jedną z ważnych elementów członkowskich **PARAFORMAT** jest *dwMask*. W `SetParaFormat`, *dwMask* Określa, jakie atrybuty akapitu zostanie ustawiona przez wywołanie tej funkcji. `GetParaFormat` Raporty atrybuty pierwszego akapitu w zaznaczeniu; *dwMask* określa atrybuty, które są spójne zaznaczenia.
+Formatowanie akapitu można zastosować przy użyciu funkcji składowej [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) . Aby określić bieżące formatowanie akapitu dla zaznaczonego tekstu, użyj funkcji składowej [GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) . Struktura [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-paraformat) jest używana z tymi funkcjami składowymi, aby określić atrybuty akapitu. Jednym z ważnych elementów członkowskich **PARAFORMAT** jest *dwMask*. W `SetParaFormat`programie *dwMask* określa, które atrybuty akapitu będą ustawiane przez to wywołanie funkcji. `GetParaFormat`raportuje atrybuty pierwszego akapitu w zaznaczeniu; *dwMask* określa atrybuty, które są spójne w zaznaczeniu.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: b5da26c617c23f4dc1e95f3055dbe8dde9319756
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 91acc8255cd5f22092790f9dcf45558012caf7dc
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821332"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916795"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -11474,7 +11474,7 @@ BOOL SetLayeredWindowAttributes(
 Wskaźnik na wartość COLORREF, która określa klucz koloru przezroczystości, który ma być używany podczas redagowania okna warstwowego. Wszystkie piksele rysowane w oknie w tym kolorze będą widoczne jako przezroczyste. Aby wygenerować COLORREF, użyj makra RGB.
 
 *bAlpha*<br/>
-Wartość alfa użyta do opisania nieprzezroczystości okna warstwowego. Aby uzyskać więcej informacji, zobacz `SourceConstantAlpha` element członkowski struktury [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) . Gdy *bAlpha* ma wartość 0, okno jest całkowicie przezroczyste. Gdy *bAlpha* jest 255, okno jest nieprzezroczyste.
+Wartość alfa użyta do opisania nieprzezroczystości okna warstwowego. Aby uzyskać więcej informacji, zobacz `SourceConstantAlpha` element członkowski struktury [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) . Gdy *bAlpha* ma wartość 0, okno jest całkowicie przezroczyste. Gdy *bAlpha* jest 255, okno jest nieprzezroczyste.
 
 *flagiDW*<br/>
 Określa akcję do wykonania. Ten parametr może mieć co najmniej jedną z następujących wartości. Aby uzyskać listę możliwych wartości, zobacz [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes).
@@ -12258,7 +12258,7 @@ Jeśli *pDCSrc* ma wartość null, *pptSrc* powinna mieć wartość null.
 Wskaźnik na wartość COLORREF, która określa klucz koloru przezroczystości, który ma być używany podczas redagowania okna warstwowego. Wszystkie piksele rysowane w oknie w tym kolorze będą widoczne jako przezroczyste. Aby wygenerować COLORREF, użyj makra RGB.
 
 *pblend*<br/>
-Wskaźnik na strukturę [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) , która określa wartość przezroczystości, która ma być używana podczas redagowania okna warstwowego.
+Wskaźnik na strukturę [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) , która określa wartość przezroczystości, która ma być używana podczas redagowania okna warstwowego.
 
 *flagiDW*<br/>
 Określa akcję do wykonania. Ten parametr może mieć co najmniej jedną z następujących wartości. Aby uzyskać listę możliwych wartości, zobacz [UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow).

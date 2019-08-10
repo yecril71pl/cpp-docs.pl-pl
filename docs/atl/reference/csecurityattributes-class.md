@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503193"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915726"
 ---
 # <a name="csecurityattributes-class"></a>Klasa CSecurityAttributes
 
-Ta klasa jest otoką alokowania elastycznego w strukturze atrybuty zabezpieczeń.
+Ta klasa jest cienkim otoką dla struktury atrybutów zabezpieczeń.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,13 +41,13 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Wywołanie tej metody, aby ustawić atrybuty `CSecurityAttributes` obiektu.|
+|[CSecurityAttributes:: Set](#set)|Wywołaj tę metodę, aby ustawić atrybuty `CSecurityAttributes` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`SECURITY_ATTRIBUTES` Struktura zawiera [deskryptora zabezpieczeń](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) używane do tworzenia obiektu i określa, czy uchwyt pobierane przez określenie tej struktury jest dziedziczone.
+Struktura zawiera deskryptor zabezpieczeń używany do tworzenia obiektu i określa, czy dojście pobrane przez określenie tej struktury jest dziedziczenia. [](/windows/desktop/api/winnt/ns-winnt-security_descriptor) `SECURITY_ATTRIBUTES`
 
-Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.
+Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/desktop/SecAuthZ/access-control) w Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -57,9 +57,9 @@ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsecurity.h
+**Nagłówek:** atlsecurity. h
 
-##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
+##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes
 
 Konstruktor.
 
@@ -74,11 +74,11 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 Odwołanie do deskryptora zabezpieczeń.
 
 *bInheritsHandle*<br/>
-Określa, czy zwracany uchwyt jest dziedziczone, po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy uchwytu.
+Określa, czy zwracany uchwyt jest dziedziczony podczas tworzenia nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy dojście.
 
-##  <a name="set"></a>  CSecurityAttributes::Set
+##  <a name="set"></a>CSecurityAttributes:: Set
 
-Wywołanie tej metody, aby ustawić atrybuty `CSecurityAttributes` obiektu.
+Wywołaj tę metodę, aby ustawić atrybuty `CSecurityAttributes` obiektu.
 
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -90,16 +90,16 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 Odwołanie do deskryptora zabezpieczeń.
 
 *bInheritHandle*<br/>
-Określa, czy zwracany uchwyt jest dziedziczone, po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy uchwytu.
+Określa, czy zwracany uchwyt jest dziedziczony podczas tworzenia nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy dojście.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest używana przez konstruktora, aby zainicjować `CSecurityAttributes` obiektu.
+Ta metoda jest używana przez konstruktora do inicjowania `CSecurityAttributes` obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zabezpieczenia — przykład](../../overview/visual-cpp-samples.md)<br/>
+[Przykład zabezpieczeń](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[Deskryptor zabezpieczeń](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[deskryptor zabezpieczeń](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)
