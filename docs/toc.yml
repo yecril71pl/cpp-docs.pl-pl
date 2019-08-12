@@ -10529,22 +10529,8 @@
                   items:
                     - name: Wielowątkowość z językiem C i podsystemem Win32
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: Programy wielowątkowe
-                      href: parallel/multithread-programs.md
-                    - name: Obsługa bibliotek na potrzeby wielowątkowości
-                      href: parallel/library-support-for-multithreading.md
-                    - name: Uwzględnianie plików na potrzeby wielowątkowości
-                      href: parallel/include-files-for-multithreading.md
-                    - name: Funkcje biblioteki środowiska uruchomieniowego języka C do sterowania wątkami
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: Przykładowy program więlowątkowy w języku C
                       href: parallel/sample-multithread-c-program.md
-                    - name: Pisanie wielowątkowego programu Win32
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: Kompilowanie i łączenie programów wielowątkowych
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: Unikanie obszarów problemów z programami wielowątkowymi
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: Lokalny magazyn wątków (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: Wielowątkowość z C++ i MFC
