@@ -1,7 +1,7 @@
 ---
 title: Literały ciągów i znaków (C++)
 description: Jak deklarować i definiować literały ciągów i znaków w C++.
-ms.date: 07/29/2019
+ms.date: 08/06/2019
 f1_keywords:
 - R
 - L
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: 9fce1ef9636aaa85be71cafffb5c4247e5c2e2d9
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661525"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866091"
 ---
-# <a name="string-and-character-literals--c"></a>Literały ciągów i znaków (C++)
+# <a name="string-and-character-literals-c"></a>Literały ciągów i znaków (C++)
 
 C++obsługuje różne typy ciągów i znaków oraz zapewnia sposoby wyrażania wartości literałów każdego z tych typów. W kodzie źródłowym można wyrazić zawartość znaków i literałów ciągów przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaki ucieczki umożliwiają wyrażenie dowolnego ciągu przy użyciu tylko podstawowego zestawu znaków źródła. Nieprzetworzony literał ciągu pozwala uniknąć używania znaków ucieczki i może służyć do wyrażenia wszystkich typów literałów ciągów. Można również tworzyć `std::string` literały bez konieczności wykonywania dodatkowych kroków konstrukcyjnych lub konwersji.
 
@@ -37,6 +37,9 @@ int main()
     auto c2 =  L'A'; // wchar_t
     auto c3 =  u'A'; // char16_t
     auto c4 =  U'A'; // char32_t
+
+    // Multicharacter literals
+    auto m0 = 'abcd'; // int, value 0x61626364
 
     // String literals
     auto s0 =   "hello"; // const char*
@@ -76,7 +79,7 @@ Literały ciągu nie mogą mieć prefiksu, `u8`, `L`, `u`i `U` prefiksów, aby o
 
 - Zwykłe literały znaków typu **char**, na przykład`'a'`
 
-- Literały znakowe UTF-8 typu **char**, na przykład`u8'a'`
+- Literały znakowe UTF-8 typu **char** (**char8_t** w c++ 20), na przykład`u8'a'`
 
 - Literały szerokich znaków typu `wchar_t`, na przykład`L'a'`
 
@@ -90,9 +93,9 @@ Znak używany dla literału znakowego może być dowolnym znakiem, z wyjątkiem 
 
 Literały znakowe są zakodowane inaczej na podstawie ich prefiksu.
 
-- Literał znakowy bez prefiksu jest zwykłym literałem znaków. Wartość zwykłego literału znakowego zawierającego pojedynczy znak, sekwencję ucieczki lub uniwersalne nazwy znaków, które mogą być reprezentowane w zestawie znaków wykonywania, ma wartość równą wartości liczbowej jego kodowania w zestawie znaków wykonania. Zwykły literał znakowy, który zawiera więcej niż jeden znak, sekwencję ucieczki lub uniwersalne nazwy znaków, jest literałem wieloznakowego. Literał wieloznakowy lub zwykły literał znakowy, którego nie można przedstawić w zestawie znaków wykonywania, jest warunkowo obsługiwany, ma typ **int**, a jego wartość jest zdefiniowana przez implementację.
+- Literał znakowy bez prefiksu jest zwykłym literałem znaków. Wartość zwykłego literału znakowego zawierającego pojedynczy znak, sekwencję ucieczki lub uniwersalne nazwy znaków, które mogą być reprezentowane w zestawie znaków wykonywania, ma wartość równą wartości liczbowej jego kodowania w zestawie znaków wykonania. Zwykły literał znakowy, który zawiera więcej niż jeden znak, sekwencję ucieczki lub uniwersalne nazwy znaków, jest literałem wieloznakowego. Literał wieloznakowy lub zwykły literał znakowy, którego nie można przedstawić w zestawie znaków wykonywania, ma typ **int**, a jego wartość jest zdefiniowana przez implementację. W przypadku usługi MSVC zapoznaj się z sekcją charakterystyczną dla **firmy Microsoft** .
 
-- Literał znakowy zaczynający się od `L` prefiksu jest literałem znaków dwubajtowych. Wartość literału dwubajtowego zawierającego pojedynczy znak, sekwencję ucieczki lub nazwę uniwersalnego znaku ma wartość równą wartości liczbowej jego kodowania w zestawie znaków dwubajtowych wykonywania, chyba że literał znakowy nie ma reprezentacji w wykonanie zestawu znaków dwubajtowych, w którym przypadku wartość jest definiowana przez implementację. Wartość literału dwubajtowego zawierającego wiele znaków, sekwencje ucieczki lub uniwersalne nazwy znaków jest definiowana przez implementację.
+- Literał znakowy zaczynający się od `L` prefiksu jest literałem znaków dwubajtowych. Wartość literału dwubajtowego zawierającego pojedynczy znak, sekwencję ucieczki lub nazwę uniwersalnego znaku ma wartość równą wartości liczbowej jego kodowania w zestawie znaków dwubajtowych wykonywania, chyba że literał znakowy nie ma reprezentacji w wykonanie zestawu znaków dwubajtowych, w którym przypadku wartość jest definiowana przez implementację. Wartość literału dwubajtowego zawierającego wiele znaków, sekwencje ucieczki lub uniwersalne nazwy znaków jest definiowana przez implementację. W przypadku usługi MSVC zapoznaj się z sekcją charakterystyczną dla **firmy Microsoft** .
 
 - Literał znakowy zaczynający się od `u8` prefiksu jest literałem w formacie UTF-8. Wartość literału znakowego UTF-8 zawierającego pojedynczy znak, sekwencję ucieczki lub nazwę uniwersalnego znaku ma wartość równą wartości punktu kodu ISO 10646, jeśli może być reprezentowana przez pojedynczą jednostkę kodu UTF-8 (odpowiadającą kontrolkom C0 i łaciński podstawowy) Blok Unicode). Jeśli wartość nie może być reprezentowana przez pojedynczą jednostkę kodu UTF-8, program jest źle sformułowany. Literał znaku UTF-8 zawierający więcej niż jeden znak, sekwencję ucieczki lub nazwę uniwersalnego znaku jest źle sformułowany.
 
@@ -121,6 +124,10 @@ Istnieją trzy rodzaje sekwencji unikowych: proste, ósemkowe i szesnastkowe. Se
 | Alert (dzwonek) | \\a |
 | szesnastkowo | \\xhhh |
 
+Ósemkowa sekwencja unikowa to ukośnik odwrotny, po którym następuje sekwencja od jednej do trzech cyfr ósemkowych. Ósemkowa sekwencja ucieczki kończy się przy pierwszym znaku, który nie jest cyfrą ósemkową, jeśli napotka się wcześniej niż trzecia cyfra. Najwyższa możliwa wartość ósemkowa to `\377`.
+
+Szesnastkowa sekwencja unikowa to ukośnik odwrotny, po którym `x`następuje znak, po którym następuje sekwencja co najmniej jednej cyfry szesnastkowej. Zera wiodące są ignorowane. W przypadku zwykłego lub dwubajtowego literału znakowego najwyższa wartość szesnastkowa to 0xFF. W przypadku prefiksu dwubajtowego lub ze wstępnie ustalonym literałem, najwyższa wartość szesnastkowa to 0xFFFF. W literale ze znakiem dwubajtowym z prefiksem, najwyższa wartość szesnastkowa to 0xFFFFFFFF.
+
 Ten przykładowy kod pokazuje kilka przykładów znaków ucieczki przy użyciu zwykłych literałów znakowych. Ta sama składnia sekwencji unikowej jest prawidłowa dla innych typów literałów znakowych.
 
 ```cpp
@@ -143,23 +150,26 @@ int main() {
 }
 ```
 
+Znak ukośnika odwrotnego\\() jest znakiem kontynuacji wiersza, gdy jest umieszczony na końcu wiersza. Jeśli chcesz, aby znak ukośnika odwrotnego był wyświetlany jako literał znakowy, musisz wpisać dwa ukośniki odwrotne w wierszu`\\`(). Aby uzyskać więcej informacji na temat znaku kontynuacji wiersza, zobacz [etapy tłumaczenia](../preprocessor/phases-of-translation.md).
+
 **Microsoft specific**
 
-Aby utworzyć wartość z zwykłego literału znakowego (jeden bez prefiksu), kompilator konwertuje znak lub sekwencję znaków między pojedynczymi cudzysłowami na wartości 8-bitowe w ramach 32-bitowej liczby całkowitej. Wiele znaków w literale wypełnia odpowiednie bajty, w razie potrzeby, od wysokiej kolejności do niskiego rzędu. Aby utworzyć wartość **char** , kompilator pobiera bajt o niskiej kolejności. Aby utworzyć **wchar_t** lub `char16_t` wartość, kompilator pobiera wyraz o niskiej kolejności. Kompilator ostrzega o tym, że wynik jest obcinany, jeśli wszystkie bity powyżej przypisanego bajtu lub wyrazu są ustawione powyżej.
+Aby utworzyć wartość z wąskiego literału wieloznakowego, kompilator konwertuje znak lub sekwencję znaków między pojedynczymi cudzysłowami na wartości 8-bitowe w ramach 32-bitowej liczby całkowitej. Wiele znaków w literale wypełnia odpowiednie bajty, w razie potrzeby, od wysokiej kolejności do niskiego rzędu. Następnie kompilator konwertuje liczbę całkowitą na typ docelowy zgodnie z zwykłymi regułami. Na przykład, aby utworzyć wartość **char** , kompilator pobiera bajt o niskiej kolejności. Aby utworzyć **wchar_t** lub `char16_t` wartość, kompilator pobiera wyraz o niskiej kolejności. Kompilator ostrzega o tym, że wynik jest obcinany, jeśli wszystkie bity powyżej przypisanego bajtu lub wyrazu są ustawione powyżej.
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
+int i0     = 'abcd';    // 0x61626364
 ```
 
-Ósemkowa sekwencja unikowa to ukośnik odwrotny, po którym następuje sekwencja maksymalnie 3 cyfr ósemkowych. Zachowanie ósemkowej sekwencji ucieczki, która wydaje się zawierać więcej niż trzy cyfry, jest traktowane jako 3-cyfrowe sekwencje ósemkowe, a następnie kolejne cyfry jako znaki, które mogą dać wyniki zaskakujące. Na przykład:
+Ósemkowa sekwencja ucieczki, która wydaje się zawierać więcej niż trzy cyfry, jest traktowana jako 3-cyfrowy porządek ósemkowy, a następnie kolejne cyfry jako znaki w literale wieloznakowym, które mogą dać wyniki zaskakujące. Na przykład:
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
 ```
 
-Sekwencje unikowe, które wyglądają, aby zawierały znaki inne niż ósemkowe, są oceniane jako liczba ósemkowa w górę do ostatniego znaku ósemkowego, po którym następuje pozostałe znaki. Na przykład:
+Sekwencje unikowe, które wyglądają, aby zawierały znaki inne niż ósemkowe, są oceniane jako liczba ósemkowa w górę do ostatniego znaku ósemkowego, a następnie pozostałe znaki w literale wieloznakowym. Ostrzeżenie C4125 jest generowane, jeśli pierwszy znak inny niż ósemkowy jest cyfrą dziesiętną. Przykład:
 
 ```cpp
 char c3 = '\009';   // '9'
@@ -167,14 +177,16 @@ char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
 ```
 
-Szesnastkowa sekwencja unikowa to ukośnik odwrotny, po którym `x`następuje znak, a następnie sekwencja cyfr szesnastkowych. Sekwencja ucieczki, która nie zawiera cyfr szesnastkowych, powoduje błąd kompilatora C2153: "literały szesnastkowe muszą mieć co najmniej jedną cyfrę szesnastkową". Zera wiodące są ignorowane. Sekwencja unikowa, która wydaje się mieć szesnastkowe i nieszesnastkowe znaki, jest szacowana jako szesnastkowa sekwencja ucieczki do ostatniego znaku szesnastkowego, po którym następuje znaki inne niż szesnastkowe. W przypadku zwykłego lub dwubajtowego literału znakowego najwyższa wartość szesnastkowa to 0xFF. W przypadku prefiksu dwubajtowego lub ze wstępnie ustalonym literałem, najwyższa wartość szesnastkowa to 0xFFFF. W literale ze znakiem dwubajtowym z prefiksem, najwyższa wartość szesnastkowa to 0xFFFFFFFF.
+Ósemkowa sekwencja ucieczki o wyższej wartości `\377` , która powoduje wystąpienie błędu C2022: "*wartość-in-Decimal*": za duży dla znaku.
+
+Sekwencja unikowa, która wydaje się mieć szesnastkowe i nieszesnastkowe znaki, jest szacowana jako literał wieloznakowy, który zawiera szesnastkową sekwencję ucieczki do ostatniego znaku szesnastkowego, po którym następują znaki inne niż szesnastkowe. Szesnastkowa sekwencja ucieczki, która nie zawiera cyfr szesnastkowych powoduje błąd kompilatora C2153: "literały szesnastkowe muszą mieć co najmniej jedną cyfrę szesnastkową".
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
 ```
 
-Jeśli literał znaku dwubajtowego poprzedzony `L` prefiksem zawiera więcej niż jeden znak, wartość jest pobierana z pierwszego znaku. Kolejne znaki są ignorowane, w przeciwieństwie do zachowania równoważnego zwykłego literału znakowego.
+Jeśli literał znaku dwubajtowego z `L` prefiksem zawiera sekwencję wieloznakową, wartość jest pobierana z pierwszego znaku, a kompilator zgłasza C4066 ostrzegawczy. Kolejne znaki są ignorowane, w przeciwieństwie do zachowania równoważnego zwykłego literału wieloznakowego.
 
 ```cpp
 wchar_t w1 = L'\100';   // L'@'
@@ -186,9 +198,7 @@ wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
 ```
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
-
-Znak ukośnika odwrotnego\\() jest znakiem kontynuacji wiersza, gdy jest umieszczony na końcu wiersza. Jeśli chcesz, aby znak ukośnika odwrotnego był wyświetlany jako literał znakowy, musisz wpisać dwa ukośniki odwrotne w wierszu`\\`(). Aby uzyskać więcej informacji na temat znaku kontynuacji wiersza, zobacz [etapy tłumaczenia](../preprocessor/phases-of-translation.md).
+**Zakończenie określonych przez firmę Microsoft**
 
 ###  <a name="bkmk_UCN"></a>Uniwersalne nazwy znaków
 
@@ -241,7 +251,7 @@ const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
 ```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t i char32_t (C++ 11)
+#### <a name="char16_t-and-char32_t-c11"></a>char16_t i char32_t (C++ 11)
 
 W języku c++ 11 wprowadzono `char16_t` przenośne (16-bitowe Unicode) `char32_t` i (32-bitowe Unicode) typy znaków:
 
@@ -333,7 +343,7 @@ wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
 ```
 
-Można spowodować, że kompilator emituje błąd w przypadku przekonwertowania literału ciągu na wskaźnik znaku non_const podczas ustawiania opcji kompilatora [/Zc: strictStrings (Wyłącz konwersję typu literału ciągu)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) . Zalecamy jej używanie kodu przenośnego zgodnego ze standardami. Dobrym sposobem jest **użycie słowa** kluczowego autosłowo kluczowe do deklarowania wskaźników inicjacji literału ciągu, ponieważ jest ono rozpoznawane jako poprawny typ (const). Na przykład ten kod przykład przechwytuje próbę zapisu do literału ciągu w czasie kompilacji:
+Można spowodować, że kompilator emituje błąd w przypadku przekonwertowania literału ciągu na wskaźnik niestały, gdy ustawisz opcję kompilatora [/Zc: strictStrings (Wyłącz konwersję typu literału ciągu)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) . Zalecamy jej używanie kodu przenośnego zgodnego ze standardami. Dobrym sposobem jest użycie słowa kluczowego autosłowo kluczowe do deklarowania wskaźników inicjacji literału ciągu, ponieważ jest ono rozpoznawane jako poprawny typ (const). Na przykład ten kod przykład przechwytuje próbę zapisu do literału ciągu w czasie kompilacji:
 
 ```cpp
 auto str = L"hello";
@@ -410,6 +420,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zestawy znaków](../cpp/character-sets.md)<br/>
-[Literały numeryczne, wartości logicznych i wskaźników](../cpp/numeric-boolean-and-pointer-literals-cpp.md)<br/>
+[Zestawy znaków](../cpp/character-sets.md)\
+[Literały numeryczne, wartości logicznych i wskaźników](../cpp/numeric-boolean-and-pointer-literals-cpp.md)\
 [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md)
