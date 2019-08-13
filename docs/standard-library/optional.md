@@ -1,21 +1,20 @@
 ---
 title: '&lt;optional&gt;'
-ms.date: 11/04/2016
+ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447183"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957177"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Definiuje klasę szablonu kontenera opcjonalnie i kilka szablonów pomocniczych.
+Definiuje klasę `optional` szablonu kontenera i kilka szablonów pomocniczych.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -29,12 +28,12 @@ Definiuje klasę szablonu kontenera opcjonalnie i kilka szablonów pomocniczych.
 
 |||
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Testuje, `optional` czy obiekt po lewej stronie operatora jest równy `optional` obiektowi po prawej stronie.|
-|[operator!=](../standard-library/optional-operators.md#op_neq)|Testuje, `optional` czy obiekt po lewej stronie operatora nie jest równy `optional` obiektowi po prawej stronie.|
-|[< operatora](../standard-library/optional-operators.md#op_lt)|Testuje, `optional` czy obiekt po lewej stronie operatora jest mniejszy `optional` od obiektu po prawej stronie.|
-|[< operatora =](../standard-library/optional-operators.md#op_lt_eq)|Testuje, `optional` czy obiekt po lewej stronie operatora jest mniejszy od lub równy `optional` obiektowi po prawej stronie.|
-|[operator>](../standard-library/optional-operators.md#op_gt)|Testuje, `optional` czy obiekt po lewej stronie operatora jest większy `optional` niż obiekt po prawej stronie.|
-|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testuje, `optional` czy obiekt po lewej stronie operatora jest większy niż lub równy `optional` obiektowi po prawej stronie.|
+|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Testuje, czy obiekt jest równy innemu obiektowi.|
+|[operator!=](../standard-library/optional-operators.md#op_neq)|Testuje, czy obiekt nie jest równy innemu obiektowi.|
+|[< operatora](../standard-library/optional-operators.md#op_lt)|Testuje, czy obiekt po lewej stronie jest mniejszy niż obiekt po prawej stronie.|
+|[< operatora =](../standard-library/optional-operators.md#op_lt_eq)|Testuje, czy obiekt po lewej stronie jest mniejszy niż lub równy obiektowi po prawej stronie.|
+|[operator>](../standard-library/optional-operators.md#op_gt)|Testuje, czy obiekt po lewej stronie jest większy niż obiekt po prawej stronie.|
+|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testuje, czy obiekt po lewej stronie jest większy lub równy obiektowi po prawej stronie.|
 
 > [!NOTE]
 > Oprócz porównywania \<relacyjnego operatory opcjonalne > obsługują również porównanie z **nullopt** i `T`.
@@ -44,13 +43,13 @@ Definiuje klasę szablonu kontenera opcjonalnie i kilka szablonów pomocniczych.
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Sprawia, że obiekt jest opcjonalny.|
-|[swap](../standard-library/optional-functions.md#swap)||
+|[swap](../standard-library/optional-functions.md#swap)|Zamienia zawarte wartości dwóch `optional` obiektów.|
 
 ### <a name="classes-and-structs"></a>Klasy i struktury
 
 |||
 |-|-|
-|[skrótu]()||
+|hash|Zwraca wartość skrótu zawartego obiektu.|
 |[Klasa opcjonalna](../standard-library/optional-class.md)|Opisuje obiekt, który może lub nie może zawierać wartości.|
 |[nullopt_t, struktura](../standard-library/nullopt-t-structure.md)|Opisuje obiekt, który nie utrzymuje wartości.|
 |[Klasa bad_optional_access](../standard-library/bad-optional-access-class.md)|Opisuje obiekt zgłoszony jako wyjątek, aby zgłosić próbę uzyskania dostępu do wartości, która nie istnieje.|
@@ -59,7 +58,7 @@ Definiuje klasę szablonu kontenera opcjonalnie i kilka szablonów pomocniczych.
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)||
+|[nullopt](../standard-library/optional-functions.md#nullopt)|Wystąpienie `nullopt_t` do porównywania.|
 
 ## <a name="see-also"></a>Zobacz także
 

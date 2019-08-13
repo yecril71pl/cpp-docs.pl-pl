@@ -7,10 +7,10 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "62233366"
 ---
 # <a name="multidimensional-arrays-c"></a>Tablice wielowymiarowe (C)
@@ -21,7 +21,7 @@ Wyrażenie indeksu dolnego może mieć wiele indeksów dolnych, jak pokazano pon
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Skrajnie po lewej stronie wyrażenia indeksu dolnego, *wyrażenie1* **[** *wyrażenie2* **]**, jest stosowana jako pierwsza. Adres, który jest wynikiem dodawania *wyrażenie1* i *wyrażenie2* stanowi wyrażenie wskaźnika; następnie *expression3* jest dodawany do tego wyrażenia wskaźnika w celu utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu dolnego został dodany. Operator pośredni (<strong>\*</strong>) są stosowane po ostatnim indeksem wyrażenie jest obliczane, chyba że wskaźnik końcowej wartości typ tablicowy (Zobacz przykłady poniżej).
+Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Pierwszy wyrażenie indeksu dolnego, *wyrażenie1* **[** *wyrażenie2* **]** , jest oceniane jako pierwsze. Adres, który wynika z dodania elementu *wyrażenie1* i *wyrażenie2* tworzą wyrażenie wskaźnika; następnie *expression3* jest dodawany do tego wyrażenia wskaźnika, aby utworzyć nowe wyrażenie wskaźnika i tak dalej, aż do ostatniego wyrażenia indeksu dolnego. Operator pośredni (<strong>\*</strong>) jest stosowany po obliczeniu ostatniego wyrażenia indeksu dolnego, chyba że końcowa wartość wskaźnika odnosi się do typu tablicy (Zobacz przykłady poniżej).
 
 Wyrażenia zawierające wiele indeksów dolnych odwołują się do elementów „tablic wielowymiarowych”. Tablica wielowymiarowa jest tablicą, której elementy są tablicami. Na przykład, pierwszy element tablicy trójwymiarowej jest tablicą z dwoma wymiarami.
 

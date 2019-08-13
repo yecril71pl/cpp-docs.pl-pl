@@ -1,18 +1,18 @@
 ---
 title: '&lt;rozmiar&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451886"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957089"
 ---
 # <a name="ltmemorygt"></a>&lt;rozmiar&gt;
 
@@ -91,9 +91,9 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 
 |||
 |-|-|
-|[allocator](../standard-library/allocator-class.md)|Klasa szablonu opisuje obiekt, który zarządza alokacją magazynu i zwalnia dla tablic obiektów typu **Typ.**|
+|[allocator](../standard-library/allocator-class.md)|Klasa szablonu opisuje obiekt, który zarządza alokacją magazynu i zwalnia dla tablic obiektów typu typ.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Opisuje obiekt określający wszystkie informacje, które są wymagane przez kontener z obsługą alokatora.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Klasa szablonu opisuje obiekt, który przechowuje wskaźnik do przyznanego obiektu <strong>\*</strong> typu typ, **który** zapewnia, że obiekt, do którego wskazuje, zostaje usunięty po usunięciu otaczających auto_ptr.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Klasa szablonu opisuje obiekt, który przechowuje wskaźnik do przyznanego obiektu <strong>\*</strong> typu typ, który zapewnia, że obiekt, do którego wskazuje, zostaje usunięty po usunięciu otaczających auto_ptr.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Zgłasza zły wyjątek weak_ptr.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Pomaga wygenerować `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Dostarcza informacje, które są konieczne przez obiekt klasy `allocator_traits` szablonu do opisywania alokatora z typem `Ptr`wskaźnika.|
@@ -108,7 +108,7 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[skrótu]()||
+|hash|Zapewnia przeciążenia wyspecjalizowane `unique_ptr` dla `shared_ptr`i.|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Pozwala na mieszane porównania oparte na własności współdzielonych i słabych wskaźników.|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ Określa klasę, operator i kilka szablonów, które pomagają przydzielać i zw
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|Specjalizacja alokatora klasy szablonu do typu void, definiująca tylko typy składowych, które mają sens w tym wyspecjalizowanym kontekście.|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Specjalizacja alokatora klas szablonów do typu **void**, definiując tylko typy elementów członkowskich, które mają sens w tym wyspecjalizowanym kontekście.|
 
 ## <a name="see-also"></a>Zobacz także
 

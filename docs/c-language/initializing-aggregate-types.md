@@ -9,55 +9,55 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "62326082"
 ---
 # <a name="initializing-aggregate-types"></a>Inicjowanie typów agregacji
 
-*Agregacji* typem jest struktura, Unia lub typu tablicowego. Jeśli typem agregowanym zawiera składowych typu agregacji, mają zastosowanie reguły inicjowania cyklicznie.
+Typ *zagregowany* jest strukturą, Unią lub typem tablicy. Jeśli typ agregacji zawiera elementy członkowskie typów agregacji, reguły inicjalizacji są stosowane cyklicznie.
 
 ## <a name="syntax"></a>Składnia
 
-*initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *listy inicjatorów* **}** / * dla inicjowania agregacji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+*inicjator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *listy inicjatorów* **}** / * dla inicjowania agregacji \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *inicjator — lista*  **,}**
 
 *initializer-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Inicjator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*skład*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*listy inicjatorów* **,** *inicjatora*
 
-*Listy inicjatorów* znajduje się lista inicjatorów rozdzielonych przecinkami. Każdego inicjatora na liście jest wyrażeniem stałym lub listy inicjalizatora. W związku z tym można zagnieżdżać listy inicjatorów. Ten formularz jest przydatne w przypadku inicjowanie agregacji elementów członkowskich typu agregacji, jak pokazano w przykładach w tej sekcji. Jednak jeśli inicjator dla automatycznemu identyfikatorowi jest pojedyncze wyrażenie, go nie musi być wyrażeniem stałym; jedynie musi ona mieć odpowiedni typ w celu przypisania do identyfikatora.
+*Lista inicjalizatora* jest listą inicjatorów rozdzielonych przecinkami. Każdy inicjator na liście jest wyrażeniem stałym lub listą inicjatorów. W związku z tym listy inicjatorów mogą być zagnieżdżane. Ten formularz jest przydatny do inicjowania agregowanych elementów członkowskich typu agregacji, jak pokazano w przykładach w tej sekcji. Jeśli jednak inicjator dla automatycznego identyfikatora jest pojedynczym wyrażeniem, nie musi być wyrażeniem stałym; tylko musi mieć odpowiedni typ do przypisywania do identyfikatora.
 
-Dla każdej listy inicjatorów wartości wyrażenia stałe są przypisane, w kolejności, do odpowiednich elementów członkowskich zmiennej agregacji.
+Dla każdej listy inicjatora wartości wyrażeń stałych są przypisywane w kolejności do odpowiednich elementów członkowskich zmiennej agregującej.
 
-Jeśli *listy inicjatorów* zawiera mniej niż odpowiedni typ agregacji, pozostałe elementy Członkowskie lub elementy odpowiedni typ agregacji są inicjowane na wartość 0. Początkowa wartość identyfikatora automatyczne nie zostały jawnie zainicjować jest niezdefiniowane. Jeśli *listy inicjatorów* ma więcej wartości niż odpowiedni typ agregacji, powoduje błąd. Te reguły mają zastosowanie do każdej listy inicjatora osadzonych, a także do agregacji jako całości.
+Jeśli *inicjator-lista* ma mniejszą liczbę wartości niż typ zagregowany, pozostałe elementy członkowskie lub elementy typu agregacji są inicjowane do wartości 0. Początkowa wartość automatycznego identyfikatora, który nie został jawnie zainicjowany jest niezdefiniowana. Jeśli *inicjator — lista* zawiera więcej wartości niż typ zagregowany, wyniki błędu. Te reguły mają zastosowanie do każdej listy osadzonych inicjatorów, a także do agregacji jako całości.
 
-Struktura inicjator jest wyrażenia tego samego typu lub listy inicjatorów dla jego elementów członkowskich, ujęte w nawiasy klamrowe (**{}**). Nienazwane elementy członkowskie pole bitowe nie są inicjowane.
+Inicjator struktury jest wyrażeniem tego samego typu lub listą inicjatorów elementów członkowskich ujętych w nawiasy klamrowe ( **{}** ). Nienazwane elementy członkowskie pola bitowego nie są inicjowane.
 
-Podczas inicjowania Unii *listy inicjatorów* musi być pojedynczym wyrażeniem stałej. Wartość wyrażenie stałe jest przypisana do pierwszego elementu Członkowskiego Unii.
+Gdy Unia zostanie zainicjowana, *Lista inicjatorów* musi być wyrażeniem o pojedynczej stałej. Wartość wyrażenia stałego jest przypisywana do pierwszego elementu członkowskiego Unii.
 
-Jeśli tablica ma nieznany rozmiar, liczba inicjatorów Określa rozmiar tablicy, a jego typ zostaje wykonane. Nie istnieje sposób określić powtórzenia inicjatora w języku C lub zainicjować element w środku tablicy bez podawania również wszystkie poprzedniej wartości. Jeśli potrzebujesz tej operacji w programie zapisu procedura w języku zestawu.
+Jeśli tablica ma nieznany rozmiar, liczba inicjatorów określa rozmiar tablicy, a jej typ zostanie ukończony. Nie ma możliwości określenia powtórzenia inicjatora w języku C lub zainicjowania elementu w środku tablicy bez podawania wszystkich poprzednich wartości. Jeśli potrzebujesz tej operacji w programie, napisz procedurę w języku asemblera.
 
-Należy zwrócić uwagę na to, że liczba inicjatorów można ustawić rozmiar tablicy:
+Należy zauważyć, że liczba inicjatorów może ustawić rozmiar tablicy:
 
 ```C
 int x[ ] = { 0, 1, 2 }
 ```
 
-Jeśli określić rozmiar i nadaj niewłaściwą liczbę inicjatory, jednak kompilator generuje błąd.
+Jeśli określisz rozmiar i podasz nieprawidłową liczbę inicjatorów, kompilator generuje błąd.
 
 **Microsoft Specific**
 
-Maksymalny rozmiar tablicy jest definiowany przez **size_t**. Zdefiniowane w pliku nagłówkowym STDDEF. Godz., **size_t** jest `unsigned int` z zakresem 0x00000000 do 0x7CFFFFFF.
+Maksymalny rozmiar tablicy jest definiowany przez **size_t**. Zdefiniowane w pliku nagłówka STDDEF. H, **size_t** jest `unsigned int` z zakresem od 0x00000000 do 0x7CFFFFFF.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="examples"></a>Przykłady
 
-Ten przykład przedstawia inicjatorów dla tablic.
+Ten przykład pokazuje inicjatory dla tablicy.
 
 ```C
 int P[4][3] =
@@ -69,9 +69,9 @@ int P[4][3] =
 };
 ```
 
-Ta instrukcja deklaruje `P` jako tablicę czterech 3 i inicjuje elementy jej pierwszy wiersz 1, elementy jego drugi wiersz 2 i tak dalej za pośrednictwem czwartym wierszu. Należy pamiętać, że na liście inicjatora dla wierszy trzecia i czwarta zawiera przecinki po ostatnim wyrażenie stałe. Ostatnie lista inicjatora (`{4, 4, 4,},`) jest również rozdzielanych przecinkami. Te dodatkowe przecinkami są dozwolone, ale nie są wymagane; tylko przecinki oddzielające wyrażenia stałe od siebie nawzajem i tych, które oddzielić jednej listy inicjatorów od innego, są wymagane.
+Ta instrukcja deklaruje `P` jako tablicę czterech przez trzy i inicjuje elementy pierwszego wiersza do 1, elementy z drugiego wiersza do 2 i tak dalej w czwartym wierszu. Należy zauważyć, że lista inicjatorów dla trzeciego i czwartego wiersza zawiera przecinki po ostatnim wyrażeniu stałej. Po ostatniej liście inicjatora`{4, 4, 4,},`() występuje również przecinek. Te dodatkowe przecinki są dozwolone, ale nie są wymagane; wymagane są tylko przecinki, które oddzielają wyrażenia stałe od siebie i te, które oddzielają jedną listę inicjatorów od innych.
 
-Jeśli zagregowany nie zawiera osadzonego inicjatora listy, wartości są po prostu przypisywane, w kolejności, do każdego członka subaggregate. W związku z tym inicjowania w poprzednim przykładzie jest odpowiednikiem następujących czynności:
+Jeśli zagregowany element członkowski nie ma osadzonej listy inicjatorów, wartości są po prostu przypisywane do każdego elementu członkowskiego agregacji. W związku z tym Inicjalizacja w poprzednim przykładzie jest równoważna z następującymi:
 
 ```C
 int P[4][3] =
@@ -80,9 +80,9 @@ int P[4][3] =
 };
 ```
 
-Nawiasów może również zostać wyświetlony wokół poszczególne inicjatory na liście i może pomóc w wyjaśnieniu w powyższym przykładzie.
+Nawiasy klamrowe mogą również znajdować się na poszczególnych inicjatorach listy i pomóc w wyjaśnieniu powyższego przykładu.
 
-Podczas inicjowania zmiennej agregacji, należy zachować ostrożność użyć nawiasów klamrowych i inicjatora wyświetla prawidłowo. Poniższy przykład ilustruje kompilatora interpretacji nawiasów klamrowych bardziej szczegółowo:
+Po zainicjowaniu zmiennej agregującej należy zachować ostrożność, aby prawidłowo używać nawiasów klamrowych i list inicjatorów. Poniższy przykład ilustruje interpretację nawiasów klamrowych w bardziej szczegółowy sposób:
 
 ```C
 typedef struct
@@ -97,17 +97,17 @@ triplet nlist[2][3] =
 };
 ```
 
-W tym przykładzie `nlist` jest zadeklarowana jako tablica 2, 3, struktur, każda struktura o trzy elementy członkowskie. Wiersz 1 inicjowania przypisuje wartości do pierwszego wiersza `nlist`, wykonując następujące czynności:
+W tym przykładzie `nlist` jest zadeklarowana jako tablica o strukturze 2-by-3, każda struktura ma trzy składowe. Wiersz 1 inicjalizacji przypisuje wartości do pierwszego wiersza `nlist`w następujący sposób:
 
-1. Pierwszy lewy nawias klamrowy w wierszu 1 sygnalizuje kompilator, że inicjowanie pierwszego agregacji elementu członkowskiego `nlist` (czyli `nlist[0]`) to początek.
+1. Pierwszy lewy nawias klamrowy w wierszu 1 sygnalizuje kompilator inicjujący pierwszy zagregowany element członkowski `nlist` (czyli, `nlist[0]`).
 
-1. Drugi nawias klamrowy otwierający wskazuje, że inicjowanie pierwszego agregacji elementu członkowskiego `nlist[0]` (czyli struktury na `nlist[0][0]`) to początek.
+1. Drugi lewy nawias klamrowy wskazuje, że inicjalizacja pierwszego zagregowanego elementu `nlist[0]` członkowskiego (czyli struktury w `nlist[0][0]`) zaczyna się.
 
-1. Pierwszy nawias klamrowy zamykający kończy inicjowania struktury `nlist[0][0]`; dalej nawias klamrowy otwierający rozpoczyna inicjowanie `nlist[0][1]`.
+1. Pierwszy prawy nawias zamykający zakończył inicjalizację struktury `nlist[0][0]`; następny lewy nawias klamrowy zaczyna `nlist[0][1]`inicjalizację.
 
-1. Proces jest kontynuowany aż do końca wiersza, w którym zamykający nawias klamrowy zamykający kończy się inicjowanie `nlist[0]`.
+1. Proces jest kontynuowany do końca wiersza, gdzie zamykający się prawy nawias klamrowy kończy inicjalizację `nlist[0]`.
 
-Wiersz 2 przypisuje wartości do drugiego wiersza `nlist` w podobny sposób. Należy pamiętać, że zestawy zewnętrzne w nawiasy klamrowe obejmujące inicjatory w wierszach 1 i 2 są wymagane. Następujące konstrukcji, pomija zewnętrzne nawiasów klamrowych, spowodowałoby błąd:
+Wiersz 2 przypisuje wartości do drugiego wiersza `nlist` w podobny sposób. Należy zauważyć, że zewnętrzne zestawy nawiasów klamrowych otaczających inicjatory w wierszach 1 i 2 są wymagane. Następująca konstrukcja, która pomija zewnętrzne nawiasy klamrowe, spowoduje wystąpienie błędu:
 
 ```C
 triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
@@ -117,9 +117,9 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 };
 ```
 
-W tej konstrukcji pierwszy lewy nawias klamrowy w wierszu 1 rozpoczyna się inicjowanie `nlist[0]`, które jest tablicą trzy struktury. Trzy elementy członkowskie struktury pierwszego są przypisane wartości 1, 2 i 3. Po następnym nawias klamrowy zamykający napotkano (po wartość 3), inicjowanie `nlist[0]` zostanie zakończone, a dwie pozostałe struktury, w tablicy struktury trzy automatycznie jest inicjowana wartością 0. Podobnie `{ 4,5,6 }` inicjuje pierwszy struktury w drugim wierszu `nlist`. Pozostałe dwie struktury z `nlist[1]` są ustawione na 0. Gdy kompilator napotka na następnej liście inicjatora ( `{ 7,8,9 }` ), próbuje zainicjować `nlist[2]`. Ponieważ `nlist` ma tylko dwa wiersze, ta próba spowoduje wystąpienie błędu.
+W tej konstrukcji pierwszy lewy nawias klamrowy w wierszu 1 zaczyna inicjalizację `nlist[0]`, która jest tablicą trzech struktur. Wartości 1, 2 i 3 są przypisywane do trzech członków pierwszej struktury. Po napotkaniu następnego prawego nawiasu klamrowego (po wartości 3) Inicjalizacja `nlist[0]` jest zakończona, a dwie pozostałe struktury w tablicy z trzema strukturami są automatycznie inicjowane na wartość 0. Podobnie, `{ 4,5,6 }` inicjuje pierwszą strukturę w drugim `nlist`wierszu. Pozostałe dwie struktury `nlist[1]` są ustawione na 0. Gdy kompilator napotka następną listę inicjatora ( `{ 7,8,9 }` ), próbuje zainicjować. `nlist[2]` Ponieważ `nlist` ma tylko dwa wiersze, ta próba powoduje błąd.
 
-W tym przykładzie dalej trzy `int` członkowie `x` są inicjowane na wartość 1, 2 i 3, odpowiednio.
+W tym następnym przykładzie trzy `int` `x` elementy członkowskie są inicjowane odpowiednio do wartości 1, 2 i 3.
 
 ```C
 struct list
@@ -134,7 +134,7 @@ struct list
       };
 ```
 
-W `list` struktury powyżej, trzy elementy w pierwszym wierszu `m` są inicjowane na wartość 4.0; elementy pozostałe wiersza `m` są inicjowane na wartość 0,0 domyślnie.
+W powyższej `list` strukturze trzy elementy z pierwszego `m` wiersza są inicjowane do 4,0; elementy pozostałego wiersza `m` są domyślnie inicjowane do 0,0.
 
 ```C
 union
@@ -148,7 +148,7 @@ union
       };
 ```
 
-Zmienna złożenia `y`, w tym przykładzie jest zainicjowany. Pierwszy element Unii jest tablicą, więc inicjator jest inicjatorów agregacji. Na liście inicjatora `{'1'}` przypisuje wartości do pierwszego wiersza w tablicy. Ponieważ tylko jedną wartość pojawia się na liście, element w pierwszej kolumnie jest inicjowany do znaku `1`, a pozostałe dwa elementy w wierszu są inicjowane na wartość 0, domyślnie. Podobnie, pierwszy element drugiego wiersza `x` jest inicjowany do znaku `4`, a pozostałe dwa elementy w tym wierszu są inicjowane na wartość 0.
+W tym przykładzie `y`zmienna Union jest inicjowana. Pierwszy element Unii jest tablicą, więc inicjator jest inicjatorem agregującym. Lista `{'1'}` inicjatora przypisuje wartości do pierwszego wiersza tablicy. Ponieważ na liście jest wyświetlana tylko jedna wartość, element w pierwszej kolumnie jest inicjowany do znaku `1`, a pozostałe dwa elementy w wierszu są domyślnie inicjowane do wartości 0. Podobnie pierwszy element drugiego wiersza `x` jest inicjowany do znaku `4`, a pozostałe dwa elementy w wierszu są inicjowane do wartości 0.
 
 ## <a name="see-also"></a>Zobacz także
 

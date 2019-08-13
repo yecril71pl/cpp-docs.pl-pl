@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: d7a13b98ba8cff78839b2afb98371ffba5ced461
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 506ab5fccd44ad37a08a9f741f44f24d3a85b87d
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458336"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956996"
 ---
 # <a name="ltqueuegt"></a>&lt;niej&gt;
 
@@ -38,12 +38,6 @@ Definiuje klasy szablonów priority_queue i Queue oraz kilka szablonów pomocnic
 |[operator==](../standard-library/queue-operators.md#op_eq_eq)|Testuje, czy obiekt kolejki po lewej stronie operatora jest równy obiektowi kolejki po prawej stronie.|
 |[operator>](../standard-library/queue-operators.md#op_gt)|Testuje, czy obiekt kolejki po lewej stronie operatora jest większy niż obiekt kolejki po prawej stronie.|
 |[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Testuje, czy obiekt kolejki po lewej stronie operatora jest większy niż lub równy obiektowi kolejki po prawej stronie.|
-
-### <a name="functions"></a>Funkcje
-
-|||
-|-|-|
-|[swap]()||
 
 ### <a name="classes"></a>Klasy
 

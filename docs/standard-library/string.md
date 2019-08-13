@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459187"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957128"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -38,8 +38,8 @@ C++ Język i C++ standardowa biblioteka obsługują dwa typy ciągów:
 
 |Nazwa typu|Opis|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Typ, który opisuje specjalizację klasy `basic_string` szablonu z elementami typu  `string`char jako.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Typ, który opisuje specjalizację klasy `basic_string` szablonu z elementami typu  `wstring`wchar_t jako.|
+|[string](../standard-library/string-typedefs.md#string)|Typ, który opisuje specjalizację klasy `basic_string` szablonu z elementami typu `string`char jako.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Typ, który opisuje specjalizację klasy `basic_string` szablonu z elementami typu `wstring`wchar_t jako.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Typ, który opisuje specjalizację klasy `basic_string` szablonu na podstawie elementów typu. `char16_t`|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Typ, który opisuje specjalizację klasy `basic_string` szablonu na podstawie elementów typu. `char32_t`|
 
@@ -61,7 +61,7 @@ C++ Język i C++ standardowa biblioteka obsługują dwa typy ciągów:
 
 |||
 |-|-|
-|[skrótu]()||
+|hash|Tworzy skrót ciągu.|
 |[swap](../standard-library/string-functions.md#swap)|Wymienia tablice znaków dwóch ciągów.|
 |[stod](../standard-library/string-functions.md#stod)|Konwertuje sekwencję znaków na wartość typu **Double**.|
 |[stof](../standard-library/string-functions.md#stof)|Konwertuje sekwencję znaków na wartość **zmiennoprzecinkową**.|

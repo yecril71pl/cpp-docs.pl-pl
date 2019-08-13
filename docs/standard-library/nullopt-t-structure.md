@@ -1,23 +1,30 @@
 ---
-title: nullopt_t — struktura
-ms.date: 11/04/2016
+title: nullopt_t, struktura
+ms.date: 08/04/2019
 f1_keywords:
 - optional/std::nullopt_t
-ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-ms.openlocfilehash: 813a25fc7fa50460f251671c39c41c3d2a26a2e7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- optional/std::nullopt
+ms.openlocfilehash: 1f453a5d75de3f6dedb133d55c094a4f4274e08f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267905"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957042"
 ---
-# <a name="nulloptt-struct"></a>nullopt_t — struktura
+# <a name="nullopt_t-struct"></a>nullopt_t, struktura
 
-Typem pustą strukturą używany jako typ unikatowy do wskazania stanu nie zawiera wartości `optional` obiektów.
+Typ jest unikatowym, pustym typem używanym do wskazania, że obiekt opcjonalny nie zawiera wartości. [](optional-class.md) `nullopt_t`
+
+Stała `nullopt` typu `nullopt_t` wskazuje ,żetypmaniezainicjowanystan.`optional` Może służyć do inicjowania `optional` obiektu lub porównywania z jednym.
 
 ## <a name="syntax"></a>Składnia
 
 ```cpp
-struct nullopt_t{see below};
-inline constexpr nullopt_t nullopt(unspecified);
+struct nullopt_t;
+inline constexpr nullopt_t nullopt{ /*implementation-defined*/ };
 ```
+
+## <a name="see-also"></a>Zobacz także
+
+[\<> opcjonalne](optional.md)\
+[Klasa opcjonalna](optional-class.md)

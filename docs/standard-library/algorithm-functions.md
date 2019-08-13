@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661540"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956988"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;funkcje&gt; algorytmu
 
@@ -2244,7 +2244,7 @@ Algorytm `for_each` jest bardzo elastyczny, co umożliwia modyfikację każdego 
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w ramach sekwencji Ostatnia pozycja musi być osiągalna od pierwszej przez przyrost.
 
-Złożoność jest liniowa z najwyżej - (ostatnimi *)* porównaniami.
+Złożoność jest liniowa z najwyżej (*ostatnimi* - ) porównaniami.
 
 ### <a name="example"></a>Przykład
 
@@ -7646,7 +7646,7 @@ Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w 
 Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
 
 *Wyszukaj*\
-Program do wyszukiwania, który hermetyzuje wzorzec do wyszukania i algorytm wyszukiwania do użycia.
+Program do wyszukiwania, który hermetyzuje wzorzec do wyszukania i algorytm wyszukiwania do użycia. Aby uzyskać więcej informacji o wyszukiwarkach, zobacz klasy [default_searcher](default-searcher-class.md), [boyer_moore_horspool_searcher Class](boyer-moore-horspool-searcher-class.md)i [boyer_moore_searcher](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Wartość zwracana
 
