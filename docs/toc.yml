@@ -1124,16 +1124,7 @@
                 - name: Projekty NMAKE w programie Visual Studio
                   href: build/reference/creating-a-makefile-project.md
                 - name: Uruchomienie NMAKE
-                  expanded: false
-                  items:
-                    - name: Uruchomienie NMAKE
-                      href: build/reference/running-nmake.md
-                    - name: Opcje NMAKE
-                      href: build/reference/nmake-options.md
-                    - name: Tools.ini i NMAKE
-                      href: build/reference/tools-ini-and-nmake.md
-                    - name: Kody zakończenia z NMAKE
-                      href: build/reference/exit-codes-from-nmake.md
+                  href: build/reference/running-nmake.md
                 - name: Zawartość pliku reguł programu make
                   expanded: false
                   items:

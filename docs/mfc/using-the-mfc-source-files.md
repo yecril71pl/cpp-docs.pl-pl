@@ -11,22 +11,22 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-ms.openlocfilehash: ac8d8ea64de9fd93487b3108857669931e31d0be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f23f792f750e4352494bf3e4bde08f0fe360439
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411464"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980486"
 ---
 # <a name="using-the-mfc-source-files"></a>Korzystanie z plików źródłowych MFC
 
-Biblioteka Microsoft Foundation Class (MFC) dostarcza pełny kod źródłowy. Pliki nagłówkowe (.h) znajdują się w katalogu \atlmfc\include. pliki implementacji (.cpp) znajdują się w katalogu \atlmfc\src\mfc.
+Biblioteka Microsoft Foundation Class (MFC) oferuje pełny kod źródłowy. Pliki nagłówkowe (. h) znajdują się w katalogu \atlmfc\include; Pliki implementacji (. cpp) znajdują się w katalogu \atlmfc\src\mfc.
 
-Tej rodziny artykułów opisano konwencje, używane przez MFC do komentarzy z różnymi częściami usługi każdej klasy, co oznaczają te komentarze i czego oczekiwać można znaleźć w każdej sekcji. Kreatorów Visual C++ Użyj podobne konwencje dla klas, które tworzą dla Ciebie, a użytkownik będzie prawdopodobnie przydatne tych konwencji własnego kodu.
+W tej rodzinie artykułów objaśniono konwencje, które są używane przez MFC do komentowania różnych części każdej klasy, co oznaczają te komentarze i czego należy oczekiwać w każdej sekcji. Kreatorzy C++ wizualizacji używają podobnych Konwencji dla klas, które tworzy dla Ciebie, i prawdopodobnie te konwencje będą przydatne dla własnego kodu.
 
-Można zapoznać się z **publicznych**, **chronione**, i **prywatnej** słów kluczowych języka C++. Podczas wyszukiwania w plikach nagłówkowych MFC, znajdzie się, że każda klasa może mieć kilka z nich. Na przykład może być publicznego elementu członkowskiego zmiennych i funkcji w obszarze więcej niż jeden **publicznych** — słowo kluczowe. Jest to spowodowane MFC oddziela zmienne Członkowskie i funkcje w zależności od ich użycia, nie przez typ dostępu przyznany. MFC wykorzystuje **prywatnej** oszczędnie; nawet elementy uważane za szczegółów implementacji ogólnie są chronione oraz wiele razy były publiczne. Chociaż dostęp do szczegółów implementacji nie zaleca się, MFC pozostawia decyzji dla Ciebie.
+Być może znasz **publiczne**, **chronione**i **prywatne** C++ słowa kluczowe. W plikach nagłówkowych MFC każda klasa może zawierać kilka z nich. Na przykład publiczne zmienne składowe i funkcje mogą znajdować się w więcej niż jednym **publicznym** słowie kluczowym. Jest to spowodowane tym, że MFC oddziela zmienne składowe i funkcje na podstawie ich użycia, a nie typu dostępu, który jest dozwolony. MFC zużywa oszczędne różnice. Nawet elementy uznawane za szczegóły implementacji są często **chronione**i wiele razy są **publiczne**. Chociaż dostęp do szczegółów implementacji nie jest odradzany, MFC nie opuszcza tej decyzji.
 
-W plikach źródłowych MFC i plików tworzonych przez Kreatora aplikacji MFC można znaleźć komentarze, takie jak te w obrębie deklaracji klasy (zwykle w tej kolejności):
+Zarówno w przypadku plików źródłowych MFC, jak i plików nagłówkowych tworzonych przez Kreatora aplikacji MFC, znajdziesz Komentarze takie jak te, które znajdują się w deklaracjach klas (zwykle w tej kolejności):
 
 `// Constructors`
 
@@ -38,19 +38,19 @@ W plikach źródłowych MFC i plików tworzonych przez Kreatora aplikacji MFC mo
 
 `// Implementation`
 
-Tematy omówione w tej rodzinie artykuły obejmują:
+Tematy omówione w tej rodzinie artykułów obejmują:
 
 - [Przykład komentarzy](../mfc/an-example-of-the-comments.md)
 
-- [/ / Komentarz dotyczący implementacji](../mfc/decrement-implementation-comment.md)
+- [Komentarz//implementacji](../mfc/decrement-implementation-comment.md)
 
-- [/ / Komentarz dotyczący konstruktorów](../mfc/decrement-constructors-comment.md)
+- [Komentarz//konstruktory](../mfc/decrement-constructors-comment.md)
 
-- [/ / Atrybuty komentarz](../mfc/decrement-attributes-comment.md)
+- [Komentarz//atrybuty](../mfc/decrement-attributes-comment.md)
 
-- [/ / Komentarz dotyczący operacji](../mfc/decrement-operations-comment.md)
+- [Komentarz operacji//](../mfc/decrement-operations-comment.md)
 
-- [/ / / / Overridables komentarz](../mfc/decrement-overridables-comment.md)
+- [Komentarz//— zażądane](../mfc/decrement-overridables-comment.md)
 
 ## <a name="see-also"></a>Zobacz także
 

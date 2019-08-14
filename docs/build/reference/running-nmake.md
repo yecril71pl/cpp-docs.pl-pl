@@ -1,6 +1,6 @@
 ---
 title: Uruchomienie NMAKE
-ms.date: 09/05/2018
+ms.date: 08/11/2019
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,32 +10,68 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: dac5e9c1676278d150dd9802697a8ae8959a40e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc274190b64d5340aaac5de594931d4a5333a8c0
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318528"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980508"
 ---
 # <a name="running-nmake"></a>Uruchomienie NMAKE
 
 ## <a name="syntax"></a>Składnia
 
-> **NMAKE** [*opcji* ...] [*makra* ...] [*cele* ...] [**\@**<em>commandfile</em> ...]
+> **NMAKE** [*opcja* ...] [*makra* ...] [*elementy docelowe* ...] [ **\@** _plik polecenia_ ...]
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilacje NMAKE określony tylko *cele* albo, jeśli nie zostanie określona, pierwszy w pliku reguł programu make. Pierwszy element docelowy pliku reguł programu make może być [pseudotarget](pseudotargets.md) opiera się innych celów. NMAKE używa plików reguł programu make określony za pomocą /F; Jeśli /F nie zostanie określony, zostanie użyta plik pliku reguł programu make w bieżącym katalogu. Jeśli określono nie pliku reguł programu make, używa reguły wnioskowania Tworzenie wiersza polecenia *cele*.
+NMAKE kompiluje tylko określone *elementy docelowe* lub, jeśli żadna nie jest określona, pierwszy element docelowy w pliku reguł programu make. Pierwszy obiekt docelowy pliku reguł programu make może być [pseudotarget](pseudotargets.md) , który kompiluje inne elementy docelowe. NMAKE używa plików reguł programu make określonych za pomocą **/f**lub jeśli **/f** nie jest określony, plik reguł programu make w bieżącym katalogu. Jeśli plik reguł programu make nie zostanie określony, używa reguł wnioskowania do kompilowania *obiektów docelowych*wiersza polecenia.
 
-*Commandfile* plik tekstowy (lub pliku odpowiedzi) zawiera dane wejściowe wiersza polecenia. Inne dane wejściowe mogą poprzedzających lub następnych \@ *commandfile*. Ścieżka jest dozwolone. W *commandfile*, podziały wierszy są traktowane jako miejsca do magazynowania. Definicje makr należy ująć w znaki cudzysłowu, gdy miejsca do magazynowania.
+Plik tekstowy *pliku polecenia* (lub plik odpowiedzi) zawiera dane wejściowe wiersza polecenia. Inne dane wejściowe mogą poprzedzać \@lub stosować *plik poleceń*. Ścieżka jest dozwolona. W *pliku poleceń*podziały wierszy są traktowane jako spacje. Należy ująć definicje makr w cudzysłowy, jeśli zawierają one spacje.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="nmake-options"></a>Opcje NMAKE
 
-[Opcje NMAKE](nmake-options.md)
+Opcje NMAKE są opisane w poniższej tabeli. Opcje są poprzedzone znakiem ukośnika (`/`) lub kreską (`-`) i nie jest rozróżniana wielkość liter. Służy [`!CMDSWITCHES`](makefile-preprocessing-directives.md) do zmiany ustawień opcji w pliku reguł programu make lub pliku Tools. ini.
 
-[Tools.ini i NMAKE](tools-ini-and-nmake.md)
+| Opcja | Cel |
+| ------------ | ------------- |
+| **/A** | Wymusza kompilację wszystkich ocenionych elementów docelowych nawet wtedy, gdy nie są one nieaktualne w porównaniu do elementów zależnych. Nie wymusza kompilacji niepowiązanych elementów docelowych. |
+| **/B** | Wymusza kompilację, nawet jeśli sygnatury czasowe są równe. Zalecane tylko w przypadku bardzo szybkich systemów (rozdzielczość co najmniej dwa sekundy). |
+| **/C** | Pomija domyślne dane wyjściowe, w tym niekrytyczne Błędy NMAKE lub ostrzeżenia, sygnatury czasowe i wiadomości o prawach autorskich NMAKE. Pomija ostrzeżenia wystawione przez **/k**. |
+| **/D** | Wyświetla sygnatury czasowe każdego ocenianego elementu docelowego, zależnie i komunikat, gdy element docelowy nie istnieje. Przydatne w przypadku opcji **/p** dla debugowania pliku reguł programu make. Służy `!CMDSWITCHES` do ustawiania lub czyszczenia wartości **/d** dla części pliku reguł programu make. |
+| **/E** | Powoduje, że zmienne środowiskowe przesłaniają definicje makr pliku reguł programu make. |
+| **/ERRORREPORT** [ **BRAK** &#124; **MONITU O POTWIERDZENIE** &#124; **KOLEJKI** &#124; ] | Jeśli NMAKE. exe kończy się niepowodzeniem w czasie wykonywania, można użyć **/errorreport** do wysłania informacji o tych błędach wewnętrznych do firmy Microsoft.<br /><br /> Aby uzyskać więcej informacji, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](errorreport-report-internal-compiler-errors.md). |
+| **/F** *Nazwa pliku* | Określa *nazwę pliku* jako plik reguł programu make. Spacje lub tabulatory mogą poprzedzać *nazwę pliku*. Określ **/f** jednokrotnie dla każdego pliku reguł programu make. Aby dostarczyć plik reguł programu make ze standardowego wejścia, należy określić`-`kreskę () dla *nazwy pliku*i kończyć wprowadzanie klawiatury z **klawiszem F6** lub **Ctrl + z**. |
+| **/G** | Wyświetla listę plików reguł programu make uwzględnioną `!INCLUDE` w dyrektywie. Aby uzyskać więcej informacji, zobacz [dyrektywy wstępnego przetwarzania plików reguł programu make](makefile-preprocessing-directives.md). |
+| **/HELP**, **/?** | Wyświetla krótkie podsumowanie składni wiersza polecenia NMAKE. |
+| **/I** | Ignoruje kody zakończenia ze wszystkich poleceń. Aby ustawić lub wyczyścić polecenie **/i** dla części pliku reguł programu make `!CMDSWITCHES`, użyj. Aby zignorować kody zakończenia dla części pliku reguł programu make, użyj modyfikatora`-`poleceń kreski ( [`.IGNORE`](dot-directives.md)) lub. Przesłanias **/k** , jeśli oba są określone. |
+| **/K** | Kontynuuje Tworzenie niepowiązanych zależności, jeśli polecenie zwróci błąd. Generuje również ostrzeżenie i zwraca kod zakończenia 1. Domyślnie NMAKE zatrzymuje się, Jeśli dowolne polecenie zwróci kod zakończenia różny od zera. Ostrzeżenia z **/k** są pomijane przez **/c**; **/I** przesłania **/k** , jeśli oba są określone. |
+| **/N** | Wyświetla, ale nie wykonuje poleceń; polecenia przetwarzania wstępnego są wykonywane. Nie wyświetla poleceń w cyklicznych wywołaniach NMAKE. Przydatne do debugowania plików reguł programu make i sprawdzania sygnatur czasowych. Aby ustawić lub wyczyścić **/n** dla części pliku reguł programu make, `!CMDSWITCHES`Użyj. |
+| **/NOLOGO** | Pomija komunikat o prawach autorskich NMAKE. |
+| **/P** | Wyświetla informacje (definicje makr, reguły wnioskowania, elementy docelowe [`.SUFFIXES`](dot-directives.md) , lista) do wyjścia standardowego, a następnie uruchamia kompilację. Jeśli nie istnieje plik reguł programu make lub wiersza polecenia, zawiera on tylko informacje. Użyj parametru **/d** , aby debugować plik reguł programu make. |
+| **PARAMETRU** | Sprawdza sygnatury czasowe obiektów docelowych; nie uruchamia kompilacji. Zwraca zerowy kod zakończenia, jeśli wszystkie elementy docelowe są aktualne, a niezerowy kod zakończenia, jeśli którykolwiek element docelowy jest nieaktualny. Polecenia przetwarzania wstępnego są wykonywane. Przydatne podczas uruchamiania NMAKE z pliku wsadowego. |
+| **/R** | `.SUFFIXES` Czyści listę i ignoruje reguły wnioskowania i makra, które są zdefiniowane w pliku Tools. ini lub wstępnie zdefiniowane. |
+| **/S** | Pomija wyświetlanie wykonanych poleceń. Aby pominąć wyświetlanie w części pliku reguł programu make, użyj **\@** modyfikatora polecenia [`.SILENT`](dot-directives.md)lub. Aby ustawić lub wyczyścić **/s** dla części pliku reguł programu make, `!CMDSWITCHES`Użyj. |
+| **/T** | Aktualizuje sygnatury czasowe obiektów docelowych wiersza polecenia (lub pierwszy element docelowy pliku reguł programu make) i wykonuje polecenia przetwarzania wstępnego, ale nie uruchamia kompilacji. |
+| **/U** | Musi być używany w połączeniu z **/n**. Wykonuje zrzuty wbudowanych plików NMAKE, aby **/n** dane wyjściowe mogły być używane jako plik wsadowy. |
+| **/X** *Nazwa pliku* | Wysyła dane wyjściowe błędu NMAKE do *nazwy pliku* zamiast standardowego błędu. Spacje lub tabulatory mogą poprzedzać *nazwę pliku*. Aby wysłać dane wyjściowe z błędami do wyjścia standardowego, należy`-`określić kreskę () dla *nazwy pliku*. Nie ma wpływu na dane wyjściowe z poleceń na błąd standardowy. |
+| **/Y** | Wyłącza reguły wnioskowania w trybie wsadowym. Po wybraniu tej opcji wszystkie reguły wnioskowania w trybie wsadowym są traktowane jak regularne reguły wnioskowania. |
 
-[Kody zakończenia z NMAKE](exit-codes-from-nmake.md)
+## <a name="toolsini-and-nmake"></a>Tools.ini i NMAKE
+
+NMAKE odczytuje pliki Tools. ini przed odczytem plików reguł programu make, chyba że **/r** jest używany. Szuka najpierw pliku Tools. ini w bieżącym katalogu, a następnie w katalogu określonym przez zmienną środowiskową INIT. Sekcja dla ustawień NMAKE w pliku inicjującym rozpoczyna się od `[NMAKE]` i może zawierać wszelkie informacje dotyczące pliku reguł programu make. Określ komentarz w osobnym wierszu zaczynający się od znaku numeru (`#`).
+
+## <a name="exit-codes-from-nmake"></a>Kody zakończenia z NMAKE
+
+NMAKE zwraca następujące kody zakończenia:
+
+| Kod | Znaczenie |
+| ---------- | ------------- |
+| 0 | Brak błędu (prawdopodobnie ostrzeżenie) |
+| 1 | Niekompletna kompilacja (wystawiona tylko wtedy, gdy jest używana **/k** ) |
+| 2 | Błąd programu, prawdopodobnie spowodowany przez jeden z następujących problemów:<br /> -Błąd składniowy w pliku reguł programu make<br /> -Błąd lub kod zakończenia z polecenia<br /> -Przerwanie przez użytkownika |
+| 4 | Błąd systemu — za mało pamięci |
+| 255 | Element docelowy jest nieaktualny (wystawiony tylko wtedy, gdy jest używany **/q** ) |
 
 ## <a name="see-also"></a>Zobacz także
 
