@@ -1,5 +1,5 @@
 ---
-title: Plik typy utworzone dla programu Visual Studio C++ projektów
+title: Typy plików utworzone dla projektów programu C++ Visual Studio
 ms.date: 04/08/2019
 helpviewer_keywords:
 - header files [C++], Visual Studio projects
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 42040854b7a038ebe32d67e305c947d095d5391a
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446286"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492873"
 ---
-# <a name="file-types-created-for-visual-studio-c-projects"></a>Typy plików utworzonych dla projektów języka C++ w programie Visual Studio
+# <a name="file-types-created-for-visual-studio-c-projects"></a>Typy plików utworzone dla projektów programu C++ Visual Studio
 
-Wiele typów plików są skojarzone z projektów programu Visual Studio dla klasycznych aplikacji klasycznych. Rzeczywiste pliki zawarte w projekcie są zależne od typu projektu i opcje wybrane w przypadku korzystania z kreatora.
+Wiele typów plików jest skojarzonych z projektami programu Visual Studio dla klasycznej aplikacji klasycznych. Rzeczywiste pliki zawarte w projekcie zależą od typu projektu i opcji wybranych podczas korzystania z kreatora.
 
 - [Pliki projektu i rozwiązania](project-and-solution-files.md)
 
@@ -41,57 +41,57 @@ Wiele typów plików są skojarzone z projektów programu Visual Studio dla klas
 
 - [Pliki wskazówek](hint-files.md)
 
-Podczas tworzenia projektu programu Visual Studio, można je utworzyć w nowym rozwiązaniu lub można dodać projektu do istniejącego rozwiązania. Aplikacje inne niż prosta często są tworzone z użyciem wielu projektów w rozwiązaniu.
+Podczas tworzenia projektu programu Visual Studio można go utworzyć w nowym rozwiązaniu lub dodać projekt do istniejącego rozwiązania. Aplikacje inne niż proste są zwykle opracowywane z wieloma projektami w rozwiązaniu.
 
-Projekty zazwyczaj generuje pliku EXE lub DLL. Projekty mogą być zależne od siebie; podczas procesu kompilacji w środowisku Visual Studio sprawdza zależności w obrębie i między projektami. Każdy projekt ma zwykle core kodu źródłowego. W zależności od rodzaju projektu może mieć wiele plików zawierających różne aspekty projektu. Zawartość tych plików są wskazywane przez rozszerzenie pliku. Środowiska programistycznego Visual Studio używa rozszerzeń plików, aby określić sposób obsługi zawartość pliku podczas kompilacji.
+Projekty zwykle tworzą plik EXE lub DLL. Projekty mogą być od siebie zależne. w trakcie procesu kompilacji środowisko programu Visual Studio sprawdza zależności zarówno wewnątrz, jak i między projektami. Każdy projekt ma zwykle podstawowy kod źródłowy. W zależności od rodzaju projektu może istnieć wiele innych plików zawierających różne aspekty projektu. Zawartość tych plików jest wskazywana przez rozszerzenie pliku. Środowisko programistyczne programu Visual Studio używa rozszerzeń plików, aby określić, jak obsłużyć zawartość pliku podczas kompilacji.
 
-Poniższa tabela zawiera wspólne pliki w projekcie programu Visual Studio i identyfikuje ich za pomocą ich rozszerzenia pliku.
+W poniższej tabeli przedstawiono typowe pliki w projekcie programu Visual Studio i są one identyfikowane przy użyciu rozszerzenia pliku.
 
 |Rozszerzenie pliku|Typ|Spis treści|
 |--------------------|----------|--------------|
-|asmx|Source|Plik wdrożenia.|
-|ASP|Source|Aktywny plik strony serwera.|
-|.ATP|Projekt|Plik projektu szablonu aplikacji.|
-|.bmp, .dib, .gif, .jpg, .jpe, .png|Zasób|Pliki obrazów ogólne.|
-|.BSC|Kompilowanie|Plik kodu przeglądarki.|
-|.cpp, .c|Source|Pliki kodu źródłowego główne dla twojej aplikacji.|
-|.CUR|Zasób|Plik graficzny mapy bitowej kursora.|
+|. asmx|Source|Plik wdrożenia.|
+|. ASP|Source|Plik stronicowania Active Server.|
+|. ATP|Projekt|Plik projektu szablonu aplikacji.|
+|BMP, DIB, GIF, jpg,. jpe,. png|Zasób|Ogólne pliki obrazów.|
+|. bsc|Tworzenie|Plik kodu przeglądarki.|
+|. cpp,. c|Source|Główne pliki kodu źródłowego aplikacji.|
+|. CUR|Zasób|Plik graficzny kursora mapy bitowej.|
 |.dbp|Projekt|Plik projektu bazy danych.|
-|.disco|Source|Dynamiczne odnajdowanie plik dokumentu. Obsługuje odnajdowania usług XML sieci Web.|
-|.exe, .dll|Projekt|Pliki wykonywalne lub dołączanej biblioteki.|
-|.h|Source|Nagłówek (Dołącz) pliku.|
-|htm, HTML, .xsp, .asp, .htc, HTA, .xml|Zasób|Wspólne pliki sieci Web.|
+|.disco|Source|Plik dokumentu odnajdywania dynamicznego. Obsługuje odnajdywanie usług sieci Web XML.|
+|.exe, .dll|Projekt|Pliki bibliotek wykonywalnych lub dynamicznych.|
+|. h|Source|Plik nagłówka (include).|
+|. htm,. html,. XSP,. ASP,. HTC,. hta,. XML|Zasób|Wspólne pliki sieci Web.|
 |.HxC|Projekt|Plik projektu pomocy.|
 |.ico|Zasób|Plik graficzny mapy bitowej ikony.|
-|.idb|Kompilowanie|Plik stanu, zawierający informacje o zależnościach między plikami źródłowymi a definicje klas. Może służyć przez kompilator podczas kompilacji przyrostowej. Użyj [/Fd](fd-program-database-file-name.md) opcję kompilatora, aby określić nazwę pliku .idb.|
-|.IDL|Kompilowanie|Plik języka definicji interfejsu. Aby uzyskać więcej informacji, zobacz [plik definicji interfejsu (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) w zestawie Windows SDK.|
-|.ilk|Konsolidacja|Plik konsolidowania przyrostowego. Aby uzyskać więcej informacji, zobacz [/INCREMENTAL](incremental-link-incrementally.md).|
-|map|Konsolidacja|Plik tekstowy zawierający informacje o konsolidatora. Użyj [/Fm](fm-name-mapfile.md) — opcja kompilatora nazwę pliku mapy. Aby uzyskać więcej informacji, zobacz [/MAP](map-generate-mapfile.md).|
-|.mfcribbon-ms|Zasób|Plik zasobu, który zawiera kod XML definiujący przyciski MFC, formanty i atrybuty na Wstążce. Aby uzyskać więcej informacji, zobacz [projektanta wstążki](../../mfc/ribbon-designer-mfc.md).|
-|.obj, .o||Pliki obiektów, skompilowany, ale nie jest połączona.|
-|.pch|Debugowanie|Prekompilowany plik nagłówkowy.|
-|.RC, .rc2|Zasób|[Pliki skryptów zasobów](../../windows/working-with-resource-files.md) by wygenerować zasoby.|
-|.sbr|Kompilowanie|Plik pośredni przeglądarki źródeł. Plik wejściowy dla [BSCMAKE](bscmake-options.md).|
-|.sln|Rozwiązanie|[Rozwiązania](/visualstudio/ide/solutions-and-projects-in-visual-studio) pliku.|
-|.suo|Rozwiązanie|Opcje pliku rozwiązania.|
-|.txt|Zasób|Plik tekstowy, zwykle w pliku "readme".|
-|.VAP|Projekt|Plik projektu programu Visual Studio Analyzer.|
-|.vbg|Rozwiązanie|Plik grupy projektów zgodny.|
-|.vbp, .vip, .vbproj|Projekt|Plik projektu języka Visual Basic.|
-|.vcxitems|Projekt|Udostępniane elementy projektu do udostępniania plików kodu między wiele projektów w języku C++. Aby uzyskać więcej informacji, zobacz [pliki projektu i rozwiązania](project-and-solution-files.md).|
-|.vcxproj|Projekt|Plik projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pliki projektu i rozwiązania](project-and-solution-files.md).|
-|.vcxproj.filters|Projekt|Używany, gdy używasz Eksploratora rozwiązań, aby dodać plik do projektu. Plik filtrów definiuje miejsce, w widoku drzewa Eksploratora rozwiązań, aby dodać plik, na podstawie jego rozszerzenia nazwy pliku.|
+|. IDB|Tworzenie|Plik stanu zawierający informacje o zależnościach między plikami źródłowymi i definicjami klas. Może być używany przez kompilator podczas kompilacji przyrostowej. Użyj opcji kompilatora [/FD](fd-program-database-file-name.md) , aby określić nazwę pliku. IDB.|
+|. idl|Tworzenie|Plik języka definicji interfejsu. Aby uzyskać więcej informacji, zobacz [plik definicji interfejsu (IDL)](/windows/win32/Rpc/the-interface-definition-language-idl-file) w Windows SDK.|
+|. ilk|Konsolidacja|Przyrostowy plik linku. Aby uzyskać więcej informacji, zobacz [/Incremental](incremental-link-incrementally.md).|
+|. map|Konsolidacja|Plik tekstowy zawierający informacje konsolidatora. Użyj opcji kompilatora [/FM](fm-name-mapfile.md) , aby nazwać plik mapy. Aby uzyskać więcej informacji, zobacz [/map](map-generate-mapfile.md).|
+|.mfcribbon-ms|Zasób|Plik zasobów zawierający kod XML, który definiuje przyciski MFC, kontrolki i atrybuty na Wstążce. Aby uzyskać więcej informacji, zobacz [Projektant wstążki](../../mfc/ribbon-designer-mfc.md).|
+|. obj,. o||Pliki obiektów, skompilowane, ale niepołączone.|
+|. PCH|Debugowanie|Prekompilowany plik nagłówkowy.|
+|. RC,. RC2|Zasób|[Pliki skryptów zasobów](../../windows/working-with-resource-files.md) do generowania zasobów.|
+|.sbr|Tworzenie|Plik pośredni przeglądarki źródłowej. Plik wejściowy dla [BSCMAKE](bscmake-options.md).|
+|.sln|Rozwiązanie|Plik [rozwiązania](/visualstudio/ide/solutions-and-projects-in-visual-studio) .|
+|.suo|Rozwiązanie|Plik opcji rozwiązania.|
+|. txt|Zasób|Plik tekstowy, zazwyczaj plik Readme.|
+|.vap|Projekt|Plik projektu Analizator programu Visual Studio.|
+|.vbg|Rozwiązanie|Zgodny plik grupy projektu.|
+|. VBP,. VIP,. vbproj|Projekt|Plik projektu Visual Basic.|
+|. vcxitems|Projekt|Projekt elementów udostępnionych do udostępniania plików kodu między wieloma C++ projektami. Aby uzyskać więcej informacji, zobacz [pliki projektu i rozwiązania](project-and-solution-files.md).|
+|. vcxproj|Projekt|Plik projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pliki projektu i rozwiązania](project-and-solution-files.md).|
+|. vcxproj. filters|Projekt|Używany do dodawania pliku do projektu przy użyciu Eksplorator rozwiązań. Plik filtrów definiuje, gdzie w widoku drzewa Eksplorator rozwiązań dodać plik, na podstawie jego rozszerzenia nazwy pliku.|
 |.vdproj|Projekt|Plik projektu wdrożenia programu Visual Studio.|
-|.vmx|Projekt|Makro pliku projektu.|
-|.vup|Projekt|Narzędzie do pliku projektu.|
+|. vmx|Projekt|Plik projektu makra.|
+|.vup|Projekt|Plik projektu narzędzia.|
 
-Aby uzyskać informacji na temat innych plików skojarzonych z programem Visual Studio, zobacz [typy plików i rozszerzenia plików w programie Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
+Aby uzyskać informacje dotyczące innych plików skojarzonych z programem Visual Studio, zobacz [typy plików i rozszerzenia plików w programie Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
-Pliki projektu są zorganizowane w foldery w Eksploratorze rozwiązań. Program Visual Studio tworzy folder dla plików źródłowych, pliki nagłówkowe i pliki zasobów, ale można zreorganizować tych folderów lub utworzyć nowe. Za pomocą folderów do organizowania jawnie logiczne klastrów pliki znajdujące się w hierarchii projektu. Na przykład można utworzyć foldery, aby zawierała wszystkich użytkowników interfejsu plików źródłowych. I foldery do specyfikacji, dokumentacji i zestawów testów. Wszystkie nazwy folderu plików powinny być unikatowe.
+Pliki projektu są zorganizowane w foldery w Eksplorator rozwiązań. Program Visual Studio tworzy folder dla plików źródłowych, plików nagłówkowe i plików zasobów, ale można zreorganizować te foldery lub utworzyć nowe. Folderów można używać do organizowania jawnie logicznych klastrów plików w hierarchii projektu. Można na przykład utworzyć foldery zawierające wszystkie pliki źródłowe interfejsu użytkownika. Lub foldery specyfikacji, dokumentacji lub zestawów testów. Wszystkie nazwy folderów plików powinny być unikatowe.
 
-Po dodaniu elementu do projektu, należy dodać element do wszystkie konfiguracje dla tego projektu. Element jest dodawany, czy jest on możliwej do skompilowania czy nie. Na przykład jeśli masz projekt o nazwie MyProject, dodanie elementu dodaje go do obu Debug i Release konfiguracje projektu.
+Po dodaniu elementu do projektu, Dodaj element do wszystkich konfiguracji dla tego projektu. Element jest dodawany niezależnie od tego, czy jest możliwe do skompilowania. Na przykład jeśli masz projekt o nazwie Moje projekty, dodanie elementu powoduje dodanie go do konfiguracji projektu Debug i Release.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Tworzenie i zarządzanie projektami Visual Studio C++](../creating-and-managing-visual-cpp-projects.md)<br>
-[Typy projektów C++ w programie Visual Studio](visual-cpp-project-types.md)<br>
+[Tworzenie projektów programu Visual Studio C++ i zarządzanie nimi](../creating-and-managing-visual-cpp-projects.md)<br>
+[Typy projektów C++ programu Visual Studio](visual-cpp-project-types.md)<br>
