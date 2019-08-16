@@ -1587,7 +1587,7 @@
     - name: 'Przewodnik: Tworzenie aplikacji klasycznych systemu Windows'
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Kreator aplikacji klasycznej systemu Windows
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Biblioteka aktywnych szablonów (Active Template Library — ATL)
       href: atl/
     - name: Microsoft Foundation Classes (MFC)
@@ -1607,10 +1607,6 @@
               items:
                 - name: Data i godzina — przegląd
                   href: atl-mfc-shared/date-and-time.md
-                - name: 'Data i godzina: obsługa automatyzacji'
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: 'Data i godzina: obsługa bazy danych'
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: 'DATE, typ'
                   href: atl-mfc-shared/date-type.md
             - name: Ciągi (ATL-MFC)
@@ -2888,6 +2884,8 @@
 - name: Tematy pomocy
   expanded: false
   items:
+    - name: Biblioteki języka C/C++ i standardowe
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: Dokumentacja języków
       expanded: false
       items:
