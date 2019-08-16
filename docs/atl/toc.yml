@@ -240,7 +240,7 @@
             - name: Tworzenie skryptów rejestratora
               href: creating-registrar-scripts.md
             - name: Opis składni notacji Backusa-Naura (BNF)
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: Opis drzew analizy
               href: understanding-parse-trees.md
             - name: Przykłady skryptów rejestru
