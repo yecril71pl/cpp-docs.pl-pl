@@ -2,72 +2,72 @@
 title: 'Przewodnik przenoszenia: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451123"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511661"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Spy++
 
-To przenoszenia analiza przypadku jest przeznaczona do daje wyobrażenie o jakie typowym projekcie przenoszenia jest podobna, jakiego rodzaju problemy mogą wystąpić i pewne ogólne porady i wskazówki dotyczące przenoszenia problemów adresowania. Ma nie należy traktować jako ostateczny przewodnik do przenoszenia, ponieważ środowisko Eksportowanie projektu zależy od bardzo szczegółowe informacje na temat kodu.
+Ta analiza przypadku portów została zaprojektowana z myślą o tym, co jest typowym projektem portów, rodzajami problemów, które mogą wystąpić, a także z niektórymi ogólnymi wskazówkami i wskazówki dotyczące rozwiązywania problemów z portami. Nie jest to jednak ostateczny Przewodnik dotyczący przenoszenia, ponieważ środowisko przenoszenia projektu jest zależne od konkretnego kodu.
 
 ## <a name="spy"></a>Spy++
 
-Spy ++ to powszechnie używane narzędzie diagnostyczne graficznego interfejsu użytkownika dla pulpitu Windows, który udostępnia wszelkiego rodzaju informacji na temat elementów interfejsu użytkownika na pulpicie Windows. Pokazuje kompletny hierarchii systemu windows i zapewnia dostęp do metadanych dotyczących każdego okna i kontroli. Ta aplikacja przydatne zostało wysłane z programem Visual Studio przez wiele lat. Znaleziono starą wersję go ostatnio został skompilowany w Visual C++ 6.0 i przenieść go do programu Visual Studio 2015. Środowisko programu Visual Studio 2017 powinny być prawie identyczne.
+Program Spy + + jest szeroko używanym graficznym interfejsem użytkownika narzędzia diagnostycznego dla pulpitu systemu Windows, który udostępnia wszystkie informacje o elementach interfejsu użytkownika na pulpicie systemu Windows. Pokazuje kompletną hierarchię systemu Windows i zapewnia dostęp do metadanych każdego okna i kontroli. Ta przydatna aplikacja jest dostarczana z programem Visual Studio przez wiele lat. Znaleźliśmy starą wersję, która była ostatnio skompilowana w programie Visual C++ 6,0 i przeprowadzono jej port do programu visual Studio 2015. Środowisko dla programu Visual Studio 2017 powinno być niemal identyczne.
 
-Firma Microsoft uważa za takim być typowe eksportowaniu aplikacje pulpitu Windows, które używają MFC i Win32 API, szczególnie w przypadku starych projektów, które nie były aktualizowane wraz z każdą wersją programu Visual C++ od Visual C++ 6.0.
+Uważamy, że jest to typowe dla portów aplikacji klasycznych systemu Windows korzystających z MFC i Win32 API, szczególnie w przypadku starych projektów, które nie zostały zaktualizowane przy użyciu poszczególnych C++ wersji wizualizacji od Visual C++ 6,0.
 
-##  <a name="convert_project_file"></a> Krok 1. Konwertowanie pliku projektu.
+##  <a name="convert_project_file"></a>Krok 1. Konwertowanie pliku projektu.
 
-Plik projektu dwóch stare pliki .dsw z Visual C++ 6.0, łatwo przekonwertować bez problemów wymagających dalszej uwagi. Jeden projekt jest aplikacją programu Spy ++. Druga to SpyHk, napisany w języku C, obsługi biblioteki DLL. Bardziej złożone projekty nie może uaktualnić równie łatwo, zgodnie z opisem [tutaj](../porting/visual-cpp-porting-and-upgrading-guide.md).
+Plik projektu, dwa stare pliki DSW z programu Visual C++ 6,0, można łatwo skonwertować bez problemów, które wymagają dalszej uwagi. Jeden projekt jest aplikacją programu Spy + +. Druga to SpyHk, zapisywana w C, Pomocnicza biblioteka DLL. Bardziej złożone projekty mogą nie zostać uaktualnione tak szybko, jak opisano [tutaj](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
-Po uaktualnieniu dwa projekty Nasze rozwiązanie zapoznaniu się następująco:
+Po uaktualnieniu dwóch projektów nasze rozwiązanie wygląda następująco:
 
-![Szpieguj&#43; &#43; rozwiązania](../porting/media/spyxxsolution.PNG "Spy&#43; &#43; rozwiązania")
+![Rozwiązanie&#43; &#43; ]rozwiązanie(../porting/media/spyxxsolution.PNG "Spy&#43; &#43; ")
 
-Firma Microsoft ma dwa projekty, jeden z dużą liczbą plików języka C++, a drugi biblioteki DLL, który jest zapisywany w C.
+Mamy dwa projekty, jeden z dużą liczbą C++ plików, a inna dll, która jest zapisywana w C.
 
-##  <a name="header_file_problems"></a> Krok 2. Problemy pliku nagłówka
+##  <a name="header_file_problems"></a>Krok 2. Problemy z plikiem nagłówka
 
-Podczas tworzenia nowo przekonwertowanego projektu, jedną z pierwszych czynności, które często okazuje się, nie znaleziono plików nagłówkowych, które używa projekt.
+Po utworzeniu nowo przekonwertowanego projektu jedną z pierwszych rzeczy, które często się znajdują, jest to, że nie można odnaleźć plików nagłówkowych używanych przez projekt.
 
-Jeden z plików, których nie można znaleźć w programie Spy ++ był verstamp.h. Z wyszukiwania w Internecie Ustaliliśmy, to pochodzą z zestawu SDK DAO technologia przestarzałe dane. Chcemy dowiedzieć się, jakie symbole zostały użyte z tego pliku nagłówka, aby zobaczyć, czy ten plik był naprawdę potrzebne, czy te symbole zostały zdefiniowane w innym miejscu, dzięki czemu możemy komentarzami deklaracji pliku nagłówka i ponownie kompilowana. Okazuje się tylko jeden symbol, który jest potrzebny w VER_FILEFLAGSMASK.
+Jeden z plików, których nie można znaleźć w programie Spy + +, to verstamp. h. W wyszukiwaniu internetowym firma Microsoft ustaliła, że pochodzi ona z zestawu DAO SDK, czyli przestarzałej technologii danych. Chcemy dowiedzieć się, jakie symbole zostały użyte z tego pliku nagłówka, aby sprawdzić, czy ten plik był rzeczywiście wymagany lub czy te symbole zostały zdefiniowane w innym miejscu, dlatego komentarz do deklaracji pliku nagłówka i ponownej kompilacji. Spowoduje to, że istnieje tylko jeden symbol, który jest wymagany, VER_FILEFLAGSMASK.
 
 ```Output
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
-Najprostszym sposobem znalezienia symbolu w plikach dołączonych dostępne jest użycie **Znajdź w plikach** (**Ctrl**+**Shift**+**F**) a następnie określ **Visual C++ Dołącz katalogi**. Firma Microsoft uznała, że w ntverp.h. Zastąpiliśmy verstamp.h dołączone ntverp.h i zniknął tego błędu.
+Najprostszym sposobem znalezienia symbolu w dostępnych plikach dołączania jest użycie **Znajdź w plikach** (**Ctrl**+**SHIFT**+**F**) i określanie **katalogów dołączania C++ wizualizacji**. Znaleźliśmy ją w ntverp. h. Zamieniono verstamp. h na ntverp. h i ten błąd znika.
 
-##  <a name="linker_output_settings"></a> Krok 3. Ustawienie Plik_wyjściowy konsolidatora
+##  <a name="linker_output_settings"></a>Krok 3. Ustawienie Plik_wyjściowy konsolidatora
 
-Starsze projekty mają czasami pliki umieszczone w niekonwencjonalne lokalizacje, które mogą być przyczyną problemów po uaktualnieniu. W tym przypadku mamy do dodania `$(SolutionDir)` do **Include** ścieżkę we właściwościach projektu, aby upewnić się, że program Visual Studio można znaleźć pliki nagłówkowe, które są umieszczane w tym folderze, a nie w jednym z folderów projektu.
+Starsze projekty czasami mają pliki umieszczane w niekonwencjonalnych lokalizacjach, które mogą spowodować problemy po uaktualnieniu. W takim przypadku musimy dodać `$(SolutionDir)` do ścieżki dołączania we właściwościach projektu, aby upewnić się, że program Visual Studio może znaleźć w tym miejscu pliki nagłówkowe, a nie w jednym z folderów projektu.
 
-MSBuild narzeka, **Link.OutputFile** właściwość jest niezgodna **TargetPath** i **TargetName** wartości, wydawanie MSB8012.
+Program MSBuild zgłasza, że właściwość **link. plik_wyjściowy** nie pasuje do wartości **TargetPath** i **TargetName** , wystawiając MSB8012.
 
 ```Output
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** znajdują się dane wyjściowe kompilacji (EXE, DLL, na przykład) i zwykle jest zbudowany z `$(TargetDir)$(TargetName)$(TargetExt)`, podając ścieżkę, nazwa_pliku i rozszerzenia. To jest typowym błędem podczas migrowania projektów ze starego Visual C++ kompilacji narzędzia (vcbuild.exe) nowe narzędzia do kompilowania (MSBuild.exe). Ponieważ zmiana narzędzia kompilacji została wprowadzona w programie Visual Studio 2010, może wystąpić ten problem, zawsze wtedy, gdy migracja projektu pre-2010 do 2010 lub nowszej wersji. Podstawowego problemu jest, że Kreator migracji projektu nie jest aktualizowany **Link.OutputFile** wartości, ponieważ nie zawsze jest możliwe ustalenie, co jej wartość powinna być zgodnie z ustawieniami projektu. W związku z tym zazwyczaj należy ręcznie ustawić. Aby uzyskać więcej informacji, zobacz ten [wpis](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) na blogu Visual C++.
+**Link. plik_wyjściowy** to dane wyjściowe kompilacji (exe, DLL, na przykład) i są zwykle konstruowane z `$(TargetDir)$(TargetName)$(TargetExt)`, podając ścieżkę, nazwę pliku i rozszerzenie. Jest to typowy błąd podczas migrowania projektów ze starego narzędzia do C++ kompilacji wizualizacji (vcbuild. exe) do nowego narzędzia kompilacji (MSBuild. exe). Ze względu na to, że narzędzie kompilacji zmieniło się w programie Visual Studio 2010, ten problem może wystąpić po każdym przeprowadzeniu migracji projektu poprzedzającego 2010 do wersji 2010 lub nowszej. Podstawowy problem polega na tym, że Kreator migracji projektu nie aktualizuje wartości **link. plik_wyjściowy** , ponieważ nie zawsze jest możliwe ustalenie, jaka wartość powinna być oparta na innych ustawieniach projektu. W związku z tym zazwyczaj trzeba ustawić ją ręcznie. Aby uzyskać więcej informacji, zobacz ten [wpis](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) w blogu C++ wizualnym.
 
-W tym przypadku **Link.OutputFile** ustawiono właściwość w projekcie przekonwertowanego.\Debug\Spyxx.exe i.\Release\Spyxx.exe dla Spy ++ projektu, w zależności od konfiguracji. Najlepiej pasujących, jest po prostu zastąpić te wartości zapisane na stałe za pomocą `$(TargetDir)$(TargetName)$(TargetExt)` dla **wszystkie konfiguracje**. Jeśli to nie zadziała, można dostosować w tym miejscu lub zmienić właściwości w **ogólne** sekcji, w którym te wartości są ustawiane (właściwości są **katalog wyjściowy**, **Nazwa docelowego**, i **docelowe rozszerzenie**. Należy pamiętać, że jeśli właściwość wyświetlasz używa makra, możesz wybrać **Edytuj** na liście rozwijanej, aby wyświetlić okno dialogowe, które wyświetla ostatni ciąg podstawienia — makro wprowadzone. Wszystkich dostępnych makr oraz ich bieżących wartości można wyświetlić, wybierając **makra** przycisku.
+W takim przypadku Właściwość **link. plik_wyjściowy** w przekonwertowanym projekcie została ustawiona na .\Debug\Spyxx.exe i .\Release\Spyxx.exe dla projektu Spy + +, w zależności od konfiguracji. Najlepszym trafieniem jest po prostu zastąpienie tych wartości `$(TargetDir)$(TargetName)$(TargetExt)` stałe dla **wszystkich konfiguracji**. Jeśli to nie zadziała, można dostosować się z tego miejsca lub zmienić właściwości w sekcji **Ogólne** , w której są ustawione wartości (właściwości są **katalogiem wyjściowym**, nazwą docelową i **rozszerzeniem docelowym**. Pamiętaj, że jeśli właściwość, którą przeglądasz, używa makr, możesz wybrać opcję **Edytuj** na liście rozwijanej, aby wyświetlić okno dialogowe, w którym jest wyświetlany ostatni ciąg z utworzonymi podstawieniami makr. Możesz wyświetlić wszystkie dostępne makra i ich bieżące wartości, wybierając przycisk **makra** .
 
-##  <a name="updating_winver"></a> Krok 4. Aktualizowanie wersji Windows docelowej
+##  <a name="updating_winver"></a>Krok 4. Aktualizowanie docelowej wersji systemu Windows
 
-Następny błąd wskazuje, że wersja WINVER nie jest już obsługiwana w MFC. Polecenie WINVER systemu Windows XP jest 0x0501.
+Następny błąd wskazuje, że wersja programu WINVER nie jest już obsługiwana w MFC. W programie WINVER dla systemu Windows XP jest 0x0501.
 
 ```Output
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.
 ```
 
-Windows XP nie jest już obsługiwana przez firmę Microsoft, więc mimo, że jego celem jest dozwolony w programie Visual Studio, należy być wycofanie pomocy technicznej dla niego w swoich aplikacjach i zachęcanie użytkowników podczas wdrażania nowej wersji systemu Windows.
+System Windows XP nie jest już obsługiwany przez firmę Microsoft, więc mimo że jest to dozwolone w programie Visual Studio, należy wypróbować wsparcie dla niego w swoich aplikacjach i zachęcać użytkowników do przyjmowania nowych wersji systemu Windows.
 
-Aby pozbyć się błąd, należy zdefiniować WINVER, aktualizując **właściwości projektu** ustawienie Najniższa wersja systemu Windows, które obecnie ma pod kątem. Znajdź tabelę wartości dla różnych wersji Windows [tutaj](/windows/desktop/WinProg/using-the-windows-headers).
+Aby usunąć błąd, zdefiniuj polecenie WINVER, aktualizując ustawienie **właściwości projektu** do najmniejszej wersji systemu Windows, która jest obecnie przeznaczona do użycia. W [tym miejscu](/windows/win32/WinProg/using-the-windows-headers)znajdziesz tabelę wartości dla różnych wersji systemu Windows.
 
-W pliku stdafx.h zawiera niektóre z tych definicji makra.
+Plik stdafx. h zawiera niektóre z tych definicji makr.
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -75,46 +75,46 @@ W pliku stdafx.h zawiera niektóre z tych definicji makra.
 #define _WIN32_IE    0x0400  // from both winuser.h and commctrl.h.
 ```
 
-Polecenie WINVER firma Microsoft ustawi Windows 7. Jest łatwiejsza do odczytania kodu później użycie makra dla Windows 7 (_WIN32_WINNT_WIN7) zamiast sama (0x0601) wartość.
+WINVER ustawimy na system Windows 7. Można łatwiej odczytywać kod później, jeśli używasz makra dla systemu Windows 7 (_WIN32_WINNT_WIN7), a nie samej wartości (0x0601).
 
 ```cpp
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7
 ```
 
-##  <a name="linker_errors"></a> Krok 5. Błędy konsolidatora
+##  <a name="linker_errors"></a>Krok 5. Błędy konsolidatora
 
-Za pomocą tych zmian kompilacji projektu SpyHk (DLL), ale powoduje błąd konsolidatora.
+Po wprowadzeniu tych zmian projekt SpyHk (DLL) kompiluje, ale generuje błąd konsolidatora.
 
 ```Output
 LINK : warning LNK4216: Exported entry point _DLLEntryPoint@12
 ```
 
-Punkt wejścia dla biblioteki DLL powinny nie można wyeksportować. Punkt wejścia jest przeznaczona tylko do wywoływana przez moduł ładujący, gdy biblioteki DLL, najpierw jest ładowany do pamięci, dlatego nie powinny być w tabeli eksportu dla innych klientów. Musimy upewnić się, że nie ma **__declspec(dllexport)** dyrektywy dołączono do niego. Spyxxhk.c, firma Microsoft musi usunąć ją z dwoma miejscami, deklaracji i definicji `DLLEntryPoint`. Nigdy nie przeprowadza warto użyć tej dyrektywy, ale poprzednie wersje kompilatora i konsolidatora nie Flaga go jako problem. Nowsze wersje konsolidator ostrzeżenie.
+Nie należy eksportować punktu wejścia dla biblioteki DLL. Punkt wejścia jest przeznaczony tylko do wywoływania przez moduł ładujący, gdy biblioteka DLL jest najpierw ładowana do pamięci, dlatego nie powinna znajdować się w tabeli eksportu, która jest przeznaczona dla innych obiektów wywołujących. Wystarczy upewnić się, że nie ma do niej dołączonej dyrektywy **__declspec (dllexport)** . W Spyxxhk. c musimy usunąć ją z dwóch miejsc, deklaracji i definicji `DLLEntryPoint`. Nigdy nie ma sensu używania tej dyrektywy, ale poprzednie wersje konsolidatora i kompilatora nie oflagują go jako problemu. Nowsze wersje konsolidatora dają ostrzeżenie.
 
 ```cpp
 // deleted __declspec(dllexport)
 BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved);
 ```
 
-Projekt DLL języka C, SpyHK.dll, teraz kompiluje i łączy bez błędów.
+Projekt C DLL, SpyHK. dll, teraz kompiluje i łączy bez błędu.
 
-##  <a name="outdated_header_files"></a> Krok 6. Więcej nieaktualne pliki nagłówkowe
+##  <a name="outdated_header_files"></a>Krok 6. Więcej nieaktualnych plików nagłówkowych
 
-W tym momencie Rozpoczniemy pracę nad główny projekt wykonywalny Spyxx.
+W tym momencie rozpoczynamy pracę nad głównym projektem wykonywalnym, spyxx.
 
-Nie można odnaleźć kilka inne pliki include: ctl3d.h i penwin.h. Może być przydatne do wyszukiwania w Internecie w celu zidentyfikowania, co jest wliczane nagłówka, czasami dane nie jest to przydatne. Znaleźliśmy ctl3d.h było częścią Development Kit programu Exchange i zapewniono obsługę dla stylu kontrolki w Windows 95 i penwin.h odnosi się do okna Pióro obliczenia, interfejs API przestarzały. W tym przypadku możemy po prostu komentarz `#include` wiersza i przeciwdziałania niezdefiniowane symbole, ile My mieliśmy z verstamp.h. Wszystko, co odnosi się do formantów 3D lub korzystania z pióra został usunięty z projektu.
+Nie można znaleźć kilku innych plików dołączanych: ctl3d. h i penwin. h. Mimo że pomocne może być przeszukanie Internetu w celu zidentyfikowania elementów uwzględnionych w nagłówku, czasami te informacje nie są przydatne. Znaleźliśmy, że ctl3d. h była częścią zestawu Exchange Development Kit i zapewnia obsługę pewnego stylu formantów w systemie Windows 95, a penwin. h odnosi się do przetwarzania piórem okien, przestarzałego interfejsu API. W tym przypadku po prostu dodamy komentarz do `#include` wiersza i zachodzimy z niezdefiniowanymi symbolami, tak jak w verstamp. h. Wszystkie elementy, które odnoszą się do kontrolek 3D lub obliczeń pióra, zostały usunięte z projektu.
 
-Biorąc pod uwagę projekt o wiele błędów kompilacji, które są stopniowo wyeliminowanie, nie jest realistyczne, aby znaleźć wszystkie przypadki użycia interfejsu API nieaktualne natychmiast, gdy usuniesz `#include` dyrektywy. Nie wykryliśmy ją od razu, ale raczej w pewnym momencie później dołączone jako błąd, że WM_DLGBORDER nie została zdefiniowana. Jest to w rzeczywistości po prostu jeden wiele niezdefiniowanych symboli, które pochodzą z ctl3d.h. Gdy Ustaliliśmy został on odnosi się do interfejsu API nieaktualne, firma Microsoft usunęła wszystkie odwołania w kodzie do niego.
+W przypadku projektu z wieloma błędami kompilacji, które stopniowo eliminują, nie jest to realistyczne, aby znaleźć wszystkie zastosowania nieaktualnego interfejsu API natychmiast po usunięciu `#include` dyrektywy. Nie wykryjemy go natychmiast, ale zamiast tego w późniejszym momencie wystąpił błąd, który WM_DLGBORDER został niezdefiniowany. W rzeczywistości jest tylko jeden niezdefiniowany symbol, który pochodzi z ctl3d. h. Po ustaleniu, że odnosi się on do nieaktualnego interfejsu API, usunęliśmy wszystkie odwołania w kodzie.
 
-##  <a name="updating_iostreams_code"></a> Krok 7. Aktualizowanie stary kod iostream
+##  <a name="updating_iostreams_code"></a>Krok 7. Aktualizowanie starego kodu iostreams
 
-Następny błąd jest powszechne starego kodu C++, który używa iostream.
+Następny błąd jest typowy dla starego C++ kodu, który używa iostreams.
 
 ```Output
 mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
 ```
 
-Problem jest, że stary biblioteki iostreams został usunięty i zastąpiony. Mamy zastąp stare iostreams nowszej standardy.
+Problem polega na tym, że stara Biblioteka iostreams została usunięta i zastąpiona. Musimy zastąpić stary iostreams nowszymi standardami.
 
 ```cpp
 #include <iostream.h>
@@ -122,7 +122,7 @@ Problem jest, że stary biblioteki iostreams został usunięty i zastąpiony. Ma
 #include <iomanip.h>
 ```
 
-Oto zaktualizowany obejmuje:
+Dostępne są następujące aktualizacje:
 
 ```cpp
 #include <iostream>
@@ -130,36 +130,36 @@ Oto zaktualizowany obejmuje:
 #include <iomanip>
 ```
 
-Dzięki tej zmianie mamy problemy z `ostrstream`, który nie jest już używana. Odpowiednie zastąpienia jest ostringstream. Możemy spróbować dodać **typedef** dla `ostrstream` w celu uniknięcia modyfikacji kodu zbyt dużo przynajmniej rozpoczęcia.
+W przypadku tej zmiany mamy problemy z `ostrstream`, które nie są już używane. Odpowiednim zastąpieniem jest ostringstream —. Spróbujemy dodać **element typedef** dla `ostrstream` , aby uniknąć zbyt dużej ilości kodu, co najmniej jako początku.
 
 ```cpp
 typedef std::basic_ostringstream<TCHAR> ostrstream;
 ```
 
-Obecnie projekt jest kompilowany przy użyciu MBCS (wielobajtowego zestawu znaków), więc **char** jest odpowiednich danych znakowych. Jednakże, aby umożliwić łatwiejsze aktualizacji kodu Unicode UTF-16, aktualizujemy ten element, aby `TCHAR`, która jest rozpoznawana jako **char** lub **wchar_t** zależności od tego, czy **zestawznaków** w ustawieniach projektu jest właściwością MBCS lub Unicode.
+Obecnie projekt został skompilowany przy użyciu MBCS (zestaw znaków wielobajtowych), więc **char** jest odpowiednim typem danych znakowych. Aby jednak ułatwić aktualizację kodu UTF-16 `TCHAR`Unicode, zaktualizujemy ten element do, który jest rozpoznawany jako **char** lub **wchar_t** , w zależności od tego, czy właściwość **zestawu znaków** w ustawieniach projektu jest ustawiona na wartość MBCS lub Unicode.
 
-Kilka fragmentów kodu, muszą zostać zaktualizowane.  Zastąpiliśmy klasy bazowej `ios` z `ios_base`, i zastąpiliśmy ostream polega na basic_ostream\<T >. Możemy dodać dwie dodatkowe definicje typów, a następnie kompiluje w tej sekcji.
+Należy zaktualizować kilka innych fragmentów kodu.  Zastąpiono klasę `ios` `ios_base`bazową, a zamienimy ostream na basic_ostream\<T >. Dodamy dwa dodatkowe definicje typów i ta sekcja zostanie skompilowana.
 
 ```cpp
 typedef std::basic_ostream<TCHAR> ostream;
 typedef ios_base ios;
 ```
 
-Za pomocą tych definicji typów to rozwiązanie tymczasowe. W przypadku bardziej trwałych rozwiązania firma Microsoft może zaktualizować każde odwołanie do interfejsu API nieaktualne lub zmieniono jego nazwę.
+Korzystanie z tych typów typedef jest tylko tymczasowym rozwiązaniem. W przypadku bardziej trwałego rozwiązania możemy zaktualizować każde odwołanie do nazwy lub nieaktualnego interfejsu API.
 
-Oto następny błąd.
+Poniżej przedstawiono następny błąd.
 
 ```Output
 error C2039: 'freeze': is not a member of 'std::basic_stringbuf<char,std::char_traits<char>,std::allocator<char>>'
 ```
 
-Następny problem jest to, że `basic_stringbuf` nie ma `freeze` metody. `freeze` Metoda jest używana, aby uniknąć przecieku pamięci w starym `ostream`. Nie potrzebujemy jej teraz, gdy firma Microsoft korzysta z nowym `ostringstream`. Usuniemy wywołanie `freeze`.
+Następny problem `basic_stringbuf` nie `freeze` ma metody. Metoda służy do zapobiegania przeciekowi pamięci w starym `ostream`. `freeze` Nie potrzebujemy go teraz, gdy korzystamy z nowej `ostringstream`usługi. Możemy usunąć wywołanie metody `freeze`.
 
 ```cpp
 //rdbuf()->freeze(0);
 ```
 
-Następne dwa wystąpiły błędy w wierszach sąsiadująco. Pierwszy narzeka o używaniu `ends`, czyli starego `iostream` manipulator we/wy biblioteki, który dodaje terminator o wartości null na ciąg. Drugi z tych błędów wyjaśniono, że dane wyjściowe `str` metody nie można przypisać do wskaźnika niebędącego stałą.
+Dwa następne błędy wystąpiły w sąsiednich wierszach. Pierwszy skargę dotyczącą używania `ends`, który jest starym `iostream` Manipulator biblioteki we/wy, który dodaje terminator o wartości null do ciągu. W drugim z tych błędów wyjaśniono, że dane wyjściowe `str` metody nie mogą być przypisane do wskaźnika innego niż const.
 
 ```cpp
 // Null terminate the string in the buffer and
@@ -173,21 +173,21 @@ LPSTR psz = str();
 2>mstream.cpp(167): error C2065: 'ends': undeclared identifier2>mstream.cpp(168): error C2440: 'initializing': cannot convert from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'LPSTR'
 ```
 
-Przy użyciu nowej biblioteki strumienia `ends` nie jest potrzebna, ponieważ ciąg jest zawsze zakończony znakiem null, dzięki czemu można usunąć wiersza. Dla drugiego problemu problemu jest to, że teraz `str()` nie zwracają wskaźnik do tablicy znaków ciągu; zwraca `std::string` typu. Rozwiązanie do drugiego jest Zmień typ na `LPCSTR` i użyj `c_str()` metodę, aby zażądać wskaźnika.
+Za pomocą nowej biblioteki strumieni nie `ends` jest wymagana, ponieważ ciąg jest zawsze zakończony zerem, aby można było usunąć wiersz. Dla drugiego problemu problem polega na tym, że teraz `str()` nie zwraca wskaźnika do tablicy znaków dla ciągu; `std::string` zwraca typ. Rozwiązaniem drugim jest zmiana typu na `LPCSTR` i `c_str()` użycie metody w celu zażądania wskaźnika.
 
 ```cpp
 //*this << ends;
 LPCTSTR psz = str().c_str();
 ```
 
-Błąd, który puzzled nam od pewnego czasu podczas tego kodu.
+Wystąpił błąd, który został pozostały przez nas dla elementu while w tym kodzie.
 
 ```cpp
 MOUT << _T(" chUser:'") << chUser
 << _T("' (") << (INT)(UCHAR)chUser << _T(')');
 ```
 
-Makra MOUT jest rozpoznawana jako `*g_pmout` czyli obiektu typu `mstream`. `mstream` Klasa pochodzi od klasy ciąg standardowego wyjścia `std::basic_ostream<TCHAR>`. Jednak za pomocą \_T wokół literału ciągu, na którym umieściliśmy w ramach przygotowania do konwersji na format Unicode, rozdzielczość przeciążenia dla **operator <<** kończy się niepowodzeniem z następujący komunikat o błędzie:
+MOUT makro jest rozpoznawana `*g_pmout` jako obiekt typu. `mstream` Klasa jest pochodną klasy standardowego ciągu wyjściowego, `std::basic_ostream<TCHAR>`. `mstream` Jednak za \_pomocą T wokół literału ciągu, który wprowadzamy do konwersji na Unicode, rozpoznawanie przeciążenia dla **operatora < <** kończy się niepowodzeniem z następującym komunikatem o błędzie:
 
 ```Output
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions
@@ -241,7 +241,7 @@ Makra MOUT jest rozpoznawana jako `*g_pmout` czyli obiektu typu `mstream`. `mstr
 1>  winmsgs.cpp(4612): note: while trying to match the argument list '(CMsgStream, const wchar_t [10])'
 ```
 
-Istnieje wiele **operator <<** definicje, że ten rodzaj błędu może mieć OPORY przed. Po Przyglądając się dokładniej dostępnych przeciążeń, widzimy, że większość z nich są bez znaczenia i wyglądających dokładniej w `mstream` klasy definicji, firma Microsoft ustaliła, następującą funkcję, która uważamy, że powinna być wywoływana w tym przypadku.
+Istnieje wiele **< operatora <** definicje, których ten rodzaj błędu może być zastraszanie. Po dokładniejszym zajrzeć od dostępnych przeciążeń można zobaczyć, że większość z nich nie jest istotna i że dokładniej `mstream` jest w definicji klasy, zidentyfikowano następującą funkcję, która zdaniem powinna zostać wywołana w tym przypadku.
 
 ```cpp
 mstream& operator<<(LPTSTR psz)
@@ -250,19 +250,19 @@ mstream& operator<<(LPTSTR psz)
 }
 ```
 
-Przyczyną nie jest ona wywoływana jest literał ciągu ma typ `const wchar_t[10]` jak widać w ostatnim wierszu komunikat o błędzie długi, dlatego konwersji do wskaźnika niebędącego stałą nie jest automatyczna. Jednak ten operator nie należy modyfikować parametr wejściowy, dzięki czemu jest bardziej odpowiednia typ parametru `LPCTSTR` (`const char*` podczas kompilowania kodu jako MBCS, i `const wchar_t*` jako Unicode), a nie `LPTSTR` (`char*` podczas kompilowania kodu jako MBCS i `wchar_t*` jako Unicode). Wprowadzenie tej zmiany naprawia ten błąd.
+Powód, dla którego ta funkcja nie jest wywoływana, jest spowodowany `const wchar_t[10]` tym, że literał ciągu ma typ, jak widać w ostatnim wierszu tego długiego komunikatu o błędzie, dlatego konwersja na wskaźnik niestały nie jest automatyczna. Jednak operator nie powinien modyfikować parametru wejściowego, więc bardziej odpowiedni typ parametru to `LPCTSTR` (`const char*` podczas kompilacji jako MBCS, i `const wchar_t*` jako Unicode), not `LPTSTR` (`char*` podczas kompilowania jako MBCS, i `wchar_t*` jako Unicode). Wprowadzenie tej zmiany spowoduje usunięcie tego błędu.
 
-Ten typ konwersji był dozwolony w obszarze kompilatora starsze, mniej rygorystyczne nowszą grupę zmian zgodności wymaga jednak bardziej poprawny kod.
+Ten typ konwersji jest dozwolony w ramach starszego, mniej rygorystycznego kompilatora, ale więcej najnowszych zmian zgodności wymaga bardziej poprawnego kodu.
 
-##  <a name="stricter_conversions"></a> Krok 8. Konwersje bardziej rygorystyczne kompilatora
+##  <a name="stricter_conversions"></a>Krok 8. Bardziej rygorystyczne konwersje kompilatora
 
-Możemy również otrzymać wiele błędów, jak pokazano poniżej:
+Występuje również wiele błędów, takich jak następujące:
 
 ```Output
 error C2440: 'static_cast': cannot convert from 'UINT (__thiscall CHotLinkCtrl::* )(CPoint)' to 'LRESULT (__thiscall CWnd::* )(CPoint)'
 ```
 
-Ten błąd występuje w mapie komunikatów, który jest po prostu makra:
+Ten błąd występuje w mapie komunikatów, która jest po prostu makro:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CFindToolIcon, CWnd)
@@ -271,7 +271,7 @@ ON_WM_NCHITTEST() // Error occurs on this line.
 END_MESSAGE_MAP()
 ```
 
-Przechodzenie do definicji to makro, zobaczymy, odwołuje się funkcja `OnNcHitTest`.
+Po przejściu do definicji tego makra zobaczymy, że odwołuje się `OnNcHitTest`do funkcji.
 
 ```cpp
 #define ON_WM_NCHITTEST() \
@@ -280,7 +280,7 @@ Przechodzenie do definicji to makro, zobaczymy, odwołuje się funkcja `OnNcHitT
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },
 ```
 
-Ma problem z niezgodności we wskaźniku na typy funkcji elementu członkowskiego. Ten problem nie jest konwersja z `CHotLinkCtrl` jako typ klasy `CWnd` jako typ klasy, ponieważ jest prawidłowa konwersja pochodnych do podstawowego. Problem jest typ zwracany: UINT programu vs. LRESULT. LRESULT jest rozpoznawany jako LONG_PTR, czyli wskaźnika 64-bitowego lub wskaźnik 32-bitowe, w zależności od typu binary docelowy, więc UINT nie konwertuje do tego typu. To nie jest niczym niezwykłym podczas uaktualniania kod napisany przed 2005, ponieważ zwracany typ wiele metod mapy wiadomości zmieniła się z UINT do LRESULT w programie Visual Studio 2005 jako część zmiany 64-bitowej zgodności. Możemy zmienić typ zwracany z UINT w poniższym kodzie na LRESULT:
+Problem należy wykonać z niezgodnością we wskaźnikach do typów funkcji Członkowskich. Problem nie dotyczy konwersji `CHotLinkCtrl` jako `CWnd` typu klasy jako typu klasy, ponieważ jest to prawidłowa konwersja pochodna-podstawowa. Problem jest typem zwracanym: UINT a LRESULT. LRESULT jest rozpoznawana jako LONG_PTR, który jest wskaźnikiem 64-bitowym lub 32-bitowym, w zależności od docelowego typu danych binarnych, więc UINT nie jest konwertowany na ten typ. Jest to nietypowe w przypadku uaktualniania kodu pisanego przed 2005, ponieważ typ zwracany wielu metod mapy komunikatów zmienił się z UINT na LRESULT w programie Visual Studio 2005 w ramach aktualizacji zgodności z 64-bitową. Zmienimy Typ zwracany z UINT w poniższym kodzie na LRESULT:
 
 ```cpp
 afx_msg UINT OnNcHitTest(CPoint point);
@@ -292,55 +292,55 @@ Po zmianie mamy następujący kod:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Ponieważ około dziesięciu wystąpień tej funkcji w różnych klas pochodzące od CWnd, warto użyć **przejdź do definicji** (klawiatury: **F12**) i **przejdź do deklaracji** (klawiatury: **CTRL**+**F12**) gdy kursor znajduje się w funkcji w edytorze aby zlokalizować i przejdź do nich z **Znajdź Symbol** okna narzędzi. **Przejdź do definicji** jest zazwyczaj bardziej użyteczne dwóch. **Przejdź do deklaracji** będzie deklaracji Znajdź inne niż Definiowanie klasy deklaracji, takich jak przyjazne deklaracje klas lub przekazywać odwołania.
+Ze względu na to, że w różnych klasach pochodzących od CWnd istnieje około dziesięciu wystąpień tej funkcji, warto użyć funkcji **Przejdź do definicji** (klawiatura: **F12**) i **Przejdź do deklaracji** (klawiatura:Ctrl+**F12**), gdy kursor znajduje się w funkcji w edytorze, aby je zlokalizować, i przejść do nich z okna narzędzia **Znajdowanie symboli** . **Przechodzenie do definicji** jest zazwyczaj bardziej przydatne w przypadku obu tych elementów. Polecenie **Przejdź do deklaracji** będzie znajdować deklaracje inne niż definicje klasy definiującej, takie jak zaprzyjaźnione deklaracje klas lub odwołania do przodu.
 
-##  <a name="mfc_changes"></a> Krok 9. MFC Changes
+##  <a name="mfc_changes"></a>Krok 9. Zmiany MFC
 
-Następny błąd również odnosi się do typu deklaracji zmienione i występuje także w makrze.
+Następny błąd dotyczy również zmienionego typu deklaracji i występuje również w makrze.
 
 ```Output
 error C2440: 'static_cast': cannot convert from 'void (__thiscall CFindWindowDlg::* )(BOOL,HTASK)' to 'void (__thiscall CWnd::* )(BOOL,DWORD)'
 ```
 
-Problem jest drugi parametr `CWnd::OnActivateApp` zmieniła się z HTASK typu DWORD. Ta zmiana została wprowadzona w wersji programu Visual Studio, Visual Studio .NET 2002.
+Problem polega na tym, że drugi parametr `CWnd::OnActivateApp` zmieniony z HTASK na DWORD. Ta zmiana nastąpiła w wersji 2002 programu Visual Studio, Visual Studio .NET.
 
 ```cpp
 afx_msg void OnActivateApp(BOOL bActive, HTASK hTask);
 ```
 
-Mamy deklaracje OnActivateApp w klasach pochodnych odpowiednio zaktualizować w następujący sposób:
+Konieczne jest zaktualizowanie deklaracji OnActivateApp w klasach pochodnych w następujący sposób:
 
 ```cpp
 afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
 ```
 
-W tym momencie możemy do skompilowania projektu. Istnieje kilka ostrzeżeń, aby trzymać się kolejności, jednak wiąże się z opcjonalnych części uaktualnienia, takich jak konwertowanie z MBCS na Unicode lub ulepszania zabezpieczeń za pomocą funkcji CRT bezpieczny.
+W tym momencie możemy skompilować projekt. Istnieje kilka ostrzeżeń, które mogą być wykonywane przez program, ale istnieją opcjonalne części uaktualnienia, takie jak konwertowanie z MBCS na Unicode lub zwiększanie bezpieczeństwa przy użyciu funkcji Secure CRT.
 
-##  <a name="compiler_warnings"></a> Krok 10. Adresowanie ostrzeżenia kompilatora
+##  <a name="compiler_warnings"></a>Krok 10. Rozwiązywanie ostrzeżeń kompilatora
 
-Aby uzyskać pełną listę ostrzeżeń, należy wykonać **Kompiluj wszystko ponownie** na rozwiązanie, a nie zwykłe kompilacji, tak, aby upewnić się, że wszystko, co wcześniej skompilowany zostaną ponownie skompilowane, ponieważ ostrzeżenie raportów można pobierać tylko z bieżącego Kompilacja. Inne pytania jest o akceptacji bieżący poziom ostrzeżeń lub użyj wyższy poziom ostrzeżeń.  Przenoszenie dużej ilości kodu, szczególnie poprzedni kod, za pomocą wyższy poziom ostrzeżeń może być odpowiednie.  Możesz również chcieć zaczynać domyślnym poziomem ostrzeżeń, a dopiero potem zwiększyć jej poziom ostrzeżeń, aby wyświetlić wszystkie ostrzeżenia. Jeśli używasz `/Wall`, otrzymujesz pewne ostrzeżenia w systemie plików nagłówkowych, tak wiele osób `/W4` Aby uzyskać najbardziej ostrzeżenia na kodzie bez wyświetlanie ostrzeżeń dla nagłówków systemu. Jeśli ostrzeżenia pojawienie się jako błędy, należy dodać `/WX` opcji. Te ustawienia znajdują się w **C/C++** części **właściwości projektu** okno dialogowe.
+Aby uzyskać pełną listę ostrzeżeń, należy wykonać ponowną kompilację **wszystkich** rozwiązań w rozwiązaniu zamiast zwykłej kompilacji, aby upewnić się, że wszystkie skompilowane wcześniej elementy zostaną ponownie skompilowane, ponieważ tylko raporty z bieżącej kompilacji są wyświetlane. Innym pytaniem jest zaakceptowanie bieżącego poziomu ostrzeżeń lub użycie wyższego poziomu ostrzeżeń.  W przypadku przenoszenia dużej ilości kodu, szczególnie starego kodu, może być odpowiednie użycie wyższego poziomu ostrzegawczego.  Możesz również zacząć od domyślnego poziomu ostrzeżeń, a następnie zwiększyć poziom ostrzeżeń w celu uzyskania wszystkich ostrzeżeń. W przypadku korzystania `/Wall`z programu w plikach nagłówkowych systemu są wyświetlane ostrzeżenia, przez co wiele osób `/W4` używa do uzyskiwania najbardziej ostrzeżeń dotyczących kodu bez otrzymywania ostrzeżeń dotyczących nagłówków systemowych. Jeśli chcesz, aby ostrzeżenia były wyświetlane jako błędy, Dodaj `/WX` opcję. Te ustawienia znajdują się w sekcji **C/C++**  okna dialogowego **właściwości projektu** .
 
-Jedną z metod w `CSpyApp` klasy generuje ostrzeżenia o funkcję, która nie jest już obsługiwana.
+Jedna z metod w `CSpyApp` klasie generuje ostrzeżenie o funkcji, która nie jest już obsługiwana.
 
 ```cpp
 void SetDialogBkColor() {CWinApp::SetDialogBkColor(::GetSysColor(COLOR_BTNFACE));}
 ```
 
-To ostrzeżenie jest w następujący sposób.
+Ostrzeżenie jest następujące.
 
 ```Output
 warning C4996: 'CWinApp::SetDialogBkColor': CWinApp::SetDialogBkColor is no longer supported. Instead, handle WM_CTLCOLORDLG in your dialog
 ```
 
-Komunikat WM_CTLCOLORDLG już został obsłużony w kodzie programu Spy ++, więc tylko wymagana zmiana została można usunąć wszystkie odwołania do `SetDialogBkColor`, który nie jest już potrzebny.
+Komunikat WM_CTLCOLORDLG został już obsłużony w kodzie Spy + +, więc jedyną wymaganą zmianą było usunięcie wszelkich odwołań do `SetDialogBkColor`, które nie są już potrzebne.
 
-Następne ostrzeżenie była prosta rozwiązać problem, zakomentowując nazwę zmiennej. Otrzymaliśmy następujące ostrzeżenie:
+Następne ostrzeżenie było bardzo proste, aby rozwiązać problem, dodając komentarz do nazwy zmiennej. Otrzymaliśmy następujące ostrzeżenie:
 
 ```Output
 warning C4456: declaration of 'lpszBuffer' hides previous local declaration
 ```
 
-Kod, który generuje ten obejmuje makra.
+Kod, który generuje ten element, obejmuje makro.
 
 ```cpp
 DECODEPARM(CB_GETLBTEXT)
@@ -367,21 +367,21 @@ DECODEPARM(CB_GETLBTEXT)
 }
 ```
 
-Intensywne użycie makra, tak jak w tym kodzie zwykle uczynić kod trudniejszym do zachowania. W tym przypadku dostępne są następujące makra deklaracje zmiennych. PARAMETR makro jest zdefiniowany następująco:
+Duże użycie makr, jak w tym kodzie, sprawia, że kod jest trudniejszy do utrzymania. W takim przypadku makra zawierają deklaracje zmiennych. PARAMETR makro jest zdefiniowane w następujący sposób:
 
 ```cpp
 #define PARM(var, type, src)type var = (type)src
 ```
 
-W związku z tym `lpszBuffer` pobiera zadeklarowana zmienna dwa razy w tej samej funkcji. Nie jest tym straightfoward, aby rozwiązać ten problem, jakim byłaby, jeśli kod nie była używana makra (po prostu usuń drugi deklaracji typu). Po wykonaniu, mamy niefortunne wybór konieczności zdecyduj, czy chcesz ponownie pisać kodu makra jako zwykły kod (zadanie żmudnym i prawdopodobnie obarczone ryzykiem błędów) lub wyłącz ostrzeżenia.
+W związku `lpszBuffer` z tym zmienna jest zadeklarowana dwukrotnie w tej samej funkcji. Nie jest to straightfoward, aby rozwiązać ten problem tak, jak gdyby kod nie używa makr (po prostu usuń deklarację drugiego typu). W takim przypadku mamy możliwość podjęcia decyzji o tym, czy należy ponownie napisać kod makra jako zwykły kod (żmudnym i ewentualnie podatne na błędy zadanie), czy wyłączyć ostrzeżenie.
 
-W tym przypadku możemy zoptymalizowany pod kątem Aby wyłączyć ostrzeżenia. Można to zrobić, dodając pragmy w następujący sposób:
+W takim przypadku wybieramy ostrzeżenie. Możemy to zrobić przez dodanie dyrektywy pragma w następujący sposób:
 
 ```cpp
 #pragma warning(disable : 4456)
 ```
 
-Po wyłączeniu ostrzeżenie, możesz chcieć ograniczyć, wyłączając efektu tylko kod, generuje ostrzeżenie, aby uniknąć pomijanie ostrzeżenia, gdy może on zawierają przydatne informacje. Możemy dodać kod, aby przywrócić ostrzeżenia zaraz po wierszu, który tworzy go lub jeszcze lepiej, ponieważ ostrzeżenie to pojawia się w makrze, należy użyć **__pragma** słowo kluczowe, które działa w makrach (`#pragma` nie działa w makrach).
+Podczas wyłączania ostrzeżenia można ograniczyć efekt wyłączenia tylko do kodu, który generuje ostrzeżenie, aby uniknąć pomijania ostrzeżenia, gdy może on dostarczyć przydatne informacje. Dodaliśmy kod, aby przywrócić ostrzeżenie tuż po wierszu, który go generuje, lub lepiej, ponieważ to ostrzeżenie występuje w makrze, użyj słowa kluczowego **__pragma** , które działa w makrach`#pragma` (nie działa w makrach).
 
 ```cpp
 #define PARM(var, type, src)__pragma(warning(disable : 4456))  \
@@ -389,7 +389,7 @@ type var = (type)src \
 __pragma(warning(default : 4456))
 ```
 
-Następne ostrzeżenie wymaga niektóre wersje kodu. Win32 API `GetVersion` (i `GetVersionEx`) jest przestarzały.
+Następne ostrzeżenie wymaga wprowadzenia zmian w kodzie. Win32 API `GetVersion` (i `GetVersionEx`) jest przestarzały.
 
 ```Output
 warning C4996: 'GetVersion': was declared deprecated
@@ -402,11 +402,11 @@ Poniższy kod przedstawia sposób uzyskiwania wersji.
 DWORD dwWindowsVersion = GetVersion();
 ```
 
-To następuje duże ilości kodu, która sprawdza, czy wartość dwWindowsVersion, aby ustalić, czy jest uruchomiony na Windows 95 i wersji systemu Windows NT. Ponieważ jest to wszystkie przestarzałe, możemy usunąć kod oraz dotyczącej wszelkie odwołania do tych zmiennych.
+Następuje to wiele kodu, który analizuje wartość dwWindowsVersion, aby określić, czy pracujemy w systemie Windows 95 i która wersja systemu Windows NT. Ponieważ to wszystko jest nieaktualne, firma Microsoft usuwa kod i zajmuje się wszelkimi odwołaniami do tych zmiennych.
 
-Artykuł [zmiany wersji systemu operacyjnego Windows 8.1 i Windows Server 2012 R2](https://msdn.microsoft.com/library/windows/desktop/dn302074.aspx) opisano tę sytuację.
+W artykule [zmiany wersji systemu operacyjnego w systemach Windows 8.1 i Windows Server 2012 R2](/windows/win32/w8cookbook/operating-system-version-changes-in-windows-8-1) opisano sytuację.
 
-Brak metody `CSpyApp` klasy, które zbadać wersję systemu operacyjnego: `IsWindows9x`, `IsWindows4x`, i `IsWindows5x`. Dobry punkt wyjścia jest założenie, że wersje systemu Windows, które firma Microsoft zamierza obsługiwać (Windows 7 i nowsze) są wszystkie Zamknij, aby zainteresowanym 5 Windows NT, jak daleko technologie, które są używane w tej starszej aplikacji. Korzysta z tych metod były do czynienia z ograniczeniami starszych systemów operacyjnych. Więc zmienione tych metod zwraca wartość TRUE dla `IsWindows5x` i FALSE dla pozostałych.
+W `CSpyApp` klasie są dostępne metody, które wysyłają zapytania do wersji systemu `IsWindows9x`operacyjnego `IsWindows4x`:, `IsWindows5x`, i. Dobrym punktem początkowym jest założenie, że wersje systemu Windows, które mają być obsługiwane (system Windows 7 i nowsze), są blisko systemu Windows NT 5, ponieważ technologie używane w tej starszej aplikacji są odpowiednie. Zastosowanie tych metod było związane z ograniczeniami starszych systemów operacyjnych. Dlatego zostały zmienione metody zwracające wartość true dla `IsWindows5x` innych.
 
 ```cpp
 BOOL IsWindows9x() {/*return(m_bIsWindows9x);*/ return FALSE;  }
@@ -414,7 +414,7 @@ BOOL IsWindows4x() {/*return(m_bIsWindows4x);*/ return FALSE;  }
 BOOL IsWindows5x() {/*return(m_bIsWindows5x);*/ return TRUE;  }
 ```
 
-Która pozostanie tylko kilku miejscach, w którym wewnętrznych zmiennych były używane bezpośrednio. Usunęliśmy tych zmiennych, uzyskujemy kilka błędów, które zajmują się jawnie.
+To tylko kilka miejsc, w których zmienne wewnętrzne były używane bezpośrednio. Ze względu na to, że usunięto te zmienne, wystąpimy kilka błędów, które muszą być w sposób jawny.
 
 ```Output
 error C2065: 'm_bIsWindows9x': undeclared identifier
@@ -427,7 +427,7 @@ void CSpyApp::OnUpdateSpyProcesses(CCmdUI *pCmdUI)
 }
 ```
 
-Firma Microsoft może Zastąp to wywołanie metody lub po prostu Przekaż wartość TRUE lub usunąć stare szczególny przypadek Windows 9 x.
+Możemy zastąpić to wywołanie metody lub po prostu przekazać wartość TRUE i usunąć stary specjalny przypadek dla systemu Windows 9X.
 
 ```cpp
 void CSpyApp::OnUpdateSpyProcesses(CCmdUI *pCmdUI)
@@ -436,19 +436,19 @@ void CSpyApp::OnUpdateSpyProcesses(CCmdUI *pCmdUI)
 }
 ```
 
-Końcowe ostrzeżenie na poziomie domyślnym (3) związana z bitfield.
+Końcowe ostrzeżenie na poziomie domyślnym (3) musi mieć wartość pole bitowe.
 
 ```Output
 treectl.cpp(1656): warning C4463: overflow; assigning 1 to bit-field that can only hold values from -1 to 0
 ```
 
-Kod, który wyzwala to wygląda następująco:
+Ten kod wyzwala następujące czynności.
 
 ```cpp
 m_bStdMouse = TRUE;
 ```
 
-Deklaracja `m_bStdMouse` wskazuje, że jest bitfield.
+Deklaracja `m_bStdMouse` wskazuje, że jest to pole bitowe.
 
 ```cpp
 class CTreeListBox : public CListBox
@@ -466,113 +466,113 @@ class CTreeListBox : public CListBox
   BOOL m_bStdMouse : 1;
 ```
 
-Ten kod został napisany przed typu logicznego wbudowanych była obsługiwana w programie Visual C++. W takich kod był BOOL **typedef** dla **int**. Typ **int** jest **podpisany** typu i bitowa reprezentacja **podpisany int** jest użycie pierwszego bitu jako bitu znaku, dzięki czemu bitfield typu int może zostać zinterpretowane jako reprezentuje 0 albo -1, prawdopodobnie nie co zamierzony sposób.
+Ten kod został zapisany przed wbudowanym typem bool w wizualizacji C++. W takim kodzie BOOL był elementem **typedef** dla **int**. Typ **int** jest typem ze **znakiem** , a reprezentacja bitowa ze **znakiem int** ma używać pierwszego bitu jako bitu znaku, więc pole bitowe typu int można interpretować jako reprezentujący 0 lub-1, prawdopodobnie nie jest to oczekiwane.
 
-Nie wiesz, patrząc na kod dlaczego są to pola bitów. Został zamiar zachować mały rozmiar obiektu lub czy istnieje wszędzie gdzie układ binarny obiektu jest używana? Zmieniliśmy je do zwykłych członków BOOL, ponieważ firma Microsoft nie może zobaczyć jakiegokolwiek powodu do użytku bitfield. Użycie pola bitów, aby zapewnić mały rozmiar obiektu nie jest gwarantowane. Zależy to od jak kompilator decydujących o typie.
+Nie wiesz, patrząc na kod, dlaczego są one pola bitów. Czy zamiar zachować mały rozmiar obiektu lub czy tam, gdzie jest używany układ binarny obiektu? Zmieniono te wartości na zwykłe elementy logiczne, ponieważ nie wykryto żadnych przyczyn użycia pole bitowe. Użycie pola bitów do zachowania małego rozmiaru obiektu nie jest gwarantowane. Jest to zależne od tego, jak kompilator ustala typ.
 
-Być może zastanawiasz się, jeśli przy użyciu standardowego typu **bool** przez cały czas w mogą być przydatne. Wiele stare wzorców kodu, takie jak typ BOOL zostały utworzoną do rozwiązywania problemów, które później zostały rozwiązane w standardzie języka C++, więc zmiany bool do **bool** wbudowany typ jest tylko jeden przykład takiej zmiany, należy rozważyć wykonanie tej po przekazywanie kodu do pierwotnie uruchomiona w nowej wersji.
+Może się zdarzyć, że użycie typu standardowego **bool** w systemie byłoby przydatne. Wiele starych wzorców kodu, takich jak typ BOOL, zostały opracowane w celu rozwiązywania problemów, które zostały później rozwiązane w warstwie Standardowa C++, więc zmiana wartości bool na typ wbudowany typu **bool** to tylko jeden przykład takiej zmiany, którą należy wziąć pod uwagę po uzyskaniu kodu w itially działa w nowej wersji.
 
-Gdy firma Microsoft zostały omówione wszystkie ostrzeżenia, które pojawiają się na poziomie domyślnym (poziom 3) zmieniliśmy na poziomie 4, aby przechwycić kilka dodatkowych ostrzeżeń. Pierwszy pojawiają się to w następujący sposób:
+Po podaniu wszystkich ostrzeżeń, które są wyświetlane na poziomie domyślnym (poziom 3), został zmieniony na poziom 4, aby przechwycić kilka dodatkowych ostrzeżeń. Pierwszy z nich jest następujący:
 
 ```Output
 warning C4100: 'nTab': unreferenced formal parameter
 ```
 
-Kod, który to ostrzeżenie jest w następujący sposób.
+Kod, który wygenerował to ostrzeżenie, był następujący:
 
 ```cpp
 virtual void OnSelectTab(int nTab) {};
 ```
 
-Zajmuje to nieco wystarczająco nieszkodliwe, ale ponieważ Chcieliśmy czysta kompilacja z `/W4` i `/WX` ustawiona, możemy po prostu komentarzami nazwę zmiennej równoczesnym pozostawieniu ich dla czytelności.
+Wydaje się to nieszkodliwe, ale ponieważ chciałem przeprowadzić czystą `/W4` kompilację z i `/WX` zestawem, po prostu komentarz do nazwy zmiennej, pozostawiając go w celu czytelności.
 
 ```cpp
 virtual void OnSelectTab(int /*nTab*/) {};
 ```
 
-Inne ostrzeżenia, które odebraliśmy były przydatne w przypadku ogólnych kod czyszczenia. Istnieje wiele niejawne konwersje z elementu **int** lub **unsigned int** do programu WORD (czyli element typedef dla **typ unsigned short**). Obejmują one możliwa utrata danych. W takiej sytuacji dodaliśmy rzutowanie do programu WORD.
+Inne otrzymane ostrzeżenia są przydatne podczas ogólnego czyszczenia kodu. Istnieje wiele niejawnych konwersji z **int** lub unsigned **int** do wyrazu (jest to element typedef dla niepodpisanego **Short**). Obejmują one ewentualną utratę danych. W tych przypadkach dodaliśmy rzutowanie do programu WORD.
 
-Jest innym ostrzeżenia poziomu 4, którą mamy dla tego kodu:
+Dla tego kodu jest wyświetlane ostrzeżenie innego poziomu 4:
 
 ```Output
 warning C4211: nonstandard extension used: redefined extern to static
 ```
 
-Ten problem występuje, gdy najpierw zadeklarowano zmienną **extern**, później zadeklarowana **statyczne**. Znaczenie tych dwóch specyfikatory klas magazynu jest wzajemnie wykluczających się, ale jest to dozwolone jako rozszerzeń firmy Microsoft. Potrzebowała kod będzie działał w innych kompilatorach, czy chcesz skompilować go za pomocą `/Za` (zgodność z ANSI), należy zmienić deklaracje specyfikatory klas magazynu pasujących do siebie.
+Ten problem występuje, gdy zmienna została najpierw zadeklarowana jako **extern**, a następnie później zadeklarowana jako **statyczna**. Znaczenie tych dwóch specyfikatorów klas magazynu wykluczają się wzajemnie, ale jest to dozwolone jako rozszerzenie firmy Microsoft. Jeśli chcesz, aby kod był przenośny do innych kompilatorów lub chcesz go skompilować z `/Za` (zgodność ze standardem ANSI), należy zmienić deklaracje tak, aby miały pasujące specyfikatory klasy magazynu.
 
-##  <a name="porting_to_unicode"></a> Krok 11. Eksportowanie z MBCS na Unicode
+##  <a name="porting_to_unicode"></a>Krok 11. Przenoszenie z MBCS do Unicode
 
-Należy pamiętać, że w środowisku Windows, gdy mówimy Unicode, zwykle rozumie UTF-16. Inne systemy operacyjne, takie jak Linux Użyj UTF-8, ale Windows nie jest zazwyczaj. Wersja MBCS MFC została zakończona w programie Visual Studio 2013 i 2015, ale nie jest już przestarzałe w programie Visual Studio 2017. Jeśli przed wykonaniem kroku do faktycznie portu kodu MBCS na Unicode UTF-16 za pomocą programu Visual Studio 2013 lub 2015 r., firma Microsoft może być tymczasowo wyeliminować ostrzeżenia, że MBCS jest przestarzała, aby można było wykonywać inne czynności lub odłożyć, przenoszenie do momentu dogodnym momencie. Bieżący kod używa MBCS i aby kontynuować, musimy zainstalować wersję ANSI/MBCS MFC. Zamiast dużej biblioteki MFC nie jest częścią domyślnej programu Visual Studio **programowanie aplikacji klasycznych w języku C++** instalacji, więc musi ona zostać wybrana za pomocą opcjonalnych składników w Instalatorze. Zobacz [dodatek MFC MBCS DLL](../mfc/mfc-mbcs-dll-add-on.md). Gdy możesz pobrać ten program i uruchom ponownie program Visual Studio można kompilować, a także połączyć się z wersją MBCS MFC, ale wszelkiego ostrzeżenia dotyczące MBCS — Jeśli używasz programu Visual Studio 2013 lub 2015, NO_WARN_MBCS_MFC_DEPRECATION należy również dodać do listy wstępnie zdefiniowanych makra w **preprocesora** sekcji we właściwościach projektu lub na początku pliku nagłówka pliku stdafx.h lub innych wspólnego pliku nagłówkowego.
+Należy pamiętać, że w świecie systemu Windows, gdy jesteśmy w formacie Unicode, zwykle jest to UTF-16. W przypadku innych systemów operacyjnych, takich jak Linux, są używane UTF-8, ale system Windows zazwyczaj nie. Wersja MBCS MFC była przestarzała w Visual Studio 2013 i 2015, ale nie jest już przestarzała w programie Visual Studio 2017. Jeśli jest używany Visual Studio 2013 lub 2015, przed przeprowadzeniem kroku do rzeczywistego portu MBCS kod w kodzie Unicode UTF-16, firma Microsoft może chcieć tymczasowo wyeliminować ostrzeżenia, które MBCS są przestarzałe, aby można było wykonać inne zadania lub odroczyć port do dogodnego czasu. Bieżący kod korzysta z MBCS i aby kontynuować, że musimy zainstalować wersję MFC/MBCS w wersji ANSI. Niewielka biblioteka MFC nie jest częścią domyślnego programowania programu Visual Studio **Desktop z C++**  instalacją, dlatego musi być wybrana z opcjonalnych składników w instalatorze. Zobacz [dodatek MFC MBCS dll](../mfc/mfc-mbcs-dll-add-on.md). Po pobraniu i ponownym uruchomieniu programu Visual Studio można kompilować i łączyć się z MBCS wersją MFC, ale aby usunąć ostrzeżenia dotyczące MBCS, jeśli używasz Visual Studio 2013 lub 2015, należy również dodać NO_WARN_MBCS_MFC_DEPRECATION do listy wstępnie zdefiniowanych makra w sekcji **preprocesora** we właściwościach projektu lub na początku pliku nagłówkowego stdafx. h lub innego wspólnego pliku nagłówkowego.
 
-W efekcie powstał błędy konsolidatora.
+Mamy teraz kilka błędów konsolidatora.
 
 ```Output
 fatal error LNK1181: cannot open input file 'mfc42d.lib'
 ```
 
-LNK1181 występuje, ponieważ nieaktualne biblioteki statycznej wersji biblioteki mfc znajduje się na konsolidatora danych wejściowych. Nie jest to wymagane dłużej, ponieważ firma Microsoft dynamicznie łączy biblioteki MFC, musimy Usuń wszystkie biblioteki statycznej MFC z **dane wejściowe** właściwość **konsolidatora** sekcji we właściwościach projektu. Ten projekt jest również za pomocą `/NODEFAULTLIB` opcji, a zamiast tego zawiera listę wszystkich zależności biblioteki.
+LNK1181 występuje, ponieważ nieaktualna statyczna wersja biblioteki MFC jest uwzględniona w danych wejściowych konsolidatora. Nie jest to wymagane, ponieważ możemy dynamicznie łączyć MFC, dlatego wystarczy usunąć wszystkie biblioteki statyczne MFC z właściwości **Input** w sekcji konsolidatora właściwości projektu . Ten projekt używa `/NODEFAULTLIB` również opcji, a zamiast tego wyświetla wszystkie zależności biblioteki.
 
 ```
 msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\SpyHk55.lib;%(AdditionalDependencies)
 ```
 
-Teraz Daj nam faktycznie aktualizować stary kod zestawu znaków wielobajtowych (MBCS) na Unicode. Ponieważ jest to aplikacja Windows, ściśle powiązane na platformę Windows desktop, firma Microsoft będzie portu na Unicode UTF-16, który korzysta z Windows. Jeśli piszesz kod dla wielu platform lub przenoszenie aplikacji Windows, do innej platformy, należy wziąć pod uwagę przenoszenie UTF-8, która jest powszechnie używana w innych systemach operacyjnych.
+Teraz daj nam zaktualizować stary kod wielobajtowego zestawu znaków (MBCS) do formatu Unicode. Ponieważ jest to aplikacja systemu Windows, dokładnie powiązane z platformą Windows Desktop, przeniesiemy ją do formatu UTF-16 Unicode używanego przez system Windows. W przypadku pisania kodu międzyplatformowego lub przenoszenia aplikacji systemu Windows na inną platformę warto rozważyć przenoszenie do formatu UTF-8, który jest powszechnie używany w innych systemach operacyjnych.
 
-Przenoszenie Unicode UTF-16, firma Microsoft należy zdecydować, czy nadal chcemy możliwość kompilowania do MBCS, czy nie.  Jeśli chcemy mieć możliwość obsługi MBCS powinniśmy skorzystać — makro tchar — jako typ znaku, który jest rozpoznawany jako celu **char** lub **wchar_t**, w zależności od tego, czy \_MBCS lub \_UNICODE jest definiowany podczas kompilacji. Przełączanie do TCHAR i TCHAR wersje różnych interfejsów API, zamiast **wchar_t** i jego skojarzone interfejsy API oznacza, że możesz wrócić do MBCS wersję kodu poprzez definiowanie \_makro MBCS zamiast \_ UNICODE. Oprócz TCHAR istnieje wiele wersji tchar — takich jak definicje powszechnie używanych typów, makra i funkcje. Na przykład LPCTSTR zamiast LPCSTR i tak dalej. W oknie dialogowym właściwości projektu w obszarze **właściwości konfiguracji**w **ogólne** sekcji, zmień **zestaw znaków** właściwość **Użyj MBCS Zestaw znaków** do **Użyj kodowania Unicode**. To ustawienie ma wpływ na wstępnie zdefiniowane makra, które podczas kompilacji. Jest makrem UNICODE i \_makro UNICODE. Właściwość projektu ma wpływ na oba spójne. Używaj UNICODE, gdzie Użyj nagłówków Visual C++, takie jak MFC w nagłówki Windows \_UNICODE, ale jeśli jest zdefiniowana, drugi zawsze jest definiowany.
+W przypadku przenoszenia do formatu UTF-16 Unicode należy zdecydować, czy nadal chcemy, aby opcja została skompilowana do MBCS, czy nie.  Jeśli chcemy mieć opcję obsługi MBCS, należy użyć makra używanie TCHAR jako typu znaku, który jest rozpoznawany jako **char** lub **wchar_t**, w zależności od tego, czy \_MBCS lub \_Unicode jest zdefiniowany podczas kompilacji. Przełączenie do używanie TCHAR i wersji używanie TCHAR różnych interfejsów API zamiast **wchar_t** i skojarzonych z nimi interfejsów API oznacza, że można wrócić do wersji MBCS kodu, wystarczy zdefiniować \_makro \_MBCS zamiast Unicode. Oprócz używanie TCHAR, istnieją różne wersje używanie TCHAR, takie jak powszechnie używane definicje typów, makra i funkcje. Na przykład LPCTSTR zamiast LPCSTR i tak dalej. W oknie dialogowym właściwości projektu, w obszarze **Właściwości konfiguracji**, w sekcji **Ogólne** Zmień właściwość **zestawu znaków** z zestawu znaków **MBCS** na użycie zestawu znaków **Unicode**. To ustawienie ma wpływ na to, jakie makro jest wstępnie zdefiniowane podczas kompilacji. Istnieje zarówno makro Unicode, jak i \_makro Unicode. Właściwość projektu wpływa spójnie. Nagłówki systemu Windows używają Unicode, C++ gdzie w nagłówkach wizualnych, takich jak MFC, są używane \_znaki Unicode, ale gdy jeden z nich jest zdefiniowany, drugi jest zawsze zdefiniowany.
 
-Jest dobrą [przewodnik](https://msdn.microsoft.com/library/cc194801.aspx) przenoszenie z MBCS na Unicode UTF-16 za pomocą TCHAR istnieje. Wybraliśmy tę trasę. Po pierwsze zmienimy **zestaw znaków** właściwości **zestaw znaków Unicode, użyj** i skompiluj ponownie projekt.
+Dobry [Przewodnik](/previous-versions/cc194801(v=msdn.10)) dotyczący przenoszenia z MBCS do UTF-16 Unicode przy użyciu używanie TCHAR istnieje. Wybieramy tę trasę. Najpierw zmienimy Właściwość **zestawu znaków** , aby **używała zestawu znaków Unicode** i ponownie skompiluj projekt.
 
-Niektóre miejsca w kodzie była już używana TCHAR, najwyraźniej oczekując na końcu obsługi standardu Unicode. Niektóre nie były dostępne. Przeszukaliśmy dla wystąpień CHAR, czyli **typedef** dla **char**i zastąpione większość z nich TCHAR. Ponadto firma Microsoft wyszukiwanego `sizeof(CHAR)`. Zawsze, gdy zmieniliśmy z CHAR do tchar — zwykle mieliśmy można zmienić na `sizeof(TCHAR)` ponieważ był to często używane do określenia liczby znaków w ciągu. W tym miejscu przy użyciu nieprawidłowego typu nie generuje błąd kompilatora, aby poświęcić nieco uwagi w tym przypadku zwracając.
+Niektóre miejsca w kodzie już korzystają z używanie TCHAR, prawdopodobnie w oczekiwanej obsłudze kodu Unicode. Niektóre z nich nie zostały. Przeszukano wystąpienia CHAR, które jest **elementem TypeDef** dla **char**, i zastąpione większością z używanie TCHAR. Szukamy `sizeof(CHAR)`również. Zawsze, gdy zmienimy się z char na używanie TCHAR, zwykle musiałmy `sizeof(TCHAR)` zmienić się na, ponieważ był on często używany do określenia liczby znaków w ciągu. Użycie nieprawidłowego typu w tym miejscu nie powoduje błędu kompilatora, dlatego warto zwrócić uwagę na ten przypadek.
 
-Tego typu błędu jest bardzo częsty zaraz po przełączenie na Unicode.
+Ten typ błędu jest bardzo powszechny po przełączeniu do formatu Unicode.
 
 ```Output
 error C2664: 'int wsprintfW(LPWSTR,LPCWSTR,...)': cannot convert argument 1 from 'CHAR [16]' to 'LPWSTR'
 ```
 
-Poniżej przedstawiono przykładowy kod, który produkuje to:
+Oto przykład kodu, który tworzy:
 
 ```cpp
 wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 ```
 
-Umieściliśmy \_T wokół literału ciągu, aby usunąć ten błąd.
+Wprowadzimy \_T wokół literału ciągu, aby usunąć błąd.
 
 ```cpp
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-\_Makro T ma sprawia kompilacji literału ciągu, jako **char** ciągu lub **wchar_t** ciągu, w zależności od ustawienia MBCS lub UNICODE. Aby zamienić wszystkie ciągi zawierające \_T w programie Visual Studio, najpierw otwórz **szybkiego zamieniania** (klawiatury: **CTRL**+**F**) pole lub **zamienianie w plikach** (klawiatury: **CTRL**+**Shift**+**H**), następnie wybierz **Użyj wyrażeń regularnych** pola wyboru. Wprowadź `((\".*?\")|('.+?'))` jako tekst wyszukiwania i `_T($1)` jako tekst zastępczy. Jeśli masz już \_makro T niektóre ciągi, tej procedurze zostanie dodane ponownie, a także znajdzie przypadki, w których nie chcesz, \_T, na przykład przy użyciu `#include`, dlatego najlepiej użyć **Zamień następny**zamiast **Zamień wszystkie**.
+Makro T ma wpływ na tworzenie literału ciągu jako ciągu znaków lub ciągu **wchar_t** , w zależności od ustawienia MBCS lub Unicode. \_ Aby zastąpić wszystkie ciągi znakiem \_T w programie Visual Studio, najpierw Otwórz **szybkie zamienianie** (klawiatura:Ctrl+**F**) Box lub **Zamień w plikach** (klawiatura: **Ctrl**ShiftH),anastępniewybierzpolewyboruUżyjwyrażeńregularnych.++ Wpisz `((\".*?\")|('.+?'))` jako tekst do wyszukania i `_T($1)` tekst zastępczy. Jeśli masz \_już makro T otaczające kilka ciągów, ta procedura zostanie ponownie dodana i będzie mogła znaleźć przypadki, w których nie chcesz \_, na przykład kiedy `#include`używasz, dlatego najlepiej użyć **Zamień** zamiast  **Zamień wszystko**.
 
-Tej określonej funkcji [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), faktycznie jest zdefiniowany w nagłówki Windows i dokumentacji, aby zaleca się, że jej nie używane, z powodu przepełnienia buforu możliwe. Nie podano rozmiaru dla `szTmp` buforu, więc nie ma możliwości dla funkcji sprawdzić, czy bufor może zawierać wszystkie dane, które ma zostać zapisana. Zobacz następną sekcję o przenoszenie do bezpiecznego CRT, w którym naprawiony inne podobne problemy. Firma Microsoft zakończył się zastąpienie go za pomocą [_stprintf_s —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
+Ta określona funkcja, [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw), jest zdefiniowana w nagłówkach systemu Windows, a dokumentacja nie zaleca się jej użycia z powodu przepełnienia buforu. Nie podano `szTmp` rozmiaru bufora, dlatego nie ma możliwości sprawdzenia, czy bufor może przechowywać wszystkie dane do zapisu. Zapoznaj się z następną sekcją przenoszenia do bezpiecznej CRT, w której Naprawiono inne podobne problemy. Zakończył wymianę IT z [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
-Innym typowym błędem, będzie widocznych na konwersji do formatu Unicode jest to.
+Inny typowy błąd widoczny w konwersji na Unicode to.
 
 ```Output
 error C2440: '=': cannot convert from 'char *' to 'TCHAR *'
 ```
 
-Kod, który go generuje jest następująca:
+Tworzony jest następujący kod:
 
 ```cpp
 pParentNode->m_szText = new char[strTitle.GetLength() + 1];
 _tcscpy(pParentNode->m_szText, strTitle);
 ```
 
-Mimo że `_tcscpy` funkcja została użyta, czyli TCHAR strcpy — funkcja kopiowania ciągu, bufor, która została przydzielona był **char** buforu. Jest to prosty sposób zmienić na TCHAR.
+Mimo że funkcja została użyta, która jest funkcją używanie TCHAR strcpy do kopiowania ciągu, bufor, który został przydzielony, był buforem **znaku.** `_tcscpy` Jest to łatwo zmienione na używanie TCHAR.
 
 ```cpp
 pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];
 _tcscpy(pParentNode->m_szText, strTitle);
 ```
 
-Podobnie zmieniliśmy LPSTR (Long wskaźnik do ciągu) i LPCSTR (Long wskaźnik ze stałym ciągiem) LPTSTR (wskaźnik długi ciąg TCHAR) i LPCTSTR (Long wskaźnik ze stałym ciągiem TCHAR) odpowiednio w błąd kompilatora. Wybraliśmy nie dokonywać takiego zastąpienia przy użyciu wyszukiwania globalnego i Zamień, ponieważ do badania oddzielnie każdą sytuację. W niektórych przypadkach **char** wyznaczony wersji, takie jak kiedy przetwarzanie niektórych Windows komunikatów, w której użyty struktury Windows, które mają **A** sufiks. W interfejsie API Windows sufiks **A** oznacza ASCII, ANSI (i ma zastosowanie również do MBCS), a sufiksem **W** oznacza, że znaki dwubajtowe lub Unicode UTF-16. Ten wzorzec nazewnictwa jest używany w nagłówkach Windows, ale możemy również przestrzegać go w kodzie programu Spy ++ podczas Musieliśmy dodać wersję Unicode, funkcji, która została już zdefiniowana w MBCS wersji.
+Podobnie zmieniono LPSTR (długi wskaźnik na ciąg) i LPCSTR (długi wskaźnik na ciąg stały) na LPTSTR (długi wskaźnik do używanie TCHAR ciąg) i LPCTSTR (długi wskaźnik do stałego ciągu używanie TCHAR), gdy jest to uzasadnione przez błąd kompilatora. Nie wybraliśmy takich zamian przy użyciu wyszukiwania globalnego i zastępowania, ponieważ każda z nich musiała zostać zbadana pojedynczo. W niektórych przypadkach jest wymagana wersja **znaku** , na przykład podczas przetwarzania niektórych komunikatów systemu Windows korzystających ze struktur systemu Windows, które mają sufiks. W interfejsie API systemu Windows sufiks **a** oznacza ASCII lub ANSI (a także dotyczy MBCS), a sufiks **w** przypadku znaków dwubajtowych lub UTF-16 Unicode. Ten wzorzec nazewnictwa jest używany w nagłówkach systemu Windows, ale również został użyty w kodzie Spy + +, gdy musiałem zostać dodana wersja Unicode funkcji, która została już zdefiniowana w wersji MBCS.
 
-W niektórych przypadkach firma Microsoft było zastąpienie typu do korzystania z wersji, który jest rozpoznawany jako poprawnie (WNDCLASS zamiast WNDCLASSA, na przykład).
+W niektórych przypadkach wymagało zamiany typu w celu użycia wersji, która jest rozpoznawana poprawnie (WNDCLASS zamiast WNDCLASSA na przykład).
 
-W wielu przypadkach mieliśmy do używania wersji ogólnych (makro) interfejsu API Win32, takich jak `GetClassName` (zamiast `GetClassNameA`). W instrukcji switch procedury obsługi komunikatów, niektóre komunikaty dotyczą MBCS lub Unicode, w tych przypadkach, mieliśmy zmienić kod, aby jawnie wywołać wersji MBCS, ponieważ zastąpiliśmy objęty nazwane funkcje z **A** i **W** określonych funkcji i dodaje makro dla nazwy ogólnej, który jest rozpoznawany jako poprawny **A** lub **W** nazwę opartą na czy UNICODE jest zdefiniowana.  W wielu częściach kodu, gdy przeszliśmy do definiowania \_UNICODE, wersja W jest teraz wybrane nawet wtedy, gdy **A** wersja to, co chcę teraz.
+W wielu przypadkach musiałeś użyć wersji ogólnej (makra) Win32 API, na przykład `GetClassName` ( `GetClassNameA`zamiast). W przypadku instrukcji switch programu obsługi komunikatów niektóre komunikaty są MBCS lub Unicode, w takich przypadkach musiały zmienić kod, aby jawnie wywołać wersję MBCS, ponieważ zastępujemy funkcje o nazwie i **w** określonych funkcjach. i dodano makro dla nazwy ogólnej, która jest rozpoznawana jako poprawna nazwa **a** lub **W** na podstawie tego, czy Unicode jest zdefiniowany.  W wielu częściach kodu, gdy przełączymy się w celu zdefiniowania \_standardu Unicode, wersja w w wersji jest teraz wybierana nawet wtedy, gdy wersja jest wymagana.
 
-Istnieje kilka miejsc, gdy miały stosowanie specjalnych działań do wykonania. Jakiekolwiek wykorzystanie `WideCharToMultiByte` lub `MultiByteToWideChar` mogą wymagać bliżej. Poniżej przedstawiono przykładowy gdzie `WideCharToMultiByte` było ono używane.
+Istnieje kilka miejsc, w których należy podjąć specjalne działania. Użycie `WideCharToMultiByte` lub`MultiByteToWideChar` może wymagać bliższego wyglądu. Oto przykład `WideCharToMultiByte` użycia.
 
 ```cpp
 BOOL C3dDialogTemplate::GetFont(CString& strFace, WORD& nFontSize)
@@ -597,7 +597,7 @@ BOOL C3dDialogTemplate::GetFont(CString& strFace, WORD& nFontSize)
 }
 ```
 
-Aby rozwiązać ten problem, mieliśmy zrozumienie przyczyn jest to możliwe było skopiować szeroki ciąg znaków reprezentujący nazwę czcionki do wewnętrznego buforu elementu `CString`, `strFace`. Wymaga to nieco inny kod dla znaków wielobajtowych `CString` ciągi, jak w przypadku szerokich `CString` ciągów, dlatego dodaliśmy `#ifdef` w tym przypadku.
+Aby rozwiązać ten fakt, musiałmy zrozumieć, że przyczyną jest skopiowanie ciągu znaków dwubajtowych reprezentującego nazwę czcionki do wewnętrznego bufora `CString`,. `strFace` Jest `CString` `CString` tonieznacznieinnykoddlaciągówwielobajtowych,takjakwprzypadkuciągówznakówszerokich,więcdodaliśmywtymprzypadku.`#ifdef`
 
 ```cpp
 #ifdef _MBCS
@@ -610,35 +610,35 @@ strFace.ReleaseBuffer();
 #endif
 ```
 
-Oczywiście, a nie z `wcscpy` naprawdę powinniśmy skorzystać w `wcscpy_s`, bardziej bezpieczna wersja. Następna sekcja rozwiązuje ten problem.
+Oczywiście zamiast `wcscpy` nas powinna korzystać `wcscpy_s`z bezpieczniejszej wersji. Następna sekcja dotyczy tego.
 
-W celu sprawdzenia naszej pracy, firma Microsoft należy zresetować **zestaw znaków** do **zestaw znaków wielobajtowych użyj** i upewnij się, że kod nadal będzie się kompilować przy użyciu MBCS, jak również Unicode. Needless, że przebieg pełnego testu powinien być wykonywany ponownej kompilacji aplikacji po tych zmian.
+Jako sprawdzenie naszej pracy należy zresetować **zestaw znaków** , aby **używał zestawu znaków** wielobajtowych, i upewnić się, że kod nadal kompiluje się przy użyciu MBCS, a także kodu Unicode. Niezbędny do wypowiedzenia, w ponownie skompilowanej aplikacji należy wykonać pełne przebieg testowy po wszystkich tych zmianach.
 
-W naszych pracach za pomocą tego rozwiązania programu Spy ++, jaki zajęło około dwóch dni roboczych dla średniej dewelopera języka C++ przekonwertować kod Unicode. Który nie zawiera retesting czasu.
+W naszej pracy z tym rozwiązaniem Spy + + zajęło on około dwóch dni roboczych na średnią C++ aplikację, aby przekonwertować kod na Unicode. , Które nie obejmowały czasu przetestowania.
 
-##  <a name="porting_to_secure_crt"></a> Krok 12. Przenoszenie do użycia zabezpieczenia CRT
+##  <a name="porting_to_secure_crt"></a>Krok 12. Przenoszenie do używania bezpiecznego CRT
 
-Przenoszenie kodu do użycia bezpieczne wersje (wersje **_s** sufiks) funkcje CRT jest dalej. W tym przypadku jest ogólną strategią zastąpić funkcji z **_s** wersji, a następnie, zwykle, Dodaj parametry rozmiar wymaganego buforu dodatkowe. W wielu przypadkach to proste, ponieważ rozmiar jest znany. W innych przypadkach, w których rozmiar nie jest natychmiast dostępna, jest konieczne dodanie dodatkowych parametrów do funkcji, która używa funkcji CRT lub prawdopodobnie zużycie buforu miejsca docelowego i zobacz jakie odpowiedniego rozmiaru obowiązują limity.
+Przenoszenie kodu w celu używania bezpiecznych wersji (wersje z sufiksem **_s** ) funkcji CRT jest dalej. W takim przypadku ogólna strategia polega na zastępowaniu funkcji z wersją **_s** , a następnie, zazwyczaj dodać wymagane dodatkowe parametry rozmiaru buforu. W wielu przypadkach jest to proste, ponieważ rozmiar jest znany. W innych przypadkach, w których rozmiar nie jest natychmiast dostępny, konieczne jest dodanie dodatkowych parametrów do funkcji, która używa funkcji CRT, lub może sprawdzić użycie buforu docelowego i zobaczyć, jakie są odpowiednie limity rozmiaru.
 
-Visual C++ zapewnia sposobem, aby ułatwić uzyskiwanie kodzie bezpieczeństwa bez dodawania tyle parametrów rozmiar, a przy użyciu przeciążenia szablonu. Ponieważ te przeciążenia szablonów, są one dostępne podczas kompilowania kodu jako C++, nie się C. Spyxxhk projekt C, aby lewy nie będzie działać w tym.  Jednak nie jest Spyxx i używamy lewy. Lewy jest dodać taki wiersz w miejscu, gdzie go zostanie skompilowany w każdym pliku projektu, takie jak w pliku stdafx.h:
+Wizualizacja C++ zawiera lewę, która ułatwia uzyskiwanie bezpiecznego kodu bez konieczności dodawania tylu parametrów rozmiaru i jest przy użyciu przeciążeń szablonu. Ponieważ te przeciążenia są szablonami, są dostępne tylko wtedy, gdy C++kompilacja jako, a nie jako c. Spyxxhk jest projektem c, więc lewę nie będzie można używać.  Jednak spyxx nie jest i będziemy mogli korzystać z lew. Lewę jest dodanie linii podobnej do tego w miejscu, w którym zostanie on skompilowany w każdym pliku projektu, na przykład w stdafx. h:
 
 ```cpp
 #define _CRT_SECURE_TEMPLATE_OVERLOADS 1
 ```
 
-Po zdefiniowaniu, zawsze wtedy, gdy rozmiar buforu jest tablicą, a nie wskaźnik surowy jego rozmiar jest wnioskowany z typu tablicy i używany jako parametr rozmiaru bez konieczności dostarczenia go. Która pozwala zmniejszyć złożoność ponowne napisanie kodu. Nadal trzeba zastąpić nazwy funkcji za pomocą **_s** wersji, ale często może odbywać się za pomocą wyszukiwania oraz operację zamiany.
+Po zdefiniowaniu tego elementu, gdy bufor jest tablicą, a nie pierwotnym wskaźnikiem, jego rozmiar jest wywnioskowany z typu tablicy i używany jako parametr rozmiaru, bez konieczności podawania go. Pozwala to skrócić złożoność ponownego zapisywania kodu. Nadal trzeba zamienić nazwę funkcji na wersję **_s** , ale może to być spowodowane operacją wyszukiwania i zamieniania.
 
-Zmienić wartości zwrócone przez niektóre funkcje. Na przykład `_itoa_s` (i `_itow_s` i makra `_itot_s`) zwraca kod błędu (`errno_t`), zamiast ciągu. Dlatego w tych przypadkach należy przenieść wywołanie `_itoa_s` na oddzielnym wierszy i zastąp go z identyfikatorem buforu.
+Wartości zwracane niektórych funkcji zostały zmienione. Na przykład `_itoa_s` (i `_itow_s` i makro `_itot_s`) zwraca kod błędu (`errno_t`), a nie ciąg. W takich przypadkach należy przenieść wywołanie do `_itoa_s` oddzielnego wiersza i zastąpić je identyfikatorem buforu.
 
-Niektóre typowe przypadki: dla `memcpy`, podczas przełączania `memcpy_s`, dodaliśmy często rozmiar struktury kopiowane do. Podobnie dla większości ciągów i bufory rozmiaru tablicy lub buforu łatwo zależy od deklaracji buforu lub znajdując, gdzie pierwotnie został przydzielony rozmiar buforu. W niektórych sytuacjach należy określić sposób dużych bufora jest aktualnie dostępna i jeśli te informacje nie są dostępne w zakresie funkcji, który jest modyfikowany, powinny zostać dodane jako dodatkowy parametr i należy zmodyfikować kod wywołujący, aby Podaj informacje.
+Niektóre typowe przypadki: dla `memcpy`, podczas przełączania do `memcpy_s`, często dodaliśmy rozmiar struktury kopiowanej do. Podobnie w przypadku większości ciągów i buforów rozmiar tablicy lub buforu można łatwo określić na podstawie deklaracji buforu lub przez znalezienie miejsca, w którym bufor został pierwotnie przydzielony. W niektórych sytuacjach należy określić, jak duże jest dostępność bufora, a jeśli te informacje nie są dostępne w zakresie modyfikowanej funkcji, należy dodać jako dodatkowy parametr, a kod wywołujący powinien zostać zmodyfikowany do Podaj informacje.
 
-Za pomocą tych metod zajęło to około pół dnia można przekonwertować kod, aby użyć bezpieczne funkcje CRT. Jeśli nie zdecydujesz się na przeciążenia szablonu, aby ręcznie dodać parametry rozmiar, będzie ona prawdopodobnie należy wykonać dwa razy lub trzy razy więcej czasu.
+Przy użyciu tych technik trwało około pół dnia, aby przekonwertować kod w celu użycia funkcji Secure CRT. Jeśli wybierzesz pozycję nie do przeciążenia szablonu i dodasz parametry rozmiaru ręcznie, prawdopodobnie trwa dwa razy lub trzy razy więcej czasu.
 
-##  <a name="deprecated_forscope"></a> Krok 13. /Zc:forScope-jest przestarzała.
+##  <a name="deprecated_forscope"></a>Krok 13. /Zc: forScope — jest przestarzałe
 
-Od czasu Visual C++ 6.0 kompilator jest zgodny z bieżącym standardem, co ogranicza zakres zmiennych zadeklarowanych w pętli do zakresu pętli. Opcja kompilatora [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**Wymuszaj zgodność w zakresie pętli for** we właściwościach projektu) określa, czy jest to raportowane jako błąd. Firma Microsoft należy zaktualizować naszego kodu jako zgodność, a następnie dodaj deklaracje tylko poza pętlę. Aby uniknąć wprowadzania zmian w kodzie, można zmienić to ustawienie w **języka** sekcji właściwości projektu C++, aby `No (/Zc:forScope-)`. Jednak należy pamiętać, że `/Zc:forScope-` może zostać usunięte w przyszłej wersji programu Visual C++, więc po pewnym czasie kodu będą musieli zmienić są zgodne ze standardem.
+Ponieważ Visual C++ 6,0, kompilator jest zgodny z bieżącym standardem, który ogranicza zakres zmiennych zadeklarowanych w pętli do zakresu pętli. Opcja kompilatora [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**Wymuszaj zgodność z zakresem pętli** we właściwościach projektu) określa, czy jest to raportowany jako błąd. Należy zaktualizować nasz kod, aby był zgodny, i dodać deklaracje tylko poza pętlą. Aby uniknąć wprowadzania zmian w kodzie, można zmienić to ustawienie w sekcji **Język** właściwości C++ projektu na `No (/Zc:forScope-)`. Należy jednak pamiętać, że `/Zc:forScope-` mogą zostać usunięte w przyszłej wersji wizualizacji C++, więc w efekcie kod będzie musiał zmienić się w taki sposób, aby był zgodny ze standardem.
 
-Te problemy są stosunkowo łatwo rozwiązać, ale w zależności od kodu, to może wpłynąć na duże ilości kodu. Oto typowy problem.
+Te problemy są stosunkowo łatwe do naprawy, ale w zależności od kodu mogą mieć wpływ na wiele kodów. Poniżej przedstawiono typowy problem.
 
 ```cpp
 int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
@@ -649,13 +649,13 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 }
 ```
 
-Powyższy kod generuje błąd:
+Powyższy kod powoduje błąd:
 
 ```Output
 'n': undeclared identifier
 ```
 
-Dzieje się tak, ponieważ kompilator jest przestarzała opcję kompilatora, która może kod, który nie jest już zgodny ze standardem C++. W standardzie zadeklarowanie zmiennej wewnątrz pętli, ogranicza jego zakres do pętli, więc powszechną praktyką użycia licznika pętli, poza pętlą wymagają, że deklaracja licznika także przenosić poza pętlę, jak w poniższym kodzie poprawione :
+Dzieje się tak, ponieważ kompilator zakończył opcję kompilatora, która zezwala na kod, który nie jest już C++ zgodny ze standardem. W standardzie deklarowanie zmiennej wewnątrz pętli ogranicza swój zakres do pętli, dlatego powszechną metodą używania licznika pętli poza pętlą jest, że deklaracja licznika również jest przenoszona poza pętlę, jak w poniższym zmienionym kodzie :
 
 ```cpp
 int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
@@ -669,9 +669,9 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 ## <a name="summary"></a>Podsumowanie
 
-Przenoszenie programu Spy ++ od oryginalnego kodu Visual C++ 6.0 najnowszą wersję kompilatora trwało około 20 godzin kodowania czasu w ciągu około tygodnia. Możemy uaktualnić bezpośrednio w ramach ośmiu wersjach produktu programu Visual Studio 6.0 do programu Visual Studio 2015. Teraz jest to zalecane podejście do wszystkich uaktualnień w projektach dużych i małych.
+Przenoszenie programu Spy + + z oryginalnego kodu programu C++ Visual 6,0 do najnowszego kompilatora zajęło około 20 godzin czasu kodowania w ciągu tygodnia. Firma Microsoft została uaktualniona bezpośrednio przez osiem wydań produktu z programu Visual Studio 6,0 do programu Visual Studio 2015. Jest to teraz zalecane rozwiązanie dla wszystkich uaktualnień w projektach dużych i małych.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Poprzednie analiza przypadku: COM Spy](../porting/porting-guide-com-spy.md)
+[Poprzednia analiza przypadku: COM Spy](../porting/porting-guide-com-spy.md)

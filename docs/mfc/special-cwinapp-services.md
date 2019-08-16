@@ -30,56 +30,56 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-ms.openlocfilehash: 910660253c9d306b13294a710021a6bbd36c1952
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e96753a5dbc77fdc7aab365439e997585e00f43b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307318"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511332"
 ---
 # <a name="special-cwinapp-services"></a>Specjalne usługi CWinApp
 
-Oprócz uruchamiania pętli komunikatów i zapewniając możliwość inicjowania aplikacji i wyczyść zasoby po ukończeniu, [CWinApp](../mfc/reference/cwinapp-class.md) zawiera kilka innych usług.
+Poza uruchomieniem pętli komunikatów i umożliwieniem zainicjowania aplikacji i jej oczyszczenia, [CWinApp](../mfc/reference/cwinapp-class.md) udostępnia kilka innych usług.
 
-##  <a name="_core_shell_registration"></a> Rejestracja powłoki
+##  <a name="_core_shell_registration"></a>Rejestracja powłoki
 
-Domyślnie Kreator aplikacji MFC umożliwia użytkownikowi otwieranie plików danych, utworzonych przez dwukrotne kliknięcie pliku w Eksploratorze plików lub Menedżer plików aplikacji. Jeśli Twoja aplikacja jest aplikacją MDI i określ rozszerzenie dla plików, aplikacja tworzy, Kreator aplikacji MFC dodaje wywołania [registershellfiletypes —](../mfc/reference/cwinapp-class.md#registershellfiletypes) i [enableshellopen —](../mfc/reference/cwinapp-class.md#enableshellopen)funkcje elementów członkowskich [CWinApp](../mfc/reference/cwinapp-class.md) do `InitInstance` zastąpienie zapisującej dla Ciebie.
+Domyślnie Kreator aplikacji MFC umożliwia użytkownikowi otwieranie plików danych utworzonych przez aplikację przez dwukrotne kliknięcie ich w Eksploratorze plików lub w Menedżerze plików. Jeśli aplikacja jest aplikacją MDI i określisz rozszerzenie dla plików tworzonych przez aplikację, Kreator aplikacji MFC dodaje wywołania do funkcji składowych [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) i [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen) z [CWinApp](../mfc/reference/cwinapp-class.md) do `InitInstance` zastąpienie, które zapisuje dla Ciebie.
 
-`RegisterShellFileTypes` rejestruje typy dokumentów aplikacji za pomocą Eksploratora plików lub Menedżer plików. Funkcja dodaje wpisy do bazy danych rejestracji, która utrzymuje Windows. Wpisy zarejestrować każdy typ dokumentu, skojarzyć rozszerzenie pliku z typem pliku, określenie wiersza polecenia, aby otworzyć aplikację i określić polecenie do programu exchange (DDE) dane dynamiczne, aby otworzyć dokument tego typu.
+`RegisterShellFileTypes`rejestruje typy dokumentów aplikacji w Eksploratorze plików lub Menedżerze plików. Funkcja dodaje wpisy do bazy danych rejestracji przechowywanej w systemie Windows. Wpisy rejestrują każdy typ dokumentu, skojarz rozszerzenie pliku z typem pliku, określ wiersz polecenia, aby otworzyć aplikację, a następnie określ polecenie dynamicznej wymiany danych (DDE), aby otworzyć dokument tego typu.
 
-`EnableShellOpen` kończy proces, umożliwiając aplikacji na odbieranie poleceń DDE z Eksploratora plików lub Menedżera plików, aby otworzyć plik, wybierany przez użytkownika.
+`EnableShellOpen`kończy proces, umożliwiając aplikacji otrzymywanie poleceń DDE z Eksploratora plików lub Menedżera plików, aby otworzyć plik wybrany przez użytkownika.
 
-Ta obsługa automatycznej rejestracji w `CWinApp` eliminuje potrzeby dostarczać pliku reg za pomocą aplikacji ani wykonywać pracę specjalnej instalacji.
+Ta Automatyczna obsługa rejestracji w `CWinApp` programie eliminuje konieczność dostarczania pliku reg do aplikacji lub wykonywania specjalnej instalacji.
 
-Jeśli chcesz zainicjować interfejsu GDI + aplikacji (przez wywołanie metody [GdiplusStartup](/windows/desktop/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup) w swojej [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) funkcji), należy pominąć GDI + wątek w tle.
+Jeśli chcesz zainicjować GDI+ dla aplikacji (przez wywołanie [GdiplusStartup](/windows/win32/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup) w funkcji [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ), musisz pominąć wątek w tle GDI+.
 
-Można to zrobić, ustawiając `SuppressBackgroundThread` członkiem [GdiplusStartupInput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput) struktury do **TRUE**. Gdy pomijanie GDI + w tle w wątku, `NotificationHook` i `NotificationUnhook` wywołania należy po prostu wcześniejsze wprowadzanych i wyprowadzanych pętli komunikatów dla aplikacji. Aby uzyskać więcej informacji na temat tych wywołań, zobacz [GdiplusStartupOutput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput). W związku z tym, dobrym miejscem do śledzenia wywołań `GdiplusStartup` i funkcje punktu zaczepienia powiadomień będzie znajdować się w przesłonięcie funkcji wirtualnej [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), jak pokazano poniżej:
+Można to zrobić, ustawiając `SuppressBackgroundThread` element członkowski struktury [GdiplusStartupInput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput) na **wartość true**. W `NotificationHook` przypadku pomijania wątku w tle GDI+, wywołania `NotificationUnhook` i powinny zostać wykonane tuż przed wejściem i wyjściem z pętli komunikatów aplikacji. Aby uzyskać więcej informacji na temat tych wywołań, zobacz [GdiplusStartupOutput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput). W związku z tym, dobrym miejscem `GdiplusStartup` do wywołania i funkcji powiadomień punktu zaczepienia byłaby przesłonięcie funkcji wirtualnej [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), jak pokazano poniżej:
 
 [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]
 
-Jeśli nie pomijać GDI + wątku tła, DDE polecenia mogą być przedwcześnie wydawane do aplikacji przed wyświetleniem głównego okna została utworzona. Wystawiony przez powłokę poleceń DDE można przedwcześnie przerwana, wynikiem komunikaty o błędach.
+Jeśli nie zostanie pominięty wątek GDI+ w tle, polecenia DDE mogą być przedwcześnie wystawione dla aplikacji przed utworzeniem jej okna głównego. Polecenia DDE, które są emitowane przez powłokę, mogą być przedwcześnie przerywane, co skutkuje komunikatami o błędach.
 
-##  <a name="_core_file_manager_drag_and_drop"></a> Menedżer plików — przeciąganie i upuszczanie
+##  <a name="_core_file_manager_drag_and_drop"></a>Przeciąganie i upuszczanie Menedżera plików
 
-Pliki mogą być przeciągnięte z okna widoku pliku w Menedżerze plików lub Eksploratora plików do okna aplikacji. Być może na przykład włączyć jeden lub więcej plików, można przeciągać do okna głównego aplikacji MDI, gdzie aplikacja może pobrać nazwy pliku i otwórz oknami podrzędnymi MDI dla tych plików.
+Pliki można przeciągać z okna widok plików w Menedżerze plików lub Eksploratorze plików do okna w aplikacji. Możesz na przykład włączyć przeciąganie co najmniej jednego pliku do głównego okna aplikacji MDI, gdzie aplikacja może pobrać nazwy plików i otworzyć okna podrzędne MDI dla tych plików.
 
-Do pliku przeciągania i upuszczania w aplikacji, Kreator aplikacji MFC zapisuje wywołanie [CWnd](../mfc/reference/cwnd-class.md) funkcja elementu członkowskiego [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) dla okna głównej ramki w swojej `InitInstance`. Możesz usunąć to wywołanie, jeśli nie chcesz zaimplementować funkcję przeciągania i upuszczania.
+Aby włączyć przeciąganie i upuszczanie plików w aplikacji, Kreator aplikacji MFC zapisuje wywołanie do funkcji [](../mfc/reference/cwnd-class.md) składowej CWnd [element DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) dla głównego `InitInstance`okna ramki w. To wywołanie można usunąć, jeśli nie chcesz zaimplementować funkcji przeciągania i upuszczania.
 
 > [!NOTE]
->  Można również zaimplementować bardziej ogólne możliwości przeciągania i upuszczania — przeciąganie danych między lub w dokumentach — przy użyciu OLE. Aby uzyskać informacje, zobacz artykuł [przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md).
+>  Możesz również zaimplementować bardziej ogólne możliwości przeciągania i upuszczania — przeciągając dane między lub w obrębie dokumentów — za pomocą OLE. Aby uzyskać więcej informacji, zobacz artykuł przeciąganie [i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md).
 
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Rejestrowanie informacji o najbardziej niedawno używane dokumenty
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a>Śledzenie ostatnio używanych dokumentów
 
-Kiedy użytkownik otwiera i zamyka pliki, obiekt aplikacji śledzi informacje o czterech ostatnio używanych plików. Nazwy tych plików są dodawane do menu Plik i aktualizowane po zmianie. Struktura przechowuje te nazwy plików, albo rejestru lub w pliku .ini, z taką samą nazwę jak projektu i odczytuje je z pliku, podczas uruchamiania aplikacji. `InitInstance` Zastąpienia, Kreator aplikacji MFC tworzy zawiera wywołanie [CWinApp](../mfc/reference/cwinapp-class.md) funkcja elementu członkowskiego [loadstdprofilesettings —](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), który ładuje informacje z rejestru lub pliku ini plik, tym najnowsze używany w nazwach plików.
+Gdy użytkownik otwiera i zamyka pliki, obiekt aplikacji śledzi cztery ostatnio używane pliki. Nazwy tych plików są dodawane do menu plik i aktualizowane wraz z ich zmianą. W strukturze są przechowywane te nazwy plików w rejestrze lub w pliku. ini o takiej samej nazwie jak projekt i odczytywane z pliku podczas uruchamiania aplikacji. Zastąpienie tworzonego przez Kreatora aplikacji MFC obejmuje wywołanie funkcji składowej CWinApp [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), która ładuje informacje z rejestru lub pliku ini, w tym ostatnio używany plik [](../mfc/reference/cwinapp-class.md) `InitInstance` nazwisko.
 
 Te wpisy są przechowywane w następujący sposób:
 
-- Windows NT, Windows 2000 lub nowszym, wartość jest przechowywana w kluczu rejestru.
+- W systemie Windows NT, Windows 2000 i nowszych wartość jest przechowywana w kluczu rejestru.
 
-- W Windows 3.x, a wartość jest przechowywana w ZWYCIĘSTWA. Pliku INI.
+- W systemie Windows 3. x wartość jest przechowywana w WIN. Plik INI.
 
-- W Windows 95 lub nowszy wartość jest przechowywana w pamięci podręcznej wersji systemu Windows. PLIKU INI.
+- W systemie Windows 95 i nowszych wartość jest przechowywana w buforowanej wersji programu WIN. Nośnika.
 
 ## <a name="see-also"></a>Zobacz także
 
-[CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)

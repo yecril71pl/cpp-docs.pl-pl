@@ -31,16 +31,16 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: 8e9524249d6c90323bdcfc0b92ecf2dad281c79b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156489"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501003"
 ---
-# <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
+# <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
-Konwertuj lokalnego czasu na wartość kalendarza.
+Przekonwertuj czas lokalny na wartość kalendarza.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,35 +59,35 @@ __time64_t _mktime64(
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Wskaźnik do struktury czas; zobacz [asctime —](asctime-wasctime.md).
+Wskaźnik na strukturę czasową; Zobacz [asctime](asctime-wasctime.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mktime32** zwraca czas określony kalendarz zakodowane jako wartość typu [time_t](../../c-runtime-library/standard-types.md). Jeśli *timeptr* odwołuje się do datę wcześniejszą niż północ 1 stycznia 1970 r., lub jeśli nie można przedstawić czas w kalendarzu, **_mktime32** zwraca wartość -1 rzutowane na typ **time_t**. Korzystając z **_mktime32** i, jeśli *timeptr* odwołuje się do datę wypadającą po 23:59:59 18 stycznia 2038 r. uniwersalnego czasu koordynowanego (UTC), to zostanie zwrócona wartość -1 rzutowane na typ **time_t**.
+**_mktime32** zwraca określony czas kalendarza zakodowany jako wartość typu [time_t](../../c-runtime-library/standard-types.md). Jeśli *timeptr* odwołuje się do daty sprzed północy, 1 stycznia 1970 lub jeśli czas kalendarza nie może być reprezentowany, **_mktime32** zwraca-1 rzutowanie do typu **time_t**. W przypadku korzystania z **_mktime32** i jeśli *timeptr* odwołuje się do daty po 23:59:59 stycznia 18, 2038, uniwersalnym czasie koordynowanym (UTC), zwróci-1 rzutowanie na typ **time_t**.
 
-**_mktime64** zostanie zwrócona wartość -1 rzutowane na typ **__time64_t —** Jeśli *timeptr* odwołuje się do datę wypadającą po 23:59:59, 31 grudnia 3000, czasu UTC.
+**_mktime64** zwróci wartość-1 rzutowanie na typ **__time64_t** , jeśli *timeptr* odwołuje się do daty 23:59:59, 31 grudnia 3000, UTC.
 
 ## <a name="remarks"></a>Uwagi
 
-**Mktime**, **_mktime32** i **_mktime64** funkcji konwertuje struktury podany czas (prawdopodobnie niezakończone) wskazywany przez *timeptr*w pełni zdefiniowana strukturę za pomocą znormalizowanych wartości, a następnie konwertuje ją na **time_t** wartość godziny w kalendarzu. Czas przekonwertowany ma tego samego kodu jako wartości zwracane przez [czasu](time-time32-time64.md) funkcji. Oryginalne wartości parametru **tm_wday** i **tm_yday** składniki *timeptr* struktury są ignorowane i oryginalne wartości inne składniki nie są ograniczone Aby ich przewidziane zakresy.
+Funkcje **mktime**, **_mktime32** i **_mktime64** konwertują określoną strukturę czasową (prawdopodobnie niekompletną) wskazywaną przez *timeptr* w w pełni zdefiniowaną strukturę z znormalizowanymi wartościami, a następnie konwertuje ją na **time_t** wartość czasu kalendarza. Konwertowany czas ma takie samo kodowanie jak wartości zwracane przez funkcję [Time](time-time32-time64.md) . Oryginalne wartości składników **tm_wday** i **tm_yday** struktury *timeptr* są ignorowane, a oryginalne wartości innych składników nie są ograniczone do ich normalnych zakresów.
 
-**mktime** jest funkcją śródwierszową, który jest odpowiednikiem **_mktime64**, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w którym to przypadku jest to równoważne **_mktime32** .
+**mktime** to wbudowana funkcja, która jest równoważna z **_mktime64**, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w takim przypadku jest równoważne **_mktime32**.
 
-Po dostosowaniu względem czasu UTC **_mktime32** obsługuje daty od północy 1 stycznia 1970 r., do 23:59:59 18 stycznia 2038 r. UTC. **_mktime64** obsługuje daty od północy 1 stycznia 1970 r. do 23:59:59, 31 grudnia 3000. To dostosowanie może spowodować, że te funkcje, aby zwracają wartość -1 (rzutowany **time_t**, **__time32_t** lub **__time64_t —**), nawet jeśli daty należy określić znajduje się w zakresie. Na przykład, jeśli znajdują się w Kair, Egipt, czyli dwie godziny wyprzedzające czas UTC, dwie godziny zostanie najpierw odjęta od daty, określ w *timeptr*; to, że teraz umieścić swoją datę poza zakresem.
+Po dostosowaniu do czasu UTC **_mktime32** obsługuje daty z północy, od 1 stycznia 1970 do 23:59:59 stycznia 18, 2038, UTC. **_mktime64** obsługuje daty z północy, 1 stycznia 1970 do 23:59:59, 31 grudnia 3000. Ta korekta może spowodować, że te funkcje zwracają wartość-1 (rzutowanie do **time_t**, **__time32_t** lub **__time64_t**), nawet jeśli określona data znajduje się w zakresie. Na przykład, jeśli używasz programu Kair, Egipt, który jest dwie godziny przed czasem UTC, dwie godziny zostaną najpierw odjęte od daty określonej w *timeptr*; to może teraz spowodować, że data jest poza zakresem.
 
-Te funkcje mogą służyć do sprawdzania poprawności, a następnie wypełnij struktury tm. Jeśli operacja się powiedzie, te funkcje ustawiają wartości **tm_wday** i **tm_yday** odpowiednio ustawić innych składników do reprezentowania czas określony kalendarz, ale z wartościami zmuszeni do normalnego zakresy. Końcowa wartość **tm_mday** nie jest ustawiony do momentu **tm_mon** i **tm_year** są określane. Podczas określania **tm** struktury czasu, ustaw **tm_isdst** pola:
+Te funkcje mogą służyć do sprawdzania poprawności i wypełnienia struktury TM. Jeśli to się powiedzie, te funkcje ustawiają wartości **tm_wday** i **tm_yday** odpowiednio i ustawiają inne składniki do reprezentowania określonego czasu kalendarzowego, ale z ich wartościami wymuszonymi do normalnych zakresów. Końcowa wartość **tm_mday** nie jest ustawiona do momentu określenia wartości **tm_mon** i **tm_year** . Podczas określania czasu struktury **TM** ustaw wartość pola **tm_isdst** na:
 
-- Zero (0), aby wskazać, czy (czas standardowy) jest aktywna.
+- Zero (0), aby wskazać, że obowiązuje czas standardowy.
 
-- Wartość większą niż 0, aby wskazać, że czasu letniego obowiązuje.
+- Wartość większa od 0 wskazuje, że obowiązuje czas letni.
 
-- Wartość niższą niż zero, kod biblioteki wykonawczej C obliczeń, czy (czas standardowy) lub czasu jest aktywna.
+- Wartość mniejsza od zera, aby można było obliczyć kod biblioteki wykonawczej C, niezależnie od tego, czy obowiązuje czas standardowy czy czas letni.
 
-Biblioteki wykonawczej C określają zachowanie w czasie oszczędność czasu letniego z [TZ](tzset.md) zmiennej środowiskowej. Jeśli **TZ** nie jest ustawiona, wywołanie interfejsu API Win32 [Funkcja GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) jest używany, aby uzyskać informacje dotyczące czasu letniego z systemu operacyjnego. W przypadku niepowodzenia biblioteki przyjęto założenie, że używane są zasady Stanów Zjednoczonych wykonywania obliczeń czasu letniego. **tm_isdst** jest polem wymaganym. Jeśli nie jest ustawiony, jego wartość jest niezdefiniowana, i wartość zwrotną z tych funkcji, będzie nieprzewidywalny. Jeśli *timeptr* wskazuje **tm** struktury zwrócony przez poprzednie wywołanie [asctime —](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), lub [localtime](localtime-localtime32-localtime64.md) (lub wariantów tych funkcji) **tm_isdst** pole zawiera poprawną wartość.
+Biblioteka środowiska uruchomieniowego C określi zachowanie czasu letniego ze zmiennej środowiskowej $ [](tzset.md) . Jeśli nie ustawiono opcji/$, Win32 API wywołanie [GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) służy do uzyskiwania informacji o czasie letnim z systemu operacyjnego. Jeśli to się nie powiedzie, biblioteka zakłada, że używane są reguły Stany Zjednoczone w celu wykonania obliczeń czasu letniego. **tm_isdst** jest polem wymaganym. Jeśli nie zostanie ustawiona, jego wartość jest niezdefiniowana i wartość zwracana z tych funkcji jest nieprzewidywalne. Jeśli *timeptr* wskazuje strukturę **TM** zwróconą przez poprzednie wywołanie do [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)lub [localtime](localtime-localtime32-localtime64.md) (lub warianty tych funkcji), pole **tm_isdst** zawiera poprawną wartość.
 
-Należy pamiętać, że **gmtime** i **localtime** (i **_gmtime32**, **_gmtime64**, **_localtime32**, i **_localtime64**) pojedynczy bufor dla każdego wątku na użytek konwersji. Jeśli podasz tego buforu do **mktime**, **_mktime32** lub **_mktime64**, poprzednie zawartość zostaje zniszczona.
+Należy zauważyć, że **gmtime** i **localtime** (oraz **_gmtime32**, **_gmtime64**, **_localtime32**i **_localtime64**) używają jednego buforu dla każdej wątku dla konwersji. Jeśli podasz ten bufor do **mktime**, **_mktime32** lub **_mktime64**, poprzednia zawartość zostanie zniszczona.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *timeptr* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
+Te funkcje sprawdzają poprawność parametru. Jeśli *timeptr* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -97,11 +97,11 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *timeptr* jest pu
 |**_mktime32**|\<time.h>|
 |**_mktime64**|\<time.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

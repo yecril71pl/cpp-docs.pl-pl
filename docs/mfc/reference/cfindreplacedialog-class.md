@@ -1,5 +1,5 @@
 ---
-title: Klasa CFindReplaceDialog
+title: Klasa okno CFindReplaceDialog
 ms.date: 11/04/2016
 f1_keywords:
 - CFindReplaceDialog
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: de48d8f495802bdf1c5f69e7a4edc41153c9599f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71234adec214bcbf5d42090edb582a7e5dd552b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206016"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506528"
 ---
-# <a name="cfindreplacedialog-class"></a>Klasa CFindReplaceDialog
+# <a name="cfindreplacedialog-class"></a>Klasa okno CFindReplaceDialog
 
-Umożliwia wdrożenie okien dialogowych standardowego ciągu Znajdź/Zamień w aplikacji.
+Pozwala zaimplementować standardowe okna dialogowe szukania/zamieniania ciągów w aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,51 +55,51 @@ class CFindReplaceDialog : public CCommonDialog
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|Wywołaj tę funkcję, aby skonstruować `CFindReplaceDialog` obiektu.|
+|[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|Wywołaj tę funkcję, aby `CFindReplaceDialog` skonstruować obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFindReplaceDialog::Create](#create)|Tworzy i wyświetla `CFindReplaceDialog` okno dialogowe.|
-|[CFindReplaceDialog::FindNext](#findnext)|Wywołaj tę funkcję, aby ustalić, czy użytkownik chce, aby znaleźć następne wystąpienie ciągu wyszukiwania.|
-|[CFindReplaceDialog::GetFindString](#getfindstring)|Wywołaj tę funkcję można pobrać bieżącego ciągu wyszukiwania.|
-|[CFindReplaceDialog::GetNotifier](#getnotifier)|Wywołaj tę funkcję, aby pobrać `FINDREPLACE` strukturze usługi program obsługi zarejestrowanych komunikatów.|
-|[CFindReplaceDialog::GetReplaceString](#getreplacestring)|Wywołaj tę funkcję można pobrać bieżącego ciągu zastępowania.|
-|[CFindReplaceDialog::IsTerminating](#isterminating)|Wywołaj tę funkcję, aby ustalić, czy jest przerywany, okno dialogowe.|
-|[CFindReplaceDialog::MatchCase](#matchcase)|Wywołaj tę funkcję, aby ustalić, czy użytkownik chce, aby dokładnie odpowiadać wielkości liter w ciągu wyszukiwania.|
-|[CFindReplaceDialog::MatchWholeWord](#matchwholeword)|Wywołaj tę funkcję, aby ustalić, czy użytkownik chce, aby dopasować tylko całe wyrazy.|
-|[CFindReplaceDialog::ReplaceAll](#replaceall)|Wywołaj tę funkcję, aby ustalić, czy użytkownik chce, aby wszystkie wystąpienia ciągu, który ma zostać zastąpione.|
-|[CFindReplaceDialog::ReplaceCurrent](#replacecurrent)|Wywołaj tę funkcję, aby ustalić, czy użytkownik chce bieżącego słowa, które ma zostać zastąpione.|
-|[CFindReplaceDialog::SearchDown](#searchdown)|Wywołaj tę funkcję, aby ustalić, czy użytkownik chce wyszukiwania, aby przejść w kierunku w dół.|
+|[Okno CFindReplaceDialog:: Create](#create)|Tworzy i wyświetla `CFindReplaceDialog` okno dialogowe.|
+|[CFindReplaceDialog::FindNext](#findnext)|Wywołaj tę funkcję, aby określić, czy użytkownik chce znaleźć następne wystąpienie ciągu wyszukiwania.|
+|[Okno CFindReplaceDialog:: getfindstr](#getfindstring)|Wywołaj tę funkcję, aby pobrać bieżący ciąg wyszukiwania.|
+|[Okno CFindReplaceDialog:: getpowiadamianie](#getnotifier)|Wywołaj tę funkcję, aby `FINDREPLACE` pobrać strukturę z zarejestrowanego programu obsługi komunikatów.|
+|[Okno CFindReplaceDialog:: GetReplaceString](#getreplacestring)|Wywołaj tę funkcję, aby pobrać bieżący ciąg zamiany.|
+|[Okno CFindReplaceDialog:: iskończona](#isterminating)|Wywołaj tę funkcję, aby określić, czy okno dialogowe zostało zakończone.|
+|[CFindReplaceDialog::MatchCase](#matchcase)|Wywołaj tę funkcję, aby określić, czy użytkownik chce dokładnie dopasować do wielkości liter w wyszukiwanym ciągu.|
+|[Okno CFindReplaceDialog:: MatchWholeWord](#matchwholeword)|Wywołaj tę funkcję, aby określić, czy użytkownik chce dopasować tylko całe wyrazy.|
+|[CFindReplaceDialog::ReplaceAll](#replaceall)|Wywołaj tę funkcję, aby określić, czy użytkownik chce, aby wszystkie wystąpienia ciągu zostały zastąpione.|
+|[CFindReplaceDialog::ReplaceCurrent](#replacecurrent)|Wywołaj tę funkcję, aby określić, czy użytkownik chce zastąpić bieżące słowo.|
+|[CFindReplaceDialog::SearchDown](#searchdown)|Wywołaj tę funkcję, aby określić, czy użytkownik chce, aby wyszukiwanie kontynuowało pracę w kierunku do dołu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFindReplaceDialog::m_fr](#m_fr)|Struktury używane w celu dostosowania `CFindReplaceDialog` obiektu.|
+|[CFindReplaceDialog::m_fr](#m_fr)|Struktura używana do dostosowywania `CFindReplaceDialog` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do innych Windows typowych okien dialogowych `CFindReplaceDialog` obiekty są niemodalne, pozwalając użytkownikom na interakcję z innymi oknami, gdy są one na ekranie. Istnieją dwa rodzaje z `CFindReplaceDialog` obiektów: Znajdowanie okien dialogowych i okna dialogowe Znajdź i Zamień. Mimo że okna dialogowe zezwala użytkownikowi na wyszukiwanie danych wejściowych i ciągi wyszukiwania/zastępowania, nie wykonują wyszukiwanie lub zastępując funkcji. Należy dodać je do aplikacji.
+W przeciwieństwie do innych okien dialogowych `CFindReplaceDialog` wspólnych okien obiekty są niemodalne, dzięki czemu użytkownicy mogą korzystać z innych okien, gdy znajdują się na ekranie. Istnieją dwa rodzaje `CFindReplaceDialog` obiektów: Okna dialogowe Znajdowanie/zamienianie okien dialogowych. Mimo że okna dialogowe umożliwiają użytkownikowi wprowadzanie danych wyszukiwania i wyszukiwanie/zamienianie ciągów, nie wykonują żadnych funkcji wyszukiwania ani zamiany. Należy dodać je do aplikacji.
 
-Do konstruowania `CFindReplaceDialog` obiektu, należy użyć konstruktora podana, (która nie ma argumentów). Ponieważ jest niemodalne okno dialogowe, należy przydzielić obiektu przy użyciu sterty **nowe** operatora, a nie na stosie.
+Aby skonstruować `CFindReplaceDialog` obiekt, użyj dostarczonego konstruktora (który nie ma argumentów). Ponieważ jest to niemodalne okno dialogowe, Przydziel obiekt na stercie przy użyciu operatora **New** , a nie na stosie.
 
-Raz `CFindReplaceDialog` obiekt został skonstruowany, musisz użyć wywołania [Utwórz](#create) funkcja elementu członkowskiego, aby utworzyć i wyświetlić okno dialogowe.
+Gdy obiekt został skonstruowany, należy wywołać funkcję tworzenia elementu członkowskiego, aby utworzyć i wyświetlić okno dialogowe. [](#create) `CFindReplaceDialog`
 
-Użyj [m_fr](#m_fr) strukturę, aby zainicjować okno dialogowe przed wywołaniem `Create`. `m_fr` Struktury jest typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.
+Użyj struktury [m_fr](#m_fr) , aby zainicjować okno dialogowe przed wywołaniem `Create`. Struktura jest typu FINDREPLACE. [](/windows/win32/api/commdlg/ns-commdlg-findreplacew) `m_fr` Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
 
-Aby okno nadrzędne otrzymywać powiadomienia, Znajdź/Zamień żądań, należy użyć Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) działać, a następnie użyć [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) makra mapy komunikatów w swojej ramki okno, który obsługuje ten zarejestrowany komunikat.
+Aby okno nadrzędne było powiadamiane o żądaniach wyszukiwania/zamieniania, należy użyć funkcji [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew) systemu Windows i w oknie ramki użyć makra [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) -map wiadomości, które obsługuje ten zarejestrowany komunikat.
 
-Można określić, czy użytkownik zdecydował się zakończyć okno dialogowe z `IsTerminating` funkcja elementu członkowskiego.
+Można określić, czy użytkownik zdecydował się zakończyć okno dialogowe z `IsTerminating` funkcją składową.
 
-`CFindReplaceDialog` opiera się na pliku COMMDLG. Plik DLL, który jest dostarczany z programem Windows w wersji 3.1 lub nowszej.
+`CFindReplaceDialog`opiera się na COMMDLG. Plik DLL, który jest dostarczany z systemem Windows w wersji 3,1 lub nowszej.
 
-Aby dostosować okno dialogowe, należy wyprowadzić klasę z `CFindReplaceDialog`, udostępniają szablon niestandardowy dialog i dodać mapy wiadomości, przetwarzanie komunikatów powiadomień od formantów rozszerzonego. Wszystkie nieprzetworzone komunikaty powinien zostać przekazany do klasy bazowej.
+Aby dostosować okno dialogowe, wyprowadzić klasę z `CFindReplaceDialog`, udostępnić niestandardowy szablon okna dialogowego i dodać mapę komunikatów do przetwarzania komunikatów powiadomień z formantów rozszerzonych. Wszystkie nieprzetworzone komunikaty powinny być przesyłane do klasy bazowej.
 
-Dostosowywanie funkcji punktów zaczepienia nie jest wymagana.
+Dostosowywanie funkcji Hook nie jest wymagane.
 
-Aby uzyskać więcej informacji na temat korzystania z `CFindReplaceDialog`, zobacz [klasy wspólnych okien dialogowych](../../mfc/common-dialog-classes.md).
+Aby uzyskać więcej informacji na `CFindReplaceDialog`temat korzystania z programu, zobacz [wspólne klasy okien dialogowych](../../mfc/common-dialog-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -117,11 +117,11 @@ Aby uzyskać więcej informacji na temat korzystania z `CFindReplaceDialog`, zob
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdlgs.h
+**Nagłówek:** afxdlgs. h
 
-##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog
+##  <a name="cfindreplacedialog"></a>Okno CFindReplaceDialog:: okno CFindReplaceDialog
 
-Konstruuje `CFindReplaceDialog` obiektu.
+Konstruuje `CFindReplaceDialog` obiekt.
 
 ```
 CFindReplaceDialog();
@@ -129,19 +129,19 @@ CFindReplaceDialog();
 
 ### <a name="remarks"></a>Uwagi
 
-Ponieważ `CFindReplaceDialog` obiektu jest niemodalne okno dialogowe, należy tworzyć na stosie przy użyciu **nowe** operatora.
+Ponieważ obiekt jest niemodalnym oknem dialogowym, należy skonstruować go na stercie przy użyciu operatora **New.** `CFindReplaceDialog`
 
-Podczas niszczenia, próbuje wykonać ramach **usunąć ten** wskaźnika do okna dialogowego. Jeśli okno dialogowe są tworzone na stosie, **to** wskaźnik nie istnieje i może spowodować niezdefiniowane zachowanie.
+Podczas niszczenia, struktura próbuje wykonać operację **usuwania** na wskaźniku do okna dialogowego. Jeśli utworzono okno dialogowe na stosie, ten wskaźnik nie istnieje i może **to** spowodować niezdefiniowane zachowanie.
 
-Aby uzyskać więcej informacji na temat konstrukcji `CFindReplaceDialog` obiekty, zobacz [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) Przegląd. Użyj [CFindReplaceDialog::Create](#create) funkcja elementu członkowskiego, aby wyświetlić okno dialogowe.
+Aby uzyskać więcej informacji na temat konstruowania `CFindReplaceDialog` obiektów, zobacz Omówienie [okno CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) . Użyj funkcji [okno CFindReplaceDialog:: Create](#create) member, aby wyświetlić okno dialogowe.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]
 
-##  <a name="create"></a>  CFindReplaceDialog::Create
+##  <a name="create"></a>Okno CFindReplaceDialog:: Create
 
-Tworzy i wyświetla Znajdź lub Znajdź/Zamień okna dialogowego pole obiektu, w zależności od wartości `bFindDialogOnly`.
+Tworzy i wyświetla obiekt okna dialogowego Znajdź lub Znajdź/Zamień, w zależności od wartości `bFindDialogOnly`.
 
 ```
 virtual BOOL Create(
@@ -155,27 +155,27 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *bFindDialogOnly*<br/>
-Ustaw ten parametr na wartość TRUE, aby wyświetlić **znaleźć** okno dialogowe. Ustaw ją na wartość FALSE, aby wyświetlić **Znajdź/Zamień** okno dialogowe.
+Ustaw ten parametr na wartość TRUE, aby wyświetlić okno dialogowe **Znajdowanie** . Ustaw na wartość FALSE, aby wyświetlić okno dialogowe **Znajdowanie/zamienianie** .
 
 *lpszFindWhat*<br/>
-Wskaźnik na domyślny ciąg wyszukiwania, gdy pojawi się okno dialogowe. Jeśli ma wartość NULL, okno dialogowe nie zawiera domyślny ciąg wyszukiwania.
+Wskaźnik na domyślny ciąg wyszukiwania, gdy zostanie wyświetlone okno dialogowe. Jeśli wartość jest równa NULL, okno dialogowe nie zawiera domyślnego ciągu wyszukiwania.
 
 *lpszReplaceWith*<br/>
-Wskaźnik do ciągu zamiennym domyślną, gdy pojawi się okno dialogowe. Jeśli ma wartość NULL, okno dialogowe nie zawiera domyślny ciąg zastępczy.
+Wskaźnik na domyślny ciąg zastępczy po wyświetleniu okna dialogowego. Jeśli wartość jest równa NULL, okno dialogowe nie zawiera domyślnego ciągu zastępczego.
 
-*dwFlags*<br/>
-Co najmniej jeden flagi, których można użyć, aby dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Wartość domyślna to FR_DOWN, która określa, że wyszukiwanie postępować w kierunku w dół. Zobacz [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea) struktury w zestawie Windows SDK, aby uzyskać więcej informacji na temat tych flag.
+*flagiDW*<br/>
+Jedna lub więcej flag, których można użyć, aby dostosować ustawienia okna dialogowego połączone przy użyciu operatora bitowego or. Wartość domyślna to FR_DOWN, która określa, że wyszukiwanie ma przechodzić w kierunku do dołu. Zapoznaj się ze strukturą [FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew) w Windows SDK, aby uzyskać więcej informacji na temat tych flag.
 
 *pParentWnd*<br/>
-Wskaźnik do okna nadrzędnego lub właściciela okno dialogowe. To okno, które otrzymają specjalne komunikat wskazujący, żądanie akcji Znajdź/Zamień. Jeśli ma wartość NULL, jest używany w głównym oknie aplikacji.
+Wskaźnik do okna dialogowego nadrzędnego lub właściciela. Jest to okno, w którym zostanie wyświetlony specjalny komunikat informujący o tym, że zażądano akcji Znajdź/Zamień. Jeśli wartość jest równa NULL, używane jest główne okno aplikacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli obiekt okno dialogowe został pomyślnie utworzony; w przeciwnym razie 0.
+Niezerowe, jeśli obiekt okna dialogowego został pomyślnie utworzony; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby okno nadrzędne otrzymywać powiadomienia, Znajdź/Zamień żądań, należy użyć Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funkcji, których wartość zwracana jest liczba wiadomości, unikatowe dla wystąpienia aplikacji. Okno ramki powinny mieć wpisu mapy wiadomości, która deklaruje funkcję wywołania zwrotnego ( `OnFindReplace` w poniższym przykładzie) obsługującego ten zarejestrowany komunikat. Poniższy fragment kodu znajduje się przykład jak to zrobić w klasie okien ramowych, o nazwie `CMyRichEditView`:
+Aby okno nadrzędne było powiadamiane o żądaniach wyszukiwania/zamieniania, należy użyć funkcji [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew) systemu Windows, której wartość zwracana jest numerem wiadomości unikatowym dla wystąpienia aplikacji. Okno ramki powinno mieć wpis mapy komunikatów, który deklaruje funkcję wywołania zwrotnego `OnFindReplace` (w poniższym przykładzie), która obsługuje ten zarejestrowany komunikat. Poniższy fragment kodu jest przykładem, jak to zrobić dla klasy okien ramowych o nazwie `CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 
@@ -183,15 +183,15 @@ Aby okno nadrzędne otrzymywać powiadomienia, Znajdź/Zamień żądań, należy
 
 [!code-cpp[NVC_MFCDocView#173](../../mfc/codesnippet/cpp/cfindreplacedialog-class_4.cpp)]
 
-W ramach Twojej `OnFindReplace` funkcji interpretacji zamiarach użytkownika przy użyciu [CFindReplaceDialog::FindNext](#findnext) i [CFindReplaceDialog::IsTerminating](#isterminating) metody i możesz utworzyć kod dla operacji Znajdź i Zamień.
+W ramach [](#isterminating) funkcji interpretuje intencje użytkownika przy użyciu metod [okno CFindReplaceDialog:: ZnajdźNastępny](#findnext) i okno CFindReplaceDialog:: isabort i tworzysz kod dla operacji znajdowania/zamieniania. `OnFindReplace`
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).
+  Zobacz przykład dla [okno CFindReplaceDialog:: okno CFindReplaceDialog](#cfindreplacedialog).
 
-##  <a name="findnext"></a>  CFindReplaceDialog::FindNext
+##  <a name="findnext"></a>Okno CFindReplaceDialog:: ZnajdźNastępny
 
-Wywołaj tę funkcję ze swojej funkcji wywołania zwrotnego, aby ustalić, czy użytkownik chce, aby znaleźć następne wystąpienie ciągu wyszukiwania.
+Wywołaj tę funkcję z funkcji wywołania zwrotnego, aby określić, czy użytkownik chce znaleźć następne wystąpienie ciągu wyszukiwania.
 
 ```
 BOOL FindNext() const;
@@ -199,11 +199,11 @@ BOOL FindNext() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli użytkownik chce, aby znaleźć następne wystąpienie ciągu wyszukiwania; w przeciwnym razie 0.
+Niezerowe, jeśli użytkownik chce znaleźć następne wystąpienie ciągu wyszukiwania; w przeciwnym razie 0.
 
-##  <a name="getfindstring"></a>  CFindReplaceDialog::GetFindString
+##  <a name="getfindstring"></a>Okno CFindReplaceDialog:: getfindstr
 
-Wywołaj tę funkcję można pobrać domyślny ciąg można znaleźć funkcji wywołania zwrotnego.
+Wywołaj tę funkcję z funkcji wywołania zwrotnego, aby pobrać domyślny ciąg do znalezienia.
 
 ```
 CString GetFindString() const;
@@ -211,15 +211,15 @@ CString GetFindString() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Domyślny ciąg, który można znaleźć.
+Domyślny ciąg do znalezienia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]
 
-##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier
+##  <a name="getnotifier"></a>Okno CFindReplaceDialog:: getpowiadamianie
 
-Wywołaj tę funkcję, aby pobrać wskaźnika do bieżącego Znajdź Zastąp okna dialogowego.
+Wywołaj tę funkcję, aby pobrać wskaźnik do bieżącego okna dialogowego Znajdź Zastąp.
 
 ```
 static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
@@ -228,7 +228,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ### <a name="parameters"></a>Parametry
 
 *lParam*<br/>
-*Lparam* wartość przekazywana do okno ramowe `OnFindReplace` funkcja elementu członkowskiego.
+Wartość *lParam* przeniesiona do funkcji `OnFindReplace` składowej okna ramki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -236,17 +236,17 @@ Wskaźnik do bieżącego okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy jej używać w ramach funkcji wywołania zwrotnego dostęp do bieżącego okna dialogowego, wywołaj członków, funkcje i dostęp `m_fr` struktury.
+Powinien być używany w funkcji wywołania zwrotnego, aby uzyskać dostęp do bieżącego okna dialogowego, wywołać jego funkcje członkowskie i uzyskać `m_fr` dostęp do struktury.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [CFindReplaceDialog::Create](#create) przykładowy sposób rejestrowania procedury obsługi OnFindReplace może otrzymywać powiadomienia z okna dialogowego Znajdowanie Zastąp.
+Zobacz [okno CFindReplaceDialog:: Create](#create) , aby zapoznać się z przykładem sposobu rejestrowania procedury obsługi OnFindReplace w celu otrzymywania powiadomień z okna dialogowego Znajdowanie zastąpień.
 
 [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]
 
-##  <a name="getreplacestring"></a>  CFindReplaceDialog::GetReplaceString
+##  <a name="getreplacestring"></a>Okno CFindReplaceDialog:: GetReplaceString
 
-Wywołaj tę funkcję można pobrać bieżącego ciągu zastępowania.
+Wywołaj tę funkcję, aby pobrać bieżący ciąg zamiany.
 
 ```
 CString GetReplaceString() const;
@@ -254,15 +254,15 @@ CString GetReplaceString() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Domyślny ciąg za pomocą którego ma zostać znaleziona ciągów.
+Domyślny ciąg, za pomocą którego ma zostać zamieniony znaleziony ciąg.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CFindReplaceDialog::GetFindString](#getfindstring).
+  Zobacz przykład dla [okno CFindReplaceDialog::](#getfindstring)getfindstrs.
 
-##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating
+##  <a name="isterminating"></a>Okno CFindReplaceDialog:: iskończona
 
-Wywołaj tę funkcję w ramach funkcji wywołania zwrotnego do określenia, czy użytkownik zdecydował się do zakończenia okna dialogowego.
+Wywołaj tę funkcję w funkcji wywołania zwrotnego, aby określić, czy użytkownik zdecydował się zakończyć okno dialogowe.
 
 ```
 BOOL IsTerminating() const;
@@ -270,19 +270,19 @@ BOOL IsTerminating() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli użytkownik zdecydował się zakończyć w oknie dialogowym. w przeciwnym razie 0.
+Niezerowe, jeśli użytkownik zdecydował się zakończyć okno dialogowe; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ta funkcja zwraca wartość różną od zera, należy wywołać `DestroyWindow` funkcji składowej typu bieżącego okna dialogowego pole, a następnie ustaw dowolnej zmiennej wskaźnika okno dialogowe na wartość NULL. Opcjonalnie możesz również przechowywanie tekstu Znajdź/Zamień ostatnio wprowadzonego i użyć go, aby zainicjować okno dialogowe Znajdź/Zamień następny.
+Jeśli ta funkcja zwróci wartość różną od zera, należy wywołać `DestroyWindow` funkcję członkowską bieżącego okna dialogowego i ustawić zmienną wskaźnika okna dialogowego na null. Opcjonalnie możesz również przechowywać ostatnio wprowadzony tekst Znajdź/Zamień i użyć go do zainicjowania następnego okna dialogowego Znajdowanie/zamienianie.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CFindReplaceDialog::GetFindString](#getfindstring).
+  Zobacz przykład dla [okno CFindReplaceDialog::](#getfindstring)getfindstrs.
 
-##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr
+##  <a name="m_fr"></a>Okno CFindReplaceDialog:: m_fr
 
-Używany w celu dostosowania `CFindReplaceDialog` obiektu.
+Służy do dostosowywania `CFindReplaceDialog` obiektu.
 
 ```
 FINDREPLACE m_fr;
@@ -290,17 +290,17 @@ FINDREPLACE m_fr;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_fr` jest to struktura typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Jego członkowie przechowywać właściwości obiektu, okno dialogowe. Po konstruowanie `CFindReplaceDialog` obiektu, możesz użyć `m_fr` do modyfikowania różnych wartości w oknie dialogowym.
+`m_fr`jest strukturą typu [FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew). Jego członkowie przechowują charakterystykę obiektu okna dialogowego. Po skonstruowaniu `CFindReplaceDialog` obiektu można użyć `m_fr` programu, aby zmodyfikować różne wartości w oknie dialogowym.
 
-Aby uzyskać więcej informacji na temat tej struktury, zobacz `FINDREPLACE` struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat tej struktury, `FINDREPLACE` Zobacz strukturę w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).
+  Zobacz przykład dla [okno CFindReplaceDialog:: okno CFindReplaceDialog](#cfindreplacedialog).
 
-##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase
+##  <a name="matchcase"></a>Okno CFindReplaceDialog:: MatchCase
 
-Wywołaj tę funkcję, aby ustalić, czy użytkownik chce, aby dokładnie odpowiadać wielkości liter w ciągu wyszukiwania.
+Wywołaj tę funkcję, aby określić, czy użytkownik chce dokładnie dopasować do wielkości liter w wyszukiwanym ciągu.
 
 ```
 BOOL MatchCase() const;
@@ -308,11 +308,11 @@ BOOL MatchCase() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli użytkownik chce, aby wyszukać wystąpienia ciągu wyszukiwania, które dokładnie odpowiadać wielkości liter w ciągu wyszukiwania; w przeciwnym razie 0.
+Niezerowe, jeśli użytkownik chce znaleźć wystąpienia ciągu wyszukiwania, który dokładnie pasuje do wielkości liter ciągu wyszukiwania; w przeciwnym razie 0.
 
-##  <a name="matchwholeword"></a>  CFindReplaceDialog::MatchWholeWord
+##  <a name="matchwholeword"></a>Okno CFindReplaceDialog:: MatchWholeWord
 
-Wywołaj tę funkcję, aby ustalić, czy użytkownik chce, aby dopasować tylko całe wyrazy.
+Wywołaj tę funkcję, aby określić, czy użytkownik chce dopasować tylko całe wyrazy.
 
 ```
 BOOL MatchWholeWord() const;
@@ -320,11 +320,11 @@ BOOL MatchWholeWord() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli użytkownik chce dopasować tylko całe wyrazy ciąg wyszukiwania; w przeciwnym razie 0.
+Niezerowe, jeśli użytkownik chce dopasować tylko całe wyrazy ciągu wyszukiwania; w przeciwnym razie 0.
 
-##  <a name="replaceall"></a>  CFindReplaceDialog::ReplaceAll
+##  <a name="replaceall"></a>Okno CFindReplaceDialog:: Zamień wszystkie
 
-Wywołaj tę funkcję, aby ustalić, czy użytkownik chce, aby wszystkie wystąpienia ciągu, który ma zostać zastąpione.
+Wywołaj tę funkcję, aby określić, czy użytkownik chce, aby wszystkie wystąpienia ciągu zostały zastąpione.
 
 ```
 BOOL ReplaceAll() const;
@@ -332,11 +332,11 @@ BOOL ReplaceAll() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli użytkownik zażądał, czy należy zastąpić wszystkie ciągi dopasowania ciągu zastępowania; w przeciwnym razie 0.
+Niezerowe, jeśli użytkownik zażądał zastąpienia wszystkich ciągów, które pasują do ciągu zamiany; w przeciwnym razie 0.
 
-##  <a name="replacecurrent"></a>  CFindReplaceDialog::ReplaceCurrent
+##  <a name="replacecurrent"></a>Okno CFindReplaceDialog:: ReplaceCurrent
 
-Wywołaj tę funkcję, aby ustalić, czy użytkownik chce bieżącego słowa, które ma zostać zastąpione.
+Wywołaj tę funkcję, aby określić, czy użytkownik chce zastąpić bieżące słowo.
 
 ```
 BOOL ReplaceCurrent() const;
@@ -344,11 +344,11 @@ BOOL ReplaceCurrent() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli użytkownik zażądał, że zaznaczony ciąg zastąpione ciągu zastępowania; w przeciwnym razie 0.
+Wartość różna od zera, jeśli użytkownik zażądał zastąpienia aktualnie wybranego ciągu ciągiem zastępującym; w przeciwnym razie 0.
 
-##  <a name="searchdown"></a>  CFindReplaceDialog::SearchDown
+##  <a name="searchdown"></a>Okno CFindReplaceDialog:: SearchDown
 
-Wywołaj tę funkcję, aby ustalić, czy użytkownik chce wyszukiwania, aby przejść w kierunku w dół.
+Wywołaj tę funkcję, aby określić, czy użytkownik chce, aby wyszukiwanie kontynuowało pracę w kierunku do dołu.
 
 ```
 BOOL SearchDown() const;
@@ -356,7 +356,7 @@ BOOL SearchDown() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli użytkownik chce, wyszukiwanie, aby przejść w dół kierunku; 0, jeśli użytkownik chce wyszukiwania, aby przejść w górę kierunku.
+Niezerowe, jeśli użytkownik chce, aby wyszukiwanie przejdzie w kierunku ku dolnym; 0, jeśli użytkownik chce, aby wyszukiwanie kontynuowało pracę w kierunku do góry.
 
 ## <a name="see-also"></a>Zobacz także
 

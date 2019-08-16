@@ -16,48 +16,48 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: deaf53d7b337fd33214bbcc4567e73bd33345d49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212434"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511716"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>Wielowątkowość: Porady dotyczące programowania MFC
 
-Aplikacje wielowątkowe wymagają opieki bardziej restrykcyjny niż jednowątkowe aplikacji, aby upewnić się, że operacje są wykonywane w zalecanej kolejności, a wszelkie dane, które odbywa się przez wiele wątków nie jest uszkodzony. W tym temacie opisano techniki w celu uniknięcia potencjalnych problemów podczas programowania wielowątkowe aplikacje za pomocą biblioteki Microsoft Foundation Class (MFC).
+Aplikacje wielowątkowe wymagają bardziej rygorystycznych zastosowań niż aplikacje jednowątkowe, aby zapewnić, że operacje są wykonywane w zamierzonej kolejności, a wszystkie dane, do których dostęp jest wykonywany przez wiele wątków, nie są uszkodzone. W tym temacie objaśniono techniki pozwalające uniknąć potencjalnych problemów związanych z programowaniem aplikacji wielowątkowych za pomocą biblioteki Microsoft Foundation Class (MFC).
 
 - [Uzyskiwanie dostępu do obiektów z wielu wątków](#_core_accessing_objects_from_multiple_threads)
 
-- [Uzyskiwanie dostępu do obiektów MFC z innego typu niż MFC wątków](#_core_accessing_mfc_objects_from_non.2d.mfc_threads)
+- [Uzyskiwanie dostępu do obiektów MFC z wątków nienależących do MFC](#_core_accessing_mfc_objects_from_non.2d.mfc_threads)
 
-- [Windows uchwyt mapy](#_core_windows_handle_maps)
+- [Mapy uchwytów systemu Windows](#_core_windows_handle_maps)
 
 - [Komunikacja między wątkami](#_core_communicating_between_threads)
 
-##  <a name="_core_accessing_objects_from_multiple_threads"></a> Uzyskiwanie dostępu do obiektów z wielu wątków
+##  <a name="_core_accessing_objects_from_multiple_threads"></a>Uzyskiwanie dostępu do obiektów z wielu wątków
 
-Obiekty MFC nie są wątkowo samodzielnie. Dwóch oddzielnych wątkach nie można manipulować tego samego obiektu, o ile nie użyto klas MFC synchronizacji i/lub odpowiednie obiekty synchronizacji Win32, takich jak sekcje krytyczne. Aby uzyskać więcej informacji na temat sekcje krytyczne i inne powiązane obiekty, zobacz [synchronizacji](/windows/desktop/Sync/synchronization) w zestawie Windows SDK.
+Obiekty MFC nie są bezpieczne wątkowo. Dwa oddzielne wątki nie mogą manipulować tym samym obiektem, chyba że używasz klas synchronizacji MFC i/lub odpowiednich obiektów synchronizacji Win32, takich jak sekcje krytyczne. Aby uzyskać więcej informacji na temat sekcji krytycznych i innych powiązanych obiektów, zobacz [Synchronizacja](/windows/win32/Sync/synchronization) w Windows SDK.
 
-Biblioteka klas wymaga sekcje krytyczne wewnętrznie, aby chronić struktur danych globalnych, takich jak używane przez alokacji pamięci debugowania.
+Biblioteka klas wykorzystuje wewnętrznie krytyczne sekcje w celu ochrony globalnych struktur danych, takich jak te używane przez alokację pamięci debugowania.
 
-##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> Uzyskiwanie dostępu do obiektów MFC z innego typu niż MFC wątków
+##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a>Uzyskiwanie dostępu do obiektów MFC z wątków nienależących do MFC
 
-W przypadku aplikacji wielowątkowych, który tworzy wątek w sposób niż przy użyciu [CWinThread](../mfc/reference/cwinthread-class.md) obiektu, nie masz dostępu do innych obiektów MFC z tego wątku. Innymi słowy, jeśli chcesz uzyskać dostęp do dowolnego obiektu MFC z wątek pomocniczy, należy utworzyć wątek przy użyciu jednej z metod opisanych w [wielowątkowość: Tworzenie wątków interfejsu użytkownika](multithreading-creating-user-interface-threads.md) lub [wielowątkowość: Tworzenie wątków roboczych](multithreading-creating-worker-threads.md). Te metody są jedynymi osobami, które umożliwiają biblioteki klas zainicjować zmienne wewnętrznej, która jest niezbędne do obsługi aplikacji wielowątkowych.
+Jeśli masz aplikację wielowątkową, która tworzy wątek w inny sposób niż przy użyciu obiektu [CWinThread](../mfc/reference/cwinthread-class.md) , nie możesz uzyskać dostępu do innych obiektów MFC z tego wątku. Innymi słowy, jeśli chcesz uzyskać dostęp do dowolnego obiektu MFC z wątku pomocniczego, musisz utworzyć ten wątek przy użyciu jednej z metod opisanych w [wielowątkowości: Tworzenie wątków](multithreading-creating-user-interface-threads.md) interfejsu użytkownika lub [wielowątkowości: Tworzenie wątków](multithreading-creating-worker-threads.md)roboczych. Te metody są jedynymi, które umożliwiają bibliotece klas zainicjowanie zmiennych wewnętrznych wymaganych do obsługi aplikacji wielowątkowych.
 
-##  <a name="_core_windows_handle_maps"></a> Windows uchwyt mapy
+##  <a name="_core_windows_handle_maps"></a>Mapy uchwytów systemu Windows
 
-Zgodnie z ogólną zasadą wątku, mogą uzyskiwać dostęp tylko obiekty MFC, utworzonych przez siebie. Jest to spowodowane tymczasowe i stałe mapy uchwyt Windows są przechowywane w pamięci lokalnej wątku, aby zapewnić ochronę przed równoczesny dostęp z wielu wątków. Na przykład wątku roboczego nie może wykonać obliczenia, a następnie wywołać dokumentu `UpdateAllViews` funkcja elementu członkowskiego przez system Windows, które zawierają widoki na nowe dane zmodyfikowany. Nie ma to wpływu na wszystkich, ponieważ do mapy `CWnd` obiekty do parametrów hWnd jest lokalna wątku głównego. Oznacza to, że jeden wątek może być mapowanie Windows dojścia do obiektu języka C++, ale inny wątek mogą być mapowane na ten sam dojścia do innego obiektu języka C++. Zmiany wprowadzone w jednym wątku nie byłyby widoczne w innym.
+Jako ogólna reguła wątek może uzyskać dostęp tylko do utworzonych obiektów MFC. Wynika to z faktu, że tymczasowe i stałe mapy uchwytów systemu Windows są przechowywane w lokalnym magazynie wątków, aby zapewnić ochronę przed równoczesnym dostępem z wielu wątków. Na przykład wątek roboczy nie może wykonać obliczenia, a następnie wywołać funkcję `UpdateAllViews` członkowską dokumentu, aby okna zawierające widoki dla nowych danych zostały zmodyfikowane. Nie ma to żadnego wpływu, ponieważ mapa z `CWnd` obiektów do HWND jest lokalna dla wątku głównego. Oznacza to, że jeden wątek może mieć mapowanie z dojścia systemu Windows do C++ obiektu, ale inny wątek może mapować ten sam uchwyt do innego C++ obiektu. Zmiany wprowadzone w jednym wątku nie zostaną odzwierciedlone w drugim.
 
-Istnieje kilka sposobów tego problemu. Pierwszy jest przekazanie poszczególnych uchwytów (na przykład HWND) zamiast obiektów C++ do wątku roboczego. Wątek roboczy dodaje te obiekty do jego tymczasowe mapy przez wywołanie odpowiedniej `FromHandle` funkcja elementu członkowskiego. Obiekt można dodać do mapy stałe wątku, wywołując `Attach`, ale należy to zrobić tylko wtedy, gdy masz gwarancję, że obiekt będzie istnieć dłuższy niż wątek.
+Istnieje kilka sposobów na obejście tego problemu. Pierwszym z nich jest przekazanie poszczególnych dojścia (takich jak HWND), C++ a nie obiektów do wątku roboczego. Następnie wątek roboczy dodaje te obiekty do tymczasowej mapy, wywołując odpowiednią `FromHandle` funkcję członkowską. Można również dodać obiekt do trwałej mapy wątku przez wywołanie `Attach`, ale należy to zrobić tylko wtedy, gdy masz gwarancję, że obiekt będzie istniał dłużej niż wątek.
 
-Inną metodą jest utworzenie nowych wiadomości zdefiniowanych przez użytkownika, odpowiadający różne zadania, wątki procesów roboczych spowoduje wykonywania i publikować te wiadomości do okna głównego aplikacji przy użyciu `::PostMessage`. Ta metoda komunikacji jest podobne do dwóch różnych aplikacji konwersację z tą różnicą, że zarówno wątki są wykonywane w tej samej przestrzeni adresowej.
+Inna metoda polega na tworzeniu nowych komunikatów zdefiniowanych przez użytkownika, które odpowiadają różnym czynnościom, które będą wykonywane przez wątki robocze, i ogłaszają te komunikaty w oknie `::PostMessage`głównym aplikacji przy użyciu. Ta metoda komunikacji jest podobna do dwóch różnych aplikacji, z wyjątkiem tego, że oba wątki są wykonywane w tej samej przestrzeni adresowej.
 
-Aby uzyskać więcej informacji na temat map uchwyt zobacz [Technical Preview 3 Uwaga](../mfc/tn003-mapping-of-windows-handles-to-objects.md). Aby uzyskać więcej informacji na temat pamięci lokalnej wątku, zobacz [lokalny magazyn wątków](/windows/desktop/ProcThread/thread-local-storage) i [przy użyciu pamięci lokalnej wątku](/windows/desktop/ProcThread/using-thread-local-storage) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat map uchwytów, zobacz [Uwaga techniczna 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md). Aby uzyskać więcej informacji na temat lokalnego magazynu wątków, zobacz temat [lokalny magazyn](/windows/win32/ProcThread/thread-local-storage) wątków i [Używanie lokalnego magazynu wątków](/windows/win32/ProcThread/using-thread-local-storage) w Windows SDK.
 
-##  <a name="_core_communicating_between_threads"></a> Komunikacja między wątkami
+##  <a name="_core_communicating_between_threads"></a>Komunikacja między wątkami
 
-Biblioteka MFC zawiera szereg klas, które umożliwiają wątków do synchronizowania dostępu do obiektów, aby zachować bezpieczeństwo wątkowe. Sposób użycia tych klas jest opisana w [wielowątkowość: Jak używać klas synchronizacji](multithreading-how-to-use-the-synchronization-classes.md) i [wielowątkowość: Kiedy należy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji na temat tych obiektów, zobacz [synchronizacji](/windows/desktop/Sync/synchronization) w zestawie Windows SDK.
+MFC udostępnia wiele klas, które umożliwiają wątkom synchronizowanie dostępu do obiektów w celu zapewnienia bezpieczeństwa wątków. Użycie tych klas zostało opisane w [wielowątkowości: Jak używać klas](multithreading-how-to-use-the-synchronization-classes.md) synchronizacji i [wielowątkowości: Kiedy używać klas](multithreading-when-to-use-the-synchronization-classes.md)synchronizacji. Aby uzyskać więcej informacji na temat tych obiektów, zobacz [Synchronizacja](/windows/win32/Sync/synchronization) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

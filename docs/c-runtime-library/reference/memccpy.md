@@ -22,16 +22,16 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156606"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499691"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
-Kopiuje znaków z bufora.
+Kopiuje znaki z buforu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,36 +49,36 @@ void *_memccpy(
 *dest*<br/>
 Wskaźnik do miejsca docelowego.
 
-*src*<br/>
+*SRC*<br/>
 Wskaźnik do źródła.
 
 *c*<br/>
 Ostatni znak do skopiowania.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Liczba znaków.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli znak *c* jest kopiowany **_memccpy —** zwraca wskaźnik do znaku w *dest* który poprzedza znak. Jeśli *c* nie jest kopiowany, funkcja zwraca **NULL**.
+Jeśli znak *c* jest kopiowany, **_memccpy** zwraca wskaźnik do znaku w elemencie *docelowy* , który bezpośrednio następuje po znaku. Jeśli *c* nie jest kopiowana, zwraca **wartość null**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Memccpy —** funkcja kopiuje 0 lub więcej znaków *src* do *dest*, zatrzymaniu, gdy znak *c* został skopiowany lub *liczba* znaków zostały skopiowane, osiągnięta jako pierwsza.
+Funkcja **_memccpy** kopiuje 0 lub więcej znaków *src* do miejsca *docelowego*, zatrzymuje się, gdy znak *c* został skopiowany lub po skopiowaniu *liczby* znaków, w zależności od tego, co nastąpi wcześniej.
 
-**Uwaga dotycząca zabezpieczeń** upewnij się, że bufor docelowy jest taki sam lub większy rozmiar niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Upewnij się, że bufor docelowy ma ten sam rozmiar lub większy niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_memccpy**|\<Memory.h > lub \<string.h >|
+|**_memccpy**|\<> pamięci. h > \<lub String. h|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

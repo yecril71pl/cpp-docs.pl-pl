@@ -9,41 +9,41 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351803"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511002"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Obsługa podwójnego interfejsu w przypadku serwerów automatyzacji OLE
 
 > [!NOTE]
-> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-Ta uwaga omówiono, jak dodać obsługę podwójnego interfejsu z aplikacją serwer oparty na bibliotece MFC automatyzacji OLE. [Acdual —](../overview/visual-cpp-samples.md) przykładową Obsługa podwójnego interfejsu i przykładowy kod w ta notatka pochodzi z acdual —. Makra opisane w tym notatki, takich jak DECLARE_DUAL_ERRORINFO DUAL_ERRORINFO_PART i IMPLEMENT_DUAL_ERRORINFO, są częścią acdual — przykład i znajdują się w MFCDUAL. H.
+W tym artykule omówiono sposób dodawania obsługi podwójnego interfejsu do aplikacji serwera automatyzacji OLE opartej na bibliotece MFC. Przykład [ACDUAL](../overview/visual-cpp-samples.md) ilustruje obsługę dwóch interfejsów, a przykładowy kod w tej notatce jest pobierany z ACDUAL. Makra opisane w tej notatce, takie jak DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART i IMPLEMENT_DUAL_ERRORINFO, są częścią przykładu ACDUAL i znajdują się w MFCDUAL. C.
 
 ## <a name="dual-interfaces"></a>Podwójne interfejsy
 
-Mimo że automatyzacji pozwala na implementowanie `IDispatch` interfejsu, interfejs VTBL lub podwójnego interfejsu (co obejmuje zarówno), firma Microsoft zaleca, implementuje dwa interfejsy, dla wszystkich widoczne obiekty automatyzacji OLE. Podwójne interfejsy mają znaczące korzyści `IDispatch`— tylko lub tylko do VTBL interfejsów:
+Chociaż Automatyzacja OLE umożliwia implementację `IDispatch` interfejsu, interfejsu VTBL lub podwójnego interfejsu (co obejmuje obie te funkcje), firma Microsoft zdecydowanie zaleca zaimplementowanie podwójnych interfejsów dla wszystkich uwidocznionych obiektów automatyzacji OLE. Dwa interfejsy mają znaczące zalety tylko `IDispatch`w przypadku interfejsów VTBL lub tylko do odczytu:
 
-- Powiązanie może odbywać się w czasie kompilacji przez interfejs VTBL lub w czasie wykonywania za pomocą `IDispatch`.
+- Powiązanie może odbywać się w czasie kompilacji za pomocą interfejsu VTBL lub w czasie `IDispatch`wykonywania.
 
-- Kontrolery automatyzacji OLE, które można użyć interfejsu VTBL mogą korzystać ze zwiększoną wydajność.
+- Kontrolery automatyzacji OLE, które mogą korzystać z interfejsu VTBL, mogą korzystać z ulepszonej wydajności.
 
-- Istniejące kontrolery automatyzacji OLE, które używają `IDispatch` interfejsu będą nadal działać.
+- Istniejące kontrolery automatyzacji OLE, które używają `IDispatch` interfejsu, będą nadal działały.
 
-- Interfejs VTBL łatwiej jest wywołać z języka C++.
+- Interfejs VTBL jest łatwiejszy do wywołania z programu C++.
 
-- Podwójne interfejsy są wymagane dla zachowania zgodności z funkcji obsługi obiektu języka Visual Basic.
+- Aby zapewnić zgodność z funkcjami obsługi obiektów Visual Basic, wymagane są dwa interfejsy.
 
-## <a name="adding-dual-interface-support-to-a-ccmdtarget-based-class"></a>Dodawanie Obsługa podwójnego interfejsu do klasy na podstawie CCmdTarget
+## <a name="adding-dual-interface-support-to-a-ccmdtarget-based-class"></a>Dodawanie obsługi podwójnego interfejsu do klasy opartej na CCmdTarget
 
-Podwójnego interfejsu jest tylko niestandardowy interfejs pochodną `IDispatch`. Najprostszym sposobem realizowania Obsługa podwójnego interfejsu w `CCmdTarget`— na podstawie klasy jest zaimplementowanie pierwszego wysyłania normalne interfejsu na klasie za pomocą MFC i ClassWizard, a następnie dodaj niestandardowy interfejs później. W większości przypadków implementacji niestandardowego interfejsu po prostu delegowanie do MFC `IDispatch` implementacji.
+Podwójny interfejs jest naprawdę tylko interfejsem niestandardowym pochodnym `IDispatch`. Najbardziej prostym sposobem implementacji obsługi podwójnego interfejsu w `CCmdTarget`klasie opartej na systemie jest najpierw wdrożenie normalnego interfejsu wysyłania w klasie za pomocą MFC i ClassWizard, a następnie dodanie interfejsu niestandardowego później. W większości przypadków implementacja interfejsu niestandardowego zostanie po prostu oddelegowana do implementacji MFC `IDispatch` .
 
-Najpierw należy zmodyfikować plik ODL serwera zdefiniować dwa interfejsy do obiektów. Aby zdefiniować podwójnego interfejsu, należy użyć instrukcji interfejsu zamiast `DISPINTERFACE` instrukcji, które generują kreatorów Visual C++. Zamiast usuwając istniejący `DISPINTERFACE` instrukcji, Dodaj nowy raport interfejsu. Zachowując `DISPINTERFACE` formularza, będzie można kontynuować używanie ClassWizard można dodać właściwości i metody do obiektu, ale należy dodać do interface — instrukcja równoważne właściwości i metody.
+Najpierw zmodyfikuj plik ODL dla serwera, aby zdefiniować podwójne interfejsy dla obiektów. Aby zdefiniować podwójny interfejs, należy użyć instrukcji interfejsu zamiast `DISPINTERFACE` instrukcji generowanej przez kreatorów wizualizacji. C++ Zamiast usuwać istniejącą `DISPINTERFACE` instrukcję, Dodaj nową instrukcję interfejsu. Zachowując `DISPINTERFACE` formularz, można nadal używać ClassWizard do dodawania właściwości i metod do obiektu, ale do instrukcji interfejsu należy dodać równoważne właściwości i metody.
 
-Interface — instrukcja podwójnego interfejsu muszą mieć *oleautomation —* i *PODWÓJNĄ* atrybutów i interfejs musi pochodzić od `IDispatch`. Możesz użyć [GUIDGEN](../overview/visual-cpp-samples.md) przykładu można utworzyć **IID** dla podwójnego interfejsu:
+Instrukcja interfejsu dla podwójnego interfejsu musi mieć *OleAutomation* i *podwójne* atrybuty, a interfejs musi pochodzić od `IDispatch`. Możesz użyć przykładu [Guidgen](../overview/visual-cpp-samples.md) , aby utworzyć **Identyfikator IID** dla podwójnego interfejsu:
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -55,14 +55,14 @@ interface IDualAClick : IDispatch
     };
 ```
 
-Po utworzeniu interface — instrukcja w miejscu Rozpocznij dodawanie wpisów do metod i właściwości. Podwójne interfejsy, musisz zmienić układ listy parametrów, tak, aby zwrócić swoje metody i funkcje metod dostępu właściwości w podwójnego interfejsu **HRESULT** i przekazywanie ich wartości zwracane jako parametry atrybutów `[retval,out]`. Należy pamiętać, że w przypadku właściwości będzie należy dodać zarówno podczas operacji odczytu (`propget`) i zapis (`propput`) dostęp do funkcji z tym samym identyfikatorze. Na przykład:
+Po umieszczeniu w miejscu instrukcji interfejsu Rozpocznij Dodawanie wpisów dla metod i właściwości. W przypadku podwójnych interfejsów należy ponownie rozmieścić listy parametrów, tak aby metody i metoda dostępu do właściwości w podwójnym interfejsie zwracały **wynik HRESULT** i przekazywać wartości zwracane jako parametry z `[retval,out]`atrybutami. Należy pamiętać, że w przypadku właściwości należy dodać funkcję dostępu Odczyt (`propget`) i zapis (`propput`) z tym samym identyfikatorem. Przykład:
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
 [propget, id(1)] HRESULT text([out, retval] BSTR* retval);
 ```
 
-Po zdefiniowaniu właściwości i metody, należy dodać odwołanie do interface — instrukcja w instrukcji klasy coclass. Na przykład:
+Po zdefiniowaniu metod i właściwości należy dodać odwołanie do instrukcji Interface w instrukcji coclass. Przykład:
 
 ```IDL
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]
@@ -73,9 +73,9 @@ coclass Document
 };
 ```
 
-Po zaktualizowaniu pliku ODL używać mechanizmu mapowania interfejsu MFC do definiowania klasy implementacji dla podwójnego interfejsu w klasie obiektów i wprowadzić odpowiednie pozycje w MFC `QueryInterface` mechanizm. Należy w jeden wpis `INTERFACE_PART` blok dla każdego wpisu w zestawieniu interfejsu ODL, a także wpisy dla interfejs ekspedycji. Każdy wpis ODL z *propput* atrybut wymaga funkcję o nazwie `put_propertyname`. Każdy wpis z *propget* atrybut wymaga funkcję o nazwie `get_propertyname`.
+Po zaktualizowaniu pliku ODL Użyj mechanizmu mapy interfejsu MFC, aby zdefiniować klasę implementacji dla podwójnego interfejsu w klasie obiektu i wprowadzić odpowiednie wpisy w `QueryInterface` mechanizmie MFC. Musisz mieć jeden wpis w `INTERFACE_PART` bloku dla każdego wpisu w instrukcji interfejsu ODL oraz wpisy dla interfejsu wysyłania. Każdy wpis ODL z atrybutem *propput* wymaga funkcji o nazwie `put_propertyname`. Każdy wpis z atrybutem *propget* wymaga funkcji o nazwie `get_propertyname`.
 
-Aby zdefiniować klasę implementacji dla podwójnego interfejsu, Dodaj `DUAL_INTERFACE_PART` bloku do swojej definicji klasy obiektu. Na przykład:
+Aby zdefiniować klasę implementacji dla podwójnego interfejsu, Dodaj `DUAL_INTERFACE_PART` blok do definicji klasy obiektu. Na przykład:
 
 ```cpp
 BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
@@ -93,7 +93,7 @@ BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
 END_DUAL_INTERFACE_PART(DualAClick)
 ```
 
-Nawiązać podwójnego interfejsu MFC [QueryInterface](/windows/desktop/com/queryinterface--navigating-in-an-object) mechanizmu, Dodaj `INTERFACE_PART` wpisu do mapy interfejsu:
+Aby nawiązać połączenie z mechanizmem [QueryInterface](/windows/win32/com/queryinterface--navigating-in-an-object) o podwójnym interfejsie `INTERFACE_PART` MFC, Dodaj wpis do mapy interfejsu:
 
 ```cpp
 BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
@@ -102,7 +102,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
 END_INTERFACE_MAP()
 ```
 
-Następnie należy wypełnić implementacji interfejsu. W większości przypadków można delegować do istniejących MFC `IDispatch` implementacji. Na przykład:
+Następnie musisz wypełnić implementację interfejsu. W większości przypadków będzie można delegować do istniejącej implementacji MFC `IDispatch` . Na przykład:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()
@@ -179,7 +179,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }
 ```
 
-Dla obiektu metody i funkcje metod dostępu właściwości należy wypełnić w implementacji. Powrót do metod wygenerowany za pomocą ClassWizard ogólnie delegować metod i właściwości funkcji. Jednakże jeśli skonfigurowano dostęp do zmiennych bezpośrednio właściwości należy napisać kod, aby get/put wartość do zmiennej. Na przykład:
+Dla metod obiektu i funkcji dostępu do właściwości należy uzupełnić implementację. Metody i funkcje właściwości mogą zwykle delegować do metod wygenerowanych za pomocą ClassWizard. Jeśli jednak właściwości są skonfigurowane do bezpośredniego dostępu do zmiennych, należy napisać kod w celu uzyskania/przełączenia wartości do zmiennej. Przykład:
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -203,7 +203,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 
 ## <a name="passing-dual-interface-pointers"></a>Przekazywanie wskaźników podwójnego interfejsu
 
-Przekazanie wskaźnika podwójnego interfejsu nie jest proste, zwłaszcza, jeśli jest to potrzebne do wywoływania `CCmdTarget::FromIDispatch`. `FromIDispatch` działa tylko na MFC `IDispatch` wskaźników. Jest jednym ze sposobów, aby obejść ten problem do wykonywania zapytań w oryginalnym `IDispatch` zestaw wskaźnika w górę przez MFC i przekazać ten wskaźnik do funkcji, które go potrzebują. Na przykład:
+Przekazywanie wskaźnika podwójnego interfejsu nie jest proste, zwłaszcza jeśli trzeba wywołać `CCmdTarget::FromIDispatch`. `FromIDispatch`działa tylko na `IDispatch` wskaźnikach MFC. Jednym ze sposobów obejścia tego problemu jest zapytanie o oryginalny `IDispatch` wskaźnik ustawiony przez MFC i przekazanie tego wskaźnika do funkcji, które go potrzebują. Na przykład:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -218,7 +218,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
 }
 ```
 
-Przed przekazaniem wskaźnik wstecz za pośrednictwem metody podwójnego interfejsu, konieczne może być przekonwertować ją z MFC `IDispatch` wskaźnik do wskaźnika podwójnego interfejsu. Na przykład:
+Przed przekazaniem wskaźnika z powrotem za pośrednictwem metody podwójnego interfejsu, może być konieczne przekonwertowanie jej `IDispatch` ze wskaźnika MFC na wskaźnik podwójnego interfejsu. Na przykład:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
@@ -232,15 +232,15 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
 }
 ```
 
-## <a name="registering-the-applications-type-library"></a>Rejestrowania biblioteki typów aplikacji
+## <a name="registering-the-applications-type-library"></a>Rejestrowanie biblioteki typów aplikacji
 
-Kreator AppWizard nie generuje kodu, można zarejestrować biblioteki typów aplikację serwera automatyzacji OLE w systemie. Gdy istnieją inne sposoby, aby zarejestrować bibliotekę typów, wygodne jest aplikacja zarejestrować biblioteki typów, podczas aktualizacji informacji o typie OLE, oznacza to, że przy każdym uruchomieniu aplikacji autonomicznej.
+AppWizard nie generuje kodu w celu zarejestrowania biblioteki typów aplikacji serwera automatyzacji OLE w systemie. Chociaż istnieją inne sposoby zarejestrowania biblioteki typów, wygodnie jest, aby aplikacja rejestrował bibliotekę typów podczas aktualizowania informacji o typie OLE, to jest zawsze, gdy aplikacja jest uruchamiana autonomicznie.
 
-Aby zarejestrować autonomicznie biblioteki typów aplikacji przy każdym uruchomieniu aplikacji:
+Aby zarejestrować bibliotekę typów aplikacji za każdym razem, gdy aplikacja jest uruchamiana autonomicznie:
 
-- Obejmują AFXCTL. H w standardowego zawiera STDAFX pliku nagłówka. Godz., aby dostęp do definicji `AfxOleRegisterTypeLib` funkcji.
+- Uwzględnij 'AFXCTL. H w standardzie obejmuje plik nagłówka, STDAFX. H, aby uzyskać dostęp do definicji `AfxOleRegisterTypeLib` funkcji.
 
-- W Twojej aplikacji `InitInstance` funkcji, Znajdź wywołanie `COleObjectFactory::UpdateRegistryAll`. Po tym wywołaniu, dodaj wywołanie `AfxOleRegisterTypeLib`, określanie **LIBID** odpowiadający Twojej biblioteki typów, wraz z nazwą Twojej biblioteki typów:
+- W `InitInstance` funkcji aplikacji Znajdź `COleObjectFactory::UpdateRegistryAll`wywołanie. Po tym wywołaniu Dodaj wywołanie do `AfxOleRegisterTypeLib`, określając **identyfikatora LIBID** odpowiadające bibliotece typów, wraz z nazwą biblioteki typów:
 
     ```cpp
     // When a server application is launched stand-alone, it is a good idea
@@ -257,19 +257,19 @@ Aby zarejestrować autonomicznie biblioteki typów aplikacji przy każdym urucho
     // DUAL_SUPPORT_END
     ```
 
-## <a name="modifying-project-build-settings-to-accommodate-type-library-changes"></a>Modyfikowanie ustawień kompilacji projektu, aby uwzględnić zmiany w bibliotece typów
+## <a name="modifying-project-build-settings-to-accommodate-type-library-changes"></a>Modyfikowanie ustawień kompilacji projektu w celu uwzględnienia zmian w bibliotece typów
 
-Aby zmodyfikować ustawienia kompilacji projektu, aby plik nagłówka zawierający **UUID** definicje są generowane przez z MkTypLib, zawsze wtedy, gdy zostanie odtworzony biblioteki typów:
+Aby zmodyfikować ustawienia kompilacji projektu, tak aby plik nagłówkowy zawierający definicje **UUID** był generowany przez MkTypLib za każdym razem, gdy biblioteka typów zostanie odbudowana:
 
-1. Na **kompilacji** menu, kliknij przycisk **ustawienia**, a następnie wybierz plik ODL z listy plików dla każdej konfiguracji.
+1. W menu **kompilacja** kliknij pozycję **Ustawienia**, a następnie wybierz plik ODL z listy plików dla każdej konfiguracji.
 
-2. Kliknij przycisk **OLE typy** kartę i określ nazwę pliku w **nagłówku wyjściowym** pole nazwy pliku. Nazwa pliku, który nie jest już używany w projekcie, należy użyć, ponieważ z MkTypLib zastąpi istniejący plik. Kliknij przycisk **OK** zamknąć **ustawieniach kompilacji** okno dialogowe.
+2. Kliknij kartę **typy OLE** i określ nazwę pliku w polu Nazwa pliku **nagłówku danych wyjściowych** . Użyj nazwy pliku, która nie jest jeszcze używana przez projekt, ponieważ MkTypLib zastąpi istniejący plik. Kliknij przycisk **OK** , aby zamknąć okno dialogowe **Ustawienia kompilacji** .
 
-Aby dodać **UUID** definicje z pliku nagłówka wygenerowane z MkTypLib do projektu:
+Aby dodać definicje **UUID** z MkTypLibego pliku nagłówkowego do projektu:
 
-1. Obejmują wygenerowane z MkTypLib pliku nagłówka w standardowego zawiera STDAFX pliku nagłówka. H.
+1. Dołącz plik nagłówka MkTypLib-generaty w standardowym pliku nagłówkowym, STDAFX. C.
 
-2. Utwórz nowy plik INITIIDS. CPP i dodaj go do projektu. W tym pliku należy uwzględnić plik nagłówka wygenerowane z MkTypLib po tym OLE2. H i INITGUID. GODZ.:
+2. Utwórz nowy plik INITIIDS. CPP i dodaj go do projektu. W tym pliku Uwzględnij plik nagłówka MkTypLib, po uwzględnieniu OLE2. H i INITGUID. C
 
     ```cpp
     // initIIDs.c: defines IIDs for dual interfaces
@@ -279,21 +279,21 @@ Aby dodać **UUID** definicje z pliku nagłówka wygenerowane z MkTypLib do proj
     #include "acdual.h"
     ```
 
-3. Na **kompilacji** menu, kliknij przycisk **ustawienia**, a następnie wybierz pozycję INITIIDS. CPP z listy plików dla każdej konfiguracji.
+3. W menu **kompilacja** kliknij pozycję **Ustawienia**, a następnie wybierz pozycję INITIIDS. CPP z listy plików dla każdej konfiguracji.
 
-4. Kliknij przycisk **C++** kartę, kliknij kategorię **prekompilowanych nagłówków**i wybierz **prekompilowane nagłówki nie są używane** przycisku radiowego. Kliknij przycisk OK, aby zamknąć **ustawieniach kompilacji** okno dialogowe.
+4. Kliknij **C++** kartę, kliknij pozycję kategorie **prekompilowane nagłówki**, a następnie wybierz przycisk radiowy **nie używa prekompilowanych nagłówków** . Kliknij przycisk OK, aby zamknąć okno dialogowe **Ustawienia kompilacji** .
 
-## <a name="specifying-the-correct-object-class-name-in-the-type-library"></a>Określenie nazwy klasy odpowiedni obiekt w bibliotece typów
+## <a name="specifying-the-correct-object-class-name-in-the-type-library"></a>Określanie prawidłowej nazwy klasy obiektu w bibliotece typów
 
-Kreatorzy dostarczane z programem Visual C++ niepoprawnie Użyj nazwy klasy implementacji, aby określić wspólna w pliku ODL serwera OLE utworzone klasy. Gdy to będzie działać, nazwę klasy wykonania prawdopodobnie nie jest nazwą klasy, użytkownicy obiektu do użycia. Aby określić poprawną nazwę, otwórz plik ODL, zlokalizuj każdej instrukcji klasy coclass i zastąp nazwę klasy wykonania poprawną nazwę zewnętrznego.
+Kreatory dostarczone z wizualizacją C++ nieprawidłowo wykorzystują nazwę klasy implementacji, aby określić klasę coclass w pliku ODL serwera dla klas, które umożliwiają tworzenie OLE. Chociaż ta funkcja będzie działała, nazwa klasy implementacji prawdopodobnie nie jest nazwą klasy, która ma być używana przez użytkowników obiektu. Aby określić poprawną nazwę, Otwórz plik ODL, Znajdź każdą instrukcję coclass i zastąp nazwę klasy implementacji poprawną nazwą zewnętrzną.
 
-Należy pamiętać, że po zmianie instrukcji coclass nazwy zmiennej **CLSID**s w pliku nagłówka wygenerowane z MkTypLib zostanie zmieniona. Należy zaktualizować kod, aby użyć nowej nazwy zmiennych.
+Należy zauważyć, że po zmianie instrukcji coclass, nazwy zmiennych **identyfikatora CLSID**s w pliku nagłówkowym MkTypLib. Musisz zaktualizować swój kod, aby użyć nowych nazw zmiennych.
 
-## <a name="handling-exceptions-and-the-automation-error-interfaces"></a>Obsługa wyjątków i interfejsów błąd automatyzacji
+## <a name="handling-exceptions-and-the-automation-error-interfaces"></a>Obsługa wyjątków i interfejsów błędów automatyzacji
 
-Metody i funkcje metod dostępu właściwości obiektu automatyzacji może zgłaszać wyjątki. Jeśli tak, należy je obsłużyć w danej implementacji podwójnego interfejsu i przekazać informacje o wyjątku odsyłane do kontrolera korzystając z interfejsu obsługi błędów automatyzacji OLE, `IErrorInfo`. Ten interfejs zapewnia informacje o błędzie szczegółowe, kontekstowe za pośrednictwem zarówno `IDispatch` i VTBL interfejsów. Aby wskazać, że procedura obsługi błędów jest dostępna, należy zaimplementować `ISupportErrorInfo` interfejsu.
+Metody obiektu automatyzacji i funkcje metody dostępu do właściwości mogą generować wyjątki. Jeśli tak, należy je obsłużyć w implementacji o podwójnym interfejsie i przekazać informacje o wyjątku z powrotem do kontrolera za pomocą interfejsu `IErrorInfo`obsługi błędów automatyzacji OLE. Ten interfejs zapewnia szczegółowe, kontekstowe informacje o błędzie za `IDispatch` poorednictwem obu interfejsów i VTBL. Aby wskazać, że program obsługi błędów jest dostępny, należy zaimplementować `ISupportErrorInfo` interfejs.
 
-Do ilustrowania mechanizmu obsługi błędów, założono, że wygenerowany ClassWizard funkcji, używaną do zaimplementowania pomocy technicznej standard wysyłania zgłaszają wyjątki. Implementacja MFC `IDispatch::Invoke` zazwyczaj przechwytuje tych wyjątków i konwertuje je na strukturę EXCEPTINFO, która jest zwracana za pośrednictwem `Invoke` wywołania. Jednak w przypadku interfejsu VTBL odpowiedzialność za przechwytywanie wyjątków, samodzielnie. Na przykład chronić swoje metody podwójnego interfejsu:
+Aby zilustrować mechanizm obsługi błędów, należy założyć, że funkcje wygenerowane przez ClassWizard służące do implementowania standardowych wyjątków do obsługi wysyłania. Implementacja `IDispatch::Invoke` MFC zwykle przechwytuje te wyjątki i konwertuje je na strukturę EXCEPTINFO, która jest zwracana `Invoke` przez wywołanie. Jeśli jednak używany jest interfejs VTBL, użytkownik jest odpowiedzialny za przechwycenie wyjątków samodzielnie. Jak na przykład chronić metody podwójnego interfejsu:
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -310,31 +310,31 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` zajmuje się zwracając kod poprawny błąd, gdy wystąpi wyjątek. `CATCH_ALL_DUAL` Konwertuje wyjątek MFC do automatyzacji OLE obsługi błędów informacje przy użyciu `ICreateErrorInfo` interfejsu. (Przykład `CATCH_ALL_DUAL` makr znajduje się w pliku MFCDUAL. H w [acdual —](../overview/visual-cpp-samples.md) próbki. Funkcji wywoływanych przez nią do obsługi wyjątków, `DualHandleException`, znajduje się w pliku MFCDUAL. CPP.) `CATCH_ALL_DUAL` określa wróć w oparciu o typ wyjątku, który wystąpił kod błędu:
+`CATCH_ALL_DUAL`w przypadku wystąpienia wyjątku należy zwrócić uwagę na zwrócenie poprawnego kodu błędu. `CATCH_ALL_DUAL`Konwertuje wyjątek MFC na informacje o obsłudze błędów automatyzacji OLE przy użyciu `ICreateErrorInfo` interfejsu. (Przykładowe `CATCH_ALL_DUAL` makro znajduje się w pliku MFCDUAL. H w próbce [ACDUAL](../overview/visual-cpp-samples.md) . Funkcja, która wywołuje do obsługi wyjątków, `DualHandleException`jest w pliku MFCDUAL. CPP). `CATCH_ALL_DUAL` określa kod błędu, który ma zostać zwrócony na podstawie typu wyjątku, który wystąpił:
 
-- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) — w tym przypadku `HRESULT` jest tworzony przy użyciu następującego kodu:
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) — w tym przypadku `HRESULT` jest konstruowany przy użyciu następującego kodu:
 
     ```cpp
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-   Spowoduje to utworzenie `HRESULT` specyficzne dla interfejsu, który spowodował wyjątek. Kod błędu jest przesunięty 0x200, aby uniknąć konfliktów z zdefiniowaną przez system `HRESULT`pod kątem standardowe interfejsy OLE.
+   Spowoduje to utworzenie `HRESULT` określonego interfejsu, który spowodował wyjątek. Kod błędu jest przesunięty przez 0x200, aby uniknąć konfliktów ze zdefiniowanym `HRESULT`przez system elementem s dla standardowych interfejsów OLE.
 
-- [CMemoryException](../mfc/reference/cmemoryexception-class.md) — w tym przypadku `E_OUTOFMEMORY` jest zwracana.
+- [CMemoryException](../mfc/reference/cmemoryexception-class.md) — w tym przypadku `E_OUTOFMEMORY` jest zwracany.
 
-- — W tym przypadku innych wyjątków `E_UNEXPECTED` jest zwracana.
+- Każdy inny wyjątek — w tym przypadku `E_UNEXPECTED` jest zwracany.
 
-Aby wskazać, że jest używana procedura obsługi błędów automatyzacji OLE, należy także zaimplementować `ISupportErrorInfo` interfejsu.
+Aby wskazać, że jest używany program obsługi błędów automatyzacji OLE, należy również zaimplementować `ISupportErrorInfo` interfejs.
 
-Najpierw należy dodać kod do swojej definicji klasy automatyzacji, aby pokazać, obsługuje on `ISupportErrorInfo`.
+Najpierw Dodaj kod do definicji klasy automatyzacji, aby go `ISupportErrorInfo`wyświetlić.
 
-Po drugie, Dodaj kod do mapę interfejsu klasy automatyzacji, aby skojarzyć `ISupportErrorInfo` implementacji klasy z biblioteki MFC `QueryInterface` mechanizm. `INTERFACE_PART` Instrukcji odpowiada klasy zdefiniowanej dla `ISupportErrorInfo`.
+Następnie Dodaj kod do mapy interfejsu klasy automatyzacji, aby skojarzyć `ISupportErrorInfo` klasę implementacji z `QueryInterface` mechanizmem MFC. Instrukcja pasuje do klasy zdefiniowanej dla `ISupportErrorInfo`. `INTERFACE_PART`
 
-Na koniec implementuje klasy zdefiniowane w celu obsługi `ISupportErrorInfo`.
+Na koniec Zaimplementuj klasę zdefiniowaną do `ISupportErrorInfo`obsługi.
 
-( [Acdual —](../overview/visual-cpp-samples.md) sample zawiera trzy makra, aby pomóc, wykonaj następujące trzy kroki `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, i `IMPLEMENT_DUAL_ERRORINFO`, wszystkie zawarte w MFCDUAL. H.)
+( [ACDUAL](../overview/visual-cpp-samples.md) próbka zawiera trzy makra, które pomagają wykonać te trzy kroki `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`,, `IMPLEMENT_DUAL_ERRORINFO`i, wszystkie zawarte w MFCDUAL. H)
 
-Poniższy przykład implementuje klasy zdefiniowanej w celu obsługi `ISupportErrorInfo`. `CAutoClickDoc` jest nazwą klasy automatyzacji i `IID_IDualAClick` jest **IID** dla interfejsu, który jest źródłem błędów zgłoszonych przez obiekt automatyzacji OLE błąd:
+W poniższym przykładzie przedstawiono implementację klasy zdefiniowanej `ISupportErrorInfo`do obsługi. `CAutoClickDoc`jest nazwą klasy automatyzacji i `IID_IDualAClick` jest identyfikatorem **IID** dla interfejsu, który jest źródłem błędów raportowanych za pośrednictwem obiektu błędu automatyzacji OLE:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()

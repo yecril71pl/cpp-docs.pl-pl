@@ -1,21 +1,21 @@
 ---
-title: ograniczone (atrybut COM C++)
+title: z ograniczeniami (C++ atrybut com)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407357"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514057"
 ---
 # <a name="restricted"></a>restricted
 
-Określa, że jest członkiem moduł, interfejs lub dispinterface nie może być wywoływana arbitralnie.
+Określa, że element członkowski modułu, interfejsu lub dispinterface nie może zostać wywołany arbitralnie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,15 +28,15 @@ Określa, że jest członkiem moduł, interfejs lub dispinterface nie może być
 ### <a name="parameters"></a>Parametry
 
 *interfaces*<br/>
-Jeden lub więcej interfejsów, które może nie być wywoływana arbitralnie obiektu COM. Ten parametr jest prawidłowy tylko w przypadku zastosowania do klasy.
+Co najmniej jeden interfejs, który może nie być wywoływany arbitralnie dla obiektu COM. Ten parametr jest prawidłowy tylko wtedy, gdy jest stosowany do klasy.
 
 ## <a name="remarks"></a>Uwagi
 
-**Ograniczeniami** atrybut C++ ma taką samą funkcjonalność jak [ograniczeniami](/windows/desktop/Midl/restricted) atrybutów w MIDL.
+Atrybut C++ z ograniczeniami ma taką samą funkcjonalność jak atrybut MIDL z [ograniczeniami](/windows/win32/Midl/restricted) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia sposób użycia **ograniczeniami** atrybutu:
+Poniższy kod pokazuje, jak używać atrybutu z **ograniczeniami** :
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -67,12 +67,12 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu **interfejsu**, **klasy**, **— struktura**|
+|**Dotyczy**|Interface — Metoda, **interfejs**, **Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|**Klasa coclass** (po zastosowaniu do **klasy** lub **struktury**)|
+|**Wymagane atrybuty**|**Klasa coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

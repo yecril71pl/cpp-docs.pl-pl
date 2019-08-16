@@ -1,28 +1,28 @@
 ---
-title: Konwersja boxing (C++sposób niezamierzony i C++/CX)
+title: Opakowanie (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346069"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509871"
 ---
-# <a name="boxing--ccli-and-ccx"></a>Konwersja boxing (C++sposób niezamierzony i C++/CX)
+# <a name="boxing--ccli-and-ccx"></a>Opakowanie (C++/CLI i C++/CX)
 
-Konwersja typów wartości do obiektów jest nazywany *pakowania*, i nosi nazwę konwersji obiektów na typy wartości *Rozpakowywanie*.
+Konwersja typów wartości do obiektów jest nazywana *opakowaniem*, a Konwersja obiektów na typy wartości jest nazywana rozpakowywaniem.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-(Nie ma żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie do wszystkich środowisk uruchomieniowych).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-C++/CX obsługuje oczekiwaliśmy składni skrótu dla typów wartości opakowywanie i rozpakowywanie typy odwołań. Typ wartości jest ramce, gdy jest ona przypisana do zmiennej typu `Object`. `Object` Zmienna jest rozpakowywany, gdy jest ona przypisana do zmiennej typu wartości i typ rozpakowany jest określona w nawiasach; oznacza to, gdy zmienna obiektu jest rzutowany na typ wartości.
+C++/CX obsługuje skróconą składnię typów wartości opakowania i rozpakowywanie typów odwołań. Typ wartości jest opakowany, gdy jest przypisany do zmiennej typu `Object`. `Object` Zmienna jest oddzielona, gdy jest przypisana do zmiennej typu wartości, a nieopakowany typ jest określony w nawiasach, czyli gdy zmienna obiektu jest rzutowana na typ wartości.
 
 ```cpp
   Platform::Object^
@@ -32,13 +32,13 @@ value_variable = (value_type) object_variable;
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ### <a name="examples"></a>Przykłady
 
-Następujący kod przykładowy pola i unboxes `DateTime` wartość. Po pierwsze w przykładzie uzyskano `DateTime` wartość, która reprezentuje bieżącą datę i godzinę, a następnie przypisuje go do `DateTime` zmiennej. A następnie `DateTime` jest zapakowany, przypisując go do `Object` zmiennej. Na koniec wartości spakowanej jest rozpakowywany, przypisując go do innego `DateTime` zmiennej.
+Poniższe przykładowe kody i oddzielą `DateTime` pola wartości. Najpierw przykład uzyskuje `DateTime` wartość reprezentującą bieżącą datę i godzinę, a następnie przypisuje ją `DateTime` do zmiennej. Następnie jest opakowany przez przypisanie go `Object` do zmiennej. `DateTime` Na koniec, opakowana wartość jest niezaopakowana, przypisując ją do innej `DateTime` zmiennej.
 
-Aby przetestować w przykładzie, należy utworzyć `BlankApplication` projektu, Zastąp `BlankPage::OnNavigatedTo()` metody, a następnie określ punkty przerwania w nawias zamykający i przypisanie do zmiennej `str1`. W przypadku przykładu osiągnie nawiasem zamykającym, sprawdzić `str1`.
+Aby przetestować przykład, należy utworzyć `BlankApplication` projekt, `BlankPage::OnNavigatedTo()` zastąpić metodę, a następnie określić punkty przerwania w nawiasie zamykającym i przypisanie do zmiennej `str1`. Gdy przykład osiągnie nawias zamykający, należy zapoznać `str1`się z tematem.
 
 ```cpp
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
@@ -72,13 +72,13 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Aby uzyskać więcej informacji, zobacz [Boxing (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx).
+Aby uzyskać więcej informacji, zobacz [opakowanieC++(/CX)](../cppcx/boxing-c-cx.md).
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-Typy, do wartości pola kompilatora <xref:System.Object>. Jest to możliwe z powodu konwersji zdefiniowanego przez kompilator do typów wartości do przekonwertowania <xref:System.Object>.
+Pola kompilatora mają <xref:System.Object>typ wartości. Jest to możliwe z powodu konwersji zdefiniowanej przez kompilator na konwersję typów wartości <xref:System.Object>na.
 
-Pakowania, jak i rozpakowania Włącz typy wartości powinien być traktowany jako obiekty. Typy wartości, w tym typy struktury i typy wbudowane, takie jak int, mogą być konwertowane do i z typu <xref:System.Object>.
+Pakowanie i rozpakowywanie Włącz typy wartości, które mają być traktowane jako obiekty. Typy wartości, w tym typy struktury i typy wbudowane, takie jak int, można przekonwertować na typ i z tego typu <xref:System.Object>.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -92,11 +92,11 @@ Aby uzyskać więcej informacji, zobacz:
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład przedstawia jak niejawna konwersja boxing działa.
+Poniższy przykład pokazuje, jak działa niejawny opakowanie.
 
 ```cpp
 // vcmcppv2_explicit_boxing2.cpp

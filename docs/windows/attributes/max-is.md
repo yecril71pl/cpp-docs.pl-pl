@@ -1,21 +1,21 @@
 ---
-title: max_is — (C++ atrybutów COM)
+title: max_is (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409281"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514428"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-Określa maksymalną wartość indeksu prawidłową tablicą.
+Określa maksymalną wartość prawidłowego indeksu tablicy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,11 +26,11 @@ Określa maksymalną wartość indeksu prawidłową tablicą.
 ### <a name="parameters"></a>Parametry
 
 *expression*<br/>
-Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
+Co najmniej jedno wyrażenie języka C. Puste gniazda argumentów są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
 
-**Max_is —** C++ atrybut ma taką samą funkcjonalność jak [max_is —](/windows/desktop/Midl/max-is) atrybutów w MIDL.
+Atrybut **max_is** C++ ma takie same funkcje jak atrybut [max_is](/windows/win32/Midl/max-is) MIDL.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -38,16 +38,16 @@ Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
 
 |||
 |-|-|
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Dotyczy**|Pole w **strukturze** lub **Unii**, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|**size_is**|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Przykład
 
-Zobacz [first_is —](first-is.md) przykład sposobu określania część tablicy.
+Zobacz [first_is](first-is.md) , aby zapoznać się z przykładem, jak określić sekcję tablicy.
 
 ## <a name="see-also"></a>Zobacz także
 

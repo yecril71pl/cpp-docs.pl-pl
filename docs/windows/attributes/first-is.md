@@ -1,21 +1,21 @@
 ---
-title: first_is — (C++ atrybutów COM)
+title: first_is (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409606"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501559"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
-Określa indeks pierwszego elementu tablicy mają być przekazywane.
+Określa indeks pierwszego elementu tablicy, który ma zostać przesłany.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Określa indeks pierwszego elementu tablicy mają być przekazywane.
 ### <a name="parameters"></a>Parametry
 
 *expression*<br/>
-Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
+Co najmniej jedno wyrażenie języka C. Puste gniazda argumentów są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
 
-**First_is —** C++ atrybut ma taką samą funkcjonalność jak [first_is —](/windows/desktop/Midl/first-is) atrybutów w MIDL.
+Atrybut **first_is** C++ ma takie same funkcje jak atrybut [first_is](/windows/win32/Midl/first-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia różne sposoby, aby określić sekcji w tablicy:
+Poniższy kod przedstawia różne sposoby określania sekcji w tablicy:
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -62,12 +62,12 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Dotyczy**|Pole w **strukturze** lub **Unii**, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 80b95225a277a7985c30e5ea453597b06e501753
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915250"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513302"
 ---
 # <a name="tooltiptext-structure"></a>Struktura TOOLTIPTEXT
 
@@ -31,7 +31,7 @@ typedef struct {
 ```
 
 *hdr*<br/>
-Identyfikuje narzędzie, które wymaga tekstu. Jedynym członkiem tej struktury może być wymagany identyfikator polecenia kontrolki. Identyfikator polecenia kontrolki będzie znajdować się w *idFrom* składowej struktury **NMHDR** , do którego zostanie uzyskany `hdr.idFrom`dostęp ze składnią. Zobacz [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) , aby zapoznać się z omówieniem elementów członkowskich struktury **NMHDR** .
+Identyfikuje narzędzie, które wymaga tekstu. Jedynym członkiem tej struktury może być wymagany identyfikator polecenia kontrolki. Identyfikator polecenia kontrolki będzie znajdować się w *idFrom* składowej struktury **NMHDR** , do którego zostanie uzyskany `hdr.idFrom`dostęp ze składnią. Zobacz [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) , aby zapoznać się z omówieniem elementów członkowskich struktury **NMHDR** .
 
 *lpszText*<br/>
 Adres ciągu, w którym jest wyświetlany tekst dla narzędzia.

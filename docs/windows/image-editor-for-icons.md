@@ -42,176 +42,176 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: c411c4b95fcd3866c897f04b70da7cbb2b48ba28
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504319"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514218"
 ---
 # <a name="image-editor-for-icons-c"></a>Edytor obrazów dla ikon (C++)
 
-Po wybraniu pliku obrazu (na przykład .ico, bmp, PNG) w **Eksploratora rozwiązań**, obraz, który zostanie otwarty w **edytora obrazów** w kodu pliki otwarte w taki sam sposób **Edytor kodu** . Gdy **edytora obrazów** karta jest aktywna, zostanie wyświetlony pasków narzędzi za pomocą wielu narzędzi do tworzenia i edycji obrazów. Wraz z map bitowych, ikon i kursorów można edytować obrazy w formacie GIF lub JPEG przy użyciu poleceń w **obraz** menu i narzędzi na **edytora obrazów** paska narzędzi.
+Po wybraniu pliku obrazu (takiego jak ICO, BMP, PNG) w **Eksplorator rozwiązań**obraz zostanie otwarty w **Edytorze obrazów** w taki sam sposób, jak pliki kodu otwierają się w **edytorze kodu**. Gdy karta **Edytor obrazu** jest aktywna, są wyświetlane paski narzędzi z wieloma narzędziami do tworzenia i edytowania obrazów. Oprócz map bitowych, ikon i kursorów można edytować obrazy w formacie GIF lub JPEG przy użyciu poleceń z menu **obraz** i narzędzi na pasku narzędzi **edytora obrazu** .
 
-Zasoby graficzne są obrazy, które należy zdefiniować dla aplikacji. Można narysować freehand lub rysowanie przy użyciu kształtów. Możesz wybrać części obrazu dla edycji lub zmiana rozmiaru i odbijanie lub można utworzyć niestandardowy obiekt brush z wybranej części obrazu i rysowanie za pomocą tego pędzla. Można zdefiniować właściwości obrazu, zapisać obrazy w różnych formatach i konwertowania obrazów z jednego formatu na inny.
-
-> [!NOTE]
-> Za pomocą **edytora obrazów**, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.
-
-Można również użyć **edytora obrazów** i [Edytor plików binarnych](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
-
-Oprócz tworzenia nowych zasobów graficznych, możliwe jest również [importowanie istniejących obrazów](../windows/how-to-copy-resources.md#import-and-export-resources) do edycji i dodać je do projektu. Możesz również otworzyć i edycji obrazów, które nie są częścią projektu dla [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
-
-Instrukcje dotyczące **edytora obrazów**, zobacz instrukcje [Tworzenie ikony lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [edytować obraz](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [Użyj narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Praca z kolorami](../windows/working-with-color-image-editor-for-icons.md), i [klawiszy](../windows/accelerator-keys-image-editor-for-icons.md).
+Zasoby graficzne to obrazy zdefiniowane dla aplikacji. Możesz rysować odręczne lub rysować przy użyciu kształtów. Można wybrać fragmenty obrazu do edycji, odwrócenia lub zmiany rozmiarów lub można utworzyć niestandardowy pędzel z wybranej części obrazu i rysować z tym pędzlem. Można definiować właściwości obrazu, zapisywać obrazy w różnych formatach i konwertować obrazy z jednego formatu na inny.
 
 > [!NOTE]
-> Pobierz bezpłatnie **Visual Studio Image Library** zawierającą wiele animacji, bitmap i ikon, których można używać w aplikacjach. Aby uzyskać więcej informacji dotyczących sposobu pobierania biblioteki, zobacz [Visual Studio Image Library](/visualstudio/designers/the-visual-studio-image-library).
+> Korzystając z **edytora obrazów**, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.
+
+Można również użyć **edytora obrazów** i [edytora binarnego](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
+
+Oprócz tworzenia nowych zasobów graficznych można [zaimportować istniejące obrazy](../windows/how-to-copy-resources.md#import-and-export-resources) do edycji, a następnie dodać je do projektu. Możesz również otwierać i edytować obrazy, które nie są częścią projektu, na potrzeby [edycji obrazów](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)autonomicznych.
+
+Aby uzyskać informacje na temat **edytora obrazów**, zobacz jak [utworzyć ikonę lub inny obraz](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [edytować obraz](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [użyć narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md), [pracy z kolorem](../windows/working-with-color-image-editor-for-icons.md)i [klawiszy skrótów](../windows/accelerator-keys-image-editor-for-icons.md).
+
+> [!NOTE]
+> Pobierz bez kosztów **Biblioteka obrazów programu Visual Studio** , która zawiera wiele animacji, map bitowych i ikon, których możesz używać w aplikacjach. Aby uzyskać więcej informacji dotyczących sposobu pobierania biblioteki, zobacz [Biblioteka obrazów programu Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
 
 ## <a name="image-menu"></a>Menu obrazu
 
-**Obraz** menu, która jest wyświetlana tylko wtedy, gdy **edytora obrazów** jest aktywna, zawiera polecenia służące do edycji obrazów, zarządzanie palety kolorów i ustawienie **edytora obrazów** okna Opcje. Ponadto polecenia narzędzia obrazach urządzeń są dostępne podczas pracy z ikony i kursory.
+Menu **obraz** , które pojawia się tylko wtedy, gdy **Edytor obrazu** jest aktywny, zawiera polecenia służące do edytowania obrazów, zarządzania paletami kolorów oraz ustawiania opcji okna **edytora obrazu** . Ponadto polecenia dotyczące korzystania z obrazów urządzeń są dostępne podczas pracy z ikonami i kursorami.
 
 |Polecenie|Opis|
 |---|---|
 |**Odwróć kolory**|Odwraca kolory.|
 |**Przerzuć w poziomie**|Przerzuca obraz lub zaznaczenie w poziomie.|
 |**Przerzuć w pionie**|Przerzuca obraz lub zaznaczenie w pionie.|
-|**Obrót o 90 stopni**|Obraca obraz lub zaznaczenie o 90 stopni.|
-|**Pokaż okno kolorów**|Otwiera **kolory** okna, w którym można wybrać kolory używane dla obrazu.|
-|**Użyj zaznaczenia jako pędzla**|Umożliwia tworzenie pędzla niestandardowego na podstawie część obrazu.<br/><br/>Wybór staje się pędzla niestandardowego, który rozdziela kolorów w wyborze między obrazu. Kopiuje zaznaczenie są pozostawiane w ścieżce przeciągania. Przeciągniesz wolniej, większej liczby kopii zostały wprowadzone.|
-|**Kopiuj i wybór konspektu**|Tworzy kopię bieżącego zaznaczenia i zakreśla ją.<br/><br/>Jeśli kolor tła znajduje się w bieżącym zaznaczeniu, będzie on wykluczony, jeśli masz przezroczyste wybrane.
-|**Adjust Colors**|Otwiera **selektor kolorów niestandardowych**, co pozwala dostosować kolory używane dla obrazu.|
-|**Załaduj paletę**|Otwiera **Załaduj paletę kolorów** okno dialogowe, które umożliwia ładowanie kolorów palety wcześniej zapisane w pliku .pal.|
-|**Zapisz paletę**|Zapisuje w pliku .pal kolorów palety.|
-|**Rysuj nieprzezroczyste**|Po wybraniu sprawia, że bieżące zaznaczenie nieprzezroczystości.<br/><br/>Po wyczyszczeniu, sprawia, że bieżące zaznaczenie przezroczyste.|
+|**Obróć o 90 stopni**|Obraca obraz lub zaznaczenie o 90 stopni.|
+|**Pokaż okno kolorów**|Otwiera okno **kolory** , w którym można wybrać kolory do użycia w obrazie.|
+|**Użyj zaznaczenia jako pędzla**|Umożliwia utworzenie pędzla niestandardowego na podstawie fragmentu obrazu.<br/><br/>Wybór zostanie przekształcony w niestandardowy Pędzel, który dystrybuuje kolory w zaznaczeniu na obrazie. Kopie zaznaczenia są pozostawiane wzdłuż ścieżki przeciągania. Im wolniej przeciągniesz, tym więcej kopii jest wykonanych.|
+|**Kopiuj i zaznacz konspekt**|Tworzy kopię bieżącego zaznaczenia i zawiera jej obramowanie.<br/><br/>Jeśli kolor tła jest zawarty w bieżącym zaznaczeniu, zostanie on wykluczony, jeśli wybrano opcję przezroczysty.
+|**Dostosuj kolory**|Otwiera **Selektor niestandardowego koloru**, który pozwala na dostosowanie kolorów używanych dla obrazu.|
+|**Załaduj paletę**|Otwiera okno dialogowe **paleta kolorów** , dzięki któremu można załadować kolory palety wcześniej zapisane w pliku. PAL.|
+|**Zapisz paletę**|Zapisuje kolory palety w pliku. PAL.|
+|**Rysuj nieprzezroczyste**|Gdy ta opcja jest zaznaczona, bieżące zaznaczenie staje się nieprzezroczyste.<br/><br/>Gdy jest wyczyszczone, sprawia, że bieżące zaznaczenie jest przezroczyste.|
 |**Edytor paska narzędzi**|Otwiera [okno dialogowe Nowy zasób paska narzędzi](../windows/new-toolbar-resource-dialog-box.md).|
-|**Ustawienia siatki**|Otwiera **ustawienia siatki** okno dialogowe, w którym można określić siatki dla obrazu.|
-|**Nowy typ obrazu**|Otwiera [New \<urządzenia > okno dialogowe typu obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Zasób pojedyncza ikona może zawierać kilka obrazów o różnych rozmiarach i system windows może używać rozmiar odpowiednią ikonę w zależności od tego, w jaki sposób będzie mają być wyświetlane. Nowy typ urządzenia nie modyfikuje rozmiar ikony, ale raczej tworzy nowy obraz w ramach ikony. Dotyczy tylko ikony i kursory.|
-|**Bieżący typ obrazu ikony/kursora**|Zostanie otwarty podmenu zawiera listę pierwszych dziewięciu dostępne obrazy kursorem lub ikonę. Ostatnie polecenie, w podmenu, **więcej**, otwiera [Otwórz \<urządzenia > okno dialogowe obrazu](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
-|**Usuń typ obrazu**|Usuwa obraz wybranego urządzenia.|
-|**Narzędzia**|Uruchamia podmenu, który zawiera wszystkie dostępne narzędzia **edytora obrazów** paska narzędzi.|
+|**Ustawienia siatki**|Otwiera okno dialogowe **Ustawienia siatki** , w którym można określić siatki dla obrazu.|
+|**Nowy typ obrazu**|Otwiera [okno dialogowe \<nowe urządzenie > typ obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Zasób o pojedynczej ikonie może zawierać kilka obrazów o różnych rozmiarach, a system Windows może użyć odpowiedniego rozmiaru ikony w zależności od tego, jak ma być wyświetlana. Nowy typ urządzenia nie modyfikuje rozmiaru ikony, ale zamiast tego tworzy nowy obraz w obrębie ikony. Dotyczy tylko ikon i kursorów.|
+|**Bieżąca ikona/typ obrazu kursora**|Otwiera podmenu, w którym znajduje się lista pierwszych dziewięciu dostępnych obrazów kursorów lub ikon. Ostatnie polecenie w podmenu, **więcej**, otwiera okno [dialogowe Otwórz \<urządzenie > obrazu](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Usuń typ obrazu**|Usuwa wybrany obraz urządzenia.|
+|**Narzędzia**|Uruchamia podmenu, które zawiera wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazu** .|
 
-**Ustawienia siatki** okno dialogowe umożliwia określenie ustawienia siatki dla obrazu i prezentuje linie siatki edytowanego obrazu. Wiersze są przydatne w przypadku edycji obrazu, ale nie są zapisywane jako część samego obrazu.
+Okno dialogowe **Ustawienia siatki** umożliwia określenie ustawień siatki obrazu i wyświetla linie siatki na edytowanym obrazie. Linie są przydatne do edycji obrazu, ale nie są zapisywane jako część obrazu.
 
 |Właściwość|Opis|
 |---|---|
-|**Siatka pikseli**|Po zaznaczeniu tej opcji, wyświetla siatkę wokół każdego piksela **edytora obrazów**.<br/><br/>Siatka pojawia się tylko na 4 x i wyższych rozdzielczościach.|
-|**Siatka**|Po wybraniu Wyświetla siatkę wokół bloki pikseli **edytora obrazów**, określony przez wartości odstępy siatki.|
-|**Szerokość**|Określa szerokość każdy blok kafelka.<br/><br/>Ta właściwość jest przydatna, gdy mapy bitowe zawierające wiele obrazów, które są rozmieszczone w regularnych odstępach czasu.|
-|**Wysokość**|Określa wysokość każdego bloku kafelka.<br/><br/>Ta właściwość jest przydatna, gdy mapy bitowe zawierające wiele obrazów, które są rozmieszczone w regularnych odstępach czasu.|
+|**Siatka pikseli**|Po zaznaczeniu tej opcji wyświetlana jest siatka dookoła każdego piksela w **Edytorze obrazu**.<br/><br/>Siatka pojawia się tylko na 4 × i wyższych rozdzielczościach.|
+|**Siatka kafelków**|Po wybraniu Wyświetla siatkę dookoła bloków pikseli w **Edytorze obrazu**, określoną przez wartości odstępów siatki.|
+|**Szerokość**|Określa szerokość każdego bloku kafelków.<br/><br/>Ta właściwość jest przydatna podczas rysowania map bitowych zawierających wiele obrazów, które są ułożone w regularnych odstępach czasu.|
+|**Proporcj**|Określa wysokość każdego bloku kafelków.<br/><br/>Ta właściwość jest przydatna podczas rysowania map bitowych zawierających wiele obrazów, które są ułożone w regularnych odstępach czasu.|
 
 ## <a name="toolbar"></a>Pasek narzędzi
 
-**Edytora obrazów** narzędzi zawiera narzędzia do rysowania, rysowania, wprowadzania tekstu, wymazywanie i manipulowanie widoków. Zawiera ona także Selektor opcji, za pomocą którego można wybrać opcje dotyczące korzystania z poszczególnych narzędzi. Na przykład można wybierać różne szerokość pędzla, czynniki powiększenia i style linii.
+Pasek narzędzi **edytora obrazów** zawiera narzędzia do rysowania, malowania, wprowadzania tekstu, wymazywania i manipulowania widokami. Zawiera również selektor opcji, za pomocą którego można wybrać opcje używania poszczególnych narzędzi. Można na przykład wybrać różne szerokości pędzla, współczynniki powiększenia i style linii.
 
-Wszystkie narzędzia dostępne na **edytora obrazów** narzędzi są również dostępne z menu **obraz** > **narzędzia**. Aby użyć **edytora obrazów** narzędzi i **opcji** selektor, wybierz narzędzie lub opcji, które mają.
+Wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazów** są również dostępne w narzędziach **obrazu** > menu. Aby użyć paska narzędzi **edytora obrazów** i selektora **opcji** , wybierz odpowiednie narzędzie lub opcję.
 
 ![Pasek narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
-**Edytor obrazów** paska narzędzi
+Pasek narzędzi **edytora obrazów**
 
 > [!TIP]
-> Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.
+> Etykietki narzędzi są wyświetlane po umieszczeniu wskaźnika myszy na przycisku paska narzędzi. Te porady mogą ułatwić identyfikację funkcji poszczególnych przycisków.
 
-Ponieważ wiele narzędzi do rysowania są dostępne z [klawiatury](../windows/accelerator-keys-image-editor-for-icons.md), warto czasami Ukryj **edytora obrazów** paska narzędzi.
+Ponieważ wiele narzędzi do rysowania jest dostępnych na klawiaturze [](../windows/accelerator-keys-image-editor-for-icons.md), czasami warto ukryć pasek narzędzi **edytora obrazu** .
 
-- Aby wyświetlić lub ukryć **edytora obrazów** narzędzi, przejdź do menu **widoku** > **pasków narzędzi** i wybierz polecenie **edytora obrazów**.
+- Aby wyświetlić lub ukryć pasek narzędzi **edytora obrazów** , przejdź do **widoku** > menu**paski narzędzi** i wybierz **Edytor obrazów**.
 
 > [!NOTE]
-> Elementy z tego paska narzędzi pojawi się niedostępne, gdy plik obrazu z bieżącego projektu lub rozwiązania nie jest otwarty w **edytora obrazów**.
+> Elementy z tego paska narzędzi będą wyświetlane jako niedostępne, gdy plik obrazu z bieżącego projektu lub rozwiązania nie zostanie otwarty w **Edytorze obrazu**.
 
 ### <a name="option-selector"></a>selektor opcji
 
-Za pomocą **opcji** selektor można określić szerokość linii, pociągnięć i nie tylko. Ikony na **opcji** selektor przycisk zmiany, w zależności od narzędzie, które zostały wybrane.
+Za pomocą selektora **opcji** można określić szerokość linii, pociągnięcia pędzla i inne. Ikona przycisku selektora **opcji** zmienia się w zależności od wybranego narzędzia.
 
-![Rysowanie&#45;selektor kształt na pasku narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
-**Opcja** selektor na **edytora obrazów** paska narzędzi
+![Selektor&#45;kształtu rysowania na pasku narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
+Selektor **opcji** na pasku narzędzi **edytora obrazów**
 
 ### <a name="text-tool"></a>Narzędzie tekstowe
 
-Użyj **narzędzie tekstowe** okno dialogowe, aby dodać tekst do kursora, mapa bitowa lub ikona zasobu.
+Za pomocą okna dialogowego **Narzędzie tekstowe** można dodać tekst do kursora, mapy bitowej lub zasobu ikony.
 
-Aby uzyskać dostęp do tego okna dialogowego, otwórz **edytora obrazów** i przejdź do menu **obraz** > **narzędzia**, a następnie wybierz **narzędzie tekstowe** polecenie.
+Aby uzyskać dostęp do tego okna dialogowego, **Otwórz Edytor obrazów** i przejdź do menu**Narzędzia** **obrazu** > , a następnie wybierz polecenie **tekst narzędzia** .
 
 > [!TIP]
-> Kliknięciu prawym przyciskiem myszy **narzędzie tekstowe** okno dialogowe, aby dostęp do menu skrótów domyślne, które zawiera listę standardowych poleceń Windows.
+> Możesz kliknąć prawym przyciskiem myszy okno dialogowe **narzędzia tekstowe** , aby uzyskać dostęp do domyślnego menu skrótów zawierającego listę standardowych poleceń systemu Windows.
 
-Otwórz **narzędzie czcionki tekstu** okno dialogowe, aby zmienić czcionkę, styl lub rozmiar czcionki kursora. Zmiany są stosowane do tekstu wyświetlanego w **tekstu** obszaru.
+Otwórz okno dialogowe **czcionka narzędzia tekstowe** , aby zmienić czcionkę, styl lub rozmiar czcionki kursora. Zmiany są stosowane do tekstu wyświetlanego w obszarze **tekstu** .
 
-Aby otworzyć to okno dialogowe, wybierz **czcionki** znajdujący się w **narzędzie tekstowe** okno dialogowe. Są dostępne właściwości:
+Aby uzyskać dostęp do tego okna dialogowego, wybierz przycisk **czcionki** w oknie dialogowym **narzędzia tekstowe** . Dostępne są następujące właściwości:
 
 |Właściwość|Opis|
 |---|---|
 |**Czcionka**|Wyświetla listę dostępnych czcionek.|
-|**Styl czcionki**|Wyświetla listę dostępnych stylów określonej czcionki.|
-|**Rozmiar**|Wyświetla listę dostępnych rozmiarów określonej czcionki.|
-|**Próbki**|Pokazuje przykładowy wygląd tekstu przy użyciu ustawień określonej czcionki.|
-|**Skrypt**|Wyświetla listę dostępnych skryptów językowych dla określonej czcionki.<br/><br/>Po wybraniu inny język skryptu, zestawu znaków języka i udostępnieniu do tworzenia dokumentów w wielu języków.|
+|**Styl czcionki**|Wyświetla listę dostępnych stylów dla określonej czcionki.|
+|**Zmienia**|Wyświetla listę dostępnych rozmiarów punktów dla określonej czcionki.|
+|**Northwind**|Pokazuje przykład sposobu wyświetlania tekstu z określonymi ustawieniami czcionki.|
+|**Skrypt**|Wyświetla listę dostępnych skryptów języka dla określonej czcionki.<br/><br/>Po wybraniu innego skryptu języka zestaw znaków dla tego języka będzie dostępny do tworzenia dokumentów wielojęzycznych.|
 
-#### <a name="to-change-the-font-of-text-on-an-image"></a>Zmiana czcionki tekstu obrazu
+#### <a name="to-change-the-font-of-text-on-an-image"></a>Aby zmienić czcionkę tekstu w obrazie
 
-Poniżej przedstawiono przykładowy sposób dodawania tekstu do ikony w aplikacji Windows i manipulowania czcionkę tekstu.
+Oto przykład sposobu dodawania tekstu do ikony w aplikacji systemu Windows i manipulowania czcionką tekstu.
 
-1. Tworzenie aplikacji formularzy Windows w języku C++. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie aplikacji z formularzem Windows](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). *App.ico* plik zostanie dodany do projektu, domyślnie.
+1. Utwórz aplikację C++ Windows Formsową. Aby uzyskać szczegółowe informacje [, zobacz How to: Utwórz aplikacje](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90))Windows Forms. Plik *. ico aplikacji* jest domyślnie dodawany do projektu.
 
-1. W **Eksploratora rozwiązań**, kliknij dwukrotnie plik *app.ico*. **Edytora obrazów** zostanie otwarty.
+1. W **Eksplorator rozwiązań**kliknij dwukrotnie plik *App. ico*. Zostanie otwarty **Edytor obrazów** .
 
-1. Przejdź do menu **obraz** > **narzędzia** i wybierz **narzędzie tekstowe**.
+1. Przejdź do menu**Narzędzia** **obrazu** > i wybierz **Narzędzie Tekst**.
 
-1. W **narzędzie tekstowe** okno dialogowe, typ *C++* w obszarze pusty tekst. Ten tekst będzie wyświetlany w polu o zmiennym rozmiarze, znajduje się w lewym górnym rogu *app.ico* w **edytora obrazów**.
+1. W oknie dialogowym **Narzędzie tekstowe** wpisz *C++* pusty obszar tekstu. Ten tekst będzie widoczny w polu o zmiennym rozmiarze znajdującym się w lewym górnym rogu *aplikacji App. ico* w **Edytorze obrazu**.
 
-1. W **edytora obrazów**, przeciągnij pole o zmiennych rozmiarach do środka *app.ico* można zwiększyć czytelność tekstu.
+1. W **Edytorze obrazów**przeciągnij pole o zmiennym rozmiarze do centrum *App. ico* , aby zwiększyć czytelność tekstu.
 
-1. W **narzędzie tekstowe** okno dialogowe, wybierz opcję **czcionki** przycisku.
+1. W oknie dialogowym **Narzędzie tekstowe** wybierz przycisk **czcionka** .
 
-1. W **narzędzie czcionki tekstu** okno dialogowe:
+1. W oknie dialogowym **czcionka narzędzia tekstowego** :
 
-   - Wybierz **podzbiory** z listy dostępnych czcionek, które są wymienione w **czcionki** pola listy.
+   - Wybierz pozycję **Times New Roman** z listy dostępnych czcionek, które są wymienione w polu listy **czcionka** .
 
-   - Wybierz **Bold** z listy dostępnych style na liście **styl czcionki** pola listy.
+   - Wybierz pozycję pogrubienie z listy dostępnych stylów czcionki w polu listy **styl czcionki** .
 
-   - Wybierz **10** z listy dostępnych punktów rozmiarów wymienionych w **rozmiar** pola listy.
+   - Wybierz pozycję **10** z listy dostępnych rozmiarów punktów wymienionych w polu listy **rozmiar** .
 
-   - Wybierz **OK**. **Narzędzie czcionki tekstu** okno dialogowe zostanie zamknięte i nowe ustawienia czcionek będą stosowane do tekstu.
+   - Wybierz **OK**. Zostanie zamknięte okno dialogowe **czcionka narzędzia tekstowego** i nowe ustawienia czcionki zostaną zastosowane do tekstu.
 
-1. Wybierz **Zamknij** na **narzędzie tekstowe** okno dialogowe. Pole o zmiennym rozmiarze wokół tekstu zniknie z **edytora obrazów**.
+1. Wybierz **Zamknij** w oknie dialogowym **Narzędzie tekstowe** . Pole o zmiennym rozmiarze wokół tekstu zniknie z **edytora obrazu**.
 
-Obszar tekstu zawiera tekst, który pojawia się jako część zasobu. Ten obszar jest początkowo pusta.
+W obszarze tekstowym zostanie wyświetlony tekst wyświetlany jako część zasobu. Początkowo ten obszar jest pusty.
 
 > [!NOTE]
-> Jeśli **przezroczyste tło** jest ustawiona tylko tekst, zostaną umieszczone w obrazie. Jeśli **tło nieprzezroczyste** jest ustawiony, prostokąt otaczający wypełniony kolorem tła, zostaną umieszczone za tekstem.
+> W przypadku ustawienia **przezroczystego tła** tylko tekst zostanie umieszczony w obrazie. W przypadku ustawienia **tła** nieprzezroczystego prostokąt ograniczenia wypełniony kolorem tła zostanie umieszczony za tekstem.
 
 ## <a name="window-panes"></a>Okienka
 
-**Edytora obrazów** okna wyświetla dwa widoki obrazu, pasek podziału rozdziela dwa okienka. Aby zmieniać względne rozmiary okienek, można przeciągać pasek podziału. Aktywne okienko wyświetla krawędź wyboru.
+W oknie **Edytor obrazów** są wyświetlane dwa widoki obrazu z paskiem podziału rozdzielającym dwa okienka. Aby zmieniać względne rozmiary okienek, można przeciągać pasek podziału. Aktywne okienko wyświetla krawędź wyboru.
 
-Jeden widok jest rzeczywisty rozmiar, a drugi jest powiększony przez domyślny współczynnik rozszerzenia, 6. Widoki te dwa okienka są automatycznie aktualizowane, wszelkie zmiany wprowadzone w jednym okienku natychmiast są wyświetlane w innym. Dwa okienka ułatwiają pracować nad powiększania widoku obrazu, w którym można odróżnić poszczególnych pikseli i, w tym samym czasie obserwować wpływ swoją pracę na widoku rzeczywisty rozmiar obrazu.
+Jeden widok jest rzeczywistym rozmiarem, a drugi jest powiększony przez domyślny współczynnik powiększenia 6. Widoki w tych dwóch okienkach są aktualizowane automatycznie. wszystkie zmiany wprowadzone w jednym okienku są natychmiast wyświetlane w drugim. Dwa okienka ułatwiają pracy nad powiększonym widokiem obrazu, w którym można odróżnić poszczególne piksele i, w tym samym czasie, obserwować efekt pracy na widoku rzeczywistego obrazu.
 
-Tyle miejsca, ile potrzeba korzysta z okienka po lewej stronie (do połowy **obraz** okna) aby wyświetlić domyślny widok 1:1 powiększenie obrazu. W okienku po prawej stronie wyświetla domyślny obraz powiększonego powiększenia 6:1. Można zmieniać powiększenie w każdym za pomocą okienka **Magnify** narzędzie **edytora obrazów** paska narzędzi lub za pomocą klawiszy skrótów.
+W okienku po lewej stronie jest używane tyle miejsca, ile jest to konieczne (do połowy okna **obrazu** ), aby wyświetlić domyślny widok powiększenia 1:1 obrazu. W okienku po prawej stronie jest wyświetlany domyślny obraz powiększenia o powiększeniu 6:1. Powiększenie można zmienić w każdym okienku przy użyciu narzędzia **Powiększ** na pasku narzędzi **edytora obrazu** lub przy użyciu klawiszy skrótów.
 
-Można powiększyć mniejszych okienku **edytora obrazów** okno i użyj dwa okienka, aby pokazać różnych regionach duży obraz. Wybierz w okienku, aby ją wybrać.
+Możesz powiększyć mniejsze okienko okna **edytora obrazów** i użyć dwóch okienek, aby pokazać różne regiony dużego obrazu. Wybierz wewnątrz okienka, aby je wybrać.
 
-Względne rozmiary okienek można zmienić, ustawiając kursor na pasek podziału i przenoszenie pasek podziału w prawo lub lewo. Pasek podziału można przenieść do dowolnej stronie, aby pracować nad tylko jedno okienko.
+Względne rozmiary okienek można zmienić, umieszczając wskaźnik na pasku podziału i przesuwając pasek podziału w prawo lub w lewo. Pasek podziału może poruszać się po obu stronach, jeśli chcesz korzystać tylko z jednego okienka.
 
-Jeśli **edytora obrazów** okienko jest powiększony o 4 lub nowszej, może wyświetlić siatkę pikseli, ograniczającego piksele na obrazie.
+Jeśli okienko **edytora obrazu** zostanie powiększone o współczynnik 4 lub większy, można wyświetlić siatkę pikseli, która ogranicza poszczególne piksele w obrazie.
 
-### <a name="to-change-the-magnification-factor"></a>Aby zmienić stopień powiększenia
+### <a name="to-change-the-magnification-factor"></a>Aby zmienić współczynnik powiększenia
 
-Domyślnie **edytora obrazów** Wyświetla widok w okienku po lewej stronie rzeczywisty rozmiar i widok, w okienku po prawej stronie w rzeczywistym rozmiarze 6 razy. Współczynnika powiększenia (widoczny na pasku stanu w dolnej części obszaru roboczego) jest stosunek między rzeczywisty rozmiar obrazu i wyświetlany rozmiar. Domyślny współczynnik wynosi 6 i zakres jest z zakresu od 1 do 10.
+Domyślnie **Edytor obrazów** wyświetla widok w okienku po lewej stronie w rzeczywistym rozmiarze i widok w okienku po prawej stronie o 6 razy większym rozmiarze. Współczynnik powiększenia (widoczny na pasku stanu w dolnej części obszaru roboczego) jest stosunkiem między rzeczywistym rozmiarem obrazu a wyświetlanym rozmiarem. Domyślnym czynnikiem jest 6, a zakresem jest z zakresu od 1 do 10.
 
-1. Wybierz **edytora obrazów** okienko współczynnika powiększenia, którego chcesz zmienić.
+1. Wybierz okienko **edytora obrazu** , którego współczynnik powiększenia chcesz zmienić.
 
-1. Na **edytora obrazów** narzędzi, wybierz strzałkę po prawej stronie **Magnify** narzędzia, a następnie wybierz współczynnika powiększenia z podmenu: **1 X**, **2 X**, **6 X**, lub **8 X**.
+1. Na pasku narzędzi **edytora obrazu** wybierz strzałkę po prawej stronie narzędzia Powiększ i wybierz współczynnik powiększenia z podmenu: **1x**, **2x**, **6X**lub **8x**.
 
    > [!NOTE]
-   > Aby wybrać współczynnika powiększenia, inne niż te wymienione w **Magnify** narzędzie, korzystanie z klawiszy skrótów.
+   > Aby wybrać współczynnik powiększenia inny niż wymienione w narzędziu **Powiększ** , użyj klawiszy skrótów.
 
 ### <a name="to-display-or-hide-the-pixel-grid"></a>Aby wyświetlić lub ukryć siatkę pikseli
 
-Dla wszystkich **edytora obrazów** okienka przy użyciu współczynnika powiększenia 4 lub większą, można wyświetlić siatkę ograniczającego piksele na obrazie.
+Dla wszystkich okienek **edytora obrazu** o współczynniku powiększenia równym 4 lub większym, można wyświetlić siatkę, która ogranicza poszczególne piksele w obrazie.
 
-1. Przejdź do menu **obraz** > **ustawienia siatki**.
+1. Przejdź do pozycji menu**Ustawienia siatki** **obrazu** > .
 
-1. Wybierz **siatkę pikseli** pole wyboru, aby wyświetlić siatkę, lub wyczyść pole, aby ukryć siatkę.
+1. Zaznacz pole wyboru **Siatka pikseli** , aby wyświetlić siatkę, lub wyczyść pole, aby ukryć siatkę.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -220,4 +220,4 @@ Brak
 ## <a name="see-also"></a>Zobacz także
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
-[Ikony](/windows/desktop/menurc/icons)
+[Ikony](/windows/win32/menurc/icons)

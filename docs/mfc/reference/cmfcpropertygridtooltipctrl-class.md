@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 6c14ed1f11a7a414332b34566a314459d76b911b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b6f626b5f9844c73cd2225a7d6311f5b2f7d4f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310477"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505092"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Klasa CMFCPropertyGridToolTipCtrl
 
-Implementuje w etykietce narzędzia kontrolkę, która [klasa CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) używa w celu wyświetlenia etykietki narzędzi.
+Implementuje formant ToolTip, którego [Klasa CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) używa do wyświetlania etykietek narzędzi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,7 +44,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Konstruuje `CMFCPropertyGridToolTipCtrl` obiektu.|
+|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Konstruuje `CMFCPropertyGridToolTipCtrl` obiekt.|
 |`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
@@ -52,23 +52,23 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCPropertyGridToolTipCtrl::Create](#create)|Tworzy okno dla kontrolki tooltip.|
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Dezaktywuje i ukrywa kontrolki tooltip.|
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Zwraca współrzędne ostatnia pozycja kontrolki tooltip.|
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Ukrywa kontrolki tooltip.|
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Ustawia odstęp między tekst etykietki narzędzia i krawędź okna etykiety narzędzi.|
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Wyświetla kontrolki tooltip.|
+|[CMFCPropertyGridToolTipCtrl:: Create](#create)|Tworzy okno dla kontrolki ToolTip.|
+|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Dezaktywuje i ukrywa kontrolkę etykietki narzędzia.|
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Zwraca współrzędne ostatniej pozycji kontrolki ToolTip.|
+|[CMFCPropertyGridToolTipCtrl:: Hide](#hide)|Ukrywa kontrolkę etykietki narzędzia.|
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okna przed ich wysłaniem do funkcji [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Przesłania [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Ustawia odstępy między tekstem etykietki narzędzia a obramowaniem okna etykietki narzędzia.|
+|[CMFCPropertyGridToolTipCtrl:: Track](#track)|Wyświetla kontrolkę etykietki narzędzia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Etykietki narzędzi są wyświetlane po zatrzymaniu wskaźnika myszy nad nazwy właściwości. [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) tak, aby łatwo czytelnej przez użytkownika, klasa wyświetla etykietkę narzędzia. Zazwyczaj położenia etykietki narzędzia jest ustalany położenia wskaźnika. Za pomocą tej klasy, etykietki narzędzia pojawi się nad nazwy właściwości i przypomina rozszerzenie właściwości fizyczne, aby w pełni widoczna jest nazwa właściwości.
+Etykietki narzędzi są wyświetlane, gdy wskaźnik zmieni się na nazwę właściwości. Klasa [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) wyświetla etykietkę narzędzia, aby można ją było łatwo odczytać przez użytkownika. Zwykle pozycja etykietki narzędzia jest określana na podstawie pozycji wskaźnika. Za pomocą tej klasy, etykietka narzędzia pojawia się nad nazwą właściwości i przypomina rozszerzenie właściwości naturalnej, dzięki czemu nazwa właściwości jest w pełni widoczna.
 
-MFC, automatycznie tworzy ten formant i używa go w [klasa CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).
+MFC automatycznie tworzy ten formant i używa go w [klasie CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCPropertyGridToolTipCtrl` klasy i sposób wyświetlania kontrolki tooltip.
+Poniższy przykład ilustruje sposób konstruowania obiektu `CMFCPropertyGridToolTipCtrl` klasy i sposób wyświetlania kontrolki ToolTip.
 
 [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]
 
@@ -84,19 +84,19 @@ W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCPropertyGridTo
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxpropertygridtooltipctrl.h
+**Nagłówek:** afxpropertygridtooltipctrl. h
 
-##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
+##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
 
-Konstruuje `CMFCPropertyGridToolTipCtrl` obiektu.
+Konstruuje `CMFCPropertyGridToolTipCtrl` obiekt.
 
 ```
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```
 
-##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create
+##  <a name="create"></a>CMFCPropertyGridToolTipCtrl:: Create
 
-Tworzy okno dla kontrolki tooltip.
+Tworzy okno dla kontrolki ToolTip.
 
 ```
 BOOL Create(CWnd* pWndParent);
@@ -105,15 +105,15 @@ BOOL Create(CWnd* pWndParent);
 ### <a name="parameters"></a>Parametry
 
 *pWndParent*<br/>
-[in] Wskaźnik do okna nadrzędnego.
+podczas Wskaźnik do okna nadrzędnego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okno został pomyślnie utworzony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli okno zostało pomyślnie utworzone; w przeciwnym razie FALSE.
 
-##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate
+##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::D eactivate
 
-Dezaktywuje i ukrywa kontrolki tooltip.
+Dezaktywuje i ukrywa kontrolkę etykietki narzędzia.
 
 ```
 void Deactivate();
@@ -121,11 +121,11 @@ void Deactivate();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda ustawia ostatniej pozycji i tekst wartości puste, aby w przyszłości wywołuje w celu [CMFCPropertyGridToolTipCtrl::Track](#track) wyświetlić etykietkę narzędzia.
+Ta metoda ustawia ostatnią pozycję i tekst na puste wartości, tak aby przyszłe wywołania [CMFCPropertyGridToolTipCtrl:: Track](#track) wyświetlały etykietkę narzędzia.
 
-##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect
+##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect
 
-Zwraca współrzędne ostatnia pozycja kontrolki tooltip.
+Zwraca współrzędne ostatniej pozycji kontrolki ToolTip.
 
 ```
 void GetLastRect(CRect& rect) const;
@@ -133,20 +133,20 @@ void GetLastRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[out] Zawiera ostatnia pozycja kontrolki tooltip.
+*cinania*<br/>
+określoną Zawiera ostatnią pozycję kontrolki ToolTip.
 
-##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide
+##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl:: Hide
 
-Ukrywa kontrolki tooltip.
+Ukrywa kontrolkę etykietki narzędzia.
 
 ```
 void Hide();
 ```
 
-##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin
+##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin
 
-Ustawia odstęp między tekst etykietki narzędzia i krawędź okna etykiety narzędzi.
+Ustawia odstępy między tekstem etykietki narzędzia a obramowaniem okna etykietki narzędzia.
 
 ```
 void SetTextMargin(int nTextMargin);
@@ -155,11 +155,11 @@ void SetTextMargin(int nTextMargin);
 ### <a name="parameters"></a>Parametry
 
 *nTextMargin*<br/>
-[in] Określa odstępy między tekst kontrolki etykietki narzędzia i krawędź okna etykiety narzędzi. Wartość domyślna to 10 pikseli.
+podczas Określa odstępy między tekstem kontrolki etykietki narzędzia a obramowaniem okna etykietki narzędzia. Wartość domyślna to 10 pikseli.
 
-##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track
+##  <a name="track"></a>CMFCPropertyGridToolTipCtrl:: Track
 
-Wyświetla kontrolki tooltip.
+Wyświetla kontrolkę etykietki narzędzia.
 
 ```
 void Track(
@@ -169,15 +169,15 @@ void Track(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[in] Określa położenie i rozmiar kontrolki tooltip.
+*cinania*<br/>
+podczas Określa położenie i rozmiar kontrolki ToolTip.
 
 *strText*<br/>
-[in] Określa tekst wyświetlany w etykietce narzędzia.
+podczas Określa tekst, który ma być wyświetlany w etykietce narzędzia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda Wy Wyświetla kontrolki tooltip na położenie i rozmiar określony przez *prostokąt*. Jeśli położenie, rozmiar i tekst nie uległy zmianie od czasu ostatniego wywołania tej metody, Metoda ta nie ma znaczenia.
+Ta metoda wyświetla kontrolkę etykietki narzędzia w pozycji i rozmiarze określonym przez element *Rect*. Jeśli pozycja, rozmiar i tekst nie uległy zmianie od czasu ostatniego wywołania tej metody, ta metoda nie ma żadnego wpływu.
 
 ## <a name="see-also"></a>Zobacz także
 

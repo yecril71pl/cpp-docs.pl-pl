@@ -1,21 +1,21 @@
 ---
-title: size_is (C++ atrybutów COM)
+title: size_is (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407331"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514038"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Określ rozmiar pamięci przydzielonej dla wskaźników o rozmiarze rozmiar wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.
+Określ rozmiar pamięci przydzieloną dla wskaźników rozmiaru, wskaźniki rozmiaru do wskaźników rozmiaru i tablic pojedynczych lub wielowymiarowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Określ rozmiar pamięci przydzielonej dla wskaźników o rozmiarze rozmiar wska
 ### <a name="parameters"></a>Parametry
 
 *expression*<br/>
-Rozmiar pamięci przydzielonej dla wskaźników o rozmiarze.
+Rozmiar pamięci przydzieloną dla wskaźników rozmiaru.
 
 ## <a name="remarks"></a>Uwagi
 
-**Size_is** C++ atrybut ma taką samą funkcjonalność jak [size_is](/windows/desktop/Midl/size-is) atrybutów w MIDL.
+Atrybut **size_is** C++ ma takie same funkcje jak atrybut [size_is](/windows/win32/Midl/size-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [first_is —](first-is.md) przykład sposobu określania część tablicy.
+Zobacz przykład dla [first_is](first-is.md) , aby uzyskać przykład sposobu określania sekcji tablicy.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -42,12 +42,12 @@ Zobacz przykład [first_is —](first-is.md) przykład sposobu określania czę�
 
 |||
 |-|-|
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Dotyczy**|Pole w **strukturze** lub **Unii**, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`max_is`|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 
